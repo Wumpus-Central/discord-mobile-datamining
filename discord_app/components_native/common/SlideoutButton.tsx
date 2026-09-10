@@ -1,9 +1,9 @@
-// === Module 11290: SlideoutButton ===
+// === Module 11330: SlideoutButton ===
 
-// Module 11290 (SlideoutButton)
+// Module 11330 (SlideoutButton)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Pressables from "Pressables" /* 5137 */;
+import Pressables from "Pressables" /* 5173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,10 +34,10 @@ class SlideoutButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { button: { alignSelf: "flex-end", justifyContent: "center", alignItems: "center" }, buttonText: null };
 createStyles = { color: null, fontSize: 12, fontFamily: null, marginTop: 2, marginHorizontal: 2, textAlign: "center" };
-const ColorUtils = fn(4423);
+const ColorUtils = fn(4454);
 createStyles.color = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.6);
 createStyles.fontFamily = fn(1074).Fonts.PRIMARY_SEMIBOLD;
 createStyles.buttonText = createStyles;

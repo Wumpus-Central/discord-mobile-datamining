@@ -1,19 +1,19 @@
-// === Module 15292: AdvancedVoiceActivitySetting ===
+// === Module 15341: AdvancedVoiceActivitySetting ===
 
-// Module 15292 (AdvancedVoiceActivitySetting)
+// Module 15341 (AdvancedVoiceActivitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9121 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9158 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.BbESsg);
   },
-  parent: fn(7989).MobileUserSettings.VOICE,
+  parent: fn(8027).MobileUserSettings.VOICE,
   useValue: function useAdvancedVoiceActivitySettingValue() {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().vadUseKrisp);

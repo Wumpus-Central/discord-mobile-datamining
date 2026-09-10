@@ -1,9 +1,9 @@
-// === Module 5445: StageChannelParticipantStoreHooks ===
+// === Module 5481: StageChannelParticipantStoreHooks ===
 
-// Module 5445 (StageChannelParticipantStoreHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 5439 */;
+// Module 5481 (StageChannelParticipantStoreHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 5475 */;
 import _slicedToArray from "module_32" /* 32 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5432 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5468 */;
 
 require = fn;
 const size = fn(2);

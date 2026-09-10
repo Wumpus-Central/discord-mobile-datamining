@@ -1,7 +1,7 @@
-// === Module 17148: useCanSetVoiceChannelStatus ===
+// === Module 17207: useCanSetVoiceChannelStatus ===
 
-// Module 17148 (useCanSetVoiceChannelStatus)
-import PermissionStore from "PermissionStore" /* 4212 */;
+// Module 17207 (useCanSetVoiceChannelStatus)
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = fn;
 const Permissions = fn(1085).Permissions;

@@ -1,9 +1,9 @@
-// === Module 5005: ButtonEllipsis ===
+// === Module 5041: ButtonEllipsis ===
 
-// Module 5005 (ButtonEllipsis)
+// Module 5041 (ButtonEllipsis)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -62,9 +62,9 @@ function EllipsisCircle(offset) {
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let __closure = { duration: 500, easing: null };
-const Easing = fn(4310).Easing;
-__closure.easing = Easing.inOut(fn(4310).Easing.quad);
-const createStyles = fn(4574);
+const Easing = fn(4341).Easing;
+__closure.easing = Easing.inOut(fn(4341).Easing.quad);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   if ("lg" === arg0) {
     let num = 4;
@@ -97,7 +97,7 @@ function withEllipsisAnimation(arg0, value) {
   const obj2 = ReanimatedRexport;
   return obj.withDelay(result, obj2.withRepeat(timing.withTiming(value, obj, "animate-always"), -1, true));
 }
-__closure = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: fn(4310).withDelay, withRepeat: fn(4310).withRepeat, withTiming: fn(4575).withTiming, ELLIPSIS_APPEAR_TIMING: __closure };
+__closure = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: fn(4341).withDelay, withRepeat: fn(4341).withRepeat, withTiming: fn(4606).withTiming, ELLIPSIS_APPEAR_TIMING: __closure };
 withEllipsisAnimation.__closure = __closure;
 withEllipsisAnimation.__workletHash = 2181731162311;
 withEllipsisAnimation.__initData = { code: "function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){const{ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING}=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));}" };

@@ -1,21 +1,21 @@
-// === Module 16594: OnboardingHomeResourcesSheet ===
+// === Module 16649: OnboardingHomeResourcesSheet ===
 
-// Module 16594 (OnboardingHomeResourcesSheet)
+// Module 16649 (OnboardingHomeResourcesSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12314 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16593 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12354 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16648 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(16592).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_3 = fn(16647).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");
 
 export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(4275);
+  let obj = guildId(4306);
   importDefault = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
   obj = { children: null };
   obj = {
@@ -41,7 +41,7 @@ export default function OnboardingHomeResourcesSheet(guildId) {
       return jsx(guildId(dependencyMap[9]).ActionSheetRow, { label: label.title, icon: null, onPress: null, arrow: true }, label.channelId);
     })
   };
-  obj.children = jsx(guildId(7213).ActionSheetRow.Group, {
+  obj.children = jsx(guildId(7251).ActionSheetRow.Group, {
     hasIcons: true,
     children: useResourceChannelsDefault(guildId).map((label) => {
       let obj = height(dependencyMap[10]);
@@ -64,7 +64,7 @@ export default function OnboardingHomeResourcesSheet(guildId) {
       return jsx(guildId(dependencyMap[9]).ActionSheetRow, { label: label.title, icon: null, onPress: null, arrow: true }, label.channelId);
     })
   });
-  return jsx(guildId(7211).ActionSheet, {
+  return jsx(guildId(7249).ActionSheet, {
     hasIcons: true,
     children: useResourceChannelsDefault(guildId).map((label) => {
       let obj = height(dependencyMap[10]);

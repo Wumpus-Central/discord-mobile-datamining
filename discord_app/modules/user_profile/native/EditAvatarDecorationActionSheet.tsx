@@ -1,12 +1,12 @@
-// === Module 8184: EditAvatarDecorationActionSheet ===
+// === Module 8221: EditAvatarDecorationActionSheet ===
 
-// Module 8184 (EditAvatarDecorationActionSheet)
+// Module 8221 (EditAvatarDecorationActionSheet)
 import nativeDefault from "native" /* 576 */;
-import useShopProductItems from "useShopProductItems" /* 8197 */;
-import EditAvatarDecorationSection from "EditAvatarDecorationSection" /* 13196 */;
+import useShopProductItems from "useShopProductItems" /* 8234 */;
+import EditAvatarDecorationSection from "EditAvatarDecorationSection" /* 13243 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7572 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7609 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
 require = fn;
@@ -84,7 +84,7 @@ function EditAvatarDecorationInner(pendingAvatarSrc) {
 function AvatarDecorationSectionPreview(previewSkuId) {
   ({ user, guildId, pendingAvatarSrc } = previewSkuId);
   let purchase;
-  const tmp4 = purchase(8199)(previewSkuId.previewSkuId);
+  const tmp4 = purchase(8236)(previewSkuId.previewSkuId);
   const product = tmp4.product;
   _require = product;
   purchase = tmp4.purchase;
@@ -122,16 +122,16 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   obj = { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo, size: null };
   const tmp = closure_13();
   obj.size = tmp10(1178).AvatarSizes.EDIT_AVATAR_DECORATION;
-  const items1 = [closure_10(purchase(8283), obj), closure_10(purchase(13203), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo })];
+  const items1 = [closure_10(purchase(8320), obj), closure_10(purchase(13250), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo })];
   obj.children = items1;
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7561).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7599).isAvatarDecorationRecord;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, bounceOffset: null, title: null, avatarDisplayContainer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createStyles.container = createStyles;
@@ -146,23 +146,23 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   let selectedAvatarDecoration;
   const tmp = closure_13();
-  const tmp4 = selectedAvatarDecoration(8185)({ analyticsLocations, isTryItOut, guildId });
+  const tmp4 = selectedAvatarDecoration(8222)({ analyticsLocations, isTryItOut, guildId });
   const setPendingAvatarDecoration = tmp4.setPendingAvatarDecoration;
-  setPendingAvatarDecoration(8195);
+  setPendingAvatarDecoration(8232);
   let obj = { userId: user.id, image: tmp4.pendingAvatar };
   let obj2 = noop;
   const pendingAvatarSrc = obj.getPendingAvatarSrc(obj);
   const tmp7 = _slicedToArray(noop.useState(currentAvatarDecoration), 2);
   selectedAvatarDecoration = tmp7[0];
-  let obj3 = setPendingAvatarDecoration(8196);
+  let obj3 = setPendingAvatarDecoration(8233);
   if (analyticsLocations == null) {
     analyticsLocations = [];
   }
-  const analyticsLocations2 = selectedAvatarDecoration(7176)(analyticsLocations, tmp2(7196).EDIT_AVATAR_DECORATION_SHEET).analyticsLocations;
+  const analyticsLocations2 = selectedAvatarDecoration(7214)(analyticsLocations, tmp2(7234).EDIT_AVATAR_DECORATION_SHEET).analyticsLocations;
   const items = [selectedAvatarDecoration, setPendingAvatarDecoration];
   const callback = obj2.useCallback(() => {
     first(1242);
-    const obj = { type: first(7196).EDIT_AVATAR_DECORATION_SHEET, is_fullscreen: true };
+    const obj = { type: first(7234).EDIT_AVATAR_DECORATION_SHEET, is_fullscreen: true };
     obj.track(constants.OPEN_POPOUT, obj);
   }, []);
   const callback1 = obj2.useCallback((arg0) => {
@@ -183,13 +183,13 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   const obj4 = { variant: "redesign/heading-18/bold", style: tmp.title, accessibilityRole: "header", children: null };
   const intl = tmp5(1114).intl;
   obj4.children = intl.string(setPendingAvatarDecoration(1114).t.HykynS);
-  items1[1] = closure_10(setPendingAvatarDecoration(4570).Text, obj4);
+  items1[1] = closure_10(setPendingAvatarDecoration(4601).Text, obj4);
   items1[2] = closure_10(EditAvatarDecorationInner, { user, guildId, pendingAvatarSrc, selectedAvatarDecoration, setSelectedAvatarDecoration: tmp7[1], isTryItOut });
   obj2.children = items1;
   const items2 = [closure_11(View, obj2), ];
   const obj5 = { user, currentSkuId: null, selectedSkuId: null, isTryItOut: null, onApply: null, analyticsLocations: null, analyticsSource: null };
   let skuId;
-  const tmp9 = selectedAvatarDecoration(7176);
+  const tmp9 = selectedAvatarDecoration(7214);
   if (currentAvatarDecoration != null) {
     skuId = currentAvatarDecoration.skuId;
   }
@@ -203,10 +203,10 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   obj5.isTryItOut = isTryItOut;
   obj5.onApply = callback1;
   obj5.analyticsLocations = analyticsLocations2;
-  obj5.analyticsSource = selectedAvatarDecoration(7196).EDIT_AVATAR_DECORATION_SHEET;
-  items2[1] = closure_10(selectedAvatarDecoration(8198), obj5);
+  obj5.analyticsSource = selectedAvatarDecoration(7234).EDIT_AVATAR_DECORATION_SHEET;
+  items2[1] = closure_10(selectedAvatarDecoration(8235), obj5);
   obj1.children = items2;
-  obj.children = closure_11(setPendingAvatarDecoration(7164).BottomSheet, obj1);
-  obj6.children = closure_10(setPendingAvatarDecoration(7176).AnalyticsLocationProvider, obj);
-  return closure_10(setPendingAvatarDecoration(4284).ThemeContextProvider, obj6);
+  obj.children = closure_11(setPendingAvatarDecoration(7202).BottomSheet, obj1);
+  obj6.children = closure_10(setPendingAvatarDecoration(7214).AnalyticsLocationProvider, obj);
+  return closure_10(setPendingAvatarDecoration(4315).ThemeContextProvider, obj6);
 };

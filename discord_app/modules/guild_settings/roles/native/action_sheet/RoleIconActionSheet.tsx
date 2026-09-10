@@ -1,17 +1,18 @@
-// === Module 17661: RoleIconActionSheet ===
+// === Module 17720: RoleIconActionSheet ===
 
-// Module 17661 (RoleIconActionSheet)
+// Module 17720 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import TableRow from "TableRow" /* 5619 */;
-import TableRowGroup from "TableRowGroup" /* 5701 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
-import ActionSheet from "ActionSheet" /* 7211 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17658 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import TableRow from "TableRow" /* 5655 */;
+import TableRowGroup from "TableRowGroup" /* 5737 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7201 */;
+import ActionSheet from "ActionSheet" /* 7249 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17717 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17644 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17703 */;
 
 require = fn;
 const UPLOAD_SMALL_SIZE = fn(1074).UPLOAD_SMALL_SIZE;
@@ -119,13 +120,17 @@ export default function RoleIconActionSheet(arg0) {
   obj = { title: null };
   let intl = util.intl;
   obj.title = intl.string(util.t.B9grJw);
-  const items2 = [closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), ];
-  obj = { label: null, subLabel: null, onPress: null };
+  const items2 = [closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), , ];
+  obj = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj.label = intl2.string(util.t.royWSB);
+  obj.children = intl2.string(util.t.I3YQeV);
+  items2[1] = closure_7(Text_Text.Text, obj);
+  let obj1 = { label: null, subLabel: null, onPress: null };
   const intl3 = util.intl;
-  obj.subLabel = intl3.string(util.t["mz++Qq"]);
-  obj.onPress = function handleUploadImage() {
+  obj1.label = intl3.string(util.t.royWSB);
+  const intl4 = util.intl;
+  obj1.subLabel = intl4.string(util.t["mz++Qq"]);
+  obj1.onPress = function handleUploadImage() {
     const self = this;
     const apply = closure_2.apply;
     if (typeof apply === "unknown") {
@@ -135,12 +140,12 @@ export default function RoleIconActionSheet(arg0) {
     }
     return applyArgumentsResult;
   };
-  const items3 = [closure_7(TableRow.TableRow, obj), , ];
-  let obj1 = { label: null, onPress: null };
-  const intl4 = util.intl;
-  obj1.label = intl4.string(util.t["/Ny2wZ"]);
-  obj1.onPress = function handleSelectEmoji() {
-    guildId(11153);
+  const items3 = [closure_7(TableRow.TableRow, obj1), , ];
+  let obj2 = { label: null, onPress: null };
+  const intl5 = util.intl;
+  obj2.label = intl5.string(util.t["/Ny2wZ"]);
+  obj2.onPress = function handleSelectEmoji() {
+    guildId(11193);
     let obj = { guildId, pickerIntention: constants.COMMUNITY_CONTENT, onPressEmoji: null };
     guildId = asyncGeneratorStep(async (arg0) => {
       if (c8 === 2) {
@@ -175,25 +180,25 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(17658).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(17658);
+                  closure_0(17717).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(17717);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(17658);
+                const tmp22 = closure_0(17717);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                let obj1 = { value: closure_0(17662).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                let obj1 = { value: closure_0(17721).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj1;
               }
             }
           } else {
             if (1 === tmp7) {
               c6 = 0;
-              obj1 = closure_0(4271);
+              obj1 = closure_0(4302);
               const intl = closure_0(1114).intl;
               obj1.presentError(intl.string(closure_0(1114).t.R0RpRX));
             } else if (arg0 === 1) {
@@ -231,21 +236,21 @@ export default function RoleIconActionSheet(arg0) {
     };
     const result = obj.openEmojiPickerActionSheet(obj, "stack");
   };
-  items3[1] = closure_7(TableRow.TableRow, obj1);
+  items3[1] = closure_7(TableRow.TableRow, obj2);
   let tmp5Result = null;
   if (stateFromStores) {
-    let obj2 = { variant: "danger", label: null, onPress: null };
-    const intl5 = util.intl;
-    obj2.label = intl5.string(util.t["uY+Nk/"]);
-    obj2.onPress = function handleRemoveIcon() {
+    let obj3 = { variant: "danger", label: null, onPress: null };
+    const intl6 = util.intl;
+    obj3.label = intl6.string(util.t["uY+Nk/"]);
+    obj3.onPress = function handleRemoveIcon() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       GuildSettingsRolesActionCreators.updateRoleIcon(roleId, null, null);
     };
-    tmp5Result = closure_7(TableRow.TableRow, obj2);
+    tmp5Result = closure_7(TableRow.TableRow, obj3);
   }
-  let obj3 = { children: null };
+  const obj4 = { children: null };
   items3[2] = tmp5Result;
-  items2[1] = closure_8(TableRowGroup.TableRowGroup, { hasIcons: false, children: items3 });
-  obj3.children = items2;
-  return closure_8(ActionSheet.ActionSheet, obj3);
+  items2[2] = closure_8(TableRowGroup.TableRowGroup, { hasIcons: false, children: items3 });
+  obj4.children = items2;
+  return closure_8(ActionSheet.ActionSheet, obj4);
 };

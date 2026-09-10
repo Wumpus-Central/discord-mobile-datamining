@@ -1,10 +1,10 @@
-// === Module 10085: StageSectionHeader ===
+// === Module 10123: StageSectionHeader ===
 
-// Module 10085 (StageSectionHeader)
+// Module 10123 (StageSectionHeader)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import _modDef7172 from "module_7172" /* 7172 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import _modDef7210 from "module_7210" /* 7210 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { section: { height: 48, paddingHorizontal: 4 }, children: { marginLeft: 12 }, collapseButton: { marginLeft: "auto" }, collapseIcon: null, audience: null };
 createStyles = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createStyles.collapseIcon = createStyles;
@@ -27,7 +27,7 @@ export default function StageSectionHeader(collapsed) {
   const children = collapsed.children;
   ({ label, count, onToggleCollapse } = collapsed);
   const tmp = closure_7();
-  collapsed(4310);
+  collapsed(4341);
   const fn = function y() {
     let obj = timing;
     let str = "0deg";
@@ -40,7 +40,7 @@ export default function StageSectionHeader(collapsed) {
     obj.transform = items;
     return obj;
   };
-  let obj = { withTiming: collapsed(4575).withTiming, collapsed };
+  let obj = { withTiming: collapsed(4606).withTiming, collapsed };
   fn.__closure = obj;
   fn.__workletHash = 13855092771739;
   fn.__initData = __initData;
@@ -50,7 +50,7 @@ export default function StageSectionHeader(collapsed) {
   const obj2 = { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: null };
   let items = [label, " \u2014 ", count];
   obj2.children = items;
-  const items1 = [closure_5(collapsed(4570).Text, obj2), , ];
+  const items1 = [closure_5(collapsed(4601).Text, obj2), , ];
   let tmp5Result = null != children;
   if (tmp5Result) {
     const obj3 = { style: tmp.children, children };
@@ -58,7 +58,7 @@ export default function StageSectionHeader(collapsed) {
   }
   items1[1] = tmp5Result;
   const obj4 = { style: tmp.collapseButton, children: null };
-  const obj5 = { style: animatedStyle, children: closure_6(collapsed(1178).Icon, { source: _modDef7172, style: tmp.collapseIcon }) };
+  const obj5 = { style: animatedStyle, children: closure_6(collapsed(1178).Icon, { source: _modDef7210, style: tmp.collapseIcon }) };
   obj4.children = closure_6(ReanimatedRexportDefault.View, obj5);
   items1[2] = closure_6(closure_4, obj4);
   obj1.children = items1;

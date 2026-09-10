@@ -1,9 +1,9 @@
-// === Module 15820: UserSettingsDesignSystemCoachmark ===
+// === Module 15869: UserSettingsDesignSystemCoachmark ===
 
-// Module 15820 (UserSettingsDesignSystemCoachmark)
-import _modDef5768 from "module_5768" /* 5768 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
-import LayerScope from "LayerScope" /* 7170 */;
+// Module 15869 (UserSettingsDesignSystemCoachmark)
+import _modDef5804 from "module_5804" /* 5804 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7175 */;
+import LayerScope from "LayerScope" /* 7208 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -55,7 +55,7 @@ function Content() {
       gradientColor: null
     };
     obj = { type: "image", src: null, aspectRatio: null };
-    obj = { uri: _modDef5768 };
+    obj = { uri: _modDef5804 };
     obj.src = obj;
     obj.aspectRatio = first5;
     obj.graphic = obj;
@@ -144,7 +144,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_10 = createStyles.createStyles({ container: { paddingTop: 240, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1, padding: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx");

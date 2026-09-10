@@ -1,10 +1,10 @@
-// === Module 12138: ExpandableList ===
+// === Module 12178: ExpandableList ===
 
-// Module 12138 (ExpandableList)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import timingPresets from "timingPresets" /* 4578 */;
-import usePreviousDefault from "usePrevious" /* 8300 */;
+// Module 12178 (ExpandableList)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import timingPresets from "timingPresets" /* 4609 */;
+import usePreviousDefault from "usePrevious" /* 8337 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_9 = createStyles.createStyles({ animatedListContainer: { overflow: "hidden" }, expandCTALabelContainer: { alignItems: "center" } });
 let closure_10 = { code: "function ExpandableListTsx1(){const{expanded,collapsedListHeight,remainingListHeight}=this.__closure;if(expanded&&collapsedListHeight.get()!==0&&remainingListHeight.get()!==0){return collapsedListHeight.get()+remainingListHeight.get();}return collapsedListHeight.get();}" };
 let closure_11 = { code: "function ExpandableListTsx2(){const{collapsedListHeight,withTiming,containerHeight,timingStandard}=this.__closure;if(collapsedListHeight.get()!==0){return{height:withTiming(containerHeight.get(),timingStandard)};}else{return{};}}" };
@@ -65,11 +65,11 @@ export default function ExpandableList(onExpand) {
   if (null == showsExpandCTAOverride) {
     showsExpandCTAOverride = items.length > bound;
   }
-  let obj2 = memo1(4310);
+  let obj2 = memo1(4341);
   sharedValue = obj2.useSharedValue(0);
-  let obj3 = memo1(4310);
+  let obj3 = memo1(4341);
   sharedValue1 = obj3.useSharedValue(0);
-  let obj4 = memo1(4310);
+  let obj4 = memo1(4341);
   class C {
     constructor() {
       if (closure_5) {
@@ -96,7 +96,7 @@ export default function ExpandableList(onExpand) {
   const memo = obj.useMemo(() => memo1.slice(0, bound), items3);
   const items4 = [items, bound];
   memo1 = obj.useMemo(() => memo1.slice(bound, memo1.length), items4);
-  let obj5 = memo1(4310);
+  let obj5 = memo1(4341);
   class A {
     constructor() {
       if (0 !== closure_9.get()) {
@@ -113,7 +113,7 @@ export default function ExpandableList(onExpand) {
       return obj;
     }
   }
-  obj = { collapsedListHeight: sharedValue, withTiming: memo1(4575).withTiming, containerHeight: derivedValue, timingStandard: memo1(4578).timingStandard };
+  obj = { collapsedListHeight: sharedValue, withTiming: memo1(4606).withTiming, containerHeight: derivedValue, timingStandard: memo1(4609).timingStandard };
   A.__closure = obj;
   A.__workletHash = 2086836441465;
   A.__initData = derivedValue;
@@ -188,7 +188,7 @@ export default function ExpandableList(onExpand) {
     }
     obj7 = { children: null };
     const obj8 = { color: "text-brand", variant: "text-md/semibold", children: stringResult1 };
-    obj6.children = tmp16(tmp9(4570).Text, obj8);
+    obj6.children = tmp16(tmp9(4601).Text, obj8);
     obj6 = tmp16(tmp17, obj6);
     obj5.label = obj6;
     obj5.onPress = function onPress() {
@@ -202,7 +202,7 @@ export default function ExpandableList(onExpand) {
         tmp4(obj);
       }
     };
-    obj5 = tmp16(tmp9(5619).TableRow, obj5);
+    obj5 = tmp16(tmp9(5655).TableRow, obj5);
     obj7.children = obj5;
     tmp16Result = tmp16(tmp17, obj7);
   }

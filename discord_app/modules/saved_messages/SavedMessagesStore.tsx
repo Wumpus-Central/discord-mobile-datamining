@@ -1,10 +1,10 @@
-// === Module 11691: SavedMessagesStore ===
+// === Module 11731: SavedMessagesStore ===
 
-// Module 11691 (SavedMessagesStore)
+// Module 11731 (SavedMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7874 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4828 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7911 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -91,7 +91,7 @@ function handleGuild() {
   return tmp;
 }
 let c3 = 10000000000000;
-const secondaryIndexMap = new fn(4208).SecondaryIndexMap((saveData) => {
+const secondaryIndexMap = new fn(4239).SecondaryIndexMap((saveData) => {
   const items = [SavedMessagesTypes.SavedMessageSortTypes.ALL, ];
   if (null != saveData.saveData.dueAt) {
     let BOOKMARK = SavedMessagesTypes.SavedMessageSortTypes.REMINDER;

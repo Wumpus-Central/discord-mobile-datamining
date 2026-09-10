@@ -1,8 +1,8 @@
-// === Module 8483: MethodPathIcon ===
+// === Module 8520: MethodPathIcon ===
 
-// Module 8483 (MethodPathIcon)
+// Module 8520 (MethodPathIcon)
 import nativeDefault from "native" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8484 */;
+import inlineStyles from "inlineStyles" /* 8521 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -10,7 +10,7 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 const createStyles = { container: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg };
 createStyles.container = size;

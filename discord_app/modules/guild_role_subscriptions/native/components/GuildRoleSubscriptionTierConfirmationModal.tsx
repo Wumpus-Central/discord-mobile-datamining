@@ -1,25 +1,25 @@
-// === Module 17800: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 17859: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 17800 (GuildRoleSubscriptionTierConfirmationModal)
+// Module 17859 (GuildRoleSubscriptionTierConfirmationModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import FormHeaderDefault from "FormHeader" /* 9848 */;
-import FormStylesDefault from "FormStyles" /* 13924 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17769 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 17777 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 17801 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import FormHeaderDefault from "FormHeader" /* 9886 */;
+import FormStylesDefault from "FormStyles" /* 13973 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17828 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 17836 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 17860 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 17765 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 17824 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 const createStyles = { description: { paddingHorizontal: 16 }, coverPhotoContainer: { marginHorizontal: 16 }, coverPhoto: null };
 let size = { height: 114, width: "100%", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 createStyles.coverPhoto = size;

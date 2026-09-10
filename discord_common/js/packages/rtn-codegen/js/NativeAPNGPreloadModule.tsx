@@ -1,6 +1,6 @@
-// === Module 16993: NativeAPNGPreloadModule ===
+// === Module 17051: NativeAPNGPreloadModule ===
 
-// Module 16993 (NativeAPNGPreloadModule)
+// Module 17051 (NativeAPNGPreloadModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

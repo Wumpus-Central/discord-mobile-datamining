@@ -1,9 +1,9 @@
-// === Module 16769: ChannelDetailsMoreButton ===
+// === Module 16826: ChannelDetailsMoreButton ===
 
-// Module 16769 (ChannelDetailsMoreButton)
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7880 */;
-import _modDef9832 from "module_9832" /* 9832 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10945 */;
+// Module 16826 (ChannelDetailsMoreButton)
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7917 */;
+import _modDef9870 from "module_9870" /* 9870 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10985 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,9 +21,9 @@ export default function MoreButton(channel) {
       obj = { accessibilityLabel: null, source: null, onPress: null };
       const intl = channel(1114).intl;
       obj.accessibilityLabel = intl.string(channel(1114).t["UKOtz+"]);
-      obj.source = _modDef9832;
+      obj.source = _modDef9870;
       obj.onPress = tmp;
-      obj.children = jsx(channel(7877).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+      obj.children = jsx(channel(7914).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
       tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { accessibilityLabel: null, source: null, onPress: null });
     } else {
       tmp2 = null;

@@ -1,8 +1,8 @@
-// === Module 17174: VoicePanelCTACardCallerDisconnected ===
+// === Module 17233: VoicePanelCTACardCallerDisconnected ===
 
-// Module 17174 (VoicePanelCTACardCallerDisconnected)
+// Module 17233 (VoicePanelCTACardCallerDisconnected)
 import nativeDefault from "native" /* 576 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4726 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4757 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1371 */;
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: null, avatarContainer: null, avatarWrapper: null, avatar: null, disconnectedAvatar: null, textContainer: null, text: null };
 let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.container = size;

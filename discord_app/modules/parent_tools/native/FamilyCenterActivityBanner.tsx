@@ -1,14 +1,14 @@
-// === Module 14904: FamilyCenterActivityBanner ===
+// === Module 14953: FamilyCenterActivityBanner ===
 
-// Module 14904 (FamilyCenterActivityBanner)
+// Module 14953 (FamilyCenterActivityBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useUserLinks from "useUserLinks" /* 8678 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8679 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11950 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14905 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useUserLinks from "useUserLinks" /* 8715 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8716 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11990 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14954 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,9 +34,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ container: { width: "100%" } });
-fn(4574);
+fn(4605);
 createStyles = { container: null, art: null, header: null, description: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 };
 createStyles.container = createStyles;
@@ -64,7 +64,7 @@ export default function FamilyCenterActivityBanner() {
   obj = { style: tmp4.container, children: null };
   obj = { source: null, style: null };
   const ageSpecificText1 = obj2.useAgeSpecificText(intl3.format(_modDef2396.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2396.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
-  obj.source = importDefault(tmp3 ? 14912 : 14913);
+  obj.source = importDefault(tmp3 ? 14961 : 14962);
   obj.style = tmp4.art;
   const items = [hasOwnProperty(React4, obj), , , ];
   obj1 = { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText };

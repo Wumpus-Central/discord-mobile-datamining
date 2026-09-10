@@ -1,13 +1,13 @@
-// === Module 12730: ContactSyncInviteFriends ===
+// === Module 12770: ContactSyncInviteFriends ===
 
-// Module 12730 (ContactSyncInviteFriends)
+// Module 12770 (ContactSyncInviteFriends)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import UserUtilsDefault from "UserUtils" /* 4418 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import showShareActionSheet from "showShareActionSheet" /* 8389 */;
-import _modDef12731 from "module_12731" /* 12731 */;
+import UserUtilsDefault from "UserUtils" /* 4449 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import showShareActionSheet from "showShareActionSheet" /* 8426 */;
+import _modDef12771 from "module_12771" /* 12771 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -17,7 +17,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, art: { marginBottom: 16 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center" }, button: null };
 createStyles = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 createStyles.button = createStyles;
@@ -32,7 +32,7 @@ export default function ContactSyncInviteFriends() {
   _require = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj = { children: null };
   obj = { style: tmp.container, children: null };
-  const obj1 = { style: tmp.art, source: _modDef12731 };
+  const obj1 = { style: tmp.art, source: _modDef12771 };
   const items1 = [closure_7(FastImageDefault, obj1), , ];
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = require("util").intl;

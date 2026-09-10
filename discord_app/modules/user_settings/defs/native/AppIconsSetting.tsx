@@ -1,13 +1,13 @@
-// === Module 15554: AppIconsSetting ===
+// === Module 15603: AppIconsSetting ===
 
-// Module 15554 (AppIconsSetting)
+// Module 15603 (AppIconsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import AppIconUtils from "AppIconUtils" /* 13390 */;
-import SettingsItemAppIconDefault from "SettingsItemAppIcon" /* 15555 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14748 */;
-import SettingBuilders from "SettingBuilders" /* 11500 */;
+import AppIconUtils from "AppIconUtils" /* 13439 */;
+import SettingsItemAppIconDefault from "SettingsItemAppIcon" /* 15604 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14797 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const dismissibleBadgeRouteProps = DismissibleBadgeUtils.createDismissibleBadgeRouteProps(dismissible_content.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE);

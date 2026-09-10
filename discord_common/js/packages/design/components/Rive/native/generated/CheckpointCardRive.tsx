@@ -1,8 +1,8 @@
-// === Module 4368: CheckpointCardRive ===
+// === Module 4399: CheckpointCardRive ===
 
-// Module 4368 (CheckpointCardRive)
-import BaseRive from "BaseRive" /* 4304 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4359 */;
+// Module 4399 (CheckpointCardRive)
+import BaseRive from "BaseRive" /* 4335 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4390 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

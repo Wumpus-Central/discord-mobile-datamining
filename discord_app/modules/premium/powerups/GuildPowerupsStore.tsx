@@ -1,6 +1,6 @@
-// === Module 4463: GuildPowerupsStore ===
+// === Module 4494: GuildPowerupsStore ===
 
-// Module 4463 (GuildPowerupsStore)
+// Module 4494 (GuildPowerupsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -68,7 +68,7 @@ function calculateAppliedBoosts(guildId) {
   }
   return sum;
 }
-const GuildPowerupsConstants = fn(4464);
+const GuildPowerupsConstants = fn(4495);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_PURCHASABLE_FEATURES: c2, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: c3 } = GuildPowerupsConstants);
 const Constants = fn(1074);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4, BoostedGuildTiers: hasOwnProperty, GuildFeatures: metroRequire } = Constants);

@@ -1,22 +1,22 @@
-// === Module 5152: utils/UploadUtils ===
+// === Module 5188: utils/UploadUtils ===
 
-// Module 5152 (utils/UploadUtils)
+// Module 5188 (utils/UploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1152 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
-import Upload from "Upload" /* 5142 */;
-import UploadUtils from "UploadUtils" /* 5143 */;
-import FileUtils from "FileUtils" /* 5148 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5153 */;
-import ImageConversionDecision from "ImageConversionDecision" /* 5173 */;
-import VideoUploadUtils from "VideoUploadUtils" /* 5175 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 5182 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
+import Upload from "Upload" /* 5178 */;
+import UploadUtils from "UploadUtils" /* 5179 */;
+import FileUtils from "FileUtils" /* 5184 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5189 */;
+import ImageConversionDecision from "ImageConversionDecision" /* 5209 */;
+import VideoUploadUtils from "VideoUploadUtils" /* 5211 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 5218 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
-import NetworkStore from "NetworkStore" /* 4623 */;
+import NetworkStore from "NetworkStore" /* 4654 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -1263,7 +1263,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      const obj4 = { uri, overrideType: "a" };
+                      const obj4 = { uri, overrideType: "Array" };
                       isVideo2 = UploadUtils.getFile(obj4).isVideo;
                       const tmp12Result3 = UploadUtils;
                     }
@@ -1281,7 +1281,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj5 = { uri, overrideType: "a" };
+                  const obj5 = { uri, overrideType: "Array" };
                   isVideo = UploadUtils.getFile(obj5).isVideo;
                   const tmp12Result5 = UploadUtils;
                 }
@@ -1993,7 +1993,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
           } else {
             tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
           }
-          tmpResult = closure_1_0(5173);
+          tmpResult = closure_1_0(5209);
         }
         const obj = closure_1_0(1115);
       })(closure_131_0, closure_131_1)) {
@@ -2470,7 +2470,7 @@ let UnsyncedUserSettingsStore = fn(1185);
 const Constants = fn(1074);
 ({ Base64PNGPrefix: map1, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_15, CompressionQuality: closure_16, Base64WEBPPrefix: closure_17, Base64AVIFPrefix: closure_18, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(4784).NativePermissionTypes;
+const NativePermissionTypes = fn(4815).NativePermissionTypes;
 let closure_20 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2549,8 +2549,8 @@ export const getFileSize = function getFileSize(uri) {
 };
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(5173).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(5173).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(5209).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(5209).shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

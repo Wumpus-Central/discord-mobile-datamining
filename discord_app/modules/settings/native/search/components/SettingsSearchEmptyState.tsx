@@ -1,18 +1,18 @@
-// === Module 14730: SettingsSearchEmptyState ===
+// === Module 14779: SettingsSearchEmptyState ===
 
-// Module 14730 (SettingsSearchEmptyState)
+// Module 14779 (SettingsSearchEmptyState)
 import util from "util" /* 1114 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4285 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Stack_Stack from "Stack/Stack" /* 4987 */;
-import NoResultsAlt from "NoResultsAlt" /* 9792 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4316 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Stack_Stack from "Stack/Stack" /* 5023 */;
+import NoResultsAlt from "NoResultsAlt" /* 9830 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles({ container: { paddingTop: 24, justifyContent: "center", alignItems: "center" }, textContainer: { marginTop: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/search/components/SettingsSearchEmptyState.tsx");

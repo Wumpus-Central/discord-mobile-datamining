@@ -1,14 +1,14 @@
-// === Module 14927: FamilyCenterTopServersBottomSheet ===
+// === Module 14976: FamilyCenterTopServersBottomSheet ===
 
-// Module 14927 (FamilyCenterTopServersBottomSheet)
+// Module 14976 (FamilyCenterTopServersBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import GuildIconDefault from "GuildIcon" /* 5598 */;
-import TableRowGroup from "TableRowGroup" /* 5701 */;
-import ActionSheet from "ActionSheet" /* 7211 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import GuildIconDefault from "GuildIcon" /* 5634 */;
+import TableRowGroup from "TableRowGroup" /* 5737 */;
+import ActionSheet from "ActionSheet" /* 7249 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7589 */;
 
 require = fn;
 function GuildRow(guildActivity) {
@@ -19,17 +19,17 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7607).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(7644).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     obj = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     obj = { guild: stateFromStores, style: tmp.guildIcon };
     obj.icon = closure_4(GuildIconDefault, obj);
-    return closure_4(tmp2(5619).TableRow, obj);
+    return closure_4(tmp2(5655).TableRow, obj);
   }
   tmp = closure_6();
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { header: { textAlign: "center" }, guildIcon: null };
 createStyles = { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.guildIcon = createStyles;

@@ -1,9 +1,9 @@
-// === Module 8215: DisplayProfile ===
+// === Module 8252: DisplayProfile ===
 
-// Module 8215 (DisplayProfile)
+// Module 8252 (DisplayProfile)
 import PremiumConstants from "PremiumConstants" /* 1373 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8192 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8229 */;
 import size from "module_2" /* 2 */;
 
 const PremiumTypes = PremiumConstants.PremiumTypes;

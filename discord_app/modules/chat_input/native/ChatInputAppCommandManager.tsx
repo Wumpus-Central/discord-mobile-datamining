@@ -1,16 +1,16 @@
-// === Module 12435: ChatInputAppCommandManager ===
+// === Module 12475: ChatInputAppCommandManager ===
 
-// Module 12435 (ChatInputAppCommandManager)
+// Module 12475 (ChatInputAppCommandManager)
 import nativeDefault from "native" /* 576 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 5125 */;
-import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12021 */;
-import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 12436 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 5161 */;
+import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12061 */;
+import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 12476 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7793 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7794 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7830 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7831 */;
 import GameStore from "GameStore" /* 1916 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5122 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5158 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -38,9 +38,9 @@ function areResolvedGamesEqual(size, size2) {
     return false;
   }
 }
-const ChannelAutocompleteConstants = fn(5014);
+const ChannelAutocompleteConstants = fn(5050);
 ({ extractGameMentionIds: closure_11, GAME_MENTION_RAW_RE_GLOBAL: closure_12, GAME_MENTION_SENTINEL: map1 } = ChannelAutocompleteConstants);
-fn(4574);
+fn(4605);
 let obj = { commandOption: null, commandErrorOption: null, gameMention: null, timestampMention: null, autocomplete: null };
 obj = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.xs, fontSize: 14 };
 obj.commandOption = obj;

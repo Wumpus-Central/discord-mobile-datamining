@@ -1,9 +1,9 @@
-// === Module 6243: MagnifyingGlassSpotIllustration ===
+// === Module 6279: MagnifyingGlassSpotIllustration ===
 
-// Module 6243 (MagnifyingGlassSpotIllustration)
+// Module 6279 (MagnifyingGlassSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6244 from "module_6244" /* 6244 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6280 from "module_6280" /* 6280 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const MagnifyingGlassSpotIllustration = function MagnifyingGlassSpotIllus
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6244 };
+  obj = { uri: _modDef6280 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const MagnifyingGlassSpotIllustration = function MagnifyingGlassSpotIllus
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6244 });
+  return jsx(FastImageDefault, { uri: _modDef6280 });
 };

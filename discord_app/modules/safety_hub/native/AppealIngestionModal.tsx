@@ -1,24 +1,24 @@
-// === Module 11917: AppealIngestionModal ===
+// === Module 11957: AppealIngestionModal ===
 
-// Module 11917 (AppealIngestionModal)
+// Module 11957 (AppealIngestionModal)
 import nativeDefault from "native" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import NavigatorHeader from "NavigatorHeader" /* 5638 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11916 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import NavigatorHeader from "NavigatorHeader" /* 5674 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11956 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8458 */;
+import SafetyHubStore from "SafetyHubStore" /* 8495 */;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8447);
+const SafetyHubConstants = fn(8484);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, headerContainer: null, header: null, subheader: null, separator: null, footerContainer: null, footerText: null, footerButton: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -284,7 +284,7 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
               v2("");
               v2 = 2;
               c5 = 1;
-              let obj1 = { value: tmp27(11912).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
+              let obj1 = { value: tmp27(11952).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
               return obj1;
             }
           }
@@ -292,7 +292,7 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_0 = tmp27;
-            obj1 = safetyHubAppealSignal(8446);
+            obj1 = safetyHubAppealSignal(8483);
             const body = closure_128_0.body;
             let code;
             if (body != null) {

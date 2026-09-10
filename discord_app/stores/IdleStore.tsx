@@ -1,14 +1,14 @@
-// === Module 5424: IdleStore ===
+// === Module 5460: IdleStore ===
 
-// Module 5424 (IdleStore)
+// Module 5460 (IdleStore)
 import initializeDefault from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import DiscordNativeDefault from "DiscordNative" /* 4195 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5425 */;
+import DiscordNativeDefault from "DiscordNative" /* 4225 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5461 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -65,7 +65,7 @@ function checkIdleAFK() {
 }
 const Constants = fn(1074);
 ({ IDLE_DURATION: hasOwnProperty, AppStates: metroRequire } = Constants);
-const SpeakingFlags = fn(4599).SpeakingFlags;
+const SpeakingFlags = fn(4630).SpeakingFlags;
 const idleSince = Date.now();
 let idle = false;
 let afk = false;

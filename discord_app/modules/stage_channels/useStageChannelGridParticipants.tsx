@@ -1,13 +1,13 @@
-// === Module 10103: useStageChannelGridParticipants ===
+// === Module 10141: useStageChannelGridParticipants ===
 
-// Module 10103 (useStageChannelGridParticipants)
+// Module 10141 (useStageChannelGridParticipants)
 import _mod12 from "module_12" /* 12 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5439 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5445 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5475 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5481 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5432 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5468 */;
 
 require = fn;
 const constants = { SELECTED: 0, [0]: "SELECTED", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE", MEDIA: 3, [3]: "MEDIA" };

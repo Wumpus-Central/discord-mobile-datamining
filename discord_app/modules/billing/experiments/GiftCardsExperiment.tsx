@@ -1,6 +1,6 @@
-// === Module 7401: GiftCardsExperiment ===
+// === Module 7439: GiftCardsExperiment ===
 
-// Module 7401 (GiftCardsExperiment)
+// Module 7439 (GiftCardsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

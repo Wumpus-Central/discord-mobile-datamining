@@ -1,20 +1,20 @@
-// === Module 11107: PremiumGiftingGoGoSuccessActions ===
+// === Module 11147: PremiumGiftingGoGoSuccessActions ===
 
-// Module 11107 (PremiumGiftingGoGoSuccessActions)
+// Module 11147 (PremiumGiftingGoGoSuccessActions)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
-import showShareActionSheet from "showShareActionSheet" /* 8389 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10694 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7593 */;
+import showShareActionSheet from "showShareActionSheet" /* 8426 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10732 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10697 */;
+import PromotionsStore from "PromotionsStore" /* 10735 */;
 
 require = fn;
 const AnalyticsSections = fn(1074).AnalyticsSections;
 let closure_6 = fn(1076).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_10 = createStyles.createStyles(() => {
   let obj = { promoDetails: null };
   obj = { marginBottom: nativeDefault.space.PX_6, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };

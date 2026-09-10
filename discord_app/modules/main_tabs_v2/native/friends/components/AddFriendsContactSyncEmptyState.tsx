@@ -1,13 +1,13 @@
-// === Module 16812: AddFriendsContactSyncEmptyState ===
+// === Module 16869: AddFriendsContactSyncEmptyState ===
 
-// Module 16812 (AddFriendsContactSyncEmptyState)
+// Module 16869 (AddFriendsContactSyncEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12706 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12710 */;
-import _modDef12723 from "module_12723" /* 12723 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12746 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12750 */;
+import _modDef12763 from "module_12763" /* 12763 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { content: null, headerImage: null, title: null, subtitle: null, subtitleText: null, trailing: null };
 createStyles = { alignItems: "center", marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg };
 createStyles.content = createStyles;
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/c
 export default function AddFriendsContactSyncEmptyState() {
   const tmp = closure_7();
   let obj = { style: tmp.content, children: null };
-  obj = { resizeMode: "contain", style: tmp.headerImage, source: _modDef12723 };
+  obj = { resizeMode: "contain", style: tmp.headerImage, source: _modDef12763 };
   const items = [hasOwnProperty(React4, obj), , , ];
   obj = { style: tmp.title, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

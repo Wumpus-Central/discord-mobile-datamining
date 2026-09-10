@@ -1,17 +1,17 @@
-// === Module 10849: SocialLayerStorefrontBadges ===
+// === Module 10887: SocialLayerStorefrontBadges ===
 
-// Module 10849 (SocialLayerStorefrontBadges)
+// Module 10887 (SocialLayerStorefrontBadges)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import ClydeIcon from "ClydeIcon" /* 10850 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import ClydeIcon from "ClydeIcon" /* 10888 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { exclusiveBadge: null, exclusiveBadgeText: null };
 createStyles = { flexDirection: "row", alignItems: "center", textAlignVertical: "center", alignSelf: "flex-start", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 createStyles.exclusiveBadge = createStyles;

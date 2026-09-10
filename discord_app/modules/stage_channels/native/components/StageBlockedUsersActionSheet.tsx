@@ -1,16 +1,16 @@
-// === Module 8651: StageBlockedUsersActionSheet ===
+// === Module 8688: StageBlockedUsersActionSheet ===
 
-// Module 8651 (StageBlockedUsersActionSheet)
+// Module 8688 (StageBlockedUsersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5435 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5471 */;
 
 require = fn;
 function RestrictedUser(guildId) {
@@ -44,7 +44,7 @@ function RestrictedUser(guildId) {
     const obj2 = { style: null, children: null };
     const items3 = [tmp.iconContainer];
     obj2.style = items3;
-    const obj3 = { style: tmp.icon, source: user(8652), color: user(576).unsafe_rawColors.WHITE };
+    const obj3 = { style: tmp.icon, source: user(8689), color: user(576).unsafe_rawColors.WHITE };
     obj2.children = closure_9(native.Icon, obj3);
     speaker = closure_9(View, obj2);
   }
@@ -139,10 +139,10 @@ function StageBlockedUsersActionSheetHeader(arg0) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(5428).STAGE_BLOCKED_USERS_SHEET_KEY;
+let closure_8 = fn(5464).STAGE_BLOCKED_USERS_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { paddingHorizontal: 16 }, header: { padding: 16 }, title: { marginTop: 16, marginBottom: 8, textAlign: "center" }, description: { textAlign: "center", marginBottom: 16 }, buttons: null, userContainer: null, avatarContainer: null, avatar: null, iconContainer: null, icon: null, flex: null, blocked: null, ignored: null };
 createStyles = { width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16, paddingVertical: 8 };
 createStyles.buttons = createStyles;
@@ -167,9 +167,9 @@ export default function StageBlockedUsersActionSheet(channel) {
   const tmp = closure_11();
   const tmp2 = items1(noop.useState(0), 2);
   dependencyMap = tmp2[1];
-  let obj = channel(8653);
+  let obj = channel(8690);
   const stageBlockedUsers = obj.useStageBlockedUsers(channel.id);
-  let obj1 = channel(8653);
+  let obj1 = channel(8690);
   const stageIgnoredUsers = obj1.useStageIgnoredUsers(channel.id);
   const callback = noop.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.height);
@@ -182,20 +182,20 @@ export default function StageBlockedUsersActionSheet(channel) {
     onAccept(channel);
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_8);
   };
-  const items = [closure_9(channel(4989).Button, obj), ];
+  const items = [closure_9(channel(5025).Button, obj), ];
   obj1 = { variant: "secondary", text: null, onPress: null };
   const intl2 = channel(1114).intl;
   obj1.text = intl2.string(channel(1114).t.CZGqeT);
   obj1.onPress = function handleDismiss() {
-    onAccept(4541).hideActionSheet(closure_1_8);
+    onAccept(4572).hideActionSheet(closure_1_8);
   };
-  items[1] = closure_9(channel(4989).Button, obj1);
+  items[1] = closure_9(channel(5025).Button, obj1);
   obj.children = items;
   items1 = [];
   HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
-  const obj2 = { scrollable: true, header: closure_9(StageBlockedUsersActionSheetHeader, { blockedUserCount: stageBlockedUsers.length, ignoredUserCount: stageIgnoredUsers.length }), footer: closure_10(channel(7137).SafeAreaPaddingView, obj), children: null };
+  const obj2 = { scrollable: true, header: closure_9(StageBlockedUsersActionSheetHeader, { blockedUserCount: stageBlockedUsers.length, ignoredUserCount: stageIgnoredUsers.length }), footer: closure_10(channel(7175).SafeAreaPaddingView, obj), children: null };
   const obj3 = { inActionSheet: true, contentContainerStyle: tmp.container, accessibilityLabel: null, sections: null, renderItem: null, itemSize: null };
-  const tmp4 = closure_10(channel(7137).SafeAreaPaddingView, obj);
+  const tmp4 = closure_10(channel(7175).SafeAreaPaddingView, obj);
   const intl3 = channel(1114).intl;
   obj3.accessibilityLabel = intl3.string(channel(1114).t["3VoRLH"]);
   const items2 = [items1.length];
@@ -206,7 +206,7 @@ export default function StageBlockedUsersActionSheet(channel) {
   obj3.itemSize = function itemSize() {
     return 48;
   };
-  const items3 = [closure_9(onAccept(7086), obj3), closure_9(View, { style: { height: tmp2[0] } })];
+  const items3 = [closure_9(onAccept(7124), obj3), closure_9(View, { style: { height: tmp2[0] } })];
   obj2.children = items3;
-  return closure_10(channel(7164).BottomSheet, obj2);
+  return closure_10(channel(7202).BottomSheet, obj2);
 };

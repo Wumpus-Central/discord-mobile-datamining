@@ -1,7 +1,7 @@
-// === Module 7836: BurstReactionEffectUtils ===
+// === Module 7873: BurstReactionEffectUtils ===
 
-// Module 7836 (BurstReactionEffectUtils)
-import ColorUtils from "ColorUtils" /* 4423 */;
+// Module 7873 (BurstReactionEffectUtils)
+import ColorUtils from "ColorUtils" /* 4454 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

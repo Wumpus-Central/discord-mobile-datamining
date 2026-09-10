@@ -1,17 +1,17 @@
-// === Module 7197: GuildOnboardingCompleted ===
+// === Module 7235: GuildOnboardingCompleted ===
 
-// Module 7197 (GuildOnboardingCompleted)
+// Module 7235 (GuildOnboardingCompleted)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import UserProfileRolesCard from "UserProfileRolesCard" /* 7199 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import UserProfileRolesCard from "UserProfileRolesCard" /* 7237 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7114 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7152 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 400;
-fn(4574);
+fn(4605);
 let createStyles = { screen: { flex: 1, position: "relative" }, container: { backgroundColor: "rgba(0, 0, 0, 0.5)", paddingHorizontal: 24, display: "flex", justifyContent: "center", flexGrow: 1 }, containerWithoutSplash: null, backgroundImage: null, title: null, subtitle: null, card: null, username: null, rolesHeader: null, roles: null, role: null, roleOverflow: null, animation: null, wave: null, animationText: null, getStartedButton: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.containerWithoutSplash = createStyles;

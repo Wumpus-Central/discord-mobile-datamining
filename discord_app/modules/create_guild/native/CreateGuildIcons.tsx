@@ -1,17 +1,17 @@
-// === Module 12741: CreateGuildIcons ===
+// === Module 12781: CreateGuildIcons ===
 
-// Module 12741 (CreateGuildIcons)
-import native from "native" /* 5706 */;
-import _modDef12356 from "module_12356" /* 12356 */;
-import _modDef12357 from "module_12357" /* 12357 */;
-import _modDef12358 from "module_12358" /* 12358 */;
-import _modDef12359 from "module_12359" /* 12359 */;
-import _modDef12360 from "module_12360" /* 12360 */;
-import _modDef12361 from "module_12361" /* 12361 */;
-import _modDef12362 from "module_12362" /* 12362 */;
+// Module 12781 (CreateGuildIcons)
+import native from "native" /* 5742 */;
+import _modDef12396 from "module_12396" /* 12396 */;
+import _modDef12397 from "module_12397" /* 12397 */;
+import _modDef12398 from "module_12398" /* 12398 */;
+import _modDef12399 from "module_12399" /* 12399 */;
+import _modDef12400 from "module_12400" /* 12400 */;
+import _modDef12401 from "module_12401" /* 12401 */;
+import _modDef12402 from "module_12402" /* 12402 */;
 import size from "module_2" /* 2 */;
 
-let obj = { CREATE: _modDef12356, GAMING: _modDef12360, FRIENDS: _modDef12358, STUDY: _modDef12359, CLUBS: _modDef12361, CREATORS: _modDef12362, LOCAL_COMMUNITY: _modDef12357, SCHOOL_CLUB: _modDef12361 };
+let obj = { CREATE: _modDef12396, GAMING: _modDef12400, FRIENDS: _modDef12398, STUDY: _modDef12399, CLUBS: _modDef12401, CREATORS: _modDef12402, LOCAL_COMMUNITY: _modDef12397, SCHOOL_CLUB: _modDef12401 };
 obj = { CREATE: native.PencilIllocon, GAMING: native.ControllerIllocon, FRIENDS: native.HeartIllocon, STUDY: native.AppleIllocon, CLUBS: native.BookIllocon, CREATORS: native.PaintIllocon, LOCAL_COMMUNITY: native.LeafIllocon, SCHOOL_CLUB: native.BookIllocon };
 const result = size.fileFinishedImporting("modules/create_guild/native/CreateGuildIcons.tsx");
 

@@ -1,16 +1,16 @@
-// === Module 9452: ApplicationEducation ===
+// === Module 9490: ApplicationEducation ===
 
-// Module 9452 (ApplicationEducation)
+// Module 9490 (ApplicationEducation)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import FriendsIcon from "FriendsIcon" /* 4273 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import SettingsIcon from "SettingsIcon" /* 7394 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8367 */;
-import GameControllerIcon from "GameControllerIcon" /* 9255 */;
-import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9275 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 9453 */;
-import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 9455 */;
+import FriendsIcon from "FriendsIcon" /* 4304 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import SettingsIcon from "SettingsIcon" /* 7432 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8404 */;
+import GameControllerIcon from "GameControllerIcon" /* 9292 */;
+import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9312 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 9491 */;
+import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 9493 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ const View = fn(17).View;
 const MAX_FRIENDS = fn(1074).MAX_FRIENDS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 const createStyles = { applicationEducation: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 12 }, entryText: { flex: 1 }, entryIcon: null };
 let size = { width: 20, height: 20, tintColor: nativeDefault.colors.TEXT_MUTED };
 createStyles.entryIcon = size;

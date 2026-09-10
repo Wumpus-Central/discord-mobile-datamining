@@ -1,6 +1,6 @@
-// === Module 10456: channel_text_area/ChannelAutocompleteConstants ===
+// === Module 10494: channel_text_area/ChannelAutocompleteConstants ===
 
-// Module 10456 (channel_text_area/ChannelAutocompleteConstants)
+// Module 10494 (channel_text_area/ChannelAutocompleteConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteConstants.tsx");

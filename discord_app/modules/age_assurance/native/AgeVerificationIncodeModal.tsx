@@ -1,13 +1,13 @@
-// === Module 8443: AgeVerificationIncodeModal ===
+// === Module 8480: AgeVerificationIncodeModal ===
 
-// Module 8443 (AgeVerificationIncodeModal)
+// Module 8480 (AgeVerificationIncodeModal)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 let jsx = fn(21).jsx;
 const constants = { METHOD_SELECT: "METHOD_SELECT", VERIFY_AGE: "VERIFY_AGE" };
-fn(4574);
+fn(4605);
 let createStyles = { headerStyle: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
 createStyles.headerStyle = createStyles;

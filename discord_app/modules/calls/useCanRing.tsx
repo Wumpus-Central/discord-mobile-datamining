@@ -1,19 +1,19 @@
-// === Module 9206: useCanRing ===
+// === Module 9243: useCanRing ===
 
-// Module 9206 (useCanRing)
-import useChannelRoleSubscriptionStatusDefault from "useChannelRoleSubscriptionStatus" /* 5021 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5430 */;
+// Module 9243 (useCanRing)
+import useChannelRoleSubscriptionStatusDefault from "useChannelRoleSubscriptionStatus" /* 5057 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5466 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5292 */;
+import CallStore from "CallStore" /* 5328 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5427 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import PresenceStore from "PresenceStore" /* 4614 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
-import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5463 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import PresenceStore from "PresenceStore" /* 4645 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
+import VoiceStateStore from "VoiceStateStore" /* 4624 */;
 
-const GuildVoiceRingingExperimentDefault = tmp4(9207);
+const GuildVoiceRingingExperimentDefault = tmp4(9244);
 const require = fn;
 function useCanRingToGuildVoiceChannel(user) {
   _require = user;

@@ -1,10 +1,10 @@
-// === Module 13822: OngoingCallStatusLabel ===
+// === Module 13871: OngoingCallStatusLabel ===
 
-// Module 13822 (OngoingCallStatusLabel)
+// Module 13871 (OngoingCallStatusLabel)
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5292 */;
-import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import CallStore from "CallStore" /* 5328 */;
+import VoiceStateStore from "VoiceStateStore" /* 4624 */;
 
 const require = fn;
 const jsx = fn(21).jsx;

@@ -1,8 +1,8 @@
-// === Module 14798: useSafetyHubLoading ===
+// === Module 14847: useSafetyHubLoading ===
 
-// Module 14798 (useSafetyHubLoading)
+// Module 14847 (useSafetyHubLoading)
 import initialize from "initialize" /* 504 */;
-import SafetyHubStore from "SafetyHubStore" /* 8458 */;
+import SafetyHubStore from "SafetyHubStore" /* 8495 */;
 
 require = fn;
 const size = fn(2);

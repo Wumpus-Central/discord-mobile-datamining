@@ -1,14 +1,14 @@
-// === Module 12221: AppLauncherChannelListActionSheet ===
+// === Module 12261: AppLauncherChannelListActionSheet ===
 
-// Module 12221 (AppLauncherChannelListActionSheet)
+// Module 12261 (AppLauncherChannelListActionSheet)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useChannelNameDefault from "useChannelName" /* 4727 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
-import TextIcon3 from "TextIcon" /* 5094 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5456 */;
-import TableRow from "TableRow" /* 5619 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12209 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useChannelNameDefault from "useChannelName" /* 4758 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5078 */;
+import TextIcon3 from "TextIcon" /* 5130 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5492 */;
+import TableRow from "TableRow" /* 5655 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12249 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -55,7 +55,7 @@ function ChannelListItem(arg0) {
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
-fn(4574);
+fn(4605);
 let createStyles = { channelIconWrapper: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 createStyles.channelIconWrapper = createStyles;

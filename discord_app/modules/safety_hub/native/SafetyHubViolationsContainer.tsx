@@ -1,22 +1,22 @@
-// === Module 14802: SafetyHubViolationsContainer ===
+// === Module 14851: SafetyHubViolationsContainer ===
 
-// Module 14802 (SafetyHubViolationsContainer)
+// Module 14851 (SafetyHubViolationsContainer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8446 */;
-import SafetyHubModels from "SafetyHubModels" /* 8448 */;
-import WarningIcon from "WarningIcon" /* 8621 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9082 */;
-import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 11185 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11911 */;
-import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 13600 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8483 */;
+import SafetyHubModels from "SafetyHubModels" /* 8485 */;
+import WarningIcon from "WarningIcon" /* 8658 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9119 */;
+import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 11225 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11951 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 13649 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8458 */;
+import SafetyHubStore from "SafetyHubStore" /* 8495 */;
 
 require = fn;
 function SafetyHubViolationsHeader(count) {
@@ -172,7 +172,7 @@ function ClassificationDetail(classification) {
   obj = {
     onPress() {
       const obj = { classificationId: id, source: React6.StandingTab };
-      obj.pushLazy(asyncRequireImpl(11909, dependencyMap.paths), obj);
+      obj.pushLazy(asyncRequireImpl(11949, dependencyMap.paths), obj);
     },
     children: null
   };
@@ -336,12 +336,12 @@ class SafetyHubViolationsContainer {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8447);
+const SafetyHubConstants = fn(8484);
 ({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: closure_9 } = SafetyHubConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { connectedContainer: null, container: null, header: null, detailContainerOuter: null, detailContainerOuterNew: null, detailContainerInner: null, iconBackground: null, chevron: null, incidentDate: null, incidentDateNew: null, newText: null, emptyState: null, separator: null, moreButtonContainer: null, moreButton: null, headerTextContainer: null };
 createStyles = { display: "flex", marginTop: nativeDefault.space.PX_12, marginBottom: 36, gap: nativeDefault.space.PX_12 };
 createStyles.connectedContainer = createStyles;

@@ -1,8 +1,8 @@
-// === Module 16970: BogoPromotionActionSheet ===
+// === Module 17027: BogoPromotionActionSheet ===
 
-// Module 16970 (BogoPromotionActionSheet)
+// Module 17027 (BogoPromotionActionSheet)
 import nativeDefault from "native" /* 576 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7436 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7474 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -13,7 +13,7 @@ const Constants = fn(1074);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, buttonContainer: null, header: null, subheader: null, image: null };
 createStyles = { dipslay: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, marginBottom: nativeDefault.space.PX_24 };
 createStyles.container = createStyles;
@@ -31,7 +31,7 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   let analyticsLocations;
   const tmp = closure_14();
-  analyticsLocations = analyticsLocations(7176)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7214)().analyticsLocations;
   const items = [analyticsLocations, markAsDismissed];
   const items1 = [markAsDismissed];
   const callback = noop.useCallback(() => {
@@ -49,20 +49,20 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   const items2 = [tmp.container];
   obj.style = items2;
   obj = { source: { uri: "https://cdn.discordapp.com/assets/content/a59aed2e0e61a955dc3e0f4f6f7ab295e39f89a93c4f01e4bd84ed7fb418ec63.png" }, style: tmp.image };
-  const items3 = [closure_12(analyticsLocations(5601), obj), , , ];
+  const items3 = [closure_12(analyticsLocations(5637), obj), , , ];
   const obj1 = { style: null, color: "mobile-text-heading-primary", variant: "heading-xl/bold", children: null };
   const items4 = [tmp.header];
   obj1.style = items4;
   const intl = markAsDismissed(1114).intl;
   obj1.children = intl.string(markAsDismissed(1114).t["6Jjfk8"]);
-  items3[1] = closure_12(markAsDismissed(4570).Text, obj1);
+  items3[1] = closure_12(markAsDismissed(4601).Text, obj1);
   const obj2 = { style: null, color: "text-subtle", variant: "text-md/medium", children: null };
   const items5 = [tmp.subheader];
   obj2.style = items5;
   const intl2 = markAsDismissed(1114).intl;
   const obj3 = { helpCenterLink: analyticsLocations(2024).getArticleURL(SUMMER_BOGO_2025.SUMMER_BOGO_2025) };
   obj2.children = intl2.format(markAsDismissed(1114).t.y7lJK6, obj3);
-  items3[2] = closure_12(markAsDismissed(4570).Text, obj2);
+  items3[2] = closure_12(markAsDismissed(4601).Text, obj2);
   const obj4 = { style: null, children: null };
   const items6 = [tmp.buttonContainer];
   obj4.style = items6;
@@ -71,9 +71,9 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1114).intl;
   obj5.text = intl3.string(markAsDismissed(1114).t.J61px0);
   obj5.onPress = callback;
-  obj4.children = closure_12(analyticsLocations(10002), obj5);
+  obj4.children = closure_12(analyticsLocations(10040), obj5);
   items3[3] = closure_12(View, obj4);
   obj.children = items3;
   obj.children = closure_13(View, obj);
-  return closure_12(markAsDismissed(7164).BottomSheet, obj);
+  return closure_12(markAsDismissed(7202).BottomSheet, obj);
 };

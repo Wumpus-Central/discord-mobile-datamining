@@ -1,6 +1,6 @@
-// === Module 11223: BadgeIconSvg ===
+// === Module 11263: BadgeIconSvg ===
 
-// Module 11223 (BadgeIconSvg)
+// Module 11263 (BadgeIconSvg)
 import BackoffDefault from "Backoff" /* 559 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import size from "module_2" /* 2 */;

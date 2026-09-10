@@ -1,52 +1,52 @@
-// === Module 10946: ChannelLongPressActionSheet ===
+// === Module 10986: ChannelLongPressActionSheet ===
 
-// Module 10946 (ChannelLongPressActionSheet)
+// Module 10986 (ChannelLongPressActionSheet)
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
-import ToastUtils from "ToastUtils" /* 4271 */;
-import RootNavigationRef from "RootNavigationRef" /* 4432 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
-import useChannelName from "useChannelName" /* 4727 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5534 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7124 */;
-import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7127 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7128 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7133 */;
-import ClipboardUtils from "ClipboardUtils" /* 7203 */;
-import ActionSheetRow from "ActionSheetRow" /* 7213 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8658 */;
-import ReportModals from "ReportModals" /* 8662 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9769 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9852 */;
-import markChannelUnreadDefault from "markChannelUnread" /* 10278 */;
-import showChatGDMCustomizeActionSheetDefault from "showChatGDMCustomizeActionSheet" /* 10951 */;
-import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10987 */;
-import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 10988 */;
-import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10991 */;
-import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10995 */;
-import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 10996 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 10998 */;
+import ToastUtils from "ToastUtils" /* 4302 */;
+import RootNavigationRef from "RootNavigationRef" /* 4463 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4618 */;
+import useChannelName from "useChannelName" /* 4758 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4806 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5570 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7162 */;
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7165 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7166 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7171 */;
+import ClipboardUtils from "ClipboardUtils" /* 7241 */;
+import ActionSheetRow from "ActionSheetRow" /* 7251 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8242 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8695 */;
+import ReportModals from "ReportModals" /* 8699 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9807 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9890 */;
+import markChannelUnreadDefault from "markChannelUnread" /* 10316 */;
+import showChatGDMCustomizeActionSheetDefault from "showChatGDMCustomizeActionSheet" /* 10991 */;
+import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 11027 */;
+import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 11028 */;
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 11031 */;
+import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 11035 */;
+import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 11036 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 11038 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 7344 */;
+import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 7382 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5521 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7131 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5557 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7169 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7541 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7579 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import ReadStateStore from "ReadStateStore" /* 4589 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import ReadStateStore from "ReadStateStore" /* 4620 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -337,7 +337,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       obj8.IconComponent = tmp5(tmp2[32]).LinkIcon;
       obj8.onPress = function onPress() {
         const obj = { channelId: channel.id };
-        obj.pushLazy(asyncRequireImpl(10963, dependencyMap.paths), obj);
+        obj.pushLazy(asyncRequireImpl(11003, dependencyMap.paths), obj);
       };
       buttons4.push(obj8);
     }
@@ -661,7 +661,7 @@ function ChannelLongPressActionSheetConnected(channel) {
               let obj = ActionSheetActionCreatorsDefault;
               obj.hideActionSheet();
               obj = { channel };
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10997, dependencyMap.paths), obj);
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11037, dependencyMap.paths), obj);
               hideLaunchPadDefault();
             };
             buttons18.push(obj33);
@@ -872,10 +872,10 @@ function ChannelLongPressActionSheetConnected(channel) {
             if (onPress.isDestructive) {
               str = "danger";
             }
-            return closure_1_33(channel(7213).ActionSheetRow, {
+            return closure_1_33(channel(7251).ActionSheetRow, {
               variant: str,
               label,
-              icon: closure_1_33(channel(7213).ActionSheetRow.Icon, { IconComponent, style: iconStyle, disableColor }),
+              icon: closure_1_33(channel(7251).ActionSheetRow.Icon, { IconComponent, style: iconStyle, disableColor }),
               trailing,
               onPress() {
                 if (onPress != null) {
@@ -997,12 +997,12 @@ function ChannelLongPressActionSheetConnected(channel) {
   }
   const tmp36 = onClose(tmp2[93])(channel, "ChannelLongPressActionSheet");
 }
-const SafetyWarningTypes = fn(10947).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10987).SafetyWarningTypes;
 const ChannelRecord = fn(1961);
 ({ isGuildTextChannelType: closure_9, isGuildVocalChannelType: c10, isReadableType: closure_11, isTextChannel: closure_12 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_23, AnalyticsObjects: closure_24, AnalyticsSections: closure_25, ChannelSettingsSections: closure_26, ChannelTypes: closure_27, InstantInviteSources: closure_28, NULL_STRING_GUILD_ID: closure_29, Permissions: closure_30, ZERO_STRING_GUILD_ID: items } = Constants);
-let closure_32 = fn(10948).ChannelDetailsNavigatorScreens;
+let closure_32 = fn(10988).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel/native/ChannelLongPressActionSheet.tsx");

@@ -1,13 +1,13 @@
-// === Module 16803: MediaKeyboardBottomSheet ===
+// === Module 16860: MediaKeyboardBottomSheet ===
 
-// Module 16803 (MediaKeyboardBottomSheet)
+// Module 16860 (MediaKeyboardBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import ChatInputUtils from "ChatInputUtils" /* 4439 */;
-import HapticUtils from "HapticUtils" /* 4542 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import ChatInputUtils from "ChatInputUtils" /* 4470 */;
+import HapticUtils from "HapticUtils" /* 4573 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ const MetaQuestUtils = fn(1608);
 let closure_11 = MetaQuestUtils.isMetaQuest();
 const PlatformUtils = fn(1115);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { background: null };
 obj = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS };
 obj.background = obj;

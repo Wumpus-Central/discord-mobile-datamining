@@ -1,6 +1,6 @@
-// === Module 9543: FramesConstants ===
+// === Module 9581: FramesConstants ===
 
-// Module 9543 (FramesConstants)
+// Module 9581 (FramesConstants)
 import size from "module_2" /* 2 */;
 
 let obj = { MAIN: 0, [0]: "MAIN", APP_CHANNEL: 1, [1]: "APP_CHANNEL" };

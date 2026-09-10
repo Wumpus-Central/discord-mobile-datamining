@@ -1,8 +1,8 @@
-// === Module 15919: useIsAllowGameFriendDMsSettingVisible ===
+// === Module 15968: useIsAllowGameFriendDMsSettingVisible ===
 
-// Module 15919 (useIsAllowGameFriendDMsSettingVisible)
+// Module 15968 (useIsAllowGameFriendDMsSettingVisible)
 import initialize from "initialize" /* 504 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7672 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7709 */;
 
 require = fn;
 const size = fn(2);

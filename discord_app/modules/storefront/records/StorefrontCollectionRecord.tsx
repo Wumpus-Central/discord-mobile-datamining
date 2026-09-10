@@ -1,10 +1,10 @@
-// === Module 7575: StorefrontCollectionRecord ===
+// === Module 7612: StorefrontCollectionRecord ===
 
-// Module 7575 (StorefrontCollectionRecord)
-import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7576 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7577 */;
+// Module 7612 (StorefrontCollectionRecord)
+import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7613 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7614 */;
 
-const AssetDisplayConfigRecord = fn(7569).AssetDisplayConfigRecord;
+const AssetDisplayConfigRecord = fn(7607).AssetDisplayConfigRecord;
 const prototype = function StorefrontCollectionRecord(arg0) {
   ({ id: tmp.id, applicationId: tmp.applicationId, name: tmp.name, description: tmp.description, products: tmp.products, isOrbsExclusive: tmp.isOrbsExclusive, createdAt: tmp.createdAt, updatedAt: tmp.updatedAt, unpublishedAt: tmp.unpublishedAt, willUnpublishAt: tmp.willUnpublishAt, styles: tmp.styles, bannerTextColor: tmp.bannerTextColor, heroRanking: tmp.heroRanking, heroDisplayConfig: tmp.heroDisplayConfig, heroLogoDisplayConfig: tmp.heroLogoDisplayConfig, heroUrl: tmp.heroUrl, heroRiveUrl: tmp.heroRiveUrl, heroAnimatedUrl: tmp.heroAnimatedUrl, heroLogoUrl: tmp.heroLogoUrl, heroBannerUrl: tmp.heroBannerUrl, heroBannerAnimatedUrl: tmp.heroBannerAnimatedUrl, catalogBannerUrl: tmp.catalogBannerUrl, catalogBannerRiveUrl: tmp.catalogBannerRiveUrl, catalogBannerAnimatedUrl: tmp.catalogBannerAnimatedUrl, featuredBlockUrl: tmp.featuredBlockUrl, logoUrl: tmp.logoUrl, pdpBgUrl: tmp.pdpBgUrl, wideBannerUrl: tmp.wideBannerUrl, wideBannerAnimatedUrl: tmp.wideBannerAnimatedUrl, mobileHeroUrl: tmp.mobileHeroUrl, mobileHeroAnimatedUrl: tmp.mobileHeroAnimatedUrl, mobileBannerUrl: tmp.mobileBannerUrl, mobileBgUrl: tmp.mobileBgUrl, shopButtonBgHoverUrl: tmp.shopButtonBgHoverUrl, upsellBannerPopoutUrl: tmp.upsellBannerPopoutUrl, upsellBannerUrl: tmp.upsellBannerUrl, heroBlockTitle: tmp.heroBlockTitle, featuredBlockBody: tmp.featuredBlockBody, mobileHeroBlockTitle: tmp.mobileHeroBlockTitle, mobileProductsTitle: tmp.mobileProductsTitle, mobileSummary: tmp.mobileSummary, wideBannerTitle: tmp.wideBannerTitle, wideBannerBody: tmp.wideBannerBody } = arg0);
   return Object.create(new.target.prototype);

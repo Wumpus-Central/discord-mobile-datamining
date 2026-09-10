@@ -1,15 +1,15 @@
-// === Module 12504: GuildProgressUtils ===
+// === Module 12544: GuildProgressUtils ===
 
-// Module 12504 (GuildProgressUtils)
+// Module 12544 (GuildProgressUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12507 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12547 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import GuildProgressStore from "GuildProgressStore" /* 12505 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import GuildProgressStore from "GuildProgressStore" /* 12545 */;
 
 require = fn;
 function useIOSCompletionStates(guild) {
@@ -64,7 +64,7 @@ function useIOSCompletionStates(guild) {
   const items6 = [GuildProgressStore];
   const stateFromStores4 = require("initialize").useStateFromStores(items6, () => GuildProgressStore.getProgress(guild.id));
   if (stateFromStores) {
-    const ServerSetupBoostCtaExperiment = tmp(12618).ServerSetupBoostCtaExperiment;
+    const ServerSetupBoostCtaExperiment = tmp(12658).ServerSetupBoostCtaExperiment;
     const enabled = ServerSetupBoostCtaExperiment.getConfig({ location: "GuildProgress" }).enabled;
     const items7 = [guildPopulated, guildPersonalized, stateFromStores2];
     if (enabled) {
@@ -95,7 +95,7 @@ function useIOSCompletionStates(guild) {
   }
   const tmpResult1 = require("initialize");
 }
-const Steps = fn(12499).Steps;
+const Steps = fn(12539).Steps;
 const Constants = fn(1074);
 ({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
@@ -105,7 +105,7 @@ export const MIN_PROGRESS_PERCENT = 3;
 export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export const openActionSheet = function openActionSheet(guild) {
   const obj = { guild };
-  obj.openLazy(asyncRequireImpl(12506, dependencyMap.paths), "guild-progress-" + guild.id, obj);
+  obj.openLazy(asyncRequireImpl(12546, dependencyMap.paths), "guild-progress-" + guild.id, obj);
 };
 export const hideActionSheet = function hideActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + id);

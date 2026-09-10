@@ -1,19 +1,19 @@
-// === Module 11613: UserProfileSection ===
+// === Module 11653: UserProfileSection ===
 
-// Module 11613 (UserProfileSection)
+// Module 11653 (UserProfileSection)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4284 */;
-import ColorUtils from "ColorUtils" /* 4423 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7198 */;
-import FormDivider from "FormDivider" /* 8632 */;
+import native from "native" /* 4315 */;
+import ColorUtils from "ColorUtils" /* 4454 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7236 */;
+import FormDivider from "FormDivider" /* 8669 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" }, title: { flexDirection: "row" }, section: { marginHorizontal: 12, marginTop: 12, marginBottom: 8 }, contentContainer: null };
 createStyles = { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 createStyles.contentContainer = createStyles;

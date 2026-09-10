@@ -1,15 +1,15 @@
-// === Module 7053: SceneLoadingIndicator ===
+// === Module 7091: SceneLoadingIndicator ===
 
-// Module 7053 (SceneLoadingIndicator)
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5591 */;
-import NavScrim from "NavScrim" /* 7054 */;
+// Module 7091 (SceneLoadingIndicator)
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5627 */;
+import NavScrim from "NavScrim" /* 7092 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_5 = createStyles.createStyles({ loadingContainer: { flex: 1, paddingTop: 40 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/SceneLoadingIndicator.native.tsx");

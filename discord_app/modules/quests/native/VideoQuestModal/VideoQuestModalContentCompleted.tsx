@@ -1,13 +1,13 @@
-// === Module 15187: VideoQuestModalContentCompleted ===
+// === Module 15236: VideoQuestModalContentCompleted ===
 
-// Module 15187 (VideoQuestModalContentCompleted)
+// Module 15236 (VideoQuestModalContentCompleted)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import spring from "spring" /* 4988 */;
-import QuestTypes from "QuestTypes" /* 5461 */;
-import showShareActionSheet from "showShareActionSheet" /* 8389 */;
-import AssetUtils from "AssetUtils" /* 11317 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11327 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import spring from "spring" /* 5024 */;
+import QuestTypes from "QuestTypes" /* 5497 */;
+import showShareActionSheet from "showShareActionSheet" /* 8426 */;
+import AssetUtils from "AssetUtils" /* 11357 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11367 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,12 +17,12 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ANIMATED_CONTENT_SPRING_CONFIG = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: false };
-fn(4574);
+fn(4605);
 let obj = { wrapper: { flexGrow: 1, flexShrink: 1 }, headerContentCopy: { flexGrow: 1, flexShrink: 1 }, closeButton: { opacity: 0.5 }, scroll: { flexGrow: 1, flexShrink: 1 }, scrollContent: { flexGrow: 1 }, content: null, contentRewardsAnimatedWrapper: null, contentRewardsWrapper: null, contentRewards: null, contentRewardsCopy: null, contentEndCardHeader: null, contentEndCardHeaderCopy: null, contentEndCard: null, image: null };
 obj = { padding: nativeDefault.space.PX_16 };
 obj.content = obj;
 obj.contentRewardsAnimatedWrapper = { flexGrow: 1, flexShrink: 0 };
-const createStyles = { flexGrow: 1, flexShrink: 0, paddingTop: fn(15161).COMPLETION_GLOW_CLEARANCE };
+const createStyles = { flexGrow: 1, flexShrink: 0, paddingTop: fn(15210).COMPLETION_GLOW_CLEARANCE };
 obj.contentRewardsWrapper = createStyles;
 obj.contentRewards = { alignItems: "center" };
 obj.contentRewardsCopy = { textAlign: "center" };

@@ -1,8 +1,8 @@
-// === Module 5517: GuildStickersStore ===
+// === Module 5553: GuildStickersStore ===
 
-// Module 5517 (GuildStickersStore)
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4226 */;
-import StickersTypes from "StickersTypes" /* 5282 */;
+// Module 5553 (GuildStickersStore)
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4257 */;
+import StickersTypes from "StickersTypes" /* 5318 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -24,12 +24,12 @@ function parseServerGuildStickers(stickers) {
 }
 function deriveStickerMetadata(arg0, tags) {
   const items = [];
-  let obj = { type: items(5282).StickerMetadataTypes.STICKER_NAME, value: null };
+  let obj = { type: items(5318).StickerMetadataTypes.STICKER_NAME, value: null };
   const trimmed = tags.name.trim();
   obj.value = trimmed.toLocaleLowerCase();
   items.push(obj);
   if (null != tags.tags) {
-    obj = { type: tmp(5282).StickerMetadataTypes.TAG, value: null };
+    obj = { type: tmp(5318).StickerMetadataTypes.TAG, value: null };
     const trimmed1 = str.trim();
     obj.value = trimmed1.toLocaleLowerCase();
     items.push(obj);
@@ -42,13 +42,13 @@ function deriveStickerMetadata(arg0, tags) {
         tmp5 = "" !== toLocaleLowerCaseResult;
       }
       if (tmp5) {
-        obj = { type: tmp(5282).StickerMetadataTypes.GUILD_NAME, value: toLocaleLowerCaseResult };
+        obj = { type: tmp(5318).StickerMetadataTypes.GUILD_NAME, value: toLocaleLowerCaseResult };
         items.push(obj);
       }
     }
     const byName = UnicodeEmojisDefault.getByName(str);
     if (null != byName) {
-      const obj1 = { type: tmp(5282).StickerMetadataTypes.CORRELATED_EMOJI, value: byName.surrogates };
+      const obj1 = { type: tmp(5318).StickerMetadataTypes.CORRELATED_EMOJI, value: byName.surrogates };
       items.push(obj1);
       byName.forEachDiversity((surrogates) => items.push({ type: StickersTypes.StickerMetadataTypes.CORRELATED_EMOJI, value: surrogates.surrogates }));
     }

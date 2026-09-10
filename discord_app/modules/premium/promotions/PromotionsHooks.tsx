@@ -1,12 +1,12 @@
-// === Module 13495: PromotionsHooks ===
+// === Module 13544: PromotionsHooks ===
 
-// Module 13495 (PromotionsHooks)
+// Module 13544 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PromotionUtils from "PromotionUtils" /* 13382 */;
+import PromotionUtils from "PromotionUtils" /* 13431 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import PromotionsStore from "PromotionsStore" /* 10697 */;
+import PromotionsStore from "PromotionsStore" /* 10735 */;
 
 require = fn;
 function useEligibleActiveOutboundPromotions(arg0) {

@@ -1,12 +1,12 @@
-// === Module 7996: ChangeChannelNameSystemMessage ===
+// === Module 8034: ChangeChannelNameSystemMessage ===
 
-// Module 7996 (ChangeChannelNameSystemMessage)
+// Module 8034 (ChangeChannelNameSystemMessage)
 import util from "util" /* 1114 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7967 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7976 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7978 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 7981 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8005 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8012 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8014 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8016 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8019 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;

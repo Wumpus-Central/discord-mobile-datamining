@@ -1,15 +1,15 @@
-// === Module 10054: ChannelCallSingleController ===
+// === Module 10092: ChannelCallSingleController ===
 
-// Module 10054 (ChannelCallSingleController)
+// Module 10092 (ChannelCallSingleController)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4785 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4627 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ParticipantTypes = fn(4595).ParticipantTypes;
+const ParticipantTypes = fn(4626).ParticipantTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallSingleController.tsx");
@@ -31,13 +31,13 @@ export const ChannelCallSingleController = function ChannelCallSingleController(
       return null;
     } else {
       let tmp18 = channel;
-      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10055 : 10057);
+      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10093 : 10095);
       let obj = { participant: selectedParticipant, channel };
       <tmp18 participant={selectedParticipant} channel={channel} />;
     }
   } else if (ParticipantTypes.USER === type) {
     obj = { participant: selectedParticipant, channel };
-    return jsx(channel(10058), { participant: selectedParticipant, channel });
+    return jsx(channel(10096), { participant: selectedParticipant, channel });
   } else if (ParticipantTypes.HIDDEN_STREAM === type) {
     return null;
   } else if (ParticipantTypes.ACTIVITY === type) {

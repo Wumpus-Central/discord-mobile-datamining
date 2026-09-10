@@ -1,15 +1,15 @@
-// === Module 9865: InviteSuggestionsStore ===
+// === Module 9903: InviteSuggestionsStore ===
 
-// Module 9865 (InviteSuggestionsStore)
+// Module 9903 (InviteSuggestionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5532 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 9854 */;
-import QuickSwitcherStore from "QuickSwitcherStore" /* 9866 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7673 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5568 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 9892 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 9904 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7710 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 
 require = fn;
 function compareRowsByMatchScore(score, score2) {
@@ -40,7 +40,7 @@ function _computeRows(query) {
   if (!tmp) {
     id = guild.id;
   }
-  const mostRecentDMedUser = set1(9854).getMostRecentDMedUser(set, id);
+  const mostRecentDMedUser = set1(9892).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
     isBlockedOrIgnoredResult = RelationshipStore.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -63,12 +63,12 @@ function _computeRows(query) {
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
-  const obj2 = set1(9854);
-  return set1(9854).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType });
+  const obj2 = set1(9892);
+  return set1(9892).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType });
 }
 const Constants = fn(1074);
 ({ ChannelTypes: closure_14, Permissions: closure_15 } = Constants);
-const InviteTargetTypes = fn(7750).InviteTargetTypes;
+const InviteTargetTypes = fn(7787).InviteTargetTypes;
 let set = new Set();
 let rows = [];
 let map = new Map();

@@ -1,18 +1,18 @@
-// === Module 16480: ForYouUnreadClearedState ===
+// === Module 16529: ForYouUnreadClearedState ===
 
-// Module 16480 (ForYouUnreadClearedState)
+// Module 16529 (ForYouUnreadClearedState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import _modDef10684 from "module_10684" /* 10684 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import _modDef10722 from "module_10722" /* 10722 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { marginBottom: 4, marginHorizontal: 24, alignItems: "center", flexDirection: "row" }, imageContainer: null, icon: null, headerText: null };
 let size = { width: 48, height: 48, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_400, opacity: 0.16, borderRadius: nativeDefault.radii.xl, marginRight: 16, justifyContent: "center", alignItems: "center" };
 createStyles.imageContainer = size;
@@ -28,7 +28,7 @@ export const ForYouUnreadClearedState = function ForYouUnreadClearedState() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.imageContainer };
   const items = [React4(View, obj), , ];
-  obj = { source: _modDef10684, style: tmp.icon, color: tmp.icon.color };
+  obj = { source: _modDef10722, style: tmp.icon, color: tmp.icon.color };
   items[1] = React4(native.Icon, obj);
   const obj1 = { children: null };
   const obj2 = { color: "mobile-text-heading-primary", variant: "text-md/semibold", style: tmp.headerText, children: null };

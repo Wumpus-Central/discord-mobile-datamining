@@ -1,7 +1,7 @@
-// === Module 8299: computeGlobalSpoilerDisplay ===
+// === Module 8336: computeGlobalSpoilerDisplay ===
 
-// Module 8299 (computeGlobalSpoilerDisplay)
-import PermissionStore from "PermissionStore" /* 4212 */;
+// Module 8336 (computeGlobalSpoilerDisplay)
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = fn;
 const Constants = fn(1074);

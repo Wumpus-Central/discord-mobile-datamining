@@ -1,15 +1,15 @@
-// === Module 7279: MemberSafetyPermissionsUtils ===
+// === Module 7317: MemberSafetyPermissionsUtils ===
 
-// Module 7279 (MemberSafetyPermissionsUtils)
+// Module 7317 (MemberSafetyPermissionsUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
 const isGuildOwner = fn(1975).isGuildOwner;
-let closure_8 = fn(4216).MemberSafetyPagePermissions;
+let closure_8 = fn(4247).MemberSafetyPagePermissions;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_9, Permissions: c10 } = Constants);
 const size = fn(2);

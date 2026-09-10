@@ -1,17 +1,17 @@
-// === Module 9491: InfoBox ===
+// === Module 9529: InfoBox ===
 
-// Module 9491 (InfoBox)
+// Module 9529 (InfoBox)
 import nativeDefault from "native" /* 576 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4529 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6624 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4560 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6660 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { infoBox: null, infoBoxWarning: null, infoText: null };
 createStyles = { borderRadius: nativeDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 };
 createStyles.infoBox = createStyles;

@@ -1,14 +1,14 @@
-// === Module 13069: GroupAvatar ===
+// === Module 13109: GroupAvatar ===
 
-// Module 13069 (GroupAvatar)
+// Module 13109 (GroupAvatar)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import timing from "timing" /* 4575 */;
-import spring from "spring" /* 4988 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8111 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import timing from "timing" /* 4606 */;
+import spring from "spring" /* 5024 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7032 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 require = fn;
 function AnimatedContainer(children) {
@@ -140,7 +140,7 @@ const createElement = fn(19).createElement;
 let c9 = 38;
 const SPRING_OPTIONS_SCALE = { damping: 30, stiffness: 400 };
 const SPRING_OPTIONS_POSITION = { damping: 30, stiffness: 400 };
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_12 = createStyles.createStyles(() => {
   let obj = { groupContainer: { position: "relative" }, shadowContainer: null, shadowContainerBackground: null, shadowContainerBackgroundLight: null, shadowContainerBackgroundDark: null, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, avatar: null, avatarWrapper: null, overflowCount: null };
   obj = { borderRadius: nativeDefault.radii.sm };

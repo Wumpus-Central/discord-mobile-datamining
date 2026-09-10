@@ -1,9 +1,9 @@
-// === Module 15806: UserSettingsDesignSystemSegmentedControl ===
+// === Module 15855: UserSettingsDesignSystemSegmentedControl ===
 
-// Module 15806 (UserSettingsDesignSystemSegmentedControl)
+// Module 15855 (UserSettingsDesignSystemSegmentedControl)
 import nativeDefault from "native" /* 576 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4285 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4316 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { margin: 16, flex: 1, alignItems: "center", padding: 40 }, item: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 };
 createStyles.item = createStyles;

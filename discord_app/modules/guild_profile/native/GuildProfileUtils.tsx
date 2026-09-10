@@ -1,11 +1,11 @@
-// === Module 9224: guild_profile/GuildProfileUtils ===
+// === Module 9261: guild_profile/GuildProfileUtils ===
 
-// Module 9224 (guild_profile/GuildProfileUtils)
+// Module 9261 (guild_profile/GuildProfileUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import tinycolorDefault from "tinycolor" /* 7566 */;
-import useAvatarColor from "useAvatarColor" /* 8158 */;
+import tinycolorDefault from "tinycolor" /* 7604 */;
+import useAvatarColor from "useAvatarColor" /* 8195 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 const useAvatarColorDefault = useAvatarColor;
 

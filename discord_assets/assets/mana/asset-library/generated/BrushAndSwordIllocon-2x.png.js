@@ -1,6 +1,6 @@
-// === Module 5824: ? ===
+// === Module 5860: ? ===
 
-// Module 5824
+// Module 5860
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BrushAndSwordIllocon-2x.png.js");

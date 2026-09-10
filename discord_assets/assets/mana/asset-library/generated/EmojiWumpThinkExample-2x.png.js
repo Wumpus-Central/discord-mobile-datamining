@@ -1,6 +1,6 @@
-// === Module 5980: ? ===
+// === Module 6016: ? ===
 
-// Module 5980
+// Module 6016
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiWumpThinkExample-2x.png.js");

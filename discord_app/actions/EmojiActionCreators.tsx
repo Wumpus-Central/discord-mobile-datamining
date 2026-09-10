@@ -1,19 +1,19 @@
-// === Module 10368: EmojiActionCreators ===
+// === Module 10406: EmojiActionCreators ===
 
-// Module 10368 (EmojiActionCreators)
+// Module 10406 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import wrappers from "wrappers" /* 1218 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4226 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
-import InlineUploaderDefault from "InlineUploader" /* 5183 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5480 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4257 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
+import InlineUploaderDefault from "InlineUploader" /* 5219 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5516 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 5473 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4916 */;
+import EmojiStore from "EmojiStore" /* 5509 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4947 */;
 
 require = fn;
 let closure_10 = async function _updateEmoji(arg0) {

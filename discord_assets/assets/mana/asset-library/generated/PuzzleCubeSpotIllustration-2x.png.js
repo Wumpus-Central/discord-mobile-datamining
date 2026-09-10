@@ -1,6 +1,6 @@
-// === Module 6388: ? ===
+// === Module 6424: ? ===
 
-// Module 6388
+// Module 6424
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PuzzleCubeSpotIllustration-2x.png.js");

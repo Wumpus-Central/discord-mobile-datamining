@@ -1,10 +1,10 @@
-// === Module 7884: PressableNavigatorModalIcon ===
+// === Module 7921: PressableNavigatorModalIcon ===
 
-// Module 7884 (PressableNavigatorModalIcon)
+// Module 7921 (PressableNavigatorModalIcon)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1114 */;
-import HeaderShared from "HeaderShared" /* 7877 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7880 */;
+import HeaderShared from "HeaderShared" /* 7914 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7917 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -19,7 +19,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   if (str === undefined) {
     str = "back";
   }
-  let obj = { source: importDefault(tmp6 ? 7881 : 7885), onPress: goBack, accessibilityLabel: null };
+  let obj = { source: importDefault(tmp6 ? 7918 : 7922), onPress: goBack, accessibilityLabel: null };
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;
@@ -28,6 +28,6 @@ export default function PressableNavigatorModalIcon(onPress) {
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj = { isModal: true, children: jsx(HeaderShared.HeaderIconButton, { source: importDefault(tmp6 ? 7881 : 7885), onPress: goBack, accessibilityLabel: null }), accessibilityLabel: stringResult };
-  return jsx(PressableNavigatorButtonWrapperDefault, { isModal: true, children: jsx(HeaderShared.HeaderIconButton, { source: importDefault(tmp6 ? 7881 : 7885), onPress: goBack, accessibilityLabel: null }), accessibilityLabel: stringResult });
+  obj = { isModal: true, children: jsx(HeaderShared.HeaderIconButton, { source: importDefault(tmp6 ? 7918 : 7922), onPress: goBack, accessibilityLabel: null }), accessibilityLabel: stringResult };
+  return jsx(PressableNavigatorButtonWrapperDefault, { isModal: true, children: jsx(HeaderShared.HeaderIconButton, { source: importDefault(tmp6 ? 7918 : 7922), onPress: goBack, accessibilityLabel: null }), accessibilityLabel: stringResult });
 };

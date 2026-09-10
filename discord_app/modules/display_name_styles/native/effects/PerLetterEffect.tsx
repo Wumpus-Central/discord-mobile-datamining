@@ -1,13 +1,13 @@
-// === Module 10936: PerLetterEffect ===
+// === Module 10974: PerLetterEffect ===
 
-// Module 10936 (PerLetterEffect)
+// Module 10974 (PerLetterEffect)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Text: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ container: { overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/effects/PerLetterEffect.tsx");
@@ -21,10 +21,10 @@ export default function PerLetterEffect(name) {
   const items1 = [closure_7().container, containerStyle];
   obj.style = items1;
   const memo = noop.useMemo(() => {
-    const regex = colors(10937)();
+    const regex = colors(10975)();
     closure_1 = 0;
-    let obj = name(10938);
-    return name(10938).splitGraphemes(regex).map((children, index) => {
+    let obj = name(10976);
+    return name(10976).splitGraphemes(regex).map((children, index) => {
       regex.lastIndex = 0;
       const tmp = regex.test(children) || 0 === children.trim().length;
       let tmp2;
@@ -55,9 +55,9 @@ export default function PerLetterEffect(name) {
     accessibilityLabel = name;
   }
   obj.accessibilityLabel = accessibilityLabel;
-  const items2 = [textStyle, { lineHeight: "disabled" }];
+  const items2 = [textStyle, { lineHeight: "Array" }];
   obj.style = items2;
   obj.children = memo;
-  obj.children = jsx(name(4570).Text, {});
+  obj.children = jsx(name(4601).Text, {});
   return <closure_4 />;
 };

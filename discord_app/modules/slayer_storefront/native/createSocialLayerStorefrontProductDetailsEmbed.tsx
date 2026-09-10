@@ -1,23 +1,23 @@
-// === Module 11562: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11602: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11562 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11602 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1114 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import _modDef3430 from "module_3430" /* 3430 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7240 */;
-import StorefrontUtils from "StorefrontUtils" /* 7245 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7959 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10830 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11563 */;
+import _modDef3460 from "module_3460" /* 3460 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7278 */;
+import StorefrontUtils from "StorefrontUtils" /* 7283 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7997 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10868 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11603 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4802 */;
-import SKUStore from "SKUStore" /* 5524 */;
+import ApplicationStore from "ApplicationStore" /* 4833 */;
+import SKUStore from "SKUStore" /* 5560 */;
 
 require = fn;
 const PaymentGateways = fn(1074).PaymentGateways;
-const InviteTypes = fn(7750).InviteTypes;
+const InviteTypes = fn(7787).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 
@@ -79,7 +79,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3430.BKf0MM);
+              stringResult = string(_modDef3460.BKf0MM);
             }
             obj.acceptLabelText = stringResult;
             let prop;

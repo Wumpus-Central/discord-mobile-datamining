@@ -1,8 +1,8 @@
-// === Module 9696: GuildScheduledEventUtils ===
+// === Module 9734: GuildScheduledEventUtils ===
 
-// Module 9696 (GuildScheduledEventUtils)
+// Module 9734 (GuildScheduledEventUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef4166 from "module_4166" /* 4166 */;
+import _modDef4196 from "module_4196" /* 4196 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
 import size from "module_2" /* 2 */;
 
@@ -10,12 +10,12 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventUtils.tsx");
 
 export const getNextShownUpcomingEventNoticeType = function getNextShownUpcomingEventNoticeType(guildScheduledEvent, arg1, arg2, flag) {
-  const obj = _modDef4166();
+  const obj = _modDef4196();
   const time = new Date(guildScheduledEvent.scheduled_start_time).getTime();
   const diff = time - React4;
   if (obj.isBetween(diff, time)) {
     if (null != arg1) {
-      const obj4 = _modDef4166(arg1);
+      const obj4 = _modDef4196(arg1);
       const isBetweenResult = obj4.isBetween(diff, time);
       let EVENT_STARTING_SOON;
       if (!isBetweenResult) {

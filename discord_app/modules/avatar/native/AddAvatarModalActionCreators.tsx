@@ -1,16 +1,16 @@
-// === Module 17467: AddAvatarModalActionCreators ===
+// === Module 17526: AddAvatarModalActionCreators ===
 
-// Module 17467 (AddAvatarModalActionCreators)
+// Module 17526 (AddAvatarModalActionCreators)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6998 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8190 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8192 */;
-import NUFActionCreators from "NUFActionCreators" /* 12734 */;
-import AddAvatarModalConstants from "AddAvatarModalConstants" /* 17468 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7036 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8227 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8229 */;
+import NUFActionCreators from "NUFActionCreators" /* 12774 */;
+import AddAvatarModalConstants from "AddAvatarModalConstants" /* 17527 */;
 import size from "module_2" /* 2 */;
 
 const ADD_AVATAR_MODAL_KEY = AddAvatarModalConstants.ADD_AVATAR_MODAL_KEY;
@@ -60,5 +60,5 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   AlertActionCreatorsDefault.show(obj);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17469, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17528, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

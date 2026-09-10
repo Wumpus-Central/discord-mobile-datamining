@@ -1,16 +1,16 @@
-// === Module 14208: CarouselPagination ===
+// === Module 14257: CarouselPagination ===
 
-// Module 14208 (CarouselPagination)
+// Module 14257 (CarouselPagination)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import Easing from "Easing" /* 14146 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import Easing from "Easing" /* 14195 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: null, dot: null };
 obj = { position: "relative", top: -16, marginBottom: -16, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_20, paddingVertical: nativeDefault.space.PX_32 };
 obj.container = obj;

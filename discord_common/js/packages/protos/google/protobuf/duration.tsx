@@ -1,6 +1,6 @@
-// === Module 7910: duration ===
+// === Module 7948: duration ===
 
-// Module 7910 (duration)
+// Module 7948 (duration)
 import _mod1188 from "module_1188" /* 1188 */;
 import _slicedToArray from "module_32" /* 32 */;
 

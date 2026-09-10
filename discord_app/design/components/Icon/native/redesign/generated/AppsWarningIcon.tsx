@@ -1,9 +1,9 @@
-// === Module 5117: AppsWarningIcon ===
+// === Module 5153: AppsWarningIcon ===
 
-// Module 5117 (AppsWarningIcon)
+// Module 5153 (AppsWarningIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod5069 from "module_5069" /* 5069 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod5105 from "module_5105" /* 5105 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const AppsWarningIcon = function AppsWarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5069, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5105, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

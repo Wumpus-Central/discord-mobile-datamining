@@ -1,6 +1,6 @@
-// === Module 11693: useShouldHideMediaOptions ===
+// === Module 11733: useShouldHideMediaOptions ===
 
-// Module 11693 (useShouldHideMediaOptions)
+// Module 11733 (useShouldHideMediaOptions)
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = fn;

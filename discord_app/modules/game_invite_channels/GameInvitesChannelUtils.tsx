@@ -1,11 +1,11 @@
-// === Module 7286: GameInvitesChannelUtils ===
+// === Module 7324: GameInvitesChannelUtils ===
 
-// Module 7286 (GameInvitesChannelUtils)
+// Module 7324 (GameInvitesChannelUtils)
 import _modDef38 from "module_38" /* 38 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5522 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7288 */;
-import ForumPostDataLoader from "ForumPostDataLoader" /* 7318 */;
-import hasFlagDefault from "hasFlag" /* 7327 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5558 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7326 */;
+import ForumPostDataLoader from "ForumPostDataLoader" /* 7356 */;
+import hasFlagDefault from "hasFlag" /* 7365 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -14,7 +14,7 @@ let closure_3 = ["data"];
 const useMemo = fn(19).useMemo;
 const Constants = fn(1074);
 ({ ActivityFlags: closure_7, ActivityTypes: closure_8, MAX_CHANNEL_NAME_LENGTH: closure_9 } = Constants);
-const MAX_FORUM_POST_TAGS = fn(7287).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(7325).MAX_FORUM_POST_TAGS;
 let c11 = "No Mic";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/GameInvitesChannelUtils.tsx");
@@ -102,7 +102,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
     isGameInvitesChannelResult = stateFromStores.isGameInvitesChannel();
   }
   _modDef38(isGameInvitesChannelResult, "requires a game invites channel");
-  let tmpResult = tmp(7323);
+  let tmpResult = tmp(7361);
   let gameId;
   if (stateFromStores != null) {
     gameId = stateFromStores.gameId;
@@ -112,7 +112,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
   if (data != null) {
     officialApplicationId = data.getOfficialApplicationId();
   }
-  tmpResult = tmp(7177);
+  tmpResult = tmp(7215);
   const application = tmpResult.useApplication(officialApplicationId);
   closure_129_0 = application;
   const items1 = [application];

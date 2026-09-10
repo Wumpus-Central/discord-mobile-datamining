@@ -1,14 +1,14 @@
-// === Module 7091: SMSBackupWarningAlert ===
+// === Module 7129: SMSBackupWarningAlert ===
 
-// Module 7091 (SMSBackupWarningAlert)
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
-import common_AlertDefault from "common/Alert" /* 5008 */;
+// Module 7129 (SMSBackupWarningAlert)
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
+import common_AlertDefault from "common/Alert" /* 5044 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_5 = createStyles.createStyles({ title: { textAlign: "center" }, body: { marginTop: 8, textAlign: "center", lineHeight: 18 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/SMSBackupWarningAlert.tsx");
@@ -31,11 +31,11 @@ export default function SMSBackupWarningAlert(onConfirm) {
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = onConfirm(1114).intl;
   obj.children = intl3.string(onConfirm(1114).t.Ed4XQB);
-  const items = [closure_3(onConfirm(4570).Text, obj), ];
+  const items = [closure_3(onConfirm(4601).Text, obj), ];
   obj = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl4 = onConfirm(1114).intl;
   obj.children = intl4.string(onConfirm(1114).t.EDU2Eg);
-  items[1] = closure_3(onConfirm(4570).Text, obj);
+  items[1] = closure_3(onConfirm(4601).Text, obj);
   obj.children = items;
   return closure_4(common_AlertDefault, obj);
 };

@@ -1,13 +1,13 @@
-// === Module 7390: SearchBarNav ===
+// === Module 7428: SearchBarNav ===
 
-// Module 7390 (SearchBarNav)
+// Module 7428 (SearchBarNav)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Pressables from "Pressables" /* 5137 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5642 */;
-import SearchField from "SearchField" /* 7064 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Pressables from "Pressables" /* 5173 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5678 */;
+import SearchField from "SearchField" /* 7102 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,9 +15,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = { container: null, cancelText: null, cancelIcon: null, flex: null };
-obj = { flexDirection: "row", alignItems: "center", height: fn(5696).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG };
+obj = { flexDirection: "row", alignItems: "center", height: fn(5732).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG };
 obj.container = obj;
 const createStyles = { paddingLeft: nativeDefault.space.PX_16 };
 obj.cancelText = createStyles;

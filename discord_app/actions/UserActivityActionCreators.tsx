@@ -1,9 +1,9 @@
-// === Module 11783: UserActivityActionCreators ===
+// === Module 11823: UserActivityActionCreators ===
 
-// Module 11783 (UserActivityActionCreators)
+// Module 11823 (UserActivityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PresenceStore from "PresenceStore" /* 4614 */;
+import PresenceStore from "PresenceStore" /* 4645 */;
 
 const require = fn;
 let closure_6 = async function _getMetadata(arg0, arg1) {

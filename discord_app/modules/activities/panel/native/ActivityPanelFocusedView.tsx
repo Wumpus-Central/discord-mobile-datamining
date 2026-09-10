@@ -1,15 +1,15 @@
-// === Module 17057: ActivityPanelFocusedView ===
+// === Module 17116: ActivityPanelFocusedView ===
 
-// Module 17057 (ActivityPanelFocusedView)
+// Module 17116 (ActivityPanelFocusedView)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4284 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import spring from "spring" /* 4988 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 9667 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17049 */;
+import native from "native" /* 4315 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import spring from "spring" /* 5024 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 9705 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17108 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
@@ -224,16 +224,16 @@ class BaseActivityPanelFocusedView {
   }
 }
 const ActivityLayoutMode = fn(1920).ActivityLayoutMode;
-const ActivityPanelConstants = fn(9537);
+const ActivityPanelConstants = fn(9575);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(17052);
+const ActivityPanelNativeConstants = fn(17111);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1074).ThemeTypes;
-const IS_IOS = fn(12303).IS_IOS;
+const IS_IOS = fn(12343).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const collapsedCategories = { duration: 300 };
-fn(4574);
+fn(4605);
 let obj = { wrapper: null, shade: null };
 obj = { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.wrapper = obj;

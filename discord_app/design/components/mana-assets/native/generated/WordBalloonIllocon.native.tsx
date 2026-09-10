@@ -1,9 +1,9 @@
-// === Module 6593: WordBalloonIllocon ===
+// === Module 6629: WordBalloonIllocon ===
 
-// Module 6593 (WordBalloonIllocon)
+// Module 6629 (WordBalloonIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6594 from "module_6594" /* 6594 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6630 from "module_6630" /* 6630 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const WordBalloonIllocon = function WordBalloonIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6594 };
+  obj = { uri: _modDef6630 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6594 });
+  return jsx(FastImageDefault, { uri: _modDef6630 });
 };

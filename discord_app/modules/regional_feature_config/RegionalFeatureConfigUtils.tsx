@@ -1,8 +1,8 @@
-// === Module 5437: RegionalFeatureConfigUtils ===
+// === Module 5473: RegionalFeatureConfigUtils ===
 
-// Module 5437 (RegionalFeatureConfigUtils)
+// Module 5473 (RegionalFeatureConfigUtils)
 import initialize from "initialize" /* 504 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4789 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4820 */;
 
 require = fn;
 const size = fn(2);

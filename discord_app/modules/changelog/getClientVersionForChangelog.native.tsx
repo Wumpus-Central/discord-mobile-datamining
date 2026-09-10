@@ -1,7 +1,7 @@
-// === Module 17360: getClientVersionForChangelog ===
+// === Module 17419: getClientVersionForChangelog ===
 
-// Module 17360 (getClientVersionForChangelog)
-import AppInfoUtils from "AppInfoUtils" /* 17361 */;
+// Module 17419 (getClientVersionForChangelog)
+import AppInfoUtils from "AppInfoUtils" /* 17420 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/changelog/getClientVersionForChangelog.native.tsx");

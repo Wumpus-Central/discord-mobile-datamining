@@ -1,11 +1,11 @@
-// === Module 7104: MemberVerificationAlertUpdate ===
+// === Module 7142: MemberVerificationAlertUpdate ===
 
-// Module 7104 (MemberVerificationAlertUpdate)
+// Module 7142 (MemberVerificationAlertUpdate)
 import util from "util" /* 1114 */;
-import LinkingDefault from "Linking" /* 4268 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import common_AlertDefault from "common/Alert" /* 5008 */;
-import _modDef7105 from "module_7105" /* 7105 */;
+import LinkingDefault from "Linking" /* 4299 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import common_AlertDefault from "common/Alert" /* 5044 */;
+import _modDef7143 from "module_7143" /* 7143 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const Image = fn(17).Image;
 const DownloadLinks = fn(1074).DownloadLinks;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 }, header: { marginTop: 24, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx");
@@ -30,7 +30,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
     return LinkingDefault.openURL(constants.IOS);
   };
   obj.onCancel = onClose.onClose;
-  obj = { source: _modDef7105, style: tmp.headerImage };
+  obj = { source: _modDef7143, style: tmp.headerImage };
   const items = [hasOwnProperty(Image, obj), , ];
   obj = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = util.intl;

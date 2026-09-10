@@ -1,9 +1,9 @@
-// === Module 5835: ButterflyIllocon ===
+// === Module 5871: ButterflyIllocon ===
 
-// Module 5835 (ButterflyIllocon)
+// Module 5871 (ButterflyIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5836 from "module_5836" /* 5836 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5872 from "module_5872" /* 5872 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const ButterflyIllocon = function ButterflyIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5836 };
+  obj = { uri: _modDef5872 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5836 });
+  return jsx(FastImageDefault, { uri: _modDef5872 });
 };

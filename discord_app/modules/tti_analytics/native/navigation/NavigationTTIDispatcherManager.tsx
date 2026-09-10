@@ -1,13 +1,13 @@
-// === Module 17897: NavigationTTIDispatcherManager ===
+// === Module 17955: NavigationTTIDispatcherManager ===
 
-// Module 17897 (NavigationTTIDispatcherManager)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 17898 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 17899 */;
+// Module 17955 (NavigationTTIDispatcherManager)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16619 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 16621 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 16715 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4795 */;
+import MessageStore from "MessageStore" /* 4826 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 require = fn;
 function handleChannelSelect(opensChannel) {
@@ -37,7 +37,7 @@ function handleChannelSelect(opensChannel) {
           }
           fromGuildId = guildId;
         }
-        obj = { spanTtiName: discord_common_AnalyticsUtils.SpanTtiNames.CHANNEL, destinationKey: channelId, properties: null };
+        obj = { definition: NavigationTTIDefinition.CHANNEL_NAVIGATION_TTI, destinationKey: channelId, properties: null };
         obj = { trigger: "navigation", from_guild_id: fromGuildId, to_guild_id: guildId, from_channel_id: fromChannelId, to_channel_id: channelId, channel_type: null, changed_guild: null, warm_message_cache: null };
         const channel1 = ChannelStore.getChannel(channelId);
         let type;

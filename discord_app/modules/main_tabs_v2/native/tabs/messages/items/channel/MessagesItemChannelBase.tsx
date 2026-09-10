@@ -1,16 +1,16 @@
-// === Module 16064: MessagesItemChannelBase ===
+// === Module 16113: MessagesItemChannelBase ===
 
-// Module 16064 (MessagesItemChannelBase)
+// Module 16113 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 576 */;
-import transitionToChannel from "transitionToChannel" /* 4585 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10945 */;
+import transitionToChannel from "transitionToChannel" /* 4616 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4618 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10985 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4614 */;
-import ReadStateStore from "ReadStateStore" /* 4589 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import PresenceStore from "PresenceStore" /* 4645 */;
+import ReadStateStore from "ReadStateStore" /* 4620 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_14 = createStyles.createStyles(() => {
   let obj = { pressable: null, nameplate: null, rowActive: null, selectedBorder: null, rowSelected: null };
   obj = { marginBottom: 1, borderRadius: nativeDefault.radii.md, marginHorizontal: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 };
@@ -77,7 +77,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
       obj.status = PresenceStore.getStatus(obj.getRecipientId());
       obj.activities = activities;
     } else {
-      obj = { status: "Array", activities: "PX_16" };
+      obj = { status: "call", activities: "accessibilityLabel" };
     }
     return obj;
   });

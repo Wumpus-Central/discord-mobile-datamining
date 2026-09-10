@@ -1,16 +1,16 @@
-// === Module 13173: OrbBadgePreview ===
+// === Module 13220: OrbBadgePreview ===
 
-// Module 13173 (OrbBadgePreview)
+// Module 13220 (OrbBadgePreview)
 import util from "util" /* 1114 */;
-import useCurrentUser from "useCurrentUser" /* 8204 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8880 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11141 */;
+import useCurrentUser from "useCurrentUser" /* 8241 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8917 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11181 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");

@@ -1,8 +1,8 @@
-// === Module 16991: useGiftingPromotionAssetsReady ===
+// === Module 17049: useGiftingPromotionAssetsReady ===
 
-// Module 16991 (useGiftingPromotionAssetsReady)
-import MarketingComponentHooks from "MarketingComponentHooks" /* 10785 */;
-import usePreloadedAssetDefault from "usePreloadedAsset" /* 16992 */;
+// Module 17049 (useGiftingPromotionAssetsReady)
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10823 */;
+import usePreloadedAssetDefault from "usePreloadedAsset" /* 17050 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");

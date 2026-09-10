@@ -1,13 +1,13 @@
-// === Module 8019: UserPremiumGuildSubscriptionTierAchievedSystemMessage ===
+// === Module 8057: UserPremiumGuildSubscriptionTierAchievedSystemMessage ===
 
-// Module 8019 (UserPremiumGuildSubscriptionTierAchievedSystemMessage)
+// Module 8057 (UserPremiumGuildSubscriptionTierAchievedSystemMessage)
 import util from "util" /* 1114 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4468 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7976 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7978 */;
-import UserPremiumGuildSubscriptionSystemMessage from "UserPremiumGuildSubscriptionSystemMessage" /* 8017 */;
-import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8018 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4499 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8012 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8014 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8016 */;
+import UserPremiumGuildSubscriptionSystemMessage from "UserPremiumGuildSubscriptionSystemMessage" /* 8055 */;
+import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8056 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 

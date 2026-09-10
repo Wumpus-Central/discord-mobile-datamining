@@ -1,21 +1,21 @@
-// === Module 12278: ChatInputActionButtonGift ===
+// === Module 12318: ChatInputActionButtonGift ===
 
-// Module 12278 (ChatInputActionButtonGift)
+// Module 12318 (ChatInputActionButtonGift)
 import nativeDefault from "native" /* 576 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
-import PromotionsStore from "PromotionsStore" /* 10697 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import PromotionsStore from "PromotionsStore" /* 10735 */;
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(11992).ChatInputActionType;
+const ChatInputActionType = fn(12032).ChatInputActionType;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { gradientContainerRefresh: null, transparentBackground: null };
   const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };

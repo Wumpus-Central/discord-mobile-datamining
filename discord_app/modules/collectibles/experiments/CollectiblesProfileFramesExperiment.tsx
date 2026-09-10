@@ -1,6 +1,6 @@
-// === Module 8238: CollectiblesProfileFramesExperiment ===
+// === Module 8275: CollectiblesProfileFramesExperiment ===
 
-// Module 8238 (CollectiblesProfileFramesExperiment)
+// Module 8275 (CollectiblesProfileFramesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

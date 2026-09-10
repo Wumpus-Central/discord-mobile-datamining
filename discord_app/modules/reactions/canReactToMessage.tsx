@@ -1,12 +1,12 @@
-// === Module 7984: canReactToMessage ===
+// === Module 8022: canReactToMessage ===
 
-// Module 7984 (canReactToMessage)
+// Module 8022 (canReactToMessage)
 import FlagUtils from "FlagUtils" /* 1384 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4201 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 7985 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4231 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8023 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5427 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5463 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

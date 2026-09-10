@@ -1,13 +1,13 @@
-// === Module 17338: AgeGateManager ===
+// === Module 17397: AgeGateManager ===
 
-// Module 17338 (AgeGateManager)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import AgeGateUtils from "AgeGateUtils" /* 4785 */;
+// Module 17397 (AgeGateManager)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import AgeGateUtils from "AgeGateUtils" /* 4816 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 require = fn;
 const AgeGateConstants = fn(1098);

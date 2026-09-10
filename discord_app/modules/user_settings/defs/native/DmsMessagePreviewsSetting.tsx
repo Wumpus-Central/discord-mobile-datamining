@@ -1,20 +1,20 @@
-// === Module 15348: DmsMessagePreviewsSetting ===
+// === Module 15397: DmsMessagePreviewsSetting ===
 
-// Module 15348 (DmsMessagePreviewsSetting)
+// Module 15397 (DmsMessagePreviewsSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7893 */;
-import useMessagePreviews from "useMessagePreviews" /* 15349 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7931 */;
+import useMessagePreviews from "useMessagePreviews" /* 15398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OAOUoQ);
   },
-  parent: fn(7989).MobileUserSettings.APPEARANCE,
+  parent: fn(8027).MobileUserSettings.APPEARANCE,
   useValue: function useDMsMessagePreviewsValue() {
     return useMessagePreviews.useMessagePreviewSetting();
   },

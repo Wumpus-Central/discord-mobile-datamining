@@ -1,10 +1,10 @@
-// === Module 16624: VibegrationsAnalytics ===
+// === Module 16679: VibegrationsAnalytics ===
 
-// Module 16624 (VibegrationsAnalytics)
+// Module 16679 (VibegrationsAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 7258 */;
-import ApplicationStore from "ApplicationStore" /* 4802 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16621 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 7296 */;
+import ApplicationStore from "ApplicationStore" /* 4833 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16676 */;
 
 require = fn;
 function vibegrationLocation(project_id, isPreview) {

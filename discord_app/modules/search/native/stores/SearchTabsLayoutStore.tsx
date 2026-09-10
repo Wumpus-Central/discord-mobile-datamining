@@ -1,15 +1,15 @@
-// === Module 12392: SearchTabsLayoutStore ===
+// === Module 12432: SearchTabsLayoutStore ===
 
-// Module 12392 (SearchTabsLayoutStore)
+// Module 12432 (SearchTabsLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SearchUtils from "SearchUtils" /* 12370 */;
+import SearchUtils from "SearchUtils" /* 12410 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SearchMessageStore from "SearchMessageStore" /* 7295 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12393 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 12394 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12395 */;
-import SearchQueryStore from "SearchQueryStore" /* 12369 */;
+import SearchMessageStore from "SearchMessageStore" /* 7333 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12433 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 12434 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12435 */;
+import SearchQueryStore from "SearchQueryStore" /* 12409 */;
 
 require = fn;
 function handleSearchQuery(searchContext) {
@@ -76,7 +76,7 @@ function computeLayoutForState(value) {
         return closure_5;
       }
     });
-    let tmp6Result = tmp6(12370);
+    let tmp6Result = tmp6(12410);
     SearchQueryStore = tmp6Result.getSearchContextId(searchContext);
     const reduced = found.reduce((acc, item) => {
       if (constants.MEMBERS === item) {
@@ -158,7 +158,7 @@ function computeLayoutForAll() {
   }
   return flag;
 }
-const SearchConstants = fn(7892);
+const SearchConstants = fn(7930);
 ({ SearchTabs: closure_9, SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: c10, SEARCH_TYPE_TO_SEARCH_RESULT_TABS: closure_11 } = SearchConstants);
 let closure_12 = [];
 const map = new Map();

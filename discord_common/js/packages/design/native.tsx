@@ -1,10 +1,10 @@
-// === Module 4284: native ===
+// === Module 4315: native ===
 
-// Module 4284 (native)
-import ManaContext from "ManaContext" /* 4355 */;
-import GraphicTypes from "GraphicTypes" /* 4391 */;
+// Module 4315 (native)
+import ManaContext from "ManaContext" /* 4386 */;
+import GraphicTypes from "GraphicTypes" /* 4422 */;
 import size from "module_2" /* 2 */;
-import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 4295 */;
+import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 4326 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/native.tsx");
 for (const key10018 in require("AccessibilityAnnouncer")) {
@@ -63,8 +63,8 @@ for (const key10071 in require("ThemeContextFlags")) {
   arg5[key10071] = require("ThemeContextFlags")[key10071];
   continue;
 }
-for (const key10075 in require("module_4302")) {
-  arg5[key10075] = require("module_4302")[key10075];
+for (const key10075 in require("module_4333")) {
+  arg5[key10075] = require("module_4333")[key10075];
   continue;
 }
 for (const key10079 in require("Colors")) {

@@ -1,17 +1,17 @@
-// === Module 14002: GuildProgressBar ===
+// === Module 14051: GuildProgressBar ===
 
-// Module 14002 (GuildProgressBar)
+// Module 14051 (GuildProgressBar)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4575 */;
-import timingPresets from "timingPresets" /* 4578 */;
+import timing from "timing" /* 4606 */;
+import timingPresets from "timingPresets" /* 4609 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { wrapper: null, progress: null };
-createStyles = { position: "relative", backgroundColor: fn(12504).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 };
+createStyles = { position: "relative", backgroundColor: fn(12544).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 };
 createStyles.wrapper = createStyles;
 createStyles.progress = { position: "absolute", height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.xs };
 let closure_6 = createStyles.createStyles(createStyles);
@@ -22,7 +22,7 @@ let result = size.fileFinishedImporting("modules/guild_progress/native/component
 export default function GuildProgressBar(percent) {
   percent = percent.percent;
   const tmp = closure_6();
-  let obj = percent(4310);
+  let obj = percent(4341);
   const sharedValue = obj.useSharedValue(0);
   const items = [percent, sharedValue];
   const effect = noop.useEffect(() => {
@@ -37,10 +37,10 @@ export default function GuildProgressBar(percent) {
   obj = { style: null, children: null };
   const items1 = [tmp.wrapper, percent.style];
   obj.style = items1;
-  const animatedStyle = percent(4310).useAnimatedStyle(fn);
+  const animatedStyle = percent(4341).useAnimatedStyle(fn);
   obj = { style: null };
   const items2 = [tmp.progress, animatedStyle];
   obj.style = items2;
-  obj.children = jsx(sharedValue(4310).View, { style: null });
+  obj.children = jsx(sharedValue(4341).View, { style: null });
   return <View style={null} />;
 };

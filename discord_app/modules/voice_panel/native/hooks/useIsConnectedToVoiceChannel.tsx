@@ -1,9 +1,9 @@
-// === Module 17071: useIsConnectedToVoiceChannel ===
+// === Module 17130: useIsConnectedToVoiceChannel ===
 
-// Module 17071 (useIsConnectedToVoiceChannel)
+// Module 17130 (useIsConnectedToVoiceChannel)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
-import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
+import VoiceStateStore from "VoiceStateStore" /* 4624 */;
 
 const require = fn;
 const RTCConnectionStates = fn(1074).RTCConnectionStates;

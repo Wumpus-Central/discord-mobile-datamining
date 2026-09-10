@@ -1,6 +1,6 @@
-// === Module 8194: useShouldConvertBioEmoji ===
+// === Module 8231: useShouldConvertBioEmoji ===
 
-// Module 8194 (useShouldConvertBioEmoji)
+// Module 8231 (useShouldConvertBioEmoji)
 import UserSettings from "UserSettings" /* 1935 */;
 import size from "module_2" /* 2 */;
 

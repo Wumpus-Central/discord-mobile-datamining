@@ -1,12 +1,12 @@
-// === Module 15883: SettingsSecureFramesScreen ===
+// === Module 15932: SettingsSecureFramesScreen ===
 
-// Module 15883 (SettingsSecureFramesScreen)
+// Module 15932 (SettingsSecureFramesScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
-import UserActionCreators from "UserActionCreators" /* 8207 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9182 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8242 */;
+import UserActionCreators from "UserActionCreators" /* 8244 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9219 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -106,7 +106,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, header: null, list: null };
 createStyles = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;

@@ -1,17 +1,17 @@
-// === Module 5444: StageBoostingActionSheet ===
+// === Module 5480: StageBoostingActionSheet ===
 
-// Module 5444 (StageBoostingActionSheet)
+// Module 5480 (StageBoostingActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5448 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5484 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5428).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5464).STAGE_BOOSTING_SHEET_KEY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, BoostedGuildTiers: closure_8, GuildFeatures: closure_9, MAX_STAGE_VIDEO_USER_LIMIT_TIER2: c10, MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED: closure_11 } = Constants);
 const PremiumConstants = fn(1373);
@@ -103,11 +103,11 @@ export default function StageBoostingActionSheet(channel) {
       obj = { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: constants3.DISMISS };
       AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_CLICKED, obj);
     }
-    tmpResult = tmp(5445);
+    tmpResult = tmp(5481);
     dependencyMap = tmpResult.useActualStageSpeakerCount(channel.id);
     const string3Result1 = string3(t.pqPQL0);
-    useReducedMotion = tmp(5445).useStageParticipantsCount(channel.id, tmp(5439).StageChannelParticipantNamedIndex.AUDIENCE);
-    stateFromStores2(5006)(() => {
+    useReducedMotion = tmp(5481).useStageParticipantsCount(channel.id, tmp(5475).StageChannelParticipantNamedIndex.AUDIENCE);
+    stateFromStores2(5042)(() => {
       const obj = { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, listener_count: closure_2 + closure_3 };
       obj.track(constants.BOOSTING_UPSELL_VIEWED, obj);
     });
@@ -125,14 +125,14 @@ export default function StageBoostingActionSheet(channel) {
         obj = { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: constants3.BOOST };
         AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_CLICKED, obj);
       };
-      const items5 = [closure_14(tmp(4989).Button, obj), ];
+      const items5 = [closure_14(tmp(5025).Button, obj), ];
       obj1 = { variant: "secondary", size: "lg", text: null, onPress: null };
       const intl7 = tmp(1114).intl;
       obj1.text = intl7.string(tmp(1114).t.f3Pet9);
       obj1.onPress = handleClose;
-      items5[1] = closure_14(tmp(4989).Button, obj1);
+      items5[1] = closure_14(tmp(5025).Button, obj1);
       obj.children = items5;
-      let tmp24Result = closure_15(tmp(5447).ButtonGroup, obj);
+      let tmp24Result = closure_15(tmp(5483).ButtonGroup, obj);
       let tmp24 = closure_14;
     } else {
       tmp24 = closure_14;
@@ -148,18 +148,18 @@ export default function StageBoostingActionSheet(channel) {
         obj3.text = intl4.string(tmp(1114).t["NX+WJN"]);
         obj3.onPress = handleClose;
       }
-      tmp24Result = tmp24(tmp(4989).Button, obj3);
+      tmp24Result = tmp24(tmp(5025).Button, obj3);
     }
     let obj4 = { title: string3Result1, description: stringResult, illustration: null, actions: null };
     if (tmp9) {
-      tmp24Result = tmp24(tmp(5706).HoldingGemSpotIllustration, { accessible: false });
+      tmp24Result = tmp24(tmp(5742).HoldingGemSpotIllustration, { accessible: false });
     } else {
-      const obj5 = { source: tmp22(8625) };
-      tmp24Result = tmp24(tmp22(5601), obj5);
-      const tmp22Result = tmp22(5601);
+      const obj5 = { source: tmp22(8662) };
+      tmp24Result = tmp24(tmp22(5637), obj5);
+      const tmp22Result = tmp22(5637);
     }
     obj4.illustration = tmp24Result;
     obj4.actions = tmp24Result;
-    return tmp24(tmp(10262).PromoSheet, obj4);
+    return tmp24(tmp(10300).PromoSheet, obj4);
   }
 };

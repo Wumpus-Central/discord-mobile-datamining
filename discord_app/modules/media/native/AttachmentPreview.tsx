@@ -1,27 +1,27 @@
-// === Module 10228: AttachmentPreview ===
+// === Module 10266: AttachmentPreview ===
 
-// Module 10228 (AttachmentPreview)
+// Module 10266 (AttachmentPreview)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import FileUtils from "FileUtils" /* 5148 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import common_Video from "common/Video" /* 8335 */;
-import _modDef10229 from "module_10229" /* 10229 */;
-import _modDef10230 from "module_10230" /* 10230 */;
-import _modDef10231 from "module_10231" /* 10231 */;
-import _modDef10232 from "module_10232" /* 10232 */;
-import _modDef10233 from "module_10233" /* 10233 */;
-import _modDef10234 from "module_10234" /* 10234 */;
-import _modDef10235 from "module_10235" /* 10235 */;
-import _modDef10236 from "module_10236" /* 10236 */;
-import _modDef10237 from "module_10237" /* 10237 */;
-import _modDef10238 from "module_10238" /* 10238 */;
-import _modDef10239 from "module_10239" /* 10239 */;
-import _modDef10240 from "module_10240" /* 10240 */;
-import _modDef10241 from "module_10241" /* 10241 */;
-import _modDef10242 from "module_10242" /* 10242 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import FileUtils from "FileUtils" /* 5184 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import common_Video from "common/Video" /* 8372 */;
+import _modDef10267 from "module_10267" /* 10267 */;
+import _modDef10268 from "module_10268" /* 10268 */;
+import _modDef10269 from "module_10269" /* 10269 */;
+import _modDef10270 from "module_10270" /* 10270 */;
+import _modDef10271 from "module_10271" /* 10271 */;
+import _modDef10272 from "module_10272" /* 10272 */;
+import _modDef10273 from "module_10273" /* 10273 */;
+import _modDef10274 from "module_10274" /* 10274 */;
+import _modDef10275 from "module_10275" /* 10275 */;
+import _modDef10276 from "module_10276" /* 10276 */;
+import _modDef10277 from "module_10277" /* 10277 */;
+import _modDef10278 from "module_10278" /* 10278 */;
+import _modDef10279 from "module_10279" /* 10279 */;
+import _modDef10280 from "module_10280" /* 10280 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ class AttachmentIcon {
             }
             let tmp2 = createStyles[obj.classifyFileName(obj, str)];
             if (tmp2 == null) {
-              tmp2 = _modDef10240;
+              tmp2 = _modDef10278;
             }
             return tmp2;
           }, items)
@@ -95,7 +95,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 let obj = { fileInfoAttachmentPreviewFile: null, attachmentFileIcon: null, attachmentFileName: null, videoIcon: null };
 obj = { flexDirection: "row", alignItems: "center", overflow: "hidden", borderRadius: nativeDefault.radii.sm, height: 75, padding: 12, flex: 1, gap: nativeDefault.space.PX_8 };
 obj.fileInfoAttachmentPreviewFile = obj;
@@ -103,7 +103,7 @@ obj.attachmentFileIcon = { height: 32, width: 24 };
 obj.attachmentFileName = { paddingRight: 4, paddingLeft: 4, maxWidth: 136 };
 obj.videoIcon = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" };
 const React6 = createStyles.createStyles(obj);
-createStyles = { archive: _modDef10229, acrobat: _modDef10230, ae: _modDef10231, ai: _modDef10232, audio: _modDef10233, code: _modDef10234, document: _modDef10235, image: _modDef10236, photoshop: _modDef10237, sketch: _modDef10238, spreadsheet: _modDef10239, unknown: _modDef10240, video: _modDef10241, webcode: _modDef10242 };
+createStyles = { archive: _modDef10267, acrobat: _modDef10268, ae: _modDef10269, ai: _modDef10270, audio: _modDef10271, code: _modDef10272, document: _modDef10273, image: _modDef10274, photoshop: _modDef10275, sketch: _modDef10276, spreadsheet: _modDef10277, unknown: _modDef10278, video: _modDef10279, webcode: _modDef10280 };
 let closure_13 = noop.memo((borderRadius) => {
   ({ uri, width, height, style, fileName } = borderRadius);
   const size = { uri, width, height };
@@ -216,7 +216,7 @@ export default function AttachmentPreview(height) {
       const obj3 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj3.style = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(10164).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(10202).CirclePlayIcon;
       tmp6 = timestampProducer(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj3.children = tmp6;
       items[1] = timestampProducer(hasOwnProperty, obj3);

@@ -1,9 +1,9 @@
-// === Module 11569: ChatManager ===
+// === Module 11609: ChatManager ===
 
-// Module 11569 (ChatManager)
+// Module 11609 (ChatManager)
 import _modDef1332 from "module_1332" /* 1332 */;
-import getEmbeddedActivityKeyDefault from "getEmbeddedActivityKey" /* 11570 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7947 */;
+import getEmbeddedActivityKeyDefault from "getEmbeddedActivityKey" /* 11610 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7985 */;
 import size from "module_2" /* 2 */;
 
 ({ Changeset: c2, RowType: c3 } = RowGeneratorConstants);

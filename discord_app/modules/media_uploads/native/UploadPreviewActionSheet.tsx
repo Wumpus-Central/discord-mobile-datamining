@@ -1,23 +1,23 @@
-// === Module 10666: UploadPreviewActionSheet ===
+// === Module 10704: UploadPreviewActionSheet ===
 
-// Module 10666 (UploadPreviewActionSheet)
+// Module 10704 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5152 */;
-import ImagePickerDefault from "ImagePicker" /* 5164 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9339 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11271 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5188 */;
+import ImagePickerDefault from "ImagePicker" /* 5200 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9376 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11311 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(4915).DraftType;
-const ACTION_SHEET_MAX_WIDTH = fn(7165).ACTION_SHEET_MAX_WIDTH;
+const DraftType = fn(4946).DraftType;
+const ACTION_SHEET_MAX_WIDTH = fn(7203).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { contentContainer: { padding: 16 }, imageWrap: null, imageContainer: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" };
 createStyles.imageWrap = createStyles;
@@ -110,8 +110,8 @@ export default function UploadPreviewActionSheet(onAdd) {
       }
     }).catch((error) => {
       if ("E_PICKER_CANCELLED" !== error.code) {
-        onEdit(4272);
-        const obj = { key: "CROP_ERROR", IconComponent: onAdd(6624).CircleErrorIcon, content: error.message };
+        onEdit(4303);
+        const obj = { key: "CROP_ERROR", IconComponent: onAdd(6660).CircleErrorIcon, content: error.message };
         obj.open(obj);
       }
     });

@@ -1,14 +1,15 @@
-// === Module 15231: QuestDockUnenrolledBackground ===
+// === Module 15280: QuestDockUnenrolledBackground ===
 
-// Module 15231 (QuestDockUnenrolledBackground)
+// Module 15280 (QuestDockUnenrolledBackground)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4275 */;
-import QuestHooks from "QuestHooks" /* 15121 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15132 */;
-import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 15232 */;
+import useToken from "useToken" /* 4306 */;
+import QuestHooks from "QuestHooks" /* 15170 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15181 */;
+import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 15281 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
+const expandedHeight = fn(15174).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");
@@ -19,7 +20,7 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
   const questDockHeroAsset = QuestHooks.useQuestDockHeroAsset(questDockQuest);
   ({ videoAsset, staticUrl } = questDockHeroAsset);
   const token = useToken.useToken(nativeDefault.colors.CARD_BACKGROUND_DEFAULT);
-  obj = { imageUrl: staticUrl, videoUrl: null, videoMimetype: null, gradientBaseColor: null };
+  obj = { expandedHeight, imageUrl: staticUrl, videoUrl: null, videoMimetype: null, gradientBaseColor: null };
   let url;
   if (videoAsset != null) {
     url = videoAsset.url;
@@ -34,5 +35,5 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
   }
   obj.videoMimetype = mimetype;
   obj.gradientBaseColor = token;
-  return jsx(QuestDockVideoBackgroundDefault, { imageUrl: staticUrl, videoUrl: null, videoMimetype: null, gradientBaseColor: null });
+  return jsx(QuestDockVideoBackgroundDefault, { expandedHeight, imageUrl: staticUrl, videoUrl: null, videoMimetype: null, gradientBaseColor: null });
 });

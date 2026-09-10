@@ -1,10 +1,10 @@
-// === Module 15274: GuildRoleSubscriptionBenefitRow ===
+// === Module 15323: GuildRoleSubscriptionBenefitRow ===
 
-// Module 15274 (GuildRoleSubscriptionBenefitRow)
+// Module 15323 (GuildRoleSubscriptionBenefitRow)
 import native from "native" /* 1178 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4226 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import EmojiIconDefault from "EmojiIcon" /* 15272 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4257 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import EmojiIconDefault from "EmojiIcon" /* 15321 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -31,7 +31,7 @@ function BenefitRow(description) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, textContainer: { flex: 1, justifyContent: "center" }, description: { marginTop: 2 }, channelTitle: { flexDirection: "row", alignItems: "center" }, channelIcon: { width: 16, height: 16, marginEnd: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionBenefitRow.tsx");
@@ -46,16 +46,16 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = benefit(1114).intl;
   obj.children = "[" + intl.string(benefit(1114).t.bz1PZX) + "]";
-  let tmp8 = closure_5(benefit(4570).Text, obj);
+  let tmp8 = closure_5(benefit(4601).Text, obj);
   if (null != stateFromStores) {
     obj = { style: tmp.channelTitle, children: null };
-    const obj1 = { style: tmp.channelIcon, size: tmp2(1178).Icon.Sizes.CUSTOM, source: tmp2(5042).getChannelIcon(stateFromStores) };
+    const obj1 = { style: tmp.channelIcon, size: tmp2(1178).Icon.Sizes.CUSTOM, source: tmp2(5078).getChannelIcon(stateFromStores) };
     const items2 = [closure_5(tmp2(1178).Icon, obj1), ];
     const obj2 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
-    items2[1] = closure_5(tmp2(4570).Text, obj2);
+    items2[1] = closure_5(tmp2(4601).Text, obj2);
     obj.children = items2;
     tmp8 = closure_6(View, obj);
-    const tmp2Result = tmp2(5042);
+    const tmp2Result = tmp2(5078);
   }
   if (null != benefit.emoji_id) {
     let str = benefit.emoji_id;

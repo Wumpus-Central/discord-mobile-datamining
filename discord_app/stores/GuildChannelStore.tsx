@@ -4,16 +4,16 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4217 */;
-import useChannelName from "useChannelName" /* 4727 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4248 */;
+import useChannelName from "useChannelName" /* 4758 */;
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -190,7 +190,7 @@ function hasElevatedPermissions(user, context) {
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_1_17);
 }
-let closure_6 = fn(4211).createFavoritesGuildChannelRecord;
+let closure_6 = fn(4242).createFavoritesGuildChannelRecord;
 const ChannelRecord = fn(1961);
 ({ isGuildSelectableChannelType: closure_7, GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8, isGuildVocalChannelType: closure_9, createChannelRecord } = ChannelRecord);
 const Constants = fn(1074);

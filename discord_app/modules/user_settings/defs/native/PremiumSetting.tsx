@@ -1,19 +1,19 @@
-// === Module 15009: PremiumSetting ===
+// === Module 15058: PremiumSetting ===
 
-// Module 15009 (PremiumSetting)
+// Module 15058 (PremiumSetting)
 import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 4231 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7431 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11465 */;
-import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13441 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15010 */;
+import PremiumUtils from "PremiumUtils" /* 4262 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7469 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11505 */;
+import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13490 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15059 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4237 */;
+import SubscriptionStore from "SubscriptionStore" /* 4268 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle: function getPremiumSettingTitle() {
     const mobileNitroManageSubscriptionsSettingsExperiment = MobileNitroManageSubscriptionsSettingsExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
@@ -34,7 +34,7 @@ let SettingBuilders = {
     }
   },
   parent: null,
-  IconComponent: fn(8695).NitroWheelIcon,
+  IconComponent: fn(8732).NitroWheelIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();

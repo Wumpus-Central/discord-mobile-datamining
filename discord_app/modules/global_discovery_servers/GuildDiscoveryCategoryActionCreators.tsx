@@ -1,10 +1,10 @@
-// === Module 16503: GuildDiscoveryCategoryActionCreators ===
+// === Module 16552: GuildDiscoveryCategoryActionCreators ===
 
-// Module 16503 (GuildDiscoveryCategoryActionCreators)
+// Module 16552 (GuildDiscoveryCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16504 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16553 */;
 
 const require = fn;
 let closure_7 = async function _maybeFetchGuildDiscoveryCategories() {

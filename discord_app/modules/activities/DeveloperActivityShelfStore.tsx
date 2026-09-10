@@ -1,11 +1,11 @@
-// === Module 8887: DeveloperActivityShelfStore ===
+// === Module 8924: DeveloperActivityShelfStore ===
 
-// Module 8887 (DeveloperActivityShelfStore)
+// Module 8924 (DeveloperActivityShelfStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8888 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8925 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationFlags = Constants.ApplicationFlags;

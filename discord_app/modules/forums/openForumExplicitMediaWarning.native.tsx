@@ -1,9 +1,9 @@
-// === Module 9426: openForumExplicitMediaWarning ===
+// === Module 9464: openForumExplicitMediaWarning ===
 
-// Module 9426 (openForumExplicitMediaWarning)
+// Module 9464 (openForumExplicitMediaWarning)
 import jsxProd from "jsxProd" /* 21 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -14,7 +14,7 @@ export default function openForumExplicitMediaWarning(arg0, arg1) {
   importDefault = arg1;
   let obj = {
     importer() {
-      return asyncRequireImpl(9427, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(9465, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};

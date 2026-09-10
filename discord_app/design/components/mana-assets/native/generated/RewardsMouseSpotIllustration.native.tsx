@@ -1,9 +1,9 @@
-// === Module 6399: RewardsMouseSpotIllustration ===
+// === Module 6435: RewardsMouseSpotIllustration ===
 
-// Module 6399 (RewardsMouseSpotIllustration)
+// Module 6435 (RewardsMouseSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6400 from "module_6400" /* 6400 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6436 from "module_6436" /* 6436 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const RewardsMouseSpotIllustration = function RewardsMouseSpotIllustratio
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6400 };
+  obj = { uri: _modDef6436 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const RewardsMouseSpotIllustration = function RewardsMouseSpotIllustratio
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6400 });
+  return jsx(FastImageDefault, { uri: _modDef6436 });
 };

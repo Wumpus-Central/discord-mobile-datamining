@@ -1,11 +1,11 @@
-// === Module 13011: useMediaViewerPanGesture ===
+// === Module 13051: useMediaViewerPanGesture ===
 
-// Module 13011 (useMediaViewerPanGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import spring from "spring" /* 4988 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8289 */;
-import useVideoControls from "useVideoControls" /* 8290 */;
+// Module 13051 (useMediaViewerPanGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import spring from "spring" /* 5024 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8326 */;
+import useVideoControls from "useVideoControls" /* 8327 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15749: TextDisplayComponentViewNativeComponent ===
+// === Module 15798: TextDisplayComponentViewNativeComponent ===
 
-// Module 15749 (TextDisplayComponentViewNativeComponent)
+// Module 15798 (TextDisplayComponentViewNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

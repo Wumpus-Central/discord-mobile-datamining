@@ -1,8 +1,8 @@
-// === Module 7328: LazyLoadedThreadManager ===
+// === Module 7366: LazyLoadedThreadManager ===
 
-// Module 7328 (LazyLoadedThreadManager)
+// Module 7366 (LazyLoadedThreadManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
@@ -56,11 +56,11 @@ function loadThread(channelId) {
         }
         return resolved;
       } else {
-        let tmp13Result = tmp13(4400);
+        let tmp13Result = tmp13(4431);
         const _location = location;
         obj = { path: null, exact: true };
-        const RouteParam = tmp13(4413).RouteParam;
-        const RouteParam2 = tmp13(4413).RouteParam;
+        const RouteParam = tmp13(4444).RouteParam;
+        const RouteParam2 = tmp13(4444).RouteParam;
         obj.path = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj);
         const HTTP = tmp13(1272).HTTP;
@@ -134,7 +134,7 @@ export default {
       let nextResult = iter.next();
       while (iter !== undefined) {
         let tmp9 = nextResult;
-        if (nextResult !== items1(7235).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(7273).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           if (!isStaticChannelRoute(tmp9)) {
             if (null == ChannelStore.getChannel(tmp9)) {
               let tmp18 = dependencyMap[tmp9];

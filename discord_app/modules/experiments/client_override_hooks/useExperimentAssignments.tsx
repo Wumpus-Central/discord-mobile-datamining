@@ -1,9 +1,9 @@
-// === Module 11841: useExperimentAssignments ===
+// === Module 11881: useExperimentAssignments ===
 
-// Module 11841 (useExperimentAssignments)
-import ExperimentManager from "ExperimentManager" /* 4495 */;
+// Module 11881 (useExperimentAssignments)
+import ExperimentManager from "ExperimentManager" /* 4526 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4490 */;
+import ExperimentStore from "ExperimentStore" /* 4521 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 
 require = fn;

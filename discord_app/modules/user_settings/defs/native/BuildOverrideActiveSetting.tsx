@@ -1,22 +1,22 @@
-// === Module 15780: BuildOverrideActiveSetting ===
+// === Module 15829: BuildOverrideActiveSetting ===
 
-// Module 15780 (BuildOverrideActiveSetting)
+// Module 15829 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11820 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14609 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14871 */;
-import DevToolsContent from "DevToolsContent" /* 15776 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11457 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11860 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14658 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14920 */;
+import DevToolsContent from "DevToolsContent" /* 15825 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11497 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: fn(15188).RefreshIcon,
+  IconComponent: fn(15237).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     let obj = initialize;
     const items = [BuildOverrideStore];

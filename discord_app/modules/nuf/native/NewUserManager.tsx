@@ -1,20 +1,20 @@
-// === Module 17466: NewUserManager ===
+// === Module 17525: NewUserManager ===
 
-// Module 17466 (NewUserManager)
+// Module 17525 (NewUserManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import NUFActionCreators from "NUFActionCreators" /* 12734 */;
+import NUFActionCreators from "NUFActionCreators" /* 12774 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PhoneStore from "PhoneStore" /* 6957 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5295 */;
+import PhoneStore from "PhoneStore" /* 6993 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5331 */;
 import UserStore from "UserStore" /* 1371 */;
-import NewUserStore from "NewUserStore" /* 5573 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import NewUserStore from "NewUserStore" /* 5609 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 require = fn;
-const NewUserTypes = fn(12735).NewUserTypes;
+const NewUserTypes = fn(12775).NewUserTypes;
 const PlatformTypes = fn(1074).PlatformTypes;
-let closure_10 = fn(12749).HUBS_IN_ONBOARDING_COUNTRIES;
+let closure_10 = fn(12789).HUBS_IN_ONBOARDING_COUNTRIES;
 let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };
 obj = {
   key: obj.ADD_AVATAR,
@@ -26,7 +26,7 @@ obj = {
     }
     return null == avatar;
   },
-  transitionToStep: fn(17467).openAddAvatarModal
+  transitionToStep: fn(17526).openAddAvatarModal
 };
 obj = {
   key: obj.CONTACT_SYNC,
@@ -47,7 +47,7 @@ obj = {
     }
     return tmp3;
   },
-  transitionToStep: fn(12706).openContactSyncModalOnboarding
+  transitionToStep: fn(12746).openContactSyncModalOnboarding
 };
 const items = [
   obj,
@@ -56,7 +56,7 @@ const items = [
     shouldShowStep() {
       return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
     },
-    transitionToStep: fn(12734).openDiscoverabilityModal
+    transitionToStep: fn(12774).openDiscoverabilityModal
   },
   obj,
   {
@@ -93,11 +93,11 @@ let obj1 = {
   shouldShowStep() {
     return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: fn(12734).openDiscoverabilityModal
+  transitionToStep: fn(12774).openDiscoverabilityModal
 };
 items[5] = {
   key: obj.ACCEPT_INVITE,
-  shouldShowStep: fn(9852).hasDeferredInvite,
+  shouldShowStep: fn(9890).hasDeferredInvite,
   transitionToStep() {
     DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }

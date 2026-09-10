@@ -1,8 +1,8 @@
-// === Module 10955: maybeShowDiscardChangesAlert ===
+// === Module 10995: maybeShowDiscardChangesAlert ===
 
-// Module 10955 (maybeShowDiscardChangesAlert)
+// Module 10995 (maybeShowDiscardChangesAlert)
 import util from "util" /* 1114 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
@@ -14,7 +14,7 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     if (onHasEdits != null) {
       onHasEdits();
     }
-    onConfirm(4919);
+    onConfirm(4950);
     const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.pvRCSu);

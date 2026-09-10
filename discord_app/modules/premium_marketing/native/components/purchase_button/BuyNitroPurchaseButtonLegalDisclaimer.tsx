@@ -1,11 +1,11 @@
-// === Module 13416: BuyNitroPurchaseButtonLegalDisclaimer ===
+// === Module 13465: BuyNitroPurchaseButtonLegalDisclaimer ===
 
-// Module 13416 (BuyNitroPurchaseButtonLegalDisclaimer)
+// Module 13465 (BuyNitroPurchaseButtonLegalDisclaimer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import PremiumUtils from "PremiumUtils" /* 4231 */;
+import PremiumUtils from "PremiumUtils" /* 4262 */;
 import noop from "module_19" /* 19 */;
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -14,7 +14,7 @@ require = fn;
 const Constants = fn(1074);
 ({ HelpdeskArticles: c3, MarketingURLs: closure_4 } = Constants);
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { disclaimer: null };
 createStyles = { marginTop: nativeDefault.space.PX_12, textAlign: "center" };
 createStyles.disclaimer = createStyles;
@@ -54,7 +54,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         const tmp6 = tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"];
       }
       const obj1 = { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult };
-      jsx(tmp10(4570).Text, { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult });
+      jsx(tmp10(4601).Text, { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult });
     }
     const tmp3Result1 = PlatformUtils;
     const isAndroidResult1 = PlatformUtils.isAndroid();

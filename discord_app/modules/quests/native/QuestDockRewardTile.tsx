@@ -1,17 +1,17 @@
-// === Module 11802: QuestDockRewardTile ===
+// === Module 11842: QuestDockRewardTile ===
 
-// Module 11802 (QuestDockRewardTile)
+// Module 11842 (QuestDockRewardTile)
 import nativeDefault from "native" /* 576 */;
-import AssetUtils from "AssetUtils" /* 11317 */;
+import AssetUtils from "AssetUtils" /* 11357 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_9 = createStyles.createStyles(() => {
   let obj = { container: null, video: null, image: null };
   obj = { borderRadius: nativeDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };

@@ -1,15 +1,15 @@
-// === Module 15758: DevToolsPerformanceTestingScreen ===
+// === Module 15807: DevToolsPerformanceTestingScreen ===
 
-// Module 15758 (DevToolsPerformanceTestingScreen)
+// Module 15807 (DevToolsPerformanceTestingScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14609 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14658 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
 obj.container = obj;
@@ -27,9 +27,9 @@ export default noop.memo(function DevToolsPerformanceTestingScreen() {
   const entries = Object.entries(require("DevToolsScreens").PerformanceTestingScreens);
   obj1.children = entries.map((item) => {
     [tmp, ] = item;
-    return jsx(screenKey(5619).TableRow, {
+    return jsx(screenKey(5655).TableRow, {
       label: tmp2,
-      icon: jsx(screenKey(5619).TableRow.Icon, { IconComponent: tmp3 }),
+      icon: jsx(screenKey(5655).TableRow.Icon, { IconComponent: tmp3 }),
       arrow: true,
       onPress() {
         let arr = screenKey;

@@ -1,7 +1,7 @@
-// === Module 11316: BountyTypes ===
+// === Module 11356: BountyTypes ===
 
-// Module 11316 (BountyTypes)
-import AssetUtils from "AssetUtils" /* 11317 */;
+// Module 11356 (BountyTypes)
+import AssetUtils from "AssetUtils" /* 11357 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/ads/BountyTypes.tsx");

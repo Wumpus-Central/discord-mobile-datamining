@@ -1,19 +1,19 @@
-// === Module 13434: BuyNitroAccountCredit ===
+// === Module 13483: BuyNitroAccountCredit ===
 
-// Module 13434 (BuyNitroAccountCredit)
+// Module 13483 (BuyNitroAccountCredit)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import SetUtils from "SetUtils" /* 1974 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13375 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13424 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4237 */;
-import EntitlementStore from "EntitlementStore" /* 7408 */;
+import SubscriptionStore from "SubscriptionStore" /* 4268 */;
+import EntitlementStore from "EntitlementStore" /* 7446 */;
 
 require = fn;
 let closure_6 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { creditList: null };
 obj = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
 obj.creditList = obj;

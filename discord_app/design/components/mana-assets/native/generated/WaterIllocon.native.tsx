@@ -1,9 +1,9 @@
-// === Module 6579: WaterIllocon ===
+// === Module 6615: WaterIllocon ===
 
-// Module 6579 (WaterIllocon)
+// Module 6615 (WaterIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6580 from "module_6580" /* 6580 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6616 from "module_6616" /* 6616 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const WaterIllocon = function WaterIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6580 };
+  obj = { uri: _modDef6616 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6580 });
+  return jsx(FastImageDefault, { uri: _modDef6616 });
 };

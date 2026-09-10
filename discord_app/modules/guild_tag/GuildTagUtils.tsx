@@ -1,13 +1,13 @@
-// === Module 8191: GuildTagUtils ===
+// === Module 8228: GuildTagUtils ===
 
-// Module 8191 (GuildTagUtils)
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4218 */;
+// Module 8228 (GuildTagUtils)
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4249 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-const GuildTagConstants = fn(7958);
+const GuildTagConstants = fn(7996);
 ({ GuildTagBadgeMediaProxySizes, GuildTagBadgeMediaProxySizesMobile: hasOwnProperty, GuildTagBadgeSize: metroRequire } = GuildTagConstants);
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);

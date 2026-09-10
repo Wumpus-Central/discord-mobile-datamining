@@ -1,22 +1,22 @@
-// === Module 16894: ChannelSettingsChangeRTCRegion ===
+// === Module 16951: ChannelSettingsChangeRTCRegion ===
 
-// Module 16894 (ChannelSettingsChangeRTCRegion)
+// Module 16951 (ChannelSettingsChangeRTCRegion)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import TableRadioGroup from "TableRadioGroup" /* 5699 */;
-import TableRadioRow from "TableRadioRow" /* 5702 */;
-import Form from "Form" /* 8626 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8658 */;
+import TableRadioGroup from "TableRadioGroup" /* 5735 */;
+import TableRadioRow from "TableRadioRow" /* 5738 */;
+import Form from "Form" /* 8663 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8695 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RegionStore from "RegionStore" /* 16850 */;
+import RegionStore from "RegionStore" /* 16907 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const AUTOMATIC_RTC_REGION = "AUTOMATIC_RTC_REGION";
-fn(4574);
+fn(4605);
 let createStyles = { form: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.form = createStyles;
@@ -81,7 +81,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(8658).updateChannel({ rtcRegion: tmp });
+  self(8695).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     const obj = { rtcRegion };
     obj.saveChannel(self.props.channel.id, obj);
@@ -107,7 +107,7 @@ prototype["render"] = function render() {
   const tmp = closure_8(this.context);
   return jsx(Form.Form, { style: closure_8(this.context).form, children: this.renderRegions() });
 };
-ChannelSettingsChangeRTCRegion.contextType = fn(4284).ThemeContext;
+ChannelSettingsChangeRTCRegion.contextType = fn(4315).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");
 

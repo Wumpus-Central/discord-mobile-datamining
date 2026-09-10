@@ -1,9 +1,9 @@
-// === Module 15139: UndoIcon ===
+// === Module 15188: UndoIcon ===
 
-// Module 15139 (UndoIcon)
+// Module 15188 (UndoIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod15140 from "module_15140" /* 15140 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod15189 from "module_15189" /* 15189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const UndoIcon = function UndoIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15140, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15189, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

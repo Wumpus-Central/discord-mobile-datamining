@@ -1,6 +1,6 @@
-// === Module 4783: StageVoicePanelExperiment ===
+// === Module 4814: StageVoicePanelExperiment ===
 
-// Module 4783 (StageVoicePanelExperiment)
+// Module 4814 (StageVoicePanelExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

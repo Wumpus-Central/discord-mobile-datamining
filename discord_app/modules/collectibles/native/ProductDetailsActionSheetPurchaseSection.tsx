@@ -1,19 +1,19 @@
-// === Module 13180: ProductDetailsActionSheetPurchaseSection ===
+// === Module 13227: ProductDetailsActionSheetPurchaseSection ===
 
-// Module 13180 (ProductDetailsActionSheetPurchaseSection)
+// Module 13227 (ProductDetailsActionSheetPurchaseSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7176 */;
-import OrbsIcon from "OrbsIcon" /* 8869 */;
-import openGiftModal from "openGiftModal" /* 11039 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7214 */;
+import OrbsIcon from "OrbsIcon" /* 8906 */;
+import openGiftModal from "openGiftModal" /* 11079 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7572 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7609 */;
 
 require = fn;
 function GiftButton(onTrackPress) {
@@ -57,12 +57,12 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  let obj = balance(13178);
+  let obj = balance(13225);
   const virtualCurrencyData = obj.useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj1 = balance(8901);
+  let obj1 = balance(8938);
   let isPartiallyOwnedBundle = obj1.useProductDisableState(product.skuId).isDisabled;
-  let obj2 = balance(8874);
+  let obj2 = balance(8911);
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = !canAfford;
   }
@@ -79,12 +79,12 @@ function VCButton(balance) {
       skuId: product.skuId,
       analyticsLocations,
       onCheckoutSuccess(arg0) {
-        let obj = balance(7555);
+        let obj = balance(7593);
         const collectiblesPurchases = obj.fetchCollectiblesPurchases();
-        let obj1 = product(4777);
+        let obj1 = product(4808);
         obj1.popWithKey(ORB_CHECKOUT_MODAL);
         if (product.skuId === constants.ORB_PROFILE_BADGE) {
-          let tmp4Result = product(4777);
+          let tmp4Result = product(4808);
           obj = {
             modalKey,
             onPressViewBadge() {
@@ -92,11 +92,11 @@ function VCButton(balance) {
               },
             orbBalancePriorToPurchase
           };
-          tmp4Result.pushLazy(balance(1896)(13185, dependencyMap.paths), obj, modalKey);
+          tmp4Result.pushLazy(balance(1896)(13232, dependencyMap.paths), obj, modalKey);
         } else {
           const ALL = balance(1077).FractionalPremiumSKUsSets.ALL;
           if (ALL.has(product.skuId)) {
-            tmp4Result = product(4541);
+            tmp4Result = product(4572);
             obj = { skuId: product.skuId, consumed: null, onPressExplorePerks: null, onPressViewCredits: null };
             const first = arg0.entitlements[0];
             let flag;
@@ -109,23 +109,23 @@ function VCButton(balance) {
             obj.consumed = flag;
             obj.onPressExplorePerks = function onPressExplorePerks() {
               navigation.navigate(constants2.PREMIUM);
-              product(4541).hideActionSheet();
+              product(4572).hideActionSheet();
             };
             obj.onPressViewCredits = function onPressViewCredits() {
               navigation.navigate(constants2.PREMIUM_MANAGE_PLAN);
-              product(4541).hideActionSheet();
+              product(4572).hideActionSheet();
             };
-            tmp4Result.openLazy(balance(1896)(13186, dependencyMap.paths), "FractionalNitroCollectedActionSheet", obj);
-            const tmp10 = balance(1896)(13186, dependencyMap.paths);
+            tmp4Result.openLazy(balance(1896)(13233, dependencyMap.paths), "FractionalNitroCollectedActionSheet", obj);
+            const tmp10 = balance(1896)(13233, dependencyMap.paths);
           } else {
             obj1 = { product, useCategoryImage: true, showOrbBalancePill: true, orbBalancePriorToPurchase, stageCollectibleChangeForEditProfile };
-            product(11109).open(obj1);
-            const tmp4Result1 = product(11109);
+            product(11149).open(obj1);
+            const tmp4Result1 = product(11149);
           }
         }
       }
     };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13181, dependencyMap.paths), obj, ORB_CHECKOUT_MODAL);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13228, dependencyMap.paths), obj, ORB_CHECKOUT_MODAL);
   }, items);
   if (null == price) {
     return null;
@@ -179,7 +179,7 @@ function VCButton(balance) {
       str2 = "secondary";
     }
     obj3.variant = str2;
-    obj2.children = closure_13(tmp2(4990).BaseTextButton, obj3);
+    obj2.children = closure_13(tmp2(5026).BaseTextButton, obj3);
     return closure_13(navigation, obj2);
   }
   const tmp2Result = balance(1483);
@@ -201,13 +201,13 @@ const CollectiblesShopConstants = fn(1076);
 ({ EXTERNAL_PRODUCT_SKU_IDS: closure_7, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const Constants = fn(1074);
 ({ MarketingURLs: closure_9, UserSettingsSections: c10 } = Constants);
-const RootNavigatorScreen = fn(11116).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11156).RootNavigatorScreen;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const ORB_BADGE_COLLECTED_MODAL = "ORB_BADGE_COLLECTED_MODAL";
 const ORB_CHECKOUT_MODAL = "ORB_CHECKOUT_MODAL";
-fn(4574);
+fn(4605);
 let createStyles = { container: null, purchaseSection: null, disclaimer: null, buttonContainer: null, orbsButtonLabel: null, orbsButtonText: null };
 createStyles = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 };
 createStyles.container = createStyles;
@@ -247,7 +247,7 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
   const result1 = obj6.isFreeCollectiblesProduct(product);
   let obj7 = require("CollectiblesProductUtils");
   const result2 = obj7.isOrbsExclusiveProduct(product);
-  let obj8 = require("module_8882");
+  let obj8 = require("module_8919");
   const balance = obj8.useFetchVirtualCurrencyBalance().balance;
   let obj9 = require("useVirtualCurrencyData");
   const canAfford = obj9.useVirtualCurrencyData(product, canUseShopDiscountsResult).canAfford;

@@ -1,24 +1,24 @@
-// === Module 11865: ModerateUserActionSheet ===
+// === Module 11905: ModerateUserActionSheet ===
 
-// Module 11865 (ModerateUserActionSheet)
+// Module 11905 (ModerateUserActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 9435 */;
-import GuildMemberUtils from "GuildMemberUtils" /* 11866 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11870 */;
-import showKickConfirmModalDefault from "showKickConfirmModal" /* 11886 */;
-import showBanConfirmModalDefault from "showBanConfirmModal" /* 11888 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 9473 */;
+import GuildMemberUtils from "GuildMemberUtils" /* 11906 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11910 */;
+import showKickConfirmModalDefault from "showKickConfirmModal" /* 11926 */;
+import showBanConfirmModalDefault from "showBanConfirmModal" /* 11928 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_11 = createStyles.createStyles({ container: { padding: 16, gap: 16 }, memberRoles: { justifyContent: "flex-start" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_automod/native/ModerateUserActionSheet.tsx");
@@ -117,7 +117,7 @@ export default noop.memo((user) => {
               arr = arr.pop();
             }
           };
-          obj.pushLazy(asyncRequireImpl(11867, dependencyMap.paths), obj);
+          obj.pushLazy(asyncRequireImpl(11907, dependencyMap.paths), obj);
         };
         items4.push(closure_9(tmp2(tmp3[13]).ActionSheetRow, obj));
       }

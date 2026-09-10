@@ -1,8 +1,8 @@
-// === Module 16044: SidebarCoachmarkOverlay ===
+// === Module 16093: SidebarCoachmarkOverlay ===
 
-// Module 16044 (SidebarCoachmarkOverlay)
-import useInitialValueDefault from "useInitialValue" /* 5612 */;
-import LayerContext from "LayerContext" /* 7171 */;
+// Module 16093 (SidebarCoachmarkOverlay)
+import useInitialValueDefault from "useInitialValue" /* 5648 */;
+import LayerContext from "LayerContext" /* 7209 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

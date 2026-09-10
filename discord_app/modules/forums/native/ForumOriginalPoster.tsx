@@ -1,9 +1,9 @@
-// === Module 11903: ForumOriginalPoster ===
+// === Module 11943: ForumOriginalPoster ===
 
-// Module 11903 (ForumOriginalPoster)
+// Module 11943 (ForumOriginalPoster)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,11 +32,11 @@ class ForumOriginalPoster {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, opIcon: null, opIconBackground: null };
 createStyles = { borderRadius: nativeDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 };
 createStyles.opIcon = createStyles;
-createStyles.opIconBackground = { backgroundColor: fn(5455).DARK_BRAND_260_LIGHT_BRAND_200 };
+createStyles.opIconBackground = { backgroundColor: fn(5491).DARK_BRAND_260_LIGHT_BRAND_200 };
 const hasOwnProperty = createStyles.createStyles(createStyles);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumOriginalPoster.tsx");

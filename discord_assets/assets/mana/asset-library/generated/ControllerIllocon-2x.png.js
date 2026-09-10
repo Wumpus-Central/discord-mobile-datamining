@@ -1,6 +1,6 @@
-// === Module 5888: ? ===
+// === Module 5924: ? ===
 
-// Module 5888
+// Module 5924
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ControllerIllocon-2x.png.js");

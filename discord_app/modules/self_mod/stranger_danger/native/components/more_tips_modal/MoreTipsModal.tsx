@@ -1,19 +1,19 @@
-// === Module 11407: MoreTipsModal ===
+// === Module 11447: MoreTipsModal ===
 
-// Module 11407 (MoreTipsModal)
+// Module 11447 (MoreTipsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import _modDef7006 from "module_7006" /* 7006 */;
-import HeaderActionButton from "HeaderActionButton" /* 7391 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
-import MetricEvents from "MetricEvents" /* 7621 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11402 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11408 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11409 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import _modDef7044 from "module_7044" /* 7044 */;
+import HeaderActionButton from "HeaderActionButton" /* 7429 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7653 */;
+import MetricEvents from "MetricEvents" /* 7658 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11442 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11448 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11449 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10947 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10987 */;
 
 require = fn;
 function MoreTipsModalScreen(learnMore) {
@@ -49,7 +49,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { scroll: null, contentContainer: null, tipsContainer: null, learnMore: null, header: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.scroll = createStyles;
@@ -99,7 +99,7 @@ export default function MoreTipsModal(headerStyle) {
           onPress() {
             return warningId(senderId[12]).popWithKey(channelId);
           },
-          source: _modDef7006,
+          source: _modDef7044,
           iconSize: native.IconSizes.MEDIUM,
           accessibilityLabel: null
         };

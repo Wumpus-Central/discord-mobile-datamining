@@ -1,9 +1,9 @@
-// === Module 5111: StageIcon ===
+// === Module 5147: StageIcon ===
 
-// Module 5111 (StageIcon)
+// Module 5147 (StageIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod5051 from "module_5051" /* 5051 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod5087 from "module_5087" /* 5087 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const StageIcon = function StageIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5051, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5087, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

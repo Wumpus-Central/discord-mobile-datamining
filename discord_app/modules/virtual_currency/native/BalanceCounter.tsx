@@ -1,10 +1,10 @@
-// === Module 11130: BalanceCounter ===
+// === Module 11170: BalanceCounter ===
 
-// Module 11130 (BalanceCounter)
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4294 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import spring from "spring" /* 4988 */;
+// Module 11170 (BalanceCounter)
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4325 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import spring from "spring" /* 5024 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

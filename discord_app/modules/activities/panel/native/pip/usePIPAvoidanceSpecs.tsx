@@ -1,10 +1,10 @@
-// === Module 17044: pip/usePIPAvoidanceSpecs ===
+// === Module 17103: pip/usePIPAvoidanceSpecs ===
 
-// Module 17044 (pip/usePIPAvoidanceSpecs)
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9527 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11386 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 16950 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 17046 */;
+// Module 17103 (pip/usePIPAvoidanceSpecs)
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9565 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11426 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 17007 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 17105 */;
 import size from "module_2" /* 2 */;
 
 let __initData = { code: "function usePIPAvoidanceSpecsTsx1(){const{keyboardHeight,safeArea,screenName}=this.__closure;return{keyboardHeight:keyboardHeight.get(),safeAreaBottom:safeArea.bottom,screenName:screenName.get()};}" };
@@ -15,9 +15,9 @@ export default function usePIPAvoidanceSpecs(safeArea) {
   _require = safeArea;
   let obj = require("ReanimatedRexport");
   const sharedValue = obj.useSharedValue({ top: 0, bottom: 0 });
-  const tmp2 = sharedValue(16729)();
+  const tmp2 = sharedValue(16786)();
   dependencyMap = tmp2;
-  const tmp3 = sharedValue(17045)();
+  const tmp3 = sharedValue(17104)();
   __initData = tmp3;
   const fn = function n() {
     return { keyboardHeight: closure_2.get(), safeAreaBottom: safeArea.bottom, screenName: closure_3.get() };
@@ -36,7 +36,7 @@ export default function usePIPAvoidanceSpecs(safeArea) {
     }
     tmp = current;
   };
-  obj = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(16950), getAdjustedBottomOffsets: sharedValue(17046), updateSharedValueIfChanged: sharedValue(11386), pipAvoidanceSpecs: sharedValue };
+  obj = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(17007), getAdjustedBottomOffsets: sharedValue(17105), updateSharedValueIfChanged: sharedValue(11426), pipAvoidanceSpecs: sharedValue };
   fn2.__closure = obj;
   fn2.__workletHash = 643938425459;
   fn2.__initData = __initData2;

@@ -1,7 +1,7 @@
-// === Module 9701: useEventException ===
+// === Module 9739: useEventException ===
 
-// Module 9701 (useEventException)
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7540 */;
+// Module 9739 (useEventException)
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7578 */;
 
 const require = fn;
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 16413: FocusModeOptionsActionSheet ===
+// === Module 16462: FocusModeOptionsActionSheet ===
 
-// Module 16413 (FocusModeOptionsActionSheet)
+// Module 16462 (FocusModeOptionsActionSheet)
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
 import noop from "module_19" /* 19 */;
@@ -66,7 +66,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/
 
 export default function FocusModeOptionsActionSheet(onSelect) {
   onSelect = onSelect.onSelect;
-  let obj = onSelect(10122);
+  let obj = onSelect(10160);
   const focusModeEnabled = obj.useFocusModeEnabled();
   obj = { title: null, hasIcons: false, children: null };
   const intl = onSelect(1114).intl;
@@ -83,7 +83,7 @@ export default function FocusModeOptionsActionSheet(onSelect) {
     };
     const intl4 = tmp(1114).intl;
     obj.label = intl4.string(tmp(1114).t.rk35Gm);
-    tmp4Result = closure_2(tmp(5619).TableRow, obj);
+    tmp4Result = closure_2(tmp(5655).TableRow, obj);
   }
   const obj1 = { children: null };
   items = [tmp4Result, ];
@@ -101,6 +101,6 @@ export default function FocusModeOptionsActionSheet(onSelect) {
     }, "" + duration);
   });
   obj.children = items;
-  obj1.children = closure_3(onSelect(5701).TableRowGroup, obj);
-  return closure_2(onSelect(7211).ActionSheet, obj1);
+  obj1.children = closure_3(onSelect(5737).TableRowGroup, obj);
+  return closure_2(onSelect(7249).ActionSheet, obj1);
 };

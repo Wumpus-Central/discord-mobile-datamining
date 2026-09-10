@@ -1,9 +1,9 @@
-// === Module 12459: ChatInputCharCounter ===
+// === Module 12499: ChatInputCharCounter ===
 
-// Module 12459 (ChatInputCharCounter)
+// Module 12499 (ChatInputCharCounter)
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9345 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -13,7 +13,7 @@ const UpsellTypes = fn(1074).UpsellTypes;
 const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_10 = createStyles.createStyles({ container: { alignItems: "center", paddingBottom: 6 } });
 const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
@@ -24,7 +24,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   const stateFromStores = obj.useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
   const tmp = closure_10();
   [tmp6, c2] = _slicedToArray(noop.useState(0), 2);
-  const tmp7 = stateFromStores(9336)();
+  const tmp7 = stateFromStores(9373)();
   _slicedToArray = tmp7;
   const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     onMessageLengthChanged(length) {
@@ -38,9 +38,9 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     obj = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xs/medium", children: null };
     const _HermesInternal = HermesInternal;
     obj.children = "-" + tmp6;
-    const items2 = [closure_8(tmp2(4570).Text, obj), closure_8(tmp2(8695).NitroWheelIcon, { size: "sm" })];
+    const items2 = [closure_8(tmp2(4601).Text, obj), closure_8(tmp2(8732).NitroWheelIcon, { size: "sm" })];
     obj.children = items2;
-    tmp10 = closure_9(tmp2(5137).PressableOpacity, obj);
+    tmp10 = closure_9(tmp2(5173).PressableOpacity, obj);
   }
   return tmp10;
 });

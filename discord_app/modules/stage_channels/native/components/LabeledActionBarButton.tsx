@@ -1,9 +1,9 @@
-// === Module 10042: LabeledActionBarButton ===
+// === Module 10080: LabeledActionBarButton ===
 
-// Module 10042 (LabeledActionBarButton)
+// Module 10080 (LabeledActionBarButton)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Pressables from "Pressables" /* 5137 */;
+import Pressables from "Pressables" /* 5173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,9 +11,9 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { buttonContainer: null, container: null, containerWithLabel: null, pressable: null, buttonContent: null, buttonText: null, rightTextMargin: null };
-createStyles = { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5455).ACTION_BAR_BUTTON_BACKGROUND };
+createStyles = { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5491).ACTION_BAR_BUTTON_BACKGROUND };
 createStyles.buttonContainer = createStyles;
 createStyles.container = { marginHorizontal: 12 };
 createStyles.containerWithLabel = { minWidth: "50%", maxWidth: "70%", flexShrink: 1 };

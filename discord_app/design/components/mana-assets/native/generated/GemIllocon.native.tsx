@@ -1,9 +1,9 @@
-// === Module 6113: GemIllocon ===
+// === Module 6149: GemIllocon ===
 
-// Module 6113 (GemIllocon)
+// Module 6149 (GemIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6114 from "module_6114" /* 6114 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6150 from "module_6150" /* 6150 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const GemIllocon = function GemIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6114 };
+  obj = { uri: _modDef6150 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6114 });
+  return jsx(FastImageDefault, { uri: _modDef6150 });
 };

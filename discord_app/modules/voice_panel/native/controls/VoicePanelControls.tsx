@@ -1,45 +1,45 @@
-// === Module 17203: VoicePanelControls ===
+// === Module 17262: VoicePanelControls ===
 
-// Module 17203 (VoicePanelControls)
+// Module 17262 (VoicePanelControls)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import native from "native" /* 4284 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import HapticUtils from "HapticUtils" /* 4542 */;
-import spring from "spring" /* 4988 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
-import native2 from "native" /* 8934 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9527 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11025 */;
-import createUseAnimatedScrollLock from "createUseAnimatedScrollLock" /* 12133 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12307 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12309 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17088 */;
-import useControlsLockDefault from "useControlsLock" /* 17129 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 17204 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17205 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17206 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 17207 */;
-import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17211 */;
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17213 */;
+import native from "native" /* 4315 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import HapticUtils from "HapticUtils" /* 4573 */;
+import spring from "spring" /* 5024 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
+import native2 from "native" /* 8971 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9565 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11065 */;
+import createUseAnimatedScrollLock from "createUseAnimatedScrollLock" /* 12173 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12347 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12349 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17147 */;
+import useControlsLockDefault from "useControlsLock" /* 17188 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 17263 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17264 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17265 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 17266 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17270 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17272 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12303);
+const VoicePanelConstants = fn(12343);
 ({ UI_SHOW_HIDE_PHYSICS: closure_7, MODE_CHANGE_PHYSICS: closure_8, BORDER_RADIUS_PHYSICS: closure_9, PANEL_CONTROLS_HEIGHT_PHYSICS: c10, VoicePanelModes: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(12306);
+const VoicePanelCardConstants = fn(12346);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(12301);
+const VoicePanelControlsConstants = fn(12341);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } = VoicePanelControlsConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { accessibilityWrapper: null, wrapper: null, buttonsWrapper: null, actionSheetDragHandleWrapper: null };
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

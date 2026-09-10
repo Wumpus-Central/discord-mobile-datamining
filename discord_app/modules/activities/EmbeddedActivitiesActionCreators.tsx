@@ -1,24 +1,24 @@
-// === Module 9536: EmbeddedActivitiesActionCreators ===
+// === Module 9574: EmbeddedActivitiesActionCreators ===
 
-// Module 9536 (EmbeddedActivitiesActionCreators)
+// Module 9574 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4202 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9508 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4233 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4806 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9546 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4802 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 4717 */;
+import ApplicationStore from "ApplicationStore" /* 4833 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 4748 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import UserStore from "UserStore" /* 1371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import VoiceStateStore from "VoiceStateStore" /* 4624 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
 require = fn;
@@ -275,9 +275,9 @@ let closure_27 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants2.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const obj = closure_1_0(8888);
-                const hasApplicationFlagResult = closure_1_0(8888).hasApplicationFlag(application, constants.EMBEDDED);
-                const result = closure_1_0(9578).isActivityInTextSupportedForChannel(type);
+                const obj = closure_1_0(8925);
+                const hasApplicationFlagResult = closure_1_0(8925).hasApplicationFlag(application, constants.EMBEDDED);
+                const result = closure_1_0(9616).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = hasApplicationFlagResult;
                 }
@@ -585,19 +585,19 @@ let closure_29 = async function _maybeSendPrimaryAppCommand(arg0) {
                               obj = { status: error_status, body: null };
                               const obj1 = { message: error_message, code: error_code };
                               obj.body = obj1;
-                              const tmp21 = new nonce(4476)(obj);
+                              const tmp21 = new nonce(4507)(obj);
                               closure_1_1(tmp21);
                             }
                           }
                         }
                         if (null != error_reason_code) {
-                          if (error_reason_code in nonce(4803).ReasonCodes) {
-                            const tmp14 = new nonce(4803)(error_reason_code);
+                          if (error_reason_code in nonce(4834).ReasonCodes) {
+                            const tmp14 = new nonce(4834)(error_reason_code);
                             closure_1_1(tmp14);
                           }
                         }
-                        let tmp3Result = nonce(4803);
-                        tmp3Result = new tmp3Result(nonce(4803).ReasonCodes.UNKNOWN);
+                        let tmp3Result = nonce(4834);
+                        tmp3Result = new tmp3Result(nonce(4834).ReasonCodes.UNKNOWN);
                         closure_1_1(tmp3Result);
                       }
                     };
@@ -605,7 +605,7 @@ let closure_29 = async function _maybeSendPrimaryAppCommand(arg0) {
                 };
                 obj = { channel, guild };
                 obj.context = obj;
-                nonce(9443)(obj);
+                nonce(9481)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -1326,10 +1326,10 @@ let closure_38 = async function _sendEmbeddedActivityInviteUser() {
     } else {
       let content;
       if (null != closure_1_5) {
-        content = closure_1(7696).parse(channel, tmp2).content;
-        const obj = closure_1(7696);
+        content = closure_1(7733).parse(channel, tmp2).content;
+        const obj = closure_1(7733);
       }
-      const obj2 = closure_1(7470);
+      const obj2 = closure_1(7508);
       obj2.sendInvite(result, code.code, closure_1_3, closure_1_4, content);
     }
   });
@@ -1563,14 +1563,14 @@ let closure_42 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_4 = fn(9322).getOrFetchApplicationCommandIndexForTarget;
+let closure_4 = fn(9359).getOrFetchApplicationCommandIndexForTarget;
 let closure_16 = fn(1920).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
-const ActivityPanelModes = fn(9537).ActivityPanelModes;
+const ActivityPanelModes = fn(9575).ActivityPanelModes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_18, AnalyticsGameOpenTypes: closure_19, ApplicationFlags: closure_20, ChannelTypes: closure_21, Endpoints: closure_22, PopoutWindowKeys: closure_23 } = Constants);
 const INSTALL_LESS_APP_IDS = fn(1350).INSTALL_LESS_APP_IDS;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const InviteTargetTypes = fn(7750).InviteTargetTypes;
+const InviteTargetTypes = fn(7787).InviteTargetTypes;
 let closure_28 = { NO_PRIMARY_APP_COMMAND: 1, [1]: "NO_PRIMARY_APP_COMMAND", UNAUTHORIZED: 2, [2]: "UNAUTHORIZED", NO_CHANNEL: 3, [3]: "NO_CHANNEL", FAILED_ACTIVITY_LAUNCH_CHECKS: 4, [4]: "FAILED_ACTIVITY_LAUNCH_CHECKS" };
 let closure_30 = { OTHER: 0, [0]: "OTHER", NO_APPLICATION_ID: 1, [1]: "NO_APPLICATION_ID", UNKNOWN_USER_OR_APPLICATION: 2, [2]: "UNKNOWN_USER_OR_APPLICATION", INVALID_CHANNEL: 3, [3]: "INVALID_CHANNEL", LAUNCHABILITY_CHECK_FAILED_OTHER: 4, [4]: "LAUNCHABILITY_CHECK_FAILED_OTHER", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 5, [5]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", FAILED_ACTIVITY_LAUNCH_CHECKS: 7, [7]: "FAILED_ACTIVITY_LAUNCH_CHECKS", NOT_CONNECTED_TO_VOICE_CHANNEL: 8, [8]: "NOT_CONNECTED_TO_VOICE_CHANNEL", AIT_NOT_ENABLED_FOR_USER: 9, [9]: "AIT_NOT_ENABLED_FOR_USER" };
 const size = fn(2);

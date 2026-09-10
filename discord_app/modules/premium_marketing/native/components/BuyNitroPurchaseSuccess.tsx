@@ -1,13 +1,13 @@
-// === Module 13418: BuyNitroPurchaseSuccess ===
+// === Module 13467: BuyNitroPurchaseSuccess ===
 
-// Module 13418 (BuyNitroPurchaseSuccess)
+// Module 13467 (BuyNitroPurchaseSuccess)
 import util from "util" /* 1114 */;
-import useAlertStore from "useAlertStore" /* 4920 */;
-import AlertModal from "AlertModal" /* 4924 */;
+import useAlertStore from "useAlertStore" /* 4951 */;
+import AlertModal from "AlertModal" /* 4955 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const reset = fn(7435).reset;
+const reset = fn(7473).reset;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);

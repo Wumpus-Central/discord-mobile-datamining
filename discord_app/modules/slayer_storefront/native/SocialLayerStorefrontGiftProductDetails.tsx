@@ -1,9 +1,9 @@
-// === Module 11034: SocialLayerStorefrontGiftProductDetails ===
+// === Module 11074: SocialLayerStorefrontGiftProductDetails ===
 
-// Module 11034 (SocialLayerStorefrontGiftProductDetails)
+// Module 11074 (SocialLayerStorefrontGiftProductDetails)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8859 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8896 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const constants = fn(1074).PriceSetAssignmentPurchaseTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, text: null, appInfo: null, appIcon: null };
 createStyles = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginHorizontal: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;
@@ -29,9 +29,9 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
   sku = sku.sku;
   let getOrFetchApplication;
   const tmp = closure_9();
-  let obj = getOrFetchApplication(7182);
+  let obj = getOrFetchApplication(7220);
   getOrFetchApplication = obj.useGetOrFetchApplication(sku.applicationId);
-  let obj1 = getOrFetchApplication(10834);
+  let obj1 = getOrFetchApplication(10872);
   obj = { sku, priceSetAssignmentPurchaseType: constants.GIFT };
   const userPrice = obj1.useFormattedSKUPrice(obj).userPrice;
   const items = [getOrFetchApplication];
@@ -60,17 +60,17 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
     }
     const items2 = [tmp8Result, ];
     const obj5 = { variant: "text-sm/medium", color: "text-muted", children: getOrFetchApplication.name };
-    items2[1] = closure_7(tmp2(4570).Text, obj5);
+    items2[1] = closure_7(tmp2(4601).Text, obj5);
     obj2.children = items2;
     tmp6Result = closure_8(closure_5, obj2);
   }
-  const items3 = [tmp6Result, closure_7(getOrFetchApplication(4570).Text, { variant: "text-md/semibold", children: sku.name })];
+  const items3 = [tmp6Result, closure_7(getOrFetchApplication(4601).Text, { variant: "text-md/semibold", children: sku.name })];
   obj1.children = items3;
   items1[1] = closure_8(closure_5, obj1);
   tmp8Result = null != userPrice;
   if (tmp8Result) {
     const obj7 = { variant: "text-md/semibold", children: userPrice };
-    tmp8Result = closure_7(tmp2(4570).Text, obj7);
+    tmp8Result = closure_7(tmp2(4601).Text, obj7);
   }
   items1[2] = tmp8Result;
   obj.children = items1;

@@ -1,11 +1,11 @@
-// === Module 9234: GuildProfileTraits ===
+// === Module 9271: GuildProfileTraits ===
 
-// Module 9234 (GuildProfileTraits)
+// Module 9271 (GuildProfileTraits)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4230 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import EmojiDefault from "Emoji" /* 7144 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4261 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import EmojiDefault from "Emoji" /* 7182 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -37,7 +37,7 @@ function GuildProfileTraitView(trait) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 }, trait: null, emojiImage: null };
 createStyles = { display: "flex", flexDirection: "row", gap: 4, alignItems: "center", paddingHorizontal: 8, paddingVertical: 4, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE };
 createStyles.trait = createStyles;

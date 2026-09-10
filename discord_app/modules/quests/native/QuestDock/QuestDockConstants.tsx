@@ -1,6 +1,6 @@
-// === Module 15125: QuestDockConstants ===
+// === Module 15174: QuestDockConstants ===
 
-// Module 15125 (QuestDockConstants)
+// Module 15174 (QuestDockConstants)
 import nativeDefault from "native" /* 576 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,8 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 
 export const QUEST_DOCK_COLLAPSED_HEIGHT = 56;
 export const QUEST_DOCK_CLOSED_HEIGHT = 22;
-export const QUEST_DOCK_EXPANDED_HEIGHT = 400;
+export const QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT = 400;
+export const QUEST_DOCK_PORTRAIT_MEDIA_EXPANDED_HEIGHT = 585;
 export const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = nativeDefault.space.PX_16;
 export const QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL = nativeDefault.space.PX_12;
 export const QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP = nativeDefault.space.PX_8;

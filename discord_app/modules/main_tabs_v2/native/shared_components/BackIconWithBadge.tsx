@@ -1,14 +1,14 @@
-// === Module 16437: BackIconWithBadge ===
+// === Module 16486: BackIconWithBadge ===
 
-// Module 16437 (BackIconWithBadge)
+// Module 16486 (BackIconWithBadge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import XLargeIcon from "XLargeIcon" /* 4527 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5642 */;
-import XSmallIcon from "XSmallIcon" /* 5694 */;
-import ClipView from "ClipView" /* 8847 */;
+import XLargeIcon from "XLargeIcon" /* 4558 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5678 */;
+import XSmallIcon from "XSmallIcon" /* 5730 */;
+import ClipView from "ClipView" /* 8884 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7650 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7687 */;
 
 require = fn;
 function IconWithBadge(includeNotificationsCount) {
@@ -28,7 +28,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(16428)().value;
+    num2 = memo(16477)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -63,7 +63,7 @@ function IconWithBadge(includeNotificationsCount) {
     items4 = [];
   }
   const obj1 = { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, { size: "md", style: tmp.backIcon, color: "interactive-text-default" }) };
-  const items5 = [closure_6(memo(8847), obj1), ];
+  const items5 = [closure_6(memo(8884), obj1), ];
   let tmp9Result = null;
   if (sum > 0) {
     const obj3 = { style: tmp.badgeWrapper, children: null };
@@ -79,7 +79,7 @@ function IconWithBadge(includeNotificationsCount) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { badgeWrapper: { position: "absolute", top: 16, left: 12 }, backIcon: { height: 24, width: 24 }, iconWithBadge: null };
 createStyles = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 createStyles.iconWithBadge = createStyles;

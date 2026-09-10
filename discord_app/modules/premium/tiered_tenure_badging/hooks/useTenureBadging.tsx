@@ -1,14 +1,14 @@
-// === Module 11216: useTenureBadging ===
+// === Module 11256: useTenureBadging ===
 
-// Module 11216 (useTenureBadging)
+// Module 11256 (useTenureBadging)
 import initialize from "initialize" /* 504 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7648 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11217 */;
-import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11218 */;
-import UserProfileStore from "UserProfileStore" /* 7635 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7685 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11257 */;
+import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11258 */;
+import UserProfileStore from "UserProfileStore" /* 7672 */;
 import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4237 */;
+import SubscriptionStore from "SubscriptionStore" /* 4268 */;
 
 require = fn;
 function usePremiumSince() {

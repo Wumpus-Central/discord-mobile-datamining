@@ -1,18 +1,18 @@
-// === Module 8689: InAppReportsUserPreview ===
+// === Module 8726: InAppReportsUserPreview ===
 
-// Module 8689 (InAppReportsUserPreview)
+// Module 8726 (InAppReportsUserPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import ColorUtils from "ColorUtils" /* 4423 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import ColorUtils from "ColorUtils" /* 4454 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: null, title: null, userContainer: null, userProfileInfo: null };
 createStyles = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createStyles.borderColor = createStyles;

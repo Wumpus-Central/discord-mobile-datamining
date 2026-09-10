@@ -1,17 +1,17 @@
-// === Module 11872: GuildDisableCommunication ===
+// === Module 11912: GuildDisableCommunication ===
 
-// Module 11872 (GuildDisableCommunication)
+// Module 11912 (GuildDisableCommunication)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import useMountEffectDefault from "useMountEffect" /* 5006 */;
-import TableRadioGroup from "TableRadioGroup" /* 5699 */;
-import TableRadioRow from "TableRadioRow" /* 5702 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6995 */;
-import TextArea from "TextArea" /* 7099 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11178 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import useMountEffectDefault from "useMountEffect" /* 5042 */;
+import TableRadioGroup from "TableRadioGroup" /* 5735 */;
+import TableRadioRow from "TableRadioRow" /* 5738 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7033 */;
+import TextArea from "TextArea" /* 7137 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11218 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -69,7 +69,7 @@ let items = [
     }
   }
 ];
-fn(4574);
+fn(4605);
 obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, reasonTextArea: null, buttonContainer: null };
 const createStyles = { marginVertical: nativeDefault.space.PX_16 };
 obj.reasonTextArea = createStyles;
@@ -110,7 +110,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             obj = { value, done: true };
             return obj;
           } else {
-            let obj3 = tmp4(11873);
+            let obj3 = tmp4(11913);
             dependencyMap = 1;
             c3 = 1;
             const obj1 = { value: obj3.setCommunicationDisabledDuration(guild_id, id.id, items[asyncGeneratorStep].value, ref.current), done: false };
@@ -125,8 +125,8 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           return obj2;
         } else {
           const intl = user(1114).intl;
-          const obj8 = tmp4(4272);
-          const name = tmp4(4726).getName(closure_129_1, null, closure_129_0);
+          const obj8 = tmp4(4303);
+          const name = tmp4(4757).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";
@@ -134,7 +134,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
           obj3 = { user };
           obj.content = intl.formatToPlainString(user(1114).t.O9C3Nt, obj3);
-          obj.icon = tmp4(9598);
+          obj.icon = tmp4(9636);
           obj8.open(obj);
           closure_129_2();
           c3 = 3;

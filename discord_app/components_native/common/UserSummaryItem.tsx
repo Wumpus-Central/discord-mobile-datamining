@@ -1,6 +1,6 @@
-// === Module 10086: UserSummaryItem ===
+// === Module 10124: UserSummaryItem ===
 
-// Module 10086 (UserSummaryItem)
+// Module 10124 (UserSummaryItem)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -8,7 +8,7 @@ import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { container: { flexDirection: "row" }, names: { marginStart: 4, paddingRight: 1 }, namesLegacy: null, plusCountContainer: null, cutout: null };
 createStyles = { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE };
 createStyles.namesLegacy = createStyles;

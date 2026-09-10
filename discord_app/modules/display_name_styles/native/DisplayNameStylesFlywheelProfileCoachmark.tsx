@@ -1,7 +1,7 @@
-// === Module 16841: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 16898: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 16841 (DisplayNameStylesFlywheelProfileCoachmark)
-import native from "native" /* 5706 */;
+// Module 16898 (DisplayNameStylesFlywheelProfileCoachmark)
+import native from "native" /* 5742 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -12,7 +12,7 @@ function CoachmarkImage() {
 const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
@@ -27,7 +27,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(4231).canUsePremiumProfileCustomization(stateFromStores);
+  const result = markAsDismissed(4262).canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1114).intl;
   const string = intl.string;
   const tmp6 = markAsDismissed(2786);
@@ -61,7 +61,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
       return closure_1_7(closure_1_9, {});
     }
   }), items2);
-  const obj2 = markAsDismissed(4231);
-  const coachmark = visible(11159).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(4262);
+  const coachmark = visible(11199).useCoachmark(visible.targetRef, memo);
   return null;
 };

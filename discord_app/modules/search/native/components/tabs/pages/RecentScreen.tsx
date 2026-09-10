@@ -1,23 +1,23 @@
-// === Module 16675: RecentScreen ===
+// === Module 16732: RecentScreen ===
 
-// Module 16675 (RecentScreen)
+// Module 16732 (RecentScreen)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Pressables from "Pressables" /* 5137 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12368 */;
-import SearchUtils from "SearchUtils" /* 12370 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12388 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12391 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14850 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Pressables from "Pressables" /* 5173 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8476 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8478 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12408 */;
+import SearchUtils from "SearchUtils" /* 12410 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12428 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12431 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14899 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 7295 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12393 */;
-import SearchHistoryStore from "SearchHistoryStore" /* 16676 */;
-import SearchQueryStore from "SearchQueryStore" /* 12369 */;
+import SearchMessageStore from "SearchMessageStore" /* 7333 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12433 */;
+import SearchHistoryStore from "SearchHistoryStore" /* 16733 */;
+import SearchQueryStore from "SearchQueryStore" /* 12409 */;
 
 require = fn;
 function ClearAllHistory(searchContext) {
@@ -36,8 +36,8 @@ function ClearAllHistory(searchContext) {
   obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1114).intl;
   obj.children = intl2.string(searchContext(1114).t.LFTAUp);
-  obj.children = jsx(searchContext(4570).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(5137).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  obj.children = jsx(searchContext(4601).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(5173).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
 function ViewAll(onJumpToMedia) {
   let obj = { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null };
@@ -49,9 +49,9 @@ function ViewAll(onJumpToMedia) {
   obj.children = jsx(Text_Text.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
   return jsx(Pressables.PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
-const SearchConstants = fn(7892);
+const SearchConstants = fn(7930);
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11, SearchListItemTypes: closure_12, SearchTabs: map1 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(12383).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(12423).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo((searchContext) => {

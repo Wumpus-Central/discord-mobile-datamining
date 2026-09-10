@@ -1,8 +1,8 @@
-// === Module 16925: useSpamMessageRequestsCount ===
+// === Module 16982: useSpamMessageRequestsCount ===
 
-// Module 16925 (useSpamMessageRequestsCount)
+// Module 16982 (useSpamMessageRequestsCount)
 import initialize from "initialize" /* 504 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7234 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7272 */;
 
 require = fn;
 const size = fn(2);

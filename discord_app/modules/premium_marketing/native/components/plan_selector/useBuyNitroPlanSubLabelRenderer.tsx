@@ -1,7 +1,7 @@
-// === Module 13432: useBuyNitroPlanSubLabelRenderer ===
+// === Module 13481: useBuyNitroPlanSubLabelRenderer ===
 
-// Module 13432 (useBuyNitroPlanSubLabelRenderer)
-import BuyNitroPlanPriceDetailsDefault from "BuyNitroPlanPriceDetails" /* 13413 */;
+// Module 13481 (useBuyNitroPlanSubLabelRenderer)
+import BuyNitroPlanPriceDetailsDefault from "BuyNitroPlanPriceDetails" /* 13462 */;
 import noop from "module_19" /* 19 */;
 
 const PRICE_PLACEHOLDER = fn(1373).PRICE_PLACEHOLDER;

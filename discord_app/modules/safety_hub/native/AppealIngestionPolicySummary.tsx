@@ -1,18 +1,18 @@
-// === Module 11930: AppealIngestionPolicySummary ===
+// === Module 11970: AppealIngestionPolicySummary ===
 
-// Module 11930 (AppealIngestionPolicySummary)
+// Module 11970 (AppealIngestionPolicySummary)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ColorUtils from "ColorUtils" /* 4423 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8446 */;
+import ColorUtils from "ColorUtils" /* 4454 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8483 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { sectionTitle: { marginBottom: 8 }, policy: { marginBottom: 16 }, borderColor: null, userContainer: null };
 createStyles = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createStyles.borderColor = createStyles;

@@ -1,6 +1,6 @@
-// === Module 5580: DomainMigrationUtils ===
+// === Module 5616: DomainMigrationUtils ===
 
-// Module 5580 (DomainMigrationUtils)
+// Module 5616 (DomainMigrationUtils)
 import size from "module_2" /* 2 */;
 
 const DomainMigrationMessageFrom = { MIGRATION_SOURCE_DOMAIN: 0, [0]: "MIGRATION_SOURCE_DOMAIN", MIGRATION_DESTINATION_DOMAIN: 1, [1]: "MIGRATION_DESTINATION_DOMAIN" };

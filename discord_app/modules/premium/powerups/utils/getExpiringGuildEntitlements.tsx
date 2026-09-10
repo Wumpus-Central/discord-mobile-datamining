@@ -1,6 +1,6 @@
-// === Module 12523: getExpiringGuildEntitlements ===
+// === Module 12563: getExpiringGuildEntitlements ===
 
-// Module 12523 (getExpiringGuildEntitlements)
+// Module 12563 (getExpiringGuildEntitlements)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/getExpiringGuildEntitlements.tsx");

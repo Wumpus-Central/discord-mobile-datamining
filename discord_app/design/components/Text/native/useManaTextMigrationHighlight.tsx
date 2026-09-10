@@ -1,12 +1,12 @@
-// === Module 4572: useManaTextMigrationHighlight ===
+// === Module 4603: useManaTextMigrationHighlight ===
 
-// Module 4572 (useManaTextMigrationHighlight)
+// Module 4603 (useManaTextMigrationHighlight)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import DevSettingsStore from "DevSettingsStore" /* 4573 */;
+import DevSettingsStore from "DevSettingsStore" /* 4604 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
-import createStyles from "createStyles" /* 4574 */;
+import createStyles from "createStyles" /* 4605 */;
 import size from "module_2" /* 2 */;
 
 const StyleSheet = _mod17.StyleSheet;

@@ -1,23 +1,23 @@
-// === Module 12743: GuildInvite ===
+// === Module 12783: GuildInvite ===
 
-// Module 12743 (GuildInvite)
+// Module 12783 (GuildInvite)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 4985 */;
-import GroupIcon from "GroupIcon" /* 5103 */;
-import TableRow from "TableRow" /* 5619 */;
-import NavigatorHeader from "NavigatorHeader" /* 5638 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9852 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9879 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 9925 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12738 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4785 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5021 */;
+import GroupIcon from "GroupIcon" /* 5139 */;
+import TableRow from "TableRow" /* 5655 */;
+import NavigatorHeader from "NavigatorHeader" /* 5674 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9890 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9917 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 9963 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12778 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9853 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9891 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9865 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9903 */;
 
 require = fn;
 function SeeMoreFooter(openInviteSheet) {
@@ -67,15 +67,15 @@ function GuildInviteSuggestionRows(openInviteSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, FlatList: closure_7, StyleSheet } = get_ActivityIndicator);
-let closure_8 = fn(9926).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(6994).CreateGuildModalStates;
+let closure_8 = fn(9964).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(7030).CreateGuildModalStates;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, AnalyticsSections: closure_15, InstantInviteSources: closure_16, Permissions: closure_17, SearchTypes: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, header: null, description: null, headerImage: null, linkContainer: null, linkButton: null, linkButtonIcon: null, inviteDetail: null, shareButton: null, suggestionsContainer: null, friendIcon: null, suggestionRowsContainer: null, separator: null };
-createStyles = { marginTop: fn(5696).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
+createStyles = { marginTop: fn(5732).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
 createStyles.container = createStyles;
 createStyles.header = { marginBottom: 8 };
 createStyles.description = { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" };

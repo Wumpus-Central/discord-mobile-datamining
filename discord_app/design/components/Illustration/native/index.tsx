@@ -1,7 +1,7 @@
-// === Module 8259: ? ===
+// === Module 8296: ? ===
 
-// Module 8259
-import native from "native" /* 4284 */;
+// Module 8296
+import native from "native" /* 4315 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Illustration/native/index.tsx");

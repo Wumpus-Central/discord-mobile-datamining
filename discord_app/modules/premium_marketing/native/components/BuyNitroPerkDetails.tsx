@@ -1,15 +1,15 @@
-// === Module 13412: BuyNitroPerkDetails ===
+// === Module 13461: BuyNitroPerkDetails ===
 
-// Module 13412 (BuyNitroPerkDetails)
+// Module 13461 (BuyNitroPerkDetails)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
-import Stack_Stack from "Stack/Stack" /* 4987 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
-import PromoSheet from "PromoSheet" /* 10262 */;
-import useBuyNitroPlanSelection from "useBuyNitroPlanSelection" /* 13385 */;
-import BuyNitroPlanPriceDetailsDefault from "BuyNitroPlanPriceDetails" /* 13413 */;
-import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13414 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4572 */;
+import Stack_Stack from "Stack/Stack" /* 5023 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
+import PromoSheet from "PromoSheet" /* 10300 */;
+import useBuyNitroPlanSelection from "useBuyNitroPlanSelection" /* 13434 */;
+import BuyNitroPlanPriceDetailsDefault from "BuyNitroPlanPriceDetails" /* 13462 */;
+import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13463 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -19,7 +19,7 @@ const Image = fn(17).Image;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const BuyNitroPerkDetailsActionSheet = "BuyNitroPerkDetailsActionSheet";
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ illustration: { width: "100%", height: 180 } });
 let closure_8 = noop.memo((perk) => {
   perk = perk.perk;

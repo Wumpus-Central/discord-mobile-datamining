@@ -1,9 +1,9 @@
-// === Module 13283: ConversationCoachmark ===
+// === Module 13331: ConversationCoachmark ===
 
-// Module 13283 (ConversationCoachmark)
+// Module 13331 (ConversationCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const TOPICAL_NAVIGATION_HEADER_COACHMARK = fn(1943).DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
 let items = [TOPICAL_NAVIGATION_HEADER_COACHMARK];
-fn(4574);
+fn(4605);
 let createStyles = { badge: null, coachmarkWrapper: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
 createStyles.badge = createStyles;
@@ -34,7 +34,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
   let first;
   ({ children, isLast } = arg0);
   const ref = noop.useRef(null);
-  let obj = first(7402);
+  let obj = first(7440);
   const tmp3 = _slicedToArray(obj.useSelectedDismissibleContent(items), 2);
   first = tmp3[0];
   dependencyMap = tmp5;
@@ -55,7 +55,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
     return obj;
   }, items);
   const tmp = closure_9();
-  const coachmark = first(11159).useCoachmark(ref, memo);
+  const coachmark = first(11199).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
   const callback = noop.useCallback(() => {

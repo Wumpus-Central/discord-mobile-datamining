@@ -1,10 +1,10 @@
-// === Module 16643: VibegrationsSecretRequestCard ===
+// === Module 16698: VibegrationsSecretRequestCard ===
 
-// Module 16643 (VibegrationsSecretRequestCard)
+// Module 16698 (VibegrationsSecretRequestCard)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import VibegrationsSecretsSheet from "VibegrationsSecretsSheet" /* 16644 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import VibegrationsSecretsSheet from "VibegrationsSecretsSheet" /* 16699 */;
 import noop from "module_19" /* 19 */;
 
 const VibegrationsSecretsSheetDefault = VibegrationsSecretsSheet;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { card: null, chips: null, chip: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 createStyles.card = createStyles;
@@ -39,8 +39,8 @@ export default function VibegrationsSecretRequestCard(projectId) {
   }, items);
   obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = projectId(1114).intl;
-  obj.children = intl.string(request(3560)["/e28TK"]);
-  const items1 = [closure_5(projectId(4570).Text, obj), , , ];
+  obj.children = intl.string(request(3590)["/e28TK"]);
+  const items1 = [closure_5(projectId(4601).Text, obj), , , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -58,11 +58,11 @@ export default function VibegrationsSecretRequestCard(projectId) {
     items1[2] = closure_5(View, obj1);
     const obj2 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp6(1114).intl;
-    obj2.text = intl3.string(tmp8(3560)["gVV+HX"]);
-    items1[3] = closure_5(tmp6(4989).Button, obj2);
+    obj2.text = intl3.string(tmp8(3590)["gVV+HX"]);
+    items1[3] = closure_5(tmp6(5025).Button, obj2);
     obj.children = items1;
     return closure_6(View, obj);
   }
   const intl2 = tmp6(1114).intl;
-  note = intl2.string(tmp8(3560).jxvtin);
+  note = intl2.string(tmp8(3590).jxvtin);
 };

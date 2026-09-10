@@ -1,15 +1,15 @@
-// === Module 15760: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 15809: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 15760 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 15809 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2786 from "module_2786" /* 2786 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Stack_Stack from "Stack/Stack" /* 4987 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10931 */;
-import types from "types" /* 10932 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10934 */;
-import _mod10938 from "module_10938" /* 10938 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Stack_Stack from "Stack/Stack" /* 5023 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10969 */;
+import types from "types" /* 10970 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10972 */;
+import _mod10976 from "module_10976" /* 10976 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -63,7 +63,7 @@ const jsxProd = fn(21);
 let items = [...fn(1389).EFFECT_ORDER, fn(1390).DisplayNameEffect.GUMMY];
 let closure_12 = [10, 50, 100, 200];
 let items1 = [{ key: "short", label: "Short", name: "Pixel7" }, { key: "medium", label: "Medium", name: "NebulaWanderer" }, { key: "long", label: "Long", name: "GalacticOverlord2049" }];
-fn(4574);
+fn(4605);
 let createStyles = { wrap: null, container: null, batchRow: null, optionButtons: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.wrap = createStyles;
@@ -114,7 +114,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   }, items1);
   const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod10938.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod10976.splitGraphemes(memo).length, items3);
   const items4 = [first];
   const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
@@ -240,7 +240,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
-        const splitGraphemesResult = _mod10938.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod10976.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);

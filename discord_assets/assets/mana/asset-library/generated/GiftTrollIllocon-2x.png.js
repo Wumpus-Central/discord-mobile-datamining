@@ -1,6 +1,6 @@
-// === Module 6166: ? ===
+// === Module 6202: ? ===
 
-// Module 6166
+// Module 6202
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftTrollIllocon-2x.png.js");

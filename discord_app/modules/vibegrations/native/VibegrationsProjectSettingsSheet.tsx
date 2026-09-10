@@ -1,14 +1,14 @@
-// === Module 16636: VibegrationsProjectSettingsSheet ===
+// === Module 16691: VibegrationsProjectSettingsSheet ===
 
-// Module 16636 (VibegrationsProjectSettingsSheet)
+// Module 16691 (VibegrationsProjectSettingsSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7259 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4572 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16621 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16676 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
@@ -80,12 +80,12 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
   const tmp7 = stateFromStoresArray(first.useState(""), 2);
   obj = { scrollable: true, startExpanded: true, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: null, footer: null, header: null, children: null };
   const intl2 = guildId(onSave[13]).intl;
-  obj.dismissAccessibilityLabel = intl2.string(require("module_3560")["9yHiDe"]);
-  let formatToPlainStringResult = intl.formatToPlainString(require("module_3560").eaqbJt, obj);
-  obj.footer = closure_10(closure_6, { style: tmp.roleListFooter, children: closure_10(guildId(onSave[16]).Text, { variant: "text-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_3560").eaqbJt, obj) }) });
+  obj.dismissAccessibilityLabel = intl2.string(require("module_3590")["9yHiDe"]);
+  let formatToPlainStringResult = intl.formatToPlainString(require("module_3590").eaqbJt, obj);
+  obj.footer = closure_10(closure_6, { style: tmp.roleListFooter, children: closure_10(guildId(onSave[16]).Text, { variant: "text-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_3590").eaqbJt, obj) }) });
   const obj2 = { title: null, trailing: null };
   const intl3 = guildId(onSave[13]).intl;
-  obj2.title = intl3.string(require("module_3560").fqvhf0);
+  obj2.title = intl3.string(require("module_3590").fqvhf0);
   const obj3 = { label: null, onPress: null };
   const intl4 = guildId(onSave[13]).intl;
   obj3.label = intl4.string(guildId(onSave[13]).t.i4jeWR);
@@ -141,7 +141,7 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
           if (tmp3) {
             const intl = guildId(onSave[13]).intl;
             const obj1 = { max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES };
-            formatToPlainStringResult = intl.formatToPlainString(require("module_3560").VPUL05, obj1);
+            formatToPlainStringResult = intl.formatToPlainString(require("module_3590").VPUL05, obj1);
           }
           obj.accessibilityHint = formatToPlainStringResult;
           obj.onPress = function onPress(arg0) {
@@ -163,7 +163,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const VibegrationsProjectSettingsSheet = "VibegrationsProjectSettingsSheet";
 VibegrationsCollaboratorRolesSheet = "VibegrationsCollaboratorRolesSheet";
-fn(4574);
+fn(4605);
 let createStyles = { content: null, roleLabel: null, roleListContent: null, roleListEmpty: null, roleListFooter: null };
 createStyles = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 createStyles.content = createStyles;
@@ -175,7 +175,7 @@ createStyles.roleListEmpty = { alignItems: "center", paddingVertical: nativeDefa
 let obj3 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
 createStyles.roleListFooter = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_14 = createStyles.createStyles(createStyles);
-createStyles = fn(4574);
+createStyles = fn(4605);
 let closure_15 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };

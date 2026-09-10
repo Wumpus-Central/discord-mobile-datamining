@@ -1,7 +1,7 @@
-// === Module 16173: useFavoritesGuildAutoAddedThreadsAction ===
+// === Module 16222: useFavoritesGuildAutoAddedThreadsAction ===
 
-// Module 16173 (useFavoritesGuildAutoAddedThreadsAction)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10255 */;
+// Module 16222 (useFavoritesGuildAutoAddedThreadsAction)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10293 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
@@ -11,7 +11,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  let obj = hasAccess(10256);
+  let obj = hasAccess(10294);
   hasAccess = obj.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   const items = [UserStore];
   if (hasAccess) {

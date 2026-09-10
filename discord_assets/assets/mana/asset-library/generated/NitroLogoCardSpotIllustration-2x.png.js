@@ -1,6 +1,6 @@
-// === Module 6290: ? ===
+// === Module 6326: ? ===
 
-// Module 6290
+// Module 6326
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroLogoCardSpotIllustration-2x.png.js");

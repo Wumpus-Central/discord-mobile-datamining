@@ -1,12 +1,12 @@
-// === Module 15792: UserSettingsDesignSystemLegacyButton ===
+// === Module 15841: UserSettingsDesignSystemLegacyButton ===
 
-// Module 15792 (UserSettingsDesignSystemLegacyButton)
+// Module 15841 (UserSettingsDesignSystemLegacyButton)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Stack_Stack from "Stack/Stack" /* 4987 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import Form from "Form" /* 8626 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Stack_Stack from "Stack/Stack" /* 5023 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import Form from "Form" /* 8663 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -210,7 +210,7 @@ const obj37 = { look: fn(1178).ButtonLooks.OUTLINED, color: fn(1178).ButtonColor
 items[40] = { look: fn(1178).ButtonLooks.OUTLINED, color: fn(1178).ButtonColors.WHITE, size: fn(1178).ButtonSizes.SMALL, shrink: false, count: 1 };
 let items1 = [fn(1178).ButtonColors.WHITE];
 let set = new Set(items1);
-fn(4574);
+fn(4605);
 const obj39 = { comboRow: null, darkText: null, darkBg: null, comparisonRow: null, comparisonButtons: null, comparisonSide: null, container: null, header: null };
 const obj38 = { look: fn(1178).ButtonLooks.OUTLINED, color: fn(1178).ButtonColors.WHITE, size: fn(1178).ButtonSizes.SMALL, shrink: false, count: 1 };
 obj39.comboRow = { gap: 4, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4 };

@@ -1,6 +1,6 @@
-// === Module 7531: AutomodAlert ===
+// === Module 7569: AutomodAlert ===
 
-// Module 7531 (AutomodAlert)
+// Module 7569 (AutomodAlert)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodAlert.tsx");

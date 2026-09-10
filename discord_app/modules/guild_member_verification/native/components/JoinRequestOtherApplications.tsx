@@ -1,13 +1,13 @@
-// === Module 16615: JoinRequestOtherApplications ===
+// === Module 16670: JoinRequestOtherApplications ===
 
-// Module 16615 (JoinRequestOtherApplications)
+// Module 16670 (JoinRequestOtherApplications)
 import nativeDefault from "native" /* 576 */;
-import DateUtils from "DateUtils" /* 4255 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4534 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import CircleXIcon from "CircleXIcon" /* 6630 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16612 */;
+import DateUtils from "DateUtils" /* 4286 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4429 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4565 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import CircleXIcon from "CircleXIcon" /* 6666 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { label: { marginHorizontal: 16, marginBottom: 8 }, container: null, row: null, divider: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginHorizontal: 16, marginBottom: 12, borderRadius: nativeDefault.radii.md };
 obj.container = obj;
@@ -50,7 +50,7 @@ export default noop.memo((arg0) => {
     obj = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
     const intl = tmp2(1114).intl;
     obj.children = intl.string(tmp2(1114).t["hxa+G3"]);
-    let items = [closure_6(tmp2(4570).Text, obj), ];
+    let items = [closure_6(tmp2(4601).Text, obj), ];
     let obj1 = {
       style: tmp.container,
       children: otherGuildJoinRequestsForUser.map((createdAt, index) => {

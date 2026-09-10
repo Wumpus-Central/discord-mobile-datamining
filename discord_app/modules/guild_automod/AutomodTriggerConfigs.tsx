@@ -1,12 +1,12 @@
-// === Module 17577: AutomodTriggerConfigs ===
+// === Module 17636: AutomodTriggerConfigs ===
 
-// Module 17577 (AutomodTriggerConfigs)
+// Module 17636 (AutomodTriggerConfigs)
 import util from "util" /* 1114 */;
-import guild_automod_ExperimentUtils from "guild_automod/ExperimentUtils" /* 10132 */;
+import guild_automod_ExperimentUtils from "guild_automod/ExperimentUtils" /* 10170 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(11893);
+const Constants = fn(11933);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let triggerConfigs = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
@@ -214,7 +214,7 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
   }
 };
 export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) {
-  isUserProfileRuleEnabled = isUserProfileRuleEnabled(16873).useIsUserProfileRuleEnabled(arg0);
+  isUserProfileRuleEnabled = isUserProfileRuleEnabled(16930).useIsUserProfileRuleEnabled(arg0);
   const items = [isUserProfileRuleEnabled];
   return noop.useMemo(() => {
     const keys = Object.keys(obj9);

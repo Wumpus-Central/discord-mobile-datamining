@@ -1,11 +1,11 @@
-// === Module 11503: PresenceSubscriptionsStore ===
+// === Module 11543: PresenceSubscriptionsStore ===
 
-// Module 11503 (PresenceSubscriptionsStore)
+// Module 11543 (PresenceSubscriptionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11504 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11544 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PresenceStore from "PresenceStore" /* 4614 */;
+import PresenceStore from "PresenceStore" /* 4645 */;
 
 function handleConnectionOpenOrResumed() {
   closure_5 = {};
@@ -14,7 +14,7 @@ function handleConnectionOpenOrResumed() {
 const INVITE_EXPIRATION_MS = fn(1920).INVITE_EXPIRATION_MS;
 let closure_5 = {};
 let closure_6 = {};
-const delayedCall = new fn(4461).DelayedCall(3000, function flush() {
+const delayedCall = new fn(4492).DelayedCall(3000, function flush() {
   const items = [];
   const entries = Object.entries(closure_6);
   while (tmp4 !== undefined) {

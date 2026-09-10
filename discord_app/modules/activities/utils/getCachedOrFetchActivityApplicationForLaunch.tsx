@@ -1,9 +1,9 @@
-// === Module 9569: getCachedOrFetchActivityApplicationForLaunch ===
+// === Module 9607: getCachedOrFetchActivityApplicationForLaunch ===
 
-// Module 9569 (getCachedOrFetchActivityApplicationForLaunch)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9536 */;
+// Module 9607 (getCachedOrFetchActivityApplicationForLaunch)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9574 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4802 */;
+import ApplicationStore from "ApplicationStore" /* 4833 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

@@ -1,9 +1,9 @@
-// === Module 6565: TrophyIllocon ===
+// === Module 6601: TrophyIllocon ===
 
-// Module 6565 (TrophyIllocon)
+// Module 6601 (TrophyIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6566 from "module_6566" /* 6566 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6602 from "module_6602" /* 6602 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const TrophyIllocon = function TrophyIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6566 };
+  obj = { uri: _modDef6602 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6566 });
+  return jsx(FastImageDefault, { uri: _modDef6602 });
 };

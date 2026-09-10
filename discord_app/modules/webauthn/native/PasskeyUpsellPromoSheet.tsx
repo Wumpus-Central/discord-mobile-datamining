@@ -1,8 +1,8 @@
-// === Module 14694: PasskeyUpsellPromoSheet ===
+// === Module 14743: PasskeyUpsellPromoSheet ===
 
-// Module 14694 (PasskeyUpsellPromoSheet)
-import NativeCeremoniesDefault from "NativeCeremonies" /* 6963 */;
-import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14691 */;
+// Module 14743 (PasskeyUpsellPromoSheet)
+import NativeCeremoniesDefault from "NativeCeremonies" /* 6999 */;
+import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14740 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ export default function PasswordlessUpsellPromoSheet() {
     const obj = setRegistering(onRegisterSuccess[6]);
     const result1 = setRegistering(onRegisterSuccess[6]).openPasskeyUpsellPromoModal(merged);
   }
-  let obj = { source: require("module_14695"), style: { height: 190, width: 220, resizeMode: "contain" } };
+  let obj = { source: require("module_14744"), style: { height: 190, width: 220, resizeMode: "contain" } };
   const tmp4 = closure_7(Image, obj);
   [r10018, require] = _slicedToArray(noop.useState(""), 2);
   const tmp5 = _slicedToArray(noop.useState(""), 2);

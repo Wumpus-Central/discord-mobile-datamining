@@ -1,6 +1,6 @@
-// === Module 4239: GooglePlayPriceChangeRecord ===
+// === Module 4270: GooglePlayPriceChangeRecord ===
 
-// Module 4239 (GooglePlayPriceChangeRecord)
+// Module 4270 (GooglePlayPriceChangeRecord)
 import Record from "Record" /* 1386 */;
 
 const GooglePlayPriceChangeMode = { PRICE_CHANGE_MODE_UNSPECIFIED: "PRICE_CHANGE_MODE_UNSPECIFIED", PRICE_DECREASE: "PRICE_DECREASE", PRICE_INCREASE: "PRICE_INCREASE", OPT_OUT_PRICE_INCREASE: "OPT_OUT_PRICE_INCREASE" };

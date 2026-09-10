@@ -1,8 +1,8 @@
-// === Module 4426: design/shared ===
+// === Module 4457: design/shared ===
 
-// Module 4426 (design/shared)
+// Module 4457 (design/shared)
 import size from "module_2" /* 2 */;
-import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 4295 */;
+import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 4326 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/shared.tsx");
 for (const key10018 in require("AccessibilityAnnouncer")) {

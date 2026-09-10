@@ -1,20 +1,20 @@
-// === Module 12758: HubEmailConnectionStudentPrompt ===
+// === Module 12798: HubEmailConnectionStudentPrompt ===
 
-// Module 12758 (HubEmailConnectionStudentPrompt)
+// Module 12798 (HubEmailConnectionStudentPrompt)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5538 */;
+import TextStyles from "TextStyles" /* 5574 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12749).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12789).HubEmailConnectionSteps;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }, header: null, row: null };
 createStyles = {};
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
@@ -39,9 +39,9 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   obj1.children = intl.string(onClose(1114).t["+/Pv0h"]);
   const items = [closure_7(onClose(1178).LegacyText, obj1), , ];
   const obj2 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, subLabel: null, onPress: null };
-  const obj3 = { source: invite(12759) };
+  const obj3 = { source: invite(12799) };
   obj2.leading = closure_7(closure_4, obj3);
-  obj2.trailing = invite(7151).Arrow;
+  obj2.trailing = invite(7189).Arrow;
   const intl2 = onClose(1114).intl;
   obj2.label = intl2.string(onClose(1114).t["a7a/D+"]);
   const intl3 = onClose(1114).intl;
@@ -52,18 +52,18 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
     obj = { onClose, invite };
     closure_2.push(HubEmailConnectionSteps.VERIFY_EMAIL, obj);
   };
-  items[1] = closure_7(invite(7151), obj2);
+  items[1] = closure_7(invite(7189), obj2);
   const obj4 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };
   const obj5 = { source: null };
-  const tmp2 = invite(7151);
-  obj5.source = invite(12760);
+  const tmp2 = invite(7189);
+  obj5.source = invite(12800);
   obj4.leading = closure_7(closure_4, obj5);
-  obj4.trailing = invite(7151).Arrow;
+  obj4.trailing = invite(7189).Arrow;
   const intl4 = onClose(1114).intl;
   obj4.label = intl4.string(onClose(1114).t.GLG9n4);
   obj4.onPress = onClose;
-  items[2] = closure_7(invite(7151), obj4);
+  items[2] = closure_7(invite(7189), obj4);
   obj.children = items;
   obj.children = closure_8(closure_3, obj);
-  return closure_7(onClose(12757).HubEmailConnectionScreen, obj);
+  return closure_7(onClose(12797).HubEmailConnectionScreen, obj);
 };

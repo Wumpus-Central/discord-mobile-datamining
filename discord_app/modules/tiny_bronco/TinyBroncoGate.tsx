@@ -1,6 +1,6 @@
-// === Module 14714: TinyBroncoGate ===
+// === Module 14763: TinyBroncoGate ===
 
-// Module 14714 (TinyBroncoGate)
+// Module 14763 (TinyBroncoGate)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tiny_bronco/TinyBroncoGate.tsx");

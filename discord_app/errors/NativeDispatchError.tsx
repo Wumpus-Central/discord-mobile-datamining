@@ -1,7 +1,7 @@
-// === Module 4478: NativeDispatchError ===
+// === Module 4509: NativeDispatchError ===
 
-// Module 4478 (NativeDispatchError)
-import Constants from "Constants" /* 4479 */;
+// Module 4509 (NativeDispatchError)
+import Constants from "Constants" /* 4510 */;
 import size from "module_2" /* 2 */;
 
 const DispatchErrorCodes = Constants.DispatchErrorCodes;

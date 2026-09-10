@@ -1,10 +1,10 @@
-// === Module 8158: useAvatarColor ===
+// === Module 8195: useAvatarColor ===
 
-// Module 8158 (useAvatarColor)
+// Module 8195 (useAvatarColor)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 const require = fn;
 function hasFetchedColors(game_name) {
@@ -216,11 +216,11 @@ export default function useAvatarColor(uri, arg1) {
     if (dependencyMap != null) {
       mapped = dependencyMap.map((item) => {
         [tmp, tmp2, tmp3] = item;
-        let obj = flag(7566)({ r: tmp, g: tmp2, b: tmp3 });
+        let obj = flag(7604)({ r: tmp, g: tmp2, b: tmp3 });
         ({ h, s, l } = obj.toHsl());
         obj = { h, s: s * stateFromStores, l };
         const toHslResult = obj.toHsl();
-        return flag(7566)(obj).toHexString();
+        return flag(7604)(obj).toHexString();
       });
     }
     return mapped;
@@ -294,11 +294,11 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
     if (dependencyMap != null) {
       mapped = dependencyMap.map((item) => {
         [tmp, tmp2, tmp3] = item;
-        let obj = flag(7566)({ r: tmp, g: tmp2, b: tmp3 });
+        let obj = flag(7604)({ r: tmp, g: tmp2, b: tmp3 });
         ({ h, s, l } = obj.toHsl());
         obj = { h, s: s * stateFromStores, l };
         const toHslResult = obj.toHsl();
-        return flag(7566)(obj).toHexString();
+        return flag(7604)(obj).toHexString();
       });
     }
     return mapped;

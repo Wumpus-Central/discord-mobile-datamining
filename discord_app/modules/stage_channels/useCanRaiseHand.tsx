@@ -1,7 +1,7 @@
-// === Module 9964: useCanRaiseHand ===
+// === Module 10002: useCanRaiseHand ===
 
-// Module 9964 (useCanRaiseHand)
-import PermissionStore from "PermissionStore" /* 4212 */;
+// Module 10002 (useCanRaiseHand)
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = fn;
 const Permissions = fn(1085).Permissions;

@@ -1,16 +1,16 @@
-// === Module 17817: SelectEmojiRolesActionSheet ===
+// === Module 17876: SelectEmojiRolesActionSheet ===
 
-// Module 17817 (SelectEmojiRolesActionSheet)
+// Module 17876 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Pressables from "Pressables" /* 5137 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
-import ActionSheet from "ActionSheet" /* 7211 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15244 */;
+import Pressables from "Pressables" /* 5173 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7201 */;
+import ActionSheet from "ActionSheet" /* 7249 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15293 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5538 */;
+import TextStyles from "TextStyles" /* 5574 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,7 +18,7 @@ const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const itemSize = fn(1182).FORM_ROW_VERTICAL_PADDING + 22;
-fn(4574);
+fn(4605);
 let createStyles = { list: null, label: null, roleName: null, archivedBadge: null, archivedBadgeText: null, divider: null, saveButton: null, saveButtonDisabled: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.list = createStyles;
@@ -144,6 +144,6 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   };
   const items1 = [subscriptionListingsForGuild.length];
   obj3.sections = items1;
-  obj2.children = closure_6(emoji(7086), obj3);
+  obj2.children = closure_6(emoji(7124), obj3);
   return closure_6(ActionSheet.ActionSheet, obj2);
 };

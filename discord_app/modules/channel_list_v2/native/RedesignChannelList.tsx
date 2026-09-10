@@ -1,24 +1,25 @@
-// === Module 16136: RedesignChannelList ===
+// === Module 16185: RedesignChannelList ===
 
-// Module 16136 (RedesignChannelList)
-import ChannelListState from "ChannelListState" /* 7542 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11025 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11927 */;
-import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 16166 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16213 */;
-import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 16214 */;
-import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 16222 */;
-import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 16297 */;
-import GuildsEmptyDefault from "GuildsEmpty" /* 16302 */;
-import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 16312 */;
+// Module 16185 (RedesignChannelList)
+import ChannelListState from "ChannelListState" /* 7580 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11065 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11967 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16102 */;
+import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 16215 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16262 */;
+import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 16263 */;
+import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 16271 */;
+import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 16346 */;
+import GuildsEmptyDefault from "GuildsEmpty" /* 16351 */;
+import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 16361 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
-import ChannelListStore from "ChannelListStore" /* 7539 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16056 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import ChannelListStore from "ChannelListStore" /* 7577 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16103 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4598 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4629 */;
 
 require = fn;
 function GuildChannels(guild) {
@@ -68,9 +69,9 @@ function ChannelsWrapper(selectedGuildId) {
           obj.guild = stateFromStores;
           obj.selectedChannelId = selectedChannelId;
           obj.selectedVoiceChannelId = stateFromStores1;
-          return closure_14(tmp2(16304).default, obj);
+          return closure_14(tmp2(16353).default, obj);
         } else {
-          tmp2Result = tmp2(10326);
+          tmp2Result = tmp2(10364);
           if (tmp2Result.shouldNSFWGateGuild(selectedGuildId)) {
             obj1 = { style: merged.style, guildId: selectedGuildId };
             let tmp6Result = closure_14(NsfwGateGuildSidebarDefault, obj1);
@@ -346,11 +347,15 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelList.tsx");
 
 export default noop.memo((arg0) => {
-  let obj = { children: null };
-  obj = {};
+  const obj = {};
+  const doesLandOnHomeDrawer = obj.useDoesLandOnHomeDrawer();
   const merged = Object.assign(arg0);
-  const items = [closure_1_14(ChannelsWrapper, obj), closure_1_14(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "channel-list", checkFocusedScreen: "guilds" })];
-  obj.children = items;
-  return __initData(value2, obj);
+  const children = [closure_1_14(ChannelsWrapper, obj), ];
+  let tmp6Result = null;
+  if (!doesLandOnHomeDrawer) {
+    tmp6Result = closure_1_14(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "channel-list", checkFocusedScreen: "guilds" });
+  }
+  children[1] = tmp6Result;
+  return __initData(value2, { children });
 });
 export const ChannelList = memoResult;

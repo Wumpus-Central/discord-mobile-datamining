@@ -1,18 +1,18 @@
-// === Module 10440: StickersPremiumUpsellAlert ===
+// === Module 10478: StickersPremiumUpsellAlert ===
 
-// Module 10440 (StickersPremiumUpsellAlert)
+// Module 10478 (StickersPremiumUpsellAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Pressables from "Pressables" /* 5137 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9424 */;
-import _modDef10441 from "module_10441" /* 10441 */;
-import _modDef10442 from "module_10442" /* 10442 */;
-import _modDef10443 from "module_10443" /* 10443 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Pressables from "Pressables" /* 5173 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9462 */;
+import _modDef10479 from "module_10479" /* 10479 */;
+import _modDef10480 from "module_10480" /* 10480 */;
+import _modDef10481 from "module_10481" /* 10481 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7251 */;
+import IAPStore from "IAPStore" /* 7289 */;
 
 require = fn;
 function PerkRow(perk) {
@@ -41,7 +41,7 @@ const PremiumConstants = fn(1373);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let obj = {
-  icon: _modDef10441,
+  icon: _modDef10479,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -50,7 +50,7 @@ let obj = {
 };
 let items = [obj, , ];
 obj = {
-  icon: _modDef10442,
+  icon: _modDef10480,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
@@ -58,7 +58,7 @@ obj = {
 };
 items[1] = obj;
 obj = {
-  icon: _modDef10443,
+  icon: _modDef10481,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -66,7 +66,7 @@ obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_GREEN
 };
 items[2] = obj;
-fn(4574);
+fn(4605);
 let obj1 = { alert: { paddingTop: 18 }, shortHeightAlert: { height: 500 }, content: { alignItems: "center" }, closeContainer: { flexDirection: "row-reverse", width: "100%", marginBottom: 16 }, description: { textAlign: "center", lineHeight: 20 }, perks: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, marginTop: 16, marginBottom: 0, paddingHorizontal: 12, paddingVertical: 8, width: "100%" }, perkRow: null, lastPerkRow: null, perkIcon: null, perkText: null, imageHeader: null };
 const createStyles = { paddingVertical: 10, borderBottomColor: nativeDefault.unsafe_rawColors.PRIMARY_560, borderBottomWidth: 1, flexDirection: "row", alignItems: "center" };
 obj1.perkRow = createStyles;
@@ -88,12 +88,12 @@ export default function StickersPremiumUpsellAlert(arg0) {
       const obj = analyticsLocations(dependencyMap[14]);
     }
   }, []);
-  const tmp5 = analyticsLocations(9396)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(9434)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
   }
-  analyticsLocations = tmp3(7176)().analyticsLocations;
+  analyticsLocations = tmp3(7214)().analyticsLocations;
   let obj = { cancelText: null, confirmColor: null, confirmText: null, onConfirm: null, onClose: null, onCancel: null, style: null, children: null };
   const intl = util.intl;
   obj.cancelText = intl.string(util.t.f3Pet9);
@@ -121,8 +121,8 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj.style = items;
   obj = { style: tmp.closeContainer, children: null };
   obj = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-  const tmp3Result = analyticsLocations(5008);
-  obj.children = closure_14(native.Icon, { source: analyticsLocations(7006) });
+  const tmp3Result = analyticsLocations(5044);
+  obj.children = closure_14(native.Icon, { source: analyticsLocations(7044) });
   obj.children = closure_14(Pressables.PressableOpacity, obj);
   const items1 = [closure_14(closure_4, obj), ];
   const obj2 = {
@@ -132,8 +132,8 @@ export default function StickersPremiumUpsellAlert(arg0) {
     },
     children: null
   };
-  const obj1 = { source: analyticsLocations(7006) };
-  const items2 = [closure_14(closure_5, { source: analyticsLocations(10444), style: tmp.imageHeader }), , ];
+  const obj1 = { source: analyticsLocations(7044) };
+  const items2 = [closure_14(closure_5, { source: analyticsLocations(10482), style: tmp.imageHeader }), , ];
   const obj4 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl3 = util.intl;
   if (priceString == null) {
@@ -142,7 +142,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj5 = { children: null };
   obj4.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_14(Text_Text.Text, obj4);
-  const obj3 = { source: analyticsLocations(10444), style: tmp.imageHeader };
+  const obj3 = { source: analyticsLocations(10482), style: tmp.imageHeader };
   items2[2] = closure_14(closure_4, { style: tmp.perks, children: items.map((perk, index) => closure_1_14(PerkRow, { perk, isLastPerk: index === length.length - 1 }, index)) });
   obj2.children = items2;
   obj5.children = closure_15(closure_4, obj2);

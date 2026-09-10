@@ -1,9 +1,9 @@
-// === Module 10384: FoodIcon ===
+// === Module 10422: FoodIcon ===
 
-// Module 10384 (FoodIcon)
+// Module 10422 (FoodIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod10385 from "module_10385" /* 10385 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod10423 from "module_10423" /* 10423 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const FoodIcon = function FoodIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10385, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10423, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

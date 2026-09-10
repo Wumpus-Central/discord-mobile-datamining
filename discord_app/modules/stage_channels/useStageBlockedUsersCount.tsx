@@ -1,8 +1,8 @@
-// === Module 8653: useStageBlockedUsersCount ===
+// === Module 8690: useStageBlockedUsersCount ===
 
-// Module 8653 (useStageBlockedUsersCount)
-import StageChannelParticipants from "StageChannelParticipants" /* 5439 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5432 */;
+// Module 8690 (useStageBlockedUsersCount)
+import StageChannelParticipants from "StageChannelParticipants" /* 5475 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5468 */;
 
 require = fn;
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 13644: GuildSubscriptionRemoval ===
+// === Module 13693: GuildSubscriptionRemoval ===
 
-// Module 13644 (GuildSubscriptionRemoval)
-import shared from "shared" /* 4425 */;
-import _mod8259 from "module_8259" /* 8259 */;
+// Module 13693 (GuildSubscriptionRemoval)
+import shared from "shared" /* 4456 */;
+import _mod8296 from "module_8296" /* 8296 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRemovalSource(theme) {
   const obj = {
     dark() {
-      return require("module_13645");
+      return require("module_13694");
     },
     darker() {
-      return require("module_13646");
+      return require("module_13695");
     },
     light() {
-      return require("module_13647");
+      return require("module_13696");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,31 +28,31 @@ export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRe
 export const useGuildSubscriptionRemovalSource = function useGuildSubscriptionRemovalSource() {
   const obj = {
     dark() {
-      return require("module_13645");
+      return require("module_13694");
     },
     darker() {
-      return require("module_13646");
+      return require("module_13695");
     },
     light() {
-      return require("module_13647");
+      return require("module_13696");
     }
   };
-  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8296.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const GuildSubscriptionRemoval = function GuildSubscriptionRemoval(arg0) {
   let obj = {
     dark() {
-      return require("module_13645");
+      return require("module_13694");
     },
     darker() {
-      return require("module_13646");
+      return require("module_13695");
     },
     light() {
-      return require("module_13647");
+      return require("module_13696");
     }
   };
   obj = {};
-  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8296.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

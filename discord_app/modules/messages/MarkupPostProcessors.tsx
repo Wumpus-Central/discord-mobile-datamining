@@ -1,8 +1,8 @@
-// === Module 7903: MarkupPostProcessors ===
+// === Module 7941: MarkupPostProcessors ===
 
-// Module 7903 (MarkupPostProcessors)
-import findCodedLinks from "findCodedLinks" /* 4557 */;
-import EmbedUtils from "EmbedUtils" /* 4911 */;
+// Module 7941 (MarkupPostProcessors)
+import findCodedLinks from "findCodedLinks" /* 4588 */;
+import EmbedUtils from "EmbedUtils" /* 4942 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -41005,8 +41005,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(7904).isExperimentEmbedURL(type.target);
-      const obj = closure_0(7904);
+      tmp = !closure_0(7942).isExperimentEmbedURL(type.target);
+      const obj = closure_0(7942);
     }
     return tmp;
   });
@@ -41265,8 +41265,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(7904).isExperimentEmbedURL(type.target);
-        const obj = closure_0(7904);
+        tmp = !closure_0(7942).isExperimentEmbedURL(type.target);
+        const obj = closure_0(7942);
       }
       return tmp;
     });

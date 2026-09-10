@@ -1,6 +1,6 @@
-// === Module 6963: NativeCeremonies ===
+// === Module 6999: NativeCeremonies ===
 
-// Module 6963 (NativeCeremonies)
+// Module 6999 (NativeCeremonies)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

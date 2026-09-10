@@ -1,12 +1,12 @@
-// === Module 13256: GamePartyStore ===
+// === Module 13303: GamePartyStore ===
 
-// Module 13256 (GamePartyStore)
+// Module 13303 (GamePartyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5293 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5329 */;
 
 function updateParty(id, id2, activities, status) {
   const found = activities.find((party) => {

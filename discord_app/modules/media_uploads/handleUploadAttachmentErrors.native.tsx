@@ -1,12 +1,12 @@
-// === Module 9341: handleUploadAttachmentErrors ===
+// === Module 9379: handleUploadAttachmentErrors ===
 
-// Module 9341 (handleUploadAttachmentErrors)
+// Module 9379 (handleUploadAttachmentErrors)
 import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
-import FileUtils from "FileUtils" /* 5148 */;
-import KestrelExperiment from "KestrelExperiment" /* 5193 */;
-import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9342 */;
-import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 9425 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
+import FileUtils from "FileUtils" /* 5184 */;
+import KestrelExperiment from "KestrelExperiment" /* 5229 */;
+import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9380 */;
+import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 9463 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

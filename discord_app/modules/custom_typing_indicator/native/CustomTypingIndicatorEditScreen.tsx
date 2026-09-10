@@ -1,14 +1,14 @@
-// === Module 15389: CustomTypingIndicatorEditScreen ===
+// === Module 15438: CustomTypingIndicatorEditScreen ===
 
-// Module 15389 (CustomTypingIndicatorEditScreen)
+// Module 15438 (CustomTypingIndicatorEditScreen)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import user from "user" /* 1379 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1392 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9424 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12001 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9462 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12041 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { screen: { flex: 1 }, container: null, previewContainer: null, section: null, description: null };
 createStyles = { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 };
 createStyles.container = createStyles;
@@ -108,11 +108,11 @@ export default function CustomTypingIndicatorEditScreen() {
   const items5 = [memo, first3];
   const callback1 = first1.useCallback(() => {
     const obj = { initialValue: first2, onChange };
-    obj.openLazy(asyncRequireImpl(15390, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", obj);
+    obj.openLazy(asyncRequireImpl(15439, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", obj);
   }, items4);
   const callback2 = first1.useCallback(() => {
     const obj = { emojis: memo, initialAnimation: first3, onChange: onChange2 };
-    obj.openLazy(asyncRequireImpl(15391, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", obj);
+    obj.openLazy(asyncRequireImpl(15440, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", obj);
   }, items5);
   first1.useRef(null);
   const callback3 = first1.useCallback(() => {

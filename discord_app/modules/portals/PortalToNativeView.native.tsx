@@ -1,11 +1,11 @@
-// === Module 7084: PortalToNativeView ===
+// === Module 7122: PortalToNativeView ===
 
-// Module 7084 (PortalToNativeView)
+// Module 7122 (PortalToNativeView)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
 let closure_1 = fn(17).requireNativeComponent("PortalToNativeView");
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_2 = createStyles.createStyles({ portal: { position: "absolute", opacity: 0, height: 0, right: 0, left: 0, top: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/portals/PortalToNativeView.native.tsx");

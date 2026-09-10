@@ -1,6 +1,6 @@
-// === Module 5870: ? ===
+// === Module 5906: ? ===
 
-// Module 5870
+// Module 5906
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ClydeCoinsSpotIllustration-2x.png.js");

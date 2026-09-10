@@ -1,14 +1,14 @@
-// === Module 16914: MessageRequestsScreenWithTabs ===
+// === Module 16971: MessageRequestsScreenWithTabs ===
 
-// Module 16914 (MessageRequestsScreenWithTabs)
+// Module 16971 (MessageRequestsScreenWithTabs)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import SegmentedControlState from "SegmentedControlState" /* 9824 */;
-import SegmentedControl from "SegmentedControl" /* 9825 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11927 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 12646 */;
-import MessageRequestListDefault from "MessageRequestList" /* 16915 */;
-import SpamMessageListDefault from "SpamMessageList" /* 16931 */;
+import SegmentedControlState from "SegmentedControlState" /* 9862 */;
+import SegmentedControl from "SegmentedControl" /* 9863 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11967 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 12686 */;
+import MessageRequestListDefault from "MessageRequestList" /* 16972 */;
+import SpamMessageListDefault from "SpamMessageList" /* 16988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
-fn(4574);
+fn(4605);
 let obj = { container: null, messageRequestContent: null, tabContainer: null };
 obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.container = obj;

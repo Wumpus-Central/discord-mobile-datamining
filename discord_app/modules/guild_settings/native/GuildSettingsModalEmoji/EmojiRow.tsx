@@ -1,11 +1,11 @@
-// === Module 17598: GuildSettingsModalEmoji/EmojiRow ===
+// === Module 17657: GuildSettingsModalEmoji/EmojiRow ===
 
-// Module 17598 (GuildSettingsModalEmoji/EmojiRow)
+// Module 17657 (GuildSettingsModalEmoji/EmojiRow)
 import nativeDefault from "native" /* 576 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4230 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4976 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10368 */;
-import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 17599 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4261 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5012 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10406 */;
+import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 17658 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { flex: { flex: 1 }, flexCenterRow: { flexDirection: "row", alignItems: "center" }, nameContainer: null, activeNameContainer: null, usernameContainer: null, emojiText: null, colon: null, username: null, emojiImage: null, overflowIcon: null };
 createStyles = { paddingVertical: 4, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 createStyles.nameContainer = createStyles;

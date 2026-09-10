@@ -1,15 +1,15 @@
-// === Module 17852: MessageSendFailureNotificationManager ===
+// === Module 17910: MessageSendFailureNotificationManager ===
 
-// Module 17852 (MessageSendFailureNotificationManager)
+// Module 17910 (MessageSendFailureNotificationManager)
 import util from "util" /* 1114 */;
-import PushNotificationDefault from "PushNotification" /* 9719 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10126 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10128 */;
+import PushNotificationDefault from "PushNotification" /* 9757 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10164 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10166 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
 import UserStore from "UserStore" /* 1371 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 require = fn;
 function handleMessageSendFailure(shouldNotify) {
@@ -76,7 +76,7 @@ function handleMessageCreate(message) {
 }
 const Constants = fn(1074);
 ({ InAppNotificationTypes: closure_7, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(13743).LocalNotificationTypes;
+const LocalNotificationTypes = fn(13792).LocalNotificationTypes;
 let prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

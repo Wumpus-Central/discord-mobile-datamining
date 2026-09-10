@@ -1,18 +1,18 @@
-// === Module 10451: StickerPickerCategories ===
+// === Module 10489: StickerPickerCategories ===
 
-// Module 10451 (StickerPickerCategories)
+// Module 10489 (StickerPickerCategories)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HapticUtils from "HapticUtils" /* 4542 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
-import StickersTypes from "StickersTypes" /* 5282 */;
+import HapticUtils from "HapticUtils" /* 4573 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4574 */;
+import StickersTypes from "StickersTypes" /* 5318 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10422).useStickerPickerStore;
+let useStickerPickerStore = fn(10460).useStickerPickerStore;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9, CATEGORY_ICON_RIPPLE_CONFIG: c10, CATEGORY_ICON_SIZE } = Constants);
 const EXPRESSION_FOOTER_HEIGHT = Constants.EXPRESSION_FOOTER_HEIGHT;
@@ -20,7 +20,7 @@ const NODE_SIZE = Constants.NODE_SIZE;
 const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, itemInner: null, fadedItem: { opacity: 0.5 }, activeItem: null, guildIcon: null, guildItemPlaceholder: null, lockContainer: null, lock: null };
 let size = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
 obj.itemInner = size;
@@ -209,9 +209,9 @@ export default function _default(categories) {
   const callback5 = first.useCallback((arg0, index) => closure_2_14(closure_17, { category: categories[index], index, isActive: index === categoryIndex, locked: categories[index].isNitroLocked, onPressCategory: callback2 }), items8);
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(10390)();
+  const tmp19 = categoryIndex(10428)();
   obj = { estimatedListSize: "windowSize", horizontal: true, itemSize: EXPRESSION_FOOTER_HEIGHT, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.STICKER, onLayout: callback4, onScroll: callback1, placeholderConfig: tmp19, ref, scrollReporting: "callbacks", sections: memo, renderItem: callback5, showsHorizontalScrollIndicator: false, style: tmp.list };
-  const items9 = [closure_14(categoryIndex(7069), obj), ];
+  const items9 = [closure_14(categoryIndex(7107), obj), ];
   let tmp22Result = null != first && first1;
   if (tmp22Result) {
     obj = { onPress: callback3, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -221,12 +221,12 @@ export default function _default(categories) {
     const items10 = [, ];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj1.style = items10;
-    const obj2 = { style: tmp.guildIcon, source: tmp17(10452) };
+    const obj2 = { style: tmp.guildIcon, source: tmp17(10490) };
     obj1.children = closure_14(categories(1178).Icon, obj2);
     obj.children = closure_14(closure_5, obj1);
-    tmp22Result = closure_14(categories(5137).PressableOpacity, obj);
+    tmp22Result = closure_14(categories(5173).PressableOpacity, obj);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return closure_15(categoryIndex(10391), obj);
+  return closure_15(categoryIndex(10429), obj);
 };

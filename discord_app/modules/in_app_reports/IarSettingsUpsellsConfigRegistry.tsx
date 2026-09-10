@@ -1,17 +1,17 @@
-// === Module 8673: IarSettingsUpsellsConfigRegistry ===
+// === Module 8710: IarSettingsUpsellsConfigRegistry ===
 
-// Module 8673 (IarSettingsUpsellsConfigRegistry)
+// Module 8710 (IarSettingsUpsellsConfigRegistry)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import IarSettingsUpsellsConfigDmSpamFilterDefault from "IarSettingsUpsellsConfigDmSpamFilter" /* 8674 */;
-import IarSettingsUpsellsConfigScFiltersSexualMediaDefault from "IarSettingsUpsellsConfigScFiltersSexualMedia" /* 8675 */;
-import IarSettingsUpsellsConfigScFiltersGraphicMediaDefault from "IarSettingsUpsellsConfigScFiltersGraphicMedia" /* 8676 */;
+import IarSettingsUpsellsConfigDmSpamFilterDefault from "IarSettingsUpsellsConfigDmSpamFilter" /* 8711 */;
+import IarSettingsUpsellsConfigScFiltersSexualMediaDefault from "IarSettingsUpsellsConfigScFiltersSexualMedia" /* 8712 */;
+import IarSettingsUpsellsConfigScFiltersGraphicMediaDefault from "IarSettingsUpsellsConfigScFiltersGraphicMedia" /* 8713 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const SettingsUpsellsConfigRegistry = {};
-SettingsUpsellsConfigRegistry[fn(8663).SettingsUpsells.SAFETY_DM_SPAM_FILTER] = IarSettingsUpsellsConfigDmSpamFilterDefault;
-SettingsUpsellsConfigRegistry[fn(8663).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] = IarSettingsUpsellsConfigScFiltersSexualMediaDefault;
-SettingsUpsellsConfigRegistry[fn(8663).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] = IarSettingsUpsellsConfigScFiltersGraphicMediaDefault;
+SettingsUpsellsConfigRegistry[fn(8700).SettingsUpsells.SAFETY_DM_SPAM_FILTER] = IarSettingsUpsellsConfigDmSpamFilterDefault;
+SettingsUpsellsConfigRegistry[fn(8700).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] = IarSettingsUpsellsConfigScFiltersSexualMediaDefault;
+SettingsUpsellsConfigRegistry[fn(8700).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] = IarSettingsUpsellsConfigScFiltersGraphicMediaDefault;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 6122: ? ===
+// === Module 6158: ? ===
 
-// Module 6122
+// Module 6158
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemLevel1Illocon-2x.png.js");

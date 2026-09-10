@@ -1,6 +1,6 @@
-// === Module 7262: DiceRollActionCreators ===
+// === Module 7300: DiceRollActionCreators ===
 
-// Module 7262 (DiceRollActionCreators)
+// Module 7300 (DiceRollActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

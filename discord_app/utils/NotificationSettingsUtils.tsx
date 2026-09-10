@@ -1,19 +1,19 @@
-// === Module 7128: NotificationSettingsUtils ===
+// === Module 7166: NotificationSettingsUtils ===
 
-// Module 7128 (NotificationSettingsUtils)
+// Module 7166 (NotificationSettingsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7129 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4785 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7167 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4795 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+import MessageStore from "MessageStore" /* 4826 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, UserNotificationSettings } = Constants);
-const constants2 = fn(4225).NotificationSettingsUpdateType;
-const UnreadSetting = fn(4756).UnreadSetting;
+const constants2 = fn(4256).NotificationSettingsUpdateType;
+const UnreadSetting = fn(4787).UnreadSetting;
 const UserSettingsConstants = fn(1084);
 ({ ChannelNotificationSettingsFlags: closure_11, GuildNotificationSettingsFlags: closure_12 } = UserSettingsConstants);
 let NotificationLabel = { ForumThreadsCreatedOn: "enabled forum thread created notifs", ForumThreadsCreatedOff: "disabled forum thread created notifs", SuppressEveryoneOn: "enabled suppress everyone", SuppressEveryoneOff: "disabled suppress everyone", SuppressRolesOn: "enabled suppress roles", SuppressRolesOff: "disabled suppress roles", HighlightsOn: "enabled highlights", HighlightsOff: "disabled highlights", MobilePushOn: "enabled mobile push notifications", MobilePushOff: "disabled mobile push notifications", UnreadsAll: "unreads set to all messages", UnreadsMentions: "unreads set to mentions", UnreadsDefault: "unreads set to the default", NotificationsAll: "notifications set to all messages", NotificationsMentions: "notifications set to mentions", NotificationsNothing: "notifications set to nothing", NotificationsDefault: "notifications set to the default", PresetAll: "notification preset set to all messages", PresetMentions: "notification preset set to mentions", PresetNothing: "notification preset set to nothing", PresetDefault: "notification preset set to the default", OptedIn: "opted in to entity", OptedOut: "opted out from entity", Favorited: "favorited", UnFavorited: "unfavorited", Muted: "muted", Unmuted: "unmuted", MutedScheduledEvents: "muted scheduled events", UnmutedScheduledEvents: "unmuted scheduled events", OverrideCreated: "channel override created", OverrideDeleted: "channel override deleted", AnnouncementAutoEnable: "announcement channels auto set to all messages" };

@@ -1,15 +1,15 @@
-// === Module 17211: VoicePanelFloatingCTAContainer ===
+// === Module 17270: VoicePanelFloatingCTAContainer ===
 
-// Module 17211 (VoicePanelFloatingCTAContainer)
+// Module 17270 (VoicePanelFloatingCTAContainer)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4284 */;
-import Stack_Stack from "Stack/Stack" /* 4987 */;
-import spring from "spring" /* 4988 */;
-import RowButton from "RowButton" /* 8628 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11025 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12217 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12309 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17088 */;
+import native from "native" /* 4315 */;
+import Stack_Stack from "Stack/Stack" /* 5023 */;
+import spring from "spring" /* 5024 */;
+import RowButton from "RowButton" /* 8665 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11065 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12257 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12349 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17147 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -118,11 +118,11 @@ class VoicePanelFloatingCTAContainer {
     return tmp12(tmp13, obj1);
   }
 }
-const UI_SHOW_HIDE_PHYSICS = fn(12303).UI_SHOW_HIDE_PHYSICS;
-let CALL_TILE_GUTTER = fn(12306).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(12343).UI_SHOW_HIDE_PHYSICS;
+let CALL_TILE_GUTTER = fn(12346).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 const createStyles = { container: null };
 const rect = { zIndex: 1, position: "absolute", bottom: 0, left: "50%", overflow: "hidden", alignItems: "center", borderRadius: nativeDefault.radii.lg };
 createStyles.container = rect;

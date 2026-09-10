@@ -1,6 +1,6 @@
-// === Module 17505: NativeProximitySensorManagerModule ===
+// === Module 17564: NativeProximitySensorManagerModule ===
 
-// Module 17505 (NativeProximitySensorManagerModule)
+// Module 17564 (NativeProximitySensorManagerModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

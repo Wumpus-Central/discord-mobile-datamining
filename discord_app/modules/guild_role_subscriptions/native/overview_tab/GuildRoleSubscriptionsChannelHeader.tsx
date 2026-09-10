@@ -1,18 +1,18 @@
-// === Module 13291: GuildRoleSubscriptionsChannelHeader ===
+// === Module 13339: GuildRoleSubscriptionsChannelHeader ===
 
-// Module 13291 (GuildRoleSubscriptionsChannelHeader)
+// Module 13339 (GuildRoleSubscriptionsChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import _modDef12809 from "module_12809" /* 12809 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import _modDef12849 from "module_12849" /* 12849 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { header: null };
 obj = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj.header = obj;
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 
 export default noop.memo(function GuildRoleSubscriptionsChannelHeader() {
   let obj = { style: closure_6().header, children: null };
-  obj = { source: _modDef12809, size: native.Icon.Sizes.MEDIUM, disableColor: true };
+  obj = { source: _modDef12849, size: native.Icon.Sizes.MEDIUM, disableColor: true };
   const items = [React4(native.Icon, obj), ];
   obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
   const intl = util.intl;

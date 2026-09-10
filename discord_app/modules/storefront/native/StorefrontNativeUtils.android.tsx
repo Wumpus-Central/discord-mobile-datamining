@@ -1,8 +1,8 @@
-// === Module 10834: StorefrontNativeUtils ===
+// === Module 10872: StorefrontNativeUtils ===
 
-// Module 10834 (StorefrontNativeUtils)
-import IAPStoreDefault from "IAPStore" /* 7251 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 9399 */;
+// Module 10872 (StorefrontNativeUtils)
+import IAPStoreDefault from "IAPStore" /* 7289 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9437 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
       const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
     }
   }, items);
-  const items1 = [stateFromStores(7251)];
+  const items1 = [stateFromStores(7289)];
   const items2 = [tmp2];
   stateFromStores = require("initialize").useStateFromStores(items1, () => {
     let product = null;

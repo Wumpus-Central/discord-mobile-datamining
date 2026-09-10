@@ -1,11 +1,11 @@
-// === Module 16477: ContactSuggestionActions ===
+// === Module 16526: ContactSuggestionActions ===
 
-// Module 16477 (ContactSuggestionActions)
+// Module 16526 (ContactSuggestionActions)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import spring from "spring" /* 4988 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16077 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import spring from "spring" /* 5024 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,19 +13,19 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = { duration: 200, easing: null };
-const Easing = fn(4310).Easing;
-obj.easing = Easing.in(fn(4310).Easing.quad);
+const Easing = fn(4341).Easing;
+obj.easing = Easing.in(fn(4341).Easing.quad);
 obj = { duration: 250, easing: null };
-const Easing2 = fn(4310).Easing;
-obj.easing = Easing2.in(fn(4310).Easing.quad);
+const Easing2 = fn(4341).Easing;
+obj.easing = Easing2.in(fn(4341).Easing.quad);
 obj = { duration: 250, easing: null };
-const Easing3 = fn(4310).Easing;
-obj.easing = Easing3.in(fn(4310).Easing.quad);
+const Easing3 = fn(4341).Easing;
+obj.easing = Easing3.in(fn(4341).Easing.quad);
 let obj1 = { duration: 250, easing: null };
-const Easing4 = fn(4310).Easing;
-obj1.easing = Easing4.out(fn(4310).Easing.quad);
+const Easing4 = fn(4341).Easing;
+obj1.easing = Easing4.out(fn(4341).Easing.quad);
 const SPRING_CONFIG = { mass: 1, stiffness: 172, damping: 17.3 };
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { icon: { position: "absolute", top: 4, zIndex: 2, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 } };
 let closure_12 = createStyles.createStyles(obj2);
 const __initData = { code: "function ContactSuggestionActionsTsx1(){const{right,opacity,scale}=this.__closure;return{right:right.get(),opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };

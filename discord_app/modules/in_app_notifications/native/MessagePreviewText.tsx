@@ -1,20 +1,20 @@
-// === Module 10139: MessagePreviewText ===
+// === Module 10177: MessagePreviewText ===
 
-// Module 10139 (MessagePreviewText)
+// Module 10177 (MessagePreviewText)
 import nativeDefault from "native" /* 576 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useMessageAuthor from "useMessageAuthor" /* 4807 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7316 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7893 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10126 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10140 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 10141 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 10163 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 10171 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 10172 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useMessageAuthor from "useMessageAuthor" /* 4838 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7354 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7931 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10164 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10178 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 10179 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 10201 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 10209 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 10210 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -135,24 +135,24 @@ function EmbedCard(embed) {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10127);
+const InAppNotificationConstants = fn(10165);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let PlatformUtils = fn(1116);
 let createStyles = { italic: null };
 createStyles = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 createStyles.italic = createStyles;
 let closure_10 = createStyles.createStyles(createStyles);
-fn(4574);
+fn(4605);
 PlatformUtils = { embedContainer: { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" }, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj2 = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
 PlatformUtils.embedAccentBar = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 createStyles = { flex: 1, gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
 PlatformUtils.embedTextContainer = createStyles;
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "channel" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "WireType" };
 PlatformUtils.embedMediaContainer = size;
 PlatformUtils.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(PlatformUtils);

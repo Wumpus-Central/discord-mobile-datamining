@@ -1,8 +1,8 @@
-// === Module 8369: ContentInventoryTypes ===
+// === Module 8406: ContentInventoryTypes ===
 
-// Module 8369 (ContentInventoryTypes)
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8156 */;
-import PlatformType from "PlatformType" /* 8370 */;
+// Module 8406 (ContentInventoryTypes)
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8193 */;
+import PlatformType from "PlatformType" /* 8407 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryTypes.tsx");
@@ -14,23 +14,23 @@ export const isPlayedGameEntry = function isPlayedGameEntry(content_type) {
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME;
 };
-export const isTopGameEntry = function isTopGameEntry(content_type) {
-  content_type = undefined;
-  if (content_type != null) {
-    content_type = content_type.content_type;
+export const isTopGameEntry = function isTopGameEntry(entry) {
+  let content_type;
+  if (entry != null) {
+    content_type = entry.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME;
 };
-export const isGamingLikeEntry = function isGamingLikeEntry(content) {
+export const isGamingLikeEntry = function isGamingLikeEntry(entry) {
   let content_type;
-  if (content != null) {
-    content_type = content.content_type;
+  if (entry != null) {
+    content_type = entry.content_type;
   }
   let tmp4 = content_type === ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME;
   if (!tmp4) {
     let content_type1;
-    if (content != null) {
-      content_type1 = content.content_type;
+    if (entry != null) {
+      content_type1 = entry.content_type;
     }
     tmp4 = content_type1 === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME;
   }
@@ -163,10 +163,10 @@ export const isConsoleEntry = function isConsoleEntry(content_type) {
   }
   return tmp6;
 };
-export const isLaunchedActivityEntry = function isLaunchedActivityEntry(content_type) {
-  content_type = undefined;
-  if (content_type != null) {
-    content_type = content_type.content_type;
+export const isLaunchedActivityEntry = function isLaunchedActivityEntry(entry) {
+  let content_type;
+  if (entry != null) {
+    content_type = entry.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.LAUNCHED_ACTIVITY;
 };

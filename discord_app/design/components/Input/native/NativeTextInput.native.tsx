@@ -1,6 +1,6 @@
-// === Module 6638: NativeTextInput ===
+// === Module 6674: NativeTextInput ===
 
-// Module 6638 (NativeTextInput)
+// Module 6674 (NativeTextInput)
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1479 */;
 
@@ -96,7 +96,7 @@ export const NativeTextInput = noop.forwardRef((value, ref2) => {
   ref(defaultValue[9]);
   if (null != value.keyboardAppearance) {
     obj = {};
-    obj = { value: "Array", defaultValue: "PX_16" };
+    obj = { value: "call", defaultValue: "accessibilityLabel" };
     let tmp6Result = tmp6(tmp3[10]);
     let merged = Object.assign(tmp6Result.mergeProps(value, tmp4, obj));
     tmp6Result = tmp6(tmp3[10]);

@@ -1,15 +1,15 @@
-// === Module 12279: PremiumAnimatedGiftButton ===
+// === Module 12319: PremiumAnimatedGiftButton ===
 
-// Module 12279 (PremiumAnimatedGiftButton)
+// Module 12319 (PremiumAnimatedGiftButton)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 require = fn;
 const useRef = fn(19).useRef;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles((width, marginHorizontal) => {
   const obj = { containerRefresh: null, animationRefresh: null };
   const size = { width, height: width, borderRadius: nativeDefault.radii.sm, marginHorizontal, display: "flex", alignItems: "center", justifyContent: "center" };
@@ -57,7 +57,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   }, items1);
   let FadeOut;
   if (!stateFromStores) {
-    FadeOut = tmp(4310).FadeOut;
+    FadeOut = tmp(4341).FadeOut;
   }
   obj = { exiting: FadeOut, children: null };
   const items2 = [tmp7.containerRefresh, style, ];
@@ -79,7 +79,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   obj.accessibilityState = obj1;
   const merged1 = Object.assign(arg0);
   obj2 = { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished };
-  obj.children = jsx(stateFromStores(5543), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
+  obj.children = jsx(stateFromStores(5579), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
   obj.children = jsx(require("Pressables").PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
-  return jsx(stateFromStores(4310).View, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
+  return jsx(stateFromStores(4341).View, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
 };

@@ -1,15 +1,15 @@
-// === Module 17025: shared/DMChannel ===
+// === Module 17084: shared/DMChannel ===
 
-// Module 17025 (shared/DMChannel)
+// Module 17084 (shared/DMChannel)
 import nativeDefault from "native" /* 576 */;
-import transitionToChannel from "transitionToChannel" /* 4585 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10945 */;
+import transitionToChannel from "transitionToChannel" /* 4616 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10985 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UnreadSetting = fn(4756).UnreadSetting;
+const UnreadSetting = fn(4787).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { pressable: { flex: 1 }, pressableUnderlayColor: null };
 obj = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj.pressableUnderlayColor = obj;
@@ -27,10 +27,10 @@ export default noop.memo(function DMChannel(navigationReplace) {
     flag = false;
   }
   const tmp = closure_6();
-  let obj = channel(16377);
+  let obj = channel(16426);
   const baseChannelUnreadBadgeState = obj.useBaseChannelUnreadBadgeState(channel, muted);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const tmp7 = flag(15349)(channel, { unread });
+  const tmp7 = flag(15398)(channel, { unread });
   let extractTimestampResult;
   if (null != tmp7) {
     let tmp2Result = tmp2(11);
@@ -43,9 +43,9 @@ export default noop.memo(function DMChannel(navigationReplace) {
       str = "text-default";
     }
   }
-  const tmp4 = flag(16698)();
-  const fontScale = channel(4996).useFontScale();
-  tmp2Result = tmp2(17017);
+  const tmp4 = flag(16755)();
+  const fontScale = channel(5032).useFontScale();
+  tmp2Result = tmp2(17076);
   obj = { style: null, underlayColor: tmp.pressableUnderlayColor.backgroundColor };
   const items = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj.style = items;
@@ -59,17 +59,17 @@ export default noop.memo(function DMChannel(navigationReplace) {
   obj.onLongPress = noop.useCallback(() => openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id), items2);
   const merged = Object.assign(obj);
   const obj1 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted, mentionCount, unreadBadge: null, subtitle: null, latestMessageTimestamp: null, channelName: null, fontScale: null };
-  const tmp5Result = channel(4996);
-  obj1.unreadBadge = jsx(flag(17018), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
+  const tmp5Result = channel(5032);
+  obj1.unreadBadge = jsx(flag(17077), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
   if (tmp11Result) {
-    const obj3 = { channel, message: tmp7, color: str, muted, layout: channel(7893).ChannelListLayoutTypes.COMPACT };
-    tmp11Result = jsx(channel(10141).ChannelRowPreview, { channel, message: tmp7, color: str, muted, layout: channel(7893).ChannelListLayoutTypes.COMPACT });
+    const obj3 = { channel, message: tmp7, color: str, muted, layout: channel(7931).ChannelListLayoutTypes.COMPACT };
+    tmp11Result = jsx(channel(10179).ChannelRowPreview, { channel, message: tmp7, color: str, muted, layout: channel(7931).ChannelListLayoutTypes.COMPACT });
   }
   obj1.subtitle = tmp11Result;
   obj1.latestMessageTimestamp = extractTimestampResult;
-  obj1.channelName = flag(4727)(channel);
+  obj1.channelName = flag(4758)(channel);
   obj1.fontScale = fontScale;
-  obj.children = flag(16697)(obj1);
-  return tmp2Result(jsx(channel(5137).PressableHighlight, { onPress: null, onLongPress: null }));
+  obj.children = flag(16754)(obj1);
+  return tmp2Result(jsx(channel(5173).PressableHighlight, { onPress: null, onLongPress: null }));
 });

@@ -1,11 +1,11 @@
-// === Module 14490: validateEmbeddedAppFrame ===
+// === Module 14539: validateEmbeddedAppFrame ===
 
-// Module 14490 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8888 */;
-import RPCErrorDefault from "RPCError" /* 9586 */;
-import RPCHelpers from "RPCHelpers" /* 9591 */;
-import FramesStore from "FramesStore" /* 9542 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14491 */;
+// Module 14539 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8925 */;
+import RPCErrorDefault from "RPCError" /* 9624 */;
+import RPCHelpers from "RPCHelpers" /* 9629 */;
+import FramesStore from "FramesStore" /* 9580 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14540 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -30,7 +30,7 @@ function validateEmbeddedAppFrame(transport) {
           tmp13 = null;
           if (tmp12.MAIN === type) {
             if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-              obj1 = { channelId: "Array", guildId: "PX_16" };
+              obj1 = { channelId: "call", guildId: "accessibilityLabel" };
             } else {
               obj1 = null;
             }
@@ -55,10 +55,10 @@ function validateEmbeddedAppFrame(transport) {
   }
   validateApplicationResult = obj1.validateApplication(transport.application);
 }
-const TransportTypes = fn(4479).TransportTypes;
+const TransportTypes = fn(4510).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const FramesConstants = fn(9543);
+const FramesConstants = fn(9581);
 ({ asLaunched: closure_8, EmbeddedSurfaceType: closure_9 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");

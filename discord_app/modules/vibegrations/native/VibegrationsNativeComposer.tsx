@@ -1,10 +1,10 @@
-// === Module 16647: VibegrationsNativeComposer ===
+// === Module 16702: VibegrationsNativeComposer ===
 
-// Module 16647 (VibegrationsNativeComposer)
+// Module 16702 (VibegrationsNativeComposer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import _modDef3560 from "module_3560" /* 3560 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7259 */;
+import _modDef3590 from "module_3590" /* 3590 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,15 +15,15 @@ function tooLargeText(contentType) {
   const obj = { size: null };
   const obj2 = VibegrationsTypes;
   obj.size = obj2.formatVibegrationsAttachmentLimit(VibegrationsTypes.vibegrationsAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef3560.cI7t94, obj);
+  return intl.formatToPlainString(_modDef3590.cI7t94, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(16623);
+const VibegrationsConnectionStore = fn(16678);
 ({ deleteStagedAttachment: closure_8, uploadAttachmentBytes: closure_9 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, box: null, boxFocused: null, boxContents: null, input: null, inputText: null, inputPlaceholder: null, draftRow: null, draftPill: null, draftName: null, trailingButton: null, sendButtonActive: null, sendIconActive: null };
 createStyles = { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 createStyles.container = createStyles;
@@ -243,7 +243,7 @@ export default function VibegrationsNativeComposer(projectId) {
         let obj = { count: null };
         VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = VibegrationsTypes.VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
         obj.count = VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
-        _undefined3(intl.formatToPlainString(_modDef3560.DlX57a, obj));
+        _undefined3(intl.formatToPlainString(_modDef3590.DlX57a, obj));
         const _Math = Math;
         const substr = map.slice(0, Math.max(0, diff));
         let arr2 = substr;
@@ -331,8 +331,8 @@ export default function VibegrationsNativeComposer(projectId) {
             return obj;
           } else {
             closure_128_0 = undefined;
-            let obj1 = tmp5(5164);
-            obj1 = { mediaType: "any", selectionLimit: tmp2(7259).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
+            let obj1 = tmp5(5200);
+            obj1 = { mediaType: "any", selectionLimit: tmp2(7297).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
             dependencyMap = 1;
             c3 = 1;
             const obj2 = { value: obj1.launchImageLibraryAsync(obj1), done: false };
@@ -471,12 +471,12 @@ export default function VibegrationsNativeComposer(projectId) {
   const memo = obj.useMemo(() => {
     let obj = { label: null, action: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef3560.xE6M2k);
+    obj.label = intl.string(_modDef3590.xE6M2k);
     obj.action = callback5;
     const items = [obj, ];
     obj = { label: null, action: null };
     const intl2 = util.intl;
-    obj.label = intl2.string(_modDef3560.DN7KeU);
+    obj.label = intl2.string(_modDef3590.DN7KeU);
     obj.action = callback6;
     items[1] = obj;
     return items;

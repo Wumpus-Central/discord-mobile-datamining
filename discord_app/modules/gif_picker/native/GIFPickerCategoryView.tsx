@@ -1,13 +1,13 @@
-// === Module 10415: GIFPickerCategoryView ===
+// === Module 10453: GIFPickerCategoryView ===
 
-// Module 10415 (GIFPickerCategoryView)
+// Module 10453 (GIFPickerCategoryView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import useAccessibilityPressDefault from "useAccessibilityPress" /* 9791 */;
-import StarIcon from "StarIcon" /* 10267 */;
-import AnalyticsIcon from "AnalyticsIcon" /* 10416 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 9829 */;
+import StarIcon from "StarIcon" /* 10305 */;
+import AnalyticsIcon from "AnalyticsIcon" /* 10454 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 fn(1074).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, gifImage: null, gifOverlay: null, categoryName: null, categoryNameIcon: null };
 createStyles = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
 createStyles.container = createStyles;

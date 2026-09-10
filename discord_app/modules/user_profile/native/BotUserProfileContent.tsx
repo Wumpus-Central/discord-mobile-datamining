@@ -1,20 +1,20 @@
-// === Module 13017: BotUserProfileContent ===
+// === Module 13057: BotUserProfileContent ===
 
-// Module 13017 (BotUserProfileContent)
+// Module 13057 (BotUserProfileContent)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ToastUtils from "ToastUtils" /* 4271 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+import ToastUtils from "ToastUtils" /* 4302 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4618 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import ClipboardUtils from "ClipboardUtils" /* 7241 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7222);
+const Constants = fn(7260);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: metroRequire, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(7165).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7203).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const size = fn(2);
@@ -116,7 +116,7 @@ export default noop.memo(function BotUserProfileContent(user) {
                 id = channel.id;
               }
               obj.channelId = id;
-              obj.openLazy(asyncRequireImpl(11181, dependencyMap.paths), "UserProfileCustomStatusActionSheet", obj, "stack");
+              obj.openLazy(asyncRequireImpl(11221, dependencyMap.paths), "UserProfileCustomStatusActionSheet", obj, "stack");
             },
         style: null,
         emojiOnlyStyle: null

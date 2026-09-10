@@ -1,8 +1,8 @@
-// === Module 7238: canUseGuildSpace ===
+// === Module 7276: canUseGuildSpace ===
 
-// Module 7238 (canUseGuildSpace)
+// Module 7276 (canUseGuildSpace)
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = fn;
 const Permissions = fn(1074).Permissions;

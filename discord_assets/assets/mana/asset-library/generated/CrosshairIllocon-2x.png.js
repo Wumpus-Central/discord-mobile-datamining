@@ -1,6 +1,6 @@
-// === Module 5894: ? ===
+// === Module 5930: ? ===
 
-// Module 5894
+// Module 5930
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CrosshairIllocon-2x.png.js");

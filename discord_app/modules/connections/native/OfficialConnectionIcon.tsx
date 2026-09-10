@@ -1,13 +1,13 @@
-// === Module 11597: OfficialConnectionIcon ===
+// === Module 11637: OfficialConnectionIcon ===
 
-// Module 11597 (OfficialConnectionIcon)
+// Module 11637 (OfficialConnectionIcon)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import native from "native" /* 1178 */;
-import useRoleIconProps from "useRoleIconProps" /* 7200 */;
-import RoleIconDefault from "RoleIcon" /* 7219 */;
-import _modDef11598 from "module_11598" /* 11598 */;
-import _modDef11599 from "module_11599" /* 11599 */;
+import useRoleIconProps from "useRoleIconProps" /* 7238 */;
+import RoleIconDefault from "RoleIcon" /* 7257 */;
+import _modDef11638 from "module_11638" /* 11638 */;
+import _modDef11639 from "module_11639" /* 11639 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_4, EMPTY_STRING_SNOWFLAKE_ID: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_8 = createStyles.createStyles({ verifiedCheck: { position: "absolute", left: 0, top: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/OfficialConnectionIcon.tsx");
@@ -70,11 +70,11 @@ export default function OfficialConnectionIcon(arg0) {
   const obj2 = { style: null, children: null };
   const items1 = [style, size];
   obj2.style = items1;
-  const obj3 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11598, color: roleColor };
+  const obj3 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11638, color: roleColor };
   const items2 = [tmp.verifiedCheck, size];
   obj3.style = items2;
   const items3 = [timestampProducer(native.Icon, obj3), ];
-  const obj4 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11599, color: PRIMARY_630 };
+  const obj4 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11639, color: PRIMARY_630 };
   const items4 = [tmp.verifiedCheck, size];
   obj4.style = items4;
   items3[1] = timestampProducer(native.Icon, obj4);

@@ -1,8 +1,8 @@
-// === Module 16641: VibegrationsClarificationCard ===
+// === Module 16696: VibegrationsClarificationCard ===
 
-// Module 16641 (VibegrationsClarificationCard)
+// Module 16696 (VibegrationsClarificationCard)
 import nativeDefault from "native" /* 576 */;
-import VibegrationsClarification from "VibegrationsClarification" /* 16642 */;
+import VibegrationsClarification from "VibegrationsClarification" /* 16697 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { card: null, optionHeader: null, footer: null, customField: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 createStyles.card = createStyles;
@@ -100,10 +100,10 @@ export default function VibegrationsClarificationCard(clarification) {
     obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
     let intl = clarification(1114).intl;
     const obj1 = { index: bound + 1, total: length };
-    obj.children = intl.formatToPlainString(onSubmit(3560)["7bypa+"], obj1);
-    tmp14 = closure_6(clarification(4570).Text, obj);
+    obj.children = intl.formatToPlainString(onSubmit(3590)["7bypa+"], obj1);
+    tmp14 = closure_6(clarification(4601).Text, obj);
   }
-  const items4 = [tmp14, closure_6(clarification(4570).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , ];
+  const items4 = [tmp14, closure_6(clarification(4601).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , ];
   const options = tmp8.options;
   items4[2] = options.map((answer) => {
     closure_0 = answer;
@@ -153,16 +153,16 @@ export default function VibegrationsClarificationCard(clarification) {
     if (!tmp6) {
       const obj4 = { variant: "secondary", size: "sm", text: null, onPress: null };
       let intl2 = tmp20(1114).intl;
-      obj4.text = intl2.string(onSubmit(3560).yKdgqw);
+      obj4.text = intl2.string(onSubmit(3590).yKdgqw);
       obj4.onPress = callback1;
-      tmp19Result = tmp19(tmp20(4989).Button, obj4);
+      tmp19Result = tmp19(tmp20(5025).Button, obj4);
     }
   }
   const items5 = [tmp19Result, ];
   const obj5 = { style: tmp.customField, children: null };
   const obj6 = { size: "md", isCentered: false, placeholder: null, value: null, onChange: null, onSubmitEditing: null, returnKeyType: "send" };
   const intl3 = tmp20(1114).intl;
-  obj6.placeholder = intl3.string(onSubmit(3560).qifsdL);
+  obj6.placeholder = intl3.string(onSubmit(3590).qifsdL);
   obj6.value = str;
   obj6.onChange = function onChange(arg0) {
     closure_0 = arg0;
@@ -174,7 +174,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj6.onSubmitEditing = callback2;
-  obj5.children = closure_6(clarification(14198).GhostInput, obj6);
+  obj5.children = closure_6(clarification(14247).GhostInput, obj6);
   items5[1] = closure_6(closure_5, obj5);
   obj3.children = items5;
   items4[3] = closure_7(closure_5, obj3);

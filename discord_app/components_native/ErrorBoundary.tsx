@@ -1,17 +1,17 @@
-// === Module 14600: ErrorBoundary ===
+// === Module 14649: ErrorBoundary ===
 
-// Module 14600 (ErrorBoundary)
+// Module 14649 (ErrorBoundary)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import AppCrash from "AppCrash" /* 9881 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import AppCrash from "AppCrash" /* 9919 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11457 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11497 */;
 
 require = fn;
 function MaybeClearBuildOverride() {
@@ -60,14 +60,14 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return closure_9(tmp2(4989).Button, obj);
+    return closure_9(tmp2(5025).Button, obj);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_11 = createStyles.createLegacyClassComponentStyles({ buttons: { position: "absolute", right: 32, bottom: 32, left: 32, gap: 12 }, debugLogsContainer: { position: "absolute", right: 32, top: 64, display: "flex", flexDirection: "row", alignItems: "center", gap: 12 }, error: { marginTop: 24, textAlign: "center" }, text: { textAlign: "center" } });
 const PureComponent = noop.PureComponent;
 class ErrorBoundary extends PureComponent {
@@ -158,7 +158,7 @@ prototype["render"] = function render() {
   }
   return children;
 };
-ErrorBoundary.contextType = fn(4284).ThemeContext;
+ErrorBoundary.contextType = fn(4315).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/ErrorBoundary.tsx");
 

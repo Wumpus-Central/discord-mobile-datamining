@@ -1,14 +1,14 @@
-// === Module 4602: DeviceFrecencyStore ===
+// === Module 4633: DeviceFrecencyStore ===
 
-// Module 4602 (DeviceFrecencyStore)
+// Module 4633 (DeviceFrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import FrecencyDefault from "Frecency" /* 4611 */;
+import FrecencyDefault from "Frecency" /* 4642 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import UserStore from "UserStore" /* 1371 */;
 
-const Constants = fn(4599);
+const Constants = fn(4630);
 const DeviceTypes = Constants.DeviceTypes;
 ({ MediaEngineContextTypes: hasOwnProperty, SpeakingFlags: metroRequire } = Constants);
 let closure_7 = { inputDeviceFrecency: DeviceTypes.AUDIO_INPUT, outputDeviceFrecency: DeviceTypes.AUDIO_OUTPUT, videoDeviceFrecency: DeviceTypes.VIDEO_INPUT };
@@ -26,11 +26,11 @@ let obj = {
   numFrequentlyItems: Infinity
 };
 obj = {};
-const stopWatch = new fn(4603).StopWatch();
+const stopWatch = new fn(4634).StopWatch();
 obj[DeviceTypes.AUDIO_INPUT] = stopWatch;
-const stopWatch1 = new fn(4603).StopWatch();
+const stopWatch1 = new fn(4634).StopWatch();
 obj[DeviceTypes.AUDIO_OUTPUT] = stopWatch1;
-const stopWatch2 = new fn(4603).StopWatch();
+const stopWatch2 = new fn(4634).StopWatch();
 obj[DeviceTypes.VIDEO_INPUT] = stopWatch2;
 let dependencyMap = { [DeviceTypes.AUDIO_INPUT]: {}, [DeviceTypes.AUDIO_OUTPUT]: {}, [DeviceTypes.VIDEO_INPUT]: {} };
 obj = {};

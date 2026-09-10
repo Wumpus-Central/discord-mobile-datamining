@@ -1,15 +1,15 @@
-// === Module 17822: GuildRoleSubscriptionTierTemplateRolePreview ===
+// === Module 17881: GuildRoleSubscriptionTierTemplateRolePreview ===
 
-// Module 17822 (GuildRoleSubscriptionTierTemplateRolePreview)
+// Module 17881 (GuildRoleSubscriptionTierTemplateRolePreview)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1091 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4726 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import RoleIconDefault from "RoleIcon" /* 7219 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4757 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import RoleIconDefault from "RoleIcon" /* 7257 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, avatar: null, content: null, contextRow: null };
 createStyles = { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;

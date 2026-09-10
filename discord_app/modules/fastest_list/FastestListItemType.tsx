@@ -1,6 +1,6 @@
-// === Module 7078: FastestListItemType ===
+// === Module 7116: FastestListItemType ===
 
-// Module 7078 (FastestListItemType)
+// Module 7116 (FastestListItemType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/fastest_list/FastestListItemType.tsx");

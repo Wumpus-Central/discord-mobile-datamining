@@ -1,9 +1,9 @@
-// === Module 10283: ForumComposerModalActionCreators ===
+// === Module 10321: ForumComposerModalActionCreators ===
 
-// Module 10283 (ForumComposerModalActionCreators)
+// Module 10321 (ForumComposerModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import tracking_Tracking from "tracking/Tracking" /* 7781 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import tracking_Tracking from "tracking/Tracking" /* 7818 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "create-forum-post";
@@ -18,7 +18,7 @@ export const openCreateForumPostModal = function openCreateForumPostModal(guildI
     const result1 = tracking_Tracking.trackForumCreateNewPostStarted(obj);
     const tmpResult = tracking_Tracking;
   }
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10284, dependencyMap.paths), guildId, c3);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10322, dependencyMap.paths), guildId, c3);
   tmp4 = null != guildId.isEdit && guildId.isEdit;
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {

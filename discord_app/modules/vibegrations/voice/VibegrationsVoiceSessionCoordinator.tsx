@@ -1,21 +1,21 @@
-// === Module 14487: VibegrationsVoiceSessionCoordinator ===
+// === Module 14536: VibegrationsVoiceSessionCoordinator ===
 
-// Module 14487 (VibegrationsVoiceSessionCoordinator)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9121 */;
-import RPCErrorDefault from "RPCError" /* 9586 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13852 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14490 */;
-import FrameVisibilityStore from "FrameVisibilityStore" /* 14488 */;
-import FramesStore from "FramesStore" /* 9542 */;
+// Module 14536 (VibegrationsVoiceSessionCoordinator)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9158 */;
+import RPCErrorDefault from "RPCError" /* 9624 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13901 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14539 */;
+import FrameVisibilityStore from "FrameVisibilityStore" /* 14537 */;
+import FramesStore from "FramesStore" /* 9580 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
 import UserStore from "UserStore" /* 1371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import VoiceStateStore from "VoiceStateStore" /* 4624 */;
 
 let size = fn;
 const RPCErrors = fn(1074).RPCErrors;
-const Constants = fn(4599);
+const Constants = fn(4630);
 ({ Features: closure_11, MediaEngineContextTypes: closure_12 } = Constants);
 let closure_13 = { x: 0, y: 0, z: -1 };
 class VibegrationsVoiceSessionCoordinator {
@@ -287,7 +287,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             let obj = set;
             if (!set.has(user_id)) {
               obj.add(user_id);
-              obj = { userId: user_id, position: size(14489).toListenerRelativePosition(closure_0, user_id.position) };
+              obj = { userId: user_id, position: size(14538).toListenerRelativePosition(closure_0, user_id.position) };
               return obj;
             }
           }

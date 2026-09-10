@@ -1,29 +1,29 @@
-// === Module 7865: PremiumUpsellActionSheet ===
+// === Module 7902: PremiumUpsellActionSheet ===
 
-// Module 7865 (PremiumUpsellActionSheet)
+// Module 7902 (PremiumUpsellActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import PremiumUtils from "PremiumUtils" /* 4231 */;
-import ChatInputUtils from "ChatInputUtils" /* 4439 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import LinearGradientDefault from "LinearGradient" /* 5001 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import TableSwitchRow from "TableSwitchRow" /* 7214 */;
-import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 7864 */;
-import showForLaterModal from "showForLaterModal" /* 7873 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7874 */;
-import APNGPlayer from "APNGPlayer" /* 8842 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9390 */;
+import PremiumUtils from "PremiumUtils" /* 4262 */;
+import ChatInputUtils from "ChatInputUtils" /* 4470 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import LinearGradientDefault from "LinearGradient" /* 5037 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import TableSwitchRow from "TableSwitchRow" /* 7252 */;
+import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 7901 */;
+import showForLaterModal from "showForLaterModal" /* 7910 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7911 */;
+import APNGPlayer from "APNGPlayer" /* 8879 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9428 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -107,13 +107,13 @@ const PremiumConstants = fn(1373);
 ({ PremiumSubscriptionSKUs: closure_11, PremiumTypes: closure_12, PremiumUpsellTypes: map1 } = PremiumConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, AnalyticsPages: closure_15, HelpdeskArticles: closure_16, ThemeTypes: closure_17 } = Constants);
-const ApplicationStreamFPS = fn(4621).ApplicationStreamFPS;
-const SavedMessagesConstants = fn(7866);
+const ApplicationStreamFPS = fn(4652).ApplicationStreamFPS;
+const SavedMessagesConstants = fn(7903);
 ({ SAVED_BOOKMARKS_MAX: closure_19, SAVED_REMINDERS_MAX: closure_20 } = SavedMessagesConstants);
-const premiumMax = fn(7860).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(7897).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_22, Fragment: closure_23, jsxs: closure_24 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { hero: null, image: null, text: null, betaTag: null, description: null, textContainer: null, buttonContainer: null, compressionContainer: null, compressionHint: null, imageGradientBackgroundContainer: null, imageGradientBackground: null, imageInGradientBackground: null };
 createStyles = { alignSelf: "center", marginTop: nativeDefault.space.PX_16 };
 createStyles.hero = createStyles;

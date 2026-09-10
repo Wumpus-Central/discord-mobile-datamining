@@ -1,6 +1,6 @@
-// === Module 10079: StageTileTypes ===
+// === Module 10117: StageTileTypes ===
 
-// Module 10079 (StageTileTypes)
+// Module 10117 (StageTileTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stage_channels/StageTileTypes.tsx");

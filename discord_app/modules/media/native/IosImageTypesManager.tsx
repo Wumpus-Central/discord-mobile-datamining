@@ -1,6 +1,6 @@
-// === Module 5174: IosImageTypesManager ===
+// === Module 5210: IosImageTypesManager ===
 
-// Module 5174 (IosImageTypesManager)
+// Module 5210 (IosImageTypesManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;

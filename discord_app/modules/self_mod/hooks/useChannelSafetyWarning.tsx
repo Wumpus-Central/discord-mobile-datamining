@@ -1,7 +1,7 @@
-// === Module 11005: useChannelSafetyWarning ===
+// === Module 11045: useChannelSafetyWarning ===
 
-// Module 11005 (useChannelSafetyWarning)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10947 */;
+// Module 11045 (useChannelSafetyWarning)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10987 */;
 
 const require = fn;
 const size = fn(2);

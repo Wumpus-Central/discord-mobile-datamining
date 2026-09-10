@@ -1,9 +1,9 @@
-// === Module 5021: useChannelRoleSubscriptionStatus ===
+// === Module 5057: useChannelRoleSubscriptionStatus ===
 
-// Module 5021 (useChannelRoleSubscriptionStatus)
+// Module 5057 (useChannelRoleSubscriptionStatus)
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = fn;
 function getChannelRoleSubscriptionStatus(id) {

@@ -1,9 +1,9 @@
-// === Module 9823: useInterestedEventUsers ===
+// === Module 9861: useInterestedEventUsers ===
 
-// Module 9823 (useInterestedEventUsers)
+// Module 9861 (useInterestedEventUsers)
 import _mod19 from "module_19" /* 19 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7540 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7578 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;

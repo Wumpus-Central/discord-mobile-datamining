@@ -1,13 +1,13 @@
-// === Module 10776: PremiumGiftingIntentActionCreators ===
+// === Module 10814: PremiumGiftingIntentActionCreators ===
 
-// Module 10776 (PremiumGiftingIntentActionCreators)
+// Module 10814 (PremiumGiftingIntentActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7673 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7710 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 4795 */;
+import MessageStore from "MessageStore" /* 4826 */;
 
 require = fn;
 const GiftIntentType = fn(1373).GiftIntentType;

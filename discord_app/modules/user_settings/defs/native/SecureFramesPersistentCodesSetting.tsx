@@ -1,13 +1,13 @@
-// === Module 15885: SecureFramesPersistentCodesSetting ===
+// === Module 15934: SecureFramesPersistentCodesSetting ===
 
-// Module 15885 (SecureFramesPersistentCodesSetting)
+// Module 15934 (SecureFramesPersistentCodesSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9185 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9183 */;
+import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9222 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9220 */;
 
 require = fn;
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -17,7 +17,7 @@ let SettingBuilders = {
     const intl = util.intl;
     return intl.string(util.t.opw5ls);
   },
-  parent: fn(7989).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8027).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useSecureFramesPersistentCodesValue() {
     const items = [SecureFramesPersistedStore];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());

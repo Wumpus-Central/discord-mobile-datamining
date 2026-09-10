@@ -1,11 +1,11 @@
-// === Module 9068: InAppReportsGuildPreviewElement ===
+// === Module 9105: InAppReportsGuildPreviewElement ===
 
-// Module 9068 (InAppReportsGuildPreviewElement)
+// Module 9105 (InAppReportsGuildPreviewElement)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ColorUtils from "ColorUtils" /* 4423 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import GuildIcon from "GuildIcon" /* 5598 */;
+import ColorUtils from "ColorUtils" /* 4454 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import GuildIcon from "GuildIcon" /* 5634 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: null, title: null, guildContainer: null, guildInfo: null };
 createStyles = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createStyles.borderColor = createStyles;

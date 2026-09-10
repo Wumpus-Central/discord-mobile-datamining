@@ -1,6 +1,6 @@
-// === Module 15237: GuildRoleSubscriptionsConstants ===
+// === Module 15286: GuildRoleSubscriptionsConstants ===
 
-// Module 15237 (GuildRoleSubscriptionsConstants)
+// Module 15286 (GuildRoleSubscriptionsConstants)
 import Constants from "Constants" /* 1085 */;
 import PremiumConstants from "PremiumConstants" /* 1373 */;
 import size from "module_2" /* 2 */;

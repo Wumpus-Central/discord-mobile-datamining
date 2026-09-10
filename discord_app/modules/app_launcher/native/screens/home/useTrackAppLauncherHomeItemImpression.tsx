@@ -1,6 +1,6 @@
-// === Module 12130: useTrackAppLauncherHomeItemImpression ===
+// === Module 12170: useTrackAppLauncherHomeItemImpression ===
 
-// Module 12130 (useTrackAppLauncherHomeItemImpression)
+// Module 12170 (useTrackAppLauncherHomeItemImpression)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
 
 export const useTrackAppLauncherHomeItemImpression = function useTrackAppLauncherHomeItemImpression() {
-  let obj = trackAppLauncherItemImpressionOnFirstView(12131);
+  let obj = trackAppLauncherItemImpressionOnFirstView(12171);
   trackAppLauncherItemImpressionOnFirstView = obj.useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
   obj = { trackAppLauncherHomeItemImpression: null };
   const items = [trackAppLauncherItemImpressionOnFirstView];

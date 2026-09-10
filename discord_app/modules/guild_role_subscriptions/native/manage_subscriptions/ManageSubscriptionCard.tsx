@@ -1,19 +1,19 @@
-// === Module 15248: ManageSubscriptionCard ===
+// === Module 15297: ManageSubscriptionCard ===
 
-// Module 15248 (ManageSubscriptionCard)
+// Module 15297 (ManageSubscriptionCard)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import PremiumUtils from "PremiumUtils" /* 4231 */;
-import LinkingDefault from "Linking" /* 4268 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
-import Pressables from "Pressables" /* 5137 */;
-import GuildIconDefault from "GuildIcon" /* 5598 */;
-import _modDef9743 from "module_9743" /* 9743 */;
-import FormSeparatorDefault from "FormSeparator" /* 15249 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15255 */;
+import PremiumUtils from "PremiumUtils" /* 4262 */;
+import LinkingDefault from "Linking" /* 4299 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
+import Pressables from "Pressables" /* 5173 */;
+import GuildIconDefault from "GuildIcon" /* 5634 */;
+import _modDef9781 from "module_9781" /* 9781 */;
+import FormSeparatorDefault from "FormSeparator" /* 15298 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15304 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -83,7 +83,7 @@ function Header(arg0) {
     expanded = tmp.expandIconExpanded;
   }
   items3[1] = expanded;
-  items1[2] = closure_1_11(native.Icon, { style: items3, size: native.Icon.Sizes.MEDIUM, source: _modDef9743 });
+  items1[2] = closure_1_11(native.Icon, { style: items3, size: native.Icon.Sizes.MEDIUM, source: _modDef9781 });
   obj.children = items1;
   items[1] = closure_1_12(View, obj);
   obj.children = items;
@@ -131,9 +131,9 @@ function CardBody(isTrial) {
               obj1.body = intl.string(tmp5(1114).t.NL7DFi);
               const intl2 = tmp5(1114).intl;
               obj1.confirmText = intl2.string(tmp5(1114).t["NX+WJN"]);
-              tmp3(4919).show(obj1);
+              tmp3(4950).show(obj1);
               c5 = 3;
-              const obj6 = tmp3(4919);
+              const obj6 = tmp3(4950);
             } else {
               dependencyMap = 1;
               _slicedToArray(true);
@@ -144,7 +144,7 @@ function CardBody(isTrial) {
                 let obj2 = { value: resubscribeSubscription(), done: false };
                 return obj2;
               } else {
-                obj2 = tmp38(4898);
+                obj2 = tmp38(4929);
                 c4 = 2;
                 c5 = 1;
                 const obj3 = { value: obj2.resubscribeToSubscription(tmp45, analyticsLocations), done: false };
@@ -211,11 +211,11 @@ function CardBody(isTrial) {
   ({ isCancelled, isPastDue, memberSince, nextRenewalDate, nextRenewalLabel, onCancelSubscription, subscriptionPrice } = isTrial);
   const tmp = closure_14();
   dependencyMap = tmp;
-  let obj = subscription(9398);
+  let obj = subscription(9436);
   let resubscribeSubscription = obj.useResubscribeSubscription(subscription.id);
   resubscribeSubscription = resubscribeSubscription.resubscribeSubscription;
   [tmp6, c5] = _slicedToArray(analyticsLocations.useState(false), 2);
-  analyticsLocations = subscription(7176)().analyticsLocations;
+  analyticsLocations = subscription(7214)().analyticsLocations;
   obj = { style: tmp.cardContent, children: null };
   let tmp7Result = null;
   if (isPastDue) {
@@ -226,7 +226,7 @@ function CardBody(isTrial) {
     let obj2 = { variant: "text-sm/medium", color: "interactive-text-active", children: null };
     let intl = isTrial(1114).intl;
     obj2.children = intl.string(isTrial(1114).t.eaqlau);
-    items[2] = closure_11(isTrial(4570).Text, obj2);
+    items[2] = closure_11(isTrial(4601).Text, obj2);
     obj1.children = items;
     const items1 = [closure_12(tmp8, obj1), closure_11(isTrial(1178).Spacer, { size: 12 })];
     obj.children = items1;
@@ -234,30 +234,30 @@ function CardBody(isTrial) {
   }
   const items2 = [tmp7Result, , , , ];
   let obj3 = { title: null, icon: null, onPressIcon: null, children: null };
-  tmp2(15252);
+  tmp2(15301);
   let intl2 = isTrial(1114).intl;
   obj3.title = intl2.string(isTrial(1114).t.dltUMH);
   let tmp2Result;
   if (isTrial) {
-    tmp2Result = tmp2(12799);
+    tmp2Result = tmp2(12839);
   }
   obj3.icon = tmp2Result;
   let prop;
   if (isTrial) {
-    prop = tmp15(4271).presentGuildRoleSubscriptionTrialTierMonthCost;
+    prop = tmp15(4302).presentGuildRoleSubscriptionTrialTierMonthCost;
   }
   obj3.onPressIcon = prop;
   obj3.children = subscriptionPrice;
   items2[1] = closure_11(tmp2Result, obj3);
   items2[2] = closure_11(isTrial(1178).Spacer, { size: 16 });
   let obj4 = { style: tmp.cardRow, children: null };
-  const items3 = [closure_11(subscription(15252), { title: nextRenewalLabel, children: nextRenewalDate }), closure_11(isTrial(1178).Spacer, { size: 8 }), ];
+  const items3 = [closure_11(subscription(15301), { title: nextRenewalLabel, children: nextRenewalDate }), closure_11(isTrial(1178).Spacer, { size: 8 }), ];
   const obj5 = { title: null, children: null };
   const tmp5 = _slicedToArray(analyticsLocations.useState(false), 2);
   const intl3 = tmp15(1114).intl;
   obj5.title = intl3.string(isTrial(1114).t.AOcwWB);
   obj5.children = memberSince;
-  items3[2] = closure_11(subscription(15252), obj5);
+  items3[2] = closure_11(subscription(15301), obj5);
   obj4.children = items3;
   items2[3] = closure_12(closure_7, obj4);
   let obj6 = { inset: true, titleViewStyle: tmp.manageSection, title: null, children: null };
@@ -271,7 +271,7 @@ function CardBody(isTrial) {
     children: null
   };
   const obj9 = { text: null, onPress: null };
-  const tmp2Result1 = subscription(15252);
+  const tmp2Result1 = subscription(15301);
   const intl5 = tmp15(1114).intl;
   obj9.text = intl5.string(isTrial(1114).t["7spYft"]);
   obj9.onPress = function handleUpdatePaymentMethod() {
@@ -290,15 +290,15 @@ function CardBody(isTrial) {
       }
     }
   };
-  const items4 = [closure_11(subscription(15253), obj9), , ];
+  const items4 = [closure_11(subscription(15302), obj9), , ];
   const obj10 = { text: null, onPress: null };
-  const tmp2Result2 = subscription(15253);
+  const tmp2Result2 = subscription(15302);
   const intl6 = tmp15(1114).intl;
   obj10.text = intl6.string(isTrial(1114).t.FRbWR8);
   obj10.onPress = function handleChangeTier() {
     router_utils.transitionTo(React6.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   };
-  items4[1] = closure_11(subscription(15253), obj10);
+  items4[1] = closure_11(subscription(15302), obj10);
   if (isCancelled) {
     const obj11 = { style: tmp.resubscribeButtonContainer, children: null };
     const obj12 = { text: null, onPress: null, loading: null };
@@ -315,22 +315,22 @@ function CardBody(isTrial) {
       return applyArgumentsResult;
     };
     obj12.loading = tmp6;
-    obj11.children = closure_11(tmp2(10333), obj12);
+    obj11.children = closure_11(tmp2(10371), obj12);
     let tmp13Result = closure_11(tmp8, obj11);
-    const tmp2Result4 = tmp2(10333);
+    const tmp2Result4 = tmp2(10371);
   } else {
     const obj13 = { text: null, onPress: null };
     const intl7 = tmp15(1114).intl;
     obj13.text = intl7.string(tmp15(1114).t.Dx0lF7);
     obj13.onPress = onCancelSubscription;
-    tmp13Result = closure_11(tmp2(15253), obj13);
-    const tmp2Result5 = tmp2(15253);
+    tmp13Result = closure_11(tmp2(15302), obj13);
+    const tmp2Result5 = tmp2(15302);
   }
   items4[2] = tmp13Result;
   obj8.children = items4;
-  obj7.children = closure_12(isTrial(10378).GappedList, obj8);
+  obj7.children = closure_12(isTrial(10416).GappedList, obj8);
   obj6.children = closure_11(closure_7, obj7);
-  items2[4] = closure_11(isTrial(8626).FormSection, obj6);
+  items2[4] = closure_11(isTrial(8663).FormSection, obj6);
   obj.children = items2;
   return closure_12(closure_7, obj);
 }
@@ -340,7 +340,7 @@ const Constants = fn(1074);
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, cardContent: null, buttonsContainer: null, buttonDivider: null, resubscribeButtonContainer: null, separator: null, header: null, headerContent: null, headerTitlesContainer: null, expandIcon: null, expandIconExpanded: null, cardRow: null, manageSection: null, paymentOverDueWarning: null, headerStatusContainer: null, headerStatusCancel: null, headerStatusTrial: null, headerStatusPastDue: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
 createStyles.container = createStyles;

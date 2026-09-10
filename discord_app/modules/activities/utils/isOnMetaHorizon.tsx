@@ -1,6 +1,6 @@
-// === Module 13048: isOnMetaHorizon ===
+// === Module 13088: isOnMetaHorizon ===
 
-// Module 13048 (isOnMetaHorizon)
+// Module 13088 (isOnMetaHorizon)
 import Constants from "Constants" /* 1074 */;
 import Constants2 from "Constants" /* 1920 */;
 import size from "module_2" /* 2 */;

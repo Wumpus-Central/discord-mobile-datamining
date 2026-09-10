@@ -1,9 +1,9 @@
-// === Module 5849: ChatControllersSpotIllustration ===
+// === Module 5885: ChatControllersSpotIllustration ===
 
-// Module 5849 (ChatControllersSpotIllustration)
+// Module 5885 (ChatControllersSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5850 from "module_5850" /* 5850 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5886 from "module_5886" /* 5886 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ChatControllersSpotIllustration = function ChatControllersSpotIllus
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5850 };
+  obj = { uri: _modDef5886 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ChatControllersSpotIllustration = function ChatControllersSpotIllus
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5850 });
+  return jsx(FastImageDefault, { uri: _modDef5886 });
 };

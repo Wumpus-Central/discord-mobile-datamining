@@ -1,47 +1,47 @@
-// === Module 13387: useBuyNitroPerks ===
+// === Module 13436: useBuyNitroPerks ===
 
-// Module 13387 (useBuyNitroPerks)
+// Module 13436 (useBuyNitroPerks)
 import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 4231 */;
-import ChatIcon from "ChatIcon" /* 5085 */;
-import AppsIcon from "AppsIcon" /* 5120 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5144 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7407 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8695 */;
-import TrophyIcon from "TrophyIcon" /* 8750 */;
-import ReactionIcon from "ReactionIcon" /* 8790 */;
-import TagIcon from "TagIcon" /* 8894 */;
-import ScreenStreamIcon from "ScreenStreamIcon" /* 9253 */;
-import UploadIcon from "UploadIcon" /* 9403 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9405 */;
-import BoostGemIcon from "BoostGemIcon" /* 9407 */;
-import UserSquareIcon from "UserSquareIcon" /* 9409 */;
-import VideoIcon from "VideoIcon" /* 10142 */;
-import StickerIcon from "StickerIcon" /* 10146 */;
-import SoundboardIcon from "SoundboardIcon" /* 12558 */;
-import _modDef13388 from "module_13388" /* 13388 */;
-import _modDef13389 from "module_13389" /* 13389 */;
-import AppIconUtils from "AppIconUtils" /* 13390 */;
-import _modDef13392 from "module_13392" /* 13392 */;
-import _modDef13393 from "module_13393" /* 13393 */;
-import _modDef13394 from "module_13394" /* 13394 */;
-import _modDef13395 from "module_13395" /* 13395 */;
-import _modDef13396 from "module_13396" /* 13396 */;
-import _modDef13397 from "module_13397" /* 13397 */;
-import DoorEnterIcon from "DoorEnterIcon" /* 13398 */;
-import _modDef13400 from "module_13400" /* 13400 */;
-import _modDef13401 from "module_13401" /* 13401 */;
-import ServerGridIcon from "ServerGridIcon" /* 13402 */;
-import _modDef13404 from "module_13404" /* 13404 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 13405 */;
-import _modDef13407 from "module_13407" /* 13407 */;
-import LettersIcon from "LettersIcon" /* 13408 */;
-import SparklesIcon from "SparklesIcon" /* 13410 */;
+import PremiumUtils from "PremiumUtils" /* 4262 */;
+import ChatIcon from "ChatIcon" /* 5121 */;
+import AppsIcon from "AppsIcon" /* 5156 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5180 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7445 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8732 */;
+import TrophyIcon from "TrophyIcon" /* 8787 */;
+import ReactionIcon from "ReactionIcon" /* 8827 */;
+import TagIcon from "TagIcon" /* 8931 */;
+import ScreenStreamIcon from "ScreenStreamIcon" /* 9290 */;
+import UploadIcon from "UploadIcon" /* 9441 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9443 */;
+import BoostGemIcon from "BoostGemIcon" /* 9445 */;
+import UserSquareIcon from "UserSquareIcon" /* 9447 */;
+import VideoIcon from "VideoIcon" /* 10180 */;
+import StickerIcon from "StickerIcon" /* 10184 */;
+import SoundboardIcon from "SoundboardIcon" /* 12598 */;
+import _modDef13437 from "module_13437" /* 13437 */;
+import _modDef13438 from "module_13438" /* 13438 */;
+import AppIconUtils from "AppIconUtils" /* 13439 */;
+import _modDef13441 from "module_13441" /* 13441 */;
+import _modDef13442 from "module_13442" /* 13442 */;
+import _modDef13443 from "module_13443" /* 13443 */;
+import _modDef13444 from "module_13444" /* 13444 */;
+import _modDef13445 from "module_13445" /* 13445 */;
+import _modDef13446 from "module_13446" /* 13446 */;
+import DoorEnterIcon from "DoorEnterIcon" /* 13447 */;
+import _modDef13449 from "module_13449" /* 13449 */;
+import _modDef13450 from "module_13450" /* 13450 */;
+import ServerGridIcon from "ServerGridIcon" /* 13451 */;
+import _modDef13453 from "module_13453" /* 13453 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 13454 */;
+import _modDef13456 from "module_13456" /* 13456 */;
+import LettersIcon from "LettersIcon" /* 13457 */;
+import SparklesIcon from "SparklesIcon" /* 13459 */;
 import noop from "module_19" /* 19 */;
 import n from "module_672" /* 672 */;
 
 require = fn;
-const Gradients = fn(7446).Gradients;
+const Gradients = fn(7484).Gradients;
 const PremiumConstants = fn(1373);
 ({ FractionalPremiumStates: closure_4, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: hasOwnProperty, PremiumTypes: metroRequire } = PremiumConstants);
 let items = [...Gradients.PREMIUM_TIER_2];
@@ -66,7 +66,7 @@ export default function useBuyNitroPerks(arg0) {
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t["3cyhe3"]);
     obj.IconComponent = ReactionIcon.ReactionIcon;
-    obj = { image: _modDef13388, description: util.t["3SUJLd"] };
+    obj = { image: _modDef13437, description: util.t["3SUJLd"] };
     obj.detail = obj;
     let items = [obj, , , , , , , , , , , , , , , ];
     const obj1 = { id: "uploads", label: null, labelBasic: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
@@ -82,7 +82,7 @@ export default function useBuyNitroPerks(arg0) {
     const intl6 = util.intl;
     obj1.subLabel = intl6.string(util.t["8AhJqy"]);
     obj1.IconComponent = UploadIcon.UploadIcon;
-    let obj3 = { image: _modDef13389, description: null };
+    let obj3 = { image: _modDef13438, description: null };
     let obj7 = NitroFileUploadExperiments;
     obj4 = { legacyCopy: null, rolloutCopy: null };
     const intl7 = util.intl;
@@ -112,7 +112,7 @@ export default function useBuyNitroPerks(arg0) {
     const intl12 = util.intl;
     obj6.subLabel = intl12.string(util.t["t/Mvdj"]);
     obj6.IconComponent = UserSquareIcon.UserSquareIcon;
-    obj7 = { image: _modDef13392, description: util.t.kWcDK8 };
+    obj7 = { image: _modDef13441, description: util.t.kWcDK8 };
     obj6.detail = obj7;
     items[arraySpreadResult] = obj6;
     if (closure_1) {
@@ -125,7 +125,7 @@ export default function useBuyNitroPerks(arg0) {
       const intl14 = util.intl;
       obj8.subLabel = intl14.string(util.t["n+DGY/"]);
       obj8.IconComponent = BoostGemIcon.BoostGemIcon;
-      const obj10 = { image: _modDef13393, description: util.t.jsyNHm };
+      const obj10 = { image: _modDef13442, description: util.t.jsyNHm };
       obj8.detail = obj10;
       items3 = [obj8];
     }
@@ -136,7 +136,7 @@ export default function useBuyNitroPerks(arg0) {
     const intl16 = util.intl;
     obj11.subLabel = intl16.string(util.t.ymCPxp);
     obj11.IconComponent = ScreenStreamIcon.ScreenStreamIcon;
-    obj11.detail = { image: _modDef13394, description: util.t.ymCPxp };
+    obj11.detail = { image: _modDef13443, description: util.t.ymCPxp };
     items[arraySpreadResult] = obj11;
     const sum = arraySpreadResult + 1;
     const obj13 = { id: "super-reactions", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
@@ -145,9 +145,9 @@ export default function useBuyNitroPerks(arg0) {
     const intl18 = util.intl;
     obj13.subLabel = intl18.string(util.t.ZK3ZoX);
     obj13.IconComponent = SuperReactionIcon.SuperReactionIcon;
-    const obj12 = { image: _modDef13394, description: util.t.ymCPxp };
+    const obj12 = { image: _modDef13443, description: util.t.ymCPxp };
     const tmp7 = closure_1;
-    obj13.detail = { image: _modDef13395, description: util.t.A0U9fk };
+    obj13.detail = { image: _modDef13444, description: util.t.A0U9fk };
     items[sum] = obj13;
     if (tmp7) {
       let items4 = [];
@@ -167,8 +167,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl22 = util.intl;
     obj16.subLabel = intl22.string(util.t.hJG8ZN);
     obj16.IconComponent = StickerIcon.StickerIcon;
-    const obj14 = { image: _modDef13395, description: util.t.A0U9fk };
-    obj16.detail = { image: _modDef13396, description: util.t.FXlU24 };
+    const obj14 = { image: _modDef13444, description: util.t.A0U9fk };
+    obj16.detail = { image: _modDef13445, description: util.t.FXlU24 };
     items[arraySpreadResult1] = obj16;
     const sum1 = arraySpreadResult1 + 1;
     const obj18 = { id: "custom-sounds", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -177,8 +177,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl24 = util.intl;
     obj18.subLabel = intl24.string(util.t["4lSyCY"]);
     obj18.IconComponent = SoundboardIcon.SoundboardIcon;
-    const obj17 = { image: _modDef13396, description: util.t.FXlU24 };
-    obj18.detail = { image: _modDef13397, description: util.t["4lSyCY"] };
+    const obj17 = { image: _modDef13445, description: util.t.FXlU24 };
+    obj18.detail = { image: _modDef13446, description: util.t["4lSyCY"] };
     items[sum1] = obj18;
     const sum2 = sum1 + 1;
     const obj20 = { id: "entrance-sounds", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -195,8 +195,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl28 = util.intl;
     obj21.subLabel = intl28.string(util.t["A8O/Qw"]);
     obj21.IconComponent = VideoIcon.VideoIcon;
-    const obj19 = { image: _modDef13397, description: util.t["4lSyCY"] };
-    obj21.detail = { image: _modDef13400, description: util.t["A8O/Qw"] };
+    const obj19 = { image: _modDef13446, description: util.t["4lSyCY"] };
+    obj21.detail = { image: _modDef13449, description: util.t["A8O/Qw"] };
     items[sum3] = obj21;
     const sum4 = sum3 + 1;
     const obj23 = { id: "longer-messages", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -205,8 +205,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl30 = util.intl;
     obj23.subLabel = intl30.string(util.t.vN6XpQ);
     obj23.IconComponent = ChatIcon.ChatIcon;
-    const obj22 = { image: _modDef13400, description: util.t["A8O/Qw"] };
-    obj23.detail = { image: _modDef13401, description: util.t.vN6XpQ };
+    const obj22 = { image: _modDef13449, description: util.t["A8O/Qw"] };
+    obj23.detail = { image: _modDef13450, description: util.t.vN6XpQ };
     items[sum4] = obj23;
     const sum5 = sum4 + 1;
     const obj25 = { id: "more-servers", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -215,8 +215,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl32 = util.intl;
     obj25.subLabel = intl32.string(util.t.JMfaTU);
     obj25.IconComponent = ServerGridIcon.ServerGridIcon;
-    const obj24 = { image: _modDef13401, description: util.t.vN6XpQ };
-    obj25.detail = { image: _modDef13404, description: util.t.JMfaTU };
+    const obj24 = { image: _modDef13450, description: util.t.vN6XpQ };
+    obj25.detail = { image: _modDef13453, description: util.t.JMfaTU };
     items[sum5] = obj25;
     const sum6 = sum5 + 1;
     const obj27 = { id: "client-themes", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -225,8 +225,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl34 = util.intl;
     obj27.subLabel = intl34.string(util.t.CjRASJ);
     obj27.IconComponent = PaintPaletteIcon.PaintPaletteIcon;
-    const obj26 = { image: _modDef13404, description: util.t.JMfaTU };
-    obj27.detail = { image: _modDef13407, description: util.t.jBTTws };
+    const obj26 = { image: _modDef13453, description: util.t.JMfaTU };
+    obj27.detail = { image: _modDef13456, description: util.t.jBTTws };
     items[sum6] = obj27;
     const sum7 = sum6 + 1;
     const obj29 = { id: "display-name-styles", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -315,6 +315,6 @@ export default function useBuyNitroPerks(arg0) {
       HermesBuiltin.arraySpread(mapped.map((perk, index) => ({ kind: "perk", perk, start: 0 === index, end: index === mapped.length - 1 })), 1);
       return items7;
     }
-    const obj28 = { image: _modDef13407, description: util.t.jBTTws };
+    const obj28 = { image: _modDef13456, description: util.t.jBTTws };
   }, items);
 };

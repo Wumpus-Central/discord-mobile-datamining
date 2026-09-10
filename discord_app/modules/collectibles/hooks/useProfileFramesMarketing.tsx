@@ -1,8 +1,8 @@
-// === Module 16986: useProfileFramesMarketing ===
+// === Module 17043: useProfileFramesMarketing ===
 
-// Module 16986 (useProfileFramesMarketing)
-import CollectiblesProfileFramesExperimentDefault from "CollectiblesProfileFramesExperiment" /* 8238 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 14659 */;
+// Module 17043 (useProfileFramesMarketing)
+import CollectiblesProfileFramesExperimentDefault from "CollectiblesProfileFramesExperiment" /* 8275 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 14708 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");

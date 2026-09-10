@@ -1,6 +1,6 @@
-// === Module 7764: device/DeviceState ===
+// === Module 7801: device/DeviceState ===
 
-// Module 7764 (device/DeviceState)
+// Module 7801 (device/DeviceState)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

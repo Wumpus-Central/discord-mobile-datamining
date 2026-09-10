@@ -1,8 +1,8 @@
-// === Module 11182: useCustomStatusActivityForUser ===
+// === Module 11222: useCustomStatusActivityForUser ===
 
-// Module 11182 (useCustomStatusActivityForUser)
+// Module 11222 (useCustomStatusActivityForUser)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 4614 */;
+import PresenceStore from "PresenceStore" /* 4645 */;
 
 const require = fn;
 const ActivityTypes = fn(1074).ActivityTypes;

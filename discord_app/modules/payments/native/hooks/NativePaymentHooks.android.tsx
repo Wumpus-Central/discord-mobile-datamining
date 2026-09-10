@@ -1,11 +1,11 @@
-// === Module 9398: NativePaymentHooks ===
+// === Module 9436: NativePaymentHooks ===
 
-// Module 9398 (NativePaymentHooks)
+// Module 9436 (NativePaymentHooks)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7251 */;
+import IAPStore from "IAPStore" /* 7289 */;
 
 const require = fn;
 function notSupported() {
@@ -69,7 +69,7 @@ function useGoogleSkuIds(arg0, arg1) {
                       ref = 1;
                       v2 = 2;
                       c5 = 1;
-                      const obj1 = { value: closure_2_0(9399).loadInAppSkus(differenceResult), done: false };
+                      const obj1 = { value: closure_2_0(9437).loadInAppSkus(differenceResult), done: false };
                       return obj1;
                     }
                   }
@@ -85,7 +85,7 @@ function useGoogleSkuIds(arg0, arg1) {
               closure_128_1 = closure_2;
               logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
               v2("Unable to fetch");
-              let obj2 = closure_2_0(4246);
+              let obj2 = closure_2_0(4277);
               const result = obj2.captureBillingException(closure_128_1);
             } else if (arg0 === 1) {
               c5 = 3;

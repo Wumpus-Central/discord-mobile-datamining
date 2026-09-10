@@ -1,10 +1,10 @@
-// === Module 16247: GuildMemberDashChannelRow ===
+// === Module 16296: GuildMemberDashChannelRow ===
 
-// Module 16247 (GuildMemberDashChannelRow)
+// Module 16296 (GuildMemberDashChannelRow)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5555 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4429 */;
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5591 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ const Constants = fn(1074);
 ({ GuildFeatures: closure_4, Routes: hasOwnProperty } = Constants);
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { container: null, badge: null, badgeText: null };
-createStyles = { marginVertical: fn(10150).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+createStyles = { marginVertical: fn(10188).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 createStyles.container = createStyles;
 createStyles.badge = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_DEFAULT };
 const obj1 = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_DEFAULT };
@@ -28,7 +28,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   let hasItem;
   const tmp = closure_8();
   const id = guild.id;
-  let obj = id(16248);
+  let obj = id(16297);
   let num = obj.useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;
@@ -46,7 +46,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   const callback = noop.useCallback(() => {
     router_utils.transitionTo(hasOwnProperty.CHANNEL(id, StaticChannelRoute.MEMBER_SAFETY));
   }, items1);
-  const ChannelModes = tmp2(12409).ChannelModes;
+  const ChannelModes = tmp2(12449).ChannelModes;
   const tmp7 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
   obj = { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null };
   const intl = tmp2(1114).intl;
@@ -57,9 +57,9 @@ export default function GuildMemberDashChannelRow(arg0) {
   const intl2 = tmp2(1114).intl;
   obj.name = intl2.string(id(1114).t["9Oq93m"]);
   obj.mode = tmp7;
-  obj.name = jsx(id(12409).BaseChannelName, { name: null, mode: null });
-  const tmp9 = hasItem(12409);
-  obj.icon = jsx(id(12409).BaseChannelIcon, { mode: tmp7, IconComponent: id(5103).GroupIcon });
+  obj.name = jsx(id(12449).BaseChannelName, { name: null, mode: null });
+  const tmp9 = hasItem(12449);
+  obj.icon = jsx(id(12449).BaseChannelIcon, { mode: tmp7, IconComponent: id(5139).GroupIcon });
   let tmp8Result = null;
   if (num > 0) {
     const obj2 = { style: null, textStyle: null, value: null };

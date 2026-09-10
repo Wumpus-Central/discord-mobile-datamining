@@ -1,11 +1,11 @@
-// === Module 8360: DeviceOrientation ===
+// === Module 8397: DeviceOrientation ===
 
-// Module 8360 (DeviceOrientation)
+// Module 8397 (DeviceOrientation)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
-import DeviceUtils from "DeviceUtils" /* 4553 */;
+import DeviceUtils from "DeviceUtils" /* 4584 */;
 import noop from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_8361" /* 8361 */;
+import get_ActivityIndicator from "module_8398" /* 8398 */;
 
 require = fn;
 function handleOrientationChange(initialOrientation) {

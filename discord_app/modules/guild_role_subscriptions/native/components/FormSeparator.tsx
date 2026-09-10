@@ -1,12 +1,12 @@
-// === Module 15249: FormSeparator ===
+// === Module 15298: FormSeparator ===
 
-// Module 15249 (FormSeparator)
+// Module 15298 (FormSeparator)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 const createStyles = { container: { alignSelf: "stretch" }, margins: { marginTop: 16 }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 createStyles.separator = size;

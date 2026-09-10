@@ -1,21 +1,21 @@
-// === Module 15840: CollectiblesShopV2 ===
+// === Module 15889: CollectiblesShopV2 ===
 
-// Module 15840 (CollectiblesShopV2)
+// Module 15889 (CollectiblesShopV2)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7604 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8213 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8880 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9398 */;
-import ShopCategory from "ShopCategory" /* 15845 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15847 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7641 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8250 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8917 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9436 */;
+import ShopCategory from "ShopCategory" /* 15894 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15896 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4573 */;
+import DevSettingsStore from "DevSettingsStore" /* 4604 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import UserStore from "UserStore" /* 1371 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7594 */;
 
 require = fn;
 class CollectiblesShopV2 {
@@ -96,7 +96,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, PaymentGateways: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 const collapsedCategories = createStyles.createStyles({ rootContainer: { height: "100%", width: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 } });
 function CollectiblesShopInternal(analyticsSource) {
   analyticsSource = analyticsSource.analyticsSource;

@@ -1,9 +1,9 @@
-// === Module 9590: NativeRPCHelpers ===
+// === Module 9628: NativeRPCHelpers ===
 
-// Module 9590 (NativeRPCHelpers)
+// Module 9628 (NativeRPCHelpers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const TransportTypes = fn(4479).TransportTypes;
+const TransportTypes = fn(4510).TransportTypes;
 const RPCCloseCodes = fn(1074).RPCCloseCodes;
 let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
   closure_0 = arg0;
@@ -40,22 +40,22 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
             closure_131_0 = closure_0;
             closure_131_1 = closure_1;
             closure_131_2 = dependencyMap;
-            const result = closure_0(9591).validateOriginAndUpdateSocket(closure_0, closure_1);
+            const result = closure_0(9629).validateOriginAndUpdateSocket(closure_0, closure_1);
             if (null == dependencyMap) {
               const obj1 = { closeCode: constants.INVALID_CLIENTID };
-              const tmp23 = new closure_1(9586)(obj1, "No Client ID Specified");
+              const tmp23 = new closure_1(9624)(obj1, "No Client ID Specified");
               c6 = 3;
               const obj2 = { value: Promise.reject(tmp23), done: true };
               return obj2;
             } else {
-              let obj3 = closure_0(9591);
+              let obj3 = closure_0(9629);
               c5 = 1;
               c6 = 1;
               obj3 = { value: null, done: false };
               obj3.value = obj3.processSocketThrottlers(dependencyMap, closure_0.transport !== tmp2.POST_MESSAGE, closure_0.abortController.signal);
               return obj3;
             }
-            const obj10 = closure_0(9591);
+            const obj10 = closure_0(9629);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -65,7 +65,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          obj = closure_0(9591);
+          obj = closure_0(9629);
           c6 = 3;
           const obj5 = { value: obj.validateSocketApplication(closure_131_0, closure_131_2, closure_131_1), done: true };
           return obj5;
@@ -90,5 +90,5 @@ export const validateSocketClient = function() {
   }
   return applyArgumentsResult;
 };
-export const getDeprecatedVoiceSettings = () => closure_0(9591).getDeprecatedVoiceSettingsWithShortcut(() => []);
-export const getVoiceSettings = (arg0) => closure_0(9591).getVoiceSettingsWithShortcut(arg0, () => "");
+export const getDeprecatedVoiceSettings = () => closure_0(9629).getDeprecatedVoiceSettingsWithShortcut(() => []);
+export const getVoiceSettings = (arg0) => closure_0(9629).getVoiceSettingsWithShortcut(arg0, () => "");

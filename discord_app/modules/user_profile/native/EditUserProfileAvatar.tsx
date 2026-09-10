@@ -1,18 +1,18 @@
-// === Module 14636: EditUserProfileAvatar ===
+// === Module 14685: EditUserProfileAvatar ===
 
-// Module 14636 (EditUserProfileAvatar)
+// Module 14685 (EditUserProfileAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import timing from "timing" /* 4575 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8192 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import timing from "timing" /* 4606 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8229 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ editIcon: { position: "absolute", right: -3 } });
 let __initData = { code: "function EditUserProfileAvatarTsx1(){const{rotation}=this.__closure;return{transform:[{rotateZ:rotation.get()+\"deg\"}]};}" };
 let size = fn(2);
@@ -88,7 +88,7 @@ export default function EditUserProfileAvatar(user) {
       },
       showRemoveAvatar: null
     };
-    const tmp = asyncRequireImpl(14638, dependencyMap.paths);
+    const tmp = asyncRequireImpl(14687, dependencyMap.paths);
     obj.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj.openLazy(tmp, "Change Avatar", obj);
   }, items);

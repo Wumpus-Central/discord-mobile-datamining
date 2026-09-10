@@ -1,6 +1,6 @@
-// === Module 5540: MemberVerificationRouteExperiment ===
+// === Module 5576: MemberVerificationRouteExperiment ===
 
-// Module 5540 (MemberVerificationRouteExperiment)
+// Module 5576 (MemberVerificationRouteExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
 let obj = { name: "2026-07-rm-member-verification-route", kind: "user", defaultConfig: { isDeprecated: false }, variations: null };

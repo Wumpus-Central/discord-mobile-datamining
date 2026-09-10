@@ -1,9 +1,9 @@
-// === Module 8117: FacebookNeutralIcon ===
+// === Module 8154: FacebookNeutralIcon ===
 
-// Module 8117 (FacebookNeutralIcon)
+// Module 8154 (FacebookNeutralIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod8118 from "module_8118" /* 8118 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod8155 from "module_8155" /* 8155 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const FacebookNeutralIcon = function FacebookNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8118, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8155, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

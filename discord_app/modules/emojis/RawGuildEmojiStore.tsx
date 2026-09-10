@@ -1,7 +1,7 @@
-// === Module 5475: RawGuildEmojiStore ===
+// === Module 5511: RawGuildEmojiStore ===
 
-// Module 5475 (RawGuildEmojiStore)
-import EmojiTypes from "EmojiTypes" /* 4229 */;
+// Module 5511 (RawGuildEmojiStore)
+import EmojiTypes from "EmojiTypes" /* 4260 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

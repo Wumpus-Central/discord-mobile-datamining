@@ -1,17 +1,17 @@
-// === Module 7877: HeaderShared ===
+// === Module 7914: HeaderShared ===
 
-// Module 7877 (HeaderShared)
+// Module 7914 (HeaderShared)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import useToken from "useToken" /* 4275 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Pressables from "Pressables" /* 5137 */;
-import _mod5645 from "module_5645" /* 5645 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7879 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 7884 */;
-import ChannelActionsDefault from "ChannelActions" /* 7889 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13290 */;
+import useToken from "useToken" /* 4306 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Pressables from "Pressables" /* 5173 */;
+import _mod5681 from "module_5681" /* 5681 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7916 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 7921 */;
+import ChannelActionsDefault from "ChannelActions" /* 7926 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 13338 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -123,10 +123,10 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(7878).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(7915).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = { headerRightContainer: { marginRight: 16 }, headerWrapper: null, actionButtonPressable: null, actionButtonIcon: null, headerText: null, subtitleText: null, backButtonLabel: null, titleContainer: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 };
 obj.headerWrapper = obj;
@@ -136,7 +136,7 @@ obj.actionButtonIcon = createStyles;
 obj.headerText = { textAlign: "center", fontSize: 18 };
 obj.subtitleText = { textAlign: "center" };
 const obj2 = {};
-let merged = Object.assign(fn(4570).TextStyleSheet["text-md/semibold"]);
+let merged = Object.assign(fn(4601).TextStyleSheet["text-md/semibold"]);
 obj2.color = nativeDefault.colors.TEXT_BRAND;
 obj.backButtonLabel = obj2;
 obj.titleContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -160,6 +160,7 @@ const memoResult = noop.memo(function HeaderInner(style) {
     fn = (arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
+      const merged1 = Object.assign(str);
       obj.navigation = navigation;
       return timestampProducer(PressableNavigatorBackIcon.PressableNavigatorBackIcon, obj);
     };
@@ -241,11 +242,13 @@ export const renderHeader = function renderHeader(arg0) {
   const merged = Object.assign(arg0);
   return timestampProducer(memoResult, {});
 };
-export function getRenderBackImage(navigation) {
+export function getRenderBackImage(navigation, arg1) {
   closure_0 = navigation;
+  closure_1 = arg1;
   return (arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
+    const merged1 = Object.assign(str);
     obj.navigation = navigation;
     return timestampProducer(PressableNavigatorBackIcon.PressableNavigatorBackIcon, obj);
   };
@@ -265,6 +268,7 @@ export function getDefaultStackHeaderProps(navigation) {
     headerLeft: (arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
+      const merged1 = Object.assign(str);
       obj.navigation = navigation;
       return timestampProducer(PressableNavigatorBackIcon.PressableNavigatorBackIcon, obj);
     },
@@ -280,10 +284,12 @@ export const getDefaultChannelStackHeaderProps = function getDefaultChannelStack
     str = "none";
   }
   closure_129_0 = navigation;
+  closure_129_1 = undefined;
   return {
     headerLeft: (arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
+      const merged1 = Object.assign(str);
       obj.navigation = navigation;
       return timestampProducer(PressableNavigatorBackIcon.PressableNavigatorBackIcon, obj);
     },

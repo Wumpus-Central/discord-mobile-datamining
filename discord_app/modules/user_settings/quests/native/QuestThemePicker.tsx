@@ -1,8 +1,8 @@
-// === Module 15206: QuestThemePicker ===
+// === Module 15255: QuestThemePicker ===
 
-// Module 15206 (QuestThemePicker)
+// Module 15255 (QuestThemePicker)
 import nativeDefault from "native" /* 576 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15207 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15256 */;
 import noop from "module_19" /* 19 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
@@ -140,7 +140,7 @@ let closure_8 = fn(1230).LEGACY_STANDARD_BACKGROUND_THEMES;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { themeSection: null, themeSelector: null, themeOption: null, themeCircle: null, themeCircleSelected: null, themeLabel: null, resetButton: null, resetIcon: null };
 createStyles = { marginBottom: nativeDefault.space.PX_8 };
 createStyles.themeSection = createStyles;

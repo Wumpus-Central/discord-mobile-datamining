@@ -1,9 +1,9 @@
-// === Module 6247: MailboxSpotIllustration ===
+// === Module 6283: MailboxSpotIllustration ===
 
-// Module 6247 (MailboxSpotIllustration)
+// Module 6283 (MailboxSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6248 from "module_6248" /* 6248 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6284 from "module_6284" /* 6284 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const MailboxSpotIllustration = function MailboxSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6248 };
+  obj = { uri: _modDef6284 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const MailboxSpotIllustration = function MailboxSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6248 });
+  return jsx(FastImageDefault, { uri: _modDef6284 });
 };

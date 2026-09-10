@@ -1,10 +1,10 @@
-// === Module 15365: DisplayNameStylesRouteSetting ===
+// === Module 15414: DisplayNameStylesRouteSetting ===
 
-// Module 15365 (DisplayNameStylesRouteSetting)
+// Module 15414 (DisplayNameStylesRouteSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import _modDef2786 from "module_2786" /* 2786 */;
-import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

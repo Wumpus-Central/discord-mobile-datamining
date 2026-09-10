@@ -1,16 +1,16 @@
-// === Module 14206: Slider ===
+// === Module 14255: Slider ===
 
-// Module 14206 (Slider)
+// Module 14255 (Slider)
 import nativeDefault from "native" /* 576 */;
-import HapticUtils from "HapticUtils" /* 4542 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
+import HapticUtils from "HapticUtils" /* 4573 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4574 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { flex: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: null, maximumTrackTintColor: null, startIcon: null, endIcon: null };
 createStyles = { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 createStyles.minimumTrackTintColor = createStyles;
@@ -53,7 +53,7 @@ export const Slider = function Slider(step) {
   obj.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
   obj.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
   obj.tapToSeek = true;
-  items1[1] = closure_5(step(8306), obj);
+  items1[1] = closure_5(step(8343), obj);
   let tmp8Result = null;
   if (null != endIcon) {
     const obj1 = { style: tmp2.endIcon, children: endIcon };

@@ -1,9 +1,9 @@
-// === Module 6221: IceCreamIllocon ===
+// === Module 6257: IceCreamIllocon ===
 
-// Module 6221 (IceCreamIllocon)
+// Module 6257 (IceCreamIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6222 from "module_6222" /* 6222 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6258 from "module_6258" /* 6258 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const IceCreamIllocon = function IceCreamIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6222 };
+  obj = { uri: _modDef6258 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6222 });
+  return jsx(FastImageDefault, { uri: _modDef6258 });
 };

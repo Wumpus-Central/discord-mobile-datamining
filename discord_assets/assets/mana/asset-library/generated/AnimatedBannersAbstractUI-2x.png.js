@@ -1,6 +1,6 @@
-// === Module 5758: ? ===
+// === Module 5794: ? ===
 
-// Module 5758
+// Module 5794
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AnimatedBannersAbstractUI-2x.png.js");

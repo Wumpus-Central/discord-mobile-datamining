@@ -1,11 +1,11 @@
-// === Module 5923: DiscordQuestsLockupLogo ===
+// === Module 5959: DiscordQuestsLockupLogo ===
 
-// Module 5923 (DiscordQuestsLockupLogo)
+// Module 5959 (DiscordQuestsLockupLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4275 */;
-import _modDef5924 from "module_5924" /* 5924 */;
+import useToken from "useToken" /* 4306 */;
+import _modDef5960 from "module_5960" /* 5960 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -42,9 +42,9 @@ export const DiscordQuestsLockupLogo = function DiscordQuestsLockupLogo(color) {
     }
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
-  const obj1 = { fadeDuration: 0, source: { uri: _modDef5924 }, style: null, accessible, accessibilityLabel, resizeMode };
+  const obj1 = { fadeDuration: 0, source: { uri: _modDef5960 }, style: null, accessible, accessibilityLabel, resizeMode };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj1.style = items;
-  return <Image fadeDuration={0} source={{ uri: _modDef5924 }} style={null} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
+  return <Image fadeDuration={0} source={{ uri: _modDef5960 }} style={null} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
 };

@@ -1,7 +1,7 @@
-// === Module 8125: transformNativeMarkupNode ===
+// === Module 8162: transformNativeMarkupNode ===
 
-// Module 8125 (transformNativeMarkupNode)
-import MarkupTypes from "MarkupTypes" /* 5010 */;
+// Module 8162 (transformNativeMarkupNode)
+import MarkupTypes from "MarkupTypes" /* 5046 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -73,7 +73,7 @@ function transformNode(type, channelId) {
         obj11.inQuote = true;
         let arr2 = transformNativeBlocks(type.value, obj11, "quote");
         if (arr2.length <= 0) {
-          const obj12 = { type: tmp55(5010).AST_KEY.TEXT, content: " " };
+          const obj12 = { type: tmp55(5046).AST_KEY.TEXT, content: " " };
           items = [obj12];
           arr2 = items;
         }
@@ -105,7 +105,7 @@ function transformNode(type, channelId) {
         obj = require("transformNativeMarkupLink");
         result1 = obj.transformNativeLink(type.value, channelId, transformNativeInline);
         if (result1 == null) {
-          const obj15 = { type: tmp(5010).AST_KEY.TEXT, content: "" };
+          const obj15 = { type: tmp(5046).AST_KEY.TEXT, content: "" };
           result1 = obj15;
         }
         tmp = _require;
@@ -200,7 +200,7 @@ function transformNativeBlocks(value, channelId, quote) {
   return items;
 }
 const set = new Set(["paragraph", "quote"]);
-const regExp = new RegExp(fn(4569).ANSI_CONTROL_SEQUENCE_RE, "g");
+const regExp = new RegExp(fn(4600).ANSI_CONTROL_SEQUENCE_RE, "g");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupNode.tsx");
 

@@ -1,23 +1,23 @@
-// === Module 15444: ContrastModeSetting ===
+// === Module 15493: ContrastModeSetting ===
 
-// Module 15444 (ContrastModeSetting)
+// Module 15493 (ContrastModeSetting)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11236 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14465 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15344 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11276 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14514 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15393 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["TYyfO/"]);
   },
-  parent: fn(7989).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8027).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },

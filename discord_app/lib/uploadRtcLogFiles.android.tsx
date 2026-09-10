@@ -1,6 +1,6 @@
-// === Module 10222: uploadRtcLogFiles ===
+// === Module 10260: uploadRtcLogFiles ===
 
-// Module 10222 (uploadRtcLogFiles)
+// Module 10260 (uploadRtcLogFiles)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

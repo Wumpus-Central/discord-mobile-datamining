@@ -1,13 +1,13 @@
-// === Module 7352: SoundboardActionCreators ===
+// === Module 7390: SoundboardActionCreators ===
 
-// Module 7352 (SoundboardActionCreators)
+// Module 7390 (SoundboardActionCreators)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 5026 */;
+import SoundboardStore from "SoundboardStore" /* 5062 */;
 
 require = fn;
 let closure_11 = async function _fetchDefaultSoundsFromApi2() {
@@ -64,7 +64,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  let obj = SOUNDBOARD_SOUNDS_RECEIVED(7354);
+  let obj = SOUNDBOARD_SOUNDS_RECEIVED(7392);
   const guildIdsToFetchSoundsFor = obj.getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
@@ -398,7 +398,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(5028).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5064).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, AnalyticEvents: closure_7 } = Constants);
 const UserSettingsConstants = fn(1084);

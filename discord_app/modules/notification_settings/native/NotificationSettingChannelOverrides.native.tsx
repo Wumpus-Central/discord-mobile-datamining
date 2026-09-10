@@ -1,14 +1,14 @@
-// === Module 17828: NotificationSettingChannelOverrides ===
+// === Module 17887: NotificationSettingChannelOverrides ===
 
-// Module 17828 (NotificationSettingChannelOverrides)
+// Module 17887 (NotificationSettingChannelOverrides)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4285 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7126 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4316 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7164 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7125 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7163 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const Constants = fn(1074);
 ({ ChannelTypes: c10, NotificationSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = { container: null, searchContainer: null };
 obj = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
 obj.container = obj;

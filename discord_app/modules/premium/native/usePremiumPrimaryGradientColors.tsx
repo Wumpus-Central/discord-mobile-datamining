@@ -1,8 +1,8 @@
-// === Module 13463: usePremiumPrimaryGradientColors ===
+// === Module 13512: usePremiumPrimaryGradientColors ===
 
-// Module 13463 (usePremiumPrimaryGradientColors)
+// Module 13512 (usePremiumPrimaryGradientColors)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4275 */;
+import useToken from "useToken" /* 4306 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");

@@ -1,9 +1,9 @@
-// === Module 16923: useListHasSingleMessageRequest ===
+// === Module 16980: useListHasSingleMessageRequest ===
 
-// Module 16923 (useListHasSingleMessageRequest)
+// Module 16980 (useListHasSingleMessageRequest)
 import noop from "module_19" /* 19 */;
-import MessageRequestStore from "MessageRequestStore" /* 7233 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7234 */;
+import MessageRequestStore from "MessageRequestStore" /* 7271 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7272 */;
 
 const require = fn;
 const size = fn(2);

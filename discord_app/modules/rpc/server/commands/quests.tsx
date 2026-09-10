@@ -1,20 +1,20 @@
-// === Module 14538: quests ===
+// === Module 14587: quests ===
 
-// Module 14538 (quests)
+// Module 14587 (quests)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7738 */;
-import RPCErrorDefault from "RPCError" /* 9586 */;
-import RPCHelpers from "RPCHelpers" /* 9591 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 11547 */;
-import QuestStore from "QuestStore" /* 7717 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7775 */;
+import RPCErrorDefault from "RPCError" /* 9624 */;
+import RPCHelpers from "RPCHelpers" /* 9629 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 11587 */;
+import QuestStore from "QuestStore" /* 7754 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ RPCCommands, RPCErrors: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 let obj = {};
 obj = {
-  scope: fn(8367).OAuth2Scopes.IDENTIFY,
+  scope: fn(8404).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -54,7 +54,7 @@ obj = {
 };
 obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = obj;
 obj = {
-  scope: fn(8367).OAuth2Scopes.IDENTIFY,
+  scope: fn(8404).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -95,7 +95,7 @@ obj = {
 };
 obj[RPCCommands.QUEST_START_TIMER] = obj;
 obj[RPCCommands.GET_QUEST] = {
-  scope: fn(8367).OAuth2Scopes.IDENTIFY,
+  scope: fn(8404).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     let obj = RPCHelpers;

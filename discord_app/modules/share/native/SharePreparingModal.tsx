@@ -1,14 +1,14 @@
-// === Module 8395: SharePreparingModal ===
+// === Module 8432: SharePreparingModal ===
 
-// Module 8395 (SharePreparingModal)
+// Module 8432 (SharePreparingModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Backdrop from "Backdrop" /* 4977 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5591 */;
-import XSmallIcon from "XSmallIcon" /* 5694 */;
-import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 8396 */;
-import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 8397 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Backdrop from "Backdrop" /* 5013 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5627 */;
+import XSmallIcon from "XSmallIcon" /* 5730 */;
+import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 8433 */;
+import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 8434 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { content: null, topBar: null, topBarEnd: null };
 createStyles = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12 };
 createStyles.content = createStyles;

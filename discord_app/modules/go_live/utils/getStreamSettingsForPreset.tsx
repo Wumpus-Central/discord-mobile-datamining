@@ -1,11 +1,11 @@
-// === Module 9985: getStreamSettingsForPreset ===
+// === Module 10023: getStreamSettingsForPreset ===
 
-// Module 9985 (getStreamSettingsForPreset)
+// Module 10023 (getStreamSettingsForPreset)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 4712 */;
-import GoLiveVideoPresetResolutionExperimentDefault from "GoLiveVideoPresetResolutionExperiment" /* 9986 */;
-import canStreamWithSettingsDefault from "canStreamWithSettings" /* 9987 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4621 */;
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 4743 */;
+import GoLiveVideoPresetResolutionExperimentDefault from "GoLiveVideoPresetResolutionExperiment" /* 10024 */;
+import canStreamWithSettingsDefault from "canStreamWithSettings" /* 10025 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4652 */;
 import size from "module_2" /* 2 */;
 
 function getApplicationStreamPresetValues() {

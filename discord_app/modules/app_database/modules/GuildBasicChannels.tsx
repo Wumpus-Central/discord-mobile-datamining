@@ -1,18 +1,18 @@
-// === Module 7662: GuildBasicChannels ===
+// === Module 7699: GuildBasicChannels ===
 
-// Module 7662 (GuildBasicChannels)
+// Module 7699 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4221 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import BasicChannelCacheStore from "BasicChannelCacheStore" /* 1958 */;
 
 const require = fn;
@@ -297,7 +297,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_15.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj2 = { value: { v: "disabled" }, done: true };
+                            const obj2 = { value: { v: "Array" }, done: true };
                             return obj2;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {

@@ -1,8 +1,8 @@
-// === Module 6989: BackgroundImage ===
+// === Module 7025: BackgroundImage ===
 
-// Module 6989 (BackgroundImage)
-import shared from "shared" /* 4425 */;
-import _modDef6991 from "module_6991" /* 6991 */;
+// Module 7025 (BackgroundImage)
+import shared from "shared" /* 4456 */;
+import _modDef7027 from "module_7027" /* 7027 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export default function BackgroundImage(backgroundImageSource) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = flag(4509)();
+  const tmp = flag(4540)();
   dependencyMap = tmp;
   let items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };
@@ -33,10 +33,10 @@ export default function BackgroundImage(backgroundImageSource) {
     } else {
       let tmp2 = dependencyMap;
       if (obj2.isThemeDark(closure_2)) {
-        tmp2 = 6990;
+        tmp2 = 7026;
         let tmp4Result = importDefault(tmp2);
       } else {
-        tmp4Result = _modDef6991;
+        tmp4Result = _modDef7027;
       }
       obj2 = shared;
     }

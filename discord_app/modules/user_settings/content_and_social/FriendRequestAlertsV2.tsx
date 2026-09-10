@@ -1,6 +1,6 @@
-// === Module 10904: FriendRequestAlertsV2 ===
+// === Module 10942: FriendRequestAlertsV2 ===
 
-// Module 10904 (FriendRequestAlertsV2)
+// Module 10942 (FriendRequestAlertsV2)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

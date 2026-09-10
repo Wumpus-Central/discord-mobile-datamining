@@ -1,10 +1,10 @@
-// === Module 11847: GiftIntentGifModal ===
+// === Module 11887: GiftIntentGifModal ===
 
-// Module 11847 (GiftIntentGifModal)
+// Module 11887 (GiftIntentGifModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import NavigatorHeader from "NavigatorHeader" /* 5674 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -173,10 +173,10 @@ function GiftIntentGifModalBody(channelId) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const MessageSendLocation = fn(4567).MessageSendLocation;
+const MessageSendLocation = fn(4598).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, messageContainer: null, pickerContainer: null, footer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;

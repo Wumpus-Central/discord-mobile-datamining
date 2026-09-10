@@ -1,6 +1,6 @@
-// === Module 16828: ShopCoachmark ===
+// === Module 16885: ShopCoachmark ===
 
-// Module 16828 (ShopCoachmark)
+// Module 16885 (ShopCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -14,7 +14,7 @@ function CoachmarkImg(arg0) {
 }
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles({ image: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");

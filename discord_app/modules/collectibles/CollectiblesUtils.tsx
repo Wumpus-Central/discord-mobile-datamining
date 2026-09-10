@@ -1,6 +1,6 @@
-// === Module 7568: CollectiblesUtils ===
+// === Module 7606: CollectiblesUtils ===
 
-// Module 7568 (CollectiblesUtils)
+// Module 7606 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1085 */;
 import util from "util" /* 1114 */;
@@ -9,14 +9,13 @@ import PerksStateUtils from "PerksStateUtils" /* 1377 */;
 import user from "user" /* 1379 */;
 import NameplateRecord from "NameplateRecord" /* 1887 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
-import PriceUtils from "PriceUtils" /* 7248 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7561 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7562 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7563 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7567 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7569 */;
-import XboxGamePassPerksExperiment from "XboxGamePassPerksExperiment" /* 7570 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
+import PriceUtils from "PriceUtils" /* 7286 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7599 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7600 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7601 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7605 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7607 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1076 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
@@ -142,18 +141,14 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
       if (hasItem) {
         let NITRO = obj.NITRO;
       } else {
-        NITRO = null;
-        if (tmp4Result.getIsXboxGamePassPerksEnabled("getShopDiscountSource")) {
-          let hasItem1;
-          if (perkSource != null) {
-            hasItem1 = perkSource.includes(user.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
-          }
-          NITRO = null;
-          if (hasItem1) {
-            NITRO = obj.THIRDPARTY;
-          }
+        let hasItem1;
+        if (perkSource != null) {
+          hasItem1 = perkSource.includes(user.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
         }
-        tmp4Result = XboxGamePassPerksExperiment;
+        NITRO = null;
+        if (hasItem1) {
+          NITRO = obj.THIRDPARTY;
+        }
       }
       return NITRO;
     }

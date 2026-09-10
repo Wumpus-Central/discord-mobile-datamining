@@ -1,6 +1,6 @@
-// === Module 7362: VoiceChannelEffectsConstants ===
+// === Module 7400: VoiceChannelEffectsConstants ===
 
-// Module 7362 (VoiceChannelEffectsConstants)
+// Module 7400 (VoiceChannelEffectsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsConstants.tsx");

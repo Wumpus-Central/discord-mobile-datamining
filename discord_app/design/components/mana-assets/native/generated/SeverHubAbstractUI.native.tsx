@@ -1,9 +1,9 @@
-// === Module 6461: SeverHubAbstractUI ===
+// === Module 6497: SeverHubAbstractUI ===
 
-// Module 6461 (SeverHubAbstractUI)
+// Module 6497 (SeverHubAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6462 from "module_6462" /* 6462 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6498 from "module_6498" /* 6498 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SeverHubAbstractUI = function SeverHubAbstractUI(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6462 };
+  obj = { uri: _modDef6498 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const SeverHubAbstractUI = function SeverHubAbstractUI(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6462 });
+  return jsx(FastImageDefault, { uri: _modDef6498 });
 };

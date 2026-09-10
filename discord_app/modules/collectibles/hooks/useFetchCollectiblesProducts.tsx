@@ -1,11 +1,11 @@
-// === Module 8905: useFetchCollectiblesProducts ===
+// === Module 8942: useFetchCollectiblesProducts ===
 
-// Module 8905 (useFetchCollectiblesProducts)
+// Module 8942 (useFetchCollectiblesProducts)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7593 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SKUStore from "SKUStore" /* 5524 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
+import SKUStore from "SKUStore" /* 5560 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7594 */;
 
 require = fn;
 const useEffect = fn(19).useEffect;

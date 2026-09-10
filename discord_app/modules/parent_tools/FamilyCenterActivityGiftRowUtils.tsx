@@ -1,10 +1,10 @@
-// === Module 14933: FamilyCenterActivityGiftRowUtils ===
+// === Module 14982: FamilyCenterActivityGiftRowUtils ===
 
-// Module 14933 (FamilyCenterActivityGiftRowUtils)
+// Module 14982 (FamilyCenterActivityGiftRowUtils)
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import _mod3809 from "module_3809" /* 3809 */;
-import PriceUtils from "PriceUtils" /* 7248 */;
+import _mod3839 from "module_3839" /* 3839 */;
+import PriceUtils from "PriceUtils" /* 7286 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
@@ -14,7 +14,7 @@ export const getGiftRowDisplayInfo = function getGiftRowDisplayInfo(giftInfo) {
 };
 export const formatGiftDate = function formatGiftDate(claimedAt) {
   const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-  return dateTimeFormat.format(_mod3809.parseISO(claimedAt));
+  return dateTimeFormat.format(_mod3839.parseISO(claimedAt));
 };
 export const getGiftSubtext = function getGiftSubtext(claimed) {
   ({ price, gifterName, offeredAt, claimedAt } = claimed);
@@ -40,14 +40,14 @@ export const getGiftSubtext = function getGiftSubtext(claimed) {
       obj = { date: null };
       const _Intl2 = Intl;
       const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-      let tmp8Result = _mod3809;
+      let tmp8Result = _mod3839;
       obj.date = dateTimeFormat.format(tmp8Result.parseISO(claimedAt));
       let formatToPlainStringResult1 = formatToPlainString(tmp11.kDyllq, obj);
     } else {
       const obj1 = { date: null };
       const _Intl = Intl;
       const dateTimeFormat1 = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-      tmp8Result = _mod3809;
+      tmp8Result = _mod3839;
       obj1.date = dateTimeFormat1.format(tmp8Result.parseISO(offeredAt));
       formatToPlainStringResult1 = formatToPlainString(tmp11.gAG45y, obj1);
     }

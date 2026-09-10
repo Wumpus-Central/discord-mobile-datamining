@@ -1,18 +1,18 @@
-// === Module 9567: transitionToActivity ===
+// === Module 9605: transitionToActivity ===
 
-// Module 9567 (transitionToActivity)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4202 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 9498 */;
-import ChannelCallStore from "ChannelCallStore" /* 9499 */;
-import ChannelCallConstants from "ChannelCallConstants" /* 9500 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9508 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9536 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 9537 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9560 */;
-import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 9568 */;
+// Module 9605 (transitionToActivity)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4233 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4462 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4806 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9536 */;
+import ChannelCallStore from "ChannelCallStore" /* 9537 */;
+import ChannelCallConstants from "ChannelCallConstants" /* 9538 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9546 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9574 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9575 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9598 */;
+import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 9606 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 8868: LimitedTimeBadge ===
+// === Module 8905: LimitedTimeBadge ===
 
-// Module 8868 (LimitedTimeBadge)
+// Module 8905 (LimitedTimeBadge)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import shared from "shared" /* 4425 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useCountdownDefault from "useCountdown" /* 7453 */;
+import shared from "shared" /* 4456 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useCountdownDefault from "useCountdown" /* 7491 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
@@ -14,7 +14,7 @@ import ThemeStore from "ThemeStore" /* 1183 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { root: null, backgroundDarkMode: null, backgroundLightMode: null };
 createStyles = { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
 createStyles.root = createStyles;

@@ -1,9 +1,9 @@
-// === Module 6397: RewardsLaptopSpotIllustration ===
+// === Module 6433: RewardsLaptopSpotIllustration ===
 
-// Module 6397 (RewardsLaptopSpotIllustration)
+// Module 6433 (RewardsLaptopSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6398 from "module_6398" /* 6398 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6434 from "module_6434" /* 6434 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const RewardsLaptopSpotIllustration = function RewardsLaptopSpotIllustrat
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6398 };
+  obj = { uri: _modDef6434 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const RewardsLaptopSpotIllustration = function RewardsLaptopSpotIllustrat
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6398 });
+  return jsx(FastImageDefault, { uri: _modDef6434 });
 };

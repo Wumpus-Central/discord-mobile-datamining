@@ -1,19 +1,19 @@
-// === Module 9522: usePipVideoOrStream ===
+// === Module 9560: usePipVideoOrStream ===
 
-// Module 9522 (usePipVideoOrStream)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 9498 */;
+// Module 9560 (usePipVideoOrStream)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4462 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9536 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
-import VideoSpeakerStore from "VideoSpeakerStore" /* 9523 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+import VideoSpeakerStore from "VideoSpeakerStore" /* 9561 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4627 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
 
 require = fn;
-const CallConstants = fn(4595);
+const CallConstants = fn(4626);
 ({ isStreamParticipant: closure_11, isUserParticipant: closure_12, ParticipantTypes: map1 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/usePipVideoOrStream.tsx");

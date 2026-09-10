@@ -1,9 +1,9 @@
-// === Module 6287: NitroGradientBackgroundAbstractUI ===
+// === Module 6323: NitroGradientBackgroundAbstractUI ===
 
-// Module 6287 (NitroGradientBackgroundAbstractUI)
+// Module 6323 (NitroGradientBackgroundAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6288 from "module_6288" /* 6288 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6324 from "module_6324" /* 6324 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const NitroGradientBackgroundAbstractUI = function NitroGradientBackgroun
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6288 };
+  obj = { uri: _modDef6324 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const NitroGradientBackgroundAbstractUI = function NitroGradientBackgroun
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6288 });
+  return jsx(FastImageDefault, { uri: _modDef6324 });
 };

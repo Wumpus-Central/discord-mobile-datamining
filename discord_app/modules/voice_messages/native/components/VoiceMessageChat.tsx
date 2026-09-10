@@ -1,14 +1,14 @@
-// === Module 12677: VoiceMessageChat ===
+// === Module 12717: VoiceMessageChat ===
 
-// Module 12677 (VoiceMessageChat)
+// Module 12717 (VoiceMessageChat)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import spring from "spring" /* 4988 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 5182 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import spring from "spring" /* 5024 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 5218 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
@@ -183,13 +183,13 @@ function Duration(animationValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-let useVoiceMessagesUIStore = fn(11990).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(11991);
+let useVoiceMessagesUIStore = fn(12030).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(12031);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: c10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = ReanimatedRexport.createAnimatedComponent(ActivityIndicator);
-fn(4574);
+fn(4605);
 let obj = { container: null, loading: null, dot: null, dotDismissed: null, waveformContainer: null, waveformBar: null, durationContainer: null, duration: null };
 obj = { height: "100%", flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL, gap: nativeDefault.modules.mobile.VOICE_MESSAGE_CHAT_GAP, borderRadius: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
 obj.container = obj;

@@ -1,16 +1,16 @@
-// === Module 14543: AuthCommandsFactory ===
+// === Module 14592: AuthCommandsFactory ===
 
-// Module 14543 (AuthCommandsFactory)
+// Module 14592 (AuthCommandsFactory)
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import RPCErrorDefault from "RPCError" /* 9586 */;
+import RPCErrorDefault from "RPCError" /* 9624 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4802 */;
+import ApplicationStore from "ApplicationStore" /* 4833 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import UserStore from "UserStore" /* 1371 */;
-import LeakyBucket from "LeakyBucket" /* 9593 */;
+import LeakyBucket from "LeakyBucket" /* 9631 */;
 
 require = fn;
 function authorizeWithPrompt() {
@@ -415,7 +415,7 @@ function authenticate(authorization, access_token) {
     });
   }
 }
-let Constants = fn(4479);
+let Constants = fn(4510);
 ({ TransportTypes: closure_9, RPC_AUTHENTICATED_SCOPE: c10, RPC_PRIVATE_SCOPE: closure_11 } = Constants);
 Constants = fn(1074);
 ({ ApplicationFlags: closure_12, Endpoints: map1, RPCCommands: closure_14, RPCErrors: closure_15 } = Constants);
@@ -443,10 +443,10 @@ export default function createAuthCommandHandlers(arg0, arg1) {
           id = socket.application.id;
           if (null == id) {
             let obj = { errorCode: constants2.INVALID_COMMAND };
-            const tmp29 = new closure_1(9586)(obj, "No application.");
+            const tmp29 = new closure_1(9624)(obj, "No application.");
             throw tmp29;
           } else {
-            IDENTIFY = closure_0(8367).OAuth2Scopes.IDENTIFY;
+            IDENTIFY = closure_0(8404).OAuth2Scopes.IDENTIFY;
             _authorize = function _authorize() {
 
             };
@@ -481,7 +481,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                   return authorizeWithPrompt(obj, closure_0, closure_1).then((result) => {
                     if (null == result) {
                       let obj = { errorCode: constants2.UNKNOWN_ERROR };
-                      const tmp22 = new closure_1(9586)(obj, "Unknown error occurred");
+                      const tmp22 = new closure_1(9624)(obj, "Unknown error occurred");
                       throw tmp22;
                     } else {
                       const parts = result.split(/#|\?/);
@@ -489,7 +489,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                       if (null != parsed.error) {
                         obj = { errorCode: constants2.OAUTH2_ERROR };
                         let str = parsed.error_description;
-                        let tmp8 = closure_1(9586);
+                        let tmp8 = closure_1(9624);
                         if (str == null) {
                           str = "unknown error";
                         }
@@ -524,7 +524,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
               catchPromise = authorizeWithPrompt(obj, socket, signal).then((result) => {
                 if (null == result) {
                   let obj = { errorCode: constants2.UNKNOWN_ERROR };
-                  const tmp22 = new closure_1(9586)(obj, "Unknown error occurred");
+                  const tmp22 = new closure_1(9624)(obj, "Unknown error occurred");
                   throw tmp22;
                 } else {
                   const parts = result.split(/#|\?/);
@@ -532,7 +532,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                   if (null != parsed.error) {
                     obj = { errorCode: constants2.OAUTH2_ERROR };
                     let str = parsed.error_description;
-                    let tmp8 = closure_1(9586);
+                    let tmp8 = closure_1(9624);
                     if (str == null) {
                       str = "unknown error";
                     }
@@ -565,7 +565,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
       }
       if (null == access_token) {
         obj = { errorCode: constants2.INVALID_TOKEN };
-        const tmp11 = new closure_1(9586)(obj, "No access token provided");
+        const tmp11 = new closure_1(9624)(obj, "No access token provided");
         throw tmp11;
       } else {
         return authenticate(socket, access_token);
@@ -618,7 +618,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
               socket.authorization.authing = false;
               if (null == location) {
                 let obj = { errorCode: constants2.UNKNOWN_ERROR };
-                const tmp25 = new hasItem(9586)(obj, "Unknown error occurred");
+                const tmp25 = new hasItem(9624)(obj, "Unknown error occurred");
                 throw tmp25;
               } else {
                 const _URL = URL;
@@ -640,14 +640,14 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                       }
                       const obj1 = { errorCode: constants2.OAUTH2_ERROR };
                       const _HermesInternal = HermesInternal;
-                      let tmp12 = hasItem(9586);
+                      let tmp12 = hasItem(9624);
                       tmp12 = new tmp12(obj1, "OAuth2 Error: " + value + ": " + str5);
                       throw tmp12;
                     }
                   }
                   if (null == value) {
                     const obj2 = { errorCode: constants2.OAUTH2_ERROR };
-                    const tmp8 = new hasItem(9586)(obj2, "OAuth2 Error: Unable to find auth code");
+                    const tmp8 = new hasItem(9624)(obj2, "OAuth2 Error: Unable to find auth code");
                     throw tmp8;
                   } else {
                     obj = { code: value };

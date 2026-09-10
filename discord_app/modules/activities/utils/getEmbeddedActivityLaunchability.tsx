@@ -1,12 +1,12 @@
-// === Module 9614: getEmbeddedActivityLaunchability ===
+// === Module 9652: getEmbeddedActivityLaunchability ===
 
-// Module 9614 (getEmbeddedActivityLaunchability)
+// Module 9652 (getEmbeddedActivityLaunchability)
 import util from "util" /* 1114 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9534 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9572 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import VoiceStateStore from "VoiceStateStore" /* 4624 */;
 
 require = fn;
 function getEmbeddedActivityLaunchability(arg0) {

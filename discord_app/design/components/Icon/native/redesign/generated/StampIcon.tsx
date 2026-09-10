@@ -1,9 +1,9 @@
-// === Module 11771: StampIcon ===
+// === Module 11811: StampIcon ===
 
-// Module 11771 (StampIcon)
+// Module 11811 (StampIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod11772 from "module_11772" /* 11772 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod11812 from "module_11812" /* 11812 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const StampIcon = function StampIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11772, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11812, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

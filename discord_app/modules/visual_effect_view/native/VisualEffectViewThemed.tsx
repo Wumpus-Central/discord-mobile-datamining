@@ -1,9 +1,9 @@
-// === Module 8271: VisualEffectViewThemed ===
+// === Module 8308: VisualEffectViewThemed ===
 
-// Module 8271 (VisualEffectViewThemed)
-import shared from "shared" /* 4425 */;
-import useThemeDefault from "useTheme" /* 4509 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 4979 */;
+// Module 8308 (VisualEffectViewThemed)
+import shared from "shared" /* 4456 */;
+import useThemeDefault from "useTheme" /* 4540 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5015 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

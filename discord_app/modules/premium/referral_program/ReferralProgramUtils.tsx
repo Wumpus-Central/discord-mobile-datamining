@@ -1,15 +1,15 @@
-// === Module 8070: ReferralProgramUtils ===
+// === Module 8108: ReferralProgramUtils ===
 
-// Module 8070 (ReferralProgramUtils)
+// Module 8108 (ReferralProgramUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4394 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8071 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7466 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4425 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8109 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7504 */;
 
 require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;

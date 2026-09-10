@@ -1,9 +1,9 @@
-// === Module 9978: useHasVideoPermission ===
+// === Module 10016: useHasVideoPermission ===
 
-// Module 9978 (useHasVideoPermission)
-import StreamPermissionUtils from "StreamPermissionUtils" /* 7740 */;
+// Module 10016 (useHasVideoPermission)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 7777 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 require = fn;
 const size = fn(2);

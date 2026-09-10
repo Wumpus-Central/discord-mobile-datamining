@@ -1,9 +1,9 @@
-// === Module 8011: useIsStickerReplyEnabled ===
+// === Module 8049: useIsStickerReplyEnabled ===
 
-// Module 8011 (useIsStickerReplyEnabled)
-import ThreadHooks from "ThreadHooks" /* 7283 */;
+// Module 8049 (useIsStickerReplyEnabled)
+import ThreadHooks from "ThreadHooks" /* 7321 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

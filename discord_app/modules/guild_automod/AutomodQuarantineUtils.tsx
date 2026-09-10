@@ -1,22 +1,22 @@
-// === Module 11902: AutomodQuarantineUtils ===
+// === Module 11942: AutomodQuarantineUtils ===
 
-// Module 11902 (AutomodQuarantineUtils)
+// Module 11942 (AutomodQuarantineUtils)
 import util from "util" /* 1114 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4218 */;
-import openUserSettings2 from "openUserSettings" /* 7396 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9242 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4249 */;
+import openUserSettings2 from "openUserSettings" /* 7434 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9279 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9240 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9277 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
-const GuildMemberFlags = fn(4200).GuildMemberFlags;
+const GuildMemberFlags = fn(4230).GuildMemberFlags;
 let closure_12 = fn(1084).ProfileCustomizationSubsection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodQuarantineUtils.tsx");
@@ -43,7 +43,7 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    let obj = { nick: "Array", bio: "PX_16" };
+    let obj = { nick: "call", bio: "accessibilityLabel" };
     let guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

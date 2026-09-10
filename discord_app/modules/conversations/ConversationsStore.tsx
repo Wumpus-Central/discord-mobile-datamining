@@ -1,18 +1,18 @@
-// === Module 7610: ConversationsStore ===
+// === Module 7647: ConversationsStore ===
 
-// Module 7610 (ConversationsStore)
+// Module 7647 (ConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1437 */;
-import ReactionUtils from "ReactionUtils" /* 4224 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
+import ReactionUtils from "ReactionUtils" /* 4255 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4828 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
-import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7611 */;
+import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7648 */;
 
 require = fn;
 function removePendingListFetch(channelId, requestKey) {
@@ -262,7 +262,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7612);
+const ConversationConstants = fn(7649);
 ({ CONVERSATION_COLORS: closure_9, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10, MAX_CONVERSATIONS_PER_CHANNEL: closure_11, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
 let obj = {
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
@@ -283,8 +283,8 @@ prototype["initialize"] = function initialize() {
 prototype["hasChannelData"] = function hasChannelData(id) {
   return navigation.has(id);
 };
-prototype["getChannelConversations"] = function getChannelConversations(_handleEndReached) {
-  const peekResult = navigation.peek(_handleEndReached);
+prototype["getChannelConversations"] = function getChannelConversations(id) {
+  const peekResult = navigation.peek(id);
   let conversations = null;
   if (null != peekResult) {
     conversations = peekResult.conversations;
@@ -341,14 +341,14 @@ prototype["getConversationMetadata"] = function getConversationMetadata(channelI
   }
   return value;
 };
-prototype["getEdgeMarker"] = function getEdgeMarker(_handleEndReached, after) {
-  const peekResult = navigation.peek(_handleEndReached);
+prototype["getEdgeMarker"] = function getEdgeMarker(id, after) {
+  const peekResult = navigation.peek(id);
   if (null == peekResult) {
     return null;
   }
 };
-prototype["isPendingFetch"] = function isPendingFetch(_handleEndReached) {
-  return map.has(_handleEndReached);
+prototype["isPendingFetch"] = function isPendingFetch(id) {
+  return map.has(id);
 };
 prototype["isListFetchPending"] = function isListFetchPending(arg0, arg1) {
   value = map.get(arg0);
@@ -534,7 +534,7 @@ obj = {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7613).mapConversation);
+      const mapped = rawConversations.map(set(7650).mapConversation);
       const found = mapped.filter(set(1369).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {

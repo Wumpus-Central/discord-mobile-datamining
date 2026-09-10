@@ -1,10 +1,10 @@
-// === Module 11490: FirstPartyRichPresenceStore ===
+// === Module 11530: FirstPartyRichPresenceStore ===
 
-// Module 11490 (FirstPartyRichPresenceStore)
+// Module 11530 (FirstPartyRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef1332 from "module_1332" /* 1332 */;
-import StageChannelSelfRichPresenceStoreDefault from "StageChannelSelfRichPresenceStore" /* 11491 */;
+import StageChannelSelfRichPresenceStoreDefault from "StageChannelSelfRichPresenceStore" /* 11531 */;
 
 function updateActivities() {
   items = [];

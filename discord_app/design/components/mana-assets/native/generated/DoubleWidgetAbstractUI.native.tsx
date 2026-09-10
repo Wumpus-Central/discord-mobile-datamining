@@ -1,9 +1,9 @@
-// === Module 5949: DoubleWidgetAbstractUI ===
+// === Module 5985: DoubleWidgetAbstractUI ===
 
-// Module 5949 (DoubleWidgetAbstractUI)
+// Module 5985 (DoubleWidgetAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5950 from "module_5950" /* 5950 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5986 from "module_5986" /* 5986 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DoubleWidgetAbstractUI = function DoubleWidgetAbstractUI(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5950 };
+  obj = { uri: _modDef5986 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const DoubleWidgetAbstractUI = function DoubleWidgetAbstractUI(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5950 });
+  return jsx(FastImageDefault, { uri: _modDef5986 });
 };

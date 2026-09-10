@@ -1,29 +1,29 @@
-// === Module 10944: ChannelRow ===
+// === Module 10984: ChannelRow ===
 
-// Module 10944 (ChannelRow)
+// Module 10984 (ChannelRow)
 import nativeDefault from "native" /* 576 */;
-import _modDef4166 from "module_4166" /* 4166 */;
-import DateUtils from "DateUtils" /* 4255 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useChannelName from "useChannelName" /* 4727 */;
-import TextIcon2 from "TextIcon" /* 5094 */;
-import ForumIcon from "ForumIcon" /* 5102 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10945 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 11031 */;
+import _modDef4196 from "module_4196" /* 4196 */;
+import DateUtils from "DateUtils" /* 4286 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useChannelName from "useChannelName" /* 4758 */;
+import TextIcon2 from "TextIcon" /* 5130 */;
+import ForumIcon from "ForumIcon" /* 5138 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10985 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 11071 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ReadStateStore from "ReadStateStore" /* 4589 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import ReadStateStore from "ReadStateStore" /* 4620 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10892).UserRowModes;
-const ReadStateTypes = fn(4756).ReadStateTypes;
+const UserRowModes = fn(10930).UserRowModes;
+const ReadStateTypes = fn(4787).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { guildIcon: { flexShrink: 0, flexGrow: 0 }, subLabel: { display: "flex", flexDirection: "row", alignItems: "center" }, subLabelIcon: { width: 12, height: 12, marginRight: 2 }, subLabelSeparator: null, threadName: null };
 obj = { marginHorizontal: nativeDefault.space.PX_4 };
 obj.subLabelSeparator = obj;
@@ -142,7 +142,7 @@ export default noop.memo(function ChannelRow(channel) {
         const obj1 = { children: null };
         const obj2 = { style: closure_7.subLabelSeparator, variant: "text-xs/medium", color: "text-subtle", children: "\u2022" };
         const items1 = [closure_2_12(Text_Text.Text, obj2), ];
-        const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: DateUtils.calendarFormatCompact(_modDef4166(tmp14)) };
+        const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: DateUtils.calendarFormatCompact(_modDef4196(tmp14)) };
         items1[1] = closure_2_12(Text_Text.Text, obj3);
         obj1.children = items1;
         tmp5Result = closure_2_14(map1, obj1);

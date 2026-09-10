@@ -1,17 +1,17 @@
-// === Module 15556: AppIcon ===
+// === Module 15605: AppIcon ===
 
-// Module 15556 (AppIcon)
+// Module 15605 (AppIcon)
 import nativeDefault from "native" /* 576 */;
-import shared from "shared" /* 4425 */;
-import useThemeDefault from "useTheme" /* 4509 */;
+import shared from "shared" /* 4456 */;
+import useThemeDefault from "useTheme" /* 4540 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const getIconById = fn(9355).getIconById;
+const getIconById = fn(9393).getIconById;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { container: null, image: null };
 createStyles = { overflow: "hidden", borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.container = createStyles;

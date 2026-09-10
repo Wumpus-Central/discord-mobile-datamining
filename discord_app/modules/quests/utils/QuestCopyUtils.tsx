@@ -1,14 +1,14 @@
-// === Module 11327: QuestCopyUtils ===
+// === Module 11367: QuestCopyUtils ===
 
-// Module 11327 (QuestCopyUtils)
+// Module 11367 (QuestCopyUtils)
 import util from "util" /* 1114 */;
-import AdCreativeType from "AdCreativeType" /* 5465 */;
-import ClipboardUtils from "ClipboardUtils" /* 7203 */;
-import AnalyticsActions from "AnalyticsActions" /* 7732 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11224 */;
-import captureAdUserAction from "captureAdUserAction" /* 11225 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11229 */;
-import QuestConstants from "QuestConstants" /* 5458 */;
+import AdCreativeType from "AdCreativeType" /* 5501 */;
+import ClipboardUtils from "ClipboardUtils" /* 7241 */;
+import AnalyticsActions from "AnalyticsActions" /* 7769 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11264 */;
+import captureAdUserAction from "captureAdUserAction" /* 11265 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11269 */;
+import QuestConstants from "QuestConstants" /* 5494 */;
 import size from "module_2" /* 2 */;
 
 ({ QuestHomeSortMethods: c2, RewardFilterTypes: c3, TaskFilterTypes: closure_4 } = QuestConstants);

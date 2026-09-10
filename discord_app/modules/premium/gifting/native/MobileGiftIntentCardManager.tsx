@@ -1,15 +1,15 @@
-// === Module 17501: MobileGiftIntentCardManager ===
+// === Module 17560: MobileGiftIntentCardManager ===
 
-// Module 17501 (MobileGiftIntentCardManager)
+// Module 17560 (MobileGiftIntentCardManager)
 import ChannelTypes from "ChannelTypes" /* 1094 */;
-import Timers from "Timers" /* 4461 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9880 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7673 */;
+import Timers from "Timers" /* 4492 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9918 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7710 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4795 */;
+import MessageStore from "MessageStore" /* 4826 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8093 */;
-import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 17502 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8131 */;
+import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 17561 */;
 
 require = fn;
 const PremiumConstants = fn(1373);
@@ -30,10 +30,10 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
       if (id === SelectedChannelStore.getChannelId()) {
         if (MessageStore.isReady(id)) {
           if (self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, found, constants.SEND_MESSAGE)) {
-            let tmpResult = tmp(10776);
+            let tmpResult = tmp(10814);
             const result = tmpResult.logMessageGiftIntentShown(found);
             const userAffinity = self.getUserAffinity(found);
-            tmpResult = tmp(8801);
+            tmpResult = tmp(8838);
             let obj = { name: tmp(1250).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION, type: tmp(1250).ImpressionTypes.VIEW, properties: null };
             obj = { gift_intent_type: constants2.FRIEND_ANNIVERSARY, dm_affinity: null, channel_id: null };
             let dmProbability;

@@ -1,10 +1,10 @@
-// === Module 13376: BuyNitroMarketing ===
+// === Module 13425: BuyNitroMarketing ===
 
-// Module 13376 (BuyNitroMarketing)
+// Module 13425 (BuyNitroMarketing)
 import nativeDefault from "native" /* 576 */;
-import BuyNitroPerkDetails from "BuyNitroPerkDetails" /* 13412 */;
-import BuyNitroSectionHeaderDefault from "BuyNitroSectionHeader" /* 13419 */;
-import BuyNitroPerkDefault from "BuyNitroPerk" /* 13420 */;
+import BuyNitroPerkDetails from "BuyNitroPerkDetails" /* 13461 */;
+import BuyNitroSectionHeaderDefault from "BuyNitroSectionHeader" /* 13468 */;
+import BuyNitroPerkDefault from "BuyNitroPerk" /* 13469 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, list: null, listContent: null, listHeader: null, sectionHeader: null, disabled: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.container = createStyles;
@@ -47,7 +47,7 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
   let obj3 = applicationId(onPaymentDismiss[9]);
   let tmp7;
   if (null != initialTier) {
-    obj = { tier: initialTier, productId: "a" };
+    obj = { tier: initialTier, productId: "Array" };
     tmp7 = obj;
   }
   buyNitroPlanSelection = obj3.useBuyNitroPlanSelection(tmp7);

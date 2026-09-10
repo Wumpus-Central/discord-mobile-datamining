@@ -1,9 +1,9 @@
-// === Module 8792: useGameAnnouncements ===
+// === Module 8829: useGameAnnouncements ===
 
-// Module 8792 (useGameAnnouncements)
+// Module 8829 (useGameAnnouncements)
 import _mod19 from "module_19" /* 19 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8793 */;
-import GameProfileStore from "GameProfileStore" /* 8715 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8830 */;
+import GameProfileStore from "GameProfileStore" /* 8752 */;
 import size from "module_2" /* 2 */;
 
 const useEffect = _mod19.useEffect;
@@ -51,7 +51,7 @@ export default function useGameAnnouncements(arg0, limit) {
   if (messages == null) {
     messages = [];
   }
-  obj = { messages, channelId: null, guildId: null, loading: null };
+  obj = { messages, channelId: null, guildId: null, loading: null, hasFetched: null };
   let channelId;
   if (data != null) {
     channelId = data.channelId;
@@ -63,5 +63,6 @@ export default function useGameAnnouncements(arg0, limit) {
   }
   obj.guildId = guildId;
   obj.loading = stateFromStoresObject.isFetching;
+  obj.hasFetched = hasFetched;
   return obj;
 };

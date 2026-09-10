@@ -1,10 +1,10 @@
-// === Module 13055: usePersonalizedVoiceChannelUsers ===
+// === Module 13095: usePersonalizedVoiceChannelUsers ===
 
-// Module 13055 (usePersonalizedVoiceChannelUsers)
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7673 */;
-import ConsentStore from "ConsentStore" /* 6609 */;
+// Module 13095 (usePersonalizedVoiceChannelUsers)
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7710 */;
+import ConsentStore from "ConsentStore" /* 6645 */;
 import UserStore from "UserStore" /* 1371 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4598 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4629 */;
 
 const require = fn;
 const Consents = fn(1074).Consents;

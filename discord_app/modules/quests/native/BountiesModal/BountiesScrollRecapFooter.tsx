@@ -1,20 +1,21 @@
-// === Module 15077: BountiesScrollRecapFooter ===
+// === Module 15126: BountiesScrollRecapFooter ===
 
-// Module 15077 (BountiesScrollRecapFooter)
+// Module 15126 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 4284 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import OrbsIcon from "OrbsIcon" /* 8869 */;
+import native from "native" /* 4315 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7031 */;
+import OrbsIcon from "OrbsIcon" /* 8906 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles(() => {
   let obj = { container: null, headerLabel: null, orbRow: null, rive: null, orbAmount: null };
   obj = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };
@@ -36,16 +37,20 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/B
 export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbAmount) {
   orbAmount = orbAmount.orbAmount;
   const tmp = closure_7();
+  let obj = useTypeConsolidationTextTransform;
+  const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("BountiesScrollRecapFooter", "text-xs/bold");
   const intl = util.intl;
   const stringResult = intl.string(util.t.d6Rrn6);
-  let obj = { style: tmp.container, pointerEvents: "none", accessible: true, accessibilityRole: "text", accessibilityLabel: "" + stringResult + ", +" + orbAmount, children: null };
-  obj = { variant: "text-xs/bold", color: "text-brand", style: tmp.headerLabel, accessible: false, children: stringResult };
-  const items = [hasOwnProperty(Text_Text.Text, obj), ];
-  obj = { style: tmp.orbRow, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
-  const items1 = [hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false }), hasOwnProperty(Text_Text.Text, { variant: "display-sm", color: "text-strong", accessible: false, style: tmp.orbAmount, children: "+" + orbAmount })];
+  obj = { style: tmp.container, pointerEvents: "none", accessible: true, accessibilityRole: "text", accessibilityLabel: "" + stringResult + ", +" + orbAmount, children: null };
+  obj = { variant: typeConsolidationEyebrow.variant, color: "text-brand", style: null, accessible: false, children: stringResult };
+  const items = [tmp.headerLabel, typeConsolidationEyebrow.style];
+  obj.style = items;
+  const items1 = [hasOwnProperty(Text_Text.Text, obj), ];
+  const obj1 = { style: tmp.orbRow, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
+  const items2 = [hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false }), hasOwnProperty(Text_Text.Text, { variant: "display-sm", color: "text-strong", accessible: false, style: tmp.orbAmount, children: "+" + orbAmount })];
+  obj1.children = items2;
+  items1[1] = timestampProducer(View, obj1);
   obj.children = items1;
-  items[1] = timestampProducer(View, obj);
-  obj.children = items;
   return timestampProducer(View, obj);
 };
 export const BountiesScrollRecapFooterGradient = function BountiesScrollRecapFooterGradient() {

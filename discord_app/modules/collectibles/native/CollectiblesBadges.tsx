@@ -1,12 +1,12 @@
-// === Module 8864: CollectiblesBadges ===
+// === Module 8901: CollectiblesBadges ===
 
-// Module 8864 (CollectiblesBadges)
+// Module 8901 (CollectiblesBadges)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import LockIcon from "LockIcon" /* 5109 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8695 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8865 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import LockIcon from "LockIcon" /* 5145 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8732 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8902 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { badgeTextUppercase: { textTransform: "uppercase" }, badgeSurfaceDarkMode: null, badgeSurfaceLightMode: null, newIconBadge: null, limitedTimeBadge: null, lockIconBadge: null, newLockIconBadge: null, badgePill: null, iconTextBadge: null };
 createStyles = { backgroundColor: nativeDefault.colors.WHITE };
 createStyles.badgeSurfaceDarkMode = createStyles;

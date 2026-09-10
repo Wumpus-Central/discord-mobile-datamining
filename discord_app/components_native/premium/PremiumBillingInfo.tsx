@@ -1,16 +1,16 @@
-// === Module 13373: PremiumBillingInfo ===
+// === Module 13422: PremiumBillingInfo ===
 
-// Module 13373 (PremiumBillingInfo)
+// Module 13422 (PremiumBillingInfo)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 4231 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4244 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7176 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
-import PremiumManagementUtils from "PremiumManagementUtils" /* 7418 */;
-import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13370 */;
-import BillingInformation from "BillingInformation" /* 13374 */;
+import PremiumUtils from "PremiumUtils" /* 4262 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4275 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7214 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 7456 */;
+import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13419 */;
+import BillingInformation from "BillingInformation" /* 13423 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,7 +47,7 @@ const Constants = fn(1074);
 ({ SubscriptionStatusTypes: hasOwnProperty, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, billingContainer: null, billingRenewalInfo: null, billingManageGoogle: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 };
 createStyles.billingContainer = createStyles;

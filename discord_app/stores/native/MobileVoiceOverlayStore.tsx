@@ -1,6 +1,6 @@
-// === Module 10012: MobileVoiceOverlayStore ===
+// === Module 10050: MobileVoiceOverlayStore ===
 
-// Module 10012 (MobileVoiceOverlayStore)
+// Module 10050 (MobileVoiceOverlayStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;

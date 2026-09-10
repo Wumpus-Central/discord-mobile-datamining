@@ -1,8 +1,8 @@
-// === Module 9610: OAuth2AuthorizeModal ===
+// === Module 9648: OAuth2AuthorizeModal ===
 
-// Module 9610 (OAuth2AuthorizeModal)
+// Module 9648 (OAuth2AuthorizeModal)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 4988 */;
+import spring from "spring" /* 5024 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
-fn(4574);
+fn(4605);
 let createStyles = { container: null, contentContainer: null, titleContainer: null, titleContainerBorder: null, title: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.container = createStyles;
@@ -26,7 +26,7 @@ let result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeMo
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = closure_8();
-  const tmp4 = sharedValue(9267)(arg0);
+  const tmp4 = sharedValue(9304)(arg0);
   _require = tmp4;
   let obj = require("ReanimatedRexport");
   sharedValue = obj.useSharedValue(0);
@@ -78,10 +78,10 @@ export default function OAuth2AuthorizeModal(arg0) {
   };
   if (null != tmp4.backStep) {
     const obj3 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
-    let tmp11Result = closure_5(tmp5(9611).ArrowSmallLeftIcon, obj3);
+    let tmp11Result = closure_5(tmp5(9649).ArrowSmallLeftIcon, obj3);
   } else {
     const obj4 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
-    tmp11Result = closure_5(tmp5(5694).XSmallIcon, obj4);
+    tmp11Result = closure_5(tmp5(5730).XSmallIcon, obj4);
   }
   obj2.children = tmp11Result;
   const items2 = [closure_5(require("Pressables").PressableOpacity, obj2), , ];
@@ -94,7 +94,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const obj7 = { style: null };
   const items3 = [tmp.titleContainerBorder, animatedStyle];
   obj7.style = items3;
-  items2[2] = closure_5(sharedValue(4310).View, obj7);
+  items2[2] = closure_5(sharedValue(4341).View, obj7);
   obj.children = items2;
   const items4 = [closure_6(View, obj), ];
   const obj8 = { bottom: true, style: tmp.contentContainer, children: null };
@@ -102,7 +102,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const merged = Object.assign(tmp4);
   obj9.onScroll = callback;
   obj9.centerContent = true;
-  obj8.children = closure_5(sharedValue(9613), obj9);
+  obj8.children = closure_5(sharedValue(9651), obj9);
   items4[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj8);
   obj.children = items4;
   return closure_6(View, obj);

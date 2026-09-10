@@ -1,11 +1,11 @@
-// === Module 14928: FamilyCenterActivitySection ===
+// === Module 14977: FamilyCenterActivitySection ===
 
-// Module 14928 (FamilyCenterActivitySection)
+// Module 14977 (FamilyCenterActivitySection)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7607 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8679 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14923 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7644 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8716 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14972 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,17 +56,17 @@ function FamilyCenterActivitySectionHeader(displayType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7552);
+const FamilyCenterConstants = fn(7590);
 ({ FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS: closure_7, TeenActionDisplayType: closure_8 } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { header: null, description: null };
 createStyles = { marginBottom: nativeDefault.space.PX_4 };
 createStyles.header = createStyles;
 createStyles.description = { marginBottom: nativeDefault.space.PX_8 };
 let closure_11 = createStyles.createStyles(createStyles);
-createStyles = fn(4574);
+createStyles = fn(4605);
 let obj2 = { container: { display: "flex" }, loadMoreContainer: { display: "flex", flexDirection: "row", flex: 1, alignItems: "center", justifyContent: "center", width: "100%" }, loadMore: null, loadMoreButton: null };
 let obj1 = { marginBottom: nativeDefault.space.PX_8 };
 obj2.loadMore = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: nativeDefault.radii.sm, borderBottomLeftRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
@@ -78,11 +78,11 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
   let loadMoreButton = closure_13();
-  let obj = displayType(14923);
+  let obj = displayType(14972);
   const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
-  let obj1 = displayType(14923);
+  let obj1 = displayType(14972);
   const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
-  let obj2 = displayType(11947);
+  let obj2 = displayType(11987);
   const familyCenterActions = obj2.useFamilyCenterActions({});
   const loadMore = familyCenterActions.loadMore;
   const tmp6 = _slicedToArray(noop.useState(closure_7), 2);
@@ -99,7 +99,7 @@ export default function FamilyCenterActivitySection(displayType) {
     const formatToPlainStringResult = intl.formatToPlainString(loadMore(2396)["7dMmJY"], obj);
     obj = { style: loadMoreButton.container, children: null };
     obj1 = { displayType };
-    const items1 = [closure_9(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => closure_1_9(loadMore(14929), { action }, action.event_id)), ];
+    const items1 = [closure_9(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => closure_1_9(loadMore(14978), { action }, action.event_id)), ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj.children = items1;
@@ -116,8 +116,8 @@ export default function FamilyCenterActivitySection(displayType) {
       } else {
         const obj5 = { style: loadMoreButton.loadMore, accessibilityLabel: formatToPlainStringResult, accessibilityRole: "button", onPress: tmp7, children: null };
         const obj6 = { style: loadMoreButton.loadMoreButton, variant: "text-xs/semibold", color: "text-overlay-light", children: formatToPlainStringResult };
-        obj5.children = closure_9(tmp(4570).Text, obj6);
-        tmp17Result = closure_9(tmp(5137).PressableOpacity, obj5);
+        obj5.children = closure_9(tmp(4601).Text, obj6);
+        tmp17Result = closure_9(tmp(5173).PressableOpacity, obj5);
       }
       obj2.children = tmp17Result;
       tmp17Result = closure_9(closure_6, obj2);

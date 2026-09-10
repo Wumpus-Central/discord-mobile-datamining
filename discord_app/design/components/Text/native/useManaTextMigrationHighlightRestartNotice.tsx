@@ -1,9 +1,9 @@
-// === Module 15740: useManaTextMigrationHighlightRestartNotice ===
+// === Module 15789: useManaTextMigrationHighlightRestartNotice ===
 
-// Module 15740 (useManaTextMigrationHighlightRestartNotice)
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+// Module 15789 (useManaTextMigrationHighlightRestartNotice)
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4573 */;
+import DevSettingsStore from "DevSettingsStore" /* 4604 */;
 
 const require = fn;
 const size = fn(2);

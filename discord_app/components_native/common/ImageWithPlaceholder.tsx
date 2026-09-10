@@ -1,9 +1,9 @@
-// === Module 8788: ImageWithPlaceholder ===
+// === Module 8825: ImageWithPlaceholder ===
 
-// Module 8788 (ImageWithPlaceholder)
+// Module 8825 (ImageWithPlaceholder)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 8789 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 8826 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import size from "module_2" /* 2 */;

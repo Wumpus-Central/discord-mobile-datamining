@@ -1,9 +1,9 @@
-// === Module 6583: WaypostSpotIllustration ===
+// === Module 6619: WaypostSpotIllustration ===
 
-// Module 6583 (WaypostSpotIllustration)
+// Module 6619 (WaypostSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6584 from "module_6584" /* 6584 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6620 from "module_6620" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const WaypostSpotIllustration = function WaypostSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6584 };
+  obj = { uri: _modDef6620 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const WaypostSpotIllustration = function WaypostSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6584 });
+  return jsx(FastImageDefault, { uri: _modDef6620 });
 };

@@ -1,9 +1,9 @@
-// === Module 4428: GuildThemePresets ===
+// === Module 4459: GuildThemePresets ===
 
-// Module 4428 (GuildThemePresets)
+// Module 4459 (GuildThemePresets)
 import _modDef672 from "module_672" /* 672 */;
 import Constants from "Constants" /* 1085 */;
-import CustomThemesRandomUtils from "CustomThemesRandomUtils" /* 4429 */;
+import CustomThemesRandomUtils from "CustomThemesRandomUtils" /* 4460 */;
 import size from "module_2" /* 2 */;
 
 const ThemeTypes = Constants.ThemeTypes;
@@ -124,7 +124,7 @@ export const getGuildThemePreset = function getGuildThemePreset(presetId) {
   return tmp;
 };
 export const getDefaultGuildThemePresetSettings = function getDefaultGuildThemePresetSettings() {
-  return { presetId: mapped[0].id, customUserThemeSettings: "a" };
+  return { presetId: mapped[0].id, customUserThemeSettings: "Array" };
 };
 export const getGuildThemePresetAppearance = function getGuildThemePresetAppearance(preset, stateFromStores) {
   return stateFromStores === ThemeTypes.LIGHT ? preset.lightAppearance : preset.darkAppearance;

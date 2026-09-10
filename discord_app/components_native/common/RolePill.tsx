@@ -1,9 +1,9 @@
-// === Module 10979: RolePill ===
+// === Module 11019: RolePill ===
 
-// Module 10979 (RolePill)
+// Module 11019 (RolePill)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4271 */;
-import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+import ToastUtils from "ToastUtils" /* 4302 */;
+import ClipboardUtils from "ClipboardUtils" /* 7241 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, MAX_VISUAL_ROLE_LENGTH: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, pill: null, bubble: null, verifiedContainer: null, roleIcon: null };
 createStyles = { marginRight: 4, marginBottom: 4, borderRadius: nativeDefault.radii.xs };
 createStyles.container = createStyles;
@@ -31,7 +31,7 @@ export default function RolePill(role) {
   ({ guildId, color } = role);
   const DeveloperMode = role(1935).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  role(7200);
+  role(7238);
   let obj = { guildId, roleId: role.id, size: 12 };
   const roleIconProps = obj.useRoleIconProps(obj);
   let name = role.name;
@@ -73,8 +73,8 @@ export default function RolePill(role) {
     }
     obj2.guildId = guildId;
     obj2.roleColor = color;
-    let tmp10Result = closure_6(combined(7217), obj2);
-    const tmp15 = combined(7217);
+    let tmp10Result = closure_6(combined(7255), obj2);
+    const tmp15 = combined(7255);
   } else {
     const items = [tmp9.bubble, ];
     if (null != color) {
@@ -94,13 +94,13 @@ export default function RolePill(role) {
     const obj6 = { style: tmp9.roleIcon, children: null };
     const obj7 = {};
     const merged = Object.assign(roleIconProps);
-    obj6.children = closure_6(combined(7219), obj7);
+    obj6.children = closure_6(combined(7257), obj7);
     tmp10Result = closure_6(View, obj6);
-    const tmp18 = combined(7219);
+    const tmp18 = combined(7257);
   }
   items1[1] = tmp10Result;
-  items1[2] = closure_6(role(4570).Text, { variant: "text-xs/semibold", color: "interactive-text-active", children: name });
+  items1[2] = closure_6(role(4601).Text, { variant: "text-xs/semibold", color: "interactive-text-active", children: name });
   obj1.children = items1;
   obj.children = closure_7(View, obj1);
-  return closure_6(role(5137).PressableHighlight, obj);
+  return closure_6(role(5173).PressableHighlight, obj);
 };

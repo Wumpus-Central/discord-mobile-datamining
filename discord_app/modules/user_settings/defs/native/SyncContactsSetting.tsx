@@ -1,21 +1,21 @@
-// === Module 14872: SyncContactsSetting ===
+// === Module 14921: SyncContactsSetting ===
 
-// Module 14872 (SyncContactsSetting)
+// Module 14921 (SyncContactsSetting)
 import util from "util" /* 1114 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12710 */;
-import ContactSyncSettings from "ContactSyncSettings" /* 14873 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5295 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12750 */;
+import ContactSyncSettings from "ContactSyncSettings" /* 14922 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5331 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const PlatformTypes = fn(1074).PlatformTypes;
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSvEy7);
   },
-  parent: fn(7989).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8027).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useContactSyncSettingValue() {
     const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();
     return ContactSyncUtils.isContactSyncEnabled(contactSyncAccount);

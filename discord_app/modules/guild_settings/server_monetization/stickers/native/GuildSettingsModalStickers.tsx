@@ -1,16 +1,16 @@
-// === Module 17607: GuildSettingsModalStickers ===
+// === Module 17666: GuildSettingsModalStickers ===
 
-// Module 17607 (GuildSettingsModalStickers)
+// Module 17666 (GuildSettingsModalStickers)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4468 */;
-import LockIcon from "LockIcon" /* 5109 */;
-import TableRow from "TableRow" /* 5619 */;
-import TableRowGroup from "TableRowGroup" /* 5701 */;
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17611 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4499 */;
+import LockIcon from "LockIcon" /* 5145 */;
+import TableRow from "TableRow" /* 5655 */;
+import TableRowGroup from "TableRowGroup" /* 5737 */;
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17670 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -29,19 +29,19 @@ let items = [obj, , , ];
 obj = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };
 let intl2 = fn(1114).intl;
 obj.title = intl2.string(fn(1114).t.nzXtaS);
-obj.IconComponent = fn(17608).BoostGemOutlineIcon;
+obj.IconComponent = fn(17667).BoostGemOutlineIcon;
 items[1] = obj;
 let obj1 = { tier: BoostedGuildTiers.TIER_2, title: null, IconComponent: null };
 let intl3 = fn(1114).intl;
 obj1.title = intl3.string(fn(1114).t["h33/uW"]);
-obj1.IconComponent = fn(9407).BoostGemIcon;
+obj1.IconComponent = fn(9445).BoostGemIcon;
 items[2] = obj1;
 let obj2 = { tier: BoostedGuildTiers.TIER_3, title: null, IconComponent: null };
 const intl4 = fn(1114).intl;
 obj2.title = intl4.string(fn(1114).t.BfF6ED);
-obj2.IconComponent = fn(13552).BoostTier3Icon;
+obj2.IconComponent = fn(13601).BoostTier3Icon;
 items[3] = obj2;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_15 = createStyles.createStyles((arg0) => {
   let obj = { container: null, label: null, divider: null, stickerSlot: null, userRow: null };
   obj = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 };
@@ -181,20 +181,20 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
                 let obj = { icon: null, label: null, trailing: null, onPress: null };
                 obj = { style: closure_1.stickerSlot, children: null };
                 const obj1 = { sticker: tmp2, size: closure_1_1(576).space.PX_48, animated: true };
-                obj.children = closure_1_12(closure_1_1(10208), obj1);
+                obj.children = closure_1_12(closure_1_1(10246), obj1);
                 obj.icon = closure_1_12(closure_1_4, obj);
                 const obj2 = { variant: "heading-sm/semibold", color: "text-strong", style: closure_1.label, children: tmp2.name };
-                items = [closure_1_12(guildId(4570).Text, obj2), ];
+                items = [closure_1_12(guildId(4601).Text, obj2), ];
                 let tmp16Result = null;
                 if (null != user) {
                   obj = { style: closure_1.userRow, children: null };
                   const obj3 = { user, size: tmp10(1178).AvatarSizes.XSMALL_20, guildId };
                   const items1 = [closure_1_12(tmp10(1178).Avatar, obj3), ];
-                  const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: closure_1_1(4418).getName(user) };
-                  items1[1] = closure_1_12(tmp10(4570).Text, obj4);
+                  const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: closure_1_1(4449).getName(user) };
+                  items1[1] = closure_1_12(tmp10(4601).Text, obj4);
                   obj.children = items1;
                   tmp16Result = closure_1_13(closure_1_4, obj);
-                  const tmp14Result = closure_1_1(4418);
+                  const tmp14Result = closure_1_1(4449);
                 }
                 const obj5 = { children: null };
                 items[1] = tmp16Result;
@@ -202,7 +202,7 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
                 obj.label = closure_1_13(closure_1_4, obj5);
                 let tmp9Result;
                 if (tmp8) {
-                  tmp9Result = closure_1_12(tmp10(5626).TableRowArrow, {});
+                  tmp9Result = closure_1_12(tmp10(5662).TableRowArrow, {});
                 }
                 obj.trailing = tmp9Result;
                 let fn;
@@ -214,7 +214,7 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
                   };
                 }
                 obj.onPress = fn;
-                return closure_1_12(guildId(5619).TableRow, obj, index);
+                return closure_1_12(guildId(5655).TableRow, obj, index);
               }
             })
           ];

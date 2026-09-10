@@ -1,8 +1,8 @@
-// === Module 4265: LinkingModule ===
+// === Module 4296: LinkingModule ===
 
-// Module 4265 (LinkingModule)
+// Module 4296 (LinkingModule)
 import _mod17 from "module_17" /* 17 */;
-import NativeLinkingModuleDefault from "NativeLinkingModule" /* 4266 */;
+import NativeLinkingModuleDefault from "NativeLinkingModule" /* 4297 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

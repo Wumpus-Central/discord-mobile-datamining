@@ -1,7 +1,7 @@
-// === Module 8798: useDefaultVariantIndex ===
+// === Module 8835: useDefaultVariantIndex ===
 
-// Module 8798 (useDefaultVariantIndex)
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7572 */;
+// Module 8835 (useDefaultVariantIndex)
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7609 */;
 
 const require = fn;
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 13215: ExecutedCommand ===
+// === Module 13262: ExecutedCommand ===
 
-// Module 13215 (ExecutedCommand)
+// Module 13262 (ExecutedCommand)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
@@ -8,13 +8,13 @@ import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
 import Server from "Server" /* 1894 */;
-import useMessageAuthor from "useMessageAuthor" /* 4807 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7535 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7975 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7977 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9321 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9578 */;
-import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11650 */;
+import useMessageAuthor from "useMessageAuthor" /* 4838 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7573 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8013 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 8015 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9358 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9616 */;
+import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11690 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;

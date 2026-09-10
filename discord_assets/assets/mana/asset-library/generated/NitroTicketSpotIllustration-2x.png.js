@@ -1,6 +1,6 @@
-// === Module 6318: ? ===
+// === Module 6354: ? ===
 
-// Module 6318
+// Module 6354
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroTicketSpotIllustration-2x.png.js");

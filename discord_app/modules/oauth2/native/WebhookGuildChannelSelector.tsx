@@ -1,14 +1,14 @@
-// === Module 9459: WebhookGuildChannelSelector ===
+// === Module 9497: WebhookGuildChannelSelector ===
 
-// Module 9459 (WebhookGuildChannelSelector)
+// Module 9497 (WebhookGuildChannelSelector)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const createChannelRecord = fn(1961).createChannelRecord;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { selectorGroup: { flexDirection: "column", gap: 8 }, select: null, label: null, error: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs };
 createStyles.select = createStyles;
@@ -53,7 +53,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       obj.title = intl.string(util.t["Re/64R"]);
       const channels = first.channels;
       obj.items = channels.map((id) => {
-        const obj = { label: selectedGuildId(4727).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8), value: id.id };
+        const obj = { label: selectedGuildId(4758).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8), value: id.id };
         return obj;
       });
       obj.onItemSelect = function onItemSelect(arg0) {
@@ -61,8 +61,8 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         selectedChannelId(onChannelChange[10]).hideActionSheet(WebhookGuildChannelSelector);
       };
       obj.selectedItem = selectedChannelId;
-      obj.openLazy(asyncRequireImpl(9458, dependencyMap.paths), WebhookGuildChannelSelector, obj);
-      const tmp7 = asyncRequireImpl(9458, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(9496, dependencyMap.paths), WebhookGuildChannelSelector, obj);
+      const tmp7 = asyncRequireImpl(9496, dependencyMap.paths);
     }
   }, items);
   const effect = noop.useEffect(() => {

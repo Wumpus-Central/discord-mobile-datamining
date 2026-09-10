@@ -1,12 +1,12 @@
-// === Module 7012: UserSettingsAccountUnverifiedHeader ===
+// === Module 7050: UserSettingsAccountUnverifiedHeader ===
 
-// Module 7012 (UserSettingsAccountUnverifiedHeader)
+// Module 7050 (UserSettingsAccountUnverifiedHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Pressables from "Pressables" /* 5137 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5635 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Pressables from "Pressables" /* 5173 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5671 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -33,7 +33,7 @@ function getBannerText(currentUser) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { accountWarning: null, accountWarningText: null, accountWarningButton: null };
 createStyles = { backgroundColor: nativeDefault.unsafe_rawColors.RED_400, height: 36, alignItems: "center", alignSelf: "stretch", flexDirection: "row", paddingHorizontal: 16 };
 createStyles.accountWarning = createStyles;

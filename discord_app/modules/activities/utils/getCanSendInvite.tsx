@@ -1,11 +1,11 @@
-// === Module 13260: getCanSendInvite ===
+// === Module 13307: getCanSendInvite ===
 
-// Module 13260 (getCanSendInvite)
-import hasFlagDefault from "hasFlag" /* 7327 */;
-import isInviteActiveDefault from "isInviteActive" /* 11785 */;
-import getPartySize from "getPartySize" /* 11786 */;
-import hasPartySize from "hasPartySize" /* 11787 */;
-import isPartyFull from "isPartyFull" /* 11788 */;
+// Module 13307 (getCanSendInvite)
+import hasFlagDefault from "hasFlag" /* 7365 */;
+import isInviteActiveDefault from "isInviteActive" /* 11825 */;
+import getPartySize from "getPartySize" /* 11826 */;
+import hasPartySize from "hasPartySize" /* 11827 */;
+import isPartyFull from "isPartyFull" /* 11828 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

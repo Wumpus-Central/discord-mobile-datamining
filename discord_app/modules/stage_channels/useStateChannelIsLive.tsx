@@ -1,6 +1,6 @@
-// === Module 8424: useStateChannelIsLive ===
+// === Module 8461: useStateChannelIsLive ===
 
-// Module 8424 (useStateChannelIsLive)
+// Module 8461 (useStateChannelIsLive)
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
 const require = fn;

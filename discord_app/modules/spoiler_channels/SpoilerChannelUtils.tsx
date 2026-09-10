@@ -1,8 +1,8 @@
-// === Module 7343: SpoilerChannelUtils ===
+// === Module 7381: SpoilerChannelUtils ===
 
-// Module 7343 (SpoilerChannelUtils)
+// Module 7381 (SpoilerChannelUtils)
 import ChannelStore from "ChannelStore" /* 1957 */;
-import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 7344 */;
+import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 7382 */;
 
 const require = fn;
 function isChannelSpoilerGated(channel) {

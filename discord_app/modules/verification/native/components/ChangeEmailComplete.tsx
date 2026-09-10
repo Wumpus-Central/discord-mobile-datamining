@@ -1,12 +1,12 @@
-// === Module 7013: ChangeEmailComplete ===
+// === Module 7051: ChangeEmailComplete ===
 
-// Module 7013 (ChangeEmailComplete)
+// Module 7051 (ChangeEmailComplete)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5635 */;
-import _modDef6616 from "module_6616" /* 6616 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5671 */;
+import _modDef6652 from "module_6652" /* 6652 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,10 +16,10 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const resetChangeEmailStore = fn(5637).resetChangeEmailStore;
+const resetChangeEmailStore = fn(5673).resetChangeEmailStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { contentContainer: null, image: null, title: null, body: null, bodyInner: null, tooltip: null };
 createStyles = { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: 20, alignItems: "center" };
 createStyles.contentContainer = createStyles;
@@ -36,7 +36,7 @@ const result = size.fileFinishedImporting("modules/verification/native/component
 export default function ChangeEmailComplete(email) {
   const tmp = closure_9();
   let obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: null };
-  obj = { style: tmp.image, source: _modDef6616 };
+  obj = { style: tmp.image, source: _modDef6652 };
   const items = [React5(React4, obj), , , ];
   obj = { style: tmp.bodyInner, children: null };
   const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };

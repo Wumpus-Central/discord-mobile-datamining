@@ -1,10 +1,10 @@
-// === Module 9064: useDisplayableBoardWidgets ===
+// === Module 9101: useDisplayableBoardWidgets ===
 
-// Module 9064 (useDisplayableBoardWidgets)
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7637 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7644 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7647 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 9066 */;
+// Module 9101 (useDisplayableBoardWidgets)
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7674 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7681 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7684 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 9103 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
 export const useDisplayableBoardWidgets = function useDisplayableBoardWidgets(id) {
-  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(9065).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
+  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(9102).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
   const tmp2 = useUserProfileWidgetsDefault(id);
   importDefault = tmp2;
   const items = [isMobileGameCollectionExperimentEnabled, tmp2];

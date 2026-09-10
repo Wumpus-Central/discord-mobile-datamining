@@ -1,18 +1,18 @@
-// === Module 14949: FamilyCenterRequestorDetails ===
+// === Module 14998: FamilyCenterRequestorDetails ===
 
-// Module 14949 (FamilyCenterRequestorDetails)
+// Module 14998 (FamilyCenterRequestorDetails)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useUserLinks from "useUserLinks" /* 8678 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14921 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useUserLinks from "useUserLinks" /* 8715 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14970 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: null, detailsContainer: null };
 createStyles = { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.avatar = createStyles;

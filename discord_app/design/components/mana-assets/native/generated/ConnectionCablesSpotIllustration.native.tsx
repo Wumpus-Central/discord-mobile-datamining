@@ -1,9 +1,9 @@
-// === Module 5885: ConnectionCablesSpotIllustration ===
+// === Module 5921: ConnectionCablesSpotIllustration ===
 
-// Module 5885 (ConnectionCablesSpotIllustration)
+// Module 5921 (ConnectionCablesSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5886 from "module_5886" /* 5886 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5922 from "module_5922" /* 5922 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ConnectionCablesSpotIllustration = function ConnectionCablesSpotIll
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5886 };
+  obj = { uri: _modDef5922 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ConnectionCablesSpotIllustration = function ConnectionCablesSpotIll
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5886 });
+  return jsx(FastImageDefault, { uri: _modDef5922 });
 };

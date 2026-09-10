@@ -1,9 +1,9 @@
-// === Module 11775: BookmarkOutlineIcon ===
+// === Module 11815: BookmarkOutlineIcon ===
 
-// Module 11775 (BookmarkOutlineIcon)
+// Module 11815 (BookmarkOutlineIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod11776 from "module_11776" /* 11776 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod11816 from "module_11816" /* 11816 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const BookmarkOutlineIcon = function BookmarkOutlineIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11776, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11816, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

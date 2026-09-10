@@ -1,22 +1,22 @@
-// === Module 14684: SettingsAccountScreen ===
+// === Module 14733: SettingsAccountScreen ===
 
-// Module 14684 (SettingsAccountScreen)
+// Module 14733 (SettingsAccountScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import useMountEffectDefault from "useMountEffect" /* 5006 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import TableRowGroup from "TableRowGroup" /* 5701 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6611 */;
-import MFAUtils from "MFAUtils" /* 6965 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11912 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14711 */;
-import SettingsAccountHeaderDefault from "SettingsAccountHeader" /* 14715 */;
-import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import useMountEffectDefault from "useMountEffect" /* 5042 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import TableRowGroup from "TableRowGroup" /* 5737 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6647 */;
+import MFAUtils from "MFAUtils" /* 7001 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11952 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14760 */;
+import SettingsAccountHeaderDefault from "SettingsAccountHeader" /* 14764 */;
+import SettingLayoutDefault from "SettingLayout" /* 14767 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 14685 */;
+import WebAuthnStore from "WebAuthnStore" /* 14734 */;
 
 require = fn;
 function PasswordlessUpsell() {
@@ -27,7 +27,7 @@ function PasswordlessUpsell() {
   obj = { border: "none", shadow: "none", children: null };
   const obj1 = { style: { flexDirection: "row", gap: 8 }, children: null };
   const obj2 = { style: { width: 70, height: 70 }, children: null };
-  const obj3 = { source: require("module_14687"), resizeMode: "contain", style: tmp.upsellImagePasswordless };
+  const obj3 = { source: require("module_14736"), resizeMode: "contain", style: tmp.upsellImagePasswordless };
   obj2.children = closure_10(FastImageDefault, obj3);
   const items = [closure_10(View, obj2), ];
   const obj4 = { style: { flex: 1 }, children: null };
@@ -46,7 +46,7 @@ function PasswordlessUpsell() {
   obj9.text = intl3.string(require("util").t.piGf5c);
   obj9.onPress = function onPress() {
     const obj = { navigation, initialRouteName: WebAuthnScreens.REGISTER, showNav: true };
-    obj.pushLazy(asyncRequireImpl(14688, dependencyMap.paths), obj);
+    obj.pushLazy(asyncRequireImpl(14737, dependencyMap.paths), obj);
   };
   const items2 = [closure_10(require("components/Button/Button").Button, obj9), closure_10(View, {})];
   obj8.children = items2;
@@ -68,7 +68,7 @@ function AccountTwoFALabel() {
   }), 2);
   first = tmp3[0];
   closure_1 = tmp5;
-  const isUserVerified = first(14710).useIsUserVerified();
+  const isUserVerified = first(14759).useIsUserVerified();
   const items1 = [tmp3[1], first, isUserVerified];
   const memo = noop.useMemo(() => {
     let tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1;
@@ -92,7 +92,7 @@ function AccountTwoFALabel() {
   obj = { title: null };
   const intl = tmp(1114).intl;
   obj.title = intl.string(first(1114).t.fuTmEJ);
-  items3[1] = closure_10(first(5701).TableRowGroupTitle, obj);
+  items3[1] = closure_10(first(5737).TableRowGroupTitle, obj);
   obj.children = items3;
   return closure_11(closure_12, obj);
 }
@@ -139,11 +139,11 @@ function AccountSecurityPage() {
   return closure_1_10(SettingLayoutDefault, { node });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(7989).MobileUserSettings;
-const WebAuthnScreens = fn(14686).WebAuthnScreens;
+const MobileUserSettings = fn(8027).MobileUserSettings;
+const WebAuthnScreens = fn(14735).WebAuthnScreens;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { upsellPasswordless: null, upsellImagePasswordless: null };
 obj = { marginBottom: 16, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
 obj.upsellPasswordless = obj;

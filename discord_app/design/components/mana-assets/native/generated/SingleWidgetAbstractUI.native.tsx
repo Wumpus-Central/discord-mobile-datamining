@@ -1,9 +1,9 @@
-// === Module 6473: SingleWidgetAbstractUI ===
+// === Module 6509: SingleWidgetAbstractUI ===
 
-// Module 6473 (SingleWidgetAbstractUI)
+// Module 6509 (SingleWidgetAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6474 from "module_6474" /* 6474 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6510 from "module_6510" /* 6510 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SingleWidgetAbstractUI = function SingleWidgetAbstractUI(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6474 };
+  obj = { uri: _modDef6510 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const SingleWidgetAbstractUI = function SingleWidgetAbstractUI(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6474 });
+  return jsx(FastImageDefault, { uri: _modDef6510 });
 };

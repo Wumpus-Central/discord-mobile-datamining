@@ -1,9 +1,9 @@
-// === Module 16186: FavoritesGuildAddCategoryActionSheet ===
+// === Module 16235: FavoritesGuildAddCategoryActionSheet ===
 
-// Module 16186 (FavoritesGuildAddCategoryActionSheet)
+// Module 16235 (FavoritesGuildAddCategoryActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10255 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4572 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10293 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj = { title: null };
   const intl = value(1114).intl;
   obj.title = intl.string(value(1114).t["ISN+NM"]);
-  obj.header = closure_6(value(7163).BottomSheetTitleHeader, obj);
+  obj.header = closure_6(value(7201).BottomSheetTitleHeader, obj);
   const obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, isClearable: true, returnKeyType: "done", onSubmitEditing: null };
   const intl2 = value(1114).intl;
   obj1.label = intl2.string(value(1114).t.OCAkGP);
@@ -38,21 +38,21 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj1.onChange = tmp2[1];
   obj1.maxLength = maxLength;
   obj1.onSubmitEditing = callback;
-  const items1 = [closure_6(value(6620).TextInput, obj1), ];
+  const items1 = [closure_6(value(6656).TextInput, obj1), ];
   let obj2 = { text: null, onPress: null, disabled: null };
   const intl4 = value(1114).intl;
   obj2.text = intl4.string(value(1114).t.CumH4u);
   obj2.onPress = callback;
   obj2.disabled = !result;
-  items1[1] = closure_6(value(4989).Button, obj2);
+  items1[1] = closure_6(value(5025).Button, obj2);
   obj.children = items1;
-  return closure_7(value(7164).BottomSheet, obj);
+  return closure_7(value(7202).BottomSheet, obj);
 }
 const maxLength = fn(1970).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
-fn(4574);
+fn(4605);
 let createStyles = { content: null, body: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.content = createStyles;

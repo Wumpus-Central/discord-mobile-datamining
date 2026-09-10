@@ -1,9 +1,9 @@
-// === Module 6435: ServerIconBoomBGoneExample ===
+// === Module 6471: ServerIconBoomBGoneExample ===
 
-// Module 6435 (ServerIconBoomBGoneExample)
+// Module 6471 (ServerIconBoomBGoneExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6436 from "module_6436" /* 6436 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6472 from "module_6472" /* 6472 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerIconBoomBGoneExample = function ServerIconBoomBGoneExample(wi
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6436 };
+  obj = { uri: _modDef6472 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ServerIconBoomBGoneExample = function ServerIconBoomBGoneExample(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6436 });
+  return jsx(FastImageDefault, { uri: _modDef6472 });
 };

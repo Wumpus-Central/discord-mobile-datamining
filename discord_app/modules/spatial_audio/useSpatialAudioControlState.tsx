@@ -1,12 +1,12 @@
-// === Module 13851: useSpatialAudioControlState ===
+// === Module 13900: useSpatialAudioControlState ===
 
-// Module 13851 (useSpatialAudioControlState)
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13852 */;
+// Module 13900 (useSpatialAudioControlState)
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13901 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 const require = fn;
-const Constants = fn(4599);
+const Constants = fn(4630);
 ({ Features: hasOwnProperty, SpatialAudioStatus: metroRequire } = Constants);
 const SpatialAudioControlState = { HIDDEN: "HIDDEN", AVAILABLE: "AVAILABLE", BLOCKED_MONO_OUTPUT: "BLOCKED_MONO_OUTPUT", BLOCKED_INIT_FAILED: "BLOCKED_INIT_FAILED", BLOCKED_HRTF_FAILED: "BLOCKED_HRTF_FAILED" };
 const size = fn(2);

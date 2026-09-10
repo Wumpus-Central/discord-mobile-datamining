@@ -1,11 +1,11 @@
-// === Module 17807: components/StepsIndicator ===
+// === Module 17866: components/StepsIndicator ===
 
-// Module 17807 (components/StepsIndicator)
+// Module 17866 (components/StepsIndicator)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 require = fn;
 function StepNode(isCurrent) {
@@ -73,7 +73,7 @@ function StepNode(isCurrent) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, node: { width: 20, height: 20, borderRadius: 10, marginHorizontal: -2 }, filledNode: null, emptyNode: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" };
 createStyles.filledNode = createStyles;

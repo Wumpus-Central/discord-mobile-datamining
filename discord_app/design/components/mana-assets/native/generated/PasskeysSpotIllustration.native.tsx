@@ -1,9 +1,9 @@
-// === Module 6355: PasskeysSpotIllustration ===
+// === Module 6391: PasskeysSpotIllustration ===
 
-// Module 6355 (PasskeysSpotIllustration)
+// Module 6391 (PasskeysSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6356 from "module_6356" /* 6356 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6392 from "module_6392" /* 6392 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PasskeysSpotIllustration = function PasskeysSpotIllustration(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6356 };
+  obj = { uri: _modDef6392 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const PasskeysSpotIllustration = function PasskeysSpotIllustration(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6356 });
+  return jsx(FastImageDefault, { uri: _modDef6392 });
 };

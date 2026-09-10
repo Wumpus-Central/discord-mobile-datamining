@@ -1,9 +1,9 @@
-// === Module 11162: Tooltip ===
+// === Module 11202: Tooltip ===
 
-// Module 11162 (Tooltip)
+// Module 11202 (Tooltip)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import spring from "spring" /* 4988 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import spring from "spring" /* 5024 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
-fn(4574);
+fn(4605);
 let createStyles = { container: { position: "absolute", alignItems: "center" }, textContainer: null, text: null, arrow: null, bottomArrow: null, topArrow: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, maxWidth: 150, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 createStyles.textContainer = createStyles;

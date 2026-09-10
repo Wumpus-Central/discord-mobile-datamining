@@ -1,24 +1,24 @@
-// === Module 8000: SystemMessageUtils ===
+// === Module 8038: SystemMessageUtils ===
 
-// Module 8000 (SystemMessageUtils)
+// Module 8038 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1114 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4726 */;
-import useChannelName from "useChannelName" /* 4727 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
-import useMessageAuthor from "useMessageAuthor" /* 4807 */;
-import MarkupParser from "MarkupParser" /* 8001 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8005 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8006 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8008 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8009 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8010 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4757 */;
+import useChannelName from "useChannelName" /* 4758 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4828 */;
+import useMessageAuthor from "useMessageAuthor" /* 4838 */;
+import MarkupParser from "MarkupParser" /* 8039 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8043 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8044 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8046 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8047 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8048 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4223 */;
+import MessageRecord from "MessageRecord" /* 4254 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

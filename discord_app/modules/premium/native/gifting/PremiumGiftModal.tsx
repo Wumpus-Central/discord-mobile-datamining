@@ -1,10 +1,10 @@
-// === Module 10694: PremiumGiftModal ===
+// === Module 10732: PremiumGiftModal ===
 
-// Module 10694 (PremiumGiftModal)
+// Module 10732 (PremiumGiftModal)
 import nativeDefault from "native" /* 576 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10695 */;
-import PremiumGiftPlanSelectDefault from "PremiumGiftPlanSelect" /* 10696 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10733 */;
+import PremiumGiftPlanSelectDefault from "PremiumGiftPlanSelect" /* 10734 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -12,9 +12,9 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 const jsx = fn(21).jsx;
 let obj = { PLAN_SELECT: "PremiumGiftPlanSelect", REWARD_SELECT: "GiftingSKUSelect", CUSTOMIZATION: "PremiumGiftCustomization", SUCCESS: "PremiumGiftSuccess", GIFTING_BADGE: "GiftingBadgePostPurchase" };
-obj = { [PLAN_SELECT]: fn(10695).PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: fn(10695).PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: fn(10695).PaymentFlowStep.PLAN_SELECT, [SUCCESS]: fn(10695).PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: fn(10695).PaymentFlowStep.CONFIRM };
+obj = { [PLAN_SELECT]: fn(10733).PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: fn(10733).PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: fn(10733).PaymentFlowStep.PLAN_SELECT, [SUCCESS]: fn(10733).PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: fn(10733).PaymentFlowStep.CONFIRM };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = obj);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 obj = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_9 = createStyles.createStyles(obj);
 const size = fn(2);
@@ -153,9 +153,9 @@ export default function PremiumGiftModal(analyticsLocations) {
       return jsx(analyticsLocations(onDismiss[16]), {
         currentProgress: currentProgress.currentProgress,
         onSendGift() {
-          analyticsLocation(10693);
+          analyticsLocation(10731);
           obj = { analyticsLocations: null };
-          const items = [analyticsLocations(7196).GIFTING_BADGE_POST_PURCHASE];
+          const items = [analyticsLocations(7234).GIFTING_BADGE_POST_PURCHASE];
           obj.analyticsLocations = items;
           obj.openGiftModal(obj);
         }

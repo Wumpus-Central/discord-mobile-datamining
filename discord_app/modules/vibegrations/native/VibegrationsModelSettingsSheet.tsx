@@ -1,14 +1,14 @@
-// === Module 16633: VibegrationsModelSettingsSheet ===
+// === Module 16688: VibegrationsModelSettingsSheet ===
 
-// Module 16633 (VibegrationsModelSettingsSheet)
-import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16634 */;
+// Module 16688 (VibegrationsModelSettingsSheet)
+import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16689 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16623 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16678 */;
 
 require = fn;
 let closure_3 = ["fast"];
-const sendModelSettings = fn(16623).sendModelSettings;
+const sendModelSettings = fn(16678).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
@@ -56,13 +56,13 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     settings = stateFromStores.settings;
     const choices = stateFromStores.choices;
     const intl2 = tmp(tmp2[6]).intl;
-    const stringResult = intl2.string(require("module_3560")["9FRudW"]);
+    const stringResult = intl2.string(require("module_3590")["9FRudW"]);
     const intl3 = tmp(tmp2[6]).intl;
-    const stringResult1 = intl3.string(require("module_3560")["4AsQHS"]);
+    const stringResult1 = intl3.string(require("module_3590")["4AsQHS"]);
     obj = { scrollable: true, header: null, children: null };
     obj = { title: null };
     const intl4 = tmp(tmp2[6]).intl;
-    obj.title = intl4.string(require("module_3560")["2NWMqY"]);
+    obj.title = intl4.string(require("module_3590")["2NWMqY"]);
     obj.header = closure_8(tmp(tmp2[9]).BottomSheetTitleHeader, obj);
     const obj1 = { direction: "vertical", spacing: require("native").space.PX_16, children: null };
     const obj2 = {
@@ -137,7 +137,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     items3[2] = tmp9Result;
     const obj7 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl = tmp(tmp2[6]).intl;
-    obj7.children = intl.string(require("module_3560").ICU5aW);
+    obj7.children = intl.string(require("module_3590").ICU5aW);
     items3[3] = closure_8(tmp(tmp2[18]).Text, obj7);
     obj1.children = items3;
     obj6.children = closure_9(tmp(tmp2[11]).Stack, obj1);

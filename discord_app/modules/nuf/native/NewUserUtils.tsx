@@ -1,19 +1,19 @@
-// === Module 17481: NewUserUtils ===
+// === Module 17540: NewUserUtils ===
 
-// Module 17481 (NewUserUtils)
+// Module 17540 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import Link from "Link" /* 1484 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12710 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12713 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12776 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 17482 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4462 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12750 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12753 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12816 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 17541 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 15991 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5295 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 16040 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5331 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -230,8 +230,8 @@ let closure_18 = async function _getNextOnboardingStep() {
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
 ({ PlatformTypes: closure_8, Routes: closure_9 } = Constants);
-const ContactPermissions = fn(12708).ContactPermissions;
-let closure_11 = fn(4784).NotificationAuthorizationStatus;
+const ContactPermissions = fn(12748).ContactPermissions;
+let closure_11 = fn(4815).NotificationAuthorizationStatus;
 let obj = {
   key: "choose-avatar",
   shouldShowStep() {
@@ -397,7 +397,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9852).hasDeferredInvite,
+    shouldShowStep: fn(9890).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }

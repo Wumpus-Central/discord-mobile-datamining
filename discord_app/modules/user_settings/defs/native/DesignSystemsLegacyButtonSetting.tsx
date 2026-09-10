@@ -1,9 +1,9 @@
-// === Module 15791: DesignSystemsLegacyButtonSetting ===
+// === Module 15840: DesignSystemsLegacyButtonSetting ===
 
-// Module 15791 (DesignSystemsLegacyButtonSetting)
+// Module 15840 (DesignSystemsLegacyButtonSetting)
 import Constants from "Constants" /* 1074 */;
-import SettingsConstants from "SettingsConstants" /* 7989 */;
-import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingsConstants from "SettingsConstants" /* 8027 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

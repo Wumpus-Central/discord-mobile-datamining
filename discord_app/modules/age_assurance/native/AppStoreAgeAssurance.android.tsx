@@ -1,13 +1,13 @@
-// === Module 8602: AppStoreAgeAssurance ===
+// === Module 8639: AppStoreAgeAssurance ===
 
-// Module 8602 (AppStoreAgeAssurance)
-import PlayAgeSignals from "PlayAgeSignals" /* 8603 */;
+// Module 8639 (AppStoreAgeAssurance)
+import PlayAgeSignals from "PlayAgeSignals" /* 8640 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_3 = { [fn(8603).AgeSignalsStatus.SHARED]: "SHARED", [fn(8603).AgeSignalsStatus.NOT_SHARED]: "NOT_SHARED", [fn(8603).AgeSignalsStatus.VERIFICATION_REQUIRED]: "VERIFICATION_REQUIRED" };
-let closure_4 = { [fn(8603).AgeRangeSource.TIER_A]: "TIER_A", [fn(8603).AgeRangeSource.TIER_B]: "TIER_B", [fn(8603).AgeRangeSource.TIER_C]: "TIER_C", [fn(8603).AgeRangeSource.TIER_D]: "TIER_D" };
-let closure_5 = { [fn(8603).SignificantChangeStatus.APPROVED]: "APPROVED", [fn(8603).SignificantChangeStatus.PENDING]: "PENDING", [fn(8603).SignificantChangeStatus.DECLINED]: "DECLINED" };
+let closure_3 = { [fn(8640).AgeSignalsStatus.SHARED]: "SHARED", [fn(8640).AgeSignalsStatus.NOT_SHARED]: "NOT_SHARED", [fn(8640).AgeSignalsStatus.VERIFICATION_REQUIRED]: "VERIFICATION_REQUIRED" };
+let closure_4 = { [fn(8640).AgeRangeSource.TIER_A]: "TIER_A", [fn(8640).AgeRangeSource.TIER_B]: "TIER_B", [fn(8640).AgeRangeSource.TIER_C]: "TIER_C", [fn(8640).AgeRangeSource.TIER_D]: "TIER_D" };
+let closure_5 = { [fn(8640).SignificantChangeStatus.APPROVED]: "APPROVED", [fn(8640).SignificantChangeStatus.PENDING]: "PENDING", [fn(8640).SignificantChangeStatus.DECLINED]: "DECLINED" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeAssurance.android.tsx");
 

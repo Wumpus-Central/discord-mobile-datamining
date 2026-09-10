@@ -1,9 +1,9 @@
-// === Module 6471: ShopIllocon ===
+// === Module 6507: ShopIllocon ===
 
-// Module 6471 (ShopIllocon)
+// Module 6507 (ShopIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6472 from "module_6472" /* 6472 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6508 from "module_6508" /* 6508 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const ShopIllocon = function ShopIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6472 };
+  obj = { uri: _modDef6508 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6472 });
+  return jsx(FastImageDefault, { uri: _modDef6508 });
 };

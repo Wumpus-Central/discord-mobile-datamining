@@ -1,14 +1,14 @@
-// === Module 13308: ForLaterScreen ===
+// === Module 13357: ForLaterScreen ===
 
-// Module 13308 (ForLaterScreen)
+// Module 13357 (ForLaterScreen)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
-import spring from "spring" /* 4988 */;
-import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 13309 */;
-import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 13311 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
+import spring from "spring" /* 5024 */;
+import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 13358 */;
+import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 13360 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11691 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11731 */;
 
 require = fn;
 function keyExtractor(saveData) {
@@ -20,10 +20,10 @@ function ForLaterPage(type) {
   importDefault = undefined;
   const tmp = closure_10();
   const arr = useSavedMessagesForPageDefault(type);
-  const tmp5 = type === throttledNow(7874).SavedMessageSortTypes.REMINDER;
-  let obj = throttledNow(7869);
+  const tmp5 = type === throttledNow(7911).SavedMessageSortTypes.REMINDER;
+  let obj = throttledNow(7906);
   const forLaterLimit = obj.useForLaterLimit(ForLaterScreen, tmp5);
-  let obj1 = throttledNow(7869);
+  let obj1 = throttledNow(7906);
   const isForLaterLimitUpgradable = obj1.useIsForLaterLimitUpgradable(ForLaterScreen);
   let tmp8 = isForLaterLimitUpgradable;
   if (isForLaterLimitUpgradable) {
@@ -38,10 +38,10 @@ function ForLaterPage(type) {
   }
   const items = [SavedMessagesStore];
   const stateFromStores = throttledNow(504).useStateFromStores(items, () => overdueMessageReminderCount.getOverdueMessageReminderCount());
-  let tmp2Result = tmp2(7176);
-  const analyticsLocations = tmp2Result(tmp2(7196).FOR_LATER_POPOUT).analyticsLocations;
+  let tmp2Result = tmp2(7214);
+  const analyticsLocations = tmp2Result(tmp2(7234).FOR_LATER_POPOUT).analyticsLocations;
   obj = { type: null, name: null, properties: null };
-  tmp2Result = tmp2(8801);
+  tmp2Result = tmp2(8838);
   obj.type = throttledNow(1250).ImpressionTypes.MODAL;
   obj.name = throttledNow(1250).ImpressionNames.FOR_LATER_LIST_VIEWED;
   obj = { tab_type: type, total_count: arr.length, overdue_count: stateFromStores, nitro_upsell_bar_shown: null, nitro_roadblock_upsell_bar_shown: null };
@@ -72,22 +72,22 @@ function ForLaterPage(type) {
   if (0 === arr.length) {
     obj1 = { value: analyticsLocations, children: null };
     const obj2 = { type };
-    obj1.children = closure_7(tmp2(13317), obj2);
-    let tmp24Result = closure_7(tmp4(7176).AnalyticsLocationProvider, obj1);
+    obj1.children = closure_7(tmp2(13366), obj2);
+    let tmp24Result = closure_7(tmp4(7214).AnalyticsLocationProvider, obj1);
   } else {
     const obj3 = { value: analyticsLocations, children: null };
     const obj4 = { style: tmp.listContainer, children: null };
     const obj5 = { data: arr, renderItem: tmp20, contentContainerStyle: tmp.cardContainer, keyExtractor, onScroll: type.handleScroll };
-    obj4.children = closure_7(tmp4(8906).FlashList, obj5);
+    obj4.children = closure_7(tmp4(8943).FlashList, obj5);
     const items2 = [closure_7(View, obj4), ];
     let tmp25Result = null;
     if (tmp9) {
       const obj6 = { isReminder: tmp5, isAtLimit: tmp8 };
-      tmp25Result = closure_7(tmp2(13321), obj6);
+      tmp25Result = closure_7(tmp2(13370), obj6);
     }
     items2[1] = tmp25Result;
     obj3.children = items2;
-    tmp24Result = closure_8(tmp4(7176).AnalyticsLocationProvider, obj3);
+    tmp24Result = closure_8(tmp4(7214).AnalyticsLocationProvider, obj3);
   }
   return tmp24Result;
 }
@@ -95,7 +95,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ForLaterScreen = "ForLaterScreen";
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: null, headerBorder: null, cardContainer: null, listContainer: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flexGrow: 1 };
 obj.container = obj;
@@ -111,7 +111,7 @@ let result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterS
 export default noop.memo((type) => {
   let sharedValue;
   const tmp = closure_10();
-  let obj = sharedValue(4310);
+  let obj = sharedValue(4341);
   sharedValue = obj.useSharedValue(0);
   const items = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
@@ -128,7 +128,7 @@ export default noop.memo((type) => {
   fn.__workletHash = 16693192032676;
   fn.__initData = __initData;
   obj = { style: tmp.container, children: null };
-  const animatedStyle = sharedValue(4310).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4341).useAnimatedStyle(fn);
   obj = { style: null };
   const items1 = [tmp.headerBorder, animatedStyle];
   obj.style = items1;

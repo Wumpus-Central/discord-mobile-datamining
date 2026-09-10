@@ -1,7 +1,7 @@
-// === Module 10313: useTopAndNewlyAddedEmojis ===
+// === Module 10351: useTopAndNewlyAddedEmojis ===
 
-// Module 10313 (useTopAndNewlyAddedEmojis)
-import EmojiStore from "EmojiStore" /* 5473 */;
+// Module 10351 (useTopAndNewlyAddedEmojis)
+import EmojiStore from "EmojiStore" /* 5509 */;
 
 const require = fn;
 const EmojiIntention = fn(1374).EmojiIntention;

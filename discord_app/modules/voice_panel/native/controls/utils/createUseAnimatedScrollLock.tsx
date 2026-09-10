@@ -1,7 +1,7 @@
-// === Module 12133: createUseAnimatedScrollLock ===
+// === Module 12173: createUseAnimatedScrollLock ===
 
-// Module 12133 (createUseAnimatedScrollLock)
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+// Module 12173 (createUseAnimatedScrollLock)
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,8 +22,8 @@ export function createUseAnimatedScrollLock(arg0, arg1, token, sharedValue1) {
   closure_1 = arg1;
   const IS_ANDROID = token;
   return () => {
-    let obj = A;
-    if (A === undefined) {
+    let obj = fn;
+    if (fn === undefined) {
       obj = {};
     }
     const onScrollHandler = obj.onScrollHandler;
@@ -33,7 +33,7 @@ export function createUseAnimatedScrollLock(arg0, arg1, token, sharedValue1) {
     obj = { onScroll: null, animatedProps: null, scrollerRef: null, gestureRef: null };
     let obj3 = closure_0(onScrollHandlerWorkletized[2]);
     obj = { onBeginDrag: null, onEndDrag: null, onMomentumEnd: null, onScroll: null };
-    const fn = function w(arg0, arg1) {
+    fn = function w(arg0, arg1) {
       arg1.momentumEndCount = 0;
       const result = sharedValue1.set(true);
     };
@@ -45,7 +45,7 @@ export function createUseAnimatedScrollLock(arg0, arg1, token, sharedValue1) {
     class H {
       constructor(arg0) {
         result = closure_1_3.set(false);
-        velocity = A.velocity;
+        velocity = fn.velocity;
         num = undefined;
         if (velocity != null) {
           num = velocity.y;

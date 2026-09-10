@@ -1,24 +1,24 @@
-// === Module 7358: SoundboardUtils ===
+// === Module 7396: SoundboardUtils ===
 
-// Module 7358 (SoundboardUtils)
+// Module 7396 (SoundboardUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
-import UserUtils from "UserUtils" /* 4418 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
-import SoundboardTypes from "SoundboardTypes" /* 5034 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7352 */;
-import useMuteStates from "useMuteStates" /* 7359 */;
-import VoiceChannelEffectsActionCreators from "VoiceChannelEffectsActionCreators" /* 7360 */;
-import getCurrentVoiceChannelDefault from "getCurrentVoiceChannel" /* 7387 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
+import UserUtils from "UserUtils" /* 4449 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4785 */;
+import SoundboardTypes from "SoundboardTypes" /* 5070 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7390 */;
+import useMuteStates from "useMuteStates" /* 7397 */;
+import VoiceChannelEffectsActionCreators from "VoiceChannelEffectsActionCreators" /* 7398 */;
+import getCurrentVoiceChannelDefault from "getCurrentVoiceChannel" /* 7425 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import UserStore from "UserStore" /* 1371 */;
-import SoundboardStore from "SoundboardStore" /* 5026 */;
+import SoundboardStore from "SoundboardStore" /* 5062 */;
 
 require = fn;
 function hasPermissionToPlaySound(guildId, guild_id) {
@@ -178,9 +178,9 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
               tmp23 = null;
               if (closure_130_16(closure_129_1)) {
                 (function playCustomJoinSound(sound, id) {
-                  closure_1_0(7352).playSoundLocally(id, sound);
-                  const obj = closure_1_0(7352);
-                  const result = closure_1_0(7360).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
+                  closure_1_0(7390).playSoundLocally(id, sound);
+                  const obj = closure_1_0(7390);
+                  const result = closure_1_0(7398).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
                 })(sound, closure_129_1.id);
               }
             }
@@ -199,7 +199,7 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
   }
 };
 let closure_5 = fn(1961).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
-const SoundboardConstants = fn(5028);
+const SoundboardConstants = fn(5064);
 ({ CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID: closure_9, DEFAULT_SOUND_GUILD_ID: c10 } = SoundboardConstants);
 const Constants = fn(1074);
 ({ Permissions: closure_11, AnalyticEvents: closure_12 } = Constants);
@@ -312,9 +312,9 @@ export const updateCustomJoinSound = function updateCustomJoinSound(guildId, gui
       tmp6 = require;
     }
     if (null != joinSound.joinSound) {
-      let ADDED = tmp6(5034).AnalyticsChangeType.UPDATED;
+      let ADDED = tmp6(5070).AnalyticsChangeType.UPDATED;
     } else {
-      ADDED = tmp6(5034).AnalyticsChangeType.ADDED;
+      ADDED = tmp6(5070).AnalyticsChangeType.ADDED;
     }
     joinSound.joinSound = { soundId: guildId.soundId, guildId: guildId.guildId === closure_2_10 ? React7 : guildId.guildId };
     const obj = { location_stack, guild_id: null, change_type: null, sound_type: null, sound_source: null };
@@ -325,7 +325,7 @@ export const updateCustomJoinSound = function updateCustomJoinSound(guildId, gui
     }
     obj.guild_id = num;
     obj.change_type = ADDED;
-    obj.sound_type = tmp6(5034).AnalyticsSoundType.ENTRY;
+    obj.sound_type = tmp6(5070).AnalyticsSoundType.ENTRY;
     obj.sound_source = CUSTOM;
     obj.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj);
   }, require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION);

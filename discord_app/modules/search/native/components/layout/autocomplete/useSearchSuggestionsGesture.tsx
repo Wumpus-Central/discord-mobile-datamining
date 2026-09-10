@@ -1,8 +1,8 @@
-// === Module 16660: useSearchSuggestionsGesture ===
+// === Module 16717: useSearchSuggestionsGesture ===
 
-// Module 16660 (useSearchSuggestionsGesture)
-import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12368 */;
+// Module 16717 (useSearchSuggestionsGesture)
+import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12408 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,11 +1,11 @@
-// === Module 4539: BrowserManager ===
+// === Module 4570: BrowserManager ===
 
-// Module 4539 (BrowserManager)
+// Module 4570 (BrowserManager)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import LinkingDefault from "Linking" /* 4268 */;
-import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 4540 */;
+import LinkingDefault from "Linking" /* 4299 */;
+import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 4571 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;

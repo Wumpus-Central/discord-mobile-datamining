@@ -1,8 +1,8 @@
-// === Module 5704: ChangeEmailUtils ===
+// === Module 5740: ChangeEmailUtils ===
 
-// Module 5704 (ChangeEmailUtils)
+// Module 5740 (ChangeEmailUtils)
 import util from "util" /* 1114 */;
-import VerificationConstants from "VerificationConstants" /* 5698 */;
+import VerificationConstants from "VerificationConstants" /* 5734 */;
 import size from "module_2" /* 2 */;
 
 const ChangeEmailReasons = VerificationConstants.ChangeEmailReasons;

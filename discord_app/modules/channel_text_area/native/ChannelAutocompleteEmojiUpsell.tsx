@@ -1,9 +1,9 @@
-// === Module 12417: ChannelAutocompleteEmojiUpsell ===
+// === Module 12457: ChannelAutocompleteEmojiUpsell ===
 
-// Module 12417 (ChannelAutocompleteEmojiUpsell)
+// Module 12457 (ChannelAutocompleteEmojiUpsell)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import FastImageDefault from "FastImage" /* 5601 */;
+import FastImageDefault from "FastImage" /* 5637 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 const createStyles = { upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, title: { lineHeight: 16, flex: 1 }, emojis: { height: 28 }, emojiWrapper: null, emoji: null };
 let size = { position: "absolute", width: 28, height: 28, padding: 2, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderRadius: 14, borderColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
 createStyles.emojiWrapper = size;

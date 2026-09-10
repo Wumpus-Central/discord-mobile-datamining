@@ -1,34 +1,34 @@
-// === Module 12265: ChatInputActions ===
+// === Module 12305: ChatInputActions ===
 
-// Module 12265 (ChatInputActions)
+// Module 12305 (ChatInputActions)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import mergeProps from "mergeProps" /* 4280 */;
-import ImageIcon from "ImageIcon" /* 5101 */;
-import AppsIcon from "AppsIcon" /* 5120 */;
-import ImagePickerUtils from "ImagePickerUtils" /* 5165 */;
-import AttachmentIcon from "AttachmentIcon" /* 10144 */;
-import PollsIcon from "PollsIcon" /* 10670 */;
-import CameraIcon from "CameraIcon" /* 10685 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12239 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 12267 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12269 */;
-import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 12270 */;
+import mergeProps from "mergeProps" /* 4311 */;
+import ImageIcon from "ImageIcon" /* 5137 */;
+import AppsIcon from "AppsIcon" /* 5156 */;
+import ImagePickerUtils from "ImagePickerUtils" /* 5201 */;
+import AttachmentIcon from "AttachmentIcon" /* 10182 */;
+import PollsIcon from "PollsIcon" /* 10708 */;
+import CameraIcon from "CameraIcon" /* 10723 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12279 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 12307 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12309 */;
+import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 12310 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ChatInputConstants = fn(11992);
+const ChatInputConstants = fn(12032);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = { actions: { flexDirection: "row", alignItems: "center" }, themedChatInput: null, buttonWrapper: null, activeBrand: null };
 obj = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
 obj.themedChatInput = obj;
-const createStyles = { maxHeight: fn(4994).SMALL_BUTTON_HEIGHT + fn(4994).SMALL_BUTTON_PADDING };
+const createStyles = { maxHeight: fn(5030).SMALL_BUTTON_HEIGHT + fn(5030).SMALL_BUTTON_PADDING };
 obj.buttonWrapper = createStyles;
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
@@ -57,7 +57,7 @@ const forwardRefResult = noop.forwardRef((canStartThreads, arg1) => {
   closure_15 = tmp6;
   let obj3 = canStartThreads(isAppLauncherEnabled[11]);
   const tmp4 = channel;
-  const canUseScheduledMessages = canStartThreads(isAppLauncherEnabled[14]).useCanUseScheduledMessages();
+  const canSendScheduledMessagesInChannel = canStartThreads(isAppLauncherEnabled[14]).useCanSendScheduledMessagesInChannel(channel);
   let obj4 = canStartThreads(isAppLauncherEnabled[14]);
   [c17, c18] = onPressAction(noop.useState(false), 2);
   const tmp9 = onPressAction(noop.useState(true), 2);
@@ -85,7 +85,7 @@ const forwardRefResult = noop.forwardRef((canStartThreads, arg1) => {
       }
     };
   }, []).showActionsImperativeApi);
-  let items = [canPostPolls, canStartThreads, isAppLauncherEnabled, canUpload, tmp6, canUseScheduledMessages, channel.id, onPressAction, onPollsPress, onAttachPress];
+  let items = [canPostPolls, canStartThreads, isAppLauncherEnabled, canUpload, tmp6, canSendScheduledMessagesInChannel, channel.id, onPressAction, onPollsPress, onAttachPress];
   noop.useMemo(() => {
     let result = canUpload;
     if (canUpload) {
@@ -152,7 +152,7 @@ const forwardRefResult = noop.forwardRef((canStartThreads, arg1) => {
       obj4.action = onAttachPress;
       items.push(obj4);
     }
-    if (canUseScheduledMessages) {
+    if (canSendScheduledMessagesInChannel) {
       const obj5 = { label: null, IconComponent: null, action: null };
       const intl7 = util.intl;
       obj5.label = intl7.string(util.t["3+ii4F"]);

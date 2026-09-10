@@ -1,15 +1,15 @@
-// === Module 12490: ChatInputGuardRequiredLobbyApplicationAuthorization ===
+// === Module 12530: ChatInputGuardRequiredLobbyApplicationAuthorization ===
 
-// Module 12490 (ChatInputGuardRequiredLobbyApplicationAuthorization)
+// Module 12530 (ChatInputGuardRequiredLobbyApplicationAuthorization)
 import nativeDefault from "native" /* 576 */;
-import LinkingDefault from "Linking" /* 4268 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12478 */;
+import LinkingDefault from "Linking" /* 4299 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12518 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { icon: null };
 let size = { height: 40, width: 40, resizeMode: "contain", borderRadius: nativeDefault.radii.md };
 obj.icon = size;

@@ -1,6 +1,6 @@
-// === Module 6386: ? ===
+// === Module 6422: ? ===
 
-// Module 6386
+// Module 6422
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PurchaseDiscountSpotIllustration-2x.png.js");

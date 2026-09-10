@@ -1,8 +1,8 @@
-// === Module 11355: useChannelStylesShared ===
+// === Module 11395: useChannelStylesShared ===
 
-// Module 11355 (useChannelStylesShared)
+// Module 11395 (useChannelStylesShared)
 import nativeDefault from "native" /* 576 */;
-import createStyles from "createStyles" /* 4574 */;
+import createStyles from "createStyles" /* 4605 */;
 import size from "module_2" /* 2 */;
 
 let obj = { container: { flex: 1 }, background: null };

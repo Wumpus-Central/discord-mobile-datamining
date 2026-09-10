@@ -1,6 +1,6 @@
-// === Module 5918: ? ===
+// === Module 5954: ? ===
 
-// Module 5918
+// Module 5954
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiamondIllocon-2x.png.js");

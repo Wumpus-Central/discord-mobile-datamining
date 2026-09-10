@@ -1,16 +1,16 @@
-// === Module 16300: OneColumnGuildUpsellList ===
+// === Module 16349: OneColumnGuildUpsellList ===
 
-// Module 16300 (OneColumnGuildUpsellList)
-import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 16301 */;
+// Module 16349 (OneColumnGuildUpsellList)
+import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 16350 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15653 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15702 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
 const viewabilityConfig = { itemVisiblePercentThreshold: 50, minimumViewTime: 500 };
 let c8 = 0;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_9 = createStyles.createStyles({ hidden: { opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_community_upsell/native/OneColumnGuildUpsellList.tsx");

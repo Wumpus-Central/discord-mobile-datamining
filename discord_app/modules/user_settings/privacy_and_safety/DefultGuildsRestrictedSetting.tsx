@@ -1,6 +1,6 @@
-// === Module 15909: DefultGuildsRestrictedSetting ===
+// === Module 15958: DefultGuildsRestrictedSetting ===
 
-// Module 15909 (DefultGuildsRestrictedSetting)
+// Module 15958 (DefultGuildsRestrictedSetting)
 import UserSettings from "UserSettings" /* 1935 */;
 import size from "module_2" /* 2 */;
 

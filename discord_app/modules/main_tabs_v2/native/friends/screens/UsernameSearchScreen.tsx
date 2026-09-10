@@ -1,6 +1,6 @@
-// === Module 16813: UsernameSearchScreen ===
+// === Module 16870: UsernameSearchScreen ===
 
-// Module 16813 (UsernameSearchScreen)
+// Module 16870 (UsernameSearchScreen)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { background: null, content: null, iosPaddingThemeAdjust: null, container: null, inputContainer: null, headerText: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createStyles.background = createStyles;
@@ -36,14 +36,14 @@ export default function UsernameSearchScreen(navigation) {
     const obj = { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL };
     obj.track(constants.FRIEND_ADD_VIEWED, obj);
   }, []);
-  const insets = ref(6995)().insets;
+  const insets = ref(7033)().insets;
   ref = noop.useRef(null);
   const items = [navigation];
   const effect1 = noop.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     let closing = data.data.closing;
     if (!closing) {
-      closing = navigation(4976).getIsScreenReaderEnabled();
-      const obj = navigation(4976);
+      closing = navigation(5012).getIsScreenReaderEnabled();
+      const obj = navigation(5012);
     }
     if (!closing) {
       const current = ref.current;
@@ -52,7 +52,7 @@ export default function UsernameSearchScreen(navigation) {
       }
     }
   }), items);
-  let obj = navigation(7886);
+  let obj = navigation(7923);
   const clientThemesOverride = obj.useClientThemesOverride();
   let obj1 = navigation(1115);
   let prop = null;
@@ -69,13 +69,13 @@ export default function UsernameSearchScreen(navigation) {
   obj = { style: null, children: null };
   const items1 = [tmp.content, clientThemesOverride];
   obj.style = items1;
-  tmp3(5592);
-  const items2 = [closure_8(ref(5139), { absolute: true }), ];
+  tmp3(5628);
+  const items2 = [closure_8(ref(5175), { absolute: true }), ];
   obj1 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items3 = [tmp.container, prop, { paddingBottom: insets.bottom + ref(576).space.PX_16 }];
   obj1.contentContainerStyle = items3;
   const obj3 = { style: tmp.inputContainer, autoFocusInput: false, headerText: null, headerTextStyle: null, ref: null };
-  const tmp3Result = tmp3(13881);
+  const tmp3Result = tmp3(13930);
   const intl = tmp7(1114).intl;
   obj3.headerText = intl.string(navigation(1114).t.YEOwDM);
   obj3.headerTextStyle = tmp.headerText;

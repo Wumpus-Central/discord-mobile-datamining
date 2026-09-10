@@ -1,11 +1,11 @@
-// === Module 13195: useAvatarDecorationSections ===
+// === Module 13242: useAvatarDecorationSections ===
 
-// Module 13195 (useAvatarDecorationSections)
+// Module 13242 (useAvatarDecorationSections)
 import util from "util" /* 1114 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7606 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7572 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7594 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7609 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;

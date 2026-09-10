@@ -1,6 +1,6 @@
-// === Module 8297: PortalViewNativeComponent ===
+// === Module 8334: PortalViewNativeComponent ===
 
-// Module 8297 (PortalViewNativeComponent)
+// Module 8334 (PortalViewNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

@@ -1,18 +1,18 @@
-// === Module 16419: YouBarUser ===
+// === Module 16468: YouBarUser ===
 
-// Module 16419 (YouBarUser)
+// Module 16468 (YouBarUser)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 4988 */;
+import spring from "spring" /* 5024 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15128);
+const YouBarConstants = fn(15177);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { youButton: null, userText: null, placeholder: null };
 obj = { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS };
 obj.youButton = obj;
@@ -48,19 +48,19 @@ export default noop.memo(function YouBarUser(isQuestRendered) {
   S.__workletHash = 12063452832866;
   S.__initData = __initData;
   const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(S);
-  let obj3 = sharedValue(4418);
+  let obj3 = sharedValue(4449);
   const name = obj3.useName(stateFromStores);
   if (null != stateFromStores) {
     if (null != name) {
       obj = { style: tmp.youButton, children: null };
       obj = { isLargeAvatar: tmp5, onPress: isQuestRendered.onAvatarPress };
-      const items2 = [closure_9(tmp9(16421), obj), ];
+      const items2 = [closure_9(tmp9(16470), obj), ];
       obj1 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj1.style = items3;
       const obj2 = { userId: stateFromStores.id, username: name };
-      obj1.children = closure_9(tmp9(16422), obj2);
-      items2[1] = closure_9(tmp9(4310).View, obj1);
+      obj1.children = closure_9(tmp9(16471), obj2);
+      items2[1] = closure_9(tmp9(4341).View, obj1);
       obj.children = items2;
     }
     return tmp11(View, obj);
@@ -68,11 +68,11 @@ export default noop.memo(function YouBarUser(isQuestRendered) {
   obj3 = { style: null, children: null };
   const items4 = [tmp.youButton];
   obj3.style = items4;
-  const items5 = [closure_9(sharedValue(16420), { isLarge: !isQuestRendered }), ];
+  const items5 = [closure_9(sharedValue(16469), { isLarge: !isQuestRendered }), ];
   const obj4 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items6 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj4.style = items6;
-  items5[1] = closure_9(sharedValue(4310).View, obj4);
+  items5[1] = closure_9(sharedValue(4341).View, obj4);
   obj3.children = items5;
   obj = obj3;
   const obj5 = { style: tmp.placeholder };

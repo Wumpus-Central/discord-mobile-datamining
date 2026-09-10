@@ -1,9 +1,9 @@
-// === Module 8825: ContentInventoryOutboxStore ===
+// === Module 8862: ContentInventoryOutboxStore ===
 
-// Module 8825 (ContentInventoryOutboxStore)
+// Module 8862 (ContentInventoryOutboxStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import matchUtils from "matchUtils" /* 8365 */;
+import matchUtils from "matchUtils" /* 8402 */;
 
 require = fn;
 let map = new Map();
@@ -27,8 +27,8 @@ prototype["getMatchingOutboxEntry"] = function getMatchingOutboxEntry(activity) 
 prototype["getUserOutbox"] = function getUserOutbox(id) {
   return map.get(id);
 };
-prototype["isFetchingUserOutbox"] = function isFetchingUserOutbox(require) {
-  return set.has(require);
+prototype["isFetchingUserOutbox"] = function isFetchingUserOutbox(userId) {
+  return set.has(userId);
 };
 Object.defineProperty(prototype, "deleteOutboxEntryError", {
   get: function deleteOutboxEntryError() {

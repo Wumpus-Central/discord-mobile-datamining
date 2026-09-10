@@ -1,19 +1,19 @@
-// === Module 15498: SaveCameraUploadsToDeviceSetting ===
+// === Module 15547: SaveCameraUploadsToDeviceSetting ===
 
-// Module 15498 (SaveCameraUploadsToDeviceSetting)
+// Module 15547 (SaveCameraUploadsToDeviceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9390 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9428 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
 require = fn;
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["99tBAC"]);
   },
-  parent: fn(7989).MobileUserSettings.CHAT,
+  parent: fn(8027).MobileUserSettings.CHAT,
   useValue: function useSaveCameraUploadsToDeviceValue() {
     const items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => UnsyncedUserSettingsStore.saveCameraUploadsToDevice);

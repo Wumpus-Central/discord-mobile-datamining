@@ -1,12 +1,12 @@
-// === Module 12121: RecommendationsBannerCard ===
+// === Module 12161: RecommendationsBannerCard ===
 
-// Module 12121 (RecommendationsBannerCard)
+// Module 12161 (RecommendationsBannerCard)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8213 */;
-import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 12086 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12116 */;
-import RecommendationsBannerDefault from "RecommendationsBanner" /* 12122 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8250 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 12126 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12156 */;
+import RecommendationsBannerDefault from "RecommendationsBanner" /* 12162 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, banner: null, appDetailsContainer: null, appDetails: null, appIconContainer: null, notifsContainer: null, badge: null, promotedLabelWrapper: null };
 createStyles = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, width: "100%", overflow: "hidden" };
 createStyles.container = createStyles;
@@ -41,10 +41,10 @@ export default function RecommendationsBannerCard(application) {
   }
   const tmp = closure_8();
   if (!showsPromoted) {
-    let obj = application(9321);
+    let obj = application(9358);
     showsPromoted = obj.isPromotedApplication(application);
   }
-  let obj1 = application(9321);
+  let obj1 = application(9358);
   const shelfBadgeTypeIfActive = obj1.getShelfBadgeTypeIfActive(application);
   let bot = application.bot;
   let id;
@@ -68,7 +68,7 @@ export default function RecommendationsBannerCard(application) {
   const applicationIconSource = obj2.getApplicationIconSource(obj);
   if (isLandscape) {
     obj = { application, iconSource: applicationIconSource, onPress, isFirstRow: isFirst, isLastRow: isLast };
-    let tmp12Result = closure_6(tmp4(12113).BaseAppRow, obj);
+    let tmp12Result = closure_6(tmp4(12153).BaseAppRow, obj);
   } else {
     const items1 = [tmp.container, , ];
     let num = 8;
@@ -89,7 +89,7 @@ export default function RecommendationsBannerCard(application) {
     const obj3 = { style: tmp.banner, children: null };
     const obj4 = { applicationBot: application.bot, applicationEmbedded: null, applicationId: null, applicationIcon: null, overrideImageUrl: null };
     const tmp10Result = RecommendationsBannerDefault;
-    obj4.applicationEmbedded = tmp4(9321).isEmbeddedApp(application);
+    obj4.applicationEmbedded = tmp4(9358).isEmbeddedApp(application);
     ({ id: obj8.applicationId, icon } = application);
     obj4.applicationIcon = icon;
     obj4.overrideImageUrl = application.overrideImageUrl;
@@ -103,7 +103,7 @@ export default function RecommendationsBannerCard(application) {
         const obj8 = { variant: "text-xxs/medium", color: "mobile-text-heading-primary", children: null };
         const intl = tmp4(1114).intl;
         obj8.children = intl.string(tmp4(1114).t["/eVltv"]);
-        obj7.children = closure_6(tmp4(4570).Text, obj8);
+        obj7.children = closure_6(tmp4(4601).Text, obj8);
         showsPromoted = closure_6(View, obj7);
       }
       items3[1] = showsPromoted;
@@ -124,17 +124,17 @@ export default function RecommendationsBannerCard(application) {
     const items5 = [tmp14Result, , ];
     const obj11 = { style: tmp.appDetails, children: null };
     const obj12 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name };
-    const items6 = [closure_6(tmp4(4570).Text, obj12), ];
+    const items6 = [closure_6(tmp4(4601).Text, obj12), ];
     const obj13 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: application.description };
-    items6[1] = closure_6(tmp4(4570).Text, obj13);
+    items6[1] = closure_6(tmp4(4601).Text, obj13);
     obj11.children = items6;
     items5[1] = closure_7(View, obj11);
-    items5[2] = closure_6(tmp4(5626).TableRowArrow, {});
+    items5[2] = closure_6(tmp4(5662).TableRowArrow, {});
     obj9.children = items5;
     items4[1] = closure_7(View, obj9);
     obj2.children = items4;
-    tmp12Result = closure_7(tmp4(5137).PressableOpacity, obj2);
-    const tmp4Result = tmp4(9321);
+    tmp12Result = closure_7(tmp4(5173).PressableOpacity, obj2);
+    const tmp4Result = tmp4(9358);
   }
   return tmp12Result;
 };

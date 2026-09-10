@@ -1,12 +1,12 @@
-// === Module 17565: AssetChooser ===
+// === Module 17624: AssetChooser ===
 
-// Module 17565 (AssetChooser)
+// Module 17624 (AssetChooser)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Pressables from "Pressables" /* 5137 */;
-import _modDef17566 from "module_17566" /* 17566 */;
-import _modDef17567 from "module_17567" /* 17567 */;
+import Pressables from "Pressables" /* 5173 */;
+import _modDef17625 from "module_17625" /* 17625 */;
+import _modDef17626 from "module_17626" /* 17626 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { assetWrapper: { width: "100%", alignItems: "center" }, asset: null, uploadIconWrapper: null, uploadIcon: null, remove: null };
 let size = { width: "100%", height: 192, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.asset = size;
@@ -131,13 +131,13 @@ prototype["render"] = function render() {
   obj.disabled = disabled;
   let tmp9 = source;
   if (null == source) {
-    tmp9 = _modDef17566;
+    tmp9 = _modDef17625;
   }
   obj = { source: tmp9, style: tmp.asset, children: null };
   let tmp5Result = null;
   if (!disabled) {
     obj = { style: tmp.uploadIconWrapper, children: null };
-    const obj1 = { style: tmp.uploadIcon, source: _modDef17567 };
+    const obj1 = { style: tmp.uploadIcon, source: _modDef17626 };
     obj.children = React7(hasOwnProperty, obj1);
     tmp5Result = React7(React4, obj);
   }
@@ -159,7 +159,7 @@ prototype["render"] = function render() {
   children[1] = tmp5Result;
   return closure_1_11(closure_1_10, { children });
 };
-AssetChooser.contextType = fn(4284).ThemeContext;
+AssetChooser.contextType = fn(4315).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
 

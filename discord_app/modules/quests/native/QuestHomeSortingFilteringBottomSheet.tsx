@@ -1,14 +1,14 @@
-// === Module 15027: QuestHomeSortingFilteringBottomSheet ===
+// === Module 15076: QuestHomeSortingFilteringBottomSheet ===
 
-// Module 15027 (QuestHomeSortingFilteringBottomSheet)
+// Module 15076 (QuestHomeSortingFilteringBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import shared from "shared" /* 4425 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import ButtonGroup from "ButtonGroup" /* 5447 */;
-import TableRowGroup from "TableRowGroup" /* 5701 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import shared from "shared" /* 4456 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import ButtonGroup from "ButtonGroup" /* 5483 */;
+import TableRowGroup from "TableRowGroup" /* 5737 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7175 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,10 +45,10 @@ function FilterFooter(inline) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(5458).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(5494).QuestHomeSortMethods;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { content: null, bodyContainer: null, footerInline: null, footer: null, footerButtonGroup: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.content = createStyles;
@@ -147,13 +147,13 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
       const options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(11327).getFilterTypeText(item.filter),
+          label: onSortMethodChange(11367).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },
           checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter)
         };
-        return ref(onSortMethodChange(5618).TableCheckboxRow, obj, index);
+        return ref(onSortMethodChange(5654).TableCheckboxRow, obj, index);
       });
       return React5(TableRowGroup.TableRowGroup, obj, index);
     })

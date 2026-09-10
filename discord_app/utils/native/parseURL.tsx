@@ -1,6 +1,6 @@
-// === Module 4554: parseURL ===
+// === Module 4585: parseURL ===
 
-// Module 4554 (parseURL)
+// Module 4585 (parseURL)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import FingerprintUtils from "FingerprintUtils" /* 1255 */;
@@ -8,17 +8,17 @@ import URLUtilsDefault from "URLUtils" /* 1365 */;
 import UrlDefault from "Url" /* 1367 */;
 import _modDef1471 from "module_1471" /* 1471 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import _modDef4270 from "module_4270" /* 4270 */;
-import findCodedLinks from "findCodedLinks" /* 4557 */;
-import CodedLink from "CodedLink" /* 4562 */;
-import LinkUtils from "LinkUtils" /* 4728 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 4813 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7420 */;
-import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 9192 */;
-import Authorize from "Authorize" /* 9269 */;
-import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 12975 */;
-import QRLoginUtils from "QRLoginUtils" /* 13874 */;
-import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 13875 */;
+import _modDef4301 from "module_4301" /* 4301 */;
+import findCodedLinks from "findCodedLinks" /* 4588 */;
+import CodedLink from "CodedLink" /* 4593 */;
+import LinkUtils from "LinkUtils" /* 4759 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4844 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7458 */;
+import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 9229 */;
+import Authorize from "Authorize" /* 9306 */;
+import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 13015 */;
+import QRLoginUtils from "QRLoginUtils" /* 13923 */;
+import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 13924 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -45,8 +45,8 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, GuildSettingsSections: hasOwnProperty, GuildSettingsSubsections: metroRequire, LinkingTypes: closure_7 } = Constants);
 const CollectiblesShopConstants = fn(1076);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const UPDATE_CONFIG = fn(4555).UPDATE_CONFIG;
-const PaymentConstants = fn(4556);
+const UPDATE_CONFIG = fn(4586).UPDATE_CONFIG;
+const PaymentConstants = fn(4587);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_11, MobileWebRedirectCheckoutDeepLinkQueryKeys: closure_12 } = PaymentConstants);
 const re13 = /feature\/([\w-]+)/;
 const re14 = /feature\/boost\/([0-9]+)/;
@@ -73,7 +73,7 @@ export default function parseURL(ctaLink) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = _modDef4270;
+  let obj = _modDef4301;
   const sanitizeUrlResult = obj.sanitizeUrl(ctaLink);
   if (null == sanitizeUrlResult) {
     obj = { payload: null };

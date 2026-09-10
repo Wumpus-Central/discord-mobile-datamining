@@ -1,23 +1,23 @@
-// === Module 11035: SocialLayerStorefrontGiftPurchaseSection ===
+// === Module 11075: SocialLayerStorefrontGiftPurchaseSection ===
 
-// Module 11035 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 11075 (SocialLayerStorefrontGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10829 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10867 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(7438).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7476).useNativeCheckoutStore;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const GiftingOrigin = fn(1373).GiftingOrigin;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_12 = createStyles.createStyles((arg0) => {
   let obj = { container: null, legalCopy: null };
   obj = { paddingBottom: nativeDefault.space.PX_12 + arg0, paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

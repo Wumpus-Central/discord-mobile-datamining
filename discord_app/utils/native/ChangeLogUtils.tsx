@@ -1,13 +1,13 @@
-// === Module 8110: utils/ChangeLogUtils ===
+// === Module 8148: utils/ChangeLogUtils ===
 
-// Module 8110 (utils/ChangeLogUtils)
+// Module 8148 (utils/ChangeLogUtils)
 import nativeDefault from "native" /* 576 */;
-import _modDef4270 from "module_4270" /* 4270 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8111 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 8112 */;
+import _modDef4301 from "module_4301" /* 4301 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7032 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 8149 */;
 import noop from "module_19" /* 19 */;
-import CustomMarkup from "CustomMarkup" /* 5009 */;
+import CustomMarkup from "CustomMarkup" /* 5045 */;
 
 require = fn;
 function ChangeLogLink(arg0) {
@@ -100,9 +100,9 @@ function ChangeLogStrong(arg0) {
 function ChangeLogImage(arg0) {
   ({ node, state } = arg0);
   let obj = { style: closure_6().image, source: null };
-  obj = { uri: _modDef4270.sanitizeUrl(node.target) };
+  obj = { uri: _modDef4301.sanitizeUrl(node.target) };
   obj.source = obj;
-  return <React4 key={state.key} uri={_modDef4270.sanitizeUrl(node.target)} />;
+  return <React4 key={state.key} uri={_modDef4301.sanitizeUrl(node.target)} />;
 }
 function ChangeLogBlockQuote(state) {
   state = state.state;
@@ -116,14 +116,14 @@ function ChangeLogBlockQuote(state) {
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { link: null, list: null, image: null, container: null, text: null };
 createStyles = { color: nativeDefault.colors.TEXT_LINK };
 createStyles.link = createStyles;
 createStyles.list = { marginBottom: 10 };
 createStyles.image = { alignSelf: "center", flex: 1 };
-createStyles.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5455).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj1 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5455).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+createStyles.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5491).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj1 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5491).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 createStyles.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(createStyles);
 const rules = CustomMarkup.createRules({});

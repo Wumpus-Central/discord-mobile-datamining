@@ -1,16 +1,16 @@
-// === Module 14646: UserProfileEditFormControls ===
+// === Module 14695: UserProfileEditFormControls ===
 
-// Module 14646 (UserProfileEditFormControls)
+// Module 14695 (UserProfileEditFormControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Pressables from "Pressables" /* 5137 */;
-import TableRowArrow from "TableRowArrow" /* 5626 */;
-import Input from "Input" /* 6621 */;
-import FormSwitch from "FormSwitch" /* 7215 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8695 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Pressables from "Pressables" /* 5173 */;
+import TableRowArrow from "TableRowArrow" /* 5662 */;
+import Input from "Input" /* 6657 */;
+import FormSwitch from "FormSwitch" /* 7253 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8732 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { button: null, buttonDisabled: null, buttonTextContainer: null, formControlText: null, labelTrailing: null, newBadge: null };
 createStyles = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md };
 createStyles.button = createStyles;
@@ -154,7 +154,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
     closure_2(value);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(5137).PressableHighlight;
+    let PressableHighlight = tmp2(5173).PressableHighlight;
   } else {
     PressableHighlight = React4;
   }

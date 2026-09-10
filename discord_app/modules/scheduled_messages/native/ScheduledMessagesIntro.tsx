@@ -1,16 +1,16 @@
-// === Module 12249: ScheduledMessagesIntro ===
+// === Module 12289: ScheduledMessagesIntro ===
 
-// Module 12249 (ScheduledMessagesIntro)
+// Module 12289 (ScheduledMessagesIntro)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import AttachmentIcon from "AttachmentIcon" /* 10144 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10983 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12239 */;
-import _modDef12250 from "module_12250" /* 12250 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import AttachmentIcon from "AttachmentIcon" /* 10182 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 11023 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12279 */;
+import _modDef12290 from "module_12290" /* 12290 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4574 */;
+import createStyles from "createStyles" /* 4605 */;
 import size from "module_2" /* 2 */;
 
 function MenuRow(arg0) {
@@ -59,7 +59,7 @@ export default function ScheduledMessagesIntro() {
   const tmp = closure_8();
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: _modDef12250, style: tmp.upsellImage };
+  obj = { source: _modDef12290, style: tmp.upsellImage };
   const items = [timestampProducer(React3, obj), , ];
   const obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };

@@ -1,15 +1,15 @@
-// === Module 10211: MessageFailedToSendNotification ===
+// === Module 10249: MessageFailedToSendNotification ===
 
-// Module 10211 (MessageFailedToSendNotification)
+// Module 10249 (MessageFailedToSendNotification)
 import nativeDefault from "native" /* 576 */;
-import Client from "Client" /* 4505 */;
-import transitionToChannel from "transitionToChannel" /* 4585 */;
+import Client from "Client" /* 4536 */;
+import transitionToChannel from "transitionToChannel" /* 4616 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { iconContainer: null };
 let size = { width: 40, height: 40, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, display: "flex", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md };
 obj.iconContainer = size;
@@ -33,14 +33,14 @@ export default noop.memo(function MessageFailedToSendNotification(notification) 
   obj = { icon: null, children: null, header: null, onPress: null, notification: null };
   obj = { style: closure_6().iconContainer, children: null };
   const tmp = closure_6();
-  obj.children = jsx(channelId(10212).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
+  obj.children = jsx(channelId(10250).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
   obj.icon = <View style={closure_6().iconContainer}>{null}</View>;
   const obj2 = { text: null };
   const intl2 = channelId(1114).intl;
   obj2.text = intl2.string(channelId(1114).t.xxRPOT);
-  obj.children = jsx(channelId(10139).SystemMessageText, { text: null });
+  obj.children = jsx(channelId(10177).SystemMessageText, { text: null });
   obj.header = obj;
   obj.onPress = callback;
   obj.notification = notification;
-  return jsx(channelId(10202).NotificationPressable, { style: closure_6().iconContainer, children: null });
+  return jsx(channelId(10240).NotificationPressable, { style: closure_6().iconContainer, children: null });
 });

@@ -1,11 +1,11 @@
-// === Module 16758: SearchTabsTransitionGroup ===
+// === Module 16815: SearchTabsTransitionGroup ===
 
-// Module 16758 (SearchTabsTransitionGroup)
-import native from "native" /* 4284 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import spring from "spring" /* 4988 */;
-import springPresets from "springPresets" /* 4992 */;
-import Tabs from "Tabs" /* 12644 */;
+// Module 16815 (SearchTabsTransitionGroup)
+import native from "native" /* 4315 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import spring from "spring" /* 5024 */;
+import springPresets from "springPresets" /* 5028 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 12684 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -72,11 +72,11 @@ function AnimatedTabs(state) {
     if (!state) {
       if (toLocaleString > 1000) {
         const _HermesInternal = HermesInternal;
-        let combined = "(" + Tabs.defaultCountFormatter(1000) + "+)";
+        let combined = "(" + Tabs_Tabs.defaultCountFormatter(1000) + "+)";
       }
       return combined;
     }
-    combined = "(" + Tabs.defaultCountFormatter(toLocaleString) + ")";
+    combined = "(" + Tabs_Tabs.defaultCountFormatter(toLocaleString) + ")";
   }, items1);
   context = sharedValue.useContext(tmp(tmp2[8]).SwipeForMemberListContext);
   const fn2 = function h() {

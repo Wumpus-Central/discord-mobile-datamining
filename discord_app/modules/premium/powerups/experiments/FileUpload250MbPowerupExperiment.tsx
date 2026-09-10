@@ -1,7 +1,7 @@
-// === Module 4501: FileUpload250MbPowerupExperiment ===
+// === Module 4532: FileUpload250MbPowerupExperiment ===
 
-// Module 4501 (FileUpload250MbPowerupExperiment)
-import createExperiment from "module_4488" /* 4488 */;
+// Module 4532 (FileUpload250MbPowerupExperiment)
+import createExperiment from "module_4519" /* 4519 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-03_file_upload_250_mb_powerup", label: "File Upload 250MB Powerup", defaultConfig: { enabled: false, rollbackEnabled: false }, treatments: null };

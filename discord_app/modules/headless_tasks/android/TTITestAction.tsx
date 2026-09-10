@@ -1,13 +1,13 @@
-// === Module 17966: TTITestAction ===
+// === Module 18021: TTITestAction ===
 
-// Module 17966 (TTITestAction)
+// Module 18021 (TTITestAction)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1359 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4438 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 17445 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4469 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 17504 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ExperimentStore from "ExperimentStore" /* 4490 */;
+import ExperimentStore from "ExperimentStore" /* 4521 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -593,13 +593,13 @@ let closure_19 = async function _apiLogin(arg0) {
         const items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
         function _loop(iter) {
           obj = password(573);
-          const f126075 = () => {
+          const f126346 = () => {
             const error = new Error("Unable to login " + login + ". Login failed with action '" + obj + "'");
             iter(error);
           };
           function handler(arg0) {
             obj.unsubscribe(closure_1, handler);
-            return f126075(arg0);
+            return f126346(arg0);
           }
           const subscription = obj.subscribe(iter, handler);
         }
@@ -609,7 +609,7 @@ let closure_19 = async function _apiLogin(arg0) {
           continue;
         }
         closure_1_20(password(573), "LOGIN_SUCCESS", (token) => closure_0(token.token));
-        password(6607);
+        password(6643);
         obj = { login, password };
         obj.login(obj);
       });
@@ -629,12 +629,12 @@ function subscribeOnce(subscribe, arg1, arg2) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f126075(arg0);
+    return f126346(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
-const applicationReady = fn(17262).applicationReady;
-fn(5572).addPostConnectionCallback;
+const applicationReady = fn(17321).applicationReady;
+fn(5608).addPostConnectionCallback;
 const logger = new LoggerDefault("TTITestAction");
 let obj = {
   "setup-test": setupTTITest,
@@ -643,7 +643,7 @@ let obj = {
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = closure_0(10226);
+    obj = closure_0(10264);
     const result = obj.resetComponentProfiler();
     obj = { type: "response", status: "success", message: "reset-component-profiler" };
     const merged = Object.assign(undefined);
@@ -651,7 +651,7 @@ let obj = {
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = closure_0(10226);
+    obj = closure_0(10264);
     const result = obj.pauseComponentProfiler();
     obj = { type: "response", status: "success", message: "pause-component-profiler" };
     const merged = Object.assign(undefined);
@@ -659,7 +659,7 @@ let obj = {
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = closure_0(10226);
+    obj = closure_0(10264);
     const result = obj.resumeComponentProfiler();
     obj = { type: "response", status: "success", message: "resume-component-profiler" };
     const merged = Object.assign(undefined);
@@ -667,11 +667,11 @@ let obj = {
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = { stats: closure_0(10226).dumpStats() };
+    obj = { stats: closure_0(10264).dumpStats() };
     obj = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    const obj2 = closure_0(10226);
+    const obj2 = closure_0(10264);
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
@@ -768,7 +768,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           const obj1 = { ClientInfoUtils: null, ComponentProfiler: null, Dispatcher: null, ExperimentStore: null, NativeJankStats: null, ProcessUtils: null, AnalyticsUtils: null, TTITestAction: null };
           const obj2 = { getConstants: closure_0(1364).getConstants };
           obj1.ClientInfoUtils = obj2;
-          const obj3 = { resetComponentProfiler: closure_0(10226).resetComponentProfiler, resumeComponentProfiler: closure_0(10226).resumeComponentProfiler, pauseComponentProfiler: closure_0(10226).pauseComponentProfiler, dumpStats: closure_0(10226).dumpStats };
+          const obj3 = { resetComponentProfiler: closure_0(10264).resetComponentProfiler, resumeComponentProfiler: closure_0(10264).resumeComponentProfiler, pauseComponentProfiler: closure_0(10264).pauseComponentProfiler, dumpStats: closure_0(10264).dumpStats };
           obj1.ComponentProfiler = obj3;
           obj1.Dispatcher = DispatcherDefault;
           obj1.ExperimentStore = ExperimentStore;

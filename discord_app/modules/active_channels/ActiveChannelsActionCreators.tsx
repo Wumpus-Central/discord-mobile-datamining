@@ -1,6 +1,6 @@
-// === Module 16094: ActiveChannelsActionCreators ===
+// === Module 16143: ActiveChannelsActionCreators ===
 
-// Module 16094 (ActiveChannelsActionCreators)
+// Module 16143 (ActiveChannelsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

@@ -1,7 +1,7 @@
-// === Module 5029: PerceptualVolumeUtils ===
+// === Module 5065: PerceptualVolumeUtils ===
 
-// Module 5029 (PerceptualVolumeUtils)
-import perceptual_volume_PerceptualVolumeUtils from "perceptual_volume/PerceptualVolumeUtils" /* 5030 */;
+// Module 5065 (PerceptualVolumeUtils)
+import perceptual_volume_PerceptualVolumeUtils from "perceptual_volume/PerceptualVolumeUtils" /* 5066 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/PerceptualVolumeUtils.tsx");

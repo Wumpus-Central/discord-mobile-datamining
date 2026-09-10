@@ -1,9 +1,9 @@
-// === Module 6463: ShareNitroSpotIllustration ===
+// === Module 6499: ShareNitroSpotIllustration ===
 
-// Module 6463 (ShareNitroSpotIllustration)
+// Module 6499 (ShareNitroSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6464 from "module_6464" /* 6464 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6500 from "module_6500" /* 6500 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ShareNitroSpotIllustration = function ShareNitroSpotIllustration(wi
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6464 };
+  obj = { uri: _modDef6500 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ShareNitroSpotIllustration = function ShareNitroSpotIllustration(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6464 });
+  return jsx(FastImageDefault, { uri: _modDef6500 });
 };

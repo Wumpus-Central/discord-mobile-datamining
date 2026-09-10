@@ -1,6 +1,6 @@
-// === Module 5882: ? ===
+// === Module 5918: ? ===
 
-// Module 5882
+// Module 5918
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CompassIllocon-2x.png.js");

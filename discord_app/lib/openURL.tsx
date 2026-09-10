@@ -1,6 +1,6 @@
-// === Module 4262: openURL ===
+// === Module 4293: openURL ===
 
-// Module 4262 (openURL)
+// Module 4293 (openURL)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

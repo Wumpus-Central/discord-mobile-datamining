@@ -1,8 +1,8 @@
-// === Module 9120: useChannelVideoLimit ===
+// === Module 9157: useChannelVideoLimit ===
 
-// Module 9120 (useChannelVideoLimit)
+// Module 9157 (useChannelVideoLimit)
 import GuildStore from "GuildStore" /* 1979 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4598 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4629 */;
 
 const require = fn;
 const ChannelTypes = fn(1074).ChannelTypes;

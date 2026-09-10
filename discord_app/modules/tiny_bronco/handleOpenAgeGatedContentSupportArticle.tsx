@@ -1,9 +1,9 @@
-// === Module 14783: handleOpenAgeGatedContentSupportArticle ===
+// === Module 14832: handleOpenAgeGatedContentSupportArticle ===
 
-// Module 14783 (handleOpenAgeGatedContentSupportArticle)
+// Module 14832 (handleOpenAgeGatedContentSupportArticle)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
-import TinyBroncoConstants from "TinyBroncoConstants" /* 14712 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8476 */;
+import TinyBroncoConstants from "TinyBroncoConstants" /* 14761 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = TinyBroncoConstants.TINY_BRONCO_SUPPORT_ARTICLE_ID;

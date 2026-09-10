@@ -1,12 +1,12 @@
-// === Module 13001: MediaModalOverlayFooter ===
+// === Module 13041: MediaModalOverlayFooter ===
 
-// Module 13001 (MediaModalOverlayFooter)
+// Module 13041 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11568 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11608 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,11 +14,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { drawerContainer: { overflow: "hidden", backgroundColor: "WireType" }, drawerHeaderTab: null, drawerHeader: null, messagePreviewContainer: null, thumbnailsContainer: null };
 createStyles = { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 };
 createStyles.drawerHeaderTab = createStyles;
-createStyles.drawerHeader = { backgroundColor: "disabled" };
+createStyles.drawerHeader = { backgroundColor: "Array" };
 createStyles.messagePreviewContainer = { marginLeft: 6 };
 createStyles.thumbnailsContainer = { paddingTop: 8 };
 let closure_8 = createStyles.createStyles(createStyles);

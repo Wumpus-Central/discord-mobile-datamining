@@ -1,8 +1,8 @@
-// === Module 17136: useCanInviteMembers ===
+// === Module 17195: useCanInviteMembers ===
 
-// Module 17136 (useCanInviteMembers)
+// Module 17195 (useCanInviteMembers)
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = fn;
 const Permissions = fn(1085).Permissions;

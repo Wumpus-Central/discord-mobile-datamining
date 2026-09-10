@@ -1,6 +1,6 @@
-// === Module 7310: ObscureMediaModels ===
+// === Module 7348: ObscureMediaModels ===
 
-// Module 7310 (ObscureMediaModels)
+// Module 7348 (ObscureMediaModels)
 import size from "module_2" /* 2 */;
 
 const obj = { SPOILER: "spoiler", EXPLICIT_CONTENT: "explicit_content", POTENTIAL_EXPLICIT_CONTENT: "potential_explicit_content", GORE_CONTENT: "gore_content", SELF_HARM_CONTENT: "self_harm_content" };

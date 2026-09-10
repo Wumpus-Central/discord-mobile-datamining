@@ -1,6 +1,6 @@
-// === Module 7353: ErrorHandlingUtils ===
+// === Module 7391: ErrorHandlingUtils ===
 
-// Module 7353 (ErrorHandlingUtils)
+// Module 7391 (ErrorHandlingUtils)
 import Constants from "Constants" /* 1074 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import size from "module_2" /* 2 */;

@@ -1,14 +1,14 @@
-// === Module 17824: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
+// === Module 17883: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
 
-// Module 17824 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 17883 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import PriceUtils from "PriceUtils" /* 7248 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9082 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15263 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4323 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import PriceUtils from "PriceUtils" /* 7286 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9119 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15312 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ function PriceOptionRow(selected) {
   items[1] = containerSelected;
   obj = { style: tmp.rowStatusIcon, source: null };
   const tmp7 = TouchableHitBoxDefault;
-  obj.source = importDefault(selected ? 17728 : 16597);
+  obj.source = importDefault(selected ? 17787 : 16652);
   const items1 = [React7(FastImageDefault, obj), ];
   const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = util.intl;
@@ -49,7 +49,7 @@ const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1085).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, rowContainer: null, containerSelected: null, rowStatusIcon: null, confirmButton: null, backToTemplates: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md };
 createStyles.container = createStyles;

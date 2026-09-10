@@ -1,16 +1,16 @@
-// === Module 9723: FocusedControlsBottomControls ===
+// === Module 9761: FocusedControlsBottomControls ===
 
-// Module 9723 (FocusedControlsBottomControls)
+// Module 9761 (FocusedControlsBottomControls)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 9726 */;
-import CallPTTButton from "CallPTTButton" /* 9727 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 9764 */;
+import CallPTTButton from "CallPTTButton" /* 9765 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5538 */;
+import TextStyles from "TextStyles" /* 5574 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 const CallPTTButtonDefault = CallPTTButton;
@@ -60,9 +60,9 @@ function FocusedControlsExpanded(availableHeight) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_18();
-  let obj = positionY(9724);
+  let obj = positionY(9762);
   const canShowTooltip = obj.useCanShowTooltip(positionY(1093).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-  positionY(4310);
+  positionY(4341);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / c15, 1) };
   };
@@ -88,7 +88,7 @@ function FocusedControlsAboveActionBarView(positionY) {
   const aboveActionBar = positionY.aboveActionBar;
   ({ onPressHeader, isExpanded } = positionY);
   const tmp = closure_18();
-  positionY(4310);
+  positionY(4341);
   const fn = function _() {
     return { opacity: 2 - Math.max(Math.abs(positionY.get()) / (offsetY / 3 - c15), 0) };
   };
@@ -99,14 +99,14 @@ function FocusedControlsAboveActionBarView(positionY) {
   obj = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
   const obj1 = { style: tmp.aboveActionBarContainer, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items = [closure_13(FocusedControlsBottomDrawerTooltip, { positionY }), closure_13(positionY(7168).ActionSheetHeaderBar, {}), ];
+  const items = [closure_13(FocusedControlsBottomDrawerTooltip, { positionY }), closure_13(positionY(7206).ActionSheetHeaderBar, {}), ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
     obj2 = { style: null, children: null };
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj2.style = items1;
     obj2.children = aboveActionBar;
-    tmp4Result = closure_13(offsetY(4310).View, obj2);
+    tmp4Result = closure_13(offsetY(4341).View, obj2);
   }
   items[2] = tmp4Result;
   obj1.children = items;
@@ -637,9 +637,9 @@ class FocusedControlsBottomDrawer {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, TouchableWithoutFeedback: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const ChannelCallStore = fn(9499);
+const ChannelCallStore = fn(9537);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(9500);
+const ChannelCallConstants = fn(9538);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_12, Fonts } = Constants);
@@ -652,7 +652,7 @@ function EXTENDED_CONTROLS_OFFSET_Y(arg0) {
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {
 
 }
-fn(4574);
+fn(4605);
 let createStyles = { bottomDrawerContainer: null, visualEffectView: null, visualEffectViewBackground: null, expandedControlsContainer: null, aboveActionBarContainer: null, aboveActionBarChildrenContainer: null, ptbButton: null, tooltipStyle: null, containerStyle: null, labelStyle: null };
 const rect = { position: "absolute", left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
 createStyles.bottomDrawerContainer = rect;

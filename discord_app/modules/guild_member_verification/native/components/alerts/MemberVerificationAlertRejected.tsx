@@ -1,11 +1,11 @@
-// === Module 5558: MemberVerificationAlertRejected ===
+// === Module 5594: MemberVerificationAlertRejected ===
 
-// Module 5558 (MemberVerificationAlertRejected)
+// Module 5594 (MemberVerificationAlertRejected)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4396 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4427 */;
 
 const require = fn;
 const jsxProd = fn(21);
@@ -90,7 +90,7 @@ export default function MemberVerificationAlertRejected(guildId) {
             if (stateFromStores2 != null) {
               isPending = stateFromStores2.isPending;
             }
-            let obj3 = v1(5555);
+            let obj3 = v1(5591);
             if (isPending) {
               v1 = 2;
               dependencyMap = 1;
@@ -124,7 +124,7 @@ export default function MemberVerificationAlertRejected(guildId) {
           if (closure_128_1 != null) {
             tmp6();
           }
-          obj1 = guildId(5583);
+          obj1 = guildId(5619);
           const result = obj1.openMemberVerificationModal(closure_128_0);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
@@ -185,7 +185,7 @@ export default function MemberVerificationAlertRejected(guildId) {
             if (stateFromStores2 != null) {
               isPending = stateFromStores2.isPending;
             }
-            let obj3 = v1(5555);
+            let obj3 = v1(5591);
             if (isPending) {
               v1 = 2;
               dependencyMap = 1;
@@ -219,7 +219,7 @@ export default function MemberVerificationAlertRejected(guildId) {
           if (closure_128_1 != null) {
             tmp6();
           }
-          obj1 = guildId(5583);
+          obj1 = guildId(5619);
           const result = obj1.openMemberVerificationModal(closure_128_0);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };

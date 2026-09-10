@@ -1,9 +1,9 @@
-// === Module 11707: retrySendMessage ===
+// === Module 11747: retrySendMessage ===
 
-// Module 11707 (retrySendMessage)
-import MessageConstants from "MessageConstants" /* 4567 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
-import handleUploadAttachmentErrors from "handleUploadAttachmentErrors" /* 9341 */;
+// Module 11747 (retrySendMessage)
+import MessageConstants from "MessageConstants" /* 4598 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7508 */;
+import handleUploadAttachmentErrors from "handleUploadAttachmentErrors" /* 9379 */;
 import size from "module_2" /* 2 */;
 
 const MessageSendLocation = MessageConstants.MessageSendLocation;

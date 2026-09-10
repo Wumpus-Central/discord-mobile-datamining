@@ -1,10 +1,10 @@
-// === Module 7415: GuildBoostingMarketingPersistentCta ===
+// === Module 7453: GuildBoostingMarketingPersistentCta ===
 
-// Module 7415 (GuildBoostingMarketingPersistentCta)
+// Module 7453 (GuildBoostingMarketingPersistentCta)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 4988 */;
+import spring from "spring" /* 5024 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 require = fn;
 const View = fn(17).View;
@@ -12,7 +12,7 @@ const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const SPRING_CONFIG = { stiffness: 70, damping: 10 };
-fn(4574);
+fn(4605);
 let createStyles = { wrapper: { display: "flex", alignItems: "center", position: "absolute", width: "100%", zIndex: 1, bottom: -76 }, innerWraper: null, guildInfoContainer: null, guildIcon: null, guildIconText: null, guildName: null, buttonContainer: null, button: null, border: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, display: "flex", flexDirection: "row", alignItems: "center", position: "relative", height: 76, width: 343, borderRadius: 76, paddingLeft: 13, paddingVertical: 13, paddingRight: 27 };
 createStyles.innerWraper = size;
@@ -37,7 +37,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   let obj = isVisible(563);
   let items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = isVisible(4310);
+  let obj1 = isVisible(4341);
   const fn = function _() {
     let num = -120;
     if (!stateFromStores) {
@@ -58,7 +58,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
     obj.opacity = spring.withSpring(num3, closure_8);
     return obj;
   };
-  obj = { useReducedMotion: stateFromStores, VISIBILITY_OFFSET: 120, withSpring: isVisible(4988).withSpring, isVisible, SPRING_CONFIG };
+  obj = { useReducedMotion: stateFromStores, VISIBILITY_OFFSET: 120, withSpring: isVisible(5024).withSpring, isVisible, SPRING_CONFIG };
   fn.__closure = obj;
   fn.__workletHash = 14370895185277;
   fn.__initData = __initData;
@@ -74,16 +74,16 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const obj2 = { style: tmp.innerWraper, children: null };
   const obj3 = { style: tmp.guildInfoContainer, children: null };
   const obj4 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
-  const tmp4 = stateFromStores(5001);
-  obj4.size = isVisible(5598).GuildIconSizes.LARGE;
-  const items3 = [closure_6(stateFromStores(5598), obj4), closure_6(isVisible(4570).Text, { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name })];
+  const tmp4 = stateFromStores(5037);
+  obj4.size = isVisible(5634).GuildIconSizes.LARGE;
+  const items3 = [closure_6(stateFromStores(5634), obj4), closure_6(isVisible(4601).Text, { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name })];
   obj3.children = items3;
   const items4 = [closure_7(View, obj3), ];
-  const obj6 = { style: tmp.buttonContainer, children: closure_6(stateFromStores(7416), { guild, previousGuildSubscriptionSlot, useShortenedCTA: true, styles: tmp.button, analyticsSection: AnalyticsSections.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR, fractionalPremiumState, premiumGroupRole }) };
+  const obj6 = { style: tmp.buttonContainer, children: closure_6(stateFromStores(7454), { guild, previousGuildSubscriptionSlot, useShortenedCTA: true, styles: tmp.button, analyticsSection: AnalyticsSections.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR, fractionalPremiumState, premiumGroupRole }) };
   items4[1] = closure_6(View, obj6);
   obj2.children = items4;
   obj1.children = closure_7(View, obj2);
   obj.children = closure_6(tmp4, obj1);
-  return closure_6(stateFromStores(4310).View, obj);
+  return closure_6(stateFromStores(4341).View, obj);
 };
 export const VISIBILITY_OFFSET = 120;

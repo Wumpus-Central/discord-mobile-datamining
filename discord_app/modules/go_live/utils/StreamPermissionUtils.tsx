@@ -1,13 +1,13 @@
-// === Module 7740: StreamPermissionUtils ===
+// === Module 7777: StreamPermissionUtils ===
 
-// Module 7740 (StreamPermissionUtils)
-import ChannelUtils from "ChannelUtils" /* 4719 */;
-import AgeGateUtils from "AgeGateUtils" /* 4785 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5430 */;
-import GameConsoleStore from "GameConsoleStore" /* 4591 */;
+// Module 7777 (StreamPermissionUtils)
+import ChannelUtils from "ChannelUtils" /* 4750 */;
+import AgeGateUtils from "AgeGateUtils" /* 4816 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5466 */;
+import GameConsoleStore from "GameConsoleStore" /* 4622 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import VoiceStateStore from "VoiceStateStore" /* 4624 */;
 
 require = fn;
 function canStreamInChannel(channel, GuildStore, PermissionStore, arg3) {

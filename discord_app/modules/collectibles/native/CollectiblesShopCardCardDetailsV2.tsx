@@ -1,20 +1,20 @@
-// === Module 8879: CollectiblesShopCardCardDetailsV2 ===
+// === Module 8916: CollectiblesShopCardCardDetailsV2 ===
 
-// Module 8879 (CollectiblesShopCardCardDetailsV2)
+// Module 8916 (CollectiblesShopCardCardDetailsV2)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
-import useToken from "useToken" /* 4275 */;
-import ColorUtils from "ColorUtils" /* 4423 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import LinearGradientDefault from "LinearGradient" /* 5001 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7567 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
-import useCurrentUser from "useCurrentUser" /* 8204 */;
-import getProductName from "getProductName" /* 8896 */;
-import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 8897 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
+import useToken from "useToken" /* 4306 */;
+import ColorUtils from "ColorUtils" /* 4454 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import LinearGradientDefault from "LinearGradient" /* 5037 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7605 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7606 */;
+import useCurrentUser from "useCurrentUser" /* 8241 */;
+import getProductName from "getProductName" /* 8933 */;
+import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 8934 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7251 */;
+import IAPStore from "IAPStore" /* 7289 */;
 
 require = fn;
 const View = fn(17).View;
@@ -22,7 +22,7 @@ const Constants = fn(1074);
 ({ CurrencyCodes: metroRequire, VerticalGradient: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { regularMetadataContainer: null, assetName: null, priceVariantsContainer: null, priceDescription: null, text: null, discountPercentage: null, wheelIcon: null, androidTextPadding: null };
 let size = { position: "absolute", height: "45%", width: "100%", padding: 10, flex: 1, bottom: 0, overflow: "hidden", borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, display: "flex", flexDirection: "column", justifyContent: "flex-end" };
 obj.regularMetadataContainer = size;

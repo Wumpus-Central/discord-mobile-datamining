@@ -1,11 +1,11 @@
-// === Module 4483: useGuildPowerupsBoostCount ===
+// === Module 4514: useGuildPowerupsBoostCount ===
 
-// Module 4483 (useGuildPowerupsBoostCount)
-import GameServerExperiment from "GameServerExperiment" /* 4487 */;
+// Module 4514 (useGuildPowerupsBoostCount)
+import GameServerExperiment from "GameServerExperiment" /* 4518 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 4484 */;
+import GameServerStore from "GameServerStore" /* 4515 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4463 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4494 */;
 
 require = fn;
 const size = fn(2);

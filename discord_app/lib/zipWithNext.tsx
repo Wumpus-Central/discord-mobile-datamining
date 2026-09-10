@@ -1,6 +1,6 @@
-// === Module 13830: zipWithNext ===
+// === Module 13879: zipWithNext ===
 
-// Module 13830 (zipWithNext)
+// Module 13879 (zipWithNext)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/zipWithNext.tsx");

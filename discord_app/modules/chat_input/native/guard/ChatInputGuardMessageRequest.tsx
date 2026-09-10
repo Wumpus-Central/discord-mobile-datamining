@@ -1,7 +1,7 @@
-// === Module 12469: ChatInputGuardMessageRequest ===
+// === Module 12509: ChatInputGuardMessageRequest ===
 
-// Module 12469 (ChatInputGuardMessageRequest)
-import ChatInputGuardDefault from "ChatInputGuard" /* 12478 */;
+// Module 12509 (ChatInputGuardMessageRequest)
+import ChatInputGuardDefault from "ChatInputGuard" /* 12518 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -116,8 +116,8 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
   };
   let obj = channel(1483);
   importDefault = obj.useNavigation();
-  const isMessageRequestRestrictedViewer = channel(12470).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
-  let obj2 = channel(12470);
+  const isMessageRequestRestrictedViewer = channel(12510).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
+  let obj2 = channel(12510);
   const items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   const obj3 = channel(504);
@@ -135,7 +135,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
       closure_1.pop();
     }
   };
-  const messageRequestActions = channel(12472).useMessageRequestActions(obj);
+  const messageRequestActions = channel(12512).useMessageRequestActions(obj);
   ({ acceptMessageRequest: c2, rejectMessageRequest: c3, isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected } = messageRequestActions);
   let tmp6 = isAcceptLoading;
   if (!isAcceptLoading) {
@@ -151,7 +151,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     tmp6 = isOptimisticRejected;
   }
   obj = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  const obj4 = channel(12472);
+  const obj4 = channel(12512);
   const tmp7 = closure_5;
   let intl = tmp(1114).intl;
   obj.message = intl.string(channel(1114).t["e/eQVB"]);

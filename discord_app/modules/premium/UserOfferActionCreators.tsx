@@ -1,13 +1,13 @@
-// === Module 8077: UserOfferActionCreators ===
+// === Module 8115: UserOfferActionCreators ===
 
-// Module 8077 (UserOfferActionCreators)
+// Module 8115 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8078 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7468 */;
-import UserOfferStore from "UserOfferStore" /* 7464 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8116 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7506 */;
+import UserOfferStore from "UserOfferStore" /* 7502 */;
 
 require = fn;
 function getPaymentGateway() {
@@ -61,7 +61,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_1 = flag;
           let obj1 = closure_2;
           if (closure_2 === undefined) {
-            obj1 = { offerId: "Array", paymentGatewayOverride: "PX_16" };
+            obj1 = { offerId: "call", paymentGatewayOverride: "accessibilityLabel" };
           }
           closure_136_2 = obj1;
           closure_136_3 = closure_3;

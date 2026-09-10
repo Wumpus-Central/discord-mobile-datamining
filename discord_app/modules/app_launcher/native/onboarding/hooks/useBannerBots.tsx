@@ -1,9 +1,9 @@
-// === Module 12096: useBannerBots ===
+// === Module 12136: useBannerBots ===
 
-// Module 12096 (useBannerBots)
+// Module 12136 (useBannerBots)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12075 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12115 */;
 
 const require = fn;
 const size = fn(2);
@@ -13,7 +13,7 @@ export const useBannerBots = function useBannerBots(context) {
   context = context.context;
   let first1;
   let obj = (function useAppsMap(context) {
-    const apps = first1(12097).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+    const apps = first1(12137).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
     const items = [apps];
     return React.useMemo(() => {
       const map = new Map();
@@ -24,11 +24,11 @@ export const useBannerBots = function useBannerBots(context) {
       return map;
     }, items);
   })({ context });
-  let apps = first1(12097).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
-  const obj2 = first1(12097);
+  let apps = first1(12137).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+  const obj2 = first1(12137);
   const tmp2 = first1;
   const obj3 = (function useCommandsMap(context) {
-    const commands = first1(12097).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
+    const commands = first1(12137).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
     const items = [commands];
     return React.useMemo(() => {
       const map = new Map();
@@ -54,15 +54,15 @@ export const useBannerBots = function useBannerBots(context) {
         return guild.getGuild(guild_id);
       })
     };
-    return context(9331).useTopCommands(obj);
+    return context(9368).useTopCommands(obj);
   })({ context });
   let channel = context.channel;
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const activityApplications = first1(12068).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-  const obj4 = first1(12068);
+  const activityApplications = first1(12108).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+  const obj4 = first1(12108);
   let items = [AppLauncherOnboardingStore];
   const stateFromStores = tmp2(504).useStateFromStores(items, () => recentApplicationCommandMetadata.getRecentApplicationCommandMetadata());
   value = null;

@@ -1,6 +1,6 @@
-// === Module 6234: ? ===
+// === Module 6270: ? ===
 
-// Module 6234
+// Module 6270
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/LavaIllocon-2x.png.js");

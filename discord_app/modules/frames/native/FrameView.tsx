@@ -1,13 +1,13 @@
-// === Module 16650: FrameView ===
+// === Module 16705: FrameView ===
 
-// Module 16650 (FrameView)
+// Module 16705 (FrameView)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9600 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16651 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9638 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16706 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9542 */;
+import FramesStore from "FramesStore" /* 9580 */;
 
 require = fn;
 function FrameViewInner(frame) {
@@ -84,7 +84,7 @@ function FrameViewInner(frame) {
   });
   return jsx(frame(setIsResetting[10]).BaseActivityView, { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null });
 }
-const FramesConstants = fn(9543);
+const FramesConstants = fn(9581);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
 const ActivityPlatform = fn(1920).ActivityPlatform;
 const jsx = fn(21).jsx;

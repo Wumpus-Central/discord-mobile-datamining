@@ -1,29 +1,29 @@
-// === Module 11308: QuestActionCreators ===
+// === Module 11348: QuestActionCreators ===
 
-// Module 11308 (QuestActionCreators)
+// Module 11348 (QuestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4767 */;
-import QuestTypes from "QuestTypes" /* 5461 */;
-import AdCreativeType from "AdCreativeType" /* 5465 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7475 */;
-import QuestDataUtils from "QuestDataUtils" /* 7713 */;
-import AnalyticsActions from "AnalyticsActions" /* 7732 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11224 */;
-import captureAdUserAction from "captureAdUserAction" /* 11225 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11229 */;
-import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 11312 */;
-import QuestDecisionRoundtripTrackerDefault from "QuestDecisionRoundtripTracker" /* 11313 */;
-import EarnedDecisionRoundtripTrackerDefault from "EarnedDecisionRoundtripTracker" /* 11333 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4798 */;
+import QuestTypes from "QuestTypes" /* 5497 */;
+import AdCreativeType from "AdCreativeType" /* 5501 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7513 */;
+import QuestDataUtils from "QuestDataUtils" /* 7750 */;
+import AnalyticsActions from "AnalyticsActions" /* 7769 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11264 */;
+import captureAdUserAction from "captureAdUserAction" /* 11265 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11269 */;
+import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 11352 */;
+import QuestDecisionRoundtripTrackerDefault from "QuestDecisionRoundtripTracker" /* 11353 */;
+import EarnedDecisionRoundtripTrackerDefault from "EarnedDecisionRoundtripTracker" /* 11373 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7714 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5453 */;
-import NetworkStore from "NetworkStore" /* 4623 */;
-import SortedGuildStore from "SortedGuildStore" /* 5452 */;
-import QuestStore from "QuestStore" /* 7717 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7719 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7751 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5489 */;
+import NetworkStore from "NetworkStore" /* 4654 */;
+import SortedGuildStore from "SortedGuildStore" /* 5488 */;
+import QuestStore from "QuestStore" /* 7754 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7756 */;
 
 require = fn;
 let closure_15 = async function _manuallyStartConsoleQuest(arg0) {
@@ -334,8 +334,8 @@ let closure_18 = async function _fetchCurrentQuests() {
         } else if (arg0 !== 2) {
           closure_129_1 = value;
           quests2 = closure_129_1.body.quests;
-          const found = quests2.filter((item) => closure_1_0(7724).isQuestWithKnownConfigVersion(item));
-          closure_129_3 = found.map((item) => closure_1_0(7724).questWithUserStatusFromServer(item));
+          const found = quests2.filter((item) => closure_1_0(7761).isQuestWithKnownConfigVersion(item));
+          closure_129_3 = found.map((item) => closure_1_0(7761).questWithUserStatusFromServer(item));
           closure_129_4 = closure_129_1.body.quest_enrollment_blocked_until;
           closure_129_5 = closure_129_1.body.quest_access_suspended_until;
           closure_129_6 = closure_129_3.filter((userStatus) => {
@@ -361,7 +361,7 @@ let closure_18 = async function _fetchCurrentQuests() {
           obj4.data = obj5;
           closure_130_1(closure_130_2[16]).addBreadcrumb(obj4);
           const excluded_quests = closure_129_1.body.excluded_quests;
-          closure_129_13 = excluded_quests.map((item) => closure_1_0(7724).excludedQuestFromServer(item));
+          closure_129_13 = excluded_quests.map((item) => closure_1_0(7761).excludedQuestFromServer(item));
           const obj9 = closure_130_1(closure_130_2[16]);
           const obj6 = { type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS", quests: closure_129_6, excludedQuests: closure_129_13, questEnrollmentBlockedUntil: closure_129_4, questAccessSuspendedUntil: closure_129_5 };
           closure_130_1(closure_130_2[11]).dispatch(obj6);
@@ -1580,7 +1580,7 @@ let closure_30 = async function _fetchEarnedQuestToDeliver(arg0) {
                 if (content != null) {
                   value = content.get(item);
                 }
-                return !closure_0(7713).earnedDecisionIsValid(value);
+                return !closure_0(7750).earnedDecisionIsValid(value);
               });
               closure_132_2 = found;
               if (0 !== found.length) {
@@ -1653,7 +1653,7 @@ let closure_30 = async function _fetchEarnedQuestToDeliver(arg0) {
                 if (obj.isQuestWithKnownConfigVersion(tmp)) {
                   tmp2 = tmp;
                 }
-                obj = closure_0(7724);
+                obj = closure_0(7761);
               }
               items[1] = tmp2;
               return items;
@@ -2399,9 +2399,9 @@ let closure_37 = async function _fetchQuestHomeHeroPreview(arg0) {
     }
   }
 };
-const getVisibleGuildIdsMethod = fn(11227).getVisibleGuildIdsMethod;
-const FetchStatus = fn(7719).FetchStatus;
-const ORBS_INTRO_QUEST_ID = fn(5458).ORBS_INTRO_QUEST_ID;
+const getVisibleGuildIdsMethod = fn(11267).getVisibleGuildIdsMethod;
+const FetchStatus = fn(7756).FetchStatus;
+const ORBS_INTRO_QUEST_ID = fn(5494).ORBS_INTRO_QUEST_ID;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, Endpoints: closure_14 } = Constants);
 const QuestEnrollmentResultType = { SUCCESS: "success", CAPTCHA_FAILED: "captcha_failed", UNKNOWN_ERROR: "unknown_error", PREVIOUS_IN_FLIGHT_REQUEST: "previous_in_flight_request" };

@@ -1,6 +1,6 @@
-// === Module 11694: usePollMessageContextItemTypes ===
+// === Module 11734: usePollMessageContextItemTypes ===
 
-// Module 11694 (usePollMessageContextItemTypes)
+// Module 11734 (usePollMessageContextItemTypes)
 import initialize from "initialize" /* 504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

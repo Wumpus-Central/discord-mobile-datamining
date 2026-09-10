@@ -1,9 +1,9 @@
-// === Module 5807: BeeIllocon ===
+// === Module 5843: BeeIllocon ===
 
-// Module 5807 (BeeIllocon)
+// Module 5843 (BeeIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5808 from "module_5808" /* 5808 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5844 from "module_5844" /* 5844 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const BeeIllocon = function BeeIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5808 };
+  obj = { uri: _modDef5844 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5808 });
+  return jsx(FastImageDefault, { uri: _modDef5844 });
 };

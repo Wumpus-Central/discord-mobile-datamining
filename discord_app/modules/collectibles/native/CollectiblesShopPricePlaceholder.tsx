@@ -1,16 +1,16 @@
-// === Module 8893: CollectiblesShopPricePlaceholder ===
+// === Module 8930: CollectiblesShopPricePlaceholder ===
 
-// Module 8893 (CollectiblesShopPricePlaceholder)
+// Module 8930 (CollectiblesShopPricePlaceholder)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { skeletonContainer: null };
 createStyles = { height: 16, flex: 1, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 createStyles.skeletonContainer = createStyles;
@@ -21,7 +21,7 @@ let result = size.fileFinishedImporting("modules/collectibles/native/Collectible
 
 export const CollectiblesShopPricePlaceholder = function CollectiblesShopPricePlaceholder(style) {
   let sharedValue;
-  let obj = sharedValue(4310);
+  let obj = sharedValue(4341);
   sharedValue = obj.useSharedValue(0.3);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
@@ -35,7 +35,7 @@ export const CollectiblesShopPricePlaceholder = function CollectiblesShopPricePl
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 10107093534072;
   fn.__initData = __initData;
-  const animatedStyle = sharedValue(4310).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4341).useAnimatedStyle(fn);
   obj = { style: null };
   const items1 = [tmp.skeletonContainer, style.style, animatedStyle];
   obj.style = items1;

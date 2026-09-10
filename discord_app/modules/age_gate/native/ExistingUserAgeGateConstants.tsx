@@ -1,6 +1,6 @@
-// === Module 17340: ExistingUserAgeGateConstants ===
+// === Module 17399: ExistingUserAgeGateConstants ===
 
-// Module 17340 (ExistingUserAgeGateConstants)
+// Module 17399 (ExistingUserAgeGateConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/age_gate/native/ExistingUserAgeGateConstants.tsx");

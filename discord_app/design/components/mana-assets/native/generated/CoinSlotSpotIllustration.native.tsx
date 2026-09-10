@@ -1,9 +1,9 @@
-// === Module 5879: CoinSlotSpotIllustration ===
+// === Module 5915: CoinSlotSpotIllustration ===
 
-// Module 5879 (CoinSlotSpotIllustration)
+// Module 5915 (CoinSlotSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5880 from "module_5880" /* 5880 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5916 from "module_5916" /* 5916 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const CoinSlotSpotIllustration = function CoinSlotSpotIllustration(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5880 };
+  obj = { uri: _modDef5916 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const CoinSlotSpotIllustration = function CoinSlotSpotIllustration(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5880 });
+  return jsx(FastImageDefault, { uri: _modDef5916 });
 };

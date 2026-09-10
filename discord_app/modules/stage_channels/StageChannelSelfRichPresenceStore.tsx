@@ -1,21 +1,21 @@
-// === Module 11491: StageChannelSelfRichPresenceStore ===
+// === Module 11531: StageChannelSelfRichPresenceStore ===
 
-// Module 11491 (StageChannelSelfRichPresenceStore)
+// Module 11531 (StageChannelSelfRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef1332 from "module_1332" /* 1332 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4217 */;
-import useChannelName from "useChannelName" /* 4727 */;
-import StageMediaHooks from "StageMediaHooks" /* 5431 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5439 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10924 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4248 */;
+import useChannelName from "useChannelName" /* 4758 */;
+import StageMediaHooks from "StageMediaHooks" /* 5467 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5475 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10962 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5432 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5468 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
 require = fn;
@@ -116,7 +116,7 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(5428).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(5464).STAGE_APPLICATION_ID;
 const Constants = fn(1074);
 ({ ActivityTypes: map1, GuildFeatures: closure_14, Permissions: closure_15, RTCConnectionStates: closure_16 } = Constants);
 let timestamps = null;

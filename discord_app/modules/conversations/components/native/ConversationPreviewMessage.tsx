@@ -1,12 +1,12 @@
-// === Module 7945: ConversationPreviewMessage ===
+// === Module 7983: ConversationPreviewMessage ===
 
-// Module 7945 (ConversationPreviewMessage)
+// Module 7983 (ConversationPreviewMessage)
 import nativeDefault from "native" /* 576 */;
-import DateUtils from "DateUtils" /* 4255 */;
-import RowGeneratorDefault from "RowGenerator" /* 7946 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8152 */;
+import DateUtils from "DateUtils" /* 4286 */;
+import RowGeneratorDefault from "RowGenerator" /* 7984 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8189 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
 require = fn;
@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let container = new RowGeneratorDefault();
 container.setOptions({ renderReplies: false, renderReactions: false });
-fn(4574);
+fn(4605);
 container = { container: null, header: null, authorRow: null, headerTimestamp: null };
 container = { gap: nativeDefault.space.PX_4 };
 container.container = container;

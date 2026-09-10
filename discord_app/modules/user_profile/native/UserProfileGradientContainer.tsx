@@ -1,8 +1,8 @@
-// === Module 11143: UserProfileGradientContainer ===
+// === Module 11183: UserProfileGradientContainer ===
 
-// Module 11143 (UserProfileGradientContainer)
-import LinearGradientDefault from "LinearGradient" /* 5001 */;
-import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8265 */;
+// Module 11183 (UserProfileGradientContainer)
+import LinearGradientDefault from "LinearGradient" /* 5037 */;
+import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8302 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,16 +1,16 @@
-// === Module 17062: ActivityInviteSheetList ===
+// === Module 17121: ActivityInviteSheetList ===
 
-// Module 17062 (ActivityInviteSheetList)
+// Module 17121 (ActivityInviteSheetList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import RootNavigationRef from "RootNavigationRef" /* 4432 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Pressables from "Pressables" /* 5137 */;
-import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 17063 */;
+import RootNavigationRef from "RootNavigationRef" /* 4463 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Pressables from "Pressables" /* 5173 */;
+import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 17122 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5538 */;
+import TextStyles from "TextStyles" /* 5574 */;
 
 require = fn;
 function keyExtractor(item) {
@@ -57,7 +57,7 @@ function FriendsEmptyComponent() {
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 createStyles = {};
 const merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));

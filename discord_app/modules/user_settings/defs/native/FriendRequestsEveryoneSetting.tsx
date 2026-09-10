@@ -1,22 +1,22 @@
-// === Module 15005: FriendRequestsEveryoneSetting ===
+// === Module 15054: FriendRequestsEveryoneSetting ===
 
-// Module 15005 (FriendRequestsEveryoneSetting)
+// Module 15054 (FriendRequestsEveryoneSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7009 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14853 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7047 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14902 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: closure_4 } = Constants);
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(7989).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8027).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsEveryoneSettingValue() {
     const FriendSourceFlagsSetting = setting(1935).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();

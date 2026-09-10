@@ -1,21 +1,21 @@
-// === Module 15496: VideoUploadQualitySetting ===
+// === Module 15545: VideoUploadQualitySetting ===
 
-// Module 15496 (VideoUploadQualitySetting)
+// Module 15545 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsText from "UserSettingsText" /* 15495 */;
+import UserSettingsText from "UserSettingsText" /* 15544 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
 require = fn;
 const VideoQualitySettings = fn(1185).VideoQualitySettings;
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.PXq9f1);
   },
-  parent: fn(7989).MobileUserSettings.CHAT,
+  parent: fn(8027).MobileUserSettings.CHAT,
   useValue: function useVideoUploadQualitySettingValue() {
     const items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);

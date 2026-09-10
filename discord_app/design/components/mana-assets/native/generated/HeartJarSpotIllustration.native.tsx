@@ -1,9 +1,9 @@
-// === Module 6211: HeartJarSpotIllustration ===
+// === Module 6247: HeartJarSpotIllustration ===
 
-// Module 6211 (HeartJarSpotIllustration)
+// Module 6247 (HeartJarSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6212 from "module_6212" /* 6212 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6248 from "module_6248" /* 6248 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const HeartJarSpotIllustration = function HeartJarSpotIllustration(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6212 };
+  obj = { uri: _modDef6248 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const HeartJarSpotIllustration = function HeartJarSpotIllustration(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6212 });
+  return jsx(FastImageDefault, { uri: _modDef6248 });
 };

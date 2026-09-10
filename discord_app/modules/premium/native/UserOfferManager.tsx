@@ -1,9 +1,9 @@
-// === Module 17535: UserOfferManager ===
+// === Module 17594: UserOfferManager ===
 
-// Module 17535 (UserOfferManager)
+// Module 17594 (UserOfferManager)
 import UserStore from "UserStore" /* 1371 */;
-import UserOfferStore from "UserOfferStore" /* 7464 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import UserOfferStore from "UserOfferStore" /* 7502 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 let require = fn;
 const PaymentGateways = fn(1085).PaymentGateways;

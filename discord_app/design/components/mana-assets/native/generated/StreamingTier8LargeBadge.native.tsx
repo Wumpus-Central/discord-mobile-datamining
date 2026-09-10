@@ -1,9 +1,9 @@
-// === Module 6535: StreamingTier8LargeBadge ===
+// === Module 6571: StreamingTier8LargeBadge ===
 
-// Module 6535 (StreamingTier8LargeBadge)
+// Module 6571 (StreamingTier8LargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6536 from "module_6536" /* 6536 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6572 from "module_6572" /* 6572 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const StreamingTier8LargeBadge = function StreamingTier8LargeBadge(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6536 };
+  obj = { uri: _modDef6572 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const StreamingTier8LargeBadge = function StreamingTier8LargeBadge(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6536 });
+  return jsx(FastImageDefault, { uri: _modDef6572 });
 };

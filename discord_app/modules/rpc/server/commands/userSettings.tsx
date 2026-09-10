@@ -1,11 +1,11 @@
-// === Module 14533: userSettings ===
+// === Module 14582: userSettings ===
 
-// Module 14533 (userSettings)
+// Module 14582 (userSettings)
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 let obj = {};
 obj = {
-  scope: fn(8367).OAuth2Scopes.IDENTIFY,
+  scope: fn(8404).OAuth2Scopes.IDENTIFY,
   handler() {
     return { locale: LocaleStore.locale };
   }

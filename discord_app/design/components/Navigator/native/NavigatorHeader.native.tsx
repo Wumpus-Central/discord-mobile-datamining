@@ -1,14 +1,14 @@
-// === Module 5638: NavigatorHeader ===
+// === Module 5674: NavigatorHeader ===
 
-// Module 5638 (NavigatorHeader)
+// Module 5674 (NavigatorHeader)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5639 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5642 */;
-import _mod5645 from "module_5645" /* 5645 */;
-import XSmallIcon from "XSmallIcon" /* 5694 */;
-import NavigatorConstants from "NavigatorConstants" /* 5696 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5675 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5678 */;
+import _mod5681 from "module_5681" /* 5681 */;
+import XSmallIcon from "XSmallIcon" /* 5730 */;
+import NavigatorConstants from "NavigatorConstants" /* 5732 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,12 +50,12 @@ function CloseButton(onPress) {
     return timestampProducer(XSmallIcon.XSmallIcon, obj);
   };
   obj.accessibilityLabel = stringResult;
-  return closure_6(require("module_5645").HeaderBackButton, obj);
+  return closure_6(require("module_5681").HeaderBackButton, obj);
 }
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-  let obj = onPress(5644);
+  let obj = onPress(5680);
   obj.useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
@@ -69,7 +69,7 @@ function CustomHeaderBackButton(onPress) {
   obj.backImage = function backImage() {
     return closure_1_6(HeaderBackImage, {});
   };
-  return closure_6(onPress(5645).HeaderBackButton, obj);
+  return closure_6(onPress(5681).HeaderBackButton, obj);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -91,18 +91,18 @@ function HeaderTextButton(text) {
     tmp5 = text;
   }
   obj.accessibilityLabel = tmp5;
-  return timestampProducer(_mod5645.HeaderBackButton, obj);
+  return timestampProducer(_mod5681.HeaderBackButton, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { fauxHeaderWrapper: null, headerTitle: null, headerBackTitleStyle: null, navigatorHeaderTitleContainer: null, navigatorHeaderContainer: null, navigatorHeaderSubtitle: null, headerButtonIcon: null, submittingIndicator: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
 createStyles.fauxHeaderWrapper = createStyles;
 let obj1 = {};
-let merged = Object.assign(fn(4570).TextStyleSheet["redesign/heading-18/bold"]);
+let merged = Object.assign(fn(4601).TextStyleSheet["redesign/heading-18/bold"]);
 obj1.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 createStyles.headerTitle = obj1;
 createStyles.headerBackTitleStyle = { fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM, fontSize: 16, letterSpacing: 0, lineHeight: 20, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };

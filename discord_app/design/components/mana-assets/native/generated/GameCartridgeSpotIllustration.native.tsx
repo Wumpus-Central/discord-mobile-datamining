@@ -1,9 +1,9 @@
-// === Module 6021: GameCartridgeSpotIllustration ===
+// === Module 6057: GameCartridgeSpotIllustration ===
 
-// Module 6021 (GameCartridgeSpotIllustration)
+// Module 6057 (GameCartridgeSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6022 from "module_6022" /* 6022 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6058 from "module_6058" /* 6058 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GameCartridgeSpotIllustration = function GameCartridgeSpotIllustrat
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6022 };
+  obj = { uri: _modDef6058 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const GameCartridgeSpotIllustration = function GameCartridgeSpotIllustrat
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6022 });
+  return jsx(FastImageDefault, { uri: _modDef6058 });
 };

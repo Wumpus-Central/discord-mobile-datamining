@@ -1,8 +1,8 @@
-// === Module 9411: useDiscountedPremiumProductInfo ===
+// === Module 9449: useDiscountedPremiumProductInfo ===
 
-// Module 9411 (useDiscountedPremiumProductInfo)
-import PriceUtils from "PriceUtils" /* 7248 */;
-import ProductIds from "ProductIds" /* 7254 */;
+// Module 9449 (useDiscountedPremiumProductInfo)
+import PriceUtils from "PriceUtils" /* 7286 */;
+import ProductIds from "ProductIds" /* 7292 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,12 +1,12 @@
-// === Module 4914: UploadAttachmentStore ===
+// === Module 4945: UploadAttachmentStore ===
 
-// Module 4914 (UploadAttachmentStore)
+// Module 4945 (UploadAttachmentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import DraftStore from "DraftStore" /* 4915 */;
-import CloudUpload from "CloudUpload" /* 5141 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 5150 */;
+import DraftStore from "DraftStore" /* 4946 */;
+import CloudUpload from "CloudUpload" /* 5177 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 5186 */;
 import size from "module_2" /* 2 */;
 
 const DraftType = DraftStore.DraftType;

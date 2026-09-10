@@ -1,7 +1,7 @@
-// === Module 5071: useShowMemberVerificationGate ===
+// === Module 5107: useShowMemberVerificationGate ===
 
-// Module 5071 (useShowMemberVerificationGate)
-import MemberVerificationUtils from "MemberVerificationUtils" /* 5072 */;
+// Module 5107 (useShowMemberVerificationGate)
+import MemberVerificationUtils from "MemberVerificationUtils" /* 5108 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;

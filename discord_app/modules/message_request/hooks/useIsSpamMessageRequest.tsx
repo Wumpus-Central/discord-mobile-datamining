@@ -1,7 +1,7 @@
-// === Module 11397: useIsSpamMessageRequest ===
+// === Module 11437: useIsSpamMessageRequest ===
 
-// Module 11397 (useIsSpamMessageRequest)
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7234 */;
+// Module 11437 (useIsSpamMessageRequest)
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7272 */;
 
 const require = fn;
 const size = fn(2);

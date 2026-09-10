@@ -1,13 +1,13 @@
-// === Module 9506: RevealProvider ===
+// === Module 9544: RevealProvider ===
 
-// Module 9506 (RevealProvider)
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9501 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9507 */;
-import StatusBarDefault from "StatusBar" /* 9513 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 9515 */;
+// Module 9544 (RevealProvider)
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9539 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9545 */;
+import StatusBarDefault from "StatusBar" /* 9551 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 9553 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4264 */;
-import GameConsoleStore from "GameConsoleStore" /* 4591 */;
+import ActionSheetStore from "ActionSheetStore" /* 4295 */;
+import GameConsoleStore from "GameConsoleStore" /* 4622 */;
 
 const require = fn;
 function useRevealProviderValue(arg0, channel) {
@@ -43,7 +43,7 @@ function useRevealProviderValue(arg0, channel) {
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
 }
-const ChannelCallStore = fn(9499);
+const ChannelCallStore = fn(9537);
 ({ useChannelCallStore: metroRequire, focusTimeout: closure_7, resetFocusTimer: closure_8, useIsVoiceChatFocused: closure_9 } = ChannelCallStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

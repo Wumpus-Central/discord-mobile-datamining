@@ -1,6 +1,6 @@
-// === Module 8704: NativeFWOMeasureModule ===
+// === Module 8741: NativeFWOMeasureModule ===
 
-// Module 8704 (NativeFWOMeasureModule)
+// Module 8741 (NativeFWOMeasureModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

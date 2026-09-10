@@ -1,6 +1,6 @@
-// === Module 12710: ContactSyncUtils ===
+// === Module 12750: ContactSyncUtils ===
 
-// Module 12710 (ContactSyncUtils)
+// Module 12750 (ContactSyncUtils)
 import initialize from "initialize" /* 504 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
@@ -8,12 +8,12 @@ import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 125
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import LinkingDefault from "Linking" /* 4268 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4767 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import ContactSyncManager from "ContactSyncManager" /* 12711 */;
+import LinkingDefault from "Linking" /* 4299 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4798 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import ContactSyncManager from "ContactSyncManager" /* 12751 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5295 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5331 */;
 
 require = fn;
 let closure_18 = async function _uploadContacts(arg0) {
@@ -103,9 +103,9 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(12709);
+const ContactSyncPersistedStore = fn(12749);
 ({ useContactSyncStore: metroRequire, clearDismissState: closure_7, deleteStoredContacts: closure_8 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(12708);
+const ContactSyncConstants = fn(12748);
 ({ CONTACT_SYNC_MODAL_KEY: closure_9, ContactPermissions: c10, ContactSyncSuggestionsSetting: closure_11 } = ContactSyncConstants);
 const Constants = fn(1074);
 ({ Endpoints: closure_12, PlatformTypes: map1, FriendDiscoveryFlags: closure_14, HelpdeskArticles: closure_15 } = Constants);

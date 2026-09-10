@@ -1,21 +1,21 @@
-// === Module 8138: ComponentStateContext ===
+// === Module 8175: ComponentStateContext ===
 
-// Module 8138 (ComponentStateContext)
+// Module 8175 (ComponentStateContext)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Server from "Server" /* 1894 */;
-import InteractionTypes from "InteractionTypes" /* 4804 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 4806 */;
-import useMountEffectDefault from "useMountEffect" /* 5006 */;
-import InteractionUtils from "InteractionUtils" /* 8142 */;
+import InteractionTypes from "InteractionTypes" /* 4835 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 4837 */;
+import useMountEffectDefault from "useMountEffect" /* 5042 */;
+import InteractionUtils from "InteractionUtils" /* 8179 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InteractionStore from "InteractionStore" /* 7955 */;
-import LurkingStore from "LurkingStore" /* 4213 */;
+import InteractionStore from "InteractionStore" /* 7993 */;
+import LurkingStore from "LurkingStore" /* 4244 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5427 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5463 */;
 import UserStore from "UserStore" /* 1371 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8139 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8176 */;
 
 require = fn;
 function isInteractionComponent(type) {
@@ -131,9 +131,9 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  let tmpResult = tmp(7283);
+  let tmpResult = tmp(7321);
   const isThreadModerator = tmpResult.useIsThreadModerator(channel);
-  tmpResult = tmp(7283);
+  tmpResult = tmp(7321);
   let tmp9 = !stateFromStores;
   const canUnarchiveThread = tmpResult.useCanUnarchiveThread(channel);
   if (stateFromStores) {

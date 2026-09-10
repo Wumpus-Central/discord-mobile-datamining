@@ -1,10 +1,10 @@
-// === Module 10701: announcement_modal_variant_1_properties ===
+// === Module 10739: announcement_modal_variant_1_properties ===
 
-// Module 10701 (announcement_modal_variant_1_properties)
+// Module 10739 (announcement_modal_variant_1_properties)
 import _mod1188 from "module_1188" /* 1188 */;
-import localized_string from "localized_string" /* 10702 */;
-import help_article from "help_article" /* 10703 */;
-import cta_button from "cta_button" /* 10704 */;
+import localized_string from "localized_string" /* 10740 */;
+import help_article from "help_article" /* 10741 */;
+import cta_button from "cta_button" /* 10742 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

@@ -1,22 +1,22 @@
-// === Module 11910: ClassificationDetail ===
+// === Module 11950: ClassificationDetail ===
 
-// Module 11910 (ClassificationDetail)
+// Module 11950 (ClassificationDetail)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import LinkingDefault from "Linking" /* 4268 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
-import MetricEvents from "MetricEvents" /* 7621 */;
-import SafetyHubModels from "SafetyHubModels" /* 8448 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9082 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11914 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11916 */;
+import LinkingDefault from "Linking" /* 4299 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7653 */;
+import MetricEvents from "MetricEvents" /* 7658 */;
+import SafetyHubModels from "SafetyHubModels" /* 8485 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9119 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11954 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11956 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import SafetyHubStore from "SafetyHubStore" /* 8458 */;
+import SafetyHubStore from "SafetyHubStore" /* 8495 */;
 
 require = fn;
 function ClassificationHeader(classificationTypeText) {
@@ -69,7 +69,7 @@ function ClassificationHeader(classificationTypeText) {
     }
   }, items);
   obj = { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo };
-  obj.children = closure_13(classificationTypeText(4570).Text, obj);
+  obj.children = closure_13(classificationTypeText(4601).Text, obj);
   return closure_13(closure_4, obj);
 }
 function ClassificationActionsTaken(arg0) {
@@ -167,13 +167,13 @@ function ClassificationPolicyCard(classificationDescription) {
   obj.style = items;
   obj = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj.children = closure_13(policyExplainerLink(9434).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
+  obj.children = closure_13(policyExplainerLink(9472).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
   const items1 = [closure_13(closure_4, obj), ];
   const obj2 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = policyExplainerLink(1114).intl;
   obj3.children = intl.format(policyExplainerLink(1114).t.zxUdpj, { classificationDescription: classificationDescription.classificationTypeText });
-  obj2.children = closure_13(policyExplainerLink(4570).Text, obj3);
+  obj2.children = closure_13(policyExplainerLink(4601).Text, obj3);
   items1[1] = closure_13(closure_4, obj2);
   obj.children = items1;
   obj.children = closure_14(tmp2, obj);
@@ -234,12 +234,12 @@ function ClassificationDetailFooter(onClose) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8447);
+const SafetyHubConstants = fn(8484);
 ({ SafetyHubAnalyticsActionSource: closure_9, SafetyHubAnalyticsActions: c10, SafetyHubLinks: closure_11 } = SafetyHubConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { root: null, container: null, header: null, headerText: null, sectionContainer: null, actionsTaken: null, classificationDetailContainer: null, letUsKnowContainer: null, expressiveModalV2LetUsKnowContainer: null, expressiveModalV2LetUsKnowText: null, classificationPolicyCard: null, classificationPolicyCardIcon: null, classificationPolicyCardContent: null, classificationActionDescription: null, redirectButtonWrapper: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.root = createStyles;

@@ -1,9 +1,9 @@
-// === Module 11521: apexExperiment ===
+// === Module 11561: apexExperiment ===
 
-// Module 11521 (apexExperiment)
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11324 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11325 */;
-import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 11522 */;
+// Module 11561 (apexExperiment)
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11364 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11365 */;
+import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 11562 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
@@ -58,7 +58,7 @@ export const MutedVideoQuestNewDefaultsExperiment = apexExperiment5;
 export const useQuestOrbsMultiplierMarketing = function useQuestOrbsMultiplierMarketing(location) {
   let obj = { location };
   const questOrbMultiplierEligibility = QuestOrbMultiplierHooks.useQuestOrbMultiplierEligibility();
-  obj = { shouldShowBonusOrbsUX: questOrbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.INELIGIBLE && questOrbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.CREPE && closure_2.useConfig(obj).enabled, multiplier: QuestOrbsMultiplier.QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100 };
+  obj = { shouldShowBonusOrbsUX: questOrbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.INELIGIBLE && questOrbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS && closure_2.useConfig(obj).enabled, multiplier: QuestOrbsMultiplier.QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100 };
   return obj;
 };
 export const ComposedQuestPlayerExperiment = apexExperiment6;

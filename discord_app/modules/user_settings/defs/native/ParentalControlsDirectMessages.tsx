@@ -1,13 +1,13 @@
-// === Module 15925: ParentalControlsDirectMessages ===
+// === Module 15974: ParentalControlsDirectMessages ===
 
-// Module 15925 (ParentalControlsDirectMessages)
+// Module 15974 (ParentalControlsDirectMessages)
 import util from "util" /* 1114 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14853 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14854 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14902 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14903 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7589 */;
 
 require = fn;
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -17,7 +17,7 @@ let SettingBuilders = {
     const intl = util.intl;
     return intl.string(util.t.wbYDfT);
   },
-  parent: fn(7989).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8027).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     return !useParentalControlSettings.useDefaultGuildsRestricted();
   },

@@ -1,6 +1,6 @@
-// === Module 10316: EmojiPicker ===
+// === Module 10354: EmojiPicker ===
 
-// Module 10316 (EmojiPicker)
+// Module 10354 (EmojiPicker)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ const Constants = fn(1074);
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = { container: { flex: 1 }, list: { overflow: "hidden", flex: 1 }, header: null, headerGradientColor: null, headerGradient: null };
 obj = { flexDirection: "row", paddingTop: nativeDefault.space.PX_8, paddingBottom: 1, gap: nativeDefault.space.PX_12 };
 obj.header = obj;

@@ -1,8 +1,8 @@
-// === Module 17212: useControlsHiddenPresentation ===
+// === Module 17271: useControlsHiddenPresentation ===
 
-// Module 17212 (useControlsHiddenPresentation)
-import spring from "spring" /* 4988 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 12303 */;
+// Module 17271 (useControlsHiddenPresentation)
+import spring from "spring" /* 5024 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 12343 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;

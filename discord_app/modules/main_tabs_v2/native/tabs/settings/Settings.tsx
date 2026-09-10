@@ -1,19 +1,19 @@
-// === Module 16942: Settings ===
+// === Module 16999: Settings ===
 
-// Module 16942 (Settings)
+// Module 16999 (Settings)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
-import DeviceUtils from "DeviceUtils" /* 4553 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6959 */;
-import profileModalTransition from "profileModalTransition" /* 16824 */;
-import SettingsNavigatorDefault from "SettingsNavigator" /* 16943 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
+import DeviceUtils from "DeviceUtils" /* 4584 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6995 */;
+import profileModalTransition from "profileModalTransition" /* 16881 */;
+import SettingsNavigatorDefault from "SettingsNavigator" /* 17000 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { containerOuter: { flex: 1, overflow: "hidden" }, containerOuterTablet: null, container: null, containerTablet: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, flex: 1 };
 createStyles.containerOuterTablet = createStyles;

@@ -1,13 +1,13 @@
-// === Module 12740: GuildTemplates ===
+// === Module 12780: GuildTemplates ===
 
-// Module 12740 (GuildTemplates)
+// Module 12780 (GuildTemplates)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import ListSelectionItemDefault from "ListSelectionItem" /* 12354 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12713 */;
-import CreateGuildIcons from "CreateGuildIcons" /* 12741 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import ListSelectionItemDefault from "ListSelectionItem" /* 12394 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12753 */;
+import CreateGuildIcons from "CreateGuildIcons" /* 12781 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -54,8 +54,8 @@ function GuildTemplatesJoinFooter(trigger) {
   const intl3 = tmp2(1114).intl;
   obj1.children = intl3.string(trigger(1114).t["N+Mi/U"]);
   const items2 = [
-    closure_14(trigger(4570).Text, obj1),
-    closure_14(trigger(4989).Button, {
+    closure_14(trigger(4601).Text, obj1),
+    closure_14(trigger(5025).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -90,17 +90,17 @@ function GuildTemplatesItem(guildTemplate) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(12737);
+let CreateGuildConstants = fn(12777);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(6994);
+CreateGuildConstants = fn(7030);
 ({ CreateGuildModalStates: closure_9, GuildTemplateTriggers: c10, NUXGuildTemplatesAnalytics: closure_11 } = CreateGuildConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { flex: { flex: 1 }, contentContainer: null, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
-createStyles = { marginTop: fn(5696).NAV_BAR_HEIGHT };
+createStyles = { marginTop: fn(5732).NAV_BAR_HEIGHT };
 createStyles.contentContainer = createStyles;
 createStyles.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj1 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

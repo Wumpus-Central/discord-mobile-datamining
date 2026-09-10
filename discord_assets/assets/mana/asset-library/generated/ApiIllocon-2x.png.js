@@ -1,6 +1,6 @@
-// === Module 5760: ? ===
+// === Module 5796: ? ===
 
-// Module 5760
+// Module 5796
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ApiIllocon-2x.png.js");

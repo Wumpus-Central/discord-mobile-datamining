@@ -1,14 +1,14 @@
-// === Module 16206: useGuildPowerupsBoostAction ===
+// === Module 16255: useGuildPowerupsBoostAction ===
 
-// Module 16206 (useGuildPowerupsBoostAction)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7176 */;
-import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 12568 */;
+// Module 16255 (useGuildPowerupsBoostAction)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7214 */;
+import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 12608 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4469 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4500 */;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4464);
+const GuildPowerupsConstants = fn(4495);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_8, AnalyticsObjectTypes: closure_9 } = Constants);
@@ -57,9 +57,9 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               tmp15 = dependencyMap;
               if (dependencyMap > 0) {
                 if (!handleMobileWebRedirectCheckout.hasFetched) {
-                  let obj1 = tmp2(7433);
+                  let obj1 = tmp2(7471);
                   const items = [obj1.init(), ];
-                  let obj2 = tmp3(4472);
+                  let obj2 = tmp3(4503);
                   items[1] = obj2.fetchGuildBoostSlots();
                   dependencyMap = 1;
                   c3 = 1;
@@ -85,10 +85,10 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
           PERK = constants.PERK;
         }
         closure_128_0 = PERK;
-        let obj4 = tmp3(4468);
+        let obj4 = tmp3(4499);
         availableGuildBoostSlots = obj4.getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
         if (availableGuildBoostSlots.length >= closure_129_2) {
-          tmp15 = tmp3(5448);
+          tmp15 = tmp3(5484);
           obj2 = { guildBoostSlots: availableGuildBoostSlots.slice(0, closure_129_2), guildId: closure_129_0, intent: closure_128_0 };
           tmp15.openTransferModal(obj2);
         } else if (!closure_129_4) {
@@ -109,8 +109,8 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               const tmpResult = guildId(dependencyMap[10]);
             }
           };
-          const result = tmp3(7417).launchGuildBoostFlowOrAlert(obj3);
-          const obj6 = tmp3(7417);
+          const result = tmp3(7455).launchGuildBoostFlowOrAlert(obj3);
+          const obj6 = tmp3(7455);
         }
       } catch (tmp50) {
         c3 = tmp;

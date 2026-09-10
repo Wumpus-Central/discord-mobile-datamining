@@ -1,15 +1,15 @@
-// === Module 11803: QuestRewardCodeClaimBottomSheet ===
+// === Module 11843: QuestRewardCodeClaimBottomSheet ===
 
-// Module 11803 (QuestRewardCodeClaimBottomSheet)
+// Module 11843 (QuestRewardCodeClaimBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import _modDef5611 from "module_5611" /* 5611 */;
-import ClipboardUtils from "ClipboardUtils" /* 7203 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11322 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import _modDef5647 from "module_5647" /* 5647 */;
+import ClipboardUtils from "ClipboardUtils" /* 7241 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11362 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7717 */;
+import QuestStore from "QuestStore" /* 7754 */;
 
 require = fn;
 function QuestRewardCodeClaimBottomSheet(quest) {
@@ -37,7 +37,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
       const obj = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
       const intl = util.intl;
       obj.content = intl.string(util.t.CKsXk3);
-      obj.icon = _modDef5611;
+      obj.icon = _modDef5647;
       obj.open(obj);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
@@ -96,7 +96,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
   const callback = obj2.useCallback(() => {
     if (null != rewardCode) {
       ClipboardUtils.copy(tmp.code, () => {
-        rewardCode(4272);
+        rewardCode(4303);
         const obj = { key: "TOAST_QUEST_REWARD_CODE_COPIED", content: null, icon: null };
         const intl = quest(1114).intl;
         obj.content = intl.string(quest(1114).t.MSaeTe);
@@ -199,10 +199,10 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(5458).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(5494).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
   let obj = { wrapper: null, footer: null, claimingIndicator: null, codeCopyWrapperLoading: null, redemptionInstructions: null };
   obj = { display: "flex", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };

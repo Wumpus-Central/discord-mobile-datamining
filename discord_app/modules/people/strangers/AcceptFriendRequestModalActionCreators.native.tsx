@@ -1,12 +1,12 @@
-// === Module 10905: AcceptFriendRequestModalActionCreators ===
+// === Module 10943: AcceptFriendRequestModalActionCreators ===
 
-// Module 10905 (AcceptFriendRequestModalActionCreators)
+// Module 10943 (AcceptFriendRequestModalActionCreators)
 import jsxProd from "jsxProd" /* 21 */;
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
-import Constants2 from "Constants" /* 10906 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
+import Constants2 from "Constants" /* 10944 */;
 import size from "module_2" /* 2 */;
 
 const type = Constants2.ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID;
@@ -20,7 +20,7 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
   obj.track(AnalyticEvents.OPEN_MODAL, obj);
   obj = {
     importer() {
-      return asyncRequireImpl(10907, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(10945, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (View) => {
           const obj = {};

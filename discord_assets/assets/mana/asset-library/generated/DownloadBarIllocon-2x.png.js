@@ -1,6 +1,6 @@
-// === Module 5952: ? ===
+// === Module 5988: ? ===
 
-// Module 5952
+// Module 5988
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DownloadBarIllocon-2x.png.js");
