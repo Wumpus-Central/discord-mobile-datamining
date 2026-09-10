@@ -4,8 +4,8 @@
 import module_3690 from "module_3690" /* 3690 */;
 import module_3691 from "module_3691" /* 3691 */;
 import module_3692 from "module_3692" /* 3692 */;
-import date from "module_3693" /* 3693 */;
-import date from "module_3694" /* 3694 */;
+import date from "module_3699" /* 3699 */;
+import date from "module_3700" /* 3700 */;
 
 if (!module_3690) {
   let obj = { default: module_3690 };
@@ -38,5 +38,5 @@ if (!date) {
   tmp11 = date;
 }
 
-export default { code: "el", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default { code: "bg", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

@@ -1,16 +1,14 @@
 // === Module 8553: ? ===
 
 // Module 8553
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8498 from "module_8498" /* 8498 */;
-import _modDef8554 from "module_8554" /* 8554 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const ForeignObject = fn;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +28,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class ForeignObject {
+class Defs {
   constructor() {
     self = this;
-    tmp = closure_3(this, ForeignObject);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(ForeignObject);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, Defs);
+    tmp2 = closure_4;
+    obj = closure_4(Defs);
+    tmp3 = closure_3;
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,29 +49,15 @@ class ForeignObject {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ForeignObject, _modDef8498);
+_inherits(Defs, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(ForeignObject(8499).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = props.children;
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    return jsx(Defs(8554), { children: this.props.children });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(ForeignObject, items);
-importDefaultResultResult.displayName = "ForeignObject";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

@@ -1,19 +1,7 @@
 // === Module 12849: ? ===
 
 // Module 12849
-import _mod12833 from "module_12833" /* 12833 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-require = arg1;
-const dependencyMap = arg6;
-const _sentrySpan = "_sentrySpan";
 
-export const _getSpanForScope = function _getSpanForScope(currentScope) {
-  return currentScope[_sentrySpan];
-};
-export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
-  if (arg1) {
-    const result = _mod12833.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
-  } else {
-    delete tmp2[tmp];
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "9f983315273ecf4164927351f28f2400", name: "ic_premium_overview_24px", type: "png" });

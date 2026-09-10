@@ -1,70 +1,27 @@
 // === Module 6794: ? ===
 
 // Module 6794
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import ComposedGestureName from "ComposedGestureName" /* 6764 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6773 */;
+import _mod6788 from "module_6788" /* 6788 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+require = arg1;
+const dependencyMap = arg6;
+function transformLongPressProps(shouldCancelWhenOutside) {
+  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
+    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
   }
+  return shouldCancelWhenOutside;
 }
-_possibleConstructorReturnDefault;
-class FlingGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, FlingGesture);
-    tmp2 = c2;
-    obj = c2(FlingGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "FlingGestureHandler";
-    return tmp3Result;
+const items = [["minDuration", "minDurationMs"], ["maxDistance", "maxDist"]];
+const map = new Map(items);
+let closure_4 = {};
+
+export const useLongPressGesture = function useLongPressGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_4;
   }
-}
-_classCallCheck = FlingGesture;
-_inherits(FlingGesture, fn(6690).BaseGesture);
-const entry = {
-  key: "numberOfPointers",
-  value: function numberOfPointers(numberOfPointers) {
-    this.config.numberOfPointers = numberOfPointers;
-    return this;
-  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map, transformLongPressProps);
+  return _mod6788.useGesture(ComposedGestureName.SingleGestureName.LongPress, clonedAndRemappedConfig);
 };
-const items = [
-  entry,
-  {
-    key: "direction",
-    value: function direction(dependencyMap) {
-      this.config.direction = dependencyMap;
-      return this;
-    }
-  }
-];
-
-export const FlingGesture = _createClass(FlingGesture, items);

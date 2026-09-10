@@ -1,7 +1,7 @@
 // === Module 8570: ? ===
 
 // Module 8570
-import _modDef8508 from "module_8508" /* 8508 */;
+import _modDef8560 from "module_8560" /* 8560 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -9,7 +9,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Pattern = importDefault;
+const FeDropShadow = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +29,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const jsx = fn(21).jsx;
-class Pattern {
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+class FeDropShadow {
   constructor() {
     self = this;
-    tmp = c2(this, Pattern);
+    tmp = c2(this, FeDropShadow);
     tmp2 = closure_4;
-    obj = closure_4(Pattern);
+    obj = closure_4(FeDropShadow);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (closure_8()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,54 +51,35 @@ class Pattern {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Pattern, _modDef8508);
+_inherits(FeDropShadow, _modDef8560);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ patternTransform, patternUnits, patternContentUnits } = props);
-    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
-    if (!patternTransform) {
-      patternTransform = transform;
+    const _in = props.in;
+    let str = "SourceGraphic";
+    if (undefined !== _in) {
+      str = _in;
     }
-    if (!patternTransform) {
-      patternTransform = props;
-    }
-    const tmp3Result = Pattern(8492)(patternTransform);
-    const size = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
-    let num = patternUnits;
-    if (patternUnits) {
-      num = Pattern(8562)[patternUnits];
-    }
-    if (!num) {
-      num = 0;
-    }
-    size.patternUnits = num;
-    let num2 = 1;
-    if (patternContentUnits) {
-      num2 = Pattern(8562)[patternContentUnits];
-    }
-    size.patternContentUnits = num2;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp3 = Pattern(8492);
-    const merged = Object.assign(size);
-    const merged1 = Object.assign(Pattern(8497)({ viewBox, preserveAspectRatio }));
-    obj.children = children;
-    return jsx(Pattern(8571), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    let obj = { children: null };
+    ({ dx, dy, result } = props);
+    const items = [timestampProducer(FeDropShadow(8571), { in: str, stdDeviation: props.stdDeviation }), timestampProducer(FeDropShadow(8573), { dx, dy, result: "offsetblur" }), , , ];
+    obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
+    items[2] = timestampProducer(FeDropShadow(8575), obj);
+    items[3] = timestampProducer(FeDropShadow(8564), { in2: "offsetblur", operator: "in" });
+    obj = { result, children: null };
+    const items1 = [timestampProducer(FeDropShadow(8579), {}), timestampProducer(FeDropShadow(8579), { in: str })];
+    obj.children = items1;
+    items[4] = React5(FeDropShadow(8577), obj);
+    obj.children = items;
+    return React5(noop.Fragment, obj);
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(Pattern, items);
-importDefaultResultResult.displayName = "Pattern";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+let items = [entry];
+const importDefaultResultResult = _createClass(FeDropShadow, items);
+importDefaultResultResult.displayName = "FeDropShadow";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

@@ -1,11 +1,14 @@
 // === Module 6812: ? ===
 
 // Module 6812
-const fn = function n(sum1, initialPosition, value) {
-  return Math.min(Math.max(initialPosition, sum1), value);
-};
-fn.__closure = {};
-fn.__workletHash = 4405247003092;
-fn.__initData = { code: "function pnpm_clampTs1(value,lowerBound,upperBound){return Math.min(Math.max(lowerBound,value),upperBound);}" };
+import ComposedGestureName from "ComposedGestureName" /* 6764 */;
+import _mod6813 from "module_6813" /* 6813 */;
 
-export const clamp = fn;
+require = arg1;
+const dependencyMap = arg6;
+
+export const useCompetingGestures = function useCompetingGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
+  return _mod6813.useComposedGesture.apply(items1);
+};

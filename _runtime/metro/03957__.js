@@ -1,8 +1,10 @@
 // === Module 3957: ? ===
 
 // Module 3957
-import _typeof from "module_3663" /* 3663 */;
-import requiredArgs from "requiredArgs" /* 3664 */;
+import _typeof from "module_3693" /* 3693 */;
+import startOfYear from "startOfYear" /* 3912 */;
+import differenceInCalendarDays from "differenceInCalendarDays" /* 3855 */;
+import requiredArgs from "requiredArgs" /* 3694 */;
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -11,18 +13,31 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+if (!startOfYear) {
+  obj = { default: startOfYear };
   let tmp5 = obj;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = startOfYear;
 }
-requiredArgs = tmp5;
+startOfYear = tmp5;
+if (!differenceInCalendarDays) {
+  obj = { default: differenceInCalendarDays };
+  let tmp7 = obj;
+} else {
+  tmp7 = differenceInCalendarDays;
+}
+differenceInCalendarDays = tmp7;
+if (!requiredArgs) {
+  const obj1 = { default: requiredArgs };
+  let tmp9 = obj1;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function isAfter(arg0, arg1) {
-  requiredArgs.default(2, arguments);
+export default function getDayOfYear(arg0) {
+  requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time > _typeof.default(arg1).getTime();
+  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
 };
 export default exports.default;

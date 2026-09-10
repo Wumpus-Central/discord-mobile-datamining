@@ -1,45 +1,34 @@
 // === Module 3862: ? ===
 
 // Module 3862
-import _typeof from "module_3663" /* 3663 */;
-import endOfDay from "endOfDay" /* 3863 */;
-import endOfMonth from "endOfMonth" /* 3864 */;
-import requiredArgs from "requiredArgs" /* 3664 */;
+import module_3697 from "module_3697" /* 3697 */;
+import module_3842 from "module_3842" /* 3842 */;
+import requiredArgs from "requiredArgs" /* 3694 */;
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!module_3697) {
+  let obj = { default: module_3697 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3697;
 }
-_typeof = tmp3;
-if (!endOfDay) {
-  obj = { default: endOfDay };
+module_3697 = tmp3;
+if (!module_3842) {
+  obj = { default: module_3842 };
   let tmp5 = obj;
 } else {
-  tmp5 = endOfDay;
+  tmp5 = module_3842;
 }
-endOfDay = tmp5;
-if (!endOfMonth) {
-  obj = { default: endOfMonth };
+module_3842 = tmp5;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
-  tmp7 = endOfMonth;
+  tmp7 = requiredArgs;
 }
-endOfMonth = tmp7;
-if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
+requiredArgs = tmp7;
 
-export default function isLastDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = endOfDay.default(defaultResult1).getTime();
-  const defaultResult2 = endOfDay.default(defaultResult1);
-  return time === endOfMonth.default(defaultResult1).getTime();
+export default function addYears(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_3842.default(interval, 12 * module_3697.default(arg1));
 };
 export default exports.default;

@@ -1,8 +1,8 @@
 // === Module 3961: ? ===
 
 // Module 3961
-import _typeof from "module_3663" /* 3663 */;
-import requiredArgs from "requiredArgs" /* 3664 */;
+import _typeof from "module_3693" /* 3693 */;
+import requiredArgs from "requiredArgs" /* 3694 */;
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFirstDayOfMonth(arg0) {
+export default function getDecade(arg0) {
   requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDate();
+  return 10 * Math.floor(_typeof.default(arg0).getFullYear() / 10);
 };
 export default exports.default;

@@ -1,54 +1,107 @@
 // === Module 5276: ? ===
 
 // Module 5276
-import _modDef5244 from "module_5244" /* 5244 */;
+import _mod5263 from "module_5263" /* 5263 */;
+import _modDef5266 from "module_5266" /* 5266 */;
 
+require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
-let c2 = 4;
-let c3 = 7;
 
 export default {
-  read(getUint8, sum) {
-    let obj = _modDef5244;
-    const byteAt = obj.getByteAt(getUint8, sum);
-    let num = 0;
-    if (16 & byteAt) {
-      num = 1;
+  isWebpFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod5263.getStringFromDataView(dataView, 0, 4) === "RIFF";
     }
-    obj = { value: num, description: null };
-    let str = "No";
-    let str2 = "No";
-    if (16 & byteAt) {
-      str2 = "Yes";
+    if (tmp) {
+      tmp = _mod5263.getStringFromDataView(dataView, 8, 4) === "WEBP";
     }
-    obj = { Alpha: obj, description: str2 };
-    let num2 = 0;
-    if (2 & byteAt) {
-      num2 = 1;
+    return tmp;
+  },
+  findOffsets(byteLength) {
+    let flag = false;
+    let num = 12;
+    let hasAppMarkers = false;
+    let vp8xChunkOffset;
+    let iccChunks;
+    let xmpChunks;
+    let tiffHeaderOffset;
+    if (20 < byteLength.byteLength) {
+      while (true) {
+        let obj = _mod5263;
+        let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
+        let uint32 = byteLength.getUint32(num + 4, true);
+        let flag3 = flag;
+        if (_modDef5266.USE_EXIF) {
+          if ("EXIF" === stringFromDataView) {
+            let tmp9Result = _mod5263;
+            let sum = num + 8;
+            let sum1 = sum;
+            if (tmp9Result.getStringFromDataView(byteLength, sum, 6) === "Exif\0\0") {
+              sum1 = sum + 6;
+            }
+            let tmp22 = sum1;
+            flag3 = true;
+            let sum4 = tmp;
+            let tmp20 = tmp2;
+            let tmp21 = tmp3;
+            let sum2 = uint32;
+            if (uint32 % 2 !== 0) {
+              sum2 = uint32 + 1;
+            }
+            let sum3 = num + (8 + sum2);
+            flag = flag3;
+            num = sum3;
+            tmp = sum4;
+            tmp2 = tmp20;
+            tmp3 = tmp21;
+            let tmp4 = tmp22;
+            hasAppMarkers = flag3;
+            vp8xChunkOffset = sum4;
+            iccChunks = tmp20;
+            xmpChunks = tmp21;
+            tiffHeaderOffset = tmp22;
+            if (sum3 + 8 >= byteLength.byteLength) {
+              break;
+            }
+          }
+        }
+        if (_modDef5266.USE_XMP) {
+          if ("XMP " === stringFromDataView) {
+            obj = { dataOffset: num + 8, length: uint32 };
+            let items = [obj];
+            flag3 = true;
+            sum4 = tmp;
+            tmp20 = tmp2;
+            tmp21 = items;
+            tmp22 = tmp4;
+          }
+        }
+        if (_modDef5266.USE_ICC) {
+          if ("ICCP" === stringFromDataView) {
+            obj = { offset: num + 8, length: uint32, chunkNumber: 1, chunksTotal: 1 };
+            let items1 = [obj];
+            flag3 = true;
+            sum4 = tmp;
+            tmp20 = items1;
+            tmp21 = tmp3;
+            tmp22 = tmp4;
+          }
+        }
+        sum4 = tmp;
+        tmp20 = tmp2;
+        tmp21 = tmp3;
+        tmp22 = tmp4;
+        if ("VP8X" === stringFromDataView) {
+          sum4 = num + 8;
+          flag3 = true;
+          tmp20 = tmp2;
+          tmp21 = tmp3;
+          tmp22 = tmp4;
+        }
+      }
     }
-    const obj1 = { value: num2, description: null };
-    if (2 & byteAt) {
-      str = "Yes";
-    }
-    obj1.description = str;
-    obj.Animation = obj1;
-    sum = sum + c2;
-    let tmpResult = _modDef5244;
-    const byteAt1 = tmpResult.getByteAt(getUint8, sum);
-    tmpResult = _modDef5244;
-    const sum1 = byteAt1 + 256 * tmpResult.getByteAt(getUint8, sum + 1);
-    const sum2 = sum1 + 65536 * _modDef5244.getByteAt(getUint8, sum + 2) + 1;
-    obj.ImageWidth = { value: sum2, description: `${tmp9}px` };
-    const sum3 = sum + c3;
-    const obj2 = { value: sum2, description: `${tmp9}px` };
-    const tmpResult1 = _modDef5244;
-    const byteAt2 = _modDef5244.getByteAt(getUint8, sum3);
-    const tmpResult2 = _modDef5244;
-    const sum4 = byteAt2 + 256 * _modDef5244.getByteAt(getUint8, sum3 + 1);
-    const tmpResult3 = _modDef5244;
-    const sum5 = sum4 + 65536 * _modDef5244.getByteAt(getUint8, sum3 + 2) + 1;
-    obj.ImageHeight = { value: sum5, description: `${tmp13}px` };
-    return obj;
+    return { hasAppMarkers, tiffHeaderOffset, xmpChunks, iccChunks, vp8xChunkOffset };
   }
 };

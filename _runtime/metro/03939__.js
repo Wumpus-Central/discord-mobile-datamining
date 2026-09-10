@@ -1,26 +1,14 @@
 // === Module 3939: ? ===
 
 // Module 3939
-import _typeof from "module_3663" /* 3663 */;
-import requiredArgs from "requiredArgs" /* 3664 */;
+import code from "module_2027" /* 2027 */;
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = code;
 }
-_typeof = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function getMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getMonth();
-};
+export default tmp3.default;
 export default exports.default;

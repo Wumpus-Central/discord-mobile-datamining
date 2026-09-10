@@ -1,17 +1,27 @@
 // === Module 14333: ? ===
 
 // Module 14333
-import _mod14329 from "module_14329" /* 14329 */;
+import e from "e" /* 1162 */;
 
-
-export default !_mod14329(() => {
-  const fn = () => {
-
-  };
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+e.__extends(function MissingLocaleDataError() {
+  const self = this;
+  let tmp2 = null !== Error;
+  if (!tmp2) {
+    if (!tmp2) {
+      tmp2 = self;
+    }
+    tmp2.type = "MISSING_LOCALE_DATA";
+    return tmp2;
+  } else {
+    const apply = Error.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
   }
-  return hasOwnPropertyResult;
-});
+}, Error);
+
+export const isMissingLocaleDataError = function isMissingLocaleDataError(type) {
+  return "MISSING_LOCALE_DATA" === type.type;
+};

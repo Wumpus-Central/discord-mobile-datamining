@@ -1,26 +1,34 @@
 // === Module 4148: ? ===
 
 // Module 4148
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    let obj = { data: null, locale: "ko" };
-    obj = { conjunction: null, disjunction: null, unit: null };
-    const obj1 = { long: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" }, narrow: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" }, short: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" } };
-    obj.conjunction = obj1;
-    const obj2 = { long: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" }, short: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" } };
-    obj.disjunction = obj2;
-    const obj3 = { long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" } };
-    obj.unit = obj3;
-    obj.data = obj;
-    ListFormat.__addLocaleData(obj);
+import module_3695 from "module_3695" /* 3695 */;
+
+if (!module_3695) {
+  const obj = { default: module_3695 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_3695;
+}
+function checkWeek(getTime, getTime2, arg2) {
+  let str = "eeee p";
+  if (!module_3695.default(getTime, getTime2, arg2)) {
+    const time = getTime.getTime();
+    let str2 = "'\u4E0A\u4E2A'eeee p";
+    if (time > getTime2.getTime()) {
+      str2 = "'\u4E0B\u4E2A'eeee p";
+    }
+    str = str2;
   }
+  return str;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
-}
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-obj = { data: { conjunction: { long: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" }, narrow: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" }, short: { end: "{0} \uBC0F {1}", middle: "{0}, {1}", pair: "{0} \uBC0F {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" }, short: { end: "{0} \uB610\uB294 {1}", middle: "{0}, {1}", pair: "{0} \uB610\uB294 {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" } } }, locale: "ko" };
-prop.push(obj);
+module_3695 = tmp3;
+let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
+
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_1[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
+};
+export default exports.default;

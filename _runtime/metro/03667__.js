@@ -1,29 +1,7 @@
 // === Module 3667: ? ===
 
 // Module 3667
+import registerAsset from "module_1122" /* 1122 */;
 
-export default function toInteger(arg0) {
-  if (null !== arg0) {
-    if (true !== arg0) {
-      if (false !== arg0) {
-        const _Number = Number;
-        const NumberResult = Number(arg0);
-        const _isNaN = isNaN;
-        if (isNaN(NumberResult)) {
-          return NumberResult;
-        } else {
-          if (NumberResult < 0) {
-            const _Math2 = Math;
-            let rounded = Math.ceil(NumberResult);
-          } else {
-            const _Math = Math;
-            rounded = Math.floor(NumberResult);
-          }
-          return rounded;
-        }
-      }
-    }
-  }
-  return NaN;
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "97ca046aca6d2419846cd4cfd2097c34", name: "hi.messages.97ca046aca6d2419846cd4cfd2097c34.compiled.messages", type: "jsona" });

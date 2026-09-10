@@ -1,12 +1,7 @@
 // === Module 13677: ? ===
 
 // Module 13677
-import _mod13691 from "module_13691" /* 13691 */;
-import assign from "module_13678" /* 13678 */;
-import Deflate from "Deflate" /* 13679 */;
-import Inflate from "Inflate" /* 13687 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-let obj = {};
-obj = assign.assign(obj, Deflate, Inflate, _mod13691);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_boosting/native/images", width: 424, height: 254, scales: [1], hash: "616e0e1297b795db059112c52470eab4", name: "top_perk_streaming_quality", type: "png" });

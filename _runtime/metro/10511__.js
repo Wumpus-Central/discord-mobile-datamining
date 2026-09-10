@@ -1,134 +1,105 @@
 // === Module 10511: ? ===
 
 // Module 10511
+import _mod10501 from "module_10501" /* 10501 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const DESpecificTimeExpressionParser = require;
-const regExp = new RegExp("(^|\\s|T)(?:(?:um|von)\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)", "i");
-const regExp1 = new RegExp("^\\s*(\\-|\\\u2013|\\~|\\\u301C|bis(?:\\s+um)?|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)", "i");
-class DESpecificTimeExpressionParser {
-  constructor() {
-    tmp = c2(this, DESpecificTimeExpressionParser);
-    return;
+const ENMonthNameMiddleEndianParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+const regExp = new RegExp("(" + repeatedTimeunitPattern.matchAnyPattern(_mod10501.MONTH_DICTIONARY) + ")(?:-|/|\\s*,?\\s*)(" + _mod10501.ORDINAL_NUMBER_PATTERN + ")(?!\\s*(?:am|pm))\\s*(?:(?:to|\\-)\\s*(" + _mod10501.ORDINAL_NUMBER_PATTERN + ")\\s*)?(?:(?:-|/|\\s*,\\s*|\\s+)(" + _mod10501.YEAR_PATTERN + "))?(?=\\W|$)(?!\\:\\d)", "i");
+class ENMonthNameMiddleEndianParser {
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, ENMonthNameMiddleEndianParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENMonthNameMiddleEndianParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.shouldSkipYearLikeDate = global;
+    return tmp3Result;
+  }
+}
+_inherits(ENMonthNameMiddleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "pattern",
-  value: function pattern(arg0) {
+  key: "innerPattern",
+  value: function innerPattern() {
     return regExp;
   }
 };
 const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(createParsingResult, index) {
-      const sum = index.index + index[1].length;
-      const parsingResult = createParsingResult.createParsingResult(sum, index[0].substring(index[1].length));
-      if (str2.match(/^\d{4}$/)) {
-        index.index = index.index + index[0].length;
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, index) {
+      const tmp3 = ENMonthNameMiddleEndianParser(10501).MONTH_DICTIONARY[index[1].toLowerCase(index[1])];
+      const result = ENMonthNameMiddleEndianParser(10501).parseOrdinalNumberPattern(index[2]);
+      if (result > 31) {
         return null;
       } else {
-        const start = parsingResult.start;
-        parsingResult.start = DESpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
-        if (parsingResult.start) {
-          const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
-          if (match) {
-            const start2 = parsingResult.start;
-            parsingResult.end = DESpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
-            if (parsingResult.end) {
-              parsingResult.text = parsingResult.text + match[0];
+        const self = this;
+        if (this.shouldSkipYearLikeDate) {
+          if (!index[3]) {
+            if (!index[4]) {
+              if (str2.match(/^2[0-5]$/)) {
+                return null;
+              }
+              str2 = index[2];
             }
           }
+        }
+        const date = { day: result, month: tmp3 };
+        const parsingComponents = createParsingComponents.createParsingComponents(date);
+        const addTagResult = parsingComponents.addTag("parser/ENMonthNameMiddleEndianParser");
+        if (index[4]) {
+          addTagResult.assign("year", ENMonthNameMiddleEndianParser(10501).parseYear(index[4]));
+        } else {
+          addTagResult.imply("year", ENMonthNameMiddleEndianParser(10503).findYearClosestToRef(createParsingComponents.refDate, result, tmp3));
+        }
+        if (index[3]) {
+          const result1 = ENMonthNameMiddleEndianParser(10501).parseOrdinalNumberPattern(index[3]);
+          const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
+          parsingResult.start = addTagResult;
+          parsingResult.end = addTagResult.clone();
+          const end = parsingResult.end;
+          end.assign("day", result1);
           return parsingResult;
         } else {
-          index.index = index.index + index[0].length;
-          return null;
+          return addTagResult;
         }
       }
-      str2 = parsingResult.text;
     }
   }
 ];
-const entry1 = {
-  key: "extractTimeComponent",
-  value: function extractTimeComponent(assign, arg1) {
-    const parsed = parseInt(arg1[2]);
-    let num = 0;
-    if (null != arg1[3]) {
-      const _parseInt = parseInt;
-      num = parseInt(arg1[3]);
-    }
-    if (num < 60) {
-      if (parsed <= 24) {
-        let PM = null;
-        if (parsed >= 12) {
-          PM = DESpecificTimeExpressionParser(10469).Meridiem.PM;
-        }
-        let tmp5 = PM;
-        let tmp6 = parsed;
-        if (null != arg1[5]) {
-          if (parsed > 12) {
-            return null;
-          } else {
-            const str8 = arg1[5].toLowerCase();
-            let tmp9 = parsed;
-            if (str8.match(/morgen|vormittag/)) {
-              let num2 = parsed;
-              if (12 == parsed) {
-                num2 = 0;
-              }
-              tmp9 = num2;
-              PM = DESpecificTimeExpressionParser(10469).Meridiem.AM;
-            }
-            let tmp10 = tmp9;
-            if (str8.match(/nachmittag|abend/)) {
-              let sum = tmp9;
-              if (12 != tmp9) {
-                sum = tmp9 + 12;
-              }
-              tmp10 = sum;
-              PM = DESpecificTimeExpressionParser(10469).Meridiem.PM;
-            }
-            tmp5 = PM;
-            tmp6 = tmp10;
-            if (str8.match(/nacht/)) {
-              if (12 == tmp10) {
-                PM = DESpecificTimeExpressionParser(10469).Meridiem.AM;
-              } else if (tmp10 < 6) {
-                PM = DESpecificTimeExpressionParser(10469).Meridiem.AM;
-              } else {
-                PM = DESpecificTimeExpressionParser(10469).Meridiem.PM;
-                const num4 = tmp10 + 12;
-              }
-            }
-          }
-        }
-        assign.assign("hour", tmp6);
-        assign.assign("minute", num);
-        if (null !== tmp5) {
-          assign.assign("meridiem", tmp5);
-        } else if (tmp6 < 12) {
-          assign.imply("meridiem", DESpecificTimeExpressionParser(10469).Meridiem.AM);
-        } else {
-          assign.imply("meridiem", DESpecificTimeExpressionParser(10469).Meridiem.PM);
-        }
-        if (null != arg1[4]) {
-          const _parseInt2 = parseInt;
-          const parsed1 = parseInt(arg1[4]);
-          if (parsed1 >= 60) {
-            return null;
-          } else {
-            assign.assign("second", parsed1);
-          }
-        }
-        return assign;
-      }
-    }
-    return null;
-  }
-};
-const items1 = [entry1];
 
-export default _createClass(DESpecificTimeExpressionParser, items, items1);
+export default _createClass(ENMonthNameMiddleEndianParser, items);

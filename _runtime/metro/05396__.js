@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "1c6dca03661172aa5af3340a0d3930a2", name: "img_account_sync_tiktok_light", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 228, height: 60, scales: [1], hash: "5297c54e8d9a10bee3a01f60b91ba3ae", name: "img_account_sync_samsung_white", type: "png" });

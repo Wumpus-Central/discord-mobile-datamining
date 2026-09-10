@@ -2,7 +2,7 @@
 
 // Module 10600
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10485 from "module_10485" /* 10485 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
@@ -28,27 +28,13 @@ function _isNativeReflectConstruct() {
   }
 }
 _possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class RUMergeDateTimeRefiner {
+const regExp = new RegExp("([0-9]|0[1-9]|1[012])/([0-9]{4})", "i");
+class NLSlashMonthFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, RUMergeDateTimeRefiner);
+    tmp = closure_0(this, NLSlashMonthFormatParser);
     tmp2 = c2;
-    obj = c2(RUMergeDateTimeRefiner);
+    obj = c2(NLSlashMonthFormatParser);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -63,15 +49,26 @@ class RUMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = RUMergeDateTimeRefiner;
-_inherits(RUMergeDateTimeRefiner, fn(_mod10485).default);
+_classCallCheck = NLSlashMonthFormatParser;
+_inherits(NLSlashMonthFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|\u0432|,|-)?\\s*$");
+  key: "innerPattern",
+  value: function innerPattern() {
     return regExp;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const parsed = parseInt(arg1[2]);
+      const parsed1 = parseInt(arg1[1]);
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      const implyResult = parsingComponents.imply("day", 1);
+      return parsingComponents.imply("day", 1).assign("month", parsed1).assign("year", parsed);
+    }
+  }
+];
 
-export default _createClass(RUMergeDateTimeRefiner, items);
+export default _createClass(NLSlashMonthFormatParser, items);

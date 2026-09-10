@@ -1,19 +1,29 @@
 // === Module 14434: ? ===
 
 // Module 14434
-import _mod14435 from "module_14435" /* 14435 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod14397 from "module_14397" /* 14397 */;
+import getOwnPropertyDescriptor from "module_14377" /* 14377 */;
 
+if (getOwnPropertyDescriptor) {
+  const _Object = Object;
+  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+}
+const tmp = _mod14397(prototype, "name");
+let tmp2 = tmp;
+if (tmp) {
+  tmp2 = "something" === function something() {
 
-export default function getReactNativeDimensions() {
-  try {
-    const Dimensions = get_ActivityIndicator.Dimensions;
-    try {
-      const Dimensions2 = get_ActivityIndicator.Dimensions;
-      value = Dimensions2.get("window");
-      return _mod14435.getReactNativeDimensionsWithDimensions(tmp2, value);
-    } catch (err) {
-    }
-  } catch (err) {
+  }.name;
+}
+let tmp3 = tmp;
+if (tmp) {
+  const _module = getOwnPropertyDescriptor;
+  let tmp5 = !_module;
+  if (_module) {
+    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
   }
-};
+  tmp3 = tmp5;
+}
+
+export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };

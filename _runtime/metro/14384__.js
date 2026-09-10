@@ -1,13 +1,14 @@
 // === Module 14384: ? ===
 
 // Module 14384
-import _mod14332 from "module_14332" /* 14332 */;
-import _mod14341 from "module_14341" /* 14341 */;
-import all from "module_14351" /* 14351 */;
+import _mod14385 from "module_14385" /* 14385 */;
 
-let closure_0 = _mod14332(Function.toString);
-if (!all(_mod14341.inspectSource)) {
-  _mod14341.inspectSource = (arg0) => closure_0(arg0);
-}
 
-export default _mod14341.inspectSource;
+export default (arg0) => {
+  if (_mod14385(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
+  } else {
+    return arg0;
+  }
+};

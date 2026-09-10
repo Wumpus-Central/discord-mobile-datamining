@@ -1,26 +1,42 @@
 // === Module 4145: ? ===
 
 // Module 4145
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    let obj = { data: null, locale: "hu" };
-    obj = { conjunction: null, disjunction: null, unit: null };
-    const obj1 = { long: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" }, short: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" } };
-    obj.conjunction = obj1;
-    const obj2 = { long: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" }, narrow: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" }, short: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" } };
-    obj.disjunction = obj2;
-    const obj3 = { long: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" }, short: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" } };
-    obj.unit = obj3;
-    obj.data = obj;
-    ListFormat.__addLocaleData(obj);
-  }
+import module_4146 from "module_4146" /* 4146 */;
+import module_4147 from "module_4147" /* 4147 */;
+import module_4148 from "module_4148" /* 4148 */;
+import date from "module_4149" /* 4149 */;
+import date from "module_4150" /* 4150 */;
+
+if (!module_4146) {
+  let obj = { default: module_4146 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4146;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+if (!module_4147) {
+  obj = { default: module_4147 };
+  let tmp5 = obj;
+} else {
+  tmp5 = module_4147;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-obj = { data: { conjunction: { long: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" }, short: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" }, narrow: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" }, short: { end: "{0} vagy {1}", middle: "{0}, {1}", pair: "{0} vagy {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" }, short: { end: "{0} \u00E9s {1}", middle: "{0}, {1}", pair: "{0} \u00E9s {1}", start: "{0}, {1}" } } }, locale: "hu" };
-prop.push(obj);
+if (!module_4148) {
+  obj = { default: module_4148 };
+  let tmp7 = obj;
+} else {
+  tmp7 = module_4148;
+}
+if (!date) {
+  const obj1 = { default: date };
+  let tmp9 = obj1;
+} else {
+  tmp9 = date;
+}
+if (!date) {
+  const obj2 = { default: date };
+  let tmp11 = obj2;
+} else {
+  tmp11 = date;
+}
+
+export default { code: "zh-CN", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default exports.default;

@@ -1,52 +1,15 @@
 // === Module 3730: ? ===
 
 // Module 3730
-import module_3665 from "module_3665" /* 3665 */;
+let closure_0 = { lastWeek: "'el' eeee 'pasado a la' p", yesterday: "'ayer a la' p", today: "'hoy a la' p", tomorrow: "'ma\u00F1ana a la' p", nextWeek: "eeee 'a la' p", other: "P" };
+let closure_1 = { lastWeek: "'el' eeee 'pasado a las' p", yesterday: "'ayer a las' p", today: "'hoy a las' p", tomorrow: "'ma\u00F1ana a las' p", nextWeek: "eeee 'a las' p", other: "P" };
 
-if (!module_3665) {
-  const obj = { default: module_3665 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3665;
-}
-module_3665 = tmp3;
-const dependencyMap = ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"];
-let closure_2 = {
-  lastWeek(getUTCDay, arg1, arg2) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (module_3665.default(getUTCDay, arg1, arg2)) {
-      let str = `${"'" + closure_1[tmp]} alle' p`;
-    } else {
-      str = "'domenica scorsa alle' p";
-      if (0 !== uTCDay) {
-        str = `${"'" + closure_1[tmp]} scorso alle' p`;
-      }
-    }
-    return str;
-  },
-  yesterday: "'ieri alle' p",
-  today: "'oggi alle' p",
-  tomorrow: "'domani alle' p",
-  nextWeek(getUTCDay, arg1, arg2) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (module_3665.default(getUTCDay, arg1, arg2)) {
-      let str = `${"'" + closure_1[tmp]} alle' p`;
-    } else {
-      str = "'domenica prossima alle' p";
-      if (0 !== uTCDay) {
-        str = `${"'" + closure_1[tmp]} prossimo alle' p`;
-      }
-    }
-    return str;
-  },
-  other: "P"
-};
-
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_2[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
+export default function formatRelative(arg0, getUTCHours, arg2, arg3) {
+  if (1 !== getUTCHours.getUTCHours()) {
+    let tmp2 = closure_1[arg0];
+  } else {
+    tmp2 = closure_0[arg0];
   }
-  return tmpResult;
+  return tmp2;
 };
 export default exports.default;

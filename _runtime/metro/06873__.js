@@ -1,141 +1,70 @@
 // === Module 6873: ? ===
 
 // Module 6873
+import jsxProd from "jsxProd" /* 21 */;
+import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6678 */;
+import _mod6874 from "module_6874" /* 6874 */;
+import noop from "module_19" /* 19 */;
 
-export default function _iterableToArrayLimit(iterable, arg1) {
-  let tmp7 = null;
-  if (null != iterable) {
-    const _Symbol = Symbol;
-    let prop = typeof Symbol !== "undefined";
-    if (typeof Symbol !== "undefined") {
-      const _Symbol2 = Symbol;
-      prop = iterable[Symbol.iterator];
-    }
-    if (!prop) {
-      prop = iterable[Symbol.iterator];
-    }
-    tmp7 = prop;
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
+const jsx = jsxProd.jsx;
+const __initData = { code: "function pnpm_BottomSheetFooterTsx1(){const{animatedFooterPosition,animatedKeyboardState,KEYBOARD_STATE,bottomInset}=this.__closure;let footerTranslateY=animatedFooterPosition.get();if(animatedKeyboardState.get()!==KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-bottomInset;}return{transform:[{translateY:Math.max(0,footerTranslateY)}]};}" };
+const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPosition) {
+  animatedFooterPosition = animatedFooterPosition.animatedFooterPosition;
+  let num = animatedFooterPosition.bottomInset;
+  if (num === undefined) {
+    num = 0;
   }
-  if (null != tmp7) {
-    let flag2 = false;
-    try {
-      const items = [];
-      try {
-        const call = tmp10.call;
-        if (typeof call === "unknown") {
-          let iter = tmp10();
-        } else {
-          iter = call(iterable);
-        }
-        const next = iter.next;
-        if (0 === arg1) {
-          const _Object = Object;
-          if (Object(obj2) !== obj2) {
-            try {
-              if (flag2) {
-                throw tmp6;
-              }
-            } catch (tmp23) {
-              if (tmp2) {
-                throw tmp;
-              } else {
-                throw tmp23;
-              }
-            }
-          } else {
-            let flag3 = false;
-          }
-        } else {
-          const call3 = next.call;
-          if (typeof call3 === "unknown") {
-            let iter2 = next();
-          } else {
-            iter2 = call3(obj2);
-          }
-          const done = iter2.done;
-          flag3 = done;
-          if (!done) {
-            items.push(iter3.value);
-            if (items.length !== arg1) {
-              while (true) {
-                let flag4 = true;
-                let call2 = next.call;
-                if (typeof call2 === "unknown") {
-                  let iter4 = next();
-                } else {
-                  iter4 = call2(obj2);
-                }
-                let done2 = iter4.done;
-                flag3 = done2;
-                if (done2) {
-                  break;
-                } else {
-                  let arr = items.push(iter5.value);
-                  if (items.length !== arg1) {
-                    continue;
-                  } else {
-                    break;
-                  }
-                  break;
-                }
-              }
-            }
-          }
-        }
-        try {
-          if (!flag3) {
-            if (null != obj2.return) {
-              const returnResult = obj2.return();
-              const _Object2 = Object;
-              if (Object(returnResult) !== returnResult) {
-                if (flag2) {
-                  throw tmp6;
-                }
-              }
-            }
-          }
-          if (flag2) {
-            throw tmp6;
-          } else {
-            return items;
-          }
-        } catch (tmp35) {
-          if (tmp2) {
-            throw tmp;
-          } else {
-            throw tmp35;
-          }
-        }
-      } catch (tmp6) {
-        flag2 = true;
-      }
-    } catch (tmp38) {
-      try {
-        if (!tmp4) {
-          if (tmp5 != obj.return) {
-            const returnResult1 = obj.return();
-            const _Object3 = Object;
-            if (Object(returnResult1) !== returnResult1) {
-              if (tmp2) {
-                throw tmp;
-              } else {
-                return tmp3;
-              }
-            }
-          }
-        }
-        if (tmp2) {
-          throw tmp;
-        } else {
-          throw tmp38;
-        }
-      } catch (tmp47) {
-        if (tmp2) {
-          throw tmp;
-        } else {
-          throw tmp47;
-        }
-      }
+  const style = animatedFooterPosition.style;
+  const children = animatedFooterPosition.children;
+  let animatedStyle;
+  const tmp = animatedStyle(null);
+  let obj = animatedFooterPosition(style[2]);
+  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
+  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
+  const fn = function c() {
+    animatedFooterPosition.get();
+    value = animatedKeyboardState.get();
+    let diff = value;
+    if (value !== GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
+      diff = value - num;
     }
+    let obj = { transform: null };
+    obj = { translateY: Math.max(0, diff) };
+    const items = [obj];
+    obj.transform = items;
+    return obj;
+  };
+  obj = { animatedFooterPosition, animatedKeyboardState, KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE, bottomInset: num };
+  fn.__closure = obj;
+  fn.__workletHash = 5322275157644;
+  fn.__initData = __initData;
+  let items = [num, animatedKeyboardState, animatedFooterPosition];
+  animatedStyle = animatedFooterPosition(style[3]).useAnimatedStyle(fn, items);
+  const items1 = [style, animatedStyle];
+  const items2 = [animatedFooterHeight];
+  const obj2 = animatedFooterPosition(style[3]);
+  const tmp2 = style;
+  const items3 = [animatedFooterHeight];
+  const tmp5 = animatedKeyboardState(() => {
+    const items = [_mod6874.styles.container, style, animatedStyle];
+    return items;
+  }, items1);
+  const tmp6 = animatedFooterHeight((nativeEvent) => {
+    const result = animatedFooterHeight.set(nativeEvent.nativeEvent.layout.height);
+  }, items2);
+  const tmp7 = animatedFooterHeight((height) => {
+    const result = animatedFooterHeight.set(height.height);
+  }, items3);
+  const boundingClientRect = animatedFooterPosition(style[2]).useBoundingClientRect(tmp, tmp7);
+  let tmp9 = null;
+  if (null !== children) {
+    obj = { ref: tmp, onLayout: tmp6, style: tmp5, children };
+    tmp9 = jsx(num(tmp2[3]).View, { ref: tmp, onLayout: tmp6, style: tmp5, children });
   }
-};
+  return tmp9;
+});
+memoResult.displayName = "BottomSheetFooter";
+
+export const BottomSheetFooter = memoResult;

@@ -1,33 +1,47 @@
 // === Module 14459: ? ===
 
 // Module 14459
-import emptyPromise from "emptyPromise" /* 14442 */;
+import _typeof from "module_14460" /* 14460 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export default () => (log) => {
-  const result = emptyPromise.assertHasLoggerPlugin(log);
-  closure_0 = log;
-  return {
-    onConnect() {
-      log = console.log;
-      console.log = () => {
-        const items = [...arguments];
-        log(...items);
-        const items1 = [...items];
-        log.log.apply(items1);
-      };
-      console.warn = () => {
-        const items = [...arguments];
-        warn(...items);
-        log.warn(items[0]);
-      };
-      console.debug = () => {
-        const items = [...arguments];
-        debug(...items);
-        log.debug(items[0]);
-      };
+if (_typeof) {
+  if (typeof _typeof === "object") {
+    let _default = _typeof;
+  }
+  let obj = globalThis;
+  const _Intl = Intl;
+  if (typeof Intl === "undefined") {
+    if (undefined !== global) {
+      obj = { PluralRules: _default.default };
+      global.Intl = obj;
+      _default = _default.default;
+      _default.polyfill = true;
+    } else {
+      const _window = window;
+      if (typeof window === "undefined") {
+        const self = this;
+        obj = { PluralRules: _default.default };
+        this.Intl = obj;
+      }
     }
-  };
-};
+    obj = { PluralRules: _default.default };
+    obj.window.Intl = obj;
+  } else {
+    const _Intl5 = Intl;
+    if (Intl.PluralRules) {
+      const _Intl2 = Intl;
+      if (Intl.PluralRules.prototype.selectRange) {
+        const items = ["en", "es", "ru", "zh"];
+        const _Intl4 = Intl;
+        if (PluralRules.supportedLocalesOf(items).length < items.length) {
+          const _Intl6 = Intl;
+          Intl.PluralRules = _default.default;
+          _default.default.polyfill = true;
+        }
+      }
+    }
+    const _Intl3 = Intl;
+    Intl.PluralRules = _default.default;
+    _default.default.polyfill = true;
+  }
+}
+_default = { default: _typeof };

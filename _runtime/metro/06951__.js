@@ -1,9 +1,18 @@
 // === Module 6951: ? ===
 
 // Module 6951
-import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import noop from "module_19" /* 19 */;
 
+({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
 
-export const TouchableOpacity = LegacyBaseButton.TouchableOpacity;
-export const TouchableHighlight = LegacyBaseButton.TouchableHighlight;
-export const TouchableWithoutFeedback = LegacyBaseButton.TouchableWithoutFeedback;
+export const useUnmountFlag = () => {
+  const tmp = React(false);
+  closure_0 = tmp;
+  framebus(() => {
+    closure_0.current = false;
+    return () => {
+      closure_1_0.current = true;
+    };
+  }, []);
+  return tmp;
+};

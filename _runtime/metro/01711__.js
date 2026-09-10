@@ -81,8 +81,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START",
-      reduceMotion: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR"
+      startTimestamp: "$id",
+      reduceMotion: "id"
     };
     let num = obj.velocity;
     if (num == null) {

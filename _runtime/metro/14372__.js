@@ -1,7 +1,10 @@
 // === Module 14372: ? ===
 
 // Module 14372
-import _mod14373 from "module_14373" /* 14373 */;
+import _mod14438 from "module_14438" /* 14438 */;
+import module_14373 from "module_14373" /* 14373 */;
 
-
-export default (arg0) => _mod14373(arg0.length);
+let obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod14438;
+obj = { assign: _mod14438 };
+module_14373(obj, obj);

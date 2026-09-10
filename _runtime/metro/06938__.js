@@ -1,22 +1,43 @@
 // === Module 6938: ? ===
 
 // Module 6938
-import _mod19 from "module_19" /* 19 */;
-import _mod6890 from "module_6890" /* 6890 */;
+import _mod6939 from "module_6939" /* 6939 */;
 
-_mod19.useCallback;
-
-export const useMappingHelper = () => {
-  let obj = _mod6890;
-  const recyclerViewContext = obj.useRecyclerViewContext();
-  obj = { getMappingKey: null };
-  const items = [recyclerViewContext];
-  obj.getMappingKey = useCallback((arg0, arg1) => {
-    let tmp = arg0;
-    if (recyclerViewContext) {
-      tmp = arg1;
+function _get() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect2 = Reflect;
+    if (Reflect.get) {
+      const _Reflect = Reflect;
+      exports = get.bind();
     }
-    return tmp;
-  }, items);
-  return obj;
-};
+    module.exports = exports;
+    const apply = exports.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(null);
+    } else {
+      applyArgumentsResult = apply(null, arguments);
+    }
+    return applyArgumentsResult;
+  }
+  exports = (arg0, arg1, arg2) => {
+    const tmp = _mod6939(arg0, arg1);
+    if (tmp) {
+      const _Object = Object;
+      const iter = Object.getOwnPropertyDescriptor(tmp, arg1);
+      if (iter.get) {
+        let tmp3 = arg2;
+        const get = iter.get;
+        const call = get.call;
+        if (arguments.length < 3) {
+          tmp3 = arg0;
+        }
+        typeof call === "unknown" ? get() : call(tmp3);
+      } else {
+        return iter.value;
+      }
+    }
+  };
+}
+let exports = _get;
+
+export default _get;

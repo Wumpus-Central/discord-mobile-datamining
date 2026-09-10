@@ -1,27 +1,27 @@
 // === Module 6852: ? ===
 
 // Module 6852
-import _mod19 from "module_19" /* 19 */;
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6642 */;
+import noop from "module_19" /* 19 */;
 
-const useMemo = _mod19.useMemo;
+({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
 
-export const useBottomSheetTimingConfigs = (arg0) => {
-  const easing = arg0;
-  const items = [, , ];
-  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
-  return useMemo(() => {
-    let ANIMATION_EASING = easing.easing;
-    if (!ANIMATION_EASING) {
-      ANIMATION_EASING = GESTURE_SOURCE.ANIMATION_EASING;
+export const useStableCallback = function useStableCallback(current) {
+  React3(undefined);
+  React2(() => {
+    closure_1.current = current;
+  });
+  framebus(() => () => {
+    ref.current = undefined;
+  }, []);
+  return React(() => {
+    const items = [...arguments];
+    current = ref.current;
+    let applyResult;
+    if (current != null) {
+      const items1 = [];
+      HermesBuiltin.arraySpread(items, 0);
+      applyResult = HermesBuiltin.apply(items1, ref);
     }
-    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
-    let ANIMATION_DURATION = easing.duration;
-    if (!ANIMATION_DURATION) {
-      ANIMATION_DURATION = GESTURE_SOURCE.ANIMATION_DURATION;
-    }
-    obj.duration = ANIMATION_DURATION;
-    obj.reduceMotion = easing.reduceMotion;
-    return obj;
-  }, items);
+    return applyResult;
+  }, []);
 };

@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium_marketing/native/images", width: 364, height: 180, scales: [2, 3], hash: "d7e552e30321c5576e018b6c00e2147c", name: "img_stickers", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 36, scales: [2, 3], hash: "e0c33c2cafef5b70f6c02f92e9c696e1", name: "img_premium_error_mobile", type: "png" });

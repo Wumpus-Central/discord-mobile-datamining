@@ -1,12 +1,7 @@
 // === Module 6662: ? ===
 
 // Module 6662
-function print() {
+import registerAsset from "module_1122" /* 1122 */;
 
-}
-const frozen = Object.freeze(print);
 
-export { print };
-export const enableLogging = (arg0) => {
-  console.warn("[BottomSheet] could not enable logging on production!");
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "db11ea9da81d79144310eac53428fbe9", name: "CircleErrorIcon-primary", type: "png" });

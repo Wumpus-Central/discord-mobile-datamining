@@ -1,7 +1,7 @@
 // === Module 9022: ? ===
 
 // Module 9022
-import _mod8971 from "module_8971" /* 8971 */;
+import _mod9008 from "module_9008" /* 9008 */;
 
 const self = this;
 let self2 = this;
@@ -57,9 +57,9 @@ if (self2) {
     exports.default = function default_1() {
       if (typeof error === "function") {
         let obj = { localeError: null };
-        obj = { string: { unit: "belgi", verb: "bo\u2018lishi kerak" }, file: { unit: "bayt", verb: "bo\u2018lishi kerak" }, array: { unit: "element", verb: "bo\u2018lishi kerak" }, set: { unit: "element", verb: "bo\u2018lishi kerak" } };
-        closure_1 = { regex: "kirish", email: "elektron pochta manzili", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO sana va vaqti", date: "ISO sana", time: "ISO vaqt", duration: "ISO davomiylik", ipv4: "IPv4 manzil", ipv6: "IPv6 manzil", mac: "MAC manzil", cidrv4: "IPv4 diapazon", cidrv6: "IPv6 diapazon", base64: "base64 kodlangan satr", base64url: "base64url kodlangan satr", json_string: "JSON satr", e164: "E.164 raqam", jwt: "JWT", template_literal: "kirish" };
-        closure_2 = { nan: "NaN", number: "raqam", array: "massiv" };
+        obj = { string: { unit: "Zeichen", verb: "zu haben" }, file: { unit: "Bytes", verb: "zu haben" }, array: { unit: "Elemente", verb: "zu haben" }, set: { unit: "Elemente", verb: "zu haben" } };
+        closure_1 = { regex: "Eingabe", email: "E-Mail-Adresse", url: "URL", emoji: "Emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO-Datum und -Uhrzeit", date: "ISO-Datum", time: "ISO-Uhrzeit", duration: "ISO-Dauer", ipv4: "IPv4-Adresse", ipv6: "IPv6-Adresse", cidrv4: "IPv4-Bereich", cidrv6: "IPv6-Bereich", base64: "Base64-codierter String", base64url: "Base64-URL-codierter String", json_string: "JSON-String", e164: "E.164-Nummer", jwt: "JWT", template_literal: "Eingabe" };
+        closure_2 = { nan: "NaN", number: "Zahl", array: "Array" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -68,115 +68,120 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp45 = closure_2[parsedTypeResult];
-              if (tmp45 == null) {
-                tmp45 = parsedTypeResult;
+              let tmp48 = closure_2[parsedTypeResult];
+              if (tmp48 == null) {
+                tmp48 = parsedTypeResult;
               }
               obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined = "Noto\u2018g\u2018ri kirish: kutilgan instanceof " + code.expected + ", qabul qilingan " + tmp45;
+                let combined = "Ung\u00FCltige Eingabe: erwartet instanceof " + code.expected + ", erhalten " + tmp48;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Noto\u2018g\u2018ri kirish: kutilgan " + expected + ", qabul qilingan " + tmp45;
+                combined = "Ung\u00FCltige Eingabe: erwartet " + expected + ", erhalten " + tmp48;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Noto\u2018g\u2018ri kirish: kutilgan " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "Ung\u00FCltige Eingabe: erwartet " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 = "Noto\u2018g\u2018ri variant: quyidagilardan biri kutilgan " + closure_2.joinValues(code.values, "|");
+                combined1 = "Ung\u00FCltige Option: erwartet eine von " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str30 = "<";
+              let str29 = "<";
               if (code.inclusive) {
-                str30 = "<=";
+                str29 = "<=";
               }
               let tmp27 = obj[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
-              let str31 = code.origin;
+              let str30 = code.origin;
               if (tmp27) {
-                if (str31 == null) {
-                  str31 = "qiymat";
+                if (str30 == null) {
+                  str30 = "Wert";
+                }
+                let str = code.maximum.toString();
+                let str37 = tmp27.unit;
+                if (str37 == null) {
+                  str37 = "Elemente";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Juda katta: kutilgan " + str31 + " " + str30 + code.maximum.toString() + " " + tmp27.unit + " " + tmp27.verb;
+                let combined2 = "Zu gro\u00DF: erwartet, dass " + str30 + " " + str29 + str + " " + str37 + " hat";
               } else {
-                let str32 = str31;
-                if (str31 == null) {
-                  str32 = "qiymat";
+                let str31 = str30;
+                if (str30 == null) {
+                  str31 = "Wert";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Juda katta: kutilgan " + str32 + " " + str30 + code.maximum.toString();
+                combined2 = "Zu gro\u00DF: erwartet, dass " + str31 + " " + str29 + code.maximum.toString() + " ist";
               }
               return combined2;
             case "too_small":
-              let str22 = ">";
+              let str20 = ">";
               if (code.inclusive) {
-                str22 = ">=";
+                str20 = ">=";
               }
               let tmp15 = obj[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              let str = minimum.toString();
+              const str1 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Juda kichik: kutilgan " + origin + " " + str22 + str + " " + tmp15.unit + " " + tmp15.verb;
+                let combined3 = "Zu klein: erwartet, dass " + origin + " " + str20 + str1 + " " + tmp15.unit + " hat";
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Juda kichik: kutilgan " + origin + " " + str22 + str;
+                combined3 = "Zu klein: erwartet, dass " + origin + " " + str20 + str1 + " ist";
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = "Noto\u2018g\u2018ri satr: \"" + code.prefix + "\" bilan boshlanishi kerak";
+                let combined4 = "Ung\u00FCltiger String: muss mit \"" + code.prefix + "\" beginnen";
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = "Noto\u2018g\u2018ri satr: \"" + code.suffix + "\" bilan tugashi kerak";
+                combined4 = "Ung\u00FCltiger String: muss mit \"" + code.suffix + "\" enden";
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = "Noto\u2018g\u2018ri satr: \"" + code.includes + "\" ni o\u2018z ichiga olishi kerak";
+                combined4 = "Ung\u00FCltiger String: muss \"" + code.includes + "\" enthalten";
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Noto\u2018g\u2018ri satr: " + code.pattern + " shabloniga mos kelishi kerak";
+                combined4 = "Ung\u00FCltiger String: muss dem Muster " + code.pattern + " entsprechen";
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "Noto\u2018g\u2018ri " + format;
+                combined4 = "Ung\u00FCltig: " + format;
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Noto\u2018g\u2018ri raqam: " + code.divisor + " ning karralisi bo\u2018lishi kerak";
+              return "Ung\u00FCltige Zahl: muss ein Vielfaches von " + code.divisor + " sein";
             case "unrecognized_keys":
-              let str5 = "";
+              let str3 = "Unbekannter Schl\u00FCssel";
               if (code.keys.length > 1) {
-                str5 = "lar";
+                str3 = "Unbekannte Schl\u00FCssel";
               }
               const _HermesInternal3 = HermesInternal;
-              return "Noma\u2019lum kalit" + str5 + ": " + closure_2.joinValues(code.keys, ", ");
+              return "" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "" + code.origin + " dagi kalit noto\u2018g\u2018ri";
+              return "Ung\u00FCltiger Schl\u00FCssel in " + code.origin;
             case "invalid_union":
-              return "Noto\u2018g\u2018ri kirish";
+              return "Ung\u00FCltige Eingabe";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = " da noto\u2018g\u2018ri qiymat";
-              return "" + code.origin + " da noto\u2018g\u2018ri qiymat";
+              str = "Ung\u00FCltiger Wert in ";
+              return "Ung\u00FCltiger Wert in " + code.origin;
             default:
-              return "Noto\u2018g\u2018ri kirish";
+              return "Ung\u00FCltige Eingabe";
           }
         };
         return obj;
@@ -184,7 +189,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod8971);
+    let closure_2 = fn(_mod9008);
     function error() {
 
     }

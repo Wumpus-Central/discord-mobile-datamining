@@ -1,35 +1,26 @@
 // === Module 3845: ? ===
 
 // Module 3845
-import _typeof from "module_3846" /* 3846 */;
-import _typeof from "module_3663" /* 3663 */;
-import requiredArgs from "requiredArgs" /* 3664 */;
+import _typeof from "module_3693" /* 3693 */;
+import requiredArgs from "requiredArgs" /* 3694 */;
 
 if (!_typeof) {
   let obj = { default: _typeof };
-}
-if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp5 = obj;
+  let tmp3 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp3 = _typeof;
 }
-_typeof = tmp5;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
-  let tmp7 = obj;
+  let tmp5 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isValid(num) {
+export default function isSunday(arg0) {
   requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
-    }
-  }
-  return !isNaN(Number(_typeof.default(num)));
+  return 0 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

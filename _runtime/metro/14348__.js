@@ -1,11 +1,67 @@
 // === Module 14348: ? ===
 
 // Module 14348
-import _mod14332 from "module_14332" /* 14332 */;
-import _mod14349 from "module_14349" /* 14349 */;
+import e from "e" /* 1162 */;
+import calendars from "calendars" /* 14349 */;
+import hourCycles from "hourCycles" /* 14350 */;
+import timezones from "timezones" /* 14351 */;
+import weekData from "weekData" /* 14352 */;
 
-let closure_2 = _mod14332({}.hasOwnProperty);
+require = arg1;
+const dependencyMap = arg6;
 
-export default Object.hasOwn || (function hasOwn(arg0, arg1) {
-  return closure_2(_mod14349(arg0), arg1);
-});
+export const getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForRegion(region) {
+  let str = null;
+  if (region) {
+    str = region.toUpperCase();
+  }
+  if (!str) {
+    str = "";
+  }
+  return calendars.calendars[str] || calendars.calendars["001"].map((item) => {
+    let str = "gregory";
+    if ("gregorian" !== item) {
+      let str2 = "islamicc";
+      if ("islamic-civil" !== item) {
+        str2 = item;
+      }
+      str = str2;
+    }
+    return str;
+  });
+};
+export const getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPreferenceDataForLocaleOrRegion(locale, region) {
+  const formatted = locale.toLowerCase();
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
+  }
+  let v001 = hourCycles.hourCycles[formatted] || hourCycles.hourCycles[str];
+  if (!v001) {
+    const concat = "".concat;
+    v001 = hourCycles.hourCycles["".concat("", formatted, "-001")];
+  }
+  if (!v001) {
+    v001 = hourCycles.hourCycles["001"];
+  }
+  return e.__spreadArray([], v001, true);
+};
+export const getTimeZonePreferenceForRegion = function getTimeZonePreferenceForRegion(region) {
+  const formatted = region.toLowerCase();
+  const items = [];
+  if (timezones.timezones[formatted]) {
+    return e.__spreadArray(items, timezones.timezones[formatted], true);
+  } else {
+    return items;
+  }
+};
+export const getWeekDataForRegion = function getWeekDataForRegion(region) {
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
+  }
+  if (!str) {
+    str = "001";
+  }
+  return weekData.weekData[str] || weekData.weekData["001"];
+};

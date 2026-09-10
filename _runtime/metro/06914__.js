@@ -1,38 +1,33 @@
 // === Module 6914: ? ===
 
 // Module 6914
-function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
-  try {
-    const iter = arg0[arg5](arg6);
-    value = iter.value;
-    if (iter.done) {
-      fn(value);
-    } else {
-      const resolved = Promise.resolve(value);
-      resolved.then(arg3, arg4);
-    }
-  } catch (tmp13) {
-    fn2(tmp13);
-  }
-}
 
-export default function _asyncToGenerator(arg0) {
-  closure_0 = arg0;
-  return function() {
-    const self = this;
-    closure_1 = arguments;
-    return new Promise((arg0, arg1) => {
-      _self = arg0;
-      closure_1 = arg1;
-      function _next(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
+export default function _objectWithoutPropertiesLoose(obj, arr) {
+  if (null == obj) {
+    return {};
+  } else {
+    obj = {};
+    for (const key10007 in arg0) {
+      hasOwnProperty = {}.hasOwnProperty;
+      let call = hasOwnProperty.call;
+      if (typeof call === "unknown") {
+        let hasOwnPropertyResult = hasOwnProperty(key10007);
+      } else {
+        hasOwnPropertyResult = call(arg0, key10007);
       }
-      function _throw(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
+      if (!hasOwnPropertyResult) {
+        continue;
+      } else {
+        if (-1 !== arg1.indexOf(key10007)) {
+          continue;
+        } else {
+          obj[key10007] = arg0[key10007];
+          continue;
+        }
+        continue;
       }
-      const applyResult = _self.apply(self, closure_1);
-      closure_2 = applyResult;
-      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
-    });
-  };
+      continue;
+    }
+    return obj;
+  }
 };

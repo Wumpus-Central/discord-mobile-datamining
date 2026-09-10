@@ -1,130 +1,204 @@
 // === Module 6725: ? ===
 
 // Module 6725
-import ComposedGestureName from "ComposedGestureName" /* 6728 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6737 */;
-import _mod6741 from "module_6741" /* 6741 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-require = fn;
-function isSupportedGesture(gestures) {
-  if (obj.isComposedGesture(gestures)) {
-    gestures = gestures.gestures;
-    return gestures.some(isSupportedGesture);
-  } else {
-    const type = gestures.type;
-    if (ComposedGestureName.SingleGestureName.Tap !== type) {
-      if (ComposedGestureName.SingleGestureName.LongPress !== type) {
-        if (ComposedGestureName.SingleGestureName.Fling !== type) {
-          if (ComposedGestureName.SingleGestureName.Native !== type) {
-            if (ComposedGestureName.SingleGestureName.Hover !== type) {
-              return false;
-            }
-          }
-        }
-      }
-    }
-    return true;
-  }
-  obj = DEFAULT_PROPS_TRANSFORMER;
-}
-const noop = fn(19);
-({ use: c3, useCallback: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useState: closure_7 } = noop);
-let closure_8 = fn(6726).SHARED_VALUE_OFFSET + 0.5;
-let closure_10 = { code: "function pnpm_useJSResponderHandlerTs1(sharedValues,id,notify){const{runOnJS}=this.__closure;const listener=runOnJS(notify);for(const sharedValue of sharedValues){sharedValue.addListener(id,listener);}}" };
-let closure_11 = { code: "function pnpm_useJSResponderHandlerTs2(sharedValues,id){for(const sharedValue of sharedValues){sharedValue.removeListener(id);}}" };
-
-export const useJSResponderHandler = function useJSResponderHandler(gesture) {
-  _require = gesture;
-  let tmp = closure_3(require("module_6741").JSResponderContext);
-  dependencyMap = tmp;
-  const tmp2 = _slicedToArray(closure_7(0), 2);
-  _slicedToArray = tmp2[1];
-  const tmp3 = closure_6(null);
-  closure_3 = tmp3;
-  if (null === tmp3.current) {
-    closure_8 = tmp5 + 1;
-    tmp3.current = +closure_8;
-  }
-  const items = [gesture];
-  closure_5(() => {
-    const Reanimated = gesture(6712).Reanimated;
-    let obj = gesture(6726);
-    const enabledSharedValues = obj.getEnabledSharedValues(Reanimated);
-    if (undefined !== Reanimated) {
-      if (0 !== enabledSharedValues.length) {
-        const current = runOnJS.current;
-        if (null !== current) {
-          runOnJS = Reanimated.runOnJS;
-          const fn = function o(arg0, arg1, arg2) {
-            const iter = arg0[Symbol.iterator]();
-            const tmp = runOnJS(arg2);
-            while (iter !== undefined) {
-              let addListenerResult = nextResult.addListener(arg1, tmp);
-              continue;
-            }
-          };
-          obj = { runOnJS };
-          fn.__closure = obj;
-          fn.__workletHash = 3030529712101;
-          fn.__initData = __initData;
-          const fn2 = function l(arg0, arg1) {
-            const iter = arg0[Symbol.iterator]();
-            while (iter !== undefined) {
-              let removeListenerResult = nextResult.removeListener(arg1);
-              continue;
-            }
-          };
-          fn2.__closure = {};
-          fn2.__workletHash = 3663767498079;
-          fn2.__initData = __initData2;
-          Reanimated.runOnUI(fn)(enabledSharedValues, current, () => {
-            current((arg0) => arg0 + 1);
-          });
-          return () => {
-            Reanimated.runOnUI(fn2)(enabledSharedValues, current);
-          };
-        }
-      }
-    }
-  }, items);
-  const items1 = [tmp2[0], gesture];
-  const tmp7 = closure_4(() => {
-    let some = closure_0;
-    const isGestureEnabledResult = DEFAULT_PROPS_TRANSFORMER.isGestureEnabled(closure_0);
-    if (!isGestureEnabledResult) {
-      return isGestureEnabledResult;
+let ExclusiveGesture = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      if (tmpResult.isComposedGesture(some)) {
-        const gestures = some.gestures;
-        some = gestures.some;
-        let flag = some(isSupportedGesture);
-      } else {
-        const type = some.type;
-        if (ComposedGestureName.SingleGestureName.Tap !== type) {
-          if (ComposedGestureName.SingleGestureName.LongPress !== type) {
-            if (ComposedGestureName.SingleGestureName.Fling !== type) {
-              if (ComposedGestureName.SingleGestureName.Native !== type) {
-                flag = false;
-              }
-            }
-          }
-        }
-        flag = true;
-      }
-      tmpResult = DEFAULT_PROPS_TRANSFORMER;
+      callResult = call(constructResult);
     }
-  }, items1);
-  closure_4 = tmp7;
-  const items2 = [tmp, tmp7];
-  let handleStartShouldSetResponder = closure_4(() => {
-    if (closure_4()) {
-      const result = _mod6741.updateResponderEventValue(closure_1, true);
-    }
-    return false;
-  }, items2);
-  if (null == tmp) {
-    handleStartShouldSetResponder = () => false;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  return { handleStartShouldSetResponder };
+}
+class ComposedGesture {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.gestures = [];
+    tmp3Result.simultaneousGestures = [];
+    tmp3Result.requireGesturesToFail = [];
+    tmp3Result.gestures = items;
+    return tmp3Result;
+  }
+}
+ExclusiveGesture = ComposedGesture;
+_inherits(ComposedGesture, fn(6726).Gesture);
+const entry = {
+  key: "prepareSingleGesture",
+  value: function prepareSingleGesture(item10006, simultaneousGestures, requireGesturesToFail) {
+    if (item10006 instanceof ExclusiveGesture(6726).BaseGesture) {
+      if (item10006.relationsSnapshot == null) {
+        let obj = { simultaneousWith: item10006.config.simultaneousWith, requireToFail: item10006.config.requireToFail };
+        item10006.relationsSnapshot = obj;
+      }
+      obj = {};
+      const merged = Object.assign(item10006.config);
+      const simultaneousWith = item10006.relationsSnapshot.simultaneousWith;
+      if (undefined === simultaneousWith) {
+        const items = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, 0);
+        let items1 = items;
+      } else {
+        items1 = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, HermesBuiltin.arraySpread(simultaneousWith, 0));
+      }
+      obj.simultaneousWith = items1;
+      const requireToFail = item10006.relationsSnapshot.requireToFail;
+      if (undefined === requireToFail) {
+        const items2 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, 0);
+        let items3 = items2;
+      } else {
+        items3 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, HermesBuiltin.arraySpread(requireToFail, 0));
+      }
+      obj.requireToFail = items3;
+      item10006.config = obj;
+    } else if (item10006 instanceof ExclusiveGesture) {
+      item10006.simultaneousGestures = simultaneousGestures;
+      item10006.requireGesturesToFail = requireGesturesToFail;
+      item10006.prepare();
+    }
+  }
 };
+let items = [
+  entry,
+  {
+    key: "prepare",
+    value: function prepare() {
+      const self = this;
+      for (const item10006 of tmp) {
+        let prepareSingleGestureResult = self.prepareSingleGesture(item10006, self.simultaneousGestures, self.requireGesturesToFail);
+        continue;
+      }
+    }
+  },
+  {
+    key: "initialize",
+    value: function initialize() {
+      for (const item10006 of tmp) {
+        let initializeResult = item10006.initialize();
+        continue;
+      }
+    }
+  },
+  {
+    key: "toGestureArray",
+    value: function toGestureArray() {
+      const gestures = this.gestures;
+      return gestures.flatMap((toGestureArray) => toGestureArray.toGestureArray());
+    }
+  }
+];
+const importDefaultResultResult = _createClass(ComposedGesture, items);
+class SimultaneousGesture {
+  constructor() {
+    self = this;
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+ExclusiveGesture = SimultaneousGesture;
+_inherits(SimultaneousGesture, importDefaultResultResult);
+const entry1 = {
+  key: "prepare",
+  value: function prepare() {
+    let length;
+    const self = this;
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], tmp[num], self.requireGesturesToFail);
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
+    }
+  }
+};
+let items1 = [entry1];
+class ExclusiveGesture {
+  constructor() {
+    self = this;
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ExclusiveGesture, importDefaultResultResult);
+const entry2 = {
+  key: "prepare",
+  value: function prepare() {
+    let length;
+    const self = this;
+    let items = [];
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let requireGesturesToFail = self.requireGesturesToFail;
+        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], self.simultaneousGestures, requireGesturesToFail.concat(items));
+        items = items.concat(tmp[num]);
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
+    }
+  }
+};
+let items2 = [entry2];
+
+export const ComposedGesture = importDefaultResultResult;
+export const SimultaneousGesture = _createClass(SimultaneousGesture, items1);
+export const ExclusiveGesture = _createClass(ExclusiveGesture, items2);

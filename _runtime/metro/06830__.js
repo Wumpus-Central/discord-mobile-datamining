@@ -1,27 +1,70 @@
 // === Module 6830: ? ===
 
 // Module 6830
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import _mod6831 from "module_6831" /* 6831 */;
-import noop from "module_19" /* 19 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const useMemo = noop.useMemo;
-const StyleSheet = _mod17.StyleSheet;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo((arg0) => {
-  ({ backgroundComponent, backgroundStyle } = arg0);
-  let items = [backgroundStyle];
-  ({ animatedIndex, animatedPosition } = arg0);
-  const style = useMemo(() => {
-    const items = [_mod6831.styles.container, backgroundStyle];
-    return StyleSheet.flatten(items);
-  }, items);
-  if (backgroundComponent == null) {
-    backgroundComponent = backgroundStyle(6832).BottomSheetBackground;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  return <backgroundComponent pointerEvents="none" animatedIndex={animatedIndex} animatedPosition={animatedPosition} style={style} />;
-});
-memoResult.displayName = "BottomSheetBackgroundContainer";
+}
+_possibleConstructorReturnDefault;
+class FlingGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, FlingGesture);
+    tmp2 = c2;
+    obj = c2(FlingGesture);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "FlingGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = FlingGesture;
+_inherits(FlingGesture, fn(6726).BaseGesture);
+const entry = {
+  key: "numberOfPointers",
+  value: function numberOfPointers(numberOfPointers) {
+    this.config.numberOfPointers = numberOfPointers;
+    return this;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "direction",
+    value: function direction(dependencyMap) {
+      this.config.direction = dependencyMap;
+      return this;
+    }
+  }
+];
 
-export const BottomSheetBackgroundContainer = memoResult;
+export const FlingGesture = _createClass(FlingGesture, items);

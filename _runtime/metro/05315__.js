@@ -1,7 +1,42 @@
 // === Module 5315: ? ===
 
 // Module 5315
-import registerAsset from "module_1122" /* 1122 */;
+const require = arg1;
+const dependencyMap = arg6;
+let closure_2 = [6, 7, 99];
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 256, height: 256, scales: [1], hash: "141e24b0bc4cfc4d58d1cb3b5e32f1dc", name: "img_bungie_dark", type: "png" });
+export default {
+  get(buffer, Compression, arg2) {
+    let prop = Compression;
+    if (Compression) {
+      let hasItem = undefined === Compression.Compression;
+      if (!hasItem) {
+        hasItem = closure_2.includes(Compression.Compression.value);
+      }
+      prop = hasItem;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormat;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormat.value;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormatLength;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormatLength.value;
+    }
+    if (prop) {
+      Compression.type = "image/jpeg";
+      const sum = arg2 + Compression.JPEGInterchangeFormat.value;
+      buffer = buffer.buffer;
+      Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
+      require("module_5263").deferInit(Compression, "base64", function() {
+        return require("module_5263").getBase64Image(this.image);
+      });
+      const obj = require("module_5263");
+    }
+    return Compression;
+  }
+};

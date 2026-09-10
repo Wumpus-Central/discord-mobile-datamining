@@ -1,11 +1,7 @@
 // === Module 5666: ? ===
 
 // Module 5666
-import get_ActivityIndicator from "module_17" /* 17 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-({ PixelRatio, Platform } = get_ActivityIndicator);
 
-export const getDefaultHeaderHeight = function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
-  ({ width, height } = layout);
-  return 64 + headerStatusBarHeight;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c1eae5d24a46f9d36a9168ec38445f00", name: "DragIcon", type: "png" });

@@ -1,7 +1,20 @@
 // === Module 17341: ? ===
 
 // Module 17341
-import registerAsset from "module_1122" /* 1122 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_gate/native/images", width: 24, height: 24, scales: [2, 3], hash: "d591eaa154611b58ebc00af8c514af58", name: "check", type: "png" });
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "fi",
+  pluralRuleFunction(arg0, arg1) {
+    let str2 = "other";
+    if (!arg1) {
+      let str3 = "other";
+      if (1 == arg0) {
+        str3 = "other";
+        if (!str.split(".")[1]) {
+          str3 = "one";
+        }
+      }
+      str2 = str3;
+    }
+    return str2;
+  }
+});

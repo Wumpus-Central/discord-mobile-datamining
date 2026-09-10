@@ -1,14 +1,15 @@
 // === Module 10630: ? ===
 
 // Module 10630
-import _mod10620 from "module_10620" /* 10620 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
+import REGEX_PARTS from "REGEX_PARTS" /* 10631 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UKTimeUnitCasualRelativeFormatParser = require;
+const RUTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +29,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UKTimeUnitCasualRelativeFormatParser {
+let closure_6 = "(?:(?:\u043E\u043A\u043E\u043B\u043E|\u043F\u0440\u0438\u043C\u0435\u0440\u043D\u043E)\\s*(?:~\\s*)?)?(" + REGEX_PARTS.TIME_UNITS_PATTERN + ")" + REGEX_PARTS.REGEX_PARTS.rightBoundary;
+class RUTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKTimeUnitCasualRelativeFormatParser);
+    tmp = c2(this, RUTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(RUTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,30 +50,36 @@ class UKTimeUnitCasualRelativeFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitCasualRelativeFormatParser, _mod10620.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(RUTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(\u0446\u0456|\u043E\u0441\u0442\u0430\u043D\u043D\u0456|\u043C\u0438\u043D\u0443\u043B\u0456|\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0456|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0456|\u043F\u0456\u0441\u043B\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" + UKTimeUnitCasualRelativeFormatParser(10618).TIME_UNITS_PATTERN + ")";
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return RUTimeUnitWithinFormatParser(10631).REGEX_PARTS.leftBoundary;
   }
 };
 const items = [
   entry,
   {
+    key: "innerPattern",
+    value: function innerPattern(option) {
+      let _RegExp = RegExp;
+      if (option.option.forwardDate) {
+        _RegExp = new _RegExp(closure_6, RUTimeUnitWithinFormatParser(10631).REGEX_PARTS.flags);
+      } else {
+        const _HermesInternal = HermesInternal;
+        const combined = "(?:\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435|\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0438)\\s*" + closure_6;
+        _RegExp = new _RegExp(combined, RUTimeUnitWithinFormatParser(10631).REGEX_PARTS.flags);
+      }
+      return _RegExp;
+    }
+  },
+  {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = UKTimeUnitCasualRelativeFormatParser(10618).parseDuration(arg1[3]);
-      if ("\u043E\u0441\u0442\u0430\u043D\u043D\u0456" !== formatted) {
-        if ("\u043C\u0438\u043D\u0443\u043B\u0456" !== formatted) {
-          let reverseDurationResult = parseDurationResult;
-        }
-        const ParsingComponents = UKTimeUnitCasualRelativeFormatParser(10467).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-      }
-      reverseDurationResult = UKTimeUnitCasualRelativeFormatParser(10466).reverseDuration(parseDurationResult);
+      const ParsingComponents = RUTimeUnitWithinFormatParser(10505).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitWithinFormatParser(10631).parseDuration(arg1[1]));
     }
   }
 ];
 
-export default _createClass(UKTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(RUTimeUnitWithinFormatParser, items);

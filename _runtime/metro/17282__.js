@@ -1,20 +1,7 @@
 // === Module 17282: ? ===
 
 // Module 17282
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "fi",
-  pluralRuleFunction(arg0, arg1) {
-    let str2 = "other";
-    if (!arg1) {
-      let str3 = "other";
-      if (1 == arg0) {
-        str3 = "other";
-        if (!str.split(".")[1]) {
-          str3 = "one";
-        }
-      }
-      str2 = str3;
-    }
-    return str2;
-  }
-});
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "e0e70b148b33d67bf7c7b1d0419e39c9", name: "ic_lock", type: "png" });

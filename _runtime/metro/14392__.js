@@ -1,8 +1,15 @@
 // === Module 14392: ? ===
 
 // Module 14392
-import _mod17 from "module_17" /* 17 */;
-import setupURLPolyfill from "setupURLPolyfill" /* 14393 */;
+import prop from "module_14393" /* 14393 */;
 
-const Platform = _mod17.Platform;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
+
+export default prop;

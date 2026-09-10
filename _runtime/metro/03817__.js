@@ -1,35 +1,42 @@
 // === Module 3817: ? ===
 
 // Module 3817
-import module_3667 from "module_3667" /* 3667 */;
 import module_3818 from "module_3818" /* 3818 */;
-import requiredArgs from "requiredArgs" /* 3664 */;
+import module_3819 from "module_3819" /* 3819 */;
+import module_3820 from "module_3820" /* 3820 */;
+import date from "module_3821" /* 3821 */;
+import date from "module_3822" /* 3822 */;
 
-if (!module_3667) {
-  let obj = { default: module_3667 };
+if (!module_3818) {
+  let obj = { default: module_3818 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3667;
+  tmp3 = module_3818;
 }
-module_3667 = tmp3;
-if (!module_3818) {
-  obj = { default: module_3818 };
+if (!module_3819) {
+  obj = { default: module_3819 };
   let tmp5 = obj;
 } else {
-  tmp5 = module_3818;
+  tmp5 = module_3819;
 }
-module_3818 = tmp5;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+if (!module_3820) {
+  obj = { default: module_3820 };
   let tmp7 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_3820;
 }
-requiredArgs = tmp7;
-let c3 = 3600000;
+if (!date) {
+  const obj1 = { default: date };
+  let tmp9 = obj1;
+} else {
+  tmp9 = date;
+}
+if (!date) {
+  const obj2 = { default: date };
+  let tmp11 = obj2;
+} else {
+  tmp11 = date;
+}
 
-export default function addHours(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_3818.default(interval, module_3667.default(arg1) * c3);
-};
+export default { code: "sv", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

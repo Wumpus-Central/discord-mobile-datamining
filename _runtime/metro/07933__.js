@@ -1,18 +1,7 @@
 // === Module 7933: ? ===
 
 // Module 7933
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-let context = noop.createContext(undefined);
 
-export const AnimatedHeaderHeightContext = context;
-export const useAnimatedHeaderHeight = function useAnimatedHeaderHeight() {
-  context = noop.useContext(context);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find the header height. Are you inside a screen in a native stack navigator?");
-    throw error;
-  } else {
-    return context;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f046981b02f540ff191ca29308781e07", name: "PhoneCallIcon", type: "png" });

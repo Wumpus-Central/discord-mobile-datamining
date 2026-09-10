@@ -1,51 +1,102 @@
 // === Module 6772: ? ===
 
 // Module 6772
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
 
-const noop = fn(19);
-({ useEffect: c2, useState: c3 } = noop);
-const AccessibilityInfo = fn(17).AccessibilityInfo;
-
-export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
-  const tmp = _slicedToArray(closure_3(false), 2);
-  closure_0 = tmp[1];
-  closure_2(() => {
-    closure_129_0 = closure_0(function*() {
-      closure_1 = tmp3;
-      yield screenReaderEnabled.isScreenReaderEnabled();
-      if (1 === tmp7) {
-        c3 = 0;
-        const _console = console;
-        console.warn("Could not read accessibility info: defaulting to false");
-        c5 = 3;
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        closure_128_0 = value;
-        closure_0(closure_128_0);
-        c3 = 0;
-      }
-      return value;
-    });
-    (function checkStatus() {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+export const isComposedGesture = function isComposedGesture(gesture) {
+  return "handlerTags" in gesture;
+};
+export const prepareRelations = function prepareRelations(config, handlerTag) {
+  let simultaneousWith = config.simultaneousWith;
+  closure_0 = handlerTag;
+  if (simultaneousWith) {
+    const _Array = Array;
+    if (Array.isArray(simultaneousWith)) {
+      const item = simultaneousWith.forEach(function processSingleGesture(externalSimultaneousHandlers) {
+        if ("handlerTags" in externalSimultaneousHandlers) {
+          let prop = externalSimultaneousHandlers.externalSimultaneousHandlers;
+        } else {
+          prop = externalSimultaneousHandlers.gestureRelations.simultaneousHandlers;
+        }
+        if (!prop.includes(closure_0)) {
+          prop.push(closure_0);
+        }
+      });
+    } else {
+      if ("handlerTags" in simultaneousWith) {
+        let prop = simultaneousWith.externalSimultaneousHandlers;
       } else {
-        applyArgumentsResult = apply(self, arguments);
+        prop = simultaneousWith.gestureRelations.simultaneousHandlers;
       }
-      return applyArgumentsResult;
-    })();
-    closure_0 = AccessibilityInfo.addEventListener("screenReaderChanged", (event) => {
-      closure_0(event);
-    });
-    return () => {
-      closure_0.remove();
-    };
-  }, []);
-  return tmp[0];
+      if (!prop.includes(handlerTag)) {
+        prop.push(handlerTag);
+      }
+    }
+  }
+  simultaneousWith = config.simultaneousWith;
+  if (simultaneousWith) {
+    const _Array2 = Array;
+    if (Array.isArray(simultaneousWith)) {
+      let flatMapResult = simultaneousWith.flatMap((handlerTags) => {
+        if ("handlerTags" in handlerTags) {
+          handlerTags = handlerTags.handlerTags;
+        } else {
+          handlerTags = [];
+          handlerTags[0] = handlerTags.handlerTag;
+        }
+        return handlerTags;
+      });
+    } else if ("handlerTags" in simultaneousWith) {
+      flatMapResult = simultaneousWith.handlerTags;
+    } else {
+      flatMapResult = [simultaneousWith.handlerTag];
+    }
+  } else {
+    const obj = { simultaneousHandlers: [], waitFor: null, blocksHandlers: null };
+    const requireToFail = config.requireToFail;
+    if (requireToFail) {
+      const _Array3 = Array;
+      if (Array.isArray(requireToFail)) {
+        let flatMapResult1 = requireToFail.flatMap((handlerTags) => {
+          if ("handlerTags" in handlerTags) {
+            handlerTags = handlerTags.handlerTags;
+          } else {
+            handlerTags = [];
+            handlerTags[0] = handlerTags.handlerTag;
+          }
+          return handlerTags;
+        });
+      } else if ("handlerTags" in requireToFail) {
+        flatMapResult1 = requireToFail.handlerTags;
+      } else {
+        flatMapResult1 = [requireToFail.handlerTag];
+      }
+    } else {
+      obj.waitFor = [];
+      const block = config.block;
+      if (block) {
+        const _Array4 = Array;
+        if (Array.isArray(block)) {
+          let flatMapResult2 = block.flatMap((handlerTags) => {
+            if ("handlerTags" in handlerTags) {
+              handlerTags = handlerTags.handlerTags;
+            } else {
+              handlerTags = [];
+              handlerTags[0] = handlerTags.handlerTag;
+            }
+            return handlerTags;
+          });
+        } else if ("handlerTags" in block) {
+          flatMapResult2 = block.handlerTags;
+        } else {
+          flatMapResult2 = [block.handlerTag];
+        }
+      } else {
+        obj.blocksHandlers = [];
+        return obj;
+      }
+    }
+  }
+};
+export const containsDuplicates = function containsDuplicates(flatMapResult) {
+  return new Set(flatMapResult).size !== flatMapResult.length;
 };

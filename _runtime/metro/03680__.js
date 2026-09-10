@@ -1,9 +1,7 @@
 // === Module 3680: ? ===
 
 // Module 3680
-let closure_0 = { lastWeek: "'sidste' eeee 'kl.' p", yesterday: "'i g\u00E5r kl.' p", today: "'i dag kl.' p", tomorrow: "'i morgen kl.' p", nextWeek: "'p\u00E5' eeee 'kl.' p", other: "P" };
+import registerAsset from "module_1122" /* 1122 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "75ac41380977ac7a377d9ae6d3cfcade", name: "sv-SE.messages.75ac41380977ac7a377d9ae6d3cfcade.compiled.messages", type: "jsona" });

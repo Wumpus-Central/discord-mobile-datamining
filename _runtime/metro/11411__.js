@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/self_mod/stranger_danger/images", width: 21, height: 20, scales: [1, 2, 3], hash: "4ea1c192cad9acc1fe190c6de3d2e5ff", name: "ic_thumbsdown", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/channel_following/dark", width: 280, height: 120, scales: [2, 3], hash: "902d26debf9cf5ba93edffb3d1cb9422", name: "channel_following_success_3", type: "png" });

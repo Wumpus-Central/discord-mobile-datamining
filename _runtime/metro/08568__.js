@@ -1,16 +1,14 @@
 // === Module 8568: ? ===
 
 // Module 8568
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8508 from "module_8508" /* 8508 */;
-import _modDef8569 from "module_8569" /* 8569 */;
+import _modDef8560 from "module_8560" /* 8560 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Path = fn;
+const FeDisplacementMap = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Path {
+class FeDisplacementMap {
   constructor() {
     self = this;
-    tmp = closure_3(this, Path);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Path);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeDisplacementMap);
+    tmp2 = closure_4;
+    obj = closure_4(FeDisplacementMap);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,31 +48,18 @@ class Path {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Path, _modDef8508);
+_inherits(FeDisplacementMap, _modDef8560);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    let obj = {};
-    const merged = Object.assign(Path(8499).extract(this, props));
-    obj.d = props.d;
-    obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const obj2 = Path(8499);
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8569, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FeDisplacementMap(8537).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Path, items);
-importDefaultResultResult.displayName = "Path";
+const importDefaultResultResult = _createClass(FeDisplacementMap, items);
+importDefaultResultResult.displayName = "FeDisplacementMap";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

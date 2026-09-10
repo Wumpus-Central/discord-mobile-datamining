@@ -1,263 +1,102 @@
 // === Module 12932: ? ===
 
 // Module 12932
-import errorCallback from "errorCallback" /* 12823 */;
-import _mod12834 from "module_12834" /* 12834 */;
-import _mod12851 from "module_12851" /* 12851 */;
-import _mod12859 from "module_12859" /* 12859 */;
-import _mod12898 from "module_12898" /* 12898 */;
-import _toArray from "_toArray" /* 718 */;
-import "module_12826";
-import consoleSandbox from "module_12827" /* 12827 */;
-import dateTimestampInSeconds from "module_12841" /* 12841 */;
-import __SENTRY_DEBUG__ from "module_12855" /* 12855 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function _addTracingHeadersToFetchRequest(headers, headers2, span) {
-  let obj = { span };
-  const traceData = obj.getTraceData(obj);
-  ({ sentry-trace: tmp4, baggage } = traceData);
-  if (tmp4) {
-    headers = headers2.headers;
-    if (!headers) {
-      const _Request = Request;
-      let isInstanceOfResult = typeof Request !== "undefined";
-      if (typeof Request !== "undefined") {
-        let tmpResult = _mod12834;
-        const _Request2 = Request;
-        isInstanceOfResult = tmpResult.isInstanceOf(headers, Request);
-      }
-      let headers1;
-      if (isInstanceOfResult) {
-        headers1 = headers.headers;
-      }
-      headers = headers1;
+function parseRetryAfterHeader(arg0) {
+  let timestamp = arg1;
+  if (arg1 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  const parsed = parseInt("" + arg0, 10);
+  if (isNaN(parsed)) {
+    const _Date2 = Date;
+    const _HermesInternal = HermesInternal;
+    const parsed1 = Date.parse("" + arg0);
+    const _isNaN = isNaN;
+    let num2 = 60000;
+    if (!isNaN(parsed1)) {
+      num2 = parsed1 - timestamp;
     }
-    if (headers) {
-      const _Headers = Headers;
-      let isInstanceOfResult1 = typeof Headers !== "undefined";
-      if (typeof Headers !== "undefined") {
-        tmpResult = _mod12834;
-        const _Headers3 = Headers;
-        isInstanceOfResult1 = tmpResult.isInstanceOf(headers, Headers);
-      }
-      if (isInstanceOfResult1) {
-        const _Headers2 = Headers;
-        headers2 = new Headers(headers);
-        const result = headers2.set("sentry-trace", tmp4);
-        if (baggage) {
-          const str6 = headers2.get("baggage");
-          if (str6) {
-            let parts = str6.split(",");
-            let found = parts.filter((item) => {
-              const first = item.split("=")[0];
-              return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-            });
-            let joined = found.join(",");
-            let combined = baggage;
-            if (joined) {
-              const _HermesInternal = HermesInternal;
-              combined = "" + joined + "," + baggage;
-            }
-            const result1 = headers2.set("baggage", combined);
-          } else {
-            const result2 = headers2.set("baggage", baggage);
-          }
-        }
-        return headers2;
-      } else {
-        const _Array = Array;
-        if (Array.isArray(headers)) {
-          const found1 = headers.filter((item) => {
-            let isArray = Array.isArray(item);
-            if (isArray) {
-              isArray = "sentry-trace" === item[0];
-            }
-            return !isArray;
-          });
-          let items = [];
-          const items1 = ["sentry-trace", tmp4];
-          items[HermesBuiltin.arraySpread(found1.map((item) => {
-            if (Array.isArray(item)) {
-              if ("baggage" === item[0]) {
-                if (typeof item[1] === "string") {
-                  const arr = _toArray(item);
-                  const items = [arr[0], ];
-                  const substr = arr.slice(2);
-                  const parts = arr[1].split(",");
-                  const found = parts.filter((item) => {
-                    const first = item.split("=")[0];
-                    return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-                  });
-                  items[1] = found.join(",");
-                  HermesBuiltin.arraySpread(substr, 2);
-                  return items;
-                }
-              }
-            }
-            return item;
-          }), 0)] = items1;
-          if (baggage) {
-            const items2 = ["baggage", baggage];
-            items.push(items2);
-          }
-          return items;
-        } else {
-          baggage = undefined;
-          if ("baggage" in headers) {
-            baggage = headers.baggage;
-          }
-          const _Array2 = Array;
-          if (Array.isArray(baggage)) {
-            const mapped = baggage.map((item) => {
-              let joined = item;
-              if (typeof item === "string") {
-                const parts = item.split(",");
-                const found = parts.filter((item) => {
-                  const first = item.split("=")[0];
-                  return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-                });
-                joined = found.join(",");
-              }
-              return joined;
-            });
-            let found2 = mapped.filter((item) => "" === item);
-          } else {
-            const items3 = [];
-            found2 = items3;
-            if (baggage) {
-              const parts1 = baggage.split(",");
-              const found3 = parts1.filter((item) => {
-                const first = item.split("=")[0];
-                return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-              });
-              items3.push(found3.join(","));
-              found2 = items3;
-            }
-          }
-          if (baggage) {
-            found2.push(baggage);
-          }
-          obj = {};
-          const merged = Object.assign(headers);
-          obj["sentry-trace"] = tmp4;
-          let joined1;
-          if (found2.length > 0) {
-            joined1 = found2.join(",");
-          }
-          obj.baggage = joined1;
-          return obj;
-        }
-      }
-    } else {
-      const obj1 = {};
-      const merged1 = Object.assign(traceData);
-      return obj1;
-    }
+    return num2;
+  } else {
+    return 1000 * parsed;
   }
 }
-errorCallback;
-_mod12851;
 
-export const addTracingHeadersToFetchRequest = function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
-  return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
+export const DEFAULT_RETRY_AFTER = 60000;
+export const disabledUntil = function disabledUntil(all, arg1) {
+  return all[arg1] || all.all || 0;
 };
-export const instrumentFetchRequest = function instrumentFetchRequest(fetchData, fn, fn2, arg3) {
-  let str = arg4;
-  if (arg4 === undefined) {
-    str = "auto.http.browser";
+export const isRateLimited = function isRateLimited(all, result) {
+  let timestamp = arg2;
+  if (arg2 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
   }
-  let endResult = fetchData;
-  if (fetchData.fetchData) {
-    let setHttpStatus = require;
-    let headers = dependencyMap;
-    let obj = _mod12859;
-    let hasTracingEnabledResult = obj.hasTracingEnabled();
-    if (hasTracingEnabledResult) {
-      hasTracingEnabledResult = fn(endResult.fetchData.url);
-    }
-    if (endResult.endTimestamp) {
-      if (hasTracingEnabledResult) {
-        const __span = endResult.fetchData.__span;
-        if (__span) {
-          if (arg3[__span]) {
-            if (endResult.response) {
-              setHttpStatus = setHttpStatus(12844).setHttpStatus;
-              setHttpStatus(obj10, endResult.response.status);
-              headers = endResult.response;
-              if (headers) {
-                headers = endResult.response.headers;
-              }
-              if (headers) {
-                const headers2 = endResult.response.headers;
-                headers = headers2.get("content-length");
-              }
-              if (headers) {
-                const _parseInt = parseInt;
-                setHttpStatus = parseInt(headers);
-                if (setHttpStatus > 0) {
-                  const attr = obj10.setAttribute("http.response_content_length", setHttpStatus);
-                }
-              }
-              const setHttpStatusResult = setHttpStatus(12844);
-            } else if (endResult.error) {
-              obj = { code: setHttpStatus(12844).SPAN_STATUS_ERROR, message: "internal_error" };
-              obj10.setStatus(obj);
-            }
-            endResult = obj10.end();
-            delete tmp2[tmp];
-          }
-        }
-      }
-    }
-    ({ method, url } = endResult.fetchData);
-    const tmp7 = (function getFullURL(url) {
-      try {
-        const _URL = URL;
-        const uRL = new URL(url);
-        return uRL.href;
-      } catch (err) {
-      }
-    })(url);
-    if (tmp7) {
-      const host = setHttpStatus(12909).parseUrl(tmp7).host;
-      const setHttpStatusResult2 = setHttpStatus(12909);
-    }
-    const activeSpan = setHttpStatus(12832).getActiveSpan();
-    if (hasTracingEnabledResult) {
-      if (activeSpan) {
-        obj = { name: null, attributes: null };
-        const _HermesInternal = HermesInternal;
-        obj.name = "" + method + " " + url;
-        const obj1 = { url, type: "fetch", "http.method": method, "http.url": tmp7, "server.address": host };
-        obj1[setHttpStatus(12842).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
-        obj1[setHttpStatus(12842).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
-        obj.attributes = obj1;
-        let startInactiveSpanResult = setHttpStatus(12861).startInactiveSpan(obj);
-        const setHttpStatusResult4 = setHttpStatus(12861);
-      }
-      endResult.fetchData.__span = startInactiveSpanResult.spanContext().spanId;
-      arg3[startInactiveSpanResult.spanContext().spanId] = startInactiveSpanResult;
-      if (fn2(endResult.fetchData.url)) {
-        let obj2 = endResult.args[1];
-        if (!obj2) {
-          obj2 = {};
-        }
-        let tmp14;
-        if (setHttpStatusResult5.hasTracingEnabled()) {
-          if (activeSpan) {
-            tmp14 = startInactiveSpanResult;
-          }
-        }
-        const tmp13Result = _addTracingHeadersToFetchRequest(endResult.args[0], obj2, tmp14);
-        if (tmp13Result) {
-          endResult.args[1] = obj2;
-          obj2.headers = tmp13Result;
-        }
-        setHttpStatusResult5 = setHttpStatus(12859);
-      }
-      return startInactiveSpanResult;
-    }
-    startInactiveSpanResult = new setHttpStatus(12860).SentryNonRecordingSpan();
-    const setHttpStatusResult3 = setHttpStatus(12832);
+  return (all[result] || all.all || 0) > timestamp;
+};
+export { parseRetryAfterHeader };
+export const updateRateLimits = function updateRateLimits(arg0, headers) {
+  headers = headers.headers;
+  let timestamp = arg2;
+  if (arg2 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
   }
+  const obj = {};
+  const merged = Object.assign(arg0);
+  let str = headers;
+  if (headers) {
+    str = headers["x-sentry-rate-limits"];
+  }
+  let prop = headers;
+  if (headers) {
+    prop = headers["retry-after"];
+  }
+  if (str) {
+    const parts = str.trim().split(",");
+    const iter = parts[Symbol.iterator]();
+    const str2 = str.trim();
+    while (iter !== undefined) {
+      let tmp12 = _slicedToArray(str8.split(":", 5), 5);
+      let str9 = tmp12[1];
+      let str10 = tmp12[4];
+      let _parseInt = parseInt;
+      let parsed = parseInt(tmp12[0], 10);
+      let _isNaN = isNaN;
+      let num6 = 60;
+      if (!isNaN(parsed)) {
+        num6 = parsed;
+      }
+      let result = 1000 * num6;
+      if (str9) {
+        let parts1 = str9.split(";");
+        for (const item10065 of parts1) {
+          let tmp23 = "metric_bucket" === item10065;
+          if (tmp23) {
+            tmp23 = str10;
+          }
+          if (tmp23) {
+            let parts2 = str10.split(";");
+            tmp23 = !parts2.includes("custom");
+          }
+          if (!tmp23) {
+            obj[item10065] = timestamp + result;
+          }
+          continue;
+        }
+      } else {
+        obj.all = timestamp + result;
+      }
+      continue;
+    }
+    str8 = iter.next();
+  } else if (prop) {
+    obj.all = timestamp + parseRetryAfterHeader(prop, timestamp);
+  } else if (429 === headers.statusCode) {
+    obj.all = timestamp + 60000;
+  }
+  return obj;
 };

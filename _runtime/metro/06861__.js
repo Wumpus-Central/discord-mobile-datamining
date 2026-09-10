@@ -1,11 +1,80 @@
 // === Module 6861: ? ===
 
 // Module 6861
-import cancelAnimation from "cancelAnimation" /* 1636 */;
+import jsxProd from "jsxProd" /* 21 */;
+import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6678 */;
+import _mod6682 from "module_6682" /* 6682 */;
+import _mod6862 from "module_6862" /* 6862 */;
+import noop from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
-const module_6854 = fn(6854);
-const memoResult = fn(19).memo(module_6854.createBottomSheetScrollableComponent(fn(6642).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent));
-memoResult.displayName = "BottomSheetSectionList";
+({ useMemo: c2, useRef: c3 } = noop);
+({ StatusBar: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
+const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
+  ({ containerHeight: require, containerOffset: dependencyMap, topInset } = bottomInset);
+  if (topInset === undefined) {
+    topInset = 0;
+  }
+  let num = bottomInset.bottomInset;
+  if (num === undefined) {
+    num = 0;
+  }
+  let flag = bottomInset.shouldCalculateHeight;
+  if (flag === undefined) {
+    flag = true;
+  }
+  const detached = bottomInset.detached;
+  const style = bottomInset.style;
+  const tmp = num(null);
+  const ref = tmp;
+  let items = [style, detached, topInset, num];
+  const obj = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
+  let stableCallback;
+  if (flag) {
+    stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
+      const height = nativeEvent.nativeEvent.layout.height;
+      height.value = height;
+      const current = ref.current;
+      if (current != null) {
+        current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
+          if (value.value) {
+            num = arg5;
+            let num2 = arg5;
+            if (arg5 == null) {
+              num2 = 0;
+            }
+            const rect = { top: num2, left: 0, right: 0, bottom: null };
+            if (num == null) {
+              num = 0;
+            }
+            let num3 = currentHeight.currentHeight;
+            const sum = num + height;
+            if (num3 == null) {
+              num3 = 0;
+            }
+            rect.bottom = Math.max(0, GESTURE_SOURCE.WINDOW_HEIGHT - (sum + num3));
+            tmp.value = rect;
+          }
+        });
+      }
+    });
+  }
+  obj.onLayout = stableCallback;
+  obj.style = topInset(() => {
+    const items = [style, _mod6862.styles.container, ];
+    const rect = { top: topInset, bottom: num, overflow: null };
+    let str = "hidden";
+    if (detached) {
+      str = "visible";
+    }
+    rect.overflow = str;
+    items[2] = rect;
+    return items;
+  }, items);
+  obj.children = bottomInset.children;
+  return ref(style, obj);
+});
+memoResult.displayName = "BottomSheetHostingContainer";
 
-export default memoResult;
+export const BottomSheetHostingContainer = memoResult;

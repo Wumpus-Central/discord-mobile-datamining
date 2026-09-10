@@ -1,76 +1,57 @@
 // === Module 10540: ? ===
 
 // Module 10540
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10485 from "module_10485" /* 10485 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class JPMergeDateTimeRefiner {
+const regExp = new RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i");
+class ExtractTimezoneOffsetRefiner {
   constructor() {
-    self = this;
-    tmp = closure_0(this, JPMergeDateTimeRefiner);
-    tmp2 = c2;
-    obj = c2(JPMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = closure_0(this, ExtractTimezoneOffsetRefiner);
+    return;
   }
 }
-_classCallCheck = JPMergeDateTimeRefiner;
-_inherits(JPMergeDateTimeRefiner, fn(_mod10485).default);
+_classCallCheck = ExtractTimezoneOffsetRefiner;
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(の)?\s*$/i;
+  key: "refine",
+  value: function refine(arg0, arr) {
+    let text = arg0;
+    const item = arr.forEach((start) => {
+      text = start;
+      start = start.start;
+      if (!start.isCertain("timezoneOffset")) {
+        let obj = text;
+        const match = regExp.exec(text.text.substring(start.index + start.text.length));
+        if (match) {
+          obj.debug(() => {
+            console.log("Extracting timezone: '" + match[0] + "' into : " + closure_0);
+          });
+          const _parseInt = parseInt;
+          let str2 = match[3];
+          const result = 60 * parseInt(match[2]);
+          if (!str2) {
+            str2 = "0";
+          }
+          const sum = result + parseInt(str2);
+          if (sum <= 840) {
+            let tmp7 = sum;
+            if ("-" === match[1]) {
+              tmp7 = -sum;
+            }
+            if (null != start.end) {
+              const end = start.end;
+              obj = end.assign("timezoneOffset", tmp7);
+            }
+            const start2 = start.start;
+            obj = start2.assign("timezoneOffset", tmp7);
+            start.text = start.text + match[0];
+          }
+        }
+      }
+    });
+    return arr;
   }
 };
 const items = [entry];
 
-export default _createClass(JPMergeDateTimeRefiner, items);
+export default _createClass(ExtractTimezoneOffsetRefiner, items);

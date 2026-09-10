@@ -1,23 +1,7 @@
 // === Module 8122: ? ===
 
 // Module 8122
-import reviveBigInts from "reviveBigInts" /* 8123 */;
-import DiscordMarkdownDefault from "DiscordMarkdown" /* 8124 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
 
-export const parse = function parse(arg0, arg1, arg2) {
-  const obj = reviveBigInts;
-  let json;
-  if (null != arg1) {
-    const _JSON = JSON;
-    json = JSON.stringify(arg1);
-  }
-  return obj.decodeAstJson(DiscordMarkdownDefault.parseToAstString(arg0, json, arg2));
-};
-export const unparse = function unparse(arg0) {
-  const obj = DiscordMarkdownDefault;
-  return obj.unparseFromAstString(reviveBigInts.encodeAstJson(arg0));
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 195, height: 95, scales: [2, 3], hash: "6767aee50457385555e7e15b59dff5c6", name: "img_nitro_ticket_bg", type: "png" });

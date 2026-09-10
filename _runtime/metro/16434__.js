@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0c1dfbd9df935becc793861dc2d441bd", name: "ConnectionFineIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guilds_bar/native/images", width: 59, height: 55, scales: [3], hash: "31b62f25cfc0f3a2d3cb5b6aaaef4788", name: "wumpus_wave", type: "png" });

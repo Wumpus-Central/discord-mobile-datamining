@@ -1,115 +1,142 @@
 // === Module 10629: ? ===
 
 // Module 10629
-import _mod10620 from "module_10620" /* 10620 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod10531 from "module_10531" /* 10531 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10538 */;
+import _mod10630 from "module_10630" /* 10630 */;
+import _mod10632 from "module_10632" /* 10632 */;
+import _mod10634 from "module_10634" /* 10634 */;
+import _mod10635 from "module_10635" /* 10635 */;
+import _mod10636 from "module_10636" /* 10636 */;
+import _mod10637 from "module_10637" /* 10637 */;
+import _mod10638 from "module_10638" /* 10638 */;
+import _mod10639 from "module_10639" /* 10639 */;
+import _mod10640 from "module_10640" /* 10640 */;
+import _mod10641 from "module_10641" /* 10641 */;
+import _mod10642 from "module_10642" /* 10642 */;
+import _mod10643 from "module_10643" /* 10643 */;
 
-const UKRelativeDateFormatParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
   }
+  const obj = { parsers: null, refiners: null };
+  const items = [new regExp.default(true), , , , , ];
+  const _default = new regExp.default(true);
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
+  items[4] = new _isNativeReflectConstruct.default(flag);
+  const _default4 = new _isNativeReflectConstruct.default(flag);
+  items[5] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default5 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), ];
+  const _default6 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-class UKRelativeDateFormatParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, UKRelativeDateFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(UKRelativeDateFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      tmp = __esModule;
     }
-    return tmp3(self, constructResult);
-  }
+    return tmp;
+  };
 }
-_inherits(UKRelativeDateFormatParser, _mod10620.AbstractParserWithLeftRightBoundaryChecking);
-const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E|\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E|\u043D\u0430 \u0446\u044C\u043E\u043C\u0443|\u0432 \u0446\u044C\u043E\u043C\u0443|\u0443 \u0446\u044C\u043E\u043C\u0443|\u0446\u044C\u043E\u0433\u043E)\\s*(" + UKRelativeDateFormatParser(10464).matchAnyPattern(UKRelativeDateFormatParser(10618).TIME_UNIT_DICTIONARY) + ")(?=\\s*)";
+function createCasualConfiguration() {
+  const tmp = createConfiguration(false);
+  const parsers = tmp.parsers;
+  parsers.unshift(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.unshift(new _isNativeReflectConstruct.default());
+  const parsers2 = tmp.parsers;
+  const _default1 = new _isNativeReflectConstruct.default();
+  parsers2.unshift(new _isNativeReflectConstruct.default());
+  const parsers3 = tmp.parsers;
+  const _default2 = new _isNativeReflectConstruct.default();
+  parsers3.unshift(new _isNativeReflectConstruct.default());
+  const parsers4 = tmp.parsers;
+  const _default3 = new _isNativeReflectConstruct.default();
+  parsers4.unshift(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+fn(_mod10630);
+fn(_mod10632);
+fn(_mod10634);
+fn(_mod10635);
+fn(_mod10636);
+fn(_mod10637);
+fn(_mod10638);
+fn(_mod10639);
+fn(_mod10640);
+fn(_mod10641);
+fn(_mod10642);
+const regExp = fn(_mod10531);
+const _isNativeReflectConstruct = fn(_mod10643);
+const configuration = createConfiguration(false);
+let parsers = configuration.parsers;
+parsers.unshift(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+const obj1 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ReferenceWithTimezone;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const formatted1 = arg1[2].toLowerCase();
-      const str3 = UKRelativeDateFormatParser(10618).TIME_UNIT_DICTIONARY[formatted1];
-      if ("\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
-        if ("\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
-          if ("\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
-            if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E" != formatted) {
-              if ("\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
-                if ("\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
-                  if ("\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
-                    if ("\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E" != formatted) {
-                      const parsingComponents = createParsingComponents.createParsingComponents();
-                      const _Date = Date;
-                      const instant = createParsingComponents.reference.instant;
-                      const date = new Date(instant.getTime());
-                      if (str3.match(/week/i)) {
-                        date.setDate(date.getDate() - date.getDay());
-                        parsingComponents.imply("day", date.getDate());
-                        parsingComponents.imply("month", date.getMonth() + 1);
-                        parsingComponents.imply("year", date.getFullYear());
-                        const date1 = date.getDate();
-                      } else if (str3.match(/month/i)) {
-                        date.setDate(1);
-                        parsingComponents.imply("day", date.getDate());
-                        parsingComponents.assign("year", date.getFullYear());
-                        let obj = parsingComponents.assign("month", date.getMonth() + 1);
-                      } else if (str3.match(/year/i)) {
-                        date.setDate(1);
-                        date.setMonth(0);
-                        parsingComponents.imply("day", date.getDate());
-                        parsingComponents.imply("month", date.getMonth() + 1);
-                        parsingComponents.assign("year", date.getFullYear());
-                      }
-                      return parsingComponents;
-                    }
-                  }
-                }
-              }
-              obj = {};
-              obj[str3] = -1;
-              const ParsingComponents = UKRelativeDateFormatParser(10467).ParsingComponents;
-              return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
-            }
-          }
-        }
-      }
-      const ParsingComponents2 = UKRelativeDateFormatParser(10467).ParsingComponents;
-      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [str3]: 1 });
-    }
+const obj2 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Meridiem;
   }
-];
+};
+const obj3 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Weekday;
+  }
+};
+parsers1.unshift(new _isNativeReflectConstruct.default());
+let parsers2 = configuration.parsers;
+let _default1 = new _isNativeReflectConstruct.default();
+parsers2.unshift(new _isNativeReflectConstruct.default());
+let parsers3 = configuration.parsers;
+let _default2 = new _isNativeReflectConstruct.default();
+parsers3.unshift(new _isNativeReflectConstruct.default());
+let parsers4 = configuration.parsers;
+let _default3 = new _isNativeReflectConstruct.default();
+parsers4.unshift(new _isNativeReflectConstruct.default());
+const chrono = new require("module_10498").Chrono(configuration);
+const chrono1 = new require("module_10498").Chrono(createConfiguration(true));
 
-export default _createClass(UKRelativeDateFormatParser, items);
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+};
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("ReferenceWithTimezone").ParsingComponents;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingComponents;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

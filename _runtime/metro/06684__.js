@@ -1,7 +1,9 @@
 // === Module 6684: ? ===
 
 // Module 6684
-import _modDef6685 from "module_6685" /* 6685 */;
+import _mod19 from "module_19" /* 19 */;
 
+const context = _mod19.createContext(null);
 
-export default _modDef6685;
+export const BottomSheetContext = context;
+export const BottomSheetProvider = context.Provider;

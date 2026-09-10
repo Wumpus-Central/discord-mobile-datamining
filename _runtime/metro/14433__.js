@@ -1,34 +1,13 @@
 // === Module 14433: ? ===
 
 // Module 14433
+import _mod14381 from "module_14381" /* 14381 */;
+import _mod14390 from "module_14390" /* 14390 */;
+import all from "module_14400" /* 14400 */;
 
-export const getReactNativeVersionWithModules = function getReactNativeVersionWithModules(constants) {
-  try {
-    if (constants) {
-      if (constants.reactNativeVersion) {
-        const major = constants.reactNativeVersion.major;
-        const minor = constants.reactNativeVersion.minor;
-        const patch = constants.reactNativeVersion.patch;
-        const prerelease = constants.reactNativeVersion.prerelease;
-        if (typeof major !== "number") {
-          return null;
-        } else {
-          const items = [];
-          const _HermesInternal2 = HermesInternal;
-          items.push("" + tmp4 + "." + minor + "." + patch);
-          if (prerelease) {
-            const _HermesInternal = HermesInternal;
-            arr2.push("-" + prerelease);
-          }
-          return items.join("");
-        }
-      } else {
-        return null;
-      }
-    } else {
-      return null;
-    }
-  } catch (err) {
-    return null;
-  }
-};
+let closure_0 = _mod14381(Function.toString);
+if (!all(_mod14390.inspectSource)) {
+  _mod14390.inspectSource = (arg0) => closure_0(arg0);
+}
+
+export default _mod14390.inspectSource;

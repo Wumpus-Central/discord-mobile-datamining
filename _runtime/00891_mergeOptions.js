@@ -2162,7 +2162,7 @@ function retrieveStringValue(get, email) {
   return str2;
 }
 function Form(onSubmitError) {
-  ({ options, defaultEmail, defaultName, onSubmit: f108011, onSubmitSuccess } = onSubmitError);
+  ({ options, defaultEmail, defaultName, onSubmit: f108262, onSubmitSuccess } = onSubmitError);
   onSubmitError = onSubmitError.onSubmitError;
   let screenshotInput = onSubmitError.screenshotInput;
   c4 = undefined;
@@ -2193,12 +2193,12 @@ function Form(onSubmitError) {
   }
   const tmp6 = onSubmitError(fn(D, null), 2);
   [tmp12, c14] = tmp3(fn(D, null), 2);
-  f108011 = (arg0) => {
+  f108262 = (arg0) => {
     _undefined2(arg0);
     closure_13(false);
   };
   items = [emailLabel, isEmailRequired, isNameRequired, messageLabel, nameLabel];
-  f108011 = (name) => {
+  f108262 = (name) => {
     let tmp2 = isEmailRequired;
     let tmp3 = isNameRequired;
     if (isNameRequired) {
@@ -2227,8 +2227,8 @@ function Form(onSubmitError) {
   };
   c46 = 8;
   const tmp3Result = tmp3(fn(D, null), 2);
-  closure_15 = fn2(() => f71394, items);
-  f108011 = screenshotInput(function*(arg0) {
+  closure_15 = fn2(() => f71569, items);
+  f108262 = screenshotInput(function*(arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -2325,7 +2325,7 @@ function Form(onSubmitError) {
             tags = 1;
             closure_129_4 = screenshotInput;
             if (messageLabel) {
-              const debug = f108011(onSubmitSuccess[2]).debug;
+              const debug = f108262(onSubmitSuccess[2]).debug;
               debug.error(closure_129_4);
             }
             _undefined(closure_129_4);
@@ -2364,9 +2364,9 @@ function Form(onSubmitError) {
     screenshotInput = first;
   }
   const items1 = [screenshotInput, onSubmitSuccess, onSubmitError];
-  f108011 = function(arg0) {
+  f108262 = function(arg0) {
     const self = this;
-    const apply = f108011.apply;
+    const apply = f108262.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -2375,7 +2375,7 @@ function Form(onSubmitError) {
     return applyArgumentsResult;
   };
   c46 = 8;
-  obj = { class: "form", onSubmit: fn2(() => f71394, items1) };
+  obj = { class: "form", onSubmit: fn2(() => f71569, items1) };
   let tmp15Result = null;
   if (input) {
     tmp15Result = null;
@@ -2407,7 +2407,7 @@ function Form(onSubmitError) {
     let obj6 = { "aria-hidden": true, value: defaultEmail, name: "email", type: "hidden" };
     tmp15Result4 = y$1("input", obj6);
   }
-  tmp14 = fn2(() => f71394, []);
+  tmp14 = fn2(() => f71569, []);
   const tmp15Result5 = y$1(LabelText, { label: messageLabel, isRequiredLabel, isRequired: true });
   let tmp15Result9 = null;
   if (input) {
@@ -2450,16 +2450,16 @@ function Dialog(onFormSubmitted) {
   first = tmp3[0];
   closure_3 = tmp3[1];
   items = [first];
-  let f71394 = () => {
+  let f71569 = () => {
     if (first) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp);
       closure_3(null);
     }
-    f71394();
+    f71569();
   };
   [][0] = onFormSubmitted;
-  f71394 = (arg0, arg1) => {
+  f71569 = (arg0, arg1) => {
     merged.onSubmitSuccess(arg0, arg1);
     closure_3(setTimeout(() => {
       closure_1_0();
@@ -2469,28 +2469,28 @@ function Dialog(onFormSubmitted) {
   c46 = 8;
   const tmp2 = fn2(() => {
     obj = { __html: null };
-    const _document = f71394(merged[2]).GLOBAL_OBJ.document;
+    const _document = f71569(merged[2]).GLOBAL_OBJ.document;
     const elementNS = _document.createElementNS("http://www.w3.org/2000/svg", "svg");
     const entries = Object.entries({ width: "16", height: "17", viewBox: "0 0 16 17", fill: "inherit" });
     const item = entries.forEach((item) => {
       [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
-    const _document2 = f71394(merged[2]).GLOBAL_OBJ.document;
+    const _document2 = f71569(merged[2]).GLOBAL_OBJ.document;
     const elementNS1 = _document2.createElementNS("http://www.w3.org/2000/svg", "g");
     const entries1 = Object.entries({ clipPath: "url(#clip0_57_156)" });
     const item1 = entries1.forEach((item) => {
       [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
-    const _document3 = f71394(merged[2]).GLOBAL_OBJ.document;
+    const _document3 = f71569(merged[2]).GLOBAL_OBJ.document;
     const elementNS2 = _document3.createElementNS("http://www.w3.org/2000/svg", "path");
     const entries2 = Object.entries({ "fill-rule": "evenodd", "clip-rule": "evenodd", d: "M3.55544 15.1518C4.87103 16.0308 6.41775 16.5 8 16.5C10.1217 16.5 12.1566 15.6571 13.6569 14.1569C15.1571 12.6566 16 10.6217 16 8.5C16 6.91775 15.5308 5.37103 14.6518 4.05544C13.7727 2.73985 12.5233 1.71447 11.0615 1.10897C9.59966 0.503466 7.99113 0.34504 6.43928 0.653721C4.88743 0.962403 3.46197 1.72433 2.34315 2.84315C1.22433 3.96197 0.462403 5.38743 0.153721 6.93928C-0.15496 8.49113 0.00346625 10.0997 0.608967 11.5615C1.21447 13.0233 2.23985 14.2727 3.55544 15.1518ZM4.40546 3.1204C5.46945 2.40946 6.72036 2.03 8 2.03C9.71595 2.03 11.3616 2.71166 12.575 3.92502C13.7883 5.13838 14.47 6.78405 14.47 8.5C14.47 9.77965 14.0905 11.0306 13.3796 12.0945C12.6687 13.1585 11.6582 13.9878 10.476 14.4775C9.29373 14.9672 7.99283 15.0953 6.73777 14.8457C5.48271 14.596 4.32987 13.9798 3.42502 13.075C2.52018 12.1701 1.90397 11.0173 1.65432 9.76224C1.40468 8.50718 1.5328 7.20628 2.0225 6.02404C2.5122 4.8418 3.34148 3.83133 4.40546 3.1204Z" });
     const item2 = entries2.forEach((item) => {
       [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
-    const _document4 = f71394(merged[2]).GLOBAL_OBJ.document;
+    const _document4 = f71569(merged[2]).GLOBAL_OBJ.document;
     const elementNS3 = _document4.createElementNS("http://www.w3.org/2000/svg", "path");
     const entries3 = Object.entries({ d: "M6.68775 12.4297C6.78586 12.4745 6.89218 12.4984 7 12.5C7.11275 12.4955 7.22315 12.4664 7.32337 12.4145C7.4236 12.3627 7.51121 12.2894 7.58 12.2L12 5.63999C12.0848 5.47724 12.1071 5.28902 12.0625 5.11098C12.0178 4.93294 11.9095 4.77744 11.7579 4.67392C11.6064 4.57041 11.4221 4.52608 11.24 4.54931C11.0579 4.57254 10.8907 4.66173 10.77 4.79999L6.88 10.57L5.13 8.56999C5.06508 8.49566 4.98613 8.43488 4.89768 8.39111C4.80922 8.34735 4.713 8.32148 4.61453 8.31498C4.51605 8.30847 4.41727 8.32147 4.32382 8.35322C4.23038 8.38497 4.14413 8.43484 4.07 8.49999C3.92511 8.63217 3.83692 8.81523 3.82387 9.01092C3.81083 9.2066 3.87393 9.39976 4 9.54999L6.43 12.24C6.50187 12.3204 6.58964 12.385 6.68775 12.4297Z" });
     const item3 = entries3.forEach((item) => {
@@ -2498,16 +2498,16 @@ function Dialog(onFormSubmitted) {
       obj3.setAttributeNS(null, tmp, tmp2);
     });
     elementNS.appendChild(elementNS1).append(elementNS3, elementNS2);
-    const _document5 = f71394(merged[2]).GLOBAL_OBJ.document;
+    const _document5 = f71569(merged[2]).GLOBAL_OBJ.document;
     const elementNS4 = _document5.createElementNS("http://www.w3.org/2000/svg", "defs");
-    const _document6 = f71394(merged[2]).GLOBAL_OBJ.document;
+    const _document6 = f71569(merged[2]).GLOBAL_OBJ.document;
     const elementNS5 = _document6.createElementNS("http://www.w3.org/2000/svg", "clipPath");
     const entries4 = Object.entries({ id: "clip0_57_156" });
     const item4 = entries4.forEach((item) => {
       [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
-    const _document7 = f71394(merged[2]).GLOBAL_OBJ.document;
+    const _document7 = f71569(merged[2]).GLOBAL_OBJ.document;
     const elementNS6 = _document7.createElementNS("http://www.w3.org/2000/svg", "rect");
     const entries5 = Object.entries({ width: "16", height: "16", fill: "white", transform: "translate(0 0.5)" });
     const item5 = entries5.forEach((item) => {
@@ -2832,7 +2832,7 @@ const fn3 = function p(keys) {
 const fn4 = function x(arg0, arg1) {
   closure_0 = arg0;
   c46 = 8;
-  return fn2(() => f71394, arg1);
+  return fn2(() => f71569, arg1);
 };
 let merged = Object.assign({ useCallback: null, useContext: null, useDebugValue: null, useEffect: null, useErrorBoundary: null, useId: null, useImperativeHandle: null, useLayoutEffect: null, useMemo: null, useReducer: null, useRef: null, useState: null });
 merged[0] = fn4;

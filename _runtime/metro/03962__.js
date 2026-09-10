@@ -1,26 +1,18 @@
 // === Module 3962: ? ===
 
 // Module 3962
-import _typeof from "module_3663" /* 3663 */;
-import requiredArgs from "requiredArgs" /* 3664 */;
+import _mod3698 from "module_3698" /* 3698 */;
+import assign from "assign" /* 3943 */;
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!assign) {
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = assign;
 }
-_typeof = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+assign = tmp3;
 
-export default function isFriday(arg0) {
-  requiredArgs.default(1, arguments);
-  return 5 === _typeof.default(arg0).getDay();
+export default function getDefaultOptions() {
+  return assign.default({}, _mod3698.getDefaultOptions());
 };
 export default exports.default;

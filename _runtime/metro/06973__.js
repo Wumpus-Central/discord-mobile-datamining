@@ -1,7 +1,41 @@
 // === Module 6973: ? ===
 
 // Module 6973
-import registerAsset from "module_1122" /* 1122 */;
+import _mod6925 from "module_6925" /* 6925 */;
+import _slicedToArray from "module_6907" /* 6907 */;
 
+require = fn;
+const noop = fn(19);
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e37bbde49f12a4469b46214e14dfde4a", name: "KeyIcon", type: "png" });
+export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
+  closure_0 = arg0;
+  closure_1 = arg2;
+  let tmp = hasOwnProperty(undefined);
+  [r10015, tmp3] = _slicedToArray(_mod6925.useLayoutState(0), 2);
+  React4(() => {
+    let tmpResult = closure_0;
+    if (typeof closure_0 === "function") {
+      tmpResult = tmp();
+    }
+    closure_2.current = tmpResult;
+    if (closure_1 != null) {
+      tmp3();
+    }
+  }, arg1);
+  const items = [tmp3];
+  const items1 = [
+    tmp.current,
+    React3((fn, arg1) => {
+      let tmp = fn;
+      if (typeof fn === "function") {
+        tmp = fn(ref.current);
+      }
+      if (tmp !== ref.current) {
+        tmp2.current = tmp;
+        arg1((arg0) => arg0 + 1, arg1);
+      }
+    }, items)
+  ];
+  return items1;
+};

@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/main_tabs", width: 216, height: 216, scales: [1], hash: "e8cc96dfc04f2226c8870fdf46cc16af", name: "ExampleVoiceChatActivity", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 99, height: 70, scales: [2, 3], hash: "67e9bc8b12cbc0fed84dfc34cd178623", name: "cactus", type: "png" });

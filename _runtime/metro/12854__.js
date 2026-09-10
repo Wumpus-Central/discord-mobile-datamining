@@ -1,71 +1,93 @@
 // === Module 12854: ? ===
 
 // Module 12854
-import _mod12828 from "module_12828" /* 12828 */;
-import _mod12833 from "module_12833" /* 12833 */;
-import _mod12845 from "module_12845" /* 12845 */;
-import _mod12846 from "module_12846" /* 12846 */;
-import ScopeClass from "ScopeClass" /* 12848 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getClient = function getClient() {
-  const mainCarrier = _mod12845.getMainCarrier();
-  const asyncContextStrategy = _mod12846.getAsyncContextStrategy(mainCarrier);
-  const currentScope = asyncContextStrategy.getCurrentScope();
-  return currentScope.getClient();
-};
-export const getCurrentScope = function getCurrentScope() {
-  const mainCarrier = _mod12845.getMainCarrier();
-  const asyncContextStrategy = _mod12846.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getCurrentScope();
-};
-export const getGlobalScope = function getGlobalScope() {
-  return _mod12828.getGlobalSingleton("globalScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
-export const getIsolationScope = function getIsolationScope() {
-  const mainCarrier = _mod12845.getMainCarrier();
-  const asyncContextStrategy = _mod12846.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getIsolationScope();
-};
-export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  ({ traceId, spanId, parentSpanId } = propagationContext);
-  return _mod12833.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
-};
-export const withIsolationScope = function withIsolationScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12845.getMainCarrier();
-  const asyncContextStrategy = _mod12846.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+const BackButton = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      result = asyncContextStrategy.withIsolationScope(tmp3);
+      callResult = call(constructResult);
     }
-    return result;
-  } else {
-    return asyncContextStrategy.withIsolationScope(items[0]);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+fn(17).BackHandler;
+const jsx = fn(21).jsx;
+class BackButton {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, BackButton);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(BackButton);
+    tmp3 = closure_3;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handleBack = () => {
+      let flag = 0 !== closure_0.history.index;
+      if (flag) {
+        const history = closure_0.history;
+        history.goBack();
+        flag = true;
+      }
+      return flag;
+    };
+    return tmp3Result;
+  }
+}
+_inherits(BackButton, noop.Component);
+const entry = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    const listener = BackHandler.addEventListener("hardwareBackPress", this.handleBack);
   }
 };
-export const withScope = function withScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12845.getMainCarrier();
-  const asyncContextStrategy = _mod12846.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
-    } else {
-      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
+let items = [
+  entry,
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      const removed = BackHandler.removeEventListener("hardwareBackPress", this.handleBack);
     }
-    return withSetScopeResult;
-  } else {
-    return asyncContextStrategy.withScope(items[0]);
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      return jsx(BackButton(4437).__HistoryContext.Consumer, {
+        children(history) {
+          self.history = history;
+          return self.props.children || null;
+        }
+      });
+    }
   }
-};
+];
+
+export default _createClass(BackButton, items);

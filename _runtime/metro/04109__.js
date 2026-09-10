@@ -1,42 +1,37 @@
 // === Module 4109: ? ===
 
 // Module 4109
-import module_4110 from "module_4110" /* 4110 */;
-import module_4111 from "module_4111" /* 4111 */;
-import module_4112 from "module_4112" /* 4112 */;
-import date from "module_4113" /* 4113 */;
-import date from "module_4114" /* 4114 */;
+import module_3697 from "module_3697" /* 3697 */;
+import _typeof from "module_3693" /* 3693 */;
+import requiredArgs from "requiredArgs" /* 3694 */;
 
-if (!module_4110) {
-  let obj = { default: module_4110 };
+if (!module_3697) {
+  let obj = { default: module_3697 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4110;
+  tmp3 = module_3697;
 }
-if (!module_4111) {
-  obj = { default: module_4111 };
+module_3697 = tmp3;
+if (!_typeof) {
+  obj = { default: _typeof };
   let tmp5 = obj;
 } else {
-  tmp5 = module_4111;
+  tmp5 = _typeof;
 }
-if (!module_4112) {
-  obj = { default: module_4112 };
+_typeof = tmp5;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
-  tmp7 = module_4112;
+  tmp7 = requiredArgs;
 }
-if (!date) {
-  const obj1 = { default: date };
-  let tmp9 = obj1;
-} else {
-  tmp9 = date;
-}
-if (!date) {
-  const obj2 = { default: date };
-  let tmp11 = obj2;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp7;
 
-export default { code: "vi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default function setDayOfYear(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  defaultResult1.setMonth(0);
+  defaultResult1.setDate(module_3697.default(arg1));
+  return defaultResult1;
+};
 export default exports.default;

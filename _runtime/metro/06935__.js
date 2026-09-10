@@ -1,24 +1,20 @@
 // === Module 6935: ? ===
 
 // Module 6935
+import _mod6920 from "module_6920" /* 6920 */;
+import _mod6936 from "module_6936" /* 6936 */;
 
-export const useDataMultiplier = function useDataMultiplier(arg0, arg1) {
-  const array = new Array(arg1);
-  let flag = false;
-  if (typeof arg0[0] === "object") {
-    flag = true;
+
+export default function _possibleConstructorReturn(arg0, fn) {
+  if (fn) {
+    _mod6920;
+    return fn;
   }
-  for (let num = 0; num < arg1; num = num + 1) {
-    let tmp3 = arg0[num % tmp];
-    if (flag) {
-      let obj = {};
-      let merged = Object.assign(tmp3);
-      let tmp5 = obj;
-    } else {
-      tmp5 = tmp3;
-    }
-    array[num] = tmp5;
+  if (undefined !== fn) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Derived constructors may only return object or undefined");
+    throw typeError;
+  } else {
+    return _mod6936(arg0);
   }
-  const items = [array];
-  return items;
 };

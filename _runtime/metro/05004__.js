@@ -1,26 +1,11 @@
 // === Module 5004: ? ===
 
 // Module 5004
-import pointsDiffer from "pointsDiffer" /* 78 */;
-import processColorElement from "processColorElement" /* 80 */;
+import _mod17 from "module_17" /* 17 */;
 import module_65 from "module_65" /* 65 */;
 
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-let __INTERNAL_VIEW_CONFIG = { startPoint: { diff: pointsDiffer }, endPoint: null, colors: null, locations: true, useAngle: true, angleCenter: null, angle: true, borderRadii: true };
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-__INTERNAL_VIEW_CONFIG.endPoint = { diff: pointsDiffer };
-if ("default" in processColorElement) {
-  processColorElement = processColorElement.default;
-}
-__INTERNAL_VIEW_CONFIG.colors = { process: processColorElement };
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-__INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNLinearGradient", validAttributes: __INTERNAL_VIEW_CONFIG, angleCenter: { diff: pointsDiffer } };
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenFooter", validAttributes: {} };
 
-export default module_65.get("RNLinearGradient", () => obj);
+export default module_65.get("RNSScreenFooter", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

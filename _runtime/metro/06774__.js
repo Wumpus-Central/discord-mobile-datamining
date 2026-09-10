@@ -1,11 +1,143 @@
 // === Module 6774: ? ===
 
 // Module 6774
-for (const key10013 in require("module_6775")) {
-  arg5[key10013] = require("module_6775")[key10013];
-  continue;
+import tagMessage from "tagMessage" /* 6710 */;
+import _mod6748 from "module_6748" /* 6748 */;
+import hash from "hash" /* 6762 */;
+import allowedNativeProps2 from "allowedNativeProps" /* 6763 */;
+import _mod6775 from "module_6775" /* 6775 */;
+import _slicedToArray from "module_32" /* 32 */;
+
+require = fn;
+const useMemo = fn(19).useMemo;
+const map = new Map();
+function DEFAULT_PROPS_TRANSFORMER(arg0) {
+  return arg0;
 }
-for (const key10017 in require("transformLongPressProps")) {
-  arg5[key10017] = require("transformLongPressProps")[key10017];
-  continue;
+function isGestureEnabled(gestures) {
+  if (obj.isComposedGesture(gestures)) {
+    gestures = gestures.gestures;
+    let someResult = gestures.some(isGestureEnabled);
+  } else {
+    someResult = false !== hash.maybeUnpackValue(gestures.config.enabled);
+    const tmpResult = hash;
+  }
+  return someResult;
 }
+
+export { isGestureEnabled };
+export const resolveInternalConfigProps = function resolveInternalConfigProps(useAnimated) {
+  useAnimated = useAnimated.useAnimated;
+  if (!useAnimated) {
+    useAnimated = _mod6775.isNativeAnimatedEvent(useAnimated.onUpdate);
+  }
+  useAnimated.dispatchesAnimatedEvents = useAnimated;
+  if (useAnimated.dispatchesAnimatedEvents) {
+    useAnimated.disableReanimated = true;
+  }
+  const disableReanimated = useAnimated.disableReanimated;
+  let result = !disableReanimated;
+  if (!disableReanimated) {
+    result = undefined !== _mod6748.Reanimated;
+  }
+  if (result) {
+    result = hash.hasWorkletEventHandlers(useAnimated);
+  }
+  if (result) {
+    result = !useAnimated.dispatchesAnimatedEvents;
+  }
+  useAnimated.shouldUseReanimatedDetector = result;
+  useAnimated.needsPointerData = _mod6775.shouldHandleTouchEvents(useAnimated);
+};
+export const prepareConfigForNativeSide = function prepareConfigForNativeSide(arg0, shouldUseReanimatedDetector) {
+  shouldUseReanimatedDetector = shouldUseReanimatedDetector.shouldUseReanimatedDetector;
+  if (shouldUseReanimatedDetector) {
+    let obj = hash;
+    shouldUseReanimatedDetector = !obj.maybeUnpackValue(shouldUseReanimatedDetector.runOnJS);
+  }
+  obj = { dispatchesReanimatedEvents: shouldUseReanimatedDetector };
+  const PropsWhiteLists = allowedNativeProps2.PropsWhiteLists;
+  let EMPTY_WHITE_LIST = PropsWhiteLists.get(arg0);
+  if (EMPTY_WHITE_LIST == null) {
+    EMPTY_WHITE_LIST = allowedNativeProps2.EMPTY_WHITE_LIST;
+  }
+  const entries = Object.entries(shouldUseReanimatedDetector);
+  while (tmp12 !== undefined) {
+    let tmp15 = _slicedToArray(tmp13, 2);
+    let first = tmp15[0];
+    let tmp17 = first;
+    let iter = tmp15[1];
+    let allowedNativeProps = allowedNativeProps2.allowedNativeProps;
+    if (!allowedNativeProps.has(first)) {
+      if (!EMPTY_WHITE_LIST.has(tmp17)) {
+        let PropsToFilter = allowedNativeProps2.PropsToFilter;
+        if (PropsToFilter.has(tmp17)) {
+          continue;
+        } else {
+          let _console = console;
+          let tmp19Result = tagMessage;
+          let _HermesInternal = HermesInternal;
+          let str = "";
+          let str2 = " is not a valid property for ";
+          let str3 = " and will be ignored.";
+          let warnResult = console.warn(tmp19Result.tagMessage("" + tmp17 + " is not a valid property for " + arg0 + " and will be ignored."));
+          continue;
+        }
+        continue;
+      }
+    }
+    let Reanimated = _mod6748.Reanimated;
+    let isSharedValueResult;
+    if (Reanimated != null) {
+      isSharedValueResult = Reanimated.isSharedValue(iter);
+    }
+    obj[tmp17] = isSharedValueResult ? iter.value : iter;
+  }
+  return obj;
+};
+export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(gestureHandlerProps) {
+  closure_0 = gestureHandlerProps;
+  let tmp = map;
+  if (map === undefined) {
+    tmp = map;
+  }
+  closure_1 = tmp;
+  let tmp2 = transformHoverProps;
+  if (transformHoverProps === undefined) {
+    tmp2 = DEFAULT_PROPS_TRANSFORMER;
+  }
+  closure_2 = tmp2;
+  const items = [gestureHandlerProps, tmp, tmp2];
+  return useMemo(() => {
+    const merged = Object.assign(closure_0);
+    const item = closure_1.forEach((item, index) => {
+      if (index in obj) {
+        obj[item] = obj[index];
+        delete tmp[tmp2];
+      }
+    });
+    const tmp3 = closure_2({});
+    let useAnimated = tmp3.useAnimated;
+    if (!useAnimated) {
+      useAnimated = _mod6775.isNativeAnimatedEvent(tmp3.onUpdate);
+    }
+    tmp3.dispatchesAnimatedEvents = useAnimated;
+    if (tmp3.dispatchesAnimatedEvents) {
+      tmp3.disableReanimated = true;
+    }
+    const disableReanimated = tmp3.disableReanimated;
+    let result = !disableReanimated;
+    if (!disableReanimated) {
+      result = undefined !== _mod6748.Reanimated;
+    }
+    if (result) {
+      result = hash.hasWorkletEventHandlers(tmp3);
+    }
+    if (result) {
+      result = !tmp3.dispatchesAnimatedEvents;
+    }
+    tmp3.shouldUseReanimatedDetector = result;
+    tmp3.needsPointerData = _mod6775.shouldHandleTouchEvents(tmp3);
+    return tmp3;
+  }, items);
+};

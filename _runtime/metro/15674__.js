@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "880baabfc7feb98fb5f5e21e1c109092", name: "nl.messages.880baabfc7feb98fb5f5e21e1c109092.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "84a1e2a3b13ea7ae45e68f1bb8755810", name: "TreehouseIcon", type: "png" });

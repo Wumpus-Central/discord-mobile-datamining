@@ -1,23 +1,12 @@
 // === Module 6719: ? ===
 
 // Module 6719
-import _mod19 from "module_19" /* 19 */;
-import _modDef6704 from "module_6704" /* 6704 */;
+import _modDef6720 from "module_6720" /* 6720 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-_mod19.useCallback;
+({ Animated, StyleSheet } = get_ActivityIndicator);
+const animatedComponent = Animated.createAnimatedComponent(_modDef6720);
 
-export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
-  const previousViewTag = current;
-  const items = [current, detectorUpdater];
-  return useCallback((viewRef) => {
-    if (null !== viewRef) {
-      previousViewTag.viewRef = viewRef;
-      if (-1 === previousViewTag.previousViewTag) {
-        previousViewTag.previousViewTag = _modDef6704(previousViewTag.viewRef);
-      }
-      if (!previousViewTag.firstRender) {
-        detectorUpdater(true);
-      }
-    }
-  }, items);
-};
+export const GestureDetectorType = { Native: 0, [0]: "Native", Virtual: 1, [1]: "Virtual", Intercepting: 2, [2]: "Intercepting" };
+export const AnimatedNativeDetector = animatedComponent;
+export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });

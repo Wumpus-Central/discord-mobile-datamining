@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/user_settings/account/native/images", width: 121, height: 90, scales: [1, 2, 3], hash: "6fbfa0aa2194635b21a8ebd068b44d0c", name: "lock", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "2acbce4003074453f191623a31e57601", name: "es-419.messages.2acbce4003074453f191623a31e57601.compiled.messages", type: "jsona" });

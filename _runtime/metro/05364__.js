@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "576340e1ed4deb81baadbae498cf3ba0", name: "img_account_sync_github_white", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "2eb4a3a7eee9d2c37d6ab83a1bbe761d", name: "img_account_sync_steam_light", type: "png" });

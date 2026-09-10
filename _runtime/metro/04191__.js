@@ -1,133 +1,26 @@
 // === Module 4191: ? ===
 
 // Module 4191
-import _mod4166 from "module_4166" /* 4166 */;
-
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      const _module = _mod4166;
-      let obj = { months: null, monthsShort: null, monthsParseExact: true, weekdays: null, weekdaysShort: null, weekdaysMin: null, weekdaysParseExact: true, meridiemParse: null, isPM: null, meridiem: null, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: null, week: null };
-      const split3 = "th\u00E1ng 1_th\u00E1ng 2_th\u00E1ng 3_th\u00E1ng 4_th\u00E1ng 5_th\u00E1ng 6_th\u00E1ng 7_th\u00E1ng 8_th\u00E1ng 9_th\u00E1ng 10_th\u00E1ng 11_th\u00E1ng 12".split;
-      obj.months = "th\u00E1ng 1_th\u00E1ng 2_th\u00E1ng 3_th\u00E1ng 4_th\u00E1ng 5_th\u00E1ng 6_th\u00E1ng 7_th\u00E1ng 8_th\u00E1ng 9_th\u00E1ng 10_th\u00E1ng 11_th\u00E1ng 12".split("_");
-      const split4 = "Thg 01_Thg 02_Thg 03_Thg 04_Thg 05_Thg 06_Thg 07_Thg 08_Thg 09_Thg 10_Thg 11_Thg 12".split;
-      obj.monthsShort = "Thg 01_Thg 02_Thg 03_Thg 04_Thg 05_Thg 06_Thg 07_Thg 08_Thg 09_Thg 10_Thg 11_Thg 12".split("_");
-      const split5 = "ch\u1EE7 nh\u1EADt_th\u1EE9 hai_th\u1EE9 ba_th\u1EE9 t\u01B0_th\u1EE9 n\u0103m_th\u1EE9 s\u00E1u_th\u1EE9 b\u1EA3y".split;
-      obj.weekdays = "ch\u1EE7 nh\u1EADt_th\u1EE9 hai_th\u1EE9 ba_th\u1EE9 t\u01B0_th\u1EE9 n\u0103m_th\u1EE9 s\u00E1u_th\u1EE9 b\u1EA3y".split("_");
-      const split6 = "CN_T2_T3_T4_T5_T6_T7".split;
-      obj.weekdaysShort = "CN_T2_T3_T4_T5_T6_T7".split("_");
-      const split7 = "CN_T2_T3_T4_T5_T6_T7".split;
-      obj.weekdaysMin = "CN_T2_T3_T4_T5_T6_T7".split("_");
-      obj.meridiemParse = /sa|ch/i;
-      obj.isPM = function isPM(arg0) {
-        return /^ch$/i.test(arg0);
-      };
-      obj.meridiem = function meridiem(arg0, arg1, arg2) {
-        if (arg0 < 12) {
-          let str2 = "SA";
-          if (arg2) {
-            str2 = "sa";
-          }
-          let str = str2;
-        } else {
-          str = "CH";
-          if (arg2) {
-            str = "ch";
-          }
-        }
-        return str;
-      };
-      obj.longDateFormat = { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD/MM/YYYY", LL: "D MMMM [n\u0103m] YYYY", LLL: "D MMMM [n\u0103m] YYYY HH:mm", LLLL: "dddd, D MMMM [n\u0103m] YYYY HH:mm", l: "DD/M/YYYY", ll: "D MMM YYYY", lll: "D MMM YYYY HH:mm", llll: "ddd, D MMM YYYY HH:mm" };
-      obj.calendar = { sameDay: "[H\u00F4m nay l\u00FAc] LT", nextDay: "[Ng\u00E0y mai l\u00FAc] LT", nextWeek: "dddd [tu\u1EA7n t\u1EDBi l\u00FAc] LT", lastDay: "[H\u00F4m qua l\u00FAc] LT", lastWeek: "dddd [tu\u1EA7n tr\u01B0\u1EDBc l\u00FAc] LT", sameElse: "L" };
-      obj.relativeTime = { future: "%s t\u1EDBi", past: "%s tr\u01B0\u1EDBc", s: "v\u00E0i gi\u00E2y", ss: "%d gi\u00E2y", m: "m\u1ED9t ph\u00FAt", mm: "%d ph\u00FAt", h: "m\u1ED9t gi\u1EDD", hh: "%d gi\u1EDD", d: "m\u1ED9t ng\u00E0y", dd: "%d ng\u00E0y", w: "m\u1ED9t tu\u1EA7n", ww: "%d tu\u1EA7n", M: "m\u1ED9t th\u00E1ng", MM: "%d th\u00E1ng", y: "m\u1ED9t n\u0103m", yy: "%d n\u0103m" };
-      obj.dayOfMonthOrdinalParse = /\d{1,2}/;
-      obj.ordinal = function ordinal(arg0) {
-        return arg0;
-      };
-      obj.week = { dow: 1, doy: 4 };
-      _module.defineLocale("vi", obj);
-    }
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    let obj = { data: null, locale: "zh-Hans" };
+    obj = { conjunction: null, disjunction: null, unit: null };
+    const obj1 = { long: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" }, narrow: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" }, short: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" } };
+    obj.conjunction = obj1;
+    const obj2 = { long: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" }, narrow: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" }, short: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" } };
+    obj.disjunction = obj2;
+    const obj3 = { long: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" }, narrow: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" }, short: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" } };
+    obj.unit = obj3;
+    obj.data = obj;
+    ListFormat.__addLocaleData(obj);
   }
 }
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], function n(defineLocale) {
-      ({ split, split: split2 } = "CN_T2_T3_T4_T5_T6_T7");
-      return defineLocale.defineLocale("vi", {
-        months: "th\u00E1ng 1_th\u00E1ng 2_th\u00E1ng 3_th\u00E1ng 4_th\u00E1ng 5_th\u00E1ng 6_th\u00E1ng 7_th\u00E1ng 8_th\u00E1ng 9_th\u00E1ng 10_th\u00E1ng 11_th\u00E1ng 12".split("_"),
-        monthsShort: "Thg 01_Thg 02_Thg 03_Thg 04_Thg 05_Thg 06_Thg 07_Thg 08_Thg 09_Thg 10_Thg 11_Thg 12".split("_"),
-        monthsParseExact: true,
-        weekdays: "ch\u1EE7 nh\u1EADt_th\u1EE9 hai_th\u1EE9 ba_th\u1EE9 t\u01B0_th\u1EE9 n\u0103m_th\u1EE9 s\u00E1u_th\u1EE9 b\u1EA3y".split("_"),
-        weekdaysShort: "CN_T2_T3_T4_T5_T6_T7".split("_"),
-        weekdaysMin: "CN_T2_T3_T4_T5_T6_T7".split("_"),
-        weekdaysParseExact: true,
-        meridiemParse: /sa|ch/i,
-        isPM(arg0) {
-          return /^ch$/i.test(arg0);
-        },
-        meridiem(arg0, arg1, arg2) {
-          if (arg0 < 12) {
-            let str2 = "SA";
-            if (arg2) {
-              str2 = "sa";
-            }
-            let str = str2;
-          } else {
-            str = "CH";
-            if (arg2) {
-              str = "ch";
-            }
-          }
-          return str;
-        },
-        longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD/MM/YYYY", LL: "D MMMM [n\u0103m] YYYY", LLL: "D MMMM [n\u0103m] YYYY HH:mm", LLLL: "dddd, D MMMM [n\u0103m] YYYY HH:mm", l: "DD/M/YYYY", ll: "D MMM YYYY", lll: "D MMM YYYY HH:mm", llll: "ddd, D MMM YYYY HH:mm" },
-        calendar: { sameDay: "[H\u00F4m nay l\u00FAc] LT", nextDay: "[Ng\u00E0y mai l\u00FAc] LT", nextWeek: "dddd [tu\u1EA7n t\u1EDBi l\u00FAc] LT", lastDay: "[H\u00F4m qua l\u00FAc] LT", lastWeek: "dddd [tu\u1EA7n tr\u01B0\u1EDBc l\u00FAc] LT", sameElse: "L" },
-        relativeTime: { future: "%s t\u1EDBi", past: "%s tr\u01B0\u1EDBc", s: "v\u00E0i gi\u00E2y", ss: "%d gi\u00E2y", m: "m\u1ED9t ph\u00FAt", mm: "%d ph\u00FAt", h: "m\u1ED9t gi\u1EDD", hh: "%d gi\u1EDD", d: "m\u1ED9t ng\u00E0y", dd: "%d ng\u00E0y", w: "m\u1ED9t tu\u1EA7n", ww: "%d tu\u1EA7n", M: "m\u1ED9t th\u00E1ng", MM: "%d th\u00E1ng", y: "m\u1ED9t n\u0103m", yy: "%d n\u0103m" },
-        dayOfMonthOrdinalParse: /\d{1,2}/,
-        ordinal(arg0) {
-          return arg0;
-        },
-        week: { dow: 1, doy: 4 }
-      });
-    });
-  }
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
 }
-const moment = this.moment;
-obj = {
-  months: "th\u00E1ng 1_th\u00E1ng 2_th\u00E1ng 3_th\u00E1ng 4_th\u00E1ng 5_th\u00E1ng 6_th\u00E1ng 7_th\u00E1ng 8_th\u00E1ng 9_th\u00E1ng 10_th\u00E1ng 11_th\u00E1ng 12".split("_"),
-  monthsShort: "Thg 01_Thg 02_Thg 03_Thg 04_Thg 05_Thg 06_Thg 07_Thg 08_Thg 09_Thg 10_Thg 11_Thg 12".split("_"),
-  monthsParseExact: true,
-  weekdays: "ch\u1EE7 nh\u1EADt_th\u1EE9 hai_th\u1EE9 ba_th\u1EE9 t\u01B0_th\u1EE9 n\u0103m_th\u1EE9 s\u00E1u_th\u1EE9 b\u1EA3y".split("_"),
-  weekdaysShort: "CN_T2_T3_T4_T5_T6_T7".split("_"),
-  weekdaysMin: "CN_T2_T3_T4_T5_T6_T7".split("_"),
-  weekdaysParseExact: true,
-  meridiemParse: /sa|ch/i,
-  isPM(arg0) {
-    return /^ch$/i.test(arg0);
-  },
-  meridiem(arg0, arg1, arg2) {
-    if (arg0 < 12) {
-      let str2 = "SA";
-      if (arg2) {
-        str2 = "sa";
-      }
-      let str = str2;
-    } else {
-      str = "CH";
-      if (arg2) {
-        str = "ch";
-      }
-    }
-    return str;
-  },
-  longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD/MM/YYYY", LL: "D MMMM [n\u0103m] YYYY", LLL: "D MMMM [n\u0103m] YYYY HH:mm", LLLL: "dddd, D MMMM [n\u0103m] YYYY HH:mm", l: "DD/M/YYYY", ll: "D MMM YYYY", lll: "D MMM YYYY HH:mm", llll: "ddd, D MMM YYYY HH:mm" },
-  calendar: { sameDay: "[H\u00F4m nay l\u00FAc] LT", nextDay: "[Ng\u00E0y mai l\u00FAc] LT", nextWeek: "dddd [tu\u1EA7n t\u1EDBi l\u00FAc] LT", lastDay: "[H\u00F4m qua l\u00FAc] LT", lastWeek: "dddd [tu\u1EA7n tr\u01B0\u1EDBc l\u00FAc] LT", sameElse: "L" },
-  relativeTime: { future: "%s t\u1EDBi", past: "%s tr\u01B0\u1EDBc", s: "v\u00E0i gi\u00E2y", ss: "%d gi\u00E2y", m: "m\u1ED9t ph\u00FAt", mm: "%d ph\u00FAt", h: "m\u1ED9t gi\u1EDD", hh: "%d gi\u1EDD", d: "m\u1ED9t ng\u00E0y", dd: "%d ng\u00E0y", w: "m\u1ED9t tu\u1EA7n", ww: "%d tu\u1EA7n", M: "m\u1ED9t th\u00E1ng", MM: "%d th\u00E1ng", y: "m\u1ED9t n\u0103m", yy: "%d n\u0103m" },
-  dayOfMonthOrdinalParse: /\d{1,2}/,
-  ordinal(arg0) {
-    return arg0;
-  },
-  week: { dow: 1, doy: 4 }
-};
-({ split, split: split2 } = "CN_T2_T3_T4_T5_T6_T7");
-moment.defineLocale("vi", obj);
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+obj = { data: { conjunction: { long: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" }, narrow: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" }, short: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" } }, disjunction: { long: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" }, narrow: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" }, short: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" } }, unit: { long: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" }, narrow: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" }, short: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" } } }, locale: "zh-Hans" };
+prop.push(obj);

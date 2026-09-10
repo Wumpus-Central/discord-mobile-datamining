@@ -2,6 +2,7 @@
 
 // Module 8579
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8560 from "module_8560" /* 8560 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
@@ -27,15 +28,15 @@ function _isNativeReflectConstruct() {
   }
 }
 _possibleConstructorReturnDefault;
-class Stop {
+class FeMergeNode {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_0(this, Stop);
+    tmp = closure_0(this, FeMergeNode);
     items1 = [...items];
     tmp2 = c2;
-    obj = c2(Stop);
+    obj = c2(FeMergeNode);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp5 = globalThis;
@@ -55,8 +56,8 @@ class Stop {
     return tmp3Result;
   }
 }
-_classCallCheck = Stop;
-_inherits(Stop, fn(19).Component);
+_classCallCheck = FeMergeNode;
+_inherits(FeMergeNode, _modDef8560);
 const entry = {
   key: "render",
   value: function render() {
@@ -64,7 +65,7 @@ const entry = {
   }
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(Stop, items);
-importDefaultResultResult.displayName = "Stop";
+const importDefaultResultResult = _createClass(FeMergeNode, items);
+importDefaultResultResult.displayName = "FeMergeNode";
 
 export default importDefaultResultResult;

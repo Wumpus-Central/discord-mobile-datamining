@@ -1,16 +1,37 @@
 // === Module 4965: ? ===
 
 // Module 4965
-import _mod17 from "module_17" /* 17 */;
-import _mod26 from "module_26" /* 26 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import _mod4963 from "module_4963" /* 4963 */;
+import noop from "module_19" /* 19 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsHost", directEventTypes: { topNativeFocusChange: { registrationName: "onNativeFocusChange" } }, validAttributes: null };
-__INTERNAL_VIEW_CONFIG = { tabBarHidden: true, nativeContainerBackgroundColor: _mod26.colorAttribute, tabBarBackgroundColor: _mod26.colorAttribute, tabBarItemTitleFontFamily: true, tabBarItemTitleFontSize: true, tabBarItemTitleFontSizeActive: true, tabBarItemTitleFontWeight: true, tabBarItemTitleFontStyle: true, tabBarItemTitleFontColor: _mod26.colorAttribute, tabBarItemTitleFontColorActive: _mod26.colorAttribute, tabBarItemIconColor: _mod26.colorAttribute, tabBarItemIconColorActive: _mod26.colorAttribute, tabBarItemActiveIndicatorColor: _mod26.colorAttribute, tabBarItemActiveIndicatorEnabled: true, tabBarItemRippleColor: _mod26.colorAttribute, tabBarItemLabelVisibilityMode: true, tabBarTintColor: _mod26.colorAttribute, tabBarMinimizeBehavior: true, tabBarControllerMode: true, controlNavigationStateInJS: true };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onNativeFocusChange: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
+require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
 
-export default module_65.get("RNSTabsHost", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const useRenderDebugInfo = function useRenderDebugInfo(arg0) {
+  _require = arg0;
+  const ref = ref1.useRef(null);
+  ref1 = ref1.useRef(-1);
+  closure_3 = ref1.useEffectEvent((arg0) => {
+    const RNSLog = _mod4963.RNSLog;
+    RNSLog.log("" + closure_0 + " [" + ref1.current + "] " + arg0);
+  });
+  const effect = ref1.useEffect(() => {
+    if (null != ref.current) {
+      let num = findNodeHandle(tmp.current);
+      if (num == null) {
+        num = -1;
+      }
+      ref1.current = num;
+      if (-1 === ref1.current) {
+        closure_3("failed to find node handle");
+      }
+    }
+    closure_3("mounted");
+    return () => {
+      closure_1_3("unmounted");
+    };
+  }, []);
+  let RNSLog = require("module_4963").RNSLog;
+  RNSLog.log("" + arg0 + " [" + ref1.current + "] " + "rendered");
+  return ref;
+};

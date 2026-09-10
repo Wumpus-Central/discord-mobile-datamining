@@ -1,56 +1,136 @@
 // === Module 12910: ? ===
 
 // Module 12910
-const items = ["X-Client-IP", "X-Forwarded-For", "Fly-Client-IP", "CF-Connecting-IP", "Fastly-Client-Ip", "True-Client-Ip", "X-Real-IP", "X-Cluster-Client-IP", "X-Forwarded", "Forwarded-For", "Forwarded", "X-Vercel-Forwarded-For"];
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12872 */;
+import _mod12911 from "module_12911" /* 12911 */;
+import _mod12914 from "module_12914" /* 12914 */;
+import __SENTRY_DEBUG__ from "module_12866" /* 12866 */;
+import consoleSandbox from "module_12867" /* 12867 */;
 
-export const getClientIPAddress = function getClientIPAddress(headers) {
-  let mapped = items.map((item) => {
-    let str = obj;
-    if (Array.isArray(headers[item])) {
-      str = obj.join(";");
+
+export const createEventEnvelope = function createEventEnvelope(type, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = _mod12911.getSdkMetadataForEnvelopeHeader(sdk);
+  let str = "event";
+  if (type.type) {
+    str = "event";
+    if ("replay_event" !== type.type) {
+      str = type.type;
     }
-    if ("Forwarded" === item) {
-      let mapped = (function parseForwardedHeader(str) {
-        if (str) {
-          const parts = str.split(";");
-          const iter = parts[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            let arr = nextResult;
-            if (nextResult.startsWith("for=")) {
-              let substr = arr.slice(4);
-              iter.return();
-              return substr;
-            }
-          }
-          return null;
-        } else {
-          return null;
-        }
-      })(str);
-    } else {
-      mapped = str;
-      if (str) {
-        let parts = str.split(",");
-        mapped = parts.map((item) => item.trim());
-      }
+  }
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
+    type.sdk = type.sdk || {};
+    let name = type.sdk.name;
+    if (!name) {
+      name = sdk.name;
     }
-    return mapped;
-  });
-  const reduced = mapped.reduce((arr, item) => {
-    let combined = arr;
-    if (item) {
-      combined = arr.concat(item);
+    type.sdk.name = name;
+    let version = type.sdk.version;
+    if (!version) {
+      version = sdk.version;
     }
-    return combined;
-  }, []);
-  return reduced.find((item) => {
-    let isMatch = null !== item;
-    if (isMatch) {
-      isMatch = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/.test(item);
-      const obj = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/;
+    type.sdk.version = version;
+    let integrations = type.sdk.integrations;
+    if (!integrations) {
+      integrations = [];
     }
-    return isMatch;
-  }) || null;
+    const items = [];
+    let arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
+    const tmp9 = sdk.integrations || [];
+    arraySpreadResult = HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
+    type.sdk.integrations = items;
+    let packages = type.sdk.packages;
+    if (!packages) {
+      packages = [];
+    }
+    const items1 = [];
+    const arraySpreadResult1 = HermesBuiltin.arraySpread(packages, 0);
+    const tmp17 = sdk.packages || [];
+    HermesBuiltin.arraySpread(tmp17, arraySpreadResult1);
+    type.sdk.packages = items1;
+  }
+  let tmp3Result = _mod12911;
+  const eventEnvelopeHeaders = tmp3Result.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
+  delete tmp[tmp2];
+  const items2 = [{ type: str }, type];
+  tmp3Result = _mod12911;
+  const items3 = [items2];
+  return tmp3Result.createEnvelope(eventEnvelopeHeaders, items3);
 };
-export const ipHeaderNames = items;
+export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1, sdk, arg3) {
+  let obj = _mod12911;
+  const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(sdk);
+  obj = { sent_at: new Date().toISOString() };
+  let tmp4 = sdkMetadataForEnvelopeHeader;
+  if (sdkMetadataForEnvelopeHeader) {
+    obj = { sdk: sdkMetadataForEnvelopeHeader };
+    tmp4 = obj;
+  }
+  const merged = Object.assign(tmp4);
+  let tmp6 = arg3 && arg1;
+  if (tmp6) {
+    const obj1 = { dsn: null };
+    let tmpResult = _mod12914;
+    obj1.dsn = tmpResult.dsnToString(arg1);
+    tmp6 = obj1;
+  }
+  const merged1 = Object.assign(tmp6);
+  if ("aggregates" in toJSON) {
+    const items = [{ type: "sessions" }, toJSON];
+    let items1 = items;
+  } else {
+    items1 = [{ type: "session" }, toJSON.toJSON()];
+  }
+  tmpResult = _mod12911;
+  const items2 = [items1];
+  return tmpResult.createEnvelope(obj, items2);
+};
+export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
+  let obj = beforeSendSpan(12903);
+  const dynamicSamplingContextFromSpan = obj.getDynamicSamplingContextFromSpan(arg0[0]);
+  let dsn = getDsn;
+  if (getDsn) {
+    dsn = getDsn.getDsn();
+  }
+  let tunnel = getDsn;
+  if (getDsn) {
+    tunnel = getDsn.getOptions().tunnel;
+  }
+  obj = { sent_at: new Date().toISOString() };
+  let tmp7 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
+    return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
+  })(dynamicSamplingContextFromSpan);
+  if (tmp7) {
+    obj = { trace: dynamicSamplingContextFromSpan };
+    tmp7 = obj;
+  }
+  const merged = Object.assign(tmp7);
+  let tmp9 = tunnel && dsn;
+  if (tmp9) {
+    const obj1 = { dsn: tmp2(12914).dsnToString(dsn) };
+    tmp9 = obj1;
+    const tmp2Result = tmp2(12914);
+  }
+  const merged1 = Object.assign(tmp9);
+  beforeSendSpan = getDsn;
+  if (getDsn) {
+    beforeSendSpan = getDsn.getOptions().beforeSendSpan;
+  }
+  if (beforeSendSpan) {
+    const fn2 = (arg0) => {
+      const tmp3 = beforeSendSpan(spanTimeInputToSeconds.spanToJSON(arg0));
+      if (!tmp3) {
+        spanTimeInputToSeconds.showSpanDropWarning();
+        const tmpResult = spanTimeInputToSeconds;
+      }
+      return tmp3;
+    };
+  } else {
+    const fn = (arg0) => beforeSendSpan(dependencyMap[5]).spanToJSON(arg0);
+  }
+  arg0[Symbol.iterator]();
+  const date = new Date();
+  tmp2 = beforeSendSpan;
+};

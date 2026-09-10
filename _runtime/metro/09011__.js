@@ -1,7 +1,7 @@
 // === Module 9011: ? ===
 
 // Module 9011
-import _mod8971 from "module_8971" /* 8971 */;
+import _mod9008 from "module_9008" /* 9008 */;
 
 const self = this;
 let self2 = this;
@@ -54,157 +54,244 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.default = function default_1() {
-      if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "znak\u00F3w", verb: "mie\u0107" }, file: { unit: "bajt\u00F3w", verb: "mie\u0107" }, array: { unit: "element\u00F3w", verb: "mie\u0107" }, set: { unit: "element\u00F3w", verb: "mie\u0107" } };
-        closure_1 = { regex: "wyra\u017Cenie", email: "adres email", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "data i godzina w formacie ISO", date: "data w formacie ISO", time: "godzina w formacie ISO", duration: "czas trwania ISO", ipv4: "adres IPv4", ipv6: "adres IPv6", cidrv4: "zakres IPv4", cidrv6: "zakres IPv6", base64: "ci\u0105g znak\u00F3w zakodowany w formacie base64", base64url: "ci\u0105g znak\u00F3w zakodowany w formacie base64url", json_string: "ci\u0105g znak\u00F3w w formacie JSON", e164: "liczba E.164", jwt: "JWT", template_literal: "wej\u015Bcie" };
-        closure_2 = { nan: "NaN", number: "liczba", array: "tablica" };
-        obj.localeError = (code) => {
-          switch (code.code) {
-            case "invalid_type":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp49 = closure_2[parsedTypeResult];
-              if (tmp49 == null) {
-                tmp49 = parsedTypeResult;
-              }
-              obj = /^[A-Z]/;
-              if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined = "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano instanceof " + code.expected + ", otrzymano " + tmp49;
-              } else {
-                const _HermesInternal16 = HermesInternal;
-                combined = "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano " + expected + ", otrzymano " + tmp49;
-              }
-              return combined;
-            case "invalid_value":
-              if (1 === code.values.length) {
-                const _HermesInternal15 = HermesInternal;
-                let combined1 = "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano " + closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal14 = HermesInternal;
-                combined1 = "Nieprawid\u0142owa opcja: oczekiwano jednej z warto\u015Bci " + closure_2.joinValues(code.values, "|");
-              }
-              return combined1;
-            case "too_big":
-              let str29 = "<";
-              if (code.inclusive) {
-                str29 = "<=";
-              }
-              let tmp28 = obj[code.origin];
-              if (tmp28 == null) {
-                tmp28 = null;
-              }
-              let str30 = code.origin;
-              if (tmp28) {
-                if (str30 == null) {
-                  str30 = "warto\u015B\u0107";
-                }
-                let str = code.maximum.toString();
-                let str36 = tmp28.unit;
-                if (str36 == null) {
-                  str36 = "element\u00F3w";
-                }
-                const _HermesInternal13 = HermesInternal;
-                let combined2 = "Za du\u017Ca warto\u015B\u0107: oczekiwano, \u017Ce " + str30 + " b\u0119dzie mie\u0107 " + str29 + str + " " + str36;
-              } else {
-                let str31 = str30;
-                if (str30 == null) {
-                  str31 = "warto\u015B\u0107";
-                }
-                const _HermesInternal12 = HermesInternal;
-                combined2 = "Zbyt du\u017C(y/a/e): oczekiwano, \u017Ce " + str31 + " b\u0119dzie wynosi\u0107 " + str29 + code.maximum.toString();
-              }
-              return combined2;
-            case "too_small":
-              let str18 = ">";
-              if (code.inclusive) {
-                str18 = ">=";
-              }
-              let tmp15 = obj[code.origin];
-              if (tmp15 == null) {
-                tmp15 = null;
-              }
-              let str19 = code.origin;
-              if (tmp15) {
-                if (str19 == null) {
-                  str19 = "warto\u015B\u0107";
-                }
-                const str1 = code.minimum.toString();
-                let str25 = tmp15.unit;
-                if (str25 == null) {
-                  str25 = "element\u00F3w";
-                }
-                const _HermesInternal11 = HermesInternal;
-                let combined3 = "Za ma\u0142a warto\u015B\u0107: oczekiwano, \u017Ce " + str19 + " b\u0119dzie mie\u0107 " + str18 + str1 + " " + str25;
-              } else {
-                let str20 = str19;
-                if (str19 == null) {
-                  str20 = "warto\u015B\u0107";
-                }
-                const _HermesInternal10 = HermesInternal;
-                combined3 = "Zbyt ma\u0142(y/a/e): oczekiwano, \u017Ce " + str20 + " b\u0119dzie wynosi\u0107 " + str18 + code.minimum.toString();
-              }
-              return combined3;
-            case "invalid_format":
-              if ("starts_with" === code.format) {
-                const _HermesInternal9 = HermesInternal;
-                let combined4 = "Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi zaczyna\u0107 si\u0119 od \"" + code.prefix + "\"";
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                combined4 = "Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi ko\u0144czy\u0107 si\u0119 na \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                combined4 = "Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi zawiera\u0107 \"" + code.includes + "\"";
-              } else if ("regex" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined4 = "Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi odpowiada\u0107 wzorcowi " + code.pattern;
-              } else {
-                let format = closure_1[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal5 = HermesInternal;
-                combined4 = "Nieprawid\u0142ow(y/a/e) " + format;
-              }
-              return combined4;
-            case "not_multiple_of":
-              const _HermesInternal4 = HermesInternal;
-              return "Nieprawid\u0142owa liczba: musi by\u0107 wielokrotno\u015Bci\u0105 " + code.divisor;
-            case "unrecognized_keys":
-              let str3 = "";
-              if (code.keys.length > 1) {
-                str3 = "s";
-              }
-              const _HermesInternal3 = HermesInternal;
-              return "Nierozpoznane klucze" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
-            case "invalid_key":
-              const _HermesInternal2 = HermesInternal;
-              return "Nieprawid\u0142owy klucz w " + code.origin;
-            case "invalid_union":
-              return "Nieprawid\u0142owe dane wej\u015Bciowe";
-            case "invalid_element":
-              const _HermesInternal = HermesInternal;
-              str = "Nieprawid\u0142owa warto\u015B\u0107 w ";
-              return "Nieprawid\u0142owa warto\u015B\u0107 w " + code.origin;
-            default:
-              return "Nieprawid\u0142owe dane wej\u015Bciowe";
-          }
-        };
-        return obj;
+    exports.cuid = undefined;
+    exports.cuid2 = undefined;
+    exports.ulid = undefined;
+    exports.xid = undefined;
+    exports.ksuid = undefined;
+    exports.nanoid = undefined;
+    exports.duration = undefined;
+    exports.extendedDuration = undefined;
+    exports.guid = undefined;
+    exports.uuid = undefined;
+    exports.uuid4 = undefined;
+    exports.uuid6 = undefined;
+    exports.uuid7 = undefined;
+    exports.email = undefined;
+    exports.html5Email = undefined;
+    exports.rfc5322Email = undefined;
+    exports.unicodeEmail = undefined;
+    exports.idnEmail = undefined;
+    exports.browserEmail = undefined;
+    exports.ipv4 = undefined;
+    exports.ipv6 = undefined;
+    exports.mac = undefined;
+    exports.cidrv4 = undefined;
+    exports.cidrv6 = undefined;
+    exports.base64 = undefined;
+    exports.base64url = undefined;
+    exports.hostname = undefined;
+    exports.domain = undefined;
+    exports.e164 = undefined;
+    exports.date = undefined;
+    exports.string = undefined;
+    exports.bigint = undefined;
+    exports.integer = undefined;
+    exports.number = undefined;
+    exports.boolean = undefined;
+    exports.null = undefined;
+    exports.undefined = undefined;
+    exports.lowercase = undefined;
+    exports.uppercase = undefined;
+    exports.hex = undefined;
+    exports.md5_hex = undefined;
+    exports.md5_base64 = undefined;
+    exports.md5_base64url = undefined;
+    exports.sha1_hex = undefined;
+    exports.sha1_base64 = undefined;
+    exports.sha1_base64url = undefined;
+    exports.sha256_hex = undefined;
+    exports.sha256_base64 = undefined;
+    exports.sha256_base64url = undefined;
+    exports.sha384_hex = undefined;
+    exports.sha384_base64 = undefined;
+    exports.sha384_base64url = undefined;
+    exports.sha512_hex = undefined;
+    exports.sha512_base64 = undefined;
+    exports.sha512_base64url = undefined;
+    exports.emoji = function emoji() {
+      const regExp = new RegExp(c3, "u");
+      return regExp;
+    };
+    exports.time = function time(precision) {
+      if (typeof precision.precision === "number") {
+        if (-1 === precision.precision) {
+          const _HermesInternal3 = HermesInternal;
+          let combined = "" + "(?:[01]\\d|2[0-3]):[0-5]\\d";
+        } else if (0 === precision.precision) {
+          const _HermesInternal2 = HermesInternal;
+          combined = "" + "(?:[01]\\d|2[0-3]):[0-5]\\d" + ":[0-5]\\d";
+        } else {
+          const _HermesInternal = HermesInternal;
+          combined = "" + "(?:[01]\\d|2[0-3]):[0-5]\\d" + ":[0-5]\\d\\.\\d{" + precision.precision + "}";
+        }
       } else {
-        throw new TypeError("Trying to call a non-function");
+        const _HermesInternal5 = HermesInternal;
+        const _HermesInternal4 = HermesInternal;
+        tmp = new tmp("^" + "" + "(?:[01]\\d|2[0-3]):[0-5]\\d" + "(?::[0-5]\\d(?:\\.\\d+)?)?" + "$");
+        return tmp;
       }
     };
-    let closure_2 = fn(_mod8971);
-    function error() {
-
-    }
-    module.exports = exports.default;
+    exports.datetime = function datetime(precision) {
+      precision = precision.precision;
+      if (typeof precision === "number") {
+        if (-1 === precision) {
+          const _HermesInternal3 = HermesInternal;
+          let combined = "" + "(?:[01]\\d|2[0-3]):[0-5]\\d";
+        } else if (0 === precision) {
+          const _HermesInternal2 = HermesInternal;
+          combined = "" + "(?:[01]\\d|2[0-3]):[0-5]\\d" + ":[0-5]\\d";
+        } else {
+          const _HermesInternal = HermesInternal;
+          combined = "" + "(?:[01]\\d|2[0-3]):[0-5]\\d" + ":[0-5]\\d\\.\\d{" + precision + "}";
+        }
+      } else {
+        const _HermesInternal6 = HermesInternal;
+        const combined1 = "" + "(?:[01]\\d|2[0-3]):[0-5]\\d" + "(?::[0-5]\\d(?:\\.\\d+)?)?";
+        const items = ["Z"];
+        if (precision.local) {
+          items.push("");
+        }
+        if (precision.offset) {
+          items.push("([+-](?:[01]\\d|2[0-3]):[0-5]\\d)");
+        }
+        const _HermesInternal4 = HermesInternal;
+        const _RegExp = RegExp;
+        const _HermesInternal5 = HermesInternal;
+        const regExp = new RegExp("^" + c4 + "T(?:" + "" + combined1 + "(?:" + items.join("|") + ")" + ")$");
+        return regExp;
+      }
+    };
+    let closure_2 = fn(_mod9008);
+    exports.cuid = /^[cC][^\s-]{8,}$/;
+    exports.cuid2 = /^[0-9a-z]+$/;
+    exports.ulid = /^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{26}$/;
+    exports.xid = /^[0-9a-vA-V]{20}$/;
+    exports.ksuid = /^[A-Za-z0-9]{27}$/;
+    exports.nanoid = /^[a-zA-Z0-9_-]{21}$/;
+    exports.duration = /^P(?:(\d+W)|(?!.*W)(?=\d|T\d)(\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+([.,]\d+)?S)?)?)$/;
+    exports.extendedDuration = /^[-+]?P(?!$)(?:(?:[-+]?\d+Y)|(?:[-+]?\d+[.,]\d+Y$))?(?:(?:[-+]?\d+M)|(?:[-+]?\d+[.,]\d+M$))?(?:(?:[-+]?\d+W)|(?:[-+]?\d+[.,]\d+W$))?(?:(?:[-+]?\d+D)|(?:[-+]?\d+[.,]\d+D$))?(?:T(?=[\d+-])(?:(?:[-+]?\d+H)|(?:[-+]?\d+[.,]\d+H$))?(?:(?:[-+]?\d+M)|(?:[-+]?\d+[.,]\d+M$))?(?:[-+]?\d+(?:[.,]\d+)?S)?)??$/;
+    exports.guid = /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$/;
+    exports.uuid = (arg0) => {
+      if (arg0) {
+        const _RegExp = RegExp;
+        const _HermesInternal = HermesInternal;
+        let regExp = new RegExp("^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-" + arg0 + "[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$");
+      } else {
+        regExp = /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/;
+      }
+      return regExp;
+    };
+    exports.uuid4 = exports.uuid(4);
+    exports.uuid6 = exports.uuid(6);
+    exports.uuid7 = exports.uuid(7);
+    exports.email = /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/;
+    exports.html5Email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    exports.rfc5322Email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    exports.unicodeEmail = /^(?:[\0-\x08\x0E-\x1F!#-\?A-\x9F\xA1-\u167F\u1681-\u1FFF\u200B-\u2027\u202A-\u202E\u2030-\u205E\u2060-\u2FFF\u3001-\uD7FF\uE000-\uFEFE\uFF00-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]){1,64}@(?:[\0-\x08\x0E-\x1F!-\?A-\x9F\xA1-\u167F\u1681-\u1FFF\u200B-\u2027\u202A-\u202E\u2030-\u205E\u2060-\u2FFF\u3001-\uD7FF\uE000-\uFEFE\uFF00-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]){1,255}$/;
+    exports.idnEmail = exports.unicodeEmail;
+    exports.browserEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    let c3 = "^(\\p{Extended_Pictographic}|\\p{Emoji_Component})+$";
+    exports.ipv4 = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/;
+    exports.ipv6 = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))$/;
+    exports.mac = (includes) => {
+      let str = includes;
+      if (includes == null) {
+        str = ":";
+      }
+      const escapeRegexResult = closure_2.escapeRegex(str);
+      const regExp = new RegExp("^(?:[0-9A-F]{2}" + escapeRegexResult + "){5}[0-9A-F]{2}$|^(?:[0-9a-f]{2}" + escapeRegexResult + "){5}[0-9a-f]{2}$");
+      return regExp;
+    };
+    exports.cidrv4 = /^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\/([0-9]|[1-2][0-9]|3[0-2])$/;
+    exports.cidrv6 = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::|([0-9a-fA-F]{1,4})?::([0-9a-fA-F]{1,4}:?){0,6})\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/;
+    exports.base64 = /^$|^(?:[0-9a-zA-Z+/]{4})*(?:(?:[0-9a-zA-Z+/]{2}==)|(?:[0-9a-zA-Z+/]{3}=))?$/;
+    exports.base64url = /^[A-Za-z0-9_-]*$/;
+    exports.hostname = /^(?=.{1,253}\.?$)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[-0-9a-zA-Z]{0,61}[0-9a-zA-Z])?)*\.?$/;
+    exports.domain = /^([a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/;
+    exports.e164 = /^\+[1-9]\d{6,14}$/;
+    let c4 = "(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))";
+    let _RegExp = RegExp;
+    let _HermesInternal = HermesInternal;
+    let regExp = new RegExp("^" + "(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))" + "$");
+    exports.date = regExp;
+    exports.string = (minimum) => {
+      let str = "[\\s\\S]*";
+      if (minimum) {
+        let num;
+        if (minimum != null) {
+          num = minimum.minimum;
+        }
+        if (num == null) {
+          num = 0;
+        }
+        let str2;
+        if (minimum != null) {
+          str2 = minimum.maximum;
+        }
+        if (str2 == null) {
+          str2 = "";
+        }
+        const _HermesInternal = HermesInternal;
+        str = "[\\s\\S]{" + num + "," + str2 + "}";
+      }
+      const regExp = new RegExp("^" + str + "$");
+      return regExp;
+    };
+    exports.bigint = /^-?\d+n?$/;
+    exports.integer = /^-?\d+$/;
+    exports.number = /^-?\d+(?:\.\d+)?$/;
+    exports.boolean = /^(?:true|false)$/i;
+    exports.null = /^null$/i;
+    exports.undefined = /^undefined$/i;
+    exports.lowercase = /^[^A-Z]*$/;
+    exports.uppercase = /^[^a-z]*$/;
+    exports.hex = /^[0-9a-fA-F]*$/;
+    exports.md5_hex = /^[0-9a-fA-F]{32}$/;
+    const _RegExp2 = RegExp;
+    let _HermesInternal2 = HermesInternal;
+    const regExp1 = new RegExp("^[A-Za-z0-9+/]{" + 22 + "}" + "==" + "$");
+    exports.md5_base64 = regExp1;
+    const _RegExp3 = RegExp;
+    let _HermesInternal3 = HermesInternal;
+    const regExp2 = new RegExp("^[A-Za-z0-9_-]{" + 22 + "}$");
+    exports.md5_base64url = regExp2;
+    exports.sha1_hex = /^[0-9a-fA-F]{40}$/;
+    const _RegExp4 = RegExp;
+    let _HermesInternal4 = HermesInternal;
+    const regExp3 = new RegExp("^[A-Za-z0-9+/]{" + 27 + "}" + "=" + "$");
+    exports.sha1_base64 = regExp3;
+    const _RegExp5 = RegExp;
+    let _HermesInternal5 = HermesInternal;
+    const regExp4 = new RegExp("^[A-Za-z0-9_-]{" + 27 + "}$");
+    exports.sha1_base64url = regExp4;
+    exports.sha256_hex = /^[0-9a-fA-F]{64}$/;
+    const _RegExp6 = RegExp;
+    let _HermesInternal6 = HermesInternal;
+    const regExp5 = new RegExp("^[A-Za-z0-9+/]{" + 43 + "}" + "=" + "$");
+    exports.sha256_base64 = regExp5;
+    const _RegExp7 = RegExp;
+    const _HermesInternal7 = HermesInternal;
+    const regExp6 = new RegExp("^[A-Za-z0-9_-]{" + 43 + "}$");
+    exports.sha256_base64url = regExp6;
+    exports.sha384_hex = /^[0-9a-fA-F]{96}$/;
+    const _RegExp8 = RegExp;
+    const _HermesInternal8 = HermesInternal;
+    const regExp7 = new RegExp("^[A-Za-z0-9+/]{" + 64 + "}" + "" + "$");
+    exports.sha384_base64 = regExp7;
+    const _RegExp9 = RegExp;
+    const _HermesInternal9 = HermesInternal;
+    const regExp8 = new RegExp("^[A-Za-z0-9_-]{" + 64 + "}$");
+    exports.sha384_base64url = regExp8;
+    exports.sha512_hex = /^[0-9a-fA-F]{128}$/;
+    const _RegExp10 = RegExp;
+    const _HermesInternal10 = HermesInternal;
+    const regExp9 = new RegExp("^[A-Za-z0-9+/]{" + 86 + "}" + "==" + "$");
+    exports.sha512_base64 = regExp9;
+    const _RegExp11 = RegExp;
+    const _HermesInternal11 = HermesInternal;
+    const regExp10 = new RegExp("^[A-Za-z0-9_-]{" + 86 + "}$");
+    exports.sha512_base64url = regExp10;
   } else {
     const _Object2 = Object;
   }
