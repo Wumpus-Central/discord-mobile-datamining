@@ -1,7 +1,8 @@
 // _runtime/metro/03959__.js
-import _typeof from "03693__.js";
-import 03960__ from "03960__.js";
-import requiredArgs from "../03694_requiredArgs.js";
+import _typeof from "03695__.js";
+import startOfYear from "../03914_startOfYear.js";
+import differenceInCalendarDays from "../03857_differenceInCalendarDays.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -10,33 +11,31 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-if (!module_3960) {
-  obj = { default: module_3960 };
+if (!startOfYear) {
+  obj = { default: startOfYear };
   let tmp5 = obj;
 } else {
-  tmp5 = module_3960;
+  tmp5 = startOfYear;
 }
-module_3960 = tmp5;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+startOfYear = tmp5;
+if (!differenceInCalendarDays) {
+  obj = { default: differenceInCalendarDays };
   let tmp7 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = differenceInCalendarDays;
 }
-requiredArgs = tmp7;
+differenceInCalendarDays = tmp7;
+if (!requiredArgs) {
+  const obj1 = { default: requiredArgs };
+  let tmp9 = obj1;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function getDaysInYear(arg0) {
+export default function getDayOfYear(arg0) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  if ("Invalid Date" === String(date)) {
-    return NaN;
-  } else {
-    let num = 365;
-    if (module_3960.default(defaultResult1)) {
-      num = 366;
-    }
-    return num;
-  }
-  date = new Date(defaultResult1);
+  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
 };
 export default exports.default;

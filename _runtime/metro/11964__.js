@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/safety_hub/images",
-  width: 350,
-  height: 350,
-  scales: [1],
-  hash: "401f8c2bcc4aaf9b9964b431f7df8a68",
-  name: "video_dark",
+  httpServerLocation: "/assets/modules/guild_automod/images",
+  width: 32,
+  height: 32,
+  scales: [1, 2, 3],
+  hash: "c1e94f3a9063956a896dc2a0d96e8ae1",
+  name: "ic_blocked_chat_bubble_icon",
   type: "png",
 });

@@ -1,6 +1,7 @@
 // _runtime/metro/04008__.js
-import Parser2 from "../03999_Parser.js";
+import Parser2 from "../04001_Parser.js";
 
+let closure_1 = dependencyMap;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -26,15 +27,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(MonthParser, Parser) {
+function _setPrototypeOf(QuarterParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(MonthParser, Parser) {
-      MonthParser.__proto__ = Parser;
-      return MonthParser;
+    _setPrototypeOf = function _setPrototypeOf(QuarterParser, Parser) {
+      QuarterParser.__proto__ = Parser;
+      return QuarterParser;
     };
   }
-  return _setPrototypeOf(MonthParser, Parser);
+  return _setPrototypeOf(QuarterParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,7 +55,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 let _createSuperInternal;
-class MonthParser {
+class QuarterParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -87,15 +88,18 @@ class MonthParser {
         tmp23 = referenceError;
         throw referenceError;
       } else {
-        items1 = ["Y", "R", "q", "Q", "L", "w", "I", "D", "i", "e", "c", "t", "T"];
-        str2 = "incompatibleTokens";
-        if ("incompatibleTokens" in applyResult) {
+        str2 = "priority";
+        if ("priority" in applyResult) {
           _Object = Object;
-          obj = { value: null, enumerable: true, configurable: true, writable: true };
-          obj.value = items1;
-          definePropertyResult = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 120,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
-          applyResult.incompatibleTokens = items1;
+          num3 = 120;
+          applyResult.priority = 120;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,18 +110,15 @@ class MonthParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          str3 = "priority";
-          if ("priority" in applyResult) {
+          items1 = ["Y", "R", "q", "M", "L", "w", "I", "d", "D", "i", "e", "c", "t", "T"];
+          str3 = "incompatibleTokens";
+          if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "priority", {
-              value: 110,
-              enumerable: true,
-              configurable: true,
-              writable: true,
-            });
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj.value = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
           } else {
-            num3 = 110;
-            applyResult.priority = 110;
+            applyResult.incompatibleTokens = items1;
           }
           return applyResult;
         }
@@ -133,7 +134,7 @@ class MonthParser {
     }
   }
 }
-let dependencyMap = MonthParser;
+closure_1 = QuarterParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -145,14 +146,14 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-MonthParser.prototype = Object.create(prototype, {
-  constructor: { value: MonthParser, writable: true, configurable: true },
+QuarterParser.prototype = Object.create(prototype, {
+  constructor: { value: QuarterParser, writable: true, configurable: true },
 });
 if (Parser) {
-  _setPrototypeOf(MonthParser, Parser);
+  _setPrototypeOf(QuarterParser, Parser);
 }
 let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
+closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
@@ -211,32 +212,27 @@ _createSuperInternal = function _createSuperInternal() {
 const entry = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    function valueCallback(arg0) {
-      return arg0 - 1;
+    if ("Q" !== arg1) {
+      if ("QQ" !== arg1) {
+        if ("Qo" === arg1) {
+          return ordinalNumber.ordinalNumber(arg0, { unit: "quarter" });
+        } else if ("QQQ" === arg1) {
+          return (
+            ordinalNumber.quarter(arg0, { width: "abbreviated", context: "formatting" }) ||
+            ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" })
+          );
+        } else if ("QQQQQ" === arg1) {
+          return ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" });
+        } else {
+          return (
+            ordinalNumber.quarter(arg0, { width: "wide", context: "formatting" }) ||
+            ordinalNumber.quarter(arg0, { width: "abbreviated", context: "formatting" }) ||
+            ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" })
+          );
+        }
+      }
     }
-    if ("M" === arg1) {
-      return _createSuperInternal(4001).mapValue(
-        _createSuperInternal(4001).parseNumericPattern(_createSuperInternal(4002).numericPatterns.month, arg0),
-        valueCallback,
-      );
-    } else if ("MM" === arg1) {
-      return _createSuperInternal(4001).mapValue(_createSuperInternal(4001).parseNDigits(2, arg0), valueCallback);
-    } else if ("Mo" === arg1) {
-      return _createSuperInternal(4001).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "month" }), valueCallback);
-    } else if ("MMM" === arg1) {
-      return (
-        ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) ||
-        ordinalNumber.month(arg0, { width: "narrow", context: "formatting" })
-      );
-    } else if ("MMMMM" === arg1) {
-      return ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
-    } else {
-      return (
-        ordinalNumber.month(arg0, { width: "wide", context: "formatting" }) ||
-        ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) ||
-        ordinalNumber.month(arg0, { width: "narrow", context: "formatting" })
-      );
-    }
+    return _createSuperInternal(closure_1[0]).parseNDigits(arg1.length, arg0);
   },
 };
 let items = [
@@ -244,9 +240,9 @@ let items = [
   {
     key: "validate",
     value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
+      let tmp = arg1 >= 1;
       if (tmp) {
-        tmp = arg1 <= 11;
+        tmp = arg1 <= 4;
       }
       return tmp;
     },
@@ -254,7 +250,7 @@ let items = [
   {
     key: "set",
     value: function set(setUTCMonth, arg1, arg2) {
-      setUTCMonth.setUTCMonth(arg2, 1);
+      setUTCMonth.setUTCMonth(3 * (arg2 - 1), 1);
       setUTCMonth.setUTCHours(0, 0, 0, 0);
       return setUTCMonth;
     },
@@ -278,4 +274,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { MonthParser };
+export { QuarterParser };

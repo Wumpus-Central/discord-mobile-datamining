@@ -1,6 +1,6 @@
 // _runtime/metro/03960__.js
-import _typeof from "03693__.js";
-import requiredArgs from "../03694_requiredArgs.js";
+import _typeof from "03695__.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -17,19 +17,14 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isLeapYear(arg0) {
+export default function getDaysInMonth(arg0) {
   requiredArgs.default(1, arguments);
-  const fullYear = _typeof.default(arg0).getFullYear();
-  const result = fullYear % 400;
-  let tmp4 = result === 0;
-  if (result !== 0) {
-    const result1 = fullYear % 4;
-    let tmp6 = result1 === 0;
-    if (result1 === 0) {
-      tmp6 = fullYear % 100 !== 0;
-    }
-    tmp4 = tmp6;
-  }
-  return tmp4;
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  const month = defaultResult1.getMonth();
+  const date = new Date(0);
+  date.setFullYear(fullYear, month + 1, 0);
+  date.setHours(0, 0, 0, 0);
+  return date.getDate();
 };
 export default exports.default;

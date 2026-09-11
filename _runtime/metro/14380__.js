@@ -1,19 +1,11 @@
 // _runtime/metro/14380__.js
-import _mod14378 from "14378__.js";
+import _mod14361 from "14361__.js";
 import _mod14381 from "14381__.js";
-import _mod14383 from "14383__.js";
 
-let fn = Object;
-let closure_3 = _mod14381("".split);
-if (_mod14378(() => !Object("z").propertyIsEnumerable(0))) {
-  fn = (arg0) => {
-    if ("String" === _mod14383(arg0)) {
-      let tmp2 = closure_3(arg0, "");
-    } else {
-      tmp2 = Object(arg0);
-    }
-    return tmp2;
-  };
-}
-
-export default fn;
+export default (arg0, arg1) => {
+  let tmp4;
+  if (!_mod14361(arg0[arg1])) {
+    tmp4 = _mod14381(tmp);
+  }
+  return tmp4;
+};

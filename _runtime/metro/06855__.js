@@ -1,48 +1,72 @@
 // _runtime/metro/06855__.js
-import noop from "00019__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-({ useEffect: c2, useRef: c3 } = noop);
-
-export const useReactiveSharedValue = (INITIAL_CONTAINER_HEIGHT) => {
-  const tmp = closure_3(null);
-  const tmp2 = closure_3(null);
-  _require = tmp2;
-  let tmp3 = INITIAL_CONTAINER_HEIGHT;
-  if (INITIAL_CONTAINER_HEIGHT) {
-    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
-  }
-  if (tmp3) {
-    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
-  }
-  if (!tmp3) {
-    if (null === tmp2.current) {
-      tmp.current = INITIAL_CONTAINER_HEIGHT;
-      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
-        require("cancelAnimation");
-        let obj = {};
-        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
-        let mutable = obj.makeMutable(obj);
-      } else {
-        mutable = require("cancelAnimation").makeMutable(INITIAL_CONTAINER_HEIGHT);
-        const obj3 = require("cancelAnimation");
-      }
-      tmp2.current = mutable;
-    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
-      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-  }
-  closure_2(
-    () => () => {
-      if (ref.current) {
-        ref(dependencyMap[1]).cancelAnimation(tmp.current);
-        const obj = ref(dependencyMap[1]);
-      }
-    },
-    [],
-  );
-  let current = tmp2.current;
-  if (current == null) {
-    current = INITIAL_CONTAINER_HEIGHT;
-  }
-  return current;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturnDefault;
+function changeEventCalculator(arg0, arg1) {
+  return arg0;
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 12945462865583;
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;}",
 };
+class ManualGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ManualGesture);
+    tmp2 = c2;
+    obj = c2(ManualGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.handlerName = "ManualGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = ManualGesture;
+_inherits(ManualGesture, fn(6747).ContinousBaseGesture);
+const entry = {
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
+    }
+    const items = [arg0];
+    return fn(items);
+  },
+};
+let items = [entry];
+
+export const ManualGesture = _createClass(ManualGesture, items);

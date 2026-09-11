@@ -23,8 +23,8 @@ fn = function n(toValue, userConfig, callback) {
       velocity: 0,
       duration: 2000,
       dampingRatio: 0.5,
-      reduceMotion: "call",
-      clamp: "__esModule",
+      reduceMotion: "children",
+      clamp: "marginTop",
     };
     const merged = Object.assign(dependencyMap);
     let duration;

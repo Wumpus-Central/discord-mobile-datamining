@@ -1,6 +1,6 @@
 // _runtime/metro/10582__.js
-import repeatedTimeunitPattern from "../10502_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10509_AbstractParserWithWordBoundaryChecking.js";
+import repeatedTimeunitPattern from "../10521_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10528_AbstractParserWithWordBoundaryChecking.js";
 import _mod10583 from "10583__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const PTWeekdayParser = require;
+const FRWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,17 +28,17 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const regExp = new RegExp(
-  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|passado|pr[o\u00F3]ximo)\\s*)?(" +
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(?:ce)\\s*)?(" +
     repeatedTimeunitPattern.matchAnyPattern(_mod10583.WEEKDAY_DICTIONARY) +
-    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|passado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)",
+    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(dernier|prochain)\\s*)?(?=\\W|\\d|$)",
   "i",
 );
-class PTWeekdayParser {
+class FRWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, PTWeekdayParser);
+    tmp = c2(this, FRWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(PTWeekdayParser);
+    obj = closure_4(FRWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -53,7 +53,7 @@ class PTWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(PTWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(FRWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -65,29 +65,23 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      const tmp4 = PTWeekdayParser(10583).WEEKDAY_DICTIONARY[formatted];
+      const formatted = arg1[1].toLowerCase();
+      const tmp4 = FRWeekdayParser(10583).WEEKDAY_DICTIONARY[formatted];
       if (undefined === tmp4) {
         return null;
       } else {
-        const formatted1 = arg1[1] || arg1[3] || "".toLowerCase();
-        let str5 = "this";
-        if ("passado" != formatted1) {
-          str5 = "next";
-          if ("pr\u00F3ximo" != formatted1) {
-            str5 = "next";
-            if ("proximo" != formatted1) {
-              str5 = null;
-              if ("este" == formatted1) {
-                str5 = "this";
-              }
-            }
+        const formatted1 = arg1[2] || "".toLowerCase();
+        let str4 = "last";
+        if ("dernier" != formatted1) {
+          str4 = null;
+          if ("prochain" == formatted1) {
+            str4 = "next";
           }
         }
-        return PTWeekdayParser(10529).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
+        return FRWeekdayParser(10548).createParsingComponentsAtWeekday(reference.reference, tmp4, str4);
       }
     },
   },
 ];
 
-export default _createClass(PTWeekdayParser, items);
+export default _createClass(FRWeekdayParser, items);

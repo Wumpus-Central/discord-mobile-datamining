@@ -1,138 +1,112 @@
 // _runtime/metro/10549__.js
+import _mod10520 from "10520__.js";
+import repeatedTimeunitPattern from "../10521_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10528_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const DESpecificTimeExpressionParser = require;
+const ENRelativeDateFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
 const regExp = new RegExp(
-  "(^|\\s|T)(?:(?:um|von)\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)",
+  "(this|last|past|next|after\\s*this)\\s*(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10520.TIME_UNIT_DICTIONARY) +
+    ")(?=\\s*)(?=\\W|$)",
   "i",
 );
-const regExp1 = new RegExp(
-  "^\\s*(\\-|\\\u2013|\\~|\\\u301C|bis(?:\\s+um)?|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)",
-  "i",
-);
-class DESpecificTimeExpressionParser {
+class ENRelativeDateFormatParser {
   constructor() {
-    tmp = c2(this, DESpecificTimeExpressionParser);
-    return;
+    self = this;
+    tmp = c2(this, ENRelativeDateFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENRelativeDateFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
 }
+_inherits(ENRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "pattern",
-  value: function pattern(arg0) {
+  key: "innerPattern",
+  value: function innerPattern() {
     return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(createParsingResult, index) {
-      const sum = index.index + index[1].length;
-      const parsingResult = createParsingResult.createParsingResult(sum, index[0].substring(index[1].length));
-      if (str2.match(/^\d{4}$/)) {
-        index.index = index.index + index[0].length;
-        return null;
-      } else {
-        const start = parsingResult.start;
-        parsingResult.start = DESpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
-        if (parsingResult.start) {
-          const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
-          if (match) {
-            const start2 = parsingResult.start;
-            parsingResult.end = DESpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
-            if (parsingResult.end) {
-              parsingResult.text = parsingResult.text + match[0];
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const str3 = arg1[2].toLowerCase();
+      const tmp3 = ENRelativeDateFormatParser(10520).TIME_UNIT_DICTIONARY[str3];
+      if ("next" != formatted) {
+        if (!formatted.startsWith("after")) {
+          if ("last" != formatted) {
+            if ("past" != formatted) {
+              const parsingComponents = createParsingComponents.createParsingComponents();
+              const _Date = Date;
+              const instant = createParsingComponents.reference.instant;
+              const date = new Date(instant.getTime());
+              if (str3.match(/week/i)) {
+                date.setDate(date.getDate() - date.getDay());
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.imply("year", date.getFullYear());
+                const date1 = date.getDate();
+              } else if (str3.match(/month/i)) {
+                date.setDate(1);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.assign("year", date.getFullYear());
+                parsingComponents.assign("month", date.getMonth() + 1);
+              } else if (str3.match(/year/i)) {
+                date.setDate(1);
+                date.setMonth(0);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.assign("year", date.getFullYear());
+              }
+              return parsingComponents;
             }
           }
-          return parsingResult;
-        } else {
-          index.index = index.index + index[0].length;
-          return null;
+          const obj2 = {};
+          obj2[tmp3] = -1;
+          const ParsingComponents = ENRelativeDateFormatParser(10524).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj2);
         }
       }
-      str2 = parsingResult.text;
+      const ParsingComponents2 = ENRelativeDateFormatParser(10524).ParsingComponents;
+      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
     },
   },
 ];
-const entry1 = {
-  key: "extractTimeComponent",
-  value: function extractTimeComponent(assign, arg1) {
-    const parsed = parseInt(arg1[2]);
-    let num = 0;
-    if (null != arg1[3]) {
-      const _parseInt = parseInt;
-      num = parseInt(arg1[3]);
-    }
-    if (num < 60) {
-      if (parsed <= 24) {
-        let PM = null;
-        if (parsed >= 12) {
-          PM = DESpecificTimeExpressionParser(10507).Meridiem.PM;
-        }
-        let tmp5 = PM;
-        let tmp6 = parsed;
-        if (null != arg1[5]) {
-          if (parsed > 12) {
-            return null;
-          } else {
-            const str8 = arg1[5].toLowerCase();
-            let tmp9 = parsed;
-            if (str8.match(/morgen|vormittag/)) {
-              let num2 = parsed;
-              if (12 == parsed) {
-                num2 = 0;
-              }
-              tmp9 = num2;
-              PM = DESpecificTimeExpressionParser(10507).Meridiem.AM;
-            }
-            let tmp10 = tmp9;
-            if (str8.match(/nachmittag|abend/)) {
-              let sum = tmp9;
-              if (12 != tmp9) {
-                sum = tmp9 + 12;
-              }
-              tmp10 = sum;
-              PM = DESpecificTimeExpressionParser(10507).Meridiem.PM;
-            }
-            tmp5 = PM;
-            tmp6 = tmp10;
-            if (str8.match(/nacht/)) {
-              if (12 == tmp10) {
-                PM = DESpecificTimeExpressionParser(10507).Meridiem.AM;
-              } else if (tmp10 < 6) {
-                PM = DESpecificTimeExpressionParser(10507).Meridiem.AM;
-              } else {
-                PM = DESpecificTimeExpressionParser(10507).Meridiem.PM;
-                const num4 = tmp10 + 12;
-              }
-            }
-          }
-        }
-        assign.assign("hour", tmp6);
-        assign.assign("minute", num);
-        if (null !== tmp5) {
-          assign.assign("meridiem", tmp5);
-        } else if (tmp6 < 12) {
-          assign.imply("meridiem", DESpecificTimeExpressionParser(10507).Meridiem.AM);
-        } else {
-          assign.imply("meridiem", DESpecificTimeExpressionParser(10507).Meridiem.PM);
-        }
-        if (null != arg1[4]) {
-          const _parseInt2 = parseInt;
-          const parsed1 = parseInt(arg1[4]);
-          if (parsed1 >= 60) {
-            return null;
-          } else {
-            assign.assign("second", parsed1);
-          }
-        }
-        return assign;
-      }
-    }
-    return null;
-  },
-};
-const items1 = [entry1];
 
-export default _createClass(DESpecificTimeExpressionParser, items, items1);
+export default _createClass(ENRelativeDateFormatParser, items);

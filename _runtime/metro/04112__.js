@@ -1,49 +1,58 @@
 // _runtime/metro/04112__.js
-import 03697__ from "03697__.js";
-import _typeof from "03693__.js";
-import 03841__ from "03841__.js";
-import 03964__ from "03964__.js";
-import requiredArgs from "../03694_requiredArgs.js";
+import _mod3700 from "03700__.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
-if (!module_3697) {
-  let obj = { default: module_3697 };
+if (!requiredArgs) {
+  let obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3697;
+  tmp3 = requiredArgs;
 }
-module_3697 = tmp3;
-if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp5 = obj;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-if (!module_3841) {
-  obj = { default: module_3841 };
-  let tmp7 = obj;
-} else {
-  tmp7 = module_3841;
-}
-module_3841 = tmp7;
-if (!module_3964) {
-  const obj1 = { default: module_3964 };
-  let tmp9 = obj1;
-} else {
-  tmp9 = module_3964;
-}
-module_3964 = tmp9;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp11 = obj2;
-} else {
-  tmp11 = requiredArgs;
-}
-requiredArgs = tmp11;
+requiredArgs = tmp3;
 
-export default function setISODay(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  return module_3841.default(defaultResult1, module_3697.default(arg1) - module_3964.default(defaultResult1));
+export default function setDefaultOptions(obj) {
+  requiredArgs.default(1, arguments);
+  obj = {};
+  const defaultOptions = _mod3700.getDefaultOptions();
+  for (const key10017 in defaultOptions) {
+    let _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    let call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty(key10017);
+    } else {
+      hasOwnPropertyResult = call(defaultOptions, key10017);
+    }
+    if (!hasOwnPropertyResult) {
+      continue;
+    } else {
+      obj[key10017] = defaultOptions[key10017];
+      continue;
+    }
+    continue;
+  }
+  for (const key10023 in arg0) {
+    let _Object2 = Object;
+    let call2 = hasOwnProperty2.call;
+    if (typeof call2 === "unknown") {
+      let hasOwnProperty2Result = hasOwnProperty2(key10023);
+    } else {
+      hasOwnProperty2Result = call2(arg0, key10023);
+    }
+    if (!hasOwnProperty2Result) {
+      continue;
+    } else {
+      if (undefined === arg0[key10023]) {
+        delete tmp[tmp2];
+        continue;
+      } else {
+        obj[key10023] = arg0[key10023];
+        continue;
+      }
+      continue;
+    }
+    continue;
+  }
+  _mod3700.setDefaultOptions(obj);
 };
 export default exports.default;

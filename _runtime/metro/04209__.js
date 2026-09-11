@@ -1,10 +1,10 @@
 // _runtime/metro/04209__.js
-import _mod4196 from "04196__.js";
+import _mod4198 from "04198__.js";
 
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      const _module = _mod4196;
+      const _module = _mod4198;
       let obj = {
         months: null,
         monthsShort: null,
@@ -15,271 +15,448 @@ if (typeof exports === "object") {
         calendar: null,
         relativeTime: null,
         dayOfMonthOrdinalParse: null,
-        ordinal: null,
-        meridiemParse: null,
-        isPM: null,
-        meridiem: null,
+        ordinal: "%d\u00BA",
+        week: null,
       };
-      const split3 =
-        "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split;
+      const split = "gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre"
+        .split;
       obj.months =
-        "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_");
-      const split4 =
-        "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split;
-      obj.monthsShort =
-        "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_");
-      const split5 =
-        "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C"
-          .split;
-      obj.weekdays =
-        "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split(
-          "_",
-        );
-      const split6 = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split;
-      obj.weekdaysShort = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_");
-      const split7 = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split;
-      obj.weekdaysMin = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_");
+        "gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre".split("_");
+      const split2 = "gen_feb_mar_apr_mag_giu_lug_ago_set_ott_nov_dic".split;
+      obj.monthsShort = "gen_feb_mar_apr_mag_giu_lug_ago_set_ott_nov_dic".split("_");
+      const split3 = "domenica_luned\u00EC_marted\u00EC_mercoled\u00EC_gioved\u00EC_venerd\u00EC_sabato".split;
+      obj.weekdays = "domenica_luned\u00EC_marted\u00EC_mercoled\u00EC_gioved\u00EC_venerd\u00EC_sabato".split("_");
+      const split4 = "dom_lun_mar_mer_gio_ven_sab".split;
+      obj.weekdaysShort = "dom_lun_mar_mer_gio_ven_sab".split("_");
+      const split5 = "do_lu_ma_me_gi_ve_sa".split;
+      obj.weekdaysMin = "do_lu_ma_me_gi_ve_sa".split("_");
       obj.longDateFormat = {
-        LT: "A h:mm",
-        LTS: "A h:mm:ss",
-        L: "YYYY.MM.DD.",
-        LL: "YYYY\uB144 MMMM D\uC77C",
-        LLL: "YYYY\uB144 MMMM D\uC77C A h:mm",
-        LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
-        l: "YYYY.MM.DD.",
-        ll: "YYYY\uB144 MMMM D\uC77C",
-        lll: "YYYY\uB144 MMMM D\uC77C A h:mm",
-        llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
+        LT: "HH:mm",
+        LTS: "HH:mm:ss",
+        L: "DD/MM/YYYY",
+        LL: "D MMMM YYYY",
+        LLL: "D MMMM YYYY HH:mm",
+        LLLL: "dddd D MMMM YYYY HH:mm",
       };
-      obj.calendar = {
-        sameDay: "\uC624\uB298 LT",
-        nextDay: "\uB0B4\uC77C LT",
-        nextWeek: "dddd LT",
-        lastDay: "\uC5B4\uC81C LT",
-        lastWeek: "\uC9C0\uB09C\uC8FC dddd LT",
+      obj = {
+        sameDay() {
+          const self = this;
+          let str = "lle ";
+          if (this.hours() <= 1) {
+            let str2 = "ll'";
+            if (0 === self.hours()) {
+              str2 = " ";
+            }
+            str = str2;
+          }
+          return "[Oggi a" + str + "]LT";
+        },
+        nextDay() {
+          const self = this;
+          let str = "lle ";
+          if (this.hours() <= 1) {
+            let str2 = "ll'";
+            if (0 === self.hours()) {
+              str2 = " ";
+            }
+            str = str2;
+          }
+          return "[Domani a" + str + "]LT";
+        },
+        nextWeek() {
+          const self = this;
+          let str = "lle ";
+          if (this.hours() <= 1) {
+            let str2 = "ll'";
+            if (0 === self.hours()) {
+              str2 = " ";
+            }
+            str = str2;
+          }
+          return "dddd [a" + str + "]LT";
+        },
+        lastDay() {
+          const self = this;
+          let str = "lle ";
+          if (this.hours() <= 1) {
+            let str2 = "ll'";
+            if (0 === self.hours()) {
+              str2 = " ";
+            }
+            str = str2;
+          }
+          return "[Ieri a" + str + "]LT";
+        },
+        lastWeek() {
+          const self = this;
+          if (0 === this.day()) {
+            let str5 = "lle ";
+            if (self.hours() <= 1) {
+              let str6 = "ll'";
+              if (0 === self.hours()) {
+                str6 = " ";
+              }
+              str5 = str6;
+            }
+            const _HermesInternal2 = HermesInternal;
+            let combined = "[La scorsa] dddd [a" + str5 + "]LT";
+          } else {
+            let str = "lle ";
+            if (self.hours() <= 1) {
+              let str2 = "ll'";
+              if (0 === self.hours()) {
+                str2 = " ";
+              }
+              str = str2;
+            }
+            const _HermesInternal = HermesInternal;
+            combined = "[Lo scorso] dddd [a" + str + "]LT";
+          }
+          return combined;
+        },
         sameElse: "L",
       };
+      obj.calendar = obj;
       obj.relativeTime = {
-        future: "%s \uD6C4",
-        past: "%s \uC804",
-        s: "\uBA87 \uCD08",
-        ss: "%d\uCD08",
-        m: "1\uBD84",
-        mm: "%d\uBD84",
-        h: "\uD55C \uC2DC\uAC04",
-        hh: "%d\uC2DC\uAC04",
-        d: "\uD558\uB8E8",
-        dd: "%d\uC77C",
-        M: "\uD55C \uB2EC",
-        MM: "%d\uB2EC",
-        y: "\uC77C \uB144",
-        yy: "%d\uB144",
+        future: "tra %s",
+        past: "%s fa",
+        s: "alcuni secondi",
+        ss: "%d secondi",
+        m: "un minuto",
+        mm: "%d minuti",
+        h: "un'ora",
+        hh: "%d ore",
+        d: "un giorno",
+        dd: "%d giorni",
+        w: "una settimana",
+        ww: "%d settimane",
+        M: "un mese",
+        MM: "%d mesi",
+        y: "un anno",
+        yy: "%d anni",
       };
-      obj.dayOfMonthOrdinalParse = /\d{1,2}(일|월|주)/;
-      obj.ordinal = function ordinal(arg0, arg1) {
-        if ("d" !== arg1) {
-          if ("D" !== arg1) {
-            if ("DDD" !== arg1) {
-              if ("M" === arg1) {
-                return arg0 + "\uC6D4";
-              } else {
-                if ("w" !== arg1) {
-                  if ("W" !== arg1) {
-                    return arg0;
-                  }
-                }
-                return arg0 + "\uC8FC";
-              }
-            }
-          }
-        }
-        return arg0 + "\uC77C";
-      };
-      obj.meridiemParse = /오전|오후/;
-      obj.isPM = function isPM(arg0) {
-        return "\uC624\uD6C4" === arg0;
-      };
-      obj.meridiem = function meridiem(arg0, arg1, arg2) {
-        let str = "\uC624\uD6C4";
-        if (arg0 < 12) {
-          str = "\uC624\uC804";
-        }
-        return str;
-      };
-      _module.defineLocale("ko", obj);
+      obj.dayOfMonthOrdinalParse = /\d{1,2}º/;
+      obj.week = { dow: 1, doy: 4 };
+      _module.defineLocale("it", obj);
     }
   }
 }
 if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], function t(defineLocale) {
-      ({ split, split: split2 } = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0");
-      return defineLocale.defineLocale("ko", {
-        months:
-          "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
-            "_",
-          ),
-        monthsShort:
-          "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
-            "_",
-          ),
-        weekdays:
-          "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split(
-            "_",
-          ),
-        weekdaysShort: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
-        weekdaysMin: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
+      let obj = {
+        months: "gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre".split(
+          "_",
+        ),
+        monthsShort: "gen_feb_mar_apr_mag_giu_lug_ago_set_ott_nov_dic".split("_"),
+        weekdays: "domenica_luned\u00EC_marted\u00EC_mercoled\u00EC_gioved\u00EC_venerd\u00EC_sabato".split("_"),
+        weekdaysShort: "dom_lun_mar_mer_gio_ven_sab".split("_"),
+        weekdaysMin: "do_lu_ma_me_gi_ve_sa".split("_"),
         longDateFormat: {
-          LT: "A h:mm",
-          LTS: "A h:mm:ss",
-          L: "YYYY.MM.DD.",
-          LL: "YYYY\uB144 MMMM D\uC77C",
-          LLL: "YYYY\uB144 MMMM D\uC77C A h:mm",
-          LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
-          l: "YYYY.MM.DD.",
-          ll: "YYYY\uB144 MMMM D\uC77C",
-          lll: "YYYY\uB144 MMMM D\uC77C A h:mm",
-          llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
+          LT: "HH:mm",
+          LTS: "HH:mm:ss",
+          L: "DD/MM/YYYY",
+          LL: "D MMMM YYYY",
+          LLL: "D MMMM YYYY HH:mm",
+          LLLL: "dddd D MMMM YYYY HH:mm",
         },
-        calendar: {
-          sameDay: "\uC624\uB298 LT",
-          nextDay: "\uB0B4\uC77C LT",
-          nextWeek: "dddd LT",
-          lastDay: "\uC5B4\uC81C LT",
-          lastWeek: "\uC9C0\uB09C\uC8FC dddd LT",
-          sameElse: "L",
-        },
+        calendar: null,
         relativeTime: {
-          future: "%s \uD6C4",
-          past: "%s \uC804",
-          s: "\uBA87 \uCD08",
-          ss: "%d\uCD08",
-          m: "1\uBD84",
-          mm: "%d\uBD84",
-          h: "\uD55C \uC2DC\uAC04",
-          hh: "%d\uC2DC\uAC04",
-          d: "\uD558\uB8E8",
-          dd: "%d\uC77C",
-          M: "\uD55C \uB2EC",
-          MM: "%d\uB2EC",
-          y: "\uC77C \uB144",
-          yy: "%d\uB144",
+          future: "tra %s",
+          past: "%s fa",
+          s: "alcuni secondi",
+          ss: "%d secondi",
+          m: "un minuto",
+          mm: "%d minuti",
+          h: "un'ora",
+          hh: "%d ore",
+          d: "un giorno",
+          dd: "%d giorni",
+          w: "una settimana",
+          ww: "%d settimane",
+          M: "un mese",
+          MM: "%d mesi",
+          y: "un anno",
+          yy: "%d anni",
         },
-        dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
-        ordinal(arg0, arg1) {
-          if ("d" !== arg1) {
-            if ("D" !== arg1) {
-              if ("DDD" !== arg1) {
-                if ("M" === arg1) {
-                  return arg0 + "\uC6D4";
-                } else {
-                  if ("w" !== arg1) {
-                    if ("W" !== arg1) {
-                      return arg0;
-                    }
-                  }
-                  return arg0 + "\uC8FC";
-                }
-              }
+        dayOfMonthOrdinalParse: /\d{1,2}º/,
+        ordinal: "%d\u00BA",
+        week: { dow: 1, doy: 4 },
+      };
+      obj = {
+        sameDay() {
+          const self = this;
+          let str = "lle ";
+          if (this.hours() <= 1) {
+            let str2 = "ll'";
+            if (0 === self.hours()) {
+              str2 = " ";
             }
+            str = str2;
           }
-          return arg0 + "\uC77C";
+          return "[Oggi a" + str + "]LT";
         },
-        meridiemParse: /오전|오후/,
-        isPM(arg0) {
-          return "\uC624\uD6C4" === arg0;
-        },
-        meridiem(arg0, arg1, arg2) {
-          let str = "\uC624\uD6C4";
-          if (arg0 < 12) {
-            str = "\uC624\uC804";
+        nextDay() {
+          const self = this;
+          let str = "lle ";
+          if (this.hours() <= 1) {
+            let str2 = "ll'";
+            if (0 === self.hours()) {
+              str2 = " ";
+            }
+            str = str2;
           }
-          return str;
+          return "[Domani a" + str + "]LT";
         },
-      });
+        nextWeek() {
+          const self = this;
+          let str = "lle ";
+          if (this.hours() <= 1) {
+            let str2 = "ll'";
+            if (0 === self.hours()) {
+              str2 = " ";
+            }
+            str = str2;
+          }
+          return "dddd [a" + str + "]LT";
+        },
+        lastDay() {
+          const self = this;
+          let str = "lle ";
+          if (this.hours() <= 1) {
+            let str2 = "ll'";
+            if (0 === self.hours()) {
+              str2 = " ";
+            }
+            str = str2;
+          }
+          return "[Ieri a" + str + "]LT";
+        },
+        lastWeek() {
+          const self = this;
+          if (0 === this.day()) {
+            let str5 = "lle ";
+            if (self.hours() <= 1) {
+              let str6 = "ll'";
+              if (0 === self.hours()) {
+                str6 = " ";
+              }
+              str5 = str6;
+            }
+            const _HermesInternal2 = HermesInternal;
+            let combined = "[La scorsa] dddd [a" + str5 + "]LT";
+          } else {
+            let str = "lle ";
+            if (self.hours() <= 1) {
+              let str2 = "ll'";
+              if (0 === self.hours()) {
+                str2 = " ";
+              }
+              str = str2;
+            }
+            const _HermesInternal = HermesInternal;
+            combined = "[Lo scorso] dddd [a" + str + "]LT";
+          }
+          return combined;
+        },
+        sameElse: "L",
+      };
+      obj.calendar = obj;
+      return defineLocale.defineLocale("it", obj);
     });
   }
 }
 const moment = this.moment;
 obj = {
-  months: "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
-    "_",
-  ),
-  monthsShort:
-    "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_"),
-  weekdays:
-    "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split(
-      "_",
-    ),
-  weekdaysShort: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
-  weekdaysMin: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
+  months: "gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre".split("_"),
+  monthsShort: "gen_feb_mar_apr_mag_giu_lug_ago_set_ott_nov_dic".split("_"),
+  weekdays: "domenica_luned\u00EC_marted\u00EC_mercoled\u00EC_gioved\u00EC_venerd\u00EC_sabato".split("_"),
+  weekdaysShort: "dom_lun_mar_mer_gio_ven_sab".split("_"),
+  weekdaysMin: "do_lu_ma_me_gi_ve_sa".split("_"),
   longDateFormat: {
-    LT: "A h:mm",
-    LTS: "A h:mm:ss",
-    L: "YYYY.MM.DD.",
-    LL: "YYYY\uB144 MMMM D\uC77C",
-    LLL: "YYYY\uB144 MMMM D\uC77C A h:mm",
-    LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
-    l: "YYYY.MM.DD.",
-    ll: "YYYY\uB144 MMMM D\uC77C",
-    lll: "YYYY\uB144 MMMM D\uC77C A h:mm",
-    llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
+    LT: "HH:mm",
+    LTS: "HH:mm:ss",
+    L: "DD/MM/YYYY",
+    LL: "D MMMM YYYY",
+    LLL: "D MMMM YYYY HH:mm",
+    LLLL: "dddd D MMMM YYYY HH:mm",
   },
   calendar: {
-    sameDay: "\uC624\uB298 LT",
-    nextDay: "\uB0B4\uC77C LT",
-    nextWeek: "dddd LT",
-    lastDay: "\uC5B4\uC81C LT",
-    lastWeek: "\uC9C0\uB09C\uC8FC dddd LT",
+    sameDay() {
+      const self = this;
+      let str = "lle ";
+      if (this.hours() <= 1) {
+        let str2 = "ll'";
+        if (0 === self.hours()) {
+          str2 = " ";
+        }
+        str = str2;
+      }
+      return "[Oggi a" + str + "]LT";
+    },
+    nextDay() {
+      const self = this;
+      let str = "lle ";
+      if (this.hours() <= 1) {
+        let str2 = "ll'";
+        if (0 === self.hours()) {
+          str2 = " ";
+        }
+        str = str2;
+      }
+      return "[Domani a" + str + "]LT";
+    },
+    nextWeek() {
+      const self = this;
+      let str = "lle ";
+      if (this.hours() <= 1) {
+        let str2 = "ll'";
+        if (0 === self.hours()) {
+          str2 = " ";
+        }
+        str = str2;
+      }
+      return "dddd [a" + str + "]LT";
+    },
+    lastDay() {
+      const self = this;
+      let str = "lle ";
+      if (this.hours() <= 1) {
+        let str2 = "ll'";
+        if (0 === self.hours()) {
+          str2 = " ";
+        }
+        str = str2;
+      }
+      return "[Ieri a" + str + "]LT";
+    },
+    lastWeek() {
+      const self = this;
+      if (0 === this.day()) {
+        let str5 = "lle ";
+        if (self.hours() <= 1) {
+          let str6 = "ll'";
+          if (0 === self.hours()) {
+            str6 = " ";
+          }
+          str5 = str6;
+        }
+        const _HermesInternal2 = HermesInternal;
+        let combined = "[La scorsa] dddd [a" + str5 + "]LT";
+      } else {
+        let str = "lle ";
+        if (self.hours() <= 1) {
+          let str2 = "ll'";
+          if (0 === self.hours()) {
+            str2 = " ";
+          }
+          str = str2;
+        }
+        const _HermesInternal = HermesInternal;
+        combined = "[Lo scorso] dddd [a" + str + "]LT";
+      }
+      return combined;
+    },
     sameElse: "L",
   },
   relativeTime: {
-    future: "%s \uD6C4",
-    past: "%s \uC804",
-    s: "\uBA87 \uCD08",
-    ss: "%d\uCD08",
-    m: "1\uBD84",
-    mm: "%d\uBD84",
-    h: "\uD55C \uC2DC\uAC04",
-    hh: "%d\uC2DC\uAC04",
-    d: "\uD558\uB8E8",
-    dd: "%d\uC77C",
-    M: "\uD55C \uB2EC",
-    MM: "%d\uB2EC",
-    y: "\uC77C \uB144",
-    yy: "%d\uB144",
+    future: "tra %s",
+    past: "%s fa",
+    s: "alcuni secondi",
+    ss: "%d secondi",
+    m: "un minuto",
+    mm: "%d minuti",
+    h: "un'ora",
+    hh: "%d ore",
+    d: "un giorno",
+    dd: "%d giorni",
+    w: "una settimana",
+    ww: "%d settimane",
+    M: "un mese",
+    MM: "%d mesi",
+    y: "un anno",
+    yy: "%d anni",
   },
-  dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
-  ordinal(arg0, arg1) {
-    if ("d" !== arg1) {
-      if ("D" !== arg1) {
-        if ("DDD" !== arg1) {
-          if ("M" === arg1) {
-            return arg0 + "\uC6D4";
-          } else {
-            if ("w" !== arg1) {
-              if ("W" !== arg1) {
-                return arg0;
-              }
-            }
-            return arg0 + "\uC8FC";
-          }
-        }
-      }
-    }
-    return arg0 + "\uC77C";
-  },
-  meridiemParse: /오전|오후/,
-  isPM(arg0) {
-    return "\uC624\uD6C4" === arg0;
-  },
-  meridiem(arg0, arg1, arg2) {
-    let str = "\uC624\uD6C4";
-    if (arg0 < 12) {
-      str = "\uC624\uC804";
-    }
-    return str;
-  },
+  dayOfMonthOrdinalParse: /\d{1,2}º/,
+  ordinal: "%d\u00BA",
+  week: { dow: 1, doy: 4 },
 };
-({ split, split: split2 } = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0");
-moment.defineLocale("ko", obj);
+moment.defineLocale("it", obj);
+const obj1 = {
+  sameDay() {
+    const self = this;
+    let str = "lle ";
+    if (this.hours() <= 1) {
+      let str2 = "ll'";
+      if (0 === self.hours()) {
+        str2 = " ";
+      }
+      str = str2;
+    }
+    return "[Oggi a" + str + "]LT";
+  },
+  nextDay() {
+    const self = this;
+    let str = "lle ";
+    if (this.hours() <= 1) {
+      let str2 = "ll'";
+      if (0 === self.hours()) {
+        str2 = " ";
+      }
+      str = str2;
+    }
+    return "[Domani a" + str + "]LT";
+  },
+  nextWeek() {
+    const self = this;
+    let str = "lle ";
+    if (this.hours() <= 1) {
+      let str2 = "ll'";
+      if (0 === self.hours()) {
+        str2 = " ";
+      }
+      str = str2;
+    }
+    return "dddd [a" + str + "]LT";
+  },
+  lastDay() {
+    const self = this;
+    let str = "lle ";
+    if (this.hours() <= 1) {
+      let str2 = "ll'";
+      if (0 === self.hours()) {
+        str2 = " ";
+      }
+      str = str2;
+    }
+    return "[Ieri a" + str + "]LT";
+  },
+  lastWeek() {
+    const self = this;
+    if (0 === this.day()) {
+      let str5 = "lle ";
+      if (self.hours() <= 1) {
+        let str6 = "ll'";
+        if (0 === self.hours()) {
+          str6 = " ";
+        }
+        str5 = str6;
+      }
+      const _HermesInternal2 = HermesInternal;
+      let combined = "[La scorsa] dddd [a" + str5 + "]LT";
+    } else {
+      let str = "lle ";
+      if (self.hours() <= 1) {
+        let str2 = "ll'";
+        if (0 === self.hours()) {
+          str2 = " ";
+        }
+        str = str2;
+      }
+      const _HermesInternal = HermesInternal;
+      combined = "[Lo scorso] dddd [a" + str + "]LT";
+    }
+    return combined;
+  },
+  sameElse: "L",
+};

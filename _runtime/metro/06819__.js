@@ -1,71 +1,17 @@
 // _runtime/metro/06819__.js
-import nativeViewGestureHandlerProps from "../06747_nativeViewGestureHandlerProps.js";
-import "module_19";
+import ComposedGestureName from "../06785_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../06794_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod6809 from "06809__.js";
 
-require = fn;
-const noop = fn(19);
-({ useImperativeHandle: c2, useRef: c3 } = noop);
-const jsx = fn(21).jsx;
-let items = [...fn(6747).nativeViewProps, "onGestureHandlerEvent", "onGestureHandlerStateChange"];
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export default function createNativeWrapper(displayName) {
-  _require = displayName;
+export const useManualGesture = function useManualGesture() {
+  let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
-    gestureHandlerProps = {};
+    tmp = closure_2;
   }
-  let str;
-  if (displayName != null) {
-    str = displayName.displayName;
-  }
-  if (!str) {
-    let name;
-    if (displayName != null) {
-      const render = displayName.render;
-      if (render != null) {
-        name = render.name;
-      }
-    }
-    str = name;
-  }
-  if (!str) {
-    let tmp2 = typeof displayName === "string";
-    if (typeof displayName === "string") {
-      tmp2 = displayName;
-    }
-    str = tmp2;
-  }
-  if (!str) {
-    str = "ComponentWrapper";
-  }
-  class ComponentWrapper {
-    constructor(arg0) {
-      closure_0 = displayName;
-      keys = Object.keys(displayName);
-      obj = { gestureHandlerProps: null, childProps: null };
-      obj = {};
-      merged = Object.assign(closure_1);
-      obj.gestureHandlerProps = obj;
-      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
-      reduced = keys.reduce(() => { ... }, obj);
-      ({ gestureHandlerProps, childProps } = reduced);
-      tmp3 = useRef(null);
-      closure_1 = tmp3;
-      tmp4 = useRef(null);
-      closure_2 = tmp4;
-      items = [, ];
-      items[0] = tmp3;
-      items[1] = tmp4;
-      tmp5 = useImperativeHandle(displayName.ref, () => { ... }, items);
-      obj1 = {};
-      merged1 = Object.assign(gestureHandlerProps);
-      obj1.ref = tmp4;
-      obj2 = {};
-      merged2 = Object.assign(childProps);
-      obj2.ref = tmp3;
-      obj1.children = jsx(closure_0, obj2);
-      return jsx(closure_0(closure_1[2]).NativeViewGestureHandler, obj1);
-    }
-  }
-  ComponentWrapper.displayName = str;
-  return ComponentWrapper;
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod6809.useGesture(ComposedGestureName.SingleGestureName.Manual, clonedAndRemappedConfig);
 };

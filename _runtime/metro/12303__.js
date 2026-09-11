@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/emoji",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "79fe2790d902aba7709041b8b44a4ced",
-  name: "ic_emoji_recent_color_24px",
+  hash: "937f702558598af89216deffe77af9d7",
+  name: "CalendarPlusIcon",
   type: "png",
 });

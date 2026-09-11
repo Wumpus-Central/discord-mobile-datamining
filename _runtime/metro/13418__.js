@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 180,
-  height: 108,
+  width: 51,
+  height: 36,
   scales: [2, 3],
-  hash: "ff9dd208f5a022cb1483def98770bc0b",
-  name: "img_what_you_lose_profile",
+  hash: "d8a20104f4217083a13e0ca284c4bad2",
+  name: "img_premium_resubscribe_mobile",
   type: "png",
 });

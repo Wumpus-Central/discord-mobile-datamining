@@ -1,33 +1,14 @@
 // _runtime/metro/03858__.js
-import 03697__ from "03697__.js";
-import 03848__ from "03848__.js";
-import requiredArgs from "../03694_requiredArgs.js";
 
-if (!module_3697) {
-  let obj = { default: module_3697 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3697;
-}
-module_3697 = tmp3;
-if (!module_3848) {
-  obj = { default: module_3848 };
-  let tmp5 = obj;
-} else {
-  tmp5 = module_3848;
-}
-module_3848 = tmp5;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-let c3 = 60000;
-
-export default function addMinutes(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_3848.default(interval, module_3697.default(arg1) * c3);
+export default function getTimezoneOffsetInMilliseconds(getFullYear) {
+  const fullYear = getFullYear.getFullYear();
+  const month = getFullYear.getMonth();
+  const hours = getFullYear.getHours();
+  const minutes = getFullYear.getMinutes();
+  const seconds = getFullYear.getSeconds();
+  const date1 = new Date(Date.UTC(fullYear, month, getFullYear.getDate(), hours, minutes, seconds, getFullYear.getMilliseconds()));
+  date1.setUTCFullYear(getFullYear.getFullYear());
+  const time = getFullYear.getTime();
+  return time - date1.getTime();
 };
 export default exports.default;

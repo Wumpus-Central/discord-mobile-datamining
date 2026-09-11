@@ -1,15 +1,16 @@
 // _runtime/metro/04120__.js
-import 03697__ from "03697__.js";
-import _typeof from "03693__.js";
-import requiredArgs from "../03694_requiredArgs.js";
+import 03976__ from "03976__.js";
+import _typeof from "03695__.js";
+import requiredArgs from "../03696_requiredArgs.js";
+import 03699__ from "03699__.js";
 
-if (!module_3697) {
-  let obj = { default: module_3697 };
+if (!module_3976) {
+  let obj = { default: module_3976 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3697;
+  tmp3 = module_3976;
 }
-module_3697 = tmp3;
+module_3976 = tmp3;
 if (!_typeof) {
   obj = { default: _typeof };
   let tmp5 = obj;
@@ -24,18 +25,19 @@ if (!requiredArgs) {
   tmp7 = requiredArgs;
 }
 requiredArgs = tmp7;
+if (!module_3699) {
+  const obj1 = { default: module_3699 };
+  let tmp9 = obj1;
+} else {
+  tmp9 = module_3699;
+}
+module_3699 = tmp9;
 
-export default function setYear(date, arg1) {
+export default function setWeek(arg0, arg1, arg2) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(date);
-  if (isNaN(defaultResult1.getTime())) {
-    const _Date = Date;
-    date = new Date(NaN);
-    return date;
-  } else {
-    defaultResult1.setFullYear(defaultResult2);
-    return defaultResult1;
-  }
-  defaultResult2 = module_3697.default(arg1);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_3976.default(defaultResult1, arg2) - module_3699.default(arg1);
+  defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
+  return defaultResult1;
 };
 export default exports.default;

@@ -1,53 +1,29 @@
 // _runtime/metro/14100__.js
-import _mod14090 from "14090__.js";
+import _mod14067 from "14067__.js";
 
-export default (arg0, arg1) => {
-  const obj = _mod14090(arg0, null, true);
-  const tmp = _mod14090(arg1, null, true);
-  const compareResult = obj.compare(tmp);
-  if (0 === compareResult) {
-    return null;
-  } else {
-    let tmp3 = tmp;
-    if (compareResult > 0) {
-      tmp3 = obj;
-    }
-    let tmp4 = obj;
-    if (compareResult > 0) {
-      tmp4 = tmp;
-    }
-    if (tmp4.prerelease.length) {
-      if (!length) {
-        if (tmp4.patch) {
-          let str2 = "patch";
-          if (!tmp3.patch) {
-            let str3 = "major";
-            if (tmp3.minor) {
-              str3 = "minor";
-            }
-            str2 = str3;
-          }
-          let str = str2;
-        } else {
-          str = "major";
+export default (arr, arg1, arg2) => {
+  _require = arg2;
+  dependencyMap = null;
+  closure_2 = null;
+  let regex = null;
+  try {
+    let tmp9 = new require("14096__.js")(arg1, arg2);
+    regex = tmp9;
+    const item = arr.forEach((item) => {
+      if (regex.test(item)) {
+        let tmp = closure_1;
+        if (closure_1) {
+          tmp = -1 !== closure_2.compare(item);
         }
-        return str;
+        if (!tmp) {
+          closure_1 = item;
+          const tmp9 = new _mod14067(closure_1, closure_0);
+          closure_2 = tmp9;
+        }
       }
-    }
-    let str4 = "";
-    if (tmp3.prerelease.length) {
-      str4 = "pre";
-    }
-    if (obj.major !== tmp.major) {
-      let str5 = `${str4}major`;
-    } else if (obj.minor !== tmp.minor) {
-      str5 = `${str4}minor`;
-    } else {
-      str5 = "prerelease";
-      if (obj.patch !== tmp.patch) {
-        str5 = `${str4}patch`;
-      }
-    }
-    return str5;
+    });
+    return dependencyMap;
+  } catch (err) {
+    return tmp;
   }
 };

@@ -1,114 +1,67 @@
 // _runtime/metro/06854__.js
-import DEFAULT_HANDLE_HEIGHT from "../06681_DEFAULT_HANDLE_HEIGHT.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-require = arg1;
-let dependencyMap = arg6;
-let __initData = { code: "function pnpm_useAnimatedSnapPointsTs1(){const{containerHeight,INITIAL_CONTAINER_HEIGHT,INITIAL_SNAP_POINT,snapPoints,normalizeSnapPoint,enableDynamicSizing,handleHeight,INITIAL_HANDLE_HEIGHT,contentHeight,maxDynamicContentSize,dynamicSnapPointIndex}=this.__closure;const isContainerLayoutReady=containerHeight.value!==INITIAL_CONTAINER_HEIGHT;if(!isContainerLayoutReady){return[INITIAL_SNAP_POINT];}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];let _normalizedSnapPoints=_snapPoints.map(function(snapPoint){return normalizeSnapPoint(snapPoint,containerHeight.value);});if(!enableDynamicSizing){return _normalizedSnapPoints;}if(handleHeight.value===INITIAL_HANDLE_HEIGHT){return[INITIAL_SNAP_POINT];}if(contentHeight.value===INITIAL_CONTAINER_HEIGHT){return[INITIAL_SNAP_POINT];}const dynamicSnapPoint=containerHeight.value-Math.min(contentHeight.value+handleHeight.value,maxDynamicContentSize!==undefined?maxDynamicContentSize:containerHeight.value);if(!_normalizedSnapPoints.includes(dynamicSnapPoint)){_normalizedSnapPoints.push(dynamicSnapPoint);}_normalizedSnapPoints=_normalizedSnapPoints.sort(function(a,b){return b-a;});dynamicSnapPointIndex.value=_normalizedSnapPoints.indexOf(dynamicSnapPoint);return _normalizedSnapPoints;}" };
-let __initData2 = { code: "function pnpm_useAnimatedSnapPointsTs2(){const{enableDynamicSizing,snapPoints}=this.__closure;if(enableDynamicSizing){return true;}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];if(_snapPoints.length&&_snapPoints.find(function(snapPoint){return typeof snapPoint==='string';})){return true;}return false;}" };
-
-export const useAnimatedSnapPoints = (snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize) => {
-  _require = snapPoints;
-  dependencyMap = derivedValue;
-  __initData = sharedValue1;
-  __initData2 = reactiveSharedValue2;
-  closure_4 = DEFAULT_DYNAMIC_SIZING;
-  closure_5 = maxDynamicContentSize;
-  let obj = require("cancelAnimation");
-  sharedValue = obj.useSharedValue(-1);
-  class P {
-    constructor() {
-      iter = closure_1;
-      tmp = closure_0;
-      tmp2 = closure_1;
-      if (closure_1.value === closure_0(closure_1[1]).INITIAL_CONTAINER_HEIGHT) {
-        items = [];
-        items[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-        return items;
-      } else {
-        iter3 = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter3;
-          if ("value" in iter3) {
-            value = iter3.value;
-          }
-          items1 = value;
-        } else {
-          items1 = [];
-        }
-        mapped = items1.map(() => { ... });
-        tmp3 = closure_4;
-        if (closure_4) {
-          iter2 = closure_3;
-          if (closure_3.value === tmp(tmp2[1]).INITIAL_HANDLE_HEIGHT) {
-            items2 = [];
-            items2[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-            return items2;
-          } else {
-            iter4 = closure_2;
-            if (closure_2.value === tmp(tmp2[1]).INITIAL_CONTAINER_HEIGHT) {
-              items3 = [];
-              items3[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-              return items3;
-            } else {
-              tmp4 = globalThis;
-              value = closure_5;
-              sum = iter4.value + iter2.value;
-              if (undefined === closure_5) {
-                value = iter.value;
-              }
-              diff = iter.value - Math.min(sum, value);
-              if (!mapped.includes(diff)) {
-                arr = mapped.push(diff);
-              }
-              sorted = mapped.sort(() => { ... });
-              tmp8 = closure_6;
-              closure_6.value = sorted.indexOf(diff);
-              return sorted;
-            }
-          }
-        } else {
-          return mapped;
-        }
-      }
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-  }
-  obj = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
-  P.__closure = obj;
-  P.__workletHash = 15015207820492;
-  P.__initData = __initData;
-  let items = [snapPoints, derivedValue, reactiveSharedValue2, sharedValue1, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize, sharedValue];
-  derivedValue = require("cancelAnimation").useDerivedValue(P, items);
-  const obj2 = require("cancelAnimation");
-  class N {
-    constructor() {
-      if (closure_4) {
-        flag = true;
-        return true;
-      } else {
-        iter = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter;
-          if ("value" in iter) {
-            value = iter.value;
-          }
-          items = value;
-        } else {
-          items = [];
-        }
-        length = items.length;
-        tmp = !length;
-        if (length) {
-          tmp = !items.find(/* F111239 */ function() { ... });
-        }
-        return !tmp;
-      }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturnDefault;
+class NativeGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, NativeGesture);
+    tmp2 = c2;
+    obj = c2(NativeGesture);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
     }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "NativeViewGestureHandler";
+    return tmp3Result;
   }
-  N.__closure = { enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, snapPoints };
-  N.__workletHash = 4816362093278;
-  N.__initData = __initData2;
-  let items1 = [derivedValue, sharedValue, require("cancelAnimation").useDerivedValue(N)];
-  return items1;
+}
+_classCallCheck = NativeGesture;
+_inherits(NativeGesture, fn(6747).BaseGesture);
+const entry = {
+  key: "shouldActivateOnStart",
+  value: function shouldActivateOnStart(shouldActivateOnStart) {
+    this.config.shouldActivateOnStart = shouldActivateOnStart;
+    return this;
+  },
 };
+const items = [
+  entry,
+  {
+    key: "disallowInterruption",
+    value: function disallowInterruption(disallowInterruption) {
+      this.config.disallowInterruption = disallowInterruption;
+      return this;
+    },
+  },
+];
+
+export const NativeGesture = _createClass(NativeGesture, items);

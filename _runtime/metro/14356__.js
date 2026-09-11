@@ -1,27 +1,19 @@
 // _runtime/metro/14356__.js
-const require = arg1;
-const dependencyMap = arg6;
+import _mod14354 from "14354__.js";
+import _mod14357 from "14357__.js";
+import _mod14359 from "14359__.js";
 
-export const getSupportedCalendars = function getSupportedCalendars(locale) {
-  _require = locale;
-  const calendars = require("14357__.js").calendars;
-  return calendars.filter((item) =>
-    (function isSupportedCalendar(item, arg1) {
-      let str = arg1;
-      if (undefined === arg1) {
-        str = "en";
-      }
-      try {
-        const concat = "".concat;
-        const combined = "".concat(str, "-u-ca-");
-        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
-        if ("gregory" === item) {
-          if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
-            return false;
-          }
-        }
-        return true;
-      } catch (err) {}
-    })(item, closure_0),
-  );
-};
+let fn = Object;
+let closure_3 = _mod14357("".split);
+if (_mod14354(() => !Object("z").propertyIsEnumerable(0))) {
+  fn = (arg0) => {
+    if ("String" === _mod14359(arg0)) {
+      let tmp2 = closure_3(arg0, "");
+    } else {
+      tmp2 = Object(arg0);
+    }
+    return tmp2;
+  };
+}
+
+export default fn;

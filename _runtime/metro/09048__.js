@@ -1,5 +1,5 @@
 // _runtime/metro/09048__.js
-import _mod9008 from "09008__.js";
+import _mod9029 from "09029__.js";
 
 const self = this;
 let self2 = this;
@@ -56,15 +56,19 @@ if (self2) {
       if (typeof error === "function") {
         let obj = { localeError: null };
         obj = {
-          string: { unit: "znak\u00F3w", verb: "mie\u0107" },
-          file: { unit: "bajt\u00F3w", verb: "mie\u0107" },
-          array: { unit: "element\u00F3w", verb: "mie\u0107" },
-          set: { unit: "element\u00F3w", verb: "mie\u0107" },
+          string: { unit: "merkki\u00E4", subject: "merkkijonon" },
+          file: { unit: "tavua", subject: "tiedoston" },
+          array: { unit: "alkiota", subject: "listan" },
+          set: { unit: "alkiota", subject: "joukon" },
+          number: { unit: "", subject: "luvun" },
+          bigint: { unit: "", subject: "suuren kokonaisluvun" },
+          int: { unit: "", subject: "kokonaisluvun" },
+          date: { unit: "", subject: "p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4n" },
         };
         closure_1 = {
-          regex: "wyra\u017Cenie",
-          email: "adres email",
-          url: "URL",
+          regex: "s\u00E4\u00E4nn\u00F6llinen lauseke",
+          email: "s\u00E4hk\u00F6postiosoite",
+          url: "URL-osoite",
           emoji: "emoji",
           uuid: "UUID",
           uuidv4: "UUIDv4",
@@ -76,22 +80,22 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "data i godzina w formacie ISO",
-          date: "data w formacie ISO",
-          time: "godzina w formacie ISO",
-          duration: "czas trwania ISO",
-          ipv4: "adres IPv4",
-          ipv6: "adres IPv6",
-          cidrv4: "zakres IPv4",
-          cidrv6: "zakres IPv6",
-          base64: "ci\u0105g znak\u00F3w zakodowany w formacie base64",
-          base64url: "ci\u0105g znak\u00F3w zakodowany w formacie base64url",
-          json_string: "ci\u0105g znak\u00F3w w formacie JSON",
-          e164: "liczba E.164",
+          datetime: "ISO-aikaleima",
+          date: "ISO-p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4",
+          time: "ISO-aika",
+          duration: "ISO-kesto",
+          ipv4: "IPv4-osoite",
+          ipv6: "IPv6-osoite",
+          cidrv4: "IPv4-alue",
+          cidrv6: "IPv6-alue",
+          base64: "base64-koodattu merkkijono",
+          base64url: "base64url-koodattu merkkijono",
+          json_string: "JSON-merkkijono",
+          e164: "E.164-luku",
           jwt: "JWT",
-          template_literal: "wej\u015Bcie",
+          template_literal: "templaattimerkkijono",
         };
-        closure_2 = { nan: "NaN", number: "liczba", array: "tablica" };
+        closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -100,164 +104,136 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp49 = closure_2[parsedTypeResult];
-              if (tmp49 == null) {
-                tmp49 = parsedTypeResult;
+              let tmp35 = closure_2[parsedTypeResult];
+              if (tmp35 == null) {
+                tmp35 = parsedTypeResult;
               }
               obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined =
-                  "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano instanceof " +
-                  code.expected +
-                  ", otrzymano " +
-                  tmp49;
+                const _HermesInternal15 = HermesInternal;
+                let combined = "Virheellinen tyyppi: odotettiin instanceof " + code.expected + ", oli " + tmp35;
               } else {
-                const _HermesInternal16 = HermesInternal;
-                combined = "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano " + expected + ", otrzymano " + tmp49;
+                const _HermesInternal14 = HermesInternal;
+                combined = "Virheellinen tyyppi: odotettiin " + expected + ", oli " + tmp35;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
-                const _HermesInternal15 = HermesInternal;
+                const _HermesInternal13 = HermesInternal;
                 let combined1 =
-                  "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano " + closure_2.stringifyPrimitive(code.values[0]);
+                  "Virheellinen sy\u00F6te: t\u00E4ytyy olla " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
-                const _HermesInternal14 = HermesInternal;
+                const _HermesInternal12 = HermesInternal;
                 combined1 =
-                  "Nieprawid\u0142owa opcja: oczekiwano jednej z warto\u015Bci " +
-                  closure_2.joinValues(code.values, "|");
+                  "Virheellinen valinta: t\u00E4ytyy olla yksi seuraavista: " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str29 = "<";
+              let str28 = "<";
               if (code.inclusive) {
-                str29 = "<=";
+                str28 = "<=";
               }
-              let tmp28 = obj[code.origin];
-              if (tmp28 == null) {
-                tmp28 = null;
+              let tmp20 = obj[code.origin];
+              if (tmp20 == null) {
+                tmp20 = null;
               }
-              let str30 = code.origin;
-              if (tmp28) {
-                if (str30 == null) {
-                  str30 = "warto\u015B\u0107";
-                }
-                let str = code.maximum.toString();
-                let str36 = tmp28.unit;
-                if (str36 == null) {
-                  str36 = "element\u00F3w";
-                }
-                const _HermesInternal13 = HermesInternal;
-                let combined2 =
-                  "Za du\u017Ca warto\u015B\u0107: oczekiwano, \u017Ce " +
-                  str30 +
-                  " b\u0119dzie mie\u0107 " +
-                  str29 +
-                  str +
-                  " " +
-                  str36;
-              } else {
-                let str31 = str30;
-                if (str30 == null) {
-                  str31 = "warto\u015B\u0107";
-                }
-                const _HermesInternal12 = HermesInternal;
-                combined2 =
-                  "Zbyt du\u017C(y/a/e): oczekiwano, \u017Ce " +
-                  str31 +
-                  " b\u0119dzie wynosi\u0107 " +
-                  str29 +
-                  code.maximum.toString();
-              }
-              return combined2;
-            case "too_small":
-              let str18 = ">";
-              if (code.inclusive) {
-                str18 = ">=";
-              }
-              let tmp15 = obj[code.origin];
-              if (tmp15 == null) {
-                tmp15 = null;
-              }
-              let str19 = code.origin;
-              if (tmp15) {
-                if (str19 == null) {
-                  str19 = "warto\u015B\u0107";
-                }
-                const str1 = code.minimum.toString();
-                let str25 = tmp15.unit;
-                if (str25 == null) {
-                  str25 = "element\u00F3w";
-                }
+              if (tmp20) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 =
-                  "Za ma\u0142a warto\u015B\u0107: oczekiwano, \u017Ce " +
-                  str19 +
-                  " b\u0119dzie mie\u0107 " +
-                  str18 +
-                  str1 +
+                let trimmed =
+                  "Liian suuri: " +
+                  tmp20.subject +
+                  " t\u00E4ytyy olla " +
+                  str28 +
+                  code.maximum.toString() +
                   " " +
-                  str25;
+                  tmp20.unit.trim();
+                const str35 =
+                  "Liian suuri: " +
+                  tmp20.subject +
+                  " t\u00E4ytyy olla " +
+                  str28 +
+                  code.maximum.toString() +
+                  " " +
+                  tmp20.unit;
               } else {
-                let str20 = str19;
-                if (str19 == null) {
-                  str20 = "warto\u015B\u0107";
-                }
                 const _HermesInternal10 = HermesInternal;
-                combined3 =
-                  "Zbyt ma\u0142(y/a/e): oczekiwano, \u017Ce " +
-                  str20 +
-                  " b\u0119dzie wynosi\u0107 " +
-                  str18 +
-                  code.minimum.toString();
+                trimmed = "Liian suuri: arvon t\u00E4ytyy olla " + str28 + code.maximum.toString();
               }
-              return combined3;
+              return trimmed;
+            case "too_small":
+              let str20 = ">";
+              if (code.inclusive) {
+                str20 = ">=";
+              }
+              let tmp13 = obj[code.origin];
+              if (tmp13 == null) {
+                tmp13 = null;
+              }
+              if (tmp13) {
+                const _HermesInternal9 = HermesInternal;
+                let trimmed1 =
+                  "Liian pieni: " +
+                  tmp13.subject +
+                  " t\u00E4ytyy olla " +
+                  str20 +
+                  code.minimum.toString() +
+                  " " +
+                  tmp13.unit.trim();
+                const str27 =
+                  "Liian pieni: " +
+                  tmp13.subject +
+                  " t\u00E4ytyy olla " +
+                  str20 +
+                  code.minimum.toString() +
+                  " " +
+                  tmp13.unit;
+              } else {
+                const _HermesInternal8 = HermesInternal;
+                trimmed1 = "Liian pieni: arvon t\u00E4ytyy olla " + str20 + code.minimum.toString();
+              }
+              return trimmed1;
             case "invalid_format":
               if ("starts_with" === code.format) {
-                const _HermesInternal9 = HermesInternal;
-                let combined4 =
-                  'Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi zaczyna\u0107 si\u0119 od "' + code.prefix + '"';
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                combined4 =
-                  'Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi ko\u0144czy\u0107 si\u0119 na "' + code.suffix + '"';
-              } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = 'Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi zawiera\u0107 "' + code.includes + '"';
-              } else if ("regex" === code.format) {
+                let combined2 = 'Virheellinen sy\u00F6te: t\u00E4ytyy alkaa "' + code.prefix + '"';
+              } else if ("ends_with" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi odpowiada\u0107 wzorcowi " + code.pattern;
+                combined2 = 'Virheellinen sy\u00F6te: t\u00E4ytyy loppua "' + code.suffix + '"';
+              } else if ("includes" === code.format) {
+                const _HermesInternal5 = HermesInternal;
+                combined2 = 'Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 "' + code.includes + '"';
+              } else if ("regex" === code.format) {
+                const _HermesInternal4 = HermesInternal;
+                combined2 =
+                  "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " +
+                  code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
-                const _HermesInternal5 = HermesInternal;
-                combined4 = "Nieprawid\u0142ow(y/a/e) " + format;
+                const _HermesInternal3 = HermesInternal;
+                combined2 = "Virheellinen " + format;
               }
-              return combined4;
+              return combined2;
             case "not_multiple_of":
-              const _HermesInternal4 = HermesInternal;
-              return "Nieprawid\u0142owa liczba: musi by\u0107 wielokrotno\u015Bci\u0105 " + code.divisor;
-            case "unrecognized_keys":
-              let str3 = "";
-              if (code.keys.length > 1) {
-                str3 = "s";
-              }
-              const _HermesInternal3 = HermesInternal;
-              return "Nierozpoznane klucze" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
-            case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Nieprawid\u0142owy klucz w " + code.origin;
-            case "invalid_union":
-              return "Nieprawid\u0142owe dane wej\u015Bciowe";
-            case "invalid_element":
+              return "Virheellinen luku: t\u00E4ytyy olla luvun " + code.divisor + " monikerta";
+            case "unrecognized_keys":
+              let str4 = "Tuntematon avain";
+              if (code.keys.length > 1) {
+                str4 = "Tuntemattomat avaimet";
+              }
               const _HermesInternal = HermesInternal;
-              str = "Nieprawid\u0142owa warto\u015B\u0107 w ";
-              return "Nieprawid\u0142owa warto\u015B\u0107 w " + code.origin;
+              return "" + str4 + ": " + closure_2.joinValues(code.keys, ", ");
+            case "invalid_key":
+              return "Virheellinen avain tietueessa";
+            case "invalid_union":
+              return "Virheellinen unioni";
+            case "invalid_element":
+              return "Virheellinen arvo joukossa";
             default:
-              return "Nieprawid\u0142owe dane wej\u015Bciowe";
+              return "Virheellinen sy\u00F6te";
           }
         };
         return obj;
@@ -265,7 +241,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod9008);
+    let closure_2 = fn(_mod9029);
     function error() {}
     module.exports = exports.default;
   } else {

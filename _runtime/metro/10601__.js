@@ -1,12 +1,14 @@
 // _runtime/metro/10601__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractTimeExpressionParser from "../10516_AbstractTimeExpressionParser.js";
+import repeatedTimeunitPattern from "../10521_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10528_AbstractParserWithWordBoundaryChecking.js";
+import _mod10602 from "10602__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
+const PTWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,15 +27,20 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturn;
-class NLTimeExpressionParser {
+const regExp = new RegExp(
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|passado|pr[o\u00F3]ximo)\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10602.WEEKDAY_DICTIONARY) +
+    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|passado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)",
+  "i",
+);
+class PTWeekdayParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, NLTimeExpressionParser);
-    tmp2 = c2;
-    obj = c2(NLTimeExpressionParser);
-    tmp3 = closure_1;
-    if (closure_4()) {
+    tmp = c2(this, PTWeekdayParser);
+    tmp2 = closure_4;
+    obj = closure_4(PTWeekdayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -46,44 +53,41 @@ class NLTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = NLTimeExpressionParser;
-_inherits(NLTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(PTWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:om)\\s*)?";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
-let items = [
+const items = [
   entry,
   {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|om|\\?)\\s*";
-    },
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:uur))?(?!/)(?=\\W|$)";
-    },
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      let fnResult = null;
-      if (!str.match(/^\s*\d{4}\s*$/)) {
-        const self = this;
-        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
-        if (typeof fn === "function") {
-          fn = (items) => fn.apply(self, items);
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[2].toLowerCase();
+      const tmp4 = PTWeekdayParser(10602).WEEKDAY_DICTIONARY[formatted];
+      if (undefined === tmp4) {
+        return null;
+      } else {
+        const formatted1 = arg1[1] || arg1[3] || "".toLowerCase();
+        let str5 = "this";
+        if ("passado" != formatted1) {
+          str5 = "next";
+          if ("pr\u00F3ximo" != formatted1) {
+            str5 = "next";
+            if ("proximo" != formatted1) {
+              str5 = null;
+              if ("este" == formatted1) {
+                str5 = "this";
+              }
+            }
+          }
         }
-        const items = [arg0, arg1];
-        fnResult = fn(items);
+        return PTWeekdayParser(10548).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
       }
-      return fnResult;
     },
   },
 ];
 
-export default _createClass(NLTimeExpressionParser, items);
+export default _createClass(PTWeekdayParser, items);

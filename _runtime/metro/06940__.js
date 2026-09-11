@@ -1,22 +1,29 @@
 // _runtime/metro/06940__.js
 import _mod6941 from "06941__.js";
 
-export default function _inherits(value, fn) {
-  if (typeof fn !== "function") {
-    if (null !== fn) {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Super expression must either be null or a function");
-      throw typeError;
+export default function toPrimitive(arg0, arg1) {
+  if ("object" == obj.default(arg0)) {
+    if (arg0) {
+      let str = arg1;
+      const _Symbol = Symbol;
+      if (undefined !== arg0[Symbol.toPrimitive]) {
+        const call = tmp4.call;
+        if (!str) {
+          str = "default";
+        }
+        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
+        if ("object" != tmpResult.default(tmp5)) {
+          return tmp5;
+        } else {
+          const _TypeError = TypeError;
+          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
+          throw typeError;
+        }
+        tmpResult = _mod6941;
+      } else {
+        return "string" === str ? String : Number(arg0);
+      }
     }
   }
-  let prototype = fn;
-  if (fn) {
-    prototype = fn.prototype;
-  }
-  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
-  Object.defineProperty(value, "prototype", { writable: false });
-  if (fn) {
-    _mod6941(value, fn);
-  }
-  const obj = { constructor: { value, writable: true, configurable: true } };
+  return arg0;
 }

@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/user_settings/connections/native/two_way_link/images",
+  width: 18,
+  height: 18.5,
   scales: [2, 3],
-  hash: "164752cabe6d4eb331413f5b61581302",
-  name: "ic_playstation_24px",
+  hash: "84a5f82b0047a661ec45232254da9031",
+  name: "app_installed_check",
   type: "png",
 });

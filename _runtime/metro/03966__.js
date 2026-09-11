@@ -1,35 +1,28 @@
 // _runtime/metro/03966__.js
-import startOfISOWeekYear from "../03854_startOfISOWeekYear.js";
-import 03861__ from "03861__.js";
-import requiredArgs from "../03694_requiredArgs.js";
+import _typeof from "03695__.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
-if (!startOfISOWeekYear) {
-  let obj = { default: startOfISOWeekYear };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfISOWeekYear;
+  tmp3 = _typeof;
 }
-startOfISOWeekYear = tmp3;
-if (!module_3861) {
-  obj = { default: module_3861 };
-  let tmp5 = obj;
-} else {
-  tmp5 = module_3861;
-}
-module_3861 = tmp5;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
-  let tmp7 = obj;
+  let tmp5 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
-let c3 = 604800000;
+requiredArgs = tmp5;
 
-export default function getISOWeeksInYear(arg0) {
+export default function getISODay(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = startOfISOWeekYear.default(arg0);
-  const defaultResult2 = startOfISOWeekYear.default(module_3861.default(defaultResult1, 60));
-  return Math.round((startOfISOWeekYear.default(module_3861.default(defaultResult1, 60)).valueOf() - defaultResult1.valueOf()) / c3);
+  let num = _typeof.default(arg0).getDay();
+  if (0 === num) {
+    num = 7;
+  }
+  return num;
 };
 export default exports.default;

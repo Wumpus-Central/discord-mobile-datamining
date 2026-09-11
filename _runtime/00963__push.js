@@ -124,7 +124,7 @@ function _shift(fn) {
 function createIndexedDbStore(arg0) {
   let dbName = arg0;
   function getStore() {
-    if (null == f72096) {
+    if (null == f72134) {
       let str = dbName.dbName;
       if (!str) {
         str = "sentry-offline";
@@ -146,12 +146,12 @@ function createIndexedDbStore(arg0) {
         closure_0.onerror = fn2;
         closure_0.onabort = fn2;
       });
-      f72096 = (arg0) => {
+      f72134 = (arg0) => {
         closure_0 = arg0;
         return promise.then((transaction) => closure_0(transaction.transaction(openResult, "readwrite").objectStore(openResult)));
       };
     }
-    return f72096;
+    return f72134;
   }
   const obj = { push: null, unshift: null, shift: null };
   closure_4 = asyncGeneratorStep(async (arg0) => {

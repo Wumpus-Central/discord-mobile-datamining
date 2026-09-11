@@ -1,143 +1,71 @@
 // _runtime/metro/06775__.js
-import tagMessage from "../06710_tagMessage.js";
+import handlerIDToTag from "../06730_handlerIDToTag.js";
+import convertToHandlerTag from "../06750_convertToHandlerTag.js";
+import RNGestureHandlerModuleDefault from "../06755_RNGestureHandlerModule.js";
+import transformIntoHandlerTags from "../06757_transformIntoHandlerTags.js";
 
 require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
-function isNativeEvent(arg0) {
-  return "nativeEvent" in arg0;
-}
-isNativeEvent.__closure = {};
-isNativeEvent.__workletHash = 15502708650016;
-isNativeEvent.__initData = { code: "function isNativeEvent_Pnpm_eventUtilsTs1(event){return'nativeEvent'in event;}" };
-function maybeExtractNativeEvent(nativeEvent) {
-  if (typeof isNativeEvent === "function") {
-    if ("nativeEvent" in nativeEvent) {
-      nativeEvent = nativeEvent.nativeEvent;
-    }
-    return nativeEvent;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-maybeExtractNativeEvent.__closure = { isNativeEvent };
-maybeExtractNativeEvent.__workletHash = 9418753326359;
-maybeExtractNativeEvent.__initData = {
-  code: "function maybeExtractNativeEvent_Pnpm_eventUtilsTs2(event){const{isNativeEvent}=this.__closure;return isNativeEvent(event)?event.nativeEvent:event;}",
-};
-function flattenAndFilterEvent(handlerTag) {
-  const merged = Object.assign(handlerTag.handlerData);
-  return { handlerTag: handlerTag.handlerTag };
-}
-flattenAndFilterEvent.__closure = {};
-flattenAndFilterEvent.__workletHash = 12741778497058;
-flattenAndFilterEvent.__initData = {
-  code: "function flattenAndFilterEvent_Pnpm_eventUtilsTs3(event){return{handlerTag:event.handlerTag,...event.handlerData};}",
-};
-function isEventForHandlerWithTag(arg0, handlerTag) {
-  return handlerTag.handlerTag === arg0;
-}
-isEventForHandlerWithTag.__closure = {};
-isEventForHandlerWithTag.__workletHash = 11134871115176;
-isEventForHandlerWithTag.__initData = {
-  code: "function isEventForHandlerWithTag_Pnpm_eventUtilsTs4(handlerTag,event){return event.handlerTag===handlerTag;}",
-};
-function isNativeAnimatedEvent(onUpdate) {
-  let tmp = onUpdate;
-  if (tmp) {
-    tmp = "_argMapping" in onUpdate;
-  }
-  return tmp;
-}
-isNativeAnimatedEvent.__closure = {};
-isNativeAnimatedEvent.__workletHash = 3439774750008;
-isNativeAnimatedEvent.__initData = {
-  code: "function isNativeAnimatedEvent_Pnpm_eventUtilsTs5(callback){return!!callback&&'_argMapping'in callback;}",
-};
-const __initData = {
-  code: "function pnpm_eventUtilsTs7(current,previous){const{diffCalculator}=this.__closure;const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;}",
-};
-function getChangeEventCalculator(diffCalculator) {
-  const fn = function t(handlerData, handlerData2) {
-    handlerData = null;
-    if (handlerData2) {
-      handlerData = handlerData2.handlerData;
-    }
-    const merged = Object.assign(handlerData);
-    const merged1 = Object.assign(diffCalculator(handlerData, handlerData));
-    handlerData.handlerData = {};
-    return handlerData;
-  };
-  fn.__closure = { diffCalculator };
-  fn.__workletHash = 10887773943786;
-  fn.__initData = __initData;
-  return fn;
-}
-getChangeEventCalculator.__closure = {};
-getChangeEventCalculator.__workletHash = 1165584403675;
-getChangeEventCalculator.__initData = {
-  code: "function getChangeEventCalculator_Pnpm_eventUtilsTs6(diffCalculator){return function(current,previous){'worklet';const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;};}",
-};
-function isTouchEvent(result) {
-  return "allTouches" in result;
-}
-isTouchEvent.__closure = {};
-isTouchEvent.__workletHash = 14798108877298;
-isTouchEvent.__initData = { code: "function isTouchEvent_Pnpm_eventUtilsTs8(event){return'allTouches'in event;}" };
-function isStateChangeEvent(oldState) {
-  let tmp = "oldState" in oldState;
-  if (tmp) {
-    tmp = undefined !== oldState.oldState;
-  }
-  return tmp;
-}
-isStateChangeEvent.__closure = {};
-isStateChangeEvent.__workletHash = 7295971713196;
-isStateChangeEvent.__initData = {
-  code: "function isStateChangeEvent_Pnpm_eventUtilsTs9(event){return'oldState'in event&&event.oldState!==undefined;}",
-};
 
-export { maybeExtractNativeEvent };
-export { flattenAndFilterEvent };
-export { isEventForHandlerWithTag };
-export { isNativeAnimatedEvent };
-export const checkMappingForChangeProperties = function checkMappingForChangeProperties(arg0) {
-  const iter = arg0._argMapping[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    if (nextResult) {
-      if ("nativeEvent" in tmp2) {
-        if ("handlerData" in tmp2.nativeEvent) {
-          for (const key10023 in tmp2.nativeEvent.handlerData) {
-            if (!key10023.startsWith("change")) {
-              continue;
-            } else {
-              let tmp6 = globalThis;
-              let _Error = Error;
-              let obj = tagMessage;
-              let _HermesInternal = HermesInternal;
-              let str = " is not available when using Animated.Event.";
-              let str2 = "";
-              let tmp10 = new.target;
-              let tmp11 = new.target;
-              let error = new Error(obj.tagMessage("" + key10023 + " is not available when using Animated.Event."));
-              throw error;
+export const updateHandlers = function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
+  _require = attachedGestures;
+  prepare.prepare();
+  for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
+    let tmp2 = attachedGestures.attachedGestures[num];
+    let obj = require("convertToHandlerTag");
+    let result = obj.checkGestureCallbacksForWorklets(tmp2);
+    if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
+      ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
+    }
+  }
+  attachedGestures = attachedGestures.attachedGestures;
+  require("ghQueueMicrotask").ghQueueMicrotask(() => {
+    if (attachedGestures.isMounted) {
+      let arr = attachedGestures;
+      if (attachedGestures === tmp.attachedGestures) {
+        let tmp21 = arr.length !== gesturesToAttach.length;
+        let num = 0;
+        let tmp22 = tmp21;
+        if (0 < gesturesToAttach.length) {
+          do {
+            let tmp3 = attachedGestures[num];
+            let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
+            let flag = tmp21;
+            if (tmp4) {
+              let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
+              tmp4 = tmp6;
             }
+            if (tmp4) {
+              flag = true;
+            }
+            tmp3.config = gesturesToAttach[num].config;
+            tmp3.handlers = gesturesToAttach[num].handlers;
+            let obj = RNGestureHandlerModuleDefault;
+            let obj2 = transformIntoHandlerTags;
+            let result = obj.setGestureHandlerConfig(
+              tmp3.handlerTag,
+              obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS),
+            );
+            let obj3 = RNGestureHandlerModuleDefault;
+            let obj4 = convertToHandlerTag;
+            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
+            let obj5 = handlerIDToTag;
+            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
+            num = num + 1;
+            tmp21 = flag;
+            tmp22 = flag;
+            arr = attachedGestures;
+          } while (num < gesturesToAttach.length);
+        }
+        if (attachedGestures.animatedHandlers) {
+          if (tmp22) {
+            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
+            tmp23.animatedHandlers.value = found.map((handlers) => handlers.handlers);
           }
         }
+        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
       }
     }
-    continue;
-  }
+  });
 };
-export const shouldHandleTouchEvents = function shouldHandleTouchEvents(onTouchesDown) {
-  return (
-    onTouchesDown.onTouchesDown ||
-    onTouchesDown.onTouchesMove ||
-    onTouchesDown.onTouchesUp ||
-    onTouchesDown.onTouchesCancel
-  );
-};
-export { getChangeEventCalculator };
-export { isTouchEvent };
-export { isStateChangeEvent };

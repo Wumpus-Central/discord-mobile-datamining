@@ -1,17 +1,28 @@
 // _runtime/metro/06941__.js
-function _setPrototypeOf(arg0, arg1) {
-  if (Object.setPrototypeOf) {
-    const _Object = Object;
-    exports = setPrototypeOf.bind();
-  } else {
-    exports = (arg0, arg1) => {
-      arg0.__proto__ = arg1;
-      return arg0;
-    };
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      exports = (arg0) => typeof arg0;
+    }
+    module.exports = exports;
+    return exports(arg0);
   }
-  module.exports = exports;
-  return exports(arg0, arg1);
+  exports = (arg0) => {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
 }
-let exports = _setPrototypeOf;
+let exports = _typeof;
 
-export default _setPrototypeOf;
+export default _typeof;

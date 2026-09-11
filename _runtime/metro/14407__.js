@@ -1,18 +1,47 @@
 // _runtime/metro/14407__.js
-import _mod14382 from "14382__.js";
+import _mod14351 from "14351__.js";
+import _mod14376 from "14376__.js";
+import _mod14404 from "14404__.js";
+import _mod14408 from "14408__.js";
 
-if (_mod14382) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
+export default (arg0, arg1, value, arg3) => {
+  let obj = arg3;
+  if (!arg3) {
+    obj = {};
+  }
+  let flag = obj.enumerable;
+  let name = arg1;
+  if (undefined !== obj.name) {
+    name = obj.name;
+  }
+  if (_mod14376(value)) {
+    _mod14408(value, name, obj);
+  }
+  if (obj.global) {
+    if (flag) {
+      arg0[arg1] = value;
     } else {
-      applyArgumentsResult = apply(call, arguments);
+      _mod14351(arg1, value);
     }
-    return applyArgumentsResult;
-  };
-}
-
-export default fn;
+  } else {
+    try {
+      if (obj.unsafe) {
+        if (arg0[arg1]) {
+          flag = true;
+        }
+      } else {
+        delete tmp[tmp2];
+      }
+      if (flag) {
+        arg0[arg1] = value;
+      } else {
+        obj = { value, enumerable: false, configurable: null, writable: null };
+        obj.configurable = !obj.nonConfigurable;
+        obj.writable = !obj.nonWritable;
+        _mod14404.f(arg0, arg1, obj);
+        const tmp3Result = _mod14404;
+      }
+    } catch (err) {}
+  }
+  return arg0;
+};

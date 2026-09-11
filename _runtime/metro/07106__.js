@@ -1,13 +1,16 @@
 // _runtime/metro/07106__.js
-import registerAsset from "01122__.js";
+import CardAnimationContext from "../07100_CardAnimationContext.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 160,
-  height: 160,
-  scales: [2, 3],
-  hash: "b7eca7761481c5ff3cc170b16fbdff57",
-  name: "img_no_results",
-  type: "png",
-});
+require = arg1;
+
+export const useCardAnimation = function useCardAnimation() {
+  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
+    throw error;
+  } else {
+    return context;
+  }
+};

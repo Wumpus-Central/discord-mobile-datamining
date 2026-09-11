@@ -1,7 +1,116 @@
 // _runtime/metro/08613__.js
-import 00065__ from "00065__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8566 from "08566__.js";
+import _modDef8614 from "08614__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGRadialGradient", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, fx: true, fy: true, cx: true, cy: true, rx: true, ry: true, gradient: true, gradientUnits: true, gradientTransform: true } };
+const SvgImage = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturnDefault;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const re9 = /\s+/;
+class SvgImage {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, SvgImage);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(SvgImage);
+    tmp3 = closure_4;
+    if (closure_8()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(SvgImage, _modDef8566);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ preserveAspectRatio, href } = props);
+    ({ x, y, width, height } = props);
+    if (undefined === href) {
+      href = props.xlinkHref;
+    }
+    if (preserveAspectRatio) {
+      let parts = preserveAspectRatio.trim().split(re9);
+      const str = preserveAspectRatio.trim();
+    } else {
+      parts = [];
+    }
+    const size = {
+      x,
+      y,
+      width,
+      height,
+      onLoad: props.onLoad,
+      meetOrSlice: SvgImage(8555).meetOrSliceTypes[tmp3] || 0,
+      align: null,
+      src: null,
+    };
+    [tmp2, tmp3] = parts;
+    const tmp6 = SvgImage(8555).meetOrSliceTypes[tmp3] || 0;
+    size.align = SvgImage(8555).alignEnum[tmp2] || "xMidYMid";
+    let assetSource = null;
+    if (href) {
+      let tmp10 = href;
+      if (typeof href === "string") {
+        let obj = { uri: href };
+        tmp10 = obj;
+      }
+      assetSource = Image.resolveAssetSource(tmp10);
+    }
+    size.src = assetSource;
+    obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const tmp7 = SvgImage(8555).alignEnum[tmp2] || "xMidYMid";
+    const merged = Object.assign(SvgImage(8557).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    return (
+      <tmp11
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
+  },
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(SvgImage, items);
+importDefaultResultResult.displayName = "Image";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0, preserveAspectRatio: "xMidYMid meet" };
 
-export default module_65.get("RNSVGRadialGradient", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

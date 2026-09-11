@@ -1,91 +1,104 @@
 // _runtime/metro/06853__.js
-import _mod19 from "00019__.js";
-import _modDef38 from "00038__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-const useMemo = _mod19.useMemo;
-
-export const usePropsValidator = (index) => {
-  index = index.index;
-  const snapPoints = index.snapPoints;
-  const enableDynamicSizing = index.enableDynamicSizing;
-  const topInset = index.topInset;
-  const bottomInset = index.bottomInset;
-  let items = [index, snapPoints, topInset, bottomInset, enableDynamicSizing];
-  topInset(() => {
-    if (snapPoints) {
-      value = snapPoints;
-      if ("get" in snapPoints) {
-        value = snapPoints.get();
-      }
-      let items = value;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      items = [];
+      callResult = call(constructResult);
     }
-    let tmp5 = items;
-    if (!items) {
-      tmp5 = enableDynamicSizing;
-    }
-    _modDef38(tmp5, "'snapPoints' was not provided! please provide at least one snap point.");
-    const mapped = items.map((item) => {
-      let parsed = item;
-      if (typeof item !== "number") {
-        const _Number = Number;
-        parsed = Number.parseInt(item.replace("%", ""), 10);
-      }
-      let tmp4 = parsed > 0;
-      if (!tmp4) {
-        tmp4 = parsed === index(enableDynamicSizing[2]).INITIAL_SNAP_POINT;
-      }
-      snapPoints(enableDynamicSizing[1])(
-        tmp4,
-        "Snap point '" +
-          item +
-          "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.",
-      );
-      const tmp3 = snapPoints(enableDynamicSizing[1]);
-    });
-    let tmp9 = "value" in items;
-    let tmp2Result = _modDef38;
-    if (!tmp9) {
-      tmp9 = items.length > 0;
-    }
-    if (!tmp9) {
-      tmp9 = enableDynamicSizing;
-    }
-    tmp2Result(tmp9, "'snapPoints' was provided with no points! please provide at least one snap point.");
-    let tmp13 = typeof index === "number";
-    tmp2Result = _modDef38;
-    if (typeof index !== "number") {
-      tmp13 = undefined === index;
-    }
-    tmp2Result(tmp13, "'index' was provided but with wrong type ! expected type is a number.");
-    let tmp16 = enableDynamicSizing;
-    if (!enableDynamicSizing) {
-      tmp16 = typeof index !== "number";
-    }
-    if (!tmp16) {
-      let tmp17 = index >= -1;
-      if (tmp17) {
-        tmp17 = index <= items.length - 1;
-      }
-      tmp16 = tmp17;
-    }
-    _modDef38(
-      tmp16,
-      `'index' was provided but out of the provided snap points range! expected value to be between -1, ${arr.length - 1}`,
-    );
-    let tmp20 = typeof topInset === "number";
-    const tmp2Result1 = _modDef38;
-    if (typeof topInset !== "number") {
-      tmp20 = undefined === topInset;
-    }
-    _modDef38(tmp20, "'topInset' was provided but with wrong type ! expected type is a number.");
-    let tmp23 = typeof bottomInset === "number";
-    const tmp2Result2 = _modDef38;
-    if (typeof bottomInset !== "number") {
-      tmp23 = undefined === bottomInset;
-    }
-    _modDef38(tmp23, "'bottomInset' was provided but with wrong type ! expected type is a number.");
-    const tmp2Result3 = _modDef38;
-  }, items);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturnDefault;
+function changeEventCalculator(force, force2) {
+  if (undefined === force2) {
+    let obj = { forceChange: force.force };
+  } else {
+    obj = { forceChange: force.force - force2.force };
+  }
+  obj = {};
+  const merged = Object.assign(force);
+  const merged1 = Object.assign(obj);
+  return obj;
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 11365193947542;
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}",
 };
+class ForceTouchGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ForceTouchGesture);
+    tmp2 = c2;
+    obj = c2(ForceTouchGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "ForceTouchGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = ForceTouchGesture;
+_inherits(ForceTouchGesture, fn(6747).ContinousBaseGesture);
+const entry = {
+  key: "minForce",
+  value: function minForce(minForce) {
+    this.config.minForce = minForce;
+    return this;
+  },
+};
+let items = [
+  entry,
+  {
+    key: "maxForce",
+    value: function maxForce(maxForce) {
+      this.config.maxForce = maxForce;
+      return this;
+    },
+  },
+  {
+    key: "feedbackOnActivation",
+    value: function feedbackOnActivation(feedbackOnActivation) {
+      this.config.feedbackOnActivation = feedbackOnActivation;
+      return this;
+    },
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
+    },
+  },
+];
+
+export const ForceTouchGesture = _createClass(ForceTouchGesture, items);

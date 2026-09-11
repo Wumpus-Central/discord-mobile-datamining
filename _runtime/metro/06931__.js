@@ -1,0 +1,30 @@
+// _runtime/metro/06931__.js
+import _mod6932 from "06932__.js";
+
+export default function _unsupportedIterableToArray(str, arg1) {
+  if (str) {
+    if (typeof str === "string") {
+      return _mod6932(str, arg1);
+    } else {
+      const toString = {}.toString;
+      const call = toString.call;
+      let arr = typeof call === "unknown" ? toString() : call(str);
+      const substr = arr.slice(8, -1);
+      let name = substr;
+      if (tmp3) {
+        name = str.constructor.name;
+      }
+      if ("Map" !== name) {
+        if ("Set" !== name) {
+          if ("Arguments" === name) {
+            arr = _mod6932(str, arg1);
+          }
+        }
+        return arr;
+      }
+      const _Array = Array;
+      arr = Array.from(str);
+      tmp3 = "Object" === substr && "Object".constructor;
+    }
+  }
+}

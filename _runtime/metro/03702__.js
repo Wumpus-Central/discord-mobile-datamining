@@ -1,38 +1,68 @@
 // _runtime/metro/03702__.js
-const obj = { lessThanXSeconds: { one: { regular: "m\u00E9n\u011B ne\u017E sekunda", past: "p\u0159ed m\u00E9n\u011B ne\u017E sekundou", future: "za m\u00E9n\u011B ne\u017E sekundu" }, few: { regular: "m\u00E9n\u011B ne\u017E {{count}} sekundy", past: "p\u0159ed m\u00E9n\u011B ne\u017E {{count}} sekundami", future: "za m\u00E9n\u011B ne\u017E {{count}} sekundy" }, many: { regular: "m\u00E9n\u011B ne\u017E {{count}} sekund", past: "p\u0159ed m\u00E9n\u011B ne\u017E {{count}} sekundami", future: "za m\u00E9n\u011B ne\u017E {{count}} sekund" } }, xSeconds: { one: { regular: "sekunda", past: "p\u0159ed sekundou", future: "za sekundu" }, few: { regular: "{{count}} sekundy", past: "p\u0159ed {{count}} sekundami", future: "za {{count}} sekundy" }, many: { regular: "{{count}} sekund", past: "p\u0159ed {{count}} sekundami", future: "za {{count}} sekund" } }, halfAMinute: { type: "other", other: { regular: "p\u016Fl minuty", past: "p\u0159ed p\u016Fl minutou", future: "za p\u016Fl minuty" } }, lessThanXMinutes: { one: { regular: "m\u00E9n\u011B ne\u017E minuta", past: "p\u0159ed m\u00E9n\u011B ne\u017E minutou", future: "za m\u00E9n\u011B ne\u017E minutu" }, few: { regular: "m\u00E9n\u011B ne\u017E {{count}} minuty", past: "p\u0159ed m\u00E9n\u011B ne\u017E {{count}} minutami", future: "za m\u00E9n\u011B ne\u017E {{count}} minuty" }, many: { regular: "m\u00E9n\u011B ne\u017E {{count}} minut", past: "p\u0159ed m\u00E9n\u011B ne\u017E {{count}} minutami", future: "za m\u00E9n\u011B ne\u017E {{count}} minut" } }, xMinutes: { one: { regular: "minuta", past: "p\u0159ed minutou", future: "za minutu" }, few: { regular: "{{count}} minuty", past: "p\u0159ed {{count}} minutami", future: "za {{count}} minuty" }, many: { regular: "{{count}} minut", past: "p\u0159ed {{count}} minutami", future: "za {{count}} minut" } }, aboutXHours: { one: { regular: "p\u0159ibli\u017En\u011B hodina", past: "p\u0159ibli\u017En\u011B p\u0159ed hodinou", future: "p\u0159ibli\u017En\u011B za hodinu" }, few: { regular: "p\u0159ibli\u017En\u011B {{count}} hodiny", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} hodinami", future: "p\u0159ibli\u017En\u011B za {{count}} hodiny" }, many: { regular: "p\u0159ibli\u017En\u011B {{count}} hodin", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} hodinami", future: "p\u0159ibli\u017En\u011B za {{count}} hodin" } }, xHours: { one: { regular: "hodina", past: "p\u0159ed hodinou", future: "za hodinu" }, few: { regular: "{{count}} hodiny", past: "p\u0159ed {{count}} hodinami", future: "za {{count}} hodiny" }, many: { regular: "{{count}} hodin", past: "p\u0159ed {{count}} hodinami", future: "za {{count}} hodin" } }, xDays: { one: { regular: "den", past: "p\u0159ed dnem", future: "za den" }, few: { regular: "{{count}} dny", past: "p\u0159ed {{count}} dny", future: "za {{count}} dny" }, many: { regular: "{{count}} dn\u00ED", past: "p\u0159ed {{count}} dny", future: "za {{count}} dn\u00ED" } }, aboutXWeeks: { one: { regular: "p\u0159ibli\u017En\u011B t\u00FDden", past: "p\u0159ibli\u017En\u011B p\u0159ed t\u00FDdnem", future: "p\u0159ibli\u017En\u011B za t\u00FDden" }, few: { regular: "p\u0159ibli\u017En\u011B {{count}} t\u00FDdny", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} t\u00FDdny", future: "p\u0159ibli\u017En\u011B za {{count}} t\u00FDdny" }, many: { regular: "p\u0159ibli\u017En\u011B {{count}} t\u00FDdn\u016F", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} t\u00FDdny", future: "p\u0159ibli\u017En\u011B za {{count}} t\u00FDdn\u016F" } }, xWeeks: { one: { regular: "t\u00FDden", past: "p\u0159ed t\u00FDdnem", future: "za t\u00FDden" }, few: { regular: "{{count}} t\u00FDdny", past: "p\u0159ed {{count}} t\u00FDdny", future: "za {{count}} t\u00FDdny" }, many: { regular: "{{count}} t\u00FDdn\u016F", past: "p\u0159ed {{count}} t\u00FDdny", future: "za {{count}} t\u00FDdn\u016F" } }, aboutXMonths: { one: { regular: "p\u0159ibli\u017En\u011B m\u011Bs\u00EDc", past: "p\u0159ibli\u017En\u011B p\u0159ed m\u011Bs\u00EDcem", future: "p\u0159ibli\u017En\u011B za m\u011Bs\u00EDc" }, few: { regular: "p\u0159ibli\u017En\u011B {{count}} m\u011Bs\u00EDce", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} m\u011Bs\u00EDci", future: "p\u0159ibli\u017En\u011B za {{count}} m\u011Bs\u00EDce" }, many: { regular: "p\u0159ibli\u017En\u011B {{count}} m\u011Bs\u00EDc\u016F", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} m\u011Bs\u00EDci", future: "p\u0159ibli\u017En\u011B za {{count}} m\u011Bs\u00EDc\u016F" } }, xMonths: { one: { regular: "m\u011Bs\u00EDc", past: "p\u0159ed m\u011Bs\u00EDcem", future: "za m\u011Bs\u00EDc" }, few: { regular: "{{count}} m\u011Bs\u00EDce", past: "p\u0159ed {{count}} m\u011Bs\u00EDci", future: "za {{count}} m\u011Bs\u00EDce" }, many: { regular: "{{count}} m\u011Bs\u00EDc\u016F", past: "p\u0159ed {{count}} m\u011Bs\u00EDci", future: "za {{count}} m\u011Bs\u00EDc\u016F" } }, aboutXYears: { one: { regular: "p\u0159ibli\u017En\u011B rok", past: "p\u0159ibli\u017En\u011B p\u0159ed rokem", future: "p\u0159ibli\u017En\u011B za rok" }, few: { regular: "p\u0159ibli\u017En\u011B {{count}} roky", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} roky", future: "p\u0159ibli\u017En\u011B za {{count}} roky" }, many: { regular: "p\u0159ibli\u017En\u011B {{count}} rok\u016F", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} roky", future: "p\u0159ibli\u017En\u011B za {{count}} rok\u016F" } }, xYears: { one: { regular: "rok", past: "p\u0159ed rokem", future: "za rok" }, few: { regular: "{{count}} roky", past: "p\u0159ed {{count}} roky", future: "za {{count}} roky" }, many: { regular: "{{count}} rok\u016F", past: "p\u0159ed {{count}} roky", future: "za {{count}} rok\u016F" } }, overXYears: { one: { regular: "v\u00EDce ne\u017E rok", past: "p\u0159ed v\u00EDce ne\u017E rokem", future: "za v\u00EDce ne\u017E rok" }, few: { regular: "v\u00EDce ne\u017E {{count}} roky", past: "p\u0159ed v\u00EDce ne\u017E {{count}} roky", future: "za v\u00EDce ne\u017E {{count}} roky" }, many: { regular: "v\u00EDce ne\u017E {{count}} rok\u016F", past: "p\u0159ed v\u00EDce ne\u017E {{count}} roky", future: "za v\u00EDce ne\u017E {{count}} rok\u016F" } }, almostXYears: { one: { regular: "skoro rok", past: "skoro p\u0159ed rokem", future: "skoro za rok" }, few: { regular: "skoro {{count}} roky", past: "skoro p\u0159ed {{count}} roky", future: "skoro za {{count}} roky" }, many: { regular: "skoro {{count}} rok\u016F", past: "skoro p\u0159ed {{count}} roky", future: "skoro za {{count}} rok\u016F" } } };
+import 02035__ from "02035__.js";
+import 02036__ from "02036__.js";
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if ("other" === obj[arg0].type) {
-    let many = tmp.other;
-  } else if (1 === arg1) {
-    many = tmp.one;
-  } else {
-    if (arg1 > 1) {
-      if (arg1 < 5) {
-        many = tmp.few;
-      }
+if (!module_2035) {
+  let obj = { default: module_2035 };
+} else {
+  obj = module_2035;
+}
+if (!module_2036) {
+  obj = { default: module_2036 };
+  let obj2 = obj;
+} else {
+  obj2 = module_2036;
+}
+const date = {
+  ordinalNumber: obj2.default({
+    matchPattern: /^(\d+)(-?[врмт][аи]|-?т?(ен|на)|-?(ев|ева))?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
     }
-    many = tmp.many;
-  }
-  addSuffix = undefined;
-  if (null != addSuffix) {
-    addSuffix = addSuffix.addSuffix;
-  }
-  if (null != addSuffix) {
-    const comparison = addSuffix.comparison;
-  }
-  if (true === addSuffix) {
-    if (-1 === comparison) {
-      let str = many.past;
-    }
-    const _String = String;
-    return str.replace("{{count}}", String(arg1));
-  }
-  if (true === addSuffix) {
-    if (1 === comparison) {
-      str = many.future;
-    }
-  }
-  str = many.regular;
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
 };
+obj2 = { matchPatterns: { narrow: /^((пр)?н\.?\s?е\.?)/i, abbreviated: /^((пр)?н\.?\s?е\.?)/i, wide: /^(преди новата ера|новата ера|нова ера)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj3 = { any: null };
+const items = [/^п/i, /^н/i];
+obj3.any = items;
+obj2.parsePatterns = obj3;
+date.era = obj.default(obj2);
+const obj4 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234](-?[врт]?o?)? тримес.?/i, wide: /^[1234](-?[врт]?о?)? тримесечие/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
+  }
+};
+const obj5 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj5.any = items1;
+obj4.parsePatterns = obj5;
+date.quarter = obj.default(obj4);
+const obj6 = { matchPatterns: { abbreviated: /^(яну|фев|мар|апр|май|юни|юли|авг|сеп|окт|ное|дек)/i, wide: /^(януари|февруари|март|април|май|юни|юли|август|септември|октомври|ноември|декември)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items2 = [/^я/i, /^ф/i, /^мар/i, /^ап/i, /^май/i, /^юн/i, /^юл/i, /^ав/i, /^се/i, /^окт/i, /^но/i, /^де/i];
+obj7.any = items2;
+obj6.parsePatterns = obj7;
+date.month = obj.default(obj6);
+const obj8 = { matchPatterns: { narrow: /^[нпвсч]/i, short: /^(нд|пн|вт|ср|чт|пт|сб)/i, abbreviated: /^(нед|пон|вто|сря|чет|пет|съб)/i, wide: /^(неделя|понеделник|вторник|сряда|четвъртък|петък|събота)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj9 = { narrow: null, any: null };
+const items3 = [/^н/i, /^п/i, /^в/i, /^с/i, /^ч/i, /^п/i, /^с/i];
+obj9.narrow = items3;
+const items4 = [/^н[ед]/i, /^п[он]/i, /^вт/i, /^ср/i, /^ч[ет]/i, /^п[ет]/i, /^с[ъб]/i];
+obj9.any = items4;
+obj8.parsePatterns = obj9;
+date.day = obj.default(obj8);
+const obj10 = { matchPatterns: { any: /^(преди о|след о|в по|на о|през|веч|сут|следо)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^преди о/i, pm: /^след о/i, midnight: /^в пол/i, noon: /^на об/i, morning: /^сут/i, afternoon: /^следо/i, evening: /^веч/i, night: /^през н/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj10);
+
+export default date;
 export default exports.default;

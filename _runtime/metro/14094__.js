@@ -1,20 +1,101 @@
 // _runtime/metro/14094__.js
-if (typeof process === "object") {
-  const _process3 = process;
-  if (process.env) {
-    const _process = process;
-    if (process.env.NODE_DEBUG) {
-      const _process2 = process;
-      if (obj.test(process.env.NODE_DEBUG)) {
-        let fn = () => {
-          const items = ["SEMVER"];
-          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
-          return console.error.apply(items);
-        };
+import _mod14066 from "14066__.js";
+import _mod14067 from "14067__.js";
+import _mod14071 from "14071__.js";
+
+export default (num, arg1) => {
+  if (num instanceof _mod14067) {
+    return num;
+  } else {
+    let StringResult = num;
+    if (typeof num === "number") {
+      const _String = String;
+      StringResult = String(num);
+    }
+    if (typeof StringResult !== "string") {
+      return null;
+    } else {
+      let obj = arg1;
+      if (!arg1) {
+        obj = {};
       }
-      module.exports = fn;
-      obj = /\bsemver\b/i;
+      if (obj.rtl) {
+        const safeRe2 = _mod14071.safeRe;
+        const t2 = _mod14071.t;
+        if (obj.includePrerelease) {
+          let obj2 = safeRe2[t2.COERCERTLFULL];
+        } else {
+          obj2 = safeRe2[t2.COERCERTL];
+        }
+        let match = obj2.exec(StringResult);
+        let tmp6 = null;
+        let tmp8 = null;
+        if (match) {
+          while (true) {
+            let tmp10 = tmp6;
+            let tmp11 = tmp6;
+            if (tmp6) {
+              tmp11 = match.index + match[0].length === tmp10.index + tmp10[0].length;
+            }
+            if (!tmp11) {
+              tmp10 = match;
+            }
+            obj2.lastIndex = match.index + match[1].length + match[2].length;
+            let match1 = obj2.exec(StringResult);
+            tmp8 = tmp10;
+            if (!match1) {
+              break;
+            } else {
+              match = match1;
+              tmp6 = tmp10;
+              if (!tmp10) {
+                continue;
+              } else {
+                match = match1;
+                tmp6 = tmp10;
+                tmp8 = tmp10;
+                if (tmp10.index + tmp10[0].length === StringResult.length) {
+                  break;
+                }
+              }
+              continue;
+            }
+          }
+        }
+        obj2.lastIndex = -1;
+        let match2 = tmp8;
+      } else {
+        const safeRe = _mod14071.safeRe;
+        const t = _mod14071.t;
+        if (obj.includePrerelease) {
+          let tmp3 = safeRe[t.COERCEFULL];
+        } else {
+          tmp3 = safeRe[t.COERCE];
+        }
+        match2 = StringResult.match(tmp3);
+      }
+      if (null === match2) {
+        return null;
+      } else {
+        let str2 = "";
+        if (obj.includePrerelease) {
+          str2 = "";
+          if (match2[5]) {
+            const _HermesInternal = HermesInternal;
+            str2 = "-" + match2[5];
+          }
+        }
+        let str4 = "";
+        if (obj.includePrerelease) {
+          str4 = "";
+          if (match2[6]) {
+            const _HermesInternal2 = HermesInternal;
+            str4 = "+" + match2[6];
+          }
+        }
+        const _HermesInternal3 = HermesInternal;
+        return _mod14066("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
+      }
     }
   }
-}
-fn = () => {};
+};

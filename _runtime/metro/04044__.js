@@ -1,14 +1,14 @@
 // _runtime/metro/04044__.js
-import _typeof from "03693__.js";
-import requiredArgs from "../03694_requiredArgs.js";
+import startOfISOWeekYear from "../03856_startOfISOWeekYear.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!startOfISOWeekYear) {
+  let obj = { default: startOfISOWeekYear };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfISOWeekYear;
 }
-_typeof = tmp3;
+startOfISOWeekYear = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -17,16 +17,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameMonth(arg0, arg1) {
+export default function isSameISOWeekYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = _typeof.default(arg1);
-  const fullYear = defaultResult1.getFullYear();
-  let tmp3 = fullYear === defaultResult2.getFullYear();
-  if (tmp3) {
-    const month = defaultResult1.getMonth();
-    tmp3 = month === defaultResult2.getMonth();
-  }
-  return tmp3;
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfISOWeekYear.default(arg1).getTime();
 };
 export default exports.default;

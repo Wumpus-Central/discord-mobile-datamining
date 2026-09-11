@@ -1,17 +1,31 @@
 // _runtime/metro/06935__.js
-import _mod6920 from "06920__.js";
-import _mod6936 from "06936__.js";
 
-export default function _possibleConstructorReturn(arg0, fn) {
-  if (fn) {
-    _mod6920;
-    return fn;
-  }
-  if (undefined !== fn) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Derived constructors may only return object or undefined");
-    throw typeError;
+export default function _objectWithoutPropertiesLoose(obj, arr) {
+  if (null == obj) {
+    return {};
   } else {
-    return _mod6936(arg0);
+    obj = {};
+    for (const key10007 in arg0) {
+      hasOwnProperty = {}.hasOwnProperty;
+      let call = hasOwnProperty.call;
+      if (typeof call === "unknown") {
+        let hasOwnPropertyResult = hasOwnProperty(key10007);
+      } else {
+        hasOwnPropertyResult = call(arg0, key10007);
+      }
+      if (!hasOwnPropertyResult) {
+        continue;
+      } else {
+        if (-1 !== arg1.indexOf(key10007)) {
+          continue;
+        } else {
+          obj[key10007] = arg0[key10007];
+          continue;
+        }
+        continue;
+      }
+      continue;
+    }
+    return obj;
   }
 }

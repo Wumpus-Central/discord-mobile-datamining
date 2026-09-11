@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/premium/gifting",
   scales: [1],
-  hash: "8d179ad11e2a36f9d3ec9f31c06fe95d",
+  hash: "c91aaf2e607c53b6c817fc29b41e11bb",
   name: "PremiumGifting.compiled.messages",
   type: "jsona",
 });

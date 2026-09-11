@@ -1,60 +1,106 @@
 // _runtime/metro/06749__.js
-import RNGestureHandlerModuleDefault from "../06734_RNGestureHandlerModule.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import _modDef6761 from "06761__.js";
+import attachHandlers from "../06774_attachHandlers.js";
+import noop from "00019__.js";
 
-const require = arg1;
-importDefault = fn;
-let dependencyMap = arg6;
-let obj = {
-  createGestureHandler(Handler, handlerTag, config) {
-    _require = Handler;
-    closure_1 = handlerTag;
-    dependencyMap = config;
-    const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-      let obj = closure_2;
-      if (!closure_2) {
-        obj = {};
+({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+const jsx = jsxProd.jsx;
+
+export const GestureDetector = (gesture) => {
+  if (gesture.gesture) {
+    gesture = gesture.gesture;
+    (function propagateDetectorConfig(gesture, gesture) {
+      const items = ["userSelect", "enableContextMenu", "touchAction"];
+      for (const item10008 of items) {
+        let tmp2 = arg0[item10008];
+        if (undefined !== tmp2) {
+          let toGestureArrayResult = arg1.toGestureArray();
+          for (const item10018 of toGestureArrayResult) {
+            item10018.config[tmp] = tmp3;
+            continue;
+          }
+        }
+        continue;
       }
-      obj.createGestureHandler(closure_0, closure_1, obj);
-    });
-  },
-  setGestureHandlerConfig(handlerTag, result) {
-    _require = handlerTag;
-    closure_1 = result;
-    result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-      result = RNGestureHandlerModuleDefault.setGestureHandlerConfig(closure_0, closure_1);
-    });
-  },
-  updateGestureHandlerConfig: null,
-  dropGestureHandler: null,
-  configureRelations: null,
-  installUIRuntimeBindings: null,
+    })(gesture, gesture);
+    let items = [gesture];
+    let gesturesToAttach = current2(() => gesture.toGestureArray(), items);
+    const someResult = gesturesToAttach.some((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
+    let obj1 = gesture(webEventHandlers[2]);
+    webEventHandlers = obj1.useWebEventHandlers();
+    const current = detectorUpdater({
+      firstRender: true,
+      viewRef: null,
+      previousViewTag: -1,
+      forceRebuildReanimatedEvent: false,
+    }).current;
+    gesturesToAttach = {
+      attachedGestures: [],
+      animatedEventHandler: null,
+      animatedHandlers: null,
+      shouldUseReanimated: someResult,
+      isMounted: false,
+    };
+    current2 = noop.useRef(gesturesToAttach).current;
+    const obj4 = gesture(webEventHandlers[3]);
+    detectorUpdater = obj4.useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers);
+    const viewRefHandler = gesture(webEventHandlers[4]).useViewRefHandler(current, detectorUpdater);
+    let needsToReattachResult = current.firstRender || current.forceRebuildReanimatedEvent;
+    if (!needsToReattachResult) {
+      let tmp9Result = tmp9(tmp10[5]);
+      needsToReattachResult = tmp9Result.needsToReattach(current2, gesturesToAttach);
+    }
+    current.forceRebuildReanimatedEvent = false;
+    tmp9Result = tmp9(tmp10[6]);
+    const animatedGesture = tmp9Result.useAnimatedGesture(current2, needsToReattachResult);
+    const obj5 = gesture(webEventHandlers[4]);
+    const isomorphicLayoutEffect = gesture(webEventHandlers[7]).useIsomorphicLayoutEffect(() => {
+      current2.isMounted = true;
+      gesturesToAttach = attachHandlers;
+      gesturesToAttach = {
+        preparedGesture: current2,
+        gestureConfig: gesture,
+        gesturesToAttach,
+        webEventHandlersRef: webEventHandlers,
+        viewTag: _modDef6761(current.viewRef),
+      };
+      gesturesToAttach.attachHandlers(gesturesToAttach);
+      return () => {
+        current2.isMounted = false;
+        gesture(webEventHandlers[10]).dropHandlers(current2);
+      };
+    }, []);
+    const items1 = [gesture];
+    current(() => {
+      if (current.firstRender) {
+        tmp.firstRender = false;
+      } else {
+        detectorUpdater();
+      }
+    }, items1);
+    const tmp9Result1 = gesture(webEventHandlers[7]);
+    const mountReactions = gesture(webEventHandlers[11]).useMountReactions(detectorUpdater, current2);
+    const tmp9Result3 = gesture(webEventHandlers[12]);
+    if (someResult) {
+      gesturesToAttach = {
+        ref: viewRefHandler,
+        onGestureHandlerEvent: current2.animatedEventHandler,
+        children: gesture.children,
+      };
+      let tmp28Result = (
+        <tmp9Result3.AnimatedWrap ref={viewRefHandler} onGestureHandlerEvent={current2.animatedEventHandler}>
+          {gesture.children}
+        </tmp9Result3.AnimatedWrap>
+      );
+    } else {
+      obj1 = { ref: viewRefHandler, children: gesture.children };
+      tmp28Result = <tmp9Result3.Wrap ref={viewRefHandler}>{gesture.children}</tmp9Result3.Wrap>;
+    }
+    return tmp28Result;
+  } else {
+    const _Error = Error;
+    const error = new Error("GestureDetector must have a gesture prop provided.");
+    throw error;
+  }
 };
-fn = function n(arg0, arg1) {
-  const result = RNGestureHandlerModuleDefault.updateGestureHandlerConfig(arg0, arg1);
-  RNGestureHandlerModuleDefault.flushOperations();
-};
-obj = { updateGestureHandlerConfig: fn(6734).updateGestureHandlerConfig, flushOperations: fn(6734).flushOperations };
-fn.__closure = obj;
-fn.__workletHash = 12442858879797;
-fn.__initData = {
-  code: "function pnpm_NativeProxyTs1(handlerTag,newConfig){const{updateGestureHandlerConfig,flushOperations}=this.__closure;updateGestureHandlerConfig(handlerTag,newConfig);flushOperations();}",
-};
-obj.updateGestureHandlerConfig = fn;
-obj.dropGestureHandler = function dropGestureHandler(handlerTag) {
-  _require = handlerTag;
-  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-    RNGestureHandlerModuleDefault.dropGestureHandler(closure_0);
-  });
-};
-obj.configureRelations = function configureRelations(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
-  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-    RNGestureHandlerModuleDefault.configureRelations(closure_0, closure_1);
-  });
-};
-obj.installUIRuntimeBindings = function installUIRuntimeBindings() {
-  return RNGestureHandlerModuleDefault.installUIRuntimeBindings();
-};
-
-export const NativeProxy = obj;

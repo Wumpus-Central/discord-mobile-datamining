@@ -1,40 +1,43 @@
 // _runtime/metro/03805__.js
-import 03806__ from "03806__.js";
-import 03807__ from "03807__.js";
-import 03808__ from "03808__.js";
-import date from "03809__.js";
-import date from "03810__.js";
+import 02033__ from "02033__.js";
 
-if (!module_3806) {
-  let obj = { default: module_3806 };
-  let tmp3 = obj;
+if (!module_2033) {
+  let obj = { default: module_2033 };
 } else {
-  tmp3 = module_3806;
+  obj = module_2033;
 }
-if (!module_3807) {
-  obj = { default: module_3807 };
-  let tmp5 = obj;
-} else {
-  tmp5 = module_3807;
-}
-if (!module_3808) {
-  obj = { default: module_3808 };
-  let tmp7 = obj;
-} else {
-  tmp7 = module_3808;
-}
-if (!date) {
-  const obj1 = { default: date };
-  let tmp9 = obj1;
-} else {
-  tmp9 = date;
-}
-if (!date) {
-  const obj2 = { default: date };
-  let tmp11 = obj2;
-} else {
-  tmp11 = date;
-}
+const date = {
+  ordinalNumber(arg0, unit) {
+    Number(arg0);
+    unit = undefined;
+    if (null != unit) {
+      unit = unit.unit;
+    }
+    if ("week" === unit) {
+      let text = `${tmp}ª`;
+    } else {
+      text = `${tmp}º`;
+    }
+    return text;
+  },
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
+};
+obj = { values: { narrow: ["AC", "DC"], abbreviated: ["AC", "DC"], wide: ["antes de cristo", "depois de cristo"] }, defaultWidth: "wide" };
+date.era = obj.default(obj);
+date.quarter = obj.default({
+  values: { narrow: ["1", "2", "3", "4"], abbreviated: ["T1", "T2", "T3", "T4"], wide: ["1\u00BA trimestre", "2\u00BA trimestre", "3\u00BA trimestre", "4\u00BA trimestre"] },
+  defaultWidth: "wide",
+  argumentCallback(arg0) {
+    return arg0 - 1;
+  }
+});
+date.month = obj.default({ values: { narrow: ["j", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d"], abbreviated: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"], wide: ["janeiro", "fevereiro", "mar\u00E7o", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"] }, defaultWidth: "wide" });
+date.day = obj.default({ values: { narrow: ["D", "S", "T", "Q", "Q", "S", "S"], short: ["dom", "seg", "ter", "qua", "qui", "sex", "sab"], abbreviated: ["domingo", "segunda", "ter\u00E7a", "quarta", "quinta", "sexta", "s\u00E1bado"], wide: ["domingo", "segunda-feira", "ter\u00E7a-feira", "quarta-feira", "quinta-feira", "sexta-feira", "s\u00E1bado"] }, defaultWidth: "wide" });
+date.dayPeriod = obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "md", morning: "manh\u00E3", afternoon: "tarde", evening: "tarde", night: "noite" }, abbreviated: { am: "AM", pm: "PM", midnight: "meia-noite", noon: "meio-dia", morning: "manh\u00E3", afternoon: "tarde", evening: "tarde", night: "noite" }, wide: { am: "a.m.", pm: "p.m.", midnight: "meia-noite", noon: "meio-dia", morning: "manh\u00E3", afternoon: "tarde", evening: "tarde", night: "noite" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "md", morning: "da manh\u00E3", afternoon: "da tarde", evening: "da tarde", night: "da noite" }, abbreviated: { am: "AM", pm: "PM", midnight: "meia-noite", noon: "meio-dia", morning: "da manh\u00E3", afternoon: "da tarde", evening: "da tarde", night: "da noite" }, wide: { am: "a.m.", pm: "p.m.", midnight: "meia-noite", noon: "meio-dia", morning: "da manh\u00E3", afternoon: "da tarde", evening: "da tarde", night: "da noite" } }, defaultFormattingWidth: "wide" });
 
-export default { code: "ro", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default date;
 export default exports.default;

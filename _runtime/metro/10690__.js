@@ -1,247 +1,261 @@
 // _runtime/metro/10690__.js
-import repeatedTimeunitPattern from "../10502_repeatedTimeunitPattern.js";
-import findMostLikelyADYear from "../10503_findMostLikelyADYear.js";
+import repeatedTimeunitPattern from "../10521_repeatedTimeunitPattern.js";
+import findMostLikelyADYear from "../10522_findMostLikelyADYear.js";
 
 const combined =
   "(" +
   exports.NUMBER_PATTERN +
-  ")\\s{0,5}(" +
+  ")\\s{0,3}(" +
   repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) +
-  ")\\s{0,5}";
+  ")";
 const regExp = new RegExp(combined, "i");
-const combined1 =
-  "(" +
-  exports.NUMBER_PATTERN +
-  ")\\s{0,5}(" +
-  repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_NO_ABBR_DICTIONARY) +
-  ")\\s{0,5}";
 
+export const parseNumberPattern = function parseNumberPattern(str) {
+  str = str.toLowerCase();
+  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
+    let num5 = exports.INTEGER_WORD_DICTIONARY[str];
+  } else {
+    num5 = 1;
+    if ("un" !== str) {
+      num5 = 1;
+      if ("una" !== str) {
+        let num4 = 3;
+        if (!str.match(/alcuni/)) {
+          let num = 0.5;
+          if (!str.match(/metá/)) {
+            let num2 = 2;
+            if (!str.match(/paio/)) {
+              let num3 = 7;
+              if (!str.match(/molti/)) {
+                const _parseFloat = parseFloat;
+                num3 = parseFloat(str);
+              }
+              num2 = num3;
+            }
+            num = num2;
+          }
+          num4 = num;
+        }
+        num5 = num4;
+      }
+    }
+  }
+  return num5;
+};
+export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(str) {
+  str = str.toLowerCase();
+  if (undefined !== exports.ORDINAL_WORD_DICTIONARY[str]) {
+    return exports.ORDINAL_WORD_DICTIONARY[str];
+  } else {
+    const _parseInt = parseInt;
+    return parseInt(str.replace(/(?:imo|ndo|rzo|rto|nto|sto|tavo|nono|cimo|timo|esimo)$/i, ""));
+  }
+};
+export const parseYear = function parseYear(match) {
+  if (obj.test(match)) {
+    const _parseInt4 = parseInt;
+    return parseInt(match.replace(/BE/i, "")) - 543;
+  } else {
+    if (obj2.test(match)) {
+      const _parseInt3 = parseInt;
+      return -parseInt(match.replace(/BCE?/i, ""));
+    } else {
+      if (obj3.test(match)) {
+        const _parseInt2 = parseInt;
+        return parseInt(match.replace(/(AD|CE)/i, ""));
+      } else {
+        const _parseInt = parseInt;
+        const parsed = parseInt(match);
+        return findMostLikelyADYear.findMostLikelyADYear(parsed);
+      }
+      obj3 = /(AD|CE)/i;
+    }
+    obj2 = /BCE?/i;
+  }
+  obj = /BE/i;
+};
 export const parseDuration = function parseDuration(arg0) {
   let str = arg0;
   const obj = {};
   let match = regExp.exec(arg0);
   while (match) {
     let str2 = match[1];
-    let formatted = str2.toLowerCase();
-    if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-      let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
+    let str3 = str2.toLowerCase();
+    if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
+      let num5 = exports.INTEGER_WORD_DICTIONARY[str3];
     } else {
-      let _parseInt = parseInt;
-      parsed = parseInt(formatted);
+      num5 = 1;
+      if ("un" !== str3) {
+        num5 = 1;
+        if ("una" !== str3) {
+          let num4 = 3;
+          if (!str3.match(/alcuni/)) {
+            let num = 0.5;
+            if (!str3.match(/metá/)) {
+              let num2 = 2;
+              if (!str3.match(/paio/)) {
+                let num3 = 7;
+                if (!str3.match(/molti/)) {
+                  let _parseFloat = parseFloat;
+                  num3 = parseFloat(str3);
+                }
+                num2 = num3;
+              }
+              num = num2;
+            }
+            num4 = num;
+          }
+          num5 = num4;
+        }
+      }
     }
-    let str3 = match[2];
-    obj[exports.TIME_UNIT_DICTIONARY[str3.toLowerCase(str3)]] = parsed;
-    let substr = str.substring(match[0].length);
-    match = regExp.exec(substr);
-    str = substr;
+    let str4 = match[2];
+    obj[exports.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num5;
+    let str5 = str.substring(match[0].length);
+    let trimmed = str5.trim();
+    match = regExp.exec(trimmed);
+    str = trimmed;
   }
   return obj;
 };
-export const parseNumberPattern = function parseNumberPattern(match) {
-  const formatted = match.toLowerCase();
-  if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-    let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
-  } else {
-    const _parseInt = parseInt;
-    parsed = parseInt(formatted);
-  }
-  return parsed;
-};
-export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(match) {
-  const formatted = match.toLowerCase();
-  if (undefined !== exports.ORDINAL_NUMBER_DICTIONARY[formatted]) {
-    return exports.ORDINAL_NUMBER_DICTIONARY[formatted];
-  } else {
-    const _parseInt = parseInt;
-    return parseInt(formatted);
-  }
-};
-export const parseYear = function parseYear(match) {
-  if (obj.test(match)) {
-    const _parseInt2 = parseInt;
-    const parsed = parseInt(match);
-    let findMostLikelyADYearResult = parsed;
-    if (parsed < 100) {
-      findMostLikelyADYearResult = findMostLikelyADYear.findMostLikelyADYear(parsed);
-    }
-    return findMostLikelyADYearResult;
-  } else {
-    const formatted = match.toLowerCase();
-    if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-      return exports.INTEGER_WORD_DICTIONARY[formatted];
-    } else {
-      const _parseInt = parseInt;
-      return parseInt(match);
-    }
-  }
-  obj = /\d+/;
-};
 export const WEEKDAY_DICTIONARY = {
-  söndag: 0,
-  sön: 0,
-  so: 0,
-  måndag: 1,
-  mån: 1,
-  må: 1,
-  tisdag: 2,
-  tis: 2,
-  ti: 2,
-  onsdag: 3,
-  ons: 3,
-  on: 3,
-  torsdag: 4,
-  tors: 4,
-  to: 4,
-  fredag: 5,
-  fre: 5,
-  fr: 5,
-  lördag: 6,
-  lör: 6,
-  lö: 6,
+  domenica: 0,
+  dom: 0,
+  lunedì: 1,
+  lun: 1,
+  martedì: 2,
+  mar: 2,
+  mercoledì: 3,
+  merc: 3,
+  giovedì: 4,
+  giov: 4,
+  venerdì: 5,
+  ven: 5,
+  sabato: 6,
+  sab: 6,
 };
-export const MONTH_DICTIONARY = {
-  januari: 1,
-  jan: 1,
-  "jan.": 1,
-  februari: 2,
+export const FULL_MONTH_NAME_DICTIONARY = {};
+export const MONTH_DICTIONARY = Object.assign(Object.assign({}, exports.FULL_MONTH_NAME_DICTIONARY), {
+  gennaio: 1,
+  gen: 1,
+  "gen.": 1,
+  febbraio: 2,
   feb: 2,
   "feb.": 2,
-  mars: 3,
+  febraio: 2,
+  febb: 2,
+  "febb.": 2,
+  marzo: 3,
   mar: 3,
   "mar.": 3,
-  april: 4,
+  aprile: 4,
   apr: 4,
   "apr.": 4,
-  maj: 5,
-  juni: 6,
-  jun: 6,
-  "jun.": 6,
-  juli: 7,
-  jul: 7,
-  "jul.": 7,
-  augusti: 8,
-  aug: 8,
-  "aug.": 8,
-  september: 9,
-  sep: 9,
-  "sep.": 9,
-  sept: 9,
-  oktober: 10,
-  okt: 10,
-  "okt.": 10,
-  november: 11,
+  maggio: 5,
+  mag: 5,
+  giugno: 6,
+  giu: 6,
+  luglio: 7,
+  lug: 7,
+  lugl: 7,
+  "lug.": 7,
+  agosto: 8,
+  ago: 8,
+  settembre: 9,
+  set: 9,
+  "set.": 9,
+  sett: 9,
+  "sett.": 9,
+  ottobre: 10,
+  ott: 10,
+  "ott.": 10,
+  novembre: 11,
   nov: 11,
   "nov.": 11,
-  december: 12,
-  dec: 12,
-  "dec.": 12,
-};
-export const ORDINAL_NUMBER_DICTIONARY = {
-  första: 1,
-  andra: 2,
-  tredje: 3,
-  fjärde: 4,
-  femte: 5,
-  sjätte: 6,
-  sjunde: 7,
-  åttonde: 8,
-  nionde: 9,
-  tionde: 10,
-  elfte: 11,
-  tolfte: 12,
-  trettonde: 13,
-  fjortonde: 14,
-  femtonde: 15,
-  sextonde: 16,
-  sjuttonde: 17,
-  artonde: 18,
-  nittonde: 19,
-  tjugonde: 20,
-  tjugoförsta: 21,
-  tjugoandra: 22,
-  tjugotredje: 23,
-  tjugofjärde: 24,
-  tjugofemte: 25,
-  tjugosjätte: 26,
-  tjugosjunde: 27,
-  tjugoåttonde: 28,
-  tjugonionde: 29,
-  trettionde: 30,
-  trettioförsta: 31,
-};
+  dicembre: 12,
+  dic: 12,
+  dice: 12,
+  "dic.": 12,
+});
 export const INTEGER_WORD_DICTIONARY = {
-  en: 1,
-  ett: 1,
-  två: 2,
+  uno: 1,
+  due: 2,
   tre: 3,
-  fyra: 4,
-  fem: 5,
-  sex: 6,
-  sju: 7,
-  åtta: 8,
-  nio: 9,
-  tio: 10,
-  elva: 11,
-  tolv: 12,
-  tretton: 13,
-  fjorton: 14,
-  femton: 15,
-  sexton: 16,
-  sjutton: 17,
-  arton: 18,
-  nitton: 19,
-  tjugo: 20,
-  trettiо: 30,
-  fyrtio: 40,
-  femtio: 50,
-  sextio: 60,
-  sjuttio: 70,
-  åttio: 80,
-  nittio: 90,
-  hundra: 100,
-  tusen: 1000,
+  quattro: 4,
+  cinque: 5,
+  sei: 6,
+  sette: 7,
+  otto: 8,
+  nove: 9,
+  dieci: 10,
+  undici: 11,
+  dodici: 12,
+};
+export const ORDINAL_WORD_DICTIONARY = {
+  primo: 1,
+  secondo: 2,
+  terzo: 3,
+  quarto: 4,
+  quinto: 5,
+  sesto: 6,
+  settimo: 7,
+  ottavo: 8,
+  nono: 9,
+  decimo: 10,
+  undicesimo: 11,
+  dodicesimo: 12,
+  tredicesimo: 13,
+  quattordicesimo: 14,
+  quindicesimo: 15,
+  sedicesimo: 16,
+  diciassettesimo: 17,
+  diciottesimo: 18,
+  diciannovesimo: 19,
+  ventesimo: 20,
+  ventunesimo: 21,
+  ventiduesimo: 22,
+  ventitreesimo: 23,
+  ventiquattresimo: 24,
+  venticinquesimo: 25,
+  ventiseiesimo: 26,
+  ventisettesimo: 27,
+  ventottesimo: 28,
+  ventinovesimo: 29,
+  trentesimo: 30,
+  trentunesimo: 31,
 };
 export const TIME_UNIT_DICTIONARY = {
-  sek: "second",
-  sekund: "second",
-  sekunder: "second",
+  sec: "second",
+  secondo: "second",
+  secondi: "second",
   min: "minute",
-  minut: "minute",
-  minuter: "minute",
-  tim: "hour",
-  timme: "hour",
-  timmar: "hour",
-  dag: "day",
-  dagar: "day",
-  vecka: "week",
-  veckor: "week",
-  mån: "month",
-  månad: "month",
-  månader: "month",
-  år: "year",
-  kvartаl: "quarter",
-  kvartal: "quarter",
-};
-export const TIME_UNIT_NO_ABBR_DICTIONARY = {
-  sekund: "second",
-  sekunder: "second",
-  minut: "minute",
-  minuter: "minute",
-  timme: "hour",
-  timmar: "hour",
-  dag: "day",
-  dagar: "day",
-  vecka: "week",
-  veckor: "week",
-  månad: "month",
-  månader: "month",
-  år: "year",
-  kvartal: "quarter",
+  mins: "minute",
+  minuti: "minute",
+  h: "hour",
+  hr: "hour",
+  o: "hour",
+  ora: "hour",
+  ore: "hour",
+  giorno: "day",
+  giorni: "day",
+  settimana: "week",
+  settimane: "week",
+  mese: "month",
+  trimestre: "quarter",
+  trimestri: "quarter",
+  anni: "year",
+  anno: "year",
 };
 export const NUMBER_PATTERN =
-  "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|\\d+)";
+  "(?:" +
+  repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) +
+  "|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}un?)?|un?\\b(?:\\s{0,2}qualcuno)?|qualcuno|molti|a?\\s{0,2}alcuni\\s{0,2}(?:of)?)";
 export const ORDINAL_NUMBER_PATTERN =
-  "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.ORDINAL_NUMBER_DICTIONARY) + "|\\d{1,2}(?:e|:e))";
-export const TIME_UNIT_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")";
-export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);
-export const TIME_UNITS_NO_ABBR_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined1);
+  "(?:" +
+  repeatedTimeunitPattern.matchAnyPattern(exports.ORDINAL_WORD_DICTIONARY) +
+  "|[0-9]{1,2}(?:mo|ndo|rzo|simo|esimo)?)";
+export const YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9])";
+export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern(
+  "(?:(?:about|around)\\s{0,3})?",
+  combined,
+);

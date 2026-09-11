@@ -1,14 +1,14 @@
 // _runtime/metro/04046__.js
-import startOfSecond from "../04047_startOfSecond.js";
-import requiredArgs from "../03694_requiredArgs.js";
+import _typeof from "03695__.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
-if (!startOfSecond) {
-  let obj = { default: startOfSecond };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfSecond;
+  tmp3 = _typeof;
 }
-startOfSecond = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -17,10 +17,16 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameSecond(arg0, arg1) {
+export default function isSameMonth(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfSecond.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfSecond.default(arg1).getTime();
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
+  const fullYear = defaultResult1.getFullYear();
+  let tmp3 = fullYear === defaultResult2.getFullYear();
+  if (tmp3) {
+    const month = defaultResult1.getMonth();
+    tmp3 = month === defaultResult2.getMonth();
+  }
+  return tmp3;
 };
 export default exports.default;

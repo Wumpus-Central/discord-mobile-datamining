@@ -1,117 +1,108 @@
 // _runtime/metro/10529__.js
-import ReferenceWithTimezone from "../10505_ReferenceWithTimezone.js";
-import Meridiem from "../10507_Meridiem.js";
+import _mod10520 from "10520__.js";
+import repeatedTimeunitPattern from "../10521_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10528_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
-  const day = dateWithAdjustedTimezone.getDay();
-  if ("this" === next) {
-    const diff = sum - dateWithAdjustedTimezone.getDay();
-    sum = diff;
-    if (diff < 0) {
-      sum = diff + 7;
-    }
-    return sum;
-  } else if ("last" === next) {
-    const diff1 = sum - dateWithAdjustedTimezone.getDay();
-    let diff2 = diff1;
-    if (diff1 >= 0) {
-      diff2 = diff1 - 7;
-    }
-    return diff2;
-  } else if ("next" === next) {
-    if (day == Meridiem.Weekday.SUNDAY) {
-      let num12 = 7;
-      if (sum != Meridiem.Weekday.SUNDAY) {
-        num12 = sum;
-      }
-      let sum3 = num12;
-    } else if (day == Meridiem.Weekday.SATURDAY) {
-      let num9 = 7;
-      if (sum != Meridiem.Weekday.SATURDAY) {
-        let num10 = 8;
-        if (sum != Meridiem.Weekday.SUNDAY) {
-          num10 = 1 + sum;
-        }
-        num9 = num10;
-      }
-      sum3 = num9;
+const ENMonthNameLittleEndianParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      if (sum < day) {
-        if (sum != Meridiem.Weekday.SUNDAY) {
-          const diff3 = sum - dateWithAdjustedTimezone.getDay();
-          let sum1 = diff3;
-          if (diff3 < 0) {
-            sum1 = diff3 + 7;
-          }
-          sum3 = sum1;
-        }
-      }
-      const diff4 = sum - dateWithAdjustedTimezone.getDay();
-      let sum2 = diff4;
-      if (diff4 < 0) {
-        sum2 = diff4 + 7;
-      }
-      sum3 = sum2 + 7;
+      callResult = call(constructResult);
     }
-    return sum3;
-  } else {
-    const diff5 = sum - dateWithAdjustedTimezone.getDay();
-    let diff6 = diff5;
-    if (diff5 >= 0) {
-      diff6 = diff5 - 7;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+const regExp = new RegExp(
+  "(?:on\\s{0,3})?(" +
+    _mod10520.ORDINAL_NUMBER_PATTERN +
+    ")(?:\\s{0,3}(?:to|\\-|\\\u2013|until|through|till)?\\s{0,3}(" +
+    _mod10520.ORDINAL_NUMBER_PATTERN +
+    "))?(?:-|/|\\s{0,3}(?:of)?\\s{0,3})(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10520.MONTH_DICTIONARY) +
+    ")(?:(?:-|/|,?\\s{0,3})(" +
+    _mod10520.YEAR_PATTERN +
+    "(?!\\w)))?(?=\\W|$)",
+  "i",
+);
+class ENMonthNameLittleEndianParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ENMonthNameLittleEndianParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENMonthNameLittleEndianParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    const diff7 = sum - dateWithAdjustedTimezone.getDay();
-    let sum4 = diff7;
-    if (diff7 < 0) {
-      sum4 = diff7 + 7;
-    }
-    if (sum4 < -diff6) {
-      diff6 = sum4;
-    }
-    return diff6;
+    return tmp3(self, constructResult);
   }
 }
+_inherits(ENMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = ENMonthNameLittleEndianParser(10520).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const result = ENMonthNameLittleEndianParser(10520).parseOrdinalNumberPattern(index[1]);
+      if (result > 31) {
+        index.index = index.index + index[1].length;
+        return null;
+      } else {
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", result);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", ENMonthNameLittleEndianParser(10520).parseYear(index[4]));
+        } else {
+          const start = parsingResult.start;
+          start.imply(
+            "year",
+            ENMonthNameLittleEndianParser(10522).findYearClosestToRef(createParsingResult.refDate, result, tmp4),
+          );
+        }
+        if (index[2]) {
+          const start3 = parsingResult.start;
+          const result1 = ENMonthNameLittleEndianParser(10520).parseOrdinalNumberPattern(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", result1);
+        }
+        return parsingResult;
+      }
+    },
+  },
+];
 
-export const createParsingComponentsAtWeekday = function createParsingComponentsAtWeekday(reference, sum, next) {
-  const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference);
-  const addDurationAsImpliedResult = parsingComponents.addDurationAsImplied({
-    day: getDaysToWeekday(reference.getDateWithAdjustedTimezone(), sum, next),
-  });
-  addDurationAsImpliedResult.assign("weekday", sum);
-  return addDurationAsImpliedResult;
-};
-export { getDaysToWeekday };
-export const getDaysToWeekdayClosest = function getDaysToWeekdayClosest(getDay, arg1) {
-  const diff = arg1 - getDay.getDay();
-  let diff1 = diff;
-  if (diff >= 0) {
-    diff1 = diff - 7;
-  }
-  const diff2 = arg1 - getDay.getDay();
-  let sum = diff2;
-  if (diff2 < 0) {
-    sum = diff2 + 7;
-  }
-  if (sum < -diff1) {
-    diff1 = sum;
-  }
-  return diff1;
-};
-export const getDaysForwardToWeekday = function getDaysForwardToWeekday(getDay, arg1) {
-  const diff = arg1 - getDay.getDay();
-  let sum = diff;
-  if (diff < 0) {
-    sum = diff + 7;
-  }
-  return sum;
-};
-export const getBackwardDaysToWeekday = function getBackwardDaysToWeekday(getDay, arg1) {
-  const diff = arg1 - getDay.getDay();
-  let diff1 = diff;
-  if (diff >= 0) {
-    diff1 = diff - 7;
-  }
-  return diff1;
-};
+export default _createClass(ENMonthNameLittleEndianParser, items);

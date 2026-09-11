@@ -1,17 +1,22 @@
 // _runtime/metro/04876__.js
-import callBoundIntrinsic from "../01316_callBoundIntrinsic.js";
-import RequireObjectCoercible from "../04863_RequireObjectCoercible.js";
-import ToString from "../04877_ToString.js";
+import _mod4877 from "04877__.js";
 
-let closure_2 = callBoundIntrinsic("String.prototype.replace");
-const isMatch = /^\s$/.test("\u180E");
-let closure_3 = isMatch
-  ? /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/
-  : /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/;
-let closure_4 = isMatch
-  ? /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/
-  : /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/;
-
-export default function trim() {
-  return closure_2(closure_2(ToString(RequireObjectCoercible(this)), closure_3, ""), closure_4, "");
+export default function getPolyfill() {
+  if (String.prototype.trim) {
+    const trim = "\u200B".trim;
+    if ("\u200B" === "\u200B".trim()) {
+      const trim2 = "\u180E".trim;
+      if ("\u180E" === "\u180E".trim()) {
+        const trim3 = "_\u180E".trim;
+        if ("_\u180E" === "_\u180E".trim()) {
+          const trim4 = "\u180E_".trim;
+          if ("\u180E_" === "\u180E_".trim()) {
+            const _String = String;
+          }
+          return trim5;
+        }
+      }
+    }
+  }
+  trim5 = _mod4877;
 }

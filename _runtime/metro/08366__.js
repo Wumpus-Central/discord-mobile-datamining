@@ -1,12 +1,4 @@
 // _runtime/metro/08366__.js
-const re0 = /[|\\{}()[\]^$+*?.-]/g;
+import _mod8367 from "08367__.js";
 
-export default (str) => {
-  if (typeof str !== "string") {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Expected a string");
-    throw typeError;
-  } else {
-    return str.replace(re0, "\\$&");
-  }
-};
+export default _mod8367.default;

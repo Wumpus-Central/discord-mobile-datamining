@@ -1,18 +1,15 @@
 // _runtime/metro/03843__.js
-import 03844__ from "03844__.js";
-import _typeof from "03693__.js";
-import 03697__ from "03697__.js";
-import requiredArgs from "../03694_requiredArgs.js";
-import 03845__ from "03845__.js";
-import 03846__ from "03846__.js";
+import 03699__ from "03699__.js";
+import _typeof from "03695__.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
-if (!module_3844) {
-  let obj = { default: module_3844 };
+if (!module_3699) {
+  let obj = { default: module_3699 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3844;
+  tmp3 = module_3699;
 }
-module_3844 = tmp3;
+module_3699 = tmp3;
 if (!_typeof) {
   obj = { default: _typeof };
   let tmp5 = obj;
@@ -20,91 +17,26 @@ if (!_typeof) {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
-if (!module_3697) {
-  obj = { default: module_3697 };
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
-  tmp7 = module_3697;
+  tmp7 = requiredArgs;
 }
-module_3697 = tmp7;
-if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-if (!module_3845) {
-  let obj2 = { default: module_3845 };
-  let tmp11 = obj2;
-} else {
-  tmp11 = module_3845;
-}
-module_3845 = tmp11;
-if (!module_3846) {
-  const obj3 = { default: module_3846 };
-  let tmp13 = obj3;
-} else {
-  tmp13 = module_3846;
-}
-module_3846 = tmp13;
+requiredArgs = tmp7;
 
-export default function addBusinessDays(arg0, arg1) {
-  let diff;
+export default function addDays(arg0, arg1) {
   requiredArgs.default(2, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  let obj2 = module_3844;
-  let defaultResult2 = module_3844.default(defaultResult1);
-  const defaultResult3 = module_3697.default(arg1);
-  if (isNaN(defaultResult3)) {
+  const defaultResult2 = module_3699.default(arg1);
+  if (isNaN(defaultResult2)) {
     const _Date = Date;
     const date = new Date(NaN);
     return date;
+  } else if (defaultResult2) {
+    defaultResult1.setDate(defaultResult1.getDate() + defaultResult2);
+    return defaultResult1;
   } else {
-    let num3 = 1;
-    const hours = defaultResult1.getHours();
-    if (defaultResult3 < 0) {
-      num3 = -1;
-    }
-    defaultResult1.setDate(defaultResult1.getDate() + 7 * module_3697.default(defaultResult3 / 5));
-    const _Math = Math;
-    let absolute = Math.abs(defaultResult3 % 5);
-    if (absolute > 0) {
-      do {
-        let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
-        diff = absolute;
-        if (!module_3844.default(defaultResult1)) {
-          diff = absolute - 1;
-        }
-        absolute = diff;
-        obj2 = module_3844;
-      } while (diff > 0);
-    }
-    if (defaultResult2) {
-      defaultResult2 = obj2.default(defaultResult1);
-    }
-    if (defaultResult2) {
-      defaultResult2 = 0 !== defaultResult3;
-    }
-    if (defaultResult2) {
-      if (module_3846.default(defaultResult1)) {
-        let num6 = -1;
-        if (num3 < 0) {
-          num6 = 2;
-        }
-        defaultResult1.setDate(defaultResult1.getDate() + num6);
-        const date1 = defaultResult1.getDate();
-      }
-      if (module_3845.default(defaultResult1)) {
-        let num7 = -2;
-        if (num3 < 0) {
-          num7 = 1;
-        }
-        defaultResult1.setDate(defaultResult1.getDate() + num7);
-        const date2 = defaultResult1.getDate();
-      }
-    }
-    defaultResult1.setHours(hours);
     return defaultResult1;
   }
 };

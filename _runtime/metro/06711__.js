@@ -1,3 +1,7 @@
 // _runtime/metro/06711__.js
+import _mod19 from "00019__.js";
 
-export const State = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };
+const context = _mod19.createContext(null);
+
+export const BottomSheetModalContext = context;
+export const BottomSheetModalProvider = context.Provider;

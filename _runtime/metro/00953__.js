@@ -3190,7 +3190,7 @@ function initObservers(doc) {
       ({ mousemoveCb: drag, sampling, doc, mirror: fn3 } = doc);
       closure_2 = undefined;
       closure_3 = undefined;
-      let f71717;
+      let f71755;
       items = undefined;
       if (false === sampling.mousemove) {
         return () => {
@@ -3241,7 +3241,7 @@ function initObservers(doc) {
           closure_130_2 = {};
           closure_130_3 = null;
           closure_130_4 = 0;
-          f71717 = function() {
+          f71755 = function() {
             items = [...arguments];
             let self;
             const timestamp = Date.now();
@@ -4543,7 +4543,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F108436 */ function() { ... };
+                            return /* F108450 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -4609,7 +4609,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F108436 */ function() { ... };
+                            return /* F108450 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -5468,7 +5468,7 @@ function addBreadcrumbEvent(triggerUserActivity, category) {
       }
       data.timestamp = 1000 * num;
       data = { tag: "breadcrumb", payload: null };
-      const normalizer = f108478(map[8]);
+      const normalizer = f108492(map[8]);
       data.payload = normalizer.normalize(_null, 10, 1000);
       data.data = data;
       data.throttledAddEvent(data);
@@ -6208,7 +6208,7 @@ function mergeWarning(_meta, arg1) {
     _meta._meta = _meta;
     return _meta;
   } else {
-    _meta = { headers: null, size: "Array", _meta: "Array" };
+    _meta = { headers: null, size: "Array", _meta: "r" };
     _meta.headers = _meta;
     _meta = { warnings: null };
     const items1 = [arg1];
@@ -6654,7 +6654,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                         tmp23._meta = obj8;
                         let obj9 = tmp23;
                       } else {
-                        obj9 = { headers: obj8, size: "Array", _meta: "Array" };
+                        obj9 = { headers: obj8, size: "Array", _meta: "r" };
                         const obj10 = { warnings: null };
                         const items1 = [tmp21];
                         obj10.warnings = items1;
@@ -6762,7 +6762,7 @@ let closure_160 = async function _getResponseInfo2(arg0) {
           closure_132_10 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -7432,7 +7432,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                             tmp22._meta = obj5;
                             let obj6 = tmp22;
                           } else {
-                            obj6 = { headers: obj5, size: "Array", _meta: "Array" };
+                            obj6 = { headers: obj5, size: "Array", _meta: "r" };
                             const obj7 = { warnings: null };
                             let items2 = [tmp17];
                             obj7.warnings = items2;
@@ -7450,7 +7450,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                           tmp18._meta = obj8;
                           let obj9 = tmp18;
                         } else {
-                          obj9 = { headers: obj8, size: "Array", _meta: "Array" };
+                          obj9 = { headers: obj8, size: "Array", _meta: "r" };
                           const obj10 = { warnings: null };
                           let items4 = [tmp14];
                           obj10.warnings = items4;
@@ -7795,135 +7795,62 @@ function getHandleRecordingEmit(arg0) {
     }
   };
 }
-let closure_170 = async function _prepareReplayEvent(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          ({ client: closure_129_0, scope: closure_129_1, replayId: closure_129_2, event: closure_129_3 } = closure_0);
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          let sdkMetadata;
-          closure_129_7 = undefined;
-          let name;
-          let version;
-          let settings;
-          c3 = 1;
-          c4 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          obj1 = { value, done: true };
-          return obj1;
-        } else {
-          obj2 = { event_id: closure_129_2, integrations: null };
-          let keys;
-          if (typeof closure_129_0._integrations === "object") {
-            if (null !== closure_129_0._integrations) {
-              const _Array = Array;
-              if (!Array.isArray(closure_129_0._integrations)) {
-                const _Object = Object;
-                keys = Object.keys(closure_129_0._integrations);
-              }
-            }
-          }
-          obj2.integrations = keys;
-          closure_129_4 = obj2;
-          closure_129_0.emit("preprocessEvent", closure_129_3, closure_129_4);
-          obj4 = closure_130_0(closure_130_1[8]);
-          const options = closure_129_0.getOptions();
-          obj5 = closure_130_0(closure_130_1[8]);
-          c3 = 2;
-          c4 = 1;
-          obj3 = { value: obj4.prepareEvent(options, closure_129_3, closure_129_4, closure_129_1, closure_129_0, obj5.getIsolationScope()), done: false };
-          return obj3;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        obj4 = { value, done: true };
-        return obj4;
-      } else {
-        closure_129_5 = value;
-        if (closure_129_5) {
-          closure_129_0.emit("postprocessEvent", closure_129_5, closure_129_4);
-          let str2 = closure_129_5.platform;
-          if (!str2) {
-            str2 = "javascript";
-          }
-          closure_129_5.platform = str2;
-          sdkMetadata = closure_129_0.getSdkMetadata();
-          let sdk;
-          if (sdkMetadata != null) {
-            sdk = sdkMetadata.sdk;
-          }
-          if (!sdk) {
-            sdk = {};
-          }
-          closure_129_7 = sdk;
-          name = closure_129_7.name;
-          version = closure_129_7.version;
-          settings = closure_129_7.settings;
-          obj5 = {};
-          const merged = Object.assign(closure_129_5.sdk);
-          let str3 = name;
-          if (!name) {
-            str3 = "sentry.javascript.unknown";
-          }
-          obj5.name = str3;
-          let str4 = version;
-          if (!version) {
-            str4 = "0.0.0";
-          }
-          obj5.version = str4;
-          obj5.settings = settings;
-          closure_129_5.sdk = obj5;
-          c4 = 3;
-          const obj6 = { value: closure_129_5, done: true };
-          return obj6;
-        } else {
-          c4 = 3;
-          return { value: null, done: true };
-        }
+let closure_170 = async function _prepareReplayEvent() {
+  closure_1 = tmp2;
+  ({ client: closure_129_0, scope: closure_129_1, replayId: closure_129_2, event: closure_129_3 } = closure_0);
+  await "PX_16";
+  obj2 = { event_id: closure_129_2, integrations: null };
+  if (typeof closure_129_0._integrations === "object") {
+    if (null !== closure_129_0._integrations) {
+      const _Array = Array;
+      if (!Array.isArray(closure_129_0._integrations)) {
+        const _Object = Object;
+        const keys = Object.keys(closure_129_0._integrations);
       }
-    } catch (tmp48) {
-      c4 = tmp;
-      throw tmp48;
     }
   }
+  obj2.integrations = keys;
+  closure_129_4 = obj2;
+  closure_129_0.emit("preprocessEvent", closure_129_3, closure_129_4);
+  const options = closure_129_0.getOptions();
+  obj5 = closure_130_0(closure_130_1[8]);
+  await closure_130_0(closure_130_1[8]).prepareEvent(options, closure_129_3, closure_129_4, closure_129_1, closure_129_0, obj5.getIsolationScope());
+  closure_129_5 = value;
+  if (closure_129_5) {
+    closure_129_0.emit("postprocessEvent", closure_129_5, closure_129_4);
+    let str2 = closure_129_5.platform;
+    if (!str2) {
+      str2 = "javascript";
+    }
+    closure_129_5.platform = str2;
+    const sdkMetadata = closure_129_0.getSdkMetadata();
+    if (sdkMetadata != null) {
+      let sdk = sdkMetadata.sdk;
+    }
+    if (!sdk) {
+      sdk = {};
+    }
+    closure_129_7 = sdk;
+    const name = closure_129_7.name;
+    const version = closure_129_7.version;
+    const settings = closure_129_7.settings;
+    obj5 = {};
+    const merged = Object.assign(closure_129_5.sdk);
+    let str3 = name;
+    if (!name) {
+      str3 = "sentry.javascript.unknown";
+    }
+    obj5.name = str3;
+    let str4 = version;
+    if (!version) {
+      str4 = "0.0.0";
+    }
+    obj5.version = str4;
+    obj5.settings = settings;
+    closure_129_5.sdk = obj5;
+    return closure_129_5;
+  }
+  return null;
 };
 let closure_171 = async function _sendReplayRequest(arg0) {
   if (c6 === 2) {
@@ -7976,7 +7903,7 @@ let closure_171 = async function _sendReplayRequest(arg0) {
           closure_129_20 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp10) {
         if (arg0 === 1) {
@@ -8204,7 +8131,7 @@ let closure_175 = async function _sendReplay(arg0) {
           closure_130_4 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {

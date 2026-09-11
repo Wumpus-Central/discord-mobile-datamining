@@ -1,12 +1,12 @@
 // _runtime/metro/10553__.js
-import AbstractParserWithWordBoundaryChecking from "../10509_AbstractParserWithWordBoundaryChecking.js";
+import Filter from "../10540_Filter.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const DECasualTimeParser = require;
+const ENMergeRelativeFollowByDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class DECasualTimeParser {
+class ENMergeRelativeFollowByDateRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, DECasualTimeParser);
+    tmp = c2(this, ENMergeRelativeFollowByDateRefiner);
     tmp2 = closure_4;
-    obj = closure_4(DECasualTimeParser);
+    obj = closure_4(ENMergeRelativeFollowByDateRefiner);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,75 +45,67 @@ class DECasualTimeParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(DECasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMergeRelativeFollowByDateRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern(arg0) {
-    return /(diesen)?\s*(morgen|vormittag|mittags?|nachmittag|abend|nacht|mitternacht)(?=\W|$)/i;
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*$/i;
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      DECasualTimeParser(10508).implySimilarTime(parsingComponents, createParsingComponents.refDate);
-      return DECasualTimeParser.extractTimeComponents(parsingComponents, formatted);
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, text, start) {
+      let match = str.match(this.patternBetween());
+      if (match) {
+        const tmp4 = null != text.text.match(/\s+(before|from)$/i);
+        let tmp5 = !tmp4;
+        if (!tmp4) {
+          tmp5 = null == text.text.match(/\s+(after|since)$/i);
+        }
+        let tmp6 = !tmp5;
+        if (!tmp5) {
+          start = start.start;
+          value = start.get("day");
+          if (value) {
+            const start2 = start.start;
+            value = start2.get("month");
+          }
+          if (value) {
+            const start3 = start.start;
+            value = start3.get("year");
+          }
+          tmp6 = value;
+        }
+        match = tmp6;
+      }
+      return match;
+    },
+  },
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, text, start) {
+      const parseDurationResult = ENMergeRelativeFollowByDateRefiner(10520).parseDuration(text.text);
+      let reverseDurationResult = parseDurationResult;
+      if (null != str.match(/\s+(before|from)$/i)) {
+        reverseDurationResult = ENMergeRelativeFollowByDateRefiner(10523).reverseDuration(parseDurationResult);
+      }
+      const ParsingComponents = ENMergeRelativeFollowByDateRefiner(10524).ParsingComponents;
+      const ReferenceWithTimezone = ENMergeRelativeFollowByDateRefiner(10524).ReferenceWithTimezone;
+      start = start.start;
+      const relativeFromReference = ParsingComponents.createRelativeFromReference(
+        ReferenceWithTimezone.fromDate(start.date()),
+        reverseDurationResult,
+      );
+      return new ENMergeRelativeFollowByDateRefiner(10524).ParsingResult(
+        start.reference,
+        text.index,
+        "" + text.text + arg0 + start.text,
+        relativeFromReference,
+      );
     },
   },
 ];
-const entry1 = {
-  key: "extractTimeComponents",
-  value: function extractTimeComponents(nowResult, formatted) {
-    if ("morgen" === formatted) {
-      nowResult.imply("hour", 6);
-      nowResult.imply("minute", 0);
-      nowResult.imply("second", 0);
-      nowResult.imply("meridiem", DECasualTimeParser(10507).Meridiem.AM);
-    } else if ("vormittag" === formatted) {
-      nowResult.imply("hour", 9);
-      nowResult.imply("minute", 0);
-      nowResult.imply("second", 0);
-      nowResult.imply("meridiem", DECasualTimeParser(10507).Meridiem.AM);
-    } else {
-      if ("mittag" !== formatted) {
-        if ("mittags" !== formatted) {
-          if ("nachmittag" === formatted) {
-            nowResult.imply("hour", 15);
-            nowResult.imply("minute", 0);
-            nowResult.imply("second", 0);
-            nowResult.imply("meridiem", DECasualTimeParser(10507).Meridiem.PM);
-          } else if ("abend" === formatted) {
-            nowResult.imply("hour", 18);
-            nowResult.imply("minute", 0);
-            nowResult.imply("second", 0);
-            nowResult.imply("meridiem", DECasualTimeParser(10507).Meridiem.PM);
-          } else if ("nacht" === formatted) {
-            nowResult.imply("hour", 22);
-            nowResult.imply("minute", 0);
-            nowResult.imply("second", 0);
-            nowResult.imply("meridiem", DECasualTimeParser(10507).Meridiem.PM);
-          } else if ("mitternacht" === formatted) {
-            if (nowResult.get("hour") > 1) {
-              nowResult.addDurationAsImplied({ day: 1 });
-            }
-            nowResult.imply("hour", 0);
-            nowResult.imply("minute", 0);
-            nowResult.imply("second", 0);
-            nowResult.imply("meridiem", DECasualTimeParser(10507).Meridiem.AM);
-          }
-        }
-      }
-      nowResult.imply("hour", 12);
-      nowResult.imply("minute", 0);
-      nowResult.imply("second", 0);
-      nowResult.imply("meridiem", DECasualTimeParser(10507).Meridiem.AM);
-    }
-    return nowResult;
-  },
-};
-const items1 = [entry1];
 
-export default _createClass(DECasualTimeParser, items, items1);
+export default _createClass(ENMergeRelativeFollowByDateRefiner, items);

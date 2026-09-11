@@ -1,7 +1,4 @@
 // _runtime/metro/14105__.js
-import _mod14091 from "14091__.js";
+import _mod14104 from "14104__.js";
 
-export default (arg0, arg1, arg2) => {
-  const obj = new _mod14091(arg0, arg2);
-  return obj.compare(new _mod14091(arg1, arg2));
-};
+export default (arg0, arg1, arg2) => _mod14104(arg0, arg1, ">", arg2);

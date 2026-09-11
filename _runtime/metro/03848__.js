@@ -1,34 +1,24 @@
 // _runtime/metro/03848__.js
-import 03697__ from "03697__.js";
-import _typeof from "03693__.js";
-import requiredArgs from "../03694_requiredArgs.js";
+import _typeof from "03695__.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
-if (!module_3697) {
-  let obj = { default: module_3697 };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3697;
+  tmp3 = _typeof;
 }
-module_3697 = tmp3;
-if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp5 = obj;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
-  let tmp7 = obj;
+  let tmp5 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function addMilliseconds(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  return new Date(time + module_3697.default(arg1));
+export default function isSaturday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 6 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

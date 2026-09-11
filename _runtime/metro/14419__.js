@@ -1,3 +1,4 @@
 // _runtime/metro/14419__.js
+import _mod17 from "00017__.js";
 
-export default {};
+const parsed = parseInt(_mod17.Platform.Version, 10);

@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "b749a15e15191bd4c7ec2a36a9470ea1",
-  name: "VoiceXIcon",
+  hash: "15492a52206e63f9d08f70b19c6b74cb",
+  name: "ic_nitro_basic_wheel_gradient",
   type: "png",
 });

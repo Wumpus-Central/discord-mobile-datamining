@@ -85,9 +85,9 @@ let items = [
   },
   {
     key: "sendIntent",
-    value: function sendIntent(arg0, arg1) {
+    value: function sendIntent(arg0, items) {
       const tmp = LinkingImpl(70);
-      return LinkingImpl(70)(LinkingImpl(471)).sendIntent(arg0, arg1);
+      return LinkingImpl(70)(LinkingImpl(471)).sendIntent(arg0, items);
     },
   },
   {

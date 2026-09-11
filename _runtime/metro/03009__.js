@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/age_assurance",
   scales: [1],
-  hash: "e94b0e16b99cdc697daf9ff66cb8eb34",
+  hash: "bc80a0362bac16907b2128fc118c23be",
   name: "ManualReview.compiled.messages",
   type: "jsona",
 });

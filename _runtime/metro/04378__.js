@@ -1,17 +1,17 @@
 // _runtime/metro/04378__.js
-import c from "../04361_c.js";
-import _mod4374 from "04374__.js";
+import c from "../04363_c.js";
+import _mod4376 from "04376__.js";
 import _slicedToArray from "00032__.js";
 
 require = arg1;
-function getEnumProperty(enumProperty, arg1) {
-  return enumProperty.enumProperty(arg1);
+function getStringProperty(stringProperty, arg1) {
+  return stringProperty.stringProperty(arg1);
 }
 
-export const useRiveEnum = function useRiveEnum(FillColor, instance) {
+export const useRiveString = function useRiveString(LVL, instance) {
   let obj = c;
   const cResult = obj.c(4);
-  [tmp3, tmp4, tmp5] = _slicedToArray(_mod4374.useRiveProperty(instance, FillColor, getEnumProperty), 3);
+  [tmp3, tmp4, tmp5] = _slicedToArray(_mod4376.useRiveProperty(instance, LVL, getStringProperty), 3);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

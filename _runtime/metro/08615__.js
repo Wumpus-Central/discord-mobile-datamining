@@ -1,12 +1,84 @@
 // _runtime/metro/08615__.js
-import _mod26 from "00026__.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8566 from "08566__.js";
+import _modDef8616 from "08616__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGRect", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, x: true, y: true, height: true, width: true, rx: true, ry: true };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = size;
+const Line = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class Line {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, Line);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Line);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(Line, _modDef8566);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    let obj = {};
+    ({ x1, y1, x2, y2 } = props);
+    const merged = Object.assign(Line(8557).extract(this, props));
+    obj.x1 = x1;
+    obj.y1 = y1;
+    obj.x2 = x2;
+    obj.y2 = y2;
+    obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const obj2 = Line(8557);
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8616, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
+  },
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(Line, items);
+importDefaultResultResult.displayName = "Line";
+importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
 
-export default module_65.get("RNSVGRect", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

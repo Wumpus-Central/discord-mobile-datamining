@@ -1,12 +1,12 @@
 // _runtime/metro/08587__.js
-import _modDef8560 from "08560__.js";
+import _modDef8581 from "08581__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FeTurbulence = arg1;
+const FeConvolveMatrix = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeTurbulence {
+class FeConvolveMatrix {
   constructor() {
     self = this;
-    tmp = c2(this, FeTurbulence);
+    tmp = c2(this, FeConvolveMatrix);
     tmp2 = closure_4;
-    obj = closure_4(FeTurbulence);
+    obj = closure_4(FeConvolveMatrix);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,17 +45,17 @@ class FeTurbulence {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTurbulence, _modDef8560);
+_inherits(FeConvolveMatrix, _modDef8581);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTurbulence(8537).warnUnimplementedFilter();
+    const result = FeConvolveMatrix(8558).warnUnimplementedFilter();
     return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTurbulence, items);
-importDefaultResultResult.displayName = "FeTurbulence";
+const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
+importDefaultResultResult.displayName = "FeConvolveMatrix";
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 

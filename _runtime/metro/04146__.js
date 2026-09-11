@@ -1,24 +1,76 @@
 // _runtime/metro/04146__.js
-let closure_0 = { lessThanXSeconds: { one: "\u4E0D\u5230 1 \u79D2", other: "\u4E0D\u5230 {{count}} \u79D2" }, xSeconds: { one: "1 \u79D2", other: "{{count}} \u79D2" }, halfAMinute: "\u534A\u5206\u949F", lessThanXMinutes: { one: "\u4E0D\u5230 1 \u5206\u949F", other: "\u4E0D\u5230 {{count}} \u5206\u949F" }, xMinutes: { one: "1 \u5206\u949F", other: "{{count}} \u5206\u949F" }, xHours: { one: "1 \u5C0F\u65F6", other: "{{count}} \u5C0F\u65F6" }, aboutXHours: { one: "\u5927\u7EA6 1 \u5C0F\u65F6", other: "\u5927\u7EA6 {{count}} \u5C0F\u65F6" }, xDays: { one: "1 \u5929", other: "{{count}} \u5929" }, aboutXWeeks: { one: "\u5927\u7EA6 1 \u4E2A\u661F\u671F", other: "\u5927\u7EA6 {{count}} \u4E2A\u661F\u671F" }, xWeeks: { one: "1 \u4E2A\u661F\u671F", other: "{{count}} \u4E2A\u661F\u671F" }, aboutXMonths: { one: "\u5927\u7EA6 1 \u4E2A\u6708", other: "\u5927\u7EA6 {{count}} \u4E2A\u6708" }, xMonths: { one: "1 \u4E2A\u6708", other: "{{count}} \u4E2A\u6708" }, aboutXYears: { one: "\u5927\u7EA6 1 \u5E74", other: "\u5927\u7EA6 {{count}} \u5E74" }, xYears: { one: "1 \u5E74", other: "{{count}} \u5E74" }, overXYears: { one: "\u8D85\u8FC7 1 \u5E74", other: "\u8D85\u8FC7 {{count}} \u5E74" }, almostXYears: { one: "\u5C06\u8FD1 1 \u5E74", other: "\u5C06\u8FD1 {{count}} \u5E74" } };
+import 02035__ from "02035__.js";
+import 02036__ from "02036__.js";
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp6 = tmp;
-    if (null != addSuffix) {
-      tmp6 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp}前`;
-        }
-        text = `${tmp}内`;
-      }
+if (!module_2035) {
+  let obj = { default: module_2035 };
+} else {
+  obj = module_2035;
+}
+if (!module_2036) {
+  obj = { default: module_2036 };
+  let obj2 = obj;
+} else {
+  obj2 = module_2036;
+}
+const date = {
+  ordinalNumber: obj2.default({
+    matchPattern: /^(\d+)/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
     }
-    return tmp6;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    const _String = String;
-    one = tmp.other.replace("{{count}}", String(arg1));
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
+};
+obj2 = { matchPatterns: { narrow: /^(tcn|scn)/i, abbreviated: /^(trước CN|sau CN)/i, wide: /^(trước Công Nguyên|sau Công Nguyên)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj3 = { any: null };
+const items = [/^t/i, /^s/i];
+obj3.any = items;
+obj2.parsePatterns = obj3;
+date.era = obj.default(obj2);
+const obj4 = {
+  matchPatterns: { narrow: /^([1234]|i{1,3}v?)/i, abbreviated: /^q([1234]|i{1,3}v?)/i, wide: /^quý ([1234]|i{1,3}v?)/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
   }
 };
+const obj5 = { any: null };
+const items1 = [/(1|i)$/i, /(2|ii)$/i, /(3|iii)$/i, /(4|iv)$/i];
+obj5.any = items1;
+obj4.parsePatterns = obj5;
+date.quarter = obj.default(obj4);
+const obj6 = { matchPatterns: { narrow: /^(0?[2-9]|10|11|12|0?1)/i, abbreviated: /^thg[ _]?(0?[1-9](?!\d)|10|11|12)/i, wide: /^tháng ?(Một|Hai|Ba|Tư|Năm|Sáu|Bảy|Tám|Chín|Mười|Mười ?Một|Mười ?Hai|0?[1-9](?!\d)|10|11|12)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "wide" };
+const obj7 = { narrow: null, abbreviated: null, wide: null };
+const items2 = [/0?1$/i, /0?2/i, /3/, /4/, /5/, /6/, /7/, /8/, /9/, /10/, /11/, /12/];
+obj7.narrow = items2;
+const items3 = [/^thg[ _]?0?1(?!\d)/i, /^thg[ _]?0?2/i, /^thg[ _]?0?3/i, /^thg[ _]?0?4/i, /^thg[ _]?0?5/i, /^thg[ _]?0?6/i, /^thg[ _]?0?7/i, /^thg[ _]?0?8/i, /^thg[ _]?0?9/i, /^thg[ _]?10/i, /^thg[ _]?11/i, /^thg[ _]?12/i];
+obj7.abbreviated = items3;
+const items4 = [/^tháng ?(Một|0?1(?!\d))/i, /^tháng ?(Hai|0?2)/i, /^tháng ?(Ba|0?3)/i, /^tháng ?(Tư|0?4)/i, /^tháng ?(Năm|0?5)/i, /^tháng ?(Sáu|0?6)/i, /^tháng ?(Bảy|0?7)/i, /^tháng ?(Tám|0?8)/i, /^tháng ?(Chín|0?9)/i, /^tháng ?(Mười|10)/i, /^tháng ?(Mười ?Một|11)/i, /^tháng ?(Mười ?Hai|12)/i];
+obj7.wide = items4;
+obj6.parsePatterns = obj7;
+date.month = obj.default(obj6);
+const obj8 = { matchPatterns: { narrow: /^(CN|T2|T3|T4|T5|T6|T7)/i, short: /^(CN|Th ?2|Th ?3|Th ?4|Th ?5|Th ?6|Th ?7)/i, abbreviated: /^(CN|Th ?2|Th ?3|Th ?4|Th ?5|Th ?6|Th ?7)/i, wide: /^(Chủ ?Nhật|Chúa ?Nhật|thứ ?Hai|thứ ?Ba|thứ ?Tư|thứ ?Năm|thứ ?Sáu|thứ ?Bảy)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "wide" };
+const obj9 = { narrow: null, short: null, abbreviated: null, wide: null };
+const items5 = [/CN/i, /2/i, /3/i, /4/i, /5/i, /6/i, /7/i];
+obj9.narrow = items5;
+const items6 = [/CN/i, /2/i, /3/i, /4/i, /5/i, /6/i, /7/i];
+obj9.short = items6;
+const items7 = [/CN/i, /2/i, /3/i, /4/i, /5/i, /6/i, /7/i];
+obj9.abbreviated = items7;
+const items8 = [/(Chủ|Chúa) ?Nhật/i, /Hai/i, /Ba/i, /Tư/i, /Năm/i, /Sáu/i, /Bảy/i];
+obj9.wide = items8;
+obj8.parsePatterns = obj9;
+date.day = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^(a|p|nửa đêm|trưa|(giờ) (sáng|chiều|tối|đêm))/i, abbreviated: /^(am|pm|nửa đêm|trưa|(giờ) (sáng|chiều|tối|đêm))/i, wide: /^(ch[^i]*|sa|nửa đêm|trưa|(giờ) (sáng|chiều|tối|đêm))/i }, defaultMatchWidth: "wide", parsePatterns: { any: { am: /^(a|sa)/i, pm: /^(p|ch[^i]*)/i, midnight: /nửa đêm/i, noon: /trưa/i, morning: /sáng/i, afternoon: /chiều/i, evening: /tối/i, night: /^đêm/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj10);
+
+export default date;
 export default exports.default;

@@ -1,133 +1,235 @@
 // _runtime/metro/12910__.js
-import spanTimeInputToSeconds from "../12872_spanTimeInputToSeconds.js";
-import _mod12911 from "12911__.js";
-import _mod12914 from "12914__.js";
-import __SENTRY_DEBUG__ from "12866__.js";
-import consoleSandbox from "12867__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
 
-export const createEventEnvelope = function createEventEnvelope(type, url, sdk, arg3) {
-  const sdkMetadataForEnvelopeHeader = _mod12911.getSdkMetadataForEnvelopeHeader(sdk);
-  let str = "event";
-  if (type.type) {
-    str = "event";
-    if ("replay_event" !== type.type) {
-      str = type.type;
+let AsyncContextStack = require;
+function withScope(arg0) {
+  const mainCarrier = AsyncContextStack(12908).getMainCarrier();
+  const obj = AsyncContextStack(12908);
+  const sentryCarrier = AsyncContextStack(12908).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    let tmpResult = AsyncContextStack(12916);
+    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+    tmpResult = AsyncContextStack(12916);
+    stack = new _moduleResult(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(arg0);
+}
+function withSetScope(scope, arg1) {
+  closure_1 = arg1;
+  const mainCarrier = AsyncContextStack(12908).getMainCarrier();
+  const obj = AsyncContextStack(12908);
+  const sentryCarrier = AsyncContextStack(12908).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    let tmpResult = AsyncContextStack(12916);
+    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+    tmpResult = AsyncContextStack(12916);
+    stack = new _moduleResult(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    stack.getStackTop().scope = scope;
+    return closure_1(scope);
+  });
+}
+function withIsolationScope(arg0) {
+  AsyncContextStack = arg0;
+  const mainCarrier = AsyncContextStack(12908).getMainCarrier();
+  const obj = AsyncContextStack(12908);
+  const sentryCarrier = AsyncContextStack(12908).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    let tmpResult = tmp(12916);
+    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+    tmpResult = tmp(12916);
+    stack = new closure_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    const mainCarrier = AsyncContextStack(12908).getMainCarrier();
+    const obj = AsyncContextStack(12908);
+    const sentryCarrier = AsyncContextStack(12908).getSentryCarrier(mainCarrier);
+    let stack = sentryCarrier.stack;
+    if (!stack) {
+      let tmp2Result = AsyncContextStack(12916);
+      const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
+      tmp2Result = AsyncContextStack(12916);
+      stack = new closure_2_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
     }
-  }
-  if (sdk) {
-    sdk = sdk.sdk;
-  }
-  if (sdk) {
-    type.sdk = type.sdk || {};
-    let name = type.sdk.name;
-    if (!name) {
-      name = sdk.name;
+    sentryCarrier.stack = stack;
+    return closure_0(stack.getIsolationScope());
+  });
+}
+class AsyncContextStack {
+  constructor(arg0, arg1) {
+    self = this;
+    scope = global;
+    tmp2 = c2(this, AsyncContextStack);
+    if (!global) {
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      tmp5 = new.target;
+      tmp6 = new.target;
+      scope = new closure_0(closure_1[2]).Scope();
     }
-    type.sdk.name = name;
-    let version = type.sdk.version;
-    if (!version) {
-      version = sdk.version;
+    scope1 = require;
+    if (!require) {
+      tmp8 = closure_0;
+      tmp9 = closure_1;
+      tmp10 = new.target;
+      tmp11 = new.target;
+      scope1 = new closure_0(closure_1[2]).Scope();
     }
-    type.sdk.version = version;
-    let integrations = type.sdk.integrations;
-    if (!integrations) {
-      integrations = [];
-    }
-    const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
-    const tmp9 = sdk.integrations || [];
-    arraySpreadResult = HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
-    type.sdk.integrations = items;
-    let packages = type.sdk.packages;
-    if (!packages) {
-      packages = [];
-    }
-    const items1 = [];
-    const arraySpreadResult1 = HermesBuiltin.arraySpread(packages, 0);
-    const tmp17 = sdk.packages || [];
-    HermesBuiltin.arraySpread(tmp17, arraySpreadResult1);
-    type.sdk.packages = items1;
+    items = [];
+    items[0] = { scope };
+    self._stack = items;
+    self._isolationScope = scope1;
+    return;
   }
-  let tmp3Result = _mod12911;
-  const eventEnvelopeHeaders = tmp3Result.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
-  delete tmp[tmp2];
-  const items2 = [{ type: str }, type];
-  tmp3Result = _mod12911;
-  const items3 = [items2];
-  return tmp3Result.createEnvelope(eventEnvelopeHeaders, items3);
-};
-export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1, sdk, arg3) {
-  let obj = _mod12911;
-  const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(sdk);
-  obj = { sent_at: new Date().toISOString() };
-  let tmp4 = sdkMetadataForEnvelopeHeader;
-  if (sdkMetadataForEnvelopeHeader) {
-    obj = { sdk: sdkMetadataForEnvelopeHeader };
-    tmp4 = obj;
-  }
-  const merged = Object.assign(tmp4);
-  let tmp6 = arg3 && arg1;
-  if (tmp6) {
-    const obj1 = { dsn: null };
-    let tmpResult = _mod12914;
-    obj1.dsn = tmpResult.dsnToString(arg1);
-    tmp6 = obj1;
-  }
-  const merged1 = Object.assign(tmp6);
-  if ("aggregates" in toJSON) {
-    const items = [{ type: "sessions" }, toJSON];
-    let items1 = items;
-  } else {
-    items1 = [{ type: "session" }, toJSON.toJSON()];
-  }
-  tmpResult = _mod12911;
-  const items2 = [items1];
-  return tmpResult.createEnvelope(obj, items2);
-};
-export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
-  let obj = beforeSendSpan(12903);
-  const dynamicSamplingContextFromSpan = obj.getDynamicSamplingContextFromSpan(arg0[0]);
-  let dsn = getDsn;
-  if (getDsn) {
-    dsn = getDsn.getDsn();
-  }
-  let tunnel = getDsn;
-  if (getDsn) {
-    tunnel = getDsn.getOptions().tunnel;
-  }
-  obj = { sent_at: new Date().toISOString() };
-  let tmp7 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
-    return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
-  })(dynamicSamplingContextFromSpan);
-  if (tmp7) {
-    obj = { trace: dynamicSamplingContextFromSpan };
-    tmp7 = obj;
-  }
-  const merged = Object.assign(tmp7);
-  let tmp9 = tunnel && dsn;
-  if (tmp9) {
-    const obj1 = { dsn: tmp2(12914).dsnToString(dsn) };
-    tmp9 = obj1;
-    const tmp2Result = tmp2(12914);
-  }
-  const merged1 = Object.assign(tmp9);
-  beforeSendSpan = getDsn;
-  if (getDsn) {
-    beforeSendSpan = getDsn.getOptions().beforeSendSpan;
-  }
-  if (beforeSendSpan) {
-    const fn2 = (arg0) => {
-      const tmp3 = beforeSendSpan(spanTimeInputToSeconds.spanToJSON(arg0));
-      if (!tmp3) {
-        spanTimeInputToSeconds.showSpanDropWarning();
-        const tmpResult = spanTimeInputToSeconds;
+}
+const entry = {
+  key: "withScope",
+  value: function withScope(fn) {
+    const self = this;
+    try {
+      const promise = fn(tmp);
+      if (obj2.isThenable(promise)) {
+        let nextPromise = promise.then(
+          (result) => {
+            self._popScope();
+            return result;
+          },
+          (arg0) => {
+            self._popScope();
+            throw arg0;
+          },
+        );
+      } else {
+        self._popScope();
+        nextPromise = promise;
       }
-      return tmp3;
-    };
-  } else {
-    const fn = (arg0) => beforeSendSpan(dependencyMap[5]).spanToJSON(arg0);
-  }
-  arg0[Symbol.iterator]();
-  const date = new Date();
-  tmp2 = beforeSendSpan;
+      return nextPromise;
+    } catch (tmp9) {
+      obj._popScope();
+      throw tmp9;
+    }
+  },
 };
+let items = [
+  entry,
+  {
+    key: "getClient",
+    value: function getClient() {
+      return this.getStackTop().client;
+    },
+  },
+  {
+    key: "getScope",
+    value: function getScope() {
+      return this.getStackTop().scope;
+    },
+  },
+  {
+    key: "getIsolationScope",
+    value: function getIsolationScope() {
+      return this._isolationScope;
+    },
+  },
+  {
+    key: "getStackTop",
+    value: function getStackTop() {
+      return this._stack[this._stack.length - 1];
+    },
+  },
+  {
+    key: "_pushScope",
+    value: function _pushScope() {
+      const scope = this.getScope();
+      const cloneResult = scope.clone();
+      const _stack = this._stack;
+      _stack.push({ client: this.getClient(), scope: cloneResult });
+      return cloneResult;
+    },
+  },
+  {
+    key: "_popScope",
+    value: function _popScope() {
+      let arr = this._stack.length > 1;
+      if (arr) {
+        const _stack = this._stack;
+        arr = _stack.pop();
+      }
+      return arr;
+    },
+  },
+];
+const _moduleResult = _createClass(AsyncContextStack, items);
+let c3 = _moduleResult;
+
+export const AsyncContextStack = _moduleResult;
+export function getStackAsyncContextStrategy() {
+  return {
+    withIsolationScope,
+    withScope,
+    withSetScope,
+    withSetIsolationScope(arg0, arg1) {
+      closure_0 = arg1;
+      let mainCarrier = closure_0(12908).getMainCarrier();
+      let obj = closure_0(12908);
+      let sentryCarrier = closure_0(12908).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        let tmpResult = tmp(12916);
+        let defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+        tmpResult = tmp(12916);
+        stack = new closure_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+      }
+      sentryCarrier.stack = stack;
+      return stack.withScope(() => {
+        const mainCarrier = AsyncContextStack(12908).getMainCarrier();
+        const obj = AsyncContextStack(12908);
+        const sentryCarrier = AsyncContextStack(12908).getSentryCarrier(mainCarrier);
+        let stack = sentryCarrier.stack;
+        if (!stack) {
+          let tmp2Result = AsyncContextStack(12916);
+          const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
+          tmp2Result = AsyncContextStack(12916);
+          stack = new closure_2_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
+        }
+        sentryCarrier.stack = stack;
+        return closure_0(stack.getIsolationScope());
+      });
+    },
+    getCurrentScope() {
+      const mainCarrier = AsyncContextStack(12908).getMainCarrier();
+      const obj = AsyncContextStack(12908);
+      const sentryCarrier = AsyncContextStack(12908).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        let tmpResult = AsyncContextStack(12916);
+        const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+        tmpResult = AsyncContextStack(12916);
+        stack = new closure_1_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+      }
+      sentryCarrier.stack = stack;
+      return stack.getScope();
+    },
+    getIsolationScope() {
+      const mainCarrier = AsyncContextStack(12908).getMainCarrier();
+      const obj = AsyncContextStack(12908);
+      const sentryCarrier = AsyncContextStack(12908).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        let tmpResult = AsyncContextStack(12916);
+        const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+        tmpResult = AsyncContextStack(12916);
+        stack = new closure_1_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+      }
+      sentryCarrier.stack = stack;
+      return stack.getIsolationScope();
+    },
+  };
+}

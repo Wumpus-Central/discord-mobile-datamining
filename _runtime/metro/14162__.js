@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/status",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "4d498b99244dd74c9e2dd5b1de10ead7",
-  name: "ic_radio_square_checked_24px",
+  hash: "7730e55139737e3f08bf4e9540ae6591",
+  name: "StatusOffline",
   type: "png",
 });

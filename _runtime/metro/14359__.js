@@ -1,23 +1,7 @@
 // _runtime/metro/14359__.js
+import _mod14357 from "14357__.js";
 
-export const collations = [
-  "big5han",
-  "compat",
-  "dict",
-  "direct",
-  "ducet",
-  "emoji",
-  "eor",
-  "gb2312",
-  "phonebk",
-  "phonetic",
-  "pinyin",
-  "reformed",
-  "search",
-  "searchjl",
-  "standard",
-  "stroke",
-  "trad",
-  "unihan",
-  "zhuyin",
-];
+let closure_0 = _mod14357({}.toString);
+let closure_1 = _mod14357("".slice);
+
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

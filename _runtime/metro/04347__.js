@@ -1,117 +1,53 @@
 // _runtime/metro/04347__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _createClass from "00042__createClass.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import _wrapNativeSuper from "00158__wrapNativeSuper.js";
+import _mod17 from "00017__.js";
+import _mod4348 from "04348__.js";
+import _mod4349 from "04349__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
+function getInstalledNitro() {
+  return global.NitroModulesProxy;
 }
-_possibleConstructorReturnDefault;
-get_ActivityIndicator = fn(17);
-({ NativeModules: c3, Platform } = get_ActivityIndicator);
-class ModuleNotFoundError {
-  constructor(arg0) {
-    self = this;
-    tmp = ModuleNotFoundError;
-    tmp2 = closure_0(this, ModuleNotFoundError);
-    NativeUnimoduleProxy = closure_3.NativeUnimoduleProxy;
-    ExponentConstants = undefined;
-    if (NativeUnimoduleProxy != null) {
-      modulesConstants = NativeUnimoduleProxy.modulesConstants;
-      if (modulesConstants != null) {
-        ExponentConstants = modulesConstants.ExponentConstants;
-      }
-    }
-    str = "react-native";
-    if (null != ExponentConstants) {
-      str2 = "expo";
-      if ("expo" === ExponentConstants.appOwnership) {
-        str2 = "expo-go";
-      }
-      str = str2;
-    }
-    if ("expo-go" === str) {
-      items = [
-        "NitroModules are not supported in Expo Go! Use EAS (`expo prebuild`) or eject to a bare workflow instead.",
-      ];
-      tmp12 = c2;
-      obj3 = c2(tmp);
-      tmp13 = closure_1;
-      tmp14 = closure_4;
-      if (closure_4()) {
-        tmp16 = globalThis;
-        _Reflect2 = Reflect;
-        constructResult = Reflect.construct(obj3, items, tmp12(self).constructor);
-      } else {
-        constructResult = obj3.apply(self, items);
-      }
-      return tmp13(tmp13(self, constructResult));
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const installedNitro = getInstalledNitro();
+if (null != installedNitro) {
+  let installedNitro1 = installedNitro;
+  if (installedNitro.version !== _mod4348.version) {
+    const _Error2 = Error;
+    const version = installedNitro.version;
+    const _HermesInternal2 = HermesInternal;
+    const error = new Error(
+      "Nitro was installed twice: once with native version " +
+        version +
+        " and once with JS version " +
+        _mod4348.version +
+        ". This usually means react-native-nitro-modules exists multiple times in node_modules (e.g. in monorepos or double-linked setups).",
+    );
+    throw error;
+  }
+} else {
+  try {
+    const enforcing = TurboModuleRegistry.getEnforcing("NitroModules");
+    const installResult = enforcing.install();
+    if (null != installResult) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error1 = new Error("Failed to install Nitro: " + installResult);
+      throw error1;
     } else {
-      items1 = [];
-      str7 =
-        "Make sure react-native-nitro-modules/NitroModules is correctly autolinked (run `npx react-native config` to verify)";
-      arr = items1.push(
-        "Make sure react-native-nitro-modules/NitroModules is correctly autolinked (run `npx react-native config` to verify)",
-      );
-      str8 =
-        'Make sure you enabled the new architecture (TurboModules) and CodeGen properly generated the "NativeNitroModules"/NitroModules specs. See https://github.com/reactwg/react-native-new-architecture/blob/main/docs/enable-apps.md';
-      arr1 = items1.push(
-        'Make sure you enabled the new architecture (TurboModules) and CodeGen properly generated the "NativeNitroModules"/NitroModules specs. See https://github.com/reactwg/react-native-new-architecture/blob/main/docs/enable-apps.md',
-      );
-      str9 = "Make sure you are using react-native 0.75.0 or higher.";
-      arr2 = items1.push("Make sure you are using react-native 0.75.0 or higher.");
-      str10 = "Make sure you rebuilt the app.";
-      arr3 = items1.push("Make sure you rebuilt the app.");
-      str11 = "expo";
-      if ("expo" === str) {
-        str3 = "Make sure you ran `expo prebuild`.";
-        arr4 = items1.push("Make sure you ran `expo prebuild`.");
+      installedNitro1 = getInstalledNitro();
+      if (null == installedNitro1) {
+        const _Error3 = Error;
+        const error2 = new Error("NitroModules was installed, but `global.NitroModulesProxy` was null!");
+        const moduleNotFoundError = new _mod4349.ModuleNotFoundError(error2);
+        throw moduleNotFoundError;
       }
-      tmp5 = global;
-      str4 = "Make sure gradle is synced.";
-      arr5 = items1.push("Make sure gradle is synced.");
-      str5 = "\n* ";
-      str6 = 'Failed to get NitroModules: The native "NitroModules" Turbo/Native-Module could not be found.\n* ';
-      items2 = [,];
-      items2[0] = `Failed to get NitroModules: The native "NitroModules" Turbo/Native-Module could not be found.
-* ${arr3.join("\n* ")}`;
-      obj = { cause: null };
-      obj.cause = global;
-      items2[1] = obj;
-      tmp7 = c2;
-      obj2 = c2(tmp);
-      tmp9 = closure_4;
-      tmp8 = closure_1;
-      if (closure_4()) {
-        tmp11 = globalThis;
-        _Reflect = Reflect;
-        constructResult1 = Reflect.construct(obj2, items2, tmp7(self).constructor);
-      } else {
-        constructResult1 = obj2.apply(self, items2);
-      }
-      return tmp8(self, constructResult1);
     }
+  } catch (tmp13) {
+    const moduleNotFoundError1 = new tmp3(tmp[2]).ModuleNotFoundError(tmp13);
+    throw moduleNotFoundError1;
   }
 }
-_classCallCheck = ModuleNotFoundError;
-_inherits(ModuleNotFoundError, _wrapNativeSuper(Error));
 
-export const ModuleNotFoundError = _createClass(ModuleNotFoundError);
+export const NitroModules = installedNitro1;
+export const isRuntimeAlive = function isRuntimeAlive() {
+  return null != globalThis.__nitroJsiCache && null != globalThis.__nitroDispatcher;
+};

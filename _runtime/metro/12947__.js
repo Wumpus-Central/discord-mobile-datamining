@@ -1,117 +1,57 @@
 // _runtime/metro/12947__.js
-import extractRequestData from "../12948_extractRequestData.js";
-import _slicedToArray from "00032__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import setupIntegration from "12923__.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _createClass from "00042__createClass.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import _wrapNativeSuper from "00158__wrapNativeSuper.js";
 
-let closure_4 = ["ip", "user"];
-let obj = {
-  include: {
-    cookies: true,
-    data: true,
-    headers: true,
-    ip: false,
-    query_string: true,
-    url: true,
-    user: { id: true, username: true, email: true },
-  },
-  transactionNamingScheme: "methodPath",
-};
-
-export const requestDataIntegration = setupIntegration.defineIntegration(() => {
-  if (include === undefined) {
-    include = {};
-  }
-  include = {};
-  const merged = Object.assign(include);
-  const merged1 = Object.assign(include);
-  include = {};
-  const merged2 = Object.assign(include.include);
-  const merged3 = Object.assign(include.include);
-  if (include.include) {
-    if (typeof include.include.user === "boolean") {
-      let user = include.include.user;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    include.user = user;
-    include.include = include;
-    const obj1 = {
-      name: "RequestData",
-      processEvent(sdkProcessingMetadata) {
-        let prop = sdkProcessingMetadata.sdkProcessingMetadata;
-        if (undefined === prop) {
-          prop = {};
-        }
-        ({ request, normalizedRequest } = prop);
-        const tmp = (function convertReqDataIntegrationOptsToAddReqDataOpts(include) {
-          include = include.include;
-          const user = include.user;
-          const items = ["method"];
-          const entries = Object.entries(closure_1_3(include, closure_1_4));
-          while (tmp2 !== undefined) {
-            let tmp5 = closure_1_2(tmp3, 2);
-            let first = tmp5[0];
-            if (tmp5[1]) {
-              let arr = items.push(first);
-            }
-            continue;
-          }
-          let flag = true;
-          if (undefined !== user) {
-            flag = user;
-            if (typeof user !== "boolean") {
-              const items1 = [];
-              const _Object = Object;
-              const entries1 = Object.entries(user);
-              flag = items1;
-              for (const item10032 of entries1) {
-                let tmp11 = closure_1_2(item10032, 2);
-                let first1 = tmp11[0];
-                if (tmp11[1]) {
-                  arr = items1.push(first1);
-                }
-                continue;
-              }
-            }
-          }
-          include = { ip: include.ip, user: flag, request: null, transaction: null };
-          let tmp15;
-          if (0 !== items.length) {
-            tmp15 = items;
-          }
-          include.request = tmp15;
-          include.transaction = include.transactionNamingScheme;
-          return { include };
-        })(obj);
-        if (normalizedRequest) {
-          let tmp5;
-          if (request) {
-            let ip = request.ip;
-            if (!ip) {
-              ip = request.socket && request.socket.remoteAddress;
-              const tmp6 = request.socket && request.socket.remoteAddress;
-            }
-            tmp5 = ip;
-          }
-          let user;
-          if (request) {
-            user = request.user;
-          }
-          const obj3 = extractRequestData;
-          obj = { ipAddress: tmp5, user };
-          const result = obj3.addNormalizedRequestDataToEvent(sdkProcessingMetadata, normalizedRequest, obj, tmp);
-          return sdkProcessingMetadata;
-        } else {
-          let result1 = sdkProcessingMetadata;
-          if (request) {
-            result1 = extractRequestData.addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
-          }
-          return result1;
-        }
-      },
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
     };
-    return obj1;
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturn;
+class SentryError {
+  constructor(arg0) {
+    str = require;
+    if (require === undefined) {
+      str = "warn";
+    }
+    self = this;
+    tmp = closure_0(this, SentryError);
+    items = [];
+    items[0] = global;
+    tmp2 = c2;
+    obj = c2(SentryError);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.message = global;
+    tmp3Result.logLevel = str;
+    return tmp3Result;
   }
-  user = {};
-  const merged4 = Object.assign(include.include.user);
-  const merged5 = Object.assign(include.include || {}.user);
-});
+}
+_classCallCheck = SentryError;
+_inherits(SentryError, _wrapNativeSuper(Error));
+
+export const SentryError = _createClass(SentryError);

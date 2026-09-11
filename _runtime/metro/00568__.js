@@ -368,13 +368,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = {
-            fired: false,
-            wrapFn: "a",
-            target: "<string:248971265>",
-            type: "<string:3931242499>",
-            listener: "<string:1188031698>",
-          };
+          obj = { fired: false, wrapFn: "a", target: "a", type: "MENTION_HERE", listener: "r" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -401,13 +395,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = {
-            fired: false,
-            wrapFn: "a",
-            target: "<string:248971265>",
-            type: "<string:3931242499>",
-            listener: "<string:1188031698>",
-          };
+          obj = { fired: false, wrapFn: "a", target: "a", type: "MENTION_HERE", listener: "r" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;

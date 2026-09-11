@@ -1,91 +1,84 @@
 // _runtime/metro/10602__.js
-import repeatedTimeunitPattern from "../10502_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10509_AbstractParserWithWordBoundaryChecking.js";
-import _mod10596 from "10596__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
-const NLCasualYearMonthDayParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+export const parseYear = function parseYear(match) {
+  if (match.match(/^[0-9]{1,4}$/)) {
+    const _parseInt3 = parseInt;
+    const parsed = parseInt(match);
+    let sum = parsed;
+    if (parsed < 100) {
+      let num3 = 2000;
+      if (parsed > 50) {
+        num3 = 1900;
+      }
+      sum = parsed + num3;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-const regExp = new RegExp(
-  "([0-9]{4})[\\.\\/\\s](?:(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10596.MONTH_DICTIONARY) +
-    ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)",
-  "i",
-);
-class NLCasualYearMonthDayParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, NLCasualYearMonthDayParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLCasualYearMonthDayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    return sum;
+  } else if (match.match(/a\.?\s*c\.?/i)) {
+    const _parseInt2 = parseInt;
+    return -parseInt(match.replace(/a\.?\s*c\.?/i, ""));
+  } else {
+    const _parseInt = parseInt;
+    return parseInt(match);
   }
-}
-_inherits(NLCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
-  },
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(arg0, arg1) {
-      if (arg1[3]) {
-        const _parseInt = parseInt;
-        let parsed = parseInt(arg1[3]);
-      } else {
-        parsed = NLCasualYearMonthDayParser(10596).MONTH_DICTIONARY[str.toLowerCase(str)];
-      }
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          const _parseInt2 = parseInt;
-          const date = { day: null, month: null, year: null };
-          const _parseInt3 = parseInt;
-          const parsed1 = parseInt(arg1[1]);
-          date.day = parseInt(arg1[4]);
-          date.month = parsed;
-          date.year = parsed1;
-          return date;
-        }
-      }
-      return null;
-    },
-  },
-];
-
-export default _createClass(NLCasualYearMonthDayParser, items);
+export const WEEKDAY_DICTIONARY = {
+  domingo: 0,
+  dom: 0,
+  segunda: 1,
+  "segunda-feira": 1,
+  seg: 1,
+  terça: 2,
+  "terça-feira": 2,
+  ter: 2,
+  quarta: 3,
+  "quarta-feira": 3,
+  qua: 3,
+  quinta: 4,
+  "quinta-feira": 4,
+  qui: 4,
+  sexta: 5,
+  "sexta-feira": 5,
+  sex: 5,
+  sábado: 6,
+  sabado: 6,
+  sab: 6,
+};
+export const MONTH_DICTIONARY = {
+  janeiro: 1,
+  jan: 1,
+  "jan.": 1,
+  fevereiro: 2,
+  fev: 2,
+  "fev.": 2,
+  março: 3,
+  mar: 3,
+  "mar.": 3,
+  abril: 4,
+  abr: 4,
+  "abr.": 4,
+  maio: 5,
+  mai: 5,
+  "mai.": 5,
+  junho: 6,
+  jun: 6,
+  "jun.": 6,
+  julho: 7,
+  jul: 7,
+  "jul.": 7,
+  agosto: 8,
+  ago: 8,
+  "ago.": 8,
+  setembro: 9,
+  set: 9,
+  "set.": 9,
+  outubro: 10,
+  out: 10,
+  "out.": 10,
+  novembro: 11,
+  nov: 11,
+  "nov.": 11,
+  dezembro: 12,
+  dez: 12,
+  "dez.": 12,
+};
+export const YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";

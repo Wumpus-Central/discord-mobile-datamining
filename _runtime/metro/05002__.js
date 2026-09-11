@@ -1,9 +1,18 @@
 // _runtime/metro/05002__.js
-import _mod17 from "00017__.js";
-import 00065__ from "00065__.js";
+import _modDef5003 from "05003__.js";
+import noop from "00019__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSSafeAreaView", validAttributes: { edges: true, insetType: true } };
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const styles = StyleSheet.create({ flex: { flex: 1 } });
 
-export default module_65.get("RNSSafeAreaView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const SafeAreaView = function SafeAreaView(style) {
+  const obj = {};
+  const merged = Object.assign(style);
+  const items = [styles.flex, style.style];
+  obj.style = items;
+  const rect = { top: false, bottom: false, left: false, right: false };
+  const merged1 = Object.assign(style.edges);
+  obj.edges = rect;
+  return jsx(_modDef5003, {});
+};

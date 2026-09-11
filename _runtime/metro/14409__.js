@@ -1,19 +1,11 @@
 // _runtime/metro/14409__.js
-import _mod14378 from "14378__.js";
-import element from "../14410_element.js";
-import getOwnPropertyDescriptor from "14377__.js";
+import _mod14357 from "14357__.js";
+import _mod14366 from "14366__.js";
+import all from "14376__.js";
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod14378(
-    () =>
-      7 !==
-      Object.defineProperty(element("div"), "a", {
-        get() {
-          return 7;
-        },
-      }).a,
-  );
+let closure_0 = _mod14357(Function.toString);
+if (!all(_mod14366.inspectSource)) {
+  _mod14366.inspectSource = (arg0) => closure_0(arg0);
 }
 
-export default tmp2;
+export default _mod14366.inspectSource;

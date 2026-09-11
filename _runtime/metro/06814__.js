@@ -1,14 +1,17 @@
 // _runtime/metro/06814__.js
-import ComposedGestureName from "../06764_ComposedGestureName.js";
-import _mod6813 from "06813__.js";
+import ComposedGestureName from "../06785_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../06794_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod6809 from "06809__.js";
 
 require = arg1;
 const dependencyMap = arg6;
+let closure_2 = {};
 
-export const useExclusiveGestures = function useExclusiveGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
-  const applyResult = _mod6813.useComposedGesture.apply(items1);
-  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
-  return applyResult;
+export const useFlingGesture = function useFlingGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod6809.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
 };

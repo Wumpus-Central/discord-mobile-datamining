@@ -1,11 +1,13 @@
 // _runtime/metro/10551__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod10523 from "10523__.js";
+import _mod10520 from "10520__.js";
+import AbstractParserWithWordBoundaryChecking from "../10528_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const ENTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,51 +26,65 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class DEMergeDateTimeRefiner {
+const regExp = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + _mod10520.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+const regExp1 = new RegExp(
+  "(this|last|past|next|after|\\+|-)\\s*(" + _mod10520.TIME_UNITS_NO_ABBR_PATTERN + ")(?=\\W|$)",
+  "i",
+);
+class ENTimeUnitCasualRelativeFormatParser {
   constructor() {
-    self = this;
-    tmp = closure_0(this, DEMergeDateTimeRefiner);
-    tmp2 = c2;
-    obj = c2(DEMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+    flag = global;
+    if (global === undefined) {
+      flag = true;
     }
-    return tmp3(self, constructResult);
+    self = this;
+    tmp = c2(this, ENTimeUnitCasualRelativeFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.allowAbbreviations = flag;
+    return tmp3Result;
   }
 }
-_classCallCheck = DEMergeDateTimeRefiner;
-_inherits(DEMergeDateTimeRefiner, fn(_mod10523).default);
+_inherits(
+  ENTimeUnitCasualRelativeFormatParser,
+  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
+);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|um|am|,|-)?\\s*$");
-    return regExp;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.allowAbbreviations ? regExp : regExp1;
   },
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(10520).parseDuration(arg1[2]);
+      if (parseDurationResult) {
+        if ("last" !== formatted) {
+          if ("past" !== formatted) {
+            let reverseDurationResult = parseDurationResult;
+          }
+          const ParsingComponents = ENTimeUnitCasualRelativeFormatParser(10524).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+        }
+        reverseDurationResult = ENTimeUnitCasualRelativeFormatParser(10523).reverseDuration(parseDurationResult);
+      } else {
+        return null;
+      }
+    },
+  },
+];
 
-export default _createClass(DEMergeDateTimeRefiner, items);
+export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);

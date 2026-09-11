@@ -3,11 +3,9 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "88d061a76594f03187e4bf612ecd1256",
-  name: "RecordPlayerIcon",
-  type: "png",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
+  scales: [1],
+  hash: "5a2bc6869d662b6a68fce91294a99a63",
+  name: "de.messages.5a2bc6869d662b6a68fce91294a99a63.compiled.messages",
+  type: "jsona",
 });

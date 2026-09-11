@@ -1,10 +1,31 @@
 // _runtime/metro/06924__.js
-import PlatformConfig2 from "../06922_PlatformConfig.js";
+import _mod17 from "00017__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const Platform = _mod17.Platform;
 
-export const getInvertedTransformStyle = function getInvertedTransformStyle(horizontal) {
-  const PlatformConfig = PlatformConfig2.PlatformConfig;
-  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
+export const isNewArch = function isNewArch() {
+  if (undefined !== c1) {
+    return c1;
+  } else {
+    try {
+      let prop;
+      if (global != null) {
+        prop = global.nativeFabricUIManager;
+      }
+      let flag = Boolean(prop);
+      if (global != null) {
+        const __turboModuleProxy = global.__turboModuleProxy;
+      }
+      if (!flag) {
+        flag = Boolean(__turboModuleProxy);
+      }
+      if (!flag) {
+        flag = false;
+      }
+      c1 = flag;
+      return c1;
+    } catch (err) {
+      c1 = true;
+    }
+  }
 };

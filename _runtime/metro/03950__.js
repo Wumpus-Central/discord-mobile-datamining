@@ -1,83 +1,128 @@
 // _runtime/metro/03950__.js
-import requiredArgs from "../03694_requiredArgs.js";
+import _typeof from "03695__.js";
+import 03938__ from "03938__.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = _typeof;
 }
-requiredArgs = tmp3;
+_typeof = tmp3;
+if (!module_3938) {
+  obj = { default: module_3938 };
+  let tmp5 = obj;
+} else {
+  tmp5 = module_3938;
+}
+module_3938 = tmp5;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
+  let tmp7 = obj;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function formatISODuration(years) {
+export default function formatISO(arg0, format) {
   requiredArgs.default(1, arguments);
-  if ("object" !== _typeof(years)) {
-    const _Error = Error;
-    const error = new Error("Duration must be an object");
-    throw error;
+  const defaultResult1 = _typeof.default(arg0);
+  if (isNaN(defaultResult1.getTime())) {
+    const _RangeError3 = RangeError;
+    const rangeError = new RangeError("Invalid time value");
+    throw rangeError;
   } else {
-    years = years.years;
-    let num = 0;
-    if (undefined !== years) {
-      num = years;
+    format = undefined;
+    if (null != format) {
+      format = format.format;
     }
-    const months = years.months;
-    let num2 = 0;
-    if (undefined !== months) {
-      num2 = months;
+    let str2 = "extended";
+    if (null !== format) {
+      str2 = "extended";
+      if (undefined !== format) {
+        str2 = format;
+      }
     }
-    const days = years.days;
-    let num3 = 0;
-    if (undefined !== days) {
-      num3 = days;
+    const StringResult = String(str2);
+    let representation;
+    if (null != format) {
+      representation = format.representation;
     }
-    const hours = years.hours;
-    let num4 = 0;
-    if (undefined !== hours) {
-      num4 = hours;
+    let str4 = "complete";
+    if (null !== representation) {
+      str4 = "complete";
+      if (undefined !== representation) {
+        str4 = representation;
+      }
     }
-    const minutes = years.minutes;
-    let num5 = 0;
-    if (undefined !== minutes) {
-      num5 = minutes;
+    const StringResult1 = String(str4);
+    if ("extended" !== StringResult) {
+      if ("basic" !== StringResult) {
+        const _RangeError2 = RangeError;
+        const rangeError1 = new RangeError("format must be 'extended' or 'basic'");
+        throw rangeError1;
+      }
     }
-    const seconds = years.seconds;
-    let num6 = 0;
-    if (undefined !== seconds) {
-      num6 = seconds;
+    if ("date" !== StringResult1) {
+      if ("time" !== StringResult1) {
+        if ("complete" !== StringResult1) {
+          const _RangeError = RangeError;
+          const rangeError2 = new RangeError("representation must be 'date', 'time', or 'complete'");
+          throw rangeError2;
+        }
+      }
     }
-    const concat = "P".concat;
-    const combined = "P".concat(num, "Y");
-    const combined1 = combined.concat(num2, "M");
-    const combined2 = combined1.concat(num3, "DT");
-    const combined3 = combined2.concat(num4, "H");
-    const combined4 = combined3.concat(num5, "M");
-    return combined4.concat(num6, "S");
+    let str9 = "";
+    if ("extended" === StringResult) {
+      str9 = "-";
+    }
+    let str10 = "";
+    if ("extended" === StringResult) {
+      str10 = ":";
+    }
+    let str12 = "";
+    if ("time" !== StringResult1) {
+      const defaultResult2 = module_3938.default(defaultResult1.getDate(), 2);
+      const concat2 = "".concat;
+      const combined = "".concat(module_3938.default(defaultResult1.getFullYear(), 4));
+      const combined1 = combined.concat(str9);
+      const combined2 = combined1.concat(module_3938.default(defaultResult1.getMonth() + 1, 2));
+      const combined3 = combined2.concat(str9);
+      str12 = combined3.concat(defaultResult2);
+      const defaultResult3 = module_3938.default(defaultResult1.getMonth() + 1, 2);
+    }
+    let combined9 = str12;
+    if ("date" !== StringResult1) {
+      const timezoneOffset = defaultResult1.getTimezoneOffset();
+      let str13 = "Z";
+      if (0 !== timezoneOffset) {
+        const _Math = Math;
+        const absolute = Math.abs(timezoneOffset);
+        const _Math2 = Math;
+        let str14 = "-";
+        const defaultResult4 = module_3938.default(Math.floor(absolute / 60), 2);
+        if (timezoneOffset < 0) {
+          str14 = "+";
+        }
+        const combined4 = "".concat(str14);
+        const combined5 = combined4.concat(defaultResult4, ":");
+        str13 = combined5.concat(module_3938.default(absolute % 60, 2));
+        const defaultResult5 = module_3938.default(absolute % 60, 2);
+      }
+      let str16 = "T";
+      if ("" === str12) {
+        str16 = "";
+      }
+      const items = [module_3938.default(defaultResult1.getHours(), 2), module_3938.default(defaultResult1.getMinutes(), 2), module_3938.default(defaultResult1.getSeconds(), 2)];
+      const concat = "".concat;
+      const joined = items.join(str10);
+      const combined6 = "".concat(str12);
+      const combined7 = combined6.concat(str16);
+      const combined8 = combined7.concat(joined);
+      combined9 = combined8.concat(str13);
+    }
+    return combined9;
   }
 };
 export default exports.default;

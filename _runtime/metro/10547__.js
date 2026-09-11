@@ -1,14 +1,14 @@
 // _runtime/metro/10547__.js
-import repeatedTimeunitPattern from "../10502_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10509_AbstractParserWithWordBoundaryChecking.js";
-import _mod10548 from "10548__.js";
+import _mod10520 from "10520__.js";
+import repeatedTimeunitPattern from "../10521_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10528_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const DEWeekdayParser = require;
+const ENWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,17 +28,17 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const regExp = new RegExp(
-  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:a[mn]\\s*?)?(?:(diese[mn]|letzte[mn]|n(?:\u00E4|ae)chste[mn])\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10548.WEEKDAY_DICTIONARY) +
-    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(diese|letzte|n(?:\u00E4|ae)chste)\\s*woche)?(?=\\W|$)",
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:on\\s*?)?(?:(this|last|past|next)\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10520.WEEKDAY_DICTIONARY) +
+    "|weekend|weekday)(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(this|last|past|next)\\s*week)?(?=\\W|$)",
   "i",
 );
-class DEWeekdayParser {
+class ENWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, DEWeekdayParser);
+    tmp = c2(this, ENWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(DEWeekdayParser);
+    obj = closure_4(ENWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -53,7 +53,7 @@ class DEWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(DEWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -65,32 +65,52 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const str3 = str2.toLowerCase();
-      let str4 = "last";
-      if (!str3.match(/letzte/)) {
-        str4 = "next";
-        if (!str3.match(/chste/)) {
-          str4 = null;
-          if (str3.match(/diese/)) {
-            str4 = "this";
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
+      let str2 = "last";
+      if ("last" != formatted) {
+        str2 = "last";
+        if ("past" != formatted) {
+          str2 = "next";
+          if ("next" != formatted) {
+            str2 = null;
+            if ("this" == formatted) {
+              str2 = "this";
+            }
           }
         }
       }
-      return DEWeekdayParser(10529).createParsingComponentsAtWeekday(
-        reference.reference,
-        DEWeekdayParser(10548).WEEKDAY_DICTIONARY[formatted],
-        str4,
-      );
+      const formatted1 = arg1[2].toLowerCase();
+      if (undefined !== ENWeekdayParser(10520).WEEKDAY_DICTIONARY[formatted1]) {
+        let sum = ENWeekdayParser(10520).WEEKDAY_DICTIONARY[formatted1];
+      } else if ("weekend" == formatted1) {
+        if ("last" == str2) {
+          let SATURDAY = ENWeekdayParser(10526).Weekday.SUNDAY;
+        } else {
+          SATURDAY = ENWeekdayParser(10526).Weekday.SATURDAY;
+        }
+        sum = SATURDAY;
+      } else if ("weekday" != formatted1) {
+        return null;
+      } else {
+        reference = reference.reference;
+        const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+        const day = dateWithAdjustedTimezone.getDay();
+        if (day != ENWeekdayParser(10526).Weekday.SUNDAY) {
+          if (day != ENWeekdayParser(10526).Weekday.SATURDAY) {
+            const diff = day - 1;
+            sum = (("last" == str2 ? diff - 1 : diff + 1) % 5) + 1;
+          }
+        }
+        if ("last" == str2) {
+          let MONDAY = ENWeekdayParser(10526).Weekday.FRIDAY;
+        } else {
+          MONDAY = ENWeekdayParser(10526).Weekday.MONDAY;
+        }
+        sum = MONDAY;
+      }
+      return ENWeekdayParser(10548).createParsingComponentsAtWeekday(reference.reference, sum, str2);
     },
   },
 ];
 
-export default _createClass(DEWeekdayParser, items);
+export default _createClass(ENWeekdayParser, items);

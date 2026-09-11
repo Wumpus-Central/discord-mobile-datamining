@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 300,
+  height: 120,
   scales: [2, 3],
-  hash: "a2b44ab2faf9e7aa1dac11a1e1d9c4d6",
-  name: "fullscreen",
+  hash: "a5f6ed280bfa7452913e665fb649bb9c",
+  name: "img_stream_ended_darker",
   type: "png",
 });

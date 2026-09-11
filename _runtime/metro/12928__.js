@@ -1,32 +1,93 @@
 // _runtime/metro/12928__.js
-import _mod12873 from "12873__.js";
-import _mod12911 from "12911__.js";
-import _mod12914 from "12914__.js";
+import _mod12890 from "12890__.js";
+import spanTimeInputToSeconds from "../12895_spanTimeInputToSeconds.js";
+import _mod12918 from "12918__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
-  let obj = { sent_at: new Date().toISOString() };
-  if (sdk) {
-    sdk = sdk.sdk;
+export const logSpanEnd = function logSpanEnd(spanContext) {
+  if (_mod12918.DEBUG_BUILD) {
+    let tmpResult = spanTimeInputToSeconds;
+    const spanToJSONResult = tmpResult.spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
+    }
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
+    }
+    const spanId = spanContext.spanContext().spanId;
+    tmpResult = spanTimeInputToSeconds;
+    let str3 = "";
+    if (tmpResult.getRootSpan(spanContext) === spanContext) {
+      str3 = "root ";
+    }
+    const _HermesInternal = HermesInternal;
+    const combined = '[Tracing] Finishing "' + str2 + '" ' + str3 + 'span "' + str + '" with ID ' + spanId;
+    const logger = _mod12890.logger;
+    logger.log(combined);
   }
-  if (sdk) {
-    obj = { name: sdk.sdk.name, version: sdk.sdk.version };
-    obj.sdk = obj;
+};
+export const logSpanStart = function logSpanStart(spanContext) {
+  if (_mod12918.DEBUG_BUILD) {
+    let tmpResult = spanTimeInputToSeconds;
+    const spanToJSONResult = tmpResult.spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
+    }
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
+    }
+    const parent_span_id = spanToJSONResult.parent_span_id;
+    tmpResult = spanTimeInputToSeconds;
+    const spanIsSampledResult = tmpResult.spanIsSampled(spanContext);
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
+    let str3 = "unsampled";
+    if (spanIsSampledResult) {
+      str3 = "sampled";
+    }
+    let str5 = "";
+    if (rootSpan === spanContext) {
+      str5 = "root ";
+    }
+    const _HermesInternal = HermesInternal;
+    const _HermesInternal2 = HermesInternal;
+    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
+    const items = ["op: " + str2, ,];
+    const _HermesInternal3 = HermesInternal;
+    items[1] = "name: " + str;
+    const _HermesInternal4 = HermesInternal;
+    items[2] = "ID: " + spanContext.spanContext().spanId;
+    if (parent_span_id) {
+      const _HermesInternal5 = HermesInternal;
+      items.push("parent ID: " + parent_span_id);
+    }
+    if (rootSpan !== spanContext) {
+      const tmpResult2 = spanTimeInputToSeconds;
+      ({ op: op2, description: description2 } = spanTimeInputToSeconds.spanToJSON(rootSpan));
+      const _HermesInternal6 = HermesInternal;
+      items.push("root ID: " + rootSpan.spanContext().spanId);
+      if (op2) {
+        const _HermesInternal7 = HermesInternal;
+        items.push("root op: " + op2);
+      }
+      if (description2) {
+        const _HermesInternal8 = HermesInternal;
+        items.push("root description: " + description2);
+      }
+      const spanToJSONResult1 = spanTimeInputToSeconds.spanToJSON(rootSpan);
+    }
+    const logger = _mod12890.logger;
+    const _HermesInternal9 = HermesInternal;
+    logger.log("" + combined + "\n  " + items.join("\n  "));
+    const tmpResult1 = spanTimeInputToSeconds;
   }
-  let tmp = arg3;
-  if (arg3) {
-    tmp = url;
-  }
-  if (tmp) {
-    obj.dsn = _mod12914.dsnToString(url);
-  }
-  if (contexts) {
-    obj.trace = _mod12873.dropUndefinedKeys(contexts);
-  }
-  const items = [{ type: "check_in" }, arg0];
-  const date = new Date();
-  const items1 = [items];
-  return _mod12911.createEnvelope(obj, items1);
 };

@@ -1,7 +1,67 @@
 // _runtime/metro/08572__.js
-import 00065__ from "00065__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8566 from "08566__.js";
+import _modDef8573 from "08573__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeGaussianBlur", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, stdDeviationX: true, stdDeviationY: true, edgeMode: true } };
+const ClipPath = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class ClipPath {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, ClipPath);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(ClipPath);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ClipPath, _modDef8566);
+const entry = {
+  key: "render",
+  value: function render() {
+    const props = this.props;
+    const obj = { ref: this.refMethod };
+    const merged = Object.assign(ClipPath(8557).extract(this, props));
+    obj.children = props.children;
+    return <tmp ref={this.refMethod} />;
+  },
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
-export default module_65.get("RNSVGFeGaussianBlur", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

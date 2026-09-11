@@ -1,8 +1,7 @@
 // _runtime/metro/03951__.js
-import _typeof from "03693__.js";
-import 03875__ from "03875__.js";
-import 03936__ from "03936__.js";
-import 03697__ from "03697__.js";
+import _typeof from "03695__.js";
+import 03877__ from "03877__.js";
+import 03938__ from "03938__.js";
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -11,96 +10,112 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-if (!module_3875) {
-  obj = { default: module_3875 };
+if (!module_3877) {
+  obj = { default: module_3877 };
   let tmp5 = obj;
 } else {
-  tmp5 = module_3875;
+  tmp5 = module_3877;
 }
-module_3875 = tmp5;
-if (!module_3936) {
-  obj = { default: module_3936 };
+module_3877 = tmp5;
+if (!module_3938) {
+  obj = { default: module_3938 };
   let tmp7 = obj;
 } else {
-  tmp7 = module_3936;
+  tmp7 = module_3938;
 }
-module_3936 = tmp7;
-if (!module_3697) {
-  const obj1 = { default: module_3697 };
-  let tmp9 = obj1;
-} else {
-  tmp9 = module_3697;
-}
-module_3697 = tmp9;
+module_3938 = tmp7;
 
-export default function formatRFC3339(arg0, fractionDigits) {
+export default function formatISO9075(arg0, format) {
   if (arguments.length < 1) {
     const _TypeError = TypeError;
-    const concat2 = "1 arguments required, but only ".concat;
-    const typeError = new TypeError("1 arguments required, but only ".concat(arguments.length, " present"));
+    const concat2 = "1 argument required, but only ".concat;
+    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
     throw typeError;
   } else {
     const defaultResult = _typeof.default(arg0);
-    if (module_3875.default(defaultResult)) {
-      fractionDigits = undefined;
-      if (null != fractionDigits) {
-        fractionDigits = fractionDigits.fractionDigits;
+    if (module_3877.default(defaultResult)) {
+      format = undefined;
+      if (null != format) {
+        format = format.format;
       }
-      let num2 = 0;
-      if (null !== fractionDigits) {
-        num2 = 0;
-        if (undefined !== fractionDigits) {
-          num2 = fractionDigits;
+      let str3 = "extended";
+      if (null !== format) {
+        str3 = "extended";
+        if (undefined !== format) {
+          str3 = format;
         }
       }
-      const NumberResult = Number(num2);
-      if (NumberResult >= 0) {
-        if (NumberResult <= 3) {
-          const defaultResult1 = module_3936.default(defaultResult.getDate(), 2);
-          const fullYear = defaultResult.getFullYear();
-          const defaultResult2 = module_3936.default(defaultResult.getMonth() + 1, 2);
-          const defaultResult3 = module_3936.default(defaultResult.getHours(), 2);
-          let str4 = "";
-          const defaultResult4 = module_3936.default(defaultResult.getMinutes(), 2);
-          if (NumberResult > 0) {
-            const _Math = Math;
-            const _Math2 = Math;
-            const milliseconds = defaultResult.getMilliseconds();
-            str4 = `.${obj.default(tmp20(tmp19 * Math.pow(10, tmp8 - 3)), tmp8)}`;
-          }
-          const timezoneOffset = defaultResult.getTimezoneOffset();
-          let str6 = "Z";
-          if (0 !== timezoneOffset) {
-            const _Math3 = Math;
-            const absolute = Math.abs(timezoneOffset);
-            let str7 = "-";
-            const defaultResult6 = module_3936.default(module_3697.default(absolute / 60), 2);
-            if (timezoneOffset < 0) {
-              str7 = "+";
-            }
-            const combined = "".concat(str7);
-            const combined1 = combined.concat(defaultResult6, ":");
-            str6 = combined1.concat(module_3936.default(absolute % 60, 2));
-            const defaultResult7 = module_3936.default(absolute % 60, 2);
-          }
-          const concat = "".concat;
-          const combined2 = "".concat(fullYear, "-");
-          const combined3 = combined2.concat(defaultResult2, "-");
-          const combined4 = combined3.concat(defaultResult1, "T");
-          const combined5 = combined4.concat(defaultResult3, ":");
-          const combined6 = combined5.concat(defaultResult4, ":");
-          const combined7 = combined6.concat(module_3936.default(defaultResult.getSeconds(), 2));
-          const combined8 = combined7.concat(str4);
-          return combined8.concat(str6);
+      const StringResult = String(str3);
+      let representation;
+      if (null != format) {
+        representation = format.representation;
+      }
+      let str5 = "complete";
+      if (null !== representation) {
+        str5 = "complete";
+        if (undefined !== representation) {
+          str5 = representation;
         }
       }
-      const _RangeError2 = RangeError;
-      const rangeError = new RangeError("fractionDigits must be between 0 and 3 inclusively");
-      throw rangeError;
+      const StringResult1 = String(str5);
+      if ("extended" !== StringResult) {
+        if ("basic" !== StringResult) {
+          const _RangeError3 = RangeError;
+          const rangeError = new RangeError("format must be 'extended' or 'basic'");
+          throw rangeError;
+        }
+      }
+      if ("date" !== StringResult1) {
+        if ("time" !== StringResult1) {
+          if ("complete" !== StringResult1) {
+            const _RangeError2 = RangeError;
+            const rangeError1 = new RangeError("representation must be 'date', 'time', or 'complete'");
+            throw rangeError1;
+          }
+        }
+      }
+      let str10 = "";
+      if ("extended" === StringResult) {
+        str10 = "-";
+      }
+      let str11 = "";
+      if ("extended" === StringResult) {
+        str11 = ":";
+      }
+      let str13 = "";
+      if ("time" !== StringResult1) {
+        const defaultResult1 = module_3938.default(defaultResult.getDate(), 2);
+        const concat3 = "".concat;
+        const combined = "".concat(module_3938.default(defaultResult.getFullYear(), 4));
+        const combined1 = combined.concat(str10);
+        const combined2 = combined1.concat(module_3938.default(defaultResult.getMonth() + 1, 2));
+        const combined3 = combined2.concat(str10);
+        str13 = combined3.concat(defaultResult1);
+        const defaultResult2 = module_3938.default(defaultResult.getMonth() + 1, 2);
+      }
+      let combined10 = str13;
+      if ("date" !== StringResult1) {
+        const defaultResult3 = module_3938.default(defaultResult.getHours(), 2);
+        let str14 = " ";
+        const defaultResult4 = module_3938.default(defaultResult.getMinutes(), 2);
+        if ("" === str13) {
+          str14 = "";
+        }
+        const concat = "".concat;
+        const combined4 = "".concat(str13);
+        const combined5 = combined4.concat(str14);
+        const combined6 = combined5.concat(defaultResult3);
+        const combined7 = combined6.concat(str11);
+        const combined8 = combined7.concat(defaultResult4);
+        const combined9 = combined8.concat(str11);
+        combined10 = combined9.concat(module_3938.default(defaultResult.getSeconds(), 2));
+        const defaultResult5 = module_3938.default(defaultResult.getSeconds(), 2);
+      }
+      return combined10;
     } else {
       const _RangeError = RangeError;
-      const rangeError1 = new RangeError("Invalid time value");
-      throw rangeError1;
+      const rangeError2 = new RangeError("Invalid time value");
+      throw rangeError2;
     }
   }
 };

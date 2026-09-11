@@ -1,9 +1,8 @@
 // _runtime/metro/03976__.js
-import _mod3698 from "03698__.js";
-import startOfWeek from "../03852_startOfWeek.js";
-import _typeof from "03693__.js";
-import 03697__ from "03697__.js";
-import requiredArgs from "../03694_requiredArgs.js";
+import startOfWeek from "../03854_startOfWeek.js";
+import startOfWeekYear from "../03977_startOfWeekYear.js";
+import _typeof from "03695__.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
 if (!startOfWeek) {
   let obj = { default: startOfWeek };
@@ -12,20 +11,20 @@ if (!startOfWeek) {
   tmp3 = startOfWeek;
 }
 startOfWeek = tmp3;
-if (!_typeof) {
-  obj = { default: _typeof };
+if (!startOfWeekYear) {
+  obj = { default: startOfWeekYear };
   let tmp5 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp5 = startOfWeekYear;
 }
-_typeof = tmp5;
-if (!module_3697) {
-  obj = { default: module_3697 };
+startOfWeekYear = tmp5;
+if (!_typeof) {
+  obj = { default: _typeof };
   let tmp7 = obj;
 } else {
-  tmp7 = module_3697;
+  tmp7 = _typeof;
 }
-module_3697 = tmp7;
+_typeof = tmp7;
 if (!requiredArgs) {
   const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
@@ -33,84 +32,13 @@ if (!requiredArgs) {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function getWeekYear(arg0, firstWeekContainsDate) {
+export default function getWeek(arg0, arg1) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  const defaultOptions = _mod3698.getDefaultOptions();
-  let prop;
-  if (null != firstWeekContainsDate) {
-    prop = firstWeekContainsDate.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    let prop1;
-    if (null != firstWeekContainsDate) {
-      locale = firstWeekContainsDate.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              prop1 = options.firstWeekContainsDate;
-            }
-          }
-        }
-      }
-    }
-    prop = prop1;
-  }
-  if (null === prop) {
-    prop = defaultOptions.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    const locale2 = defaultOptions.locale;
-    let prop2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            prop2 = options2.firstWeekContainsDate;
-          }
-        }
-      }
-    }
-    prop = prop2;
-  }
-  let num = 1;
-  if (null !== prop) {
-    num = 1;
-    if (undefined !== prop) {
-      num = prop;
-    }
-  }
-  const defaultResult2 = module_3697.default(num);
-  if (defaultResult2 >= 1) {
-    if (defaultResult2 <= 7) {
-      const _Date = Date;
-      const date = new Date(0);
-      date.setFullYear(fullYear + 1, 0, defaultResult2);
-      date.setHours(0, 0, 0, 0);
-      const _Date2 = Date;
-      const date1 = new Date(0);
-      date1.setFullYear(fullYear, 0, defaultResult2);
-      date1.setHours(0, 0, 0, 0);
-      const defaultResult3 = startOfWeek.default(date, firstWeekContainsDate);
-      const time = defaultResult1.getTime();
-      if (time >= defaultResult3.getTime()) {
-        let sum = fullYear + 1;
-      } else {
-        const time1 = defaultResult1.getTime();
-        sum = fullYear;
-        if (time1 < defaultResult4.getTime()) {
-          sum = fullYear - 1;
-        }
-      }
-      return sum;
-    }
-  }
-  const rangeError = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-  throw rangeError;
+  const time = startOfWeek.default(defaultResult1, arg1).getTime();
+  const defaultResult2 = startOfWeek.default(defaultResult1, arg1);
+  return Math.round((time - startOfWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
 };
 export default exports.default;

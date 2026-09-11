@@ -1,10 +1,62 @@
 // _runtime/metro/08608__.js
-import _mod26 from "00026__.js";
-import 00065__ from "00065__.js";
+import _modDef8581 from "08581__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGPattern", validAttributes: null };
-const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, x: true, y: true, height: true, width: true, patternUnits: true, patternContentUnits: true, patternTransform: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true };
-__INTERNAL_VIEW_CONFIG.validAttributes = size;
+const FeTurbulence = arg1;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class FeTurbulence {
+  constructor() {
+    self = this;
+    tmp = c2(this, FeTurbulence);
+    tmp2 = closure_4;
+    obj = closure_4(FeTurbulence);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(FeTurbulence, _modDef8581);
+const entry = {
+  key: "render",
+  value: function render() {
+    const result = FeTurbulence(8558).warnUnimplementedFilter();
+    return null;
+  },
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(FeTurbulence, items);
+importDefaultResultResult.displayName = "FeTurbulence";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
-export default module_65.get("RNSVGPattern", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

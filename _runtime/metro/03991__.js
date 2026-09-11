@@ -1,6 +1,6 @@
 // _runtime/metro/03991__.js
-import _typeof from "03693__.js";
-import requiredArgs from "../03694_requiredArgs.js";
+import _typeof from "03695__.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -17,8 +17,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFirstDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDate();
+export default function isEqual(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === _typeof.default(arg1).getTime();
 };
 export default exports.default;

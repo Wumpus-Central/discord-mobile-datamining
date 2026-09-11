@@ -1,37 +1,35 @@
 // _runtime/metro/04966__.js
-import RNSLog2 from "../04962_RNSLog.js";
+import _mod4964 from "04964__.js";
 import noop from "00019__.js";
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
 
-export const useTabsHost = function useTabsHost(arg0) {
-  ({ componentNodeRef: require, onTabSelected } = arg0);
-  noop = undefined;
-  noop = noop.useRef(-1);
-  const effect = noop.useEffect(() => {
+export const useRenderDebugInfo = function useRenderDebugInfo(arg0) {
+  _require = arg0;
+  const ref = ref1.useRef(null);
+  ref1 = ref1.useRef(-1);
+  closure_3 = ref1.useEffectEvent((arg0) => {
+    const RNSLog = _mod4964.RNSLog;
+    RNSLog.log("" + closure_0 + " [" + ref1.current + "] " + arg0);
+  });
+  const effect = ref1.useEffect(() => {
     if (null != ref.current) {
-      let num2 = findNodeHandle(tmp.current);
-      if (num2 == null) {
-        num2 = -1;
+      let num = findNodeHandle(tmp.current);
+      if (num == null) {
+        num = -1;
       }
-      closure_2.current = num2;
-    } else {
-      closure_2.current = -1;
+      ref1.current = num;
+      if (-1 === ref1.current) {
+        closure_3("failed to find node handle");
+      }
     }
+    closure_3("mounted");
+    return () => {
+      closure_1_3("unmounted");
+    };
   }, []);
-  const obj = { onTabSelected: null };
-  const items = [onTabSelected];
-  obj.onTabSelected = noop.useCallback((nativeEvent) => {
-    const RNSLog = RNSLog2.RNSLog;
-    let num = ref2.current;
-    if (num == null) {
-      num = -1;
-    }
-    RNSLog.log("TabsHost [" + num + "] onTabSelected: " + JSON.stringify(nativeEvent.nativeEvent));
-    if (onTabSelected != null) {
-      onTabSelected(nativeEvent);
-    }
-  }, items);
-  return obj;
+  let RNSLog = require("04964__.js").RNSLog;
+  RNSLog.log("" + arg0 + " [" + ref1.current + "] " + "rendered");
+  return ref;
 };

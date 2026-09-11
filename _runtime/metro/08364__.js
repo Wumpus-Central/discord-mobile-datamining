@@ -1,359 +1,256 @@
 // _runtime/metro/08364__.js
-import _modDef39 from "00039__.js";
-import codegenNativeCommandsDefault from "../00113_codegenNativeCommands.js";
+import _mod32 from "00032__.js";
+import _objectWithoutProperties2 from "00109__objectWithoutProperties.js";
+import _mod8366 from "08366__.js";
+import _mod8368 from "08368__.js";
+import _mod8369 from "08369__.js";
+import 08365__ from "08365__.js";
 import noop from "00019__.js";
 import get_ActivityIndicator from "00017__.js";
 import jsxProd from "../react/00021_jsxProd.js";
 
-({
-  useCallback: c3,
-  useEffect: closure_4,
-  useImperativeHandle: hasOwnProperty,
-  useMemo: metroRequire,
-  useRef: closure_7,
-  forwardRef,
-} = noop);
-({ View: closure_8, NativeModules } = get_ActivityIndicator);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let fn = this;
-if (this) {
-  fn = this.__rest;
+const _slicedToArray = module_8365(_mod32);
+const _objectWithoutProperties = module_8365(_objectWithoutProperties2);
+if (typeof WeakMap === "function") {
+  const _WeakMap = WeakMap;
+  const weakMap = new WeakMap();
+  const _WeakMap2 = WeakMap;
+  const weakMap1 = new WeakMap();
 }
-if (!fn) {
-  fn = (obj, arr) => {
-    obj = {};
-    for (const key10007 in arg0) {
-      let _Object2 = Object;
-      hasOwnProperty = Object.prototype.hasOwnProperty;
-      let call2 = hasOwnProperty.call;
-      if (typeof call2 === "unknown") {
-        let hasOwnPropertyResult = hasOwnProperty(key10007);
-      } else {
-        hasOwnPropertyResult = call2(arg0, key10007);
-      }
-      if (hasOwnPropertyResult) {
-        hasOwnPropertyResult = arg1.indexOf(key10007) < 0;
-      }
-      if (!hasOwnPropertyResult) {
-        continue;
-      } else {
-        obj[key10007] = arg0[key10007];
-        continue;
-      }
-      continue;
-    }
-    if (null != obj) {
-      const _Object3 = Object;
-      if (typeof Object.getOwnPropertySymbols === "function") {
-        const _Object4 = Object;
-        const ownPropertySymbols = Object.getOwnPropertySymbols(obj);
-        let num = 0;
-        if (0 < ownPropertySymbols.length) {
-          const tmp2 = arr.indexOf(ownPropertySymbols[num]) < 0;
-          while (!tmp2) {
-            if (tmp2) {
-              obj[ownPropertySymbols[num]] = obj[ownPropertySymbols[num]];
+if (!noop) {
+  const merged = Object.assign({ default: null });
+  merged[0] = noop;
+  let value = merged;
+  if (null !== noop) {
+    if (typeof noop === "object") {
+      if (!weakMap) {
+        value = merged;
+        const keys = Object.keys();
+        if (keys !== undefined) {
+          value = merged;
+          while (keys[tmp] !== undefined) {
+            let tmp20 = "default" !== tmp11;
+            if (!tmp20) {
+              if (!tmp20) {
+                continue;
+              } else {
+                let _Object = Object;
+                let ownPropertyDescriptor = defineProperty;
+                if (defineProperty) {
+                  let _Object2 = Object;
+                  ownPropertyDescriptor = Object.getOwnPropertyDescriptor(noop, tmp11);
+                }
+                if (!ownPropertyDescriptor) {
+                  merged[tmp11] = noop[tmp11];
+                  continue;
+                } else {
+                  let definePropertyResult1 = defineProperty(merged, tmp11, ownPropertyDescriptor);
+                  continue;
+                }
+                continue;
+              }
+              continue;
+            } else {
+              let hasOwnProperty = {}.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              let tmp12 = typeof call === "unknown" ? hasOwnProperty(tmp11) : call(noop, tmp11);
             }
-            num = num + 1;
           }
-          const _Object = Object;
-          const call = propertyIsEnumerable.call;
-          typeof call === "unknown"
-            ? propertyIsEnumerable(ownPropertySymbols[num])
-            : call(obj, ownPropertySymbols[num]);
         }
+      } else if (weakMap.has(noop)) {
+        value = weakMap.get(noop);
+      } else {
+        let result = weakMap.set(noop, merged);
       }
+    } else {
+      value = merged;
     }
-    return obj;
-  };
+  }
+} else {
+  value = noop;
 }
-let closure_13 = codegenNativeCommandsDefault({
-  supportedCommands: [
-    "goBack",
-    "goForward",
-    "reload",
-    "stopLoading",
-    "injectJavaScript",
-    "requestFocus",
-    "postMessage",
-    "clearFormData",
-    "clearCache",
-    "clearHistory",
-    "loadUrl",
-  ],
-});
-const resolveAssetSource = get_ActivityIndicator.Image.resolveAssetSource;
-let c15 = 0;
-let RNCWebView = NativeModules.RNCWebView;
-const forwardRefResult = forwardRef((overScrollMode, arg1) => {
-  overScrollMode = overScrollMode.overScrollMode;
-  let str = "always";
-  if (undefined !== overScrollMode) {
-    str = overScrollMode;
-  }
-  const javaScriptEnabled = overScrollMode.javaScriptEnabled;
-  const thirdPartyCookiesEnabled = overScrollMode.thirdPartyCookiesEnabled;
-  const scalesPageToFit = overScrollMode.scalesPageToFit;
-  const allowsFullscreenVideo = overScrollMode.allowsFullscreenVideo;
-  const allowFileAccess = overScrollMode.allowFileAccess;
-  const saveFormDataDisabled = overScrollMode.saveFormDataDisabled;
-  const cacheEnabled = overScrollMode.cacheEnabled;
-  const androidHardwareAccelerationDisabled = overScrollMode.androidHardwareAccelerationDisabled;
-  const androidLayerType = overScrollMode.androidLayerType;
-  let str2 = "none";
-  if (undefined !== androidLayerType) {
-    str2 = androidLayerType;
-  }
-  let defaultOriginWhitelist = overScrollMode.originWhitelist;
-  if (undefined === defaultOriginWhitelist) {
-    defaultOriginWhitelist = current(onShouldStartLoadWithRequest2[4]).defaultOriginWhitelist;
-  }
-  const setSupportMultipleWindows = overScrollMode.setSupportMultipleWindows;
-  const setBuiltInZoomControls = overScrollMode.setBuiltInZoomControls;
-  const setDisplayZoomControls = overScrollMode.setDisplayZoomControls;
-  const nestedScrollEnabled = overScrollMode.nestedScrollEnabled;
-  ({ messagingWithWebViewKeyEnabled, onMessage, renderLoading, renderError, source, nativeConfig } = overScrollMode);
-  ({
-    startInLoadingState,
-    onNavigationStateChange,
-    onLoadStart,
-    onError,
-    onLoad,
-    onLoadEnd,
-    onLoadProgress,
-    onHttpError,
-    onRenderProcessGone,
-    style,
-    containerStyle,
-    onShouldStartLoadWithRequest,
-  } = overScrollMode);
-  const sum = c15 + 1;
-  c15 = sum;
-  current = closure_7("WebViewMessageHandler".concat(sum)).current;
-  const tmp17 = closure_7(null);
-  importDefault = tmp17;
-  const tmp = undefined === javaScriptEnabled || javaScriptEnabled;
-  const tmp11 = undefined === setSupportMultipleWindows || setSupportMultipleWindows;
-  const tmp12 = undefined === setBuiltInZoomControls || setBuiltInZoomControls;
-  const tmp13 = undefined !== setDisplayZoomControls && setDisplayZoomControls;
-  const tmp14 = undefined !== nestedScrollEnabled && nestedScrollEnabled;
-  const tmp15 = fn(overScrollMode, [
-    "overScrollMode",
-    "javaScriptEnabled",
-    "thirdPartyCookiesEnabled",
-    "scalesPageToFit",
-    "allowsFullscreenVideo",
-    "allowFileAccess",
-    "saveFormDataDisabled",
-    "cacheEnabled",
-    "androidHardwareAccelerationDisabled",
-    "androidLayerType",
-    "originWhitelist",
-    "setSupportMultipleWindows",
-    "setBuiltInZoomControls",
-    "setDisplayZoomControls",
-    "nestedScrollEnabled",
-    "startInLoadingState",
-    "messagingWithWebViewKeyEnabled",
-    "onNavigationStateChange",
-    "onLoadStart",
-    "onError",
-    "onLoad",
-    "onLoadEnd",
-    "onLoadProgress",
-    "onHttpError",
-    "onRenderProcessGone",
-    "onMessage",
-    "renderLoading",
-    "renderError",
-    "style",
-    "containerStyle",
-    "source",
-    "nativeConfig",
-    "onShouldStartLoadWithRequest",
-  ]);
-  const tmp2 = undefined === thirdPartyCookiesEnabled || thirdPartyCookiesEnabled;
-  const tmp3 = undefined === scalesPageToFit || scalesPageToFit;
-  const tmp4 = undefined !== allowsFullscreenVideo && allowsFullscreenVideo;
-  const tmp5 = undefined !== allowFileAccess && allowFileAccess;
-  const tmp6 = undefined !== saveFormDataDisabled && saveFormDataDisabled;
-  const tmp7 = undefined === cacheEnabled || cacheEnabled;
-  const tmp8 = undefined !== androidHardwareAccelerationDisabled && androidHardwareAccelerationDisabled;
-  let obj = current(onShouldStartLoadWithRequest2[4]);
-  const webWiewLogic = obj.useWebWiewLogic({
-    onNavigationStateChange,
-    onLoad,
-    onError,
-    onHttpErrorProp: onHttpError,
-    onLoadEnd,
-    onLoadProgress,
-    onLoadStart,
-    onRenderProcessGoneProp: onRenderProcessGone,
-    onMessageProp: onMessage,
-    startInLoadingState,
-    originWhitelist: defaultOriginWhitelist,
-    onShouldStartLoadWithRequestProp: onShouldStartLoadWithRequest,
-    onShouldStartLoadWithRequestCallback: onMessage2((arg0, arg1, arg2) => {
-      if (arg2) {
-        const RNCWebView = NativeModules.RNCWebView;
-        const result = RNCWebView.onShouldStartLoadWithRequestCallback(arg0, arg2);
-      } else if (arg0) {
-        const url = navigation.loadUrl(ref.current, arg1);
-      }
-    }, []),
-  });
-  onShouldStartLoadWithRequest2 = webWiewLogic.onShouldStartLoadWithRequest;
-  onMessage2 = webWiewLogic.onMessage;
-  ({ viewState, setViewState } = webWiewLogic);
-  const lastErrorEvent = webWiewLogic.lastErrorEvent;
-  const items = [setViewState, tmp17];
-  ({
-    onLoadingStart,
-    onHttpError: onHttpError2,
-    onLoadingError,
-    onLoadingFinish,
-    onLoadingProgress,
-    onRenderProcessGone: onRenderProcessGone2,
-  } = webWiewLogic);
-  closure_5(
-    arg1,
-    () => ({
-      goForward() {
-        return navigation.goForward(ref.current);
-      },
-      goBack() {
-        return navigation.goBack(ref.current);
-      },
-      reload() {
-        setViewState("LOADING");
-        navigation.reload(ref.current);
-      },
-      stopLoading() {
-        return navigation.stopLoading(ref.current);
-      },
-      postMessage(arg0) {
-        return navigation.postMessage(ref.current, arg0);
-      },
-      injectJavaScript(PLAYER_FUNCTIONS) {
-        return navigation.injectJavaScript(ref.current, PLAYER_FUNCTIONS);
-      },
-      requestFocus() {
-        return navigation.requestFocus(ref.current);
-      },
-      clearFormData() {
-        return navigation.clearFormData(ref.current);
-      },
-      clearCache(arg0) {
-        return navigation.clearCache(ref.current, arg0);
-      },
-      clearHistory() {
-        return navigation.clearHistory(ref.current);
-      },
-    }),
-    items,
-  );
-  const items1 = [onMessage2, onShouldStartLoadWithRequest2];
-  const tmp23 = closure_6(
-    () => ({ onShouldStartLoadWithRequest: onShouldStartLoadWithRequest2, onMessage: onMessage2 }),
-    items1,
-  );
-  closure_5 = tmp23;
-  const items2 = [current, tmp23];
-  setViewState(() => {
-    const result = _modDef39.registerCallableModule(current, closure_5);
-  }, items2);
-  if ("LOADING" === viewState) {
-    if (!renderLoading) {
-      renderLoading = tmp19(tmp20[4]).defaultRenderLoading;
-    }
-    let renderLoadingResult = renderLoading();
-  } else if ("ERROR" === viewState) {
-    require("00038__.js")(null != lastErrorEvent, "lastErrorEvent expected to be non-null");
-    if (!renderError) {
-      renderError = tmp19(tmp20[4]).defaultRenderError;
-    }
-    renderLoadingResult = renderError(lastErrorEvent.domain, lastErrorEvent.code, lastErrorEvent.description);
-  } else {
-    renderLoadingResult = null;
-    if ("IDLE" !== viewState) {
-      const _console3 = console;
-      const concat = "RNCWebView invalid state encountered: ".concat;
-      console.error("RNCWebView invalid state encountered: ".concat(viewState));
-      renderLoadingResult = null;
-    }
-  }
-  const items3 = [require("08367__.js").container, require("08367__.js").webView, style];
-  const items4 = [require("08367__.js").container, containerStyle];
-  let tmp29 = typeof source !== "number";
-  if (typeof source !== "number") {
-    tmp29 = source;
-  }
-  if (tmp29) {
-    tmp29 = "method" in source;
-  }
-  if (tmp29) {
-    if ("POST" === source.method) {
-      if (source.headers) {
-        const _console2 = console;
-        console.warn("WebView: `source.headers` is not supported when using POST.");
-      }
-    }
-    if (tmp30) {
-      const _console = console;
-      console.warn("WebView: `source.body` is not supported when using GET.");
-    }
-    tmp30 = "GET" === source.method && source.body;
-  }
-  let component;
-  if (null != nativeConfig) {
-    component = nativeConfig.component;
-  }
-  if (!component) {
-    component = require("08368__.js");
-  }
-  obj = {};
-  const merged = Object.assign(tmp15);
-  let tmp38 = typeof onMessage === "function";
-  if (typeof onMessage !== "function") {
-    tmp38 = null != messagingWithWebViewKeyEnabled && messagingWithWebViewKeyEnabled;
-    const tmp39 = null != messagingWithWebViewKeyEnabled && messagingWithWebViewKeyEnabled;
-  }
-  obj.messagingEnabled = tmp38;
-  obj.messagingModuleName = current;
-  obj.onLoadingError = onLoadingError;
-  obj.onLoadingFinish = onLoadingFinish;
-  obj.onLoadingProgress = onLoadingProgress;
-  obj.onLoadingStart = onLoadingStart;
-  obj.onHttpError = onHttpError2;
-  obj.onRenderProcessGone = onRenderProcessGone2;
-  obj.onMessage = onMessage2;
-  obj.onShouldStartLoadWithRequest = onShouldStartLoadWithRequest2;
-  obj.ref = tmp17;
-  obj.source = resolveAssetSource(source);
-  obj.style = items3;
-  obj.overScrollMode = str;
-  obj.javaScriptEnabled = tmp;
-  obj.thirdPartyCookiesEnabled = tmp2;
-  obj.scalesPageToFit = tmp3;
-  obj.allowsFullscreenVideo = tmp4;
-  obj.allowFileAccess = tmp5;
-  obj.saveFormDataDisabled = tmp6;
-  obj.cacheEnabled = tmp7;
-  obj.androidHardwareAccelerationDisabled = tmp8;
-  obj.androidLayerType = str2;
-  obj.setSupportMultipleWindows = tmp11;
-  obj.setBuiltInZoomControls = tmp12;
-  obj.setDisplayZoomControls = tmp13;
-  obj.nestedScrollEnabled = tmp14;
-  let props;
-  if (null != nativeConfig) {
-    props = nativeConfig.props;
-  }
-  const merged1 = Object.assign(props);
-  obj = { style: items4, children: null };
-  const items5 = [closure_10(component, obj, "webViewKey"), renderLoadingResult];
-  obj.children = items5;
-  return closure_11(closure_8, obj);
-});
+const __INTERNAL_VIEW_CONFIG = module_8365(_mod8366);
+let closure_8 = ["onValueChange", "onSlidingStart", "onSlidingComplete", "onAccessibilityAction", "value", "minimumValue", "maximumValue", "step", "inverted", "tapToSeek", "lowerLimit", "upperLimit"];
 
-export default Object.assign(forwardRefResult, { isFileUploadSupported: RNCWebView.isFileUploadSupported() });
+export default value.default.forwardRef(function SliderComponent(onSlidingComplete, ref) {
+  ({ onValueChange: require, onSlidingStart } = onSlidingComplete);
+  onSlidingComplete = onSlidingComplete.onSlidingComplete;
+  const onAccessibilityAction = onSlidingComplete.onAccessibilityAction;
+  let SLIDER_DEFAULT_INITIAL_VALUE = onSlidingComplete.value;
+  if (undefined === SLIDER_DEFAULT_INITIAL_VALUE) {
+    SLIDER_DEFAULT_INITIAL_VALUE = _mod8368.constants.SLIDER_DEFAULT_INITIAL_VALUE;
+  }
+  const minimumValue = onSlidingComplete.minimumValue;
+  let num = 0;
+  if (undefined !== minimumValue) {
+    num = minimumValue;
+  }
+  const maximumValue = onSlidingComplete.maximumValue;
+  let num2 = 1;
+  if (undefined !== maximumValue) {
+    num2 = maximumValue;
+  }
+  const step = onSlidingComplete.step;
+  let num3 = 0;
+  if (undefined !== step) {
+    num3 = step;
+  }
+  const inverted = onSlidingComplete.inverted;
+  const tapToSeek = onSlidingComplete.tapToSeek;
+  let lowerLimit = onSlidingComplete.lowerLimit;
+  if (undefined === lowerLimit) {
+    const Platform = get_ActivityIndicator.Platform;
+    let obj = { web: num, default: _mod8368.constants.LIMIT_MIN_VALUE };
+    lowerLimit = Platform.select(obj);
+  }
+  let upperLimit = onSlidingComplete.upperLimit;
+  if (undefined === upperLimit) {
+    const Platform2 = get_ActivityIndicator.Platform;
+    obj = { web: num2, default: _mod8368.constants.LIMIT_MAX_VALUE };
+    upperLimit = Platform2.select(obj);
+  }
+  const defaultResult = _objectWithoutProperties.default(onSlidingComplete, closure_8);
+  let obj2 = value;
+  let SLIDER_DEFAULT_INITIAL_VALUE2 = num;
+  if (null != SLIDER_DEFAULT_INITIAL_VALUE) {
+    SLIDER_DEFAULT_INITIAL_VALUE2 = SLIDER_DEFAULT_INITIAL_VALUE;
+  }
+  if (null == SLIDER_DEFAULT_INITIAL_VALUE2) {
+    SLIDER_DEFAULT_INITIAL_VALUE2 = _mod8368.constants.SLIDER_DEFAULT_INITIAL_VALUE;
+  }
+  [tmp15, jsxProd] = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
+  const defaultResult1 = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
+  const tmp4 = undefined !== tapToSeek && tapToSeek;
+  [tmp17, closure_8] = _slicedToArray.default(obj2.useState(0), 2);
+  let DEFAULT_STEP_RESOLUTION = num3;
+  if (!num3) {
+    DEFAULT_STEP_RESOLUTION = _mod8368.constants.DEFAULT_STEP_RESOLUTION;
+  }
+  let result = (num2 - num) / DEFAULT_STEP_RESOLUTION;
+  let tmp21 = num3;
+  if (!num3) {
+    tmp21 = result;
+  }
+  result = tmp21;
+  if (num3) {
+    DEFAULT_STEP_RESOLUTION = result;
+  }
+  obj = { length: DEFAULT_STEP_RESOLUTION + 1 };
+  const defaultResult2 = _slicedToArray.default(obj2.useState(0), 2);
+  if ("ios" === get_ActivityIndicator.Platform.OS) {
+    let defaultSlider = _mod8369.styles.defaultSlideriOS;
+    let tmp24 = require;
+  } else {
+    tmp24 = require;
+    defaultSlider = _mod8369.styles.defaultSlider;
+  }
+  const items = [defaultSlider, defaultResult.style];
+  if (typeof defaultResult.disabled === "boolean") {
+    let disabled = defaultResult.disabled;
+  } else {
+    const accessibilityState2 = defaultResult.accessibilityState;
+    disabled = undefined;
+    if (null != accessibilityState2) {
+      disabled = accessibilityState2.disabled;
+    }
+    disabled = true === disabled;
+  }
+  if (typeof defaultResult.disabled === "boolean") {
+    const _Object = Object;
+    const obj1 = { disabled: defaultResult.disabled };
+    let accessibilityState = Object.assign({}, defaultResult.accessibilityState, obj1);
+  } else {
+    accessibilityState = defaultResult.accessibilityState;
+  }
+  let fn = null;
+  if (onSlidingStart) {
+    fn = (nativeEvent) => {
+      onSlidingStart(nativeEvent.nativeEvent.value);
+    };
+  }
+  let fn2 = null;
+  if (onSlidingComplete) {
+    fn2 = (nativeEvent) => {
+      onSlidingComplete(nativeEvent.nativeEvent.value);
+    };
+  }
+  let fn3 = null;
+  if (onAccessibilityAction) {
+    fn3 = (arg0) => {
+      onAccessibilityAction(arg0);
+    };
+  }
+  let tmp29;
+  if (!Number.isNaN(SLIDER_DEFAULT_INITIAL_VALUE)) {
+    if (SLIDER_DEFAULT_INITIAL_VALUE) {
+      tmp29 = SLIDER_DEFAULT_INITIAL_VALUE;
+    }
+  }
+  const items1 = [lowerLimit, upperLimit];
+  const effect = obj2.useEffect(() => {
+    if (lowerLimit >= upperLimit) {
+      const _console = console;
+      console.warn("Invalid configuration: lower limit is supposed to be smaller than upper limit");
+    }
+  }, items1);
+  obj2 = {
+    onLayout(nativeEvent) {
+      closure_1_8(nativeEvent.nativeEvent.layout.width);
+    },
+    style: null,
+    children: null
+  };
+  const items2 = [items, { justifyContent: "center" }];
+  obj2.style = items2;
+  if (defaultResult.StepMarker) {
+    const obj3 = { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null };
+    ({ renderStepNumber: obj8.renderStepNumber, thumbImage: obj8.thumbImage, StepMarker: obj8.StepMarker } = defaultResult);
+    obj3.isLTR = tmp3;
+    let jsxResult = jsxProd.jsx(tmp24(8370).StepsIndicator, { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null });
+  } else {
+    jsxResult = null;
+  }
+  const items3 = [jsxResult, ];
+  const obj4 = { minimumValue: num, maximumValue: num2, step: num3, inverted: undefined !== inverted && inverted, tapToSeek: tmp4, value: tmp29, lowerLimit, upperLimit, accessibilityState, thumbImage: null, ref: null, style: null, onChange: null, onRNCSliderSlidingStart: null, onRNCSliderSlidingComplete: null, onRNCSliderValueChange: null, disabled: null, onStartShouldSetResponder: null, onResponderTerminationRequest: null, onRNCSliderAccessibilityAction: null, thumbTintColor: null };
+  if ("web" === get_ActivityIndicator.Platform.OS) {
+    let thumbImage = defaultResult.thumbImage;
+  } else if (!defaultResult.StepMarker) {
+    if (defaultResult.thumbImage) {
+      const Image = get_ActivityIndicator.Image;
+      thumbImage = Image.resolveAssetSource(defaultResult.thumbImage);
+    }
+  }
+  function onValueChangeEvent(nativeEvent) {
+    if (require) {
+      tmp(nativeEvent.nativeEvent.value);
+    }
+    jsxProd(nativeEvent.nativeEvent.value);
+  }
+  obj4.thumbImage = thumbImage;
+  obj4.ref = ref;
+  const items4 = [{ zIndex: 1, width: tmp17 }, defaultSlider, { alignContent: "center", alignItems: "center" }];
+  obj4.style = items4;
+  obj4.onChange = onValueChangeEvent;
+  obj4.onRNCSliderSlidingStart = fn;
+  obj4.onRNCSliderSlidingComplete = fn2;
+  obj4.onRNCSliderValueChange = onValueChangeEvent;
+  obj4.disabled = disabled;
+  obj4.onStartShouldSetResponder = function onStartShouldSetResponder() {
+    return true;
+  };
+  obj4.onResponderTerminationRequest = function onResponderTerminationRequest() {
+    return false;
+  };
+  obj4.onRNCSliderAccessibilityAction = fn3;
+  if (!defaultResult.thumbImage) {
+    let str = defaultResult.thumbTintColor;
+  } else {
+    str = "transparent";
+  }
+  obj4.thumbTintColor = str;
+  items3[1] = <__INTERNAL_VIEW_CONFIG.default {...Object.assign({}, defaultResult, obj4)} />;
+  obj2.children = items3;
+  return <get ActivityIndicator.View onLayout={function onLayout(nativeEvent) {
+    closure_1_8(nativeEvent.nativeEvent.layout.width);
+  }} style={null}>{null}</get ActivityIndicator.View>;
+});

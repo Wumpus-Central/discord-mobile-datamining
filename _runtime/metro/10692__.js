@@ -1,5 +1,6 @@
 // _runtime/metro/10692__.js
-import AbstractParserWithWordBoundaryChecking from "../10509_AbstractParserWithWordBoundaryChecking.js";
+import repeatedTimeunitPattern from "../10521_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10528_AbstractParserWithWordBoundaryChecking.js";
 import _mod10690 from "10690__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -7,7 +8,7 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const SVTimeUnitCasualRelativeFormatParser = require;
+const ENMonthNameMiddleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,71 +28,78 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const regExp = new RegExp(
-  "(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" +
-    _mod10690.TIME_UNITS_PATTERN +
-    ")(?=\\W|$)",
+  "(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10690.MONTH_DICTIONARY) +
+    ")(?:-|/|\\s*,?\\s*)(" +
+    _mod10690.ORDINAL_NUMBER_PATTERN +
+    ")(?!\\s*(?:am|pm))\\s*(?:(?:al|\\-|\\alle|\\del|\\s)\\s*(" +
+    _mod10690.ORDINAL_NUMBER_PATTERN +
+    ")\\s*)?(?:(?:-|/|\\s*,?\\s*)(" +
+    _mod10690.YEAR_PATTERN +
+    "))?(?=\\W|$)(?!\\:\\d)",
   "i",
 );
-const regExp1 = new RegExp(
-  "(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" +
-    _mod10690.TIME_UNITS_NO_ABBR_PATTERN +
-    ")(?=\\W|$)",
-  "i",
-);
-class SVTimeUnitCasualRelativeFormatParser {
+class ENMonthNameMiddleEndianParser {
   constructor() {
-    flag = global;
-    if (global === undefined) {
-      flag = true;
-    }
     self = this;
-    tmp = c2(this, SVTimeUnitCasualRelativeFormatParser);
+    tmp = c2(this, ENMonthNameMiddleEndianParser);
     tmp2 = closure_4;
-    obj = closure_4(SVTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(ENMonthNameMiddleEndianParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.allowAbbreviations = flag;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(
-  SVTimeUnitCasualRelativeFormatParser,
-  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
-);
+_inherits(ENMonthNameMiddleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return this.allowAbbreviations ? regExp : regExp1;
+    return regExp;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = SVTimeUnitCasualRelativeFormatParser(10690).parseDuration(arg1[2]);
-      if (parseDurationResult) {
-        if ("f\u00F6rra" !== formatted) {
-          if ("passerade" !== formatted) {
-            let reverseDurationResult = parseDurationResult;
-          }
-          const ParsingComponents = SVTimeUnitCasualRelativeFormatParser(10505).ParsingComponents;
-          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-        }
-        reverseDurationResult = SVTimeUnitCasualRelativeFormatParser(10504).reverseDuration(parseDurationResult);
-      } else {
+    value: function innerExtract(createParsingComponents, index) {
+      const tmp3 = ENMonthNameMiddleEndianParser(10690).MONTH_DICTIONARY[index[1].toLowerCase(index[1])];
+      const result = ENMonthNameMiddleEndianParser(10690).parseOrdinalNumberPattern(index[2]);
+      if (result > 31) {
         return null;
+      } else {
+        const date = { day: result, month: tmp3 };
+        const parsingComponents = createParsingComponents.createParsingComponents(date);
+        if (index[4]) {
+          parsingComponents.assign("year", ENMonthNameMiddleEndianParser(10690).parseYear(index[4]));
+        } else {
+          parsingComponents.imply(
+            "year",
+            ENMonthNameMiddleEndianParser(10522).findYearClosestToRef(createParsingComponents.refDate, result, tmp3),
+          );
+        }
+        if (index[3]) {
+          const result1 = ENMonthNameMiddleEndianParser(10690).parseOrdinalNumberPattern(index[3]);
+          const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
+          parsingResult.start = parsingComponents;
+          parsingResult.end = parsingComponents.clone();
+          const end = parsingResult.end;
+          end.assign("day", result1);
+          return parsingResult;
+        } else {
+          return parsingComponents;
+        }
       }
     },
   },
 ];
 
-export default _createClass(SVTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(ENMonthNameMiddleEndianParser, items);

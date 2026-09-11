@@ -3,9 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "425df9420548222a7512beb569adb5f8",
-  name: "sv-SE.messages.425df9420548222a7512beb569adb5f8.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "d6f2100bc35d4631ec4aaba26d151036",
+  name: "LettersIcon",
+  type: "png",
 });

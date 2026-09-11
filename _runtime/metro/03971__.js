@@ -1,6 +1,6 @@
 // _runtime/metro/03971__.js
-import _typeof from "03693__.js";
-import requiredArgs from "../03694_requiredArgs.js";
+import _typeof from "03695__.js";
+import requiredArgs from "../03696_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -17,8 +17,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getSeconds(arg0) {
+export default function getMonth(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getSeconds();
+  return _typeof.default(arg0).getMonth();
 };
 export default exports.default;

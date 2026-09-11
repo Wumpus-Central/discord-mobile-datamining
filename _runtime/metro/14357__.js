@@ -1,23 +1,24 @@
 // _runtime/metro/14357__.js
+import 14358__ from "14358__.js";
 
-export const calendars = [
-  "buddhist",
-  "chinese",
-  "coptic",
-  "dangi",
-  "ethioaa",
-  "ethiopic",
-  "gregory",
-  "hebrew",
-  "indian",
-  "islamic",
-  "islamic-civil",
-  "islamic-rgsa",
-  "islamic-tbla",
-  "islamic-umalqura",
-  "islamicc",
-  "iso8601",
-  "japanese",
-  "persian",
-  "roc",
-];
+const call = prototype.call;
+if (module_14358) {
+  const bind = prototype.bind;
+  module_14358 = bind.bind(call, call);
+}
+if (!module_14358) {
+  module_14358 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
+}
+
+export default module_14358;

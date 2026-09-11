@@ -1,100 +1,51 @@
 // _runtime/metro/12932__.js
-import _slicedToArray from "00032__.js";
+import _mod12890 from "12890__.js";
+import spanTimeInputToSeconds from "../12895_spanTimeInputToSeconds.js";
+import _mod12905 from "12905__.js";
+import _mod12918 from "12918__.js";
 
-function parseRetryAfterHeader(arg0) {
-  let timestamp = arg1;
-  if (arg1 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
+require = arg1;
+const dependencyMap = arg6;
+
+export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
+  if (activeSpan === undefined) {
+    let obj = spanTimeInputToSeconds;
+    activeSpan = obj.getActiveSpan();
   }
-  const parsed = parseInt("" + arg0, 10);
-  if (isNaN(parsed)) {
-    const _Date2 = Date;
-    const _HermesInternal = HermesInternal;
-    const parsed1 = Date.parse("" + arg0);
-    const _isNaN = isNaN;
-    let num2 = 60000;
-    if (!isNaN(parsed1)) {
-      num2 = parsed1 - timestamp;
+  let rootSpan = activeSpan;
+  if (activeSpan) {
+    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
+  }
+  if (rootSpan) {
+    if (_mod12918.DEBUG_BUILD) {
+      const logger = _mod12890.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
     }
-    return num2;
-  } else {
-    return 1000 * parsed;
+    obj = {};
+    obj[_mod12905.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj[_mod12905.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    rootSpan.addEvent(arg0, obj);
   }
-}
-
-export const DEFAULT_RETRY_AFTER = 60000;
-export const disabledUntil = function disabledUntil(all, arg1) {
-  return all[arg1] || all.all || 0;
 };
-export const isRateLimited = function isRateLimited(all, result) {
-  let timestamp = arg2;
-  if (arg2 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  return (all[result] || all.all || 0) > timestamp;
-};
-export { parseRetryAfterHeader };
-export const updateRateLimits = function updateRateLimits(arg0, headers) {
-  headers = headers.headers;
-  let timestamp = arg2;
-  if (arg2 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  const obj = {};
-  const merged = Object.assign(arg0);
-  let str = headers;
-  if (headers) {
-    str = headers["x-sentry-rate-limits"];
-  }
-  let prop = headers;
-  if (headers) {
-    prop = headers["retry-after"];
-  }
-  if (str) {
-    const parts = str.trim().split(",");
-    const iter = parts[Symbol.iterator]();
-    const str2 = str.trim();
-    while (iter !== undefined) {
-      let tmp12 = _slicedToArray(str8.split(":", 5), 5);
-      let str9 = tmp12[1];
-      let str10 = tmp12[4];
-      let _parseInt = parseInt;
-      let parsed = parseInt(tmp12[0], 10);
-      let _isNaN = isNaN;
-      let num6 = 60;
-      if (!isNaN(parsed)) {
-        num6 = parsed;
-      }
-      let result = 1000 * num6;
-      if (str9) {
-        let parts1 = str9.split(";");
-        for (const item10065 of parts1) {
-          let tmp23 = "metric_bucket" === item10065;
-          if (tmp23) {
-            tmp23 = str10;
-          }
-          if (tmp23) {
-            let parts2 = str10.split(";");
-            tmp23 = !parts2.includes("custom");
-          }
-          if (!tmp23) {
-            obj[item10065] = timestamp + result;
-          }
-          continue;
+export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
+  if (arr) {
+    if (0 !== arr.length) {
+      let obj = {};
+      const item = arr.forEach((attributes) => {
+        const tmp = attributes.attributes || {};
+        const tmp2 = tmp[_mod12905.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
+        const tmp3 = tmp[_mod12905.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
+        let tmp4 = typeof tmp2 === "string";
+        if (typeof tmp2 === "string") {
+          tmp4 = typeof tmp3 === "number";
         }
-      } else {
-        obj.all = timestamp + result;
-      }
-      continue;
+        if (tmp4) {
+          obj = { value: tmp3, unit: tmp2 };
+          obj[attributes.name] = obj;
+        }
+      });
+      return obj;
     }
-    str8 = iter.next();
-  } else if (prop) {
-    obj.all = timestamp + parseRetryAfterHeader(prop, timestamp);
-  } else if (429 === headers.statusCode) {
-    obj.all = timestamp + 60000;
   }
-  return obj;
 };

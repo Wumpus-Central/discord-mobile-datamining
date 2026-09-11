@@ -1,10 +1,13 @@
 // _runtime/metro/11299__.js
-import _mod11298 from "11298__.js";
+import registerAsset from "01122__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const keepLocalCopy = function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod11298.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "80a1b67e775ddb8de80fde27e63a5302",
+  name: "CirclePlusIcon-secondary",
+  type: "png",
+});

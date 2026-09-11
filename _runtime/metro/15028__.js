@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "025ed70341d831a8d87cf223149523d3",
-  name: "ic_monitor",
+  hash: "e5597814a0893b2321f6b666c9cfcb40",
+  name: "ClipsIcon",
   type: "png",
 });

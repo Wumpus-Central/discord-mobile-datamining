@@ -1,18 +1,15 @@
 // _runtime/metro/08623__.js
-import appendTransformPropsDefault from "../08529_appendTransformProps.js";
-import extractFontDefault from "../08543_extractFont.js";
-import _modDef8545 from "08545__.js";
-import _modDef8620 from "08620__.js";
-import _modDef8624 from "08624__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8566 from "08566__.js";
+import unitsDefault from "../08620_units.js";
+import _modDef8625 from "08625__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import metroRequire from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const TextPath = fn;
+const Mask = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,102 +28,89 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let closure_3 = [
-  "children",
-  "xlinkHref",
-  "href",
-  "startOffset",
-  "method",
-  "spacing",
-  "side",
-  "alignmentBaseline",
-  "midLine",
-];
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class TextPath {
+class Mask {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = hasOwnProperty(this, TextPath);
-    items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(TextPath);
-    tmp3 = metroRequire;
-    if (closure_9()) {
-      tmp5 = globalThis;
+    tmp = closure_3(this, Mask);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Mask);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const merged = Object.assign(matrix, TextPath(8537).pickNotNil(extractFontDefault(matrix, true)));
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(matrix);
-      }
-      const obj = TextPath(8537);
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(TextPath, _modDef8545);
+_inherits(Mask, _modDef8566);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ children, href } = props);
-    if (undefined === href) {
-      href = props.xlinkHref;
-    }
-    const startOffset = props.startOffset;
+    ({ maskUnits, maskContentUnits, style } = props);
+    const size = {
+      x: props.x,
+      y: props.y,
+      width: props.width,
+      height: props.height,
+      maskUnits: null,
+      maskContentUnits: null,
+      maskType: null,
+    };
     let num = 0;
-    if (undefined !== startOffset) {
-      num = startOffset;
+    if (undefined !== maskUnits) {
+      num = unitsDefault[maskUnits];
     }
-    ({ method, spacing, side, alignmentBaseline, midLine } = props);
-    let match = href;
-    if (href) {
-      match = href.match(TextPath(8537).idPattern);
+    size.maskUnits = num;
+    let num2 = 1;
+    if (undefined !== maskContentUnits) {
+      num2 = unitsDefault[maskContentUnits];
     }
-    let tmp5 = match;
-    if (match) {
-      tmp5 = match[1];
+    size.maskContentUnits = num2;
+    let str;
+    if (props != null) {
+      str = props.maskType;
     }
-    if (tmp5) {
-      let obj1 = TextPath(8536);
-      const withoutXYResult = obj1.withoutXY(self, tmp);
-      const _Object = Object;
-      let obj = { children };
-      obj = { href: tmp5, startOffset: num, method, spacing, side, alignmentBaseline, midLine };
-      const merged = Object.assign(withoutXYResult, extractFontDefault(obj, true), obj);
-      withoutXYResult.ref = self.refMethod;
-      obj1 = {};
-      const merged1 = Object.assign(withoutXYResult);
-      return jsx(_modDef8624, {});
-    } else {
-      const _console = console;
-      console.warn(`Invalid \`href\` prop for \`TextPath\` element, expected a href like "#id", but got: "${href}"`);
-      obj = { ref: self.refMethod, children };
-      return jsx(_modDef8620, { ref: self.refMethod, children });
+    if (!str) {
+      let maskType;
+      if (style != null) {
+        maskType = style.maskType;
+      }
+      str = maskType;
     }
-    tmp = _objectWithoutProperties(props, closure_3);
+    if (!str) {
+      str = "luminance";
+    }
+    size.maskType = Mask(8624).maskType[str];
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged = Object.assign(Mask(8557).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = props.children;
+    return (
+      <tmp8
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(TextPath, items);
-importDefaultResultResult.displayName = "TextPath";
+const items = [entry];
+const importDefaultResultResult = _createClass(Mask, items);
+importDefaultResultResult.displayName = "Mask";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

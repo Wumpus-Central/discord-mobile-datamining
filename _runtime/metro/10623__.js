@@ -1,11 +1,13 @@
 // _runtime/metro/10623__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod10523 from "10523__.js";
+import AbstractParserWithWordBoundaryChecking from "../10528_AbstractParserWithWordBoundaryChecking.js";
+import _mod10615 from "10615__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const NLTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,30 +26,18 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class ZHHantMergeDateTimeRefiner {
+const regExp = new RegExp(
+  "(dit|deze|vorig|afgelopen|(?:aan)?komend|over|\\+|-)e?\\s*(" + _mod10615.TIME_UNITS_PATTERN + ")(?=\\W|$)",
+  "i",
+);
+class NLTimeUnitCasualRelativeFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ZHHantMergeDateTimeRefiner);
-    tmp2 = c2;
-    obj = c2(ZHHantMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, NLTimeUnitCasualRelativeFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLTimeUnitCasualRelativeFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -60,14 +50,33 @@ class ZHHantMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ZHHantMergeDateTimeRefiner;
-_inherits(ZHHantMergeDateTimeRefiner, fn(_mod10523).default);
+_inherits(
+  NLTimeUnitCasualRelativeFormatParser,
+  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
+);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*$/i;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = NLTimeUnitCasualRelativeFormatParser(10615).parseDuration(arg1[2]);
+      if ("vorig" !== formatted) {
+        if ("afgelopen" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
+        }
+        const ParsingComponents = NLTimeUnitCasualRelativeFormatParser(10524).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      reverseDurationResult = NLTimeUnitCasualRelativeFormatParser(10523).reverseDuration(parseDurationResult);
+    },
+  },
+];
 
-export default _createClass(ZHHantMergeDateTimeRefiner, items);
+export default _createClass(NLTimeUnitCasualRelativeFormatParser, items);

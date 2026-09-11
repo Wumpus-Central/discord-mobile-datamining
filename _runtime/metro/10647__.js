@@ -1,6 +1,6 @@
 // _runtime/metro/10647__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractTimeExpressionParser from "../10516_AbstractTimeExpressionParser.js";
+import _mod10542 from "10542__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -25,12 +25,27 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 _possibleConstructorReturn;
-class ESTimeExpressionParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class ZHHansMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, ESTimeExpressionParser);
+    tmp = closure_0(this, ZHHansMergeDateTimeRefiner);
     tmp2 = c2;
-    obj = c2(ESTimeExpressionParser);
+    obj = c2(ZHHansMergeDateTimeRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -45,22 +60,14 @@ class ESTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ESTimeExpressionParser;
-_inherits(ESTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_classCallCheck = ZHHansMergeDateTimeRefiner;
+_inherits(ZHHansMergeDateTimeRefiner, fn(_mod10542).default);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:aslas|deslas|las?|al?|de|del)\\s*)?";
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*$/i;
   },
 };
-const items = [
-  entry,
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:l)?|\\?)\\s*";
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(ESTimeExpressionParser, items);
+export default _createClass(ZHHansMergeDateTimeRefiner, items);

@@ -1,8 +1,16 @@
 // _runtime/metro/14372__.js
-import _mod14438 from "14438__.js";
-import 14373__ from "14373__.js";
+import _mod14357 from "14357__.js";
 
-let obj = { target: "Object", stat: true, arity: 2, forced: null };
-obj.forced = Object.assign !== _mod14438;
-obj = { assign: _mod14438 };
-module_14373(obj, obj);
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod14357(1.toString);
+
+export default (arg0) => {
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
+  }
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
+};

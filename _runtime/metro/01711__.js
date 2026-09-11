@@ -93,8 +93,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "$id",
-      reduceMotion: "id",
+      startTimestamp: "ProfileBadgeRows",
+      reduceMotion: "text-md/normal",
     };
     let num = obj.velocity;
     if (num == null) {

@@ -1,24 +1,14 @@
 // _runtime/metro/03992__.js
-import _typeof from "03693__.js";
-import requiredArgs from "../03694_requiredArgs.js";
 
-if (!_typeof) {
-  let obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-
-export default function isFriday(arg0) {
-  requiredArgs.default(1, arguments);
-  return 5 === _typeof.default(arg0).getDay();
+export default function isExists(arg0, arg1, arg2) {
+  if (arguments.length < 3) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("3 argument required, but only " + arguments.length + " present");
+    throw typeError;
+  } else {
+    const _Date = Date;
+    const date = new Date(arg0, arg1, arg2);
+    return date.getFullYear() === arg0 && date.getMonth() === arg1 && date.getDate() === arg2;
+  }
 };
 export default exports.default;

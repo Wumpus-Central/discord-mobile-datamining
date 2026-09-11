@@ -1,6 +1,12 @@
 // _runtime/metro/14353__.js
-const require = arg1;
-const dependencyMap = arg6;
+import _mod14354 from "14354__.js";
 
-export const shouldPolyfill = require("supportedValuesOf").supportedValuesOf;
-export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;
+export default !_mod14354(
+  () =>
+    7 !==
+    Object.defineProperty({}, 1, {
+      get() {
+        return 7;
+      },
+    })[1],
+);

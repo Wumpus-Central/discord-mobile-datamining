@@ -1,28 +1,39 @@
 // _runtime/metro/04872__.js
+import _Symbol from "../01286__Symbol.js";
 import callBoundIntrinsic from "../01316_callBoundIntrinsic.js";
-import _mod1444 from "01444__.js";
+import regexTester from "../01446_regexTester.js";
 
-let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
-let closure_1 = callBoundIntrinsic("Object.prototype.toString");
-let closure_2 = _mod1444();
-
-export default function isDateObject(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
-  }
-  if (!tmp) {
-    return tmp;
-  } else if (closure_2) {
-    let tmp4 = (function tryDateGetDayCall(arg0) {
-      try {
-        closure_1_0(arg0);
-        return true;
-      } catch (err) {
-        return false;
+let closure_0 = callBoundIntrinsic("Object.prototype.toString");
+if (_Symbol()) {
+  let closure_1 = callBoundIntrinsic("Symbol.prototype.toString");
+  let closure_2 = regexTester(/^Symbol\(.*\)$/);
+  module.exports = function isSymbol(obj) {
+    if (typeof obj === "symbol") {
+      return true;
+    } else {
+      if (obj) {
+        if (typeof obj === "object") {
+          if ("[object Symbol]" === closure_0(obj)) {
+            try {
+              return (function isRealSymbolObject(arg0) {
+                const valueOfResult = arg0.valueOf();
+                let tmp2 = typeof valueOfResult === "symbol";
+                if (typeof valueOfResult === "symbol") {
+                  tmp2 = closure_1_2(closure_1_1(arg0));
+                }
+                return tmp2;
+              })(obj);
+            } catch (err) {
+              return false;
+            }
+          }
+        }
       }
-    })(obj);
-  } else {
-    tmp4 = "[object Date]" === closure_1(obj);
-  }
+      return false;
+    }
+  };
+} else {
+  module.exports = function isSymbol(arg0) {
+    return false;
+  };
 }

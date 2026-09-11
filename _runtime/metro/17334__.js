@@ -1,15 +1,28 @@
 // _runtime/metro/17334__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "bg",
+  locale: "it",
   pluralRuleFunction(arg0, arg1) {
-    let str = "other";
-    let str2 = "other";
-    if (!arg1) {
-      if (1 == arg0) {
-        str = "one";
+    if (arg1) {
+      if (11 != arg0) {
+        if (8 != arg0) {
+          if (80 != arg0) {
+            let str4 = "other";
+          }
+          let str3 = str4;
+        }
       }
-      str2 = str;
+      str4 = "many";
+    } else {
+      str3 = "other";
+      if (1 == arg0) {
+        str3 = "other";
+        if (!str.split(".")[1]) {
+          str3 = "one";
+        }
+      }
     }
-    return str2;
+    return str3;
   },
 });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "it-CH", parentLocale: "it" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "it-SM", parentLocale: "it" });

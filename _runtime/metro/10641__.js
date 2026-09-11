@@ -1,12 +1,11 @@
 // _runtime/metro/10641__.js
-import _mod10633 from "10633__.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod10539 from "10539__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const RUWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +24,30 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class RUWeekdayParser {
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class ZHHantMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, RUWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(RUWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, ZHHantMergeDateRangeRefiner);
+    tmp2 = c2;
+    obj = c2(ZHHantMergeDateRangeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,70 +60,14 @@ class RUWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUWeekdayParser, _mod10633.AbstractParserWithLeftRightBoundaryChecking);
+_classCallCheck = ZHHantMergeDateRangeRefiner;
+_inherits(ZHHantMergeDateRangeRefiner, fn(_mod10539).default);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(?:(?:,|\\(|\uFF08)\\s*)?(?:\u0432\\s*?)?(?:(\u044D\u0442\u0443|\u044D\u0442\u043E\u0442|\u043F\u0440\u043E\u0448\u043B\u044B\u0439|\u043F\u0440\u043E\u0448\u043B\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E)\\s*)?(" +
-      RUWeekdayParser(10502).matchAnyPattern(RUWeekdayParser(10631).WEEKDAY_DICTIONARY) +
-      ")(?:\\s*(?:,|\\)|\uFF09))?(?:\\s*\u043D\u0430\\s*(\u044D\u0442\u043E\u0439|\u043F\u0440\u043E\u0448\u043B\u043E\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439)\\s*\u043D\u0435\u0434\u0435\u043B\u0435)?"
-    );
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(至|到|\-|\~|～|－|ー)\s*$/i;
   },
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const formatted1 = str2.toLowerCase();
-      let str3 = "last";
-      if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0439" != formatted1) {
-        str3 = "last";
-        if ("\u043F\u0440\u043E\u0448\u043B\u0443\u044E" != formatted1) {
-          str3 = "last";
-          if ("\u043F\u0440\u043E\u0448\u043B\u043E\u0439" != formatted1) {
-            str3 = "next";
-            if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439" != formatted1) {
-              str3 = "next";
-              if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E" != formatted1) {
-                str3 = "next";
-                if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439" != formatted1) {
-                  str3 = "next";
-                  if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E" != formatted1) {
-                    let tmp5 = "\u044D\u0442\u043E\u0442" != formatted1;
-                    if (tmp5) {
-                      tmp5 = "\u044D\u0442\u0443" != formatted1;
-                    }
-                    if (tmp5) {
-                      tmp5 = "\u044D\u0442\u043E\u0439" != formatted1;
-                    }
-                    str3 = null;
-                    if (!tmp5) {
-                      str3 = "this";
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      return RUWeekdayParser(10529).createParsingComponentsAtWeekday(
-        reference.reference,
-        RUWeekdayParser(10631).WEEKDAY_DICTIONARY[formatted],
-        str3,
-      );
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(RUWeekdayParser, items);
+export default _createClass(ZHHantMergeDateRangeRefiner, items);

@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 240,
-  height: 152,
+  httpServerLocation: "/assets/images/native/custom_app_icons/CamoIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "1c56c6a8d7541177ea8c3d88699db89c",
-  name: "img_guild_cap_upsell_light",
+  hash: "4e81188cb8befe97a7c2fb2d0b3c1c42",
+  name: "CamoIcon",
   type: "png",
 });

@@ -4,11 +4,11 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation:
-    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_542eyc77l7xc6yrt372p7kkeyi/node_modules/@react-navigation/elements/lib/module/assets",
-  width: 64,
-  height: 64,
+    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_qbr22hmyb3tbx7536kr4boevti/node_modules/@react-navigation/elements/lib/module/assets",
+  width: 96,
+  height: 96,
   scales: [1, 1, 2, 3, 4],
-  hash: "61378328a719f21f093de82dd89ecfb0",
-  name: "clear-icon",
+  hash: "3162e8a244d8f6fbd259e79043e23ce4",
+  name: "close-icon",
   type: "png",
 });

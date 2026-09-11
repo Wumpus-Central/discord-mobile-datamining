@@ -1,22 +1,36 @@
 // _runtime/metro/06971__.js
-
-export const useDataMultiplier = function useDataMultiplier(arg0, arg1) {
-  const array = new Array(arg1);
-  let flag = false;
-  if (typeof arg0[0] === "object") {
-    flag = true;
-  }
-  for (let num = 0; num < arg1; num = num + 1) {
-    let tmp3 = arg0[num % tmp];
-    if (flag) {
-      let obj = {};
-      let merged = Object.assign(tmp3);
-      let tmp5 = obj;
+function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
+  try {
+    const iter = arg0[arg5](arg6);
+    value = iter.value;
+    if (iter.done) {
+      fn(value);
     } else {
-      tmp5 = tmp3;
+      const resolved = Promise.resolve(value);
+      resolved.then(arg3, arg4);
     }
-    array[num] = tmp5;
+  } catch (tmp13) {
+    fn2(tmp13);
   }
-  const items = [array];
-  return items;
-};
+}
+
+export default function _asyncToGenerator(arg0) {
+  closure_0 = arg0;
+  return function () {
+    const self = this;
+    closure_1 = arguments;
+    return new Promise((arg0, arg1) => {
+      _self = arg0;
+      closure_1 = arg1;
+      function _next(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
+      }
+      function _throw(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
+      }
+      const applyResult = _self.apply(self, closure_1);
+      closure_2 = applyResult;
+      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
+    });
+  };
+}

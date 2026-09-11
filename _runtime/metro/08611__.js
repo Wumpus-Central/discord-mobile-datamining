@@ -1,13 +1,14 @@
 // _runtime/metro/08611__.js
-import _modDef8545 from "08545__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8556 from "08556__.js";
+import _modDef8612 from "08612__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Polyline = importDefault;
+const ForeignObject = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,60 +27,55 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Polyline {
+class ForeignObject {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, Polyline);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(Polyline);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
+    tmp = closure_3(this, ForeignObject);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(ForeignObject);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (points) => {
-      points = points.points;
-      if (points) {
-        const _HermesInternal = HermesInternal;
-        points.d = "M" + Polyline(8610)(points);
-      }
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(points);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(Polyline, _modDef8545);
+_inherits(ForeignObject, _modDef8556);
 const entry = {
   key: "render",
   value: function render() {
+    const self = this;
     const props = this.props;
-    const points = props.points;
-    const obj = { ref: this.refMethod, d: null };
-    let combined = points;
-    if (points) {
-      const _HermesInternal = HermesInternal;
-      combined = "M" + Polyline(8610)(points);
-    }
-    obj.d = combined;
-    const merged = Object.assign(props);
-    return jsx(Polyline(8605), { ref: this.refMethod, d: null });
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height };
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged = Object.assign(ForeignObject(8557).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = props.children;
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(Polyline, items);
-importDefaultResultResult.displayName = "Polyline";
-importDefaultResultResult.defaultProps = { points: "" };
+const items = [entry];
+const importDefaultResultResult = _createClass(ForeignObject, items);
+importDefaultResultResult.displayName = "ForeignObject";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

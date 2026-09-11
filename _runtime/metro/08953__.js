@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3460a8c2a85f7dbc9f38e8345c6f5a9e",
-  name: "NintendoSwitchNeutralIcon",
+  hash: "ea051c7bb088368772b9e8a5e140622d",
+  name: "TagIcon",
   type: "png",
 });

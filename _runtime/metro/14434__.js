@@ -1,25 +1,4 @@
 // _runtime/metro/14434__.js
-import _mod14397 from "14397__.js";
-import getOwnPropertyDescriptor from "14377__.js";
+import replaceByteInByteSequence from "../14422_replaceByteInByteSequence.js";
 
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = _mod14397(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {}.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-  }
-  tmp3 = tmp5;
-}
-
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+export const URLSearchParams = replaceByteInByteSequence.URLSearchParams;

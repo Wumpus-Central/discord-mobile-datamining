@@ -1,337 +1,105 @@
 // _runtime/metro/06838__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import tagMessage from "../06731_tagMessage.js";
+import _mod6732 from "06732__.js";
 
-const GenericTouchable = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-const Animated = fn(17).Animated;
-const jsx = fn(21).jsx;
-const TOUCHABLE_STATE = { UNDETERMINED: 0, BEGAN: 1, MOVED_OUTSIDE: 2 };
-class GenericTouchable {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, GenericTouchable);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(GenericTouchable);
-    tmp3 = closure_3;
-    if (closure_7()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.longPressDetected = false;
-    tmp3Result.pointerInside = true;
-    tmp3Result.STATE = closure_8.UNDETERMINED;
-    tmp3Result.onGestureEvent = (nativeEvent) => {
-      const pointerInside = nativeEvent.nativeEvent.pointerInside;
-      if (closure_0.pointerInside !== pointerInside) {
-        if (pointerInside) {
-          closure_0.onMoveIn();
-        } else {
-          closure_0.onMoveOut();
-        }
-      }
-      closure_0.pointerInside = pointerInside;
-    };
-    tmp3Result.onHandlerStateChange = (nativeEvent) => {
-      const state = nativeEvent.nativeEvent.state;
-      if (state !== GenericTouchable(6711).State.CANCELLED) {
-        if (state !== GenericTouchable(6711).State.FAILED) {
-          if (state === GenericTouchable(6711).State.BEGAN) {
-            if (closure_0.STATE === closure_0.UNDETERMINED) {
-              closure_0.handlePressIn();
-            }
-          }
-          if (state === GenericTouchable(6711).State.END) {
-            const longPressDetected = closure_0.longPressDetected;
-            let tmp5 = !longPressDetected;
-            if (!longPressDetected) {
-              tmp5 = closure_0.STATE !== closure_0.MOVED_OUTSIDE;
-            }
-            if (tmp5) {
-              tmp5 = undefined === closure_0.pressOutTimeout;
-            }
-            const result = closure_0.handleGoToUndetermined();
-            if (tmp5) {
-              const props = closure_0.props;
-              const onPress = props.onPress;
-              if (onPress != null) {
-                onPress();
-              }
-            }
-          }
-        }
-      }
-      closure_0.moveToState(closure_0.UNDETERMINED);
-    };
-    tmp3Result.onLongPressDetected = () => {
-      closure_0.longPressDetected = true;
-      const props = closure_0.props;
-      const onLongPress = props.onLongPress;
-      if (onLongPress != null) {
-        onLongPress();
-      }
-    };
-    return tmp3Result;
+require = fn;
+const dependencyMap = arg6;
+const setGestureState = function t(arg0, arg1) {
+  const _globalThis = globalThis;
+  if (globalThis._setGestureStateSync) {
+    _globalThis._setGestureStateSync(arg0, arg1);
+  } else if (_globalThis._setGestureStateAsync) {
+    const _globalThis2 = globalThis;
+    const result = globalThis._setGestureStateAsync(arg0, arg1);
+  } else {
+    const _Error = Error;
+    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+    throw error;
   }
-}
-_inherits(GenericTouchable, fn(19).Component);
-const entry = {
-  key: "handlePressIn",
-  value: function handlePressIn() {
-    const self = this;
-    if (this.props.delayPressIn) {
-      const _setTimeout = setTimeout;
-      self.pressInTimeout = setTimeout(() => {
-        self.moveToState(obj.BEGAN);
-        self.pressInTimeout = undefined;
-      }, self.props.delayPressIn);
+};
+let obj = { tagMessage: fn(6731).tagMessage };
+setGestureState.__closure = obj;
+setGestureState.__workletHash = 727405139747;
+setGestureState.__initData = {
+  code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}",
+};
+obj = { activate: null, fail: null, deactivate: null };
+const fn2 = function _(arg0) {
+  const ACTIVE = _mod6732.State.ACTIVE;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, ACTIVE);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, ACTIVE);
     } else {
-      self.moveToState(obj.BEGAN);
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
     }
-    if (self.props.onLongPress) {
-      const _setTimeout2 = setTimeout;
-      self.longPressTimeout = setTimeout(
-        self.onLongPressDetected,
-        (self.props.delayPressIn || 0) + (self.props.delayLongPress || 0),
-      );
-      const tmp4 = self.props.delayPressIn || 0;
-      const tmp5 = self.props.delayLongPress || 0;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+obj = { setGestureState, State: fn(6732).State };
+fn2.__closure = obj;
+fn2.__workletHash = 14928129771754;
+fn2.__initData = {
+  code: "function activate_Pnpm_gestureStateManagerTs2(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.ACTIVE);}",
+};
+obj.activate = fn2;
+const fn3 = function n(arg0) {
+  const FAILED = _mod6732.State.FAILED;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, FAILED);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, FAILED);
+    } else {
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
     }
-  },
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
 };
-let items = [
-  entry,
-  {
-    key: "handleMoveOutside",
-    value: function handleMoveOutside() {
-      const self = this;
-      if (this.props.delayPressOut) {
-        let pressOutTimeout = self.pressOutTimeout;
-        if (!pressOutTimeout) {
-          const _setTimeout = setTimeout;
-          pressOutTimeout = setTimeout(() => {
-            self.moveToState(obj.MOVED_OUTSIDE);
-            self.pressOutTimeout = undefined;
-          }, self.props.delayPressOut);
-        }
-        self.pressOutTimeout = pressOutTimeout;
-      } else {
-        self.moveToState(obj.MOVED_OUTSIDE);
-      }
-    },
-  },
-  {
-    key: "handleGoToUndetermined",
-    value: function handleGoToUndetermined() {
-      const self = this;
-      clearTimeout(this.pressOutTimeout);
-      if (this.props.delayPressOut) {
-        const _setTimeout = setTimeout;
-        self.pressOutTimeout = setTimeout(() => {
-          if (self.STATE === self.UNDETERMINED) {
-            self.moveToState(self.BEGAN);
-          }
-          self.moveToState(self.UNDETERMINED);
-          self.pressOutTimeout = undefined;
-        }, self.props.delayPressOut);
-      } else {
-        if (self.STATE === obj.UNDETERMINED) {
-          self.moveToState(obj.BEGAN);
-        }
-        self.moveToState(obj.UNDETERMINED);
-      }
-    },
-  },
-  {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.reset();
-    },
-  },
-  {
-    key: "reset",
-    value: function reset() {
-      const obj = { longPressDetected: false, pointerInside: true };
-      clearTimeout(obj.pressInTimeout);
-      clearTimeout(obj.pressOutTimeout);
-      clearTimeout(obj.longPressTimeout);
-      obj.pressOutTimeout = undefined;
-      obj.longPressTimeout = undefined;
-      obj.pressInTimeout = undefined;
-    },
-  },
-  {
-    key: "moveToState",
-    value: function moveToState(BEGAN) {
-      const self = this;
-      if (BEGAN !== this.STATE) {
-        if (BEGAN === obj.BEGAN) {
-          const props3 = self.props;
-          const onPressIn = props3.onPressIn;
-          if (onPressIn != null) {
-            onPressIn();
-          }
-        } else if (BEGAN === obj.MOVED_OUTSIDE) {
-          const props2 = self.props;
-          const onPressOut2 = props2.onPressOut;
-          if (onPressOut2 != null) {
-            onPressOut2();
-          }
-        } else if (BEGAN === obj.UNDETERMINED) {
-          self.reset();
-          if (self.STATE === obj.BEGAN) {
-            const props = self.props;
-            const onPressOut = props.onPressOut;
-            if (onPressOut != null) {
-              onPressOut();
-            }
-          }
-        }
-        const props4 = self.props;
-        const onStateChange = props4.onStateChange;
-        if (onStateChange != null) {
-          onStateChange(self.STATE, BEGAN);
-        }
-        self.STATE = BEGAN;
-      }
-    },
-  },
-  {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.reset();
-    },
-  },
-  {
-    key: "onMoveIn",
-    value: function onMoveIn() {
-      const self = this;
-      if (this.STATE === obj.MOVED_OUTSIDE) {
-        self.moveToState(tmp.BEGAN);
-      }
-    },
-  },
-  {
-    key: "onMoveOut",
-    value: function onMoveOut() {
-      const self = this;
-      clearTimeout(this.longPressTimeout);
-      this.longPressTimeout = undefined;
-      if (this.STATE === obj.BEGAN) {
-        self.handleMoveOutside();
-      }
-    },
-  },
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      if (typeof this.props.hitSlop === "number") {
-        const rect = {
-          top: self.props.hitSlop,
-          left: self.props.hitSlop,
-          bottom: self.props.hitSlop,
-          right: self.props.hitSlop,
-        };
-        let hitSlop = rect;
-      } else {
-        hitSlop = self.props.hitSlop;
-      }
-      let obj = {
-        accessible: false !== self.props.accessible,
-        accessibilityLabel: self.props.accessibilityLabel,
-        accessibilityHint: self.props.accessibilityHint,
-        accessibilityRole: self.props.accessibilityRole,
-        accessibilityState: self.props.accessibilityState,
-        accessibilityActions: self.props.accessibilityActions,
-        onAccessibilityAction: self.props.onAccessibilityAction,
-        nativeID: self.props.nativeID,
-        onLayout: self.props.onLayout,
-      };
-      obj = {
-        style: self.props.containerStyle,
-        onHandlerStateChange: null,
-        onGestureEvent: null,
-        hitSlop: null,
-        userSelect: null,
-        shouldActivateOnStart: null,
-        disallowInterruption: null,
-        testID: null,
-        touchSoundDisabled: null,
-        enabled: null,
-      };
-      let onHandlerStateChange;
-      if (!self.props.disabled) {
-        onHandlerStateChange = self.onHandlerStateChange;
-      }
-      obj.onHandlerStateChange = onHandlerStateChange;
-      obj.onGestureEvent = self.onGestureEvent;
-      obj.hitSlop = hitSlop;
-      obj.userSelect = self.props.userSelect;
-      obj.shouldActivateOnStart = self.props.shouldActivateOnStart;
-      obj.disallowInterruption = self.props.disallowInterruption;
-      obj.testID = self.props.testID;
-      let flag = self.props.touchSoundDisabled;
-      if (flag == null) {
-        flag = false;
-      }
-      obj.touchSoundDisabled = flag;
-      obj.enabled = !self.props.disabled;
-      const merged = Object.assign(self.props.extraButtonProps);
-      const obj1 = {};
-      const merged1 = Object.assign(obj);
-      obj1.style = self.props.style;
-      obj1.children = self.props.children;
-      obj.children = <Animated.View />;
-      return jsx(GenericTouchable(6818).LegacyBaseButton, {
-        style: self.props.containerStyle,
-        onHandlerStateChange: null,
-        onGestureEvent: null,
-        hitSlop: null,
-        userSelect: null,
-        shouldActivateOnStart: null,
-        disallowInterruption: null,
-        testID: null,
-        touchSoundDisabled: null,
-        enabled: null,
-      });
-    },
-  },
-];
-const importDefaultResultResult = _createClass(GenericTouchable, items);
-importDefaultResultResult.defaultProps = {
-  delayLongPress: 600,
-  extraButtonProps: { rippleColor: "transparent", exclusive: true },
+fn3.__closure = { setGestureState, State: fn(6732).State };
+fn3.__workletHash = 1703030189599;
+fn3.__initData = {
+  code: "function fail_Pnpm_gestureStateManagerTs3(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.FAILED);}",
 };
+obj.fail = fn3;
+const fn4 = function s(arg0) {
+  const END = _mod6732.State.END;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, END);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, END);
+    } else {
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+const obj1 = { setGestureState, State: fn(6732).State };
+fn4.__closure = { setGestureState, State: fn(6732).State };
+fn4.__workletHash = 5511283927342;
+fn4.__initData = {
+  code: "function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.END);}",
+};
+obj.deactivate = fn4;
 
-export default importDefaultResultResult;
-export { TOUCHABLE_STATE };
+export const GestureStateManager = obj;

@@ -1,50 +1,23 @@
 // _runtime/metro/03760__.js
-import 03695__ from "03695__.js";
+let closure_0 = { lessThanXSeconds: { one: "meno di un secondo", other: "meno di {{count}} secondi" }, xSeconds: { one: "un secondo", other: "{{count}} secondi" }, halfAMinute: "alcuni secondi", lessThanXMinutes: { one: "meno di un minuto", other: "meno di {{count}} minuti" }, xMinutes: { one: "un minuto", other: "{{count}} minuti" }, aboutXHours: { one: "circa un'ora", other: "circa {{count}} ore" }, xHours: { one: "un'ora", other: "{{count}} ore" }, xDays: { one: "un giorno", other: "{{count}} giorni" }, aboutXWeeks: { one: "circa una settimana", other: "circa {{count}} settimane" }, xWeeks: { one: "una settimana", other: "{{count}} settimane" }, aboutXMonths: { one: "circa un mese", other: "circa {{count}} mesi" }, xMonths: { one: "un mese", other: "{{count}} mesi" }, aboutXYears: { one: "circa un anno", other: "circa {{count}} anni" }, xYears: { one: "un anno", other: "{{count}} anni" }, overXYears: { one: "pi\u00F9 di un anno", other: "pi\u00F9 di {{count}} anni" }, almostXYears: { one: "quasi un anno", other: "quasi {{count}} anni" } };
 
-if (!module_3695) {
-  const obj = { default: module_3695 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3695;
-}
-module_3695 = tmp3;
-const dependencyMap = ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"];
-let closure_2 = {
-  lastWeek(getUTCDay, arg1, arg2) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (module_3695.default(getUTCDay, arg1, arg2)) {
-      let str = `${"'" + closure_1[tmp]} alle' p`;
-    } else {
-      str = "'domenica scorsa alle' p";
-      if (0 !== uTCDay) {
-        str = `${"'" + closure_1[tmp]} scorso alle' p`;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp5 = tmp;
+    if (null != addSuffix) {
+      tmp5 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} fa`;
+        }
+        text = `tra ${tmp}`;
       }
     }
-    return str;
-  },
-  yesterday: "'ieri alle' p",
-  today: "'oggi alle' p",
-  tomorrow: "'domani alle' p",
-  nextWeek(getUTCDay, arg1, arg2) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (module_3695.default(getUTCDay, arg1, arg2)) {
-      let str = `${"'" + closure_1[tmp]} alle' p`;
-    } else {
-      str = "'domenica prossima alle' p";
-      if (0 !== uTCDay) {
-        str = `${"'" + closure_1[tmp]} prossimo alle' p`;
-      }
-    }
-    return str;
-  },
-  other: "P"
-};
-
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_2[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
+    return tmp5;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    one = tmp.other.replace("{{count}}", arg1.toString());
   }
-  return tmpResult;
 };
 export default exports.default;

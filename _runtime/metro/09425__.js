@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 261.5,
-  height: 152,
+  httpServerLocation: "/assets/images/native/custom_app_icons/PastelIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "5691c33dd2c3544121435e1c3a569b50",
-  name: "img_nitro_longer_message_upsell_light",
+  hash: "3abe689118b6dfa647c87ebe65954c60",
+  name: "PastelIcon",
   type: "png",
 });

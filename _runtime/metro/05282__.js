@@ -1,67 +1,115 @@
 // _runtime/metro/05282__.js
-import _mod5263 from "05263__.js";
-import _modDef5268 from "05268__.js";
-import get0thIfdOffset from "../05283_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../05284_IFD_TYPE_0TH.js";
+import _modDef5281 from "05281__.js";
 
-require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
-let c3 = "Exif IFD Pointer";
-let c4 = "GPS Info IFD Pointer";
-let c5 = "Interoperability IFD Pointer";
 
 export default {
-  read(getUint16, c5, arg2) {
-    const byteOrder = _modDef5268.getByteOrder(getUint16, c5);
-    const obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(
-      getUint16,
-      IFD_TYPE_0TH.IFD_TYPE_0TH,
-      c5,
-      get0thIfdOffset.get0thIfdOffset(getUint16, c5, byteOrder),
-      byteOrder,
-      arg2,
-    );
-    let objectAssignResult = ifd;
-    if (undefined !== ifd[c3]) {
-      const tmp3Result = get0thIfdOffset;
-      objectAssignResult = tmp3Result.objectAssign(
-        ifd,
-        tmp3Result.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2),
-      );
+  read(buffer, sum) {
+    let obj = _modDef5281;
+    const shortAt = obj.getShortAt(buffer, sum);
+    let tmp6;
+    if (15 <= shortAt) {
+      let tmp3Result = _modDef5281;
+      const byteAt = tmp3Result.getByteAt(buffer, sum + 14);
+      obj = { value: byteAt, description: null };
+      const _HermesInternal = HermesInternal;
+      obj.description = "" + byteAt + "px";
+      tmp6 = obj;
     }
-    if (undefined !== objectAssignResult[c4]) {
-      const tmp3Result2 = get0thIfdOffset;
-      objectAssignResult = _mod5263.objectAssign(
-        objectAssignResult,
-        tmp3Result2.readIfd(
-          getUint16,
-          IFD_TYPE_0TH.IFD_TYPE_GPS,
-          c5,
-          c5 + objectAssignResult[tmp12].value,
-          byteOrder,
-          arg2,
-        ),
-      );
-      const tmp3Result1 = _mod5263;
+    let tmp9;
+    if (16 <= shortAt) {
+      tmp3Result = _modDef5281;
+      const byteAt1 = tmp3Result.getByteAt(buffer, sum + 15);
+      obj = { value: byteAt1, description: null };
+      const _HermesInternal2 = HermesInternal;
+      obj.description = "" + byteAt1 + "px";
+      tmp9 = obj;
     }
-    let objectAssignResult1 = objectAssignResult;
-    if (undefined !== objectAssignResult[c5]) {
-      const tmp3Result4 = get0thIfdOffset;
-      objectAssignResult1 = _mod5263.objectAssign(
-        objectAssignResult,
-        tmp3Result4.readIfd(
-          getUint16,
-          IFD_TYPE_0TH.IFD_TYPE_INTEROPERABILITY,
-          c5,
-          c5 + objectAssignResult[tmp19].value,
-          byteOrder,
-          arg2,
-        ),
-      );
-      const tmp3Result3 = _mod5263;
+    let tmp12;
+    if (9 <= shortAt) {
+      const byteAt2 = _modDef5281.getByteAt(buffer, sum + 7);
+      const tmp3Result1 = _modDef5281;
+      const byteAt3 = _modDef5281.getByteAt(buffer, sum + 7 + 1);
+      const obj1 = { value: 256 * byteAt2 + byteAt3, description: `${tmp13}.${tmp14}` };
+      tmp12 = obj1;
+      const tmp3Result2 = _modDef5281;
     }
-    return { tags: objectAssignResult1, byteOrder };
+    const obj2 = {
+      "JFIF Version": tmp12,
+      "Resolution Unit": null,
+      XResolution: null,
+      YResolution: null,
+      "JFIF Thumbnail Width": null,
+      "JFIF Thumbnail Height": null,
+    };
+    let tmp15;
+    if (10 <= shortAt) {
+      const byteAt4 = _modDef5281.getByteAt(buffer, sum + 9);
+      const obj3 = { value: byteAt4, description: null };
+      let str6 = "None";
+      if (0 !== byteAt4) {
+        let str7 = "inches";
+        if (1 !== byteAt4) {
+          let str8 = "Unknown";
+          if (2 === byteAt4) {
+            str8 = "cm";
+          }
+          str7 = str8;
+        }
+        str6 = str7;
+      }
+      obj3.description = str6;
+      tmp15 = obj3;
+      const tmp3Result3 = _modDef5281;
+    }
+    obj2["Resolution Unit"] = tmp15;
+    let tmp17;
+    if (12 <= shortAt) {
+      const shortAt1 = _modDef5281.getShortAt(buffer, sum + 10);
+      const obj4 = { value: shortAt1, description: "" + shortAt1 };
+      tmp17 = obj4;
+      const tmp3Result4 = _modDef5281;
+    }
+    obj2.XResolution = tmp17;
+    let tmp19;
+    if (14 <= shortAt) {
+      const shortAt2 = _modDef5281.getShortAt(buffer, sum + 12);
+      const obj5 = { value: shortAt2, description: "" + shortAt2 };
+      tmp19 = obj5;
+      const tmp3Result5 = _modDef5281;
+    }
+    obj2.YResolution = tmp19;
+    obj2["JFIF Thumbnail Width"] = tmp6;
+    obj2["JFIF Thumbnail Height"] = tmp9;
+    if (undefined !== tmp6) {
+      if (undefined !== tmp9) {
+        const result = 3 * tmp6.value * tmp9.value;
+        let tmp22;
+        if (0 !== result) {
+          if (16 + result <= shortAt) {
+            buffer = buffer.buffer;
+            const obj6 = { value: buffer.slice(sum + 16, sum + 16 + result), description: "<24-bit RGB pixel data>" };
+            tmp22 = obj6;
+          }
+        }
+        if (tmp22) {
+          obj2["JFIF Thumbnail"] = tmp22;
+        }
+      }
+    }
+    const keys = Object.keys();
+    if (keys !== undefined) {
+      while (keys[16] !== undefined) {
+        if (undefined !== obj2[tmp24]) {
+          continue;
+        } else {
+          delete tmp[tmp2];
+          continue;
+        }
+        continue;
+      }
+    }
+    return obj2;
   },
 };

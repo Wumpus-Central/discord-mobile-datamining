@@ -1,49 +1,23 @@
 // _runtime/metro/06808__.js
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
-import _slicedToArray from "00032__.js";
+import ComposedGestureName from "../06785_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../06794_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod6809 from "06809__.js";
 
-const noop = fn(19);
-({ useEffect: c2, useState: c3 } = noop);
-const AccessibilityInfo = fn(17).AccessibilityInfo;
+require = arg1;
+const dependencyMap = arg6;
+const items = [
+  ["maxDistance", "maxDist"],
+  ["maxDuration", "maxDurationMs"],
+  ["maxDelay", "maxDelayMs"],
+];
+const map = new Map(items);
+let closure_3 = {};
 
-export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
-  const tmp = _slicedToArray(closure_3(false), 2);
-  closure_0 = tmp[1];
-  closure_2(() => {
-    closure_129_0 = closure_0(function* () {
-      closure_1 = tmp3;
-      yield screenReaderEnabled.isScreenReaderEnabled();
-      if (1 === tmp7) {
-        c3 = 0;
-        const _console = console;
-        console.warn("Could not read accessibility info: defaulting to false");
-        c5 = 3;
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        closure_128_0 = value;
-        closure_0(closure_128_0);
-        c3 = 0;
-      }
-      return value;
-    });
-    (function checkStatus() {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })();
-    closure_0 = AccessibilityInfo.addEventListener("screenReaderChanged", (event) => {
-      closure_0(event);
-    });
-    return () => {
-      closure_0.remove();
-    };
-  }, []);
-  return tmp[0];
+export const useTapGesture = function useTapGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_3;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
+  return _mod6809.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
 };

@@ -1,27 +1,33 @@
 // _runtime/metro/04638__.js
+import _mod518 from "00518__.js";
+import _mod531 from "00531__.js";
 import baseIteratee from "../00584_baseIteratee.js";
-import _mod4639 from "04639__.js";
-import baseFindIndex from "../04641_baseFindIndex.js";
 
-export default function findLastIndex(arg0, arg1, arg2) {
-  let num = 0;
-  if (null != arg0) {
-    num = arg0.length;
-  }
-  if (num) {
-    const diff = num - 1;
-    if (undefined === arg2) {
-      return baseFindIndex(arg0, baseIteratee(arg1, 3), diff, true);
-    } else {
-      let sum = _mod4639(arg2);
-      if (arg2 < 0) {
-        sum = num + sum;
-        let tmp7 = max(sum, 0);
-      } else {
-        tmp7 = min(sum, num - 1);
-      }
+export default function createFind(arg0) {
+  closure_0 = arg0;
+  return (arg0, arg1, arg2) => {
+    const ObjectResult = Object(arg0);
+    closure_0 = ObjectResult;
+    let fn = arg1;
+    let tmp5 = arg0;
+    if (!_mod518(arg0)) {
+      const tmp6 = baseIteratee(arg1, 3);
+      closure_1 = tmp6;
+      tmp5 = _mod531(arg0);
+      fn = function u(arg0) {
+        return closure_1(ObjectResult[arg0], arg0, ObjectResult);
+      };
+      const tmp4 = tmp6;
     }
-  } else {
-    return -1;
-  }
+    const tmp7 = closure_0(tmp5, fn, arg2);
+    let tmp8;
+    if (tmp7 > -1) {
+      let tmp9 = tmp7;
+      if (tmp4) {
+        tmp9 = tmp5[tmp7];
+      }
+      tmp8 = ObjectResult[tmp9];
+    }
+    return tmp8;
+  };
 }

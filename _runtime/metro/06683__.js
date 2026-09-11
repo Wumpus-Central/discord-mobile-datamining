@@ -1,14 +1,13 @@
 // _runtime/metro/06683__.js
-import _mod19 from "00019__.js";
-import _mod6684 from "06684__.js";
+import registerAsset from "01122__.js";
 
-const useContext = _mod19.useContext;
-
-export const useBottomSheet = () => {
-  const tmp = useContext(_mod6684.BottomSheetContext);
-  if (null === tmp) {
-    throw "'useBottomSheet' cannot be used out of the BottomSheet!";
-  } else {
-    return tmp;
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "db11ea9da81d79144310eac53428fbe9",
+  name: "CircleErrorIcon-primary",
+  type: "png",
+});

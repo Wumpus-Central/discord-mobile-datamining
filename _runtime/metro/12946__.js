@@ -1,73 +1,129 @@
 // _runtime/metro/12946__.js
-import _mod12868 from "12868__.js";
+import _mod12890 from "12890__.js";
+import _mod12917 from "12917__.js";
+import _mod12918 from "12918__.js";
+import _slicedToArray from "00032__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function getMetadataForUrl(fn, arg1) {
-  (function ensureMetadataStacksAreParsed(fn) {
-    if (_mod12868.GLOBAL_OBJ._sentryModuleMetadata) {
-      const _Object = Object;
-      const keys = Object.keys(_mod12868.GLOBAL_OBJ._sentryModuleMetadata);
-      for (const item10026 of keys) {
-        let tmp16 = _mod12868.GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        if (!set.has(item10026)) {
-          let addResult = set.add(item10026);
-          let obj2 = arg0(item10026);
-          let reversed = obj2.reverse();
-          for (const item10050 of reversed) {
-            if (item10050.filename) {
-              let result = map.set(tmp22.filename, tmp16);
-              obj3.return();
-              break;
-            }
-            continue;
-          }
-        }
-        continue;
-      }
+function setupIntegration(on, name, arg2) {
+  closure_0 = on;
+  if (arg2[name.name]) {
+    if (_mod12918.DEBUG_BUILD) {
+      const logger2 = _mod12890.logger;
+      const _HermesInternal2 = HermesInternal;
+      logger2.log("Integration skipped because it was already installed: " + name.name);
     }
-  })(fn);
-  return map.get(arg1);
+  } else {
+    arg2[name.name] = name;
+    let arr = items;
+    if (tmp) {
+      name.setupOnce();
+      arr = arr.push(name.name);
+    }
+    if (tmp4) {
+      name.setup(on);
+    }
+    if (typeof name.preprocessEvent === "function") {
+      const preprocessEvent = name.preprocessEvent;
+      closure_1 = preprocessEvent.bind(name);
+      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
+    }
+    if (typeof name.processEvent === "function") {
+      const processEvent = name.processEvent;
+      closure_2 = processEvent.bind(name);
+      const _Object = Object;
+      const obj = { id: name.name };
+      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
+    }
+    if (_mod12918.DEBUG_BUILD) {
+      const logger = _mod12890.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Integration installed: " + name.name);
+    }
+    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
+    tmp4 = name.setup && typeof name.setup === "function";
+  }
 }
-const map = new Map();
-const set = new Set();
+let items = [];
 
-export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
-  closure_0 = arg0;
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp = stacktrace.stacktrace.frames || [];
-        for (const item10010 of tmp) {
-          if (item10010.filename) {
-            if (!item10010.module_metadata) {
-              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
-              if (tmp9) {
-                item10010.module_metadata = tmp10;
-              }
-            }
-          }
-          continue;
-        }
-      }
-    });
-  } catch (err) {}
+export const addIntegration = function addIntegration(name) {
+  const client = _mod12917.getClient();
+  if (client) {
+    client.addIntegration(name);
+  } else if (_mod12918.DEBUG_BUILD) {
+    const logger = _mod12890.logger;
+    const _HermesInternal = HermesInternal;
+    logger.warn('Cannot add integration "' + name.name + '" because no SDK Client is available.');
+  }
 };
-export { getMetadataForUrl };
-export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp3 = stacktrace.stacktrace.frames || [];
-        const iter = tmp3[Symbol.iterator]();
-        iter.next();
-        while (iter !== undefined) {
-          delete tmp2[tmp];
-          continue;
-        }
+export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
+  const iter = arg1[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let obj = nextResult;
+    if (nextResult) {
+      let afterAllSetup = obj.afterAllSetup;
+    }
+    if (nextResult) {
+      let afterAllSetupResult = obj.afterAllSetup(arg0);
+    }
+    continue;
+  }
+};
+export function defineIntegration(arg0) {
+  return arg0;
+}
+export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
+  let arr = defaultIntegrations.defaultIntegrations || [];
+  const integrations = defaultIntegrations.integrations;
+  const item = arr.forEach((item) => {
+    item.isDefaultInstance = true;
+  });
+  if (Array.isArray(integrations)) {
+    items = [];
+    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
+    let arr2 = items;
+  } else {
+    arr2 = arr;
+    if (typeof integrations === "function") {
+      const integrationsResult = integrations(arr);
+      const _Array = Array;
+      let tmp2 = integrationsResult;
+      if (!Array.isArray(integrationsResult)) {
+        const items1 = [integrationsResult];
+        tmp2 = items1;
       }
-    });
-  } catch (err) {}
+      arr2 = tmp2;
+    }
+  }
+  const item1 = arr2.forEach((name) => {
+    name = name.name;
+    let isDefaultInstance = tmp2;
+    if (obj[name]) {
+      isDefaultInstance = !tmp2.isDefaultInstance;
+    }
+    if (isDefaultInstance) {
+      isDefaultInstance = name.isDefaultInstance;
+    }
+    if (!isDefaultInstance) {
+      obj[name] = name;
+    }
+  });
+  const values = Object.values({});
+  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
+  if (findIndexResult > -1) {
+    arr = values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
+  }
+  return values;
+};
+export const installedIntegrations = items;
+export { setupIntegration };
+export const setupIntegrations = function setupIntegrations(arg0, arr) {
+  closure_0 = arg0;
+  const obj = {};
+  const item = arr.forEach((item) => {
+    if (item) {
+      setupIntegration(closure_0, item, obj);
+    }
+  });
+  return obj;
 };

@@ -1,4 +1,12 @@
 // _runtime/metro/06720__.js
-import _modDef6721 from "06721__.js";
+const fn = function o() {
 
-export default _modDef6721;
+};
+fn.__closure = {};
+fn.__workletHash = 16791771801238;
+fn.__initData = { code: "function pnpm_noopTs1(){}" };
+
+export () => {
+
+}
+export const workletNoop = fn;

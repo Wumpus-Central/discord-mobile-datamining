@@ -1,12 +1,40 @@
 // _runtime/metro/03715__.js
-import 02030__ from "02030__.js";
+import 03716__ from "03716__.js";
+import 03717__ from "03717__.js";
+import 03718__ from "03718__.js";
+import date from "03719__.js";
+import date from "03720__.js";
 
-if (!module_2030) {
-  let obj = { default: module_2030 };
+if (!module_3716) {
+  let obj = { default: module_3716 };
+  let tmp3 = obj;
 } else {
-  obj = module_2030;
+  tmp3 = module_3716;
 }
-obj = { date: obj.default({ formats: { full: "EEEE, do MMMM y", long: "do MMMM y", medium: "do MMM y", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'um' {{time}}", long: "{{date}} 'um' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+if (!module_3717) {
+  obj = { default: module_3717 };
+  let tmp5 = obj;
+} else {
+  tmp5 = module_3717;
+}
+if (!module_3718) {
+  obj = { default: module_3718 };
+  let tmp7 = obj;
+} else {
+  tmp7 = module_3718;
+}
+if (!date) {
+  const obj1 = { default: date };
+  let tmp9 = obj1;
+} else {
+  tmp9 = date;
+}
+if (!date) {
+  const obj2 = { default: date };
+  let tmp11 = obj2;
+} else {
+  tmp11 = date;
+}
 
-export default obj;
+export default { code: "de", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

@@ -1,72 +1,54 @@
 // _runtime/metro/10636__.js
-import _mod10633 from "10633__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+const exports = arg5;
 
-const RUTimeUnitAgoFormatParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+export const zhStringToNumber = function zhStringToNumber(arg0) {
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < arg0.length) {
+    while ("\u5341" !== arg0[num]) {
+      let sum = num2 + exports.NUMBER[tmp];
+      num = num + 1;
+      num2 = sum;
+      num3 = sum;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class RUTimeUnitAgoFormatParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, RUTimeUnitAgoFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitAgoFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    if (0 === num2) {
+      let result = exports.NUMBER[tmp];
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      result = num2 * exports.NUMBER[tmp];
     }
-    return tmp3(self, constructResult);
   }
-}
-_inherits(RUTimeUnitAgoFormatParser, _mod10633.AbstractParserWithLeftBoundaryChecking);
-const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(" + RUTimeUnitAgoFormatParser(10631).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))"
-    );
-  },
+  return num3;
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = RUTimeUnitAgoFormatParser(10631).parseDuration(arg1[1]);
-      const ParsingComponents = RUTimeUnitAgoFormatParser(10505).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        RUTimeUnitAgoFormatParser(10504).reverseDuration(RUTimeUnitAgoFormatParser(10631).parseDuration(arg1[1])),
-      );
-    },
-  },
-];
-
-export default _createClass(RUTimeUnitAgoFormatParser, items);
+export const zhStringToYear = function zhStringToYear(arg0) {
+  let length;
+  let num = 0;
+  let str = "";
+  let str2 = "";
+  if (0 < arg0.length) {
+    do {
+      str = `${exports.NUMBER[arg0[num]]}`;
+      num = num + 1;
+      str2 = str;
+      length = arg0.length;
+    } while (num < length);
+  }
+  return parseInt(str2);
+};
+export const NUMBER = {
+  零: 0,
+  一: 1,
+  二: 2,
+  兩: 2,
+  三: 3,
+  四: 4,
+  五: 5,
+  六: 6,
+  七: 7,
+  八: 8,
+  九: 9,
+  十: 10,
+  廿: 20,
+  卅: 30,
+};
+export const WEEKDAY_OFFSET = { 天: 0, 日: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6 };

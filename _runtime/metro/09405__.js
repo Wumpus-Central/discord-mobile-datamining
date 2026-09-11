@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/PirateIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "02ec404298afd1c009d52e4ac428845a",
-  name: "PirateIcon",
+  hash: "e92f31ca34ceaeec68c2321f683014ca",
+  name: "img_nitro_global_emoji",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_scheduled_events/native/images",
-  width: 20,
-  height: 20,
-  scales: [1, 2, 3],
-  hash: "3db3f02153afc41647b2d1efd43e1f34",
-  name: "ic_event_calendar",
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 160,
+  height: 160,
+  scales: [2, 3],
+  hash: "85840ade8b69557ffa30f1445cbffe12",
+  name: "img_no_results_alt_darker",
   type: "png",
 });

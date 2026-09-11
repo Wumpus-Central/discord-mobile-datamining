@@ -1,8 +1,13 @@
 // _runtime/metro/06689__.js
-import _mod19 from "00019__.js";
+import registerAsset from "01122__.js";
 
-const createContext = _mod19.createContext;
-const context = createContext(null);
-
-export const BottomSheetGestureHandlersContext = context;
-export const BottomSheetDraggableContext = createContext(null);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "737159bf8222c1bab03c6bbf25897f2f",
+  name: "CircleXIcon-primary",
+  type: "png",
+});

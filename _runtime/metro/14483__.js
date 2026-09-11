@@ -1,14 +1,67 @@
 // _runtime/metro/14483__.js
-import _mod14484 from "14484__.js";
 import get_ActivityIndicator from "00017__.js";
 
-export default function getReactNativeDimensions() {
-  try {
-    const Dimensions = get_ActivityIndicator.Dimensions;
-    try {
-      const Dimensions2 = get_ActivityIndicator.Dimensions;
-      value = Dimensions2.get("window");
-      return _mod14484.getReactNativeDimensionsWithDimensions(tmp2, value);
-    } catch (err) {}
-  } catch (err) {}
-}
+function getDevMenu() {}
+
+export default () => () => ({
+  onCommand(type) {
+    if ("devtools.open" === type.type) {
+      if ("devtools.open" === type.type) {
+        if (typeof closure_1_1 === "function") {
+          let obj = {
+            reload() {
+              console.warn("DevMenu." + "reload" + "() not available in this environment");
+            },
+            show() {
+              console.warn("DevMenu." + "show" + "() not available in this environment");
+            },
+            getConstants() {
+              return {};
+            },
+            debugRemotely() {
+              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
+            },
+            setHotLoadingEnabled() {
+              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
+            },
+            setProfilingEnabled() {
+              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
+            },
+          };
+          const OS = Platform.Platform.OS;
+          obj.show();
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      }
+      if ("devtools.reload" === type.type) {
+        if (typeof closure_1_1 === "function") {
+          obj = {
+            reload() {
+              console.warn("DevMenu." + "reload" + "() not available in this environment");
+            },
+            show() {
+              console.warn("DevMenu." + "show" + "() not available in this environment");
+            },
+            getConstants() {
+              return {};
+            },
+            debugRemotely() {
+              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
+            },
+            setHotLoadingEnabled() {
+              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
+            },
+            setProfilingEnabled() {
+              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
+            },
+          };
+          const OS2 = Platform.Platform.OS;
+          obj.reload();
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      }
+    }
+  },
+});

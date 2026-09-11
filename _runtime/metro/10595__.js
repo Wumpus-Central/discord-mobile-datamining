@@ -1,73 +1,61 @@
 // _runtime/metro/10595__.js
-import AbstractParserWithWordBoundaryChecking from "../10509_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
-const NLTimeUnitWithinFormatParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class NLTimeUnitWithinFormatParser {
+const JPSlashDateFormatParser = require;
+const regExp = new RegExp(
+  "([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))",
+  "i",
+);
+class JPSlashDateFormatParser {
   constructor() {
-    self = this;
-    tmp = c2(this, NLTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = c2(this, JPSlashDateFormatParser);
+    return;
   }
 }
-_inherits(NLTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    const regExp = new RegExp(
-      "(?:binnen|in|binnen de|voor)\\s*(" + NLTimeUnitWithinFormatParser(10596).TIME_UNITS_PATTERN + ")(?=\\W|$)",
-      "i",
-    );
+  key: "pattern",
+  value: function pattern() {
     return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = NLTimeUnitWithinFormatParser(10505).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        NLTimeUnitWithinFormatParser(10596).parseDuration(arg1[1]),
-      );
+    key: "extract",
+    value: function extract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      const parsed = parseInt(JPSlashDateFormatParser(10591).toHankaku(arg1[2]));
+      const parsed1 = parseInt(JPSlashDateFormatParser(10591).toHankaku(arg1[3]));
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          if (parsed1 >= 1) {
+            if (parsed1 <= 31) {
+              parsingComponents.assign("day", parsed1);
+              parsingComponents.assign("month", parsed);
+              if (arg1[1]) {
+                const _parseInt = parseInt;
+                const parsed2 = parseInt(JPSlashDateFormatParser(10591).toHankaku(arg1[1]));
+                parsingComponents.assign("year", JPSlashDateFormatParser(10522).findMostLikelyADYear(parsed2));
+              } else {
+                parsingComponents.imply(
+                  "year",
+                  JPSlashDateFormatParser(10522).findYearClosestToRef(
+                    createParsingComponents.reference.instant,
+                    parsed1,
+                    parsed,
+                  ),
+                );
+              }
+              return parsingComponents;
+            }
+          }
+          return null;
+        }
+      }
+      return null;
     },
   },
 ];
 
-export default _createClass(NLTimeUnitWithinFormatParser, items);
+export default _createClass(JPSlashDateFormatParser, items);

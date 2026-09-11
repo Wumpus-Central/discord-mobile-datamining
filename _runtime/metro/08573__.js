@@ -1,84 +1,12 @@
 // _runtime/metro/08573__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8560 from "08560__.js";
-import _modDef8574 from "08574__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import _mod26 from "00026__.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-const FeOffset = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class FeOffset {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, FeOffset);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeOffset);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(FeOffset, _modDef8560);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const merged = Object.assign(this.props);
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged1 = Object.assign(FeOffset(8559).extractFilter(this.props));
-    const obj2 = FeOffset(8559);
-    const merged2 = Object.assign(FeOffset(8559).extractIn(this.props));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
-  },
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(FeOffset, items);
-importDefaultResultResult.displayName = "FeOffset";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.dx = 0;
-obj.dy = 0;
-importDefaultResultResult.defaultProps = obj;
+let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGClipPath", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+__INTERNAL_VIEW_CONFIG = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
 
-export default importDefaultResultResult;
+export default module_65.get("RNSVGClipPath", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

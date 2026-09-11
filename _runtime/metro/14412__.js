@@ -1,19 +1,12 @@
 // _runtime/metro/14412__.js
-let propertyIsEnumerable = {}.propertyIsEnumerable;
-if (!getOwnPropertyDescriptor) {
-  if (getOwnPropertyDescriptor) {
-    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
-      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
-      return tmp && tmp.enumerable;
-    };
-  }
-  arg5.f = propertyIsEnumerable;
-} else {
-  const call = propertyIsEnumerable.call;
-  if (typeof call === "unknown") {
-    let propertyIsEnumerableResult = propertyIsEnumerable(1);
-  } else {
-    propertyIsEnumerableResult = call(obj, 1);
-  }
-  obj = { 1: 2 };
+import _mod14350 from "14350__.js";
+import all from "14376__.js";
+
+let _moduleResult = all(_mod14350.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod14350.WeakMap));
+  const obj = /native code/;
 }
+
+export default _moduleResult;

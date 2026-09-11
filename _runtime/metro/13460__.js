@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/premium/native/images/perks",
+  width: 320.5,
+  height: 175,
   scales: [2, 3],
-  hash: "49797bf2e9feeabeb3ed3af5b9cf8473",
-  name: "SparklesIcon",
+  hash: "d422ef91f74da1b3cc395d635485063d",
+  name: "early_access",
   type: "png",
 });

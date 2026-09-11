@@ -1,88 +1,172 @@
 // _runtime/metro/12986__.js
-import _readOnlyError from "00377__readOnlyError.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import errorCallback from "../12886_errorCallback.js";
+import _mod12890 from "12890__.js";
+import _mod12891 from "12891__.js";
+import spanTimeInputToSeconds from "../12895_spanTimeInputToSeconds.js";
+import _mod12904 from "12904__.js";
+import _mod12917 from "12917__.js";
+import _mod12918 from "12918__.js";
+import COUNTER_METRIC_TYPE from "../12987_COUNTER_METRIC_TYPE.js";
+import __SENTRY_DEBUG__ from "12889__.js";
 
-class LRUMap {
-  constructor(arg0) {
-    tmp = closure_0(this, LRUMap);
-    this._maxSize = global;
-    map = new Map();
-    this._cache = map;
-    return;
+function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, parsed, arg4) {
+  let obj = arg4;
+  if (arg4 === undefined) {
+    obj = {};
+  }
+  let client = obj.client;
+  if (!client) {
+    client = _mod12917.getClient();
+  }
+  if (client) {
+    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
+    let rootSpan;
+    if (activeSpan) {
+      let tmp3Result = spanTimeInputToSeconds;
+      rootSpan = tmp3Result.getRootSpan(activeSpan);
+    }
+    let description = rootSpan;
+    if (rootSpan) {
+      tmp3Result = spanTimeInputToSeconds;
+      description = tmp3Result.spanToJSON(rootSpan).description;
+    }
+    ({ unit, tags, timestamp } = obj);
+    const options = client.getOptions();
+    ({ release, environment } = options);
+    obj = {};
+    if (release) {
+      obj.release = release;
+    }
+    if (environment) {
+      obj.environment = environment;
+    }
+    if (description) {
+      obj.transaction = description;
+    }
+    if (_mod12918.DEBUG_BUILD) {
+      const logger = _mod12890.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Adding value of " + parsed + " to " + SET_METRIC_TYPE + " metric " + arg2);
+    }
+    const globalSingleton = _mod12891.getGlobalSingleton("globalMetricsAggregators", () => {
+      const weakMap = new WeakMap();
+      return weakMap;
+    });
+    value = globalSingleton.get(client);
+    if (!value) {
+      const tmp20 = new arg0(client);
+      closure_0 = tmp20;
+      client.on("flush", () => closure_0.flush());
+      client.on("close", () => closure_0.close());
+      const result = globalSingleton.set(client, tmp20);
+      value = tmp20;
+    }
+    obj = {};
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(tags);
+    value.add(SET_METRIC_TYPE, arg2, parsed, unit, obj, timestamp);
+    const tmp3Result1 = _mod12891;
   }
 }
-_classCallCheck = LRUMap;
-let items = [
-  {
-    key: "size",
-    get() {
-      return this._cache.size;
-    },
-  },
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (undefined !== value) {
-        const _cache2 = self._cache;
-        _cache2.delete(arg0);
-        const _cache3 = self._cache;
-        const result = _cache3.set(arg0, value);
-        return value;
-      }
-    },
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      const self = this;
-      if (this._cache.size >= this._maxSize) {
-        ({ _cache, _cache: _cache2 } = self);
-        _cache.delete(_cache2.keys().next().value);
-        const iter = _cache2.keys();
-      }
-      const _cache3 = self._cache;
-      const result = _cache3.set(arg0, arg1);
-    },
-  },
-  {
-    key: "remove",
-    value: function remove(arg0) {
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (value) {
-        const _cache2 = this._cache;
-        _cache2.delete(arg0);
-      }
-      return value;
-    },
-  },
-  {
-    key: "clear",
-    value: function clear() {
-      const _cache = this._cache;
-      _cache.clear();
-    },
-  },
-  {
-    key: "keys",
-    value: function keys() {
-      const _cache = this._cache;
-      return Array.from(_cache.keys());
-    },
-  },
-  {
-    key: "values",
-    value: function values() {
-      const items = [];
-      const _cache = this._cache;
-      const item = _cache.forEach((item) => items.push(item));
-      return items;
-    },
-  },
-];
+errorCallback;
 
-export const LRUMap = _createClass(LRUMap, items);
+export const metrics = {
+  increment(arg0, arg1) {
+    let num = match;
+    if (match === undefined) {
+      num = 1;
+    }
+    let parsed = num;
+    if (typeof num === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(num);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  distribution(arg0, arg1, match, arg3) {
+    let parsed = match;
+    if (typeof match === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(match);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  set(arg0, arg1, parsed, arg3) {
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  gauge(arg0, arg1, match, arg3) {
+    let parsed = match;
+    if (typeof match === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(match);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  timing(arg0, name, fn) {
+    _require = arg0;
+    dependencyMap = name;
+    addToMetricsAggregator = fn;
+    let str = arg3;
+    if (arg3 === undefined) {
+      str = "second";
+    }
+    closure_3 = arg4;
+    c4 = undefined;
+    if (typeof fn === "function") {
+      let obj = require("12904__.js");
+      let timestampInSecondsResult = obj.timestampInSeconds();
+      c4 = timestampInSecondsResult;
+      obj = { op: "metrics.timing", name, startTime: timestampInSecondsResult, onlyIfParent: true };
+      return require("12924__.js").startSpanManual(obj, (arg0) => {
+        closure_0 = arg0;
+        return closure_0(name[10]).handleCallbackErrors(
+          () => fn(),
+          () => {},
+          () => {
+            let obj = _mod12904;
+            const timestampInSecondsResult = obj.timestampInSeconds();
+            const diff = timestampInSecondsResult - c4;
+            obj = {};
+            const merged = Object.assign(closure_3);
+            obj.unit = "second";
+            let parsed = diff;
+            if (typeof diff === "string") {
+              const _parseInt = parseInt;
+              parsed = parseInt(diff);
+            }
+            addToMetricsAggregator(closure_0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, closure_1, parsed, obj);
+            closure_0.end(timestampInSecondsResult);
+          },
+        );
+      });
+    } else {
+      obj = {};
+      let merged = Object.assign(arg4);
+      obj.unit = str;
+      const DISTRIBUTION_METRIC_TYPE = require("COUNTER_METRIC_TYPE").DISTRIBUTION_METRIC_TYPE;
+      let parsed = fn;
+      if (typeof fn === "string") {
+        let _parseInt = parseInt;
+        parsed = parseInt(fn);
+      }
+      addToMetricsAggregator(arg0, DISTRIBUTION_METRIC_TYPE, name, parsed, obj);
+    }
+  },
+  getMetricsAggregatorForClient(on, arg1) {
+    const globalSingleton = _mod12891.getGlobalSingleton("globalMetricsAggregators", () => {
+      const weakMap = new WeakMap();
+      return weakMap;
+    });
+    value = globalSingleton.get(on);
+    if (value) {
+      return value;
+    } else {
+      const tmp6 = new arg1(on);
+      closure_0 = tmp6;
+      on.on("flush", () => closure_0.flush());
+      on.on("close", () => closure_0.close());
+      const result = globalSingleton.set(on, tmp6);
+      return tmp6;
+    }
+  },
+};

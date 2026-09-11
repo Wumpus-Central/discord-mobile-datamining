@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_boosting/native/images",
-  width: 23,
-  height: 45,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/light",
+  width: 24,
+  height: 23,
   scales: [2, 3],
-  hash: "05cd5f5720d5fb81034c2d2412372f33",
-  name: "sparkle_star_elongated",
+  hash: "d360e66ed8ba0a3060c68a8e44e7aa91",
+  name: "tier_3_24px",
   type: "png",
 });
