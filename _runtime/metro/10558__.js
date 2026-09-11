@@ -1,161 +1,81 @@
 // === Module 10558: ? ===
 
 // Module 10558
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
-import now from "now" /* 10526 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-let self = this;
-const FRCasualDateParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+const ExtractTimezoneAbbrRefiner = require;
+const regExp = new RegExp("^\\s*,?\\s*\\(?([A-Z]{2,4})\\)?(?=\\W|$)", "i");
+class ExtractTimezoneAbbrRefiner {
+  constructor(arg0) {
+    tmp = c2(this, ExtractTimezoneAbbrRefiner);
+    this.timezoneOverrides = global;
+    return;
   }
 }
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
-  }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+const entry = {
+  key: "refine",
+  value: function refine(option, arr) {
+    let self = this;
+    let timezones = option.option.timezones;
+    if (null === timezones) {
+      timezones = {};
     }
-    if (!fn) {
-      fn = function c(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
+    const item = arr.forEach((item) => {
+      let obj = option;
+      const match = regExp.exec(option.text.substring(item.index + item.text.length));
+      if (match) {
+        const formatted = match[1].toUpperCase();
+        const start = item.start;
+        let refDate = start.date();
+        if (null === refDate) {
+          refDate = item.refDate;
         }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
+        if (null === refDate) {
+          const _Date = Date;
+          refDate = new Date();
         }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
+        const _Object = Object;
+        const _Object2 = Object;
+        const merged = Object.assign(Object.assign({}, self.timezoneOverrides), timezones);
+        const toTimezoneOffsetResult = ExtractTimezoneAbbrRefiner(10525).toTimezoneOffset(formatted, refDate, merged);
+        self = toTimezoneOffsetResult;
+        if (null != toTimezoneOffsetResult) {
+          obj.debug(() => {
+            console.log("Extracting timezone: '" + formatted + "' into: " + toTimezoneOffsetResult + " for: " + item.start);
+          });
+          const start6 = item.start;
+          value = start6.get("timezoneOffset");
+          if (null !== value) {
+            if (toTimezoneOffsetResult != value) {
+              const start2 = item.start;
             }
           }
+          const start3 = item.start;
+          if (!tmp14) {
+            item.text = item.text + match[0];
+            const start4 = item.start;
+            if (!start4.isCertain("timezoneOffset")) {
+              const start5 = item.start;
+              obj = start5.assign("timezoneOffset", toTimezoneOffsetResult);
+            }
+            let isCertainResult = null == item.end;
+            if (!isCertainResult) {
+              const end = item.end;
+              isCertainResult = end.isCertain("timezoneOffset");
+            }
+            if (!isCertainResult) {
+              const end2 = item.end;
+              obj = end2.assign("timezoneOffset", toTimezoneOffsetResult);
+            }
+          }
+          tmp14 = start3.isOnlyDate() && formatted != match[1];
         }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_9 = fn(now);
-    class FRCasualDateParser {
-      constructor() {
-        self = this;
-        tmp = c2(this, FRCasualDateParser);
-        tmp2 = closure_4;
-        obj = closure_4(FRCasualDateParser);
-        tmp3 = closure_3;
-        if (hasOwnProperty()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
       }
-    }
-    _inherits(FRCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-    const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-            return /(maintenant|aujourd'hui|demain|hier|cette\s*nuit|la\s*veille)(?=\W|$)/i;
-          }
-    };
-    let items = [entry, ];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(refDate, arg1) {
-            refDate = refDate.refDate;
-            const str2 = arg1[0].toLowerCase();
-            const parsingComponents = refDate.createParsingComponents();
-            if ("maintenant" === str2) {
-              return closure_9.now(refDate.reference);
-            } else if ("aujourd'hui" === str2) {
-              return closure_9.today(refDate.reference);
-            } else if ("hier" === str2) {
-              return closure_9.yesterday(refDate.reference);
-            } else if ("demain" === str2) {
-              return closure_9.tomorrow(refDate.reference);
-            } else {
-              if (str2.match(/cette\s*nuit/)) {
-                FRCasualDateParser(10508).assignSimilarDate(parsingComponents, refDate);
-                parsingComponents.imply("hour", 22);
-                parsingComponents.imply("meridiem", FRCasualDateParser(10507).Meridiem.PM);
-              } else if (str2.match(/la\s*veille/)) {
-                const _Date = Date;
-                const date = new Date(refDate.getTime());
-                date.setDate(date.getDate() - 1);
-                FRCasualDateParser(10508).assignSimilarDate(parsingComponents, date);
-                parsingComponents.imply("hour", 0);
-              }
-              return parsingComponents;
-            }
-          }
-    };
-    items[1] = entry1;
-    exports.default = _createClass(FRCasualDateParser, items);
-  } else {
-    const _Object2 = Object;
+    });
+    return arr;
   }
-} else {
-  let _Object = Object;
-}
+};
+const items = [entry];
+
+export default _createClass(ExtractTimezoneAbbrRefiner, items);

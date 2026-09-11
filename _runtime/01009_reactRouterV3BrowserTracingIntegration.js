@@ -22,15 +22,15 @@ export const reactRouterV3BrowserTracingIntegration = function reactRouterV3Brow
   obj = {};
   const merged1 = Object.assign(result);
   obj.afterAllSetup = function afterAllSetup(arg0) {
-    let f108601 = arg0;
-    f108601.afterAllSetup(arg0);
+    let f108615 = arg0;
+    f108615.afterAllSetup(arg0);
     let _location = closure_4;
     if (closure_4) {
       _location = result(889).WINDOW.location;
     }
     if (_location) {
       const _location2 = result(889).WINDOW.location;
-      f108601 = (name) => {
+      f108615 = (name) => {
         let str = arg1;
         if (arg1 === undefined) {
           str = "url";
@@ -39,7 +39,7 @@ export const reactRouterV3BrowserTracingIntegration = function reactRouterV3Brow
         obj = { [closure_3_0(closure_3_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "pageload", [closure_3_0(closure_3_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.pageload.react.reactrouter_v3" };
         obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str;
         obj.attributes = obj;
-        result = obj.startBrowserTracingPageLoadSpan(f108601, obj);
+        result = obj.startBrowserTracingPageLoadSpan(f108615, obj);
       };
       const pathname = _location2.pathname;
       let obj = { location: _location2, routes };
@@ -91,14 +91,14 @@ export const reactRouterV3BrowserTracingIntegration = function reactRouterV3Brow
             }
             if (0 !== str2.length) {
               if ("/*" !== str2) {
-                let tmp8 = f120895(str2, "route");
+                let tmp8 = f120886(str2, "route");
               }
               return tmp8;
             }
-            tmp8 = f120895(str2);
+            tmp8 = f120886(str2);
           }
         }
-        return f120895(str2);
+        return f120886(str2);
       });
     }
     let listen = closure_5;
@@ -112,7 +112,7 @@ export const reactRouterV3BrowserTracingIntegration = function reactRouterV3Brow
           tmp = "POP" !== action.action;
         }
         if (!tmp) {
-          const f120895 = (name) => {
+          const f120886 = (name) => {
             let str = arg1;
             if (arg1 === undefined) {
               str = "url";
@@ -122,7 +122,7 @@ export const reactRouterV3BrowserTracingIntegration = function reactRouterV3Brow
             obj = { [closure_3_0(closure_3_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "navigation", [closure_3_0(closure_3_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.navigation.react.reactrouter_v3" };
             obj[result(682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str;
             obj.attributes = obj;
-            result = obj.startBrowserTracingNavigationSpan(f120895, obj);
+            result = obj.startBrowserTracingNavigationSpan(f120886, obj);
           };
           let obj = { location: action, routes };
           closure_2_3(obj, (arg0, arg1, routes) => {
@@ -173,14 +173,14 @@ export const reactRouterV3BrowserTracingIntegration = function reactRouterV3Brow
                 }
                 if (0 !== str2.length) {
                   if ("/*" !== str2) {
-                    let tmp8 = f120895(str2, "route");
+                    let tmp8 = f120886(str2, "route");
                   }
                   return tmp8;
                 }
-                tmp8 = f120895(str2);
+                tmp8 = f120886(str2);
               }
             }
-            return f120895(str2);
+            return f120886(str2);
           });
         }
       });

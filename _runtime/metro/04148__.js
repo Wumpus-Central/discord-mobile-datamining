@@ -1,34 +1,26 @@
 // === Module 4148: ? ===
 
 // Module 4148
-import module_3695 from "module_3695" /* 3695 */;
+let closure_0 = { lessThanXSeconds: { one: "\u4E0D\u5230 1 \u79D2", other: "\u4E0D\u5230 {{count}} \u79D2" }, xSeconds: { one: "1 \u79D2", other: "{{count}} \u79D2" }, halfAMinute: "\u534A\u5206\u949F", lessThanXMinutes: { one: "\u4E0D\u5230 1 \u5206\u949F", other: "\u4E0D\u5230 {{count}} \u5206\u949F" }, xMinutes: { one: "1 \u5206\u949F", other: "{{count}} \u5206\u949F" }, xHours: { one: "1 \u5C0F\u65F6", other: "{{count}} \u5C0F\u65F6" }, aboutXHours: { one: "\u5927\u7EA6 1 \u5C0F\u65F6", other: "\u5927\u7EA6 {{count}} \u5C0F\u65F6" }, xDays: { one: "1 \u5929", other: "{{count}} \u5929" }, aboutXWeeks: { one: "\u5927\u7EA6 1 \u4E2A\u661F\u671F", other: "\u5927\u7EA6 {{count}} \u4E2A\u661F\u671F" }, xWeeks: { one: "1 \u4E2A\u661F\u671F", other: "{{count}} \u4E2A\u661F\u671F" }, aboutXMonths: { one: "\u5927\u7EA6 1 \u4E2A\u6708", other: "\u5927\u7EA6 {{count}} \u4E2A\u6708" }, xMonths: { one: "1 \u4E2A\u6708", other: "{{count}} \u4E2A\u6708" }, aboutXYears: { one: "\u5927\u7EA6 1 \u5E74", other: "\u5927\u7EA6 {{count}} \u5E74" }, xYears: { one: "1 \u5E74", other: "{{count}} \u5E74" }, overXYears: { one: "\u8D85\u8FC7 1 \u5E74", other: "\u8D85\u8FC7 {{count}} \u5E74" }, almostXYears: { one: "\u5C06\u8FD1 1 \u5E74", other: "\u5C06\u8FD1 {{count}} \u5E74" } };
 
-if (!module_3695) {
-  const obj = { default: module_3695 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3695;
-}
-function checkWeek(getTime, getTime2, arg2) {
-  let str = "eeee p";
-  if (!module_3695.default(getTime, getTime2, arg2)) {
-    const time = getTime.getTime();
-    let str2 = "'\u4E0A\u4E2A'eeee p";
-    if (time > getTime2.getTime()) {
-      str2 = "'\u4E0B\u4E2A'eeee p";
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp}前`;
+        }
+        text = `${tmp}内`;
+      }
     }
-    str = str2;
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
   }
-  return str;
-}
-module_3695 = tmp3;
-let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
-
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_1[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
-  }
-  return tmpResult;
 };
 export default exports.default;

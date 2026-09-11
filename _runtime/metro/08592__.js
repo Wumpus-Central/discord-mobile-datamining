@@ -2,7 +2,7 @@
 
 // Module 8592
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8545 from "module_8545" /* 8545 */;
+import _modDef8581 from "module_8581" /* 8581 */;
 import _modDef8593 from "module_8593" /* 8593 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -10,7 +10,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const SvgImage = fn;
+const FeGaussianBlur = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,17 +31,15 @@ function _isNativeReflectConstruct() {
   }
 }
 _possibleConstructorReturnDefault;
-const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const re9 = /\s+/;
-class SvgImage {
+class FeGaussianBlur {
   constructor() {
     self = this;
-    tmp = closure_3(this, SvgImage);
+    tmp = closure_3(this, FeGaussianBlur);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(SvgImage);
+    obj = hasOwnProperty(FeGaussianBlur);
     tmp3 = closure_4;
-    if (closure_8()) {
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -54,53 +52,33 @@ class SvgImage {
     return tmp3(self, constructResult);
   }
 }
-_inherits(SvgImage, _modDef8545);
+_inherits(FeGaussianBlur, _modDef8581);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    ({ preserveAspectRatio, href } = props);
-    ({ x, y, width, height } = props);
-    if (undefined === href) {
-      href = props.xlinkHref;
-    }
-    if (preserveAspectRatio) {
-      let parts = preserveAspectRatio.trim().split(re9);
-      const str = preserveAspectRatio.trim();
-    } else {
-      parts = [];
-    }
-    const size = { x, y, width, height, onLoad: props.onLoad, meetOrSlice: SvgImage(8534).meetOrSliceTypes[tmp3] || 0, align: null, src: null };
-    [tmp2, tmp3] = parts;
-    const tmp6 = SvgImage(8534).meetOrSliceTypes[tmp3] || 0;
-    size.align = SvgImage(8534).alignEnum[tmp2] || "xMidYMid";
-    let assetSource = null;
-    if (href) {
-      let tmp10 = href;
-      if (typeof href === "string") {
-        let obj = { uri: href };
-        tmp10 = obj;
-      }
-      assetSource = Image.resolveAssetSource(tmp10);
-    }
-    size.src = assetSource;
-    obj = {
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const tmp7 = SvgImage(8534).alignEnum[tmp2] || "xMidYMid";
-    const merged = Object.assign(SvgImage(8536).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    return <tmp11 ref={function ref(arg0) {
+    const merged = Object.assign(FeGaussianBlur(8580).extractFilter(this.props));
+    const obj2 = FeGaussianBlur(8580);
+    const merged1 = Object.assign(FeGaussianBlur(8580).extractIn(this.props));
+    const obj3 = FeGaussianBlur(8580);
+    const merged2 = Object.assign(FeGaussianBlur(8580).extractFeGaussianBlur(this.props));
+    return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(SvgImage, items);
-importDefaultResultResult.displayName = "Image";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0, preserveAspectRatio: "xMidYMid meet" };
+const importDefaultResultResult = _createClass(FeGaussianBlur, items);
+importDefaultResultResult.displayName = "FeGaussianBlur";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.stdDeviation = 0;
+obj.edgeMode = "none";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

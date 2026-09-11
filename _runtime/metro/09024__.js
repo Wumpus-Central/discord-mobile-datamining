@@ -1,7 +1,14 @@
 // === Module 9024: ? ===
 
 // Module 9024
-import _mod9008 from "module_9008" /* 9008 */;
+import ar from "ar" /* 9035 */;
+import _mod9044 from "module_9044" /* 9044 */;
+import _mod9091 from "module_9091" /* 9091 */;
+import lt from "lt" /* 9092 */;
+import _mod9094 from "module_9094" /* 9094 */;
+import _mod9095 from "module_9095" /* 9095 */;
+import _mod9096 from "module_9096" /* 9096 */;
+import _mod9098 from "module_9098" /* 9098 */;
 
 const self = this;
 let self2 = this;
@@ -53,151 +60,255 @@ if (self2) {
         return obj;
       };
     }
-    const _Object3 = Object;
-    exports.default = function default_1() {
-      if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "karaktrojn", verb: "havi" }, file: { unit: "bajtojn", verb: "havi" }, array: { unit: "elementojn", verb: "havi" }, set: { unit: "elementojn", verb: "havi" } };
-        closure_1 = { regex: "enigo", email: "retadreso", url: "URL", emoji: "emo\u011Dio", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO-datotempo", date: "ISO-dato", time: "ISO-tempo", duration: "ISO-da\u016Dro", ipv4: "IPv4-adreso", ipv6: "IPv6-adreso", cidrv4: "IPv4-rango", cidrv6: "IPv6-rango", base64: "64-ume kodita karaktraro", base64url: "URL-64-ume kodita karaktraro", json_string: "JSON-karaktraro", e164: "E.164-nombro", jwt: "JWT", template_literal: "enigo" };
-        closure_2 = { nan: "NaN", number: "nombro", array: "tabelo", null: "senvalora" };
-        obj.localeError = (code) => {
-          switch (code.code) {
-            case "invalid_type":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp50 = closure_2[parsedTypeResult];
-              if (tmp50 == null) {
-                tmp50 = parsedTypeResult;
-              }
-              obj = /^[A-Z]/;
-              if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined = "Nevalida enigo: atendi\u011Dis instanceof " + code.expected + ", ricevi\u011Dis " + tmp50;
-              } else {
-                const _HermesInternal16 = HermesInternal;
-                combined = "Nevalida enigo: atendi\u011Dis " + expected + ", ricevi\u011Dis " + tmp50;
-              }
-              return combined;
-            case "invalid_value":
-              if (1 === code.values.length) {
-                const _HermesInternal15 = HermesInternal;
-                let combined1 = "Nevalida enigo: atendi\u011Dis " + closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal14 = HermesInternal;
-                combined1 = "Nevalida opcio: atendi\u011Dis unu el " + closure_2.joinValues(code.values, "|");
-              }
-              return combined1;
-            case "too_big":
-              let str26 = "<";
-              if (code.inclusive) {
-                str26 = "<=";
-              }
-              let tmp29 = obj[code.origin];
-              if (tmp29 == null) {
-                tmp29 = null;
-              }
-              let str27 = code.origin;
-              if (tmp29) {
-                if (str27 == null) {
-                  str27 = "valoro";
-                }
-                let str = code.maximum.toString();
-                let str33 = tmp29.unit;
-                if (str33 == null) {
-                  str33 = "elementojn";
-                }
-                const _HermesInternal13 = HermesInternal;
-                let combined2 = "Tro granda: atendi\u011Dis ke " + str27 + " havu " + str26 + str + " " + str33;
-              } else {
-                let str28 = str27;
-                if (str27 == null) {
-                  str28 = "valoro";
-                }
-                const _HermesInternal12 = HermesInternal;
-                combined2 = "Tro granda: atendi\u011Dis ke " + str28 + " havu " + str26 + code.maximum.toString();
-              }
-              return combined2;
-            case "too_small":
-              let str20 = ">";
-              if (code.inclusive) {
-                str20 = ">=";
-              }
-              let tmp17 = obj[code.origin];
-              if (tmp17 == null) {
-                tmp17 = null;
-              }
-              ({ origin, minimum } = code);
-              const str1 = minimum.toString();
-              if (tmp17) {
-                const _HermesInternal11 = HermesInternal;
-                let combined3 = "Tro malgranda: atendi\u011Dis ke " + origin + " havu " + str20 + str1 + " " + tmp17.unit;
-              } else {
-                const _HermesInternal10 = HermesInternal;
-                combined3 = "Tro malgranda: atendi\u011Dis ke " + origin + " estu " + str20 + str1;
-              }
-              return combined3;
-            case "invalid_format":
-              if ("starts_with" === code.format) {
-                const _HermesInternal9 = HermesInternal;
-                let combined4 = "Nevalida karaktraro: devas komenci\u011Di per \"" + code.prefix + "\"";
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                combined4 = "Nevalida karaktraro: devas fini\u011Di per \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                combined4 = "Nevalida karaktraro: devas inkluzivi \"" + code.includes + "\"";
-              } else if ("regex" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined4 = "Nevalida karaktraro: devas kongrui kun la modelo " + code.pattern;
-              } else {
-                let format = closure_1[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal5 = HermesInternal;
-                combined4 = "Nevalida " + format;
-              }
-              return combined4;
-            case "not_multiple_of":
-              const _HermesInternal4 = HermesInternal;
-              return "Nevalida nombro: devas esti oblo de " + code.divisor;
-            case "unrecognized_keys":
-              let str3 = "";
-              let str4 = "";
-              if (code.keys.length > 1) {
-                str4 = "j";
-              }
-              if (code.keys.length > 1) {
-                str3 = "j";
-              }
-              const _HermesInternal3 = HermesInternal;
-              return "Nekonata" + str4 + " \u015Dlosilo" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
-            case "invalid_key":
-              const _HermesInternal2 = HermesInternal;
-              return "Nevalida \u015Dlosilo en " + code.origin;
-            case "invalid_union":
-              return "Nevalida enigo";
-            case "invalid_element":
-              const _HermesInternal = HermesInternal;
-              str = "Nevalida valoro en ";
-              return "Nevalida valoro en " + code.origin;
-            default:
-              return "Nevalida enigo";
-          }
-        };
-        return obj;
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    };
-    let closure_2 = fn(_mod9008);
-    function error() {
-
+    let fn2 = self;
+    if (self) {
+      fn2 = self.__exportStar;
     }
-    module.exports = exports.default;
+    if (!fn2) {
+      fn2 = (obj, exports) => {
+        for (const key10007 in arg0) {
+          let tmp6 = "default" === key10007;
+          if (tmp6) {
+            if (tmp6) {
+              continue;
+            } else {
+              let tmp4 = self2(arg1, arg0, key10007);
+              continue;
+            }
+            continue;
+          } else {
+            let _Object = Object;
+            hasOwnProperty = Object.prototype.hasOwnProperty;
+            let call = hasOwnProperty.call;
+            if (typeof call === "unknown") {
+              let hasOwnPropertyResult = hasOwnProperty(key10007);
+            } else {
+              hasOwnPropertyResult = call(arg1, key10007);
+            }
+          }
+        }
+      };
+    }
+    let fn3 = self;
+    if (self) {
+      fn3 = self.__importDefault;
+    }
+    if (!fn3) {
+      fn3 = (__esModule) => {
+        if (!__esModule) {
+          const obj = { default: __esModule };
+          let tmp = obj;
+        } else {
+          tmp = __esModule;
+        }
+        return tmp;
+      };
+    }
+    const _Object3 = Object;
+    exports.core = undefined;
+    exports.globalRegistry = undefined;
+    exports.registry = undefined;
+    exports.config = undefined;
+    exports.$output = undefined;
+    exports.$input = undefined;
+    exports.$brand = undefined;
+    exports.clone = undefined;
+    exports.regexes = undefined;
+    exports.treeifyError = undefined;
+    exports.prettifyError = undefined;
+    exports.formatError = undefined;
+    exports.flattenError = undefined;
+    exports.TimePrecision = undefined;
+    exports.util = undefined;
+    exports.NEVER = undefined;
+    exports.toJSONSchema = undefined;
+    exports.fromJSONSchema = undefined;
+    exports.locales = undefined;
+    exports.ZodISODateTime = undefined;
+    exports.ZodISODate = undefined;
+    exports.ZodISOTime = undefined;
+    exports.ZodISODuration = undefined;
+    exports.iso = undefined;
+    exports.coerce = undefined;
+    exports.core = fn(require("module_9025"));
+    fn2(_mod9091, exports);
+    fn2(lt, exports);
+    fn2(_mod9095, exports);
+    fn2(_mod9094, exports);
+    fn2(_mod9096, exports);
+    require("module_9025").config(fn3(_mod9044).default());
+    const _Object4 = Object;
+    let obj = {
+      enumerable: true,
+      get() {
+            return require("module_9025").globalRegistry;
+          }
+    };
+    Object.defineProperty(exports, "globalRegistry", obj);
+    const _Object5 = Object;
+    obj = {
+      enumerable: true,
+      get() {
+            return require("module_9025").registry;
+          }
+    };
+    Object.defineProperty(exports, "registry", obj);
+    const _Object6 = Object;
+    const obj1 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").config;
+          }
+    };
+    Object.defineProperty(exports, "config", obj1);
+    const _Object7 = Object;
+    const obj2 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").$output;
+          }
+    };
+    Object.defineProperty(exports, "$output", obj2);
+    const _Object8 = Object;
+    const obj3 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").$input;
+          }
+    };
+    Object.defineProperty(exports, "$input", obj3);
+    const _Object9 = Object;
+    const obj4 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").$brand;
+          }
+    };
+    Object.defineProperty(exports, "$brand", obj4);
+    const _Object10 = Object;
+    const obj5 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").clone;
+          }
+    };
+    Object.defineProperty(exports, "clone", obj5);
+    const _Object11 = Object;
+    const obj6 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").regexes;
+          }
+    };
+    Object.defineProperty(exports, "regexes", obj6);
+    const _Object12 = Object;
+    const obj7 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").treeifyError;
+          }
+    };
+    Object.defineProperty(exports, "treeifyError", obj7);
+    const _Object13 = Object;
+    const obj8 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").prettifyError;
+          }
+    };
+    Object.defineProperty(exports, "prettifyError", obj8);
+    const _Object14 = Object;
+    const obj9 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").formatError;
+          }
+    };
+    Object.defineProperty(exports, "formatError", obj9);
+    const _Object15 = Object;
+    const obj10 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").flattenError;
+          }
+    };
+    Object.defineProperty(exports, "flattenError", obj10);
+    const _Object16 = Object;
+    const obj11 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").TimePrecision;
+          }
+    };
+    Object.defineProperty(exports, "TimePrecision", obj11);
+    const _Object17 = Object;
+    const obj12 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").util;
+          }
+    };
+    Object.defineProperty(exports, "util", obj12);
+    const _Object18 = Object;
+    const obj13 = {
+      enumerable: true,
+      get() {
+            return require("module_9025").NEVER;
+          }
+    };
+    Object.defineProperty(exports, "NEVER", obj13);
+    const _Object19 = Object;
+    const obj14 = {
+      enumerable: true,
+      get() {
+            return require("stringProcessor").toJSONSchema;
+          }
+    };
+    Object.defineProperty(exports, "toJSONSchema", obj14);
+    const _Object20 = Object;
+    const obj15 = {
+      enumerable: true,
+      get() {
+            return require("convertBaseSchema").fromJSONSchema;
+          }
+    };
+    Object.defineProperty(exports, "fromJSONSchema", obj15);
+    exports.locales = fn(ar);
+    const _Object21 = Object;
+    const obj16 = {
+      enumerable: true,
+      get() {
+            return require("module_9093").ZodISODateTime;
+          }
+    };
+    Object.defineProperty(exports, "ZodISODateTime", obj16);
+    const _Object22 = Object;
+    const obj17 = {
+      enumerable: true,
+      get() {
+            return require("module_9093").ZodISODate;
+          }
+    };
+    Object.defineProperty(exports, "ZodISODate", obj17);
+    const _Object23 = Object;
+    const obj18 = {
+      enumerable: true,
+      get() {
+            return require("module_9093").ZodISOTime;
+          }
+    };
+    Object.defineProperty(exports, "ZodISOTime", obj18);
+    const _Object24 = Object;
+    const obj19 = {
+      enumerable: true,
+      get() {
+            return require("module_9093").ZodISODuration;
+          }
+    };
+    Object.defineProperty(exports, "ZodISODuration", obj19);
+    exports.iso = fn(require("module_9093"));
+    exports.coerce = fn(_mod9098);
+    const fn3Result = fn3(_mod9044);
   } else {
     const _Object2 = Object;
   }

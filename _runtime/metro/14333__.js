@@ -1,27 +1,5 @@
 // === Module 14333: ? ===
 
 // Module 14333
-import e from "e" /* 1162 */;
 
-e.__extends(function MissingLocaleDataError() {
-  const self = this;
-  let tmp2 = null !== Error;
-  if (!tmp2) {
-    if (!tmp2) {
-      tmp2 = self;
-    }
-    tmp2.type = "MISSING_LOCALE_DATA";
-    return tmp2;
-  } else {
-    const apply = Error.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-  }
-}, Error);
-
-export const isMissingLocaleDataError = function isMissingLocaleDataError(type) {
-  return "MISSING_LOCALE_DATA" === type.type;
-};
+export const calendars = ["buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-civil", "islamic-rgsa", "islamic-tbla", "islamic-umalqura", "islamicc", "iso8601", "japanese", "persian", "roc"];

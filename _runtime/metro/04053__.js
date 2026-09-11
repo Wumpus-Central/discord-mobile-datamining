@@ -2,7 +2,7 @@
 
 // Module 4053
 import module_4045 from "module_4045" /* 4045 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
 if (!module_4045) {
   let obj = { default: module_4045 };
@@ -19,7 +19,7 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisQuarter(arg0) {
+export default function isThisMinute(arg0) {
   requiredArgs.default(1, arguments);
   return module_4045.default(Date.now(), arg0);
 };

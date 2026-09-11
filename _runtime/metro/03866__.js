@@ -1,78 +1,33 @@
 // === Module 3866: ? ===
 
 // Module 3866
-import _typeof from "module_3693" /* 3693 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import _typeof from "module_3867" /* 3867 */;
+import _typeof from "module_3868" /* 3868 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
 if (!_typeof) {
   let obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
 }
-_typeof = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+if (!_typeof) {
+  obj = { default: _typeof };
   let tmp5 = obj;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = _typeof;
 }
-requiredArgs = tmp5;
+_typeof = tmp5;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
+  let tmp7 = obj;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function min(arg0) {
-  requiredArgs.default(1, arguments);
-  if (!arg0) {
-    if ("object" === _typeof(arg0)) {
-      if (null !== arg0) {
-        const _Array = Array;
-        const call = slice.call;
-        let arr = typeof call === "unknown" ? slice() : call(arg0);
-      }
-    }
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
-  } else {
-    arr = arg0;
-  }
-  const item = arr.forEach((item) => {
-    defaultResult = _typeof.default(item);
-    let isNaNResult = undefined === defaultResult || defaultResult > defaultResult;
-    if (!isNaNResult) {
-      const _isNaN = isNaN;
-      isNaNResult = isNaN(defaultResult.getDate());
-    }
-  });
-  let date1 = _typeof;
-  if (!_typeof) {
-    const _Date2 = Date;
-    date1 = new Date(NaN);
-  }
-  return date1;
+export default function clamp(arg0, arg1) {
+  ({ start, end } = arg1);
+  requiredArgs.default(2, arguments);
+  const items = [arg0, start];
+  const items1 = [_typeof.default(items), end];
+  return _typeof.default(items1);
 };
 export default exports.default;

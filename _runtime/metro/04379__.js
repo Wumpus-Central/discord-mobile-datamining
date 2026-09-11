@@ -1,60 +1,31 @@
 // === Module 4379: ? ===
 
 // Module 4379
-import c from "c" /* 4361 */;
-import _mod4374 from "module_4374" /* 4374 */;
+import c from "c" /* 4363 */;
+import _mod4376 from "module_4376" /* 4376 */;
 import _slicedToArray from "module_32" /* 32 */;
 
-const RiveColor2 = tmp(4369);
-require = fn;
-fn(19).useCallback;
-const f30641 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
+require = arg1;
+function getBooleanProperty(booleanProperty, arg1) {
+  return booleanProperty.booleanProperty(arg1);
+}
 
-export const useRiveColor = function useRiveColor(FillColor, instance) {
+export const useRiveBoolean = function useRiveBoolean(reducedMotion, instance) {
   let obj = c;
-  const cResult = obj.c(8);
-  const tmp4 = _slicedToArray(_mod4374.useRiveProperty(instance, FillColor, f30641), 3);
-  [tmp5, tmp6] = tmp4;
-  require = tmp6;
-  if (cResult[0] !== tmp5) {
-    let fromIntResult;
-    if (undefined !== tmp5) {
-      let RiveColor = RiveColor2.RiveColor;
-      fromIntResult = RiveColor.fromInt(tmp5);
-    }
-    cResult[0] = tmp5;
-    cResult[1] = fromIntResult;
-    let tmp8 = fromIntResult;
-  } else {
-    tmp8 = cResult[1];
-  }
-  if (cResult[2] !== tmp6) {
-    const fn = function p(str) {
-      let fromHexStringResult = str;
-      if (typeof str === "string") {
-        const RiveColor = RiveColor2.RiveColor;
-        fromHexStringResult = RiveColor.fromHexString(str);
+  const cResult = obj.c(4);
+  [tmp3, tmp4, tmp5] = _slicedToArray(_mod4376.useRiveProperty(instance, reducedMotion, getBooleanProperty), 3);
+  if (cResult[0] === tmp5) {
+    if (cResult[1] === tmp4) {
+      if (cResult[2] === tmp3) {
+        let tmp6 = cResult[3];
       }
-      tmp6(fromHexStringResult.toInt());
-    };
-    cResult[2] = tmp6;
-    cResult[3] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[3];
-  }
-  if (cResult[4] === tmp4[2]) {
-    if (cResult[5] === tmp10) {
-      if (cResult[6] === tmp8) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
+      return tmp6;
     }
   }
-  obj = { value: tmp8, setValue: tmp10, error: tmp7 };
-  cResult[4] = tmp4[2];
-  cResult[5] = tmp10;
-  cResult[6] = tmp8;
-  cResult[7] = obj;
-  tmp11 = obj;
+  obj = { value: tmp3, setValue: tmp4, error: tmp5 };
+  cResult[0] = tmp5;
+  cResult[1] = tmp4;
+  cResult[2] = tmp3;
+  cResult[3] = obj;
+  tmp6 = obj;
 };

@@ -2,14 +2,12 @@
 
 // Module 17343
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "hr",
+  locale: "ru",
   pluralRuleFunction(arg0, arg1) {
     const parts = String(arg0).split(".");
-    const first = parts[0];
-    const substr = first.slice(-1);
-    const substr1 = first.slice(-2);
-    const substr2 = arr2.slice(-1);
-    const substr3 = arr2.slice(-2);
+    [arr, tmp2] = parts;
+    const substr = arr.slice(-1);
+    const substr1 = arr.slice(-2);
     let str2 = "other";
     if (!arg1) {
       if (!tmp2) {
@@ -18,31 +16,38 @@ globalThis.IntlMessageFormat.__addLocaleData({
         }
         str2 = str3;
       }
-      if (1 != substr2) {
-        if (!tmp2) {
-          if (substr >= 2) {
-            if (substr <= 4) {
-              if (substr1 >= 12) {
-                str3 = str4;
-              }
-            }
-            str4 = "few";
-          }
-        }
-        str4 = "other";
-        if (substr2 >= 2) {
-          str4 = "other";
-          if (substr2 <= 4) {
-            if (substr3 >= 12) {
-              str4 = "other";
+      if (!tmp2) {
+        if (substr >= 2) {
+          if (substr <= 4) {
+            let str5 = "few";
+            if (substr1 >= 12) {
+              str5 = "few";
             }
           }
+          str3 = str5;
         }
-      } else {
-        str3 = "one";
       }
+      if (tmp2) {
+        if (!tmp2) {
+          if (substr >= 5) {
+            str5 = str6;
+          }
+        }
+        str6 = "other";
+        if (!tmp2) {
+          str6 = "other";
+          if (substr1 >= 11) {
+            str6 = "other";
+          }
+        }
+      }
+      str6 = "many";
     }
     return str2;
   }
 });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "hr-BA", parentLocale: "hr" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "ru-BY", parentLocale: "ru" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "ru-KG", parentLocale: "ru" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "ru-KZ", parentLocale: "ru" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "ru-MD", parentLocale: "ru" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "ru-UA", parentLocale: "ru" });

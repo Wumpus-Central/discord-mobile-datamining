@@ -1,7 +1,13 @@
 // === Module 4898: ? ===
 
 // Module 4898
-import _mod1291 from "module_1291" /* 1291 */;
+let setPrototypeOf = typeof Reflect !== "undefined";
+if (typeof Reflect !== "undefined") {
+  const _Reflect = Reflect;
+  setPrototypeOf = Reflect.setPrototypeOf;
+}
+if (!setPrototypeOf) {
+  setPrototypeOf = null;
+}
 
-
-export default _mod1291.setPrototypeOf || null;
+export default setPrototypeOf;

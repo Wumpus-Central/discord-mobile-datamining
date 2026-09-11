@@ -1,168 +1,152 @@
 // === Module 8580: ? ===
 
 // Module 8580
-import _modDef8560 from "module_8560" /* 8560 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import extractOpacityDefault from "extractOpacity" /* 8548 */;
+import extractBrushDefault from "extractBrush" /* 8560 */;
+import noop from "module_19" /* 19 */;
 
-let FeFuncA = arg1;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+const re3 = /\s+/;
+const action = { type: 0, payload: fn(17).processColor("black") };
+
+export default function extractFeFlood(arg0) {
+  ({ floodColor, floodOpacity } = arg0);
+  if (null == floodColor) {
+    let tmp = action;
+  } else {
+    tmp = extractBrushDefault(floodColor);
   }
-}
-class FeComponentTransferFunction {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(FeFuncA);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "UNKNOWN";
-    return tmp3Result;
+  const obj = { floodColor: tmp };
+  if (null != floodOpacity) {
+    obj.floodOpacity = extractOpacityDefault(floodOpacity);
   }
-}
-FeFuncA = FeComponentTransferFunction;
-_inherits(FeComponentTransferFunction, _modDef8560);
-const entry = {
-  key: "render",
-  value: function render() {
-    const result = FeFuncA(8537).warnUnimplementedFilter();
-    return null;
-  }
+  return obj;
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(FeComponentTransferFunction, items);
-importDefaultResultResult.defaultProps = { type: "identity", tableValues: [], slope: 1, intercept: 0, amplitude: 1, exponent: 1, offset: 0 };
-class FeFuncR {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(FeFuncA);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "R";
-    return tmp3Result;
+export const extractFilter = (props) => {
+  const size = { x: props.x, y: props.y, width: props.width, height: props.height, result: props.result };
+  return size;
+};
+export const extractIn = (props) => {
+  if (props.in) {
+    let obj = { in1: props.in };
+  } else {
+    obj = {};
   }
-}
-FeFuncA = FeFuncR;
-_inherits(FeFuncR, importDefaultResultResult);
-const importDefaultResultResult1 = _createClass(FeFuncR);
-importDefaultResultResult1.displayName = "FeFuncR";
-class FeFuncG {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(FeFuncA);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "G";
-    return tmp3Result;
+  return obj;
+};
+export const extractFeBlend = (props) => {
+  const obj = {};
+  if (props.in2) {
+    obj.in2 = props.in2;
   }
-}
-FeFuncA = FeFuncG;
-_inherits(FeFuncG, importDefaultResultResult);
-const importDefaultResultResult2 = _createClass(FeFuncG);
-importDefaultResultResult2.displayName = "FeFuncG";
-class FeFuncB {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(FeFuncA);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "B";
-    return tmp3Result;
+  if (props.mode) {
+    obj.mode = props.mode;
   }
-}
-FeFuncA = FeFuncB;
-_inherits(FeFuncB, importDefaultResultResult);
-const importDefaultResultResult3 = _createClass(FeFuncB);
-importDefaultResultResult3.displayName = "FeFuncB";
-class FeFuncA {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(FeFuncA);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+  return obj;
+};
+export const extractFeColorMatrix = (props) => {
+  const obj = {};
+  if (undefined !== props.values) {
+    const _Array = Array;
+    const values = props.values;
+    if (Array.isArray(props.values)) {
+      obj.values = values.map((item) => {
+        let parsed = item;
+        if (typeof item !== "number") {
+          const _parseFloat = parseFloat;
+          parsed = parseFloat(item);
+        }
+        return parsed;
+      });
+    } else if (typeof values === "number") {
+      const items = [props.values];
+      obj.values = items;
+    } else if (typeof props.values === "string") {
+      const parts = props.values.split(re3);
+      let _parseFloat = parseFloat;
+      const mapped = parts.map(parseFloat);
+      obj.values = mapped.filter((item) => !isNaN(item));
     } else {
-      constructResult = obj.apply(self, items1);
+      const _console = console;
+      console.warn("Invalid value for FeColorMatrix `values` prop");
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "A";
-    return tmp3Result;
   }
-}
-_inherits(FeFuncA, importDefaultResultResult);
-const importDefaultResultResult4 = _createClass(FeFuncA);
-importDefaultResultResult4.displayName = "FeFuncA";
-
-export default importDefaultResultResult;
-export const FeFuncR = importDefaultResultResult1;
-export const FeFuncG = importDefaultResultResult2;
-export const FeFuncB = importDefaultResultResult3;
-export const FeFuncA = importDefaultResultResult4;
+  if (props.type) {
+    obj.type = props.type;
+  }
+  return obj;
+};
+export const extractFeComposite = (props) => {
+  const obj = { in1: props.in || "", in2: props.in2 || "", operator1: props.operator || "over" };
+  const items = ["k1", "k2", "k3", "k4"];
+  const item = items.forEach((item) => {
+    if (undefined !== props[item]) {
+      const _Number = Number;
+      obj[item] = Number(tmp[item]) || 0;
+      const tmp4 = Number(tmp[item]) || 0;
+    }
+  });
+  return obj;
+};
+export const extractFeGaussianBlur = (props) => {
+  const obj = {};
+  if (Array.isArray(props.stdDeviation)) {
+    const _Number5 = Number;
+    obj.stdDeviationX = Number(props.stdDeviation[0]) || 0;
+    const _Number6 = Number;
+    const tmp7 = Number(props.stdDeviation[0]) || 0;
+    obj.stdDeviationY = Number(props.stdDeviation[1]) || 0;
+    const tmp8 = Number(props.stdDeviation[1]) || 0;
+  } else {
+    if (typeof props.stdDeviation === "string") {
+      if (str2.match(re3)) {
+        const parts = props.stdDeviation.split(re3);
+        const _Number3 = Number;
+        obj.stdDeviationX = Number(parts[0]) || 0;
+        const _Number4 = Number;
+        const tmp5 = Number(parts[0]) || 0;
+        obj.stdDeviationY = Number(parts[1]) || 0;
+        const tmp6 = Number(parts[1]) || 0;
+      }
+      str2 = props.stdDeviation;
+    }
+    const stdDeviation = props.stdDeviation;
+    let tmp = typeof stdDeviation === "number";
+    if (typeof stdDeviation !== "number") {
+      const stdDeviation2 = props.stdDeviation;
+      let tmp10 = typeof stdDeviation2 === "string";
+      if (typeof stdDeviation2 === "string") {
+        tmp10 = !props.stdDeviation.match(re3);
+      }
+      tmp = tmp10;
+    }
+    if (tmp) {
+      const _Number = Number;
+      obj.stdDeviationX = Number(props.stdDeviation) || 0;
+      const _Number2 = Number;
+      const tmp2 = Number(props.stdDeviation) || 0;
+      obj.stdDeviationY = Number(props.stdDeviation) || 0;
+      const tmp3 = Number(props.stdDeviation) || 0;
+    }
+  }
+  if (props.edgeMode) {
+    obj.edgeMode = props.edgeMode;
+  }
+  return obj;
+};
+export const extractFeMerge = (props, parent) => {
+  if (props.children) {
+    const Children = noop.Children;
+    let mapped = Children.map(props.children, (onlyResult) => noop.cloneElement(onlyResult, { parent }));
+  } else {
+    mapped = [];
+  }
+  const nodes = [];
+  for (let num = 0; num < length; num = num + 1) {
+    let str = mapped[num].props.in;
+    if (!str) {
+      str = "";
+    }
+    let arr = nodes.push(str);
+  }
+  return { nodes };
+};

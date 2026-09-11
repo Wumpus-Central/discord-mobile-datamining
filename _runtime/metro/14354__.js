@@ -2,6 +2,10 @@
 
 // Module 14354
 
-export const shouldPolyfill = function shouldPolyfill() {
-  return !("supportedValuesOf" in Intl);
+export default (fn) => {
+  try {
+    return fn();
+  } catch (err) {
+    return true;
+  }
 };

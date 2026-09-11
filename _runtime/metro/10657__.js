@@ -1,14 +1,13 @@
 // === Module 10657: ? ===
 
 // Module 10657
-import _mod10658 from "module_10658" /* 10658 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod10542 from "module_10542" /* 10542 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UKMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +27,30 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UKMonthNameLittleEndianParser {
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class RUMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, UKMonthNameLittleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(UKMonthNameLittleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, RUMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(RUMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,47 +63,15 @@ class UKMonthNameLittleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKMonthNameLittleEndianParser, _mod10658.AbstractParserWithLeftRightBoundaryChecking);
+_classCallCheck = RUMergeDateTimeRefiner;
+_inherits(RUMergeDateTimeRefiner, fn(_mod10542).default);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(?:\u0437|\u0456\u0437)?\\s*(" + UKMonthNameLittleEndianParser(10656).ORDINAL_NUMBER_PATTERN + ")(?:\\s{0,3}(?:\u043F\u043E|-|\u2013|\u0434\u043E)?\\s{0,3}(" + UKMonthNameLittleEndianParser(10656).ORDINAL_NUMBER_PATTERN + "))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(" + UKMonthNameLittleEndianParser(10502).matchAnyPattern(UKMonthNameLittleEndianParser(10656).MONTH_DICTIONARY) + ")(?:(?:-|\\/|,?\\s{0,3})(" + UKMonthNameLittleEndianParser(10656).YEAR_PATTERN + "(?![^\\s]\\d)))?";
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(T|\u0432|,|-)?\\s*$");
+    return regExp;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = UKMonthNameLittleEndianParser(10656).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const result = UKMonthNameLittleEndianParser(10656).parseOrdinalNumberPattern(index[1]);
-      if (result > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", result);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", UKMonthNameLittleEndianParser(10656).parseYearPattern(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply("year", UKMonthNameLittleEndianParser(10503).findYearClosestToRef(createParsingResult.reference.instant, result, tmp4));
-        }
-        if (index[2]) {
-          const start3 = parsingResult.start;
-          const result1 = UKMonthNameLittleEndianParser(10656).parseOrdinalNumberPattern(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-        }
-        return parsingResult;
-      }
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(UKMonthNameLittleEndianParser, items);
+export default _createClass(RUMergeDateTimeRefiner, items);

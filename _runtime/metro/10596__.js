@@ -1,95 +1,236 @@
 // === Module 10596: ? ===
 
 // Module 10596
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
-import findMostLikelyADYear from "findMostLikelyADYear" /* 10503 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10528 */;
+import alphaNum from "alphaNum" /* 10591 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const combined = "(" + exports.NUMBER_PATTERN + ")\\s{0,5}(" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")\\s{0,5}";
-const regExp = new RegExp(combined, "i");
-
-export const parseNumberPattern = function parseNumberPattern(str) {
-  str = str.toLowerCase();
-  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    let num = exports.INTEGER_WORD_DICTIONARY[str];
+const JPTimeExpressionParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+function createTimeComponents(createParsingComponents, match, match2, match3, match4) {
+  const parsingComponents = createParsingComponents.createParsingComponents();
+  let parsed = parseInt(JPTimeExpressionParser(10591).toHankaku(match));
+  if (isNaN(parsed)) {
+    parsed = JPTimeExpressionParser(10591).jaStringToNumber(match);
+  }
+  if (parsed > 24) {
+    return null;
   } else {
-    num = 2;
-    if ("paar" !== str) {
-      let num3 = 0.5;
-      if ("half" !== str) {
-        num3 = 0.5;
-        if (!str.match(/halve?/)) {
-          const _parseFloat = parseFloat;
-          num3 = parseFloat(str.replace(",", "."));
+    if (match2) {
+      let num = 30;
+      if ("\u534A" !== match2) {
+        const _parseInt = parseInt;
+        const parsed1 = parseInt(JPTimeExpressionParser(10591).toHankaku(match2));
+        const _isNaN = isNaN;
+        num = parsed1;
+        if (isNaN(parsed1)) {
+          num = JPTimeExpressionParser(10591).jaStringToNumber(match2);
         }
       }
-      num = num3;
+      if (num >= 60) {
+        return null;
+      } else {
+        parsingComponents.assign("minute", num);
+      }
     }
-  }
-  return num;
-};
-export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(str) {
-  str = str.toLowerCase();
-  if (undefined !== exports.ORDINAL_WORD_DICTIONARY[str]) {
-    return exports.ORDINAL_WORD_DICTIONARY[str];
-  } else {
-    const _parseInt = parseInt;
-    return parseInt(str.replace(/(?:ste|de)$/i, ""));
-  }
-};
-export const parseYear = function parseYear(match) {
-  if (obj.test(match)) {
-    const _parseInt3 = parseInt;
-    return -parseInt(match.replace(/voor Christus/i, ""));
-  } else {
-    if (obj2.test(match)) {
+    if (match3) {
       const _parseInt2 = parseInt;
-      return parseInt(match.replace(/na Christus/i, ""));
-    } else {
-      const _parseInt = parseInt;
-      const parsed = parseInt(match);
-      return findMostLikelyADYear.findMostLikelyADYear(parsed);
-    }
-    obj2 = /na Christus/i;
-  }
-  obj = /voor Christus/i;
-};
-export const parseDuration = function parseDuration(arg0) {
-  let str = arg0;
-  const obj = {};
-  let match = regExp.exec(arg0);
-  while (match) {
-    let str2 = match[1];
-    let str3 = str2.toLowerCase();
-    if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
-      let num = exports.INTEGER_WORD_DICTIONARY[str3];
-    } else {
-      num = 2;
-      if ("paar" !== str3) {
-        let num2 = 0.5;
-        if ("half" !== str3) {
-          num2 = 0.5;
-          if (!str3.match(/halve?/)) {
-            let _parseFloat = parseFloat;
-            num2 = parseFloat(str3.replace(",", "."));
-          }
-        }
-        num = num2;
+      let parsed2 = parseInt(JPTimeExpressionParser(10591).toHankaku(match3));
+      const _isNaN2 = isNaN;
+      if (isNaN(parsed2)) {
+        parsed2 = JPTimeExpressionParser(10591).jaStringToNumber(match3);
+      }
+      if (parsed2 >= 60) {
+        return null;
+      } else {
+        parsingComponents.assign("second", parsed2);
       }
     }
-    let str4 = match[2];
-    obj[exports.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num;
-    let substr = str.substring(match[0].length);
-    match = regExp.exec(substr);
-    str = substr;
+    let num5 = -1;
+    let num6 = parsed;
+    if (match4) {
+      if (parsed > 12) {
+        return null;
+      } else {
+        if ("\u5348\u524D" !== match4) {
+          if ("a" !== str2.toLowerCase()) {
+            let tmp8 = "\u5348\u5F8C" !== match4;
+            if (tmp8) {
+              tmp8 = "p" !== match4[0].toLowerCase();
+            }
+            num5 = -1;
+            num6 = parsed;
+            if (!tmp8) {
+              let sum = parsed;
+              if (12 != parsed) {
+                sum = parsed + 12;
+              }
+              num6 = sum;
+              num5 = JPTimeExpressionParser(10526).Meridiem.PM;
+            }
+          }
+          str2 = match4[0];
+        }
+        const AM = JPTimeExpressionParser(10526).Meridiem.AM;
+        num5 = AM;
+        num6 = parsed;
+        if (12 === parsed) {
+          num6 = 0;
+          num5 = AM;
+        }
+      }
+    }
+    parsingComponents.assign("hour", num6);
+    if (num5 >= 0) {
+      parsingComponents.assign("meridiem", num5);
+    } else if (num6 < 12) {
+      parsingComponents.imply("meridiem", JPTimeExpressionParser(10526).Meridiem.AM);
+    } else {
+      parsingComponents.imply("meridiem", JPTimeExpressionParser(10526).Meridiem.PM);
+    }
+    return parsingComponents;
   }
-  return obj;
+}
+const keys = Object.keys(alphaNum.NUMBER);
+const text = `(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj.join("")}`;
+const keys1 = Object.keys(alphaNum.NUMBER);
+const text1 = `${`(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj.join("")}`}]+)(?:\\s*)(?:時(?!間)|:|：)(?:\\s*)([0-9０-９]+|半|[${obj2.join("")}`;
+const keys2 = Object.keys(alphaNum.NUMBER);
+const regExp = new RegExp(text1 + "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)([0-9\uFF10-\uFF19]+|[" + keys2.join("") + "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?", "i");
+const keys3 = Object.keys(alphaNum.NUMBER);
+const text2 = `(?:^\\s*(?:から|\\-|\\–|\\－|\\~|\\〜)\\s*)(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj4.join("")}`;
+const keys4 = Object.keys(alphaNum.NUMBER);
+const text3 = `${`(?:^\\s*(?:から|\\-|\\–|\\－|\\~|\\〜)\\s*)(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj4.join("")}`}]+)(?:\\s*)(?:時|:|：)(?:\\s*)([0-9０-９]+|半|[${obj5.join("")}`;
+const keys5 = Object.keys(alphaNum.NUMBER);
+const regExp1 = new RegExp(text3 + "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)([0-9\uFF10-\uFF19]+|[" + keys5.join("") + "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?", "i");
+class JPTimeExpressionParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, JPTimeExpressionParser);
+    tmp2 = closure_4;
+    obj = closure_4(JPTimeExpressionParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(JPTimeExpressionParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  }
 };
-export const WEEKDAY_DICTIONARY = { zondag: 0, zon: 0, "zon.": 0, zo: 0, "zo.": 0, maandag: 1, ma: 1, "ma.": 1, dinsdag: 2, din: 2, "din.": 2, di: 2, "di.": 2, woensdag: 3, woe: 3, "woe.": 3, wo: 3, "wo.": 3, donderdag: 4, dond: 4, "dond.": 4, do: 4, "do.": 4, vrijdag: 5, vrij: 5, "vrij.": 5, vr: 5, "vr.": 5, zaterdag: 6, zat: 6, "zat.": 6, za: 6, "za.": 6 };
-export const MONTH_DICTIONARY = { januari: 1, jan: 1, "jan.": 1, februari: 2, feb: 2, "feb.": 2, maart: 3, mar: 3, "mar.": 3, mrt: 3, "mrt.": 3, april: 4, apr: 4, "apr.": 4, mei: 5, juni: 6, jun: 6, "jun.": 6, juli: 7, jul: 7, "jul.": 7, augustus: 8, aug: 8, "aug.": 8, september: 9, sep: 9, "sep.": 9, sept: 9, "sept.": 9, oktober: 10, okt: 10, "okt.": 10, november: 11, nov: 11, "nov.": 11, december: 12, dec: 12, "dec.": 12 };
-export const INTEGER_WORD_DICTIONARY = { een: 1, twee: 2, drie: 3, vier: 4, vijf: 5, zes: 6, zeven: 7, acht: 8, negen: 9, tien: 10, elf: 11, twaalf: 12 };
-export const ORDINAL_WORD_DICTIONARY = { eerste: 1, tweede: 2, derde: 3, vierde: 4, vijfde: 5, zesde: 6, zevende: 7, achtste: 8, negende: 9, tiende: 10, elfde: 11, twaalfde: 12, dertiende: 13, veertiende: 14, vijftiende: 15, zestiende: 16, zeventiende: 17, achttiende: 18, negentiende: 19, twintigste: 20, eenentwintigste: 21, "tweeëntwintigste": 22, drieentwintigste: 23, vierentwintigste: 24, vijfentwintigste: 25, zesentwintigste: 26, zevenentwintigste: 27, achtentwintig: 28, negenentwintig: 29, dertigste: 30, eenendertigste: 31 };
-export const TIME_UNIT_DICTIONARY = { sec: "second", second: "second", seconden: "second", min: "minute", mins: "minute", minute: "minute", minuut: "minute", minuten: "minute", minuutje: "minute", h: "hour", hr: "hour", hrs: "hour", uur: "hour", u: "hour", uren: "hour", dag: "day", dagen: "day", week: "week", weken: "week", maand: "month", maanden: "month", jaar: "year", jr: "year", jaren: "year" };
-export const NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|[0-9]+|[0-9]+[\\.,][0-9]+|halve?|half|paar)";
-export const ORDINAL_NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.ORDINAL_WORD_DICTIONARY) + "|[0-9]{1,2}(?:ste|de)?)";
-export const YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s*(?:voor Christus|na Christus)|[1-2][0-9]{3}|[5-9][0-9])";
-export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("(?:(?:binnen|in)\\s*)?", combined);
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      if (index.index > 0) {
+        if (str.match(/\w/)) {
+          return null;
+        }
+        str = createParsingResult.text[index.index - 1];
+      }
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      let tmp3 = index[1];
+      if (null === tmp3) {
+        tmp3 = index[5];
+      }
+      parsingResult.start = createTimeComponents(createParsingResult, index[2], index[3], index[4], tmp3);
+      if (parsingResult.start) {
+        const match = regExp1.exec(createParsingResult.text.substring(parsingResult.index + parsingResult.text.length));
+        let tmp7 = parsingResult;
+        if (match) {
+          parsingResult.text = parsingResult.text + match[0];
+          let tmp11 = match[1];
+          if (null === tmp11) {
+            tmp11 = match[5];
+          }
+          parsingResult.end = createTimeComponents(createParsingResult, match[2], match[3], match[4], tmp11);
+          let tmp17 = null;
+          if (parsingResult.end) {
+            const end = parsingResult.end;
+            const isCertainResult = end.isCertain("meridiem");
+            let isCertainResult1 = !isCertainResult;
+            if (!isCertainResult) {
+              const start = parsingResult.start;
+              isCertainResult1 = start.isCertain("meridiem");
+            }
+            if (isCertainResult1) {
+              ({ end: end2, start: start2 } = parsingResult);
+              end2.imply("meridiem", start2.get("meridiem"));
+              const start3 = parsingResult.start;
+              value = start3.get("meridiem");
+              if (value === JPTimeExpressionParser(10526).Meridiem.PM) {
+                const start5 = parsingResult.start;
+                const end10 = parsingResult.end;
+                const diff = start5.get("hour") - 12;
+                if (diff > end10.get("hour")) {
+                  const end6 = parsingResult.end;
+                  end6.imply("meridiem", JPTimeExpressionParser(10526).Meridiem.AM);
+                } else {
+                  const end3 = parsingResult.end;
+                  if (end3.get("hour") < 12) {
+                    ({ end: end4, end: end5 } = parsingResult);
+                    end4.assign("hour", end5.get("hour") + 12);
+                  }
+                }
+              }
+            }
+            const end7 = parsingResult.end;
+            const start4 = parsingResult.start;
+            const time = end7.date().getTime();
+            const dateResult = end7.date();
+            tmp17 = parsingResult;
+            if (time < dateResult1.getTime()) {
+              ({ end: end8, end: end9 } = parsingResult);
+              end8.imply("day", end9.get("day") + 1);
+              tmp17 = parsingResult;
+            }
+            dateResult1 = start4.date();
+          }
+          tmp7 = tmp17;
+        }
+        let tmp4 = tmp7;
+      } else {
+        index.index = index.index + index[0].length;
+        tmp4 = null;
+      }
+      return tmp4;
+    }
+  }
+];
+
+export default _createClass(JPTimeExpressionParser, items);

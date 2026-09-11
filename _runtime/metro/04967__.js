@@ -1,16 +1,39 @@
 // === Module 4967: ? ===
 
 // Module 4967
-import _mod17 from "module_17" /* 17 */;
-import _mod26 from "module_26" /* 26 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import RNSLog2 from "RNSLog" /* 4963 */;
+import noop from "module_19" /* 19 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsHostAndroid", directEventTypes: { topTabSelected: { registrationName: "onTabSelected" }, topTabSelectionRejected: { registrationName: "onTabSelectionRejected" }, topTabSelectionPrevented: { registrationName: "onTabSelectionPrevented" } }, validAttributes: null };
-__INTERNAL_VIEW_CONFIG = { navStateRequest: true, rejectStaleNavStateUpdates: true, tabBarHidden: true, nativeContainerBackgroundColor: _mod26.colorAttribute, colorScheme: true, tabBarRespectsIMEInsets: true };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onTabSelected: true, onTabSelectionRejected: true, onTabSelectionPrevented: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
+require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
 
-export default module_65.get("RNSTabsHostAndroid", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const useTabsHost = function useTabsHost(arg0) {
+  ({ componentNodeRef: require, onTabSelected } = arg0);
+  noop = undefined;
+  noop = noop.useRef(-1);
+  const effect = noop.useEffect(() => {
+    if (null != ref.current) {
+      let num2 = findNodeHandle(tmp.current);
+      if (num2 == null) {
+        num2 = -1;
+      }
+      closure_2.current = num2;
+    } else {
+      closure_2.current = -1;
+    }
+  }, []);
+  const obj = { onTabSelected: null };
+  const items = [onTabSelected];
+  obj.onTabSelected = noop.useCallback((nativeEvent) => {
+    const RNSLog = RNSLog2.RNSLog;
+    let num = ref2.current;
+    if (num == null) {
+      num = -1;
+    }
+    RNSLog.log("TabsHost [" + num + "] onTabSelected: " + JSON.stringify(nativeEvent.nativeEvent));
+    if (onTabSelected != null) {
+      onTabSelected(nativeEvent);
+    }
+  }, items);
+  return obj;
+};

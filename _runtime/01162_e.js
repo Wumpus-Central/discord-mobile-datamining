@@ -1975,9 +1975,9 @@ if (typeof obj === "object") {
           }
         }
         closure_0 = global;
-        const f108755 = (arg0, arg1) => {
+        const f108769 = (arg0, arg1) => {
           let tmp2Result = arg1;
-          if (f108755) {
+          if (f108769) {
             tmp2Result = tmp2(arg0, arg1);
           }
           closure_0[arg0] = tmp2Result;
@@ -1986,7 +1986,7 @@ if (typeof obj === "object") {
         // // eliminated: always false
         fn((arg0, arg1) => {
           let tmp2Result = arg1;
-          if (f108755) {
+          if (f108769) {
             tmp2Result = tmp2(arg0, arg1);
           }
           closure_0[arg0] = tmp2Result;
@@ -2011,7 +2011,7 @@ if (typeof obj === "object") {
       let closure_131_0 = obj;
       let closure_131_1 = (arg0, arg1) => {
         let tmp2Result = arg1;
-        if (f108755) {
+        if (f108769) {
           tmp2Result = tmp2(arg0, arg1);
         }
         closure_0[arg0] = tmp2Result;
@@ -2027,7 +2027,7 @@ if (typeof obj === "object") {
       }
       fn((arg0, arg1) => {
         let tmp2Result = arg1;
-        if (f108755) {
+        if (f108769) {
           tmp2Result = tmp2(arg0, arg1);
         }
         closure_0[arg0] = tmp2Result;
@@ -2046,7 +2046,7 @@ if (typeof obj === "object") {
   }
   fn((arg0, arg1) => {
     let tmp2Result = arg1;
-    if (f108755) {
+    if (f108769) {
       tmp2Result = tmp2(arg0, arg1);
     }
     closure_0[arg0] = tmp2Result;

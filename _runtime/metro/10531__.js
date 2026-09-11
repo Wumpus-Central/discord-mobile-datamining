@@ -1,97 +1,96 @@
 // === Module 10531: ? ===
 
 // Module 10531
+import _mod10520 from "module_10520" /* 10520 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10521 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10528 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const SlashDateFormatParser = require;
-const regExp = new RegExp("([^\\d]|^)([0-3]{0,1}[0-9]{1})[\\/\\.\\-]([0-3]{0,1}[0-9]{1})(?:[\\/\\.\\-]([0-9]{4}|[0-9]{2}))?(\\W|$)", "i");
-class SlashDateFormatParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, SlashDateFormatParser);
-    num = 2;
-    if (global) {
-      num = 3;
+const ENMonthNameParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    self.groupNumberMonth = num;
-    num2 = 3;
-    if (global) {
-      num2 = 2;
-    }
-    self.groupNumberDay = num2;
-    return;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+const regExp = new RegExp("((?:in)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10520.MONTH_DICTIONARY) + ")\\s*(?:(?:,|-|of)?\\s*(" + _mod10520.YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)", "i");
+class ENMonthNameParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ENMonthNameParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENMonthNameParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
+  key: "innerPattern",
+  value: function innerPattern() {
     return regExp;
   }
 };
-let items = [
+const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(text, index) {
-      const sum = index.index + index[1].length;
-      const diff = index.index + index[0].length - index[5].length;
-      if (sum > 0) {
-        text.text.substring(0, sum);
-      }
-      if (diff < text.text.length) {
-        text.text.substring(diff);
-      }
-      const str8 = text.text.substring(sum, diff);
-      if (!str8.match(/^\d\.\d$/)) {
-        if (!str8.match(/^\d\.\d{1,2}\.\d{1,2}\s*$/)) {
-          const self = this;
-          const parsingResult = text.createParsingResult(sum, str8);
-          const _parseInt = parseInt;
-          const parsed = parseInt(index[this.groupNumberMonth]);
-          const _parseInt2 = parseInt;
-          const parsed1 = parseInt(index[this.groupNumberDay]);
-          if (parsed < 1) {
-            tmp6 = parsed1;
-            tmp7 = parsed;
-            if (parsed > 12) {
-              if (parsed1 >= 1) {
-                if (parsed1 <= 12) {
-                  if (parsed <= 31) {
-                    const items = [parsed, parsed1];
-                    [tmp6, tmp7] = items;
-                  }
-                }
-              }
-              return null;
-            }
-          } else {
-            tmp6 = parsed1;
-            tmp7 = parsed;
-          }
-          if (tmp6 >= 1) {
-            if (tmp6 <= 31) {
-              const start3 = parsingResult.start;
-              start3.assign("day", tmp6);
-              const start4 = parsingResult.start;
-              start4.assign("month", tmp7);
-              if (index[4]) {
-                const _parseInt3 = parseInt;
-                const parsed2 = parseInt(index[4]);
-                const start2 = parsingResult.start;
-                start2.assign("year", SlashDateFormatParser(10503).findMostLikelyADYear(parsed2));
-              } else {
-                const start = parsingResult.start;
-                start.imply("year", SlashDateFormatParser(10503).findYearClosestToRef(text.refDate, tmp6, tmp7));
-              }
-              return parsingResult.addTag("parser/SlashDateFormatParser");
-            }
-          }
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!ENMonthNameParser(10520).FULL_MONTH_NAME_DICTIONARY[formatted]) {
           return null;
         }
       }
+      let str2 = index[1];
+      if (!str2) {
+        str2 = "";
+      }
+      const parsingResult = createParsingResult.createParsingResult(index.index + str2.length, index.index + index[0].length);
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const start2 = parsingResult.start;
+      start2.addTag("parser/ENMonthNameParser");
+      const tmp10 = ENMonthNameParser(10520).MONTH_DICTIONARY[formatted];
+      const start3 = parsingResult.start;
+      start3.assign("month", tmp10);
+      if (index[3]) {
+        const start5 = parsingResult.start;
+        start5.assign("year", ENMonthNameParser(10520).parseYear(index[3]));
+      } else {
+        const start4 = parsingResult.start;
+        start4.imply("year", ENMonthNameParser(10522).findYearClosestToRef(createParsingResult.refDate, 1, tmp10));
+      }
+      return parsingResult;
     }
   }
 ];
 
-export default _createClass(SlashDateFormatParser, items);
+export default _createClass(ENMonthNameParser, items);

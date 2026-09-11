@@ -1,32 +1,7 @@
 // === Module 8395: ? ===
 
 // Module 8395
-import colorPropType from "colorPropType" /* 8379 */;
-import _mod8386 from "module_8386" /* 8386 */;
-import emptyFunction from "module_4434" /* 4434 */;
-import "module_4434";
+import _modDef8396 from "module_8396" /* 8396 */;
 
-const obj = {};
-const module_8386 = Object.assign(_mod8386);
-obj.color = colorPropType;
-obj.fontFamily = emptyFunction.string;
-obj.fontSize = emptyFunction.number;
-obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
-obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
-obj.fontVariant = emptyFunction.arrayOf(emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]));
-const size = { width: emptyFunction.number, height: emptyFunction.number };
-obj.textShadowOffset = emptyFunction.shape(size);
-obj.textShadowRadius = emptyFunction.number;
-obj.textShadowColor = colorPropType;
-obj.letterSpacing = emptyFunction.number;
-obj.lineHeight = emptyFunction.number;
-obj.textAlign = emptyFunction.oneOf(["auto", "left", "right", "center", "justify"]);
-obj.textAlignVertical = emptyFunction.oneOf(["auto", "top", "bottom", "center"]);
-obj.includeFontPadding = emptyFunction.bool;
-obj.textDecorationLine = emptyFunction.oneOf(["none", "underline", "line-through", "underline line-through"]);
-obj.textDecorationStyle = emptyFunction.oneOf(["solid", "double", "dotted", "dashed"]);
-obj.textDecorationColor = colorPropType;
-obj.textTransform = emptyFunction.oneOf(["none", "capitalize", "uppercase", "lowercase"]);
-obj.writingDirection = emptyFunction.oneOf(["auto", "ltr", "rtl"]);
 
-export default obj;
+export default _modDef8396({ contain: null, cover: null, stretch: null });

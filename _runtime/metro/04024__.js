@@ -1,7 +1,7 @@
 // === Module 4024: ? ===
 
 // Module 4024
-import Parser2 from "Parser" /* 3999 */;
+import Parser2 from "Parser" /* 4001 */;
 
 let closure_1 = dependencyMap;
 function _typeof(arg0) {
@@ -29,15 +29,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(DayPeriodParser, Parser) {
+function _setPrototypeOf(AMPMParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(DayPeriodParser, Parser) {
-      DayPeriodParser.__proto__ = Parser;
-      return DayPeriodParser;
+    _setPrototypeOf = function _setPrototypeOf(AMPMParser, Parser) {
+      AMPMParser.__proto__ = Parser;
+      return AMPMParser;
     };
   }
-  return _setPrototypeOf(DayPeriodParser, Parser);
+  return _setPrototypeOf(AMPMParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -57,7 +57,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 let _createSuperInternal;
-class DayPeriodParser {
+class AMPMParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -107,7 +107,7 @@ class DayPeriodParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["a", "b", "t", "T"];
+          items1 = ["b", "B", "H", "k", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -131,7 +131,7 @@ class DayPeriodParser {
     }
   }
 }
-closure_1 = DayPeriodParser;
+closure_1 = AMPMParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -143,9 +143,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-DayPeriodParser.prototype = Object.create(prototype, { constructor: { value: DayPeriodParser, writable: true, configurable: true } });
+AMPMParser.prototype = Object.create(prototype, { constructor: { value: AMPMParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(DayPeriodParser, Parser);
+  _setPrototypeOf(AMPMParser, Parser);
 }
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
@@ -207,10 +207,10 @@ _createSuperInternal = function _createSuperInternal() {
 const entry = {
   key: "parse",
   value: function parse(arg0, arg1, dayPeriod) {
-    if ("B" !== arg1) {
-      if ("BB" !== arg1) {
-        if ("BBB" !== arg1) {
-          if ("BBBBB" === arg1) {
+    if ("a" !== arg1) {
+      if ("aa" !== arg1) {
+        if ("aaa" !== arg1) {
+          if ("aaaaa" === arg1) {
             return dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
           } else {
             return dayPeriod.dayPeriod(arg0, { width: "wide", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
@@ -249,4 +249,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { DayPeriodParser };
+export { AMPMParser };

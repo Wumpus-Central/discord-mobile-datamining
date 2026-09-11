@@ -1,117 +1,106 @@
 // === Module 5235: ? ===
 
 // Module 5235
-function fetchFromObject(FileTypes, arr) {
-  const index = arr.indexOf(".");
-  if (index > -1) {
-    let tmp2 = fetchFromObject(FileTypes[arr.slice(arr, 0, index)], arr.slice(index + 1));
-  } else {
-    tmp2 = FileTypes[arr];
-  }
-  return tmp2;
-}
+import _mod5236 from "module_5236" /* 5236 */;
 
-export const getFileChunk = function getFileChunk(fileChunk) {
-  let num = chunkSize;
-  if (chunkSize === undefined) {
-    num = 32;
-  }
-  let uint8Array = fileChunk;
-  if (fileChunk instanceof ArrayBuffer) {
-    const _Uint8Array = Uint8Array;
-    uint8Array = new Uint8Array(fileChunk);
-  }
-  if (!Array.isArray(fileChunk)) {
-    const _ArrayBuffer = ArrayBuffer;
-    if (!(fileChunk instanceof ArrayBuffer)) {
-      const _Uint8Array2 = Uint8Array;
-      if (!(fileChunk instanceof Uint8Array)) {
-        const _TypeError = TypeError;
-        const _HermesInternal = HermesInternal;
-        const typeError = new TypeError("Expected the `file` argument to be of type `Array<number>`, `Uint8Array`, or `ArrayBuffer`, got `" + typeof fileChunk + "`");
-        throw typeError;
+const _mod5237 = tmp5(5237);
+require = arg1;
+const dependencyMap = arg6;
+
+export const detectFile = function detectFile(uint8Array, chunkSize) {
+  if (chunkSize) {
+    const _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty("chunkSize");
+    } else {
+      hasOwnPropertyResult = call(chunkSize, "chunkSize");
+    }
+    if (hasOwnPropertyResult) {
+      chunkSize = undefined;
+      if (null != chunkSize) {
+        chunkSize = chunkSize.chunkSize;
       }
-    }
-  }
-  const arr = Array.from(uint8Array.slice(0, num));
-  if (arr.every((item) => {
-    let tmp = typeof item === "number";
-    if (typeof item === "number") {
-      const _isNaN = isNaN;
-      tmp = !isNaN(item);
-    }
-    return tmp;
-  })) {
-    return arr;
-  } else {
-    const _TypeError2 = TypeError;
-    const typeError1 = new TypeError("File content contains illegal values");
-    throw typeError1;
-  }
-};
-export { fetchFromObject };
-export const findMatroskaDocTypeElements = function findMatroskaDocTypeElements(fileChunk) {
-  const mapped = fileChunk.map((item) => String.fromCharCode(item));
-  const joined = mapped.join("");
-  let str = "webm";
-  if (!joined.includes("webm")) {
-    let str3;
-    if (joined.includes("matroska")) {
-      str3 = "mkv";
-    }
-    str = str3;
-  }
-  return str;
-};
-export const isftypStringIncluded = function isftypStringIncluded(fileChunk) {
-  const items = [102, 116, 121, 112];
-  let num = 0;
-  if (0 < fileChunk.length - items.length) {
-    while (true) {
       let num2 = 0;
-      let flag = true;
-      if (0 < items.length) {
-        flag = false;
-        while (fileChunk[num + num2] === items[num2]) {
-          let sum = num2 + 1;
-          num2 = sum;
-          flag = true;
-          if (sum >= items.length) {
-            break;
-          }
+      if (null !== chunkSize) {
+        num2 = 0;
+        if (undefined !== chunkSize) {
+          num2 = chunkSize;
         }
       }
-      if (flag) {
-        break;
-      } else {
-        num = num + 1;
+      if (num2 <= 0) {
+        const _RangeError = RangeError;
+        const rangeError = new RangeError("chunkSize must be bigger than zero");
+        throw rangeError;
       }
     }
-    return true;
   }
-  return false;
-};
-export const isFlvStringIncluded = function isFlvStringIncluded(fileChunk) {
-  const substr = fileChunk.slice(0, 3);
-  const decoder = new TextDecoder();
-  const uint8Array = new Uint8Array(substr);
-  return decoder.decode(uint8Array).includes("FLV");
-};
-export const isFileContaineJfiforExifHeader = function isFileContaineJfiforExifHeader(arg0) {
-  let tmp2 = 224 === tmp;
-  if (!tmp2) {
-    tmp2 = 225 === tmp;
+  let num3;
+  if (null != chunkSize) {
+    num3 = chunkSize.chunkSize;
   }
-  return tmp2;
-};
-export const isAvifStringIncluded = function isAvifStringIncluded(fileChunk) {
-  const substr = fileChunk.slice(4, 12);
-  const mapped = substr.map((item) => String.fromCharCode(item));
-  return "ftypavif" === mapped.join("");
-};
-export const isHeicSignatureIncluded = function isHeicSignatureIncluded(fileChunk) {
-  const mapped = fileChunk.map((item) => String.fromCharCode(item));
-  closure_0 = mapped.join("");
-  const items = ["ftypheic", "ftyphevc", "ftypmif1", "ftypmsf1"];
-  return items.some((item) => closure_0.includes(item));
+  if (!num3) {
+    num3 = 64;
+  }
+  const fileChunk = _mod5236.getFileChunk(uint8Array, num3);
+  if (0 !== fileChunk.length) {
+    const items = [];
+    const items1 = [];
+    for (const key10027 in _mod5237.FileTypes) {
+      let _Object4 = Object;
+      let call2 = hasOwnProperty2.call;
+      let tmp23 = require;
+      let FileTypes5 = _mod5237.FileTypes;
+      if (typeof call2 === "unknown") {
+        let hasOwnProperty2Result = hasOwnProperty2(key10027);
+      } else {
+        hasOwnProperty2Result = call2(FileTypes5, key10027);
+      }
+      if (!hasOwnProperty2Result) {
+        continue;
+      } else {
+        let FileTypes = tmp23(5237).FileTypes;
+        let signaturesByName = FileTypes.getSignaturesByName(key10027);
+        let FileTypes2 = tmp23(5237).FileTypes;
+        let detectbBySignaturesResult = FileTypes2.detectbBySignatures(fileChunk, signaturesByName);
+        if (!detectbBySignaturesResult) {
+          continue;
+        } else {
+          let FileTypes3 = tmp23(5237).FileTypes;
+          let infoByName = FileTypes3.getInfoByName(key10027);
+          let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = tmp23(5237).FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
+          if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(infoByName.extension)) {
+            let arr = items1.push(infoByName.extension);
+          }
+          let obj = { extension: null, mimeType: null, description: null, signature: null };
+          ({ extension: obj.extension, mimeType: obj.mimeType, description: obj.description } = infoByName);
+          let _Object2 = Object;
+          let _Object3 = Object;
+          obj = { sequence: null };
+          let sequence = detectbBySignaturesResult.sequence;
+          let merged = Object.assign({}, detectbBySignaturesResult);
+          obj.sequence = sequence.map((item) => item.toString(16));
+          obj.signature = Object.assign(merged, obj);
+          arr = items.push(obj);
+          continue;
+        }
+        continue;
+      }
+      continue;
+    }
+    if (0 !== items.length) {
+      if (1 === items.length) {
+        if (0 === items1.length) {
+          return items[0];
+        }
+      }
+      const FileTypes4 = _mod5237.FileTypes;
+      const result = FileTypes4.detectTypeByAdditionalCheck(fileChunk, items);
+      require = result;
+      if (result) {
+        return items.find((extension) => extension.extension === result);
+      }
+    }
+  }
 };

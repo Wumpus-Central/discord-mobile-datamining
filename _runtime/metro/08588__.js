@@ -1,15 +1,14 @@
 // === Module 8588: ? ===
 
 // Module 8588
-import _modDef8545 from "module_8545" /* 8545 */;
+import _modDef8581 from "module_8581" /* 8581 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Filter = importDefault;
+const FeDiffuseLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const jsx = fn(21).jsx;
-class Filter {
+class FeDiffuseLighting {
   constructor() {
     self = this;
-    tmp = c2(this, Filter);
+    tmp = c2(this, FeDiffuseLighting);
     tmp2 = closure_4;
-    obj = closure_4(Filter);
+    obj = closure_4(FeDiffuseLighting);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,30 +48,18 @@ class Filter {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Filter, _modDef8545);
+_inherits(FeDiffuseLighting, _modDef8581);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const size = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(size);
-    obj.children = this.props.children;
-    return jsx(Filter(8589), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FeDiffuseLighting(8558).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Filter, items);
-importDefaultResultResult.displayName = "Filter";
-importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
+const importDefaultResultResult = _createClass(FeDiffuseLighting, items);
+importDefaultResultResult.displayName = "FeDiffuseLighting";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

@@ -1,14 +1,7 @@
 // === Module 8366: ? ===
 
 // Module 8366
-const re0 = /[|\\{}()[\]^$+*?.-]/g;
+import _mod8367 from "module_8367" /* 8367 */;
 
-export default (str) => {
-  if (typeof str !== "string") {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Expected a string");
-    throw typeError;
-  } else {
-    return str.replace(re0, "\\$&");
-  }
-};
+
+export default _mod8367.default;

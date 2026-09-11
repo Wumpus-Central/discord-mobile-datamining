@@ -1,7 +1,8 @@
 // === Module 6885: ? ===
 
 // Module 6885
-import _modDef6886 from "module_6886" /* 6886 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
 
-export default _modDef6886;
+export const styles = StyleSheet.create({ container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 } });

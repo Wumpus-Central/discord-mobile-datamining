@@ -1,16 +1,16 @@
 // === Module 4042: ? ===
 
 // Module 4042
-import startOfISOWeekYear from "startOfISOWeekYear" /* 3854 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import module_4043 from "module_4043" /* 4043 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
-if (!startOfISOWeekYear) {
-  let obj = { default: startOfISOWeekYear };
+if (!module_4043) {
+  let obj = { default: module_4043 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfISOWeekYear;
+  tmp3 = module_4043;
 }
-startOfISOWeekYear = tmp3;
+module_4043 = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -19,10 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameISOWeekYear(arg0, arg1) {
+export default function isSameISOWeek(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfISOWeekYear.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfISOWeekYear.default(arg1).getTime();
+  return module_4043.default(arg0, arg1, { weekStartsOn: 1 });
 };
 export default exports.default;

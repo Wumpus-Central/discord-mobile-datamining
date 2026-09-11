@@ -1,15 +1,17 @@
 // === Module 8596: ? ===
 
 // Module 8596
-import _modDef8545 from "module_8545" /* 8545 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8580 from "module_8580" /* 8580 */;
+import _modDef8581 from "module_8581" /* 8581 */;
+import _modDef8597 from "module_8597" /* 8597 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const LinearGradient = importDefault;
+const FeFlood = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +31,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class LinearGradient {
+class FeFlood {
   constructor() {
     self = this;
-    tmp = c2(this, LinearGradient);
-    tmp2 = closure_4;
-    obj = closure_4(LinearGradient);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, FeFlood);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeFlood);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,30 +53,30 @@ class LinearGradient {
     return tmp3(self, constructResult);
   }
 }
-_inherits(LinearGradient, _modDef8545);
+_inherits(FeFlood, _modDef8581);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    let obj = { x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 };
-    obj = {
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(LinearGradient(8598)(props, this));
-    return jsx(LinearGradient(8597), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const merged = Object.assign(FeFlood(8580).extractFilter(this.props));
+    const merged1 = Object.assign(_modDef8580(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(LinearGradient, items);
-importDefaultResultResult.displayName = "LinearGradient";
-importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
+const importDefaultResultResult = _createClass(FeFlood, items);
+importDefaultResultResult.displayName = "FeFlood";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.floodColor = "black";
+obj.floodOpacity = 1;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

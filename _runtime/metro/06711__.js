@@ -1,5 +1,9 @@
 // === Module 6711: ? ===
 
 // Module 6711
+import _mod19 from "module_19" /* 19 */;
 
-export const State = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };
+const context = _mod19.createContext(null);
+
+export const BottomSheetModalContext = context;
+export const BottomSheetModalProvider = context.Provider;

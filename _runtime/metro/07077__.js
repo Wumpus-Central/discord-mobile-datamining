@@ -1,560 +1,525 @@
 // === Module 7077: ? ===
 
 // Module 7077
-import PanGestureHandler from "PanGestureHandler" /* 7057 */;
-import _mod7071 from "module_7071" /* 7071 */;
-import _mod7072 from "module_7072" /* 7072 */;
-import _mod7078 from "module_7078" /* 7078 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
+let StackView = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let closure_2 = ["state", "descriptors"];
 get_ActivityIndicator = fn(17);
-({ Animated: hasOwnProperty, Platform, StyleSheet } = get_ActivityIndicator);
-const View = get_ActivityIndicator.View;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let c10 = true;
-function hasOpacityStyle(arg0) {
+({ StyleSheet, View } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+let GestureHandlerRootView = fn(7078).GestureHandlerRootView;
+if (GestureHandlerRootView == null) {
+  GestureHandlerRootView = View;
+}
+function isArrayEqual(arg0, arg1) {
 
 }
-function getAnimateToValue(arg0) {
-
-}
-function defaultOverlay(style) {
-  style = style.style;
-  let tmp = null;
-  if (style) {
-    const obj = { pointerEvents: "none", style: null };
-    const items = [closure_14.overlay, style];
-    obj.style = items;
-    tmp = React6(RN.View, obj);
-  }
-  return tmp;
-}
-let obj = { container: { flex: 1 }, overlay: { flex: 1, backgroundColor: "#000" }, shadow: { position: "absolute" }, shadowHorizontal: null, shadowStart: null, shadowEnd: null, shadowVertical: null, shadowTop: null, shadowBottom: null };
-let rect = { top: 0, bottom: 0, width: 3 };
-get_ActivityIndicator = fn(7082);
-let merged = Object.assign(get_ActivityIndicator.getShadowStyle({ offset: { width: -1, height: 1 }, radius: 5, opacity: 0.3 }));
-obj.shadowHorizontal = rect;
-obj.shadowStart = { start: 0 };
-obj.shadowEnd = { end: 0 };
-obj = { start: 0, end: 0, height: 3 };
-get_ActivityIndicator = fn(7082);
-const merged1 = Object.assign(get_ActivityIndicator.getShadowStyle({ offset: { width: 1, height: -1 }, radius: 5, opacity: 0.3 }));
-obj.shadowVertical = obj;
-obj.shadowTop = { top: 0 };
-obj.shadowBottom = { bottom: 0 };
-const styles = StyleSheet.create(obj);
-
-export const Card = function Card(shadowEnabled) {
-  let flag = shadowEnabled.shadowEnabled;
-  if (flag === undefined) {
-    flag = false;
-  }
-  let flag2 = shadowEnabled.gestureEnabled;
-  if (flag2 === undefined) {
-    flag2 = true;
-  }
-  let num = shadowEnabled.gestureVelocityImpact;
-  if (num === undefined) {
-    num = 0.3;
-  }
-  let overlay = shadowEnabled.overlay;
-  if (overlay === undefined) {
-    overlay = defaultOverlay;
-  }
-  ({ animated: dependencyMap, interpolationIndex } = shadowEnabled);
-  let opening = shadowEnabled.opening;
-  const next = shadowEnabled.next;
-  let current = shadowEnabled.current;
-  const gesture = shadowEnabled.gesture;
-  const layout = shadowEnabled.layout;
-  const insets = shadowEnabled.insets;
-  const direction = shadowEnabled.direction;
-  const gestureDirection = shadowEnabled.gestureDirection;
-  ({ onOpen: defaultOverlay, onClose: closure_14, onTransition: closure_15, onGestureBegin: closure_16, onGestureCanceled: closure_17, onGestureEnd: closure_18, transitionSpec: closure_19, preloaded } = shadowEnabled);
-  const styleInterpolator = shadowEnabled.styleInterpolator;
-  const contentStyle = shadowEnabled.contentStyle;
-  ({ pageOverflowEnabled, children, overlayEnabled, gestureResponseDistance, containerStyle } = shadowEnabled);
-  opening.useRef(false);
-  opening.useRef(undefined);
-  opening.useRef(undefined);
-  opening.useRef(undefined);
-  opening.useRef(undefined);
-  opening.useRef(undefined);
-  let closing = interpolationIndex(opening.useState(() => {
-    value = new closing.Value(0);
-    return value;
-  }), 1)[0];
-  const first1 = interpolationIndex(opening.useState(() => {
-    value = new RN.Value(_mod7072.getInvertedMultiplier(gestureDirection, "rtl" === direction));
-    return value;
-  }), 1)[0];
-  const first2 = interpolationIndex(opening.useState(() => {
-    const size = { width: null, height: null };
-    value = new RN.Value(layout.width);
-    size.width = value;
-    value = new RN.Value(layout.height);
-    size.height = value;
-    return size;
-  }), 1)[0];
-  const first3 = interpolationIndex(opening.useState(() => {
-    value = new closing.Value(0);
-    return value;
-  }), 1)[0];
-  closure_32 = num(1505)(() => {
-    if (null == ref3.current) {
-      const InteractionManager = _mod7078.InteractionManager;
-      let interactionHandle;
-      if (InteractionManager != null) {
-        interactionHandle = InteractionManager.createInteractionHandle();
-      }
-      tmp.current = interactionHandle;
+class StackView {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_4(this, StackView);
+    items1 = [...items];
+    tmp2 = metroRequire;
+    obj = metroRequire(StackView);
+    tmp3 = hasOwnProperty;
+    if (closure_8()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
     }
-  });
-  closure_33 = num(1505)(() => {
-    if (null != ref3.current) {
-      const InteractionManager = _mod7078.InteractionManager;
-      if (InteractionManager != null) {
-        const result = InteractionManager.clearInteractionHandle(ref3.current);
-      }
-      ref3.current = undefined;
-    }
-  });
-  let tmp7 = num(1505)((closing) => {
-    closing = closing.closing;
-    const velocity = closing.velocity;
-    let onFinish;
-    if (typeof gestureDirection === "function") {
-      if (closing) {
-        let obj = flag2(dependencyMap[4]);
-        num = obj.getDistanceForDirection(tmp, tmp2, "rtl" === tmp3);
-      } else {
-        num = 0;
-      }
-      closure_23.current = num;
-      let num2 = 0;
-      if (closing) {
-        num2 = 1;
-      }
-      first.setValue(num2);
-      const tmp11 = closing ? closure_19.close : closure_19.open;
-      if ("spring" === tmp11.animation) {
-        let timing = closing.spring;
-      } else {
-        timing = closing.timing;
-      }
-      const _clearTimeout = clearTimeout;
-      clearTimeout(ref5.current);
-      if (undefined !== ref4.current) {
-        const _cancelAnimationFrame = cancelAnimationFrame;
-        cancelAnimationFrame(ref4.current);
-      }
-      if (closure_15 != null) {
-        obj = { closing, gesture: undefined !== velocity };
-        tmp19(obj);
-      }
-      onFinish = function onFinish() {
-
-      };
-      if (closure_2) {
-        closure_32();
-        obj = {};
-        const merged = Object.assign(tmp11.config);
-        obj.velocity = velocity;
-        obj.toValue = num;
-        obj.useNativeDriver = insets;
-        obj.isInteraction = false;
-        timing(gesture, obj).start((finished) => {
-          closure_33();
-          let _requestAnimationFrame = globalThis;
-          clearTimeout(ref.current);
-          if (finished.finished) {
-            if (typeof onFinish === "function") {
-              if (closing) {
-                closure_2_14();
-              } else {
-                defaultOverlay();
-              }
-              _requestAnimationFrame = _requestAnimationFrame.requestAnimationFrame;
-              closure_25.current = _requestAnimationFrame(() => {
-                closure_1_37();
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    obj = { routes: [], previousState: "y", openingRouteKeys: 0.25, closingRouteKeys: null, replacingRouteKeys: "MASTERPASS_POPUP_MISSING_REQUIRED_PARAMETERS", descriptors: "Masterpass popup failed to return all required parameters needed to continue tokenization." };
+    obj.openingRouteKeys = [];
+    obj.closingRouteKeys = [];
+    obj.replacingRouteKeys = [];
+    obj.descriptors = {};
+    tmp3Result.state = obj;
+    tmp3Result.getPreviousRoute = (route) => {
+      route = route.route;
+      c1 = undefined;
+      c2 = undefined;
+      ({ closingRouteKeys: c1, replacingRouteKeys: c2 } = state.state);
+      const routes = state.state.routes;
+      const found = routes.filter((key) => {
+        let tmp = key.key === route.key;
+        if (!tmp) {
+          const hasItem = _undefined.includes(key.key);
+          let tmp4 = !hasItem;
+          if (!hasItem) {
+            tmp4 = !_undefined2.includes(key.key);
+          }
+          tmp = tmp4;
+        }
+        return tmp;
+      });
+      return found[found.findIndex(found, (key) => key.key === route.key) - 1];
+    };
+    tmp3Result.renderHeader = (arg0) => {
+      const merged = Object.assign(arg0);
+      return jsx(state(7081).HeaderContainer, {});
+    };
+    tmp3Result.handleOpenRoute = (route) => {
+      route = route.route;
+      ({ state, navigation } = state.props);
+      ({ closingRouteKeys, replacingRouteKeys } = state.state);
+      if (closingRouteKeys.some((item) => item === route.key)) {
+        if (replacingRouteKeys.every((item) => item !== route.key)) {
+          const routeNames = state.routeNames;
+          if (routeNames.includes(route.name)) {
+            let routes = state.routes;
+            if (!routes.some((key) => key.key === route.key)) {
+              navigation.dispatch((routes) => {
+                routes = routes.routes;
+                const items = [];
+                items[HermesBuiltin.arraySpread(routes.filter((key) => key.key !== key.key), 0)] = route;
+                const CommonActions = key(1484).CommonActions;
+                const obj = {};
+                const merged = Object.assign(routes);
+                obj.routes = items;
+                obj.index = items.length - 1;
+                return CommonActions.reset(obj);
               });
-            } else {
-              throw new TypeError("Trying to call a non-function");
             }
           }
-        });
-        const timingResult = timing(gesture, obj);
-      } else {
-        if (closing) {
-          closure_14();
-        } else {
-          closure_13();
         }
-        let _requestAnimationFrame = requestAnimationFrame;
-        ref4.current = requestAnimationFrame(() => {
-          closure_1_37();
+      }
+      state.setState((routes) => {
+        closure_0 = routes;
+        routes = routes.routes;
+        routes = routes.routes;
+        const substr = routes.slice(0, routes.findIndex((key) => key.key === closure_0.key));
+        const found = substr.filter((key) => {
+          const replacingRouteKeys = closure_0.replacingRouteKeys;
+          return replacingRouteKeys.includes(key.key);
+        });
+        const set = new Set(found.map((key) => key.key));
+        const obj = { routes: null, openingRouteKeys: null, closingRouteKeys: null, replacingRouteKeys: null };
+        const routes1 = routes.routes;
+        obj.routes = routes1.filter((key) => !set.has(key.key));
+        const openingRouteKeys = routes.openingRouteKeys;
+        obj.openingRouteKeys = openingRouteKeys.filter((item) => item !== closure_0.key);
+        const closingRouteKeys = routes.closingRouteKeys;
+        obj.closingRouteKeys = closingRouteKeys.filter((item) => item !== closure_0.key);
+        let replacingRouteKeys = routes.replacingRouteKeys;
+        obj.replacingRouteKeys = replacingRouteKeys.filter((item) => !set.has(item));
+        return obj;
+      });
+    };
+    tmp3Result.handleCloseRoute = (route) => {
+      route = route.route;
+      let obj = state;
+      ({ state, navigation } = state.props);
+      let routes = state.routes;
+      if (routes.some((key) => key.key === route.key)) {
+        obj = {};
+        const StackActions = StackView(1484).StackActions;
+        const merged = Object.assign(StackActions.pop());
+        obj.source = route.key;
+        obj.target = state.key;
+        navigation.dispatch(obj);
+      } else {
+        obj.setState((routes) => {
+          const obj = { routes: null, openingRouteKeys: null, closingRouteKeys: null };
+          routes = routes.routes;
+          obj.routes = routes.filter((key) => key.key !== route.key);
+          const openingRouteKeys = routes.openingRouteKeys;
+          obj.openingRouteKeys = openingRouteKeys.filter((item) => item !== route.key);
+          const closingRouteKeys = routes.closingRouteKeys;
+          obj.closingRouteKeys = closingRouteKeys.filter((item) => item !== route.key);
+          return obj;
         });
       }
+    };
+    tmp3Result.handleTransitionStart = (route, closing) => {
+      const navigation = state.props.navigation;
+      let obj = { type: "transitionStart", data: null, target: route.route.key };
+      obj = { closing };
+      obj.data = obj;
+      return navigation.emit(obj);
+    };
+    tmp3Result.handleTransitionEnd = (route, closing) => {
+      const navigation = state.props.navigation;
+      let obj = { type: "transitionEnd", data: null, target: route.route.key };
+      obj = { closing };
+      obj.data = obj;
+      return navigation.emit(obj);
+    };
+    tmp3Result.handleGestureStart = (route) => {
+      const navigation = state.props.navigation;
+      navigation.emit({ type: "gestureStart", target: route.route.key });
+    };
+    tmp3Result.handleGestureEnd = (route) => {
+      const navigation = state.props.navigation;
+      navigation.emit({ type: "gestureEnd", target: route.route.key });
+    };
+    tmp3Result.handleGestureCancel = (route) => {
+      const navigation = state.props.navigation;
+      navigation.emit({ type: "gestureCancel", target: route.route.key });
+    };
+    return tmp3Result;
+  }
+}
+_inherits(StackView, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    let props = this.props;
+    const state = props.state;
+    closure_2 = _objectWithoutProperties(props, closure_2);
+    ({ routes: _objectWithoutProperties, descriptors: _classCallCheck, openingRouteKeys: closure_5, closingRouteKeys: _getPrototypeOf } = this.state);
+    const preloadedRoutes = state.preloadedRoutes;
+    StackView = preloadedRoutes.reduce((acc, key) => {
+      let describeResult = acc[key.key];
+      if (!describeResult) {
+        const props = self.props;
+        describeResult = props.describe(key, true);
+      }
+      acc[key.key] = describeResult;
+      return acc;
+    }, {});
+    let obj = { style: container.container, children: null };
+    obj = { children: self(StackView(state[12]).SafeAreaProviderCompat, obj) };
+    obj = {
+      children(arg0) {
+        closure_0 = arg0;
+        return self(closure_0(state[14]).ModalPresentationContext.Consumer, {
+          children(arg0) {
+            closure_0 = arg0;
+            return self(closure_0(state[12]).HeaderShownContext.Consumer, {
+              children(isParentHeaderShown) {
+                const merged = Object.assign(closure_2);
+                return jsx(StackView(7087).CardStack, { insets: preloadedDescriptors, isParentHeaderShown, isParentModal: preloadedDescriptors, getPreviousRoute: self.getPreviousRoute, routes, openingRouteKeys, closingRouteKeys, onOpenRoute: self.handleOpenRoute, onCloseRoute: self.handleCloseRoute, onTransitionStart: self.handleTransitionStart, onTransitionEnd: self.handleTransitionEnd, renderHeader: self.renderHeader, state, descriptors, onGestureStart: self.handleGestureStart, onGestureEnd: self.handleGestureEnd, onGestureCancel: self.handleGestureCancel, preloadedDescriptors });
+              }
+            });
+          }
+        });
+      }
+    };
+    obj.children = self(StackView(state[13]).SafeAreaInsetsContext.Consumer, obj);
+    return self(GestureHandlerRootView, obj);
+  }
+};
+let items = [entry];
+const entry1 = {
+  key: "getDerivedStateFromProps",
+  value: function getDerivedStateFromProps(state, previousState) {
+    let arr3 = state;
+    dependencyMap = previousState;
+    const items = [...state.state.preloadedRoutes];
+    const items1 = [];
+    if (previousState.previousState) {
+      HermesBuiltin.arraySpread(previousState.previousState.preloadedRoutes, HermesBuiltin.arraySpread(previousState.previousState.routes, 0));
+      arr3 = items1;
+    } else {
+      arr3 = items1;
+    }
+    const mapped = items.map((key) => key.key);
+    const mapped1 = arr3.map((key) => key.key);
+    if (typeof isArrayEqual === "function") {
+      arr3 = mapped1;
+      if (tmp5) {
+        if (previousState.routes.length) {
+          let routes = previousState.routes;
+          const found = routes.filter((key) => {
+            const closingRouteKeys = previousState.closingRouteKeys;
+            let hasItem = closingRouteKeys.includes(key.key);
+            if (hasItem) {
+              const routes = arr3.state.routes;
+              hasItem = !routes.some((key) => key.key === key.key);
+            }
+            return hasItem;
+          });
+          const routes1 = previousState.routes;
+          const found1 = routes1.filter((key) => {
+            const replacingRouteKeys = previousState.replacingRouteKeys;
+            let hasItem = replacingRouteKeys.includes(key.key);
+            if (hasItem) {
+              const routes = arr3.state.routes;
+              hasItem = !routes.some((key) => key.key === key.key);
+            }
+            return hasItem;
+          });
+          const routes2 = state.state.routes;
+          const substr = routes2.slice();
+          if (found1.length) {
+            const splice3 = substr.splice;
+            const items2 = [substr.length - 1, 0];
+            HermesBuiltin.arraySpread(found1, 2);
+            HermesBuiltin.apply(items2, substr);
+          }
+          if (found.length) {
+            const push = substr.push;
+            const items3 = [];
+            HermesBuiltin.arraySpread(found, 0);
+            HermesBuiltin.apply(items3, substr);
+          }
+          if (typeof isArrayEqual === "function") {
+            let mapped2 = substr;
+            if (!tmp72) {
+              closure_2 = items.reduce((acc, key) => {
+                acc[key.key] = key;
+                return acc;
+              }, {});
+              mapped2 = substr.map((item) => closure_2[item.key] || item);
+            }
+            const items4 = [];
+            HermesBuiltin.arraySpread(state.state.preloadedRoutes, HermesBuiltin.arraySpread(mapped2, 0));
+            let obj = {
+              routes: mapped2,
+              previousState: state.state,
+              descriptors: items4.reduce((acc, key) => {
+                        let tmp = arr3.descriptors[key.key];
+                        if (!tmp) {
+                          tmp = previousState.descriptors[key.key];
+                        }
+                        acc[key.key] = tmp;
+                        return acc;
+                      }, {})
+            };
+            return obj;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+      }
+      if (state.state.index < state.state.routes.length - 1) {
+        const routes3 = state.state.routes;
+        let substr1 = routes3.slice(0, state.state.index + 1);
+      } else {
+        substr1 = state.state.routes;
+      }
+      let substr3 = substr1;
+      ({ openingRouteKeys, closingRouteKeys } = previousState);
+      let replacingRouteKeys = previousState.replacingRouteKeys;
+      const found2 = closingRouteKeys.filter((item) => {
+        closure_0 = item;
+        return !substr3.some((key) => key.key === closure_0);
+      });
+      let found9 = found2;
+      const found3 = replacingRouteKeys.filter((item) => {
+        closure_0 = item;
+        return !substr3.some((key) => key.key === closure_0);
+      });
+      let items10 = found3;
+      let tmp6;
+      if (previousState.previousState) {
+        tmp6 = previousState.previousState.routes[previousState.previousState.index];
+      }
+      closure_6 = tmp6;
+      closure_7 = tmp7;
+      function isAnimationEnabled(arg0) {
+
+      }
+      if (tmp6) {
+        if (tmp6.key !== tmp7.key) {
+          if (arr3.some((key) => key.key === closure_7.key)) {
+            if (!substr1.some((key) => key.key === closure_6.key)) {
+              obj = arr3(7087);
+              let animation;
+              if ((state.descriptors[tmp6.key] || previousState.descriptors[tmp6.key]) != null) {
+                animation = tmp18.options.animation;
+              }
+              let tmp9 = found3;
+              let tmp10 = found2;
+              let found4 = openingRouteKeys;
+              let arr11 = substr1;
+              if (tmp23) {
+                const items5 = [];
+                items5[HermesBuiltin.arraySpread(found2, 0)] = tmp6.key;
+                found9 = items5;
+                found4 = openingRouteKeys.filter((item) => item !== closure_6.key);
+                const found5 = found3.filter((item) => item !== closure_6.key);
+                items10 = found5;
+                const items6 = [];
+                items6[HermesBuiltin.arraySpread(substr1, 0)] = tmp6;
+                substr3 = items6;
+                tmp9 = found5;
+                tmp10 = items5;
+                arr11 = items6;
+              }
+              tmp23 = obj.getAnimationEnabled(animation) && !found2.includes(tmp6.key);
+            }
+          }
+          let animation1;
+          if ((state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key]) != null) {
+            animation1 = tmp29.options.animation;
+          }
+          tmp9 = found3;
+          tmp10 = found2;
+          found4 = openingRouteKeys;
+          arr11 = substr1;
+          if (obj2.getAnimationEnabled(animation1)) {
+            tmp9 = found3;
+            tmp10 = found2;
+            found4 = openingRouteKeys;
+            arr11 = substr1;
+            if (!openingRouteKeys.includes(tmp7.key)) {
+              const items7 = [];
+              items7[HermesBuiltin.arraySpread(openingRouteKeys, 0)] = tmp7.key;
+              const found6 = found2.filter((item) => item !== closure_7.key);
+              found9 = found6;
+              const found7 = found3.filter((item) => item !== closure_7.key);
+              items10 = found7;
+              tmp9 = found7;
+              tmp10 = found6;
+              found4 = items7;
+              arr11 = substr1;
+              if (!substr1.some((key) => key.key === closure_6.key)) {
+                const found8 = items7.filter((item) => item !== closure_6.key);
+                let str = state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key].options.animationTypeForReplace;
+                if (str == null) {
+                  str = "push";
+                }
+                if ("pop" === str) {
+                  const items8 = [];
+                  items8[HermesBuiltin.arraySpread(found6, 0)] = tmp6.key;
+                  found9 = items8;
+                  found4 = found8.filter((item) => item !== closure_7.key);
+                  const items9 = [];
+                  items9[HermesBuiltin.arraySpread(substr1, 0)] = tmp6;
+                  substr3 = items9;
+                  tmp9 = found7;
+                  tmp10 = items8;
+                  arr11 = items9;
+                } else {
+                  items10 = [];
+                  items10[HermesBuiltin.arraySpread(found7, 0)] = tmp6.key;
+                  found9 = found6.filter((item) => item !== closure_6.key);
+                  const substr2 = substr1.slice();
+                  substr3 = substr2;
+                  substr2.splice(substr2.length - 1, 0, tmp6);
+                  const routes4 = previousState.routes;
+                  const found10 = routes4.filter((key) => {
+                    let hasItem = items10.includes(key.key);
+                    if (hasItem) {
+                      hasItem = !substr3.some((key) => key.key === key.key);
+                    }
+                    return hasItem;
+                  });
+                  tmp9 = items10;
+                  tmp10 = found9;
+                  found4 = found8;
+                  arr11 = substr2;
+                  if (found10.length) {
+                    const splice2 = substr2.splice;
+                    const items11 = [substr2.length - 2, 0];
+                    HermesBuiltin.arraySpread(found10, 2);
+                    HermesBuiltin.apply(items11, substr2);
+                    tmp9 = items10;
+                    tmp10 = found9;
+                    found4 = found8;
+                    arr11 = substr2;
+                  }
+                }
+                const tmp37 = state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key];
+              }
+            }
+          }
+          obj2 = arr3(7087);
+        }
+        if (arr11.length) {
+          const items12 = [];
+          HermesBuiltin.arraySpread(state.state.preloadedRoutes, HermesBuiltin.arraySpread(arr11, 0));
+          obj = {
+            routes: arr11,
+            previousState: state.state,
+            openingRouteKeys: found4,
+            closingRouteKeys: tmp10,
+            replacingRouteKeys: tmp9,
+            descriptors: items12.reduce((acc, key) => {
+                    let tmp = arr3.descriptors[key.key];
+                    if (!tmp) {
+                      tmp = previousState.descriptors[key.key];
+                    }
+                    acc[key.key] = tmp;
+                    return acc;
+                  }, {})
+          };
+          return obj;
+        } else {
+          const _Error = Error;
+          const error = new Error("There should always be at least one route in the navigation state.");
+          throw error;
+        }
+      }
+      tmp9 = found3;
+      tmp10 = found2;
+      found4 = openingRouteKeys;
+      arr11 = substr1;
+      if (tmp8) {
+        substr3 = substr1.slice();
+        const splice = substr3.splice;
+        const items13 = [substr3.length - 1, 0];
+        const routes5 = previousState.routes;
+        HermesBuiltin.arraySpread(routes5.filter((key) => {
+          if (typeof isAnimationEnabled === "function") {
+            let tmp2 = arr3.descriptors[key];
+            if (!tmp2) {
+              tmp2 = previousState.descriptors[key];
+            }
+            let animation;
+            if (tmp2 != null) {
+              animation = tmp2.options.animation;
+            }
+            let animationEnabled = StackView(7087).getAnimationEnabled(animation);
+            if (animationEnabled) {
+              let hasItem = items10.includes(key);
+              if (!hasItem) {
+                hasItem = found9.includes(key);
+              }
+              animationEnabled = hasItem;
+            }
+            return animationEnabled;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }), 2);
+        HermesBuiltin.apply(items13, substr3);
+        tmp9 = found3;
+        tmp10 = found2;
+        found4 = openingRouteKeys;
+        arr11 = substr3;
+      }
+      tmp5 = mapped.length === mapped1.length && mapped.every((item, index) => Object.is(item, arr3[index]));
+      tmp8 = found3.length || found2.length;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-  });
-  closure_34 = tmp7;
-  let items = [gestureDirection, direction, first1, , , , ];
-  ({ width: arr[3], height: arr[4] } = first2);
-  ({ width: arr[5], height: arr[6] } = layout);
-  const layoutEffect = opening.useLayoutEffect(() => {
-    const width = first2.width;
-    width.setValue(layout.width);
-    const height = first2.height;
-    height.setValue(layout.height);
-    first1.setValue(_mod7072.getInvertedMultiplier(gestureDirection, "rtl" === direction));
-  }, items);
-  opening.useRef(null);
-  const effect = opening.useEffect(() => () => {
-    closure_1_33();
-    if (ref.current) {
-      const _cancelAnimationFrame = cancelAnimationFrame;
-      cancelAnimationFrame(tmp2.current);
-    }
-    clearTimeout(ref2.current);
-    clearTimeout(ref3.current);
-  }, []);
-  opening.useRef(undefined);
-  let tmp11 = num(1505)(() => {
-    clearTimeout(ref5.current);
-    clearTimeout(ref6.current);
-    if (ref.current) {
-      current = ref7.current;
-      if (current != null) {
-        opening = current.opening;
-      }
-      let tmp7 = null;
-      if (ref7.current) {
-        if (typeof getAnimateToValue === "function") {
-          if (ref7.current.closing) {
-            let obj = _mod7071;
-            let num2 = obj.getDistanceForDirection(tmp9, tmp10, "rtl" === tmp11);
-          } else {
-            num2 = 0;
-          }
-          tmp7 = num2;
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      if (typeof getAnimateToValue === "function") {
-        if (closing) {
-          let num3 = _mod7071.getDistanceForDirection(layout, gestureDirection, "rtl" === direction);
-        } else {
-          num3 = 0;
-        }
-        if (tmp7 === num3) {
-          if (ref2.current === num3) {
-            let tmp24 = typeof opening === "boolean";
-            if (typeof opening === "boolean") {
-              tmp24 = opening;
-            }
-            if (tmp24) {
-              tmp24 = !opening;
-            }
-            if (tmp24) {
-              gesture.setValue(_mod7071.getDistanceForDirection(layout, gestureDirection, "rtl" === direction));
-              obj = { closing };
-              closure_34(obj);
-            }
-          }
-        }
-        obj = { closing };
-        closure_34(obj);
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(ref8.current);
-      const _setTimeout = setTimeout;
-      ref8.current = setTimeout(() => {
-        ref.current = true;
-        closure_1_34({ closing });
-      }, 0);
-    }
-  });
-  closure_37 = tmp11;
-  const items1 = [tmp7, closing, direction, gesture, gestureDirection, layout, opening, preloaded, tmp11];
-  const effect1 = opening.useEffect(() => {
-    if (!preloaded) {
-      closure_37();
-      const obj = { opening, closing, layout, gestureDirection, direction, preloaded: tmp };
-      closure_35.current = obj;
-    }
-  }, items1);
-  const items2 = [interpolationIndex, current, next, closing, first3, first1, layout, , , , ];
-  ({ top: arr3[7], right: arr3[8], bottom: arr3[9], left: arr3[10] } = insets);
-  const memo = opening.useMemo(() => {
-    let obj = { index: interpolationIndex, current: null, next: null, closing: null, swiping: null, inverted: null, layouts: null, insets: null };
-    obj = { progress: current };
-    obj.current = obj;
-    let tmp2 = next;
-    if (next) {
-      obj = { progress: tmp };
-      tmp2 = obj;
-    }
-    obj.next = tmp2;
-    obj.closing = closing;
-    obj.swiping = first3;
-    obj.inverted = first1;
-    obj.layouts = { screen: layout };
-    const rect = { top: insets.top, right: insets.right, bottom: insets.bottom, left: insets.left };
-    obj.insets = rect;
-    return obj;
-  }, items2);
-  const items3 = [styleInterpolator, memo];
-  const memo1 = opening.useMemo(() => styleInterpolator(memo), items3);
-  ({ cardStyle, shadowStyle } = memo1);
-  const items4 = [gesture, gestureDirection, flag2];
-  ({ containerStyle: containerStyle2, overlayStyle } = memo1);
-  let obj = contentStyle;
-  const memo2 = opening.useMemo(() => {
-    if (flag2) {
-      if ("vertical" !== gestureDirection) {
-        if ("vertical-inverted" !== tmp3) {
-          let obj = { translationX: gesture };
-        }
-        obj = { nativeEvent: null };
-        obj.nativeEvent = obj;
-        const items = [obj];
-        obj = { useNativeDriver };
-        tmp2(items, obj);
-      }
-      const obj1 = { translationY: gesture };
-      obj = obj1;
-    }
-  }, items4);
-  if (!contentStyle) {
-    obj = {};
   }
-  const backgroundColor = next.flatten(obj).backgroundColor;
-  let tmp16 = typeof backgroundColor === "string";
-  if (typeof backgroundColor === "string") {
-    tmp16 = 0 === tmp5(5690)(backgroundColor).alpha();
-    const obj14 = tmp5(5690)(backgroundColor);
-  }
-  obj = { value: memo, children: null };
-  const items5 = [gesture(closing.View, { style: { opacity: current }, collapsable: false }), , ];
-  let tmp19Result = null;
-  if (overlayEnabled) {
-    let obj2 = { pointerEvents: "box-none", style: obj.absoluteFill, children: null };
-    let obj3 = { style: overlayStyle };
-    obj2.children = overlay(obj3);
-    tmp19Result = tmp19(current, obj2);
-  }
-  items5[1] = tmp19Result;
-  const obj4 = { pointerEvents: "box-none", style: null, children: null };
-  shadowStart = closure_14;
-  const items6 = [closure_14.container, containerStyle2, containerStyle];
-  obj4.style = items6;
-  let tmp23 = 0 !== layout.width;
-  if (tmp23) {
-    tmp23 = flag2;
-  }
-  const obj5 = {
-    enabled: tmp23,
-    onGestureEvent: memo2,
-    onHandlerStateChange: num(1505)((nativeEvent) => {
-      nativeEvent = nativeEvent.nativeEvent;
-      const state = nativeEvent.state;
-      if (PanGestureHandler.GestureState.ACTIVE === state) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(ref5.current);
-        const _clearTimeout2 = clearTimeout;
-        clearTimeout(ref6.current);
-        first3.setValue(1);
-        closure_32();
-        if (closure_1_16 != null) {
-          closure_1_16();
-        }
-      } else {
-        if (PanGestureHandler.GestureState.CANCELLED !== state) {
-          if (PanGestureHandler.GestureState.FAILED !== state) {
-            if (PanGestureHandler.GestureState.END === state) {
-              first3.setValue(0);
-              if ("vertical" !== gestureDirection) {
-                if ("vertical-inverted" !== gestureDirection) {
-                  let height = layout.width;
-                  ({ translationX: translationY, velocityX: velocityY } = nativeEvent);
-                }
-                const sum = translationY + velocityY * num;
-                if (sum * tmpResult.getInvertedMultiplier(gestureDirection, "rtl" === direction) > height / 2) {
-                  let tmp8 = 0 !== velocityY || 0 !== translationY;
-                  const tmp9 = 0 !== velocityY || 0 !== translationY;
-                } else {
-                  tmp8 = closing;
-                }
-                let obj = { closing: tmp8, velocity: velocityY };
-                closure_34(obj);
-                if (tmp8) {
-                  const _setTimeout = setTimeout;
-                  ref5.current = setTimeout(() => {
-                    closure_1_14();
-                    ref6.current = setTimeout(() => {
-                      closure_1_37();
-                    }, 32);
-                  }, 16);
-                }
-                if (closure_1_18 != null) {
-                  closure_1_18();
-                }
-                tmpResult = _mod7072;
-              }
-              height = layout.height;
-              ({ translationY, velocityY } = nativeEvent);
-            }
-          }
-        }
-        first3.setValue(0);
-        closure_33();
-        if ("vertical" !== gestureDirection) {
-          if ("vertical-inverted" !== tmp19) {
-            let velocityY2 = nativeEvent.velocityX;
-          }
-          obj = { closing, velocity: velocityY2 };
-          closure_34(obj);
-          if (closure_1_17 != null) {
-            closure_1_17();
-          }
-        }
-        velocityY2 = nativeEvent.velocityY;
-      }
-    })
-  };
-  let obj1 = { style: { opacity: current }, collapsable: false };
-  tmp5 = num;
-  let tmp8 = num(1505)((nativeEvent) => {
-    nativeEvent = nativeEvent.nativeEvent;
-    const state = nativeEvent.state;
-    if (PanGestureHandler.GestureState.ACTIVE === state) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(ref5.current);
-      const _clearTimeout2 = clearTimeout;
-      clearTimeout(ref6.current);
-      first3.setValue(1);
-      closure_32();
-      if (closure_1_16 != null) {
-        closure_1_16();
-      }
-    } else {
-      if (PanGestureHandler.GestureState.CANCELLED !== state) {
-        if (PanGestureHandler.GestureState.FAILED !== state) {
-          if (PanGestureHandler.GestureState.END === state) {
-            first3.setValue(0);
-            if ("vertical" !== gestureDirection) {
-              if ("vertical-inverted" !== gestureDirection) {
-                let height = layout.width;
-                ({ translationX: translationY, velocityX: velocityY } = nativeEvent);
-              }
-              const sum = translationY + velocityY * num;
-              if (sum * tmpResult.getInvertedMultiplier(gestureDirection, "rtl" === direction) > height / 2) {
-                let tmp8 = 0 !== velocityY || 0 !== translationY;
-                const tmp9 = 0 !== velocityY || 0 !== translationY;
-              } else {
-                tmp8 = closing;
-              }
-              let obj = { closing: tmp8, velocity: velocityY };
-              closure_34(obj);
-              if (tmp8) {
-                const _setTimeout = setTimeout;
-                ref5.current = setTimeout(() => {
-                  closure_1_14();
-                  ref6.current = setTimeout(() => {
-                    closure_1_37();
-                  }, 32);
-                }, 16);
-              }
-              if (closure_1_18 != null) {
-                closure_1_18();
-              }
-              tmpResult = _mod7072;
-            }
-            height = layout.height;
-            ({ translationY, velocityY } = nativeEvent);
-          }
-        }
-      }
-      first3.setValue(0);
-      closure_33();
-      if ("vertical" !== gestureDirection) {
-        if ("vertical-inverted" !== tmp19) {
-          let velocityY2 = nativeEvent.velocityX;
-        }
-        obj = { closing, velocity: velocityY2 };
-        closure_34(obj);
-        if (closure_1_17 != null) {
-          closure_1_17();
-        }
-      }
-      velocityY2 = nativeEvent.velocityY;
-    }
-  });
-  let merged = Object.assign(flag2(7080).gestureActivationCriteria({ layout, direction, gestureDirection, gestureResponseDistance }));
-  if (typeof direction === "function") {
-    let flag3 = false;
-    if (cardStyle) {
-      const flattenResult = obj.flatten(cardStyle);
-      flag3 = "opacity" in flattenResult && null != flattenResult.opacity;
-      const tmp27 = "opacity" in flattenResult && null != flattenResult.opacity;
-    }
-    const obj6 = { pointerEvents: "box-none", needsOffscreenAlphaCompositing: flag3, style: null, children: null };
-    const items7 = [shadowStart.container, cardStyle];
-    obj6.style = items7;
-    let tmp28 = null;
-    if (flag) {
-      tmp28 = null;
-      if (shadowStyle) {
-        tmp28 = null;
-        if (!tmp16) {
-          const items8 = [shadowStart.shadow, , , ];
-          if ("horizontal" === gestureDirection) {
-            const items9 = [, ];
-            ({ shadowHorizontal: arr13[0], shadowStart } = shadowStart);
-            items9[1] = shadowStart;
-            let items12 = items9;
-          } else if ("horizontal-inverted" === gestureDirection) {
-            const items10 = [, ];
-            ({ shadowHorizontal: arr12[0], shadowEnd: arr12[1] } = shadowStart);
-            items12 = items10;
-          } else if ("vertical" === gestureDirection) {
-            const items11 = [, ];
-            ({ shadowVertical: arr11[0], shadowTop: arr11[1] } = shadowStart);
-            items12 = items11;
-          } else {
-            items12 = [, ];
-            ({ shadowVertical: arr10[0], shadowBottom: arr10[1] } = shadowStart);
-          }
-          const obj7 = { pointerEvents: "none", style: null };
-          items8[1] = items12;
-          const obj8 = { backgroundColor };
-          items8[2] = obj8;
-          items8[3] = shadowStyle;
-          obj7.style = items8;
-          tmp19Result = tmp19(tmp20.View, obj7);
-        }
-      }
-    }
-    const items13 = [tmp28, ];
-    const obj9 = { enabled: pageOverflowEnabled, layout, style: contentStyle, children };
-    items13[1] = tmp19(tmp18(7081).CardContent, obj9);
-    obj6.children = items13;
-    obj5.children = tmp17(tmp25, obj6);
-    obj4.children = tmp19(tmp18(7057).PanGestureHandler, obj5);
-    items5[2] = tmp19(tmp20.View, obj4);
-    obj.children = items5;
-    return tmp17(flag2(7079).CardAnimationContext.Provider, obj);
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-  const tmp18Result = flag2(7080);
 };
+let items1 = [entry1];
+const container = StyleSheet.create({ container: { flex: 1 } });
+
+export const StackView = _createClass(StackView, items, items1);

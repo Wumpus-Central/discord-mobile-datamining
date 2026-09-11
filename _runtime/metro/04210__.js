@@ -1,107 +1,90 @@
 // === Module 4210: ? ===
 
 // Module 4210
-import _mod4196 from "module_4196" /* 4196 */;
+import _mod4198 from "module_4198" /* 4198 */;
 
-const fn = function n(moment) {
-  function translateSingular(arg0, arg1, arg2, arg3) {
-    const parts = dependencyMap[arg2].split("_");
-    if (arg1) {
-      let first = parts[0];
-    } else {
-      first = arg3 ? parts[1] : parts[2];
-    }
-    return first;
-  }
-  function translate(arg0, arg1, arg2, arg3) {
-    const text = `${arg0} `;
-    if (1 === arg0) {
-      const parts = dependencyMap[arg2[0]].split("_");
-      if (arg1) {
-        let first = parts[0];
-      } else {
-        first = arg3 ? parts[1] : parts[2];
-      }
-      const sum = text + first;
-    } else if (arg1) {
-      const result = arg0 % 10;
-      let tmp10 = result === 0;
-      if (result !== 0) {
-        let tmp11 = arg0 > 10;
-        if (tmp11) {
-          tmp11 = arg0 < 20;
+const fn = function t(moment) {
+  const obj = {
+    eras: null,
+    eraYearOrdinalRegex: /(元|\d+)年/,
+    eraYearOrdinalParse(match, match) {
+      let num = 1;
+      if ("\u5143" !== match[1]) {
+        let tmp2 = match[1];
+        if (!tmp2) {
+          tmp2 = match;
         }
-        tmp10 = tmp11;
+        num = parseInt(tmp2, 10);
       }
-      const parts1 = dependencyMap[arg2].split("_");
-      const sum1 = text + (tmp10 ? parts1[1] : parts1[0]);
-    } else {
-      if (arg3) {
-        let sum2 = text + dependencyMap[arg2].split("_")[1];
-      } else {
-        const result1 = arg0 % 10;
-        let tmp3 = result1 === 0;
-        if (result1 !== 0) {
-          let tmp4 = arg0 > 10;
-          if (tmp4) {
-            tmp4 = arg0 < 20;
-          }
-          tmp3 = tmp4;
-        }
-        const parts2 = dependencyMap[arg2].split("_");
-        sum2 = text + (tmp3 ? parts2[1] : parts2[2]);
-      }
-      return sum2;
-    }
-  }
-  dependencyMap = { ss: "sekund\u0117_sekund\u017Ei\u0173_sekundes", m: "minut\u0117_minut\u0117s_minut\u0119", mm: "minut\u0117s_minu\u010Di\u0173_minutes", h: "valanda_valandos_valand\u0105", hh: "valandos_valand\u0173_valandas", d: "diena_dienos_dien\u0105", dd: "dienos_dien\u0173_dienas", M: "m\u0117nuo_m\u0117nesio_m\u0117nes\u012F", MM: "m\u0117nesiai_m\u0117nesi\u0173_m\u0117nesius", y: "metai_met\u0173_metus", yy: "metai_met\u0173_metus" };
-  let obj = { months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, weekdaysParseExact: true, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: null, week: null };
-  obj = { format: "sausio_vasario_kovo_baland\u017Eio_gegu\u017E\u0117s_bir\u017Eelio_liepos_rugpj\u016B\u010Dio_rugs\u0117jo_spalio_lapkri\u010Dio_gruod\u017Eio".split("_"), standalone: "sausis_vasaris_kovas_balandis_gegu\u017E\u0117_bir\u017Eelis_liepa_rugpj\u016Btis_rugs\u0117jis_spalis_lapkritis_gruodis".split("_"), isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/ };
-  obj.months = obj;
-  obj.monthsShort = "sau_vas_kov_bal_geg_bir_lie_rgp_rgs_spa_lap_grd".split("_");
-  obj = { format: "sekmadien\u012F_pirmadien\u012F_antradien\u012F_tre\u010Diadien\u012F_ketvirtadien\u012F_penktadien\u012F_\u0161e\u0161tadien\u012F".split("_"), standalone: "sekmadienis_pirmadienis_antradienis_tre\u010Diadienis_ketvirtadienis_penktadienis_\u0161e\u0161tadienis".split("_"), isFormat: /dddd HH:mm/ };
-  obj.weekdays = obj;
-  obj.weekdaysShort = "Sek_Pir_Ant_Tre_Ket_Pen_\u0160e\u0161".split("_");
-  obj.weekdaysMin = "S_P_A_T_K_Pn_\u0160".split("_");
-  obj.longDateFormat = { LT: "HH:mm", LTS: "HH:mm:ss", L: "YYYY-MM-DD", LL: "YYYY [m.] MMMM D [d.]", LLL: "YYYY [m.] MMMM D [d.], HH:mm [val.]", LLLL: "YYYY [m.] MMMM D [d.], dddd, HH:mm [val.]", l: "YYYY-MM-DD", ll: "YYYY [m.] MMMM D [d.]", lll: "YYYY [m.] MMMM D [d.], HH:mm [val.]", llll: "YYYY [m.] MMMM D [d.], ddd, HH:mm [val.]" };
-  obj.calendar = { sameDay: "[\u0160iandien] LT", nextDay: "[Rytoj] LT", nextWeek: "dddd LT", lastDay: "[Vakar] LT", lastWeek: "[Pra\u0117jus\u012F] dddd LT", sameElse: "L" };
-  obj.relativeTime = {
-    future: "po %s",
-    past: "prie\u0161 %s",
-    s: function translateSeconds(arg0, arg1, arg2, arg3) {
-      let str = "kelios sekund\u0117s";
-      if (!arg1) {
-        let str2 = "kelias sekundes";
-        if (arg3) {
-          str2 = "keli\u0173 sekund\u017Ei\u0173";
-        }
-        str = str2;
+      return num;
+    },
+    months: "1\u6708_2\u6708_3\u6708_4\u6708_5\u6708_6\u6708_7\u6708_8\u6708_9\u6708_10\u6708_11\u6708_12\u6708".split("_"),
+    monthsShort: "1\u6708_2\u6708_3\u6708_4\u6708_5\u6708_6\u6708_7\u6708_8\u6708_9\u6708_10\u6708_11\u6708_12\u6708".split("_"),
+    weekdays: "\u65E5\u66DC\u65E5_\u6708\u66DC\u65E5_\u706B\u66DC\u65E5_\u6C34\u66DC\u65E5_\u6728\u66DC\u65E5_\u91D1\u66DC\u65E5_\u571F\u66DC\u65E5".split("_"),
+    weekdaysShort: "\u65E5_\u6708_\u706B_\u6C34_\u6728_\u91D1_\u571F".split("_"),
+    weekdaysMin: "\u65E5_\u6708_\u706B_\u6C34_\u6728_\u91D1_\u571F".split("_"),
+    longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "YYYY/MM/DD", LL: "YYYY\u5E74M\u6708D\u65E5", LLL: "YYYY\u5E74M\u6708D\u65E5 HH:mm", LLLL: "YYYY\u5E74M\u6708D\u65E5 dddd HH:mm", l: "YYYY/MM/DD", ll: "YYYY\u5E74M\u6708D\u65E5", lll: "YYYY\u5E74M\u6708D\u65E5 HH:mm", llll: "YYYY\u5E74M\u6708D\u65E5(ddd) HH:mm" },
+    meridiemParse: /午前|午後/i,
+    isPM(arg0) {
+      return "\u5348\u5F8C" === arg0;
+    },
+    meridiem(arg0, arg1, arg2) {
+      let str = "\u5348\u5F8C";
+      if (arg0 < 12) {
+        str = "\u5348\u524D";
       }
       return str;
     },
-    ss: translate,
-    m: translateSingular,
-    mm: translate,
-    h: translateSingular,
-    hh: translate,
-    d: translateSingular,
-    dd: translate,
-    M: translateSingular,
-    MM: translate,
-    y: translateSingular,
-    yy: translate
+    calendar: {
+      sameDay: "[\u4ECA\u65E5] LT",
+      nextDay: "[\u660E\u65E5] LT",
+      nextWeek(week) {
+        let str = "dddd LT";
+        if (weekResult !== this.week()) {
+          str = "[\u6765\u9031]dddd LT";
+        }
+        return str;
+      },
+      lastDay: "[\u6628\u65E5] LT",
+      lastWeek(week) {
+        let str = "dddd LT";
+        if (weekResult !== week.week()) {
+          str = "[\u5148\u9031]dddd LT";
+        }
+        return str;
+      },
+      sameElse: "L"
+    },
+    dayOfMonthOrdinalParse: /\d{1,2}日/,
+    ordinal(arg0, arg1) {
+      if ("y" === arg1) {
+        let str5 = "\u5143\u5E74";
+        if (1 !== arg0) {
+          str5 = `${arg0}年`;
+        }
+        return str5;
+      } else {
+        if ("d" !== arg1) {
+          if ("D" !== arg1) {
+            if ("DDD" !== arg1) {
+              return arg0;
+            }
+          }
+        }
+        return arg0 + "\u65E5";
+      }
+    },
+    relativeTime: { future: "%s\u5F8C", past: "%s\u524D", s: "\u6570\u79D2", ss: "%d\u79D2", m: "1\u5206", mm: "%d\u5206", h: "1\u6642\u9593", hh: "%d\u6642\u9593", d: "1\u65E5", dd: "%d\u65E5", M: "1\u30F6\u6708", MM: "%d\u30F6\u6708", y: "1\u5E74", yy: "%d\u5E74" }
   };
-  obj.dayOfMonthOrdinalParse = /\d{1,2}-oji/;
-  obj.ordinal = function ordinal(arg0) {
-    return arg0 + "-oji";
-  };
-  obj.week = { dow: 1, doy: 4 };
-  return moment.defineLocale("lt", obj);
+  const items = [{ since: "2019-05-01", offset: 1, name: "\u4EE4\u548C", narrow: "\u32FF", abbr: "R" }, { since: "1989-01-08", until: "2019-04-30", offset: 1, name: "\u5E73\u6210", narrow: "\u337B", abbr: "H" }, { since: "1926-12-25", until: "1989-01-07", offset: 1, name: "\u662D\u548C", narrow: "\u337C", abbr: "S" }, { since: "1912-07-30", until: "1926-12-24", offset: 1, name: "\u5927\u6B63", narrow: "\u337D", abbr: "T" }, { since: "1873-01-01", until: "1912-07-29", offset: 6, name: "\u660E\u6CBB", narrow: "\u337E", abbr: "M" }, { since: "0001-01-01", until: "1873-12-31", offset: 1, name: "\u897F\u66A6", narrow: "AD", abbr: "AD" }, { since: "0000-12-31", until: -Infinity, offset: 1, name: "\u7D00\u5143\u524D", narrow: "BC", abbr: "BC" }];
+  obj.eras = items;
+  ({ split, split: split2 } = "\u65E5_\u6708_\u706B_\u6C34_\u6728_\u91D1_\u571F");
+  return moment.defineLocale("ja", obj);
 };
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      fn(_mod4196);
+      fn(_mod4198);
     }
   }
 }

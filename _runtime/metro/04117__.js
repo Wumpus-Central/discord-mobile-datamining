@@ -1,17 +1,17 @@
 // === Module 4117: ? ===
 
 // Module 4117
-import module_3697 from "module_3697" /* 3697 */;
-import _typeof from "module_3693" /* 3693 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import module_3699 from "module_3699" /* 3699 */;
+import _typeof from "module_3695" /* 3695 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
-if (!module_3697) {
-  let obj = { default: module_3697 };
+if (!module_3699) {
+  let obj = { default: module_3699 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3697;
+  tmp3 = module_3699;
 }
-module_3697 = tmp3;
+module_3699 = tmp3;
 if (!_typeof) {
   obj = { default: _typeof };
   let tmp5 = obj;
@@ -27,10 +27,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setSeconds(module_3697, arg1) {
+export default function setMinutes(module_3699, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_3697);
-  defaultResult1.setSeconds(module_3697.default(arg1));
+  const defaultResult1 = _typeof.default(module_3699);
+  defaultResult1.setMinutes(module_3699.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

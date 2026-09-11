@@ -1,17 +1,13 @@
 // === Module 14409: ? ===
 
 // Module 14409
-import _mod14378 from "module_14378" /* 14378 */;
-import element from "element" /* 14410 */;
-import getOwnPropertyDescriptor from "module_14377" /* 14377 */;
+import _mod14357 from "module_14357" /* 14357 */;
+import _mod14366 from "module_14366" /* 14366 */;
+import all from "module_14376" /* 14376 */;
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod14378(() => 7 !== Object.defineProperty(element("div"), "a", {
-    get() {
-      return 7;
-    }
-  }).a);
+let closure_0 = _mod14357(Function.toString);
+if (!all(_mod14366.inspectSource)) {
+  _mod14366.inspectSource = (arg0) => closure_0(arg0);
 }
 
-export default tmp2;
+export default _mod14366.inspectSource;

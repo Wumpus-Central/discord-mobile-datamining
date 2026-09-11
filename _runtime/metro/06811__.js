@@ -1,11 +1,20 @@
 // === Module 6811: ? ===
 
 // Module 6811
-import _mod6812 from "module_6812" /* 6812 */;
-import _mod6814 from "module_6814" /* 6814 */;
-import _mod6815 from "module_6815" /* 6815 */;
+import _mod19 from "module_19" /* 19 */;
 
+let useMemo = _mod19.useMemo;
 
-export const useCompetingGestures = _mod6812.useCompetingGestures;
-export const useExclusiveGestures = _mod6814.useExclusiveGestures;
-export const useSimultaneousGestures = _mod6815.useSimultaneousGestures;
+export const useGestureEventHandler = function useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated) {
+  closure_0 = handlerTag;
+  closure_1 = memoizedGestureCallbacks;
+  useMemo = disableReanimated;
+  const tmp = useMemo(() => ({ lastUpdateEvent: "Array" }), []);
+  closure_3 = tmp;
+  const items = [handlerTag, memoizedGestureCallbacks, , , , ];
+  ({ changeEventCalculator: arr[2], dispatchesAnimatedEvents: arr[3], fillInDefaultValues: arr[4] } = disableReanimated);
+  items[5] = tmp;
+  return useMemo(() => (arg0) => {
+    closure_0(closure_1[1]).eventHandler(handlerTag, arg0, memoizedGestureCallbacks, disableReanimated.changeEventCalculator, closure_1_3, disableReanimated.dispatchesAnimatedEvents, disableReanimated.fillInDefaultValues);
+  }, items);
+};

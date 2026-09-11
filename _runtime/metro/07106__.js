@@ -1,7 +1,18 @@
 // === Module 7106: ? ===
 
 // Module 7106
-import registerAsset from "module_1122" /* 1122 */;
+import CardAnimationContext from "CardAnimationContext" /* 7100 */;
+import noop from "module_19" /* 19 */;
 
+require = arg1;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 160, height: 160, scales: [2, 3], hash: "b7eca7761481c5ff3cc170b16fbdff57", name: "img_no_results", type: "png" });
+export const useCardAnimation = function useCardAnimation() {
+  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
+    throw error;
+  } else {
+    return context;
+  }
+};

@@ -1,27 +1,78 @@
 // === Module 6852: ? ===
 
 // Module 6852
-import noop from "module_19" /* 19 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
-
-export const useStableCallback = function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  framebus(() => () => {
-    ref.current = undefined;
-  }, []);
-  return React(() => {
-    const items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, ref);
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    return applyResult;
-  }, []);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+_possibleConstructorReturnDefault;
+class LongPressGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, LongPressGesture);
+    tmp2 = c2;
+    obj = c2(LongPressGesture);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "LongPressGestureHandler";
+    result = tmp3Result.shouldCancelWhenOutside(true);
+    return tmp3Result;
+  }
+}
+_classCallCheck = LongPressGesture;
+_inherits(LongPressGesture, fn(6747).BaseGesture);
+const entry = {
+  key: "minDuration",
+  value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
+    this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+    return this;
+  }
 };
+const items = [
+  entry,
+  {
+    key: "maxDistance",
+    value: function maxDistance(maxDist) {
+      this.config.maxDist = maxDist;
+      return this;
+    }
+  },
+  {
+    key: "numberOfPointers",
+    value: function numberOfPointers(numberOfPointers) {
+      this.config.numberOfPointers = numberOfPointers;
+      return this;
+    }
+  }
+];
+
+export const LongPressGesture = _createClass(LongPressGesture, items);

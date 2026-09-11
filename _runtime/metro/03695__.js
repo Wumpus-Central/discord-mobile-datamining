@@ -1,28 +1,74 @@
 // === Module 3695: ? ===
 
 // Module 3695
-import requiredArgs from "requiredArgs" /* 3694 */;
-import startOfUTCWeek from "startOfUTCWeek" /* 3696 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
 if (!requiredArgs) {
-  let obj = { default: requiredArgs };
+  const obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;
 }
 requiredArgs = tmp3;
-if (!startOfUTCWeek) {
-  obj = { default: startOfUTCWeek };
-  let tmp5 = obj;
-} else {
-  tmp5 = startOfUTCWeek;
-}
-startOfUTCWeek = tmp5;
 
-export default function isSameUTCWeek(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfUTCWeek.default(arg0, arg2);
-  const time = defaultResult1.getTime();
-  return time === startOfUTCWeek.default(arg1, arg2).getTime();
+export default function toDate(getTime) {
+  requiredArgs.default(1, arguments);
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(getTime);
+  if (!(getTime instanceof Date)) {
+    if ("object" === _typeof(getTime)) {
+      return date;
+    }
+    if (typeof getTime !== "number") {
+      if ("[object Number]" !== tmp2) {
+        let tmp4 = typeof getTime !== "string";
+        if (typeof getTime !== "string") {
+          tmp4 = "[object String]" !== tmp2;
+        }
+        if (!tmp4) {
+          const _console = console;
+          tmp4 = typeof console === "undefined";
+        }
+        if (!tmp4) {
+          const _console2 = console;
+          console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
+          const _console3 = console;
+          const _Error = Error;
+          const error = new Error();
+          console.warn(error.stack);
+        }
+        const _Date = Date;
+        date = new Date(NaN);
+      }
+    }
+    const _Date2 = Date;
+    date = new Date(getTime);
+  }
+  date = new Date(getTime.getTime());
 };
 export default exports.default;

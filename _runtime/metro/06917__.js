@@ -1,42 +1,8 @@
 // === Module 6917: ? ===
 
 // Module 6917
-import _mod6918 from "module_6918" /* 6918 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
 
-export default function _createClass(arg0, arg1, arg2) {
-  if (arg1) {
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let tmp3 = arg1[num];
-      let flag2 = tmp3.enumerable;
-      if (!flag2) {
-        flag2 = false;
-      }
-      tmp3.enumerable = flag2;
-      tmp3.configurable = true;
-      if ("value" in tmp3) {
-        tmp3.writable = true;
-      }
-      let _Object = Object;
-      let definePropertyResult = Object.defineProperty(tmp, _mod6918(tmp3.key), tmp3);
-    }
-  }
-  if (arg2) {
-    for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
-      let tmp9 = arg2[num3];
-      let flag4 = tmp9.enumerable;
-      if (!flag4) {
-        flag4 = false;
-      }
-      tmp9.enumerable = flag4;
-      tmp9.configurable = true;
-      if ("value" in tmp9) {
-        tmp9.writable = true;
-      }
-      let _Object2 = Object;
-      let definePropertyResult1 = Object.defineProperty(arg0, _mod6918(tmp9.key), tmp9);
-    }
-  }
-  Object.defineProperty(arg0, "prototype", { writable: false });
-  return arg0;
-};
+export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });

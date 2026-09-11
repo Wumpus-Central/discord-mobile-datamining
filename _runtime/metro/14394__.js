@@ -1,48 +1,40 @@
 // === Module 14394: ? ===
 
 // Module 14394
-import _mod14374 from "module_14374" /* 14374 */;
+import _mod14355 from "module_14355" /* 14355 */;
+import _mod14357 from "module_14357" /* 14357 */;
+import _mod14373 from "module_14373" /* 14373 */;
 import _mod14395 from "module_14395" /* 14395 */;
+import _mod14396 from "module_14396" /* 14396 */;
 
-let tmp = _mod14374.process && _mod14374.process.versions;
-if (!tmp) {
-  tmp = _mod14374.Deno && _mod14374.Deno.version;
-  const tmp2 = _mod14374.Deno && _mod14374.Deno.version;
-}
-let str = tmp;
-if (tmp) {
-  str = tmp.v8;
-}
-let tmp3;
-if (str) {
-  const parts = str.split(".");
-  if (parts[0] <= 0) {
-    let num3 = +parts[0] + parts[1];
-  } else {
-    num3 = 1;
-  }
-  tmp3 = num3;
-  let tmp4 = parts;
-}
-let _module = !tmp3;
-if (!tmp3) {
-  _module = _mod14395;
-}
-if (_module) {
-  const match = _mod14395.match(/Edge\/(\d+)/);
-  let tmp8 = !match;
-  if (match) {
-    tmp8 = match[1] >= 74;
-  }
-  _module = tmp8;
-  tmp4 = match;
-}
-if (_module) {
-  _module = _mod14395.match(/Chrome\/(\d+)/);
-  tmp4 = _module;
-}
-if (_module) {
-  tmp3 = +tmp4[1];
-}
+let closure_2 = _mod14357([].push);
 
-export default tmp3;
+export default (arg0, arg1) => {
+  const tmp = _mod14355(arg0);
+  const items = [];
+  for (const key10010 in tmp) {
+    let tmp14 = _mod14373;
+    let tmp14Result = tmp14(_mod14395, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod14373(tmp, key10010);
+    }
+    if (!tmp2) {
+      continue;
+    } else {
+      let tmp4 = closure_2(items, key10010);
+      continue;
+    }
+    continue;
+  }
+  for (let num = 0; arg1.length > num; num = num + 1) {
+    let tmp7 = arg1[num];
+    if (_mod14373(tmp, tmp7)) {
+      let tmp5Result = _mod14396;
+      if (!~tmp5Result.indexOf(items, tmp7)) {
+        let tmp10 = closure_2(items, tmp7);
+      }
+    }
+  }
+  return items;
+};

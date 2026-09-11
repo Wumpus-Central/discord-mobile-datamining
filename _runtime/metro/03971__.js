@@ -1,8 +1,8 @@
 // === Module 3971: ? ===
 
 // Module 3971
-import _typeof from "module_3693" /* 3693 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import _typeof from "module_3695" /* 3695 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getSeconds(arg0) {
+export default function getMonth(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getSeconds();
+  return _typeof.default(arg0).getMonth();
 };
 export default exports.default;

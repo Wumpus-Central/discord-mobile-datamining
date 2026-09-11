@@ -464,47 +464,88 @@ let items = [
         c5 = 0;
         c6 = 0;
         const iter = (function*(arg0) {
-          if (1 === tmp5) {
+          if (c6 === 2) {
+            c6 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp4 === 3) {
             if (arg0 === 1) {
-              c6 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c6 = 3;
-              return { value, done: true };
+              let obj = { value, done: true };
+              return obj;
             } else {
-              closure_131_2 = closure_4._localeLoadingPromises[closure_131_0];
-              if (null == closure_131_2) {
-                c6 = 3;
-                return { value: closure_4._loadLocale(closure_131_0), done: true };
-              } else {
-                let initialized = closure_131_2.initialized;
-                if (initialized) {
-                  initialized = !closure_131_1;
-                }
-                if (!initialized) {
-                  c5 = 2;
-                  c6 = 1;
-                  return { value: closure_131_2.current, done: false };
-                }
-              }
+              return { value: "HermesInternal", done: null };
             }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            return { value, done: true };
+          } else {
+            try {
+              c6 = 2;
+              if (0 === c5) {
+                if (arg0 === 1) {
+                  c6 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c6 = 3;
+                  obj = { value, done: true };
+                  return obj;
+                } else {
+                  closure_4 = self;
+                  closure_3 = tmp2;
+                  closure_131_1 = undefined;
+                  closure_131_0 = closure_1;
+                  let flag = closure_2;
+                  if (closure_2 === undefined) {
+                    flag = false;
+                  }
+                  closure_131_1 = flag;
+                  closure_131_2 = undefined;
+                  c5 = 1;
+                  c6 = 1;
+                  return { value: "PX_16", done: null };
+                }
+              } else {
+                if (1 === tmp5) {
+                  if (arg0 === 1) {
+                    c6 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c6 = 3;
+                    const obj1 = { value, done: true };
+                    return obj1;
+                  } else {
+                    closure_131_2 = closure_4._localeLoadingPromises[closure_131_0];
+                    if (null == closure_131_2) {
+                      c6 = 3;
+                      const obj2 = { value: closure_4._loadLocale(closure_131_0), done: true };
+                      return obj2;
+                    } else {
+                      let initialized = closure_131_2.initialized;
+                      if (initialized) {
+                        initialized = !closure_131_1;
+                      }
+                      if (!initialized) {
+                        c5 = 2;
+                        c6 = 1;
+                        const obj3 = { value: closure_131_2.current, done: false };
+                        return obj3;
+                      }
+                    }
+                  }
+                } else if (arg0 === 1) {
+                  c6 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c6 = 3;
+                  obj = { value, done: true };
+                  return obj;
+                }
+                c6 = 3;
+                return { value: "HermesInternal", done: null };
+              }
+            } catch (tmp17) {
+              c6 = tmp;
+              throw tmp17;
+            }
           }
-          yield "HermesInternal";
-          closure_4 = self;
-          closure_3 = tmp2;
-          closure_131_0 = closure_1;
-          let flag = closure_2;
-          if (closure_2 === undefined) {
-            flag = false;
-          }
-          closure_131_1 = flag;
-          return "PX_16";
         })();
         iter.next();
         return iter;
@@ -519,60 +560,16 @@ let items = [
         closure_1 = arg0;
         c4 = 0;
         c5 = 0;
-        const iter = (function*(arg0) {
-          if (c5 === 2) {
-            c5 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c5 = 2;
-              if (0 === c4) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c5 = 3;
-                  obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_3 = self;
-                  closure_2 = tmp2;
-                  closure_130_0 = undefined;
-                  let flag = closure_1;
-                  if (closure_1 === undefined) {
-                    flag = false;
-                  }
-                  closure_130_0 = flag;
-                  c4 = 1;
-                  c5 = 1;
-                  return { value: "PX_16", done: true };
-                }
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                const obj1 = { value, done: true };
-                return obj1;
-              } else {
-                c5 = 3;
-                obj = { value: closure_3.waitForLocaleLoaded(closure_3.defaultLocale, closure_130_0), done: true };
-                return obj;
-              }
-            } catch (tmp10) {
-              c5 = tmp;
-              throw tmp10;
-            }
+        const iter = (function*() {
+          closure_3 = self;
+          closure_2 = tmp2;
+          let flag = closure_1;
+          if (closure_1 === undefined) {
+            flag = false;
           }
+          closure_130_0 = flag;
+          yield "PX_16";
+          return closure_3.waitForLocaleLoaded(closure_3.defaultLocale, closure_130_0);
         })();
         iter.next();
         return iter;

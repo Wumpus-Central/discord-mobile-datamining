@@ -1,112 +1,195 @@
 // === Module 6890: ? ===
 
 // Module 6890
-import cancelAnimation from "cancelAnimation" /* 1636 */;
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6678 */;
-import _mod6682 from "module_6682" /* 6682 */;
-import _mod6689 from "module_6689" /* 6689 */;
-import _mod6891 from "module_6891" /* 6891 */;
-import ScrollableContainer from "ScrollableContainer" /* 6892 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import jsxProd from "jsxProd" /* 21 */;
+import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6699 */;
+import DEFAULT_HANDLE_HEIGHT from "DEFAULT_HANDLE_HEIGHT" /* 6702 */;
+import normalizeSnapPoint from "normalizeSnapPoint" /* 6715 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
-let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment", "overScrollMode", "keyboardDismissMode", "showsVerticalScrollIndicator", "contentContainerStyle", "refreshing", "onRefresh", "progressViewOffset", "refreshControl", "preserveScrollMomentum", "onScroll", "onScrollBeginDrag", "onScrollEndDrag", "lockableScrollableContentOffsetY", "onContentSizeChange"];
-let noop = fn(19);
-({ forwardRef: closure_4, useContext: hasOwnProperty, useImperativeHandle: metroRequire, useMemo: closure_7 } = noop);
-const jsx = fn(21).jsx;
-let closure_9 = { code: "function pnpm_createBottomSheetScrollableComponentTsx1(){const{preserveScrollMomentum,SCROLLABLE_DECELERATION_RATE_MAPPER,animatedScrollableState,showsVerticalScrollIndicator,SCROLLABLE_STATE}=this.__closure;return{...(preserveScrollMomentum?{}:{decelerationRate:SCROLLABLE_DECELERATION_RATE_MAPPER[animatedScrollableState.value]}),showsVerticalScrollIndicator:showsVerticalScrollIndicator?animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED:showsVerticalScrollIndicator};}" };
-
-export const createBottomSheetScrollableComponent = function createBottomSheetScrollableComponent(SCROLLVIEW, animatedComponent) {
-  const ScrollableComponent = animatedComponent;
-  return closure_4((overScrollMode, arg1) => {
-    ({ focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment } = overScrollMode);
-    overScrollMode = overScrollMode.overScrollMode;
-    let str = "never";
-    if (undefined !== overScrollMode) {
-      str = overScrollMode;
-    }
-    const keyboardDismissMode = overScrollMode.keyboardDismissMode;
-    let str2 = "interactive";
-    if (undefined !== keyboardDismissMode) {
-      str2 = keyboardDismissMode;
-    }
-    const showsVerticalScrollIndicator = overScrollMode.showsVerticalScrollIndicator;
-    SCROLLVIEW = tmp2;
-    ({ onRefresh, preserveScrollMomentum } = overScrollMode);
-    ({ onScroll, onContentSizeChange: closure_2 } = overScrollMode);
-    ({ contentContainerStyle, refreshing, progressViewOffset, refreshControl, onScrollBeginDrag, onScrollEndDrag, lockableScrollableContentOffsetY } = overScrollMode);
-    const tmp6 = hasOwnProperty(_mod6689.BottomSheetDraggableContext);
-    closure_3 = tmp6;
-    let obj = _mod6682;
-    scrollHandler = obj.useScrollHandler(scrollEventsHandlersHook, onScroll, onScrollBeginDrag, onScrollEndDrag, lockableScrollableContentOffsetY);
-    const scrollableRef = scrollHandler.scrollableRef;
-    ({ scrollableContentOffsetY, scrollHandler } = scrollHandler);
-    const tmp = undefined !== enableFooterMarginAdjustment && enableFooterMarginAdjustment;
-    const tmp3 = _objectWithoutProperties(overScrollMode, closure_2);
-    const bottomSheetInternal = _mod6682.useBottomSheetInternal();
-    const animatedScrollableState = bottomSheetInternal.animatedScrollableState;
-    const setContentSize = _mod6891.useBottomSheetContentSizeSetter().setContentSize;
-    if (!tmp6) {
-      if (bottomSheetInternal.enableContentPanningGesture) {
-        throw "'Scrollable' cannot be used out of the BottomSheet!";
+({ useMemo: c3, memo } = noop);
+const jsx = jsxProd.jsx;
+let closure_5 = { code: "function pnpm_BottomSheetContentTsx1(){const{animatedContainerHeight,INITIAL_CONTAINER_HEIGHT,animatedKeyboardState,animatedKeyboardHeightInContainer,animatedHandleHeight,animatedSheetHeight,keyboardBehavior,KEYBOARD_BEHAVIOR,KEYBOARD_STATE,isInTemporaryPosition}=this.__closure;if(animatedContainerHeight.get()===INITIAL_CONTAINER_HEIGHT){return 0;}const keyboardState=animatedKeyboardState.get();const keyboardHeightInContainer=animatedKeyboardHeightInContainer.get();const handleHeight=Math.max(0,animatedHandleHeight.get());const containerHeight=animatedContainerHeight.get();let contentHeight=animatedSheetHeight.get()-handleHeight;switch(keyboardBehavior){case KEYBOARD_BEHAVIOR.extend:if(keyboardState===KEYBOARD_STATE.SHOWN){contentHeight=contentHeight-keyboardHeightInContainer;}break;case KEYBOARD_BEHAVIOR.fillParent:if(!isInTemporaryPosition.get()){break;}if(keyboardState===KEYBOARD_STATE.SHOWN){contentHeight=containerHeight-handleHeight-keyboardHeightInContainer;}else{contentHeight=containerHeight-handleHeight;}break;case KEYBOARD_BEHAVIOR.interactive:{if(!isInTemporaryPosition.get()){break;}const contentWithKeyboardHeight=contentHeight+keyboardHeightInContainer;if(keyboardState===KEYBOARD_STATE.SHOWN){if(keyboardHeightInContainer+animatedSheetHeight.get()>containerHeight){contentHeight=containerHeight-keyboardHeightInContainer-handleHeight;}}else if(contentWithKeyboardHeight+handleHeight>containerHeight){contentHeight=containerHeight-handleHeight;}else{contentHeight=contentWithKeyboardHeight;}break;}}return Math.max(contentHeight,0);}" };
+let closure_6 = { code: "function pnpm_BottomSheetContentTsx2(){const{animatedContainerHeight,INITIAL_CONTAINER_HEIGHT,animatedHighestSnapPoint,animatedPosition,overDragResistanceFactor,animatedKeyboardState,KEYBOARD_STATE,animatedKeyboardHeightInContainer}=this.__closure;const containerHeight=animatedContainerHeight.get();if(containerHeight===INITIAL_CONTAINER_HEIGHT){return 0;}const highestSnapPoint=Math.max(animatedHighestSnapPoint.get(),animatedPosition.get());const overDragSafePaddingBottom=Math.sqrt(highestSnapPoint-containerHeight*-1)*overDragResistanceFactor;let paddingBottom=overDragSafePaddingBottom;if(animatedKeyboardState.get()===KEYBOARD_STATE.SHOWN){paddingBottom=overDragSafePaddingBottom+animatedKeyboardHeightInContainer.get();}return paddingBottom;}" };
+let closure_7 = { code: "function pnpm_BottomSheetContentTsx3(){const{animatedContainerHeight,INITIAL_CONTAINER_HEIGHT,enableDynamicSizing,animatedContentHeight,detached,animatedPaddingBottom,animate,animationConfigs,overrideReduceMotion,animatedContentHeightMax}=this.__closure;if(animatedContainerHeight.get()===INITIAL_CONTAINER_HEIGHT){return{};}if(enableDynamicSizing&&animatedContentHeight.get()===INITIAL_CONTAINER_HEIGHT){return{};}const paddingBottom=detached?0:animatedPaddingBottom.get();return{paddingBottom:animate({point:paddingBottom,configs:animationConfigs,overrideReduceMotion:overrideReduceMotion}),height:animate({point:animatedContentHeightMax.get()+paddingBottom,configs:animationConfigs,overrideReduceMotion:overrideReduceMotion})};}" };
+const memoResult = memo(function BottomSheetContentComponent(detached) {
+  detached = detached.detached;
+  const animationConfigs = detached.animationConfigs;
+  const overrideReduceMotion = detached.overrideReduceMotion;
+  const keyboardBehavior = detached.keyboardBehavior;
+  let derivedValue;
+  let derivedValue1;
+  let animatedStyle;
+  ({ accessible, accessibilityLabel, accessibilityHint, accessibilityRole, children } = detached);
+  let obj = detached(overrideReduceMotion[2]);
+  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const overDragResistanceFactor = bottomSheetInternal.overDragResistanceFactor;
+  const animatedPosition = bottomSheetInternal.animatedPosition;
+  const animatedHandleHeight = bottomSheetInternal.animatedHandleHeight;
+  const animatedHighestSnapPoint = bottomSheetInternal.animatedHighestSnapPoint;
+  const animatedContainerHeight = bottomSheetInternal.animatedContainerHeight;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const animatedSheetHeight = bottomSheetInternal.animatedSheetHeight;
+  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
+  const animatedKeyboardHeightInContainer = bottomSheetInternal.animatedKeyboardHeightInContainer;
+  const isInTemporaryPosition = bottomSheetInternal.isInTemporaryPosition;
+  let obj1 = detached(overrideReduceMotion[3]);
+  class N {
+    constructor() {
+      obj = animatedContainerHeight;
+      tmp2 = closure_0;
+      tmp3 = closure_2;
+      value = animatedContainerHeight.get();
+      if (value === closure_0(closure_2[4]).INITIAL_CONTAINER_HEIGHT) {
+        num = 0;
+        return 0;
+      } else {
+        tmp8 = animatedKeyboardState;
+        value1 = animatedKeyboardState.get();
+        tmp10 = closure_13;
+        value2 = closure_13.get();
+        tmp12 = globalThis;
+        _Math2 = Math;
+        tmp13 = animatedHandleHeight;
+        num2 = 0;
+        bound = Math.max(0, animatedHandleHeight.get());
+        value3 = obj.get();
+        obj2 = animatedSheetHeight;
+        diff = animatedSheetHeight.get() - bound;
+        tmp17 = keyboardBehavior;
+        if (tmp2(tmp3[5]).KEYBOARD_BEHAVIOR.extend === keyboardBehavior) {
+          diff1 = diff;
+          if (value1 === tmp2(tmp3[5]).KEYBOARD_STATE.SHOWN) {
+            diff1 = diff - value2;
+          }
+        } else if (tmp2(tmp3[5]).KEYBOARD_BEHAVIOR.fillParent === tmp17) {
+          tmp6 = isInTemporaryPosition;
+          diff1 = diff;
+          if (isInTemporaryPosition.get()) {
+            if (value1 === tmp2(tmp3[5]).KEYBOARD_STATE.SHOWN) {
+              diff2 = value3 - bound - value2;
+            } else {
+              diff2 = value3 - bound;
+            }
+            diff1 = diff2;
+          }
+        } else {
+          diff1 = diff;
+          if (tmp2(tmp3[5]).KEYBOARD_BEHAVIOR.interactive === tmp17) {
+            tmp18 = isInTemporaryPosition;
+            diff1 = diff;
+            if (isInTemporaryPosition.get()) {
+              sum = diff + value2;
+              if (value1 === tmp2(tmp3[5]).KEYBOARD_STATE.SHOWN) {
+                diff1 = diff;
+                if (value2 + obj2.get() > value3) {
+                  diff1 = value3 - value2 - bound;
+                }
+              } else {
+                if (sum + bound > value3) {
+                  sum = value3 - bound;
+                }
+                diff1 = sum;
+              }
+            }
+          }
+        }
+        _Math = Math;
+        return Math.max(diff1, 0);
       }
     }
-    let tmp4Result = cancelAnimation;
-    class J {
-      constructor() {
-        if (preserveScrollMomentum) {
-          obj = {};
-        } else {
-          obj = { decelerationRate: null };
-          tmp = closure_0;
-          tmp2 = closure_1;
-          tmp3 = animatedScrollableState;
-          obj.decelerationRate = closure_0(closure_1[7]).SCROLLABLE_DECELERATION_RATE_MAPPER[animatedScrollableState.value];
+  }
+  obj = { animatedContainerHeight, INITIAL_CONTAINER_HEIGHT: detached(overrideReduceMotion[4]).INITIAL_CONTAINER_HEIGHT, animatedKeyboardState, animatedKeyboardHeightInContainer, animatedHandleHeight, animatedSheetHeight, keyboardBehavior, KEYBOARD_BEHAVIOR: detached(overrideReduceMotion[5]).KEYBOARD_BEHAVIOR, KEYBOARD_STATE: detached(overrideReduceMotion[5]).KEYBOARD_STATE, isInTemporaryPosition };
+  N.__closure = obj;
+  N.__workletHash = 2170474579366;
+  N.__initData = overDragResistanceFactor;
+  let items = [animatedContainerHeight, animatedHandleHeight, animatedKeyboardHeightInContainer, animatedKeyboardState, animatedSheetHeight, isInTemporaryPosition, keyboardBehavior];
+  derivedValue = obj1.useDerivedValue(N, items);
+  const fn = function l() {
+    value = animatedContainerHeight.get();
+    if (value === DEFAULT_HANDLE_HEIGHT.INITIAL_CONTAINER_HEIGHT) {
+      return 0;
+    } else {
+      const _Math = Math;
+      value = animatedHighestSnapPoint.get();
+      const _Math2 = Math;
+      const result = Math.sqrt(Math.max(value, animatedPosition.get()) - -1 * value) * overDragResistanceFactor;
+      const value1 = animatedKeyboardState.get();
+      let sum = result;
+      if (value1 === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
+        sum = result + animatedKeyboardHeightInContainer.get();
+      }
+      return sum;
+    }
+  };
+  obj = { animatedContainerHeight, INITIAL_CONTAINER_HEIGHT: detached(overrideReduceMotion[4]).INITIAL_CONTAINER_HEIGHT, animatedHighestSnapPoint, animatedPosition, overDragResistanceFactor, animatedKeyboardState, KEYBOARD_STATE: detached(overrideReduceMotion[5]).KEYBOARD_STATE, animatedKeyboardHeightInContainer };
+  fn.__closure = obj;
+  fn.__workletHash = 3484699588399;
+  fn.__initData = animatedPosition;
+  const items1 = [overDragResistanceFactor, animatedPosition, animatedContainerHeight, animatedHighestSnapPoint, animatedKeyboardState, animatedKeyboardHeightInContainer];
+  derivedValue1 = detached(overrideReduceMotion[3]).useDerivedValue(fn, items1);
+  const obj4 = detached(overrideReduceMotion[3]);
+  class S {
+    constructor() {
+      tmp2 = closure_0;
+      tmp3 = closure_2;
+      value = animatedContainerHeight.get();
+      if (value === closure_0(closure_2[4]).INITIAL_CONTAINER_HEIGHT) {
+        return {};
+      } else {
+        tmp11 = enableDynamicSizing;
+        if (enableDynamicSizing) {
+          tmp4 = animatedContentHeight;
+          value1 = animatedContentHeight.get();
+          if (value1 === tmp2(tmp3[4]).INITIAL_CONTAINER_HEIGHT) {
+            return {};
+          }
         }
-        obj = {};
-        merged = Object.assign(obj);
-        tmp5 = closure_0;
-        if (closure_0) {
-          tmp6 = animatedScrollableState;
-          tmp7 = closure_0;
-          tmp8 = closure_1;
-          tmp5 = animatedScrollableState.value === closure_0(closure_1[7]).SCROLLABLE_STATE.UNLOCKED;
+        tmp6 = detached;
+        num = 0;
+        if (!detached) {
+          tmp7 = closure_16;
+          num = closure_16.get();
         }
-        obj.showsVerticalScrollIndicator = tmp5;
+        obj = { paddingBottom: null, height: null };
+        tmp2Result = tmp2(tmp3[6]);
+        obj = { point: null, configs: null, overrideReduceMotion: null };
+        obj.point = num;
+        tmp8 = animationConfigs;
+        obj.configs = animationConfigs;
+        tmp9 = overrideReduceMotion;
+        obj.overrideReduceMotion = overrideReduceMotion;
+        obj.paddingBottom = tmp2Result.animate(obj);
+        tmp2Result1 = tmp2(tmp3[6]);
+        obj1 = { point: null, configs: null, overrideReduceMotion: null };
+        tmp10 = closure_15;
+        obj1.point = closure_15.get() + num;
+        obj1.configs = animationConfigs;
+        obj1.overrideReduceMotion = overrideReduceMotion;
+        obj.height = tmp2Result1.animate(obj1);
         return obj;
       }
     }
-    obj = { preserveScrollMomentum, SCROLLABLE_DECELERATION_RATE_MAPPER: GESTURE_SOURCE.SCROLLABLE_DECELERATION_RATE_MAPPER, animatedScrollableState, showsVerticalScrollIndicator: tmp2, SCROLLABLE_STATE: GESTURE_SOURCE.SCROLLABLE_STATE };
-    J.__closure = obj;
-    J.__workletHash = 1780437272380;
-    J.__initData = __initData;
-    const items = [animatedScrollableState, undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator, preserveScrollMomentum];
-    const items1 = [tmp6];
-    const animatedProps = tmp4Result.useAnimatedProps(J, items);
-    tmp4Result = _mod6682;
-    const tmp10 = React5(() => {
-      let result1;
-      if (closure_3) {
-        const Gesture = closure_0(preserveScrollMomentum[8]).Gesture;
-        const result = Gesture.Native().simultaneousWithExternalGesture(tmp);
-        result1 = result.shouldCancelWhenOutside(false);
-        const NativeResult = Gesture.Native();
-      }
-      return result1;
-    }, items1);
-    const stableCallback = tmp4Result.useStableCallback((arg0, arg1) => {
-      setContentSize(arg1);
-      if (closure_1_2) {
-        tmp2(arg0, arg1);
-      }
-    });
-    const bottomSheetContentContainerStyle = _mod6682.useBottomSheetContentContainerStyle(tmp, contentContainerStyle);
-    timestampProducer(arg1, () => scrollableRef.current);
-    const tmp4Result1 = _mod6682;
-    const scrollableSetter = _mod6682.useScrollableSetter(scrollableRef, SCROLLVIEW, scrollableContentOffsetY, undefined !== onRefresh, focusHook);
-    obj = { ref: scrollableRef, nativeGesture: tmp10, animatedProps, overScrollMode: str, keyboardDismissMode: str2, refreshing, scrollEventThrottle: 16, progressViewOffset, contentContainerStyle: bottomSheetContentContainerStyle, onRefresh, onScroll: scrollHandler, onContentSizeChange: stableCallback, setContentSize, ScrollableComponent, refreshControl };
-    let merged = Object.assign(tmp3);
-    return jsx(ScrollableContainer.ScrollableContainer, { ref: scrollableRef, nativeGesture: tmp10, animatedProps, overScrollMode: str, keyboardDismissMode: str2, refreshing, scrollEventThrottle: 16, progressViewOffset, contentContainerStyle: bottomSheetContentContainerStyle, onRefresh, onScroll: scrollHandler, onContentSizeChange: stableCallback, setContentSize, ScrollableComponent, refreshControl });
-  });
-};
+  }
+  obj1 = { animatedContainerHeight, INITIAL_CONTAINER_HEIGHT: detached(overrideReduceMotion[4]).INITIAL_CONTAINER_HEIGHT, enableDynamicSizing, animatedContentHeight, detached, animatedPaddingBottom: derivedValue1, animate: detached(overrideReduceMotion[6]).animate, animationConfigs, overrideReduceMotion, animatedContentHeightMax: derivedValue };
+  S.__closure = obj1;
+  S.__workletHash = 8203943631786;
+  S.__initData = animatedHandleHeight;
+  const items2 = [overDragResistanceFactor, enableDynamicSizing, detached, animationConfigs, overrideReduceMotion, animatedContentHeight, derivedValue, animatedContainerHeight];
+  animatedStyle = detached(overrideReduceMotion[3]).useAnimatedStyle(S, items2);
+  const items3 = [animatedStyle, detached];
+  const style = keyboardBehavior(() => {
+    const items = [detached ? { overflow: "visible" } : { overflow: "hidden" }, animatedStyle];
+    return items;
+  }, items3);
+  if (bottomSheetInternal.enableContentPanningGesture) {
+    let View = tmp7(tmp[7]);
+  } else {
+    View = tmp7(tmp[3]).View;
+  }
+  return enableDynamicSizing(View, { accessible, accessibilityLabel, accessibilityHint, accessibilityRole, style, children });
+});
+memoResult.displayName = "BottomSheetContent";
+
+export const BottomSheetContent = memoResult;

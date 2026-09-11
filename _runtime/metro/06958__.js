@@ -1,29 +1,23 @@
 // === Module 6958: ? ===
 
 // Module 6958
-import noop from "module_19" /* 19 */;
-
-
-export const isComponentClass = (renderScrollComponent) => {
-  let BooleanResult = typeof renderScrollComponent === "function";
-  if (typeof renderScrollComponent === "function") {
-    const prototype = renderScrollComponent.prototype;
-    let isReactComponent;
-    if (prototype != null) {
-      isReactComponent = prototype.isReactComponent;
-    }
-    BooleanResult = Boolean(isReactComponent);
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    exports = getPrototypeOf.bind();
+  } else {
+    exports = (arg0) => {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
+    };
   }
-  return BooleanResult;
-};
-export const getValidComponent = (backdropComponent1) => {
-  let tmp = backdropComponent1;
-  if (!noop.isValidElement(backdropComponent1)) {
-    let element = null;
-    if (null != backdropComponent1) {
-      element = <backdropComponent1 />;
-    }
-    tmp = element;
-  }
-  return tmp;
-};
+  module.exports = exports;
+  return exports(arg0);
+}
+let exports = _getPrototypeOf;
+
+export default _getPrototypeOf;

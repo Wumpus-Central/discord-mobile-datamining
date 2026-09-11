@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "45844ffe000e8da4174843bafa8614af", name: "SuperReactionIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 77.5, height: 72, scales: [2, 3], hash: "215c6cf6cc2b74cad508b12b0e602266", name: "empty", type: "png" });

@@ -1,16 +1,28 @@
 // === Module 3990: ? ===
 
 // Module 3990
+import _typeof from "module_3695" /* 3695 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
-export default function isExists(arg0, arg1, arg2) {
-  if (arguments.length < 3) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("3 argument required, but only " + arguments.length + " present");
-    throw typeError;
-  } else {
-    const _Date = Date;
-    const date = new Date(arg0, arg1, arg2);
-    return date.getFullYear() === arg0 && date.getMonth() === arg1 && date.getDate() === arg2;
-  }
+if (!_typeof) {
+  let obj = { default: _typeof };
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
+  let tmp5 = obj;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+
+export default function isBefore(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  return time < _typeof.default(arg1).getTime();
 };
 export default exports.default;

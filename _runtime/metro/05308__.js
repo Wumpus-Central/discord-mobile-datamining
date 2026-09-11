@@ -1,228 +1,81 @@
 // === Module 5308: ? ===
 
 // Module 5308
-import _mod5263 from "module_5263" /* 5263 */;
-import _modDef5268 from "module_5268" /* 5268 */;
-import _modDef5280 from "module_5280" /* 5280 */;
-import get0thIfdOffset from "get0thIfdOffset" /* 5283 */;
-import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5284 */;
+import _mod5264 from "module_5264" /* 5264 */;
+import _modDef5269 from "module_5269" /* 5269 */;
+import get0thIfdOffset from "get0thIfdOffset" /* 5284 */;
+import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5285 */;
 
 require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
-let c3 = 16;
+let obj = { K3_III: 78420 };
+obj = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
 
 export default {
-  read(buffer, c5, arg2) {
-    let iter;
-    let obj = _modDef5268;
-    const byteOrder = obj.getByteOrder(buffer, c5);
+  read(byteLength, arg1, arg2, arg3) {
+    obj = _modDef5269;
+    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
+    const sum = arg1 + arg2;
     let obj1 = get0thIfdOffset;
-    let obj2 = get0thIfdOffset;
-    const ifd = obj1.readIfd(buffer, IFD_TYPE_0TH.IFD_TYPE_MPF, c5, obj2.get0thIfdOffset(buffer, c5, byteOrder), byteOrder, arg2);
-    if (ifd.MPEntry) {
-      const items = [];
-      const _Math = Math;
-      let num13 = 0;
-      if (0 < Math.ceil(ifd.MPEntry.value.length / c3)) {
-        while (true) {
-          items[num13] = {};
-          value = ifd.MPEntry.value;
-          let result = num13 * c3;
-          let obj3 = _modDef5280;
-          let typeSize = obj3.getTypeSize("LONG");
-          if (byteOrder === _modDef5268.LITTLE_ENDIAN) {
-            let num17 = 0;
-            let num18 = 0;
-            let num19 = 0;
-            if (0 < typeSize) {
-              do {
-                num18 = num18 + (value[result + num17] << 8 * num17);
-                num17 = num17 + 1;
-                num19 = num18;
-              } while (num17 < typeSize);
-            }
-            let num16 = num19;
-          } else {
-            let num14 = 0;
-            let num15 = 0;
-            num16 = 0;
-            if (0 < typeSize) {
-              do {
-                num15 = num15 + (value[result + num14] << 8 * (typeSize - 1 - num14));
-                num14 = num14 + 1;
-                num16 = num15;
-              } while (num14 < typeSize);
-            }
-          }
-          let items1 = [num16 >> 31 & 1, num16 >> 30 & 1, num16 >> 29 & 1];
-          let items2 = [];
-          if (items1[0]) {
-            let arr = items2.push("Dependent Parent Image");
-          }
-          if (items1[1]) {
-            arr = items2.push("Dependent Child Image");
-          }
-          if (items1[2]) {
-            let arr1 = items2.push("Representative Image");
-          }
-          obj = { value: items1, description: null };
-          let tmp14 = items2.join(", ") || "None";
-          obj.description = tmp14;
-          items[num13].ImageFlags = obj;
-          let tmp15 = num16 >> 24 & 7;
-          obj = { value: tmp15, description: null };
-          let str11 = "Unknown";
-          if (0 === tmp15) {
-            str11 = "JPEG";
-          }
-          obj.description = str11;
-          items[num13].ImageFormat = obj;
-          let tmp16 = 16777215 & num16;
-          obj1 = { value: tmp16, description: null };
-          let str12 = { 196608: "Baseline MP Primary Image", 65537: "Large Thumbnail (VGA equivalent)", 65538: "Large Thumbnail (Full HD equivalent)", 131073: "Multi-Frame Image (Panorama)", 131074: "Multi-Frame Image (Disparity)", 131075: "Multi-Frame Image (Multi-Angle)", 0: "Undefined" }[tmp16];
-          if (!str12) {
-            str12 = "Unknown";
-          }
-          obj1.description = str12;
-          items[num13].ImageType = obj1;
-          value = ifd.MPEntry.value;
-          let sum = num13 * c3 + 4;
-          let obj8 = _modDef5280;
-          let typeSize1 = obj8.getTypeSize("LONG");
-          if (byteOrder === _modDef5268.LITTLE_ENDIAN) {
-            let num23 = 0;
-            let num24 = 0;
-            let num25 = 0;
-            if (0 < typeSize1) {
-              do {
-                num24 = num24 + (value[sum + num23] << 8 * num23);
-                num23 = num23 + 1;
-                num25 = num24;
-              } while (num23 < typeSize1);
-            }
-            let num22 = num25;
-          } else {
-            let num20 = 0;
-            let num21 = 0;
-            num22 = 0;
-            if (0 < typeSize1) {
-              do {
-                num21 = num21 + (value[sum + num20] << 8 * (typeSize1 - 1 - num20));
-                num20 = num20 + 1;
-                num22 = num21;
-              } while (num20 < typeSize1);
-            }
-          }
-          obj2 = { value: num22, description: "" + num22 };
-          items[num13].ImageSize = obj2;
-          iter = ifd.MPEntry;
-          if (0 !== num13) {
-            break;
-          } else {
-            obj3 = { value: 0, description: "" };
-            items[num13].ImageOffset = obj3;
-            value = ifd.MPEntry.value;
-            let sum1 = num13 * c3 + 12;
-            let obj11 = _modDef5280;
-            let typeSize2 = obj11.getTypeSize("SHORT");
-            if (byteOrder === _modDef5268.LITTLE_ENDIAN) {
-              let num36 = 0;
-              let num37 = 0;
-              let num38 = 0;
-              if (0 < typeSize2) {
-                do {
-                  num37 = num37 + (value[sum1 + num36] << 8 * num36);
-                  num36 = num36 + 1;
-                  num38 = num37;
-                } while (num36 < typeSize2);
-              }
-              let num35 = num38;
-            } else {
-              let num33 = 0;
-              let num34 = 0;
-              num35 = 0;
-              if (0 < typeSize2) {
-                do {
-                  num34 = num34 + (value[sum1 + num33] << 8 * (typeSize2 - 1 - num33));
-                  num33 = num33 + 1;
-                  num35 = num34;
-                } while (num33 < typeSize2);
-              }
-            }
-            let obj4 = { value: num35, description: "" + num35 };
-            items[num13].DependentImage1EntryNumber = obj4;
-            let value1 = ifd.MPEntry.value;
-            let sum2 = num13 * c3 + 14;
-            let obj13 = _modDef5280;
-            let typeSize3 = obj13.getTypeSize("SHORT");
-            if (byteOrder === _modDef5268.LITTLE_ENDIAN) {
-              let num42 = 0;
-              let num43 = 0;
-              let num44 = 0;
-              if (0 < typeSize3) {
-                do {
-                  num43 = num43 + (value1[sum2 + num42] << 8 * num42);
-                  num42 = num42 + 1;
-                  num44 = num43;
-                } while (num42 < typeSize3);
-              }
-              let num41 = num44;
-            } else {
-              let num39 = 0;
-              let num40 = 0;
-              num41 = 0;
-              if (0 < typeSize3) {
-                do {
-                  num40 = num40 + (value1[sum2 + num39] << 8 * (typeSize3 - 1 - num39));
-                  num39 = num39 + 1;
-                  num41 = num40;
-                } while (num39 < typeSize3);
-              }
-            }
-            let obj5 = { value: num41, description: "" + num41 };
-            items[num13].DependentImage2EntryNumber = obj5;
-            buffer = buffer.buffer;
-            items[num13].image = buffer.slice(0, num22);
-            let obj15 = _mod5263;
-            let deferInitResult = obj15.deferInit(items[num13], "base64", function() {
-              return _mod5263.getBase64Image(this.image);
-            });
-            num13 = num13 + 1;
-            let _Math2 = Math;
-          }
-        }
-        value2 = iter.value;
-        const sum3 = num13 * c3 + 8;
-        const typeSize4 = _modDef5280.getTypeSize("LONG");
-        if (byteOrder === _modDef5268.LITTLE_ENDIAN) {
-          let num30 = 0;
-          let num31 = 0;
-          let num32 = 0;
-          if (0 < typeSize4) {
-            do {
-              num31 = num31 + (value2[sum3 + num30] << 8 * num30);
-              num30 = num30 + 1;
-              num32 = num31;
-            } while (num30 < typeSize4);
-          }
-          let num29 = num32;
-        } else {
-          let num27 = 0;
-          let num28 = 0;
-          num29 = 0;
-          if (0 < typeSize4) {
-            do {
-              num28 = num28 + (value2[sum3 + num27] << 8 * (typeSize4 - 1 - num27));
-              num27 = num27 + 1;
-              num29 = num28;
-            } while (num27 < typeSize4);
-          }
-        }
-        const sum4 = num29 + c5;
-      }
-      ifd.Images = items;
+    const ifd = obj1.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
+    let LevelInfo = ifd.PentaxModelID;
+    if (LevelInfo) {
+      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
     }
-    return ifd;
-  }
+    if (LevelInfo) {
+      LevelInfo = ifd.LevelInfo;
+    }
+    let tmp10 = ifd;
+    if (LevelInfo) {
+      const sum1 = sum + ifd.LevelInfo.__offset;
+      obj = {};
+      if (sum1 + 7 <= byteLength.byteLength) {
+        const int8 = byteLength.getInt8(sum1 + obj.CAMERA_ORIENTATION);
+        obj = { value: int8, description: null };
+        let str6 = "Horizontal (normal)";
+        if (0 !== int8) {
+          let str = "Rotate 270 CW";
+          if (1 !== int8) {
+            let str2 = "Rotate 180";
+            if (2 !== int8) {
+              let str3 = "Rotate 90 CW";
+              if (3 !== int8) {
+                let str4 = "Upwards";
+                if (4 !== int8) {
+                  let str5 = "Unknown";
+                  if (5 === int8) {
+                    str5 = "Downwards";
+                  }
+                  str4 = str5;
+                }
+                str3 = str4;
+              }
+              str2 = str3;
+            }
+            str = str2;
+          }
+          str6 = str;
+        }
+        obj.description = str6;
+        obj.CameraOrientation = obj;
+        const sum2 = sum1 + tmp17.ROLL_ANGLE;
+        const int16 = byteLength.getInt16(sum2, byteOrder === _modDef5269.LITTLE_ENDIAN);
+        obj1 = { value: int16, description: "" + -0.5 * int16 };
+        obj.RollAngle = obj1;
+        const sum3 = sum1 + tmp17.PITCH_ANGLE;
+        const int161 = byteLength.getInt16(sum3, byteOrder === _modDef5269.LITTLE_ENDIAN);
+        const obj2 = { value: int161, description: "" + -0.5 * int161 };
+        obj.PitchAngle = obj2;
+      }
+      const tmp7Result = _mod5264;
+      delete tmp[tmp2];
+      tmp10 = _mod5264.objectAssign({}, ifd, obj);
+      const objectAssignResult = _mod5264.objectAssign({}, ifd, obj);
+    }
+    return tmp10;
+  },
+  PENTAX_IFD_OFFSET: 10,
+  MODEL_ID: obj,
+  LIK3III: obj
 };

@@ -1,16 +1,16 @@
 // === Module 4057: ? ===
 
 // Module 4057
-import _typeof from "module_3693" /* 3693 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import module_4043 from "module_4043" /* 4043 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!module_4043) {
+  let obj = { default: module_4043 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4043;
 }
-_typeof = tmp3;
+module_4043 = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThursday(arg0) {
+export default function isThisWeek(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  return 4 === _typeof.default(arg0).getDay();
+  return module_4043.default(arg0, Date.now(), arg1);
 };
 export default exports.default;

@@ -1,13 +1,13 @@
 // === Module 5293: ? ===
 
 // Module 5293
-let obj = { 0: null, 5: "PentaxModelID", 555: "LevelInfo" };
+let obj = { 4: null };
 obj = {
-  name: "PentaxVersion",
-  description(join) {
-    return join.join(".");
+  name: "ShotInfo",
+  description(arg0) {
+    return arg0;
   }
 };
-obj.name = obj;
+obj[4] = obj;
 
 export default obj;

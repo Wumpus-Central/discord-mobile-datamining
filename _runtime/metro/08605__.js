@@ -1,16 +1,14 @@
 // === Module 8605: ? ===
 
 // Module 8605
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8545 from "module_8545" /* 8545 */;
-import _modDef8606 from "module_8606" /* 8606 */;
+import _modDef8581 from "module_8581" /* 8581 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Path = fn;
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Path {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    tmp = closure_3(this, Path);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Path);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeSpecularLighting);
+    tmp2 = closure_4;
+    obj = closure_4(FeSpecularLighting);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,31 +48,18 @@ class Path {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Path, _modDef8545);
+_inherits(FeSpecularLighting, _modDef8581);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    let obj = {};
-    const merged = Object.assign(Path(8536).extract(this, props));
-    obj.d = props.d;
-    obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const obj2 = Path(8536);
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8606, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FeSpecularLighting(8558).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Path, items);
-importDefaultResultResult.displayName = "Path";
+const importDefaultResultResult = _createClass(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

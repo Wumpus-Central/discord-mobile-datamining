@@ -1,67 +1,30 @@
 // === Module 6877: ? ===
 
 // Module 6877
-import _mod6879 from "module_6879" /* 6879 */;
-import noop from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod6721 from "module_6721" /* 6721 */;
 
-const useMemo = noop.useMemo;
-({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
-  style = style.style;
-  const indicatorStyle = style.indicatorStyle;
-  let DEFAULT_ACCESSIBLE = style.accessible;
-  if (DEFAULT_ACCESSIBLE === undefined) {
-    DEFAULT_ACCESSIBLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBLE;
-  }
-  let DEFAULT_ACCESSIBILITY_ROLE = style.accessibilityRole;
-  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
-    DEFAULT_ACCESSIBILITY_ROLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_ROLE;
-  }
-  let DEFAULT_ACCESSIBILITY_LABEL = style.accessibilityLabel;
-  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
-    DEFAULT_ACCESSIBILITY_LABEL = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_LABEL;
-  }
-  let DEFAULT_ACCESSIBILITY_HINT = style.accessibilityHint;
-  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
-    DEFAULT_ACCESSIBILITY_HINT = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_HINT;
-  }
-  let items = [style];
-  const items1 = [indicatorStyle];
-  const obj = {
-    style: useMemo(() => {
-      const items = [_mod6879.styles.container, React3.flatten(style)];
-      return items;
-    }, items),
-    accessible: null,
-    accessibilityRole: null,
-    accessibilityLabel: null,
-    accessibilityHint: null,
-    collapsable: true,
-    children: null
-  };
-  const tmp9 = useMemo(() => {
-    const items = [_mod6879.styles.container, React3.flatten(style)];
-    return items;
-  }, items);
-  obj.accessible = DEFAULT_ACCESSIBLE;
-  obj.accessibilityRole = DEFAULT_ACCESSIBILITY_ROLE;
-  obj.accessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL;
-  obj.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
-  const items2 = [
-    closure_5(closure_4, {
-      style: useMemo(() => {
-        const items = [_mod6879.styles.indicator, React3.flatten(indicatorStyle)];
-        return items;
-      }, items1)
-    }),
-    style.children
-  ];
-  obj.children = items2;
-  return closure_6(closure_4, obj);
-});
-memoResult.displayName = "BottomSheetHandle";
+const useLayoutEffect = _mod19.useLayoutEffect;
 
-export default memoResult;
+export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  if (obj.isFabricInstalled()) {
+    useLayoutEffect(() => {
+      if (closure_0) {
+        if (closure_0.current) {
+          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
+            if (typeof closure_0.current.getBoundingClientRect === "function") {
+              const current2 = closure_0.current;
+              closure_1(current2.getBoundingClientRect());
+            }
+          } else {
+            const current = closure_0.current;
+            closure_1(current.unstable_getBoundingClientRect());
+          }
+        }
+      }
+    });
+  }
+  obj = _mod6721;
+};

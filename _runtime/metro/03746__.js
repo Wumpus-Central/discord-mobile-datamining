@@ -1,44 +1,72 @@
 // === Module 3746: ? ===
 
 // Module 3746
-const obj = { lessThanXSeconds: { one: { standalone: "manje od 1 sekunde", withPrepositionAgo: "manje od 1 sekunde", withPrepositionIn: "manje od 1 sekundu" }, dual: "manje od {{count}} sekunde", other: "manje od {{count}} sekundi" }, xSeconds: { one: { standalone: "1 sekunda", withPrepositionAgo: "1 sekunde", withPrepositionIn: "1 sekundu" }, dual: "{{count}} sekunde", other: "{{count}} sekundi" }, halfAMinute: "pola minute", lessThanXMinutes: { one: { standalone: "manje od 1 minute", withPrepositionAgo: "manje od 1 minute", withPrepositionIn: "manje od 1 minutu" }, dual: "manje od {{count}} minute", other: "manje od {{count}} minuta" }, xMinutes: { one: { standalone: "1 minuta", withPrepositionAgo: "1 minute", withPrepositionIn: "1 minutu" }, dual: "{{count}} minute", other: "{{count}} minuta" }, aboutXHours: { one: { standalone: "oko 1 sat", withPrepositionAgo: "oko 1 sat", withPrepositionIn: "oko 1 sat" }, dual: "oko {{count}} sata", other: "oko {{count}} sati" }, xHours: { one: { standalone: "1 sat", withPrepositionAgo: "1 sat", withPrepositionIn: "1 sat" }, dual: "{{count}} sata", other: "{{count}} sati" }, xDays: { one: { standalone: "1 dan", withPrepositionAgo: "1 dan", withPrepositionIn: "1 dan" }, dual: "{{count}} dana", other: "{{count}} dana" }, aboutXWeeks: { one: { standalone: "oko 1 tjedan", withPrepositionAgo: "oko 1 tjedan", withPrepositionIn: "oko 1 tjedan" }, dual: "oko {{count}} tjedna", other: "oko {{count}} tjedana" }, xWeeks: { one: { standalone: "1 tjedan", withPrepositionAgo: "1 tjedan", withPrepositionIn: "1 tjedan" }, dual: "{{count}} tjedna", other: "{{count}} tjedana" }, aboutXMonths: { one: { standalone: "oko 1 mjesec", withPrepositionAgo: "oko 1 mjesec", withPrepositionIn: "oko 1 mjesec" }, dual: "oko {{count}} mjeseca", other: "oko {{count}} mjeseci" }, xMonths: { one: { standalone: "1 mjesec", withPrepositionAgo: "1 mjesec", withPrepositionIn: "1 mjesec" }, dual: "{{count}} mjeseca", other: "{{count}} mjeseci" }, aboutXYears: { one: { standalone: "oko 1 godinu", withPrepositionAgo: "oko 1 godinu", withPrepositionIn: "oko 1 godinu" }, dual: "oko {{count}} godine", other: "oko {{count}} godina" }, xYears: { one: { standalone: "1 godina", withPrepositionAgo: "1 godine", withPrepositionIn: "1 godinu" }, dual: "{{count}} godine", other: "{{count}} godina" }, overXYears: { one: { standalone: "preko 1 godinu", withPrepositionAgo: "preko 1 godinu", withPrepositionIn: "preko 1 godinu" }, dual: "preko {{count}} godine", other: "preko {{count}} godina" }, almostXYears: { one: { standalone: "gotovo 1 godinu", withPrepositionAgo: "gotovo 1 godinu", withPrepositionIn: "gotovo 1 godinu" }, dual: "gotovo {{count}} godine", other: "gotovo {{count}} godina" } };
+import module_2035 from "module_2035" /* 2035 */;
+import module_2036 from "module_2036" /* 2036 */;
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  one = obj[arg0];
-  if (typeof one === "string") {
-    let tmp7 = one;
-    if (null != addSuffix) {
-      tmp7 = one;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `prije ${one}`;
-        }
-        text = `za ${one}`;
-      }
+if (!module_2035) {
+  let obj = { default: module_2035 };
+} else {
+  obj = module_2035;
+}
+if (!module_2036) {
+  obj = { default: module_2036 };
+  let obj2 = obj;
+} else {
+  obj2 = module_2036;
+}
+const date = {
+  ordinalNumber: obj2.default({
+    matchPattern: /^(\d+)(ième|ère|ème|er|e)?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match);
     }
-    return tmp7;
-  } else {
-    if (1 !== arg1) {
-      if (1 < arg1 % 10) {
-        if (arg1 % 10 < 5) {
-          const _String = String;
-          if ("1" !== str.substr(-2, 1)) {
-            const _String3 = String;
-            let replaced = one.dual.replace("{{count}}", String(arg1));
-          }
-          str = String(arg1);
-        }
-      }
-      const _String2 = String;
-      replaced = one.other.replace("{{count}}", String(arg1));
-    }
-    if (null == addSuffix) {
-      const standalone = one.one.standalone;
-    }
-    if (!addSuffix.comparison) {
-      const withPrepositionAgo = one.one.withPrepositionAgo;
-    }
-    ({ one, withPrepositionIn } = one);
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
+};
+obj2 = { matchPatterns: { narrow: /^(av\.J\.C|ap\.J\.C|ap\.J\.-C)/i, abbreviated: /^(av\.J\.-C|av\.J-C|apr\.J\.-C|apr\.J-C|ap\.J-C)/i, wide: /^(avant Jésus-Christ|après Jésus-Christ)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj3 = { any: null };
+const items = [/^av/i, /^ap/i];
+obj3.any = items;
+obj2.parsePatterns = obj3;
+date.era = obj.default(obj2);
+const obj4 = {
+  matchPatterns: { narrow: /^T?[1234]/i, abbreviated: /^[1234](er|ème|e)? trim\.?/i, wide: /^[1234](er|ème|e)? trimestre/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
   }
 };
+const obj5 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj5.any = items1;
+obj4.parsePatterns = obj5;
+date.quarter = obj.default(obj4);
+const obj6 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(janv|févr|mars|avr|mai|juin|juill|juil|août|sept|oct|nov|déc)\.?/i, wide: /^(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { narrow: null, any: null };
+const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj7.narrow = items2;
+const items3 = [/^ja/i, /^f/i, /^mar/i, /^av/i, /^ma/i, /^juin/i, /^juil/i, /^ao/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj7.any = items3;
+obj6.parsePatterns = obj7;
+date.month = obj.default(obj6);
+const obj8 = { matchPatterns: { narrow: /^[lmjvsd]/i, short: /^(di|lu|ma|me|je|ve|sa)/i, abbreviated: /^(dim|lun|mar|mer|jeu|ven|sam)\.?/i, wide: /^(dimanche|lundi|mardi|mercredi|jeudi|vendredi|samedi)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj9 = { narrow: null, any: null };
+const items4 = [/^d/i, /^l/i, /^m/i, /^m/i, /^j/i, /^v/i, /^s/i];
+obj9.narrow = items4;
+const items5 = [/^di/i, /^lu/i, /^ma/i, /^me/i, /^je/i, /^ve/i, /^sa/i];
+obj9.any = items5;
+obj8.parsePatterns = obj9;
+date.day = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^(a|p|minuit|midi|mat\.?|ap\.?m\.?|soir|nuit)/i, any: /^([ap]\.?\s?m\.?|du matin|de l'après[-\s]midi|du soir|de la nuit)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^a/i, pm: /^p/i, midnight: /^min/i, noon: /^mid/i, morning: /mat/i, afternoon: /ap/i, evening: /soir/i, night: /nuit/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj10);
+
+export default date;
 export default exports.default;

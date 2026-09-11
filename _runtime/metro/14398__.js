@@ -1,7 +1,14 @@
 // === Module 14398: ? ===
 
 // Module 14398
-import _mod14384 from "module_14384" /* 14384 */;
+import _mod14399 from "module_14399" /* 14399 */;
 
 
-export default (arg0) => Object(_mod14384(arg0));
+export default (arg0) => {
+  const tmp = _mod14399(arg0);
+  let num = 0;
+  if (tmp > 0) {
+    num = min(tmp, 9007199254740991);
+  }
+  return num;
+};

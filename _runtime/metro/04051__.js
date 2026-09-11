@@ -1,16 +1,16 @@
 // === Module 4051: ? ===
 
 // Module 4051
-import module_4043 from "module_4043" /* 4043 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import module_4040 from "module_4040" /* 4040 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
-if (!module_4043) {
-  let obj = { default: module_4043 };
+if (!module_4040) {
+  let obj = { default: module_4040 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4043;
+  tmp3 = module_4040;
 }
-module_4043 = tmp3;
+module_4040 = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMinute(arg0) {
+export default function isThisHour(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4043.default(Date.now(), arg0);
+  return module_4040.default(Date.now(), arg0);
 };
 export default exports.default;

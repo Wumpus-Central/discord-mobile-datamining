@@ -1,8 +1,8 @@
 // === Module 3993: ? ===
 
 // Module 3993
-import _typeof from "module_3693" /* 3693 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import _typeof from "module_3695" /* 3695 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -19,9 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFuture(arg0) {
+export default function isFirstDayOfMonth(arg0) {
   requiredArgs.default(1, arguments);
-  const time = _typeof.default(arg0).getTime();
-  return time > Date.now();
+  return 1 === _typeof.default(arg0).getDate();
 };
 export default exports.default;

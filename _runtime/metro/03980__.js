@@ -1,26 +1,42 @@
 // === Module 3980: ? ===
 
 // Module 3980
-import _typeof from "module_3693" /* 3693 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import differenceInCalendarWeeks from "differenceInCalendarWeeks" /* 3884 */;
+import lastDayOfMonth from "lastDayOfMonth" /* 3981 */;
+import startOfMonth from "startOfMonth" /* 3911 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!differenceInCalendarWeeks) {
+  let obj = { default: differenceInCalendarWeeks };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = differenceInCalendarWeeks;
 }
-_typeof = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+differenceInCalendarWeeks = tmp3;
+if (!lastDayOfMonth) {
+  obj = { default: lastDayOfMonth };
   let tmp5 = obj;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = lastDayOfMonth;
 }
-requiredArgs = tmp5;
+lastDayOfMonth = tmp5;
+if (!startOfMonth) {
+  obj = { default: startOfMonth };
+  let tmp7 = obj;
+} else {
+  tmp7 = startOfMonth;
+}
+startOfMonth = tmp7;
+if (!requiredArgs) {
+  const obj1 = { default: requiredArgs };
+  let tmp9 = obj1;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function getYear(arg0) {
+export default function getWeeksInMonth(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getFullYear();
+  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
 };
 export default exports.default;

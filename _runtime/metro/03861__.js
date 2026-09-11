@@ -1,24 +1,24 @@
 // === Module 3861: ? ===
 
 // Module 3861
-import module_3697 from "module_3697" /* 3697 */;
-import module_3841 from "module_3841" /* 3841 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import module_3699 from "module_3699" /* 3699 */;
+import module_3844 from "module_3844" /* 3844 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
-if (!module_3697) {
-  let obj = { default: module_3697 };
+if (!module_3699) {
+  let obj = { default: module_3699 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3697;
+  tmp3 = module_3699;
 }
-module_3697 = tmp3;
-if (!module_3841) {
-  obj = { default: module_3841 };
+module_3699 = tmp3;
+if (!module_3844) {
+  obj = { default: module_3844 };
   let tmp5 = obj;
 } else {
-  tmp5 = module_3841;
+  tmp5 = module_3844;
 }
-module_3841 = tmp5;
+module_3844 = tmp5;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp7 = obj;
@@ -27,8 +27,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function addWeeks(arg0, arg1) {
+export default function addQuarters(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_3841.default(arg0, 7 * module_3697.default(arg1));
+  return module_3844.default(arg0, 3 * module_3699.default(arg1));
 };
 export default exports.default;

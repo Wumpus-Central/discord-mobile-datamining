@@ -2,7 +2,7 @@
 
 // Module 8594
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8545 from "module_8545" /* 8545 */;
+import _modDef8581 from "module_8581" /* 8581 */;
 import _modDef8595 from "module_8595" /* 8595 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -10,7 +10,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Line = fn;
+const FeOffset = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,12 +32,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Line {
+class FeOffset {
   constructor() {
     self = this;
-    tmp = closure_3(this, Line);
+    tmp = closure_3(this, FeOffset);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Line);
+    obj = hasOwnProperty(FeOffset);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -52,36 +52,32 @@ class Line {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Line, _modDef8545);
+_inherits(FeOffset, _modDef8581);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    let obj = {};
-    ({ x1, y1, x2, y2 } = props);
-    const merged = Object.assign(Line(8536).extract(this, props));
-    obj.x1 = x1;
-    obj.y1 = y1;
-    obj.x2 = x2;
-    obj.y2 = y2;
-    obj = {
+    const merged = Object.assign(this.props);
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const obj2 = Line(8536);
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8595, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const merged1 = Object.assign(FeOffset(8580).extractFilter(this.props));
+    const obj2 = FeOffset(8580);
+    const merged2 = Object.assign(FeOffset(8580).extractIn(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Line, items);
-importDefaultResultResult.displayName = "Line";
-importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
+const importDefaultResultResult = _createClass(FeOffset, items);
+importDefaultResultResult.displayName = "FeOffset";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.dx = 0;
+obj.dy = 0;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

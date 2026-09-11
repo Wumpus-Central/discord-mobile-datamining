@@ -1,19 +1,102 @@
 // === Module 6793: ? ===
 
 // Module 6793
-import ComposedGestureName from "ComposedGestureName" /* 6764 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6773 */;
-import _mod6788 from "module_6788" /* 6788 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
-
-export const useFlingGesture = function useFlingGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
+export const isComposedGesture = function isComposedGesture(gesture) {
+  return "handlerTags" in gesture;
+};
+export const prepareRelations = function prepareRelations(config, handlerTag) {
+  let simultaneousWith = config.simultaneousWith;
+  closure_0 = handlerTag;
+  if (simultaneousWith) {
+    const _Array = Array;
+    if (Array.isArray(simultaneousWith)) {
+      const item = simultaneousWith.forEach(function processSingleGesture(externalSimultaneousHandlers) {
+        if ("handlerTags" in externalSimultaneousHandlers) {
+          let prop = externalSimultaneousHandlers.externalSimultaneousHandlers;
+        } else {
+          prop = externalSimultaneousHandlers.gestureRelations.simultaneousHandlers;
+        }
+        if (!prop.includes(closure_0)) {
+          prop.push(closure_0);
+        }
+      });
+    } else {
+      if ("handlerTags" in simultaneousWith) {
+        let prop = simultaneousWith.externalSimultaneousHandlers;
+      } else {
+        prop = simultaneousWith.gestureRelations.simultaneousHandlers;
+      }
+      if (!prop.includes(handlerTag)) {
+        prop.push(handlerTag);
+      }
+    }
   }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod6788.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
+  simultaneousWith = config.simultaneousWith;
+  if (simultaneousWith) {
+    const _Array2 = Array;
+    if (Array.isArray(simultaneousWith)) {
+      let flatMapResult = simultaneousWith.flatMap((handlerTags) => {
+        if ("handlerTags" in handlerTags) {
+          handlerTags = handlerTags.handlerTags;
+        } else {
+          handlerTags = [];
+          handlerTags[0] = handlerTags.handlerTag;
+        }
+        return handlerTags;
+      });
+    } else if ("handlerTags" in simultaneousWith) {
+      flatMapResult = simultaneousWith.handlerTags;
+    } else {
+      flatMapResult = [simultaneousWith.handlerTag];
+    }
+  } else {
+    const obj = { simultaneousHandlers: [], waitFor: null, blocksHandlers: null };
+    const requireToFail = config.requireToFail;
+    if (requireToFail) {
+      const _Array3 = Array;
+      if (Array.isArray(requireToFail)) {
+        let flatMapResult1 = requireToFail.flatMap((handlerTags) => {
+          if ("handlerTags" in handlerTags) {
+            handlerTags = handlerTags.handlerTags;
+          } else {
+            handlerTags = [];
+            handlerTags[0] = handlerTags.handlerTag;
+          }
+          return handlerTags;
+        });
+      } else if ("handlerTags" in requireToFail) {
+        flatMapResult1 = requireToFail.handlerTags;
+      } else {
+        flatMapResult1 = [requireToFail.handlerTag];
+      }
+    } else {
+      obj.waitFor = [];
+      const block = config.block;
+      if (block) {
+        const _Array4 = Array;
+        if (Array.isArray(block)) {
+          let flatMapResult2 = block.flatMap((handlerTags) => {
+            if ("handlerTags" in handlerTags) {
+              handlerTags = handlerTags.handlerTags;
+            } else {
+              handlerTags = [];
+              handlerTags[0] = handlerTags.handlerTag;
+            }
+            return handlerTags;
+          });
+        } else if ("handlerTags" in block) {
+          flatMapResult2 = block.handlerTags;
+        } else {
+          flatMapResult2 = [block.handlerTag];
+        }
+      } else {
+        obj.blocksHandlers = [];
+        return obj;
+      }
+    }
+  }
+};
+export const containsDuplicates = function containsDuplicates(flatMapResult) {
+  return new Set(flatMapResult).size !== flatMapResult.length;
 };

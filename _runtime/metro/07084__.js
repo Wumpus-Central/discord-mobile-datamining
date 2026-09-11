@@ -2,13 +2,17 @@
 
 // Module 7084
 
-export const findLastIndex = function findLastIndex(arg0, fn) {
-  let diff = arg0.length - 1;
-  if (0 <= diff) {
-    while (!fn(arg0[diff])) {
-      diff = diff - 1;
+export function throttle(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return function() {
+    if (null == timeout) {
+      const self = this;
+      closure_0.apply(this, tmp);
+      const _setTimeout = setTimeout;
+      timeout = setTimeout(() => {
+        c2 = undefined;
+      }, closure_1);
     }
-    return diff;
-  }
-  return -1;
-};
+  };
+}

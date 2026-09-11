@@ -1,14 +1,12 @@
 // === Module 8581: ? ===
 
 // Module 8581
-import _modDef8560 from "module_8560" /* 8560 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FeImage = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,38 +26,42 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeImage {
+_possibleConstructorReturnDefault;
+class FilterPrimitive {
   constructor() {
     self = this;
-    tmp = c2(this, FeImage);
-    tmp2 = closure_4;
-    obj = closure_4(FeImage);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_0(this, FilterPrimitive);
+    items1 = [...items];
+    tmp2 = c2;
+    obj = c2(FilterPrimitive);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.root = null;
+    tmp3Result.refMethod = (root) => {
+      closure_0.root = root;
+    };
+    tmp3Result.setNativeProps = (arg0) => {
+      root = root.root;
+      if (root != null) {
+        root.setNativeProps(arg0);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeImage, _modDef8560);
-const entry = {
-  key: "render",
-  value: function render() {
-    const result = FeImage(8537).warnUnimplementedFilter();
-    return null;
-  }
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(FeImage, items);
-importDefaultResultResult.displayName = "FeImage";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+_classCallCheck = FilterPrimitive;
+_inherits(FilterPrimitive, fn(19).Component);
+const importDefaultResultResult = _createClass(FilterPrimitive);
+importDefaultResultResult.defaultPrimitiveProps = {};
 
 export default importDefaultResultResult;

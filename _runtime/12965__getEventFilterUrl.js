@@ -1,0 +1,273 @@
+// === Module 12965: _getEventFilterUrl ===
+
+// Module 12965 (_getEventFilterUrl)
+import _mod12890 from "module_12890" /* 12890 */;
+import _mod12899 from "module_12899" /* 12899 */;
+import _mod12901 from "module_12901" /* 12901 */;
+import _mod12918 from "module_12918" /* 12918 */;
+import setupIntegration from "module_12946" /* 12946 */;
+
+function _getEventFilterUrl(arg0) {
+  try {
+    const frames = arg0.exception.values[0].stacktrace.frames;
+    let tmp4 = null;
+    if (frames) {
+      tmp4 = (function _getLastValidUrl() {
+        let tmp2;
+        items = frames;
+        if (frames === undefined) {
+          items = [];
+        }
+        let diff = items.length - 1;
+        if (0 <= diff) {
+          while (true) {
+            tmp2 = items[diff];
+            if (tmp2) {
+              if ("<anonymous>" !== tmp2.filename) {
+                if ("[native code]" !== tmp2.filename) {
+                  break;
+                }
+              }
+            }
+            diff = diff - 1;
+          }
+          return tmp2.filename || null;
+        }
+        return null;
+      })(frames);
+    }
+    return tmp4;
+  } catch (err) {
+    if (_mod12918.DEBUG_BUILD) {
+      const logger = _mod12890.logger;
+      const _HermesInternal = HermesInternal;
+      logger.error("Cannot extract url for event " + _mod12901.getEventDescription(tmp));
+      const tmp6Result = _mod12901;
+    }
+    return null;
+  }
+}
+let items = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, "undefined is not an object (evaluating 'a.L')", "can't redefine non-configurable property \"solana\"", "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler", /^Non-Error promise rejection captured with value: Object Not Found Matching Id:\d+, MethodName:simulateEvent, ParamCount:\d+$/];
+
+export const inboundFiltersIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  obj = {
+    name: "InboundFilters",
+    processEvent(type, arg1, getOptions) {
+      let options = getOptions.getOptions();
+      if (obj === undefined) {
+        obj = {};
+      }
+      if (options === undefined) {
+        options = {};
+      }
+      items = [...obj.allowUrls || [], ...tmp2];
+      const items1 = [...obj.denyUrls || [], ...tmp4];
+      const items2 = [...obj.ignoreErrors || [], ...tmp6, ...tmp7];
+      const items3 = [...obj.ignoreTransactions || [], ...tmp9];
+      if (tmp10) {
+        if ((function _isSentryError(type) {
+          try {
+            return "SentryError" === type.exception.values[0].type;
+          } catch (err) {
+            return false;
+          }
+        })(type)) {
+          let flag6 = true;
+          if (_mod12918.DEBUG_BUILD) {
+            const logger6 = _mod12890.logger;
+            const _HermesInternal6 = HermesInternal;
+            logger6.warn("Event dropped due to being internal Sentry Error.\nEvent: " + _mod12901.getEventDescription(type));
+            flag6 = true;
+          }
+        }
+        let tmp77 = null;
+        if (!flag6) {
+          tmp77 = type;
+        }
+        return tmp77;
+      }
+      let flag = false;
+      if (!type.type) {
+        flag = false;
+        if (items2.length) {
+          flag = (function _getPossibleEventMessages(message) {
+            items = [];
+            if (message.message) {
+              items.push(message.message);
+            }
+            try {
+              const iter = message.exception.values[message.exception.values.length - 1];
+              value = iter;
+              if (iter) {
+                value = iter.value;
+              }
+              if (value) {
+                items.push(iter.value);
+                if (iter.type) {
+                  const _HermesInternal = HermesInternal;
+                  items.push("" + iter.type + ": " + iter.value);
+                }
+              }
+              return items;
+            } catch (err) {
+            }
+          })(type).some((item) => {
+            obj = obj(dependencyMap[4]);
+            return obj.stringMatchesSomePattern(item, items2);
+          });
+          const obj3 = (function _getPossibleEventMessages(message) {
+            items = [];
+            if (message.message) {
+              items.push(message.message);
+            }
+            try {
+              const iter = message.exception.values[message.exception.values.length - 1];
+              value = iter;
+              if (iter) {
+                value = iter.value;
+              }
+              if (value) {
+                items.push(iter.value);
+                if (iter.type) {
+                  const _HermesInternal = HermesInternal;
+                  items.push("" + iter.type + ": " + iter.value);
+                }
+              }
+              return items;
+            } catch (err) {
+            }
+          })(type);
+        }
+      }
+      if (flag) {
+        flag6 = true;
+        if (_mod12918.DEBUG_BUILD) {
+          const logger5 = _mod12890.logger;
+          const _HermesInternal5 = HermesInternal;
+          logger5.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + _mod12901.getEventDescription(type));
+          flag6 = true;
+        }
+      } else {
+        let flag2 = false;
+        if (!type.type) {
+          flag2 = false;
+          if (type.exception) {
+            flag2 = false;
+            if (type.exception.values) {
+              flag2 = false;
+              if (0 !== type.exception.values.length) {
+                const message = type.message;
+                let tmp11 = !message;
+                if (!message) {
+                  const values = type.exception.values;
+                  tmp11 = !values.some((stacktrace) => {
+                    stacktrace = stacktrace.stacktrace;
+                    if (!stacktrace) {
+                      let type = stacktrace.type;
+                      if (type) {
+                        type = "Error" !== stacktrace.type;
+                      }
+                      stacktrace = type;
+                    }
+                    if (!stacktrace) {
+                      stacktrace = stacktrace.value;
+                    }
+                    return stacktrace;
+                  });
+                }
+                flag2 = tmp11;
+              }
+            }
+          }
+        }
+        if (flag2) {
+          flag6 = true;
+          if (_mod12918.DEBUG_BUILD) {
+            const logger4 = _mod12890.logger;
+            const _HermesInternal4 = HermesInternal;
+            logger4.warn("Event dropped due to not having an error message, error type or stacktrace.\nEvent: " + _mod12901.getEventDescription(type));
+            flag6 = true;
+          }
+        } else {
+          let flag3 = false;
+          if ("transaction" === type.type) {
+            flag3 = false;
+            if (items3.length) {
+              const transaction = type.transaction;
+              let result = transaction;
+              if (result) {
+                result = _mod12899.stringMatchesSomePattern(transaction, items3);
+              }
+              flag3 = result;
+            }
+          }
+          if (flag3) {
+            flag6 = true;
+            if (_mod12918.DEBUG_BUILD) {
+              const logger3 = _mod12890.logger;
+              const _HermesInternal3 = HermesInternal;
+              logger3.warn("Event dropped due to being matched by `ignoreTransactions` option.\nEvent: " + _mod12901.getEventDescription(type));
+              flag6 = true;
+            }
+          } else {
+            let flag4 = false;
+            if (items1.length) {
+              const tmp16 = _getEventFilterUrl(type);
+              let result1 = tmp16;
+              if (result1) {
+                result1 = _mod12899.stringMatchesSomePattern(tmp16, items1);
+              }
+              flag4 = result1;
+            }
+            if (flag4) {
+              flag6 = true;
+              if (_mod12918.DEBUG_BUILD) {
+                const logger2 = _mod12890.logger;
+                const eventDescription = _mod12901.getEventDescription(type);
+                const _HermesInternal2 = HermesInternal;
+                logger2.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + eventDescription + ".\nUrl: " + _getEventFilterUrl(type));
+                flag6 = true;
+              }
+            } else {
+              let flag5 = true;
+              if (items.length) {
+                const tmp21 = _getEventFilterUrl(type);
+                let result2 = !tmp21;
+                if (tmp21) {
+                  result2 = _mod12899.stringMatchesSomePattern(tmp21, items);
+                }
+                flag5 = result2;
+              }
+              flag6 = false;
+              if (!flag5) {
+                flag6 = true;
+                if (_mod12918.DEBUG_BUILD) {
+                  const logger = _mod12890.logger;
+                  const eventDescription1 = _mod12901.getEventDescription(type);
+                  let _HermesInternal = HermesInternal;
+                  logger.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + eventDescription1 + ".\nUrl: " + _getEventFilterUrl(type));
+                  flag6 = true;
+                }
+              }
+            }
+          }
+        }
+      }
+      const tmp = obj.allowUrls || [];
+      tmp10 = undefined === obj.ignoreInternal || obj.ignoreInternal;
+      tmp2 = options.allowUrls || [];
+      const tmp3 = obj.denyUrls || [];
+      tmp4 = options.denyUrls || [];
+      const tmp5 = obj.ignoreErrors || [];
+      tmp6 = options.ignoreErrors || [];
+      tmp7 = obj.disableErrorDefaults ? [] : items;
+      const tmp8 = obj.ignoreTransactions || [];
+      tmp9 = options.ignoreTransactions || [];
+    }
+  };
+  return obj;
+});

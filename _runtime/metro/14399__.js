@@ -4,11 +4,13 @@
 import _mod14400 from "module_14400" /* 14400 */;
 
 
-export default (obj) => {
-  if (typeof obj === "object") {
-    let tmp2 = null !== obj;
-  } else {
-    tmp2 = _mod14400(obj);
+export default (arg0) => {
+  let num = 0;
+  {
+    num = 0;
+    if (0 !== tmp) {
+      num = _mod14400(tmp);
+    }
   }
-  return tmp2;
+  return num;
 };

@@ -1,31 +1,82 @@
 // === Module 4376: ? ===
 
 // Module 4376
-import c from "c" /* 4361 */;
-import _mod4374 from "module_4374" /* 4374 */;
+import _mod4377 from "module_4377" /* 4377 */;
 import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-function getStringProperty(stringProperty, arg1) {
-  return stringProperty.stringProperty(arg1);
-}
+require = fn;
+const noop = fn(19);
+({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
 
-export const useRiveString = function useRiveString(LVL, instance) {
-  let obj = c;
-  const cResult = obj.c(4);
-  [tmp3, tmp4, tmp5] = _slicedToArray(_mod4374.useRiveProperty(instance, LVL, getStringProperty), 3);
-  if (cResult[0] === tmp5) {
-    if (cResult[1] === tmp4) {
-      if (cResult[2] === tmp3) {
-        let tmp6 = cResult[3];
-      }
-      return tmp6;
+export const useRiveProperty = function useRiveProperty(instance, FillColor, f30653) {
+  closure_0 = instance;
+  closure_1 = FillColor;
+  closure_2 = f30653;
+  let tmp = hasOwnProperty(undefined);
+  const items = [instance, FillColor];
+  const disposableMemo = _mod4377.useDisposableMemo(() => {
+    if (closure_0) {
+      return closure_2(tmp, closure_1);
     }
-  }
-  obj = { value: tmp3, setValue: tmp4, error: tmp5 };
-  cResult[0] = tmp5;
-  cResult[1] = tmp4;
-  cResult[2] = tmp3;
-  cResult[3] = obj;
-  tmp6 = obj;
+  }, (dispose) => {
+    let disposeResult;
+    if (dispose != null) {
+      disposeResult = dispose.dispose();
+    }
+    return disposeResult;
+  }, items, tmp);
+  const tmp3 = _slicedToArray(timestampProducer(undefined), 2);
+  const first = tmp3[0];
+  closure_6 = tmp3[1];
+  const tmp5 = _slicedToArray(timestampProducer(null), 2);
+  closure_7 = tmp5[1];
+  const items1 = [FillColor, instance];
+  React4(() => {
+    closure_7(null);
+  }, items1);
+  const items2 = [instance, disposableMemo, FillColor];
+  React4(() => {
+    let tmp = closure_0;
+    if (closure_0) {
+      tmp = !disposableMemo;
+    }
+    if (tmp) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error = new Error("Property \"" + closure_1 + "\" not found in the ViewModel instance");
+      closure_7(error);
+    }
+  }, items2);
+  const items3 = [disposableMemo];
+  React4(() => {
+    if (disposableMemo) {
+      closure_6(disposableMemo.value);
+      closure_0 = disposableMemo.addListener((arg0) => {
+        closure_1_6(arg0);
+      });
+      return () => {
+        try {
+          closure_0();
+        } catch (err) {
+        }
+      };
+    }
+  }, items3);
+  const items4 = [disposableMemo, first];
+  const items5 = [
+    first,
+    React3((fn) => {
+      const current = ref.current;
+      if (current) {
+        let tmp2 = fn;
+        if (typeof fn === "function") {
+          tmp2 = fn(first);
+        }
+        current.value = tmp2;
+      }
+    }, items4),
+    tmp5[0],
+    disposableMemo
+  ];
+  return items5;
 };

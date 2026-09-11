@@ -1,159 +1,207 @@
 // === Module 12914: ? ===
 
 // Module 12914
-import _mod12867 from "module_12867" /* 12867 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-function dsnFromString(arg0) {
-  closure_0 = arg0;
-  const match = re3.exec(arg0);
-  if (match) {
-    const tmp5 = _slicedToArray(match.slice(1), 6);
-    let str = tmp5[1];
-    let str3 = "";
-    if (undefined !== tmp5[2]) {
-      str3 = tmp6;
+const SyncPromise = require;
+const obj = { PENDING: 0 };
+obj[0] = "PENDING";
+obj.RESOLVED = 1;
+obj[1] = "RESOLVED";
+obj.REJECTED = 2;
+obj[2] = "REJECTED";
+class SyncPromise {
+  constructor(arg0) {
+    self = this;
+    tmp = SyncPromise;
+    tmp2 = closure_3(this, SyncPromise);
+    __init = SyncPromise.prototype.__init;
+    call = __init.call;
+    if (typeof call === "unknown") {
+      __initResult = __init();
+    } else {
+      callResult = call(self);
     }
-    let str4 = "";
-    if (undefined !== tmp5[3]) {
-      str4 = tmp7;
+    __init2 = tmp.prototype.__init2;
+    call2 = __init2.call;
+    if (typeof call2 === "unknown") {
+      __init2Result = __init2();
+    } else {
+      call2Result = call2(self);
     }
-    let str5 = "";
-    if (undefined !== tmp5[4]) {
-      str5 = tmp8;
+    __init3 = tmp.prototype.__init3;
+    call3 = __init3.call;
+    if (typeof call3 === "unknown") {
+      __init3Result = __init3();
+    } else {
+      call3Result = call3(self);
     }
-    let str6 = "";
-    if (undefined !== tmp5[5]) {
-      str6 = tmp9;
+    __init4 = tmp.prototype.__init4;
+    call4 = __init4.call;
+    if (typeof call4 === "unknown") {
+      __init4 = __init4();
+    } else {
+      call4Result = call4(self);
     }
-    const parts = str6.split("/");
-    let str8 = str6;
-    let str9 = "";
-    if (parts.length > 1) {
-      const substr = parts.slice(0, -1);
-      str9 = substr.join("/");
-      str8 = parts.pop();
-    }
-    let first = str8;
-    if (str8) {
-      const match1 = str8.match(/^\d+/);
-      first = str8;
-      if (match1) {
-        first = match1[0];
-      }
-    }
-    const url = { protocol: tmp5[0], publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
-    if (!str) {
-      str = "";
-    }
-    url.publicKey = str;
-    if (!str3) {
-      str3 = "";
-    }
-    url.pass = str3;
-    url.host = str4;
-    if (!str5) {
-      str5 = "";
-    }
-    url.port = str5;
-    if (!str9) {
-      str9 = "";
-    }
-    url.path = str9;
-    url.projectId = first;
-    return url;
-  } else {
-    _mod12867.consoleSandbox(() => {
-      console.error("Invalid Sentry Dsn: " + closure_0);
-    });
+    self._state = c2.PENDING;
+    self._handlers = [];
+    return;
   }
 }
-const re3 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
-
-export { dsnFromString };
-export const dsnToString = function dsnToString(url) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
+const entry = {
+  key: "then",
+  value: function then(arg0, arg1) {
+    const self = this;
+    closure_1 = arg0;
+    closure_0 = arg1;
+    SyncPromise((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const _handlers = self._handlers;
+      const items = [
+        false,
+        (arg0) => {
+          if (closure_1) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_0(arg0);
+          }
+        },
+        (arg0) => {
+          if (closure_0) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_1(arg0);
+          }
+        }
+      ];
+      _handlers.push(items);
+      self._executeHandlers();
+    });
+    return Object.create(SyncPromise.prototype);
   }
-  ({ host, path, pass, port, projectId, protocol, publicKey } = url);
-  let str = "";
-  if (flag) {
-    str = "";
-    if (pass) {
-      const _HermesInternal = HermesInternal;
-      str = ":" + pass;
-    }
-  }
-  let str3 = "";
-  if (port) {
-    const _HermesInternal2 = HermesInternal;
-    str3 = ":" + port;
-  }
-  let combined = path;
-  if (path) {
-    const _HermesInternal3 = HermesInternal;
-    combined = "" + path + "/";
-  }
-  return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
 };
-export const makeDsn = function makeDsn(protocol) {
-  if (typeof protocol === "string") {
-    let url = dsnFromString(protocol);
-  } else {
-    url = { protocol: protocol.protocol, publicKey: protocol.publicKey || "", pass: protocol.pass || "", host: protocol.host, port: protocol.port || "", path: protocol.path || "", projectId: protocol.projectId };
-  }
-  if (url) {
-    let error = url;
-    let flag = true;
-    if (url(12866).DEBUG_BUILD) {
-      ({ port, projectId, protocol } = url);
-      const items = ["protocol", "publicKey", "host", "projectId"];
-      const found = items.find((item) => {
-        let flag = !tmp;
-        if (!url[item]) {
-          const logger = _mod12867.logger;
-          const _HermesInternal = HermesInternal;
-          logger.error("Invalid Sentry Dsn: " + item + " missing");
-          flag = true;
-        }
-        return flag;
+let items = [
+  entry,
+  {
+    key: "catch",
+    value: function _catch(arg0) {
+      return this.then((result) => result, arg0);
+    }
+  },
+  {
+    key: "finally",
+    value: function _finally(arg0) {
+      const self = this;
+      closure_0 = arg0;
+      SyncPromise((arg0, arg1) => {
+        closure_0 = arg0;
+        _self = arg1;
+        return _self.then((result) => {
+          c3 = false;
+          closure_2 = result;
+          if (closure_0) {
+            tmp();
+          }
+        }, (arg0) => {
+          c3 = true;
+          closure_2 = arg0;
+          if (closure_0) {
+            tmp();
+          }
+        }).then(() => {
+          if (c3) {
+            closure_1(closure_2);
+          } else {
+            closure_0(closure_2);
+          }
+        });
       });
-      if (found) {
-        flag = !found;
-      } else {
-        if (!projectId.match(/^\d+$/)) {
-          let logger = error(12867).logger;
-          let _HermesInternal = HermesInternal;
-          logger.error("Invalid Sentry Dsn: Invalid projectId " + projectId);
-        }
-        let tmp6 = "http" === protocol;
-        if (!tmp6) {
-          tmp6 = "https" === protocol;
-        }
-        if (tmp6) {
-          let num3 = port;
-          if (port) {
-            const _isNaN = isNaN;
-            const _parseInt = parseInt;
-            num3 = isNaN(parseInt(port, 10));
-          }
-          if (num3) {
-            const logger3 = error(12867).logger;
-            error = logger3.error;
-            const _HermesInternal3 = HermesInternal;
-            error("Invalid Sentry Dsn: Invalid port " + port);
-            num3 = 1;
-          }
-        } else {
-          const logger2 = error(12867).logger;
-          const _HermesInternal2 = HermesInternal;
-          logger2.error("Invalid Sentry Dsn: Invalid protocol " + protocol);
-        }
-      }
+      return Object.create(SyncPromise.prototype);
     }
-    if (flag) {
-      return url;
+  },
+  {
+    key: "__init",
+    value: function __init() {
+      const self = this;
+      this._resolve = (arg0) => {
+        self._setResult(obj.RESOLVED, arg0);
+      };
+    }
+  },
+  {
+    key: "__init2",
+    value: function __init2() {
+      const self = this;
+      this._reject = (arg0) => {
+        self._setResult(obj.REJECTED, arg0);
+      };
+    }
+  },
+  {
+    key: "__init3",
+    value: function __init3() {
+      const self = this;
+      this._setResult = (_state, _value) => {
+        if (self._state === self.PENDING) {
+          if (obj2.isThenable(_value)) {
+            _value.then(self._resolve, self._reject);
+          } else {
+            self._state = _state;
+            self._value = _value;
+            self._executeHandlers();
+          }
+          obj2 = SyncPromise(12897);
+        }
+      };
+    }
+  },
+  {
+    key: "__init4",
+    value: function __init4() {
+      const self = this;
+      this._executeHandlers = () => {
+        if (self._state !== obj.PENDING) {
+          const _handlers = self._handlers;
+          const substr = _handlers.slice();
+          self._handlers = [];
+          const item = substr.forEach((item) => {
+            if (!item[0]) {
+              if (_state._state === constants.RESOLVED) {
+                item[1](_state._value);
+              }
+              if (_state._state === constants.REJECTED) {
+                item[2](_state._value);
+              }
+              item[0] = true;
+            }
+          });
+        }
+      };
     }
   }
+];
+const _moduleResult = _createClass(SyncPromise, items);
+
+export const SyncPromise = _moduleResult;
+export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
+  closure_0 = arg0;
+  return new _moduleResult((arg0, fn) => {
+    fn(closure_0);
+  });
+};
+export const resolvedSyncPromise = function resolvedSyncPromise(item) {
+  closure_0 = item;
+  return new _moduleResult((fn) => {
+    fn(closure_0);
+  });
 };

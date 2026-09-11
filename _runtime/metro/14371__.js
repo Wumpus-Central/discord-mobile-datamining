@@ -1,8 +1,13 @@
 // === Module 14371: ? ===
 
 // Module 14371
-import _mod14440 from "module_14440" /* 14440 */;
-import module_14372 from "module_14372" /* 14372 */;
+import _mod14350 from "module_14350" /* 14350 */;
 
+const tmp = _mod14350.navigator && _mod14350.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
 
-export default _mod14440.Object.assign;
+export default str;

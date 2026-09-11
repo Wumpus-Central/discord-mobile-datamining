@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/badge", width: 30, height: 30, scales: [2, 3], hash: "581374036ac67fb316291b50b3effd2f", name: "ic_badge_nitro", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 93.33333333333333, height: 65, scales: [3], hash: "c4946770ab3c50ce3672b0e2087496ae", name: "asset_ruby_badge_small", type: "png" });

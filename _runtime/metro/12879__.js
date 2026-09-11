@@ -1,79 +1,100 @@
 // === Module 12879: ? ===
 
 // Module 12879
-import generatePropagationContext from "generatePropagationContext" /* 12877 */;
-import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12880 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
+import emptyFunction from "module_4436" /* 4436 */;
 
-require = arg1;
-const dependencyMap = arg6;
-const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
-
-export const TRACEPARENT_REGEXP = regExp;
-export const extractTraceparentData = function extractTraceparentData(str) {
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
+let Link = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let closure_2 = ["component", "to", "replace"];
+const jsx = fn(21).jsx;
+class Link {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_4(this, Link);
+    items1 = [...items];
+    tmp2 = metroRequire;
+    obj = metroRequire(Link);
+    tmp3 = hasOwnProperty;
+    if (closure_8()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handlePress = (defaultPrevented, str) => {
+      if (props.props.onPress) {
+        props = tmp.props;
+        props.onPress(defaultPrevented);
+      }
+      if (!defaultPrevented.defaultPrevented) {
+        const to = str.to;
+        if (tmp.props.replace) {
+          const replaced = str.replace(to);
+        } else {
+          str.push(to);
         }
       }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      return obj;
-    }
+    };
+    return tmp3Result;
   }
-};
-export const generateSentryTraceHeader = function generateSentryTraceHeader() {
-  if (traceId === undefined) {
-    traceId = generatePropagationContext.generateTraceId();
-  }
-  if (spanId === undefined) {
-    spanId = generatePropagationContext.generateSpanId();
-  }
-  let str = "";
-  if (undefined !== sampled) {
-    let str2 = "-0";
-    if (sampled) {
-      str2 = "-1";
-    }
-    str = str2;
-  }
-  return "" + traceId + "-" + spanId + str;
-};
-export const propagationContextFromHeaders = function propagationContextFromHeaders(str, _slicedToArray) {
-  let tmp;
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
-        }
+}
+_inherits(Link, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ component: dependencyMap, to, replace } = props);
+    Link = _objectWithoutProperties(props, self);
+    return jsx(Link(4439).__HistoryContext.Consumer, {
+      children(arg0) {
+        closure_0 = arg0;
+        const obj = {};
+        const merged = Object.assign(closure_0);
+        obj.onPress = function onPress(arg0) {
+          return self.handlePress(arg0, closure_0);
+        };
+        return <closure_1 />;
       }
-      let obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      tmp = obj;
-    }
+    });
   }
-  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(_slicedToArray);
-  if (tmp) {
-    if (tmp.traceId) {
-      obj = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
-      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
-      let tmp4Result = generatePropagationContext;
-      obj.spanId = tmp4Result.generateSpanId();
-      obj.sampled = parentSampled;
-      if (!result) {
-        result = {};
-      }
-      obj.dsc = result;
-      return obj;
-    }
-  }
-  obj = { traceId: null, spanId: null };
-  tmp4Result = generatePropagationContext;
-  obj.traceId = tmp4Result.generateTraceId();
-  obj.spanId = generatePropagationContext.generateSpanId();
-  return obj;
 };
+let items = [entry];
+const importDefaultResultResult = _createClass(Link, items);
+importDefaultResultResult.defaultProps = { component: fn(17).TouchableHighlight, replace: false };
+let obj = { onPress: emptyFunction.func, component: emptyFunction.elementType, replace: emptyFunction.bool, to: null };
+let items1 = [emptyFunction.string, emptyFunction.object];
+obj.to = emptyFunction.oneOfType(items1);
+importDefaultResultResult.propTypes = obj;
+
+export default importDefaultResultResult;

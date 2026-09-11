@@ -1,5 +1,7 @@
 // === Module 9012: ? ===
 
 // Module 9012
+import registerAsset from "module_1122" /* 1122 */;
 
-export const version = { major: 4, minor: 3, patch: 6 };
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "78e18d727d8c0a3ff78e647d73ffb0be", name: "QuoteIcon", type: "png" });

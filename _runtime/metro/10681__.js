@@ -2,7 +2,7 @@
 
 // Module 10681
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10523 from "module_10523" /* 10523 */;
+import _mod10539 from "module_10539" /* 10539 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
@@ -43,12 +43,12 @@ if (!fn) {
     return tmp;
   };
 }
-class ENMergeDateTimeRefiner {
+class UKMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, ENMergeDateTimeRefiner);
+    tmp = closure_0(this, UKMergeDateRangeRefiner);
     tmp2 = c2;
-    obj = c2(ENMergeDateTimeRefiner);
+    obj = c2(UKMergeDateRangeRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -63,15 +63,14 @@ class ENMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ENMergeDateTimeRefiner;
-_inherits(ENMergeDateTimeRefiner, fn(_mod10523).default);
+_classCallCheck = UKMergeDateRangeRefiner;
+_inherits(UKMergeDateRangeRefiner, fn(_mod10539).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|alle|dopo|prima|il|di|del|delle|,|-)?\\s*$");
-    return regExp;
+    return /^\s*(і до|і по|до|по|-)\s*$/i;
   }
 };
 const items = [entry];
 
-export default _createClass(ENMergeDateTimeRefiner, items);
+export default _createClass(UKMergeDateRangeRefiner, items);

@@ -1,18 +1,15 @@
 // === Module 14401: ? ===
 
 // Module 14401
-import _mod14392 from "module_14392" /* 14392 */;
-import _mod14400 from "module_14400" /* 14400 */;
-import _mod14402 from "module_14402" /* 14402 */;
-import _mod14403 from "module_14403" /* 14403 */;
+import _mod14399 from "module_14399" /* 14399 */;
 
 
-export default _mod14392 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
-  const tmp3 = _mod14402("Symbol");
-  let tmpResultResult = _mod14400(tmp3);
-  if (tmpResultResult) {
-    tmpResultResult = _mod14403(tmp3.prototype, Object(arg0));
-    const tmpResult = _mod14403;
+export default (arg0, arg1) => {
+  const tmp = _mod14399(arg0);
+  if (tmp < 0) {
+    let tmp3 = max(tmp + arg1, 0);
+  } else {
+    tmp3 = min(tmp, arg1);
   }
-  return tmpResultResult;
-});
+  return tmp3;
+};

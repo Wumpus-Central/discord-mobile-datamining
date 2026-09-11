@@ -1,7 +1,14 @@
 // === Module 6720: ? ===
 
 // Module 6720
-import _modDef6721 from "module_6721" /* 6721 */;
+const fn = function o() {
 
+};
+fn.__closure = {};
+fn.__workletHash = 16791771801238;
+fn.__initData = { code: "function pnpm_noopTs1(){}" };
 
-export default _modDef6721;
+export () => {
+
+}
+export const workletNoop = fn;

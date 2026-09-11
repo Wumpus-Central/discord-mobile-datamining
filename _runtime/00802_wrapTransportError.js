@@ -160,7 +160,7 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
                   closure_130_0 = undefined;
                   c6 = 1;
                   c7 = 1;
-                  return { value: "PX_16", done: true };
+                  return { value: "PX_16", done: null };
                 }
               } else {
                 if (1 === tmp7) {

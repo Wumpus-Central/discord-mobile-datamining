@@ -1,10 +1,25 @@
 // === Module 17325: ? ===
 
 // Module 17325
-import MessageFormat from "MessageFormat" /* 17326 */;
-import module_1318 from "module_1318" /* 1318 */;
-
-const _default = MessageFormat.default;
-_default.default = _default;
-
-export default _default;
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "da",
+  pluralRuleFunction(arg0, arg1) {
+    const parts = String(arg0).split(".");
+    const first = parts[0];
+    if (arg1) {
+      let str3 = "other";
+    } else {
+      str3 = "one";
+      if (1 != arg0) {
+        if (!tmp3) {
+          str3 = "one";
+          if (0 != first) {
+            str3 = "one";
+          }
+        }
+      }
+    }
+    return str3;
+  }
+});
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "da-GL", parentLocale: "da" });

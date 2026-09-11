@@ -1,8 +1,9 @@
 // === Module 4026: ? ===
 
 // Module 4026
-import Parser2 from "Parser" /* 3999 */;
+import Parser2 from "Parser" /* 4001 */;
 
+let closure_1 = dependencyMap;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -28,15 +29,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(Hour0to23Parser, Parser) {
+function _setPrototypeOf(DayPeriodParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(Hour0to23Parser, Parser) {
-      Hour0to23Parser.__proto__ = Parser;
-      return Hour0to23Parser;
+    _setPrototypeOf = function _setPrototypeOf(DayPeriodParser, Parser) {
+      DayPeriodParser.__proto__ = Parser;
+      return DayPeriodParser;
     };
   }
-  return _setPrototypeOf(Hour0to23Parser, Parser);
+  return _setPrototypeOf(DayPeriodParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -56,7 +57,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 let _createSuperInternal;
-class Hour0to23Parser {
+class DayPeriodParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -92,10 +93,10 @@ class Hour0to23Parser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 80, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 70;
-          applyResult.priority = 70;
+          num3 = 80;
+          applyResult.priority = 80;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,7 +107,7 @@ class Hour0to23Parser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["a", "b", "h", "K", "k", "t", "T"];
+          items1 = ["a", "b", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -130,7 +131,7 @@ class Hour0to23Parser {
     }
   }
 }
-let dependencyMap = Hour0to23Parser;
+closure_1 = DayPeriodParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -142,12 +143,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-Hour0to23Parser.prototype = Object.create(prototype, { constructor: { value: Hour0to23Parser, writable: true, configurable: true } });
+DayPeriodParser.prototype = Object.create(prototype, { constructor: { value: DayPeriodParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(Hour0to23Parser, Parser);
+  _setPrototypeOf(DayPeriodParser, Parser);
 }
 let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
+closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
@@ -205,32 +206,27 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    if ("H" === arg1) {
-      return _createSuperInternal(4001).parseNumericPattern(_createSuperInternal(4002).numericPatterns.hour23h, arg0);
-    } else if ("Ho" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
-    } else {
-      return _createSuperInternal(4001).parseNDigits(arg1.length, arg0);
+  value: function parse(arg0, arg1, dayPeriod) {
+    if ("B" !== arg1) {
+      if ("BB" !== arg1) {
+        if ("BBB" !== arg1) {
+          if ("BBBBB" === arg1) {
+            return dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
+          } else {
+            return dayPeriod.dayPeriod(arg0, { width: "wide", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
+          }
+        }
+      }
     }
+    return dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
   }
 };
 let items = [
   entry,
   {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
-      if (tmp) {
-        tmp = arg1 <= 23;
-      }
-      return tmp;
-    }
-  },
-  {
     key: "set",
     value: function set(setUTCHours, arg1, arg2) {
-      setUTCHours.setUTCHours(arg2, 0, 0, 0);
+      setUTCHours.setUTCHours(_createSuperInternal(closure_1[0]).dayPeriodEnumToHours(arg2), 0, 0, 0);
       return setUTCHours;
     }
   }
@@ -253,4 +249,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { Hour0to23Parser };
+export { DayPeriodParser };

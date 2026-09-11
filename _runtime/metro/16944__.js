@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 292, height: 182, scales: [2, 3], hash: "f94bdada98ce42ab7be865282d2b8eba", name: "webhook_empty_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/forum_channels", width: 343, height: 236, scales: [1], hash: "6e9bbbae1088530d5ab3c52a383f127c", name: "channel_settings_list_view_example_post", type: "png" });

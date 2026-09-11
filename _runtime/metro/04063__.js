@@ -1,34 +1,26 @@
 // === Module 4063: ? ===
 
 // Module 4063
-import module_3874 from "module_3874" /* 3874 */;
-import subDays from "subDays" /* 4064 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import _typeof from "module_3695" /* 3695 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
-if (!module_3874) {
-  let obj = { default: module_3874 };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3874;
+  tmp3 = _typeof;
 }
-module_3874 = tmp3;
-if (!subDays) {
-  obj = { default: subDays };
-  let tmp5 = obj;
-} else {
-  tmp5 = subDays;
-}
-subDays = tmp5;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
-  let tmp7 = obj;
+  let tmp5 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isYesterday(arg0) {
+export default function isWednesday(arg0) {
   requiredArgs.default(1, arguments);
-  return module_3874.default(arg0, subDays.default(Date.now(), 1));
+  return 3 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

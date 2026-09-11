@@ -1,23 +1,67 @@
 // === Module 4971: ? ===
 
 // Module 4971
-import _mod17 from "module_17" /* 17 */;
-import resolveAssetSource from "resolveAssetSource" /* 81 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import RNSLog2 from "RNSLog" /* 4963 */;
+import noop from "module_19" /* 19 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsScreenAndroid", directEventTypes: { topWillAppear: { registrationName: "onWillAppear" }, topDidAppear: { registrationName: "onDidAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topDidDisappear: { registrationName: "onDidDisappear" } }, validAttributes: null };
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-__INTERNAL_VIEW_CONFIG = { screenKey: true, preventNativeSelection: true, title: true, badgeValue: true, tabBarItemTestID: true, tabBarItemAccessibilityLabel: true, specialEffects: true, drawableIconResourceName: true, imageIconResource: { process: resolveAssetSource }, selectedDrawableIconResourceName: true, selectedImageIconResource: null, standardAppearance: true };
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-__INTERNAL_VIEW_CONFIG.selectedImageIconResource = { process: resolveAssetSource };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onWillAppear: true, onDidAppear: true, onWillDisappear: true, onDidDisappear: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
+require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
 
-export default module_65.get("RNSTabsScreenAndroid", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const useTabsScreen = function useTabsScreen(componentNodeRef) {
+  componentNodeRef = componentNodeRef.componentNodeRef;
+  const onDidAppear = componentNodeRef.onDidAppear;
+  const onDidDisappear = componentNodeRef.onDidDisappear;
+  const onWillAppear = componentNodeRef.onWillAppear;
+  const onWillDisappear = componentNodeRef.onWillDisappear;
+  const ref = onDidDisappear.useRef(-1);
+  const effect = onDidDisappear.useEffect(() => {
+    if (null != componentNodeRef.current) {
+      let num2 = findNodeHandle(tmp.current);
+      if (num2 == null) {
+        num2 = -1;
+      }
+      ref.current = num2;
+    } else {
+      ref.current = -1;
+    }
+  }, []);
+  const items = [onWillAppear];
+  const items1 = [onDidAppear];
+  const callback = onDidDisappear.useCallback((arg0) => {
+    const RNSLog = RNSLog2.RNSLog;
+    RNSLog.log("TabsScreen [" + ref.current + "] onWillAppear received");
+    if (onWillAppear != null) {
+      tmp2(arg0);
+    }
+  }, items);
+  const items2 = [onWillDisappear];
+  const callback1 = onDidDisappear.useCallback((arg0) => {
+    const RNSLog = RNSLog2.RNSLog;
+    RNSLog.log("TabsScreen [" + ref.current + "] onDidAppear received");
+    if (onDidAppear != null) {
+      tmp2(arg0);
+    }
+  }, items1);
+  const items3 = [onDidDisappear];
+  const callback2 = onDidDisappear.useCallback((arg0) => {
+    const RNSLog = RNSLog2.RNSLog;
+    RNSLog.log("TabsScreen [" + ref.current + "] onWillDisappear received");
+    if (onWillDisappear != null) {
+      tmp2(arg0);
+    }
+  }, items2);
+  const callback3 = onDidDisappear.useCallback((arg0) => {
+    const RNSLog = RNSLog2.RNSLog;
+    RNSLog.log("TabsScreen [" + ref.current + "] onDidDisappear received");
+    if (onDidDisappear != null) {
+      tmp2(arg0);
+    }
+  }, items3);
+  let RNSLog = componentNodeRef(onDidAppear[2]).RNSLog;
+  let num = ref.current;
+  if (num == null) {
+    num = -1;
+  }
+  RNSLog.log("TabsScreen [" + num + "] render; screenKey: " + componentNodeRef.screenKey);
+  return { componentNodeRef, lifecycleCallbacks: { onWillAppear: callback, onDidAppear: callback1, onWillDisappear: callback2, onDidDisappear: callback3 } };
+};

@@ -1,16 +1,16 @@
 // === Module 4038: ? ===
 
 // Module 4038
-import startOfHour from "startOfHour" /* 4039 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import _typeof from "module_3695" /* 3695 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
-if (!startOfHour) {
-  let obj = { default: startOfHour };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfHour;
+  tmp3 = _typeof;
 }
-startOfHour = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -19,10 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameHour(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfHour.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfHour.default(arg1).getTime();
+export default function isMonday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 1 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

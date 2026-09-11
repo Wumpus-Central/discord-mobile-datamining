@@ -1,9 +1,20 @@
 // === Module 14383: ? ===
 
 // Module 14383
-import _mod14381 from "module_14381" /* 14381 */;
+import _mod14358 from "module_14358" /* 14358 */;
 
-let closure_0 = _mod14381({}.toString);
-let closure_1 = _mod14381("".slice);
+if (_mod14358) {
+  let fn = call.bind(call);
+} else {
+  fn = () => {
+    const apply = call.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
+    } else {
+      applyArgumentsResult = apply(call, arguments);
+    }
+    return applyArgumentsResult;
+  };
+}
 
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default fn;

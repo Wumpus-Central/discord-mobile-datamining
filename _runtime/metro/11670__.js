@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/shared_components/user_list/images", width: 24, height: 24, scales: [2, 3, 4], hash: "a7182f0f94a36e3c4d169065a673c788", name: "icon-new-group", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images", width: 52, height: 54, scales: [1], hash: "952194349b0f8cbc08a58b40dbb32cb2", name: "connections-profile-steam-tf2", type: "png" });

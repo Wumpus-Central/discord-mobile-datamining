@@ -1,12 +1,7 @@
 // === Module 11299: ? ===
 
 // Module 11299
-import _mod11298 from "module_11298" /* 11298 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const keepLocalCopy = function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod11298.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "80a1b67e775ddb8de80fde27e63a5302", name: "CirclePlusIcon-secondary", type: "png" });

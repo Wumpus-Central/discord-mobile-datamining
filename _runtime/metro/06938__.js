@@ -3,41 +3,40 @@
 // Module 6938
 import _mod6939 from "module_6939" /* 6939 */;
 
-function _get() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect2 = Reflect;
-    if (Reflect.get) {
-      const _Reflect = Reflect;
-      exports = get.bind();
-    }
-    module.exports = exports;
-    const apply = exports.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(null);
-    } else {
-      applyArgumentsResult = apply(null, arguments);
-    }
-    return applyArgumentsResult;
-  }
-  exports = (arg0, arg1, arg2) => {
-    const tmp = _mod6939(arg0, arg1);
-    if (tmp) {
-      const _Object = Object;
-      const iter = Object.getOwnPropertyDescriptor(tmp, arg1);
-      if (iter.get) {
-        let tmp3 = arg2;
-        const get = iter.get;
-        const call = get.call;
-        if (arguments.length < 3) {
-          tmp3 = arg0;
-        }
-        typeof call === "unknown" ? get() : call(tmp3);
-      } else {
-        return iter.value;
-      }
-    }
-  };
-}
-let exports = _get;
 
-export default _get;
+export default function _createClass(arg0, arg1, arg2) {
+  if (arg1) {
+    for (let num = 0; num < arg1.length; num = num + 1) {
+      let tmp3 = arg1[num];
+      let flag2 = tmp3.enumerable;
+      if (!flag2) {
+        flag2 = false;
+      }
+      tmp3.enumerable = flag2;
+      tmp3.configurable = true;
+      if ("value" in tmp3) {
+        tmp3.writable = true;
+      }
+      let _Object = Object;
+      let definePropertyResult = Object.defineProperty(tmp, _mod6939(tmp3.key), tmp3);
+    }
+  }
+  if (arg2) {
+    for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
+      let tmp9 = arg2[num3];
+      let flag4 = tmp9.enumerable;
+      if (!flag4) {
+        flag4 = false;
+      }
+      tmp9.enumerable = flag4;
+      tmp9.configurable = true;
+      if ("value" in tmp9) {
+        tmp9.writable = true;
+      }
+      let _Object2 = Object;
+      let definePropertyResult1 = Object.defineProperty(arg0, _mod6939(tmp9.key), tmp9);
+    }
+  }
+  Object.defineProperty(arg0, "prototype", { writable: false });
+  return arg0;
+};

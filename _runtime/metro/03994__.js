@@ -1,9 +1,8 @@
 // === Module 3994: ? ===
 
 // Module 3994
-import _typeof from "module_3995" /* 3995 */;
-import module_3875 from "module_3875" /* 3875 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import _typeof from "module_3695" /* 3695 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -12,23 +11,16 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-if (!module_3875) {
-  obj = { default: module_3875 };
-  let tmp5 = obj;
-} else {
-  tmp5 = module_3875;
-}
-module_3875 = tmp5;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
-  let tmp7 = obj;
+  let tmp5 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isMatch(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  return module_3875.default(_typeof.default(arg0, arg1, new Date(), arg2));
+export default function isFriday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 5 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

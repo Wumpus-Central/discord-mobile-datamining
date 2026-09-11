@@ -1,41 +1,44 @@
 // === Module 6973: ? ===
 
 // Module 6973
-import _mod6925 from "module_6925" /* 6925 */;
-import _slicedToArray from "module_6907" /* 6907 */;
+import _slicedToArray from "module_6928" /* 6928 */;
 
-require = fn;
 const noop = fn(19);
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+({ useCallback: c2, useEffect: c3, useState: closure_4 } = noop);
 
-export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg2;
-  let tmp = hasOwnProperty(undefined);
-  [r10015, tmp3] = _slicedToArray(_mod6925.useLayoutState(0), 2);
-  React4(() => {
-    let tmpResult = closure_0;
-    if (typeof closure_0 === "function") {
-      tmpResult = tmp();
-    }
-    closure_2.current = tmpResult;
-    if (closure_1 != null) {
-      tmp3();
-    }
-  }, arg1);
-  const items = [tmp3];
-  const items1 = [
-    tmp.current,
-    React3((fn, arg1) => {
-      let tmp = fn;
-      if (typeof fn === "function") {
-        tmp = fn(ref.current);
-      }
-      if (tmp !== ref.current) {
-        tmp2.current = tmp;
-        arg1((arg0) => arg0 + 1, arg1);
-      }
-    }, items)
-  ];
-  return items1;
+export const useUnmountAwareTimeout = function useUnmountAwareTimeout() {
+  const first = _slicedToArray(closure_4(() => new Set()), 1)[0];
+  const items = [first];
+  closure_3(() => () => {
+    const item = set.forEach((item) => closure_1_0.clearTimeout(item));
+    set.clear();
+  }, items);
+  const obj = { setTimeout: null };
+  const items1 = [first];
+  obj.setTimeout = closure_2((arg0, arg1) => {
+    const timerId = first.setTimeout(() => {
+      first.delete(timerId);
+      closure_0();
+    }, arg1);
+    arg0.add(timerId);
+  }, items1);
+  return obj;
+};
+export const useUnmountAwareAnimationFrame = function useUnmountAwareAnimationFrame() {
+  const first = _slicedToArray(closure_4(() => new Set()), 1)[0];
+  const items = [first];
+  closure_3(() => () => {
+    const item = set.forEach((item) => cancelAnimationFrame(item));
+    set.clear();
+  }, items);
+  const obj = { requestAnimationFrame: null };
+  const items1 = [first];
+  obj.requestAnimationFrame = closure_2((arg0) => {
+    const animationFrame = first.requestAnimationFrame((arg0) => {
+      first.delete(animationFrame);
+      closure_0(arg0);
+    });
+    arg0.add(animationFrame);
+  }, items1);
+  return obj;
 };

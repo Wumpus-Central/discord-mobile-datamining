@@ -1,303 +1,243 @@
 // === Module 6967: ? ===
 
 // Module 6967
-import Cancellable from "Cancellable" /* 6968 */;
-import asyncGeneratorStep from "module_6950" /* 6950 */;
-import _slicedToArray from "module_6907" /* 6907 */;
+import _modDef6956 from "module_6956" /* 6956 */;
+import _classCallCheck from "module_6937" /* 6937 */;
+import _createClass from "module_6938" /* 6938 */;
+import _getPrototypeOf from "module_6958" /* 6958 */;
+import _get from "module_6959" /* 6959 */;
+import _inherits from "module_6961" /* 6961 */;
 
-require = fn;
-function getFormattedString(js) {
-  js = js.js;
-  let averageFPS;
-  if (js != null) {
-    averageFPS = js.averageFPS;
-  }
-  const js2 = js.js;
-  let minFPS;
-  if (js2 != null) {
-    minFPS = js2.minFPS;
-  }
-  const js3 = js.js;
-  let maxFPS;
-  if (js3 != null) {
-    maxFPS = js3.maxFPS;
-  }
-  let str = "";
-  const combined = "Results:\n\nJS FPS: Avg: " + averageFPS + " | Min: " + minFPS + " | Max: " + maxFPS + "\n\n";
-  if (js.suggestions.length > 0) {
-    const suggestions = js.suggestions;
-    const mapped = suggestions.map((item, index) => "" + index + 1 + ". " + item);
-    const _HermesInternal = HermesInternal;
-    str = "Suggestions:\n\n" + mapped.join("\n");
-  }
-  return combined + str;
-}
-function runScrollBenchmark(arg0, arg1, arg2) {
-  const self = this;
-  const apply = closure_10.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_10 = async function _runScrollBenchmark(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      return { value: "HermesInternal", done: null };
+      callResult = call(constructResult);
     }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_4 = tmp5;
-          closure_3 = tmp2;
-          closure_131_0 = ref;
-          closure_131_1 = closure_1;
-          closure_131_2 = closure_2;
-          let horizontal;
-          closure_131_4 = undefined;
-          closure_131_5 = undefined;
-          closure_131_6 = undefined;
-          if (ref.current) {
-            horizontal = ref.current.props.horizontal;
-            let current = ref.current;
-            if (current) {
-              const size = current.getWindowSize();
-              const size2 = current.getChildContainerDimensions();
-              const diff = size2.width - size.width;
-              closure_131_4 = diff;
-              const diff1 = size2.height - size.height;
-              closure_131_5 = diff1;
-              function scrollNow(arg0, arg1) {
-                const current = ref.current;
-                if (current != null) {
-                  let tmp = arg1;
-                  if (closure_1_3) {
-                    tmp = arg0;
-                  }
-                  const obj = { offset: tmp, animated: false };
-                  current.scrollToOffset(obj);
-                }
-              }
-              closure_131_6 = scrollNow;
-              const obj5 = Cancellable;
-              c5 = 1;
-              c6 = 1;
-              let obj1 = { value: obj5.autoScroll(scrollNow, 0, 0, diff, diff1, closure_2, closure_1), done: false };
-              return obj1;
-            }
-          }
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          obj1 = closure_132_0(closure_132_1[3]);
-          c5 = 2;
-          c6 = 1;
-          const obj3 = { value: obj1.autoScroll(closure_131_6, closure_131_4, closure_131_5, 0, 0, closure_131_2, closure_131_1), done: false };
-          return obj3;
-        }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
-        obj = { value, done: true };
-        return obj;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+_modDef6956;
+class RVLinearLayoutManagerImpl {
+  constructor(arg0, arg1) {
+    self = this;
+    tmp = closure_0(this, RVLinearLayoutManagerImpl);
+    items = [, ];
+    items[0] = global;
+    items[1] = fn;
+    tmp2 = c2;
+    obj = c2(RVLinearLayoutManagerImpl);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.hasSize = false;
+    tmp3Result.tallestItemHeight = 0;
+    windowSize = global.windowSize;
+    tmp3Result.boundedSize = tmp3Result.horizontal ? windowSize.height : windowSize.width;
+    tmp3Result.hasSize = tmp3Result.boundedSize > 0;
+    return tmp3Result;
+  }
+}
+_classCallCheck = RVLinearLayoutManagerImpl;
+_inherits(RVLinearLayoutManagerImpl, fn(6963).RVLayoutManager);
+const entry = {
+  key: "updateLayoutParams",
+  value: function updateLayoutParams(windowSize) {
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "updateLayoutParams", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
+    }
+    const items = [windowSize];
+    !fn(items);
+    windowSize = windowSize.windowSize;
+    self.boundedSize = self.horizontal ? windowSize.height : windowSize.width;
+    if (!tmp2) {
+      if (self.layouts.length > 0) {
+        self.recomputeLayouts(0, self.layouts.length - 1);
+        self.requiresRepaint = true;
       }
-      c6 = 3;
-      return { value: "HermesInternal", done: null };
-    } catch (tmp26) {
-      c6 = tmp;
-      throw tmp26;
     }
   }
 };
-const noop = fn(19);
-({ useEffect: closure_4, useState: hasOwnProperty, useCallback: metroRequire, useRef: closure_7 } = noop);
-
-export const useBenchmark = function useBenchmark(arg0, arg1) {
-  closure_1 = arg1;
-  let obj = arg2;
-  if (arg2 === undefined) {
-    obj = {};
-  }
-  let isBenchmarkRunning;
-  closure_5 = undefined;
-  let startBenchmark;
-  let tmp = isBenchmarkRunning(closure_5(false), 2);
-  isBenchmarkRunning = tmp[0];
-  closure_4 = tmp[1];
-  closure_5 = closure_7(null);
-  const items = [arg1, arg0, isBenchmarkRunning, , ];
-  ({ repeatCount: arr[3], speedMultiplier: arr[4] } = obj);
-  startBenchmark = startBenchmark(() => {
-    if (!isBenchmarkRunning) {
-      const cancellable = new ref(closure_1[3]).Cancellable();
-      ref = cancellable;
-      closure_5.current = cancellable;
-      closure_1 = [];
-      if (ref.current) {
-        const data = tmp8.current.props.data;
-        let length;
-        if (data != null) {
-          length = data.length;
+let items = [
+  entry,
+  {
+    key: "processLayoutInfo",
+    value: function processLayoutInfo(arg0, arg1) {
+      const self = this;
+      const iter = arg0[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let dimensions = nextResult.dimensions;
+        let tmp2 = self.layouts[nextResult.index];
+        let tmp3 = tmp2;
+        if (self.horizontal) {
+          let boundedSize = dimensions.width;
+        } else {
+          boundedSize = self.boundedSize;
         }
-        if (Number(length) <= 0) {
-          const _Error = Error;
-          const error = new Error(tmp(tmp2[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
-          throw error;
+        tmp2.width = boundedSize;
+        tmp3.isHeightMeasured = true;
+        tmp3.isWidthMeasured = true;
+        tmp3.height = dimensions.height;
+        continue;
+      }
+      if (tmp7) {
+        const result = self.normalizeLayoutHeights(arg0);
+      }
+    }
+  },
+  {
+    key: "estimateLayout",
+    value: function estimateLayout(arg0) {
+      const self = this;
+      if (this.horizontal) {
+        let boundedSize = self.getEstimatedWidth(arg0);
+      } else {
+        boundedSize = self.boundedSize;
+      }
+      this.layouts[arg0].width = boundedSize;
+      this.layouts[arg0].height = self.getEstimatedHeight(arg0);
+      this.layouts[arg0].isWidthMeasured = !self.horizontal;
+      this.layouts[arg0].enforcedWidth = !self.horizontal;
+    }
+  },
+  {
+    key: "getLayoutSize",
+    value: function getLayoutSize() {
+      const self = this;
+      if (0 === this.layouts.length) {
+        return { width: 0, height: 0 };
+      } else {
+        let size = self.layouts[self.layouts.length - 1];
+        if (self.horizontal) {
+          let boundedSize = size.x + size.width;
+        } else {
+          boundedSize = self.boundedSize;
+        }
+        size = { width: boundedSize, height: null };
+        if (self.horizontal) {
+          const tallestItem = self.tallestItem;
+          let height;
+          if (tallestItem != null) {
+            height = tallestItem.height;
+          }
+          if (height == null) {
+            height = self.boundedSize;
+          }
+          let sum = height;
+        } else {
+          sum = size.y + size.height;
+        }
+        size.height = sum;
+        return size;
+      }
+    }
+  },
+  {
+    key: "normalizeLayoutHeights",
+    value: function normalizeLayoutHeights(arg0) {
+      const self = this;
+      let tmp;
+      const iter = arg0[Symbol.iterator]();
+      while (iter !== undefined) {
+        let tmp2 = self.layouts[iter.next().index];
+        let num = tmp2.minHeight;
+        let tmp3 = tmp2;
+        if (num == null) {
+          num = 0;
+        }
+        let tmp4 = tmp2.height > num;
+        if (tmp4) {
+          let num2;
+          if (tmp != null) {
+            num2 = tmp.height;
+          }
+          if (num2 == null) {
+            num2 = 0;
+          }
+          tmp4 = tmp3.height > num2;
+        }
+        if (tmp4) {
+          tmp = tmp2;
+        }
+        continue;
+      }
+      if (tmp) {
+        if (tmp.height !== self.tallestItemHeight) {
+          let num3 = tmp.height;
+          if (tmp.height < self.tallestItemHeight) {
+            self.requiresRepaint = true;
+            num3 = 0;
+          }
+          const layouts = self.layouts;
+          for (const item10035 of layouts) {
+            if (num3 > 0) {
+              item10035.height = tmp.height;
+            }
+            item10035.minHeight = num3;
+            continue;
+          }
+          tmp.minHeight = 0;
+          self.tallestItem = tmp;
+          self.tallestItemHeight = tmp.height;
         }
       }
-      closure_4(true);
-      ref = obj(function*() {
-        if (c3 === 2) {
-          c3 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            obj = { value, done: true };
-            return obj;
+    }
+  },
+  {
+    key: "recomputeLayouts",
+    value: function recomputeLayouts(arg0, arg1) {
+      const self = this;
+      let sum = arg0;
+      if (arg0 <= arg1) {
+        do {
+          let layout = self.getLayout(sum);
+          if (0 === sum) {
+            layout.x = 0;
+            layout.y = 0;
           } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c3 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value, done: true };
-                return obj;
-              } else {
-                closure_128_0 = undefined;
-                closure_128_1 = undefined;
-                closure_128_2 = undefined;
-                closure_128_3 = undefined;
-                const jSFPSMonitor = new tmp2(tmp5[5]).JSFPSMonitor();
-                closure_128_0 = jSFPSMonitor;
-                jSFPSMonitor.startTracking();
-                closure_128_1 = 0;
-                let num8 = closure_2_2.repeatCount;
-                if (!num8) {
-                  num8 = 1;
-                }
-                if (tmp54 >= num8) {
-                  closure_128_2 = closure_128_0.stopAndGetData();
-                  if (closure_128_2.averageFPS < 35) {
-                    tmp5.push("Your average JS FPS is low. This can indicate that your components are doing too much work. Try to optimize your components and reduce re-renders if any");
-                  }
-                  (function computeSuggestions(current, arr) {
-                    current = current.current;
-                    if (current) {
-                      current = current.current.props.data.length < 200;
-                    }
-                    if (current) {
-                      arr = arr.push("Data count is low. Try to increase it to a large number (e.g 200) using the 'useDataMultiplier' hook.");
-                    }
-                  })(tmp2, tmp5);
-                  closure_128_3 = (function generateResult(js, suggestions, isCancelled) {
-                    return { js, suggestions, interrupted: isCancelled.isCancelled() };
-                  })(closure_128_2, tmp5, tmp2);
-                  if (!tmp2.isCancelled()) {
-                    closure_128_3.formattedString = getFormattedString(closure_128_3);
-                  }
-                  tmp5(closure_128_3);
-                  closure_2_4(false);
-                  c3 = 3;
-                  return { value: "HermesInternal", done: null };
-                }
-                tmp54 = closure_128_1;
-              }
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_128_1 = closure_128_1 + 1;
-              let num4 = closure_2_2.repeatCount;
-              if (!num4) {
-                num4 = 1;
-              }
+            let size = self.getLayout(sum - 1);
+            let num = 0;
+            if (self.horizontal) {
+              num = size.x + size.width;
             }
-            let num11 = closure_2_2.speedMultiplier;
-            if (!num11) {
-              num11 = 1;
+            layout.x = num;
+            let num2 = 0;
+            if (!self.horizontal) {
+              num2 = size.y + size.height;
             }
-            c2 = 1;
-            c3 = 1;
-            const obj1 = { value: runScrollBenchmark(tmp2, tmp2, num11), done: false };
-            return obj1;
-          } catch (tmp43) {
-            c3 = tmp;
-            throw tmp43;
+            layout.y = num2;
           }
-        }
-      });
-      (function runBenchmark() {
-        const self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })();
-      tmp = ref;
-      tmp2 = closure_1;
-    }
-  }, items);
-  closure_4(() => {
-    if (!obj.startManually) {
-      let num = tmp.startDelayInMs;
-      if (!num) {
-        num = 3000;
+          if (self.horizontal) {
+            if (self.hasSize) {
+              layout.minHeight = self.boundedSize;
+            }
+          } else {
+            layout.width = self.boundedSize;
+          }
+          sum = sum + 1;
+        } while (sum <= arg1);
       }
-      const timeout = setTimeout(() => {
-        startBenchmark();
-      }, num);
-      return () => {
-        clearTimeout(closure_0);
-        if (ref.current) {
-          const current = ref.current;
-          current.cancel();
-        }
-      };
     }
-  }, []);
-  return { startBenchmark, isBenchmarkRunning };
-};
-export { getFormattedString };
+  }
+];
+
+export const RVLinearLayoutManagerImpl = _createClass(RVLinearLayoutManagerImpl, items);

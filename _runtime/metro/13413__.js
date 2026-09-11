@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 180, height: 108, scales: [2, 3], hash: "b78926d791a6ae551c895470cfd808a1", name: "img_what_you_lose_profile_tier1_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 33, scales: [2, 3], hash: "fffb876f7b3f447f47b0591850317fff", name: "img_tier_0_resubscribe_mobile", type: "png" });

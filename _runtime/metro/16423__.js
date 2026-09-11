@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 46, height: 46, scales: [2, 3], hash: "812d0ec6cbf43741fa947b18063ae5e5", name: "server-error", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guilds_bar/native/images", width: 59, height: 55, scales: [3], hash: "31b62f25cfc0f3a2d3cb5b6aaaef4788", name: "wumpus_wave", type: "png" });

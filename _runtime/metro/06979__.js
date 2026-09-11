@@ -1,8 +1,29 @@
 // === Module 6979: ? ===
 
 // Module 6979
-import _mod17 from "module_17" /* 17 */;
+import noop from "module_19" /* 19 */;
 
-const StyleSheet = _mod17.StyleSheet;
 
-export const styles = StyleSheet.create({ container: {} });
+export const isComponentClass = (renderScrollComponent) => {
+  let BooleanResult = typeof renderScrollComponent === "function";
+  if (typeof renderScrollComponent === "function") {
+    const prototype = renderScrollComponent.prototype;
+    let isReactComponent;
+    if (prototype != null) {
+      isReactComponent = prototype.isReactComponent;
+    }
+    BooleanResult = Boolean(isReactComponent);
+  }
+  return BooleanResult;
+};
+export const getValidComponent = (backdropComponent1) => {
+  let tmp = backdropComponent1;
+  if (!noop.isValidElement(backdropComponent1)) {
+    let element = null;
+    if (null != backdropComponent1) {
+      element = <backdropComponent1 />;
+    }
+    tmp = element;
+  }
+  return tmp;
+};

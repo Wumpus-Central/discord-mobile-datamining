@@ -1,122 +1,73 @@
 // === Module 6840: ? ===
 
 // Module 6840
-import _modDef6838 from "module_6838" /* 6838 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import metroRequire from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import nativeViewGestureHandlerProps from "nativeViewGestureHandlerProps" /* 6768 */;
+import "module_19";
 
-const TouchableOpacity = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let closure_3 = ["style"];
-get_ActivityIndicator = fn(17);
-({ Animated: closure_8, Easing: closure_9, StyleSheet: c10, View: closure_11 } = get_ActivityIndicator);
+require = fn;
+const noop = fn(19);
+({ useImperativeHandle: c2, useRef: c3 } = noop);
 const jsx = fn(21).jsx;
-class TouchableOpacity {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = hasOwnProperty(this, TouchableOpacity);
-    items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(TouchableOpacity);
-    tmp3 = metroRequire;
-    if (closure_13()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.getChildStyleOpacityWithDefault = () => {
-      const tmp = closure_2_10.flatten(closure_0.props.style) || {};
-      let num = 1;
-      if (null != tmp.opacity) {
-        const opacity = tmp.opacity;
-        num = opacity.valueOf();
-      }
-      return num;
-    };
-    value = new closure_8.Value(tmp3Result.getChildStyleOpacityWithDefault());
-    tmp3Result.opacity = value;
-    tmp3Result.setOpacityTo = (toValue, duration) => {
-      const obj = { toValue, duration, easing: React7.inOut(React7.quad), useNativeDriver: null };
-      let flag = closure_0.props.useNativeAnimations;
-      if (flag == null) {
-        flag = true;
-      }
-      obj.useNativeDriver = flag;
-      React6.timing(closure_0.opacity, obj).start();
-      const timingResult = React6.timing(closure_0.opacity, obj);
-    };
-    tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === TouchableOpacity(6838).TOUCHABLE_STATE.BEGAN) {
-        closure_0.setOpacityTo(closure_0.props.activeOpacity, 0);
-      } else {
-        if (!tmp3) {
-          closure_0.setOpacityTo(closure_0.getChildStyleOpacityWithDefault(), 150);
-        }
-        tmp3 = arg1 !== TouchableOpacity(6838).TOUCHABLE_STATE.UNDETERMINED && arg1 !== TouchableOpacity(6838).TOUCHABLE_STATE.MOVED_OUTSIDE;
-      }
-    };
-    return tmp3Result;
-  }
-}
-_inherits(TouchableOpacity, fn(19).Component);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    let style = props.style;
-    if (undefined === style) {
-      style = {};
-    }
-    const obj = {};
-    const tmp = _objectWithoutProperties(props, closure_3);
-    const merged = Object.assign(tmp);
-    const items = [style, { opacity: self.opacity }];
-    obj.style = items;
-    obj.onStateChange = self.onStateChange;
-    if (self.props.children) {
-      let children = self.props.children;
-    } else {
-      children = <closure_1_11 />;
-    }
-    obj.children = children;
-    return jsx(_modDef6838, {});
-  }
-};
-let items = [entry];
-const importDefaultResultResult = _createClass(TouchableOpacity, items);
-let obj = {};
-let merged = Object.assign(_modDef6838.defaultProps);
-obj.activeOpacity = 0.2;
-importDefaultResultResult.defaultProps = obj;
+let items = [...fn(6768).nativeViewProps, "onGestureHandlerEvent", "onGestureHandlerStateChange"];
 
-export default importDefaultResultResult;
+export default function createNativeWrapper(displayName) {
+  _require = displayName;
+  if (gestureHandlerProps === undefined) {
+    gestureHandlerProps = {};
+  }
+  let str;
+  if (displayName != null) {
+    str = displayName.displayName;
+  }
+  if (!str) {
+    let name;
+    if (displayName != null) {
+      const render = displayName.render;
+      if (render != null) {
+        name = render.name;
+      }
+    }
+    str = name;
+  }
+  if (!str) {
+    let tmp2 = typeof displayName === "string";
+    if (typeof displayName === "string") {
+      tmp2 = displayName;
+    }
+    str = tmp2;
+  }
+  if (!str) {
+    str = "ComponentWrapper";
+  }
+  class ComponentWrapper {
+    constructor(arg0) {
+      closure_0 = displayName;
+      keys = Object.keys(displayName);
+      obj = { gestureHandlerProps: null, childProps: null };
+      obj = {};
+      merged = Object.assign(closure_1);
+      obj.gestureHandlerProps = obj;
+      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
+      reduced = keys.reduce(() => { ... }, obj);
+      ({ gestureHandlerProps, childProps } = reduced);
+      tmp3 = useRef(null);
+      closure_1 = tmp3;
+      tmp4 = useRef(null);
+      closure_2 = tmp4;
+      items = [, ];
+      items[0] = tmp3;
+      items[1] = tmp4;
+      tmp5 = useImperativeHandle(displayName.ref, () => { ... }, items);
+      obj1 = {};
+      merged1 = Object.assign(gestureHandlerProps);
+      obj1.ref = tmp4;
+      obj2 = {};
+      merged2 = Object.assign(childProps);
+      obj2.ref = tmp3;
+      obj1.children = jsx(closure_0, obj2);
+      return jsx(closure_0(closure_1[2]).NativeViewGestureHandler, obj1);
+    }
+  }
+  ComponentWrapper.displayName = str;
+  return ComponentWrapper;
+};

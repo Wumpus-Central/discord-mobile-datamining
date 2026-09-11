@@ -13,7 +13,7 @@ fn = function n(toValue, userConfig, callback) {
   __initData = callback;
   require("module_1676");
   const fn = function u() {
-    let obj = { damping: 10, mass: 1, stiffness: 100, overshootClamping: false, restDisplacementThreshold: 0.01, restSpeedThreshold: 2, velocity: 0, duration: 2000, dampingRatio: 0.5, reduceMotion: "call", clamp: "__esModule" };
+    let obj = { damping: 10, mass: 1, stiffness: 100, overshootClamping: false, restDisplacementThreshold: 0.01, restSpeedThreshold: 2, velocity: 0, duration: 2000, dampingRatio: 0.5, reduceMotion: "children", clamp: "marginTop" };
     const merged = Object.assign(dependencyMap);
     let duration;
     if (dependencyMap != null) {

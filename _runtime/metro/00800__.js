@@ -44,82 +44,22 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
           c6 = 0;
           c7 = 0;
           const iter = (async (arg0) => {
-            if (c7 === 2) {
-              c7 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                obj = { value, done: true };
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c7 = 2;
-                if (0 === c6) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c7 = 3;
-                    obj = { value, done: true };
-                    return obj;
-                  } else {
-                    closure_5 = self;
-                    closure_4 = self;
-                    closure_3 = tmp2;
-                    closure_131_0 = closure_1;
-                    closure_131_1 = closure_2;
-                    closure_131_2 = undefined;
-                    c6 = 1;
-                    c7 = 1;
-                    return { value: "PX_16", done: true };
-                  }
-                } else if (1 === tmp5) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c7 = 3;
-                    const obj1 = { value, done: true };
-                    return obj1;
-                  } else {
-                    const call = self.call;
-                    const items = [closure_5, closure_131_0];
-                    HermesBuiltin.arraySpread(closure_131_1, 2);
-                    c6 = 2;
-                    c7 = 1;
-                    const obj2 = { value: HermesBuiltin.apply(items, self), done: false };
-                    return obj2;
-                  }
-                } else if (arg0 === 1) {
-                  c7 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c7 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  closure_131_2 = value;
-                  const result = obj(802).wrapTransportOnMessage(closure_131_0, closure_0);
-                  const obj7 = obj(802);
-                  obj(802).wrapTransportSend(closure_131_0, closure_0);
-                  const obj8 = obj(802);
-                  obj(802).wrapTransportOnClose(closure_131_0);
-                  const obj9 = obj(802);
-                  obj(802).wrapTransportError(closure_131_0);
-                  c7 = 3;
-                  obj = { value: closure_131_2, done: true };
-                  return obj;
-                }
-              } catch (tmp21) {
-                c7 = tmp;
-                throw tmp21;
-              }
-            }
+            closure_5 = self;
+            closure_4 = self;
+            closure_3 = tmp2;
+            closure_131_0 = closure_1;
+            closure_131_1 = closure_2;
+            await "PX_16";
+            const call = self.call;
+            const items = [closure_5, closure_131_0];
+            HermesBuiltin.arraySpread(closure_131_1, 2);
+            await HermesBuiltin.apply(items, self);
+            closure_131_2 = value;
+            const result = obj(802).wrapTransportOnMessage(closure_131_0, closure_0);
+            obj(802).wrapTransportSend(closure_131_0, closure_0);
+            obj(802).wrapTransportOnClose(closure_131_0);
+            obj(802).wrapTransportError(closure_131_0);
+            return closure_131_2;
           })();
           iter.next();
           return iter;

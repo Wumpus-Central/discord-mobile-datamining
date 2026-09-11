@@ -1,11 +1,9 @@
 // === Module 6707: ? ===
 
 // Module 6707
-import _mod6708 from "module_6708" /* 6708 */;
+import _mod19 from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const context = _mod19.createContext(null);
 
-export const initialize = function initialize() {
-  _mod6708.startListening();
-};
+export const BottomSheetInternalContext = context;
+export const BottomSheetInternalProvider = context.Provider;

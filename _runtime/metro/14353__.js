@@ -1,8 +1,11 @@
 // === Module 14353: ? ===
 
 // Module 14353
-const require = arg1;
-const dependencyMap = arg6;
+import _mod14354 from "module_14354" /* 14354 */;
 
-export const shouldPolyfill = require("supportedValuesOf").supportedValuesOf;
-export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;
+
+export default !_mod14354(() => 7 !== Object.defineProperty({}, 1, {
+  get() {
+    return 7;
+  }
+})[1]);

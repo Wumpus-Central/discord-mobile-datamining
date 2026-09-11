@@ -2,7 +2,7 @@
 
 // Module 4056
 import module_4048 from "module_4048" /* 4048 */;
-import requiredArgs from "requiredArgs" /* 3694 */;
+import requiredArgs from "requiredArgs" /* 3696 */;
 
 if (!module_4048) {
   let obj = { default: module_4048 };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisYear(arg0) {
+export default function isThisSecond(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4048.default(arg0, Date.now());
+  return module_4048.default(Date.now(), arg0);
 };
 export default exports.default;

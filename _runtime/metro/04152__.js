@@ -1,26 +1,70 @@
 // === Module 4152: ? ===
 
 // Module 4152
-let closure_0 = { lessThanXSeconds: { one: "\u5C11\u65BC 1 \u79D2", other: "\u5C11\u65BC {{count}} \u79D2" }, xSeconds: { one: "1 \u79D2", other: "{{count}} \u79D2" }, halfAMinute: "\u534A\u5206\u9418", lessThanXMinutes: { one: "\u5C11\u65BC 1 \u5206\u9418", other: "\u5C11\u65BC {{count}} \u5206\u9418" }, xMinutes: { one: "1 \u5206\u9418", other: "{{count}} \u5206\u9418" }, xHours: { one: "1 \u5C0F\u6642", other: "{{count}} \u5C0F\u6642" }, aboutXHours: { one: "\u5927\u7D04 1 \u5C0F\u6642", other: "\u5927\u7D04 {{count}} \u5C0F\u6642" }, xDays: { one: "1 \u5929", other: "{{count}} \u5929" }, aboutXWeeks: { one: "\u5927\u7D04 1 \u500B\u661F\u671F", other: "\u5927\u7D04 {{count}} \u500B\u661F\u671F" }, xWeeks: { one: "1 \u500B\u661F\u671F", other: "{{count}} \u500B\u661F\u671F" }, aboutXMonths: { one: "\u5927\u7D04 1 \u500B\u6708", other: "\u5927\u7D04 {{count}} \u500B\u6708" }, xMonths: { one: "1 \u500B\u6708", other: "{{count}} \u500B\u6708" }, aboutXYears: { one: "\u5927\u7D04 1 \u5E74", other: "\u5927\u7D04 {{count}} \u5E74" }, xYears: { one: "1 \u5E74", other: "{{count}} \u5E74" }, overXYears: { one: "\u8D85\u904E 1 \u5E74", other: "\u8D85\u904E {{count}} \u5E74" }, almostXYears: { one: "\u5C07\u8FD1 1 \u5E74", other: "\u5C07\u8FD1 {{count}} \u5E74" } };
+import module_2035 from "module_2035" /* 2035 */;
+import module_2036 from "module_2036" /* 2036 */;
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp6 = tmp;
-    if (null != addSuffix) {
-      tmp6 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp}前`;
-        }
-        text = `${tmp}內`;
-      }
+if (!module_2035) {
+  let obj = { default: module_2035 };
+} else {
+  obj = module_2035;
+}
+if (!module_2036) {
+  obj = { default: module_2036 };
+  let obj2 = obj;
+} else {
+  obj2 = module_2036;
+}
+const date = {
+  ordinalNumber: obj2.default({
+    matchPattern: /^(第\s*)?\d+(日|时|分|秒)?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
     }
-    return tmp6;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    const _String = String;
-    one = tmp.other.replace("{{count}}", String(arg1));
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
+};
+obj2 = { matchPatterns: { narrow: /^(前)/i, abbreviated: /^(前)/i, wide: /^(公元前|公元)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj3 = { any: null };
+const items = [/^(前)/i, /^(公元)/i];
+obj3.any = items;
+obj2.parsePatterns = obj3;
+date.era = obj.default(obj2);
+const obj4 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^第[一二三四]刻/i, wide: /^第[一二三四]刻钟/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
   }
 };
+const obj5 = { any: null };
+const items1 = [/(1|一)/i, /(2|二)/i, /(3|三)/i, /(4|四)/i];
+obj5.any = items1;
+obj4.parsePatterns = obj5;
+date.quarter = obj.default(obj4);
+const obj6 = { matchPatterns: { narrow: /^(一|二|三|四|五|六|七|八|九|十[二一])/i, abbreviated: /^(一|二|三|四|五|六|七|八|九|十[二一]|\d|1[12])月/i, wide: /^(一|二|三|四|五|六|七|八|九|十[二一])月/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { narrow: null, any: null };
+const items2 = [/^一/i, /^二/i, /^三/i, /^四/i, /^五/i, /^六/i, /^七/i, /^八/i, /^九/i, /^十(?!(一|二))/i, /^十一/i, /^十二/i];
+obj7.narrow = items2;
+const items3 = [/^一|1/i, /^二|2/i, /^三|3/i, /^四|4/i, /^五|5/i, /^六|6/i, /^七|7/i, /^八|8/i, /^九|9/i, /^十(?!(一|二))|10/i, /^十一|11/i, /^十二|12/i];
+obj7.any = items3;
+obj6.parsePatterns = obj7;
+date.month = obj.default(obj6);
+const obj8 = { matchPatterns: { narrow: /^[一二三四五六日]/i, short: /^[一二三四五六日]/i, abbreviated: /^周[一二三四五六日]/i, wide: /^星期[一二三四五六日]/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj9 = { any: null };
+const items4 = [/日/i, /一/i, /二/i, /三/i, /四/i, /五/i, /六/i];
+obj9.any = items4;
+obj8.parsePatterns = obj9;
+date.day = obj.default(obj8);
+const obj10 = { matchPatterns: { any: /^(上午?|下午?|午夜|[中正]午|早上?|下午|晚上?|凌晨|)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^上午?/i, pm: /^下午?/i, midnight: /^午夜/i, noon: /^[中正]午/i, morning: /^早上/i, afternoon: /^下午/i, evening: /^晚上?/i, night: /^凌晨/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj10);
+
+export default date;
 export default exports.default;
