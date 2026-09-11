@@ -1,12 +1,12 @@
-// === Module 15318: GuildRoleSubscriptionCard ===
+// === Module 15298: GuildRoleSubscriptionCard ===
 
-// Module 15318 (GuildRoleSubscriptionCard)
+// Module 15298 (GuildRoleSubscriptionCard)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7031 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15308 */;
-import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 15320 */;
-import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 15323 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7052 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15288 */;
+import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 15300 */;
+import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 15303 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,7 +33,7 @@ class Separator {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 const createStyles = { sectionTitle: { textTransform: "uppercase" }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
 createStyles.separator = size;
@@ -63,7 +63,7 @@ export const Content = function Content(arg0) {
   obj1 = { children: null };
   const intl = guildId(1114).intl;
   obj1.children = intl.string(guildId(1114).t["DJ+bGu"]);
-  const items = [closure_6(SectionTitle, obj1), closure_6(guildId(1178).Spacer, { size: 8 }), closure_6(guildId(15319).GuildRoleSubscriptionMemberPreview, { guildId, role })];
+  const items = [closure_6(SectionTitle, obj1), closure_6(guildId(1178).Spacer, { size: 8 }), closure_6(guildId(15299).GuildRoleSubscriptionMemberPreview, { guildId, role })];
   obj.children = items;
   const items1 = [closure_8(closure_7, obj), , , ];
   let tmp4Result = null;
@@ -93,7 +93,7 @@ export const Content = function Content(arg0) {
     obj7.children = intl3.format(guildId(1114).t.l40GUu, obj8);
     const items4 = [closure_6(SectionTitle, obj7), closure_6(guildId(1178).Spacer, { size: 14 }), ];
     const obj9 = { gap: 14, children: first1.map((benefit) => timestampProducer(GuildRoleSubscriptionBenefitRow.ChannelBenefitRow, { benefit, guildId }, benefit.ref_id)) };
-    items4[2] = closure_6(guildId(10416).GappedList, obj9);
+    items4[2] = closure_6(guildId(10435).GappedList, obj9);
     obj6.children = items4;
     tmp4Result = closure_8(closure_7, obj6);
   }
@@ -107,11 +107,11 @@ export const Content = function Content(arg0) {
     obj11.children = intl4.format(guildId(1114).t["4V/Mfi"], obj12);
     const items5 = [closure_6(SectionTitle, obj11), closure_6(guildId(1178).Spacer, { size: 14 }), ];
     const obj13 = { gap: 14, children: first2.map((benefit, index) => timestampProducer(GuildRoleSubscriptionBenefitRow.IntangibleBenefitRow, { benefit, guildId }, index)) };
-    items5[2] = closure_6(guildId(10416).GappedList, obj13);
+    items5[2] = closure_6(guildId(10435).GappedList, obj13);
     obj10.children = items5;
     tmp4Result1 = closure_8(closure_7, obj10);
   }
   items1[3] = tmp4Result1;
   obj.children = items1;
-  return closure_8(guildId(10416).GappedList, obj);
+  return closure_8(guildId(10435).GappedList, obj);
 };

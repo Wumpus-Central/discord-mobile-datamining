@@ -1,19 +1,19 @@
-// === Module 12379: GuildDirectoryAddModal ===
+// === Module 12402: GuildDirectoryAddModal ===
 
-// Module 12379 (GuildDirectoryAddModal)
+// Module 12402 (GuildDirectoryAddModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import useInitialValueDefault from "useInitialValue" /* 5648 */;
-import NavigatorHeader from "NavigatorHeader" /* 5674 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7175 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12378 */;
+import useInitialValueDefault from "useInitialValue" /* 5649 */;
+import NavigatorHeader from "NavigatorHeader" /* 5675 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12401 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const GuildDirectoryCreate = fn(12380).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12403).GuildDirectoryCreate;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { safeArea: null };
-createStyles = { marginTop: fn(5732).NAV_BAR_HEIGHT, flex: 1 };
+createStyles = { marginTop: fn(5733).NAV_BAR_HEIGHT, flex: 1 };
 createStyles.safeArea = createStyles;
 let closure_5 = createStyles.createStyles(createStyles);
 const size = fn(2);
@@ -37,7 +37,7 @@ export default function GuildDirectoryAddModal(arg0) {
     };
     obj2.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_4(closure_1_1(12381), {});
+      return closure_1_4(closure_1_1(12404), {});
     };
     obj1[GuildDirectoryCreate.CREATE_OR_ADD] = obj2;
     obj1[GuildDirectoryCreate.DESCRIPTION] = {
@@ -48,7 +48,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12389), {});
+        return closure_1_4(closure_1_1(12412), {});
       }
     };
     const obj3 = {
@@ -59,7 +59,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12389), {});
+        return closure_1_4(closure_1_1(12412), {});
       }
     };
     obj1[GuildDirectoryCreate.TEMPLATES] = {
@@ -70,7 +70,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12393), {});
+        return closure_1_4(closure_1_1(12416), {});
       }
     };
     obj5 = {
@@ -81,7 +81,7 @@ export default function GuildDirectoryAddModal(arg0) {
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12403), {});
+        return closure_1_4(closure_1_1(12426), {});
       }
     };
     obj1[GuildDirectoryCreate.CREATE] = obj5;

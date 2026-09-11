@@ -1,14 +1,14 @@
-// === Module 16747: GuildVoiceOrStageChannelRow ===
+// === Module 16735: GuildVoiceOrStageChannelRow ===
 
-// Module 16747 (GuildVoiceOrStageChannelRow)
+// Module 16735 (GuildVoiceOrStageChannelRow)
 import util from "util" /* 1114 */;
-import UserUtilsDefault from "UserUtils" /* 4449 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5481 */;
-import ChannelListLayout from "ChannelListLayout" /* 10191 */;
-import renderChannelBadge from "renderChannelBadge" /* 12361 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16748 */;
-import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 16749 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 16751 */;
+import UserUtilsDefault from "UserUtils" /* 4451 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5482 */;
+import ChannelListLayout from "ChannelListLayout" /* 10210 */;
+import renderChannelBadge from "renderChannelBadge" /* 12384 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16736 */;
+import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 16737 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 16739 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
@@ -270,9 +270,9 @@ function GuildVoiceChannelExtras(arg0) {
   return <View style={tmp.subtitle}>{null}</View>;
 }
 const View = fn(17).View;
-const layout = fn(7930).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(7952).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({ users: { marginTop: 4 }, subtitle: { marginEnd: 16 }, trailing: { paddingVertical: 4, alignItems: "center", alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx");

@@ -1,6 +1,6 @@
-// === Module 15998: MobileNotifSettingsSections ===
+// === Module 15982: MobileNotifSettingsSections ===
 
-// Module 15998 (MobileNotifSettingsSections)
+// Module 15982 (MobileNotifSettingsSections)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ NOTIFICATIONS_REDESIGN: "Notifications (Redesign)", NOTIF_REALTIME: "Realtime", NOTIF_CATEGORY_SOCIAL: "Category social", NOTIF_CATEGORY_SERVER: "Category server", NOTIF_CATEGORY_OTHER: "Category other" });

@@ -1,15 +1,15 @@
-// === Module 8861: SocialLayerStorefrontEligibilityHooks ===
+// === Module 8882: SocialLayerStorefrontEligibilityHooks ===
 
-// Module 8861 (SocialLayerStorefrontEligibilityHooks)
+// Module 8882 (SocialLayerStorefrontEligibilityHooks)
 import initialize from "initialize" /* 504 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8406 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8427 */;
 import noop from "module_19" /* 19 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8862 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8883 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
-import UserProfileStore from "UserProfileStore" /* 7672 */;
+import UserProfileStore from "UserProfileStore" /* 7693 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PresenceStore from "PresenceStore" /* 4645 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7280 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7301 */;
 
 require = fn;
 const size = fn(2);

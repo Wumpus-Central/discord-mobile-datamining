@@ -1,9 +1,9 @@
-// === Module 5833: BadgeCustomizeAbstractUI ===
+// === Module 5854: BadgeCustomizeAbstractUI ===
 
-// Module 5833 (BadgeCustomizeAbstractUI)
+// Module 5854 (BadgeCustomizeAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5834 from "module_5834" /* 5834 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5855 from "module_5855" /* 5855 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const BadgeCustomizeAbstractUI = function BadgeCustomizeAbstractUI(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5834 };
+  obj = { uri: _modDef5855 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const BadgeCustomizeAbstractUI = function BadgeCustomizeAbstractUI(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5834 });
+  return jsx(FastImageDefault, { uri: _modDef5855 });
 };

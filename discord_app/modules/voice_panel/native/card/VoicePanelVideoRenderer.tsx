@@ -1,14 +1,14 @@
-// === Module 17226: VoicePanelVideoRenderer ===
+// === Module 17215: VoicePanelVideoRenderer ===
 
-// Module 17226 (VoicePanelVideoRenderer)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
-import spring from "spring" /* 5024 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9565 */;
-import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9686 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11426 */;
-import VideoActionCreators from "VideoActionCreators" /* 17097 */;
+// Module 17215 (VoicePanelVideoRenderer)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4607 */;
+import spring from "spring" /* 5025 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9586 */;
+import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9707 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11448 */;
+import VideoActionCreators from "VideoActionCreators" /* 17086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,12 +16,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12343);
+const VoicePanelConstants = fn(12366);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(12341).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17181).VoicePanelPIPModes;
-let SCALE_PHYSICS = fn(12344).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(12364).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17170).VoicePanelPIPModes;
+let SCALE_PHYSICS = fn(12367).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 25;
@@ -41,7 +41,7 @@ function getScaleChangeWithOverscroll(arg0, arg1, arg2) {
 getScaleChangeWithOverscroll.__closure = { MIN_OVERSCROLL: 0.1, OVERSCOLL_INTENSITY_FACTOR: 5 };
 getScaleChangeWithOverscroll.__workletHash = 8727721301304;
 getScaleChangeWithOverscroll.__initData = { code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}" };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_18 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }, animatedWrapperStyles: { position: "absolute" }, video: { width: "100%", height: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -16, marginLeft: -16, height: 32, width: 32 } });
 let closure_19 = { code: "function VoicePanelVideoRendererTsx2(){const{containerLayout,videoDimensions}=this.__closure;return Math.max(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
 let closure_20 = { code: "function VoicePanelVideoRendererTsx3(){const{containerLayout,videoDimensions}=this.__closure;return Math.min(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
@@ -142,8 +142,8 @@ export default noop.memo(function VideoRenderer(streamKey) {
   let tmp = onReady();
   let tmp3 = sharedCoords;
   let obj = id(sharedCoords[16]);
-  let obj1 = isCamera;
   const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(userId, { location: "VoicePanelVideoRenderer" });
+  let obj1 = isCamera;
   const context = isCamera.useContext(streamId(sharedCoords[11]));
   const mode = context.mode;
   const focused = context.focused;
@@ -160,6 +160,9 @@ export default noop.memo(function VideoRenderer(streamKey) {
   let tmp11 = isCamera;
   if (isCamera) {
     tmp11 = pIPState.id === id;
+  }
+  if (tmp11) {
+    tmp11 = surfaceDirectRendererExperiment;
   }
   [tmp13, c16] = isScrollVisible(obj1.useState(true), 2);
   getScaleChangeWithOverscroll = obj1.useRef(() => {

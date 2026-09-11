@@ -1,8 +1,8 @@
-// === Module 14003: GuildBadgeCrosshairs ===
+// === Module 13981: GuildBadgeCrosshairs ===
 
-// Module 14003 (GuildBadgeCrosshairs)
-import inlineStyles from "inlineStyles" /* 8521 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13992 */;
+// Module 13981 (GuildBadgeCrosshairs)
+import inlineStyles from "inlineStyles" /* 8542 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,11 +1,11 @@
-// === Module 17874: GuildSettingsRoleSubscriptionEmojis ===
+// === Module 17865: GuildSettingsRoleSubscriptionEmojis ===
 
-// Module 17874 (GuildSettingsRoleSubscriptionEmojis)
+// Module 17865 (GuildSettingsRoleSubscriptionEmojis)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5514 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 17829 */;
-import getMaxRoleSubscriptionEmojiSlotsDefault from "getMaxRoleSubscriptionEmojiSlots" /* 17875 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5515 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 17820 */;
+import getMaxRoleSubscriptionEmojiSlotsDefault from "getMaxRoleSubscriptionEmojiSlots" /* 17866 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import apply from "module_12" /* 12 */;
@@ -13,7 +13,7 @@ import apply from "module_12" /* 12 */;
 require = fn;
 function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(17819);
+  let obj = guildId(17810);
   const roleSubscriptionSettingsDisabled = obj.useRoleSubscriptionSettingsDisabled();
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
@@ -21,7 +21,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
     return null;
   } else {
     const intl = tmp(1114).intl;
-    obj = { maxSlots: stateFromStores(17875)(stateFromStores) };
+    obj = { maxSlots: stateFromStores(17866)(stateFromStores) };
     obj = { guild: stateFromStores, headerDescription: null, computeEmojiItems: null, onSelectRolesForEmoji: null, disabled: null };
     obj.headerDescription = intl.formatToPlainString(tmp(1114).t.H9Jxp6, obj);
     obj.computeEmojiItems = computeEmojiItems;
@@ -38,22 +38,22 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             guildId: stateFromStores.id,
             emoji,
             onSave(arg0) {
-              stateFromStores(4572).hideActionSheet();
+              stateFromStores(4573).hideActionSheet();
               closure_0(arg0);
             },
             onCancel() {
-              stateFromStores(4572).hideActionSheet();
+              stateFromStores(4573).hideActionSheet();
               const error = new Error("User cancelled");
               closure_1(error);
             }
           };
-          obj.openLazy(asyncRequireImpl(17876, dependencyMap.paths), "role-subscription-emoji-" + stateFromStores.id, obj);
+          obj.openLazy(asyncRequireImpl(17867, dependencyMap.paths), "role-subscription-emoji-" + stateFromStores.id, obj);
         });
       }
       return rejectResult;
     };
     obj.disabled = roleSubscriptionSettingsDisabled;
-    return jsx(tmp(17654).ManageEmojisModal, { guild: stateFromStores, headerDescription: null, computeEmojiItems: null, onSelectRolesForEmoji: null, disabled: null });
+    return jsx(tmp(17645).ManageEmojisModal, { guild: stateFromStores, headerDescription: null, computeEmojiItems: null, onSelectRolesForEmoji: null, disabled: null });
   }
   const obj2 = guildId(504);
 }

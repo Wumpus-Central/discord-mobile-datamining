@@ -1,20 +1,20 @@
-// === Module 7332: ChannelSectionStore ===
+// === Module 7353: ChannelSectionStore ===
 
-// Module 7332 (ChannelSectionStore)
+// Module 7353 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 7334 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7335 */;
-import ExperimentStore from "ExperimentStore" /* 4521 */;
-import SearchMessageStore from "SearchMessageStore" /* 7333 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7355 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7356 */;
+import ExperimentStore from "ExperimentStore" /* 4522 */;
+import SearchMessageStore from "SearchMessageStore" /* 7354 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -496,7 +496,15 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     let flag = null != guildSidebars[arg0.guildId];
     if (flag) {
       delete tmp[tmp2];
+      let hasSearchStateResult = null != searchContextId;
+      if (hasSearchStateResult) {
+        hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
+      }
       flag = true;
+      if (hasSearchStateResult !== c24) {
+        c24 = hasSearchStateResult;
+        flag = true;
+      }
     }
     return flag;
   },

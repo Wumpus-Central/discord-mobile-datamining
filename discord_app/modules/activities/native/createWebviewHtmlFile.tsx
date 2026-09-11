@@ -1,6 +1,6 @@
-// === Module 9718: createWebviewHtmlFile ===
+// === Module 9739: createWebviewHtmlFile ===
 
-// Module 9718 (createWebviewHtmlFile)
+// Module 9739 (createWebviewHtmlFile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -41,7 +41,7 @@ let closure_5 = async function _createWebviewHtmlFile(arg0) {
           closure_129_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

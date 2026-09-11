@@ -1,11 +1,11 @@
-// === Module 9915: ReadStateUtils ===
+// === Module 9936: ReadStateUtils ===
 
-// Module 9915 (ReadStateUtils)
-import ReadStateStore from "ReadStateStore" /* 4620 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
+// Module 9936 (ReadStateUtils)
+import ReadStateStore from "ReadStateStore" /* 4621 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 
 const require = fn;
-const UnreadSetting = fn(4787).UnreadSetting;
+const UnreadSetting = fn(4788).UnreadSetting;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/read_states/ReadStateUtils.tsx");
 

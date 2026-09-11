@@ -1,14 +1,14 @@
-// === Module 14259: Badges/Badges ===
+// === Module 14235: Badges/Badges ===
 
-// Module 14259 (Badges/Badges)
+// Module 14235 (Badges/Badges)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4601 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { base: null, danger: null, info: null, brand: null, expressive: null };
 createStyles = { borderRadius: nativeDefault.radii.sm, paddingHorizontal: 4, paddingVertical: 2 };
 createStyles.base = createStyles;
@@ -20,7 +20,7 @@ createStyles.brand = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_260
 const obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_260 };
 createStyles.expressive = { backgroundColor: nativeDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT };
 let closure_4 = createStyles.createStyles(createStyles);
-fn(4605);
+fn(4606);
 const obj5 = { text: { textAlign: "center", textTransform: "uppercase" }, dangerText: null, infoText: null, brandText: null, expressiveText: null };
 const obj4 = { backgroundColor: nativeDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT };
 obj5.dangerText = { color: nativeDefault.colors.WHITE };

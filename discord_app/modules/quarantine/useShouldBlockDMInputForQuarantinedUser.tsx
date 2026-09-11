@@ -1,7 +1,7 @@
-// === Module 12504: useShouldBlockDMInputForQuarantinedUser ===
+// === Module 12527: useShouldBlockDMInputForQuarantinedUser ===
 
-// Module 12504 (useShouldBlockDMInputForQuarantinedUser)
-import MessageStore from "MessageStore" /* 4826 */;
+// Module 12527 (useShouldBlockDMInputForQuarantinedUser)
+import MessageStore from "MessageStore" /* 4827 */;
 
 const require = fn;
 const UserFlags = fn(1074).UserFlags;

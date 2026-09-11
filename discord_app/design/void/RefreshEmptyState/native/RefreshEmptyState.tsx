@@ -1,12 +1,12 @@
-// === Module 14260: RefreshEmptyState ===
+// === Module 14236: RefreshEmptyState ===
 
-// Module 14260 (RefreshEmptyState)
+// Module 14236 (RefreshEmptyState)
 import nativeDefault from "native" /* 576 */;
-import shared from "shared" /* 4456 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8682 */;
+import shared from "shared" /* 4458 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8703 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5574 */;
+import TextStyles from "TextStyles" /* 5575 */;
 
 require = fn;
 class EmptyState {
@@ -77,7 +77,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { alignItems: "center", justifyContent: "center", padding: 16 }, title: null, body: null, image: null, cta: null };
 createStyles = {};
 let merged = Object.assign(TextStyles(Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16));

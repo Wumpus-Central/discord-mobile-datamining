@@ -1,6 +1,6 @@
-// === Module 14076: PTTEducationExperiment ===
+// === Module 14054: PTTEducationExperiment ===
 
-// Module 14076 (PTTEducationExperiment)
+// Module 14054 (PTTEducationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

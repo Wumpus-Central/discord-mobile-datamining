@@ -1,8 +1,8 @@
-// === Module 14884: BlockedUserRowV2 ===
+// === Module 14860: BlockedUserRowV2 ===
 
-// Module 14884 (BlockedUserRowV2)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8242 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9111 */;
+// Module 14860 (BlockedUserRowV2)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9132 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -10,7 +10,7 @@ const require = fn;
 function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7214)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7235)().analyticsLocations;
   let obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
   obj = { user: userRecord, guildId: "Array", size: userRecord(1178).AvatarSizes.REFRESH_MEDIUM_32 };
   obj.icon = jsx(userRecord(1178).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1178).AvatarSizes.REFRESH_MEDIUM_32 });
@@ -55,8 +55,8 @@ function BlockedUserRow(userRecord) {
   obj1.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5025).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5655).TableRow, { name: "unblock", label: null });
+  obj.trailing = jsx(userRecord(5026).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
+  return jsx(userRecord(5656).TableRow, { name: "unblock", label: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

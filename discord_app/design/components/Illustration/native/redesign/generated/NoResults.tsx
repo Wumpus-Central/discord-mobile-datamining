@@ -1,8 +1,8 @@
-// === Module 8295: generated/NoResults ===
+// === Module 8316: generated/NoResults ===
 
-// Module 8295 (generated/NoResults)
-import shared from "shared" /* 4456 */;
-import _mod8296 from "module_8296" /* 8296 */;
+// Module 8316 (generated/NoResults)
+import shared from "shared" /* 4458 */;
+import _mod8317 from "module_8317" /* 8317 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getNoResultsSource = function getNoResultsSource(theme) {
   const obj = {
     dark() {
-      return require("module_8297");
+      return require("module_8318");
     },
     darker() {
-      return require("module_8298");
+      return require("module_8319");
     },
     light() {
-      return require("module_8299");
+      return require("module_8320");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,31 +28,31 @@ export const getNoResultsSource = function getNoResultsSource(theme) {
 export const useNoResultsSource = function useNoResultsSource() {
   const obj = {
     dark() {
-      return require("module_8297");
+      return require("module_8318");
     },
     darker() {
-      return require("module_8298");
+      return require("module_8319");
     },
     light() {
-      return require("module_8299");
+      return require("module_8320");
     }
   };
-  return _mod8296.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8317.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const NoResults = function NoResults(arg0) {
   let obj = {
     dark() {
-      return require("module_8297");
+      return require("module_8318");
     },
     darker() {
-      return require("module_8298");
+      return require("module_8319");
     },
     light() {
-      return require("module_8299");
+      return require("module_8320");
     }
   };
   obj = {};
-  const illustrationSource = _mod8296.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8317.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

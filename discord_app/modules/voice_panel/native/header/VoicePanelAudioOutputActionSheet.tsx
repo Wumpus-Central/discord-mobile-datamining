@@ -1,20 +1,20 @@
-// === Module 9185: VoicePanelAudioOutputActionSheet ===
+// === Module 9206: VoicePanelAudioOutputActionSheet ===
 
-// Module 9185 (VoicePanelAudioOutputActionSheet)
+// Module 9206 (VoicePanelAudioOutputActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4425 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import NativeViewDefault from "NativeView" /* 5639 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7201 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7202 */;
-import useOnConnectToConsole from "useOnConnectToConsole" /* 9285 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4427 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import NativeViewDefault from "NativeView" /* 5640 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7222 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
+import useOnConnectToConsole from "useOnConnectToConsole" /* 9306 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4622 */;
-import AudioManagerStore from "AudioManagerStore" /* 9155 */;
+import GameConsoleStore from "GameConsoleStore" /* 4623 */;
+import AudioManagerStore from "AudioManagerStore" /* 9176 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SessionsStore from "SessionsStore" /* 4623 */;
+import SessionsStore from "SessionsStore" /* 4624 */;
 
 require = fn;
 function VoicePanelAudioPhoneOutputSection() {
@@ -23,9 +23,9 @@ function VoicePanelAudioPhoneOutputSection() {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ activeDevice: AudioManagerStore.getActiveAudioDevice(), availableDevices: AudioManagerStore.getAudioDevices() }));
   availableDevices = stateFromStoresObject.availableDevices;
   closure_1 = noop.useCallback((arg0) => {
-    availableDevices(9186).setAudioOutputDevice(arg0);
-    const obj = availableDevices(9186);
-    closure_1(4572).hideActionSheet(closure_1_9);
+    availableDevices(9207).setAudioOutputDevice(arg0);
+    const obj = availableDevices(9207);
+    closure_1(4573).hideActionSheet(closure_1_9);
   }, []);
   let tmp5 = null;
   if (availableDevices.length > 0) {
@@ -44,9 +44,9 @@ function VoicePanelAudioPhoneOutputSection() {
       hasIcons: true,
       children: availableDevices.map((deviceId) => {
           let obj = { value: deviceId.deviceId, icon: null, label: null, subLabel: null };
-          obj = { source: availableDevices(9151).audioDeviceToIconMap[deviceId.simpleDeviceType] };
-          obj.icon = closure_1_11(availableDevices(5661).TableRowIcon, obj);
-          obj.label = availableDevices(9151).getAudioDeviceToDisplayText(deviceId);
+          obj = { source: availableDevices(9172).audioDeviceToIconMap[deviceId.simpleDeviceType] };
+          obj.icon = closure_1_11(availableDevices(5662).TableRowIcon, obj);
+          obj.label = availableDevices(9172).getAudioDeviceToDisplayText(deviceId);
           const deviceName = deviceId.deviceName;
           let length;
           if (deviceName != null) {
@@ -57,11 +57,11 @@ function VoicePanelAudioPhoneOutputSection() {
             deviceName1 = deviceId.deviceName;
           }
           obj.subLabel = deviceName1;
-          return closure_1_11(availableDevices(5738).TableRadioRow, obj, deviceId.deviceId);
+          return closure_1_11(availableDevices(5739).TableRadioRow, obj, deviceId.deviceId);
         })
     };
-    obj.children = closure_11(tmp2(5735).TableRadioGroup, obj);
-    tmp5 = closure_11(tmp2(9187).VoicePanelFormSection, obj);
+    obj.children = closure_11(tmp2(5736).TableRadioGroup, obj);
+    tmp5 = closure_11(tmp2(9208).VoicePanelFormSection, obj);
   }
   return tmp5;
 }
@@ -69,8 +69,8 @@ function VoicePanelAudioConsoleSection(channel) {
   channel = channel.channel;
   let arr;
   let awaitingRemoteSessionInfo;
-  arr = arr(9283)();
-  dependencyMap = arr(9284)();
+  arr = arr(9304)();
+  dependencyMap = arr(9305)();
   let obj = channel(563);
   const items = [awaitingRemoteSessionInfo];
   const stateFromStores = obj.useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
@@ -119,7 +119,7 @@ function VoicePanelAudioConsoleSection(channel) {
     }
   }, items3);
   let obj2 = channel(563);
-  const tmp8 = !channel(4425).useIsDismissibleContentDismissed_UNSAFE(channel(1943).DismissibleContent.DONUT_MOBILE_NUX);
+  const tmp8 = !channel(4427).useIsDismissibleContentDismissed_UNSAFE(channel(1943).DismissibleContent.DONUT_MOBILE_NUX);
   awaitingRemoteSessionInfo = tmp8;
   const items4 = [arr, tmp8];
   const effect = stateFromStores.useEffect(() => {
@@ -166,17 +166,17 @@ function VoicePanelAudioConsoleSection(channel) {
       return tmp5;
     });
     obj.children = mapped.filter((item) => Boolean(item));
-    obj.children = closure_11(tmp3(5735).TableRadioGroup, obj);
-    tmp10 = closure_11(tmp3(9187).VoicePanelFormSection, obj);
+    obj.children = closure_11(tmp3(5736).TableRadioGroup, obj);
+    tmp10 = closure_11(tmp3(9208).VoicePanelFormSection, obj);
   }
   return tmp10;
 }
 const ScrollView = fn(17).ScrollView;
-let closure_9 = fn(9184).VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;
+let closure_9 = fn(9205).VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_13 = createStyles.createStyles({ sectionContainer: { marginTop: 0, marginBottom: 24 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelAudioOutputActionSheet.tsx");

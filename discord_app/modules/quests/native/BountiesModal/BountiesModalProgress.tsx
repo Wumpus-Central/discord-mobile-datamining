@@ -1,9 +1,9 @@
-// === Module 15104: BountiesModalProgress ===
+// === Module 15081: BountiesModalProgress ===
 
-// Module 15104 (BountiesModalProgress)
+// Module 15081 (BountiesModalProgress)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4606 */;
-import timingPresets from "timingPresets" /* 4609 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_9 = createStyles.createStyles(() => {
   let obj = { progressContainer: { height: 4 }, progressTrack: null, progressBar: null, progressBarGlowLayer: null };
   obj = {};

@@ -1,9 +1,9 @@
-// === Module 17576: SelfPresenceStoreManager ===
+// === Module 17567: SelfPresenceStoreManager ===
 
-// Module 17576 (SelfPresenceStoreManager)
+// Module 17567 (SelfPresenceStoreManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5329 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 function handleChange() {
   const obj = { type: "SELF_PRESENCE_STORE_UPDATE", status: SelfPresenceStore.getStatus(), activities: SelfPresenceStore.getActivities(true), hiddenActivities: SelfPresenceStore.getHiddenActivities() };

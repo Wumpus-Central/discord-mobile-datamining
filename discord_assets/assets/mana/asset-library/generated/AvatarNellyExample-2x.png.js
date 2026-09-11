@@ -1,6 +1,6 @@
-// === Module 5824: ? ===
+// === Module 5845: ? ===
 
-// Module 5824
+// Module 5845
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarNellyExample-2x.png.js");

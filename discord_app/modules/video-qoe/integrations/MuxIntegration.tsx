@@ -1,6 +1,6 @@
-// === Module 15218: MuxIntegration ===
+// === Module 15197: MuxIntegration ===
 
-// Module 15218 (MuxIntegration)
+// Module 15197 (MuxIntegration)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/video-qoe/integrations/MuxIntegration.tsx");
@@ -44,7 +44,7 @@ prototype["mapDiscordToMuxMetadata"] = function mapDiscordToMuxMetadata(config, 
   return obj;
 };
 prototype["getAppVersion"] = function getAppVersion() {
-  return "6393";
+  return "6407";
 };
 prototype["getBuildChannel"] = function getBuildChannel() {
   try {

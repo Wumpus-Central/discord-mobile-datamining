@@ -1,8 +1,8 @@
-// === Module 4634: TimeUtils ===
+// === Module 4635: TimeUtils ===
 
-// Module 4634 (TimeUtils)
+// Module 4635 (TimeUtils)
 import u from "u" /* 569 */;
-import findLastIndexDefault from "findLastIndex" /* 4636 */;
+import findLastIndexDefault from "findLastIndex" /* 4637 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ function sleep(asMilliseconds) {
     const timerId = setTimeout(() => closure_0(), asMillisecondsResult);
   });
 }
-const tryCatch = fn(4635);
+const tryCatch = fn(4636);
 let c4 = 3600000;
 function now() {
   const _performance = u.performance;
@@ -569,7 +569,7 @@ export const TimeUnitMax = items;
 export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
-  const tmp2 = findLastIndexDefault(items, (unit) => f78746(unit.unit), items.findIndex((max) => {
+  const tmp2 = findLastIndexDefault(items, (unit) => f78785(unit.unit), items.findIndex((max) => {
     max = max.max;
     let tmp = max.unit === obj.NONE;
     if (tmp) {
@@ -583,7 +583,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = items.find((unit) => f78746(unit.unit));
+    const found = items.find((unit) => f78785(unit.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
@@ -610,8 +610,8 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     return obj;
   } else {
     closure_0 = rounded;
-    const f78746 = (dependencyMap) => closure_0.includes(dependencyMap);
-    const tmp12 = f78746(4636)(items, (unit) => f78746(unit.unit), items.findIndex((max) => {
+    const f78785 = (dependencyMap) => closure_0.includes(dependencyMap);
+    const tmp12 = f78785(4637)(items, (unit) => f78785(unit.unit), items.findIndex((max) => {
       max = max.max;
       let tmp = max.unit === obj.NONE;
       if (tmp) {
@@ -625,7 +625,7 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {
-      const found = items.find((unit) => f78746(unit.unit));
+      const found = items.find((unit) => f78785(unit.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;

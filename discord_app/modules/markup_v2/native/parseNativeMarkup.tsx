@@ -1,12 +1,12 @@
-// === Module 8158: parseNativeMarkup ===
+// === Module 8180: parseNativeMarkup ===
 
-// Module 8158 (parseNativeMarkup)
-import _mod8159 from "module_8159" /* 8159 */;
-import transformNativeMarkupNode from "transformNativeMarkupNode" /* 8162 */;
+// Module 8180 (parseNativeMarkup)
+import _mod8181 from "module_8181" /* 8181 */;
+import transformNativeMarkupNode from "transformNativeMarkupNode" /* 8184 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-let closure_2 = apply.once(() => _mod8159.parse);
+let closure_2 = apply.once(() => _mod8181.parse);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup_v2/native/parseNativeMarkup.tsx");
 

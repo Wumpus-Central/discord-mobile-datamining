@@ -1,8 +1,8 @@
-// === Module 17994: i18nMessagesProvider ===
+// === Module 17985: i18nMessagesProvider ===
 
-// Module 17994 (i18nMessagesProvider)
+// Module 17985 (i18nMessagesProvider)
 import _mod17 from "module_17" /* 17 */;
-import NativeI18nModuleDefault from "NativeI18nModule" /* 17995 */;
+import NativeI18nModuleDefault from "NativeI18nModule" /* 17986 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import size from "module_2" /* 2 */;
 

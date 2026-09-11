@@ -1,10 +1,10 @@
-// === Module 10158: ThreadNotificationSettings ===
+// === Module 10178: ThreadNotificationSettings ===
 
-// Module 10158 (ThreadNotificationSettings)
+// Module 10178 (ThreadNotificationSettings)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4245 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4247 */;
 
 require = fn;
 function computeThreadNotificationSetting(channel) {

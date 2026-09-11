@@ -1,9 +1,9 @@
-// === Module 5791: AnimatedAvatarsAbstractUI ===
+// === Module 5792: AnimatedAvatarsAbstractUI ===
 
-// Module 5791 (AnimatedAvatarsAbstractUI)
+// Module 5792 (AnimatedAvatarsAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5792 from "module_5792" /* 5792 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5793 from "module_5793" /* 5793 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AnimatedAvatarsAbstractUI = function AnimatedAvatarsAbstractUI(widt
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5792 };
+  obj = { uri: _modDef5793 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const AnimatedAvatarsAbstractUI = function AnimatedAvatarsAbstractUI(widt
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5792 });
+  return jsx(FastImageDefault, { uri: _modDef5793 });
 };

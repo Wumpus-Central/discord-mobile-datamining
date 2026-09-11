@@ -1,7 +1,7 @@
-// === Module 4752: useAudienceRequestToSpeakState ===
+// === Module 4753: useAudienceRequestToSpeakState ===
 
-// Module 4752 (useAudienceRequestToSpeakState)
-import VoiceStateStore from "VoiceStateStore" /* 4624 */;
+// Module 4753 (useAudienceRequestToSpeakState)
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 const require = fn;
 const RequestToSpeakStates = { NONE: 0, [0]: "NONE", REQUESTED_TO_SPEAK: 1, [1]: "REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK: 2, [2]: "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK", ON_STAGE: 3, [3]: "ON_STAGE" };

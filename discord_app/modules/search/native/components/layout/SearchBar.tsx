@@ -1,29 +1,29 @@
-// === Module 16720: layout/SearchBar ===
+// === Module 16708: layout/SearchBar ===
 
-// Module 16720 (layout/SearchBar)
+// Module 16708 (layout/SearchBar)
 import util from "util" /* 1114 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4316 */;
-import useChannelName from "useChannelName" /* 4758 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12408 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12428 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12431 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4318 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12431 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12451 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12454 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
-import SearchQueryStore from "SearchQueryStore" /* 12409 */;
+import SearchQueryStore from "SearchQueryStore" /* 12432 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(7930);
+const SearchConstants = fn(7952);
 ({ SEARCH_BAR_HEIGHT: c10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(7929).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(7951).SearchFilterAddLocations;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_15 = createStyles.createStyles((minHeight) => {
   let obj = { searchBar: null, icon: null };
   obj = { minHeight: minHeight + 2 };

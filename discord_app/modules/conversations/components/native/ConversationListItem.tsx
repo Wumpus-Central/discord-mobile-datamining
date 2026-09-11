@@ -1,14 +1,14 @@
-// === Module 7978: ConversationListItem ===
+// === Module 8000: ConversationListItem ===
 
-// Module 7978 (ConversationListItem)
+// Module 8000 (ConversationListItem)
 import nativeDefault from "native" /* 576 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 7959 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7961 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7975 */;
-import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 7980 */;
-import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 7983 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 7981 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7983 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7997 */;
+import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 8002 */;
+import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 8005 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7647 */;
+import ConversationsStore from "ConversationsStore" /* 7668 */;
 
 require = fn;
 function ConversationListItemBase(conversation) {
@@ -87,13 +87,13 @@ function ConversationListItemBase(conversation) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(7649).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(7670).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-fn(4605);
+fn(4606);
 let obj = { card: null, title: null, timestamp: null, headerContainer: null, previewsMask: null, previews: null, maskColumn: null, maskOpaque: null, maskFade: null };
 obj = { marginBottom: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, height: 232, overflow: "hidden", paddingBottom: 0 };
 obj.card = obj;

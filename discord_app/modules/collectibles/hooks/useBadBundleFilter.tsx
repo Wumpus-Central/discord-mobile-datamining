@@ -1,11 +1,11 @@
-// === Module 15154: useBadBundleFilter ===
+// === Module 15133: useBadBundleFilter ===
 
-// Module 15154 (useBadBundleFilter)
+// Module 15133 (useBadBundleFilter)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
 import UserStore from "UserStore" /* 1371 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7609 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7630 */;
 import size from "module_2" /* 2 */;
 
 _mod19.useCallback;
@@ -23,19 +23,19 @@ export const useBadBundleFilter = function useBadBundleFilter() {
       found = arr;
       if (0 !== arr.length) {
         found = arr.filter((product) => {
-          let obj = canUseShopDiscountsResult(8911);
+          let obj = canUseShopDiscountsResult(8932);
           if (obj2.isBundleProduct(product)) {
-            let tmpResult = canUseShopDiscountsResult(7606);
+            let tmpResult = canUseShopDiscountsResult(7627);
             if (!tmpResult.isFreeCollectiblesProduct(product)) {
               if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
-                tmpResult = canUseShopDiscountsResult(7605);
+                tmpResult = canUseShopDiscountsResult(7626);
                 if (tmpResult.isOrbsExclusiveProduct(product)) {
                   obj = { product, hasShopDiscount };
-                  return null != canUseShopDiscountsResult(7605).getProductOrbPrice(obj);
+                  return null != canUseShopDiscountsResult(7626).getProductOrbPrice(obj);
                 } else {
-                  const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7606).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                  const tmpResult2 = canUseShopDiscountsResult(7606);
-                  let result = canUseShopDiscountsResult(7606).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+                  const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7627).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                  const tmpResult2 = canUseShopDiscountsResult(7627);
+                  let result = canUseShopDiscountsResult(7627).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
                   if (null != result) {
                     if (0 !== result.amount) {
                       let num2 = 0;

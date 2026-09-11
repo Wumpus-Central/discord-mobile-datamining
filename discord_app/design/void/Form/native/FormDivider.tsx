@@ -1,18 +1,18 @@
-// === Module 8669: FormDivider ===
+// === Module 8690: FormDivider ===
 
-// Module 8669 (FormDivider)
+// Module 8690 (FormDivider)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4315 */;
-import ColorUtils from "ColorUtils" /* 4454 */;
-import RedesignCompat from "RedesignCompat" /* 5736 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7236 */;
+import native from "native" /* 4317 */;
+import ColorUtils from "ColorUtils" /* 4456 */;
+import RedesignCompat from "RedesignCompat" /* 5737 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7257 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-let createStyles = fn(4605);
+let createStyles = fn(4606);
 let closure_7 = createStyles.createStyles(() => {
   let obj = { divider: {}, dividerOuter: null, dividerHasIcon: null };
   obj = { marginLeft: 0, height: hasOwnProperty.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * hasOwnProperty.hairlineWidth };
@@ -20,8 +20,8 @@ let closure_7 = createStyles.createStyles(() => {
   obj.dividerHasIcon = { marginLeft: 56 };
   return obj;
 });
-createStyles = { [LIGHT]: nativeDefault.unsafe_rawColors.BLACK, [DARK]: nativeDefault.unsafe_rawColors.WHITE, [DARKER]: nativeDefault.unsafe_rawColors.WHITE, [MIDNIGHT]: nativeDefault.unsafe_rawColors.WHITE };
-({ LIGHT, DARK, DARKER, MIDNIGHT } = fn(1074).ThemeTypes);
+createStyles = { [LIGHT]: nativeDefault.unsafe_rawColors.BLACK, [ASH]: nativeDefault.unsafe_rawColors.WHITE, [DARK]: nativeDefault.unsafe_rawColors.WHITE, [ONYX]: nativeDefault.unsafe_rawColors.WHITE };
+({ LIGHT, ASH, DARK, ONYX } = fn(1074).ThemeTypes);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormDivider.tsx");
 

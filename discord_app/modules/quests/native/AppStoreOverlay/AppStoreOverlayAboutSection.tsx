@@ -1,9 +1,9 @@
-// === Module 11583: AppStoreOverlayAboutSection ===
+// === Module 11605: AppStoreOverlayAboutSection ===
 
-// Module 11583 (AppStoreOverlayAboutSection)
+// Module 11605 (AppStoreOverlayAboutSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_12, bottom: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12 };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { aboutSection: null };
 obj = { borderRadius: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj.aboutSection = obj;

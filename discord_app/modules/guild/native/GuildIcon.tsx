@@ -1,12 +1,12 @@
-// === Module 5634: GuildIcon ===
+// === Module 5635: GuildIcon ===
 
-// Module 5634 (GuildIcon)
+// Module 5635 (GuildIcon)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_5 = fn(5635).ExpressionSourceGuildRecord;
+let closure_5 = fn(5636).ExpressionSourceGuildRecord;
 const GuildRecord = fn(1975);
 ({ getGuildIconSource: metroRequire, getGuildAcronym: closure_7 } = GuildRecord);
 const Fonts = fn(1074).Fonts;
@@ -14,7 +14,7 @@ const jsx = fn(21).jsx;
 let obj = { XXXSMALL: "XXXSMALL", XXSMALL_12: "XXSMALL_12", XXSMALL: "XXSMALL", XSMALL_20: "XSMALL_20", XSMALL: "XSMALL", SMALL: "SMALL", SMALL_32: "SMALL_32", SMALL_36: "SMALL_36", NORMAL: "NORMAL", LARGE: "LARGE", XLARGE: "XLARGE", XXLARGE: "XXLARGE" };
 let closure_10 = { [obj.XXXSMALL]: [6, 4, 4, 4, 2, 1], [obj.XXSMALL_12]: [8, 6, 6, 4, 4, 2], [obj.XXSMALL]: [10, 8, 8, 6, 6, 4], [obj.XSMALL_20]: [12, 10, 10, 8, 8, 6], [obj.XSMALL]: [16, 16, 16, 14, 14, 12], [obj.SMALL]: [16, 16, 16, 14, 14, 12], [obj.SMALL_32]: [16, 16, 16, 14, 14, 12], [obj.SMALL_36]: [16, 16, 16, 14, 14, 12], [obj.NORMAL]: [16, 16, 16, 14, 14, 12], [obj.LARGE]: [16, 16, 16, 14, 14, 12], [obj.XLARGE]: [16, 16, 16, 14, 14, 12], [obj.XXLARGE]: [16, 16, 16, 14, 14, 12] };
 obj = { [obj.XXXSMALL]: 10, [obj.XXSMALL_12]: 12, [obj.XXSMALL]: 16, [obj.XSMALL_20]: 20, [obj.XSMALL]: 24, [obj.SMALL]: 30, [obj.SMALL_32]: 32, [obj.SMALL_36]: 36, [obj.NORMAL]: 40, [obj.LARGE]: 48, [obj.XLARGE]: 64, [obj.XXLARGE]: 80 };
-fn(4605);
+fn(4606);
 let obj1 = { guildIcon: { justifyContent: "center", alignItems: "center", overflow: "hidden" } };
 obj1[obj.XXXSMALL] = { width: 10, height: 10, borderRadius: 3.3333333333333335 };
 obj1[obj.XXSMALL_12] = { width: 12, height: 12, borderRadius: 4 };

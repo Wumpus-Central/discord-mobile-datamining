@@ -1,10 +1,10 @@
-// === Module 11087: UnifiedGiftModalSuccessScreen ===
+// === Module 11110: UnifiedGiftModalSuccessScreen ===
 
-// Module 11087 (UnifiedGiftModalSuccessScreen)
+// Module 11110 (UnifiedGiftModalSuccessScreen)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import openUserSettings from "openUserSettings" /* 7434 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import openUserSettings from "openUserSettings" /* 7455 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const Image = fn(17).Image;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { alertContainer: null, image: null, title: null, description: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, alignItems: "center" };
 createStyles.alertContainer = createStyles;
@@ -40,7 +40,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     }
     if (tmp2) {
       const obj = { giftBadgeProgress };
-      obj.pushLazy(asyncRequireImpl(11099, dependencyMap.paths), obj, "collectibles_shop_gift_badge_modal");
+      obj.pushLazy(asyncRequireImpl(11122, dependencyMap.paths), obj, "collectibles_shop_gift_badge_modal");
     }
   }, items);
   const items1 = [onClose];

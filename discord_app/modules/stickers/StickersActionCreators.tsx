@@ -1,17 +1,17 @@
-// === Module 10458: StickersActionCreators ===
+// === Module 10477: StickersActionCreators ===
 
-// Module 10458 (StickersActionCreators)
+// Module 10477 (StickersActionCreators)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
-import InlineUploaderDefault from "InlineUploader" /* 5219 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
+import InlineUploaderDefault from "InlineUploader" /* 5220 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4947 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4948 */;
 import UserStore from "UserStore" /* 1371 */;
-import StickersStore from "StickersStore" /* 5552 */;
+import StickersStore from "StickersStore" /* 5553 */;
 
 require = fn;
 let closure_12 = async function _fetchStickerPack() {
@@ -25,95 +25,54 @@ let closure_12 = async function _fetchStickerPack() {
   return body;
 };
 let closure_13 = async function _fetchStickerPacks() {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
+  closure_2 = tmp3;
+  closure_1 = tmp2;
+  let obj1 = closure_0;
+  if (closure_0 === undefined) {
+    obj1 = {};
+  }
+  locale = obj1.locale;
+  if (locale === undefined) {
+    locale = locale.locale;
+  }
+  closure_129_0 = locale;
+  await "PX_16";
+  if (1 === tmp6) {
     if (arg0 === 1) {
+      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      c4 = 3;
+      return { value, done: true };
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          let obj1 = closure_0;
-          if (closure_0 === undefined) {
-            obj1 = {};
-          }
-          locale = obj1.locale;
-          if (locale === undefined) {
-            locale = locale.locale;
-          }
-          closure_129_0 = locale;
-          let sticker_packs;
-          c3 = 1;
+      if (!closure_130_8.isFetchingStickerPacks) {
+        if (!closure_130_8.hasLoadedStickerPacks) {
+          let obj3 = closure_130_1(closure_130_2[10]);
+          obj3.wait(() => {
+            closure_1_1(closure_1_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
+          });
+          const HTTP = closure_130_0(closure_130_2[9]).HTTP;
+          const request = { url: closure_130_9.STICKER_PACKS, query: null, rejectWithError: null };
+          obj3 = { locale: closure_129_0 };
+          request.query = obj3;
+          request.rejectWithError = closure_130_0(closure_130_2[9]).rejectWithMigratedError();
+          c3 = 2;
           c4 = 1;
-          return { value: "PX_16", done: true };
+          closure_130_0(closure_130_2[9]);
+          return { value: HTTP.get(request), done: false };
         }
-      } else {
-        if (1 === tmp6) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            if (!closure_130_8.isFetchingStickerPacks) {
-              if (!closure_130_8.hasLoadedStickerPacks) {
-                let obj3 = closure_130_1(closure_130_2[10]);
-                obj3.wait(() => {
-                  closure_1_1(closure_1_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
-                });
-                const HTTP = closure_130_0(closure_130_2[9]).HTTP;
-                const request = { url: closure_130_9.STICKER_PACKS, query: null, rejectWithError: null };
-                obj3 = { locale: closure_129_0 };
-                request.query = obj3;
-                let obj6 = closure_130_0(closure_130_2[9]);
-                request.rejectWithError = obj6.rejectWithMigratedError();
-                c3 = 2;
-                c4 = 1;
-                const obj4 = { value: HTTP.get(request), done: false };
-                return obj4;
-              }
-            }
-            c4 = 3;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          sticker_packs = value.body.sticker_packs;
-          obj = closure_130_1(closure_130_2[10]);
-          const obj5 = { type: "STICKER_PACKS_FETCH_SUCCESS", packs: sticker_packs };
-          obj.dispatch(obj5);
-        }
-        c4 = 3;
-        obj6 = { value, done: true };
-        return obj6;
       }
-    } catch (tmp26) {
-      c4 = tmp;
-      throw tmp26;
+      c4 = 3;
     }
+  } else if (arg0 === 1) {
+    c4 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    const sticker_packs = value.body.sticker_packs;
+    closure_130_1(closure_130_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_SUCCESS", packs: sticker_packs });
+    closure_130_1(closure_130_2[10]);
   }
+  return value;
 };
 let closure_14 = async function _fetchSticker(arg0) {
   if (c4 === 2) {

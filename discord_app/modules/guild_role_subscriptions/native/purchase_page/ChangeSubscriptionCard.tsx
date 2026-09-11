@@ -1,14 +1,14 @@
-// === Module 16637: ChangeSubscriptionCard ===
+// === Module 16625: ChangeSubscriptionCard ===
 
-// Module 16637 (ChangeSubscriptionCard)
+// Module 16625 (ChangeSubscriptionCard)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4196 from "module_4196" /* 4196 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15308 */;
+import _modDef4198 from "module_4198" /* 4198 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15288 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null };
 createStyles = { paddingVertical: 16, paddingHorizontal: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -33,7 +33,7 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   ({ activeListingId, changeToListingId } = activeSubscription);
   let obj = GuildRoleSubscriptionListingEditStateUtilsAll;
   const first = _slicedToArray(obj.useName(activeListingId), 1)[0];
-  _modDef4196(activeSubscription.currentPeriodEnd);
+  _modDef4198(activeSubscription.currentPeriodEnd);
   const tmp = closure_10();
   obj = { style: null, children: null };
   const items = [tmp.container, ];
@@ -43,7 +43,7 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   const obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = activeSubscription(1114).intl;
   obj1.children = intl.format(activeSubscription(1114).t.l3uCCX, { activeListingName: first });
-  const items1 = [closure_7(activeSubscription(4601).Text, obj1), closure_7(activeSubscription(1178).Spacer, { size: 16 }), , ];
+  const items1 = [closure_7(activeSubscription(4602).Text, obj1), closure_7(activeSubscription(1178).Spacer, { size: 16 }), , ];
   const obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = activeSubscription(1114).intl;
   const formatResult = obj2.format("MMMM Do");
@@ -51,7 +51,7 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   const intl3 = activeSubscription(1114).intl;
   items2[2] = intl3.format(activeSubscription(1114).t.KIiWca, { emphasisHook });
   obj2.children = items2;
-  items1[2] = closure_8(activeSubscription(4601).Text, obj2);
+  items1[2] = closure_8(activeSubscription(4602).Text, obj2);
   let tmp7Result = null;
   if (activeSubscription.status !== SubscriptionStatusTypes.CANCELED) {
     const obj5 = { children: null };
@@ -61,10 +61,10 @@ export default function ChangeSubscriptionCard(activeSubscription) {
     obj6.text = intl4.string(tmp6(1114).t.UwHVxr);
     obj6.onPress = function onPress() {
       const obj = { subscriptionId: activeSubscription.id };
-      obj.pushLazy(asyncRequireImpl(16638, dependencyMap.paths), obj);
+      obj.pushLazy(asyncRequireImpl(16626, dependencyMap.paths), obj);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };
-    items3[1] = closure_7(tmp6(16630).ArrowButton, obj6);
+    items3[1] = closure_7(tmp6(16618).ArrowButton, obj6);
     obj5.children = items3;
     tmp7Result = closure_8(closure_9, obj5);
   }
@@ -72,5 +72,5 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   const obj4 = { emphasisHook };
   items1[3] = tmp7Result;
   obj.children = items1;
-  return closure_7(activeSubscription(7202).BottomSheet, { startExpanded: true, children: closure_8(View, obj) });
+  return closure_7(activeSubscription(7223).BottomSheet, { startExpanded: true, children: closure_8(View, obj) });
 };

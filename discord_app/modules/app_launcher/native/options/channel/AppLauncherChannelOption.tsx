@@ -1,9 +1,9 @@
-// === Module 12260: AppLauncherChannelOption ===
+// === Module 12283: AppLauncherChannelOption ===
 
-// Module 12260 (AppLauncherChannelOption)
+// Module 12283 (AppLauncherChannelOption)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet" /* 12261 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet" /* 12284 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -73,7 +73,7 @@ export default function AppLauncherChannelOption(option) {
       },
       onActionSheetDismiss
     };
-    obj.openLazy(asyncRequireImpl(12261, dependencyMap.paths), AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, obj);
+    obj.openLazy(asyncRequireImpl(12284, dependencyMap.paths), AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, obj);
   };
   obj.autoFocus = autoFocus;
   return first(require("AppLauncherSelectOptionFormRow"), obj);

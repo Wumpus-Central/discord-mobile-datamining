@@ -1,7 +1,7 @@
-// === Module 7031: useTypeConsolidationTextTransform ===
+// === Module 7052: useTypeConsolidationTextTransform ===
 
-// Module 7031 (useTypeConsolidationTextTransform)
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7032 */;
+// Module 7052 (useTypeConsolidationTextTransform)
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7053 */;
 import size from "module_2" /* 2 */;
 
 const style = { textTransform: "none" };
@@ -19,7 +19,7 @@ export const useTypeConsolidationEyebrow = function useTypeConsolidationEyebrow(
   if (obj.useManaTypeConsolidationExperiment(BountiesScrollRecapFooter)) {
     obj = { variant: "experimental/body-sm/medium", style };
   } else {
-    obj = { variant, style: "Array" };
+    obj = { variant, style: "a" };
   }
   return obj;
 };

@@ -1,22 +1,22 @@
-// === Module 16471: YouBarName ===
+// === Module 16459: YouBarName ===
 
-// Module 16471 (YouBarName)
+// Module 16459 (YouBarName)
 import nativeDefault from "native" /* 576 */;
-import GuildTagDefault from "GuildTag" /* 9253 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10948 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10949 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10969 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11225 */;
-import YouBarGuildTagExperiment from "YouBarGuildTagExperiment" /* 16451 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16472 */;
+import GuildTagDefault from "GuildTag" /* 9274 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10967 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10968 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10988 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11248 */;
+import YouBarGuildTagExperiment from "YouBarGuildTagExperiment" /* 16439 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16460 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4627 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
-import PresenceStore from "PresenceStore" /* 4645 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5329 */;
-import VoiceStateStore from "VoiceStateStore" /* 4624 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 require = fn;
 function Username(userId) {
@@ -42,7 +42,7 @@ const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, statusRow: null, statusEmoji: null, usernameRow: null, username: null, guildTag: null, statusText: null };
 obj = { flexDirection: "row", gap: nativeDefault.space.PX_4 };
 obj.statusRow = obj;

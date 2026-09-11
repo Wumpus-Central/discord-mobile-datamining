@@ -1,27 +1,27 @@
-// === Module 11082: CollectiblesShopCheckoutDetails ===
+// === Module 11105: CollectiblesShopCheckoutDetails ===
 
-// Module 11082 (CollectiblesShopCheckoutDetails)
+// Module 11105 (CollectiblesShopCheckoutDetails)
 import nativeDefault from "native" /* 576 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
 import util from "util" /* 1114 */;
 import utils from "utils" /* 1886 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7605 */;
-import useShopProductItems from "useShopProductItems" /* 8234 */;
-import useCurrentUser from "useCurrentUser" /* 8241 */;
-import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8264 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8289 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 8868 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8881 */;
-import NameplateDefault from "Nameplate" /* 8889 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8893 */;
-import _modDef8914 from "module_8914" /* 8914 */;
-import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 8915 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8917 */;
-import getProductName from "getProductName" /* 8933 */;
-import _modDef11083 from "module_11083" /* 11083 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7626 */;
+import useShopProductItems from "useShopProductItems" /* 8256 */;
+import useCurrentUser from "useCurrentUser" /* 8263 */;
+import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8286 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8310 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 8889 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8902 */;
+import NameplateDefault from "Nameplate" /* 8910 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8914 */;
+import _modDef8935 from "module_8935" /* 8935 */;
+import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 8936 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8938 */;
+import getProductName from "getProductName" /* 8954 */;
+import _modDef11106 from "module_11106" /* 11106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ function ProfileEffectAssetPreview(item) {
   if (null != tmp4) {
     let obj = { style: tmp.profileEffectContainer, children: null };
     obj = { source: null, alt: null, style: null, resizeMode: "cover" };
-    obj = { uri: _modDef11083 };
+    obj = { uri: _modDef11106 };
     obj.source = obj;
     obj.alt = tmp4.accessibilityLabel;
     obj.style = tmp.profileEffect;
@@ -50,7 +50,7 @@ function ProfileEffectAssetPreview(item) {
 }
 function ProfileFrameAssetPreview(arg0) {
   ({ item, width, height } = arg0);
-  const tmp3 = useMaybeFetchProfileFrameDefault(item.skuId, "CollectiblesShopCheckoutDetails");
+  const tmp3 = useMaybeFetchProfileFrameDefault(item.skuId);
   let tmp4 = null;
   if (null != tmp3) {
     const obj = { profileFrame: tmp3, previewWidth: width, previewHeight: height, profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -127,7 +127,7 @@ function CollectibleProductPreviewContent(userAvatarSource) {
     return React5(FractionalNitroCoinIllustration.FractionalNitroCoinIllustration, size);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     let obj = { source: null, style: null };
-    obj = { uri: _modDef8914 };
+    obj = { uri: _modDef8935 };
     obj.source = obj;
     obj.style = tmp.externalProductImage;
     return React5(FastImageDefault, obj);
@@ -245,11 +245,11 @@ function ProductPriceAmountTag(product) {
 }
 const View = fn(17).View;
 const EXTERNAL_PRODUCT_SKU_IDS = fn(1076).EXTERNAL_PRODUCT_SKU_IDS;
-const CollectiblesPreviewConstants = fn(8869);
+const CollectiblesPreviewConstants = fn(8890);
 ({ BUNDLE_PREVIEW_CONFIG: metroRequire, SAMPLE_PROFILE_ASPECT_RATIO } = CollectiblesPreviewConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { externalProductImage: { width: 45, height: 45 }, bundlePreviewContainer: null, bundlePreviewScale: null, productContainer: null, productDetailsContainer: null, productPreviewContainer: null, productDetails: null, productDetailsTextContainer: null, errorContainer: null };
 createStyles = { alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: nativeDefault.radii.xs };
 createStyles.bundlePreviewContainer = createStyles;
@@ -265,7 +265,7 @@ createStyles.productDetailsTextContainer = { gap: nativeDefault.space.PX_4 };
 let obj4 = { gap: nativeDefault.space.PX_4 };
 createStyles.errorContainer = { height: 36, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, borderBottomLeftRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.lg };
 let closure_9 = createStyles.createStyles(createStyles);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let closure_10 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
@@ -280,13 +280,13 @@ let closure_10 = createStyles.createStyles((arg0) => {
   obj.giftProductContainer = obj;
   return obj;
 });
-createStyles = fn(4605);
+createStyles = fn(4606);
 const obj6 = { profileEffectContainer: null, profileEffect: null };
 let size = { position: "relative", width: "100%", height: "100%", borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 obj6.profileEffectContainer = size;
 obj6.profileEffect = { position: "absolute", width: "100%", aspectRatio: SAMPLE_PROFILE_ASPECT_RATIO, top: 0 };
 let closure_11 = createStyles.createStyles(obj6);
-fn(4605);
+fn(4606);
 const obj7 = { nameplate: null };
 createStyles = { borderRadius: nativeDefault.radii.xs };
 obj7.nameplate = createStyles;
@@ -312,7 +312,7 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
   const tmp = closure_9();
   let obj = useCurrentUser;
   const currentUser = obj.useCurrentUser();
-  let obj1 = flag2(4262);
+  let obj1 = flag2(4264);
   const canUseShopDiscountsResult = obj1.canUseShopDiscounts(currentUser);
   dependencyMap = canUseShopDiscountsResult;
   const items = [product, flag2, canUseShopDiscountsResult];
@@ -361,7 +361,7 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
     const obj2 = { variant: "text-xs/semibold", color: "text-feedback-critical", children: null };
     let intl = tmp3(1114).intl;
     obj2.children = intl.string(tmp3(1114).t["3YfczA"]);
-    obj1.children = closure_7(tmp3(4601).Text, obj2);
+    obj1.children = closure_7(tmp3(4602).Text, obj2);
     flag3 = closure_7(View, obj1);
   }
   items3[1] = flag3;

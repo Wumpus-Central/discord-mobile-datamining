@@ -1,6 +1,6 @@
-// === Module 6534: ? ===
+// === Module 6555: ? ===
 
-// Module 6534
+// Module 6555
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SpinningGem3dIllustration-2x.png.js");

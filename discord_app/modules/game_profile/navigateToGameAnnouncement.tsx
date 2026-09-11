@@ -1,6 +1,6 @@
-// === Module 8832: navigateToGameAnnouncement ===
+// === Module 8853: navigateToGameAnnouncement ===
 
-// Module 8832 (navigateToGameAnnouncement)
+// Module 8853 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -43,7 +43,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
           let guild3;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else {
         if (1 === tmp5) {

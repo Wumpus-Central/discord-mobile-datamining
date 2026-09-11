@@ -1,16 +1,16 @@
-// === Module 11486: ForumPostReactions ===
+// === Module 11508: ForumPostReactions ===
 
-// Module 11486 (ForumPostReactions)
-import ForumHooks from "ForumHooks" /* 7937 */;
-import ForumPostReactionButton from "ForumPostReactionButton" /* 10288 */;
-import useReactionPermissionsDefault from "useReactionPermissions" /* 11386 */;
+// Module 11508 (ForumPostReactions)
+import ForumHooks from "ForumHooks" /* 7959 */;
+import ForumPostReactionButton from "ForumPostReactionButton" /* 10307 */;
+import useReactionPermissionsDefault from "useReactionPermissions" /* 11408 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles({ reactionButtonContainer: { marginEnd: 8 }, actionBarReaction: { marginEnd: 4 }, container: { flexDirection: "row" }, mostCommonContainer: { marginLeft: "auto" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/reactions/ForumPostReactions.tsx");
@@ -21,12 +21,12 @@ export const MaxForumPostReactions = function MaxForumPostReactions(thread) {
   ({ parentChannel, firstMessage, containerWidth, containerStyle } = thread);
   const tmp = closure_6();
   dependencyMap = tmp;
-  const disableReactionCreates = reactionContainerStyle(11386)(thread).disableReactionCreates;
+  const disableReactionCreates = reactionContainerStyle(11408)(thread).disableReactionCreates;
   let num = 28;
   if (disableReactionCreates) {
     num = 0;
   }
-  thread(7937);
+  thread(7959);
   let obj = { containerWidth: containerWidth - num, reactionEmojiWidth: 46, digitWidth: 7.5, message: firstMessage, parentChannel };
   const maxPossibleForumPostReactions = obj.useMaxPossibleForumPostReactions(obj);
   ({ reactions, additionalReactionCount } = maxPossibleForumPostReactions);
@@ -51,13 +51,13 @@ export const MaxForumPostReactions = function MaxForumPostReactions(thread) {
     let tmp8 = additionalReactionCount > 0;
     if (tmp8) {
       const obj1 = { count: additionalReactionCount, containerStyle: reactionContainerStyle, threadId: thread.id };
-      tmp8 = closure_4(tmp3(10288).AdditionalReactionCount, obj1);
+      tmp8 = closure_4(tmp3(10307).AdditionalReactionCount, obj1);
     }
     items1[1] = tmp8;
     let tmp10 = !disableReactionCreates;
     if (!disableReactionCreates) {
       const obj2 = { containerStyle: reactionContainerStyle, threadId: thread.id };
-      tmp10 = closure_4(tmp3(10288).AddReactionButton, obj2);
+      tmp10 = closure_4(tmp3(10307).AddReactionButton, obj2);
     }
     items1[2] = tmp10;
     obj.children = items1;
@@ -73,8 +73,8 @@ export const ForumPostActionBarReactions = function ForumPostActionBarReactions(
   ({ parentChannel, firstMessage, containerStyle } = thread);
   const tmp = closure_6();
   dependencyMap = tmp;
-  const disableReactionCreates = reactionContainerStyle(11386)(thread).disableReactionCreates;
-  thread(7937);
+  const disableReactionCreates = reactionContainerStyle(11408)(thread).disableReactionCreates;
+  thread(7959);
   let obj = { message: firstMessage, parentChannel, sorted: false, count: null };
   let num = 2;
   if (disableReactionCreates) {
@@ -107,7 +107,7 @@ export const ForumPostActionBarReactions = function ForumPostActionBarReactions(
       const items2 = [tmp.actionBarReaction, reactionContainerStyle];
       obj1.containerStyle = items2;
       obj1.threadId = thread.id;
-      tmp8 = closure_4(tmp3(10288).AdditionalReactionCount, obj1);
+      tmp8 = closure_4(tmp3(10307).AdditionalReactionCount, obj1);
     }
     items1[1] = tmp8;
     let tmp10 = !disableReactionCreates;
@@ -116,7 +116,7 @@ export const ForumPostActionBarReactions = function ForumPostActionBarReactions(
       const items3 = [tmp.actionBarReaction, reactionContainerStyle];
       obj2.containerStyle = items3;
       obj2.threadId = thread.id;
-      tmp10 = closure_4(tmp3(10288).AddReactionButton, obj2);
+      tmp10 = closure_4(tmp3(10307).AddReactionButton, obj2);
     }
     items1[2] = tmp10;
     obj.children = items1;

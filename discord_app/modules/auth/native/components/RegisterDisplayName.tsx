@@ -1,21 +1,21 @@
-// === Module 16049: RegisterDisplayName ===
+// === Module 16038: RegisterDisplayName ===
 
-// Module 16049 (RegisterDisplayName)
+// Module 16038 (RegisterDisplayName)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14787 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14761 */;
 
 const require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(16028);
+const RegistrationUIStore = fn(16017);
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(16029);
+const RegistrationConstants = fn(16018);
 ({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { globalName: null, button: null, page: null };
 createStyles = { marginTop: nativeDefault.space.PX_24 };
 createStyles.globalName = createStyles;

@@ -1,6 +1,6 @@
-// === Module 12360: DoubleTapToReactChatInputBanner ===
+// === Module 12383: DoubleTapToReactChatInputBanner ===
 
-// Module 12360 (DoubleTapToReactChatInputBanner)
+// Module 12383 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -8,18 +8,18 @@ import native from "native" /* 1178 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import timing from "timing" /* 4606 */;
-import Pressables from "Pressables" /* 5173 */;
-import XSmallIcon from "XSmallIcon" /* 5730 */;
-import EmojiDefault from "Emoji" /* 7182 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8023 */;
-import renderChannelBadge from "renderChannelBadge" /* 12361 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import timing from "timing" /* 4607 */;
+import Pressables from "Pressables" /* 5174 */;
+import XSmallIcon from "XSmallIcon" /* 5731 */;
+import EmojiDefault from "Emoji" /* 7203 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8045 */;
+import renderChannelBadge from "renderChannelBadge" /* 12384 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 function DoubleTapToReactChatInputBannerInner(emoji) {
@@ -142,7 +142,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
     const obj = { emoji };
-    obj.openLazy(asyncRequireImpl(12451, dependencyMap.paths), "DoubleTapToReactActionSheet", obj);
+    obj.openLazy(asyncRequireImpl(12474, dependencyMap.paths), "DoubleTapToReactActionSheet", obj);
     markAsDismissed(ContentDismissActionType.TAKE_ACTION);
   }, items2);
   const callback2 = noop.useCallback(() => {
@@ -185,7 +185,7 @@ const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-fn(4605);
+fn(4606);
 let createStyles = { animatedContainer: null, measurement: null, container: null, highlight: null, text: null, emojiContainer: null, emoji: null, textEmoji: null, header: null, closeButton: null };
 createStyles = { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.animatedContainer = createStyles;

@@ -1,9 +1,9 @@
-// === Module 4568: ClockIcon ===
+// === Module 4569: ClockIcon ===
 
-// Module 4568 (ClockIcon)
+// Module 4569 (ClockIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod4569 from "module_4569" /* 4569 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod4570 from "module_4570" /* 4570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ClockIcon = function ClockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod4569, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod4570, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

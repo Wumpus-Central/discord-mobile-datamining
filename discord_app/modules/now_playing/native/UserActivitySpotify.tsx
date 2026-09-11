@@ -1,17 +1,17 @@
-// === Module 11819: UserActivitySpotify ===
+// === Module 11841: UserActivitySpotify ===
 
-// Module 11819 (UserActivitySpotify)
+// Module 11841 (UserActivitySpotify)
 import native from "native" /* 1178 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1364 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import _modDef8205 from "module_8205" /* 8205 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import _modDef8227 from "module_8227" /* 8227 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(8405);
+const SpotifyConstants = fn(8426);
 ({ SPOTIFY_APP_PROTOCOL: metroRequire, SpotifyEndpoints: closure_7, SpotifyResourceTypes: closure_8 } = SpotifyConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -245,8 +245,8 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
   obj = { icon: null, text: null, size: "sm", onPress: null, grow: true };
-  obj = { source: _modDef8205 };
-  obj.icon = closure_9(activity(5025).Button.Icon, obj);
+  obj = { source: _modDef8227 };
+  obj.icon = closure_9(activity(5026).Button.Icon, obj);
   const intl = activity(1114).intl;
   obj.text = intl.formatToPlainString(activity(1114).t.LEgD7t, { platform: activity.name });
   obj.onPress = function onPress() {
@@ -270,7 +270,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
 
     });
   };
-  obj.children = closure_9(activity(5025).Button, obj);
+  obj.children = closure_9(activity(5026).Button, obj);
   return closure_9(closure_5, obj);
 };
 export { SpotifyTrack };

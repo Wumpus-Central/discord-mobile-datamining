@@ -1,11 +1,11 @@
-// === Module 11732: canForwardMessage ===
+// === Module 11754: canForwardMessage ===
 
-// Module 11732 (canForwardMessage)
+// Module 11754 (canForwardMessage)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 require = fn;
 function canForwardMessage(state) {

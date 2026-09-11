@@ -1,11 +1,11 @@
-// === Module 12684: Tabs/Tabs ===
+// === Module 12707: Tabs/Tabs ===
 
-// Module 12684 (Tabs/Tabs)
+// Module 12707 (Tabs/Tabs)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4341 */;
-import spring from "spring" /* 5024 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9565 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
+import spring from "spring" /* 5025 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9586 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
@@ -22,7 +22,7 @@ const jsxProd = fn(21);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(ScrollView);
 let c9 = 0.04;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles((gap, arg1) => {
   let obj = { container: null, controlsContainer: null, indicatorContainer: null, indicator: null };
   obj = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
@@ -31,7 +31,7 @@ let closure_11 = createStyles.createStyles((gap, arg1) => {
   obj.controlsContainer = obj;
   const size = { position: "absolute", width: "100%", height: "100%", flexDirection: "row", alignItems: "flex-end", marginLeft: nativeDefault.space.PX_16 };
   obj.indicatorContainer = size;
-  if ("gradient-background" === arg1) {
+  if ("overlay" === arg1) {
     let TEXT_BRAND = nativeDefault.colors.TEXT_STRONG;
   } else {
     TEXT_BRAND = nativeDefault.colors.TEXT_BRAND;
@@ -218,12 +218,15 @@ export const Tabs = function Tabs(state) {
     }
   }, items2);
   const animatedScrollHandler = state(formatCount[4]).useAnimatedScrollHandler(obj);
-  const fn3 = function k() {
-    return { scrollOffset: scrollOffset.get(), activeIndex: activeIndex.get(), itemDimensions: itemDimensions.get() };
-  };
-  fn3.__closure = { scrollOffset, activeIndex, itemDimensions };
-  fn3.__workletHash = 9993285637539;
-  fn3.__initData = length;
+  class P {
+    constructor() {
+      obj = { scrollOffset: scrollOffset.get(), activeIndex: activeIndex.get(), itemDimensions: itemDimensions.get() };
+      return obj;
+    }
+  }
+  P.__closure = { scrollOffset, activeIndex, itemDimensions };
+  P.__workletHash = 9993285637539;
+  P.__initData = length;
   class X {
     constructor(arg0, arg1) {
       tmp = arg1;
@@ -288,7 +291,7 @@ export const Tabs = function Tabs(state) {
   X.__closure = obj1;
   X.__workletHash = 15851319414889;
   X.__initData = ref;
-  const animatedReaction = state(formatCount[4]).useAnimatedReaction(fn3, X);
+  const animatedReaction = state(formatCount[4]).useAnimatedReaction(P, X);
   const items3 = [items, length, formatCount, state, flag, pressedIndex, activeIndex, setActiveIndex, tmp.controlsContainer, variant];
   const items4 = [simultaneousHandlers];
   const memo = simultaneousHandlers.useMemo(() => timestampProducer(React4, {
@@ -317,7 +320,7 @@ export const Tabs = function Tabs(state) {
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return variant(state(12685).TabItem, obj, id);
+      return variant(state(12708).TabItem, obj, id);
     })
   }), items3);
   const memo1 = simultaneousHandlers.useMemo(() => {

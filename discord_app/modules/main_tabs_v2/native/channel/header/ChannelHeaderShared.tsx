@@ -1,22 +1,23 @@
-// === Module 13345: ChannelHeaderShared ===
+// === Module 13368: ChannelHeaderShared ===
 
-// Module 13345 (ChannelHeaderShared)
+// Module 13368 (ChannelHeaderShared)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import native from "native" /* 1178 */;
-import useToken from "useToken" /* 4306 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import useChannelName from "useChannelName" /* 4758 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5078 */;
-import Pressables from "Pressables" /* 5173 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10969 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10982 */;
-import _modDef13346 from "module_13346" /* 13346 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13347 */;
+import useToken from "useToken" /* 4308 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5079 */;
+import Pressables from "Pressables" /* 5174 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7053 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10988 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11002 */;
+import _modDef13369 from "module_13369" /* 13369 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -71,7 +72,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj2 = { source: _modDef13346, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj2 = { source: _modDef13369, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj2);
   }
   items[2] = tmp5Result;
@@ -93,7 +94,7 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: "done", isVROnline: "flowing", style: "hourglass", autoStatusCutout: "hours" };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: null, isVROnline: true, style: null, autoStatusCutout: false };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;
@@ -127,18 +128,25 @@ function MemberCountText(arg0) {
       str = "total";
     }
   }
-  const obj = { type: str, count: null, color: "text-subtle", dotContainerWidth: null };
+  let obj = ManaTypeConsolidationExperiment;
+  let str2 = "text-sm/normal";
+  if (obj.useManaTypeConsolidationExperiment("ChannelHeaderMemberCount")) {
+    str2 = "text-xs/normal";
+  }
+  obj = { type: str, count: null, color: "text-subtle", dotContainerWidth: null, textVariant: null };
   if ("online" === str) {
     memberCount = presenceCount;
   }
   obj.count = memberCount;
   obj.dotContainerWidth = leadingAccessoryWidth;
+  obj.textVariant = str2;
   const children = [React6(GuildActionSheetMemberCountDefault, obj), ];
-  let tmp4Result = null;
+  let tmp6Result = null;
   if (withSeparator) {
-    tmp4Result = React6(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });
+    obj = { variant: str2, color: "text-subtle", children: "\u2022" };
+    tmp6Result = React6(Text_Text.Text, obj);
   }
-  children[1] = tmp4Result;
+  children[1] = tmp6Result;
   return React7(closure_1_10, { children });
 }
 function ParentChannelSubTitle(channel) {
@@ -159,7 +167,7 @@ function EmptyIcon() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles(() => {
   let obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 }, nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelNameContainer: { flexShrink: 1 }, channelName: { flexShrink: 1 }, arrowIcon: null, channelIcon: null, channelIconWrapper: null, guildChannelIcon: null, subTitleContainer: null, parentChannelName: null };
   obj = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 };

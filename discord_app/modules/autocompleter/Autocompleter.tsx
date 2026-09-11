@@ -1,19 +1,19 @@
-// === Module 9906: Autocompleter ===
+// === Module 9927: Autocompleter ===
 
-// Module 9906 (Autocompleter)
+// Module 9927 (Autocompleter)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import StringUtils from "StringUtils" /* 1925 */;
-import _modDef4301 from "module_4301" /* 4301 */;
-import findCodedLinks from "findCodedLinks" /* 4588 */;
-import CodedLink from "CodedLink" /* 4593 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 5492 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5568 */;
-import GuildUtilsDefault from "GuildUtils" /* 5569 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9909 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 9907 */;
-import LinkRecord from "LinkRecord" /* 9908 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import _modDef4303 from "module_4303" /* 4303 */;
+import findCodedLinks from "findCodedLinks" /* 4589 */;
+import CodedLink from "CodedLink" /* 4594 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 5493 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5569 */;
+import GuildUtilsDefault from "GuildUtils" /* 5570 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9930 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 9928 */;
+import LinkRecord from "LinkRecord" /* 9929 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
@@ -28,7 +28,7 @@ function getAutocompleterBoosterMap(USER, options) {
   return boosterMap;
 }
 const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
-fn(5565).AutocompleterResultTypes;
+fn(5566).AutocompleterResultTypes;
 const React7 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
@@ -548,7 +548,7 @@ prototype["queryLink"] = function queryLink(query) {
       const items = [obj];
       return items;
     } else {
-      const sanitizeUrlResult = _modDef4301.sanitizeUrl(query);
+      const sanitizeUrlResult = _modDef4303.sanitizeUrl(query);
       try {
         const _URL = URL;
         const uRL = new URL(sanitizeUrlResult);

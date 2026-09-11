@@ -1,14 +1,14 @@
-// === Module 14473: PermissionVADStore ===
+// === Module 14449: PermissionVADStore ===
 
-// Module 14473 (PermissionVADStore)
+// Module 14449 (PermissionVADStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
-import VoiceStateStore from "VoiceStateStore" /* 4624 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 function handleUpdateVADPermission() {
   const channelId = RTCConnectionStore.getChannelId();

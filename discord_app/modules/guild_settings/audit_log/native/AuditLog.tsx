@@ -1,25 +1,25 @@
-// === Module 17648: AuditLog ===
+// === Module 17639: AuditLog ===
 
-// Module 17648 (AuditLog)
+// Module 17639 (AuditLog)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
-import UserUtilsDefault from "UserUtils" /* 4449 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import PlatformsDefault from "Platforms" /* 5333 */;
-import EmojiDefault from "Emoji" /* 7182 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7220 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8242 */;
-import AppliedForumTag from "AppliedForumTag" /* 10697 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 17631 */;
+import UserUtilsDefault from "UserUtils" /* 4451 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import PlatformsDefault from "Platforms" /* 5334 */;
+import EmojiDefault from "Emoji" /* 7203 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7241 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import AppliedForumTag from "AppliedForumTag" /* 10716 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 17622 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import UserRecord from "UserRecord" /* 1385 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 import initialize from "initialize" /* 504 */;
 
@@ -50,7 +50,7 @@ const Constants = fn(1074);
 ({ AuditLogTargetTypes: c10, AuditLogActionTypes: closure_11, AuditLogActions: closure_12, Fonts, AuditLogChangeKeys: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { marginHorizontal: 8, marginVertical: 4, borderRadius: 3 }, rowContainer: { flex: 1, flexDirection: "row", alignItems: "center" }, titleContainer: { marginRight: 24, flex: 1 }, title: { marginHorizontal: 8 }, discriminator: null, avatar: null, timestamp: null, arrow: null, rotate90: null, changesContainer: null, changeRow: null, changeNumberText: null, changeItemText: null, colorHook: null, colorsHook: null, changeItemContent: null, changeItemRow: null, changeItemTextLine: null, forumTag: null, imageEmoji: null, textEmoji: null };
 createStyles = { fontSize: 12, lineHeight: 30, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 createStyles.discriminator = createStyles;
@@ -549,7 +549,7 @@ prototype["render"] = function render() {
   obj1.border = str3;
   obj1.onPress = onHeaderClick;
   const obj2 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(17640), { action: log.action }), , , ];
+  const items2 = [closure_14(user(17631), { action: log.action }), , , ];
   const obj4 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp10(1114).intl;
   obj4.accessibilityLabel = intl.string(tmp10(1114).t.iXAna6);
@@ -572,15 +572,15 @@ prototype["render"] = function render() {
       if (log.action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
         if (log.action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
           if (null != log.options.integration_type) {
-            value = tmp18(5333).get(log.options.integration_type);
+            value = tmp18(5334).get(log.options.integration_type);
             if (null != value) {
-              tmp9(4456);
+              tmp9(4458);
               const icon = value.icon;
               const tmp9Result = tmp9(1396);
               let source = tmp9Result.makeSource(tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG);
               const tmp25 = tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG;
             }
-            const tmp18Result = tmp18(5333);
+            const tmp18Result = tmp18(5334);
           }
           if (null != guildId) {
             const user2 = log.user;
@@ -594,7 +594,7 @@ prototype["render"] = function render() {
         obj5.source = source;
         obj5.size = tmp10(1178).AvatarSizes.SMALL;
         obj4.children = closure_14(tmp20, obj5);
-        items2[1] = closure_14(tmp10(5173).PressableOpacity, obj4);
+        items2[1] = closure_14(tmp10(5174).PressableOpacity, obj4);
         obj6 = { accessibilityRole: "button", accessibilityState: null, onPress: null, style: null, disabled: null, children: null };
         const obj7 = { expanded, disabled: !checkChangesToRenderResult };
         obj6.accessibilityState = obj7;
@@ -603,14 +603,14 @@ prototype["render"] = function render() {
         obj6.disabled = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj6.children = items3;
-        items2[2] = closure_15(tmp10(5173).PressableOpacity, obj6);
+        items2[2] = closure_15(tmp10(5174).PressableOpacity, obj6);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj8 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj8.style = items4;
           obj8.size = tmp10(1178).Icon.Sizes.CUSTOM;
-          obj8.source = tmp18(14679);
+          obj8.source = tmp18(14655);
           tmp17Result = closure_14(tmp10(1178).Icon, obj8);
         }
         items2[3] = tmp17Result;
@@ -622,7 +622,7 @@ prototype["render"] = function render() {
         }
         items5[1] = renderChangeSummaryResult;
         obj1.children = items5;
-        return closure_15(tmp10(5657).Card, obj1);
+        return closure_15(tmp10(5658).Card, obj1);
       }
     }
   }
@@ -632,7 +632,7 @@ prototype["render"] = function render() {
   source = tmp9Result1.ensureAvatarSource(tmp9Result2.makeSource(tmp9(1399).getAutomodAvatarURL()));
   const tmp9Result3 = tmp9(1399);
 };
-AuditLog.contextType = fn(4315).ThemeContext;
+AuditLog.contextType = fn(4317).ThemeContext;
 let items3 = [ThemeStore];
 let obj4 = { color: nativeDefault.unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
 size = fn(2);

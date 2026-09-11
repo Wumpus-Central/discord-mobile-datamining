@@ -1,6 +1,6 @@
-// === Module 17013: ModalRegistry ===
+// === Module 17002: ModalRegistry ===
 
-// Module 17013 (ModalRegistry)
+// Module 17002 (ModalRegistry)
 import size from "module_2" /* 2 */;
 
 class ModalRegistry {

@@ -1,15 +1,15 @@
-// === Module 15293: GuildRoleSubscriptionsHooks ===
+// === Module 15273: GuildRoleSubscriptionsHooks ===
 
-// Module 15293 (GuildRoleSubscriptionsHooks)
+// Module 15273 (GuildRoleSubscriptionsHooks)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7307 */;
-import useRequestDefault from "useRequest" /* 12273 */;
-import subscriptionUtils from "subscriptionUtils" /* 15295 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7328 */;
+import useRequestDefault from "useRequest" /* 12296 */;
+import subscriptionUtils from "subscriptionUtils" /* 15275 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4237 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4239 */;
 
 require = fn;
 function useFetchListingsForGuild(guildId) {
@@ -66,7 +66,7 @@ function useFetchListingsForGuild(guildId) {
   }
   return { listingsLoaded };
 }
-const FetchState = fn(4237).FetchState;
+const FetchState = fn(4239).FetchState;
 let closure_10 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHooks.tsx");
@@ -528,7 +528,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
             ({ guildId: closure_129_0, groupListingId: closure_129_1, listingId: closure_129_2 } = closure_0);
             c5 = 1;
             c6 = 1;
-            return { value: "PX_16", done: true };
+            return { value: "PX_16", done: null };
           }
         } else if (1 === tmp9) {
           if (arg0 === 1) {

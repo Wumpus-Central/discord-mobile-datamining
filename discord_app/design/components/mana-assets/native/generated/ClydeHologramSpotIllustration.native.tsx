@@ -1,9 +1,9 @@
-// === Module 5909: ClydeHologramSpotIllustration ===
+// === Module 5930: ClydeHologramSpotIllustration ===
 
-// Module 5909 (ClydeHologramSpotIllustration)
+// Module 5930 (ClydeHologramSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5910 from "module_5910" /* 5910 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5931 from "module_5931" /* 5931 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ClydeHologramSpotIllustration = function ClydeHologramSpotIllustrat
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5910 };
+  obj = { uri: _modDef5931 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ClydeHologramSpotIllustration = function ClydeHologramSpotIllustrat
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5910 });
+  return jsx(FastImageDefault, { uri: _modDef5931 });
 };

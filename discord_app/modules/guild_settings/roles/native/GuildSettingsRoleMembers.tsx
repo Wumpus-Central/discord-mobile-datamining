@@ -1,21 +1,21 @@
-// === Module 17729: GuildSettingsRoleMembers ===
+// === Module 17720: GuildSettingsRoleMembers ===
 
-// Module 17729 (GuildSettingsRoleMembers)
+// Module 17720 (GuildSettingsRoleMembers)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import _modDef5647 from "module_5647" /* 5647 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9132 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import _modDef5648 from "module_5648" /* 5648 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7180 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7201 */;
 
 require = fn;
 function onMembersLoadFail() {
-  const obj = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: _modDef5647, content: null };
+  const obj = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: _modDef5648, content: null };
   const intl = util.intl;
   obj.content = intl.string(util.t.fEptJP);
   obj.open(obj);
@@ -24,7 +24,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, containerSearchBar: null, missingMembers: null, missingMembersText: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 createStyles.container = createStyles;
@@ -82,11 +82,11 @@ export default function GuildSettingsRoleMembers(guild) {
       obj.onConfirm = function onConfirm() {
         const items = [role.id];
         GuildSettingsActionCreatorsDefault.updateMemberRoles(guild.id, name.id, found, [], items).catch(() => {
-          found(4303);
+          found(4305);
           const obj = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
           const intl = name(1114).intl;
           obj.content = intl.string(name(1114).t.fEptJP);
-          obj.icon = found(5647);
+          obj.icon = found(5648);
           obj.open(obj);
         });
       };
@@ -101,7 +101,7 @@ export default function GuildSettingsRoleMembers(guild) {
     obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Add Role Members", location_page: "Role Settings", location_section: "Members" });
     const obj2 = ActionSheetActionCreatorsDefault;
     obj = { guild, role };
-    obj2.openLazy(asyncRequireImpl(17708, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, obj);
+    obj2.openLazy(asyncRequireImpl(17699, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, obj);
   }, items3);
   closure_6 = found.useCallback((item) => {
     item = item.item;

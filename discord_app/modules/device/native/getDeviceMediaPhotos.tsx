@@ -1,11 +1,11 @@
-// === Module 10715: getDeviceMediaPhotos ===
+// === Module 10734: getDeviceMediaPhotos ===
 
-// Module 10715 (getDeviceMediaPhotos)
+// Module 10734 (getDeviceMediaPhotos)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import DCDPhotosDefault from "DCDPhotos" /* 10716 */;
+import DCDPhotosDefault from "DCDPhotos" /* 10735 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

@@ -1,18 +1,18 @@
-// === Module 7913: ForLaterModal ===
+// === Module 7935: ForLaterModal ===
 
-// Module 7913 (ForLaterModal)
+// Module 7935 (ForLaterModal)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import HeaderShared from "HeaderShared" /* 7914 */;
-import ForLaterScreenDefault from "ForLaterScreen" /* 13357 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import HeaderShared from "HeaderShared" /* 7936 */;
+import ForLaterScreenDefault from "ForLaterScreen" /* 13380 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { modal: null, headerLeftContainer: null, headerRightContainer: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
 createStyles.modal = createStyles;
@@ -53,10 +53,10 @@ export default function ForLaterModal(type) {
     num = useSafeAreaInsetsDefault().top;
   }
   obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  tmp4Result = tmp4(5674);
+  tmp4Result = tmp4(5675);
   obj.headerLeft = tmp4Result.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
   ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp);
-  const items = [closure_4(require("module_5681").Header, obj), ];
+  const items = [closure_4(require("module_5682").Header, obj), ];
   obj = { type, onClose: ModalActionCreatorsDefault.pop };
   items[1] = closure_4(ForLaterScreenDefault, obj, type);
   obj.children = items;

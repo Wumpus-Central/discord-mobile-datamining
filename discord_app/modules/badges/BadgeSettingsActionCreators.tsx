@@ -1,6 +1,6 @@
-// === Module 14683: BadgeSettingsActionCreators ===
+// === Module 14659: BadgeSettingsActionCreators ===
 
-// Module 14683 (BadgeSettingsActionCreators)
+// Module 14659 (BadgeSettingsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -35,10 +35,9 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
           closure_129_1 = undefined;
           ({ displayOrder: closure_129_0, hiddenBadges: closure_129_1 } = closure_0);
           closure_129_2 = undefined;
-          closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -46,7 +45,7 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
+          let obj1 = { value, done: true };
           return obj1;
         } else {
           if (null != closure_129_0) {
@@ -81,9 +80,9 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
         }
       } else if (2 === tmp7) {
         c4 = 0;
-        closure_129_4 = closure_3;
-        obj3 = closure_130_1(closure_130_2[4]);
-        obj3.captureException(closure_129_4);
+        closure_129_3 = closure_3;
+        obj1 = closure_130_1(closure_130_2[3]);
+        obj1.captureException(closure_129_3);
         c6 = 3;
         return { value: false, done: true };
       } else if (arg0 === 1) {
@@ -92,22 +91,18 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
+        obj = { value, done: true };
+        return obj;
       } else {
-        closure_129_3 = value;
-        obj = closure_130_1(closure_130_2[3]);
-        const obj9 = { type: "BADGE_SETTINGS_UPDATE", settings: closure_129_3.body };
-        obj.dispatch(obj9);
         c4 = 0;
         c6 = 3;
         return { value: true, done: true };
       }
-    } catch (tmp43) {
-      closure_3 = tmp43;
+    } catch (tmp37) {
+      closure_3 = tmp37;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp43;
+        throw tmp37;
       } else {
         c5 = tmp;
       }

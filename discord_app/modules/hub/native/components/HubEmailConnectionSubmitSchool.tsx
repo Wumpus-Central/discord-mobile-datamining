@@ -1,15 +1,15 @@
-// === Module 12806: HubEmailConnectionSubmitSchool ===
+// === Module 12829: HubEmailConnectionSubmitSchool ===
 
-// Module 12806 (HubEmailConnectionSubmitSchool)
+// Module 12829 (HubEmailConnectionSubmitSchool)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6655 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7033 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12797 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6676 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7054 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12820 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,10 +17,10 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12789).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12812).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { paddingHorizontal: 16 }, title: null, description: null, scrollViewContainer: null, input: null, redesignTextInput: null, redesignGrowSpacing: null, redesignSubmit: null };
 createStyles = { fontFamily: fn(1074).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
 createStyles.title = createStyles;

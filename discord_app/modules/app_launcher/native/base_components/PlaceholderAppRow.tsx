@@ -1,15 +1,15 @@
-// === Module 12160: PlaceholderAppRow ===
+// === Module 12183: PlaceholderAppRow ===
 
-// Module 12160 (PlaceholderAppRow)
+// Module 12183 (PlaceholderAppRow)
 import nativeDefault from "native" /* 576 */;
-import TableRow from "TableRow" /* 5655 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12124 */;
+import TableRow from "TableRow" /* 5656 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12147 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { loadingAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 createStyles.loadingAppIcon = size;

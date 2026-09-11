@@ -1,11 +1,11 @@
-// === Module 13761: VoiceChannelAnimationStateStore ===
+// === Module 13740: VoiceChannelAnimationStateStore ===
 
-// Module 13761 (VoiceChannelAnimationStateStore)
+// Module 13740 (VoiceChannelAnimationStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
-import VoiceStateStore from "VoiceStateStore" /* 4624 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 function resetAllState() {
   (function clearAllTimers() {

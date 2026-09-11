@@ -1,24 +1,24 @@
-// === Module 8488: AgeVerificationWebViewScreen ===
+// === Module 8509: AgeVerificationWebViewScreen ===
 
-// Module 8488 (AgeVerificationWebViewScreen)
+// Module 8509 (AgeVerificationWebViewScreen)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4462 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 4818 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8482 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4819 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8503 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(8477).AGE_VERIFICATION_MODAL_KEY;
-const AgeVerificationIncodeWebViewConstants = fn(8479);
+let closure_6 = fn(8498).AGE_VERIFICATION_MODAL_KEY;
+const AgeVerificationIncodeWebViewConstants = fn(8500);
 ({ AgeVerificationIncodeResultStatus: closure_7, buildIncodeFallbackSessionInjection: closure_8, parseIncodeWebViewMessage: closure_9 } = AgeVerificationIncodeWebViewConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("AgeVerificationWebViewScreen");
-fn(4605);
+fn(4606);
 let createStyles = { container: null, loadingOverlay: null, webView: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.container = createStyles;

@@ -1,6 +1,6 @@
-// === Module 7272: SpamMessageRequestStore ===
+// === Module 7293: SpamMessageRequestStore ===
 
-// Module 7272 (SpamMessageRequestStore)
+// Module 7293 (SpamMessageRequestStore)
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
 

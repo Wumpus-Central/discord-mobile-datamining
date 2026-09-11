@@ -1,10 +1,10 @@
-// === Module 13644: renderPremiumButtonText ===
+// === Module 13621: renderPremiumButtonText ===
 
-// Module 13644 (renderPremiumButtonText)
+// Module 13621 (renderPremiumButtonText)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -80,10 +80,10 @@ const PremiumConstants = fn(1373);
 ({ PREMIUM_YEARLY_DISCOUNT_PERCENT: closure_4, PRICE_PLACEHOLDER: hasOwnProperty, SubscriptionIntervalTypes: metroRequire } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { discount: null, premiumText: null };
 createStyles = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
-const ColorUtils = fn(4454);
+const ColorUtils = fn(4456);
 createStyles.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.3);
 createStyles.discount = createStyles;
 createStyles.premiumText = { flexDirection: "row" };

@@ -1,8 +1,8 @@
-// === Module 17264: trackVoicePanelTabOpened ===
+// === Module 17253: trackVoicePanelTabOpened ===
 
-// Module 17264 (trackVoicePanelTabOpened)
+// Module 17253 (trackVoicePanelTabOpened)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ReadStateStore from "ReadStateStore" /* 4620 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);

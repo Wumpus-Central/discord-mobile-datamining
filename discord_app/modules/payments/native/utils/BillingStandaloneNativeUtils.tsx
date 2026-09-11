@@ -1,11 +1,11 @@
-// === Module 7457: BillingStandaloneNativeUtils ===
+// === Module 7478: BillingStandaloneNativeUtils ===
 
-// Module 7457 (BillingStandaloneNativeUtils)
+// Module 7478 (BillingStandaloneNativeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1074 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import PaymentConstants from "PaymentConstants" /* 4587 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7458 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import PaymentConstants from "PaymentConstants" /* 4588 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7479 */;
 import size from "module_2" /* 2 */;
 
 function emitMWRCSentryErrorOnFailure(items, source, loadId) {
@@ -34,8 +34,8 @@ const Routes = Constants.Routes;
 const logger = new LoggerDefault("BillingStandaloneNativeUtils");
 let result = size.fileFinishedImporting("modules/payments/native/utils/BillingStandaloneNativeUtils.tsx");
 
-export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalonePremiumCheckoutFromMobileApp(premium_nitro_marketing_page, arg1, arg2, arg3) {
-  _require = premium_nitro_marketing_page;
+export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalonePremiumCheckoutFromMobileApp(premium_plan_selection_action_sheet, arg1, arg2, arg3) {
+  _require = premium_plan_selection_action_sheet;
   const loadId = arg1;
   dependencyMap = arg2;
   CustomCheckoutFlow = arg3;
@@ -99,7 +99,7 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
   if (tmpResult.isMetaQuest()) {
     prop1 = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
   }
-  tmpResult = tmp(7459);
+  tmpResult = tmp(7480);
   return tmpResult.goToBillingStandalonePageWithHandoff(Routes.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(guild_id, prop, newAnalyticsLoadId, prop1), (body, searchParams) => {
     searchParams = searchParams.searchParams;
     searchParams.append("handoff_token", body.body.handoff_token);

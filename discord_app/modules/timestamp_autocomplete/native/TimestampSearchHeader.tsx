@@ -1,12 +1,12 @@
-// === Module 12459: TimestampSearchHeader ===
+// === Module 12482: TimestampSearchHeader ===
 
-// Module 12459 (TimestampSearchHeader)
+// Module 12482 (TimestampSearchHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ClockIcon from "ClockIcon" /* 4568 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Form from "Form" /* 8663 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10189 */;
+import ClockIcon from "ClockIcon" /* 4569 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Form from "Form" /* 8684 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10208 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = "text-sm/semibold";
 let c7 = "text-sm/medium";
-fn(4605);
+fn(4606);
 let obj = { container: null, headerRow: null, icon: null, description: null, divider: null };
 obj = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj.container = obj;

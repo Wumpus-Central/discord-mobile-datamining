@@ -1,6 +1,6 @@
-// === Module 5316: imageConversion ===
+// === Module 5317: imageConversion ===
 
-// Module 5316 (imageConversion)
+// Module 5317 (imageConversion)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -64,7 +64,7 @@ let closure_8 = async function _convertViaSysimg(arg0) {
           };
           c8 = 1;
           c9 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -196,14 +196,14 @@ let closure_3 = new LoggerDefault("ImageConversion");
 let obj = { NATIVE_MODULE_UNAVAILABLE: "native_module_unavailable", PLATFORM_UNSUPPORTED: "platform_unsupported", SIZE_LIMIT_EXCEEDED: "size_limit_exceeded", CONVERSION_FAILED: "conversion_failed", UNKNOWN_ERROR: "unknown_error" };
 obj = {
   label: "heic",
-  matches: fn(5221).isHeicFile,
+  matches: fn(5222).isHeicFile,
   canConvert(canConvertHeic) {
     return canConvertHeic.canConvertHeic();
   }
 };
 obj = {
   label: "jxr",
-  matches: fn(5221).isJxrFile,
+  matches: fn(5222).isJxrFile,
   canConvert(canConvertJxr) {
     return canConvertJxr.canConvertJxr();
   }
@@ -213,9 +213,9 @@ const result = size.fileFinishedImporting("lib/uploader/imageConversion.tsx");
 
 export const ImageConversionFailureReason = obj;
 export const HeicConversionFailureReason = obj;
-export const isHeicFile = fn(5221).isHeicFile;
-export const isJxrFile = fn(5221).isJxrFile;
-export const renameToJpegExtension = fn(5221).renameToJpegExtension;
+export const isHeicFile = fn(5222).isHeicFile;
+export const isJxrFile = fn(5222).isJxrFile;
+export const renameToJpegExtension = fn(5222).renameToJpegExtension;
 export const maybeConvertHeicToJpeg = function maybeConvertHeicToJpeg(arg0) {
   let num = arg1;
   if (arg1 === undefined) {

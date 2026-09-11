@@ -1,17 +1,17 @@
-// === Module 7773: utils/QuestUtils ===
+// === Module 7794: utils/QuestUtils ===
 
-// Module 7773 (utils/QuestUtils)
-import QuestTaskUtils from "QuestTaskUtils" /* 7775 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 7776 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 7777 */;
-import QuestType2 from "QuestType" /* 7778 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7779 */;
+// Module 7794 (utils/QuestUtils)
+import QuestTaskUtils from "QuestTaskUtils" /* 7796 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 7797 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 7798 */;
+import QuestType2 from "QuestType" /* 7799 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameConsoleStore from "GameConsoleStore" /* 4622 */;
+import GameConsoleStore from "GameConsoleStore" /* 4623 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
-import VoiceStateStore from "VoiceStateStore" /* 4624 */;
-import QuestUtmStore from "QuestUtmStore" /* 7774 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
+import QuestUtmStore from "QuestUtmStore" /* 7795 */;
 
 require = fn;
 function isSponsoredPlayQuest(quest) {
@@ -29,7 +29,7 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, NON_GAMING_PLAY_QUEST) {
   return new Set(nextResult.config.features).has(NON_GAMING_PLAY_QUEST);
 }
-const QuestConstants = fn(5494);
+const QuestConstants = fn(5495);
 ({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: c10 } = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");

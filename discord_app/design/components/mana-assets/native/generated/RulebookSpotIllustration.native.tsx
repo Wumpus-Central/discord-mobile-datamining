@@ -1,9 +1,9 @@
-// === Module 6441: RulebookSpotIllustration ===
+// === Module 6462: RulebookSpotIllustration ===
 
-// Module 6441 (RulebookSpotIllustration)
+// Module 6462 (RulebookSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6442 from "module_6442" /* 6442 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6463 from "module_6463" /* 6463 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const RulebookSpotIllustration = function RulebookSpotIllustration(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6442 };
+  obj = { uri: _modDef6463 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const RulebookSpotIllustration = function RulebookSpotIllustration(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6442 });
+  return jsx(FastImageDefault, { uri: _modDef6463 });
 };

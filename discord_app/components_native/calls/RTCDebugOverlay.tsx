@@ -1,20 +1,20 @@
-// === Module 10107: RTCDebugOverlay ===
+// === Module 10127: RTCDebugOverlay ===
 
-// Module 10107 (RTCDebugOverlay)
+// Module 10127 (RTCDebugOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7175 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10109 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10110 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10129 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10130 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
-import RTCDebugStore from "RTCDebugStore" /* 10108 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4644 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
+import RTCDebugStore from "RTCDebugStore" /* 10128 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4645 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -96,7 +96,7 @@ function RTCDebugGeneral() {
   }
   obj = { title: "general", children: null };
   obj1 = { obj: null };
-  obj2 = { guild: obj, channel: { id: channelId, name: channelId(4758)(stateFromStores1) } };
+  obj2 = { guild: obj, channel: { id: channelId, name: channelId(4759)(stateFromStores1) } };
   obj.name = name;
   obj1.obj = obj2;
   obj.children = closure_14(ObjectKV, obj1);
@@ -141,17 +141,17 @@ function RTCDebugContext(context) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(4630).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4631).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 function asString(arg0) {
 
 }
-fn(4605);
+fn(4606);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-const ColorUtils = fn(4454);
+const ColorUtils = fn(4456);
 obj.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.container = obj;
 obj.scroller = { flex: 1, margin: 8 };
@@ -218,7 +218,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = closure_18();
   const effect = noop.useEffect(() => {
     RTCDebugActionCreatorsAll.open();
-    return () => closure_1_1(573).wait(closure_1_2(10109).close);
+    return () => closure_1_1(573).wait(closure_1_2(10129).close);
   }, []);
   const rect = { top: true, left: true, right: true, bottom: true, style: null, children: null };
   const items = [tmp.container, style];

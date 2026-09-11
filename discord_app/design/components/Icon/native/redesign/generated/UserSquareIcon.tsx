@@ -1,9 +1,9 @@
-// === Module 9447: UserSquareIcon ===
+// === Module 9468: UserSquareIcon ===
 
-// Module 9447 (UserSquareIcon)
+// Module 9468 (UserSquareIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod9448 from "module_9448" /* 9448 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod9469 from "module_9469" /* 9469 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const UserSquareIcon = function UserSquareIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9448, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9469, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

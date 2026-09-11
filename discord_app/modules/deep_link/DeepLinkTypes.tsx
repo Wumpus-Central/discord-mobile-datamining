@@ -1,6 +1,6 @@
-// === Module 17986: DeepLinkTypes ===
+// === Module 17977: DeepLinkTypes ===
 
-// Module 17986 (DeepLinkTypes)
+// Module 17977 (DeepLinkTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/deep_link/DeepLinkTypes.tsx");

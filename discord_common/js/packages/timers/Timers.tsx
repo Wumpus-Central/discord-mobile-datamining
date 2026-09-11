@@ -1,6 +1,6 @@
-// === Module 4492: Timers ===
+// === Module 1952: Timers ===
 
-// Module 4492 (Timers)
+// Module 1952 (Timers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 class Timeout {
@@ -107,6 +107,8 @@ class BatchInvocationManager {
     obj._promises = set;
     set1 = new Set();
     obj._pending = set1;
+    obj._activeInvocationCount = 0;
+    obj._flushReady = false;
     obj.invoke = global;
     obj.options = obj;
     tmp4 = DelayedCall;
@@ -115,7 +117,10 @@ class BatchInvocationManager {
       num = 32;
     }
     if (typeof tmp4 === "function") {
-      fn = () => obj._flush();
+      fn = () => {
+        obj._flushReady = true;
+        obj._flush();
+      };
       obj1 = Object.create(tmp4.prototype);
       obj1._delay = num;
       obj1._handler = fn;
@@ -135,11 +140,11 @@ class BatchInvocationManager {
   }
 }
 const prototype5 = BatchInvocationManager.prototype;
-prototype5["queue"] = function queue(arg0) {
+prototype5["queue"] = function queue(candidates) {
   const self = this;
-  let tmp = arg0;
-  if (!Array.isArray(arg0)) {
-    const items = [arg0];
+  let tmp = candidates;
+  if (!Array.isArray(candidates)) {
+    const items = [candidates];
     tmp = items;
   }
   const items1 = [];
@@ -180,7 +185,11 @@ prototype5["queue"] = function queue(arg0) {
     resolved = new Promise((resolve, reject) => {
       const _promises = self._promises;
       _promises.add({ resolve, reject });
-      self._flushHandler.delay(false);
+      if (!self._flushReady) {
+        self._flushHandler.delay(false);
+        const _flushHandler = self._flushHandler;
+      }
+      const obj = { resolve, reject };
     });
   }
   return resolved;
@@ -193,6 +202,7 @@ prototype5["reset"] = function reset() {
   _pending.clear();
   const _promises = this._promises;
   _promises.clear();
+  this._flushReady = false;
   this._flushHandler.cancel();
   if (items.length > 0) {
     const options = this.options;
@@ -203,13 +213,19 @@ prototype5["reset"] = function reset() {
   }
   const item = items1.forEach((reject) => reject.reject(closure_0));
 };
+prototype5["isPending"] = function isPending() {
+  return this._pending.size > 0;
+};
+prototype5["isInvoking"] = function isInvoking() {
+  return this._activeInvocationCount > 0;
+};
 prototype5["_flush"] = function _flush() {
   const self = this;
   return (async () => {
-    if (c6 === 2) {
-      c6 = 3;
+    if (c8 === 2) {
+      c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp5 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -220,64 +236,88 @@ prototype5["_flush"] = function _flush() {
       }
     } else {
       try {
-        c6 = 2;
-        if (0 === c3) {
+        c8 = 2;
+        if (0 === c7) {
           if (arg0 === 1) {
-            c6 = 3;
+            c8 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
+            c8 = 3;
             obj = { value, done: true };
             return obj;
           } else {
-            closure_2 = tmp6;
-            closure_130_0 = undefined;
-            closure_0 = 0;
-            const items = [];
-            closure_0 = HermesBuiltin.arraySpread(self._pending, closure_0);
-            const _pending = self._pending;
-            _pending.clear();
-            closure_1 = 0;
-            const items1 = [];
-            closure_1 = HermesBuiltin.arraySpread(self._promises, closure_1);
-            closure_130_0 = items1;
-            const _promises = self._promises;
-            _promises.clear();
-            if (0 !== items.length) {
-              c5 = 1;
-              c3 = 2;
-              c6 = 1;
-              const obj1 = { value: self.invoke(items), done: false };
-              return obj1;
-            } else {
-              const item = items1.forEach((resolve) => resolve.resolve());
+            closure_4 = tmp4;
+            closure_3 = tmp8;
+            closure_131_0 = undefined;
+            const maxConcurrentInvocations = self.options.maxConcurrentInvocations;
+            let Infinity = maxConcurrentInvocations;
+            if (maxConcurrentInvocations == null) {
+              Infinity = Infinity;
             }
+            if (self._flushReady) {
+              if (self._activeInvocationCount < tmp31) {
+                closure_1 = 0;
+                const items = [];
+                closure_1 = HermesBuiltin.arraySpread(self._pending, closure_1);
+                const _pending = self._pending;
+                _pending.clear();
+                closure_2 = 0;
+                const items1 = [];
+                closure_2 = HermesBuiltin.arraySpread(self._promises, closure_2);
+                closure_131_0 = items1;
+                const _promises = self._promises;
+                _promises.clear();
+                self._flushReady = false;
+                if (0 !== items.length) {
+                  self._activeInvocationCount = self._activeInvocationCount + 1;
+                  c6 = 2;
+                  c7 = 3;
+                  c8 = 1;
+                  const obj1 = { value: self.invoke(items), done: false };
+                  return obj1;
+                } else {
+                  const item = items1.forEach((resolve) => resolve.resolve());
+                }
+              }
+            }
+            c8 = 3;
           }
-        } else {
-          if (1 === tmp6) {
-            c5 = 0;
-            closure_130_1 = closure_4;
-            const item1 = closure_130_0.forEach((reject) => reject.reject(closure_1_1));
+        } else if (1 !== tmp8) {
+          if (2 === tmp8) {
+            c6 = 1;
+            closure_131_1 = closure_5;
+            const item1 = closure_131_0.forEach((reject) => reject.reject(closure_1_1));
           } else if (arg0 === 1) {
-            c6 = 3;
+            c8 = 3;
             throw value;
-          } else if (arg0 !== 2) {
-            const item2 = closure_130_0.forEach((resolve) => resolve.resolve());
-            c5 = 0;
+          } else if (arg0 === 2) {
+            c6 = 0;
+            closure_132_0._activeInvocationCount = closure_132_0._activeInvocationCount - 1;
+            closure_132_0._flush();
+            c8 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            const item2 = closure_131_0.forEach((resolve) => resolve.resolve());
+            c6 = 1;
           }
-          c5 = 0;
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          c6 = 0;
+          closure_132_0._activeInvocationCount = closure_132_0._activeInvocationCount - 1;
+          closure_132_0._flush();
         }
-        c6 = 3;
-      } catch (tmp16) {
-        closure_4 = tmp16;
-        if (tmp3 === c5) {
-          c6 = tmp2;
-          throw tmp16;
+        c6 = 0;
+        closure_132_0._activeInvocationCount = closure_132_0._activeInvocationCount - 1;
+        closure_132_0._flush();
+        throw closure_5;
+      } catch (tmp37) {
+        closure_5 = tmp37;
+        if (tmp5 === c6) {
+          c8 = tmp3;
+          throw tmp37;
+        } else if (tmp2 === tmp39) {
+          c7 = tmp2;
         } else {
-          c3 = tmp;
+          c7 = tmp;
         }
       }
     }

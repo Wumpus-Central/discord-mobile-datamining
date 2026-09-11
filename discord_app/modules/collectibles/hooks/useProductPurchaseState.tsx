@@ -1,9 +1,9 @@
-// === Module 8911: useProductPurchaseState ===
+// === Module 8932: useProductPurchaseState ===
 
-// Module 8911 (useProductPurchaseState)
+// Module 8932 (useProductPurchaseState)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import compactDefault from "compact" /* 8912 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7609 */;
+import compactDefault from "compact" /* 8933 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7630 */;
 
 require = fn;
 function getProductPurchaseState(CollectiblesPurchaseStore, skuId) {

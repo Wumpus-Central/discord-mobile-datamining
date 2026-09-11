@@ -1,16 +1,16 @@
-// === Module 13652: GuildPowerupsMarketingHeader ===
+// === Module 13629: GuildPowerupsMarketingHeader ===
 
-// Module 13652 (GuildPowerupsMarketingHeader)
+// Module 13629 (GuildPowerupsMarketingHeader)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import _modDef2428 from "module_2428" /* 2428 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12558 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12583 */;
-import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 13653 */;
-import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 13654 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12581 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12606 */;
+import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 13630 */;
+import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 13631 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4494 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4495 */;
 
 require = fn;
 function PerkText(children) {
@@ -18,7 +18,7 @@ function PerkText(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { container: null, text: null };
 createStyles = { padding: nativeDefault.space.PX_12, backgroundColor: null };
 let obj4 = _modDef672("#000000");
@@ -78,7 +78,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       }
       const obj4 = { perks: str2 };
       obj.children = intl.format(_modDef2428["7lwpzR"], obj4);
-      obj.children = jsx(guild(4601).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
+      obj.children = jsx(guild(4602).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
       return <View style={tmp.text} variant="text-sm/semibold">{null}</View>;
     }
   }

@@ -1,15 +1,15 @@
-// === Module 10407: useEmojiAndSource ===
+// === Module 10426: useEmojiAndSource ===
 
-// Module 10407 (useEmojiAndSource)
-import EmojiTypes from "EmojiTypes" /* 4260 */;
+// Module 10426 (useEmojiAndSource)
+import EmojiTypes from "EmojiTypes" /* 4262 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import EmojiStore from "EmojiStore" /* 5509 */;
+import EmojiStore from "EmojiStore" /* 5510 */;
 
 require = fn;
-const ExpressionSourceRecord = fn(5635);
+const ExpressionSourceRecord = fn(5636);
 ({ ExpressionSourceGuildRecord: closure_7, EmojiSourceDataTypes: closure_8, getEmojiSourceData: closure_9 } = ExpressionSourceRecord);
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);

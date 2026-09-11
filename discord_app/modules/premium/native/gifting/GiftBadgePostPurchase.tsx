@@ -1,23 +1,23 @@
-// === Module 11100: GiftBadgePostPurchase ===
+// === Module 11123: GiftBadgePostPurchase ===
 
-// Module 11100 (GiftBadgePostPurchase)
+// Module 11123 (GiftBadgePostPurchase)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import _modDef2492 from "module_2492" /* 2492 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4425 */;
-import HapticUtils from "HapticUtils" /* 4573 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4574 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import BadgeId from "BadgeId" /* 8247 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10819 */;
-import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11103 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11104 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4427 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4575 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import BadgeId from "BadgeId" /* 8269 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10838 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11126 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11127 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8255 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8277 */;
 
 require = fn;
 function PostPurchaseFooter(onSendGift) {
@@ -32,23 +32,23 @@ function PostPurchaseFooter(onSendGift) {
   const callback1 = noop.useCallback(() => {
     let arr = ModalActionCreatorsDefault;
     arr = arr.pop();
-    const rootNavigationRef = onSendGift(4463).getRootNavigationRef();
+    const rootNavigationRef = onSendGift(4465).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
   }, []);
   obj = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   obj = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-  obj.icon = closure_10(onSendGift(11102).GiftIcon, obj);
+  obj.icon = closure_10(onSendGift(11125).GiftIcon, obj);
   const intl = onSendGift(1114).intl;
   obj.text = intl.string(_modDef2492.g86YiI);
   obj.onPress = callback;
-  const items1 = [closure_10(onSendGift(5025).Button, obj), ];
+  const items1 = [closure_10(onSendGift(5026).Button, obj), ];
   const obj1 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1114).intl;
   obj1.text = intl2.string(_modDef2492["sa/cfM"]);
   obj1.onPress = callback1;
-  items1[1] = closure_10(onSendGift(5025).Button, obj1);
+  items1[1] = closure_10(onSendGift(5026).Button, obj1);
   obj.children = items1;
   return closure_11(View, obj);
 }
@@ -123,12 +123,12 @@ function LevelUpScreen(arg0) {
   return closure_1_11(View, obj);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(11101);
+const GiftingBadgeConstants = fn(11124);
 ({ getRemainingGiftsToNextTier: metroRequire, getTierForProgress: closure_7, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles((arg0) => {
   let obj = { screenContainer: { flex: 1 }, content: null, progressWrapper: null, messageSection: null, centerText: null, levelUpIconWrapper: null, levelUpBody: null, levelUpProgress: null, footer: null };
   obj = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 };

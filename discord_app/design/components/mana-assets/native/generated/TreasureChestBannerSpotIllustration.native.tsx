@@ -1,9 +1,9 @@
-// === Module 6597: TreasureChestBannerSpotIllustration ===
+// === Module 6618: TreasureChestBannerSpotIllustration ===
 
-// Module 6597 (TreasureChestBannerSpotIllustration)
+// Module 6618 (TreasureChestBannerSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6598 from "module_6598" /* 6598 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6619 from "module_6619" /* 6619 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const TreasureChestBannerSpotIllustration = function TreasureChestBannerS
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6598 };
+  obj = { uri: _modDef6619 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const TreasureChestBannerSpotIllustration = function TreasureChestBannerS
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6598 });
+  return jsx(FastImageDefault, { uri: _modDef6619 });
 };

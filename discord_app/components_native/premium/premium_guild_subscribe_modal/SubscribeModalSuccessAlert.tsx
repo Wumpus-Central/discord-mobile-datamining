@@ -1,17 +1,17 @@
-// === Module 13697: SubscribeModalSuccessAlert ===
+// === Module 13676: SubscribeModalSuccessAlert ===
 
-// Module 13697 (SubscribeModalSuccessAlert)
+// Module 13676 (SubscribeModalSuccessAlert)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
-import useThemeDefault from "useTheme" /* 4540 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import LinearGradientDefault from "LinearGradient" /* 5037 */;
-import common_AlertDefault from "common/Alert" /* 5044 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5484 */;
-import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 13698 */;
-import _mod13699 from "module_13699" /* 13699 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
+import common_AlertDefault from "common/Alert" /* 5045 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5485 */;
+import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 13677 */;
+import _mod13678 from "module_13678" /* 13678 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -29,10 +29,10 @@ class PremiumPaymentGuildAnimation {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const Gradients = fn(7484).Gradients;
+const Gradients = fn(7505).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" }, animation: { width: "auto", height: 112, alignSelf: "center" }, text: { lineHeight: 18, textAlign: "center" }, activated: null, activatedBackground: null, activatedImage: null, successInfo: null };
 createStyles = { padding: 2, borderRadius: nativeDefault.radii.xs, marginTop: 8 };
 createStyles.activated = createStyles;
@@ -74,8 +74,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = util.intl;
   obj.confirmText = intl.string(util.t.YKxJCI);
   obj.onConfirm = function onConfirm() {
-    closure_1(4950).close();
-    const obj = closure_1(4950);
+    closure_1(4951).close();
+    const obj = closure_1(4951);
     actions_BoostingActionCreators.closeApplyBoostModal();
   };
   obj = {
@@ -99,9 +99,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const obj3 = { style: tmp.activatedImage, source: null };
   const tmp14 = LinearGradientDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13700);
+    let tmp8Result = tmp8(13679);
   } else {
-    tmp8Result = tmp8(13701);
+    tmp8Result = tmp8(13680);
   }
   obj3.source = tmp8Result;
   obj2.children = closure_9(closure_6, obj3);

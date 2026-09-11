@@ -1,20 +1,20 @@
-// === Module 15546: DataSavingModeSetting ===
+// === Module 15528: DataSavingModeSetting ===
 
-// Module 15546 (DataSavingModeSetting)
+// Module 15528 (DataSavingModeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsText from "UserSettingsText" /* 15544 */;
+import UserSettingsText from "UserSettingsText" /* 15526 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
 require = fn;
-fn(11540);
+fn(11562);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.ix8XIj);
   },
-  parent: fn(8027).MobileUserSettings.CHAT,
+  parent: fn(8049).MobileUserSettings.CHAT,
   useValue: function useDataSavingModeSettingValue() {
     const items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);

@@ -1,6 +1,6 @@
-// === Module 7310: GuildProductsEligibility ===
+// === Module 7331: GuildProductsEligibility ===
 
-// Module 7310 (GuildProductsEligibility)
+// Module 7331 (GuildProductsEligibility)
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = fn;

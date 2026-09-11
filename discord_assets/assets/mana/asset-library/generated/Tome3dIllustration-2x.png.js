@@ -1,6 +1,6 @@
-// === Module 6594: ? ===
+// === Module 6615: ? ===
 
-// Module 6594
+// Module 6615
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/Tome3dIllustration-2x.png.js");

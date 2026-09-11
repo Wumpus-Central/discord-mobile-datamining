@@ -1,6 +1,6 @@
-// === Module 4623: SessionsStore ===
+// === Module 4624: SessionsStore ===
 
-// Module 4623 (SessionsStore)
+// Module 4624 (SessionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

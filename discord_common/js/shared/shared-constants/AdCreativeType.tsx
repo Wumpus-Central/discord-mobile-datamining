@@ -1,6 +1,6 @@
-// === Module 5501: AdCreativeType ===
+// === Module 5502: AdCreativeType ===
 
-// Module 5501 (AdCreativeType)
+// Module 5502 (AdCreativeType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AdCreativeType.tsx");

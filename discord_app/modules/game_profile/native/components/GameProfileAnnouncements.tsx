@@ -1,17 +1,17 @@
-// === Module 8820: GameProfileAnnouncements ===
+// === Module 8841: GameProfileAnnouncements ===
 
-// Module 8820 (GameProfileAnnouncements)
+// Module 8841 (GameProfileAnnouncements)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import DateUtils from "DateUtils" /* 4286 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import CustomMarkupAll from "CustomMarkup" /* 5045 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8750 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8756 */;
-import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 8822 */;
-import ImageWithPlaceholder from "ImageWithPlaceholder" /* 8825 */;
-import ReactionIcon from "ReactionIcon" /* 8827 */;
-import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 8832 */;
+import DateUtils from "DateUtils" /* 4288 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import CustomMarkupAll from "CustomMarkup" /* 5046 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8771 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8777 */;
+import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 8843 */;
+import ImageWithPlaceholder from "ImageWithPlaceholder" /* 8846 */;
+import ReactionIcon from "ReactionIcon" /* 8848 */;
+import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 8853 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -293,7 +293,7 @@ function PollAnnouncementCard(message) {
     };
     obj = { style: tmp.cardBody, children: null };
     const obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: poll.question.text };
-    const items = [closure_10(message(4601).Text, obj1), , ];
+    const items = [closure_10(message(4602).Text, obj1), , ];
     const obj2 = { style: tmp.pollAnswers, children: null };
     const items1 = [
       substr.map((poll_media) => {
@@ -313,7 +313,7 @@ function PollAnnouncementCard(message) {
       const intl = tmp13(1114).intl;
       const obj3 = { count: diff };
       obj.children = intl.format(tmp13(1114).t["mv/nIa"], obj3);
-      tmp9Result = closure_10(tmp13(4601).Text, obj);
+      tmp9Result = closure_10(tmp13(4602).Text, obj);
     }
     items1[1] = tmp9Result;
     obj2.children = items1;
@@ -325,9 +325,9 @@ function PollAnnouncementCard(message) {
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj6.createdAt = date;
-    obj6.expiryLabel = message(8822).getPollExpiryLabel(poll);
+    obj6.expiryLabel = message(8843).getPollExpiryLabel(poll);
     obj5.children = intl2.format(message(1114).t.t0FTsH, obj6);
-    obj4.children = closure_10(message(4601).Text, obj5);
+    obj4.children = closure_10(message(4602).Text, obj5);
     items[2] = closure_10(closure_6, obj4);
     obj.children = items;
     obj.children = closure_11(closure_6, obj);
@@ -336,12 +336,12 @@ function PollAnnouncementCard(message) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, Pressable: closure_7, ActivityIndicator: closure_8 } = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(8821).MAX_VISIBLE_ANNOUNCEMENTS;
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(8842).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 120;
 let closure_13 = null;
-fn(4605);
+fn(4606);
 let obj = { container: null, smallCardsScroller: null, smallCardsContainer: null, sectionHeader: null, loadingContainer: null, card: null, cardBody: null, smallCardMedia: null, mediaImage: null, metadataRow: null, reactionInfo: null, embedContentArea: null, embedAuthorRow: null, embedAuthorIcon: null, embedProviderIcon: null, embedMedia: null, pollAnswers: null, pollAnswerOption: null, pollMoreOptions: null };
 obj = { gap: nativeDefault.space.PX_8 };
 obj.container = obj;

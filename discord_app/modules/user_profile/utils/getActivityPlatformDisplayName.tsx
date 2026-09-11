@@ -1,6 +1,6 @@
-// === Module 13089: getActivityPlatformDisplayName ===
+// === Module 13112: getActivityPlatformDisplayName ===
 
-// Module 13089 (getActivityPlatformDisplayName)
+// Module 13112 (getActivityPlatformDisplayName)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;

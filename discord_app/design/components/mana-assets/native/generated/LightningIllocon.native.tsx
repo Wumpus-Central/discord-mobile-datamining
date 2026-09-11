@@ -1,9 +1,9 @@
-// === Module 6273: LightningIllocon ===
+// === Module 6294: LightningIllocon ===
 
-// Module 6273 (LightningIllocon)
+// Module 6294 (LightningIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6274 from "module_6274" /* 6274 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6295 from "module_6295" /* 6295 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const LightningIllocon = function LightningIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6274 };
+  obj = { uri: _modDef6295 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6274 });
+  return jsx(FastImageDefault, { uri: _modDef6295 });
 };

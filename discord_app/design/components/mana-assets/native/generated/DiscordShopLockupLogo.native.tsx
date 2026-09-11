@@ -1,11 +1,11 @@
-// === Module 5961: DiscordShopLockupLogo ===
+// === Module 5982: DiscordShopLockupLogo ===
 
-// Module 5961 (DiscordShopLockupLogo)
+// Module 5982 (DiscordShopLockupLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4306 */;
-import _modDef5962 from "module_5962" /* 5962 */;
+import useToken from "useToken" /* 4308 */;
+import _modDef5983 from "module_5983" /* 5983 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -42,9 +42,9 @@ export const DiscordShopLockupLogo = function DiscordShopLockupLogo(color) {
     }
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
-  const obj1 = { fadeDuration: 0, source: { uri: _modDef5962 }, style: null, accessible, accessibilityLabel, resizeMode };
+  const obj1 = { fadeDuration: 0, source: { uri: _modDef5983 }, style: null, accessible, accessibilityLabel, resizeMode };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj1.style = items;
-  return <Image fadeDuration={0} source={{ uri: _modDef5962 }} style={null} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
+  return <Image fadeDuration={0} source={{ uri: _modDef5983 }} style={null} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
 };

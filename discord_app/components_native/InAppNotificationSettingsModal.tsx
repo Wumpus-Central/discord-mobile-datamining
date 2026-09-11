@@ -1,17 +1,17 @@
-// === Module 10212: InAppNotificationSettingsModal ===
+// === Module 10231: InAppNotificationSettingsModal ===
 
-// Module 10212 (InAppNotificationSettingsModal)
+// Module 10231 (InAppNotificationSettingsModal)
 import util from "util" /* 1114 */;
-import useChannelName from "useChannelName" /* 4758 */;
-import NavigatorHeader from "NavigatorHeader" /* 5674 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7166 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7171 */;
-import Form from "Form" /* 8663 */;
-import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 10213 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import NavigatorHeader from "NavigatorHeader" /* 5675 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7187 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7192 */;
+import Form from "Form" /* 8684 */;
+import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 10232 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -146,11 +146,11 @@ export default noop.memo((channelId) => {
         obj.title = intl.string(channelId(1114).t.h850Ss);
         let channelName = null;
         if (null != closure_0) {
-          const tmp3Result = channelId(4758);
+          const tmp3Result = channelId(4759);
           channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
         }
         obj.subtitle = channelName;
-        return closure_2_11(channelId(5674).NavigatorHeader, obj);
+        return closure_2_11(channelId(5675).NavigatorHeader, obj);
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
       render() {
@@ -160,5 +160,5 @@ export default noop.memo((channelId) => {
     obj.IN_APP_NOTIFICATION_SETTINGS = obj;
     return obj;
   }, items);
-  return closure_11(channelId(7052).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return closure_11(channelId(7073).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });

@@ -1,6 +1,6 @@
-// === Module 5800: ? ===
+// === Module 5821: ? ===
 
-// Module 5800
+// Module 5821
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AppsButtonSpotIllustration-2x.png.js");

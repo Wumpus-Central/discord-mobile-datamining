@@ -1,20 +1,20 @@
-// === Module 11958: AppealIngestionSpeedBump ===
+// === Module 11981: AppealIngestionSpeedBump ===
 
-// Module 11958 (AppealIngestionSpeedBump)
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11960 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11970 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11971 */;
+// Module 11981 (AppealIngestionSpeedBump)
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11983 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11993 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11994 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8495 */;
+import SafetyHubStore from "SafetyHubStore" /* 8516 */;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8484);
+const SafetyHubConstants = fn(8505);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionSpeedBump.tsx");
@@ -119,7 +119,7 @@ export default function AppealIngestionSpeedBump(arg0) {
     const obj6 = { variant: "text-xs/normal", children: null };
     const intl7 = tmp2(1114).intl;
     obj6.children = intl7.format(tmp2(1114).t.WMUgCX, {});
-    isDsaEligible = closure_8(tmp2(4601).Text, obj6);
+    isDsaEligible = closure_8(tmp2(4602).Text, obj6);
   }
   const obj7 = { children: null };
   items2[6] = isDsaEligible;

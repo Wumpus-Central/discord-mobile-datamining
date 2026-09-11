@@ -1,12 +1,12 @@
-// === Module 14652: KeyCommandsView ===
+// === Module 14628: KeyCommandsView ===
 
-// Module 14652 (KeyCommandsView)
-import KeyCommandsNativeComponentDefault from "KeyCommandsNativeComponent" /* 14653 */;
+// Module 14628 (KeyCommandsView)
+import KeyCommandsNativeComponentDefault from "KeyCommandsNativeComponent" /* 14629 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_5 = createStyles.createStyles({ viewDefaults: { flex: 1 } });
 const redux = noop.createContext({
   keyCommands: [],

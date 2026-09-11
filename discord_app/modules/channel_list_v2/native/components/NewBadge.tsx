@@ -1,19 +1,19 @@
-// === Module 12366: NewBadge ===
+// === Module 12389: NewBadge ===
 
-// Module 12366 (NewBadge)
+// Module 12389 (NewBadge)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import shared from "shared" /* 4456 */;
-import useThemeDefault from "useTheme" /* 4540 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7924 */;
+import shared from "shared" /* 4458 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7946 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_5 = createStyles.createStyles((arg0, arg1) => {
   let obj = PlatformUtils;
   let num = 0;

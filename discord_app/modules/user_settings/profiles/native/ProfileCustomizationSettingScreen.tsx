@@ -1,20 +1,20 @@
-// === Module 14663: ProfileCustomizationSettingScreen ===
+// === Module 14639: ProfileCustomizationSettingScreen ===
 
-// Module 14663 (ProfileCustomizationSettingScreen)
+// Module 14639 (ProfileCustomizationSettingScreen)
 import util from "util" /* 1114 */;
-import ChatInputUtils from "ChatInputUtils" /* 4470 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4785 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7036 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9279 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10995 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14664 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14723 */;
+import ChatInputUtils from "ChatInputUtils" /* 4472 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4786 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7057 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9300 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 11015 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14640 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9277 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8223 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9298 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8245 */;
 
 require = fn;
 let closure_3 = ["handleSubmit"];
@@ -25,7 +25,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: map1, AnalyticsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_17 = createStyles.createStyles({ container: { height: "100%" }, controls: { paddingTop: 4 } });
 let items = [
   {

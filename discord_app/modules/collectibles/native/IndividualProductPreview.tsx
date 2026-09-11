@@ -1,17 +1,17 @@
-// === Module 13214: IndividualProductPreview ===
+// === Module 13237: IndividualProductPreview ===
 
-// Module 13214 (IndividualProductPreview)
+// Module 13237 (IndividualProductPreview)
 import nativeDefault from "native" /* 576 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import LinearGradientDefault from "LinearGradient" /* 5037 */;
-import useCurrentUser from "useCurrentUser" /* 8241 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11180 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11291 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 13215 */;
-import NameplateProductPreviewDefault from "NameplateProductPreview" /* 13216 */;
-import FractionalNitroPreview from "FractionalNitroPreview" /* 13217 */;
-import OrbBadgePreview from "OrbBadgePreview" /* 13220 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
+import useCurrentUser from "useCurrentUser" /* 8263 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11203 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11313 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 13238 */;
+import NameplateProductPreviewDefault from "NameplateProductPreview" /* 13239 */;
+import FractionalNitroPreview from "FractionalNitroPreview" /* 13240 */;
+import OrbBadgePreview from "OrbBadgePreview" /* 13243 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -80,7 +80,7 @@ const CollectiblesShopConstants = fn(1076);
 ({ EXTERNAL_PRODUCT_SKU_IDS: hasOwnProperty, ShopCtaEnum: metroRequire } = CollectiblesShopConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { collectiblePreview: null, profilePreviewContainer: null, profilePreview: null, profilePreviewGradient: null };
 createStyles = { marginTop: nativeDefault.space.PX_12, position: "relative", height: 280 };
 createStyles.collectiblePreview = createStyles;

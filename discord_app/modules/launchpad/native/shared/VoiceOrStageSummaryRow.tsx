@@ -1,18 +1,18 @@
-// === Module 17086: VoiceOrStageSummaryRow ===
+// === Module 17075: VoiceOrStageSummaryRow ===
 
-// Module 17086 (VoiceOrStageSummaryRow)
+// Module 17075 (VoiceOrStageSummaryRow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import _modDef16750 from "module_16750" /* 16750 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16755 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import _modDef16738 from "module_16738" /* 16738 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16743 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles((height) => {
   let obj = { container: { flexDirection: "row", alignItems: "center", marginLeft: -2 }, overflowCircle: null, wrapper: null, badge: null, audienceBadge: null };
   const size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, width: height };
@@ -92,10 +92,10 @@ export default noop.memo(function VoiceOrStageSummaryRow(arg0) {
     const items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj1.style = items3;
-    let obj2 = { size: max(1178).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16750 };
+    let obj2 = { size: max(1178).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16738 };
     const items4 = [closure_4(max(1178).Icon, obj2), ];
     let obj3 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
-    items4[1] = closure_4(max(4601).Text, obj3);
+    items4[1] = closure_4(max(4602).Text, obj3);
     obj1.children = items4;
     obj.children = closure_5(tmp6, obj1);
     tmp8Result = tmp8(tmp6, obj);

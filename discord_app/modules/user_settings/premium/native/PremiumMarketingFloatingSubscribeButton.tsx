@@ -1,18 +1,18 @@
-// === Module 13572: PremiumMarketingFloatingSubscribeButton ===
+// === Module 13549: PremiumMarketingFloatingSubscribeButton ===
 
-// Module 13572 (PremiumMarketingFloatingSubscribeButton)
+// Module 13549 (PremiumMarketingFloatingSubscribeButton)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import timing from "timing" /* 4606 */;
+import timing from "timing" /* 4607 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1 }, gradient: { position: "absolute", left: 0, right: 0, bottom: 0, top: -64 }, buttonContainer: null };
 createStyles = { marginLeft: "auto", marginRight: "auto", width: "100%", paddingHorizontal: 12, paddingTop: nativeDefault.space.PX_12 };
 createStyles.buttonContainer = createStyles;

@@ -1,16 +1,16 @@
-// === Module 15232: VideoQuestModalHeader ===
+// === Module 15211: VideoQuestModalHeader ===
 
-// Module 15232 (VideoQuestModalHeader)
+// Module 15211 (VideoQuestModalHeader)
 import nativeDefault from "native" /* 576 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7775 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7796 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const useVideoQuestUIStore = fn(7756).useVideoQuestUIStore;
+const useVideoQuestUIStore = fn(7777).useVideoQuestUIStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { videoContentHeaderWrapper: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" }, videoContentHeading: null, textShadow: null };
 createStyles = { flexDirection: "column", flexShrink: 1, gap: nativeDefault.space.PX_4 };
 createStyles.videoContentHeading = createStyles;
@@ -29,9 +29,9 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp2 = closure_7();
-  let obj = quest(15205);
+  let obj = quest(15184);
   quest = obj.useVideoQuestModalContext().quest;
-  let obj1 = quest(11555);
+  let obj1 = quest(11577);
   const questTaskDetails = obj1.useQuestTaskDetails(quest);
   const tmp6 = useVideoQuestUIStore((arg0) => {
     let tmp = arg0.videoProgress[quest.id];
@@ -42,15 +42,15 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     }
     const time = QuestTaskUtils.parseMinutesAndSecondsFromSeconds(tmp.duration - tmp.timestampSec);
     return QuestTaskUtils.formatWatchTaskTime(time.minutes, time.seconds);
-  }, quest(4227).shallow);
+  }, quest(4229).shallow);
   const userStatus = quest.userStatus;
   let completedAt;
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
   if (null == completedAt) {
-    const videoQuestProgressRemainingAccessibilityLabel = tmp3(11584).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
-    const tmp3Result = tmp3(11584);
+    const videoQuestProgressRemainingAccessibilityLabel = tmp3(11606).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
+    const tmp3Result = tmp3(11606);
   }
   obj = { style: null, children: null };
   const items = [tmp2.videoContentHeaderWrapper, style];
@@ -63,7 +63,7 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   obj1 = { variant: "heading-md/semibold", color: "text-overlay-light", style: textShadow2, children: null };
   const intl = tmp3(1114).intl;
   obj1.children = intl.formatToPlainString(quest(1114).t.EQa7os, { questName: quest.config.messages.questName });
-  const items1 = [closure_5(quest(4601).Text, obj1), ];
+  const items1 = [closure_5(quest(4602).Text, obj1), ];
   const obj3 = { variant: "heading-sm/semibold", color: "text-overlay-light", accessibilityLabel: videoQuestProgressRemainingAccessibilityLabel, style: null, children: null };
   if (textShadow) {
     textShadow = tmp2.textShadow;
@@ -77,9 +77,9 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     }
   }
   obj3.children = gamePublisher;
-  items1[1] = closure_5(quest(4601).Text, obj3);
+  items1[1] = closure_5(quest(4602).Text, obj3);
   obj.children = items1;
-  const items2 = [closure_6(View, obj), closure_5(questTaskDetails(15227), { iconColor: closeButtonIconColor, onClose })];
+  const items2 = [closure_6(View, obj), closure_5(questTaskDetails(15206), { iconColor: closeButtonIconColor, onClose })];
   obj.children = items2;
   return closure_6(View, obj);
 };

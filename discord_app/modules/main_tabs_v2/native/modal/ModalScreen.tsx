@@ -1,9 +1,9 @@
-// === Module 16968: modal/ModalScreen ===
+// === Module 16957: modal/ModalScreen ===
 
-// Module 16968 (modal/ModalScreen)
+// Module 16957 (modal/ModalScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8838 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8859 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { containerWithPadding: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.containerWithPadding = createStyles;
@@ -33,7 +33,7 @@ export default function Modal(route) {
   const tmp = closure_11();
   let obj1 = noop;
   const callback = noop.useCallback(() => {
-    let arr = closure_1(4808);
+    let arr = closure_1(4809);
     arr = arr.pop();
   }, []);
   let obj = { type: null, name: null, properties: null };
@@ -64,9 +64,9 @@ export default function Modal(route) {
     }
     return currentResult;
   }, []);
-  const layoutEffect = obj1.useLayoutEffect(() => modal(7527).trackAppUIViewed("ModalScreen"), []);
+  const layoutEffect = obj1.useLayoutEffect(() => modal(7548).trackAppUIViewed("ModalScreen"), []);
   ({ left, right } = useSafeAreaInsetsDefault());
-  let tmp7Result = tmp7(16969);
+  let tmp7Result = tmp7(16958);
   const items = [absoluteFillObject.absoluteFillObject, ];
   let tmp16;
   if (!tmp7Result.shouldExcludeSafeAreaForModalKey(modal.key)) {
@@ -78,7 +78,7 @@ export default function Modal(route) {
   obj1 = { style: items, onAccessibilityEscape: null, children: null };
   items[1] = tmp16;
   if (modal.closable) {
-    let pop = tmp4(4808).pop;
+    let pop = tmp4(4809).pop;
   } else {
     pop = NOOP;
   }
@@ -92,7 +92,7 @@ export default function Modal(route) {
   tmp7Result = tmp7(1115);
   let isIOSResult = tmp7Result.isIOS();
   if (isIOSResult) {
-    isIOSResult = closure_9(tmp7(16853).PortalKeyboardRenderer, { portal: false });
+    isIOSResult = closure_9(tmp7(16841).PortalKeyboardRenderer, { portal: false });
   }
   items2[1] = isIOSResult;
   obj1.children = items2;

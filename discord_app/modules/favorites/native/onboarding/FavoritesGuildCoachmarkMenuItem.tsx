@@ -1,10 +1,10 @@
-// === Module 16316: FavoritesGuildCoachmarkMenuItem ===
+// === Module 16305: FavoritesGuildCoachmarkMenuItem ===
 
-// Module 16316 (FavoritesGuildCoachmarkMenuItem)
+// Module 16305 (FavoritesGuildCoachmarkMenuItem)
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
-import LayerScope from "LayerScope" /* 7208 */;
-import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10310 */;
+import LayerScope from "LayerScope" /* 7229 */;
+import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10329 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 
@@ -31,7 +31,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, onDismiss, callback1];
   const memo = onDismiss.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M9 3H7v1h2V3ZM9 4H7v1h2V4Z", onButtonPress: null };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M0 8v4h1V8H0ZM15 9v3h1V9h-1ZM14 6v3h1V6h-1ZM13 4v2h1V4h-1Z", onButtonPress: "#000" };
     const intl = util.intl;
     const tmp4 = _modDef3236;
     if (stateFromStores) {

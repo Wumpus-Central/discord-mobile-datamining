@@ -1,15 +1,15 @@
-// === Module 9795: EditGuildEventModal ===
+// === Module 9816: EditGuildEventModal ===
 
-// Module 9795 (EditGuildEventModal)
+// Module 9816 (EditGuildEventModal)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9773 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9774 */;
-import EntityUtils from "EntityUtils" /* 9775 */;
-import useGetEventChannelsByType from "useGetEventChannelsByType" /* 9796 */;
-import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 9797 */;
-import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 9837 */;
-import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 9838 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9794 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9795 */;
+import EntityUtils from "EntityUtils" /* 9796 */;
+import useGetEventChannelsByType from "useGetEventChannelsByType" /* 9817 */;
+import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 9818 */;
+import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 9858 */;
+import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 9859 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 let closure_8 = fn(1963).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let obj = { container: null, cardStyle: null };
 obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.container = obj;
@@ -77,7 +77,7 @@ export default noop.memo((guild) => {
           return { value: "HermesInternal", done: null };
         } else {
           if (!closure_128_5) {
-            const AccessibilityAnnouncer = tmp4(4316).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = tmp4(4318).AccessibilityAnnouncer;
             const intl = tmp4(1114).intl;
             AccessibilityAnnouncer.announce(intl.string(tmp4(1114).t["5HzXO5"]));
             closure_128_1();
@@ -87,7 +87,7 @@ export default noop.memo((guild) => {
               id = closure_128_2.id;
             }
           }
-          const AccessibilityAnnouncer2 = tmp4(4316).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer2 = tmp4(4318).AccessibilityAnnouncer;
           const intl2 = tmp4(1114).intl;
           AccessibilityAnnouncer2.announce(intl2.string(tmp4(1114).t["F9On+q"]));
         }

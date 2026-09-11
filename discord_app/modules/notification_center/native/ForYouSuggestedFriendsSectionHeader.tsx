@@ -1,15 +1,15 @@
-// === Module 16521: ForYouSuggestedFriendsSectionHeader ===
+// === Module 16509: ForYouSuggestedFriendsSectionHeader ===
 
-// Module 16521 (ForYouSuggestedFriendsSectionHeader)
+// Module 16509 (ForYouSuggestedFriendsSectionHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { container: null, noDivider: null, text: null };
 createStyles = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 12, marginBottom: 8, paddingHorizontal: 24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createStyles.container = createStyles;

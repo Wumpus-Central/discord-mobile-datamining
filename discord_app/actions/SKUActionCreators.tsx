@@ -1,16 +1,16 @@
-// === Module 10886: SKUActionCreators ===
+// === Module 10905: SKUActionCreators ===
 
-// Module 10886 (SKUActionCreators)
+// Module 10905 (SKUActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import BillingUtils from "BillingUtils" /* 4277 */;
-import StoreUtils from "StoreUtils" /* 4847 */;
-import PurchaseTokenUtils from "PurchaseTokenUtils" /* 4938 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7640 */;
-import TestModeUtils from "TestModeUtils" /* 8923 */;
+import BillingUtils from "BillingUtils" /* 4279 */;
+import StoreUtils from "StoreUtils" /* 4848 */;
+import PurchaseTokenUtils from "PurchaseTokenUtils" /* 4939 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7661 */;
+import TestModeUtils from "TestModeUtils" /* 8944 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8856 */;
-import SKUStore from "SKUStore" /* 5560 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8877 */;
+import SKUStore from "SKUStore" /* 5561 */;
 
 require = fn;
 let closure_8 = async function _fetchSKU() {
@@ -214,91 +214,28 @@ let closure_9 = async function _fetchPublishedSKU(arg0) {
     }
   })();
 };
-let closure_10 = async function _fetchTestSKUsForApplication(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = true;
-          }
-          closure_130_1 = flag;
-          let body;
-          c4 = 1;
-          c5 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          if (!obj12.isTestModeForApplication(closure_130_0)) {
-            if (closure_130_1) {
-              const _Error = Error;
-              const error = new Error("this should only be used in test mode");
-              throw error;
-            }
-          }
-          let obj4 = closure_131_0(closure_131_2[5]);
-          const obj2 = { url: closure_131_7.APPLICATION_SKUS(closure_130_0), rejectWithError: null };
-          let obj6 = closure_131_0(closure_131_2[6]);
-          obj2.rejectWithError = obj6.rejectWithMigratedError();
-          c4 = 2;
-          c5 = 1;
-          const obj3 = { value: obj4.httpGetWithCountryCodeQuery(obj2), done: false };
-          return obj3;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        obj4 = { value, done: true };
-        return obj4;
-      } else {
-        body = value.body;
-        obj = closure_131_1(closure_131_2[4]);
-        const obj5 = { type: "SKUS_FETCH_SUCCESS", skus: body };
-        obj.dispatch(obj5);
-        c5 = 3;
-        obj6 = { value: body, done: true };
-        return obj6;
-      }
-    } catch (tmp28) {
-      c5 = tmp;
-      throw tmp28;
+let closure_10 = async function _fetchTestSKUsForApplication() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag = closure_1;
+  if (closure_1 === undefined) {
+    flag = true;
+  }
+  closure_130_1 = flag;
+  await "PX_16";
+  if (!obj12.isTestModeForApplication(closure_130_0)) {
+    if (closure_130_1) {
+      const _Error = Error;
+      const error = new Error("this should only be used in test mode");
+      throw error;
     }
   }
+  const obj2 = { url: closure_131_7.APPLICATION_SKUS(closure_130_0), rejectWithError: closure_131_0(closure_131_2[6]).rejectWithMigratedError() };
+  await closure_131_0(closure_131_2[5]).httpGetWithCountryCodeQuery(obj2);
+  const body = value.body;
+  closure_131_0(closure_131_2[6]);
+  closure_131_1(closure_131_2[4]).dispatch({ type: "SKUS_FETCH_SUCCESS", skus: body });
+  return body;
 };
 let closure_11 = async function _previewPurchaseSku(arg0) {
   if (c6 === 2) {
@@ -338,7 +275,7 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
           closure_129_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

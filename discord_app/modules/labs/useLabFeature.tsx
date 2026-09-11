@@ -1,7 +1,7 @@
-// === Module 8420: useLabFeature ===
+// === Module 8441: useLabFeature ===
 
-// Module 8420 (useLabFeature)
-import LabFeatureStore from "LabFeatureStore" /* 8418 */;
+// Module 8441 (useLabFeature)
+import LabFeatureStore from "LabFeatureStore" /* 8439 */;
 
 const require = fn;
 const size = fn(2);

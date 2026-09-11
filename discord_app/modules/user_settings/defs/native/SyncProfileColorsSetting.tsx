@@ -1,23 +1,23 @@
-// === Module 15495: SyncProfileColorsSetting ===
+// === Module 15477: SyncProfileColorsSetting ===
 
-// Module 15495 (SyncProfileColorsSetting)
+// Module 15477 (SyncProfileColorsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
-fn(11540);
+fn(11562);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["sSY+mD"]);
   },
-  parent: fn(8027).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8049).MobileUserSettings.ACCESSIBILITY,
   useValue: function useProfileColorsSettingValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   },
-  onValueChange: fn(14514).toggleSyncProfileThemeWithUserTheme
+  onValueChange: fn(14490).toggleSyncProfileThemeWithUserTheme
 };
 SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
 const size = fn(2);

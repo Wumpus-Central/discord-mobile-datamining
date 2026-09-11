@@ -1,13 +1,13 @@
-// === Module 9838: EditGuildEventPreview ===
+// === Module 9859: EditGuildEventPreview ===
 
-// Module 9838 (EditGuildEventPreview)
+// Module 9859 (EditGuildEventPreview)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
-import ScheduleUtils from "ScheduleUtils" /* 9735 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9774 */;
-import guildEventDetailsParser from "guildEventDetailsParser" /* 9841 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
+import ScheduleUtils from "ScheduleUtils" /* 9756 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9795 */;
+import guildEventDetailsParser from "guildEventDetailsParser" /* 9862 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -22,7 +22,7 @@ function PreviewBody(event) {
   let items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
-  const tmp6 = channel_id(4758)(stateFromStores);
+  const tmp6 = channel_id(4759)(stateFromStores);
   dependencyMap = tmp6;
   let obj1 = require("EntityUtils");
   let locationFromEvent = obj1.getLocationFromEvent(event);
@@ -43,7 +43,7 @@ function PreviewBody(event) {
     const intl2 = tmp2(1114).intl;
     const obj2 = { channelName: null };
     const obj3 = { channel: stateFromStores };
-    obj2.channelName = channel_id(9840)(obj3);
+    obj2.channelName = channel_id(9861)(obj3);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.sxcQPE, obj2);
   }
   obj1.accessibilityLabel = formatToPlainStringResult;
@@ -92,7 +92,7 @@ function PreviewBody(event) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, centered: null, centerContainer: null, flex: null, header: null, headerTitle: null, headerSubtitle: null, eventContainer: null, channelContainer: null, channelIcon: null, buttonContainer: null, error: null };
 createStyles = { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" };
 createStyles.container = createStyles;

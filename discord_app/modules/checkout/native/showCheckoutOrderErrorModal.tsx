@@ -1,9 +1,9 @@
-// === Module 7482: showCheckoutOrderErrorModal ===
+// === Module 7503: showCheckoutOrderErrorModal ===
 
-// Module 7482 (showCheckoutOrderErrorModal)
+// Module 7503 (showCheckoutOrderErrorModal)
 import util from "util" /* 1114 */;
-import useAlertStore from "useAlertStore" /* 4951 */;
-import AlertModal from "AlertModal" /* 4955 */;
+import useAlertStore from "useAlertStore" /* 4952 */;
+import AlertModal from "AlertModal" /* 4956 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -192,6 +192,6 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     obj = {};
     const merged1 = Object.assign(merged);
     obj = { dismissable: obj.dismissable };
-    closure_0(4951).openAlert(key, closure_1_5(SyncedLoadingAlertModal, obj), onCloseCallback, obj);
+    closure_0(4952).openAlert(key, closure_1_5(SyncedLoadingAlertModal, obj), onCloseCallback, obj);
   });
 };

@@ -1,13 +1,13 @@
-// === Module 7596: CollectiblesProductRecord ===
+// === Module 7617: CollectiblesProductRecord ===
 
-// Module 7596 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 5563 */;
+// Module 7617 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5564 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7597 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7603 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7618 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7624 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7598);
+const CollectiblesItemRecord = fn(7619);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1074);
@@ -171,7 +171,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              obj = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "ti", items: "Array", categorySkuId: "isArray", isCategoryReward: "guild", prices: "join", previewAssets: "Array", googleSkuIds: "isArray", eligibleOffers: "userId", variants: "LengthDelimited", bundledProducts: "Array", isFirstParty: "isArray" };
+              obj = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "accessible", items: "<string:16778466>", categorySkuId: "<string:301451089>", isCategoryReward: "<string:815361>", prices: "<string:508690432>", previewAssets: "<string:1373239002>", googleSkuIds: "<string:1359071782>", eligibleOffers: "<string:17954351>", variants: "<string:858993457>", bundledProducts: "<string:674444083>", isFirstParty: "men_holding_hands_tone1_tone2" };
               let str;
               if (first != null) {
                 str = first.optionValue;

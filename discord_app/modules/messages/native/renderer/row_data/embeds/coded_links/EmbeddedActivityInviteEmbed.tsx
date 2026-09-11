@@ -1,28 +1,28 @@
-// === Module 13289: EmbeddedActivityInviteEmbed ===
+// === Module 13312: EmbeddedActivityInviteEmbed ===
 
-// Module 13289 (EmbeddedActivityInviteEmbed)
+// Module 13312 (EmbeddedActivityInviteEmbed)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import useChannelName from "useChannelName" /* 4758 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5078 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7997 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8202 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13290 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5079 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8019 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8224 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13313 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8203 */;
-import ApplicationStore from "ApplicationStore" /* 4833 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8225 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import InviteStore from "InviteStore" /* 4589 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import InviteStore from "InviteStore" /* 4590 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const Image = fn(17).Image;
-const FetchState = fn(8203).FetchState;
-const CodedLinkExtendedType = fn(11381).CodedLinkExtendedType;
-const InviteTargetTypes = fn(7787).InviteTargetTypes;
+const FetchState = fn(8225).FetchState;
+const CodedLinkExtendedType = fn(11403).CodedLinkExtendedType;
+const InviteTargetTypes = fn(7808).InviteTargetTypes;
 let closure_16 = ["embedded_cover"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");

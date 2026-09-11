@@ -1,15 +1,15 @@
-// === Module 13812: BlockedUserInGdmActionSheet ===
+// === Module 13791: BlockedUserInGdmActionSheet ===
 
-// Module 13812 (BlockedUserInGdmActionSheet)
+// Module 13791 (BlockedUserInGdmActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4618 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4757 */;
-import TableRow from "TableRow" /* 5655 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 13814 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4619 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
+import TableRow from "TableRow" /* 5656 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 13793 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -89,11 +89,11 @@ function UserCalloutAvatars(userIds) {
       obj.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_11(tmp(1178).Avatar, obj);
     } else {
-      tmp6 = closure_11(tmp(11896).UserIcon, {});
+      tmp6 = closure_11(tmp(11919).UserIcon, {});
     }
   } else {
     obj = { users: found, size: tmp(1178).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_11(tmp(10982).FacepileGroupDMAvatar, obj);
+    return closure_11(tmp(11002).FacepileGroupDMAvatar, obj);
   }
 }
 function BlockedUserInGDMDescription(arg0) {
@@ -135,12 +135,12 @@ function BlockedUserInGDMDescription(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SharedSpaceWarningConstants = fn(13813);
+const SharedSpaceWarningConstants = fn(13792);
 ({ BlockWarningEngagements: closure_8, GdmWarningMedium: closure_9 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, headerImage: null, title: null, description: null, tableGroup: null, buttons: null, icon: null };
 createStyles = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" };
 createStyles.container = createStyles;

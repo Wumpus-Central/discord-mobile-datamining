@@ -1,6 +1,6 @@
-// === Module 12608: useGuildBoostPurchaseHandler ===
+// === Module 12631: useGuildBoostPurchaseHandler ===
 
-// Module 12608 (useGuildBoostPurchaseHandler)
+// Module 12631 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -42,8 +42,8 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(10733).getNewAnalyticsLoadId();
-            const obj7 = args(7457);
+            newAnalyticsLoadId = args(10752).getNewAnalyticsLoadId();
+            const obj7 = args(7478);
             c3 = 1;
             c4 = 1;
             const obj1 = {
@@ -76,7 +76,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          obj = args(5484);
+          obj = args(5485);
           obj.closeApplyBoostModal();
           c4 = 3;
           return { value: "HermesInternal", done: null };

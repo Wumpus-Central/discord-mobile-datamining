@@ -1,26 +1,26 @@
-// === Module 8691: StageSettingsActionSheet ===
+// === Module 8712: StageSettingsActionSheet ===
 
-// Module 8691 (StageSettingsActionSheet)
+// Module 8712 (StageSettingsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8459 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8695 */;
-import ReportModals from "ReportModals" /* 8699 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8480 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8716 */;
+import ReportModals from "ReportModals" /* 8720 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
 require = fn;
 const View = fn(17).View;
-const STAGE_SETTINGS_SHEET_KEY = fn(5464).STAGE_SETTINGS_SHEET_KEY;
+const STAGE_SETTINGS_SHEET_KEY = fn(5465).STAGE_SETTINGS_SHEET_KEY;
 const Constants = fn(1074);
 ({ ChannelSettingsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { marginTop: 8 }, icon: null, warning: null };
 createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createStyles.icon = createStyles;

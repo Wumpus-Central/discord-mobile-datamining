@@ -1,7 +1,7 @@
-// === Module 9391: MobileStickerPickerUpsellRestyleExperiment ===
+// === Module 9412: MobileStickerPickerUpsellRestyleExperiment ===
 
-// Module 9391 (MobileStickerPickerUpsellRestyleExperiment)
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7904 */;
+// Module 9412 (MobileStickerPickerUpsellRestyleExperiment)
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7925 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

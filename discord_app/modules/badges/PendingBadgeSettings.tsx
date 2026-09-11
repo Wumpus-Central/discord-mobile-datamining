@@ -1,13 +1,13 @@
-// === Module 13143: PendingBadgeSettings ===
+// === Module 13166: PendingBadgeSettings ===
 
-// Module 13143 (PendingBadgeSettings)
+// Module 13166 (PendingBadgeSettings)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import BadgeId from "BadgeId" /* 8247 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8256 */;
-import BadgeUtils from "BadgeUtils" /* 11271 */;
+import BadgeId from "BadgeId" /* 8269 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8278 */;
+import BadgeUtils from "BadgeUtils" /* 11293 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1371 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8255 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8277 */;
 
 require = fn;
 function getSavedBadgeSettings() {
@@ -82,11 +82,11 @@ function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
     const map = new Map();
     for (const item10027 of found) {
       let tmp12 = set;
-      let obj = set(8256);
+      let obj = set(8278);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let tmp12Result = tmp12(11271);
+        let tmp12Result = tmp12(11293);
         if (!tmp12Result.isPinnedBadge(tmp15)) {
           if (!map.has(tmp15)) {
             let result = map.set(tmp15, item10027);
@@ -216,7 +216,7 @@ export const setPendingBadgeVisibility = function setPendingBadgeVisibility(badg
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp20 });
 };
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "call", pendingBadgeHiddenBadges: "o" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "call", pendingBadgeHiddenBadges: "Symbol" });
 };
 export const hasPendingBadgeSettings = function hasPendingBadgeSettings(pendingBadgeDisplayOrder) {
   return undefined !== pendingBadgeDisplayOrder.pendingBadgeDisplayOrder || undefined !== pendingBadgeDisplayOrder.pendingBadgeHiddenBadges;
@@ -252,7 +252,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
     const _Map = Map;
     const map = new Map();
     for (const item10026 of mapped) {
-      let obj = set(11271);
+      let obj = set(11293);
       if (obj.isPinnedBadge(item10026.badge_id)) {
         let arr = items1.push(item10026);
       } else {
@@ -275,7 +275,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
     return items3;
   }
 };
-export const getPendingProfileBadges = function getPendingProfileBadges(arr, arr2, arg2) {
+export const getPendingProfileBadges = function getPendingProfileBadges(arr, stateFromStoresArray, arg2) {
   ({ pendingBadgeDisplayOrder, pendingBadgeHiddenBadges } = arg2);
   if (null == pendingBadgeHiddenBadges) {
     return applyPendingBadgeSettingsToProfileBadges(arr, arg2);
@@ -287,7 +287,7 @@ export const getPendingProfileBadges = function getPendingProfileBadges(arr, arr
       pendingBadgeDisplayOrder = [];
     }
     const set1 = new Set(pendingBadgeHiddenBadges);
-    const found = arr2.filter((owned) => {
+    const found = stateFromStoresArray.filter((owned) => {
       owned = owned.owned;
       if (owned) {
         owned = owned.badge_id !== BadgeId.BadgeId.LEGACY_USERNAME;
@@ -313,7 +313,7 @@ export const getPendingProfileBadges = function getPendingProfileBadges(arr, arr
     const mapped = found.map((badge_id) => {
       let obj = set(set2[5]);
       const result = obj.toProfileBadgeLegacyId(badge_id.badge_id);
-      obj = { id: result, icon: result, iconSrc: badge_id.simple_icon_url, description: badge_id.name };
+      obj = { id: result, icon: result, iconSrc: badge_id.simple_icon_raster_url, description: badge_id.name };
       return obj;
     });
     const items = [];

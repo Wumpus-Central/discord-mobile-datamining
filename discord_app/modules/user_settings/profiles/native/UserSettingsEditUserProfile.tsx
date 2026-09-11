@@ -1,9 +1,9 @@
-// === Module 14664: UserSettingsEditUserProfile ===
+// === Module 14640: UserSettingsEditUserProfile ===
 
-// Module 14664 (UserSettingsEditUserProfile)
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8250 */;
-import UserProfileEditFormDefault from "UserProfileEditForm" /* 14665 */;
+// Module 14640 (UserSettingsEditUserProfile)
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8272 */;
+import UserProfileEditFormDefault from "UserProfileEditForm" /* 14641 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -28,7 +28,7 @@ export default function UserSettingsEditUserProfile(arg0) {
     obj = { currentUser: stateFromStores };
     const merged = Object.assign(arg0);
     obj.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
-    tmp7 = jsx(stateFromStores(7214).AnalyticsLocationProvider, { currentUser: stateFromStores });
+    tmp7 = jsx(stateFromStores(7235).AnalyticsLocationProvider, { currentUser: stateFromStores });
     const tmpResult = UserProfileEditFormDefault;
   }
   return tmp7;

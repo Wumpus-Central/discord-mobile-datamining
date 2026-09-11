@@ -1,6 +1,6 @@
-// === Module 4619: ChangelogStore ===
+// === Module 4620: ChangelogStore ===
 
-// Module 4619 (ChangelogStore)
+// Module 4620 (ChangelogStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

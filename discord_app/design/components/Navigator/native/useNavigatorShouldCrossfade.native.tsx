@@ -1,7 +1,7 @@
-// === Module 7053: useNavigatorShouldCrossfade ===
+// === Module 7074: useNavigatorShouldCrossfade ===
 
-// Module 7053 (useNavigatorShouldCrossfade)
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4325 */;
+// Module 7074 (useNavigatorShouldCrossfade)
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4327 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

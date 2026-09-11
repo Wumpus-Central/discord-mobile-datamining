@@ -1,10 +1,10 @@
-// === Module 12175: CommandRowButton ===
+// === Module 12198: CommandRowButton ===
 
-// Module 12175 (CommandRowButton)
+// Module 12198 (CommandRowButton)
 import util from "util" /* 1114 */;
-import SendMessageIcon from "SendMessageIcon" /* 4550 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import TableRowArrow from "TableRowArrow" /* 5662 */;
+import SendMessageIcon from "SendMessageIcon" /* 4551 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import TableRowArrow from "TableRowArrow" /* 5663 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -76,8 +76,8 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               beforeExecuteCommand();
             }
             c3 = 1;
-            let obj1 = tmp3(9358);
-            obj1 = { command, optionValues: tmp3(12063).parseOptionValuesForSend(commandContext.channel, command, {}), context: commandContext, sectionName, commandOrigin: tmp3(7575).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW };
+            let obj1 = tmp3(9379);
+            obj1 = { command, optionValues: tmp3(12086).parseOptionValuesForSend(commandContext.channel, command, {}), context: commandContext, sectionName, commandOrigin: tmp3(7596).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW };
             dependencyMap = 2;
             c4 = 1;
             const obj2 = { value: obj1.executeAppLauncherCommand(obj1), done: false };

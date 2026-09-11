@@ -1,13 +1,13 @@
-// === Module 16152: HappeningNowCardLiveStage ===
+// === Module 16141: HappeningNowCardLiveStage ===
 
-// Module 16152 (HappeningNowCardLiveStage)
+// Module 16141 (HappeningNowCardLiveStage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4757 */;
-import HappeningNowCard from "HappeningNowCard" /* 15376 */;
-import useLiveStageData from "useLiveStageData" /* 16153 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
+import HappeningNowCard from "HappeningNowCard" /* 15358 */;
+import useLiveStageData from "useLiveStageData" /* 16142 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -180,12 +180,12 @@ function getUsersSubtitle(arg0) {
   }
 }
 const View = fn(17).View;
-const HappeningNowConstants = fn(15375);
+const HappeningNowConstants = fn(15357);
 ({ HappeningNowCardTrackingType: hasOwnProperty, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_WIDTH } = HappeningNowConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { content: { flexShrink: 1, gap: 2 }, stagePreviewContainer: { marginRight: 12, flexDirection: "column", justifyContent: "space-between", height: "100%", width: HAPPENING_NOW_STAGE_PREVIEW_WIDTH }, stagePreviewBackground: null, stagePreviewBackgroundNoAudience: null, avatarStackContainer: null };
 obj = { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800, borderRadius: nativeDefault.radii.sm, alignItems: "center", paddingTop: 6 };
 obj.stagePreviewBackground = obj;
@@ -211,7 +211,7 @@ export default noop.memo((arg0) => {
   const callback = noop.useCallback(() => {
     const obj = { order: index, guild_id, type: constants.GUILD_LIVE_STAGE_CARD, destination_channel_id: channel_id };
     obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj);
-    asyncRequireImpl(9606, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(9627, dependencyMap.paths).then((result) => {
       result.default(channel_id, true);
     });
   }, items);

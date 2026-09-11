@@ -1,6 +1,6 @@
-// === Module 13542: IconButton/IconButton ===
+// === Module 13514: IconButton/IconButton ===
 
-// Module 13542 (IconButton/IconButton)
+// Module 13514 (IconButton/IconButton)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -87,9 +87,9 @@ class CircularIconButton {
 }
 const jsx = fn(21).jsx;
 let Sizes = { SMALL_24: 24, [24]: "SMALL_24", MEDIUM_32: 32, [32]: "MEDIUM_32", LARGE_40: 40, [40]: "LARGE_40" };
-fn(4605);
+fn(4606);
 Sizes = { container: null, small: null, medium: null, large: null, smallCircular: null, mediumCircular: null, largeCircular: null, icon: null };
-Sizes = { borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5491).DARK_PRIMARY_700_LIGHT_PRIMARY_230 };
+Sizes = { borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5492).DARK_PRIMARY_700_LIGHT_PRIMARY_230 };
 Sizes.container = Sizes;
 Sizes.small = { height: Sizes.SMALL_24, width: Sizes.SMALL_24 };
 Sizes.medium = { height: Sizes.MEDIUM_32, width: Sizes.MEDIUM_32 };
@@ -98,7 +98,7 @@ const createStyles = { borderRadius: Sizes.SMALL_24 / 2 };
 Sizes.smallCircular = createStyles;
 Sizes.mediumCircular = { borderRadius: Sizes.MEDIUM_32 / 2 };
 Sizes.largeCircular = { borderRadius: Sizes.LARGE_40 / 2 };
-Sizes.icon = { tintColor: fn(5491).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+Sizes.icon = { tintColor: fn(5492).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
 const hasOwnProperty = createStyles.createStyles(Sizes);
 SquareIconButton.Sizes = Sizes;
 CircularIconButton.Sizes = Sizes;

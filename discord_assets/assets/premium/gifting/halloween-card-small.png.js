@@ -1,6 +1,6 @@
-// === Module 11094: ? ===
+// === Module 11117: ? ===
 
-// Module 11094
+// Module 11117
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/gifting/halloween-card-small.png.js");

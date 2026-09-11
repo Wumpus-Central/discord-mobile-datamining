@@ -1,9 +1,9 @@
-// === Module 9760: openNotificationSettings ===
+// === Module 9781: openNotificationSettings ===
 
-// Module 9760 (openNotificationSettings)
+// Module 9781 (openNotificationSettings)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5198 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5199 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

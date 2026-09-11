@@ -1,9 +1,9 @@
-// === Module 10250: RetryIcon ===
+// === Module 10269: RetryIcon ===
 
-// Module 10250 (RetryIcon)
+// Module 10269 (RetryIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod10251 from "module_10251" /* 10251 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod10270 from "module_10270" /* 10270 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const RetryIcon = function RetryIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10251, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10270, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,17 +1,17 @@
-// === Module 16935: ChannelSettingsIntegrationsOverview ===
+// === Module 16924: ChannelSettingsIntegrationsOverview ===
 
-// Module 16935 (ChannelSettingsIntegrationsOverview)
+// Module 16924 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import Stack_Stack from "Stack/Stack" /* 5023 */;
-import TableRow from "TableRow" /* 5655 */;
-import TableRowGroup from "TableRowGroup" /* 5737 */;
-import Form from "Form" /* 8663 */;
-import WebhookIcon from "WebhookIcon" /* 16823 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 16936 */;
+import Stack_Stack from "Stack/Stack" /* 5024 */;
+import TableRow from "TableRow" /* 5656 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import Form from "Form" /* 8684 */;
+import WebhookIcon from "WebhookIcon" /* 16811 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 16925 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -20,7 +20,7 @@ function LinkedLobbyFormSection(channel) {
   channel = channel.channel;
   let obj = channel(1483);
   importDefault = obj.useNavigation();
-  let obj1 = channel(7220);
+  let obj1 = channel(7241);
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {
@@ -41,8 +41,8 @@ function LinkedLobbyFormSection(channel) {
     obj.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj.children = closure_6(tmp(5655).TableRow, obj);
-    tmp5 = closure_6(tmp(5737).TableRowGroup, obj);
+    obj.children = closure_6(tmp(5656).TableRow, obj);
+    tmp5 = closure_6(tmp(5738).TableRowGroup, obj);
     const obj2 = { id: null, icon: null };
   }
   return tmp5;
@@ -51,7 +51,7 @@ fn(1961).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { screenContainer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 };
 createStyles.screenContainer = createStyles;

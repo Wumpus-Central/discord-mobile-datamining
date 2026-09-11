@@ -1,10 +1,10 @@
-// === Module 13908: WindowStore ===
+// === Module 13887: WindowStore ===
 
-// Module 13908 (WindowStore)
+// Module 13887 (WindowStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import WindowIdUtils from "WindowIdUtils" /* 5605 */;
+import WindowIdUtils from "WindowIdUtils" /* 5606 */;
 
 require = fn;
 let c3 = null;

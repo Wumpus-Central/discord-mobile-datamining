@@ -1,13 +1,13 @@
-// === Module 17972: ParentalConsentConnectionHeader ===
+// === Module 17963: ParentalConsentConnectionHeader ===
 
-// Module 17972 (ParentalConsentConnectionHeader)
+// Module 17963 (ParentalConsentConnectionHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import _modDef2690 from "module_2690" /* 2690 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6643 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6664 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -15,9 +15,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { row: null, logOut: null };
-createStyles = { height: fn(5732).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles = { height: fn(5733).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.row = createStyles;
 createStyles.logOut = { position: "absolute", left: nativeDefault.space.PX_16 };
 let closure_7 = createStyles.createStyles(createStyles);

@@ -1,6 +1,6 @@
-// === Module 5910: ? ===
+// === Module 5931: ? ===
 
-// Module 5910
+// Module 5931
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ClydeHologramSpotIllustration-2x.png.js");

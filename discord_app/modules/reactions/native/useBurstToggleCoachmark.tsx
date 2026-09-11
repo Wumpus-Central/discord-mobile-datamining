@@ -1,9 +1,9 @@
-// === Module 11198: useBurstToggleCoachmark ===
+// === Module 11221: useBurstToggleCoachmark ===
 
-// Module 11198 (useBurstToggleCoachmark)
+// Module 11221 (useBurstToggleCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9443 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9464 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_9 = fn(1943).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
-fn(4605);
+fn(4606);
 const createStyles = { upsellImageContainer: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, height: 40, width: 40, display: "flex", alignItems: "center", justifyContent: "center" };
 createStyles.upsellImageContainer = size;
@@ -37,7 +37,7 @@ export default function useBurstToggleCoachmark(targetRef) {
   } else {
     items2 = [];
   }
-  let tmpResult = tmp(7440);
+  let tmpResult = tmp(7461);
   const tmp5 = _slicedToArray(tmpResult.useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   closure_1 = tmp7;
@@ -57,7 +57,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     obj.visible = first === closure_9;
     return obj;
   }, items3);
-  tmpResult = tmp(11199);
+  tmpResult = tmp(11222);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return tmp5[1];
 };

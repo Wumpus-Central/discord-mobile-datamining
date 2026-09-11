@@ -1,9 +1,9 @@
-// === Module 17889: CreateInstantInviteUtils ===
+// === Module 17880: CreateInstantInviteUtils ===
 
-// Module 17889 (CreateInstantInviteUtils)
+// Module 17880 (CreateInstantInviteUtils)
 import Constants from "Constants" /* 1074 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 import size from "module_2" /* 2 */;
 
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_0, GUILD_VOCAL_CHANNELS_KEY: closure_1 } = GuildChannelStore);

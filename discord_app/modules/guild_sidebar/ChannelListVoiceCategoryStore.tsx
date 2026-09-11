@@ -1,6 +1,6 @@
-// === Module 7585: ChannelListVoiceCategoryStore ===
+// === Module 7606: ChannelListVoiceCategoryStore ===
 
-// Module 7585 (ChannelListVoiceCategoryStore)
+// Module 7606 (ChannelListVoiceCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

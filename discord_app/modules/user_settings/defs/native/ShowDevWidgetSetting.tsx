@@ -1,18 +1,18 @@
-// === Module 15655: ShowDevWidgetSetting ===
+// === Module 15638: ShowDevWidgetSetting ===
 
-// Module 15655 (ShowDevWidgetSetting)
+// Module 15638 (ShowDevWidgetSetting)
 import initialize from "initialize" /* 504 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 15656 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7770 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 15639 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7791 */;
 
 require = fn;
-fn(11540);
+fn(11562);
 let SettingBuilders = {
   useTitle() {
     return "Show Dev Tools Widget";
   },
   parent: null,
-  IconComponent: fn(15657).StaffBadgeIcon,
+  IconComponent: fn(15640).StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
     const obj = { showDevWidget };
     const result = obj.updateDevToolsSettings(obj);
@@ -21,7 +21,7 @@ let SettingBuilders = {
     const items = [DevToolsSettingsStore];
     return initialize.useStateFromStores(items, () => showDevWidget.showDevWidget);
   },
-  usePredicate: fn(14920).useStaffOrDeveloperSettingPredicate
+  usePredicate: fn(14897).useStaffOrDeveloperSettingPredicate
 };
 SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
 const size = fn(2);

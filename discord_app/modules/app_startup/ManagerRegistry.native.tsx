@@ -1,7 +1,7 @@
-// === Module 17393: ManagerRegistry ===
+// === Module 17382: ManagerRegistry ===
 
-// Module 17393 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 17985 */;
+// Module 17382 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 17976 */;
 import size from "module_2" /* 2 */;
 
 const obj = {
@@ -146,6 +146,12 @@ const obj = {
     },
     loadAfterConnectionOpen: true
   },
+  DeclarativeSystemNotifPermissionManager: {
+    actions: ["APP_STATE_UPDATE"],
+    inlineRequire() {
+      return require("DeclarativeSystemNotifPermissionManager").default;
+    }
+  },
   DiceRollLifecycleManager: {
     actions: ["CHANNEL_SELECT", "DICE_ROLL_START"],
     inlineRequire() {
@@ -213,7 +219,7 @@ const obj = {
     neverLoadBeforeConnectionOpen: true
   },
   FramesNativeManager: {
-    actions: ["RPC_APP_DISCONNECTED", "FRAME_LAUNCH", "FRAME_LAUNCH_FAIL", "FRAME_STOP"],
+    actions: ["RPC_APP_DISCONNECTED", "FRAME_LAUNCH", "FRAME_LAUNCH_FAIL", "FRAME_STOP", "VOICE_CHANNEL_SELECT", "CHANNEL_DELETE", "CHANNEL_UPDATES"],
     inlineRequire() {
       return require("FramesNativeManager").default;
     }

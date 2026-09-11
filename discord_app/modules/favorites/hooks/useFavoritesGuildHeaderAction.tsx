@@ -1,10 +1,10 @@
-// === Module 16233: useFavoritesGuildHeaderAction ===
+// === Module 16222: useFavoritesGuildHeaderAction ===
 
-// Module 16233 (useFavoritesGuildHeaderAction)
+// Module 16222 (useFavoritesGuildHeaderAction)
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
-import FavoritesHooks from "FavoritesHooks" /* 10294 */;
+import FavoritesHooks from "FavoritesHooks" /* 10313 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

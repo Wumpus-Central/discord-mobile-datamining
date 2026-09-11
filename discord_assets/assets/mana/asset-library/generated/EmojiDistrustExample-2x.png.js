@@ -1,6 +1,6 @@
-// === Module 5996: ? ===
+// === Module 6017: ? ===
 
-// Module 5996
+// Module 6017
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiDistrustExample-2x.png.js");

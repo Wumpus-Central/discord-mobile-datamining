@@ -1,9 +1,9 @@
-// === Module 6261: InkQuillSpotIllustration ===
+// === Module 6282: InkQuillSpotIllustration ===
 
-// Module 6261 (InkQuillSpotIllustration)
+// Module 6282 (InkQuillSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6262 from "module_6262" /* 6262 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6283 from "module_6283" /* 6283 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const InkQuillSpotIllustration = function InkQuillSpotIllustration(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6262 };
+  obj = { uri: _modDef6283 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const InkQuillSpotIllustration = function InkQuillSpotIllustration(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6262 });
+  return jsx(FastImageDefault, { uri: _modDef6283 });
 };

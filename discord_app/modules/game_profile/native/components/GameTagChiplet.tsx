@@ -1,15 +1,15 @@
-// === Module 17252: GameTagChiplet ===
+// === Module 17241: GameTagChiplet ===
 
-// Module 17252 (GameTagChiplet)
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8745 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8756 */;
-import GuildTag from "GuildTag" /* 9253 */;
+// Module 17241 (GameTagChiplet)
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8766 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8777 */;
+import GuildTag from "GuildTag" /* 9274 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_5 = createStyles.createStyles({ container: { flexShrink: 1, minWidth: 0, overflow: "hidden" }, text: { flexShrink: 1, minWidth: 0 }, image: { width: 12, height: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameTagChiplet.tsx");

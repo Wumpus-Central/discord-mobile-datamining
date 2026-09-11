@@ -1,6 +1,6 @@
-// === Module 4837: InteractionComponentTypes ===
+// === Module 4838: InteractionComponentTypes ===
 
-// Module 4837 (InteractionComponentTypes)
+// Module 4838 (InteractionComponentTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/interaction_components/InteractionComponentTypes.tsx");

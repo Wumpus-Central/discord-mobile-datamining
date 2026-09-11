@@ -1,12 +1,12 @@
-// === Module 9611: confirmActivityAgeGateAlert ===
+// === Module 9632: confirmActivityAgeGateAlert ===
 
-// Module 9611 (confirmActivityAgeGateAlert)
+// Module 9632 (confirmActivityAgeGateAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
-import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 9612 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
+import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 9633 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function ConfirmActivityGateContent(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertBodyText: null };
 createStyles = { fontSize: 16, lineHeight: 24, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center" };
 createStyles.alertBodyText = createStyles;

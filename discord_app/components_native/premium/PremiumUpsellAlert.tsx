@@ -1,30 +1,30 @@
-// === Module 9392: PremiumUpsellAlert ===
+// === Module 9413: PremiumUpsellAlert ===
 
-// Module 9392 (PremiumUpsellAlert)
+// Module 9413 (PremiumUpsellAlert)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import PremiumUtils from "PremiumUtils" /* 4262 */;
-import useThemeDefault from "useTheme" /* 4540 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import createStyles2 from "createStyles" /* 4605 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import TableSwitchRow from "TableSwitchRow" /* 7252 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7499 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9373 */;
-import _modDef9384 from "module_9384" /* 9384 */;
-import _modDef9385 from "module_9385" /* 9385 */;
-import _modDef9420 from "module_9420" /* 9420 */;
-import _modDef9421 from "module_9421" /* 9421 */;
-import _modDef9422 from "module_9422" /* 9422 */;
-import _modDef9423 from "module_9423" /* 9423 */;
-import _modDef9424 from "module_9424" /* 9424 */;
-import _modDef9425 from "module_9425" /* 9425 */;
-import _modDef9426 from "module_9426" /* 9426 */;
-import _modDef9427 from "module_9427" /* 9427 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9428 */;
-import _modDef9430 from "module_9430" /* 9430 */;
+import PremiumUtils from "PremiumUtils" /* 4264 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import createStyles2 from "createStyles" /* 4606 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import TableSwitchRow from "TableSwitchRow" /* 7273 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7520 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9394 */;
+import _modDef9405 from "module_9405" /* 9405 */;
+import _modDef9406 from "module_9406" /* 9406 */;
+import _modDef9441 from "module_9441" /* 9441 */;
+import _modDef9442 from "module_9442" /* 9442 */;
+import _modDef9443 from "module_9443" /* 9443 */;
+import _modDef9444 from "module_9444" /* 9444 */;
+import _modDef9445 from "module_9445" /* 9445 */;
+import _modDef9446 from "module_9446" /* 9446 */;
+import _modDef9447 from "module_9447" /* 9447 */;
+import _modDef9448 from "module_9448" /* 9448 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9449 */;
+import _modDef9451 from "module_9451" /* 9451 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
@@ -99,7 +99,7 @@ function GlobalEmojiUpsell(arg0) {
     }
   }
   const obj2 = { alertWidth, upsellItem: null };
-  const obj3 = { image: _modDef9384, title: null, description: null };
+  const obj3 = { image: _modDef9405, title: null, description: null };
   const intl4 = util.intl;
   obj3.title = intl4.string(util.t.UNtcBV);
   obj3.description = formatResult1;
@@ -108,7 +108,7 @@ function GlobalEmojiUpsell(arg0) {
 }
 function AnimatedEmojiUpsell(alertWidth) {
   let obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  obj = { image: _modDef9385, title: null, description: null };
+  obj = { image: _modDef9406, title: null, description: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.F6rmyq);
   const intl2 = util.intl;
@@ -131,9 +131,9 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9420;
+    let tmp4Result = _modDef9441;
   } else {
-    tmp4Result = _modDef9421;
+    tmp4Result = _modDef9442;
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -146,7 +146,7 @@ function PremiumGuildIdentityUpsell(alertWidth) {
 function CustomProfilesUpsell(alertWidth) {
   let obj = createStyles2;
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: obj.useLegacyClassComponentStyles(closure_17).customProfileUpsellImage, upsellItem: null };
-  obj = { image: _modDef9422, title: null, description: null };
+  obj = { image: _modDef9443, title: null, description: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTY76D);
   const intl2 = util.intl;
@@ -181,7 +181,7 @@ function CustomAppIconsUpsell(alertWidth) {
 }
 function GlobalStickerUpsell(alertWidth) {
   let obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  obj = { image: _modDef9423, title: null, description: null };
+  obj = { image: _modDef9444, title: null, description: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.jn2mBl);
   const intl2 = util.intl;
@@ -205,9 +205,9 @@ function LongerMessageUpsell(alertWidth) {
   const tmp5 = useThemeDefault();
   const tmp6 = useMessageMaxLengthDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9424;
+    let tmp4Result = _modDef9445;
   } else {
-    tmp4Result = _modDef9425;
+    tmp4Result = _modDef9446;
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -223,9 +223,9 @@ function GuildCapUpsell(alertWidth) {
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9426;
+    let tmp4Result = _modDef9447;
   } else {
-    tmp4Result = _modDef9427;
+    tmp4Result = _modDef9448;
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -324,7 +324,7 @@ class PremiumUpsellAlert {
     obj1.confirmColor = initialUpsellKey(closure_2[41]).ButtonColors.GREEN;
     obj1.confirmText = getNitroText;
     obj1.renderConfirmIcon = function renderConfirmIcon() {
-      const obj = { source: _modDef9430, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
+      const obj = { source: _modDef9451, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
       if (constants2.GLOBAL_EMOJI !== initialUpsellKey) {
         if (constants2.ANIMATED_EMOJI !== initialUpsellKey) {
           if (constants2.CUSTOM_PROFILES !== initialUpsellKey) {
@@ -436,12 +436,12 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, UpsellTypes: c10 } = Constants);
-const getIcons = fn(9393).getIcons;
+const getIcons = fn(9414).getIcons;
 const PremiumConstants = fn(1373);
 ({ PremiumSubscriptionSKUs: closure_12, PremiumTypes: map1 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { carousel: { alignItems: "center" }, upsellContainer: { alignItems: "center" }, premiumUpsellContainer: { alignItems: "center", paddingHorizontal: 8 }, nitroWheel: { width: 32, height: 32, marginVertical: -8 }, upsellImage: { height: 80, width: 120 }, upsellTitle: { marginBottom: 8, textAlign: "center" }, premiumUpsellTitle: null, upsellDescription: null, premiumUpsellDescription: null, pageIndicatorStyle: null, largerUpsellImage: null, customProfileUpsellImage: null, loadingIndicator: null, customAppIconUpsellLightImage: null, customAppIconsUpsellImage: null };
 createStyles = { marginVertical: nativeDefault.space.PX_8, textAlign: "center" };
 createStyles.premiumUpsellTitle = createStyles;
@@ -479,7 +479,7 @@ UpsellItem.prototype["render"] = function render() {
   obj.children = items1;
   return __initData(hasOwnProperty, obj);
 };
-UpsellItem.contextType = fn(4315).ThemeContext;
+UpsellItem.contextType = fn(4317).ThemeContext;
 UpsellItem.defaultProps = { isInitial: false };
 let c29 = 500;
 let c30 = 32;

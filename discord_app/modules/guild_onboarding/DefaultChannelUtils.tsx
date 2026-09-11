@@ -1,8 +1,8 @@
-// === Module 7154: DefaultChannelUtils ===
+// === Module 7175: DefaultChannelUtils ===
 
-// Module 7154 (DefaultChannelUtils)
+// Module 7175 (DefaultChannelUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4248 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

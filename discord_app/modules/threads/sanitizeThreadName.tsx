@@ -1,6 +1,6 @@
-// === Module 7326: sanitizeThreadName ===
+// === Module 7347: sanitizeThreadName ===
 
-// Module 7326 (sanitizeThreadName)
+// Module 7347 (sanitizeThreadName)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/threads/sanitizeThreadName.tsx");

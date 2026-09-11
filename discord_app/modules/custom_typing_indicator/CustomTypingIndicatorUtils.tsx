@@ -1,14 +1,14 @@
-// === Module 12041: CustomTypingIndicatorUtils ===
+// === Module 12064: CustomTypingIndicatorUtils ===
 
-// Module 12041 (CustomTypingIndicatorUtils)
+// Module 12064 (CustomTypingIndicatorUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1392 */;
 import _modDef3592 from "module_3592" /* 3592 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4257 */;
-import EmojiStore from "EmojiStore" /* 5509 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8223 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4259 */;
+import EmojiStore from "EmojiStore" /* 5510 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8245 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SortedGuildStore from "SortedGuildStore" /* 5488 */;
+import SortedGuildStore from "SortedGuildStore" /* 5489 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

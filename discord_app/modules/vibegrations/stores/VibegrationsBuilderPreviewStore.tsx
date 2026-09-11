@@ -1,6 +1,6 @@
-// === Module 14540: VibegrationsBuilderPreviewStore ===
+// === Module 14516: VibegrationsBuilderPreviewStore ===
 
-// Module 14540 (VibegrationsBuilderPreviewStore)
+// Module 14516 (VibegrationsBuilderPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

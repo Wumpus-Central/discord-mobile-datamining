@@ -1,14 +1,14 @@
-// === Module 7274: OnboardingHomeUtils ===
+// === Module 7295: OnboardingHomeUtils ===
 
-// Module 7274 (OnboardingHomeUtils)
+// Module 7295 (OnboardingHomeUtils)
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 4794 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7158 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 7275 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 4795 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7179 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 7296 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4792 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4793 */;
 
 require = fn;
 const Constants = fn(1074);

@@ -1,11 +1,11 @@
-// === Module 17025: SlayerStorefrontTimeUtils ===
+// === Module 17014: SlayerStorefrontTimeUtils ===
 
-// Module 17025 (SlayerStorefrontTimeUtils)
+// Module 17014 (SlayerStorefrontTimeUtils)
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
 import _modDef3460 from "module_3460" /* 3460 */;
-import _modDef4196 from "module_4196" /* 4196 */;
-import useIntervalDefault from "useInterval" /* 7497 */;
+import _modDef4198 from "module_4198" /* 4198 */;
+import useIntervalDefault from "useInterval" /* 7518 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ function getLimitedOfferTimeLeft(arg0) {
   if (null == arg0) {
     return null;
   } else {
-    const diffResult = _modDef4196(arg0).diff(_modDef4196(), "seconds");
+    const diffResult = _modDef4198(arg0).diff(_modDef4198(), "seconds");
     let tmp4 = null;
     if (diffResult > 0) {
       const time = { days: null, hours: null, minutes: null, seconds: null };

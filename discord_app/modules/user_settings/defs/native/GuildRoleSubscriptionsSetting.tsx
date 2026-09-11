@@ -1,13 +1,13 @@
-// === Module 15285: GuildRoleSubscriptionsSetting ===
+// === Module 15265: GuildRoleSubscriptionsSetting ===
 
-// Module 15285 (GuildRoleSubscriptionsSetting)
+// Module 15265 (GuildRoleSubscriptionsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import SettingsConstants from "SettingsConstants" /* 8027 */;
-import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15286 */;
-import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15287 */;
-import TicketIcon from "TicketIcon" /* 15288 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingsConstants from "SettingsConstants" /* 8049 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15266 */;
+import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15267 */;
+import TicketIcon from "TicketIcon" /* 15268 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
 import size from "module_2" /* 2 */;
 
 const constants = GuildRoleSubscriptionsConstants.UserGuildRoleSubscriptionRelationship;

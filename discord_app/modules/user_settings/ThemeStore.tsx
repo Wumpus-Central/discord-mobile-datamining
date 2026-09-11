@@ -6,7 +6,7 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1220 */;
 import resolveThemeDefault from "resolveTheme" /* 1227 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 14159 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 14135 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
@@ -85,25 +85,25 @@ ThemeStore.displayName = "ThemeStore";
 ThemeStore.persistKey = "ThemeStore";
 const items = [
   (theme) => {
-    let str = theme.theme;
-    if ("amoled" === str) {
-      str = "midnight";
+    let ONYX = theme.theme;
+    if ("amoled" === ONYX) {
+      ONYX = ThemeTypes.ONYX;
     }
     obj = {};
     const merged = Object.assign(theme);
-    obj.theme = str;
+    obj.theme = ONYX;
     return obj;
   },
   (preferences) => {
     let tmp = preferences;
     if (null != preferences.preferences) {
       tmp = preferences;
-      if (preferences.preferences[constants.DARK] === ThemeTypes.DARK) {
+      if (preferences.preferences[constants.DARK] === ThemeTypes.ASH) {
         obj = {};
         const merged = Object.assign(preferences);
         obj = {};
         const merged1 = Object.assign(preferences.preferences);
-        obj[tmp2.DARK] = tmp3.DARKER;
+        obj[tmp2.DARK] = tmp3.DARK;
         obj.preferences = obj;
         tmp = obj;
       }

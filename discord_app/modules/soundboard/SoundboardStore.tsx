@@ -1,18 +1,18 @@
-// === Module 5062: SoundboardStore ===
+// === Module 5063: SoundboardStore ===
 
-// Module 5062 (SoundboardStore)
+// Module 5063 (SoundboardStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import _modDef4196 from "module_4196" /* 4196 */;
-import FrecencyDefault from "Frecency" /* 4642 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5065 */;
+import _modDef4198 from "module_4198" /* 4198 */;
+import FrecencyDefault from "Frecency" /* 4643 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5066 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import UserStore from "UserStore" /* 1371 */;
-import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5063 */;
+import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5064 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -72,7 +72,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const SoundboardConstants = fn(5064);
+const SoundboardConstants = fn(5065);
 ({ DEFAULT_SOUND_GUILD_ID: closure_7, EMPTY_SOUND_ID_LIST: closure_8 } = SoundboardConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
@@ -112,7 +112,7 @@ FetchState = {
       }
       return num2;
     }
-    obj = _modDef4196();
+    obj = _modDef4198();
   },
   lookupKey(arg0) {
     return arg0;
@@ -444,8 +444,8 @@ FetchState = {
   TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS: function handleTopSoundboardSoundsLoaded(topSoundsMetadata) {
     topSoundsMetadata = topSoundsMetadata.topSoundsMetadata;
     const obj = { soundIds: topSoundsMetadata.map((soundId) => soundId.soundId), topSoundsTTL: null };
-    const obj2 = _modDef4196();
-    obj.topSoundsTTL = _modDef4196().add(1, "days").valueOf();
+    const obj2 = _modDef4198();
+    obj.topSoundsTTL = _modDef4198().add(1, "days").valueOf();
     const result = map1.set(topSoundsMetadata.guildId, obj);
   }
 };

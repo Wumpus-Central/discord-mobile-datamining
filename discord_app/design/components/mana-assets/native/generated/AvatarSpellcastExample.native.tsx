@@ -1,9 +1,9 @@
-// === Module 5827: AvatarSpellcastExample ===
+// === Module 5848: AvatarSpellcastExample ===
 
-// Module 5827 (AvatarSpellcastExample)
+// Module 5848 (AvatarSpellcastExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5828 from "module_5828" /* 5828 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5849 from "module_5849" /* 5849 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarSpellcastExample = function AvatarSpellcastExample(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5828 };
+  obj = { uri: _modDef5849 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const AvatarSpellcastExample = function AvatarSpellcastExample(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5828 });
+  return jsx(FastImageDefault, { uri: _modDef5849 });
 };

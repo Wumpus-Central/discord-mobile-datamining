@@ -1,9 +1,9 @@
-// === Module 14554: definitions ===
+// === Module 14530: definitions ===
 
-// Module 14554 (definitions)
-import OAuth2Scopes from "OAuth2Scopes" /* 8404 */;
-import helpers from "helpers" /* 14555 */;
-import contextMenuIcons from "contextMenuIcons" /* 14556 */;
+// Module 14530 (definitions)
+import OAuth2Scopes from "OAuth2Scopes" /* 8425 */;
+import helpers from "helpers" /* 14531 */;
+import contextMenuIcons from "contextMenuIcons" /* 14532 */;
 import size from "module_2" /* 2 */;
 
 function VoiceCapabilities(boolean) {
@@ -858,7 +858,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "Array"
+    response: "a"
   },
   [helpers.RPCCommand.GET_USER]: {
     request(string) {

@@ -1,8 +1,8 @@
-// === Module 17760: EnableCommunitySharedStyles ===
+// === Module 17751: EnableCommunitySharedStyles ===
 
-// Module 17760 (EnableCommunitySharedStyles)
+// Module 17751 (EnableCommunitySharedStyles)
 import _mod17 from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 4605 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 const Platform = _mod17.Platform;

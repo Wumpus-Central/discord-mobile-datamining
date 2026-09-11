@@ -1,25 +1,25 @@
-// === Module 10213: ChannelSettingsNotifications ===
+// === Module 10232: ChannelSettingsNotifications ===
 
-// Module 10213 (ChannelSettingsNotifications)
+// Module 10232 (ChannelSettingsNotifications)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import useChannelName from "useChannelName" /* 4758 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4785 */;
-import Stack_Stack from "Stack/Stack" /* 5023 */;
-import TableRow from "TableRow" /* 5655 */;
-import TableRowGroup from "TableRowGroup" /* 5737 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7166 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7171 */;
-import TableSwitchRow from "TableSwitchRow" /* 7252 */;
-import Form from "Form" /* 8663 */;
-import MutedUntilText from "MutedUntilText" /* 10216 */;
-import NotificationSettingsChannelDefault from "NotificationSettingsChannel" /* 10218 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4786 */;
+import Stack_Stack from "Stack/Stack" /* 5024 */;
+import TableRow from "TableRow" /* 5656 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7187 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7192 */;
+import TableSwitchRow from "TableSwitchRow" /* 7273 */;
+import Form from "Form" /* 8684 */;
+import MutedUntilText from "MutedUntilText" /* 10235 */;
+import NotificationSettingsChannelDefault from "NotificationSettingsChannel" /* 10237 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4525 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4526 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const MutedUntilTextDefault = MutedUntilText;
@@ -88,7 +88,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, UserNotificationSettings: closure_12, ChannelTypes: map1, SettingsPaneTypes: closure_14, MAX_MEMBERS_NOTIFY_ALL_MESSAGES: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { screenContainer: null, stackPadding: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 };
 createStyles.screenContainer = createStyles;
@@ -247,11 +247,11 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     tmp5 = require;
     tmp7 = require;
   }
-  const TableRadioGroup = tmp7(5735).TableRadioGroup;
+  const TableRadioGroup = tmp7(5736).TableRadioGroup;
   let obj = { value: state.messageNotifications, onChange: self.handleTypeChange, groupRef: self.radioGroupRef, title: null, hasIcons: false, children: null };
   const intl3 = tmp7(1114).intl;
   obj.title = intl3.string(tmp7(1114).t.h850Ss);
-  const TableRadioRow = tmp7(5738).TableRadioRow;
+  const TableRadioRow = tmp7(5739).TableRadioRow;
   if (isGuildStageVoiceResult) {
     let tmp22 = muted;
     if (!muted) {
@@ -278,14 +278,14 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     obj = { disabled: tmp25, value: constants2.ONLY_MENTIONS, label: null };
     const intl12 = tmp7(1114).intl;
     obj.label = intl12.string(tmp7(1114).t["BENn/6"]);
-    items[1] = value2(tmp7(5738).TableRadioRow, obj);
+    items[1] = value2(tmp7(5739).TableRadioRow, obj);
     if (!muted) {
       muted = guildMuted;
     }
     const obj1 = { disabled: muted, value: constants2.NO_MESSAGES, label: null };
     const intl13 = tmp7(1114).intl;
     obj1.label = intl13.string(tmp7(1114).t.CtVGyQ);
-    items[2] = value2(tmp7(5738).TableRadioRow, obj1);
+    items[2] = value2(tmp7(5739).TableRadioRow, obj1);
     obj.children = items;
     let tmp11Result = collapsedCategories(TableRadioGroup, obj);
   } else {
@@ -326,7 +326,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj3.subLabel = stringResult3;
     obj3.value = constants2.ALL_MESSAGES;
-    items1[1] = value2(tmp7(5738).TableRadioRow, obj3);
+    items1[1] = value2(tmp7(5739).TableRadioRow, obj3);
     const obj4 = { label: null, disabled: null, value: null };
     const intl8 = tmp7(1114).intl;
     obj4.label = intl8.format(tmp7(1114).t.L2hmYy, {});
@@ -336,7 +336,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj4.disabled = tmp19;
     obj4.value = constants2.ONLY_MENTIONS;
-    items1[2] = value2(tmp7(5738).TableRadioRow, obj4);
+    items1[2] = value2(tmp7(5739).TableRadioRow, obj4);
     const obj5 = { label: null, disabled: null, value: null };
     const intl9 = tmp7(1114).intl;
     obj5.label = intl9.string(tmp7(1114).t.CtVGyQ);
@@ -346,7 +346,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj5.disabled = tmp20;
     obj5.value = constants2.NO_MESSAGES;
-    items1[3] = value2(tmp7(5738).TableRadioRow, obj5);
+    items1[3] = value2(tmp7(5739).TableRadioRow, obj5);
     obj.children = items1;
     tmp11Result = collapsedCategories(TableRadioGroup, obj);
   }
@@ -404,7 +404,7 @@ prototype["render"] = function render() {
   }
   return tmp9Result;
 };
-ChannelSettingsNotifications.contextType = fn(4315).ThemeContext;
+ChannelSettingsNotifications.contextType = fn(4317).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsNotifications.tsx");
 

@@ -1,17 +1,17 @@
-// === Module 9799: StageChannelUpsell ===
+// === Module 9820: StageChannelUpsell ===
 
-// Module 9799 (StageChannelUpsell)
+// Module 9820 (StageChannelUpsell)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import Pressables from "Pressables" /* 5173 */;
-import _modDef7044 from "module_7044" /* 7044 */;
-import _modDef9801 from "module_9801" /* 9801 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import Pressables from "Pressables" /* 5174 */;
+import _modDef7065 from "module_7065" /* 7065 */;
+import _modDef9822 from "module_9822" /* 9822 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,13 +19,13 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const createChannelRecord = fn(1961).createChannelRecord;
-let closure_7 = fn(9800).useStageChannelUpsellCardStore;
-let closure_8 = fn(9769).CREATE_GUILD_EVENT_MODAL_KEY;
+let closure_7 = fn(9821).useStageChannelUpsellCardStore;
+let closure_8 = fn(9790).CREATE_GUILD_EVENT_MODAL_KEY;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
-fn(4605);
+fn(4606);
 let createStyles = { container: null, image: null, closeContainer: null, header: null, description: null, button: null };
 createStyles = { flexDirection: "column", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, margin: 16, borderRadius: nativeDefault.radii.sm };
 createStyles.container = createStyles;
@@ -47,10 +47,10 @@ export default function StageChannelUpsell(arg0) {
   if (!tmp2[0]) {
     let obj = { style: tmp.container, children: null };
     obj = { onPress: tmp3, accessibilityRole: "button", style: tmp.closeContainer, children: null };
-    obj = { source: _modDef7044 };
+    obj = { source: _modDef7065 };
     obj.children = closure_10(native.Icon, obj);
     const items = [closure_10(Pressables.PressableOpacity, obj), , , , , ];
-    const obj1 = { source: _modDef9801, style: tmp.image };
+    const obj1 = { source: _modDef9822, style: tmp.image };
     items[1] = closure_10(closure_4, obj1);
     let obj2 = { style: tmp.header, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
@@ -64,7 +64,7 @@ export default function StageChannelUpsell(arg0) {
     const intl3 = util.intl;
     const obj5 = {
       suggestionsHook(children, arg1) {
-          return closure_1_10(guildId(4601).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
+          return closure_1_10(guildId(4602).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
         }
     };
     obj4.children = intl3.format(util.t.Vh7rP7, obj5);
@@ -90,7 +90,7 @@ export default function StageChannelUpsell(arg0) {
           closure_1_1(dependencyMap[17]).popWithKey(closure_1_12);
         }
       };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9802, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9823, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
       dependencyMap();
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };

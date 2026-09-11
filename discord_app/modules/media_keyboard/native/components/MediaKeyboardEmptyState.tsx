@@ -1,14 +1,14 @@
-// === Module 10728: MediaKeyboardEmptyState ===
+// === Module 10747: MediaKeyboardEmptyState ===
 
-// Module 10728 (MediaKeyboardEmptyState)
+// Module 10747 (MediaKeyboardEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import SettingsIcon from "SettingsIcon" /* 7432 */;
-import CameraIcon from "CameraIcon" /* 10723 */;
-import _modDef10729 from "module_10729" /* 10729 */;
-import _modDef10730 from "module_10730" /* 10730 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import SettingsIcon from "SettingsIcon" /* 7453 */;
+import CameraIcon from "CameraIcon" /* 10742 */;
+import _modDef10748 from "module_10748" /* 10748 */;
+import _modDef10749 from "module_10749" /* 10749 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,10 +28,10 @@ class MediaKeyboardEmptyState {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const NativePermissionStatus = fn(4815).NativePermissionStatus;
+const NativePermissionStatus = fn(4816).NativePermissionStatus;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, label: null };
 createStyles = { marginHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
 createStyles.container = createStyles;
@@ -54,7 +54,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl3 = util.intl;
           obj.actionLabel = intl3.string(util.t.JuXTi6);
           obj.actionPress = tmp2;
-          obj.imageSource = _modDef10729;
+          obj.imageSource = _modDef10748;
           const intl4 = util.intl;
           obj.label = intl4.string(util.t["5g7NcN"]);
           return timestampProducer(MediaKeyboardEmptyState, obj);
@@ -63,7 +63,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl = util.intl;
           obj.actionLabel = intl.string(util.t.tpoWUd);
           obj.actionPress = tmp;
-          obj.imageSource = _modDef10730;
+          obj.imageSource = _modDef10749;
           const intl2 = util.intl;
           obj.label = intl2.string(util.t.YOvRBZ);
           return timestampProducer(MediaKeyboardEmptyState, obj);
@@ -75,7 +75,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
   const intl5 = util.intl;
   obj.actionLabel = intl5.string(util.t["457oeG"]);
   obj.actionPress = photosEmpty.onPressPrivacySettings;
-  obj.imageSource = _modDef10729;
+  obj.imageSource = _modDef10748;
   const intl6 = util.intl;
   obj.label = intl6.string(util.t["8p9jGu"]);
   return timestampProducer(MediaKeyboardEmptyState, obj);

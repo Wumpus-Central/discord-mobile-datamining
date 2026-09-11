@@ -1,27 +1,27 @@
-// === Module 16742: SearchList ===
+// === Module 16730: SearchList ===
 
-// Module 16742 (SearchList)
+// Module 16730 (SearchList)
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import _mod8943 from "module_8943" /* 8943 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16730 */;
-import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 16739 */;
-import DMRowDefault from "DMRow" /* 16743 */;
-import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 16745 */;
-import SearchHistoryRowDefault from "SearchHistoryRow" /* 16746 */;
-import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 16747 */;
-import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 16760 */;
-import MediaGridItemDefault from "MediaGridItem" /* 16761 */;
-import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 16763 */;
-import MediaGridDefault from "MediaGrid" /* 16765 */;
-import MessageRowDefault from "MessageRow" /* 16766 */;
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 16770 */;
-import LinkGridItemDefault from "LinkGridItem" /* 16771 */;
-import FileGridItemDefault from "FileGridItem" /* 16774 */;
-import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 16775 */;
-import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 16776 */;
-import GenericTextRowDefault from "GenericTextRow" /* 16777 */;
-import SearchListSectionDefault from "SearchListSection" /* 16778 */;
+import _mod8964 from "module_8964" /* 8964 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16718 */;
+import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 16727 */;
+import DMRowDefault from "DMRow" /* 16731 */;
+import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 16733 */;
+import SearchHistoryRowDefault from "SearchHistoryRow" /* 16734 */;
+import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 16735 */;
+import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 16748 */;
+import MediaGridItemDefault from "MediaGridItem" /* 16749 */;
+import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 16751 */;
+import MediaGridDefault from "MediaGrid" /* 16753 */;
+import MessageRowDefault from "MessageRow" /* 16754 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 16758 */;
+import LinkGridItemDefault from "LinkGridItem" /* 16759 */;
+import FileGridItemDefault from "FileGridItem" /* 16762 */;
+import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 16763 */;
+import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 16764 */;
+import GenericTextRowDefault from "GenericTextRow" /* 16765 */;
+import SearchListSectionDefault from "SearchListSection" /* 16766 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -183,11 +183,11 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(7930);
+const SearchConstants = fn(7952);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
@@ -239,7 +239,7 @@ export default noop.memo(function SearchList(arg0) {
   obj1.ListFooterComponent = ListFooterComponent;
   obj1.ItemSeparatorComponent = ItemSeparatorComponent;
   obj1.numColumns = numColumns;
-  items[1] = React6(_mod8943.AnimatedFlashList, obj1);
+  items[1] = React6(_mod8964.AnimatedFlashList, obj1);
   obj.children = items;
   return React7(React4, obj);
 });

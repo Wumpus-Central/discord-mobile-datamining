@@ -1,8 +1,8 @@
-// === Module 8501: ManualAgeAssuranceFallbackExperiment ===
+// === Module 8522: ManualAgeAssuranceFallbackExperiment ===
 
-// Module 8501 (ManualAgeAssuranceFallbackExperiment)
-import SafetyHubUtils from "SafetyHubUtils" /* 8483 */;
-import SafetyHubStore from "SafetyHubStore" /* 8495 */;
+// Module 8522 (ManualAgeAssuranceFallbackExperiment)
+import SafetyHubUtils from "SafetyHubUtils" /* 8504 */;
+import SafetyHubStore from "SafetyHubStore" /* 8516 */;
 
 require = fn;
 fn(1433);

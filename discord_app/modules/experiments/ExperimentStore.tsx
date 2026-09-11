@@ -1,6 +1,6 @@
-// === Module 4521: ExperimentStore ===
+// === Module 4522: ExperimentStore ===
 
-// Module 4521 (ExperimentStore)
+// Module 4522 (ExperimentStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage5 from "Storage" /* 510 */;
@@ -8,7 +8,7 @@ import Dispatcher from "Dispatcher" /* 573 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import BuildOverrideUtils from "BuildOverrideUtils" /* 1362 */;
-import GuildFilters from "GuildFilters" /* 4523 */;
+import GuildFilters from "GuildFilters" /* 4524 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
@@ -724,7 +724,7 @@ function handleGuildChange(arg0) {
     continue;
   }
 }
-const ExperimentConstants = fn(4522);
+const ExperimentConstants = fn(4523);
 ({ ExperimentBuckets: hasOwnProperty, ExperimentTypes: metroRequire, ExposureTypes: closure_7 } = ExperimentConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, EMPTY_STRING_SNOWFLAKE_ID: closure_9, UserFlags: c10 } = Constants);

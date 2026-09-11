@@ -1,6 +1,6 @@
-// === Module 6058: ? ===
+// === Module 6079: ? ===
 
-// Module 6058
+// Module 6079
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameCartridgeSpotIllustration-2x.png.js");

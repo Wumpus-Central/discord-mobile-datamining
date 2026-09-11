@@ -1,8 +1,8 @@
-// === Module 10243: NotificationProgress ===
+// === Module 10262: NotificationProgress ===
 
-// Module 10243 (NotificationProgress)
+// Module 10262 (NotificationProgress)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { progress: null, progressContainerBottom: null };
 createStyles = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 4 };
 createStyles.progress = createStyles;

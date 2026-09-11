@@ -1,7 +1,7 @@
-// === Module 11929: BanConfirmModal ===
+// === Module 11952: BanConfirmModal ===
 
-// Module 11929 (BanConfirmModal)
-import BanConfirmDefault from "BanConfirm" /* 11922 */;
+// Module 11952 (BanConfirmModal)
+import BanConfirmDefault from "BanConfirm" /* 11945 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

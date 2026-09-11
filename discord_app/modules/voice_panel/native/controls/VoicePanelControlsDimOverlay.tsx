@@ -1,17 +1,17 @@
-// === Module 17300: VoicePanelControlsDimOverlay ===
+// === Module 17289: VoicePanelControlsDimOverlay ===
 
-// Module 17300 (VoicePanelControlsDimOverlay)
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import spring from "spring" /* 5024 */;
-import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14513 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17265 */;
+// Module 17289 (VoicePanelControlsDimOverlay)
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import spring from "spring" /* 5025 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14489 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17254 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(14204).BACKDROP_OPAQUE_MAX_OPACITY;
-const VoicePanelConstants = fn(12343);
+let closure_4 = fn(14180).BACKDROP_OPAQUE_MAX_OPACITY;
+const VoicePanelConstants = fn(12366);
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12341).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(12364).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
 const __initData = { code: "function VoicePanelControlsDimOverlayTsx1(){const{windowDimensions,getDrawerSpec,safeArea,controlsSpecs,VoicePanelControlsModes,mode,VoicePanelModes,interpolate,wrapperSpecs,BACKDROP_OPAQUE_MAX_OPACITY}=this.__closure;const{height:height}=windowDimensions.get();const{minHeight:minHeight,maxHeight:maxHeight}=getDrawerSpec(height,safeArea.get().top);if(controlsSpecs.get().mode!==VoicePanelControlsModes.DRAWER||mode.get()!==VoicePanelModes.PANEL){return 0;}return interpolate(wrapperSpecs.get().height,[minHeight,maxHeight],[0,BACKDROP_OPAQUE_MAX_OPACITY],'clamp');}" };
 const __initData2 = { code: "function VoicePanelControlsDimOverlayTsx2(){const{overlayOpacity}=this.__closure;return overlayOpacity.get()>=0.35;}" };

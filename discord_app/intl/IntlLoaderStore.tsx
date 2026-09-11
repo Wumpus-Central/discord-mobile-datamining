@@ -3,9 +3,9 @@
 // Module 2026 (IntlLoaderStore)
 import util from "util" /* 1114 */;
 import _modDef2027 from "module_2027" /* 2027 */;
-import bg from "bg" /* 3688 */;
-import formatjs from "formatjs" /* 4163 */;
-import moment from "moment" /* 4194 */;
+import bg from "bg" /* 3690 */;
+import formatjs from "formatjs" /* 4165 */;
+import moment from "moment" /* 4196 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -348,14 +348,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "call",
+    error: "accessible",
     localeData: _modDef2027,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "call" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "accessible" });
       }
     },
     setLoadingFailed(error, arg1) {

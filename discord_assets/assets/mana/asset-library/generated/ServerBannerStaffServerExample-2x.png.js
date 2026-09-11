@@ -1,6 +1,6 @@
-// === Module 6462: ? ===
+// === Module 6483: ? ===
 
-// Module 6462
+// Module 6483
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerBannerStaffServerExample-2x.png.js");

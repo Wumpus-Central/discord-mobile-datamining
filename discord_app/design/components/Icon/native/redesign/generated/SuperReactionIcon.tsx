@@ -1,9 +1,9 @@
-// === Module 9443: SuperReactionIcon ===
+// === Module 9464: SuperReactionIcon ===
 
-// Module 9443 (SuperReactionIcon)
+// Module 9464 (SuperReactionIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod9444 from "module_9444" /* 9444 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod9465 from "module_9465" /* 9465 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const SuperReactionIcon = function SuperReactionIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9444, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9465, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

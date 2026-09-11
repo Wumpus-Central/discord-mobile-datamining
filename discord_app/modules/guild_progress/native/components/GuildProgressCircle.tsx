@@ -1,16 +1,16 @@
-// === Module 12660: GuildProgressCircle ===
+// === Module 12683: GuildProgressCircle ===
 
-// Module 12660 (GuildProgressCircle)
+// Module 12683 (GuildProgressCircle)
 import nativeDefault from "native" /* 576 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12544 */;
-import ProgressCircleDefault from "ProgressCircle" /* 12661 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12567 */;
+import ProgressCircleDefault from "ProgressCircle" /* 12684 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { wrapper: { position: "relative" }, circle: { position: "absolute" }, progressCircle: null };
 createStyles = { color: nativeDefault.colors.BACKGROUND_BRAND };
 createStyles.progressCircle = createStyles;

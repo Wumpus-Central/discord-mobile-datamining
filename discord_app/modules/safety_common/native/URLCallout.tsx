@@ -1,16 +1,16 @@
-// === Module 13020: URLCallout ===
+// === Module 13043: URLCallout ===
 
-// Module 13020 (URLCallout)
+// Module 13043 (URLCallout)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import SharedStateUtils from "SharedStateUtils" /* 13021 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import SharedStateUtils from "SharedStateUtils" /* 13044 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsxs: c3, jsx: closure_4 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { linkCalloutContainer: null, linkCalloutContainerText: null };
 createStyles = { maxHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: nativeDefault.radii.md };
 createStyles.linkCalloutContainer = createStyles;

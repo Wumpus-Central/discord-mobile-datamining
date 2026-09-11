@@ -1,18 +1,18 @@
-// === Module 17708: action_sheet/AddMembersActionSheet ===
+// === Module 17699: action_sheet/AddMembersActionSheet ===
 
-// Module 17708 (action_sheet/AddMembersActionSheet)
+// Module 17699 (action_sheet/AddMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4316 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4323 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import RegexUtilsDefault from "RegexUtils" /* 4592 */;
-import GuildUtilsDefault from "GuildUtils" /* 5569 */;
-import FormCheckbox from "FormCheckbox" /* 5667 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9132 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11014 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17707 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4318 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4325 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import RegexUtilsDefault from "RegexUtils" /* 4593 */;
+import GuildUtilsDefault from "GuildUtils" /* 5570 */;
+import FormCheckbox from "FormCheckbox" /* 5668 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11034 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17698 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -213,10 +213,10 @@ class AddMembersBody {
   }
 }
 const View = fn(17).View;
-const MAX_BULK_ROLE_MEMBERS_ADD = fn(17702).MAX_BULK_ROLE_MEMBERS_ADD;
+const MAX_BULK_ROLE_MEMBERS_ADD = fn(17693).MAX_BULK_ROLE_MEMBERS_ADD;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, inputContainer: null, tagAvatar: null, emptyStateText: null, addMembersDescription: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 createStyles.container = createStyles;

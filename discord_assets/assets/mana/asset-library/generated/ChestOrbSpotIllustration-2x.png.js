@@ -1,6 +1,6 @@
-// === Module 5896: ? ===
+// === Module 5917: ? ===
 
-// Module 5896
+// Module 5917
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChestOrbSpotIllustration-2x.png.js");

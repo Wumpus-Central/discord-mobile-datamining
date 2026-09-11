@@ -1,6 +1,6 @@
-// === Module 15568: SystemNotificationsSetting ===
+// === Module 15551: SystemNotificationsSetting ===
 
-// Module 15568 (SystemNotificationsSetting)
+// Module 15551 (SystemNotificationsSetting)
 import util from "util" /* 1114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -80,16 +80,16 @@ let closure_9 = async function _handleEnableSystemNotification() {
 };
 const NativeModules = fn(17).NativeModules;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-let closure_6 = fn(4815).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(12480);
+let closure_6 = fn(4816).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(12503);
 ({ EventActionType: closure_7, EventActionLocation: closure_8 } = NotificationPermissionConstants);
-fn(11540);
+fn(11562);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
   },
-  parent: fn(8027).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8049).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
     const apply = closure_9.apply;

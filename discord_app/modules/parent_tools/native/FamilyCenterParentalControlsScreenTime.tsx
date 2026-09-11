@@ -1,12 +1,12 @@
-// === Module 15010: FamilyCenterParentalControlsScreenTime ===
+// === Module 14987: FamilyCenterParentalControlsScreenTime ===
 
-// Module 15010 (FamilyCenterParentalControlsScreenTime)
+// Module 14987 (FamilyCenterParentalControlsScreenTime)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4605 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 function ScheduleRuleRow(rule) {
@@ -15,10 +15,10 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  let obj = rule(10153);
+  let obj = rule(10173);
   const scheduleRuleDateRange = obj.getScheduleRuleDateRange(rule);
-  const obj2 = rule(10153);
-  obj = { label: scheduleRuleDateRange, subLabel: rule(10153).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const obj2 = rule(10173);
+  obj = { label: scheduleRuleDateRange, subLabel: rule(10173).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1114).intl;
   const string = intl.string;
   const tmp4 = _modDef2396;
@@ -27,7 +27,7 @@ function ScheduleRuleRow(rule) {
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj.trailing = closure_5(rule(4601).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
+  obj.trailing = closure_5(rule(4602).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
   obj.arrow = !readOnly;
   let fn;
   if (!readOnly) {
@@ -40,7 +40,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj.onPress = fn;
-  return closure_5(rule(5655).TableRow, obj);
+  return closure_5(rule(5656).TableRow, obj);
 }
 const View = _mod17.View;
 const UserSettingsSections = Constants.UserSettingsSections;

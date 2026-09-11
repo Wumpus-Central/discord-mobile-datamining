@@ -1,12 +1,12 @@
-// === Module 11862: BundleUpdater ===
+// === Module 11885: BundleUpdater ===
 
-// Module 11862 (BundleUpdater)
+// Module 11885 (BundleUpdater)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _mod4790 from "module_4790" /* 4790 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7653 */;
+import _mod4791 from "module_4791" /* 4791 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7674 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -125,7 +125,7 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
   })();
 };
 prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
-  const match = _mod4790.match(item10010);
+  const match = _mod4791.match(item10010);
   const withResult = match.with({ type: "OtaCheckAttempt" }, (result) => {
     closure_1_5.verbose("OTA check attempt", result);
     const obj = { result: result.result, duration_seconds: result.durationSeconds, bytes_received: result.bytesReceived, error: result.error, used_streaming: result.usedStreaming };

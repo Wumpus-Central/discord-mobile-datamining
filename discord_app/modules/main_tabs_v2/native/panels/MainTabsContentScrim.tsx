@@ -1,11 +1,11 @@
-// === Module 16610: MainTabsContentScrim ===
+// === Module 16598: MainTabsContentScrim ===
 
-// Module 16610 (MainTabsContentScrim)
+// Module 16598 (MainTabsContentScrim)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import createStyles from "createStyles" /* 4605 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/Ma
 export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
-  translateX(4341);
+  translateX(4343);
   const fn = function c() {
     const obj = { opacity: null };
     value = translateX.get();
@@ -30,7 +30,7 @@ export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
     obj.opacity = ReanimatedRexport.interpolate(value, items, [0, 0.5], ReanimatedRexport.Extrapolation.CLAMP);
     return obj;
   };
-  let obj = { interpolate: translateX(4341).interpolate, translateX, maxWidth, Extrapolation: translateX(4341).Extrapolation };
+  let obj = { interpolate: translateX(4343).interpolate, translateX, maxWidth, Extrapolation: translateX(4343).Extrapolation };
   fn.__closure = obj;
   fn.__workletHash = 7933670426250;
   fn.__initData = __initData;
@@ -38,5 +38,5 @@ export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
   obj = { style: null, pointerEvents: "none" };
   let items = [closure_4().scrim, animatedStyle];
   obj.style = items;
-  return jsx(maxWidth(4341).View, { style: null, pointerEvents: "none" });
+  return jsx(maxWidth(4343).View, { style: null, pointerEvents: "none" });
 };

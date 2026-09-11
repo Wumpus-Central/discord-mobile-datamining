@@ -1,13 +1,13 @@
-// === Module 16903: UserProfileYourFriendsCard ===
+// === Module 16892: UserProfileYourFriendsCard ===
 
-// Module 16903 (UserProfileYourFriendsCard)
+// Module 16892 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7710 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7731 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let obj = { direction: fn(1178).CutoutDirection.RIGHT, inset: -4 };
 let closure_12 = Object.freeze(obj);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 obj = { pressable: null, label: null, facepile: null, avatars: null };
 obj = { flex: 1, flexDirection: "row", alignItems: "center", padding: 16, borderRadius: nativeDefault.radii.lg };
 obj.pressable = obj;
@@ -48,7 +48,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   const obj2 = require("initialize");
   const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9918).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9939).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {

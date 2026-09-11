@@ -1,14 +1,14 @@
-// === Module 13139: UserProfileActivityEmptyStates ===
+// === Module 13162: UserProfileActivityEmptyStates ===
 
-// Module 13139 (UserProfileActivityEmptyStates)
+// Module 13162 (UserProfileActivityEmptyStates)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4618 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import openUserSettings from "openUserSettings" /* 7434 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4619 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import openUserSettings from "openUserSettings" /* 7455 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -95,7 +95,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   }
 ];
-fn(4605);
+fn(4606);
 let obj = { container: null, text: null, centeredText: null, buttons: null };
 obj = { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 };
 obj.container = obj;
@@ -109,7 +109,7 @@ const memoResult = noop.memo((user) => {
   user = user.user;
   let name;
   ({ guildId, channelId } = user);
-  let obj = name(4757);
+  let obj = name(4758);
   name = obj.getName(guildId, channelId, user);
   const intl = user(1114).intl;
   const tmp = closure_10();
@@ -135,7 +135,7 @@ const memoResult = noop.memo((user) => {
   const intl2 = user(1114).intl;
   obj1.text = intl2.string(user(1114).t["g33r/P"]);
   obj1.onPress = callback;
-  obj.children = closure_7(user(5025).Button, obj1);
+  obj.children = closure_7(user(5026).Button, obj1);
   obj.children = closure_7(View, obj);
   return closure_7(EmptyState, obj);
 });

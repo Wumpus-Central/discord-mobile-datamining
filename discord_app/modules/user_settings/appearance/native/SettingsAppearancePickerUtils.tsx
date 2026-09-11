@@ -1,13 +1,13 @@
-// === Module 15380: SettingsAppearancePickerUtils ===
+// === Module 15362: SettingsAppearancePickerUtils ===
 
-// Module 15380 (SettingsAppearancePickerUtils)
+// Module 15362 (SettingsAppearancePickerUtils)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1220 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1231 */;
-import ColorUtils from "ColorUtils" /* 4454 */;
-import utils_ColorDefault from "utils/Color" /* 4455 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4537 */;
+import ColorUtils from "ColorUtils" /* 4456 */;
+import utils_ColorDefault from "utils/Color" /* 4457 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4538 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -87,22 +87,18 @@ function convertBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
 }
 function convertStandardThemeToAnimatedTheme(theme, items, BACKGROUND_SURFACE_HIGH) {
   theme = theme.theme;
-  let str = "light";
-  if (ThemeTypes.LIGHT !== theme) {
-    str = "dark";
-    if (ThemeTypes.DARK !== theme) {
-      str = "darker";
-      if (ThemeTypes.DARKER !== theme) {
-        str = "midnight";
-        if (ThemeTypes.MIDNIGHT !== theme) {
-          str = "light";
-        }
-      }
-    }
+  if (ThemeTypes.LIGHT === theme) {
+    let DARK = ThemeTypes.LIGHT;
+  } else if (ThemeTypes.ASH === theme) {
+    DARK = ThemeTypes.ASH;
+  } else if (ThemeTypes.DARK === theme) {
+    DARK = ThemeTypes.DARK;
+  } else {
+    DARK = ThemeTypes.ONYX === theme ? ThemeTypes.ONYX : ThemeTypes.LIGHT;
   }
   const internal = nativeDefault.internal;
   let obj = { enabledExperiments: items };
-  const semanticColor = internal.resolveSemanticColor(str, BACKGROUND_SURFACE_HIGH, obj);
+  const semanticColor = internal.resolveSemanticColor(DARK, BACKGROUND_SURFACE_HIGH, obj);
   obj = { theme: theme.theme, name: theme.getName(), midpointPercentage: 50, angle: 0, colors: null };
   items = [{ hex: semanticColor, stop: 20 }, { hex: semanticColor, stop: 40 }, { hex: semanticColor, stop: 60 }, { hex: semanticColor, stop: 80 }, { hex: semanticColor, stop: 100 }];
   let num = getMaxColors();
@@ -149,8 +145,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     obj = { hex: null, stop: null };
     const hexToRgbResult = obj.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(4455)(r, g, b, num8);
-    obj.hex = tmp16Result.mixColors(tmp7, new tmp12(4455)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(4457)(r, g, b, num8);
+    obj.hex = tmp16Result.mixColors(tmp7, new tmp12(4457)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -212,8 +208,8 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
   return items1;
 };
 export const useLaunchWelcomeSystemTheme = function useLaunchWelcomeSystemTheme() {
-  const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARKER;
-  token = token(4306).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
+  token = token(4308).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return noop.useMemo(() => {
     let obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

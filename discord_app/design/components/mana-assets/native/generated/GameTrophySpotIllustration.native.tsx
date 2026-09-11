@@ -1,9 +1,9 @@
-// === Module 6143: GameTrophySpotIllustration ===
+// === Module 6164: GameTrophySpotIllustration ===
 
-// Module 6143 (GameTrophySpotIllustration)
+// Module 6164 (GameTrophySpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6144 from "module_6144" /* 6144 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6165 from "module_6165" /* 6165 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GameTrophySpotIllustration = function GameTrophySpotIllustration(wi
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6144 };
+  obj = { uri: _modDef6165 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const GameTrophySpotIllustration = function GameTrophySpotIllustration(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6144 });
+  return jsx(FastImageDefault, { uri: _modDef6165 });
 };

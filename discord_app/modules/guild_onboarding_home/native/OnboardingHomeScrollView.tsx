@@ -1,13 +1,13 @@
-// === Module 16640: OnboardingHomeScrollView ===
+// === Module 16628: OnboardingHomeScrollView ===
 
-// Module 16640 (OnboardingHomeScrollView)
+// Module 16628 (OnboardingHomeScrollView)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import noop from "module_19" /* 19 */;
 
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { guildFeedBackground: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.guildFeedBackground = createStyles;

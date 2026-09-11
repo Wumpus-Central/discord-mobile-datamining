@@ -1,10 +1,10 @@
-// === Module 16498: useGetOrFetchNotificationCenterItemApplications ===
+// === Module 16486: useGetOrFetchNotificationCenterItemApplications ===
 
-// Module 16498 (useGetOrFetchNotificationCenterItemApplications)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7220 */;
+// Module 16486 (useGetOrFetchNotificationCenterItemApplications)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7241 */;
 import noop from "module_19" /* 19 */;
 
-let items = [fn(7691).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, fn(7691).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, fn(7691).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, fn(7691).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED];
+let items = [fn(7712).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, fn(7712).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, fn(7712).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, fn(7712).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED];
 let set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx");

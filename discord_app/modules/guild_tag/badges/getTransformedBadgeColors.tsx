@@ -1,6 +1,6 @@
-// === Module 13993: getTransformedBadgeColors ===
+// === Module 13971: getTransformedBadgeColors ===
 
-// Module 13993 (getTransformedBadgeColors)
+// Module 13971 (getTransformedBadgeColors)
 import _modDef672 from "module_672" /* 672 */;
 import size from "module_2" /* 2 */;
 

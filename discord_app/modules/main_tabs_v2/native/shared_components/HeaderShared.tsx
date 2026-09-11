@@ -1,17 +1,17 @@
-// === Module 7914: HeaderShared ===
+// === Module 7936: HeaderShared ===
 
-// Module 7914 (HeaderShared)
+// Module 7936 (HeaderShared)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import useToken from "useToken" /* 4306 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Pressables from "Pressables" /* 5173 */;
-import _mod5681 from "module_5681" /* 5681 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7916 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 7921 */;
-import ChannelActionsDefault from "ChannelActions" /* 7926 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13338 */;
+import useToken from "useToken" /* 4308 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Pressables from "Pressables" /* 5174 */;
+import _mod5682 from "module_5682" /* 5682 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7938 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 7943 */;
+import ChannelActionsDefault from "ChannelActions" /* 7948 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 13361 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -123,10 +123,10 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(7915).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(7937).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { headerRightContainer: { marginRight: 16 }, headerWrapper: null, actionButtonPressable: null, actionButtonIcon: null, headerText: null, subtitleText: null, backButtonLabel: null, titleContainer: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 };
 obj.headerWrapper = obj;
@@ -136,7 +136,7 @@ obj.actionButtonIcon = createStyles;
 obj.headerText = { textAlign: "center", fontSize: 18 };
 obj.subtitleText = { textAlign: "center" };
 const obj2 = {};
-let merged = Object.assign(fn(4601).TextStyleSheet["text-md/semibold"]);
+let merged = Object.assign(fn(4602).TextStyleSheet["text-md/semibold"]);
 obj2.color = nativeDefault.colors.TEXT_BRAND;
 obj.backButtonLabel = obj2;
 obj.titleContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };

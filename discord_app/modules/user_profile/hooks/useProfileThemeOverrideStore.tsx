@@ -1,10 +1,10 @@
-// === Module 8291: useProfileThemeOverrideStore ===
+// === Module 8312: useProfileThemeOverrideStore ===
 
-// Module 8291 (useProfileThemeOverrideStore)
+// Module 8312 (useProfileThemeOverrideStore)
 import Constants from "Constants" /* 1074 */;
-import shared from "shared" /* 4456 */;
-import useThemeDefault from "useTheme" /* 4540 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8292 */;
+import shared from "shared" /* 4458 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8313 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -72,20 +72,20 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       tmp4 = null;
       tmp5 = null;
     }
-    if (themeType !== ThemeTypes.DARK) {
-      let isThemeLightResult = themeType === ThemeTypes.DARK;
+    if (themeType !== ThemeTypes.ASH) {
+      let isThemeLightResult = themeType === ThemeTypes.ASH;
       if (isThemeLightResult) {
         isThemeLightResult = shared.isThemeLight(tmp3);
       }
-      let DARKER = themeType;
+      let DARK = themeType;
       if (isThemeLightResult) {
-        DARKER = ThemeTypes.DARKER;
+        DARK = ThemeTypes.DARK;
       }
     } else {
       shared;
-      DARKER = tmp3;
+      DARK = tmp3;
     }
-    obj = { theme: DARKER, primaryColor: tmp5, secondaryColor: tmp4 };
+    obj = { theme: DARK, primaryColor: tmp5, secondaryColor: tmp4 };
     return obj;
   }
 };

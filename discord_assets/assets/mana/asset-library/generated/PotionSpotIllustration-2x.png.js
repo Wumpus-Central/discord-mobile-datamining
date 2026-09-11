@@ -1,6 +1,6 @@
-// === Module 6404: ? ===
+// === Module 6425: ? ===
 
-// Module 6404
+// Module 6425
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PotionSpotIllustration-2x.png.js");

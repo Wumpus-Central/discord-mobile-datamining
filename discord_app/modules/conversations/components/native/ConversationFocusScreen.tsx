@@ -1,19 +1,19 @@
-// === Module 13325: ConversationFocusScreen ===
+// === Module 13348: ConversationFocusScreen ===
 
-// Module 13325 (ConversationFocusScreen)
+// Module 13348 (ConversationFocusScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7961 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7975 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7983 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7997 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7647 */;
+import ConversationsStore from "ConversationsStore" /* 7668 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, pendingContent: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createStyles.container = createStyles;

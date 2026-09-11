@@ -1,9 +1,9 @@
-// === Module 5847: BlossomIllocon ===
+// === Module 5868: BlossomIllocon ===
 
-// Module 5847 (BlossomIllocon)
+// Module 5868 (BlossomIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5848 from "module_5848" /* 5848 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5869 from "module_5869" /* 5869 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const BlossomIllocon = function BlossomIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5848 };
+  obj = { uri: _modDef5869 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5848 });
+  return jsx(FastImageDefault, { uri: _modDef5869 });
 };

@@ -1,23 +1,23 @@
-// === Module 17854: GuildRoleSubscriptionEmojiEditorModal ===
+// === Module 17845: GuildRoleSubscriptionEmojiEditorModal ===
 
-// Module 17854 (GuildRoleSubscriptionEmojiEditorModal)
+// Module 17845 (GuildRoleSubscriptionEmojiEditorModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
-import common_AlertDefault from "common/Alert" /* 5044 */;
-import EmojiAliasDefault from "EmojiAlias" /* 17841 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
+import common_AlertDefault from "common/Alert" /* 5045 */;
+import EmojiAliasDefault from "EmojiAlias" /* 17832 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5510 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5511 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, emojiList: null, row: null, emojiImage: null, emojiAlias: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
 createStyles.container = createStyles;

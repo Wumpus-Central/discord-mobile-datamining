@@ -1,6 +1,6 @@
-// === Module 17717: GuildSettingsRolesActionCreators ===
+// === Module 17708: GuildSettingsRolesActionCreators ===
 
-// Module 17717 (GuildSettingsRolesActionCreators)
+// Module 17708 (GuildSettingsRolesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -148,7 +148,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               closure_145_14 = undefined;
               c20 = 1;
               c21 = 1;
-              return { value: "PX_16", done: true };
+              return { value: "PX_16", done: null };
             }
           break;
           case 1:

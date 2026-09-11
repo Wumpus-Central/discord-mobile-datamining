@@ -1,10 +1,10 @@
-// === Module 15588: ProfileUpdatesNotificationUtils ===
+// === Module 15571: ProfileUpdatesNotificationUtils ===
 
-// Module 15588 (ProfileUpdatesNotificationUtils)
+// Module 15571 (ProfileUpdatesNotificationUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import NotificationConstants from "NotificationConstants" /* 4256 */;
+import NotificationConstants from "NotificationConstants" /* 4258 */;
 import size from "module_2" /* 2 */;
 
 const constants = NotificationConstants.NotificationSettingsUpdateType;

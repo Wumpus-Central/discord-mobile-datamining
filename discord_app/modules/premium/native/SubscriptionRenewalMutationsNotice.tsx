@@ -1,26 +1,26 @@
-// === Module 13420: SubscriptionRenewalMutationsNotice ===
+// === Module 13441: SubscriptionRenewalMutationsNotice ===
 
-// Module 13420 (SubscriptionRenewalMutationsNotice)
+// Module 13441 (SubscriptionRenewalMutationsNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import PremiumUtils from "PremiumUtils" /* 4262 */;
+import PremiumUtils from "PremiumUtils" /* 4264 */;
 import noop from "module_19" /* 19 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
 const View = fn(17).View;
-const isNoneSubscription = fn(4263).isNoneSubscription;
+const isNoneSubscription = fn(4265).isNoneSubscription;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, icon: null, text: null };
-createStyles = { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5491).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+createStyles = { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5492).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
 createStyles.container = createStyles;
-createStyles.icon = { alignSelf: "center", marginLeft: 15, color: fn(5491).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-let obj1 = { alignSelf: "center", marginLeft: 15, color: fn(5491).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-createStyles.text = { paddingLeft: 10, marginRight: 15, color: fn(5491).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+createStyles.icon = { alignSelf: "center", marginLeft: 15, color: fn(5492).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+let obj1 = { alignSelf: "center", marginLeft: 15, color: fn(5492).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+createStyles.text = { paddingLeft: 10, marginRight: 15, color: fn(5492).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
 let closure_7 = createStyles.createStyles(createStyles);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/SubscriptionRenewalMutationsNotice.tsx");

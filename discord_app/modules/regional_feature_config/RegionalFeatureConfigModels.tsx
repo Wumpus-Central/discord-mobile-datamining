@@ -1,6 +1,6 @@
-// === Module 4825: RegionalFeatureConfigModels ===
+// === Module 4826: RegionalFeatureConfigModels ===
 
-// Module 4825 (RegionalFeatureConfigModels)
+// Module 4826 (RegionalFeatureConfigModels)
 import size from "module_2" /* 2 */;
 
 class SettingsConfig {

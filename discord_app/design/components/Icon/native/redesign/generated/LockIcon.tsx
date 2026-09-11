@@ -1,9 +1,9 @@
-// === Module 5145: LockIcon ===
+// === Module 5146: LockIcon ===
 
-// Module 5145 (LockIcon)
+// Module 5146 (LockIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod5118 from "module_5118" /* 5118 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod5119 from "module_5119" /* 5119 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const LockIcon = function LockIcon(WHITE) {
   }
   const merged = Object.assign(WHITE, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5118, color: INTERACTIVE_ICON_DEFAULT, style: WHITE.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5119, color: INTERACTIVE_ICON_DEFAULT, style: WHITE.style });
 };

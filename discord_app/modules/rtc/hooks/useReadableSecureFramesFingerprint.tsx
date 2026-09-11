@@ -1,8 +1,8 @@
-// === Module 9227: useReadableSecureFramesFingerprint ===
+// === Module 9248: useReadableSecureFramesFingerprint ===
 
-// Module 9227 (useReadableSecureFramesFingerprint)
+// Module 9248 (useReadableSecureFramesFingerprint)
 import byteLengthDefault from "byteLength" /* 206 */;
-import _mod9204 from "module_9204" /* 9204 */;
+import _mod9225 from "module_9225" /* 9225 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export const useReadableSecureFramesFingerprint = function useReadableSecureFram
     if (null != fingerprintBase64) {
       if ("" !== fingerprintBase64) {
         const toByteArrayResult = byteLengthDefault.toByteArray(fingerprintBase64);
-        const str5 = _mod9204.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
+        const str5 = _mod9225.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
         if (null == str5) {
           return null;
         } else {

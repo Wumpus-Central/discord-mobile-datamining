@@ -1,14 +1,14 @@
-// === Module 5615: DesktopNativeUtils ===
+// === Module 5616: DesktopNativeUtils ===
 
-// Module 5615 (DesktopNativeUtils)
+// Module 5616 (DesktopNativeUtils)
 import logger_Logger from "logger/Logger" /* 4 */;
 import Storage3 from "Storage" /* 510 */;
 import GameDetectionTypes from "GameDetectionTypes" /* 1934 */;
-import Client from "Client" /* 4536 */;
-import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4631 */;
-import DomainMigrationUtils from "DomainMigrationUtils" /* 5616 */;
-import IPCEvents from "IPCEvents" /* 5617 */;
-import FileExtensionUtils from "FileExtensionUtils" /* 5618 */;
+import Client from "Client" /* 4537 */;
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4632 */;
+import DomainMigrationUtils from "DomainMigrationUtils" /* 5617 */;
+import IPCEvents from "IPCEvents" /* 5618 */;
+import FileExtensionUtils from "FileExtensionUtils" /* 5619 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -776,7 +776,7 @@ obj.copyImage = function copyImage(arg0, arg1) {
             return obj2;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(5618).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(5619).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -812,7 +812,7 @@ obj.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj8 = closure_0(5618);
+            const obj8 = closure_0(5619);
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -971,7 +971,7 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_22, "");
               } else if (!str.includes(".")) {
-                let obj8 = unknown(5618);
+                let obj8 = unknown(5619);
                 const decideFileExtensionResult = obj8.decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;

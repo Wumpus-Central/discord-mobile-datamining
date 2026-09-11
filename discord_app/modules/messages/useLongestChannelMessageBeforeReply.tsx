@@ -1,7 +1,7 @@
-// === Module 12520: useLongestChannelMessageBeforeReply ===
+// === Module 12543: useLongestChannelMessageBeforeReply ===
 
-// Module 12520 (useLongestChannelMessageBeforeReply)
-import MessageStore from "MessageStore" /* 4826 */;
+// Module 12543 (useLongestChannelMessageBeforeReply)
+import MessageStore from "MessageStore" /* 4827 */;
 
 const require = fn;
 const size = fn(2);

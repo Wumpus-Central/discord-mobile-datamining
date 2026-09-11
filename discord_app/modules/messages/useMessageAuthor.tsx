@@ -1,13 +1,13 @@
-// === Module 4838: useMessageAuthor ===
+// === Module 4839: useMessageAuthor ===
 
-// Module 4838 (useMessageAuthor)
+// Module 4839 (useMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
-import UserUtilsDefault from "UserUtils" /* 4449 */;
+import UserUtilsDefault from "UserUtils" /* 4451 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;

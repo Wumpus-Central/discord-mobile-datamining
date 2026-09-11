@@ -1,14 +1,14 @@
-// === Module 15037: ConnectionsEmptyStateUpsell ===
+// === Module 15014: ConnectionsEmptyStateUpsell ===
 
-// Module 15037 (ConnectionsEmptyStateUpsell)
+// Module 15014 (ConnectionsEmptyStateUpsell)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import shared from "shared" /* 4456 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Card from "Card" /* 5657 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9321 */;
-import ConnectionsTracking from "ConnectionsTracking" /* 15038 */;
+import shared from "shared" /* 4458 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Card from "Card" /* 5658 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9342 */;
+import ConnectionsTracking from "ConnectionsTracking" /* 15015 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -64,7 +64,7 @@ const View = fn(17).View;
 const AnalyticsLocations = fn(1074).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles(() => {
   let obj = { container: { flex: 1, alignItems: "center" }, content: { flex: 1, width: "100%", maxWidth: 260, alignItems: "center", justifyContent: "center" }, card: { flex: 1, maxHeight: 76, maxWidth: 76, aspectRatio: 1, alignItems: "center", justifyContent: "center", padding: 12 }, textContainer: { marginTop: 32 }, text: { textAlign: "center" }, iconContainer: null, icon: null };
   obj = { flex: 1, maxHeight: 52, maxWidth: 52, aspectRatio: 1, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", padding: 8 };
@@ -77,7 +77,7 @@ let result = size.fileFinishedImporting("modules/user_settings/connections/nativ
 
 export default function ConnectionsEmptyStateUpsell() {
   const tmp = closure_8();
-  let obj = emptyStatePlatforms(7555);
+  let obj = emptyStatePlatforms(7576);
   emptyStatePlatforms = obj.useEmptyStatePlatforms();
   const items = [emptyStatePlatforms];
   const memo = noop.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
@@ -90,24 +90,24 @@ export default function ConnectionsEmptyStateUpsell() {
   obj.style = items2;
   const obj1 = { style: tmp.content, children: null };
   const obj2 = { spacing: 16, direction: "vertical", align: "center", style: tmp.textContainer, children: null };
-  const items3 = [closure_6(emptyStatePlatforms(5023).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((platform) => closure_1_6(EmptyStateCard, { platform }, platform.type)) }), ];
+  const items3 = [closure_6(emptyStatePlatforms(5024).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((platform) => closure_1_6(EmptyStateCard, { platform }, platform.type)) }), ];
   const obj4 = { spacing: 16, justify: "center", direction: "horizontal", children: null };
   const items4 = [memo1.map((platform) => closure_1_6(EmptyStateCard, { platform }, platform.type)), closure_6(OtherConnectionsCard, { count: emptyStatePlatforms.length - 5 })];
   obj4.children = items4;
-  items3[1] = closure_7(emptyStatePlatforms(5023).Stack, obj4);
+  items3[1] = closure_7(emptyStatePlatforms(5024).Stack, obj4);
   obj2.children = items3;
-  const items5 = [closure_7(emptyStatePlatforms(5023).Stack, obj2), ];
+  const items5 = [closure_7(emptyStatePlatforms(5024).Stack, obj2), ];
   const obj6 = { spacing: 8, align: "center", style: tmp.textContainer, children: null };
   const obj7 = { variant: "text-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = emptyStatePlatforms(1114).intl;
   obj7.children = intl.string(emptyStatePlatforms(1114).t.JlrHXb);
-  const items6 = [closure_6(emptyStatePlatforms(4601).Text, obj7), ];
+  const items6 = [closure_6(emptyStatePlatforms(4602).Text, obj7), ];
   const obj8 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = emptyStatePlatforms(1114).intl;
   obj8.children = intl2.string(emptyStatePlatforms(1114).t.XijaQP);
-  items6[1] = closure_6(emptyStatePlatforms(4601).Text, obj8);
+  items6[1] = closure_6(emptyStatePlatforms(4602).Text, obj8);
   obj6.children = items6;
-  items5[1] = closure_7(emptyStatePlatforms(5023).Stack, obj6);
+  items5[1] = closure_7(emptyStatePlatforms(5024).Stack, obj6);
   obj1.children = items5;
   obj.children = closure_7(View, obj1);
   return closure_6(View, obj);

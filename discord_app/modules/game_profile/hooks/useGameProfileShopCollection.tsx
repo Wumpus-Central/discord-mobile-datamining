@@ -1,9 +1,9 @@
-// === Module 8941: useGameProfileShopCollection ===
+// === Module 8962: useGameProfileShopCollection ===
 
-// Module 8941 (useGameProfileShopCollection)
+// Module 8962 (useGameProfileShopCollection)
 import _mod19 from "module_19" /* 19 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8830 */;
-import GameProfileStore from "GameProfileStore" /* 8752 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8851 */;
+import GameProfileStore from "GameProfileStore" /* 8773 */;
 import size from "module_2" /* 2 */;
 
 const useEffect = _mod19.useEffect;

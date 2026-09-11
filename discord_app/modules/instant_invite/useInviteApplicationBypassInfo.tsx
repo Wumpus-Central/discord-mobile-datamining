@@ -1,7 +1,7 @@
-// === Module 17891: useInviteApplicationBypassInfo ===
+// === Module 17882: useInviteApplicationBypassInfo ===
 
-// Module 17891 (useInviteApplicationBypassInfo)
-import PermissionStore from "PermissionStore" /* 4243 */;
+// Module 17882 (useInviteApplicationBypassInfo)
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 const require = fn;
 const Constants = fn(1074);

@@ -1,7 +1,7 @@
-// === Module 10821: usePremiumProductPricingString ===
+// === Module 10840: usePremiumProductPricingString ===
 
-// Module 10821 (usePremiumProductPricingString)
-import IAPStore from "IAPStore" /* 7289 */;
+// Module 10840 (usePremiumProductPricingString)
+import IAPStore from "IAPStore" /* 7310 */;
 
 const require = fn;
 const PRICE_PLACEHOLDER = fn(1373).PRICE_PLACEHOLDER;

@@ -207,7 +207,7 @@ export default {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                let obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: "hcl" };
+                let obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: "Masterpass popup failed to return all required parameters needed to continue tokenization." };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";
                 if (typeof origin === "string") {

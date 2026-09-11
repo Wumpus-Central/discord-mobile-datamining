@@ -1,11 +1,11 @@
-// === Module 9893: utils/InstantInviteUtils ===
+// === Module 9914: utils/InstantInviteUtils ===
 
-// Module 9893 (utils/InstantInviteUtils)
+// Module 9914 (utils/InstantInviteUtils)
 import util from "util" /* 1114 */;
-import canViewInviteModal from "canViewInviteModal" /* 9844 */;
+import canViewInviteModal from "canViewInviteModal" /* 9865 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 require = fn;
 let GuildChannelStore = fn(2012);

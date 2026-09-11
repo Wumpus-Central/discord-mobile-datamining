@@ -1,6 +1,6 @@
-// === Module 9925: InstantInviteShareApps ===
+// === Module 9946: InstantInviteShareApps ===
 
-// Module 9925 (InstantInviteShareApps)
+// Module 9946 (InstantInviteShareApps)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,10 +8,10 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InstantInviteConstants = fn(9926);
+const InstantInviteConstants = fn(9947);
 ({ SHARE_ITEMS: closure_7, SHARE_ITEMS_DEFAULT: closure_8 } = InstantInviteConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { contentContainer: null };
 obj = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj.contentContainer = obj;
@@ -22,12 +22,12 @@ const result = size.fileFinishedImporting("modules/instant_invite/native/compone
 export default noop.memo(function InstantInviteShareApps(onItemPressed) {
   onItemPressed = onItemPressed.onItemPressed;
   dependencyMap = undefined;
-  let obj = onItemPressed(5032);
+  let obj = onItemPressed(5033);
   closure_1 = obj.useFontScale();
   const tmp = closure_10();
   [arr, c2] = _slicedToArray(noop.useState(closure_8), 2);
   const tmp2 = _slicedToArray(noop.useState(closure_8), 2);
-  const gesture = onItemPressed(6705).useNativeGesture({ disallowInterruption: true });
+  const gesture = onItemPressed(6726).useNativeGesture({ disallowInterruption: true });
   const effect = noop.useEffect(() => {
     Promise.all(React5.map((isAvailable) => isAvailable.isAvailable)).then((arr) => {
       const items = [];
@@ -148,5 +148,5 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
     obj.children = tmpResult;
     return <closure_1_5 key={type.type} maxWidth={76 * closure_1} />;
   })}</closure_6>;
-  return jsx(onItemPressed(6705).GestureDetector, { gesture, children });
+  return jsx(onItemPressed(6726).GestureDetector, { gesture, children });
 });

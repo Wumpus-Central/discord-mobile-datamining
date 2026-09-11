@@ -6,8 +6,8 @@ import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import KvCacheVersionConstants from "KvCacheVersionConstants" /* 499 */;
 import discord_common_AnalyticsUtilsAll from "discord_common/AnalyticsUtils" /* 1250 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7808 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13713 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7829 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13692 */;
 import checkEnv from "checkEnv" /* 16 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
@@ -16,8 +16,8 @@ function createFastConnectSocket() {
   if (null != window.WebSocket) {
     let _ws = require("PlatformUtils");
     if (_ws.isAndroid()) {
-      let supportsZstd = _ws(13725).getConstants().supportsZstd;
-      const obj2 = _ws(13725);
+      let supportsZstd = _ws(13704).getConstants().supportsZstd;
+      const obj2 = _ws(13704);
     } else {
       supportsZstd = closure_4.DCDCompressionManager.supportsZstd;
     }
@@ -27,7 +27,7 @@ function createFastConnectSocket() {
     }
     const _window = window;
     let GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ALT_ENDPOINT;
-    if (!_ws(13712)()) {
+    if (!_ws(13691)()) {
       const _window2 = window;
       GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
     }
@@ -37,7 +37,7 @@ function createFastConnectSocket() {
     _ws.log(`[FAST CONNECT] ${tmp10}`);
     const _Date = Date;
     _require = Date.now();
-    const tmp12 = _ws(13709)(combined);
+    const tmp12 = _ws(13688)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp12._socketId);
     const _isNaN = isNaN;
@@ -47,14 +47,14 @@ function createFastConnectSocket() {
       const isAndroidResult = tmp3(1115).isAndroid();
       if (supportsZstd) {
         if (isAndroidResult) {
-          let tmp7Result = tmp7(13725);
+          let tmp7Result = tmp7(13704);
           const result = tmp7Result.enableZstdStreamSupport(parsed);
         } else {
           const DCDCompressionManager2 = closure_4.DCDCompressionManager;
           const result1 = DCDCompressionManager2.enableZstdStreamSupport(parsed, 0);
         }
       } else if (isAndroidResult) {
-        tmp7Result = tmp7(13725);
+        tmp7Result = tmp7(13704);
         const result2 = tmp7Result.enableZlibStreamSupport(parsed);
       } else {
         const DCDCompressionManager = closure_4.DCDCompressionManager;

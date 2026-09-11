@@ -1,8 +1,8 @@
-// === Module 9373: useMessageMaxLength ===
+// === Module 9394: useMessageMaxLength ===
 
-// Module 9373 (useMessageMaxLength)
+// Module 9394 (useMessageMaxLength)
 import initialize from "initialize" /* 504 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

@@ -1,18 +1,18 @@
-// === Module 14557: validateOpenInviteDialog ===
+// === Module 14533: validateOpenInviteDialog ===
 
-// Module 14557 (validateOpenInviteDialog)
-import RPCErrorDefault from "RPCError" /* 9624 */;
-import canViewInviteModal from "canViewInviteModal" /* 9844 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14545 */;
-import FramesStore from "FramesStore" /* 9580 */;
+// Module 14533 (validateOpenInviteDialog)
+import RPCErrorDefault from "RPCError" /* 9645 */;
+import canViewInviteModal from "canViewInviteModal" /* 9865 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14521 */;
+import FramesStore from "FramesStore" /* 9601 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 require = fn;
-const TransportTypes = fn(4510).TransportTypes;
+const TransportTypes = fn(4511).TransportTypes;
 const RPCErrors = fn(1074).RPCErrors;
-const FramesConstants = fn(9581);
+const FramesConstants = fn(9602);
 ({ asLaunched: closure_9, EmbeddedSurfaceType: c10 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
@@ -30,15 +30,18 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp46.surface;
       const type = surface.type;
       if (constants.MAIN === type) {
-        obj = { frame: tmp46, channel: "Array", guild: "toLowerCase" };
+        obj = { frame: tmp46, channel: "Array", guild: "isArray" };
         return obj;
-      } else if (tmp23.APP_CHANNEL === type) {
-        const obj1 = { frame: tmp46, channel: ChannelStore.getChannel(surface.channelId), guild: GuildStore.getGuild(surface.guildId) };
-        return obj1;
       } else {
-        const obj2 = { errorCode: RPCErrors.INVALID_CHANNEL };
-        const tmp30 = new RPCErrorDefault(obj2, "Invalid channel");
-        throw tmp30;
+        if (constants.APP_CHANNEL !== type) {
+          if (constants.VOICE_CHANNEL !== type) {
+            const obj1 = { errorCode: RPCErrors.INVALID_CHANNEL };
+            const tmp30 = new RPCErrorDefault(obj1, "Invalid channel");
+            throw tmp30;
+          }
+        }
+        const obj2 = { frame: tmp46, channel: ChannelStore.getChannel(surface.channelId), guild: GuildStore.getGuild(surface.guildId) };
+        return obj2;
       }
     } else {
       const obj9 = getCurrentEmbeddedActivityChannelDefault();

@@ -1,10 +1,10 @@
-// === Module 5206: DiscordMd5Native ===
+// === Module 5207: DiscordMd5Native ===
 
-// Module 5206 (DiscordMd5Native)
+// Module 5207 (DiscordMd5Native)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1152 */;
-import DiscordMd5 from "DiscordMd5" /* 5207 */;
+import DiscordMd5 from "DiscordMd5" /* 5208 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

@@ -1,9 +1,9 @@
-// === Module 5851: BoostGemIllocon ===
+// === Module 5872: BoostGemIllocon ===
 
-// Module 5851 (BoostGemIllocon)
+// Module 5872 (BoostGemIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5852 from "module_5852" /* 5852 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5873 from "module_5873" /* 5873 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const BoostGemIllocon = function BoostGemIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5852 };
+  obj = { uri: _modDef5873 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5852 });
+  return jsx(FastImageDefault, { uri: _modDef5873 });
 };

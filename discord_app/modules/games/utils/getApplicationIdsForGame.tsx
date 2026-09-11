@@ -1,7 +1,7 @@
-// === Module 11588: getApplicationIdsForGame ===
+// === Module 11610: getApplicationIdsForGame ===
 
-// Module 11588 (getApplicationIdsForGame)
-import ApplicationStore from "ApplicationStore" /* 4833 */;
+// Module 11610 (getApplicationIdsForGame)
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 import GameStore from "GameStore" /* 1916 */;
 
 const size = fn(2);

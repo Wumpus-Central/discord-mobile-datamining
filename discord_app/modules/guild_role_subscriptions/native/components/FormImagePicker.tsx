@@ -1,11 +1,11 @@
-// === Module 17825: FormImagePicker ===
+// === Module 17816: FormImagePicker ===
 
-// Module 17825 (FormImagePicker)
+// Module 17816 (FormImagePicker)
 import nativeDefault from "native" /* 576 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
-import utils_UploadUtilsDefault from "utils/UploadUtils" /* 5188 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9119 */;
+import utils_UploadUtilsDefault from "utils/UploadUtils" /* 5189 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9140 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -186,7 +186,7 @@ class ImagePickerIcon {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 }, buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 }, imageDescription: { flexWrap: "wrap", marginBottom: 16 }, image: { alignSelf: "center", width: 84, height: 84 }, imageCentered: { alignSelf: "center", width: 20, height: 20 }, imageCircle: { borderRadius: 42 }, imageSquircle: null, imageContainerEmpty: null, editImageIcon: null, standaloneIcon: null, disabled: null };
 createStyles = { borderRadius: nativeDefault.radii.sm };
 createStyles.imageSquircle = createStyles;
@@ -219,8 +219,8 @@ export default function FormImagePicker(children) {
   obj = { style: tmp2.buttonColumn, children: null };
   obj = { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description };
   const items = [
-    closure_6(tmp6(4601).Text, obj),
-    closure_6(tmp6(5025).Button, {
+    closure_6(tmp6(4602).Text, obj),
+    closure_6(tmp6(5026).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {

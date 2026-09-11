@@ -1,9 +1,9 @@
-// === Module 5971: DisplayNameAbstractUI ===
+// === Module 5992: DisplayNameAbstractUI ===
 
-// Module 5971 (DisplayNameAbstractUI)
+// Module 5992 (DisplayNameAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5972 from "module_5972" /* 5972 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5993 from "module_5993" /* 5993 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DisplayNameAbstractUI = function DisplayNameAbstractUI(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5972 };
+  obj = { uri: _modDef5993 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const DisplayNameAbstractUI = function DisplayNameAbstractUI(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5972 });
+  return jsx(FastImageDefault, { uri: _modDef5993 });
 };

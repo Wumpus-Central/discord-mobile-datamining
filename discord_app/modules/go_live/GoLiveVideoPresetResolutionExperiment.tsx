@@ -1,7 +1,7 @@
-// === Module 10024: GoLiveVideoPresetResolutionExperiment ===
+// === Module 10045: GoLiveVideoPresetResolutionExperiment ===
 
-// Module 10024 (GoLiveVideoPresetResolutionExperiment)
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4652 */;
+// Module 10045 (GoLiveVideoPresetResolutionExperiment)
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4653 */;
 import ApexExperiment from "apex/ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

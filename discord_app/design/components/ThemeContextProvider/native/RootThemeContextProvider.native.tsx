@@ -1,7 +1,7 @@
-// === Module 10145: ThemeContextProvider/RootThemeContextProvider ===
+// === Module 10165: ThemeContextProvider/RootThemeContextProvider ===
 
-// Module 10145 (ThemeContextProvider/RootThemeContextProvider)
-import native from "native" /* 4315 */;
+// Module 10165 (ThemeContextProvider/RootThemeContextProvider)
+import native from "native" /* 4317 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -60,7 +60,7 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   return num(DARK(primaryColor[3]).ThemeContext.Provider, { value, children: children.children });
 };
 export const DisableCustomTheme = function DisableCustomTheme(children) {
-  let obj = themeContext(4315);
+  let obj = themeContext(4317);
   themeContext = obj.useThemeContext();
   const items = [themeContext];
   const memo = noop.useMemo(() => {
@@ -72,5 +72,5 @@ export const DisableCustomTheme = function DisableCustomTheme(children) {
     return obj.createThemedContext(obj);
   }, items);
   obj = { value: memo, children: children.children };
-  return jsx(themeContext(4315).ThemeContext.Provider, { value: memo, children: children.children });
+  return jsx(themeContext(4317).ThemeContext.Provider, { value: memo, children: children.children });
 };

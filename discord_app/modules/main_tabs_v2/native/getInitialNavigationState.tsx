@@ -1,15 +1,15 @@
-// === Module 4464: getInitialNavigationState ===
+// === Module 4466: getInitialNavigationState ===
 
-// Module 4464 (getInitialNavigationState)
+// Module 4466 (getInitialNavigationState)
 import LoggerDefault from "Logger" /* 3 */;
 import router_utils from "router_utils" /* 1100 */;
-import matchPathCompat from "matchPathCompat" /* 4431 */;
-import RouteUtils from "RouteUtils" /* 4444 */;
-import useChatLayout from "useChatLayout" /* 4465 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4468 */;
+import matchPathCompat from "matchPathCompat" /* 4433 */;
+import RouteUtils from "RouteUtils" /* 4446 */;
+import useChatLayout from "useChatLayout" /* 4467 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4470 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4430 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4432 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;

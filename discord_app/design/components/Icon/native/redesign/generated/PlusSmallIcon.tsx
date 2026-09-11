@@ -1,9 +1,9 @@
-// === Module 8936: PlusSmallIcon ===
+// === Module 8957: PlusSmallIcon ===
 
-// Module 8936 (PlusSmallIcon)
+// Module 8957 (PlusSmallIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod8937 from "module_8937" /* 8937 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod8958 from "module_8958" /* 8958 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const PlusSmallIcon = function PlusSmallIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8937, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8958, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

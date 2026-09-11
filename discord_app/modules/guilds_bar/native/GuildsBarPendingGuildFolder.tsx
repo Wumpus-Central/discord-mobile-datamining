@@ -1,11 +1,11 @@
-// === Module 16389: GuildsBarPendingGuildFolder ===
+// === Module 16378: GuildsBarPendingGuildFolder ===
 
-// Module 16389 (GuildsBarPendingGuildFolder)
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9275 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16369 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16376 */;
+// Module 16378 (GuildsBarPendingGuildFolder)
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9296 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16358 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16365 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 
 require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(16376);
+  let obj = id(16365);
   importDefault = usePendingFolderGuildIdsDefault();
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
   const items = [SelectedGuildStore];
@@ -49,16 +49,16 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   ({ accessibilityActions, onAccessibilityAction } = memo);
   const obj2 = id(504);
   const items2 = [id];
-  const sharedValue = id(4341).useSharedValue("" + id);
+  const sharedValue = id(4343).useSharedValue("" + id);
   const memo1 = noop.useMemo(() => ({
     onPress() {
-      const result = id(4573).triggerHapticFeedback(id(4573).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj = id(4573);
-      const result1 = closure_1(5570).toggleGuildFolderExpand(closure_1_0);
+      const result = id(4574).triggerHapticFeedback(id(4574).HapticFeedbackTypes.IMPACT_LIGHT);
+      const obj = id(4574);
+      const result1 = closure_1(5571).toggleGuildFolderExpand(closure_1_0);
     }
   }), items2);
-  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "accessible", config: "__esModule", externalChildren: "y", children: "isArray" };
-  const obj3 = id(4341);
+  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "ip", config: true, externalChildren: true, children: true };
+  const obj3 = id(4343);
   obj.id = "" + id;
   obj.accessibilityActions = accessibilityActions;
   obj.onAccessibilityAction = onAccessibilityAction;
@@ -71,9 +71,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     obj = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(16375).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(16364).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj.externalChildren = tmp8Result;
-  obj.children = jsx(id(9099).HourglassIcon, {});
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "accessible", config: "__esModule", externalChildren: "y", children: "isArray" });
+  obj.children = jsx(id(9120).HourglassIcon, {});
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "ip", config: true, externalChildren: true, children: true });
 });

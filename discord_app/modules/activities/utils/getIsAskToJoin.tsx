@@ -1,6 +1,6 @@
-// === Module 11830: getIsAskToJoin ===
+// === Module 11852: getIsAskToJoin ===
 
-// Module 11830 (getIsAskToJoin)
+// Module 11852 (getIsAskToJoin)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

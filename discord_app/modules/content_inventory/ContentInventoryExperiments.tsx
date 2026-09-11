@@ -1,9 +1,9 @@
-// === Module 13768: ContentInventoryExperiments ===
+// === Module 13747: ContentInventoryExperiments ===
 
-// Module 13768 (ContentInventoryExperiments)
-import ExperimentConstants from "ExperimentConstants" /* 4522 */;
+// Module 13747 (ContentInventoryExperiments)
+import ExperimentConstants from "ExperimentConstants" /* 4523 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
-import createExperiment from "module_4519" /* 4519 */;
+import createExperiment from "module_4520" /* 4520 */;
 import size from "module_2" /* 2 */;
 
 let obj = { kind: "user", name: "2026-03-content-inventory-memberlist-and-ranker", defaultConfig: { enabled: true, impressionCappingEnabled: true }, variations: { 0: { enabled: false, impressionCappingEnabled: false } } };

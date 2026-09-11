@@ -1,11 +1,11 @@
-// === Module 7222: AuthorizedAppsActionCreators ===
+// === Module 7243: AuthorizedAppsActionCreators ===
 
-// Module 7222 (AuthorizedAppsActionCreators)
+// Module 7243 (AuthorizedAppsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import Timers from "Timers" /* 4492 */;
+import Timers from "Timers" /* 1952 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7159 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7180 */;
 
 require = fn;
 function tokensToAppTokensMap(arg0, arr) {
@@ -109,7 +109,7 @@ let closure_10 = async function _fetchAuthorizedApps() {
     }
   })();
 };
-const FetchState = fn(7159).FetchState;
+const FetchState = fn(7180).FetchState;
 const Endpoints = fn(1074).Endpoints;
 let obj = {
   predicate(arg0) {
@@ -126,17 +126,17 @@ let obj = {
     return obj.dispatch(obj);
   }
 };
-const batchInvocationManager = new fn(4492).BatchInvocationManager(fetchAuthorizedApps, obj);
+const batchInvocationManager = new fn(1952).BatchInvocationManager(fetchAuthorizedApps, obj);
 obj = {
-  fetch(arg0) {
+  fetch(candidates) {
     if (AuthorizedAppsStore.getFetchState() !== FetchState.FETCHING) {
-      if (null != arg0) {
-        batchInvocationManager.queue(arg0).catch((error) => {
+      if (null != candidates) {
+        batchInvocationManager.queue(candidates).catch((error) => {
           if (!(error instanceof Timers.BatchInvocationManagerResetError)) {
             throw error;
           }
         });
-        const queueResult = batchInvocationManager.queue(arg0);
+        const queueResult = batchInvocationManager.queue(candidates);
       } else {
         batchInvocationManager.reset();
         const obj = { type: "USER_AUTHORIZED_APPS_REQUEST", request: { type: "full" } };

@@ -1,21 +1,21 @@
-// === Module 10826: GiftingBadgeProgressBanner ===
+// === Module 10845: GiftingBadgeProgressBanner ===
 
-// Module 10826 (GiftingBadgeProgressBanner)
+// Module 10845 (GiftingBadgeProgressBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import _modDef2492 from "module_2492" /* 2492 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7214 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8838 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10819 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7235 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8859 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10838 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, iconContainer: null };
 createStyles = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_MUTED };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);

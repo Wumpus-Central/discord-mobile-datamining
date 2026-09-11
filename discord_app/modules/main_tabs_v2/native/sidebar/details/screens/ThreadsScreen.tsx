@@ -1,17 +1,17 @@
-// === Module 16800: ThreadsScreen ===
+// === Module 16788: ThreadsScreen ===
 
-// Module 16800 (ThreadsScreen)
+// Module 16788 (ThreadsScreen)
 import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7033 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11294 */;
-import ThreadListDefault from "ThreadList" /* 16801 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7054 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11316 */;
+import ThreadListDefault from "ThreadList" /* 16789 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
 function ThreadsScreen(channel) {
   channel = channel.channel;
-  let obj = channel(7321);
+  let obj = channel(7342);
   const canStartThread = obj.useCanStartThread(channel);
   const items = [channel];
   const callback = noop.useCallback(() => {
@@ -44,7 +44,7 @@ const View = fn(17).View;
 const SearchTypes = fn(1074).SearchTypes;
 let closure_7 = fn(1113).OpenThreadAnalyticsLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { container: { flex: 1 }, screen: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.screen = obj;

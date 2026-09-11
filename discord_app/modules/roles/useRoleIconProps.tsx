@@ -1,7 +1,7 @@
-// === Module 7238: useRoleIconProps ===
+// === Module 7259: useRoleIconProps ===
 
-// Module 7238 (useRoleIconProps)
-import RoleIconUtils from "RoleIconUtils" /* 7239 */;
+// Module 7259 (useRoleIconProps)
+import RoleIconUtils from "RoleIconUtils" /* 7260 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;

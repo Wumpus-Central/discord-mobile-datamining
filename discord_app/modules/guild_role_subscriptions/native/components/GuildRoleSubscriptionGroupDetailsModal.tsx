@@ -1,18 +1,18 @@
-// === Module 17823: GuildRoleSubscriptionGroupDetailsModal ===
+// === Module 17814: GuildRoleSubscriptionGroupDetailsModal ===
 
-// Module 17823 (GuildRoleSubscriptionGroupDetailsModal)
+// Module 17814 (GuildRoleSubscriptionGroupDetailsModal)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Form from "Form" /* 8663 */;
-import FormHeaderDefault from "FormHeader" /* 9886 */;
-import FormStylesDefault from "FormStyles" /* 13973 */;
-import FormSeparatorDefault from "FormSeparator" /* 15298 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17819 */;
-import FormImagePicker from "FormImagePicker" /* 17825 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17828 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Form from "Form" /* 8684 */;
+import FormHeaderDefault from "FormHeader" /* 9907 */;
+import FormStylesDefault from "FormStyles" /* 13951 */;
+import FormSeparatorDefault from "FormSeparator" /* 15278 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17810 */;
+import FormImagePicker from "FormImagePicker" /* 17816 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17819 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 17824 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 17815 */;
 
 require = fn;
 class Content {
@@ -57,12 +57,12 @@ class Content {
   }
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(15286);
+const GuildRoleSubscriptionsConstants = fn(15266);
 ({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1074).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles({ coverPhoto: { height: 114, width: "100%" }, coverDescription: { marginTop: 16 }, paddedContainer: { paddingHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx");

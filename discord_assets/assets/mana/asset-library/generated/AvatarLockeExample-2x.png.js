@@ -1,6 +1,6 @@
-// === Module 5816: ? ===
+// === Module 5837: ? ===
 
-// Module 5816
+// Module 5837
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarLockeExample-2x.png.js");

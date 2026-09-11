@@ -1,11 +1,11 @@
-// === Module 9701: ActivityTile ===
+// === Module 9722: ActivityTile ===
 
-// Module 9701 (ActivityTile)
+// Module 9722 (ActivityTile)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import native2 from "native" /* 4315 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9600 */;
+import native2 from "native" /* 4317 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9621 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -64,7 +64,7 @@ function ActivityTileInner(participant) {
               const obj1 = { applicationId: stateFromStores.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
               v1 = 1;
               dependencyMap = 1;
-              const obj2 = { value: v1(9603)(obj1), done: false };
+              const obj2 = { value: v1(9624)(obj1), done: false };
               return obj2;
             } else {
               dependencyMap = 3;
@@ -74,7 +74,7 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          obj = tmp2(9704);
+          obj = tmp2(9725);
           const result = obj.setOrientationLockState(closure_128_3);
         }
         dependencyMap = 3;
@@ -250,7 +250,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1178).AvatarSizes.XSMALL;
 const androidRippleConfig = fn(1182).getThemedRippleConfig({ foreground: true });
-fn(4605);
+fn(4606);
 let createStyles = { pressableOpacity: null, activityPreview: null, activityViewContainer: null, titleText: null, subtitleText: null, overflow: null, buttonWrapper: null, buttonPill: null };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center" };
 createStyles.pressableOpacity = size;

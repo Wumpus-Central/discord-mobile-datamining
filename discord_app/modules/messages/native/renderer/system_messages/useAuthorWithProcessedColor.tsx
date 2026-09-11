@@ -1,9 +1,9 @@
-// === Module 8012: useAuthorWithProcessedColor ===
+// === Module 8034: useAuthorWithProcessedColor ===
 
-// Module 8012 (useAuthorWithProcessedColor)
+// Module 8034 (useAuthorWithProcessedColor)
 import _mod17 from "module_17" /* 17 */;
-import useMessageAuthor from "useMessageAuthor" /* 4838 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8013 */;
+import useMessageAuthor from "useMessageAuthor" /* 4839 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8035 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;

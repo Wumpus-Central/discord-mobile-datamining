@@ -1,12 +1,12 @@
-// === Module 11501: GiftCodeStore ===
+// === Module 11523: GiftCodeStore ===
 
-// Module 11501 (GiftCodeStore)
+// Module 11523 (GiftCodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef4196 from "module_4196" /* 4196 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 4844 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11502 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10770 */;
+import _modDef4198 from "module_4198" /* 4198 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4845 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11524 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10789 */;
 
 require = fn;
 function updateGiftCode(giftCode) {
@@ -18,14 +18,14 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4492).Timeout();
+      const timeout = new code(1952).Timeout();
       dependencyMap[code] = timeout;
       value = map.get(code);
       if (null != value) {
         if (null != value.expiresAt) {
           const expiresAt = value.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - _modDef4196().valueOf();
+          const diff = valueOfResult - _modDef4198().valueOf();
           if (diff <= 0) {
             map.delete(code);
             delete tmp2[tmp];
@@ -110,7 +110,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = _modDef4196();
+          const obj4 = _modDef4198();
         }
       }
     }

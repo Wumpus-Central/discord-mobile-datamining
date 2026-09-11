@@ -1,20 +1,20 @@
-// === Module 8519: AgeVerificationOtherWindowScreen ===
+// === Module 8540: AgeVerificationOtherWindowScreen ===
 
-// Module 8519 (AgeVerificationOtherWindowScreen)
+// Module 8540 (AgeVerificationOtherWindowScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2946 from "module_2946" /* 2946 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Stack_Stack from "Stack/Stack" /* 5023 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 7010 */;
-import ModalScreen from "ModalScreen" /* 8486 */;
-import ModalContent from "ModalContent" /* 8487 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Stack_Stack from "Stack/Stack" /* 5024 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 7031 */;
+import ModalScreen from "ModalScreen" /* 8507 */;
+import ModalContent from "ModalContent" /* 8508 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch" }, text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationOtherWindowScreen.tsx");

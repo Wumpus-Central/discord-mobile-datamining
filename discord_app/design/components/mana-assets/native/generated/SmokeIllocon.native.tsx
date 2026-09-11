@@ -1,9 +1,9 @@
-// === Module 6515: SmokeIllocon ===
+// === Module 6536: SmokeIllocon ===
 
-// Module 6515 (SmokeIllocon)
+// Module 6536 (SmokeIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6516 from "module_6516" /* 6516 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6537 from "module_6537" /* 6537 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const SmokeIllocon = function SmokeIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6516 };
+  obj = { uri: _modDef6537 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6516 });
+  return jsx(FastImageDefault, { uri: _modDef6537 });
 };

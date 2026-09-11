@@ -1,9 +1,9 @@
-// === Module 6275: LogoHandSpotIllustration ===
+// === Module 6296: LogoHandSpotIllustration ===
 
-// Module 6275 (LogoHandSpotIllustration)
+// Module 6296 (LogoHandSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6276 from "module_6276" /* 6276 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6297 from "module_6297" /* 6297 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const LogoHandSpotIllustration = function LogoHandSpotIllustration(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6276 };
+  obj = { uri: _modDef6297 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const LogoHandSpotIllustration = function LogoHandSpotIllustration(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6276 });
+  return jsx(FastImageDefault, { uri: _modDef6297 });
 };

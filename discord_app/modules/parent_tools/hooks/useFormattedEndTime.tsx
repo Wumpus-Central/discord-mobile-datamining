@@ -1,6 +1,6 @@
-// === Module 17388: useFormattedEndTime ===
+// === Module 17377: useFormattedEndTime ===
 
-// Module 17388 (useFormattedEndTime)
+// Module 17377 (useFormattedEndTime)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserStore from "UserStore" /* 1371 */;

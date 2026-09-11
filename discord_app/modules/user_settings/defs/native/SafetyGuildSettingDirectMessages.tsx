@@ -1,20 +1,20 @@
-// === Module 15957: SafetyGuildSettingDirectMessages ===
+// === Module 15942: SafetyGuildSettingDirectMessages ===
 
-// Module 15957 (SafetyGuildSettingDirectMessages)
+// Module 15942 (SafetyGuildSettingDirectMessages)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
-import common_AlertDefault from "common/Alert" /* 5044 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14902 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15958 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15959 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
+import common_AlertDefault from "common/Alert" /* 5045 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14879 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15943 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15944 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15951);
+const UserSettingsSafetySelectedGuildStore = fn(15936);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11541).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-fn(11540);
+let closure_6 = fn(11563).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+fn(11562);
 let SettingBuilders = {
   useTitle() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
@@ -52,7 +52,7 @@ let SettingBuilders = {
       return stringResult;
     }
   },
-  parent: fn(8027).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8049).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const RestrictedGuildIds = UserSettings.RestrictedGuildIds;

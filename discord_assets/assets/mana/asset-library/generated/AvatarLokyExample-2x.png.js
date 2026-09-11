@@ -1,6 +1,6 @@
-// === Module 5818: ? ===
+// === Module 5839: ? ===
 
-// Module 5818
+// Module 5839
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarLokyExample-2x.png.js");

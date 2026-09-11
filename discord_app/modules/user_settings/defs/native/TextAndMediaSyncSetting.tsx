@@ -1,19 +1,19 @@
-// === Module 15553: TextAndMediaSyncSetting ===
+// === Module 15535: TextAndMediaSyncSetting ===
 
-// Module 15553 (TextAndMediaSyncSetting)
+// Module 15535 (TextAndMediaSyncSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9428 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9449 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 
 require = fn;
-fn(11540);
+fn(11562);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(8027).MobileUserSettings.CHAT,
+  parent: fn(8049).MobileUserSettings.CHAT,
   useValue: function useTextAndMediaSyncSettingValue() {
     const items = [SelectivelySyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => SelectivelySyncedUserSettingsStore.shouldSync("text"));

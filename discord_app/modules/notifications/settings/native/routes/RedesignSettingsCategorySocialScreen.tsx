@@ -1,9 +1,9 @@
-// === Module 16002: RedesignSettingsCategorySocialScreen ===
+// === Module 15990: RedesignSettingsCategorySocialScreen ===
 
-// Module 16002 (RedesignSettingsCategorySocialScreen)
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 14767 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 16000 */;
+// Module 15990 (RedesignSettingsCategorySocialScreen)
+import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SettingLayoutDefault from "SettingLayout" /* 14741 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 15984 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

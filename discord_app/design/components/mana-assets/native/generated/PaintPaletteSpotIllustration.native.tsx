@@ -1,9 +1,9 @@
-// === Module 6389: PaintPaletteSpotIllustration ===
+// === Module 6410: PaintPaletteSpotIllustration ===
 
-// Module 6389 (PaintPaletteSpotIllustration)
+// Module 6410 (PaintPaletteSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6390 from "module_6390" /* 6390 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6411 from "module_6411" /* 6411 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PaintPaletteSpotIllustration = function PaintPaletteSpotIllustratio
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6390 };
+  obj = { uri: _modDef6411 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const PaintPaletteSpotIllustration = function PaintPaletteSpotIllustratio
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6390 });
+  return jsx(FastImageDefault, { uri: _modDef6411 });
 };

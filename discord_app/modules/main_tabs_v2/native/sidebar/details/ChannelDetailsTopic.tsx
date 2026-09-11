@@ -1,10 +1,10 @@
-// === Module 16829: ChannelDetailsTopic ===
+// === Module 16817: ChannelDetailsTopic ===
 
-// Module 16829 (ChannelDetailsTopic)
-import UserUtilsDefault from "UserUtils" /* 4449 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4595 */;
-import ChannelUtils from "ChannelUtils" /* 4750 */;
-import spring from "spring" /* 5024 */;
+// Module 16817 (ChannelDetailsTopic)
+import UserUtilsDefault from "UserUtils" /* 4451 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
+import ChannelUtils from "ChannelUtils" /* 4751 */;
+import spring from "spring" /* 5025 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -192,7 +192,7 @@ function PrivateChannelDetailsTopic(channel) {
     obj = { textAlign: channel.textAlign };
     obj.style = obj;
     obj.children = stateFromStores;
-    tmp4 = closure_11(channel(4601).Text, obj);
+    tmp4 = closure_11(channel(4602).Text, obj);
   }
   return tmp4;
 }
@@ -207,19 +207,19 @@ function GroupDMChannelDetailsTopic(channel) {
     obj = { textAlign: channel.textAlign };
     obj.style = obj;
     obj.children = stateFromStores;
-    tmp4 = closure_11(channel(4601).Text, obj);
+    tmp4 = closure_11(channel(4602).Text, obj);
   }
   return tmp4;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(10988);
+const ChannelDetailsConstants = fn(11008);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PlatformUtils = fn(1115);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_15 = createStyles.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
 const EMPTY_STYLE = {};
 const constants = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };

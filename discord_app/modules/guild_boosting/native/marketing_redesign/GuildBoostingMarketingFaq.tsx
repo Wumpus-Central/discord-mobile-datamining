@@ -1,10 +1,10 @@
-// === Module 13680: GuildBoostingMarketingFaq ===
+// === Module 13659: GuildBoostingMarketingFaq ===
 
-// Module 13680 (GuildBoostingMarketingFaq)
+// Module 13659 (GuildBoostingMarketingFaq)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import _modDef13681 from "module_13681" /* 13681 */;
+import _modDef13660 from "module_13660" /* 13660 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,9 +13,9 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { wrapper: null, content: null, heading: null, list: null, listItem: null, questionWrapper: null, questionWrapperExpanded: null, question: null, questionIcon: null, questionIconExpanded: null, answer: null };
-createStyles = { alignSelf: "center", marginTop: 50, marginBottom: fn(7453).VISIBILITY_OFFSET, maxWidth: 800, paddingHorizontal: 16, width: "100%" };
+createStyles = { alignSelf: "center", marginTop: 50, marginBottom: fn(7474).VISIBILITY_OFFSET, maxWidth: 800, paddingHorizontal: 16, width: "100%" };
 createStyles.wrapper = createStyles;
 createStyles.content = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 16, paddingVertical: 28 };
 createStyles.heading = { marginBottom: 20, textAlign: "center" };
@@ -173,8 +173,8 @@ export default function GuildBoostingMarketingFaq() {
         str = "interactive-text-active";
       }
       obj = { color: str, style: tmp4.question, variant: "text-md/normal", children: getQuestion.getQuestion() };
-      items1 = [closure_1_7(closure_0(4601).Text, obj), ];
-      const obj1 = { source: _modDef13681, style: null };
+      items1 = [closure_1_7(closure_0(4602).Text, obj), ];
+      const obj1 = { source: _modDef13660, style: null };
       const items2 = [closure_0.questionIcon, ];
       let questionIconExpanded = tmp;
       if (tmp) {
@@ -184,10 +184,10 @@ export default function GuildBoostingMarketingFaq() {
       obj1.style = items2;
       items1[1] = closure_1_7(closure_0(1178).Icon, obj1);
       obj.children = items1;
-      const items3 = [closure_1_8(closure_0(5173).PressableOpacity, obj), ];
+      const items3 = [closure_1_8(closure_0(5174).PressableOpacity, obj), ];
       if (tmp) {
         const obj2 = { style: tmp4.answer, color: "interactive-text-active", variant: "text-sm/normal", children: getQuestion.getAnswer() };
-        tmp = closure_1_7(tmp5(4601).Text, obj2);
+        tmp = closure_1_7(tmp5(4602).Text, obj2);
       }
       items3[1] = tmp;
       obj.children = items3;

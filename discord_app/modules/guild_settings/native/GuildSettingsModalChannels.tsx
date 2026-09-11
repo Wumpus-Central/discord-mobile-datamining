@@ -1,6 +1,6 @@
-// === Module 16227: GuildSettingsModalChannels ===
+// === Module 16216: GuildSettingsModalChannels ===
 
-// Module 16227 (GuildSettingsModalChannels)
+// Module 16216 (GuildSettingsModalChannels)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
@@ -8,31 +8,31 @@ import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4248 */;
-import shared from "shared" /* 4456 */;
-import useChannelName from "useChannelName" /* 4758 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
-import useFontScale from "useFontScale" /* 5032 */;
-import Pressables from "Pressables" /* 5173 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5570 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7246 */;
-import HeaderActionButton from "HeaderActionButton" /* 7429 */;
-import Form from "Form" /* 8663 */;
-import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 8695 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10293 */;
-import _modDef11875 from "module_11875" /* 11875 */;
-import _modDef15378 from "module_15378" /* 15378 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 16226 */;
-import ChannelSortingUtils from "ChannelSortingUtils" /* 16229 */;
-import _modDef16231 from "module_16231" /* 16231 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
+import shared from "shared" /* 4458 */;
+import useChannelName from "useChannelName" /* 4759 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
+import useFontScale from "useFontScale" /* 5033 */;
+import Pressables from "Pressables" /* 5174 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5571 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7267 */;
+import HeaderActionButton from "HeaderActionButton" /* 7450 */;
+import Form from "Form" /* 8684 */;
+import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 8716 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10312 */;
+import _modDef11898 from "module_11898" /* 11898 */;
+import _modDef15360 from "module_15360" /* 15360 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 16215 */;
+import ChannelSortingUtils from "ChannelSortingUtils" /* 16218 */;
+import _modDef16220 from "module_16220" /* 16220 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsModalChannelsStore from "GuildSettingsModalChannelsStore" /* 16225 */;
-import TextStyles from "TextStyles" /* 5574 */;
+import GuildSettingsModalChannelsStore from "GuildSettingsModalChannelsStore" /* 16214 */;
+import TextStyles from "TextStyles" /* 5575 */;
 
 require = fn;
 function ChannelItem(isFavoritesGuild) {
@@ -40,9 +40,9 @@ function ChannelItem(isFavoritesGuild) {
   isFavoritesGuild = isFavoritesGuild.isFavoritesGuild;
   ({ sortingEnabled, onPress: importAll, sortHandlers } = isFavoritesGuild);
   ({ style, actionIconStyle } = isFavoritesGuild);
-  let obj = channel(4605);
+  let obj = channel(4606);
   const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_18);
-  let obj1 = channel(4456);
+  let obj1 = channel(4458);
   let obj2 = channel(504);
   const items = [PermissionStore];
   const items1 = [channel, isFavoritesGuild];
@@ -62,12 +62,12 @@ function ChannelItem(isFavoritesGuild) {
       }
     }
   }, items1);
-  let tmpResult = channel(5078);
+  let tmpResult = channel(5079);
   const channelIcon = tmpResult.getChannelIcon(channel);
-  tmpResult = channel(5078);
+  tmpResult = channel(5079);
   const channelIconComponent = tmpResult.getChannelIconComponent(channel);
-  const tmpResult1 = channel(4456);
-  const isThemeDarkResult = channel(4456).isThemeDark(obj1.useThemeContext().theme);
+  const tmpResult1 = channel(4458);
+  const isThemeDarkResult = channel(4458).isThemeDark(obj1.useThemeContext().theme);
   const hex2rgb = channel(1091).hex2rgb;
   const unsafe_rawColors = isFavoritesGuild(576).unsafe_rawColors;
   if (isThemeDarkResult) {
@@ -92,11 +92,11 @@ function ChannelItem(isFavoritesGuild) {
     let tmp7Result = closure_16(channelIconComponent, obj2);
   } else {
     const obj3 = { size: channel(1178).Icon.Sizes.SMALL_20, source: channelIcon, style: channelIconStyle };
-    tmp7Result = closure_16(channel(8663).FormRow.Icon, obj3);
+    tmp7Result = closure_16(channel(8684).FormRow.Icon, obj3);
   }
   const obj4 = { leading: tmp7Result, style: legacyClassComponentStyles.formRowStyle, label: null, onPress: null, trailing: null, numberOfLines: null };
   const tmpResult2 = channel(1091);
-  obj4.label = channel(4758).computeChannelName(channel, UserStore, RelationshipStore);
+  obj4.label = channel(4759).computeChannelName(channel, UserStore, RelationshipStore);
   let fn;
   if (!sortingEnabled) {
     fn = () => importAll(channel.id);
@@ -106,8 +106,8 @@ function ChannelItem(isFavoritesGuild) {
   if (stateFromStores) {
     tmp7Result = null;
     if (sortingEnabled) {
-      const obj5 = { source: tmp13(16228), style: actionIconStyle };
-      tmp7Result = closure_16(channel(8663).FormRow.Icon, obj5);
+      const obj5 = { source: tmp13(16217), style: actionIconStyle };
+      tmp7Result = closure_16(channel(8684).FormRow.Icon, obj5);
     }
   }
   obj4.trailing = tmp7Result;
@@ -116,14 +116,14 @@ function ChannelItem(isFavoritesGuild) {
     num3 = 1;
   }
   obj4.numberOfLines = num3;
-  obj1.children = closure_16(channel(8663).FormRow, obj4);
+  obj1.children = closure_16(channel(8684).FormRow, obj4);
   obj.children = closure_16(closure_5, obj1);
   return closure_16(closure_6, obj);
 }
 function CreateButton(guild) {
   guild = guild.guild;
   let bottom;
-  let obj = guild(4605);
+  let obj = guild(4606);
   const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_18);
   bottom = bottom(1611)().bottom;
   let items = [bottom];
@@ -146,21 +146,21 @@ function CreateButton(guild) {
       const intl2 = util.intl;
       obj1.label = intl2.string(util.t.vHCZwr);
       obj1.onPress = function onPress() {
-        bottom(9807).open(constants.GUILD_CATEGORY, user.id, null, null);
+        bottom(9828).open(constants.GUILD_CATEGORY, user.id, null, null);
       };
       const items = [obj1, ];
       const obj2 = { label: null, onPress: null };
       const intl3 = util.intl;
       obj2.label = intl3.string(util.t.GK18KJ);
       obj2.onPress = function onPress() {
-        bottom(9807).open(null, user.id, null, null);
+        bottom(9828).open(null, user.id, null, null);
       };
       items[1] = obj2;
       obj.options = items;
       const result = obj.showSimpleActionSheet(obj);
     };
-    obj.icon = closure_16(tmp(8936).PlusSmallIcon, { color: "white" });
-    obj.children = closure_16(tmp(5025).Button, obj);
+    obj.icon = closure_16(tmp(8957).PlusSmallIcon, { color: "white" });
+    obj.children = closure_16(tmp(5026).Button, obj);
     tmp5 = closure_16(closure_5, obj);
   }
   return tmp5;
@@ -171,7 +171,7 @@ const Constants = fn(1074);
 ({ ChannelTypes: map1, Permissions: closure_14, Fonts, NULL_STRING_CHANNEL_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { headerRight: null, containerView: null, categoryText: null, categoryView: null, sortingCategoryView: null, edit: null, row: null, formRowStyle: null, dropHighlight: null, floatingActionButtonContainer: null };
 createStyles = {};
 let merged = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16));
@@ -256,7 +256,7 @@ Category.prototype["render"] = function render() {
   } else {
     tmp3Result = null;
     if (null != sortHandlers) {
-      obj2 = { source: tmp11(16228), style: actionIconStyle };
+      obj2 = { source: tmp11(16217), style: actionIconStyle };
       tmp3Result = value2(native.Icon, obj2);
     }
   }
@@ -264,7 +264,7 @@ Category.prototype["render"] = function render() {
   obj.children = value2(hasOwnProperty, { children: value2(Form.FormTitle, obj) });
   return value2(timestampProducer, obj);
 };
-Category.contextType = fn(4315).ThemeContext;
+Category.contextType = fn(4317).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class SectionEditAction extends PureComponent2 {
 }
@@ -277,7 +277,7 @@ SectionEditAction.prototype["render"] = function render() {
   obj.children = value2(native.LegacyText, obj);
   return value2(Pressables.PressableOpacity, obj);
 };
-SectionEditAction.contextType = fn(4315).ThemeContext;
+SectionEditAction.contextType = fn(4317).ThemeContext;
 const PureComponent3 = noop.PureComponent;
 class GuildSettingsModalChannels extends PureComponent3 {
   constructor() {
@@ -385,26 +385,26 @@ class GuildSettingsModalChannels extends PureComponent3 {
         let obj = { label: null, icon: null, onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.ffgJrs);
-        obj.icon = _modDef16231;
+        obj.icon = _modDef16220;
         obj.onPress = function onPress() {
-          closure_1_1(16226).startReordering(constants.GUILD_CATEGORY);
+          closure_1_1(16215).startReordering(constants.GUILD_CATEGORY);
         };
         items.push(obj);
       }
       obj = { label: null, icon: null, onPress: null };
       const intl2 = util.intl;
       obj.label = intl2.string(util.t.nIfr0Y);
-      obj.icon = _modDef11875;
+      obj.icon = _modDef11898;
       obj.onPress = function onPress() {
-        closure_1_1(16226).startReordering(constants.GUILD_TEXT, constants.GUILD_ANNOUNCEMENT, constants.GUILD_FORUM, constants.GUILD_MEDIA, constants.GUILD_APP);
+        closure_1_1(16215).startReordering(constants.GUILD_TEXT, constants.GUILD_ANNOUNCEMENT, constants.GUILD_FORUM, constants.GUILD_MEDIA, constants.GUILD_APP);
       };
       items.push(obj);
       obj = { label: null, icon: null, onPress: null };
       const intl3 = util.intl;
       obj.label = intl3.string(util.t.CYnO4s);
-      obj.icon = _modDef15378;
+      obj.icon = _modDef15360;
       obj.onPress = function onPress() {
-        closure_1_1(16226).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
+        closure_1_1(16215).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
       };
       items.push(obj);
       const obj1 = { key: "GuildSettingsChannelsSort", header: null, options: null, hasIcons: true };
@@ -475,8 +475,8 @@ class GuildSettingsModalChannels extends PureComponent3 {
                         if (null != channel) {
                           if (PermissionStore.can(constants2.MANAGE_ROLES, localChannel)) {
                             if (PermissionStore.can(constants2.MANAGE_ROLES, channel)) {
-                              const appChannelBotUserId = applyArgumentsResult(11681).getAppChannelBotUserId(localChannel);
-                              const obj2 = applyArgumentsResult(11681);
+                              const appChannelBotUserId = applyArgumentsResult(11703).getAppChannelBotUserId(localChannel);
+                              const obj2 = applyArgumentsResult(11703);
                               const areChannelsLockedResult = PermissionUtilsAll.areChannelsLocked(localChannel, channel, appChannelBotUserId);
                               let areChannelsLockedResult1 = PermissionUtilsAll.areChannelsLocked(localChannel, ChannelStore.getChannel(localChannel.parent_id), appChannelBotUserId);
                               let tmp9 = null == localChannel.parent_id && !areChannelsLockedResult;
@@ -664,7 +664,7 @@ prototype["render"] = function render() {
 prototype["handleChannelPress"] = function handleChannelPress(id) {
   ChannelSettingsActionCreators.open(id);
 };
-GuildSettingsModalChannels.contextType = fn(4315).ThemeContext;
+GuildSettingsModalChannels.contextType = fn(4317).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalChannels.tsx");
 

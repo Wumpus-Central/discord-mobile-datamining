@@ -1,15 +1,15 @@
-// === Module 17098: useExternalPipParticipant ===
+// === Module 17087: useExternalPipParticipant ===
 
-// Module 17098 (useExternalPipParticipant)
+// Module 17087 (useExternalPipParticipant)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
 
 const require = fn;
-const CallConstants = fn(4626);
+const CallConstants = fn(4627);
 ({ isStreamParticipant: closure_8, ParticipantTypes: closure_9 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");
@@ -57,7 +57,7 @@ export default function useExternalPipParticipant() {
       id2 = tmp6.id;
     }
     if (ref.current !== id2) {
-      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "toLowerCase", focusedParticipantType: ref2.current };
+      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "PX_16", focusedParticipantType: ref2.current };
     } else {
       let type1;
       if (tmp6 != null) {
@@ -234,7 +234,7 @@ export default function useExternalPipParticipant() {
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "call" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "accessible" };
   }, items4);
   closure_129_4 = selectedParticipantSpeaking;
   const items5 = [selectedParticipantSpeaking.selectedParticipantSpeaking];

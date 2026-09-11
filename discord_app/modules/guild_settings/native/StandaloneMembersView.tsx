@@ -1,11 +1,11 @@
-// === Module 16657: StandaloneMembersView ===
+// === Module 16645: StandaloneMembersView ===
 
-// Module 16657 (StandaloneMembersView)
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9132 */;
-import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 11907 */;
-import KickConfirmDefault from "KickConfirm" /* 11920 */;
-import BanConfirmDefault from "BanConfirm" /* 11922 */;
-import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 16658 */;
+// Module 16645 (StandaloneMembersView)
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
+import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 11930 */;
+import KickConfirmDefault from "KickConfirm" /* 11943 */;
+import BanConfirmDefault from "BanConfirm" /* 11945 */;
+import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 16646 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

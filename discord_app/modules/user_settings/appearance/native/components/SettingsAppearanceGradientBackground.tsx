@@ -1,24 +1,24 @@
-// === Module 15379: SettingsAppearanceGradientBackground ===
+// === Module 15361: SettingsAppearanceGradientBackground ===
 
-// Module 15379 (SettingsAppearanceGradientBackground)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
-import timingPresets from "timingPresets" /* 4609 */;
-import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 15380 */;
+// Module 15361 (SettingsAppearanceGradientBackground)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
+import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 15362 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15353 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15335 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-let ReanimatedRexport = fn(4341);
+let ReanimatedRexport = fn(4343);
 let num = ReanimatedRexport.processColor("rgba(0, 0, 0, 0)");
 if (num == null) {
   num = 0;
 }
-let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(5037).LinearGradientNativeComponent);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(5038).LinearGradientNativeComponent);
 let obj = { colors: null, locations: [], startPoint: { x: 0, y: 0 }, endPoint: { x: 0, y: 0 } };
 let items = [num, num];
 obj.colors = items;

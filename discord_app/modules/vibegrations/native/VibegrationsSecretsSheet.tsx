@@ -1,6 +1,6 @@
-// === Module 16699: VibegrationsSecretsSheet ===
+// === Module 16687: VibegrationsSecretsSheet ===
 
-// Module 16699 (VibegrationsSecretsSheet)
+// Module 16687 (VibegrationsSecretsSheet)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -8,12 +8,12 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(16678);
+const VibegrationsConnectionStore = fn(16666);
 ({ sendUserMessage: closure_7, submitProjectSecrets: closure_8 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const VibegrationsSecretsSheet = "VibegrationsSecretsSheet";
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles((paddingBottom) => {
   let obj = { container: null, copyRow: null, copyInfo: null };
   obj = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };

@@ -1,6 +1,6 @@
-// === Module 5820: ? ===
+// === Module 5841: ? ===
 
-// Module 5820
+// Module 5841
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarMallowExample-2x.png.js");

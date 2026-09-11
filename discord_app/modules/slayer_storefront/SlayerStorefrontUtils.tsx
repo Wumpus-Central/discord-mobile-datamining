@@ -1,16 +1,16 @@
-// === Module 7278: SlayerStorefrontUtils ===
+// === Module 7299: SlayerStorefrontUtils ===
 
-// Module 7278 (SlayerStorefrontUtils)
+// Module 7299 (SlayerStorefrontUtils)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
-import StoreUtils from "StoreUtils" /* 4847 */;
-import keysSorter from "keysSorter" /* 5506 */;
-import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 7282 */;
-import StorefrontUtils from "StorefrontUtils" /* 7283 */;
-import ApplicationStore from "ApplicationStore" /* 4833 */;
+import StoreUtils from "StoreUtils" /* 4848 */;
+import keysSorter from "keysSorter" /* 5507 */;
+import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 7303 */;
+import StorefrontUtils from "StorefrontUtils" /* 7304 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7280 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7301 */;
 
 require = fn;
 function getPrice(price, arg1) {
@@ -161,15 +161,15 @@ function getSKUShareURL(arg0, applicationId) {
   }
   combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + map1.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(7279).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(7281);
+let closure_4 = fn(7300).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(7302);
 ({ getChannelsGameShopPrefix: closure_8, STOREFRONT_MARKETING_GUILD_ID: closure_9, STOREFRONT_MARKETING_GUILD_ID_TEST: c10 } = SocialLayerStorefrontConstants);
 const Constants = fn(1074);
 ({ GuildFeatures: closure_11, PriceSetAssignmentPurchaseTypes: closure_12, Routes: map1, SKUProductLines: closure_14 } = Constants);
 const CollectibleShopTab = fn(1076).CollectibleShopTab;
 const CurrencyCodes = fn(1085).CurrencyCodes;
 let str = "jpg";
-if (fn(4847).SUPPORTS_WEBP) {
+if (fn(4848).SUPPORTS_WEBP) {
   str = "webp";
 }
 function getCountryPrices(arg0, arg1) {
@@ -428,7 +428,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "call", primaryIconLabel: "accessibilityLabel" };
+          obj = { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
         } else {
           const obj3 = StoreUtils;
           obj = { primaryIconAsset: URLUtilsDefault.toURLSafe(obj3.getAssetURL(application_id, first.labelIconAssetId, num, "webp")), primaryIconLabel: first.label };
@@ -438,7 +438,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "call", primaryIconLabel: "accessibilityLabel" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value) {
   let obj = arg1;

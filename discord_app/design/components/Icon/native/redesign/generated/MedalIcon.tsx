@@ -1,9 +1,9 @@
-// === Module 16562: MedalIcon ===
+// === Module 16550: MedalIcon ===
 
-// Module 16562 (MedalIcon)
+// Module 16550 (MedalIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod16563 from "module_16563" /* 16563 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod16551 from "module_16551" /* 16551 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const MedalIcon = function MedalIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16563, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16551, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

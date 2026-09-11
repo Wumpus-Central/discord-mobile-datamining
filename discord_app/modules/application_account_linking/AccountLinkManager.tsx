@@ -1,100 +1,39 @@
-// === Module 17038: AccountLinkManager ===
+// === Module 17027: AccountLinkManager ===
 
-// Module 17038 (AccountLinkManager)
+// Module 17027 (AccountLinkManager)
 import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7159 */;
-import AccountLinkStore from "AccountLinkStore" /* 17039 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7180 */;
+import AccountLinkStore from "AccountLinkStore" /* 17028 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 let require = fn;
 let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0) {
-  if (c6 === 2) {
+  closure_2 = tmp3;
+  closure_1 = tmp5;
+  ({ applicationId: closure_129_0, onSuccess: closure_129_1, onError: closure_129_2 } = closure_0);
+  await "PX_16";
+  const HTTP = closure_130_0(closure_130_1[6]).HTTP;
+  const request = { url: closure_130_7.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT, body: { application_id: closure_129_0 }, rejectWithError: true };
+  await HTTP.post(request);
+  if (2 === tmp8) {
+    c4 = 0;
+    closure_129_3 = closure_3;
+    if (closure_129_2 != null) {
+      tmp14(closure_129_3);
+    }
     c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
+  } else if (arg0 === 1) {
+    c6 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    if (closure_129_1 != null) {
+      closure_129_1();
     }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp5;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          ({ applicationId: closure_129_0, onSuccess: closure_129_1, onError: closure_129_2 } = closure_0);
-          c5 = 1;
-          c6 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp8) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          c4 = 1;
-          const HTTP = closure_130_0(closure_130_1[6]).HTTP;
-          const request = { url: closure_130_7.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT, body: null, rejectWithError: true };
-          const obj2 = { application_id: closure_129_0 };
-          request.body = obj2;
-          c5 = 3;
-          c6 = 1;
-          const obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
-        }
-      } else {
-        if (2 === tmp8) {
-          c4 = 0;
-          closure_129_3 = closure_3;
-          if (closure_129_2 != null) {
-            tmp14(closure_129_3);
-          }
-          c6 = 3;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          if (closure_129_1 != null) {
-            closure_129_1();
-          }
-          c4 = 0;
-        }
-        c4 = 0;
-        c6 = 3;
-        obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp25) {
-      closure_3 = tmp25;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp25;
-      } else {
-        c5 = tmp;
-      }
-    }
+    c4 = 0;
   }
+  return value;
 };
 const Constants = fn(1074);
 ({ AppStates: metroRequire, Endpoints: closure_7 } = Constants);

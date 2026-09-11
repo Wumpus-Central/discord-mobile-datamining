@@ -1,21 +1,21 @@
-// === Module 12468: ApplicationCommandsCategories ===
+// === Module 12491: ApplicationCommandsCategories ===
 
-// Module 12468 (ApplicationCommandsCategories)
+// Module 12491 (ApplicationCommandsCategories)
 import nativeDefault from "native" /* 576 */;
-import HapticUtils from "HapticUtils" /* 4573 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4574 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12301 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4575 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12324 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
-const ApplicationCommandsCategoriesConstants = fn(12465);
+const ApplicationCommandsCategoriesConstants = fn(12488);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: closure_7 } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let obj = { container: null, categoryImage: null, fadedItem: null, activeItem: null, item: null };
 obj = { backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
 obj.container = obj;
@@ -71,7 +71,7 @@ let closure_10 = noop.memo((section) => {
   obj.accessibilityLabel = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(5173).PressableOpacity, {
+  return jsx(section(5174).PressableOpacity, {
     onPress() {
       return importDefault(dependencyMap);
     },

@@ -1,10 +1,10 @@
-// === Module 7016: SplitTextInput ===
+// === Module 7037: SplitTextInput ===
 
-// Module 7016 (SplitTextInput)
-import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 4324 */;
-import Input from "Input" /* 6657 */;
-import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 6658 */;
-import SplitTextField from "SplitTextField" /* 7017 */;
+// Module 7037 (SplitTextInput)
+import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 4326 */;
+import Input from "Input" /* 6678 */;
+import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 6679 */;
+import SplitTextField from "SplitTextField" /* 7038 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

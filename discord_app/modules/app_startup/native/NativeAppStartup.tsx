@@ -1,6 +1,6 @@
-// === Module 17321: NativeAppStartup ===
+// === Module 17310: NativeAppStartup ===
 
-// Module 17321 (NativeAppStartup)
+// Module 17310 (NativeAppStartup)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import Storage4 from "Storage" /* 510 */;
@@ -8,8 +8,8 @@ import TokenManagerAll from "TokenManager" /* 1099 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 2003 */;
-import timeRequireDefault from "timeRequire" /* 7544 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13713 */;
+import timeRequireDefault from "timeRequire" /* 7565 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13692 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -372,20 +372,118 @@ let closure_36 = async function _initializeIntl(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    await closure_130_0(closure_130_3[39]).preloadAllIntlMessageFiles();
-    await closure_130_0(closure_130_3[40]).waitForAllDefaultIntlMessagesLoaded();
-    if (log2) {
-      closure_130_1(closure_130_3[24]).markAndLog(closure_130_20, "\u{1F30E}", "i18n loaded");
-      closure_130_1(closure_130_3[24]);
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp2;
+            closure_1 = tmp5;
+            let log2;
+            log2 = log.log;
+            closure_129_1 = undefined;
+            c3 = 1;
+            c4 = 1;
+            return { value: "PX_16", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            c3 = 2;
+            c4 = 1;
+            const obj2 = { value: closure_130_0(closure_130_3[39]).preloadAllIntlMessageFiles(), done: false };
+            return obj2;
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            let obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let obj6 = closure_130_0(closure_130_3[40]);
+            c3 = 3;
+            c4 = 1;
+            const obj4 = { value: obj6.waitForAllDefaultIntlMessagesLoaded(), done: false };
+            return obj4;
+          }
+        } else if (3 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            if (log2) {
+              obj3 = closure_130_1(closure_130_3[24]);
+              obj3.markAndLog(closure_130_20, "\u{1F30E}", "i18n loaded");
+            }
+            c3 = 4;
+            c4 = 1;
+            obj6 = { value: closure_130_0(closure_130_3[42])(closure_130_3[41], closure_130_3.paths), done: false };
+            return obj6;
+          }
+        } else if (4 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            closure_129_1 = value.default;
+            c3 = 5;
+            c4 = 1;
+            const obj8 = { value: closure_129_1(), done: false };
+            return obj8;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_130_11(() => closure_1_1());
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp29) {
+        c4 = tmp;
+        throw tmp29;
+      }
     }
-    await closure_130_0(closure_130_3[42])(closure_130_3[41], closure_130_3.paths);
-    closure_129_1 = value.default;
-    await closure_129_1();
-    closure_130_11(() => closure_1_1());
-    await "HermesInternal";
-    closure_2 = tmp2;
-    log2 = log.log;
-    return "PX_16";
   })();
   iter.next();
   return iter;
@@ -615,11 +713,11 @@ let closure_38 = async function _init(_payload) {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[42])(paths[52], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[53]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(14515).updateSaturation(closure_0(4597).default.saturation);
-            obj = closure_0(14515);
-            closure_0(17057).updateVisualRefresh(true);
-            const obj2 = closure_0(17057);
-            closure_0(17058).updateTheme(closure_0(1183).default.theme);
+            closure_0(14491).updateSaturation(closure_0(4598).default.saturation);
+            obj = closure_0(14491);
+            closure_0(17046).updateVisualRefresh(true);
+            const obj2 = closure_0(17046);
+            closure_0(17047).updateTheme(closure_0(1183).default.theme);
             closure_1_0();
           }));
         });
@@ -765,14 +863,14 @@ function initializeTokenStorage() {
   global();
   const tmp12 = null != TokenManagerAll.getToken();
 }
-const module_17322 = fn(17322);
-const superagentPatch = fn(17372);
+const module_17311 = fn(17311);
+const superagentPatch = fn(17361);
 get_ActivityIndicator = fn(17);
 ({ AppState: metroRequire, NativeEventEmitter: closure_7, Linking: closure_8, LogBox: closure_9, NativeModules: c10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(17392);
+const logThirdPartyImportsDone = fn(17381);
 let closure_11 = fn(2026).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(7512);
-const ManagerRegistry = fn(17393);
+const AnalyticsTrackingStore = fn(7533);
+const ManagerRegistry = fn(17382);
 const Constants = fn(1074);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -780,7 +878,7 @@ loadImports.recordEnd();
 let closure_20 = new LoggerDefault("index.native.tsx");
 let c21 = false;
 let c25 = null;
-const future = new fn(9362).Future();
+const future = new fn(9383).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {

@@ -1,15 +1,15 @@
-// === Module 13552: PremiumFeaturesTable ===
+// === Module 13529: PremiumFeaturesTable ===
 
-// Module 13552 (PremiumFeaturesTable)
+// Module 13529 (PremiumFeaturesTable)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import shared from "shared" /* 4456 */;
-import useThemeDefault from "useTheme" /* 4540 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import LinearGradientDefault from "LinearGradient" /* 5037 */;
-import _modDef13553 from "module_13553" /* 13553 */;
-import _modDef13554 from "module_13554" /* 13554 */;
+import shared from "shared" /* 4458 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
+import _modDef13530 from "module_13530" /* 13530 */;
+import _modDef13531 from "module_13531" /* 13531 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,12 +19,12 @@ function CheckIcon() {
   const tmp3 = useThemeDefault();
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
-  obj = { source: _modDef13553, color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL };
+  obj = { source: _modDef13530, color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL };
   return closure_1_11(native.Icon, obj);
 }
 function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef13554, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef13531, style: closure_16().icon, size: native.IconSizes.SMALL });
 }
 function CellText(children) {
   return closure_1_11(Text_Text.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.text });
@@ -211,7 +211,7 @@ const PremiumConstants = fn(1373);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = "rgba(184, 69, 193, 0.5)";
-fn(4605);
+fn(4606);
 let createStyles = { container: { display: "flex", flex: 1, width: "100%" }, headerText: { textAlign: "center" }, logo: { marginTop: 8, marginBottom: -6 }, table: { marginTop: 16 }, row: { display: "flex", flexDirection: "row" }, bottomBorder: { borderBottomColor: "rgba(106, 116, 128, 0.24)", borderBottomWidth: 1 }, topBorderRadius: null, bottomBorderRadius: null, cell: null, labelCell: null, dataCell: null, themedHighlightedCell: null, nitroHomeHightlightedBorderLeftRight: null, premiumGroupCard: null, priceContainer: null };
 createStyles = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
 createStyles.topBorderRadius = createStyles;
@@ -220,14 +220,14 @@ createStyles.cell = { paddingVertical: 12 };
 createStyles.labelCell = { flex: 1, justifyContent: "flex-start" };
 createStyles.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
 let obj1 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-createStyles.themedHighlightedCell = { backgroundColor: fn(5491).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+createStyles.themedHighlightedCell = { backgroundColor: fn(5492).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 createStyles.nitroHomeHightlightedBorderLeftRight = { borderLeftColor: "rgba(184, 69, 193, 0.5)", borderLeftWidth: 2, borderRightColor: "rgba(184, 69, 193, 0.5)", borderRightWidth: 2 };
 createStyles.premiumGroupCard = { marginTop: 16 };
 createStyles.priceContainer = { alignItems: "center" };
 let closure_14 = createStyles.createStyles(createStyles);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj3 = { icon: null };
-let obj2 = { backgroundColor: fn(5491).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+let obj2 = { backgroundColor: fn(5492).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj3.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
 let closure_16 = createStyles.createStyles(obj3);
 let size = fn(2);

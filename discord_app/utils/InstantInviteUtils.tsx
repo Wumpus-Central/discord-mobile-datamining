@@ -1,15 +1,15 @@
-// === Module 9892: InstantInviteUtils ===
+// === Module 9913: InstantInviteUtils ===
 
-// Module 9892 (InstantInviteUtils)
+// Module 9913 (InstantInviteUtils)
 import util from "util" /* 1114 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5492 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5493 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import ReadStateStore from "ReadStateStore" /* 4620 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 import UserStore from "UserStore" /* 1371 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7270 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7291 */;
 
 require = fn;
 function isGuildMember(dependencyMap, id) {
@@ -90,14 +90,14 @@ function addDmUsers(arg0) {
   }
 }
 const ChannelTypes = fn(1074).ChannelTypes;
-const InviteTargetTypes = fn(7787).InviteTargetTypes;
+const InviteTargetTypes = fn(7808).InviteTargetTypes;
 let RowTypes = { GROUP_DM: "GROUP_DM", DM: "DM", FRIEND: "FRIEND", CHANNEL: "CHANNEL" };
 const minutes = "minutes";
 const hours = "hours";
 const days = "days";
 const never = "never";
-const dependencyMap = { [fn(9893).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [fn(9893).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [fn(9893).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [fn(9893).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [fn(9893).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [fn(9893).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [fn(9893).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [fn(9893).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [fn(9893).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [fn(9893).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
-let items = [fn(9893).INVITE_OPTIONS_14_DAYS, fn(9893).INVITE_OPTIONS_30_DAYS, fn(9893).INVITE_OPTIONS_60_DAYS];
+const dependencyMap = { [fn(9914).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [fn(9914).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [fn(9914).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [fn(9914).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [fn(9914).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [fn(9914).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [fn(9914).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [fn(9914).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [fn(9914).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [fn(9914).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
+let items = [fn(9914).INVITE_OPTIONS_14_DAYS, fn(9914).INVITE_OPTIONS_30_DAYS, fn(9914).INVITE_OPTIONS_60_DAYS];
 RowTypes = {
   getMaxAgeOptionByValue(label) {
     closure_0 = label;
@@ -126,25 +126,25 @@ RowTypes = {
       return tmp2;
     });
   },
-  getMaxUsesOptions: fn(9893).MAX_USES_OPTIONS,
-  INVITE_OPTIONS_FOREVER: fn(9893).INVITE_OPTIONS_FOREVER,
-  INVITE_OPTIONS_1_DAY: fn(9893).INVITE_OPTIONS_1_DAY,
-  INVITE_OPTIONS_7_DAYS: fn(9893).INVITE_OPTIONS_7_DAYS,
-  INVITE_OPTIONS_14_DAYS: fn(9893).INVITE_OPTIONS_14_DAYS,
-  INVITE_OPTIONS_30_DAYS: fn(9893).INVITE_OPTIONS_30_DAYS,
-  INVITE_OPTIONS_60_DAYS: fn(9893).INVITE_OPTIONS_60_DAYS,
-  INVITE_OPTIONS_12_HOURS: fn(9893).INVITE_OPTIONS_12_HOURS,
-  INVITE_OPTIONS_6_HOURS: fn(9893).INVITE_OPTIONS_6_HOURS,
-  INVITE_OPTIONS_8_HOURS: fn(9893).INVITE_OPTIONS_8_HOURS,
-  INVITE_OPTIONS_1_HOUR: fn(9893).INVITE_OPTIONS_1_HOUR,
-  INVITE_OPTIONS_30_MINUTES: fn(9893).INVITE_OPTIONS_30_MINUTES,
-  INVITE_OPTIONS_UNLIMITED: fn(9893).INVITE_OPTIONS_UNLIMITED,
-  INVITE_OPTIONS_ONCE: fn(9893).INVITE_OPTIONS_ONCE,
-  INVITE_OPTIONS_5_TIMES: fn(9893).INVITE_OPTIONS_5_TIMES,
-  INVITE_OPTIONS_10_TIMES: fn(9893).INVITE_OPTIONS_10_TIMES,
-  INVITE_OPTIONS_25_TIMES: fn(9893).INVITE_OPTIONS_25_TIMES,
-  INVITE_OPTIONS_50_TIMES: fn(9893).INVITE_OPTIONS_50_TIMES,
-  INVITE_OPTIONS_100_TIMES: fn(9893).INVITE_OPTIONS_100_TIMES
+  getMaxUsesOptions: fn(9914).MAX_USES_OPTIONS,
+  INVITE_OPTIONS_FOREVER: fn(9914).INVITE_OPTIONS_FOREVER,
+  INVITE_OPTIONS_1_DAY: fn(9914).INVITE_OPTIONS_1_DAY,
+  INVITE_OPTIONS_7_DAYS: fn(9914).INVITE_OPTIONS_7_DAYS,
+  INVITE_OPTIONS_14_DAYS: fn(9914).INVITE_OPTIONS_14_DAYS,
+  INVITE_OPTIONS_30_DAYS: fn(9914).INVITE_OPTIONS_30_DAYS,
+  INVITE_OPTIONS_60_DAYS: fn(9914).INVITE_OPTIONS_60_DAYS,
+  INVITE_OPTIONS_12_HOURS: fn(9914).INVITE_OPTIONS_12_HOURS,
+  INVITE_OPTIONS_6_HOURS: fn(9914).INVITE_OPTIONS_6_HOURS,
+  INVITE_OPTIONS_8_HOURS: fn(9914).INVITE_OPTIONS_8_HOURS,
+  INVITE_OPTIONS_1_HOUR: fn(9914).INVITE_OPTIONS_1_HOUR,
+  INVITE_OPTIONS_30_MINUTES: fn(9914).INVITE_OPTIONS_30_MINUTES,
+  INVITE_OPTIONS_UNLIMITED: fn(9914).INVITE_OPTIONS_UNLIMITED,
+  INVITE_OPTIONS_ONCE: fn(9914).INVITE_OPTIONS_ONCE,
+  INVITE_OPTIONS_5_TIMES: fn(9914).INVITE_OPTIONS_5_TIMES,
+  INVITE_OPTIONS_10_TIMES: fn(9914).INVITE_OPTIONS_10_TIMES,
+  INVITE_OPTIONS_25_TIMES: fn(9914).INVITE_OPTIONS_25_TIMES,
+  INVITE_OPTIONS_50_TIMES: fn(9914).INVITE_OPTIONS_50_TIMES,
+  INVITE_OPTIONS_100_TIMES: fn(9914).INVITE_OPTIONS_100_TIMES
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
@@ -152,8 +152,8 @@ const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
 export default RowTypes;
 export { RowTypes };
 export const generateRowsForQuery = function generateRowsForQuery(arg0) {
-  ({ query, inviteTargetType, omitUserIds, suggestedUserIds } = arg0);
-  ({ suggestedChannelIds, maxRowsWithoutQuery, omitGuildId } = arg0);
+  ({ query, inviteTargetType, omitUserIds, suggestedUserIds, omitGuildId } = arg0);
+  ({ suggestedChannelIds, maxRowsWithoutQuery } = arg0);
   const set = new Set();
   const rows = [];
   const counts = { numFriends: 0, numDms: 0, numGroupDms: 0, numGuildMembers: 0, numChannels: 0 };
@@ -184,7 +184,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
                 break;
               }
             }
-            channel = channel.getChannel(tmp4);
+            let channel = set2.getChannel(tmp4);
             if (null != channel) {
               obj = { type: constants.CHANNEL, item: null, isSuggested: true };
               obj.item = tmp8;
@@ -296,17 +296,18 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
     let obj7 = {};
     const merged5 = Object.assign(obj4);
     obj7.omitUserIds = omitUserIds;
+    obj7.omitGuildId = omitGuildId;
     obj7.shownUserIds = set;
     obj7.suggestedUserIds = suggestedUserIds;
     (function addQueriedSuggestedUsers(suggestedUserIds) {
-      ({ rows: c0, counts: c1, omitUserIds, shownUserIds } = suggestedUserIds);
+      ({ rows: c0, counts: c1, omitUserIds, omitGuildId: closure_2, shownUserIds } = suggestedUserIds);
       suggestedUserIds = suggestedUserIds.suggestedUserIds;
       if (null != suggestedUserIds) {
         items = [];
-        for (const item10012 of suggestedUserIds) {
-          if (!omitUserIds.has(item10012)) {
-            if (!shownUserIds.has(item10012)) {
-              let user = authStore.getUser(item10012);
+        for (const item10013 of suggestedUserIds) {
+          if (!omitUserIds.has(item10013)) {
+            if (!shownUserIds.has(item10013)) {
+              let user = authStore.getUser(item10013);
               if (null != user) {
                 let arr = items.push(tmp8);
               }
@@ -314,12 +315,18 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
           }
           continue;
         }
-        _undefined2(shownUserIds[9]);
+        _undefined2(set[9]);
         obj = { query: tmp, members: items, limit: 10 };
         const item = obj.queryMemberList(obj).forEach((record) => {
           record = record.record;
           shownUserIds.add(record.id);
-          _undefined.push({ type: constants.FRIEND, item: record, isSuggested: true, score: record.score });
+          obj = { type: constants.FRIEND, item: record, isSuggested: true, score: record.score, isGuildMember: null };
+          let isMemberResult = null != set;
+          if (isMemberResult) {
+            isMemberResult = member.isMember(tmp3, tmp4);
+          }
+          obj.isGuildMember = isMemberResult;
+          _undefined.push(obj);
           numFriends.numFriends = numFriends.numFriends + 1;
         });
         const queryMemberListResult = obj.queryMemberList(obj);
@@ -328,19 +335,21 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
     const obj8 = {};
     const merged6 = Object.assign(obj4);
     obj8.omitUserIds = omitUserIds;
+    obj8.omitGuildId = omitGuildId;
     obj8.shownUserIds = set;
     closure_129_0 = undefined;
     closure_129_1 = undefined;
     closure_129_2 = undefined;
     closure_129_3 = undefined;
-    ({ omitUserIds: closure_129_0, shownUserIds: closure_129_1, rows: closure_129_2, counts: closure_129_3 } = obj8);
+    closure_129_4 = undefined;
+    ({ omitUserIds: closure_129_0, omitGuildId: closure_129_1, shownUserIds: closure_129_2, rows: closure_129_3, counts: closure_129_4 } = obj8);
     obj5 = AutocompleteUtilsDefault;
     const obj9 = { query: obj8.query, limit: 50 };
     const item1 = obj5.queryDMUsers(obj9).forEach((record) => {
       record = record.record;
       if (!_undefined.has(record.id)) {
-        obj = _undefined2;
-        if (!_undefined2.has(record.id)) {
+        obj = set;
+        if (!set.has(record.id)) {
           const dMFromUserId = ChannelStore.getDMFromUserId(record.id);
           let tmp4 = null != dMFromUserId;
           if (tmp4) {
@@ -348,12 +357,17 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
           }
           if (tmp4) {
             obj.add(record.id);
-            obj = { type: null, item: null, isSuggested: false, score: null };
+            obj = { type: null, item: null, isSuggested: false, score: null, isGuildMember: null };
             obj.type = obj.DM;
             obj.item = record;
             obj.score = record.score;
-            dependencyMap.push(obj);
-            set.numDms = set.numDms + 1;
+            let isMemberResult = null != c1;
+            if (isMemberResult) {
+              isMemberResult = GuildMemberStore.isMember(tmp9, tmp10);
+            }
+            obj.isGuildMember = isMemberResult;
+            EmbeddedActivitiesStore.push(obj);
+            set2.numDms = set2.numDms + 1;
           }
         }
       }
@@ -372,27 +386,34 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
     const obj11 = {};
     const merged7 = Object.assign(obj4);
     obj11.omitUserIds = omitUserIds;
+    obj11.omitGuildId = omitGuildId;
     obj11.shownUserIds = set;
     closure_131_0 = undefined;
     closure_131_1 = undefined;
     closure_131_2 = undefined;
     closure_131_3 = undefined;
-    ({ rows: closure_131_0, counts: closure_131_1, omitUserIds: closure_131_2, shownUserIds: closure_131_3, query: query3 } = obj11);
+    closure_131_4 = undefined;
+    ({ rows: closure_131_0, counts: closure_131_1, omitUserIds: closure_131_2, omitGuildId: closure_131_3, shownUserIds: closure_131_4, query: query3 } = obj11);
     obj10 = AutocompleteUtilsDefault;
     const obj12 = { query: query3, limit: 500, _fuzzy: false };
     const queryGroupDMsResult = obj7.queryGroupDMs(obj10);
     const item3 = obj10.queryFriends(obj12).forEach((record) => {
       record = record.record;
-      let hasItem = dependencyMap.has(record.id);
+      let hasItem = set.has(record.id);
       if (!hasItem) {
-        hasItem = set.has(record.id);
+        hasItem = set2.has(record.id);
       }
       if (!hasItem) {
-        set.add(record.id);
-        obj = { type: null, item: null, isSuggested: false, score: null };
+        set2.add(record.id);
+        obj = { type: null, item: null, isSuggested: false, score: null, isGuildMember: null };
         obj.type = obj.FRIEND;
         obj.item = record;
         obj.score = record.score;
+        let isMemberResult = null != EmbeddedActivitiesStore;
+        if (isMemberResult) {
+          isMemberResult = GuildMemberStore.isMember(tmp7, tmp8);
+        }
+        obj.isGuildMember = isMemberResult;
         _undefined.push(obj);
         _undefined2.numFriends = _undefined2.numFriends + 1;
       }
@@ -426,7 +447,7 @@ export const groupInviteSuggestions = function groupInviteSuggestions(arg0, depe
   const items2 = [items, items1];
   return items2;
 };
-export const getMostRecentDMedUser = function getMostRecentDMedUser(set, id) {
+export const getMostRecentDMedUser = function getMostRecentDMedUser(has, dependencyMap) {
   const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
   obj = privateChannelIds[Symbol.iterator]();
   while (obj !== undefined) {
@@ -438,12 +459,12 @@ export const getMostRecentDMedUser = function getMostRecentDMedUser(set, id) {
           let recipientId = obj2.getRecipientId();
           let tmp9 = recipientId;
           if (null != recipientId) {
-            if (!set.has(tmp9)) {
+            if (!has.has(tmp9)) {
               let user = UserStore.getUser(tmp9);
               let tmp14 = user;
               if (null != user) {
                 if (!tmp14.bot) {
-                  if (!isGuildMember(id, tmp14.id)) {
+                  if (!isGuildMember(dependencyMap, tmp14.id)) {
                     obj.return();
                     return tmp14;
                   }

@@ -1,9 +1,9 @@
-// === Module 10951: ApplicationStreamActivityStatus ===
+// === Module 10970: ApplicationStreamActivityStatus ===
 
-// Module 10951 (ApplicationStreamActivityStatus)
+// Module 10970 (ApplicationStreamActivityStatus)
 import util from "util" /* 1114 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10952 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10955 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10971 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10974 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,7 +51,7 @@ export default function ApplicationStreamActivityStatus(hideText) {
   }
   let tmp12 = !hideIcon;
   if (!hideIcon) {
-    obj = { icon: tmp7(10953).TvIcon, style: iconStyle };
+    obj = { icon: tmp7(10972).TvIcon, style: iconStyle };
     tmp12 = React3(ActivityStatusIconDefault, obj);
   }
   const children = [tmp12, ];

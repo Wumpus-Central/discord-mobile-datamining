@@ -1,12 +1,12 @@
-// === Module 7920: Badge ===
+// === Module 7942: Badge ===
 
-// Module 7920 (Badge)
+// Module 7942 (Badge)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let obj = { badge: null, badgeClassic: null, mask: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.badge = obj;

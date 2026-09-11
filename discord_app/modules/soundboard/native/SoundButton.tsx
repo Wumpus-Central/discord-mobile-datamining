@@ -1,12 +1,12 @@
-// === Module 17162: SoundButton ===
+// === Module 17151: SoundButton ===
 
-// Module 17162 (SoundButton)
+// Module 17151 (SoundButton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4341 */;
-import spring from "spring" /* 5024 */;
-import EmojiDefault from "Emoji" /* 7182 */;
-import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12005 */;
-import openSoundboardSoundPreviewActionSheetDefault from "openSoundboardSoundPreviewActionSheet" /* 17168 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
+import spring from "spring" /* 5025 */;
+import EmojiDefault from "Emoji" /* 7203 */;
+import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12028 */;
+import openSoundboardSoundPreviewActionSheetDefault from "openSoundboardSoundPreviewActionSheet" /* 17157 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -16,7 +16,7 @@ function SoundButtonEmoji(arg0) {
   ({ sound, sharedValues } = arg0);
   const tmp = closure_9();
   let animationConfig = { sharedValues, scaleFactors: { pressed: 0.8, playing: 1.2 } };
-  let obj1 = animationConfig(4341);
+  let obj1 = animationConfig(4343);
   const fn = function o() {
     const pressed = isPlayingSound.sharedValues.pressed;
     const playing = isPlayingSound.sharedValues.playing;
@@ -58,14 +58,14 @@ function SoundButtonEmoji(arg0) {
     obj.transform = items2;
     return obj;
   };
-  animationConfig = { animationConfig, withDelay: animationConfig(4341).withDelay, withSpring: animationConfig(5024).withSpring, interpolate: animationConfig(4341).interpolate, SPRING_CONFIG };
+  animationConfig = { animationConfig, withDelay: animationConfig(4343).withDelay, withSpring: animationConfig(5025).withSpring, interpolate: animationConfig(4343).interpolate, SPRING_CONFIG };
   fn.__closure = animationConfig;
   fn.__workletHash = 13932429225740;
   fn.__initData = __initData;
   animationConfig = { sharedValues, scaleFactors: { pressed: 0.7200000000000001, playing: 1.08 }, playingAnimationDelay: 100, pressedRotationDegrees: -15 };
   closure_129_0 = animationConfig;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  let obj4 = animationConfig(4341);
+  let obj4 = animationConfig(4343);
   const fn2 = function o() {
     const pressed = isPlayingSound.sharedValues.pressed;
     const playing = isPlayingSound.sharedValues.playing;
@@ -107,7 +107,7 @@ function SoundButtonEmoji(arg0) {
     obj.transform = items2;
     return obj;
   };
-  obj1 = { animationConfig, withDelay: animationConfig(4341).withDelay, withSpring: animationConfig(5024).withSpring, interpolate: animationConfig(4341).interpolate, SPRING_CONFIG };
+  obj1 = { animationConfig, withDelay: animationConfig(4343).withDelay, withSpring: animationConfig(5025).withSpring, interpolate: animationConfig(4343).interpolate, SPRING_CONFIG };
   fn2.__closure = obj1;
   fn2.__workletHash = 13932429225740;
   fn2.__initData = __initData;
@@ -130,9 +130,9 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(View);
 const SPRING_CONFIG = { damping: 10, stiffness: 300, mass: 1 };
-fn(4605);
+fn(4606);
 let obj = { button: null, buttonPressed: null, buttonDisabled: null, buttonPlaying: null, playingBackground: null, emoji: null, emojiWrapper: null, text: null, textPlaying: null, lock: null };
-obj = { marginTop: 4, height: fn(17155).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+obj = { marginTop: 4, height: fn(17144).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.button = obj;
 obj.buttonPressed = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
@@ -154,7 +154,7 @@ obj.textPlaying = { marginHorizontal: 6 };
 const size1 = { position: "absolute", top: nativeDefault.space.PX_12, end: nativeDefault.space.PX_12, width: 12, height: 12, tintColor: nativeDefault.colors.WHITE };
 obj.lock = size1;
 let closure_9 = createStyles.createStyles(obj);
-let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(5173).PressableOpacity);
+let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(5174).PressableOpacity);
 const __initData = { code: "function SoundButtonTsx1(){const{animationConfig,withDelay,withSpring,interpolate,SPRING_CONFIG}=this.__closure;var _animationConfig$play,_animationConfig$pres,_animationConfig;const isNotPressed=animationConfig.sharedValues.pressed.get()===0;const isPlaying=animationConfig.sharedValues.playing.get()>0;const shouldDoPlayingAnimation=isNotPressed&&isPlaying;const playingAnimationScaleValue=withDelay((_animationConfig$play=animationConfig.playingAnimationDelay)!==null&&_animationConfig$play!==void 0?_animationConfig$play:0,withSpring(interpolate(animationConfig.sharedValues.playing.get(),[0,1],[1,animationConfig.scaleFactors.playing]),SPRING_CONFIG));const pressedAnimationScaleValue=withSpring(interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[1,animationConfig.scaleFactors.pressed]),SPRING_CONFIG);const rotationScaleValue=interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[0,(_animationConfig$pres=(_animationConfig=animationConfig)===null||_animationConfig===void 0?void 0:_animationConfig.pressedRotationDegrees)!==null&&_animationConfig$pres!==void 0?_animationConfig$pres:0]);return{transform:[{scale:shouldDoPlayingAnimation?playingAnimationScaleValue:pressedAnimationScaleValue},{rotate:rotationScaleValue+\"deg\"}]};}" };
 let obj1 = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
 size = fn(2);

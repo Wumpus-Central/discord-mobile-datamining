@@ -1,12 +1,12 @@
-// === Module 15433: DisplayNameStylesColorPickerSheet ===
+// === Module 15415: DisplayNameStylesColorPickerSheet ===
 
-// Module 15433 (DisplayNameStylesColorPickerSheet)
+// Module 15415 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import HapticUtils from "HapticUtils" /* 4573 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14672 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14648 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const getColorPresetsForEffect = fn(1389).getColorPresetsForEffect;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { header: { paddingTop: 4 }, headerTrailing: { justifyContent: "center", alignItems: "center" }, container: { flex: 1 }, contentContainer: null, presetGrid: null, presetRow: null, presetColor: null, presetColorSelected: null, buttonsContainer: null, button: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 createStyles.contentContainer = createStyles;

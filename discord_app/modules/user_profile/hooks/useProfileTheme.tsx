@@ -1,18 +1,18 @@
-// === Module 8290: useProfileTheme ===
+// === Module 8311: useProfileTheme ===
 
-// Module 8290 (useProfileTheme)
+// Module 8311 (useProfileTheme)
 import initialize from "initialize" /* 504 */;
 import shims from "shims" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import shared from "shared" /* 4456 */;
-import useThemeDefault from "useTheme" /* 4540 */;
-import useAvatarColor from "useAvatarColor" /* 8195 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8292 */;
+import shared from "shared" /* 4458 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import useAvatarColor from "useAvatarColor" /* 8217 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8313 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
-const useEffectiveThemeOverride = fn(8291).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(8312).useEffectiveThemeOverride;
 const ThemeTypes = fn(1074).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
@@ -85,21 +85,21 @@ export default function useProfileTheme(arg0) {
         const tmp4Result3 = UserProfileGradientUtils;
       }
     }
-    if (tmp16 !== ThemeTypes.DARK) {
-      let isThemeLightResult = tmp16 === ThemeTypes.DARK;
+    if (tmp16 !== ThemeTypes.ASH) {
+      let isThemeLightResult = tmp16 === ThemeTypes.ASH;
       if (isThemeLightResult) {
         isThemeLightResult = shared.isThemeLight(tmp2);
         const tmp4Result4 = shared;
       }
-      let DARKER = tmp16;
+      let DARK = tmp16;
       if (isThemeLightResult) {
-        DARKER = ThemeTypes.DARKER;
+        DARK = ThemeTypes.DARK;
       }
     } else {
       shared;
-      DARKER = tmp2;
+      DARK = tmp2;
     }
-    obj = { theme: DARKER, primaryColor: first, secondaryColor: hex2intResult };
+    obj = { theme: DARK, primaryColor: first, secondaryColor: hex2intResult };
     return obj;
   }
 };

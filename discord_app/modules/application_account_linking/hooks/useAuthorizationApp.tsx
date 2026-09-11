@@ -1,8 +1,8 @@
-// === Module 7219: useAuthorizationApp ===
+// === Module 7240: useAuthorizationApp ===
 
-// Module 7219 (useAuthorizationApp)
+// Module 7240 (useAuthorizationApp)
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4833 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 
 const require = fn;

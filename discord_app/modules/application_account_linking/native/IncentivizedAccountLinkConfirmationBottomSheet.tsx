@@ -1,21 +1,21 @@
-// === Module 17040: IncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 17029: IncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 17040 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 17029 (IncentivizedAccountLinkConfirmationBottomSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8880 */;
-import PromoSheet from "PromoSheet" /* 10300 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 13026 */;
-import _modDef15914 from "module_15914" /* 15914 */;
-import _modDef15915 from "module_15915" /* 15915 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8901 */;
+import PromoSheet from "PromoSheet" /* 10319 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 13049 */;
+import _modDef15899 from "module_15899" /* 15899 */;
+import _modDef15900 from "module_15900" /* 15900 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -30,18 +30,18 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     obj = { source: null, style: null };
-    obj = { uri: _modDef15914 };
+    obj = { uri: _modDef15899 };
     obj.source = obj;
     const size = { width: v150, height: v150 };
     obj.style = size;
-    let tmp3Result = <Image uri={_modDef15914} />;
+    let tmp3Result = <Image uri={_modDef15899} />;
     let tmp8 = importDefault;
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
       const obj1 = { url: null, style: null };
       let tmp4Result = APNGDecorationNativeComponentDefault;
-      obj1.url = _modDef15915;
+      obj1.url = _modDef15900;
       const size1 = { width: v150, height: v150 };
       obj1.style = size1;
       tmp3Result = <tmp4Result url={null} style={null} />;
@@ -51,7 +51,7 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
       let obj2 = { source: null, resizeMode: "contain", style: null };
       const obj3 = { uri: null };
       tmp4Result = FastImageDefault;
-      obj3.uri = _modDef15915;
+      obj3.uri = _modDef15900;
       obj2.source = obj3;
       const size2 = { width: v150, height: v150 };
       obj2.style = size2;

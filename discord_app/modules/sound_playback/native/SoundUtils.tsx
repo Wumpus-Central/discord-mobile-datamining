@@ -1,6 +1,6 @@
-// === Module 9976: sound_playback/SoundUtils ===
+// === Module 9997: sound_playback/SoundUtils ===
 
-// Module 9976 (sound_playback/SoundUtils)
+// Module 9997 (sound_playback/SoundUtils)
 import _mod17 from "module_17" /* 17 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import size from "module_2" /* 2 */;

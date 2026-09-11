@@ -1,9 +1,9 @@
-// === Module 7020: EyeIcon ===
+// === Module 7041: EyeIcon ===
 
-// Module 7020 (EyeIcon)
+// Module 7041 (EyeIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod7021 from "module_7021" /* 7021 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod7042 from "module_7042" /* 7042 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const EyeIcon = function EyeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7021, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7042, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

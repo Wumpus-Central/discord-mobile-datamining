@@ -1,10 +1,10 @@
-// === Module 4759: LinkUtils ===
+// === Module 4760: LinkUtils ===
 
-// Module 4759 (LinkUtils)
-import RegexUtilsDefault from "RegexUtils" /* 4592 */;
+// Module 4760 (LinkUtils)
+import RegexUtilsDefault from "RegexUtils" /* 4593 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 const Constants = fn(1074);
 const ME = Constants.ME;

@@ -1,18 +1,18 @@
-// === Module 16988: SpamMessageList ===
+// === Module 16977: SpamMessageList ===
 
-// Module 16988 (SpamMessageList)
+// Module 16977 (SpamMessageList)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import transitionToChannel from "transitionToChannel" /* 4616 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import useMountEffectDefault from "useMountEffect" /* 5042 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7653 */;
-import MetricEvents from "MetricEvents" /* 7658 */;
-import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 16989 */;
+import transitionToChannel from "transitionToChannel" /* 4617 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import useMountEffectDefault from "useMountEffect" /* 5043 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7674 */;
+import MetricEvents from "MetricEvents" /* 7679 */;
+import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 16978 */;
 import noop from "module_19" /* 19 */;
 
-const MessageRequestEmptyDefault = tmp2(16983);
+const MessageRequestEmptyDefault = tmp2(16972);
 require = fn;
 function PendingSpamMessageRequestRow(isLastRow) {
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isLastRow);
@@ -158,7 +158,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { sectionContainer: null, rowContainer: null, actionContainer: null, actionButton: null, acceptButton: null, pressableRow: null, activityIndicator: null, list: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 };
 createStyles.sectionContainer = createStyles;
@@ -181,10 +181,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = closure_10();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  let obj = goToMessageRequestPreview(16982);
+  let obj = goToMessageRequestPreview(16971);
   dependencyMap = obj.useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj1 = goToMessageRequestPreview(16980);
+  let obj1 = goToMessageRequestPreview(16969);
   const hasSingleMessageRequest = obj1.useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     let obj = { num_spam_message_requests };

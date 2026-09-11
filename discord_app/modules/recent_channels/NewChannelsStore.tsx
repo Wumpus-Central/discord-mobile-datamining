@@ -1,20 +1,20 @@
-// === Module 7584: NewChannelsStore ===
+// === Module 7605: NewChannelsStore ===
 
-// Module 7584 (NewChannelsStore)
+// Module 7605 (NewChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7162 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 7334 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7183 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7355 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ReadStateStore from "ReadStateStore" /* 4620 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 
 require = fn;
 function guildHasCommunity(nextResult) {

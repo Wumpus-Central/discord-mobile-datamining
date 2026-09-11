@@ -1,6 +1,6 @@
-// === Module 6004: ? ===
+// === Module 6025: ? ===
 
-// Module 6004
+// Module 6025
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiSlotsAbstractUI-2x.png.js");

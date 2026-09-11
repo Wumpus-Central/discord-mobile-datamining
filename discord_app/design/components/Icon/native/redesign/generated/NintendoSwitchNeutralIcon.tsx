@@ -1,9 +1,9 @@
-// === Module 8952: NintendoSwitchNeutralIcon ===
+// === Module 8973: NintendoSwitchNeutralIcon ===
 
-// Module 8952 (NintendoSwitchNeutralIcon)
+// Module 8973 (NintendoSwitchNeutralIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod8953 from "module_8953" /* 8953 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod8974 from "module_8974" /* 8974 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const NintendoSwitchNeutralIcon = function NintendoSwitchNeutralIcon(colo
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8953, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8974, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

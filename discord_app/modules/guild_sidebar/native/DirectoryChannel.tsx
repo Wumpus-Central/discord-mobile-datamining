@@ -1,19 +1,19 @@
-// === Module 16291: DirectoryChannel ===
+// === Module 16280: DirectoryChannel ===
 
-// Module 16291 (DirectoryChannel)
+// Module 16280 (DirectoryChannel)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10985 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11005 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 
 require = fn;
-const UnreadSetting = fn(4787).UnreadSetting;
+const UnreadSetting = fn(4788).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { container: null };
-obj = { marginVertical: fn(10188).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+obj = { marginVertical: fn(10207).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 obj.container = obj;
 let closure_8 = createStyles.createStyles(obj);
 const size = fn(2);
@@ -48,14 +48,14 @@ export default noop.memo((guildId) => {
   if (null != stateFromStores) {
     obj = { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null };
     obj = { channel: stateFromStores };
-    obj.accessibilityLabel = id(9840)(obj);
+    obj.accessibilityLabel = id(9861)(obj);
     const obj1 = { selected };
     obj.accessibilityState = obj1;
     obj.channel = stateFromStores;
     obj.selected = selected;
     obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(16198), { channel: stateFromStores });
-    const tmp10 = id(16198);
+    tmp7 = jsx(id(16187), { channel: stateFromStores });
+    const tmp10 = id(16187);
   }
   return tmp7;
 });

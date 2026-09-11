@@ -1,11 +1,11 @@
-// === Module 17197: useStableParticipant ===
+// === Module 17186: useStableParticipant ===
 
-// Module 17197 (useStableParticipant)
+// Module 17186 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import NicknameUtils from "NicknameUtils" /* 4757 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 8280 */;
-import participantHasVideoDefault from "participantHasVideo" /* 9692 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+import NicknameUtils from "NicknameUtils" /* 4758 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 8301 */;
+import participantHasVideoDefault from "participantHasVideo" /* 9713 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -22,7 +22,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(4626).ParticipantTypes;
+const ParticipantTypes = fn(4627).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
@@ -38,7 +38,7 @@ export default function useStableParticipant(id, arg1, arg2) {
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          let obj = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 41.774, isSelf: 42.358 };
+          let obj = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0, isSelf: 2 };
           id = AuthenticationStore.getId();
           obj.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);

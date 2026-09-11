@@ -1,9 +1,9 @@
-// === Module 9984: shouldShowEndStageModal ===
+// === Module 10005: shouldShowEndStageModal ===
 
-// Module 9984 (shouldShowEndStageModal)
+// Module 10005 (shouldShowEndStageModal)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5468 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5471 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5469 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5472 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
 const require = fn;

@@ -1,6 +1,6 @@
-// === Module 5978: ? ===
+// === Module 5999: ? ===
 
-// Module 5978
+// Module 5999
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DisplayNameStylesV2AbstractUI-2x.png.js");

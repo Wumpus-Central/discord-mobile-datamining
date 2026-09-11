@@ -1,9 +1,9 @@
-// === Module 6039: FavoritesSpotIllustration ===
+// === Module 6060: FavoritesSpotIllustration ===
 
-// Module 6039 (FavoritesSpotIllustration)
+// Module 6060 (FavoritesSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6040 from "module_6040" /* 6040 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6061 from "module_6061" /* 6061 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const FavoritesSpotIllustration = function FavoritesSpotIllustration(widt
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6040 };
+  obj = { uri: _modDef6061 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const FavoritesSpotIllustration = function FavoritesSpotIllustration(widt
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6040 });
+  return jsx(FastImageDefault, { uri: _modDef6061 });
 };

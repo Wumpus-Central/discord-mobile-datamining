@@ -1,16 +1,16 @@
-// === Module 13347: GuildActionSheetMemberCount ===
+// === Module 13370: GuildActionSheetMemberCount ===
 
-// Module 13347 (GuildActionSheetMemberCount)
+// Module 13370 (GuildActionSheetMemberCount)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: null, dotContainer: null, onlineDot: null, offlineDot: null, refreshText: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm };
 obj.dot = size;
@@ -30,7 +30,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx");
 
 export default noop.memo(function MemberCount(arg0) {
-  ({ type, count, color, dotContainerWidth } = arg0);
+  ({ type, count, color, dotContainerWidth, textVariant } = arg0);
   if (null == count) {
     const intl2 = util.intl;
     if ("online" === type) {
@@ -64,10 +64,16 @@ export default noop.memo(function MemberCount(arg0) {
     obj2.style = items1;
     obj1.children = React3(View, obj2);
     const items2 = [React3(View, obj1), ];
+    if (textVariant == null) {
+      textVariant = "text-sm/normal";
+    }
+    const obj3 = { variant: textVariant, color: null, lineClamp: 1, style: null, children: null };
     if (color == null) {
       color = "text-default";
     }
-    const obj3 = { variant: "text-sm/normal", color, lineClamp: 1, style: tmp12.refreshText, children: intl.format(etqpUG, obj) };
+    obj3.color = color;
+    obj3.style = tmp12.refreshText;
+    obj3.children = intl.format(etqpUG, obj);
     items2[1] = React3(Text_Text.Text, obj3);
     obj.children = items2;
     return React4(View, obj);

@@ -1,33 +1,33 @@
-// === Module 17909: QuestMobileEmbedVisibilityManager ===
+// === Module 17900: QuestMobileEmbedVisibilityManager ===
 
-// Module 17909 (QuestMobileEmbedVisibilityManager)
+// Module 17900 (QuestMobileEmbedVisibilityManager)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import ChannelTypes from "ChannelTypes" /* 1094 */;
 import privDefault from "priv" /* 1437 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4462 */;
-import RootNavigationRef from "RootNavigationRef" /* 4463 */;
-import useAlertStore2 from "useAlertStore" /* 4951 */;
-import QuestTypes from "QuestTypes" /* 5497 */;
-import AdCreativeType from "AdCreativeType" /* 5501 */;
-import getQuestLogger from "getQuestLogger" /* 7760 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7779 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 11559 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
+import RootNavigationRef from "RootNavigationRef" /* 4465 */;
+import useAlertStore2 from "useAlertStore" /* 4952 */;
+import QuestTypes from "QuestTypes" /* 5498 */;
+import AdCreativeType from "AdCreativeType" /* 5502 */;
+import getQuestLogger from "getQuestLogger" /* 7781 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 11581 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ActionSheetStore from "ActionSheetStore" /* 4295 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
-import VoicePanelStore from "VoicePanelStore" /* 4813 */;
+import ActionSheetStore from "ActionSheetStore" /* 4297 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
+import VoicePanelStore from "VoicePanelStore" /* 4814 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import AlertStore from "AlertStore" /* 11616 */;
+import AlertStore from "AlertStore" /* 11638 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
-import QuestStore from "QuestStore" /* 7754 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import QuestStore from "QuestStore" /* 7775 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
-const ChannelDetailsStore = fn(7928);
+const ChannelDetailsStore = fn(7950);
 ({ useChannelDetailsStore: closure_7, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
 const isTextChannel = fn(1961).isTextChannel;
-let closure_16 = fn(11268).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_16 = fn(11290).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1074).MessageStates;
 function log() {
   if (questLogger == null) {
@@ -82,7 +82,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const set = new Set();
       codedLinks = codedLinks.codedLinks;
       const item = codedLinks.forEach((type, questContentPosition) => {
-        if (type.type === applyArgumentsResult(4593).CodedLinkType.QUESTS_EMBED) {
+        if (type.type === applyArgumentsResult(4594).CodedLinkType.QUESTS_EMBED) {
           const code = type.code;
           let obj = set;
           if (!set.has(code)) {
@@ -207,8 +207,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(10159).isChannelFocused();
-      applyArgumentsResult(4462);
+      let isChannelFocusedResult = applyArgumentsResult(10179).isChannelFocused();
+      applyArgumentsResult(4464);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }

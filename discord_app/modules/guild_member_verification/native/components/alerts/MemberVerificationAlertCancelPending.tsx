@@ -1,7 +1,7 @@
-// === Module 5590: MemberVerificationAlertCancelPending ===
+// === Module 5591: MemberVerificationAlertCancelPending ===
 
-// Module 5590 (MemberVerificationAlertCancelPending)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5591 */;
+// Module 5591 (MemberVerificationAlertCancelPending)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5592 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -35,13 +35,13 @@ export default function MemberVerificationAlertCancelPending(guildId) {
     confirmText = intl3.string(tmp7(1114).t.OzHPde);
   }
   obj = { children: null };
-  const items1 = [closure_4(guildId(5025).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
+  const items1 = [closure_4(guildId(5026).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
   obj = { text: null, variant: "secondary", onPress: null };
   const intl4 = tmp7(1114).intl;
   obj.text = intl4.string(guildId(1114).t.bANR0R);
   obj.onPress = onClose;
-  items1[1] = closure_4(guildId(5025).Button, obj);
+  items1[1] = closure_4(guildId(5026).Button, obj);
   obj.children = items1;
   obj.buttons = closure_6(closure_5, obj);
-  return closure_4(onClose(5587), obj);
+  return closure_4(onClose(5588), obj);
 };

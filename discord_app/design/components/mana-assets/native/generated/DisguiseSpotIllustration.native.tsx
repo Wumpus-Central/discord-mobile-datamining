@@ -1,9 +1,9 @@
-// === Module 5969: DisguiseSpotIllustration ===
+// === Module 5990: DisguiseSpotIllustration ===
 
-// Module 5969 (DisguiseSpotIllustration)
+// Module 5990 (DisguiseSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5970 from "module_5970" /* 5970 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5991 from "module_5991" /* 5991 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DisguiseSpotIllustration = function DisguiseSpotIllustration(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5970 };
+  obj = { uri: _modDef5991 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const DisguiseSpotIllustration = function DisguiseSpotIllustration(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5970 });
+  return jsx(FastImageDefault, { uri: _modDef5991 });
 };

@@ -1,8 +1,8 @@
-// === Module 10297: openFavoritesGuildLimitUpsell ===
+// === Module 10316: openFavoritesGuildLimitUpsell ===
 
-// Module 10297 (openFavoritesGuildLimitUpsell)
+// Module 10316 (openFavoritesGuildLimitUpsell)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import size from "module_2" /* 2 */;
 
 const FavoritesGuildUpsellSheet = "FavoritesGuildUpsellSheet";
@@ -10,6 +10,6 @@ const result = size.fileFinishedImporting("modules/favorites/utils/openFavorites
 
 export default function openFavoritesGuildLimitUpsell(limit) {
   const obj = { limit, variant: "limit_reached", source: "limit_reached" };
-  obj.openLazy(asyncRequireImpl(10298, dependencyMap.paths), FavoritesGuildUpsellSheet, obj);
+  obj.openLazy(asyncRequireImpl(10317, dependencyMap.paths), FavoritesGuildUpsellSheet, obj);
 };
 export const FAVORITES_UPSELL_SHEET_KEY = "FavoritesGuildUpsellSheet";

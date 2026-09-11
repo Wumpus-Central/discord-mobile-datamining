@@ -1,9 +1,9 @@
-// === Module 4735: RobloxSubgameUtils ===
+// === Module 4736: RobloxSubgameUtils ===
 
-// Module 4735 (RobloxSubgameUtils)
+// Module 4736 (RobloxSubgameUtils)
 import _modDef12 from "module_12" /* 12 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 4736 */;
-import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 4737 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 4737 */;
+import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 4738 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -145,11 +145,11 @@ export const updateRunningGameWithRobloxSubgameInfo = function updateRunningGame
           let tmp9 = require;
         }
         const obj1 = {};
-        obj1[tmp9(4736).RobloxMetadataKeys.ROBLOX_TIME_STARTED] = str.toString();
+        obj1[tmp9(4737).RobloxMetadataKeys.ROBLOX_TIME_STARTED] = str.toString();
         const universeId = subgameInfo.universeId;
         obj.sku = universeId;
         if (null != subgameInfo.placeId) {
-          obj1[tmp9(4736).RobloxMetadataKeys.PLACE_ID] = subgameInfo.placeId;
+          obj1[tmp9(4737).RobloxMetadataKeys.PLACE_ID] = subgameInfo.placeId;
         }
         const _Object = Object;
         let tmp13;

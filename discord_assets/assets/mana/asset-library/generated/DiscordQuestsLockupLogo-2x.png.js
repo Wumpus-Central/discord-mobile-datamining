@@ -1,6 +1,6 @@
-// === Module 5960: ? ===
+// === Module 5981: ? ===
 
-// Module 5960
+// Module 5981
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordQuestsLockupLogo-2x.png.js");

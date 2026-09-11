@@ -1,10 +1,10 @@
-// === Module 11887: GiftIntentGifModal ===
+// === Module 11910: GiftIntentGifModal ===
 
-// Module 11887 (GiftIntentGifModal)
+// Module 11910 (GiftIntentGifModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import NavigatorHeader from "NavigatorHeader" /* 5674 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import NavigatorHeader from "NavigatorHeader" /* 5675 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -12,55 +12,102 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
 let closure_13 = async function _sendGiftIntentGif(arg0) {
-  if (1 === tmp5) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
+      let obj = { value, done: true };
+      return obj;
     } else {
-      closure_129_4 = closure_129_2.trim().length > 0;
-      if (closure_129_4) {
-        let obj6 = closure_130_1(closure_130_2[10]);
-        const id2 = closure_129_0.id;
-        let obj2 = { location: closure_130_9.GIFTING };
-        c3 = 2;
-        c4 = 1;
-        let obj3 = { value: obj6.sendMessage(id2, closure_130_1(closure_130_2[11]).parse(closure_129_0, closure_129_2), true, obj2), done: false };
-        return obj3;
-      }
+      return { value: "HermesInternal", done: null };
     }
-  } else if (2 === tmp5) {
-    if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
-    }
-  } else if (arg0 === 1) {
-    c4 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c4 = 3;
-    return { value, done: true };
   } else {
-    const obj5 = { gift_intent_type: closure_129_1, is_custom_message: closure_129_4, location_stack: null };
-    const items = [closure_130_1(closure_130_2[13]).PREMIUM_GIFT_INTENT_CARD];
-    obj5.location_stack = items;
-    closure_130_1(closure_130_2[12]).track(closure_130_8.GIFT_INTENT_MESSAGE_SENT, obj5);
-    c4 = 3;
-    return { value: "HermesInternal", done: null };
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          ({ channel: closure_129_0, giftIntentType: closure_129_1, text: closure_129_2, gif: closure_129_3 } = closure_0);
+          closure_129_4 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: null };
+        }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            closure_129_4 = closure_129_2.trim().length > 0;
+            if (closure_129_4) {
+              let obj6 = closure_130_1(closure_130_2[10]);
+              const id2 = closure_129_0.id;
+              let obj7 = closure_130_1(closure_130_2[11]);
+              let obj2 = { location: closure_130_9.GIFTING };
+              c3 = 2;
+              c4 = 1;
+              let obj3 = { value: obj6.sendMessage(id2, obj7.parse(closure_129_0, closure_129_2), true, obj2), done: false };
+              return obj3;
+            }
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          const obj5 = { gift_intent_type: closure_129_1, is_custom_message: closure_129_4, location_stack: null };
+          const items = [closure_130_1(closure_130_2[13]).PREMIUM_GIFT_INTENT_CARD];
+          obj5.location_stack = items;
+          closure_130_1(closure_130_2[12]).track(closure_130_8.GIFT_INTENT_MESSAGE_SENT, obj5);
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+        obj2 = closure_130_1(closure_130_2[10]);
+        const id = closure_129_0.id;
+        obj3 = closure_130_1(closure_130_2[11]);
+        obj6 = { location: closure_130_9.GIFTING };
+        c3 = 3;
+        c4 = 1;
+        obj7 = { value: obj2.sendMessage(id, obj3.parse(closure_129_0, closure_129_3.url), true, obj6), done: false };
+        return obj7;
+      }
+    } catch (tmp33) {
+      c4 = tmp;
+      throw tmp33;
+    }
   }
-  obj2 = closure_130_1(closure_130_2[10]);
-  const id = closure_129_0.id;
-  obj3 = closure_130_1(closure_130_2[11]);
-  obj6 = { location: closure_130_9.GIFTING };
-  await obj2.sendMessage(id, obj3.parse(closure_129_0, closure_129_3.url), true, obj6);
-  closure_1 = tmp2;
-  ({ channel: closure_129_0, giftIntentType: closure_129_1, text: closure_129_2, gif: closure_129_3 } = closure_0);
-  return "PX_16";
 };
 function GiftIntentGifModalBody(channelId) {
   channelId = channelId.channelId;
@@ -173,10 +220,10 @@ function GiftIntentGifModalBody(channelId) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const MessageSendLocation = fn(4598).MessageSendLocation;
+const MessageSendLocation = fn(4599).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, messageContainer: null, pickerContainer: null, footer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;

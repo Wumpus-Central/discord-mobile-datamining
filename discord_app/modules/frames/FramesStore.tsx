@@ -1,15 +1,15 @@
-// === Module 9580: FramesStore ===
+// === Module 9601: FramesStore ===
 
-// Module 9580 (FramesStore)
+// Module 9601 (FramesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1085 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 9575 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 9582 */;
-import FramesConstants from "FramesConstants" /* 9581 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9596 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 9603 */;
+import FramesConstants from "FramesConstants" /* 9602 */;
 import size from "module_2" /* 2 */;
 
-({ FrameIntent: c2, FrameLayoutModes: c3, getFrameIntentForSurface: closure_4, isLaunched: hasOwnProperty, makeFrameId: metroRequire } = FramesConstants);
+({ FrameIntent: c2, FrameLayoutModes: c3, getChannelIdForSurface: closure_4, getFrameIntentForSurface: hasOwnProperty, isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
 const NOOP_TRUE = Constants.NOOP_TRUE;
 const map = new Map();
@@ -40,7 +40,7 @@ prototype["getAllFrames"] = function getAllFrames() {
 prototype["getFrameByIframeId"] = function getFrameByIframeId(iframeId) {
   const values = map.values();
   for (const item10009 of values) {
-    if (hasOwnProperty(item10009)) {
+    if (timestampProducer(item10009)) {
       if (item10009.data.iframeId === arg0) {
         obj.return();
         return item10009;
@@ -50,23 +50,31 @@ prototype["getFrameByIframeId"] = function getFrameByIframeId(iframeId) {
   }
 };
 prototype["getFrameBySurface"] = function getFrameBySurface(arg0, arg1) {
-  return map.get(timestampProducer(arg0, arg1));
+  return map.get(React5(arg0, arg1));
+};
+prototype["getFramesForSurface"] = function getFramesForSurface(arg0) {
+  closure_0 = arg0;
+  return Array.from(map.values()).filter((applicationId) => React5(applicationId.applicationId, closure_0) === applicationId.id);
+};
+prototype["getFramesForChannel"] = function getFramesForChannel(id) {
+  closure_0 = id;
+  return Array.from(map.values()).filter((surface) => React4(surface.surface) === closure_0);
 };
 FramesStoreClass.displayName = "FramesStore";
 const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
   FRAME_LAUNCH_START: function handleFrameLaunchStart(applicationId) {
     ({ frameId, surface } = applicationId);
-    const tmp = React4(surface);
+    const tmp = hasOwnProperty(surface);
     const result = map.set(frameId, { id: frameId, applicationId: applicationId.applicationId, intent: tmp, surface, state: "loading", data: null });
   },
-  FRAME_LAUNCH: function handleFrameLaunch(frameId) {
-    frameId = frameId.frameId;
+  FRAME_LAUNCH: function handleFrameLaunch(arg0) {
+    ({ frameId, hostWindowKey } = arg0);
     let obj = map;
-    ({ proxyTicket, customId, referrerId } = frameId);
+    ({ proxyTicket, customId, referrerId } = arg0);
     value = map.get(frameId);
     if (null != value) {
-      const tmp14 = getURLForApplicationDefault(value.applicationId);
-      if (null == tmp14) {
+      const tmp8 = getURLForApplicationDefault(value.applicationId);
+      if (null == tmp8) {
         obj.delete(frameId);
         if (frameId === frameId) {
           frameId = null;
@@ -75,12 +83,16 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
         obj = {};
         const merged = Object.assign(value);
         obj.state = "launched";
-        obj = { url: tmp14, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, prefersPictureInPictureOnNavigateAway: false, iframeId: null, customId: null, referrerId: null };
+        obj = { url: tmp8, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, prefersPictureInPictureOnNavigateAway: false, iframeId: null, hostWindowKey: null, customId: null, referrerId: null };
         const _Date = Date;
         obj.connectedSince = Date.now();
         obj.layoutMode = constants2.FOCUSED;
         obj.activityPanelMode = ActivityPanelModes.PANEL;
         obj.proxyTicket = proxyTicket;
+        if (hostWindowKey == null) {
+          hostWindowKey = null;
+        }
+        obj.hostWindowKey = hostWindowKey;
         obj.customId = customId;
         obj.referrerId = referrerId;
         obj.data = obj;
@@ -121,7 +133,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     if (null != frameId) {
       let obj = map;
       value = map.get(frameId);
-      let tmp5 = hasOwnProperty(value);
+      let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -146,7 +158,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     if (null != frameId) {
       let obj = map;
       value = map.get(frameId);
-      let tmp5 = hasOwnProperty(value);
+      let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -171,7 +183,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     if (null != frameId) {
       let obj = map;
       value = map.get(frameId);
-      let tmp4 = hasOwnProperty(value);
+      let tmp4 = timestampProducer(value);
       if (tmp4) {
         let flag2 = tmp(value.data);
         if (flag2) {
@@ -204,7 +216,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     if (null != frameId) {
       let obj = map;
       value = map.get(frameId);
-      let tmp5 = hasOwnProperty(value);
+      let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -229,7 +241,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     if (null != frameId) {
       let obj = map;
       value = map.get(frameId);
-      let tmp5 = hasOwnProperty(value);
+      let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -254,7 +266,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     if (null != frameId) {
       let obj = map;
       value = map.get(frameId);
-      let tmp5 = hasOwnProperty(value);
+      let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -279,7 +291,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     if (null != frameId) {
       let obj = map;
       value = map.get(frameId);
-      let tmp4 = hasOwnProperty(value);
+      let tmp4 = timestampProducer(value);
       if (tmp4) {
         let flag2 = tmp(value.data);
         if (flag2) {
@@ -306,7 +318,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     if (null != frameId) {
       let obj = map;
       value = map.get(frameId);
-      let tmp4 = hasOwnProperty(value);
+      let tmp4 = timestampProducer(value);
       if (tmp4) {
         let flag2 = value.data.iframeId === tmp;
         if (flag2) {
@@ -326,12 +338,62 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     }
     return flag;
   },
+  FRAME_HOST_WINDOW_MOUNT: function handleFrameHostWindowMount(frameId) {
+    frameId = frameId.frameId;
+    let flag = false;
+    if (null != frameId) {
+      let obj = map;
+      value = map.get(frameId);
+      let tmp5 = timestampProducer(value);
+      if (tmp5) {
+        let flag2 = tmp2(value.data);
+        if (flag2) {
+          obj = {};
+          const merged = Object.assign(value);
+          obj = {};
+          const merged1 = Object.assign(value.data);
+          obj.hostWindowKey = tmp;
+          obj.data = obj;
+          const result = obj.set(frameId, obj);
+          flag2 = true;
+        }
+        tmp5 = flag2;
+      }
+      flag = tmp5;
+    }
+    return flag;
+  },
+  FRAME_HOST_WINDOW_UNMOUNT: function handleFrameHostWindowUnmount(frameId) {
+    frameId = frameId.frameId;
+    let flag = false;
+    if (null != frameId) {
+      let obj = map;
+      value = map.get(frameId);
+      let tmp4 = timestampProducer(value);
+      if (tmp4) {
+        let flag2 = value.data.hostWindowKey === tmp;
+        if (flag2) {
+          obj = {};
+          const merged = Object.assign(value);
+          obj = {};
+          const merged1 = Object.assign(value.data);
+          obj.hostWindowKey = null;
+          obj.data = obj;
+          const result = obj.set(frameId, obj);
+          flag2 = true;
+        }
+        tmp4 = flag2;
+      }
+      flag = tmp4;
+    }
+    return flag;
+  },
   CHANNEL_SELECT: function handleChannelSelect() {
     let flag = false;
     if (null != frameId) {
       let obj = map;
       value = map.get(frameId);
-      let tmp5 = hasOwnProperty(value);
+      let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {

@@ -1,6 +1,6 @@
-// === Module 14176: Tooltip/Tooltip ===
+// === Module 14152: Tooltip/Tooltip ===
 
-// Module 14176 (Tooltip/Tooltip)
+// Module 14152 (Tooltip/Tooltip)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = { UP: "UP", DOWN: "DOWN" };
 obj = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
-fn(4605);
+fn(4606);
 obj = { container: { padding: 10, borderRadius: nativeDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, label: null, title: null, arrow: null };
 const createStyles = { fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
 obj.label = createStyles;

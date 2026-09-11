@@ -1,9 +1,9 @@
-// === Module 6189: GiftCardRight3dIllustration ===
+// === Module 6210: GiftCardRight3dIllustration ===
 
-// Module 6189 (GiftCardRight3dIllustration)
+// Module 6210 (GiftCardRight3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6190 from "module_6190" /* 6190 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6211 from "module_6211" /* 6211 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GiftCardRight3dIllustration = function GiftCardRight3dIllustration(
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6190 };
+  obj = { uri: _modDef6211 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const GiftCardRight3dIllustration = function GiftCardRight3dIllustration(
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6190 });
+  return jsx(FastImageDefault, { uri: _modDef6211 });
 };

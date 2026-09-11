@@ -1,22 +1,22 @@
-// === Module 16692: VibegrationsNativeChat ===
+// === Module 16680: VibegrationsNativeChat ===
 
-// Module 16692 (VibegrationsNativeChat)
+// Module 16680 (VibegrationsNativeChat)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4595 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Stack_Stack from "Stack/Stack" /* 5023 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16693 */;
-import VibegrationsMessageAuthorDefault from "VibegrationsMessageAuthor" /* 16694 */;
-import VibegrationsClarificationCardDefault from "VibegrationsClarificationCard" /* 16696 */;
-import VibegrationsSecretRequestCardDefault from "VibegrationsSecretRequestCard" /* 16698 */;
-import VibegrationsSettingsRequestCardDefault from "VibegrationsSettingsRequestCard" /* 16700 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Stack_Stack from "Stack/Stack" /* 5024 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16681 */;
+import VibegrationsMessageAuthorDefault from "VibegrationsMessageAuthor" /* 16682 */;
+import VibegrationsClarificationCardDefault from "VibegrationsClarificationCard" /* 16684 */;
+import VibegrationsSecretRequestCardDefault from "VibegrationsSecretRequestCard" /* 16686 */;
+import VibegrationsSettingsRequestCardDefault from "VibegrationsSettingsRequestCard" /* 16688 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 16675 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16678 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16663 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16666 */;
 
 require = fn;
 function ProposalCard(proposal) {
@@ -161,15 +161,15 @@ function AttachmentPills(projectId) {
         obj = { name: id.name };
         obj.accessibilityLabel = intl.formatToPlainString(closure_1(3590).QUFLUq, obj);
         obj = { variant: "text-xs/medium", color: "text-default", children: id.name };
-        obj.children = closure_1_14(projectId(4601).Text, obj);
-        let tmp12 = closure_1_14(projectId(5657).Card, obj, id.id);
+        obj.children = closure_1_14(projectId(4602).Text, obj);
+        let tmp12 = closure_1_14(projectId(5658).Card, obj, id.id);
       } else {
         const obj1 = { style: closure_1.attachmentPill, children: null };
         const obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };
         const intl2 = projectId(1114).intl;
         const obj3 = { name: id.name };
         obj2.children = intl2.formatToPlainString(closure_1(3590).OBr7WW, obj3);
-        obj1.children = closure_1_14(projectId(4601).Text, obj2);
+        obj1.children = closure_1_14(projectId(4602).Text, obj2);
         const _HermesInternal = HermesInternal;
         tmp12 = closure_1_14(closure_1_5, obj1, "" + id.name + "-" + index);
       }
@@ -265,13 +265,13 @@ function TodoList(todos) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const turnSettled = fn(16675).turnSettled;
-let VibegrationsConnectionStore = fn(16678);
+const turnSettled = fn(16663).turnSettled;
+let VibegrationsConnectionStore = fn(16666);
 ({ ensureConnection: closure_9, getAttachmentUrl: c10, interruptTurn: closure_11, sendUserMessage: closure_12 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = { allowList: true, allowHeading: true, allowLinks: true };
-fn(4605);
+fn(4606);
 let obj = { container: { flex: 1 }, transcript: { flex: 1 }, transcriptContent: null, row: null, surface: null, userBubble: null, assistantBubble: null, proposalCard: null, ideaCards: null, todoList: null, todoRow: null, activityBox: null, attachmentPills: null, attachmentPill: null, ideasOffer: null, ideasOfferHint: null, statusRow: null, thinkingRow: null, thinkingLabel: null };
 obj = { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12 };
 obj.transcriptContent = obj;
@@ -343,7 +343,7 @@ let closure_25 = noop.memo((isNewest) => {
       let tmp51Result = null;
       if ("" !== trimmed) {
         const obj1 = { variant: "text-md/normal", color: "text-default", children: trimmed };
-        tmp51Result = closure_14(message(4601).Text, obj1);
+        tmp51Result = closure_14(message(4602).Text, obj1);
       }
       items5[1] = tmp51Result;
       tmp51Result = null;
@@ -481,7 +481,7 @@ let closure_25 = noop.memo((isNewest) => {
           const obj5 = { variant: "text-md/normal", color: "text-default", children: null };
           obj4 = MarkupUtilsDefault;
           obj5.children = obj4.parse(trimmed, true, closure_16);
-          obj4.children = closure_14(message(4601).Text, obj5);
+          obj4.children = closure_14(message(4602).Text, obj5);
           tmp19Result = closure_14(closure_5, obj4);
         }
       }
@@ -542,7 +542,7 @@ let closure_25 = noop.memo((isNewest) => {
       tmp19Result8 = null;
       if ("message" in found) {
         const obj15 = { variant: "text-sm/normal", color: "text-feedback-critical", children: found.message };
-        tmp19Result8 = closure_14(message(4601).Text, obj15);
+        tmp19Result8 = closure_14(message(4602).Text, obj15);
       }
     }
     items7[12] = tmp19Result8;

@@ -1,19 +1,19 @@
-// === Module 15145: BountiesNuxPromoSheet ===
+// === Module 15126: BountiesNuxPromoSheet ===
 
-// Module 15145 (BountiesNuxPromoSheet)
+// Module 15126 (BountiesNuxPromoSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 5857 */;
-import PromoSheet from "PromoSheet" /* 10300 */;
-import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 15144 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 5878 */;
+import PromoSheet from "PromoSheet" /* 10319 */;
+import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 15125 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { illustrationContainer: null };
 createStyles = { paddingTop: nativeDefault.space.PX_12 };
 createStyles.illustrationContainer = createStyles;
@@ -29,7 +29,7 @@ export default function BountiesNuxPromoSheet() {
   const intl = util.intl;
   obj.title = intl.string(util.t.DDpHZG);
   const intl2 = util.intl;
-  obj.description = intl2.string(util.t["LY+igv"]);
+  obj.description = intl2.string(util.t.xs7q1I);
   obj = { style: closure_6().illustrationContainer, children: jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 }) };
   obj.illustration = <View style={closure_6().illustrationContainer}>{jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 })}</View>;
   obj = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };

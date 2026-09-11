@@ -1,6 +1,6 @@
-// === Module 12032: ChatInputConstants ===
+// === Module 12055: ChatInputConstants ===
 
-// Module 12032 (ChatInputConstants)
+// Module 12055 (ChatInputConstants)
 import native from "native" /* 1178 */;
 import size from "module_2" /* 2 */;
 

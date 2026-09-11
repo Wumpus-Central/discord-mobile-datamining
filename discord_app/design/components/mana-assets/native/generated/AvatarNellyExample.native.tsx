@@ -1,9 +1,9 @@
-// === Module 5823: AvatarNellyExample ===
+// === Module 5844: AvatarNellyExample ===
 
-// Module 5823 (AvatarNellyExample)
+// Module 5844 (AvatarNellyExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5824 from "module_5824" /* 5824 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef5845 from "module_5845" /* 5845 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarNellyExample = function AvatarNellyExample(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5824 };
+  obj = { uri: _modDef5845 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const AvatarNellyExample = function AvatarNellyExample(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5824 });
+  return jsx(FastImageDefault, { uri: _modDef5845 });
 };

@@ -1,21 +1,21 @@
-// === Module 15182: QuestDockContextMenuActionSheet ===
+// === Module 15161: QuestDockContextMenuActionSheet ===
 
-// Module 15182 (QuestDockContextMenuActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import QuestTypes from "QuestTypes" /* 5497 */;
-import AdCreativeType from "AdCreativeType" /* 5501 */;
-import ClipboardUtils from "ClipboardUtils" /* 7241 */;
-import openUserSettings from "openUserSettings" /* 7434 */;
-import AnalyticsActions from "AnalyticsActions" /* 7769 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7779 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11264 */;
-import captureAdUserAction from "captureAdUserAction" /* 11265 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11269 */;
-import QuestActionCreators from "QuestActionCreators" /* 11348 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11367 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11568 */;
-import QuestUtils from "QuestUtils" /* 11838 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 15192 */;
+// Module 15161 (QuestDockContextMenuActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import QuestTypes from "QuestTypes" /* 5498 */;
+import AdCreativeType from "AdCreativeType" /* 5502 */;
+import ClipboardUtils from "ClipboardUtils" /* 7262 */;
+import openUserSettings from "openUserSettings" /* 7455 */;
+import AnalyticsActions from "AnalyticsActions" /* 7790 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11286 */;
+import captureAdUserAction from "captureAdUserAction" /* 11287 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11291 */;
+import QuestActionCreators from "QuestActionCreators" /* 11370 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11389 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11590 */;
+import QuestUtils from "QuestUtils" /* 11860 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 15171 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,78 +26,78 @@ function QuestDockPreviewTools(quest) {
   dependencyMap = undefined;
   c3 = undefined;
   c4 = undefined;
-  let obj = quest(11555);
+  let obj = quest(11577);
   const questPreviewActions = obj.useQuestPreviewActions(quest.id);
   ({ handleComplete: c1, handleProgress: c2, handleResetDismissibilityClick: c3, handleResetStatusClick: c4 } = questPreviewActions);
   obj = { title: null, hasIcons: true, children: null };
   const intl = quest(1114).intl;
   obj.title = intl.string(quest(1114).t["Ape+mm"]);
-  obj = { icon: closure_5(quest(7251).ActionSheetRow.Icon, { IconComponent: quest(8787).TrophyIcon }), label: null, onPress: null };
+  obj = { icon: closure_5(quest(7272).ActionSheetRow.Icon, { IconComponent: quest(8808).TrophyIcon }), label: null, onPress: null };
   const obj2 = { text: null };
   const intl2 = quest(1114).intl;
   obj2.text = intl2.string(quest(1114).t.jQEfRT);
-  obj.label = closure_5(quest(8663).FormLabel, obj2);
+  obj.label = closure_5(quest(8684).FormLabel, obj2);
   obj.onPress = function onPress() {
     _undefined();
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  let items = [closure_5(quest(7251).ActionSheetRow, obj), , , , , , ];
+  let items = [closure_5(quest(7272).ActionSheetRow, obj), , , , , , ];
   const obj3 = { icon: null, label: null, onPress: null };
-  const obj1 = { IconComponent: quest(8787).TrophyIcon };
-  obj3.icon = closure_5(quest(7251).ActionSheetRow.Icon, { IconComponent: quest(15186).RedoIcon });
+  const obj1 = { IconComponent: quest(8808).TrophyIcon };
+  obj3.icon = closure_5(quest(7272).ActionSheetRow.Icon, { IconComponent: quest(15165).RedoIcon });
   const obj5 = { text: null };
   const intl3 = quest(1114).intl;
   obj5.text = intl3.string(quest(1114).t.cKSLr4);
-  obj3.label = closure_5(quest(8663).FormLabel, obj5);
+  obj3.label = closure_5(quest(8684).FormLabel, obj5);
   obj3.onPress = function onPress() {
     _undefined2(0.9 * Math.random() + 0.03);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items[1] = closure_5(quest(7251).ActionSheetRow, obj3);
+  items[1] = closure_5(quest(7272).ActionSheetRow, obj3);
   const obj6 = { icon: null, label: null, onPress: null };
-  const obj4 = { IconComponent: quest(15186).RedoIcon };
-  obj6.icon = closure_5(quest(7251).ActionSheetRow.Icon, { IconComponent: quest(15188).UndoIcon });
+  const obj4 = { IconComponent: quest(15165).RedoIcon };
+  obj6.icon = closure_5(quest(7272).ActionSheetRow.Icon, { IconComponent: quest(15167).UndoIcon });
   const obj8 = { text: null };
   const intl4 = quest(1114).intl;
   obj8.text = intl4.string(quest(1114).t.taqkwK);
-  obj6.label = closure_5(quest(8663).FormLabel, obj8);
+  obj6.label = closure_5(quest(8684).FormLabel, obj8);
   obj6.onPress = function onPress() {
     _undefined4();
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items[2] = closure_5(quest(7251).ActionSheetRow, obj6);
+  items[2] = closure_5(quest(7272).ActionSheetRow, obj6);
   const obj9 = { icon: null, label: null, onPress: null };
-  const obj7 = { IconComponent: quest(15188).UndoIcon };
-  obj9.icon = closure_5(quest(7251).ActionSheetRow.Icon, { IconComponent: quest(15190).UnsendIcon });
+  const obj7 = { IconComponent: quest(15167).UndoIcon };
+  obj9.icon = closure_5(quest(7272).ActionSheetRow.Icon, { IconComponent: quest(15169).UnsendIcon });
   const obj11 = { text: null };
   const intl5 = quest(1114).intl;
   obj11.text = intl5.string(quest(1114).t.JF6W66);
-  obj9.label = closure_5(quest(8663).FormLabel, obj11);
+  obj9.label = closure_5(quest(8684).FormLabel, obj11);
   obj9.onPress = function onPress() {
     _undefined3();
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items[3] = closure_5(quest(7251).ActionSheetRow, obj9);
+  items[3] = closure_5(quest(7272).ActionSheetRow, obj9);
   const obj12 = { icon: null, label: null, onPress: null };
-  const obj10 = { IconComponent: quest(15190).UnsendIcon };
-  obj12.icon = closure_5(quest(7251).ActionSheetRow.Icon, { IconComponent: quest(7020).EyeIcon });
+  const obj10 = { IconComponent: quest(15169).UnsendIcon };
+  obj12.icon = closure_5(quest(7272).ActionSheetRow.Icon, { IconComponent: quest(7041).EyeIcon });
   const obj14 = { text: null };
   const intl6 = quest(1114).intl;
   obj14.text = intl6.string(quest(1114).t["lL6/zF"]);
-  obj12.label = closure_5(quest(8663).FormLabel, obj14);
+  obj12.label = closure_5(quest(8684).FormLabel, obj14);
   obj12.onPress = function onPress() {
     const items = [quest.id];
     QuestActionCreators.markAdContentUnseen(AdCreativeType.AdCreativeType.QUEST, items);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items[4] = closure_5(quest(7251).ActionSheetRow, obj12);
+  items[4] = closure_5(quest(7272).ActionSheetRow, obj12);
   const obj15 = { icon: null, label: null, onPress: null };
-  const obj13 = { IconComponent: quest(7020).EyeIcon };
-  obj15.icon = closure_5(quest(7251).ActionSheetRow.Icon, { IconComponent: quest(7020).EyeIcon });
+  const obj13 = { IconComponent: quest(7041).EyeIcon };
+  obj15.icon = closure_5(quest(7272).ActionSheetRow.Icon, { IconComponent: quest(7041).EyeIcon });
   const obj17 = { text: null };
   const intl7 = quest(1114).intl;
   obj17.text = intl7.string(quest(1114).t.tx5Ax5);
-  obj15.label = closure_5(quest(8663).FormLabel, obj17);
+  obj15.label = closure_5(quest(8684).FormLabel, obj17);
   obj15.onPress = function onPress() {
     let obj = { screen: UserSettingsSections.QUEST_PREVIEW_TOOL_2, params: null };
     obj = { questId: quest.id };
@@ -105,47 +105,47 @@ function QuestDockPreviewTools(quest) {
     obj.openUserSettings(obj);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items[5] = closure_5(quest(7251).ActionSheetRow, obj15);
+  items[5] = closure_5(quest(7272).ActionSheetRow, obj15);
   const obj18 = { icon: null, label: null, onPress: null };
-  const obj16 = { IconComponent: quest(7020).EyeIcon };
-  obj18.icon = closure_5(quest(7251).ActionSheetRow.Icon, { IconComponent: quest(4552).CopyIcon });
+  const obj16 = { IconComponent: quest(7041).EyeIcon };
+  obj18.icon = closure_5(quest(7272).ActionSheetRow.Icon, { IconComponent: quest(4553).CopyIcon });
   const obj20 = { text: null };
   const intl8 = quest(1114).intl;
   obj20.text = intl8.string(quest(1114).t.oisrFi);
-  obj18.label = closure_5(quest(8663).FormLabel, obj20);
+  obj18.label = closure_5(quest(8684).FormLabel, obj20);
   obj18.onPress = function onPress() {
     ClipboardUtils.copy(quest.id);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items[6] = closure_5(quest(7251).ActionSheetRow, obj18);
+  items[6] = closure_5(quest(7272).ActionSheetRow, obj18);
   obj.children = items;
-  return closure_6(quest(7251).ActionSheetRow.Group, obj);
+  return closure_6(quest(7272).ActionSheetRow.Group, obj);
 }
 function QuestDockShareRow(quest) {
   quest = quest.quest;
   let obj = { icon: null, label: null, onPress: null };
-  obj = { IconComponent: quest(4552).CopyIcon };
-  obj.icon = closure_5(quest(7251).ActionSheetRow.Icon, obj);
+  obj = { IconComponent: quest(4553).CopyIcon };
+  obj.icon = closure_5(quest(7272).ActionSheetRow.Icon, obj);
   obj = { text: null };
   const intl = quest(1114).intl;
   obj.text = intl.string(quest(1114).t.WqhZss);
-  obj.label = closure_5(quest(8663).FormLabel, obj);
+  obj.label = closure_5(quest(8684).FormLabel, obj);
   obj.onPress = function onPress() {
     const obj = { content: QuestTypes.QuestContent.QUEST_BAR_MOBILE, ctaContent: AnalyticsTypes.QuestContentCTA.CONTEXT_MENU_COPY_LINK, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE };
     obj.copyShareLink(quest.id, obj);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  return closure_5(quest(7251).ActionSheetRow, obj);
+  return closure_5(quest(7272).ActionSheetRow, obj);
 }
 function QuestDockDisclosureRow(creative) {
   creative = creative.creative;
   let obj = { icon: null, label: null, onPress: null };
-  obj = { IconComponent: creative(11177).CircleQuestionIcon };
-  obj.icon = closure_5(creative(7251).ActionSheetRow.Icon, obj);
+  obj = { IconComponent: creative(11200).CircleQuestionIcon };
+  obj.icon = closure_5(creative(7272).ActionSheetRow.Icon, obj);
   obj = { text: null };
   const intl = creative(1114).intl;
   obj.text = intl.string(creative(1114).t.GcsZKJ);
-  obj.label = closure_5(creative(8663).FormLabel, obj);
+  obj.label = closure_5(creative(8684).FormLabel, obj);
   obj.onPress = function onPress() {
     let obj = { creative, isTargetedDisclosure: true, trackingCtx: null };
     obj = { content: QuestTypes.QuestContent.QUEST_BAR_MOBILE, ctaContent: AnalyticsTypes.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE };
@@ -153,7 +153,7 @@ function QuestDockDisclosureRow(creative) {
     obj.showModal(obj);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  return closure_5(creative(7251).ActionSheetRow, obj);
+  return closure_5(creative(7272).ActionSheetRow, obj);
 }
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
@@ -199,7 +199,7 @@ export default function QuestDockContextMenuActionSheet(creative) {
   } else if (tmp(tmp2[5]).AdCreativeType.BOUNTY === type) {
     buttonLabel = creative.bounty.cta.buttonLabel;
     const intl4 = tmp(tmp2[7]).intl;
-    stringResult = intl4.string(tmp(tmp2[7]).t.QUe9zz);
+    stringResult = intl4.string(tmp(tmp2[7]).t.RjPllj);
   }
   obj = { content: tmp(tmp2[8]).QuestContent.QUEST_BAR_MOBILE, ctaContent: tmp(tmp2[9]).QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK, impressionId: creative.impressionId, sourceQuestContent: tmp(tmp2[8]).QuestContent.QUEST_BAR_MOBILE };
   obj = {
@@ -285,20 +285,20 @@ export default function QuestDockContextMenuActionSheet(creative) {
             obj = { value, done: true };
             return obj;
           } else {
-            trackInternalClick(tmp2(7779).QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT);
+            trackInternalClick(tmp2(7800).QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT);
             const type = creative.type;
-            if (tmp2(5501).AdCreativeType.QUEST === type) {
-              const obj7 = tmp2(11348);
-              const dismissQuestContentResult = tmp2(11348).dismissQuestContent(creative.quest.id, tmp2(5497).QuestContent.QUEST_BAR_MOBILE);
-              v2(4572).hideActionSheet();
+            if (tmp2(5502).AdCreativeType.QUEST === type) {
+              const obj7 = tmp2(11370);
+              const dismissQuestContentResult = tmp2(11370).dismissQuestContent(creative.quest.id, tmp2(5498).QuestContent.QUEST_BAR_MOBILE);
+              v2(4573).hideActionSheet();
               v2 = 1;
               dependencyMap = 1;
               let obj1 = { value: dismissQuestContentResult, done: false };
               return obj1;
-            } else if (tmp2(5501).AdCreativeType.BOUNTY === type) {
-              let obj3 = tmp2(11596);
-              const dismissAdContentResult = obj3.dismissAdContent(closure_1, tmp2(5497).QuestContent.QUEST_BAR_MOBILE);
-              v2(4572).hideActionSheet();
+            } else if (tmp2(5502).AdCreativeType.BOUNTY === type) {
+              let obj3 = tmp2(11618);
+              const dismissAdContentResult = obj3.dismissAdContent(closure_1, tmp2(5498).QuestContent.QUEST_BAR_MOBILE);
+              v2(4573).hideActionSheet();
               v2 = 2;
               dependencyMap = 1;
               const obj2 = { value: dismissAdContentResult, done: false };
@@ -312,7 +312,7 @@ export default function QuestDockContextMenuActionSheet(creative) {
             dependencyMap = 3;
             throw value;
           } else if (arg0 !== 2) {
-            obj1 = tmp2(15185);
+            obj1 = tmp2(15164);
             const result = obj1.displayQuestDismissalToast();
           }
         } else if (arg0 === 1) {

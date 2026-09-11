@@ -1,12 +1,12 @@
-// === Module 17544: RedesignAddAvatarModal ===
+// === Module 17535: RedesignAddAvatarModal ===
 
-// Module 17544 (RedesignAddAvatarModal)
+// Module 17535 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 576 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17526 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17517 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8223 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8245 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, contentContainer: null, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -67,7 +67,7 @@ export default function RedesignAddAvatarModal(route) {
             const obj1 = { size };
             dependencyMap = 1;
             c3 = 1;
-            let obj2 = { value: tmp2(5188).openImagePicker(obj1), done: false };
+            let obj2 = { value: tmp2(5189).openImagePicker(obj1), done: false };
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -82,17 +82,17 @@ export default function RedesignAddAvatarModal(route) {
           if (null == base64) {
             pendingImage = undefined;
             if (null != base64) {
-              obj = tmp2(14670);
+              obj = tmp2(14646);
               const obj4 = { imageUri: base64, description: null };
-              obj2 = tmp2(8232);
+              obj2 = tmp2(8254);
               obj4.description = obj2.generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj4);
             }
             closure_128_1 = pendingImage;
-            obj3 = tmp2(8227);
+            obj3 = tmp2(8249);
             let obj5 = { avatar: closure_128_1 };
             obj3.setPendingChanges(obj5);
-            obj5 = tmp2(8229);
+            obj5 = tmp2(8251);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";

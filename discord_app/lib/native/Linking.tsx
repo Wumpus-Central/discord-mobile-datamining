@@ -1,8 +1,8 @@
-// === Module 4299: Linking ===
+// === Module 4301: Linking ===
 
-// Module 4299 (Linking)
+// Module 4301 (Linking)
 import _mod17 from "module_17" /* 17 */;
-import handleURL from "handleURL" /* 4294 */;
+import handleURL from "handleURL" /* 4296 */;
 import size from "module_2" /* 2 */;
 
 const Linking = _mod17.Linking;

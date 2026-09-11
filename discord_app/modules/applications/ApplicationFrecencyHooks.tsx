@@ -1,9 +1,9 @@
-// === Module 12191: ApplicationFrecencyHooks ===
+// === Module 12214: ApplicationFrecencyHooks ===
 
-// Module 12191 (ApplicationFrecencyHooks)
+// Module 12214 (ApplicationFrecencyHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import noop from "module_19" /* 19 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9360 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9381 */;
 
 const require = fn;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;

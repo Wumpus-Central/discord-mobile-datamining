@@ -1,9 +1,9 @@
-// === Module 6447: SafetyChatSpotIllustration ===
+// === Module 6468: SafetyChatSpotIllustration ===
 
-// Module 6447 (SafetyChatSpotIllustration)
+// Module 6468 (SafetyChatSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6448 from "module_6448" /* 6448 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6469 from "module_6469" /* 6469 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SafetyChatSpotIllustration = function SafetyChatSpotIllustration(wi
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6448 };
+  obj = { uri: _modDef6469 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const SafetyChatSpotIllustration = function SafetyChatSpotIllustration(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6448 });
+  return jsx(FastImageDefault, { uri: _modDef6469 });
 };

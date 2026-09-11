@@ -1,10 +1,10 @@
-// === Module 16367: GuildsBarDnDStore ===
+// === Module 16356: GuildsBarDnDStore ===
 
-// Module 16367 (GuildsBarDnDStore)
+// Module 16356 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
-import _mod4227 from "module_4227" /* 4227 */;
-import SortedGuildStore from "SortedGuildStore" /* 5488 */;
+import _mod4229 from "module_4229" /* 4229 */;
+import SortedGuildStore from "SortedGuildStore" /* 5489 */;
 import identity from "module_1244" /* 1244 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 50, scrollPosition: 100, windowSize: 100, setStateShallow: 50, dropStart: 100, dropComplete: true };
+  obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 5, scrollPosition: 10, windowSize: "person_lifting_weights", setStateShallow: "lifter", dropStart: "weight_lifter", dropComplete: true };
   const obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
   const obj3 = require("ReanimatedRexport");
@@ -53,7 +53,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1249).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "toLowerCase" }));
+      dropSpecs(1249).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "isArray" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -196,7 +196,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4227.shallow);
+  }, _mod4229.shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

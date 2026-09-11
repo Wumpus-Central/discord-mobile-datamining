@@ -1,7 +1,7 @@
-// === Module 9591: ThermalUtils ===
+// === Module 9612: ThermalUtils ===
 
-// Module 9591 (ThermalUtils)
-import NativeDeviceThermalStateModuleDefault from "NativeDeviceThermalStateModule" /* 9592 */;
+// Module 9612 (ThermalUtils)
+import NativeDeviceThermalStateModuleDefault from "NativeDeviceThermalStateModule" /* 9613 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import module_560 from "module_560" /* 560 */;
@@ -24,7 +24,7 @@ let closure_5 = module_560.create((arg0) => {
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = tmp(4584);
+    tmpResult = tmp(4585);
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();

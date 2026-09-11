@@ -1,10 +1,10 @@
-// === Module 15206: QuestModalContentCloudBackground ===
+// === Module 15185: QuestModalContentCloudBackground ===
 
-// Module 15206 (QuestModalContentCloudBackground)
-import themes from "themes" /* 4313 */;
-import useTheme from "useTheme" /* 4540 */;
-import LinearGradientDefault from "LinearGradient" /* 5037 */;
-import FastImageDefault from "FastImage" /* 5637 */;
+// Module 15185 (QuestModalContentCloudBackground)
+import themes from "themes" /* 4315 */;
+import useTheme from "useTheme" /* 4541 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
+import FastImageDefault from "FastImage" /* 5638 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles((arg0) => {
   let obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
@@ -81,7 +81,7 @@ export default function QuestModalContentCloudBackground(align) {
     const obj2 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj2.style = items2;
-    obj2.source = importDefault(isThemeDarkResult ? 15207 : 15208);
+    obj2.source = importDefault(isThemeDarkResult ? 15186 : 15187);
     obj2.resizeMode = str2;
     items1[1] = hasOwnProperty(FastImageDefault, obj2);
     obj.children = items1;

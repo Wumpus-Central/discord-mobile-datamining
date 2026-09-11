@@ -1,6 +1,6 @@
-// === Module 16305: GuildBoostingProgressBarActionCreators ===
+// === Module 16294: GuildBoostingProgressBarActionCreators ===
 
-// Module 16305 (GuildBoostingProgressBarActionCreators)
+// Module 16294 (GuildBoostingProgressBarActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

@@ -1,21 +1,23 @@
-// === Module 8296: ? ===
+// === Module 8317: ? ===
 
-// Module 8296
-import native from "native" /* 4315 */;
+// Module 8317
+import Constants from "Constants" /* 1074 */;
+import native from "native" /* 4317 */;
 import size from "module_2" /* 2 */;
 
+const ThemeTypes = Constants.ThemeTypes;
 const result = size.fileFinishedImporting("design/components/Illustration/native/index.tsx");
 
 export const getIllustrationSource = function getIllustrationSource(theme, light) {
-  if ("light" === theme) {
+  if (theme === ThemeTypes.LIGHT) {
     light = light.light;
-  } else if ("darker" === theme) {
+  } else if (theme === ThemeTypes.DARK) {
     let midnight = light.darker;
     if (midnight == null) {
       midnight = light.midnight;
     }
     light = midnight;
-  } else if ("midnight" === theme) {
+  } else if (theme === ThemeTypes.ONYX) {
     let darker = light.midnight;
     if (darker == null) {
       darker = light.darker;

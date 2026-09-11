@@ -1,11 +1,11 @@
-// === Module 8028: canReplyToMessage ===
+// === Module 8050: canReplyToMessage ===
 
-// Module 8028 (canReplyToMessage)
+// Module 8050 (canReplyToMessage)
 import MessageTypes from "MessageTypes" /* 1089 */;
-import ThreadHooks from "ThreadHooks" /* 7321 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8029 */;
+import ThreadHooks from "ThreadHooks" /* 7342 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8051 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

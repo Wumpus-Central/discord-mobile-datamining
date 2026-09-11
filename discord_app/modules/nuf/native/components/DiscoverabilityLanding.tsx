@@ -1,20 +1,20 @@
-// === Module 12818: DiscoverabilityLanding ===
+// === Module 12841: DiscoverabilityLanding ===
 
-// Module 12818 (DiscoverabilityLanding)
+// Module 12841 (DiscoverabilityLanding)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5574 */;
+import TextStyles from "TextStyles" /* 5575 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const useContactSyncModalStore = fn(12747).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12770).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, headerContainer: null, header: null, image: null, button: null, title: null, subtitle: null, formRow: null, formText: null, footerContainer: null, info: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -42,7 +42,7 @@ export default function DiscoverabilityLanding(onNext) {
   const items = [allowPhone, allowEmail];
   noop = noop.useCallback(() => {
     const obj = { allowPhone, allowEmail };
-    obj.openLazy(asyncRequireImpl(12819, dependencyMap.paths), "Discoverability Landing", obj);
+    obj.openLazy(asyncRequireImpl(12842, dependencyMap.paths), "Discoverability Landing", obj);
   }, items);
   let obj = { style: tmp.container, contentContainerStyle: null, children: null };
   obj = { paddingTop: onNext(allowPhone[12]).NAV_BAR_HEIGHT + 32, paddingBottom: allowEmail(allowPhone[8])().bottom + 16 };

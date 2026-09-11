@@ -1,19 +1,19 @@
-// === Module 12453: DiceRollBar ===
+// === Module 12476: DiceRollBar ===
 
-// Module 12453 (DiceRollBar)
+// Module 12476 (DiceRollBar)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4607 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 const View = fn(17).View;
-const useDiceRollState = fn(12029).useDiceRollState;
+const useDiceRollState = fn(12052).useDiceRollState;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { animatedContainer: { overflow: "hidden" }, container: null };
 createStyles = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, gap: 12, borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.container = createStyles;

@@ -1,15 +1,15 @@
-// === Module 13930: AddFriendById ===
+// === Module 13909: AddFriendById ===
 
-// Module 13930 (AddFriendById)
+// Module 13909 (AddFriendById)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ToastUtils from "ToastUtils" /* 4302 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4316 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import TextField from "TextField" /* 6663 */;
-import FriendsUtils from "FriendsUtils" /* 9115 */;
-import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 13931 */;
+import ToastUtils from "ToastUtils" /* 4304 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4318 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import TextField from "TextField" /* 6684 */;
+import FriendsUtils from "FriendsUtils" /* 9136 */;
+import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 13910 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,7 +27,7 @@ const Constants = fn(1074);
 ({ PLACEHOLDER_TAG: closure_7, AnalyticEvents: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { container: null, textInputContainer: null, placeholderText: null, inputAccessoryText: null, redesignInputAccessoryText: null, inputHeaderText: null, redesignGrow: null, errorStateText: null, friendMessageContainer: null, messageLabel: null, messageFooterText: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 };
 obj.container = obj;
@@ -133,7 +133,7 @@ export default noop.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      obj = sourcePage(9115);
+      obj = sourcePage(9136);
       const validateDiscordTagResult = obj.validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         obj = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
@@ -141,14 +141,14 @@ export default noop.forwardRef((arg0, ref) => {
       } else {
         const obj1 = { status: constants.LOADING };
         closure_6(obj1);
-        const obj2 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(9111).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
+        const obj2 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(9132).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
         let tmp9;
         if (trimmed1.length > 0) {
           tmp9 = trimmed1;
         }
         obj2.note = tmp9;
-        const obj5 = ref(9111);
-        ref(9111).sendRequest(obj2).then(() => {
+        const obj5 = ref(9132);
+        ref(9132).sendRequest(obj2).then(() => {
           let obj = { validatedText: "", hint: null };
           const intl = util.intl;
           obj.hint = intl.string(util.t["6p7Mhh"]);
@@ -203,7 +203,7 @@ export default noop.forwardRef((arg0, ref) => {
           }
           closure_6(obj);
         });
-        const sendRequestResult = ref(9111).sendRequest(obj2);
+        const sendRequestResult = ref(9132).sendRequest(obj2);
       }
     }
   }
@@ -321,7 +321,7 @@ export default noop.forwardRef((arg0, ref) => {
     obj3.disabled = str.trim().length <= 0;
     obj3.onPress = handleSubmitEditing;
     obj3.loading = first1.status === constants2.LOADING;
-    items6[2] = closure_9(sourcePage(5025).Button, obj3);
+    items6[2] = closure_9(sourcePage(5026).Button, obj3);
     obj1.children = items6;
     return closure_10(closure_11, obj1);
   } else {
@@ -333,7 +333,7 @@ export default noop.forwardRef((arg0, ref) => {
     obj5.style = items7;
     let intl = sourcePage(1114).intl;
     obj5.children = intl.string(sourcePage(1114).t.Yi6Mpu);
-    const items8 = [closure_9(sourcePage(4601).Text, obj5), , ];
+    const items8 = [closure_9(sourcePage(4602).Text, obj5), , ];
     const obj6 = { returnKeyType: "done", submitBehavior: "submit", value: first2, maxLength: 120, onSubmitEditing: handleSubmitEditing, onChange: callback1, status: null };
     let str2;
     if (first1.field === constants3.MESSAGE) {
@@ -342,12 +342,12 @@ export default noop.forwardRef((arg0, ref) => {
       }
     }
     obj6.status = str2;
-    items8[1] = closure_9(sourcePage(7137).TextArea, obj6);
+    items8[1] = closure_9(sourcePage(7158).TextArea, obj6);
     if (first1.status !== constants2.ERROR) {
       const obj7 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
       let intl2 = sourcePage(1114).intl;
       obj7.children = intl2.string(sourcePage(1114).t.UtfQNw);
-      let tmp17Result = closure_9(sourcePage(4601).Text, obj7);
+      let tmp17Result = closure_9(sourcePage(4602).Text, obj7);
       items8[2] = tmp17Result;
       obj4.children = items8;
       closure_10(tmp16, obj4);

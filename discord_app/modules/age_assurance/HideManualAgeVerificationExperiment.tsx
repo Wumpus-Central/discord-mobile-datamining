@@ -1,6 +1,6 @@
-// === Module 8646: HideManualAgeVerificationExperiment ===
+// === Module 8667: HideManualAgeVerificationExperiment ===
 
-// Module 8646 (HideManualAgeVerificationExperiment)
+// Module 8667 (HideManualAgeVerificationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

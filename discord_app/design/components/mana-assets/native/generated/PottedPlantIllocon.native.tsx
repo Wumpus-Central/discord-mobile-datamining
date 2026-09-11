@@ -1,9 +1,9 @@
-// === Module 6405: PottedPlantIllocon ===
+// === Module 6426: PottedPlantIllocon ===
 
-// Module 6405 (PottedPlantIllocon)
+// Module 6426 (PottedPlantIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6406 from "module_6406" /* 6406 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6427 from "module_6427" /* 6427 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const PottedPlantIllocon = function PottedPlantIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6406 };
+  obj = { uri: _modDef6427 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6406 });
+  return jsx(FastImageDefault, { uri: _modDef6427 });
 };

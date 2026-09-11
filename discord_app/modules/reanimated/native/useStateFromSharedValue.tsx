@@ -1,7 +1,7 @@
-// === Module 8332: useStateFromSharedValue ===
+// === Module 8353: useStateFromSharedValue ===
 
-// Module 8332 (useStateFromSharedValue)
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+// Module 8353 (useStateFromSharedValue)
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,7 +49,7 @@ export default function useStateFromSharedValue(arg0) {
       const result = obj.set(tmp, value);
       let fn = function n(arg0, arg1, addListener) {
         closure_0 = arg1;
-        addListener.addListener(arg0, (arg0) => set(4341).runOnJS(closure_0)(arg0));
+        addListener.addListener(arg0, (arg0) => set(4343).runOnJS(closure_0)(arg0));
       };
       obj = { runOnJS: activeIndex(callback[3]).runOnJS };
       fn.__closure = obj;
@@ -117,7 +117,7 @@ export const useDerivedStateFromSharedValue = function useDerivedStateFromShared
       const result = obj.set(tmp, value);
       let fn = function n(arg0, arg1, addListener) {
         closure_0 = arg1;
-        addListener.addListener(arg0, (arg0) => set(4341).runOnJS(closure_0)(arg0));
+        addListener.addListener(arg0, (arg0) => set(4343).runOnJS(closure_0)(arg0));
       };
       obj = { runOnJS: activeIndex(callback[3]).runOnJS };
       fn.__closure = obj;

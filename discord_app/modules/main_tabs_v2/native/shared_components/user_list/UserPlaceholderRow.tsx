@@ -1,18 +1,18 @@
-// === Module 9899: UserPlaceholderRow ===
+// === Module 9920: UserPlaceholderRow ===
 
-// Module 9899 (UserPlaceholderRow)
+// Module 9920 (UserPlaceholderRow)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
-import timingPresets from "timingPresets" /* 4609 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles((height) => {
   let obj = { row: null, rowInner: null, rowHeaderWrapper: null, placeholderAvatar: null, placeholderText: null };
   obj = { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height };
@@ -41,7 +41,7 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   let sharedValue;
   flag = undefined;
   const tmp3 = closure_8(height);
-  let obj = sharedValue(4341);
+  let obj = sharedValue(4343);
   sharedValue = obj.useSharedValue(1);
   let obj1 = sharedValue(504);
   const items = [AccessibilityStore];
@@ -66,7 +66,7 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 10137317865125;
   fn.__initData = __initData;
-  const animatedStyle = sharedValue(4341).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4343).useAnimatedStyle(fn);
   obj = { style: null, collapsable: false, children: null };
   const items2 = [tmp3.row, animatedStyle];
   obj.style = items2;
@@ -85,5 +85,5 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   obj1.children = closure_6(View, obj2);
   items3[1] = closure_6(View, obj1);
   obj.children = items3;
-  return closure_7(flag(4341).View, obj);
+  return closure_7(flag(4343).View, obj);
 });

@@ -1,17 +1,17 @@
-// === Module 7270: PrivateChannelSortStore ===
+// === Module 7291: PrivateChannelSortStore ===
 
-// Module 7270 (PrivateChannelSortStore)
+// Module 7291 (PrivateChannelSortStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef4196 from "module_4196" /* 4196 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7273 */;
-import MessageRequestStore from "MessageRequestStore" /* 7271 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7272 */;
+import _modDef4198 from "module_4198" /* 4198 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7294 */;
+import MessageRequestStore from "MessageRequestStore" /* 7292 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7293 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ReadStateStore from "ReadStateStore" /* 4620 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -28,7 +28,7 @@ function makeSortedChannel(channel) {
     const isMessageRequestTimestamp = channel.isMessageRequestTimestamp;
     let tmp2 = id;
     if (null != isMessageRequestTimestamp) {
-      let obj = _modDef4196(isMessageRequestTimestamp);
+      let obj = _modDef4198(isMessageRequestTimestamp);
       const valueOfResult = obj.valueOf();
       let fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(valueOfResult);
       if (obj3.compare(id, fromTimestampResult) > 0) {
@@ -63,7 +63,7 @@ function handleCacheLoaded() {
 }
 const isPrivate = fn(1961).isPrivate;
 const constants = { DEFAULT: "DEFAULT", FAVORITE: "FAVORITE" };
-const secondaryIndexMap = new fn(4239).SecondaryIndexMap(function indexBy(value) {
+const secondaryIndexMap = new fn(4241).SecondaryIndexMap(function indexBy(value) {
   if (value.isRequest) {
     let items = [];
   } else {
@@ -76,7 +76,7 @@ const secondaryIndexMap = new fn(4239).SecondaryIndexMap(function indexBy(value)
 let values = [];
 values = [];
 let closure_17 = [];
-const f38773 = () => {
+const f38778 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -89,7 +89,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f38773 === "function") {
+  if (typeof f38778 === "function") {
     secondaryIndexMap.values(constants.FAVORITE);
     values = secondaryIndexMap.values(constants.DEFAULT);
     let tmp4 = values === values;

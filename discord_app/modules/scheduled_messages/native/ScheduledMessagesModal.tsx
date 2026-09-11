@@ -1,26 +1,26 @@
-// === Module 12282: ScheduledMessagesModal ===
+// === Module 12305: ScheduledMessagesModal ===
 
-// Module 12282 (ScheduledMessagesModal)
+// Module 12305 (ScheduledMessagesModal)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import PremiumUtils from "PremiumUtils" /* 4262 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import spring from "spring" /* 5024 */;
-import NavigatorHeader from "NavigatorHeader" /* 5674 */;
-import _mod5681 from "module_5681" /* 5681 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7214 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
-import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 7895 */;
-import HeaderShared from "HeaderShared" /* 7914 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9383 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10037 */;
-import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 12284 */;
-import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12291 */;
+import PremiumUtils from "PremiumUtils" /* 4264 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import spring from "spring" /* 5025 */;
+import NavigatorHeader from "NavigatorHeader" /* 5675 */;
+import _mod5682 from "module_5682" /* 5682 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7235 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
+import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 7916 */;
+import HeaderShared from "HeaderShared" /* 7936 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9404 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10057 */;
+import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 12307 */;
+import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12314 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ScheduledMessageStore from "ScheduledMessageStore" /* 12283 */;
+import ScheduledMessageStore from "ScheduledMessageStore" /* 12306 */;
 
 require = fn;
 function keyExtractor(scheduledMessageId) {
@@ -126,11 +126,11 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
 const View = fn(17).View;
 const AnalyticsPages = fn(1074).AnalyticsPages;
 const PremiumTypes = fn(1373).PremiumTypes;
-const premiumMax = fn(7897).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(7918).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
-fn(4605);
+fn(4606);
 let createStyles = { modal: null, headerLeftContainer: null, headerRightContainer: null, headerBorder: null, cardContainer: null, listContainer: null, loading: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
 createStyles.modal = createStyles;
@@ -188,13 +188,13 @@ export default function ScheduledMessagesModal() {
   }
   obj.headerStatusBarHeight = num + sharedValue(576).space.PX_8;
   obj5 = PlatformUtils;
-  obj.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(4808).pop);
+  obj.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(4809).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const items1 = [closure_10(_mod5681.Header, obj), , ];
+  const items1 = [closure_10(_mod5682.Header, obj), , ];
   obj1 = { style: null };
   const items2 = [tmp.headerBorder, animatedStyle];
   obj1.style = items2;
-  items1[1] = closure_10(sharedValue(4341).View, obj1);
+  items1[1] = closure_10(sharedValue(4343).View, obj1);
   items1[2] = closure_10(ScheduledMessagesPage, { handleScroll: callback });
   obj.children = items1;
   return closure_11(View, obj);

@@ -1,7 +1,7 @@
-// === Module 7038: ImageCroppingConstants ===
+// === Module 7059: ImageCroppingConstants ===
 
-// Module 7038 (ImageCroppingConstants)
-import VideoBackgroundConstants from "VideoBackgroundConstants" /* 7039 */;
+// Module 7059 (ImageCroppingConstants)
+import VideoBackgroundConstants from "VideoBackgroundConstants" /* 7060 */;
 import size from "module_2" /* 2 */;
 
 const BACKGROUND_REPLACEMENT_SIZE = VideoBackgroundConstants.BACKGROUND_REPLACEMENT_SIZE;

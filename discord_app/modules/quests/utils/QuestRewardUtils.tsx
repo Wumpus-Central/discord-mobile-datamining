@@ -1,18 +1,18 @@
-// === Module 11362: QuestRewardUtils ===
+// === Module 11384: QuestRewardUtils ===
 
-// Module 11362 (QuestRewardUtils)
+// Module 11384 (QuestRewardUtils)
 import util from "util" /* 1114 */;
-import _mod3839 from "module_3839" /* 3839 */;
-import QuestTypes from "QuestTypes" /* 5497 */;
-import QuestDataUtils from "QuestDataUtils" /* 7750 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7759 */;
-import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 11363 */;
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11364 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11365 */;
-import FractionalPremiumUtils from "FractionalPremiumUtils" /* 11366 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11367 */;
-import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 11368 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7594 */;
+import _mod3841 from "module_3841" /* 3841 */;
+import QuestTypes from "QuestTypes" /* 5498 */;
+import QuestDataUtils from "QuestDataUtils" /* 7771 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7780 */;
+import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 11385 */;
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11386 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11387 */;
+import FractionalPremiumUtils from "FractionalPremiumUtils" /* 11388 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11389 */;
+import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 11390 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
 
 require = fn;
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
@@ -76,7 +76,7 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
     }
   }
 }
-let items = [fn(11363).QuestRewardExpirationMode.PREMIUM_EXTENSION, fn(11363).QuestRewardExpirationMode.PREMIUM_PERMANENT];
+let items = [fn(11385).QuestRewardExpirationMode.PREMIUM_EXTENSION, fn(11385).QuestRewardExpirationMode.PREMIUM_PERMANENT];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestRewardUtils.tsx");
@@ -136,7 +136,7 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
         const date = new Date(config.expiresAt);
         const _Date2 = Date;
         const date1 = new Date(tmp5.expiresAt);
-        let tmp3Result = _mod3839;
+        let tmp3Result = _mod3841;
         const differenceInDaysResult = tmp3Result.differenceInDays(date1, date);
         const _Math3 = Math;
         let num = 0;
@@ -156,7 +156,7 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
           obj = { months: sum };
           return intl3.formatToPlainString(util.t.kridzK, obj);
         } else {
-          tmp3Result = _mod3839;
+          tmp3Result = _mod3841;
           const differenceInDaysResult1 = tmp3Result.differenceInDays(date1, date);
           if (differenceInDaysResult1 >= 7) {
             const _Math = Math;

@@ -1,6 +1,6 @@
-// === Module 7904: EntitlementFeatureNames ===
+// === Module 7925: EntitlementFeatureNames ===
 
-// Module 7904 (EntitlementFeatureNames)
+// Module 7925 (EntitlementFeatureNames)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx");

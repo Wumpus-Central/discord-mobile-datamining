@@ -1,10 +1,10 @@
-// === Module 11528: ActivityLauncherStore ===
+// === Module 11550: ActivityLauncherStore ===
 
-// Module 11528 (ActivityLauncherStore)
+// Module 11550 (ActivityLauncherStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import LocalActivityStore from "LocalActivityStore" /* 11529 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5329 */;
+import LocalActivityStore from "LocalActivityStore" /* 11551 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
 
 const require = fn;
 function handleActivityStateChanged(COMPLETE, JOIN, type) {
@@ -31,7 +31,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       if (null != dependencyMap[applicationId]) {
         dependencyMap[applicationId].stop();
       }
-      const timeout = new applicationId(4492).Timeout();
+      const timeout = new applicationId(1952).Timeout();
       timeout.start(c9, () => {
         obj = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType };
         return obj.dispatch(obj);
@@ -46,7 +46,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       if (null != dependencyMap[applicationId]) {
         dependencyMap[applicationId].stop();
       }
-      const timeout1 = new applicationId(4492).Timeout();
+      const timeout1 = new applicationId(1952).Timeout();
       timeout1.start(num, () => {
         obj = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType };
         return obj.dispatch(obj);

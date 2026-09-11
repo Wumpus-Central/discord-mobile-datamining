@@ -1,9 +1,9 @@
-// === Module 6595: TrafficConeSpotIllustration ===
+// === Module 6616: TrafficConeSpotIllustration ===
 
-// Module 6595 (TrafficConeSpotIllustration)
+// Module 6616 (TrafficConeSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6596 from "module_6596" /* 6596 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6617 from "module_6617" /* 6617 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const TrafficConeSpotIllustration = function TrafficConeSpotIllustration(
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6596 };
+  obj = { uri: _modDef6617 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const TrafficConeSpotIllustration = function TrafficConeSpotIllustration(
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6596 });
+  return jsx(FastImageDefault, { uri: _modDef6617 });
 };

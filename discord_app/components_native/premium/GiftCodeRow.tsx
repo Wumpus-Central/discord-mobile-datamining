@@ -1,11 +1,11 @@
-// === Module 13639: GiftCodeRow ===
+// === Module 13616: GiftCodeRow ===
 
-// Module 13639 (GiftCodeRow)
+// Module 13616 (GiftCodeRow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 4844 */;
-import showShareActionSheet from "showShareActionSheet" /* 8426 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11502 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4845 */;
+import showShareActionSheet from "showShareActionSheet" /* 8447 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11524 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { giftCodeRow: { paddingHorizontal: 16 }, giftCodeRowLegacy: null, giftCodeShare: null, giftCodeInput: null, giftCodeInputContent: null, giftCodeShareButton: null, codeText: null, subTextRow: null, expiryText: null, revokeHint: null, firstRow: null, buttonContainer: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.giftCodeRowLegacy = createStyles;
@@ -97,7 +97,7 @@ prototype["render"] = function render() {
     const intl2 = tmp6(tmp7[13]).intl;
     const obj7 = { hours: null, revokeHook: null };
     const expiresAt = giftCode.expiresAt;
-    obj7.hours = expiresAt.diff(require("module_4196")(), "h");
+    obj7.hours = expiresAt.diff(require("module_4198")(), "h");
     obj7.revokeHook = function revokeHook(children, arg1) {
       let obj = {
         accessibilityRole: "button",
@@ -121,7 +121,7 @@ prototype["render"] = function render() {
   obj.children = items3;
   return closure_7(closure_3, obj);
 };
-GiftCodeRow.contextType = fn(4315).ThemeContext;
+GiftCodeRow.contextType = fn(4317).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/GiftCodeRow.tsx");
 

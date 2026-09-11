@@ -1,20 +1,20 @@
-// === Module 8026: DoubleTapNitroAlert ===
+// === Module 8048: DoubleTapNitroAlert ===
 
-// Module 8026 (DoubleTapNitroAlert)
+// Module 8048 (DoubleTapNitroAlert)
 import util from "util" /* 1114 */;
-import AlertModal from "AlertModal" /* 4955 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6660 */;
-import openUserSettings from "openUserSettings" /* 7434 */;
+import AlertModal from "AlertModal" /* 4956 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6681 */;
+import openUserSettings from "openUserSettings" /* 7455 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const NITRO_UPSELL_ALERT_KEY = fn(8021).NITRO_UPSELL_ALERT_KEY;
+const NITRO_UPSELL_ALERT_KEY = fn(8043).NITRO_UPSELL_ALERT_KEY;
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const MobileUserSettings = fn(8027).MobileUserSettings;
+const MobileUserSettings = fn(8049).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");

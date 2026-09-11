@@ -1,9 +1,9 @@
-// === Module 7375: GuildTemplateTooltipActionCreators ===
+// === Module 7396: GuildTemplateTooltipActionCreators ===
 
-// Module 7375 (GuildTemplateTooltipActionCreators)
+// Module 7396 (GuildTemplateTooltipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 const Permissions = fn(1074).Permissions;
 const size = fn(2);

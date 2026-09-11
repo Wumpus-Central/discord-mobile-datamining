@@ -1,6 +1,6 @@
-// === Module 15027: AuthSessionsActionCreators ===
+// === Module 15004: AuthSessionsActionCreators ===
 
-// Module 15027 (AuthSessionsActionCreators)
+// Module 15004 (AuthSessionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

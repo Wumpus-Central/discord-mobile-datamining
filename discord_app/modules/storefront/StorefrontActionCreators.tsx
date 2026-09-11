@@ -1,15 +1,15 @@
-// === Module 8855: StorefrontActionCreators ===
+// === Module 8876: StorefrontActionCreators ===
 
-// Module 8855 (StorefrontActionCreators)
+// Module 8876 (StorefrontActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingInfoStore from "BillingInfoStore" /* 4264 */;
-import SKUPricesStore from "SKUPricesStore" /* 7284 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8856 */;
-import StorefrontPromotionStore from "StorefrontPromotionStore" /* 8857 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8858 */;
+import BillingInfoStore from "BillingInfoStore" /* 4266 */;
+import SKUPricesStore from "SKUPricesStore" /* 7305 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8877 */;
+import StorefrontPromotionStore from "StorefrontPromotionStore" /* 8878 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8879 */;
 
 require = fn;
 function shouldFetchStorefrontPromotions(arg0) {
@@ -177,11 +177,69 @@ let closure_15 = async function _fetchStorefrontPricesForApplicationId(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    await closure_130_17({ type: "application", applicationId: applicationId2 });
-    await "HermesInternal";
-    closure_1 = tmp2;
-    applicationId2 = applicationId.applicationId;
-    return "PX_16";
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp5;
+            closure_1 = tmp2;
+            let applicationId2;
+            applicationId2 = applicationId.applicationId;
+            c3 = 1;
+            c4 = 1;
+            return { value: "PX_16", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            const obj2 = { type: "application", applicationId: applicationId2 };
+            c3 = 2;
+            c4 = 1;
+            const obj3 = { value: closure_130_17(obj2), done: false };
+            return obj3;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp11) {
+        c4 = tmp;
+        throw tmp11;
+      }
+    }
   })();
   iter.next();
   return iter;
@@ -191,11 +249,69 @@ let closure_16 = async function _fetchStorefrontPricesForSkuIds(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    await closure_130_17({ type: "skus", skuIds: skuIds2 });
-    await "HermesInternal";
-    closure_1 = tmp2;
-    skuIds2 = skuIds.skuIds;
-    return "PX_16";
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp5;
+            closure_1 = tmp2;
+            let skuIds2;
+            skuIds2 = skuIds.skuIds;
+            c3 = 1;
+            c4 = 1;
+            return { value: "PX_16", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            const obj2 = { type: "skus", skuIds: skuIds2 };
+            c3 = 2;
+            c4 = 1;
+            const obj3 = { value: closure_130_17(obj2), done: false };
+            return obj3;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp11) {
+        c4 = tmp;
+        throw tmp11;
+      }
+    }
   })();
   iter.next();
   return iter;

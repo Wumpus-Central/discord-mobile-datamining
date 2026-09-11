@@ -1,14 +1,14 @@
-// === Module 9522: game_console/GameConsoleAlertUtils ===
+// === Module 9543: game_console/GameConsoleAlertUtils ===
 
-// Module 9522 (game_console/GameConsoleAlertUtils)
+// Module 9543 (game_console/GameConsoleAlertUtils)
 import util from "util" /* 1114 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9321 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9342 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
-let closure_4 = fn(9302).GAME_CONSOLE_ALERT_MODAL_LOCATION;
+let closure_4 = fn(9323).GAME_CONSOLE_ALERT_MODAL_LOCATION;
 const Constants = fn(1074);
 ({ InputModes: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
@@ -36,7 +36,7 @@ export default {
             const intl = util.intl;
             obj.body = intl.string(util.t.bL21zs);
             obj.onConfirm = function onConfirm() {
-              const result = closure_0(4425).UNSAFE_markDismissibleContentAsDismissed(closure_0(1943).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT);
+              const result = closure_0(4427).UNSAFE_markDismissibleContentAsDismissed(closure_0(1943).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT);
               closure_0();
             };
             obj.show(obj);
@@ -53,7 +53,7 @@ export default {
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
     let obj = { title, body: null, onConfirm: null };
     obj = { body, errorCodeMessage, dismissCallback: actions_AlertActionCreatorsDefault.close };
-    obj.body = jsx(reconnectPlatformType(9523).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: actions_AlertActionCreatorsDefault.close });
+    obj.body = jsx(reconnectPlatformType(9544).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: actions_AlertActionCreatorsDefault.close });
     obj.onConfirm = function onConfirm() {
       if (null != reconnectPlatformType) {
         const obj = { platformType: tmp, location: _location };

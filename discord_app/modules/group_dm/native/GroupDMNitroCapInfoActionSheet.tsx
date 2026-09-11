@@ -1,20 +1,20 @@
-// === Module 12259: GroupDMNitroCapInfoActionSheet ===
+// === Module 12282: GroupDMNitroCapInfoActionSheet ===
 
-// Module 12259 (GroupDMNitroCapInfoActionSheet)
+// Module 12282 (GroupDMNitroCapInfoActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7202 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11664).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11686).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, title: null, body: null, button: null };
 createStyles = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;

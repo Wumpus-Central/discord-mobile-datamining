@@ -1,6 +1,6 @@
-// === Module 9510: XboxLinkSuccess ===
+// === Module 9531: XboxLinkSuccess ===
 
-// Module 9510 (XboxLinkSuccess)
+// Module 9531 (XboxLinkSuccess)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,12 +9,12 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, Linking: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const XboxLinkModalScenes = fn(9288).XboxLinkModalScenes;
-const GameConsoleConstants = fn(9302);
+const XboxLinkModalScenes = fn(9309).XboxLinkModalScenes;
+const GameConsoleConstants = fn(9323);
 ({ XBOX_ANDROID_APP_LINK: c10, XBOX_IOS_APP_LINK: closure_11, XBOX_URL_BASE: closure_12 } = GameConsoleConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { image: { width: 58, height: 85, marginBottom: 24 }, getApp: null, appLogoBox: null, appLogo: null, getAppTitle: null, icon: null, externalLinkIcon: null };
 createStyles = { alignItems: "center", alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginTop: 24, padding: 16, borderRadius: nativeDefault.radii.sm, flexDirection: "row" };
 createStyles.getApp = createStyles;
@@ -59,7 +59,7 @@ export default function XboxLinkDiscordSuccess() {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.EDUCATION);
   }, items1);
-  obj1.source = require("module_9511");
+  obj1.source = require("module_9532");
   obj1.style = tmp.image;
   const items2 = [closure_13(closure_5, obj1), , , ];
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
@@ -71,7 +71,7 @@ export default function XboxLinkDiscordSuccess() {
   obj3.children = intl2.string(first(navigation[13]).t.m3mBYE);
   items2[2] = closure_13(first(navigation[12]).Text, obj3);
   const obj4 = { onPress: callback, style: tmp.getApp, children: null };
-  const obj5 = { style: tmp.appLogoBox, children: closure_13(closure_5, { source: require("module_9512"), style: tmp.appLogo }) };
+  const obj5 = { style: tmp.appLogoBox, children: closure_13(closure_5, { source: require("module_9533"), style: tmp.appLogo }) };
   const items3 = [closure_13(closure_6, obj5), , ];
   const obj7 = { style: tmp.getAppTitle, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = first(navigation[13]).intl;

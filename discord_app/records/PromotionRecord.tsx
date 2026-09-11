@@ -1,9 +1,9 @@
-// === Module 10736: PromotionRecord ===
+// === Module 10755: PromotionRecord ===
 
-// Module 10736 (PromotionRecord)
+// Module 10755 (PromotionRecord)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import Record from "Record" /* 1386 */;
-import MarketingComponentRecord from "MarketingComponentRecord" /* 10737 */;
+import MarketingComponentRecord from "MarketingComponentRecord" /* 10756 */;
 
 require = fn;
 let PromotionRecord;

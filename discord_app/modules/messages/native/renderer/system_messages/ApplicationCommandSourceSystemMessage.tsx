@@ -1,13 +1,13 @@
-// === Module 8061: ApplicationCommandSourceSystemMessage ===
+// === Module 8083: ApplicationCommandSourceSystemMessage ===
 
-// Module 8061 (ApplicationCommandSourceSystemMessage)
+// Module 8083 (ApplicationCommandSourceSystemMessage)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5050 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8012 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8014 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8016 */;
-import ApplicationCommands from "ApplicationCommands" /* 8062 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5051 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8034 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8036 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8038 */;
+import ApplicationCommands from "ApplicationCommands" /* 8084 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;

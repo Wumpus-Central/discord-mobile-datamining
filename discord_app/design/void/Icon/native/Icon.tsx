@@ -1,13 +1,13 @@
-// === Module 5027: Icon ===
+// === Module 5028: Icon ===
 
-// Module 5027 (Icon)
+// Module 5028 (Icon)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
 const IconSizes = { EXTRA_SMALL_10: "extraSmall10", EXTRA_SMALL: "extraSmall", SMALL: "small", SMALL_20: "small20", MEDIUM: "medium", LARGE: "large", CUSTOM: "custom", REFRESH_SMALL_16: "refreshSmall16", SMALL_14: "small14" };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_5 = createStyles.createStyles(() => {
   let iconColor = { iconColor: null };
   iconColor = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };

@@ -1,22 +1,22 @@
-// === Module 9500: ApplicationDetails ===
+// === Module 9521: ApplicationDetails ===
 
-// Module 9500 (ApplicationDetails)
+// Module 9521 (ApplicationDetails)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import LinkIcon from "LinkIcon" /* 4548 */;
-import ClockIcon from "ClockIcon" /* 4568 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import LockIcon from "LockIcon" /* 5145 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8404 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 8955 */;
-import scopes from "scopes" /* 9307 */;
-import disclosures from "disclosures" /* 9309 */;
-import Utils from "Utils" /* 9311 */;
-import ShieldIcon from "ShieldIcon" /* 9472 */;
-import EmbedIcon from "EmbedIcon" /* 9501 */;
-import HammerIcon from "HammerIcon" /* 9503 */;
-import RobotIcon from "RobotIcon" /* 9505 */;
+import LinkIcon from "LinkIcon" /* 4549 */;
+import ClockIcon from "ClockIcon" /* 4569 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import LockIcon from "LockIcon" /* 5146 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8425 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 8976 */;
+import scopes from "scopes" /* 9328 */;
+import disclosures from "disclosures" /* 9330 */;
+import Utils from "Utils" /* 9332 */;
+import ShieldIcon from "ShieldIcon" /* 9493 */;
+import EmbedIcon from "EmbedIcon" /* 9522 */;
+import HammerIcon from "HammerIcon" /* 9524 */;
+import RobotIcon from "RobotIcon" /* 9526 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ function ApplicationDetailsEntry(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 const createStyles = { applicationDetails: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 8 }, entryText: { flex: 1 }, entryIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.TEXT_MUTED };
 createStyles.entryIcon = size;

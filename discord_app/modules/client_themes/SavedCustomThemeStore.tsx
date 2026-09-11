@@ -1,6 +1,6 @@
-// === Module 4538: SavedCustomThemeStore ===
+// === Module 4539: SavedCustomThemeStore ===
 
-// Module 4538 (SavedCustomThemeStore)
+// Module 4539 (SavedCustomThemeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
@@ -27,7 +27,7 @@ function validateSavedTheme(colors) {
     return false;
   }
 }
-({ PROTO_THEME_MAP_WEB_REFRESH, PROTO_THEME_MAP_MOBILE: c2 } = ThemeConstants);
+({ PROTO_THEME_MAP_MOBILE_REFRESH: c2, PROTO_THEME_MAP_WEB_REFRESH } = ThemeConstants);
 let FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", IS_FETCHING: 1, [1]: "IS_FETCHING", HAS_FETCHED: 2, [2]: "HAS_FETCHED", ERROR: 3, [3]: "ERROR" };
 let closure_4 = [];
 let ERROR = FetchState.NOT_FETCHED;

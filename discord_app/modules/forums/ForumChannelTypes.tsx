@@ -1,6 +1,6 @@
-// === Module 7355: ForumChannelTypes ===
+// === Module 7376: ForumChannelTypes ===
 
-// Module 7355 (ForumChannelTypes)
+// Module 7376 (ForumChannelTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/forums/ForumChannelTypes.tsx");

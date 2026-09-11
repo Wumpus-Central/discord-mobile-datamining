@@ -1,6 +1,6 @@
-// === Module 14518: CallKitManager ===
+// === Module 14494: CallKitManager ===
 
-// Module 14518 (CallKitManager)
+// Module 14494 (CallKitManager)
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 
 class CallKitLifecycleManager extends tmp2 {

@@ -1,6 +1,6 @@
-// === Module 7551: getTimestampString ===
+// === Module 7572: getTimestampString ===
 
-// Module 7551 (getTimestampString)
+// Module 7572 (getTimestampString)
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,7 @@ export default function getTimestampString(arg0, fn) {
   }
   importDefault = undefined;
   let time;
-  const diffResult = require("module_4196")().diff(require("module_4196")(arg0), "s");
+  const diffResult = require("module_4198")().diff(require("module_4198")(arg0), "s");
   let tmp4;
   if (null != fn) {
     tmp4 = fn();
@@ -112,6 +112,6 @@ export default function getTimestampString(arg0, fn) {
       }
     }
   }
-  let obj = require("module_4196")();
-  return require("module_4196")(arg0).format("LL");
+  let obj = require("module_4198")();
+  return require("module_4198")(arg0).format("LL");
 };

@@ -1,9 +1,9 @@
-// === Module 11154: useFetchCollectiblesProductCategory ===
+// === Module 11177: useFetchCollectiblesProductCategory ===
 
-// Module 11154 (useFetchCollectiblesProductCategory)
-import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10805 */;
+// Module 11177 (useFetchCollectiblesProductCategory)
+import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10824 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7594 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
 
 const require = fn;
 const size = fn(2);

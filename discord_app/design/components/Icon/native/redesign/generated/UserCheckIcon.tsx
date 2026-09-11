@@ -1,9 +1,9 @@
-// === Module 13131: UserCheckIcon ===
+// === Module 13154: UserCheckIcon ===
 
-// Module 13131 (UserCheckIcon)
+// Module 13154 (UserCheckIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4305 */;
-import _mod8128 from "module_8128" /* 8128 */;
+import BaseIconImage from "BaseIconImage" /* 4307 */;
+import _mod8150 from "module_8150" /* 8150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const UserCheckIcon = function UserCheckIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8128, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8150, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

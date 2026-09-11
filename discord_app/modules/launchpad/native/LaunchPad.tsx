@@ -1,34 +1,34 @@
-// === Module 17067: LaunchPad ===
+// === Module 17056: LaunchPad ===
 
-// Module 17067 (LaunchPad)
+// Module 17056 (LaunchPad)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import ChatInputUtils from "ChatInputUtils" /* 4470 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Pressables from "Pressables" /* 5173 */;
-import AutocompleterDefault from "Autocompleter" /* 9906 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9914 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 11038 */;
-import RouteManagerDefault from "RouteManager" /* 12859 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14658 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import ChatInputUtils from "ChatInputUtils" /* 4472 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Pressables from "Pressables" /* 5174 */;
+import AutocompleterDefault from "Autocompleter" /* 9927 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9935 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 11059 */;
+import RouteManagerDefault from "RouteManager" /* 12882 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4295 */;
-import ChannelListStore from "ChannelListStore" /* 7577 */;
-import NavigationHistoryStore from "NavigationHistoryStore" /* 7380 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5556 */;
+import ActionSheetStore from "ActionSheetStore" /* 4297 */;
+import ChannelListStore from "ChannelListStore" /* 7598 */;
+import NavigationHistoryStore from "NavigationHistoryStore" /* 7401 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5557 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7771 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7687 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7792 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7708 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13829 */;
-import ReadStateStore from "ReadStateStore" /* 4620 */;
-import SortedGuildStore from "SortedGuildStore" /* 5488 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
-import VoiceStateStore from "VoiceStateStore" /* 4624 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13808 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
+import SortedGuildStore from "SortedGuildStore" /* 5489 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import VoiceStateStore from "VoiceStateStore" /* 4625 */;
 
 require = fn;
 function TabButton(selected) {
@@ -63,7 +63,7 @@ function createAndAppendChannel(item10022, set, items) {
   }
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(7380);
+let NavigationHistoryStore = fn(7401);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
 const ChannelRecord = fn(1961);
 ({ isGuildSelectableChannelType: map1, isGuildVocalChannelType: closure_14 } = ChannelRecord);
@@ -72,7 +72,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
 const md = nativeDefault.radii.md;
-fn(4605);
+fn(4606);
 let obj = { wrapper: null, launchPadContent: null, header: null, subheader: null, tabs: null, tab: null, tabSelected: null };
 obj = { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" };
 obj.wrapper = obj;
@@ -280,7 +280,7 @@ let closure_35 = noop.memo((tab) => {
   return closure_28(sharedValue, obj);
 });
 const results = [];
-let items = [fn(9905).AutocompleterResultTypes.GUILD, fn(9905).AutocompleterResultTypes.TEXT_CHANNEL, fn(9905).AutocompleterResultTypes.GROUP_DM, fn(9905).AutocompleterResultTypes.VOICE_CHANNEL, fn(9905).AutocompleterResultTypes.USER];
+let items = [fn(9926).AutocompleterResultTypes.GUILD, fn(9926).AutocompleterResultTypes.TEXT_CHANNEL, fn(9926).AutocompleterResultTypes.GROUP_DM, fn(9926).AutocompleterResultTypes.VOICE_CHANNEL, fn(9926).AutocompleterResultTypes.USER];
 const __initData3 = { code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}" };
 const __initData4 = { code: "function LaunchPadTsx4(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}" };
 let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

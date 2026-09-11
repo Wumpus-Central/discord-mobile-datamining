@@ -1,12 +1,12 @@
-// === Module 9347: CrunchyrollLinkSuccess ===
+// === Module 9368: CrunchyrollLinkSuccess ===
 
-// Module 9347 (CrunchyrollLinkSuccess)
+// Module 9368 (CrunchyrollLinkSuccess)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7175 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9295 */;
-import _modDef9348 from "module_9348" /* 9348 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9316 */;
+import _modDef9369 from "module_9369" /* 9369 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
@@ -25,7 +25,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = closure_7();
-  const items = [hasOwnProperty(React3, { source: _modDef9348, style: closure_7().image }), , ];
+  const items = [hasOwnProperty(React3, { source: _modDef9369, style: closure_7().image }), , ];
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.Fnvxvk);

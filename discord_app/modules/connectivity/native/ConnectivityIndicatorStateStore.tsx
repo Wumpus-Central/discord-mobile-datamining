@@ -1,13 +1,13 @@
-// === Module 13762: ConnectivityIndicatorStateStore ===
+// === Module 13741: ConnectivityIndicatorStateStore ===
 
-// Module 13762 (ConnectivityIndicatorStateStore)
+// Module 13741 (ConnectivityIndicatorStateStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1461 */;
-import CacheStore from "CacheStore" /* 7528 */;
+import CacheStore from "CacheStore" /* 7549 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 4826 */;
+import MessageStore from "MessageStore" /* 4827 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
 
@@ -35,7 +35,7 @@ function updateState() {
           } else if (tmp9.CONNECTING === UNKNOWN) {
             const obj1 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let obj15 = state(13763);
+              let obj15 = state(13742);
               let num2 = obj15.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num2 == null) {
                 num2 = 10000;
@@ -63,7 +63,7 @@ function updateState() {
           } else if (tmp9.CONNECTING === UNKNOWN) {
             const obj5 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let obj10 = state(13763);
+              let obj10 = state(13742);
               let num = obj10.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num == null) {
                 num = 10000;

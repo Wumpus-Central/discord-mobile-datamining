@@ -1,25 +1,25 @@
-// === Module 10342: ExpressionPickerActionSheet ===
+// === Module 10361: ExpressionPickerActionSheet ===
 
-// Module 10342 (ExpressionPickerActionSheet)
+// Module 10361 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import useKeyboardType from "useKeyboardType" /* 4472 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import NavigatorConstants from "NavigatorConstants" /* 5732 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7202 */;
-import KeyboardUtils from "KeyboardUtils" /* 10344 */;
-import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 10345 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 10346 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import useKeyboardType from "useKeyboardType" /* 4474 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import NavigatorConstants from "NavigatorConstants" /* 5733 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
+import KeyboardUtils from "KeyboardUtils" /* 10363 */;
+import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 10364 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 10365 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
-let closure_5 = fn(7203).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(10343).STICKER_FORMATS;
+let closure_5 = fn(7224).ACTION_SHEET_START_HEIGHT_RATIO;
+const STICKER_FORMATS = fn(10362).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

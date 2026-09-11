@@ -1,11 +1,11 @@
-// === Module 5013: Backdrop ===
+// === Module 5014: Backdrop ===
 
-// Module 5013 (Backdrop)
+// Module 5014 (Backdrop)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import native from "native" /* 4315 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
+import native from "native" /* 4317 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = {};
-fn(4605);
+fn(4606);
 let createStyles = { fill: StyleSheet.absoluteFillObject, backdrop: null, backdropOpaque: null, accessibilityDismiss: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 createStyles.backdrop = createStyles;

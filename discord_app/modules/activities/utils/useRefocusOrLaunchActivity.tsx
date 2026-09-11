@@ -1,13 +1,13 @@
-// === Module 11590: useRefocusOrLaunchActivity ===
+// === Module 11612: useRefocusOrLaunchActivity ===
 
-// Module 11590 (useRefocusOrLaunchActivity)
+// Module 11612 (useRefocusOrLaunchActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9580 */;
+import FramesStore from "FramesStore" /* 9601 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
 const require = fn;
-const FramesConstants = fn(9581);
+const FramesConstants = fn(9602);
 ({ MAIN_SURFACE: closure_7, FrameLayoutModes: closure_8 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
@@ -63,8 +63,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                 if (null != stateFromStores1) {
                   if (stateFromStores1.applicationId === applicationId) {
                     const obj1 = { frameId: stateFromStores1.id, layoutMode: constants.FOCUSED };
-                    const result = tmp3(9577).updateFrameLayoutMode(obj1);
-                    const obj10 = tmp3(9577);
+                    const result = tmp3(9598).updateFrameLayoutMode(obj1);
+                    const obj10 = tmp3(9598);
                   }
                 }
                 if (tmp9) {
@@ -73,15 +73,15 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   if ("guild_id" in _location) {
                     guild_id = _location.guild_id;
                   }
-                  tmp3(9605)(guild_id, _location);
-                  const tmp26 = tmp3(9605);
+                  tmp3(9626)(guild_id, _location);
+                  const tmp26 = tmp3(9626);
                 } else {
                   if (runBeforeLaunchAttempt != null) {
                     runBeforeLaunchAttempt();
                   }
                   c4 = 1;
                   if (c7) {
-                    let obj5 = tmp3(9577);
+                    let obj5 = tmp3(9598);
                     let obj2 = { applicationId, surface, analyticsContext: null };
                     const obj3 = { isStart: true, analyticsLocations };
                     obj2.analyticsContext = obj3;
@@ -102,7 +102,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     }
                   }
                 }
-                obj2 = analyticsLocations(11591);
+                obj2 = analyticsLocations(11613);
                 obj5 = { appId: applicationId, botId: null, analyticsLocations: null };
                 let id1;
                 if (data != null) {

@@ -1,11 +1,11 @@
-// === Module 16446: useYouBarCoachmark ===
+// === Module 16435: useYouBarCoachmark ===
 
-// Module 16446 (useYouBarCoachmark)
+// Module 16435 (useYouBarCoachmark)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 
 require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;

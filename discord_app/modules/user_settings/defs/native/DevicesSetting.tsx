@@ -1,10 +1,10 @@
-// === Module 15023: DevicesSetting ===
+// === Module 15000: DevicesSetting ===
 
-// Module 15023 (DevicesSetting)
+// Module 15000 (DevicesSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import LaptopPhoneIcon from "LaptopPhoneIcon" /* 15024 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import LaptopPhoneIcon from "LaptopPhoneIcon" /* 15001 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

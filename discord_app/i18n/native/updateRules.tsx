@@ -1,9 +1,9 @@
-// === Module 17371: updateRules ===
+// === Module 17360: updateRules ===
 
-// Module 17371 (updateRules)
+// Module 17360 (updateRules)
 import native from "native" /* 1178 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import _modDef4301 from "module_4301" /* 4301 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import _modDef4303 from "module_4303" /* 4303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ class I18nLink {
     if (null == obj.onClick) {
       obj.onClick = () => {
         obj = LinkingDefault;
-        return obj.openURL(_modDef4301.sanitizeUrl(node.target));
+        return obj.openURL(_modDef4303.sanitizeUrl(node.target));
       };
     }
     obj = { accessible: true, accessibilityRole: "link", onPress: obj.onClick, style: memo, children: output(node.content, state) };

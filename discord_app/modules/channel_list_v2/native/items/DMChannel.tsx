@@ -1,22 +1,22 @@
-// === Module 16321: DMChannel ===
+// === Module 16310: DMChannel ===
 
-// Module 16321 (DMChannel)
+// Module 16310 (DMChannel)
 import nativeDefault from "native" /* 576 */;
-import transitionToChannel from "transitionToChannel" /* 4616 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9840 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10985 */;
-import useCallA11yStateDefault from "useCallA11yState" /* 16114 */;
-import ChannelItemDefault from "ChannelItem" /* 16198 */;
+import transitionToChannel from "transitionToChannel" /* 4617 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9861 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11005 */;
+import useCallA11yStateDefault from "useCallA11yState" /* 16103 */;
+import ChannelItemDefault from "ChannelItem" /* 16187 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 4620 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
+import ReadStateStore from "ReadStateStore" /* 4621 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
 
 require = fn;
-const UnreadSetting = fn(4787).UnreadSetting;
+const UnreadSetting = fn(4788).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { container: null };
-obj = { marginVertical: fn(10188).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+obj = { marginVertical: fn(10207).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 obj.container = obj;
 let closure_8 = createStyles.createStyles(obj);
 const size = fn(2);

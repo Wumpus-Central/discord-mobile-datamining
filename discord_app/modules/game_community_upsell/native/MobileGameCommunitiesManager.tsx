@@ -1,16 +1,16 @@
-// === Module 17595: MobileGameCommunitiesManager ===
+// === Module 17586: MobileGameCommunitiesManager ===
 
-// Module 17595 (MobileGameCommunitiesManager)
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13788 */;
-import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13790 */;
-import GameCommunityConfig from "GameCommunityConfig" /* 15703 */;
-import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 16348 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13787 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15702 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+// Module 17586 (MobileGameCommunitiesManager)
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13767 */;
+import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13769 */;
+import GameCommunityConfig from "GameCommunityConfig" /* 15686 */;
+import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 16337 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13766 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15685 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
-let closure_5 = fn(16347).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_5 = fn(16336).MAX_DISPLAYED_UPSELL_GUILDS;
 class MobileGameCommunitiesManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

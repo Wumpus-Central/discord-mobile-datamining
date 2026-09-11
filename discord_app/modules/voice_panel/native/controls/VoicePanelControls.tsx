@@ -1,45 +1,45 @@
-// === Module 17262: VoicePanelControls ===
+// === Module 17251: VoicePanelControls ===
 
-// Module 17262 (VoicePanelControls)
+// Module 17251 (VoicePanelControls)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import native from "native" /* 4315 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import HapticUtils from "HapticUtils" /* 4573 */;
-import spring from "spring" /* 5024 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
-import native2 from "native" /* 8971 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9565 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11065 */;
-import createUseAnimatedScrollLock from "createUseAnimatedScrollLock" /* 12173 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12347 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12349 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17147 */;
-import useControlsLockDefault from "useControlsLock" /* 17188 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 17263 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17264 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17265 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 17266 */;
-import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17270 */;
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17272 */;
+import native from "native" /* 4317 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import HapticUtils from "HapticUtils" /* 4574 */;
+import spring from "spring" /* 5025 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import native2 from "native" /* 8992 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9586 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11086 */;
+import createUseAnimatedScrollLock from "createUseAnimatedScrollLock" /* 12196 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12370 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12372 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17136 */;
+import useControlsLockDefault from "useControlsLock" /* 17177 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 17252 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17253 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17254 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 17255 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17259 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17261 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12343);
+const VoicePanelConstants = fn(12366);
 ({ UI_SHOW_HIDE_PHYSICS: closure_7, MODE_CHANGE_PHYSICS: closure_8, BORDER_RADIUS_PHYSICS: closure_9, PANEL_CONTROLS_HEIGHT_PHYSICS: c10, VoicePanelModes: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(12346);
+const VoicePanelCardConstants = fn(12369);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(12341);
+const VoicePanelControlsConstants = fn(12364);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } = VoicePanelControlsConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { accessibilityWrapper: null, wrapper: null, buttonsWrapper: null, actionSheetDragHandleWrapper: null };
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -778,13 +778,13 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   const items6 = [tmp6.wrapper, animatedStyle, hiddenStyles];
   obj7.style = items6;
   const tmp45 = isScreenReaderEnabled(channelId[47]);
-  let MIDNIGHT;
+  let ONYX;
   if (tmp11) {
     if (!tmp38[0]) {
-      MIDNIGHT = constants3.MIDNIGHT;
+      ONYX = constants3.ONYX;
     }
   }
-  obj8 = { theme: MIDNIGHT, children: null };
+  obj8 = { theme: ONYX, children: null };
   obj9 = { matchAppTheme: !tmp11 };
   const items7 = [closure_18(gestureState(channelId[48]).VoicePanelVisualEffectView, obj9), closure_18(closure_39, { openTab, wrapperSpecs: sharedValue1, sharedTab: sharedValue })];
   obj8.children = items7;

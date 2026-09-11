@@ -1,19 +1,19 @@
-// === Module 17731: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 17722: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 17731 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 17722 (GuildSettingsRoleEditConnectionConfiguration)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
-import shared from "shared" /* 4456 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Pressables from "Pressables" /* 5173 */;
-import PlatformsDefault from "Platforms" /* 5333 */;
-import TableRow from "TableRow" /* 5655 */;
-import XSmallIcon from "XSmallIcon" /* 5730 */;
-import TableRowGroup from "TableRowGroup" /* 5737 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11634 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 17732 */;
+import shared from "shared" /* 4458 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Pressables from "Pressables" /* 5174 */;
+import PlatformsDefault from "Platforms" /* 5334 */;
+import TableRow from "TableRow" /* 5656 */;
+import XSmallIcon from "XSmallIcon" /* 5731 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11656 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 17723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -129,7 +129,7 @@ function BooleanConfigRule(metadataField) {
     }
     _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(7252).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(7273).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
@@ -172,7 +172,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(17732);
+  let obj = metadataField(17723);
   const realizedOperatorForResult = obj.realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
@@ -181,7 +181,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let tmpResult = metadataField(17732);
+  let tmpResult = metadataField(17723);
   str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
   str = str.toString();
   let mapped = noop;
@@ -261,7 +261,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       obj2.children = onInputValueChange(metadataField(1178).TextInput, obj3, metadataField);
       let items1 = [onInputValueChange(map, obj2, "_numericalInputContainer"), ];
       const obj4 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(metadataField(4601).Text, obj4);
+      items1[1] = onInputValueChange(metadataField(4602).Text, obj4);
       obj1.children = items1;
       tmp21Result = closure_13(tmp22, obj1);
     }
@@ -297,7 +297,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
           _slicedToArray(tmp3, num);
         }
     };
-    return onInputValueChange(metadataField(7252).TableSwitchRow, obj5, metadataField);
+    return onInputValueChange(metadataField(7273).TableSwitchRow, obj5, metadataField);
   }
 }
 function BlueskyMetadataRules(arg0) {
@@ -514,11 +514,11 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1074).PlatformTypes;
-const Constants = fn(5458);
+const Constants = fn(5459);
 ({ MetadataFields: closure_7, OperatorTypes: closure_8, MetadataItemTypes: closure_9, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: c10, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { numericalInputContainerIOSInline: { marginTop: -2 }, numericalInputContainerAndroidInline: null, numericalInputContainerBase: null, numericalInput: null, appNumericalInput: null, appNumericalInputContainer: null, appNumericalInputText: null, numericalInputDisabled: null, metadataRow: null, metadataRowText: null };
 createStyles = { transform: null };
 let items = [{ translateY: 10 }];

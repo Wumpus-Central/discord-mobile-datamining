@@ -1,7 +1,7 @@
-// === Module 13053: getMediaViewerStateForScreen ===
+// === Module 13076: getMediaViewerStateForScreen ===
 
-// Module 13053 (getMediaViewerStateForScreen)
-import MediaSourceUtil from "MediaSourceUtil" /* 8330 */;
+// Module 13076 (getMediaViewerStateForScreen)
+import MediaSourceUtil from "MediaSourceUtil" /* 8351 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");

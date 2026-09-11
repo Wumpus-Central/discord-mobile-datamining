@@ -1,6 +1,6 @@
-// === Module 7169: CategoryCollapseStore ===
+// === Module 7190: CategoryCollapseStore ===
 
-// Module 7169 (CategoryCollapseStore)
+// Module 7190 (CategoryCollapseStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
@@ -8,7 +8,7 @@ import GlobalUtils from "GlobalUtils" /* 1369 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4947 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4948 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 
 require = fn;

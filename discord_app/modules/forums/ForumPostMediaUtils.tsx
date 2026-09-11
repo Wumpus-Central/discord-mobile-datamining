@@ -1,17 +1,17 @@
-// === Module 7949: ForumPostMediaUtils ===
+// === Module 7971: ForumPostMediaUtils ===
 
-// Module 7949 (ForumPostMediaUtils)
+// Module 7971 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4755 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4830 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4756 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4831 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7358 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7379 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4826 */;
+import MessageStore from "MessageStore" /* 4827 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

@@ -1,13 +1,13 @@
-// === Module 17218: VoicePanelConsoleFacepile ===
+// === Module 17207: VoicePanelConsoleFacepile ===
 
-// Module 17218 (VoicePanelConsoleFacepile)
+// Module 17207 (VoicePanelConsoleFacepile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import NativeViewDefault from "NativeView" /* 5639 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9283 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 9533 */;
+import NativeViewDefault from "NativeView" /* 5640 */;
+import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9304 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 9554 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ function getConsoleInfo(type) {
 }
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { consoleIconContainer: null, consoleIcon: null };
 createStyles = { borderRadius: nativeDefault.radii.round, padding: 8, margin: -3, borderWidth: 3, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.consoleIconContainer = createStyles;

@@ -1,7 +1,7 @@
-// === Module 4761: GuildRoomActionCreators ===
+// === Module 4762: GuildRoomActionCreators ===
 
-// Module 4761 (GuildRoomActionCreators)
-import _guildRoomConnectAll from "_guildRoomConnect" /* 4762 */;
+// Module 4762 (GuildRoomActionCreators)
+import _guildRoomConnectAll from "_guildRoomConnect" /* 4763 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_3 = async function _guildRoomConnect(arg0) {

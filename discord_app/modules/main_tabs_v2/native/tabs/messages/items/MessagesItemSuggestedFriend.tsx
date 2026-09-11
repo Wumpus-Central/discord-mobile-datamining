@@ -1,19 +1,19 @@
-// === Module 16124: MessagesItemSuggestedFriend ===
+// === Module 16113: MessagesItemSuggestedFriend ===
 
-// Module 16124 (MessagesItemSuggestedFriend)
+// Module 16113 (MessagesItemSuggestedFriend)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import UserUtilsDefault from "UserUtils" /* 4449 */;
-import _mod8943 from "module_8943" /* 8943 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10189 */;
-import _mod16123 from "module_16123" /* 16123 */;
-import FriendSuggestionUtils from "FriendSuggestionUtils" /* 16125 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16126 */;
+import UserUtilsDefault from "UserUtils" /* 4451 */;
+import _mod8964 from "module_8964" /* 8964 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10208 */;
+import _mod16112 from "module_16112" /* 16112 */;
+import FriendSuggestionUtils from "FriendSuggestionUtils" /* 16114 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16115 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4253 */;
+import RelationshipStore from "RelationshipStore" /* 4255 */;
 
 require = fn;
 const View = fn(17).View;
@@ -21,7 +21,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { container: null, pressable: null, textContainer: null, avatar: null };
 obj = { paddingHorizontal: nativeDefault.space.PX_8 };
 obj.container = obj;
@@ -48,7 +48,7 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     return items;
   }, items);
   const callback = noop.useCallback(() => {
-    asyncRequireImpl(8242, dependencyMap.paths).then((result) => result.default({ userId: suggestedFriend.user.id, localUser: suggestedFriend.user, location: "Messages Tab User Profile" }));
+    asyncRequireImpl(8264, dependencyMap.paths).then((result) => result.default({ userId: suggestedFriend.user.id, localUser: suggestedFriend.user, location: "Messages Tab User Profile" }));
   }, items1);
   let obj1 = height(suggestedFriend[11]);
   const items2 = [RelationshipStore];

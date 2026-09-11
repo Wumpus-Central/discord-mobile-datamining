@@ -1,9 +1,9 @@
-// === Module 6591: TentSpotIllustration ===
+// === Module 6612: TentSpotIllustration ===
 
-// Module 6591 (TentSpotIllustration)
+// Module 6612 (TentSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6592 from "module_6592" /* 6592 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6613 from "module_6613" /* 6613 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const TentSpotIllustration = function TentSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6592 };
+  obj = { uri: _modDef6613 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const TentSpotIllustration = function TentSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6592 });
+  return jsx(FastImageDefault, { uri: _modDef6613 });
 };

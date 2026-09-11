@@ -1,9 +1,9 @@
-// === Module 16689: VibegrationsEffortPresets ===
+// === Module 16677: VibegrationsEffortPresets ===
 
-// Module 16689 (VibegrationsEffortPresets)
+// Module 16677 (VibegrationsEffortPresets)
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16690 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16678 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

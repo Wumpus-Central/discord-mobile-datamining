@@ -1,14 +1,14 @@
-// === Module 11014: DetailedGuildIdentityUserRow ===
+// === Module 11034: DetailedGuildIdentityUserRow ===
 
-// Module 11014 (DetailedGuildIdentityUserRow)
+// Module 11034 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import UserUtilsDefault from "UserUtils" /* 4449 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4757 */;
-import TableRow from "TableRow" /* 5655 */;
-import Form from "Form" /* 8663 */;
-import DiscordTagDefault from "DiscordTag" /* 9873 */;
+import UserUtilsDefault from "UserUtils" /* 4451 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
+import TableRow from "TableRow" /* 5656 */;
+import Form from "Form" /* 8684 */;
+import DiscordTagDefault from "DiscordTag" /* 9894 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { mainIdentity: { flexDirection: "row", alignItems: "center" }, primaryAvatar: null, mainTag: null };
 obj = { marginRight: nativeDefault.space.PX_4 };
 obj.primaryAvatar = obj;

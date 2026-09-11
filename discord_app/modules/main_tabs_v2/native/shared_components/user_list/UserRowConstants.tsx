@@ -1,6 +1,6 @@
-// === Module 10930: UserRowConstants ===
+// === Module 10949: UserRowConstants ===
 
-// Module 10930 (UserRowConstants)
+// Module 10949 (UserRowConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx");

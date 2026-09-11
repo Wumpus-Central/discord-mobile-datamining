@@ -1,6 +1,6 @@
-// === Module 8209: ? ===
+// === Module 8231: ? ===
 
-// Module 8209
+// Module 8231
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-capybara.png.js");

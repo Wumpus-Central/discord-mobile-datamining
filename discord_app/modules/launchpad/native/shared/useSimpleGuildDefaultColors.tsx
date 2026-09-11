@@ -1,8 +1,8 @@
-// === Module 17070: useSimpleGuildDefaultColors ===
+// === Module 17059: useSimpleGuildDefaultColors ===
 
-// Module 17070 (useSimpleGuildDefaultColors)
+// Module 17059 (useSimpleGuildDefaultColors)
 import nativeDefault from "native" /* 576 */;
-import createStyles from "createStyles" /* 4605 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 let obj = { iconBackground: null, iconBackgroundBrand: null, iconStroke: null };

@@ -1,10 +1,10 @@
-// === Module 8806: GameProfileCommunity ===
+// === Module 8827: GameProfileCommunity ===
 
-// Module 8806 (GameProfileCommunity)
+// Module 8827 (GameProfileCommunity)
 import nativeDefault from "native" /* 576 */;
-import transitionToGuild from "transitionToGuild" /* 7394 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8756 */;
-import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 8808 */;
+import transitionToGuild from "transitionToGuild" /* 7415 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8777 */;
+import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 8829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, headerText: null, card: null, guildContent: null, guildHeaderRow: null, guildIcon: null, guildIconImage: null, guildInfo: null, guildNameDescriptionContainer: null, guildNameRow: null, memberCountsContainer: null, memberCountContainer: null, onlineEllipse: null, membersEllipse: null };
 createStyles = { gap: nativeDefault.space.PX_8 };
 createStyles.container = createStyles;

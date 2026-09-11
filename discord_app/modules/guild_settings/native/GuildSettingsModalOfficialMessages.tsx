@@ -1,22 +1,22 @@
-// === Module 17885: GuildSettingsModalOfficialMessages ===
+// === Module 17876: GuildSettingsModalOfficialMessages ===
 
-// Module 17885 (GuildSettingsModalOfficialMessages)
+// Module 17876 (GuildSettingsModalOfficialMessages)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7319 */;
-import HeaderActionButton from "HeaderActionButton" /* 7429 */;
-import _modDef15363 from "module_15363" /* 15363 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7340 */;
+import HeaderActionButton from "HeaderActionButton" /* 7450 */;
+import _modDef15345 from "module_15345" /* 15345 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9133 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9154 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -47,7 +47,7 @@ function MessagePreview(theme) {
   const items1 = [tmp.chatContainerInner, { backgroundColor: obj2.alpha(closure_1_10).hex() }];
   obj.style = items1;
   const hexResult1 = obj2.alpha(closure_1_10).hex();
-  const items2 = [closure_1_12(native.Avatar, { source: _modDef15363 }), ];
+  const items2 = [closure_1_12(native.Avatar, { source: _modDef15345 }), ];
   obj2 = { style: tmp.chatContent, children: null };
   const obj3 = { style: tmp.chatHeader, children: null };
   const obj4 = { animated: true, style: animatedStyles.textStrong, variant: "text-md/semibold", lineClamp: 1, children: null };
@@ -72,12 +72,12 @@ function MessagePreview(theme) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const MessageConstants = fn(4598);
+const MessageConstants = fn(4599);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_9, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: c10 } = MessageConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, segmentedControlContainer: null, trailingColorContainer: null, colorBlock: null, chatSection: null, chatContainer: null, chatContainerInner: null, chatContent: null, chatHeader: null, chatTimestamp: null };
 createStyles = { gap: nativeDefault.space.PX_8, height: "100%" };
 createStyles.container = createStyles;
@@ -85,8 +85,8 @@ createStyles.segmentedControlContainer = { gap: nativeDefault.space.PX_16, align
 createStyles.trailingColorContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
 createStyles.colorBlock = { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 };
 let obj1 = { gap: nativeDefault.space.PX_16, alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
-createStyles.chatSection = { paddingHorizontal: fn(5653).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
-let obj2 = { paddingHorizontal: fn(5653).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+createStyles.chatSection = { paddingHorizontal: fn(5654).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+let obj2 = { paddingHorizontal: fn(5654).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
 createStyles.chatContainer = { paddingVertical: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.xl, borderWidth: StyleSheet.hairlineWidth };
 let obj3 = { paddingVertical: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.xl, borderWidth: StyleSheet.hairlineWidth };
 createStyles.chatContainerInner = { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, gap: nativeDefault.space.PX_8 };
@@ -94,16 +94,16 @@ createStyles.chatContent = { flex: 1 };
 createStyles.chatHeader = { flexDirection: "row", alignItems: "baseline", gap: 6 };
 createStyles.chatTimestamp = { marginTop: -8 };
 let closure_14 = createStyles.createStyles(createStyles);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj4 = { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, gap: nativeDefault.space.PX_8 };
 let closure_15 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW });
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_16 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_STRONG });
-fn(4605);
+fn(4606);
 createStyles = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_17 = createStyles.createAnimatedThemedStyles(createStyles);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj6 = { borderColor: nativeDefault.colors.BORDER_STRONG };
 let closure_18 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_MUTED });
 const __initData = { code: "function GuildSettingsModalOfficialMessagesTsx1(){const{activeIndex}=this.__closure;return activeIndex.get();}" };
@@ -188,7 +188,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
       const obj = { officialMessageColor };
       obj.updateGuild(obj);
     };
-    obj.openLazy(asyncRequireImpl(16373, dependencyMap.paths), "RoleColorPicker", obj);
+    obj.openLazy(asyncRequireImpl(16362, dependencyMap.paths), "RoleColorPicker", obj);
   }, items5);
   const tmp8 = hasChanges(officialMessageColor.useState(0), 2);
   [tmp15, c7] = hasChanges(officialMessageColor.useState(0), 2);
@@ -205,13 +205,13 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj = { label: null, id: null, icon: null, page: null };
     const intl2 = guildId(submitting[12]).intl;
     obj.label = intl2.string(guildId(submitting[12]).t.b8Cei3);
-    obj.id = constants.DARKER;
+    obj.id = constants.DARK;
     obj.icon = closure_1_12(guildId(submitting[14]).ThemeDarkIcon, {});
     items[1] = obj;
     obj = { label: null, id: null, icon: null, page: null };
     const intl3 = guildId(submitting[12]).intl;
-    obj.label = intl3.string(guildId(submitting[12]).t.pQwSpQ);
-    obj.id = constants.MIDNIGHT;
+    obj.label = intl3.string(guildId(submitting[12]).t.Do4ZJx);
+    obj.id = constants.ONYX;
     obj.icon = closure_1_12(guildId(submitting[15]).ThemeMidnightIcon, {});
     items[2] = obj;
     return items;
@@ -220,15 +220,15 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
   const segmentedControlState = tmp2Result.useSegmentedControlState({ items: memo, pageWidth: tmp15, defaultIndex: tmp9 });
   activeIndex = segmentedControlState.activeIndex;
   const tmp14 = hasChanges(officialMessageColor.useState(0), 2);
-  class B {
+  class H {
     constructor() {
       return activeIndex.get();
     }
   }
-  B.__closure = { activeIndex };
-  B.__workletHash = 4687220686460;
-  B.__initData = __initData;
-  class P {
+  H.__closure = { activeIndex };
+  H.__workletHash = 4687220686460;
+  H.__initData = __initData;
+  class E {
     constructor(arg0) {
       obj = closure_0(closure_2[26]);
       runOnJSResult = obj.runOnJS(closure_6);
@@ -237,10 +237,10 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     }
   }
   obj = { runOnJS: tmp2(tmp3[26]).runOnJS, setCurrentThemeIndex: tmp10 };
-  P.__closure = obj;
-  P.__workletHash = 5332792853021;
-  P.__initData = __initData2;
-  const animatedReaction = guildId(submitting[26]).useAnimatedReaction(B, P);
+  E.__closure = obj;
+  E.__workletHash = 5332792853021;
+  E.__initData = __initData2;
+  const animatedReaction = guildId(submitting[26]).useAnimatedReaction(H, E);
   obj = { bgBaseLow: closure_15(activeIndex), borderStrong: closure_16(activeIndex), textStrong: closure_17(activeIndex), textMuted: closure_18(activeIndex) };
   obj1 = { style: tmp.container, children: null };
   const obj2 = { label: null, onPress: null, arrow: true, trailing: null, subLabel: null };

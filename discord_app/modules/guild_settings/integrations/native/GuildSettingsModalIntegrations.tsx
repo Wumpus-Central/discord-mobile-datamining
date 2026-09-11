@@ -1,10 +1,10 @@
-// === Module 17653: GuildSettingsModalIntegrations ===
+// === Module 17644: GuildSettingsModalIntegrations ===
 
-// Module 17653 (GuildSettingsModalIntegrations)
+// Module 17644 (GuildSettingsModalIntegrations)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9133 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9154 */;
 
 const require = fn;
 const Image = fn(17).Image;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let items = [, ];
 ({ TWITCH: arr[0], YOUTUBE: arr[1] } = PlatformTypes);
-fn(4605);
+fn(4606);
 let createStyles = { screenContainer: null, screenContent: null, platformIcon: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.screenContainer = createStyles;

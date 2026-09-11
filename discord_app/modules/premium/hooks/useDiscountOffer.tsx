@@ -1,10 +1,10 @@
-// === Module 8114: useDiscountOffer ===
+// === Module 8136: useDiscountOffer ===
 
-// Module 8114 (useDiscountOffer)
+// Module 8136 (useDiscountOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import UserOfferStore from "UserOfferStore" /* 7502 */;
+import UserOfferStore from "UserOfferStore" /* 7523 */;
 
 const require = fn;
 const PremiumConstants = fn(1373);

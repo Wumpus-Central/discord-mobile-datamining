@@ -1,9 +1,9 @@
-// === Module 9249: isPlayingGameActivity ===
+// === Module 9270: isPlayingGameActivity ===
 
-// Module 9249 (isPlayingGameActivity)
+// Module 9270 (isPlayingGameActivity)
 import Constants from "Constants" /* 1074 */;
 import Constants2 from "Constants" /* 1920 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7790 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7811 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = Constants2.XBOX_ACTIVITY_APPLICATION_ID;

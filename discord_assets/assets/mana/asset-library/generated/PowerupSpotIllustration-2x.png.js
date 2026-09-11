@@ -1,6 +1,6 @@
-// === Module 6408: ? ===
+// === Module 6429: ? ===
 
-// Module 6408
+// Module 6429
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PowerupSpotIllustration-2x.png.js");

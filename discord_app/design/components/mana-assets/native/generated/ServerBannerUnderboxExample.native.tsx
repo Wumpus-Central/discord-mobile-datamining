@@ -1,9 +1,9 @@
-// === Module 6465: ServerBannerUnderboxExample ===
+// === Module 6486: ServerBannerUnderboxExample ===
 
-// Module 6465 (ServerBannerUnderboxExample)
+// Module 6486 (ServerBannerUnderboxExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6466 from "module_6466" /* 6466 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6487 from "module_6487" /* 6487 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerBannerUnderboxExample = function ServerBannerUnderboxExample(
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6466 };
+  obj = { uri: _modDef6487 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ServerBannerUnderboxExample = function ServerBannerUnderboxExample(
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6466 });
+  return jsx(FastImageDefault, { uri: _modDef6487 });
 };

@@ -1,28 +1,28 @@
-// === Module 11194: EmojiPickerActionSheet ===
+// === Module 11217: EmojiPickerActionSheet ===
 
-// Module 11194 (EmojiPickerActionSheet)
+// Module 11217 (EmojiPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import SearchField from "SearchField" /* 7102 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 10355 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11193 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 11195 */;
-import BurstReactionToggleDefault from "BurstReactionToggle" /* 11197 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import SearchField from "SearchField" /* 7123 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 10374 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11216 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 11218 */;
+import BurstReactionToggleDefault from "BurstReactionToggle" /* 11220 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(10360).EmojiPickerSource;
+const EmojiPickerSource = fn(10379).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1074).EXPRESSION_FOOTER_HEIGHT;
 let EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-fn(4605);
+fn(4606);
 let createStyles = { header: { flexDirection: "column" }, searchContainer: null, content: null, background: null, headerText: null, headerSpacer: null, burstReaction: null };
 createStyles = { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 };
 createStyles.searchContainer = createStyles;

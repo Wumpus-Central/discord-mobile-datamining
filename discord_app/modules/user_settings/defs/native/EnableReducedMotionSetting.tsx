@@ -1,19 +1,19 @@
-// === Module 15496: EnableReducedMotionSetting ===
+// === Module 15478: EnableReducedMotionSetting ===
 
-// Module 15496 (EnableReducedMotionSetting)
+// Module 15478 (EnableReducedMotionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14514 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14490 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
-fn(11540);
+fn(11562);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.e3TR1b);
   },
-  parent: fn(8027).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8049).MobileUserSettings.ACCESSIBILITY,
   useValue: function useReducedMotionSettingValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);

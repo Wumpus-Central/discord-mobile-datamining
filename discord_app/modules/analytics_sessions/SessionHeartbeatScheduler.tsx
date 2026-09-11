@@ -1,6 +1,6 @@
-// === Module 7513: SessionHeartbeatScheduler ===
+// === Module 7534: SessionHeartbeatScheduler ===
 
-// Module 7513 (SessionHeartbeatScheduler)
+// Module 7534 (SessionHeartbeatScheduler)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
@@ -8,16 +8,16 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7514 */;
-import SessionRouteUtils2 from "SessionRouteUtils" /* 7515 */;
-import MonotonicClock from "MonotonicClock" /* 7516 */;
-import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7521 */;
-import SessionUtils from "SessionUtils" /* 7523 */;
+import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7535 */;
+import SessionRouteUtils2 from "SessionRouteUtils" /* 7536 */;
+import MonotonicClock from "MonotonicClock" /* 7537 */;
+import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7542 */;
+import SessionUtils from "SessionUtils" /* 7544 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 5460 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
+import IdleStore from "IdleStore" /* 5461 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
 
 require = fn;
 function trackHeartbeat() {
@@ -356,166 +356,118 @@ function getSession() {
   return applyArgumentsResult;
 }
 let closure_39 = async function _getSession() {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
+  closure_3 = tmp3;
+  let flag = closure_0;
+  if (closure_0 === undefined) {
+    flag = true;
+  }
+  closure_130_0 = flag;
+  await "PX_16";
+  if (1 === tmp7) {
     if (arg0 === 1) {
+      c7 = 3;
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      c7 = 3;
+      let obj1 = { value, done: true };
+      return obj1;
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_3 = tmp3;
-          dependencyMap = tmp7;
-          closure_130_0 = undefined;
-          let flag = closure_0;
-          if (closure_0 === undefined) {
-            flag = true;
-          }
-          closure_130_0 = flag;
-          closure_130_1 = undefined;
-          let session2;
-          closure_130_3 = undefined;
-          c6 = 1;
-          c7 = 1;
-          return { value: "PX_16", done: true };
+      let session2 = null;
+      let tmp21 = null;
+      if ("loaded" === closure_131_20.state) {
+        const session = closure_131_20.session;
+        uuid = undefined;
+        if (session != null) {
+          uuid = session.uuid;
         }
+        tmp21 = uuid;
+      }
+      closure_130_3 = tmp21;
+      c4 = 1;
+      if ("uninitialized" === closure_131_20.state) {
+        importDefault = closure_131_29;
+        let Storage = closure_131_0(closure_131_2[16]).Storage;
+        c6 = 3;
+        c7 = 1;
+        let obj2 = { value: Storage.getAfterRefresh(closure_131_13), done: false };
+        return obj2;
       } else {
-        if (1 === tmp7) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
-          } else {
-            session2 = null;
-            let tmp21 = null;
-            if ("loaded" === closure_131_20.state) {
-              const session = closure_131_20.session;
-              uuid = undefined;
-              if (session != null) {
-                uuid = session.uuid;
-              }
-              tmp21 = uuid;
-            }
-            closure_130_3 = tmp21;
-            c4 = 1;
-            if ("uninitialized" === closure_131_20.state) {
-              importDefault = closure_131_29;
-              let Storage = closure_131_0(closure_131_2[16]).Storage;
-              c6 = 3;
-              c7 = 1;
-              let obj2 = { value: Storage.getAfterRefresh(closure_131_13), done: false };
-              return obj2;
-            } else {
-              session2 = closure_131_20.session;
-              c4 = 0;
-            }
-          }
-        } else if (2 === tmp7) {
-          c4 = 0;
-          closure_130_4 = closure_5;
-          obj1 = closure_131_1(closure_131_2[11]);
-          obj1.captureException(closure_130_4);
-          const _Date = Date;
-          closure_130_1 = Date.now();
-          if (closure_131_27()) {
-            let isSessionExpiredResult = null == tmp30;
-            if (!isSessionExpiredResult) {
-              let obj3 = closure_131_0(closure_131_2[17]);
-              isSessionExpiredResult = obj3.isSessionExpired(session2);
-            }
-            if (isSessionExpiredResult) {
-              obj3 = { uuid: null, createdAtTimestamp: null, lastUsedTimestamp: null, version: null };
-              let obj5 = closure_131_0(closure_131_2[21]);
-              obj3.uuid = obj5.v4();
-              obj3.createdAtTimestamp = closure_130_1;
-              obj3.lastUsedTimestamp = closure_130_1;
-              obj3.version = closure_131_0(closure_131_2[17]).CLIENT_SESSION_STORAGE_VERSION;
-              session2 = obj3;
-              closure_131_18 = 0;
-            }
-            session2.lastUsedTimestamp = closure_130_1;
-            (function maybeFlushSessionToStorage(session2) {
-              monotonicNowMsResult = closure_1_0(dependencyMap[10]).monotonicNowMs();
-              if (monotonicNowMsResult - monotonicNowMsResult >= closure_1_12) {
-                try {
-                  const Storage = closure_1_0(dependencyMap[16]).Storage;
-                  const result = Storage.set(closure_1_13, session2);
-                } catch (tmp9) {
-                  closure_1_1(tmp2[11]).captureException(tmp9);
-                  const obj2 = closure_1_1(tmp2[11]);
-                }
-              }
-              obj = closure_1_0(dependencyMap[10]);
-            })(session2);
-          } else {
-            let isSessionExpiredResult1 = null != tmp30;
-            if (isSessionExpiredResult1) {
-              obj2 = closure_131_0(closure_131_2[17]);
-              isSessionExpiredResult1 = obj2.isSessionExpired(session2);
-            }
-            if (isSessionExpiredResult1) {
-              session2 = null;
-            }
-          }
-          const obj4 = { state: "loaded", session: session2 };
-          closure_131_20 = obj4;
-          let tmp61 = null != session2;
-          if (tmp61) {
-            tmp61 = closure_130_3 !== session2.uuid;
-          }
-          if (tmp61) {
-            tmp61 = closure_130_0;
-          }
-          if (tmp61) {
-            const socket = closure_131_4.getSocket();
-            if (socket != null) {
-              ({ createdAtTimestamp, uuid } = session2);
-              let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, closure_131_0(closure_131_2[18]).clientLaunchId);
-            }
-          }
-          c7 = 3;
-          obj5 = { value: session2, done: true };
-          return obj5;
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          importDefault(value);
-        }
+        session2 = closure_131_20.session;
         c4 = 0;
-        c7 = 3;
-        obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp81) {
-      closure_5 = tmp81;
-      if (tmp4 === c4) {
-        c7 = tmp2;
-        throw tmp81;
-      } else {
-        c6 = tmp;
       }
     }
+  } else if (2 === tmp7) {
+    c4 = 0;
+    closure_130_4 = closure_5;
+    obj1 = closure_131_1(closure_131_2[11]);
+    obj1.captureException(closure_130_4);
+    const _Date = Date;
+    closure_130_1 = Date.now();
+    if (closure_131_27()) {
+      let isSessionExpiredResult = null == tmp30;
+      if (!isSessionExpiredResult) {
+        let obj3 = closure_131_0(closure_131_2[17]);
+        isSessionExpiredResult = obj3.isSessionExpired(session2);
+      }
+      if (isSessionExpiredResult) {
+        obj3 = { uuid: null, createdAtTimestamp: null, lastUsedTimestamp: null, version: null };
+        let obj5 = closure_131_0(closure_131_2[21]);
+        obj3.uuid = obj5.v4();
+        obj3.createdAtTimestamp = closure_130_1;
+        obj3.lastUsedTimestamp = closure_130_1;
+        obj3.version = closure_131_0(closure_131_2[17]).CLIENT_SESSION_STORAGE_VERSION;
+        session2 = obj3;
+        closure_131_18 = 0;
+      }
+      session2.lastUsedTimestamp = closure_130_1;
+      (function maybeFlushSessionToStorage(session2) {
+        monotonicNowMsResult = closure_1_0(dependencyMap[10]).monotonicNowMs();
+        if (monotonicNowMsResult - monotonicNowMsResult >= closure_1_12) {
+          try {
+            const Storage = closure_1_0(dependencyMap[16]).Storage;
+            const result = Storage.set(closure_1_13, session2);
+          } catch (tmp9) {
+            closure_1_1(tmp2[11]).captureException(tmp9);
+            const obj2 = closure_1_1(tmp2[11]);
+          }
+        }
+        obj = closure_1_0(dependencyMap[10]);
+      })(session2);
+    } else {
+      let isSessionExpiredResult1 = null != tmp30;
+      if (isSessionExpiredResult1) {
+        obj2 = closure_131_0(closure_131_2[17]);
+        isSessionExpiredResult1 = obj2.isSessionExpired(session2);
+      }
+      if (isSessionExpiredResult1) {
+        session2 = null;
+      }
+    }
+    closure_131_20 = { state: "loaded", session: session2 };
+    let tmp61 = null != session2;
+    if (tmp61) {
+      tmp61 = closure_130_3 !== session2.uuid;
+    }
+    if (tmp61) {
+      tmp61 = closure_130_0;
+    }
+    if (tmp61) {
+      const socket = closure_131_4.getSocket();
+      if (socket != null) {
+        ({ createdAtTimestamp, uuid } = session2);
+        let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, closure_131_0(closure_131_2[18]).clientLaunchId);
+      }
+    }
+    c7 = 3;
+    obj5 = { value: session2, done: true };
+    return obj5;
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    importDefault(value);
   }
+  return value;
 };
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, AppStates: closure_9, RTCConnectionStates: c10 } = Constants);
@@ -529,9 +481,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(7514);
+const SessionForegroundUtils = fn(7535);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(7515);
+const SessionRouteUtils = fn(7536);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);

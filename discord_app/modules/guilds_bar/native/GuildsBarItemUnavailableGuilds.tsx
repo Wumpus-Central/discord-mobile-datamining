@@ -1,18 +1,18 @@
-// === Module 16432: GuildsBarItemUnavailableGuilds ===
+// === Module 16421: GuildsBarItemUnavailableGuilds ===
 
-// Module 16432 (GuildsBarItemUnavailableGuilds)
+// Module 16421 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
-import _modDef16423 from "module_16423" /* 16423 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
+import _modDef16412 from "module_16412" /* 16412 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4947 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4948 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { unavailableGuilds: null, unavailableGuildsIcon: null };
 obj = { marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" };
 obj.unavailableGuilds = obj;
@@ -43,8 +43,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       obj.show(obj);
     };
     obj.style = tmp.unavailableGuilds;
-    const obj1 = { style: tmp.unavailableGuildsIcon, source: _modDef16423 };
-    obj.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16423} />;
+    const obj1 = { style: tmp.unavailableGuildsIcon, source: _modDef16412 };
+    obj.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16412} />;
     tmp5 = <closure_4 count={stateFromStores} />;
   }
   return tmp5;

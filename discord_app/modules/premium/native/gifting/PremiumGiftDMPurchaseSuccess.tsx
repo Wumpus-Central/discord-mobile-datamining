@@ -1,19 +1,19 @@
-// === Module 11146: PremiumGiftDMPurchaseSuccess ===
+// === Module 11169: PremiumGiftDMPurchaseSuccess ===
 
-// Module 11146 (PremiumGiftDMPurchaseSuccess)
+// Module 11169 (PremiumGiftDMPurchaseSuccess)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10732 */;
-import NativeGiftContext from "NativeGiftContext" /* 10769 */;
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10900 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10751 */;
+import NativeGiftContext from "NativeGiftContext" /* 10788 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10919 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { title: null, description: null };
 createStyles = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
 createStyles.title = createStyles;

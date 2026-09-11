@@ -1,13 +1,13 @@
-// === Module 7237: UserProfileRolesCard ===
+// === Module 7258: UserProfileRolesCard ===
 
-// Module 7237 (UserProfileRolesCard)
+// Module 7258 (UserProfileRolesCard)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4302 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ClipboardUtils from "ClipboardUtils" /* 7241 */;
-import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7255 */;
-import RoleIconDefault from "RoleIcon" /* 7257 */;
-import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7258 */;
+import ToastUtils from "ToastUtils" /* 4304 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ClipboardUtils from "ClipboardUtils" /* 7262 */;
+import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7276 */;
+import RoleIconDefault from "RoleIcon" /* 7278 */;
+import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7279 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
@@ -151,7 +151,7 @@ const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_7, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: null, roleDot: null };
 createStyles = { flexDirection: "row", alignItems: "center", columnGap: 4, padding: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm };
 createStyles.role = createStyles;
@@ -183,8 +183,8 @@ export default function UserProfileRolesCard(userId) {
     obj.style = userId.style;
     obj = { guildId, guildMemberRoleIds: roles };
     obj.children = closure_9(RolesList, obj);
-    tmp4 = closure_9(guildId(7259), obj);
-    const tmp7 = guildId(7259);
+    tmp4 = closure_9(guildId(7280), obj);
+    const tmp7 = guildId(7280);
   }
   return tmp4;
 };

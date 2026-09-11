@@ -1,16 +1,16 @@
-// === Module 15668: DevToolsLocalMessageCache ===
+// === Module 15651: DevToolsLocalMessageCache ===
 
-// Module 15668 (DevToolsLocalMessageCache)
+// Module 15651 (DevToolsLocalMessageCache)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Stack_Stack from "Stack/Stack" /* 5023 */;
-import TableRow from "TableRow" /* 5655 */;
-import TableRowGroup from "TableRowGroup" /* 5737 */;
-import MessageCacheStatsDefault from "MessageCacheStats" /* 7540 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Stack_Stack from "Stack/Stack" /* 5024 */;
+import TableRow from "TableRow" /* 5656 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import MessageCacheStatsDefault from "MessageCacheStats" /* 7561 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4605 */;
+import createStyles from "createStyles" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 function CacheLogEntry(entry) {

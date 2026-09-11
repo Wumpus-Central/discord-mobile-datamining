@@ -1,6 +1,6 @@
-// === Module 4632: RTCConnection ===
+// === Module 4633: RTCConnection ===
 
-// Module 4632 (RTCConnection)
+// Module 4633 (RTCConnection)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import BackoffDefault from "Backoff" /* 559 */;
@@ -15,58 +15,58 @@ import URLUtilsDefault from "URLUtils" /* 1365 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1461 */;
 import RTCControlSocket from "RTCControlSocket" /* 1907 */;
-import DiscordNativeDefault from "DiscordNative" /* 4225 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4599 */;
-import TimeUtils from "TimeUtils" /* 4634 */;
-import RTCConnectionEvent from "RTCConnectionEvent" /* 4659 */;
-import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 4743 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
-import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5470 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7723 */;
-import SystemResourcesDefault from "SystemResources" /* 7799 */;
-import AVError from "AVError" /* 9179 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 9591 */;
-import SurfaceDirectRendererExperiment from "SurfaceDirectRendererExperiment" /* 9675 */;
-import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 9679 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10109 */;
-import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager" /* 13880 */;
-import GoLiveQualityManagerDefault from "GoLiveQualityManager" /* 13882 */;
-import BrowserTransceiverPaddingRemovalExperiment2 from "BrowserTransceiverPaddingRemovalExperiment" /* 13883 */;
-import VideoStabilizationExperimentDefault from "VideoStabilizationExperiment" /* 13884 */;
-import ServerLadderExperiment2 from "ServerLadderExperiment" /* 13888 */;
-import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 13889 */;
-import NativeMuteManagerDefault from "NativeMuteManager" /* 13890 */;
-import VoiceQuality from "VoiceQuality" /* 13891 */;
-import SystemResponsivenessDefault from "SystemResponsiveness" /* 13893 */;
-import VoiceDurationDefault from "VoiceDuration" /* 13894 */;
-import VideoQuality from "VideoQuality" /* 13895 */;
-import VideoHealthManager from "VideoHealthManager" /* 13896 */;
-import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 13898 */;
+import DiscordNativeDefault from "DiscordNative" /* 4227 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4600 */;
+import TimeUtils from "TimeUtils" /* 4635 */;
+import RTCConnectionEvent from "RTCConnectionEvent" /* 4660 */;
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 4744 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
+import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5471 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7744 */;
+import SystemResourcesDefault from "SystemResources" /* 7820 */;
+import AVError from "AVError" /* 9200 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 9612 */;
+import SurfaceDirectRendererExperiment from "SurfaceDirectRendererExperiment" /* 9696 */;
+import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 9700 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10129 */;
+import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager" /* 13859 */;
+import GoLiveQualityManagerDefault from "GoLiveQualityManager" /* 13861 */;
+import BrowserTransceiverPaddingRemovalExperiment2 from "BrowserTransceiverPaddingRemovalExperiment" /* 13862 */;
+import VideoStabilizationExperimentDefault from "VideoStabilizationExperiment" /* 13863 */;
+import ServerLadderExperiment2 from "ServerLadderExperiment" /* 13867 */;
+import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 13868 */;
+import NativeMuteManagerDefault from "NativeMuteManager" /* 13869 */;
+import VoiceQuality from "VoiceQuality" /* 13870 */;
+import SystemResponsivenessDefault from "SystemResponsiveness" /* 13872 */;
+import VoiceDurationDefault from "VoiceDuration" /* 13873 */;
+import VideoQuality from "VideoQuality" /* 13874 */;
+import VideoHealthManager from "VideoHealthManager" /* 13875 */;
+import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 13877 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DeviceFrecencyStore from "DeviceFrecencyStore" /* 4633 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4643 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9220 */;
-import AudioRouteStore from "AudioRouteStore" /* 9152 */;
+import DeviceFrecencyStore from "DeviceFrecencyStore" /* 4634 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4644 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9241 */;
+import AudioRouteStore from "AudioRouteStore" /* 9173 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
-import RTCDebugStore from "RTCDebugStore" /* 10108 */;
-import RTCRegionStore from "RTCRegionStore" /* 4655 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
+import RTCDebugStore from "RTCDebugStore" /* 10128 */;
+import RTCRegionStore from "RTCRegionStore" /* 4656 */;
 import UserStore from "UserStore" /* 1371 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4663 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4664 */;
 
 const RTCControlSocketDefault = RTCControlSocket;
 const VoiceQualityDefault = VoiceQuality;
 
-const RTCBandwidthMonitorDefault = tmp19(7526);
+const RTCBandwidthMonitorDefault = tmp19(7547);
 require = fn;
 function getEventHistoryString() {
   const items = [];
   TimeUtils;
-  for (const item10012 of closure_35) {
+  for (const item10012 of closure_36) {
     let obj = {};
     let merged = Object.assign(item10012);
     obj.t = tmp2 - item10012.t;
@@ -77,18 +77,19 @@ function getEventHistoryString() {
 }
 let Constants = fn(1074);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18, RTCConnectionStates: closure_19, RTCConnectionQuality: closure_20, BoostedGuildTiers: closure_21 } = Constants);
-const StreamSettingsConstants = fn(4652);
+const StreamSettingsConstants = fn(4653);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(13877).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(4630);
+let closure_24 = fn(13856).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(4631);
 ({ Features: closure_25, MediaEngineContextTypes: closure_26, ConnectionStates: closure_27, Codecs: closure_28, MediaTypes: closure_29, SpeakingFlags: closure_30, DISABLED_DEVICE_ID: items } = Constants);
 let str = "ws:";
 if (obj.test("https:")) {
   str = "wss:";
 }
-const __initData11 = { CONNECTION_CREATE: 0, [0]: "CONNECTION_CREATE", CONNECTION_DESTROY: 1, [1]: "CONNECTION_DESTROY", CONNECT: 2, [2]: "CONNECT", MLS_FAILURE: 3, [3]: "MLS_FAILURE", MESSAGE_RECEIVE: 4, [4]: "MESSAGE_RECEIVE", MESSAGE_SEND: 5, [5]: "MESSAGE_SEND", SET_ENDPOINT: 6, [6]: "SET_ENDPOINT", RECONNECT: 7, [7]: "RECONNECT", SET_STATE: 8, [8]: "SET_STATE", SET_NEXT_CHANNEL_ID: 9, [9]: "SET_NEXT_CHANNEL_ID", MLS_INIT: 10, [10]: "MLS_INIT", SECURE_FRAMES_INIT: 11, [11]: "SECURE_FRAMES_INIT" };
-let c34 = 0;
-let closure_35 = [];
+const constants10 = { INIT: "init", EPOCH: "epoch", TRANSITION: "transition" };
+const __initData12 = { CONNECTION_CREATE: 0, [0]: "CONNECTION_CREATE", CONNECTION_DESTROY: 1, [1]: "CONNECTION_DESTROY", CONNECT: 2, [2]: "CONNECT", MLS_FAILURE: 3, [3]: "MLS_FAILURE", MESSAGE_RECEIVE: 4, [4]: "MESSAGE_RECEIVE", MESSAGE_SEND: 5, [5]: "MESSAGE_SEND", SET_ENDPOINT: 6, [6]: "SET_ENDPOINT", RECONNECT: 7, [7]: "RECONNECT", SET_STATE: 8, [8]: "SET_STATE", SET_NEXT_CHANNEL_ID: 9, [9]: "SET_NEXT_CHANNEL_ID", MLS_INIT: 10, [10]: "MLS_INIT", SECURE_FRAMES_INIT: 11, [11]: "SECURE_FRAMES_INIT", DOWNGRADE_REFUSED: 12, [12]: "DOWNGRADE_REFUSED" };
+let c35 = 0;
+let closure_36 = [];
 class RTCConnection extends tmp5 {
   constructor(arg0) {
     ({ userId, sessionId, guildId, channelId, context } = global);
@@ -102,6 +103,7 @@ class RTCConnection extends tmp5 {
     obj = new RTCConnection(tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp, sessionId, channelId, guildId, streamServerId);
     closure_0 = obj;
     closure_129_0 = obj;
+    obj._isStageChannel = null;
     map = new Map();
     obj._secureFramesRosterMap = map;
     obj.reconnecting = false;
@@ -223,7 +225,7 @@ class RTCConnection extends tmp5 {
       }
     };
     obj.context = context;
-    obj = { c: closure_33.CONNECTION_CREATE };
+    obj = { c: closure_34.CONNECTION_CREATE };
     recordEventResult = obj.recordEvent(obj);
     obj3 = closure_12;
     asyncResources = closure_12.fetchAsyncResources();
@@ -238,16 +240,17 @@ class RTCConnection extends tmp5 {
     items[0] = channelId;
     set = new Set(items);
     obj.channelIds = set;
+    _latchIsStageChannelResult = obj._latchIsStageChannel();
     obj.streamServerId = streamServerId;
     obj.streamChannelId = streamChannelId;
     obj.parentMediaSessionId = parentMediaSessionId;
     obj.joinVoiceId = joinVoiceId;
-    tmp15 = +closure_34;
-    closure_34 = tmp15 + 1;
-    obj._connectionSerial = tmp15;
-    tmp16 = closure_1(closure_3[21]);
-    tmp16 = new tmp16("RTCConnection(" + obj.trueServerId + ", " + obj.context + ")");
-    obj.logger = tmp16;
+    tmp16 = +closure_35;
+    closure_35 = tmp16 + 1;
+    obj._connectionSerial = tmp16;
+    tmp17 = closure_1(closure_3[21]);
+    tmp17 = new tmp17("RTCConnection(" + obj.trueServerId + ", " + obj.context + ")");
+    obj.logger = tmp17;
     logger = obj.logger;
     enableNativeLoggerResult = logger.enableNativeLogger(true);
     obj._endpoint = null;
@@ -258,20 +261,20 @@ class RTCConnection extends tmp5 {
     obj.voiceVersion = null;
     obj.rtcWorkerVersion = null;
     if (createdTime == null) {
-      tmp19 = closure_0;
+      tmp20 = closure_0;
       obj4 = closure_0(tmp12[18]);
       createdTime = obj4.now();
     }
     obj._createdTime = createdTime;
     obj.state = RTCConnectionStates.AWAITING_ENDPOINT;
-    tmp20 = closure_0;
+    tmp21 = closure_0;
     stateHistory = new closure_0(tmp12[22]).StateHistory(obj.state, obj._createdTime);
     obj.stateHistory = stateHistory;
     obj._socket = null;
-    tmp22 = new tmp11(tmp12[17])(1000, 10000);
-    obj._backoff = tmp22;
     tmp23 = new tmp11(tmp12[17])(1000, 10000);
-    obj._mlsFailureReconnectBackoff = tmp23;
+    obj._backoff = tmp23;
+    tmp24 = new tmp11(tmp12[17])(1000, 10000);
+    obj._mlsFailureReconnectBackoff = tmp24;
     obj._destroyed = false;
     obj._pings = [];
     obj._pingBadCount = 0;
@@ -317,25 +320,25 @@ class RTCConnection extends tmp5 {
     obj.reconnecting = false;
     obj._lastSentSpeakingStatus = 0;
     obj._lastSentSSRC = undefined;
-    tmp26 = Features;
-    tmp27 = obj3.supports(Features.FIRST_FRAME_CALLBACK) && obj3.supports(tmp26.REMOTE_USER_MULTI_STREAM);
+    tmp27 = Features;
+    tmp28 = obj3.supports(Features.FIRST_FRAME_CALLBACK) && obj3.supports(tmp27.REMOTE_USER_MULTI_STREAM);
     if (MediaEngineContextTypes.DEFAULT === context) {
-      tmp29 = closure_10;
+      tmp30 = closure_10;
       channel = closure_10.getChannel(obj.channelId);
       type = undefined;
       if (channel != null) {
         type = channel.type;
       }
-      tmp32 = ChannelTypes;
-      tmp33 = new.target;
+      tmp33 = ChannelTypes;
       tmp34 = new.target;
-      tmp35 = userId;
-      tmp36 = tmp27;
-      tmp37 = new tmp11(tmp12[24])(userId, type === ChannelTypes.GUILD_STAGE_VOICE, tmp27);
-      tmp38 = tmp37;
-      obj._localMediaSinkWantsManager = tmp37;
+      tmp35 = new.target;
+      tmp36 = userId;
+      tmp37 = tmp28;
+      tmp38 = new tmp11(tmp12[24])(userId, type === ChannelTypes.GUILD_STAGE_VOICE, tmp28);
+      tmp39 = tmp38;
+      obj._localMediaSinkWantsManager = tmp38;
       _localMediaSinkWantsManager = obj._localMediaSinkWantsManager;
-      onResult = _localMediaSinkWantsManager.on(tmp20(tmp12[24]).RTCMediaSinkWantsManagerEvent.Update, (localVideoSinkWants) => {
+      onResult = _localMediaSinkWantsManager.on(tmp21(tmp12[24]).RTCMediaSinkWantsManagerEvent.Update, (localVideoSinkWants) => {
         let tmp2 = obj.state === constants3.RTC_CONNECTED;
         if (tmp2) {
           tmp2 = null != obj._socket;
@@ -354,27 +357,27 @@ class RTCConnection extends tmp5 {
         }
       });
       _localMediaSinkWantsManager2 = obj._localMediaSinkWantsManager;
-      onResult1 = _localMediaSinkWantsManager2.on(tmp20(tmp12[24]).RTCMediaSinkWantsManagerEvent.UserSSRCUpdate, (arg0, arg1, arg2) => {
+      onResult1 = _localMediaSinkWantsManager2.on(tmp21(tmp12[24]).RTCMediaSinkWantsManagerEvent.UserSSRCUpdate, (arg0, arg1, arg2) => {
         const _connection = obj._connection;
         if (_connection != null) {
           const user = _connection.createUser(arg0, arg1, arg2);
         }
       });
-    } else if (tmp28.STREAM === context) {
-      tmp48 = new.target;
+    } else if (tmp29.STREAM === context) {
       tmp49 = new.target;
-      tmp50 = new tmp11(tmp12[25])();
-      tmp51 = tmp50;
-      obj._goLiveQualityManager = tmp50;
+      tmp50 = new.target;
+      tmp51 = new tmp11(tmp12[25])();
+      tmp52 = tmp51;
+      obj._goLiveQualityManager = tmp51;
       _goLiveQualityManager = obj._goLiveQualityManager;
-      onResult2 = _goLiveQualityManager.on(tmp20(tmp12[25]).GoLiveQualityManagerEvent.RequestedSSRCsUpdate, (arg0, arg1, arg2) => {
+      onResult2 = _goLiveQualityManager.on(tmp21(tmp12[25]).GoLiveQualityManagerEvent.RequestedSSRCsUpdate, (arg0, arg1, arg2) => {
         const _connection = obj._connection;
         if (_connection != null) {
           const user = _connection.createUser(arg0, arg1, arg2);
         }
       });
       _goLiveQualityManager2 = obj._goLiveQualityManager;
-      onResult3 = _goLiveQualityManager2.on(tmp20(tmp12[25]).GoLiveQualityManagerEvent.RequestedStreamsUpdate, (localVideoSinkWants) => {
+      onResult3 = _goLiveQualityManager2.on(tmp21(tmp12[25]).GoLiveQualityManagerEvent.RequestedStreamsUpdate, (localVideoSinkWants) => {
         let tmp2 = obj.state === constants3.RTC_CONNECTED;
         if (tmp2) {
           tmp2 = null != obj._socket;
@@ -393,14 +396,14 @@ class RTCConnection extends tmp5 {
         }
       });
     }
-    obj._remoteVideoSinkWants = tmp20(tmp12[24]).DEFAULT_WANTS_FULL;
-    WindowVisibilityVideoManager = tmp20(tmp12[26]).WindowVisibilityVideoManager;
-    onResult4 = WindowVisibilityVideoManager.on(tmp20(tmp12[26]).WindowVisibilityEvent.IncomingVideoEnabledChanged, obj.incomingVideoEnabledChanged);
-    WindowVisibilityVideoManager2 = tmp20(tmp12[26]).WindowVisibilityVideoManager;
-    onResult5 = WindowVisibilityVideoManager2.on(tmp20(tmp12[26]).WindowVisibilityEvent.WindowVisibilityChanged, obj.windowVisibilityChanged);
+    obj._remoteVideoSinkWants = tmp21(tmp12[24]).DEFAULT_WANTS_FULL;
+    WindowVisibilityVideoManager = tmp21(tmp12[26]).WindowVisibilityVideoManager;
+    onResult4 = WindowVisibilityVideoManager.on(tmp21(tmp12[26]).WindowVisibilityEvent.IncomingVideoEnabledChanged, obj.incomingVideoEnabledChanged);
+    WindowVisibilityVideoManager2 = tmp21(tmp12[26]).WindowVisibilityVideoManager;
+    onResult5 = WindowVisibilityVideoManager2.on(tmp21(tmp12[26]).WindowVisibilityEvent.WindowVisibilityChanged, obj.windowVisibilityChanged);
     if (closure_14.shouldRecordNextConnection()) {
       obj._recordingEnabled = true;
-      tmp43 = closure_2;
+      tmp44 = closure_2;
       obj6 = closure_2(tmp12[27]);
       result = obj6.setShouldRecordNextConnection(false);
     } else {
@@ -410,8 +413,8 @@ class RTCConnection extends tmp5 {
     addOnlineCallbackResult = tmp11Result.addOnlineCallback(obj._handleNetworkOnline);
     tmp11Result1 = tmp11(tmp12[28]);
     addOfflineCallbackResult = tmp11Result1.addOfflineCallback(obj._handleNetworkOffline);
-    tmp20Result = tmp20(tmp12[29]);
-    if (tmp20Result.isDesktop()) {
+    tmp21Result = tmp21(tmp12[29]);
+    if (tmp21Result.isDesktop()) {
       powerMonitor = tmp11(tmp12[30]).powerMonitor;
       str = "resume";
       obj.powerMonitorListener = powerMonitor.on("resume", obj._handlePowerResume);
@@ -432,11 +435,11 @@ prototype["recordEvent"] = function recordEvent(arg0) {
   const merged = Object.assign(arg0);
   obj.t = TimeUtils.now();
   obj.n = this._connectionSerial;
-  closure_35.push(obj);
-  if (closure_35.length > 50) {
+  closure_36.push(obj);
+  if (closure_36.length > 50) {
     do {
-      let arr = closure_35.shift();
-      length = closure_35.length;
+      let arr = closure_36.shift();
+      length = closure_36.length;
     } while (length > 50);
   }
 };
@@ -471,7 +474,7 @@ Object.defineProperty(prototype, "endpoint", {
   get: undefined,
   set: function endpoint(arg0) {
     const self = this;
-    this.recordEvent({ c: constants10.SET_ENDPOINT, e: null != arg0 });
+    this.recordEvent({ c: constants11.SET_ENDPOINT, e: null != arg0 });
     if (null == arg0) {
       self._endpoint = null;
       self.hostname = null;
@@ -504,7 +507,7 @@ Object.defineProperty(prototype, "endpoint", {
       self.hostname = hostname;
       tmp5 = str;
     }
-    const obj = { c: constants10.SET_ENDPOINT, e: null != arg0 };
+    const obj = { c: constants11.SET_ENDPOINT, e: null != arg0 };
   }
 });
 prototype["connect"] = function connect(endpoint, token) {
@@ -514,7 +517,7 @@ prototype["connect"] = function connect(endpoint, token) {
     const error = new Error("RTCConnection.connect(...): Attempting to connect on destroyed instance.");
     throw error;
   } else {
-    let obj = { c: constants10.CONNECT, e: null != endpoint, h: null != token };
+    let obj = { c: constants11.CONNECT, e: null != endpoint, h: null != token };
     self.recordEvent(obj);
     self._cancelReconnect();
     endpoint = self.endpoint;
@@ -536,6 +539,8 @@ prototype["connect"] = function connect(endpoint, token) {
       if (null != self._nextChannelId) {
         self._channelId = self._nextChannelId;
         self._nextChannelId = undefined;
+        self._isStageChannel = null;
+        self._latchIsStageChannel();
       }
       const obj5 = new RTCControlSocketDefault(self.endpoint, self.context);
       self._socket = obj5;
@@ -594,9 +599,9 @@ prototype["connect"] = function connect(endpoint, token) {
       const _handleMLSWelcome = self._handleMLSWelcome;
       obj5.on(RTCControlSocket.SocketEvent.MLSWelcome, _handleMLSWelcome.bind(self));
       const _recordMessageEvent = self._recordMessageEvent;
-      obj5.on(RTCControlSocket.SocketEvent.ReceiveMessage, _recordMessageEvent.bind(self, constants10.MESSAGE_RECEIVE));
+      obj5.on(RTCControlSocket.SocketEvent.ReceiveMessage, _recordMessageEvent.bind(self, constants11.MESSAGE_RECEIVE));
       const _recordMessageEvent2 = self._recordMessageEvent;
-      obj5.on(RTCControlSocket.SocketEvent.SendMessage, _recordMessageEvent2.bind(self, constants10.MESSAGE_SEND));
+      obj5.on(RTCControlSocket.SocketEvent.SendMessage, _recordMessageEvent2.bind(self, constants11.MESSAGE_SEND));
       self._connectStartTime = TimeUtils.now();
       self._connectCount = self._connectCount + 1;
       self._connecting = true;
@@ -646,7 +651,7 @@ prototype["destroy"] = function destroy() {
       powerMonitorListener();
     }
   }
-  obj = { c: constants10.CONNECTION_DESTROY };
+  obj = { c: constants11.CONNECTION_DESTROY };
   self.recordEvent(obj);
   const WindowVisibilityVideoManager = WindowVisibilityVideoManager3.WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(WindowVisibilityVideoManager3.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
@@ -895,7 +900,7 @@ prototype["setState"] = function setState(s) {
   if (arg1 === undefined) {
     obj = {};
   }
-  obj = { c: constants10.SET_STATE, s };
+  obj = { c: constants11.SET_STATE, s };
   this.recordEvent(obj);
   const logger = this.logger;
   logger.info("RTC connection state: " + this.state + " => " + s);
@@ -1005,7 +1010,7 @@ prototype["clearJoinVoiceId"] = function clearJoinVoiceId() {
 };
 prototype["setNextChannelId"] = function setNextChannelId(channelId) {
   const self = this;
-  this.recordEvent({ c: constants10.SET_NEXT_CHANNEL_ID });
+  this.recordEvent({ c: constants11.SET_NEXT_CHANNEL_ID });
   const channel = ChannelStore.getChannel(this.channelId);
   let type;
   if (channel != null) {
@@ -1584,15 +1589,18 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
       const tmp104Result = require("KrispUtils");
     }
   } else {
-    if (code === require("RTCControlSocket").RTCSocketCloseCode.REPEATED_MLS_INVALID_MESSAGES) {
-      let result2 = self._scheduleMLSFailureReconnect();
-    } else {
-      result2 = self._scheduleReconnect();
+    if (code !== require("RTCControlSocket").RTCSocketCloseCode.REPEATED_MLS_INVALID_MESSAGES) {
+      if (code !== tmp11(tmp12[33]).RTCSocketCloseCode.DAVE_DOWNGRADE_REFUSED) {
+        let _scheduleReconnectResult = self._scheduleReconnect();
+      }
+      const logger2 = self.logger;
+      const result2 = _scheduleReconnectResult / 1000;
+      const _HermesInternal = HermesInternal;
+      logger2.warn("Disconnect was not clean! reason=" + reason + ". Reconnecting in " + result2.toFixed(2) + " seconds.");
     }
-    const logger2 = self.logger;
-    const result3 = result2 / 1000;
-    const _HermesInternal = HermesInternal;
-    logger2.warn("Disconnect was not clean! reason=" + reason + ". Reconnecting in " + result3.toFixed(2) + " seconds.");
+    _scheduleReconnectResult = self._scheduleMLSFailureReconnect();
+    tmp11 = _require;
+    tmp12 = _videoQuality2;
   }
 };
 prototype["_handleResuming"] = function _handleResuming() {
@@ -1660,7 +1668,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   const mediaEngine = MediaEngineStore.getMediaEngine();
   const persistentCodesEnabled = SecureFramesPersistedStore.getPersistentCodesEnabled();
   const staticAuthSessionId = AuthenticationStore.getStaticAuthSessionId();
-  let tmp2Result = tmp2(4634);
+  let tmp2Result = tmp2(4635);
   obj = { ssrc, address: _sfuEndpoint.address, port: _sfuEndpoint.port, modes: _sfuEndpoint.modes, experiments: self._selectedExperiments, streamParameters, videoSupported: obj.supports(constants5.VIDEO), qosEnabled: obj.getQoS(), signingKeyId: null, processPriority: null, threadPriorityConfiguration: null };
   ({ context, userId } = self);
   let tmp9;
@@ -1673,7 +1681,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   let merged = Object.assign(self.getExtraConnectionOptions());
   const connectResult = mediaEngine.connect(context, userId, obj);
   dependencyMap = connectResult;
-  tmp2Result = tmp2(4634);
+  tmp2Result = tmp2(4635);
   self._mediaEngineConnectDuration = tmp2Result.now() - tmp2Result.now();
   const nowResult = tmp2Result.now();
   let isWebResult = require("PlatformUtils").isWeb();
@@ -2833,42 +2841,44 @@ prototype["_handleSecureFramesInit"] = function _handleSecureFramesInit(v) {
   let obj = TimeUtils;
   const nowResult = obj.now();
   const require = nowResult;
-  obj = { c: constants10.SECURE_FRAMES_INIT, v };
+  obj = { c: constants11.SECURE_FRAMES_INIT, v };
   this.recordEvent(obj);
-  if (v > 0) {
-    const logger = self.logger;
-    const _HermesInternal = HermesInternal;
-    logger.info("DAVE protocol init with protocol version: " + v);
-    self._mlsInitReceivedTime = nowResult;
-    const _connection2 = self._connection;
-    if (_connection2 != null) {
-      let result = _connection2.prepareSecureFramesEpoch("1", v, self.trueChannelId);
-    }
-    self._sendMLSKeyPackage();
-    obj = { initReceivedTime: nowResult, initFinishedTime: TimeUtils.now(), protocolVersion: v };
-    let result1 = self._storeSecureFrameNextTransitionData(obj);
-    const obj1 = { c: constants10.MLS_INIT };
-    self.recordEvent(obj1);
-    const tmpResult = TimeUtils;
-  } else {
-    let _connection = self._connection;
-    if (_connection != null) {
-      let result2 = _connection.prepareSecureFramesTransition(0, v, () => {
-        try {
-          const _connection = self._connection;
-          if (_connection != null) {
-            const result = _connection.executeSecureFramesTransition(0);
+  if (!this._maybeRefuseDaveDowngrade(constants10.INIT, v)) {
+    if (v > 0) {
+      const logger = self.logger;
+      const _HermesInternal = HermesInternal;
+      logger.info("DAVE protocol init with protocol version: " + v);
+      self._mlsInitReceivedTime = nowResult;
+      const _connection2 = self._connection;
+      if (_connection2 != null) {
+        let result = _connection2.prepareSecureFramesEpoch("1", v, self.trueChannelId);
+      }
+      self._sendMLSKeyPackage();
+      obj = { initReceivedTime: nowResult, initFinishedTime: TimeUtils.now(), protocolVersion: v };
+      let result1 = self._storeSecureFrameNextTransitionData(obj);
+      const obj1 = { c: constants11.MLS_INIT };
+      self.recordEvent(obj1);
+      const tmpResult = TimeUtils;
+    } else {
+      let _connection = self._connection;
+      if (_connection != null) {
+        let result2 = _connection.prepareSecureFramesTransition(0, v, () => {
+          try {
+            const _connection = self._connection;
+            if (_connection != null) {
+              const result = _connection.executeSecureFramesTransition(0);
+            }
+            let flag = false;
+            let obj = { initReceivedTime: nowResult, initFinishedTime: TimeUtils.now(), protocolVersion, executeError: flag };
+            const result1 = self._storeSecureFrameTransitionData(0, obj);
+            const result2 = self._trackSecureFrameTransition(0);
+          } catch (tmp4) {
+            obj = SentryUtilsDefault;
+            obj.captureException(tmp4);
+            flag = true;
           }
-          let flag = false;
-          let obj = { initReceivedTime: nowResult, initFinishedTime: TimeUtils.now(), protocolVersion, executeError: flag };
-          const result1 = self._storeSecureFrameTransitionData(0, obj);
-          const result2 = self._trackSecureFrameTransition(0);
-        } catch (tmp4) {
-          obj = SentryUtilsDefault;
-          obj.captureException(tmp4);
-          flag = true;
-        }
-      });
+        });
+      }
     }
   }
 };
@@ -2895,41 +2905,90 @@ prototype["_handleSecureFramesRosterChange"] = function _handleSecureFramesRoste
   let result = this._storeSecureFrameTransitionData(transition_id, { usersAdded: importAll, usersRemoved: _require, rosterSizeAfter: this._secureFramesRosterMap.size });
   this.emit(RTCConnectionEvent.RTCConnectionEvent.RosterMapUpdate, items);
 };
-prototype["_handleSecureFramesPrepareTransition"] = function _handleSecureFramesPrepareTransition(lastPreparedTransitionId, v) {
+prototype["_latchIsStageChannel"] = function _latchIsStageChannel() {
   const self = this;
-  closure_1 = lastPreparedTransitionId;
-  const protocolVersion = v;
-  const logger = this.logger;
-  logger.info("Preparing DAVE protocol transition: " + lastPreparedTransitionId + ", protocol version: " + v);
-  this._secureFramesTransitionPrepareCount = this._secureFramesTransitionPrepareCount + 1;
-  _require = require("TimeUtils").now();
-  if (0 === v) {
-    self._trackMLSFailures({ recovered: true, downgraded: true });
+  if (null == this._isStageChannel) {
+    const channel = ChannelStore.getChannel(self._channelId);
+    if (null != channel) {
+      self._isStageChannel = channel.type === constants2.GUILD_STAGE_VOICE;
+    }
   }
-  const _connection = self._connection;
-  if (_connection != null) {
-    let result = _connection.prepareSecureFramesTransition(lastPreparedTransitionId, v, () => {
-      const result = self._maybeSendSecureFramesTransitionReady(closure_1);
-      const obj = { protocolVersion, prepareReceivedTime, prepareFinishedTime: TimeUtils.now() };
-      const result1 = self._storeSecureFrameTransitionData(closure_1, obj);
-    });
+  return self._isStageChannel;
+};
+prototype["_maybeRefuseDaveDowngrade"] = function _maybeRefuseDaveDowngrade(EPOCH, protocol_version, transition_id) {
+  if (0 !== protocol_version) {
+    return false;
+  } else {
+    const self = this;
+    const _latchIsStageChannelResult = this._latchIsStageChannel();
+    let flag2 = EPOCH !== constants10.INIT;
+    if (!flag2) {
+      flag2 = true !== _latchIsStageChannelResult;
+    }
+    if (flag2) {
+      const logger = self.logger;
+      const _HermesInternal = HermesInternal;
+      logger.error("Refusing DAVE protocol downgrade to version " + protocol_version + " at " + EPOCH + ", disconnecting.");
+      let obj = { c: constants11.DOWNGRADE_REFUSED, s: EPOCH };
+      self.recordEvent(obj);
+      obj = {};
+      const merged = Object.assign(self._getAnalyticsProperties());
+      obj.media_session_id = self.getMediaSessionId();
+      obj.parent_media_session_id = self.parentMediaSessionId;
+      obj.refused_at = EPOCH;
+      obj.transition_id = transition_id;
+      obj.protocol_version = protocol_version;
+      obj.channel_resolved = null != _latchIsStageChannelResult;
+      obj.event_history = getEventHistoryString();
+      obj.connection_serial = self._connectionSerial;
+      AnalyticsUtilsDefault.track(constants.DAVE_DOWNGRADE_REFUSED, obj);
+      const _socket = self._socket;
+      flag2 = true;
+      if (_socket != null) {
+        const result = _socket.disconnectForRefusedDaveDowngrade(EPOCH);
+        flag2 = true;
+      }
+    }
+    return flag2;
   }
 };
-prototype["_handleSecureFramesPrepareEpoch"] = function _handleSecureFramesPrepareEpoch(_1, v) {
+prototype["_handleSecureFramesPrepareTransition"] = function _handleSecureFramesPrepareTransition(transition_id, protocol_version) {
+  const self = this;
+  closure_1 = transition_id;
+  const protocolVersion = protocol_version;
+  const logger = this.logger;
+  logger.info("Preparing DAVE protocol transition: " + transition_id + ", protocol version: " + protocol_version);
+  this._secureFramesTransitionPrepareCount = this._secureFramesTransitionPrepareCount + 1;
+  _require = require("TimeUtils").now();
+  if (!this._maybeRefuseDaveDowngrade(constants10.TRANSITION, protocol_version, transition_id)) {
+    const _connection = this._connection;
+    if (_connection != null) {
+      let result = _connection.prepareSecureFramesTransition(transition_id, protocol_version, () => {
+        const result = self._maybeSendSecureFramesTransitionReady(closure_1);
+        const obj = { protocolVersion, prepareReceivedTime, prepareFinishedTime: TimeUtils.now() };
+        const result1 = self._storeSecureFrameTransitionData(closure_1, obj);
+      });
+    }
+  }
+};
+prototype["_handleSecureFramesPrepareEpoch"] = function _handleSecureFramesPrepareEpoch(_1, protocol_version) {
   const self = this;
   const logger = this.logger;
-  logger.info("Preparing DAVE protocol epoch: " + _1 + ", protocol version: " + v);
+  logger.info("Preparing DAVE protocol epoch: " + _1 + ", protocol version: " + protocol_version);
   str = _1.toString();
-  const _connection = this._connection;
-  if (_connection != null) {
-    const result = _connection.prepareSecureFramesEpoch(str, v, self.trueChannelId);
-  }
-  if ("1" === str) {
-    let obj = TimeUtils;
-    self._mlsInitReceivedTime = obj.now();
-    self._sendMLSKeyPackage();
-    obj = { c: constants10.MLS_INIT };
-    self.recordEvent(obj);
+  if (!this._maybeRefuseDaveDowngrade(constants10.EPOCH, protocol_version)) {
+    const _connection = self._connection;
+    if (_connection != null) {
+      const result = _connection.prepareSecureFramesEpoch(str, protocol_version, self.trueChannelId);
+    }
+    str = "1";
+    if ("1" === str) {
+      let obj = TimeUtils;
+      self._mlsInitReceivedTime = obj.now();
+      self._sendMLSKeyPackage();
+      obj = { c: constants11.MLS_INIT };
+      self.recordEvent(obj);
+    }
   }
 };
 prototype["_sendMLSKeyPackage"] = function _sendMLSKeyPackage() {
@@ -3031,7 +3090,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   const byteLength = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  dependencyMap = _connection(4634).now();
+  dependencyMap = _connection(4635).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3063,7 +3122,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   const byteLength = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  dependencyMap = _connection(4634).now();
+  dependencyMap = _connection(4635).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3128,7 +3187,7 @@ prototype["_handleMLSFailure"] = function _handleMLSFailure(source, reason) {
   let obj = TimeUtils;
   const nowResult = obj.now();
   this._nextFailureId = +this._nextFailureId + 1;
-  obj = { c: constants10.MLS_FAILURE, i: tmp4 };
+  obj = { c: constants11.MLS_FAILURE, i: tmp4 };
   this.recordEvent(obj);
   const _mlsFailures = this._mlsFailures;
   obj = { id: tmp4, source, reason, count: 1, countDuringReset: null, firstOccurrence: null, timeSinceInit: null, eventLog: null };

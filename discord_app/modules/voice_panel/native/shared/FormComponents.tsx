@@ -1,18 +1,18 @@
-// === Module 9187: FormComponents ===
+// === Module 9208: FormComponents ===
 
-// Module 9187 (FormComponents)
+// Module 9208 (FormComponents)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import NativeViewDefault from "NativeView" /* 5639 */;
-import TableRowGroup from "TableRowGroup" /* 5737 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7789 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8242 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 9188 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 9251 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import NativeViewDefault from "NativeView" /* 5640 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7810 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9209 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 9272 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4645 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
 
 require = fn;
 function VoiceBadges(arg0) {
@@ -42,7 +42,7 @@ function VoiceBadges(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: null, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 createStyles = { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: nativeDefault.radii.round };
 createStyles.iconWrapper = createStyles;

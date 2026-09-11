@@ -1,9 +1,9 @@
-// === Module 6527: SoundboardSpotIllustration ===
+// === Module 6548: SoundboardSpotIllustration ===
 
-// Module 6527 (SoundboardSpotIllustration)
+// Module 6548 (SoundboardSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6528 from "module_6528" /* 6528 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6549 from "module_6549" /* 6549 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SoundboardSpotIllustration = function SoundboardSpotIllustration(wi
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6528 };
+  obj = { uri: _modDef6549 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const SoundboardSpotIllustration = function SoundboardSpotIllustration(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6528 });
+  return jsx(FastImageDefault, { uri: _modDef6549 });
 };

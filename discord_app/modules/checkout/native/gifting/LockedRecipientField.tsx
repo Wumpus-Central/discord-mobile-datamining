@@ -1,17 +1,17 @@
-// === Module 10926: LockedRecipientField ===
+// === Module 10945: LockedRecipientField ===
 
-// Module 10926 (LockedRecipientField)
+// Module 10945 (LockedRecipientField)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import UserUtilsDefault from "UserUtils" /* 4449 */;
-import Text_Text from "Text/Text" /* 4601 */;
+import UserUtilsDefault from "UserUtils" /* 4451 */;
+import Text_Text from "Text/Text" /* 4602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, avatar: null };
 createStyles = { flexDirection: "row", alignItems: "center", marginLeft: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;

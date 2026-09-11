@@ -1,14 +1,14 @@
-// === Module 8245: UserProfileSpeedBumpActionSheet ===
+// === Module 8267: UserProfileSpeedBumpActionSheet ===
 
-// Module 8245 (UserProfileSpeedBumpActionSheet)
+// Module 8267 (UserProfileSpeedBumpActionSheet)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import TableRow from "TableRow" /* 5655 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8242 */;
-import UserActionCreators from "UserActionCreators" /* 8244 */;
-import _modDef8248 from "module_8248" /* 8248 */;
+import TableRow from "TableRow" /* 5656 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import UserActionCreators from "UserActionCreators" /* 8266 */;
+import _modDef8270 from "module_8270" /* 8270 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -18,11 +18,11 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 function InformationTable(speedBumpType) {
   let items;
-  let obj = { icon: _modDef8248, text: null };
+  let obj = { icon: _modDef8270, text: null };
   const intl = items(1114).intl;
   obj.text = intl.string(items(1114).t.kcuWva);
   items = [obj, ];
-  obj = { icon: _modDef8248, text: null };
+  obj = { icon: _modDef8270, text: null };
   if ("block" === speedBumpType.speedBumpType) {
     const intl3 = tmp2(1114).intl;
     let stringResult = intl3.string(tmp2(1114).t.QxrDY1);
@@ -42,15 +42,15 @@ function InformationTable(speedBumpType) {
       return closure_2_12(TableRow.TableRow, obj, index);
     })
   };
-  return closure_12(items(5737).TableRowGroup, obj);
+  return closure_12(items(5738).TableRowGroup, obj);
 }
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(8246).UserProfileAnalyticsTypes;
+const UserProfileAnalyticsTypes = fn(8268).UserProfileAnalyticsTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { button: null, tableContainer: null, header: null, bodyText: null, headerText: null, avatar: null, avatarContainer: null, avatarIconContainer: null, suppress: null };
 obj = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 };
 obj.button = obj;
@@ -74,35 +74,50 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
   userId = userId.userId;
   const channelId = userId.channelId;
-  const onClose = userId.onClose;
+  ({ localUser, onClose } = userId);
   ({ location: _slicedToArray, sourceAnalyticsLocations } = userId);
   ({ messageId, roleId, sessionId, openedAt } = userId);
   if (sourceAnalyticsLocations === undefined) {
     sourceAnalyticsLocations = [];
   }
   const speedBumpType = userId.speedBumpType;
+  localUser = undefined;
+  let guild_id;
   let stateFromStores2;
-  closure_7 = undefined;
+  closure_8 = undefined;
   let first;
-  UserProfileAnalyticsTypes = undefined;
+  closure_10 = undefined;
   let analyticsLocations;
   let createUserProfileAnalyticsContext;
-  closure_12 = undefined;
+  closure_13 = undefined;
   let tmp = closure_14();
   let obj = userId(onClose[16]);
   let obj1 = userId(onClose[18]);
-  const items = [first];
+  const items = [closure_8];
   const stateFromStores = obj1.useStateFromStores(items, () => UserStore.getUser(userId));
-  let obj2 = userId(onClose[18]);
-  const items1 = [stateFromStores2];
+  let tmp7 = stateFromStores;
+  if (stateFromStores == null) {
+    let id;
+    if (localUser != null) {
+      id = localUser.id;
+    }
+    let tmp9;
+    if (id === userId) {
+      tmp9 = localUser;
+    }
+    tmp7 = tmp9;
+  }
+  localUser = tmp7;
+  let tmp2Result = tmp2(onClose[18]);
+  const items1 = [guild_id];
   const items2 = [channelId];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => ChannelStore.getChannel(channelId), items2);
-  let guild_id;
+  const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => ChannelStore.getChannel(channelId), items2);
+  guild_id = undefined;
   if (stateFromStores1 != null) {
     guild_id = stateFromStores1.guild_id;
   }
-  let tmp2Result = tmp2(tmp3[18]);
-  const items3 = [closure_7];
+  tmp2Result = tmp2(onClose[18]);
+  const items3 = [stateFromStores2];
   stateFromStores2 = tmp2Result.useStateFromStores(items3, () => {
     let member = null;
     if (null != guild_id) {
@@ -110,33 +125,33 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
     }
     return member;
   });
-  let id;
-  let tmp4Result = tmp4(tmp3[19]);
-  if (stateFromStores != null) {
-    id = stateFromStores.id;
+  let id1;
+  let tmp4Result = tmp4(onClose[19]);
+  if (tmp7 != null) {
+    id1 = tmp7.id;
   }
-  if (id == null) {
-    id = createUserProfileAnalyticsContext;
+  if (id1 == null) {
+    id1 = analyticsLocations;
   }
-  const tmp4ResultResult = tmp4Result(id, guild_id);
-  closure_7 = tmp4ResultResult;
-  const tmp13 = _slicedToArray(stateFromStores.useState(false), 2);
-  first = tmp13[0];
-  UserProfileAnalyticsTypes = tmp13[1];
+  const tmp4ResultResult = tmp4Result(id1, guild_id);
+  closure_8 = tmp4ResultResult;
+  const tmp16 = _slicedToArray(stateFromStores.useState(false), 2);
+  first = tmp16[0];
+  closure_10 = tmp16[1];
   const items4 = [];
-  tmp4Result = tmp4(tmp3[20]);
+  tmp4Result = tmp4(onClose[20]);
   const isThemeLightResult = obj.isThemeLight(channelId(onClose[17])());
   items4[HermesBuiltin.arraySpread(sourceAnalyticsLocations, 0)] = channelId(onClose[21]).IGNORED_PROFILE_ACTION_SHEET;
   analyticsLocations = tmp4Result(items4).analyticsLocations;
-  tmp2Result = tmp2(tmp3[22]);
-  createUserProfileAnalyticsContext = tmp2Result.useCreateUserProfileAnalyticsContext({ layout: "ACTION_SHEET", sourceSessionId: sessionId, userId, channelId, messageId, roleId });
-  const tmp18 = channelId(onClose[23])({ userId, user: stateFromStores, channelId, guildId: guild_id, displayProfile: tmp4ResultResult, guildMember: stateFromStores2, type: UserProfileAnalyticsTypes.IGNORED_USER_SHEET });
-  closure_12 = tmp18;
-  const items5 = [tmp18, tmp4ResultResult, guild_id, first, stateFromStores2];
+  const arraySpreadResult = HermesBuiltin.arraySpread(sourceAnalyticsLocations, 0);
+  createUserProfileAnalyticsContext = userId(onClose[22]).useCreateUserProfileAnalyticsContext({ layout: "ACTION_SHEET", sourceSessionId: sessionId, userId, channelId, messageId, roleId });
+  const tmp21 = channelId(onClose[23])({ userId, user: tmp7, channelId, guildId: guild_id, displayProfile: tmp4ResultResult, guildMember: stateFromStores2, type: first.IGNORED_USER_SHEET });
+  closure_13 = tmp21;
+  const items5 = [tmp21, tmp4ResultResult, guild_id, first, stateFromStores2];
   const effect = stateFromStores.useEffect(() => {
     let tmp = first;
     if (!first) {
-      tmp = null == closure_7;
+      tmp = null == closure_8;
     }
     if (!tmp) {
       let tmp6 = null == guild_id;
@@ -148,8 +163,8 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
         tmp6 = null != prop;
       }
       if (tmp6) {
-        AnalyticsUtilsDefault.track(constants.OPEN_POPOUT, closure_12);
-        closure_9(true);
+        AnalyticsUtilsDefault.track(constants.OPEN_POPOUT, closure_13);
+        closure_10(true);
       }
     }
   }, items5);
@@ -165,7 +180,7 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
       const user = UserActionCreators.getUser(userId);
     }
   }, items7);
-  if (null == stateFromStores) {
+  if (null == tmp7) {
     return null;
   } else {
     obj = { value: analyticsLocations, children: null };
@@ -186,38 +201,38 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
     }
     obj.isLoaded = isLoaded;
     obj1 = { style: tmp.header, children: null };
-    obj2 = { style: tmp.avatarContainer, children: null };
-    const obj3 = { user: stateFromStores, guildId: guild_id, animate: false, size: tmp2(tmp3[15]).AvatarSizes.XLARGE, style: tmp.avatar };
-    const items8 = [closure_12(tmp2(tmp3[15]).Avatar, obj3), ];
+    const obj2 = { style: tmp.avatarContainer, children: null };
+    const obj3 = { user: tmp7, guildId: guild_id, animate: false, size: tmp2(onClose[15]).AvatarSizes.XLARGE, style: tmp.avatar };
+    const items8 = [createUserProfileAnalyticsContext(tmp2(onClose[15]).Avatar, obj3), ];
     const obj4 = { style: tmp.avatarIconContainer, children: null };
-    const obj5 = { size: tmp2(tmp3[15]).Icon.Sizes.MEDIUM, source: null };
+    const obj5 = { size: tmp2(onClose[15]).Icon.Sizes.MEDIUM, source: null };
     if ("block" === speedBumpType) {
-      obj5.source = tmp4(tmp3[29]);
-      let tmp28 = obj5;
+      obj5.source = tmp4(onClose[29]);
+      let tmp31 = obj5;
     } else {
-      obj5.source = tmp4(tmp3[30]);
-      tmp28 = obj5;
+      obj5.source = tmp4(onClose[30]);
+      tmp31 = obj5;
     }
-    obj4.children = closure_12(tmp2(tmp3[15]).Icon, tmp28);
-    items8[1] = closure_12(guild_id, obj4);
+    obj4.children = createUserProfileAnalyticsContext(tmp2(onClose[15]).Icon, tmp31);
+    items8[1] = createUserProfileAnalyticsContext(localUser, obj4);
     obj2.children = items8;
-    const items9 = [closure_13(guild_id, obj2), , ];
+    const items9 = [closure_13(localUser, obj2), , ];
     const obj6 = { style: tmp.headerText, variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
-    const intl = tmp2(tmp3[12]).intl;
-    obj6.children = intl.string(tmp2(tmp3[12]).t.b33pLD);
-    items9[1] = closure_12(tmp2(tmp3[31]).Text, obj6);
+    const intl = tmp2(onClose[12]).intl;
+    obj6.children = intl.string(tmp2(onClose[12]).t.b33pLD);
+    items9[1] = createUserProfileAnalyticsContext(tmp2(onClose[31]).Text, obj6);
     const obj7 = { style: tmp.bodyText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-    const intl2 = tmp2(tmp3[12]).intl;
-    const t = tmp2(tmp3[12]).t;
-    const obj8 = { username: tmp4(tmp3[32]).getName(guild_id, channelId, stateFromStores) };
+    const intl2 = tmp2(onClose[12]).intl;
+    const t = tmp2(onClose[12]).t;
+    const obj8 = { username: tmp4(onClose[32]).getName(guild_id, channelId, tmp7) };
     obj7.children = intl2.format("block" === speedBumpType ? t["8F+WNz"] : t["/cZp5s"], obj8);
-    items9[2] = closure_12(tmp2(tmp3[31]).Text, obj7);
+    items9[2] = createUserProfileAnalyticsContext(tmp2(onClose[31]).Text, obj7);
     obj1.children = items9;
-    const items10 = [closure_13(guild_id, obj1), , ];
+    const items10 = [closure_13(localUser, obj1), , ];
     const obj9 = { style: tmp.tableContainer, children: null };
     const obj10 = { speedBumpType };
-    obj9.children = closure_12(InformationTable, obj10);
-    items10[1] = closure_12(guild_id, obj9);
+    obj9.children = createUserProfileAnalyticsContext(InformationTable, obj10);
+    items10[1] = createUserProfileAnalyticsContext(localUser, obj9);
     const obj11 = { style: tmp.button, children: null };
     let str2 = "secondary";
     if (isThemeLightResult) {
@@ -226,13 +241,13 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
     const obj12 = { variant: str2, size: "lg", text: null, onPress: null };
     function handleShowProfileActionSheet() {
       const merged = Object.assign(createUserProfileAnalyticsContext);
-      showUserProfileActionSheetDefault({ sourceAnalyticsLocations: analyticsLocations, ignoreBlockedSpeedBump: true, location: _location });
+      showUserProfileActionSheetDefault({ sourceAnalyticsLocations: analyticsLocations, ignoreBlockedSpeedBump: true, location: _location, localUser });
     }
-    const intl3 = tmp2(tmp3[12]).intl;
-    obj12.text = intl3.string(tmp2(tmp3[12]).t["UJKH/l"]);
+    const intl3 = tmp2(onClose[12]).intl;
+    obj12.text = intl3.string(tmp2(onClose[12]).t["UJKH/l"]);
     obj12.onPress = handleShowProfileActionSheet;
-    const items11 = [closure_12(tmp2(tmp3[33]).Button, obj12), ];
-    let tmp32Result = null;
+    const items11 = [createUserProfileAnalyticsContext(tmp2(onClose[33]).Button, obj12), ];
+    let tmp35Result = null;
     if ("ignore" === speedBumpType) {
       const obj13 = {
         style: tmp.suppress,
@@ -241,26 +256,26 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
               const IgnoreProfileSpeedbumpDisabled = UserSettings.IgnoreProfileSpeedbumpDisabled;
               IgnoreProfileSpeedbumpDisabled.updateSetting(true);
               const merged = Object.assign(createUserProfileAnalyticsContext);
-              showUserProfileActionSheetDefault({ sourceAnalyticsLocations: analyticsLocations, ignoreBlockedSpeedBump: true, location: _location });
+              showUserProfileActionSheetDefault({ sourceAnalyticsLocations: analyticsLocations, ignoreBlockedSpeedBump: true, location: _location, localUser });
             },
         children: null
       };
       const obj14 = { variant: "text-sm/normal", color: "text-link", children: null };
-      const intl4 = tmp2(tmp3[12]).intl;
-      obj14.children = intl4.string(tmp2(tmp3[12]).t.QbcRCJ);
-      obj13.children = tmp32(tmp2(tmp3[31]).Text, obj14);
-      tmp32Result = tmp32(tmp2(tmp3[34]).PressableOpacity, obj13);
+      const intl4 = tmp2(onClose[12]).intl;
+      obj14.children = intl4.string(tmp2(onClose[12]).t.QbcRCJ);
+      obj13.children = tmp35(tmp2(onClose[31]).Text, obj14);
+      tmp35Result = tmp35(tmp2(onClose[34]).PressableOpacity, obj13);
     }
     const obj15 = { startExpanded: true, children: null };
     const obj16 = { children: null };
-    items11[1] = tmp32Result;
+    items11[1] = tmp35Result;
     obj11.children = items11;
-    items10[2] = closure_13(guild_id, obj11);
+    items10[2] = closure_13(localUser, obj11);
     obj16.children = items10;
-    obj15.children = closure_13(tmp2(tmp3[28]).BottomSheetView, obj16);
-    obj.children = closure_12(tmp2(tmp3[27]).BottomSheet, obj15);
-    obj.children = closure_12(tmp2(tmp3[22]).UserProfileAnalyticsProvider, obj);
-    return closure_12(tmp2(tmp3[20]).AnalyticsLocationProvider, obj);
+    obj15.children = closure_13(tmp2(onClose[28]).BottomSheetView, obj16);
+    obj.children = createUserProfileAnalyticsContext(tmp2(onClose[27]).BottomSheet, obj15);
+    obj.children = createUserProfileAnalyticsContext(tmp2(onClose[22]).UserProfileAnalyticsProvider, obj);
+    return createUserProfileAnalyticsContext(tmp2(onClose[20]).AnalyticsLocationProvider, obj);
   }
-  const arraySpreadResult = HermesBuiltin.arraySpread(sourceAnalyticsLocations, 0);
+  const tmp2Result1 = userId(onClose[22]);
 });

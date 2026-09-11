@@ -1,15 +1,15 @@
-// === Module 12638: GuildPowerupsCard ===
+// === Module 12661: GuildPowerupsCard ===
 
-// Module 12638 (GuildPowerupsCard)
+// Module 12661 (GuildPowerupsCard)
 import nativeDefault from "native" /* 576 */;
-import Card from "Card" /* 5657 */;
+import Card from "Card" /* 5658 */;
 import noop from "module_19" /* 19 */;
 import n from "module_672" /* 672 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { cardActive: null, cardExpiring: null, cardRemoving: null };
 createStyles = { borderColor: null };
 const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.GREEN_360);

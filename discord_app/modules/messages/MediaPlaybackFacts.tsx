@@ -1,6 +1,6 @@
-// === Module 11347: MediaPlaybackFacts ===
+// === Module 11369: MediaPlaybackFacts ===
 
-// Module 11347 (MediaPlaybackFacts)
+// Module 11369 (MediaPlaybackFacts)
 import size from "module_2" /* 2 */;
 
 const map = new Map();

@@ -1,9 +1,9 @@
-// === Module 4342: REAWorkaroundView ===
+// === Module 4344: REAWorkaroundView ===
 
-// Module 4342 (REAWorkaroundView)
+// Module 4344 (REAWorkaroundView)
 import _mod19 from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ReanimatedViewNativeComponentDefault from "ReanimatedViewNativeComponent" /* 4343 */;
+import ReanimatedViewNativeComponentDefault from "ReanimatedViewNativeComponent" /* 4345 */;
 import cancelAnimation from "cancelAnimation" /* 1636 */;
 import size from "module_2" /* 2 */;
 

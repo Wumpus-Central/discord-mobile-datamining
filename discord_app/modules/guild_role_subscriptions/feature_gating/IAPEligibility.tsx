@@ -1,8 +1,8 @@
-// === Module 5549: IAPEligibility ===
+// === Module 5550: IAPEligibility ===
 
-// Module 5549 (IAPEligibility)
+// Module 5550 (IAPEligibility)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import getSystemVersion from "getSystemVersion" /* 5550 */;
+import getSystemVersion from "getSystemVersion" /* 5551 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -75,7 +75,7 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
 export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIAP(guildId) {
   _require = guildId;
   const memo = noop.useMemo(() => {
-    const str = guildId(5550).getSystemVersion();
+    const str = guildId(5551).getSystemVersion();
     let tmp = null != str;
     if (tmp) {
       const parts = str.split(".");

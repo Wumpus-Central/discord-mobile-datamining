@@ -1,9 +1,9 @@
-// === Module 14468: installSystrace ===
+// === Module 14444: installSystrace ===
 
-// Module 14468 (installSystrace)
+// Module 14444 (installSystrace)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import NativeSystraceModule from "NativeSystraceModule" /* 14469 */;
+import NativeSystraceModule from "NativeSystraceModule" /* 14445 */;
 import size from "module_2" /* 2 */;
 
 const Systrace = _mod17.Systrace;

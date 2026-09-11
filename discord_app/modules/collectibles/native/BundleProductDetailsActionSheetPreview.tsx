@@ -1,12 +1,12 @@
-// === Module 13212: BundleProductDetailsActionSheetPreview ===
+// === Module 13235: BundleProductDetailsActionSheetPreview ===
 
-// Module 13212 (BundleProductDetailsActionSheetPreview)
+// Module 13235 (BundleProductDetailsActionSheetPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7606 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 13214 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7627 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 13237 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1076).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { previewContainer: null, bundleThumbnail: null, selectedRing: null, bundleThumbnailRow: null, bundleContainer: null, bundleInfoContainer: null };
 createStyles = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 createStyles.previewContainer = createStyles;

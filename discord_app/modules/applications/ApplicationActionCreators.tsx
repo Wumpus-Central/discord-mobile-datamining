@@ -1,10 +1,10 @@
-// === Module 7215: ApplicationActionCreators ===
+// === Module 7236: ApplicationActionCreators ===
 
-// Module 7215 (ApplicationActionCreators)
+// Module 7236 (ApplicationActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7216 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7237 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
-import ApplicationStore from "ApplicationStore" /* 4833 */;
+import ApplicationStore from "ApplicationStore" /* 4834 */;
 
 const require = fn;
 function fetchApplication() {
@@ -56,7 +56,7 @@ let closure_10 = async function _fetchApplication(arg0) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

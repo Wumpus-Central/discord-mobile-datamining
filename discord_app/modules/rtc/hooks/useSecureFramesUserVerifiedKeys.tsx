@@ -1,8 +1,8 @@
-// === Module 15933: useSecureFramesUserVerifiedKeys ===
+// === Module 15918: useSecureFramesUserVerifiedKeys ===
 
-// Module 15933 (useSecureFramesUserVerifiedKeys)
+// Module 15918 (useSecureFramesUserVerifiedKeys)
 import _modDef12 from "module_12" /* 12 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9203 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9224 */;
 
 const require = fn;
 const size = fn(2);

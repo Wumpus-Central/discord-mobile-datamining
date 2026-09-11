@@ -1,7 +1,7 @@
-// === Module 7257: RoleIcon ===
+// === Module 7278: RoleIcon ===
 
-// Module 7257 (RoleIcon)
-import Text_Text from "Text/Text" /* 4601 */;
+// Module 7278 (RoleIcon)
+import Text_Text from "Text/Text" /* 4602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ export default function RoleIcon(arg0) {
     size = 20;
   }
   size = { height: size, width: size };
-  let obj = { fontFamily: "System", fontSize: size * num, lineHeight: "call", textAlign: "mp", width: size, marginBottom: "age_gate_modal" };
+  let obj = { fontFamily: "System", fontSize: size * num, lineHeight: "call", textAlign: "Array", width: size, marginBottom: "withSpring" };
   if (null != src) {
     obj = { resizeMode: "contain", source: null, style: null };
     const obj1 = { uri: src };

@@ -1,23 +1,30 @@
-// === Module 7619: CollectiblesMarketingCoachmarkRecord ===
+// === Module 7640: CollectiblesMarketingCoachmarkRecord ===
 
-// Module 7619 (CollectiblesMarketingCoachmarkRecord)
-import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7617 */;
+// Module 7640 (CollectiblesMarketingCoachmarkRecord)
+import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7638 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function CollectiblesMarketingCoachmarkRecord(arg0) {
   const obj = Object.create(new.target.prototype);
   obj.type = CollectiblesMarketingType.CollectiblesMarketingType.COACHMARK;
-  ({ title: tmp.title, body: tmp.body, assetDark: tmp.assetDark, assetLight: tmp.assetLight, version: tmp.version, refTargetBackground: tmp.refTargetBackground, badgeIcon: tmp.badgeIcon, badgeText: tmp.badgeText, buttonLabel: tmp.buttonLabel } = arg0);
+  ({ title: tmp.title, body: tmp.body, assetDark: tmp.assetDark, assetLight: tmp.assetLight, version: tmp.version, refTargetBackground: tmp.refTargetBackground, badgeIcon: tmp.badgeIcon, badgeText: tmp.badgeText, badgeCountdownEndsAt: tmp.badgeCountdownEndsAt, buttonLabel: tmp.buttonLabel } = arg0);
   return obj;
 }.prototype;
-prototype["fromServer"] = function fromServer(arg0) {
+prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
   let obj = {};
-  const merged = Object.assign(arg0);
-  ({ asset_dark: obj.assetDark, asset_light: obj.assetLight, ref_target_background: obj.refTargetBackground, badge_icon: obj.badgeIcon, badge_text: obj.badgeText, button_label: obj.buttonLabel } = arg0);
+  const merged = Object.assign(badge_countdown_ends_at);
+  ({ asset_dark: obj.assetDark, asset_light: obj.assetLight, ref_target_background: obj.refTargetBackground, badge_icon: obj.badgeIcon, badge_text: obj.badgeText } = badge_countdown_ends_at);
+  let date;
+  if (null != badge_countdown_ends_at.badge_countdown_ends_at) {
+    const _Date = Date;
+    date = new Date(badge_countdown_ends_at.badge_countdown_ends_at);
+  }
+  obj.badgeCountdownEndsAt = date;
+  obj.buttonLabel = badge_countdown_ends_at.button_label;
   if (typeof prototype === "function") {
     obj = Object.create(prototype.prototype);
     obj.type = CollectiblesMarketingType.CollectiblesMarketingType.COACHMARK;
-    ({ title: tmp2.title, body: tmp2.body, assetDark: tmp2.assetDark, assetLight: tmp2.assetLight, version: tmp2.version, refTargetBackground: tmp2.refTargetBackground, badgeIcon: tmp2.badgeIcon, badgeText: tmp2.badgeText, buttonLabel: tmp2.buttonLabel } = obj);
+    ({ title: tmp6.title, body: tmp6.body, assetDark: tmp6.assetDark, assetLight: tmp6.assetLight, version: tmp6.version, refTargetBackground: tmp6.refTargetBackground, badgeIcon: tmp6.badgeIcon, badgeText: tmp6.badgeText, badgeCountdownEndsAt: tmp6.badgeCountdownEndsAt, buttonLabel: tmp6.buttonLabel } = obj);
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");

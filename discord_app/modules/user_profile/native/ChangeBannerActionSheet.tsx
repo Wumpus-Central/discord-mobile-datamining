@@ -1,21 +1,21 @@
-// === Module 14669: ChangeBannerActionSheet ===
+// === Module 14645: ChangeBannerActionSheet ===
 
-// Module 14669 (ChangeBannerActionSheet)
+// Module 14645 (ChangeBannerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import TableRow from "TableRow" /* 5655 */;
-import TableRowGroup from "TableRowGroup" /* 5737 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7201 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7214 */;
-import ActionSheet from "ActionSheet" /* 7249 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8227 */;
-import Form from "Form" /* 8663 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8732 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14672 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import TableRow from "TableRow" /* 5656 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7222 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7235 */;
+import ActionSheet from "ActionSheet" /* 7270 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8249 */;
+import Form from "Form" /* 8684 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8753 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14648 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8223 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8245 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -33,11 +33,11 @@ function ChangeBannerColorRow(user) {
   let obj1 = require("RecentAvatarUtils");
   obj = { userId: user.id, image: pendingAvatar };
   let pendingAvatarSrc = obj1.getPendingAvatarSrc(obj);
-  const tmp7 = pendingAccentColor(8249)(user.id);
+  const tmp7 = pendingAccentColor(8271)(user.id);
   if (pendingAvatarSrc == null) {
     pendingAvatarSrc = user.getAvatarURL(undefined, 80);
   }
-  tmp2(8311);
+  tmp2(8332);
   const tmp2Result = tmp2(1091);
   const memoizedImageSourceResult = tmp2Result.memoizedImageSource(pendingAvatarSrc);
   const rgb2intResult = tmp2Result.rgb2int(require("VideoBackground").useDominantColorFromImage(pendingAvatarSrc, memoizedImageSourceResult));
@@ -69,14 +69,14 @@ function ChangeBannerColorRow(user) {
   obj1.text = intl.string(require("util").t.xzNfPz);
   obj.label = closure_9(require("Form").FormLabel, obj1);
   const obj2 = { style: tmp.selectedColor, children: null };
-  const items2 = [closure_9(pendingAccentColor(14674), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
+  const items2 = [closure_9(pendingAccentColor(14650), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
   const obj4 = { style: tmp.selectedColorHex, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const obj3 = { style: tmp.bannerColor, color: pendingAccentColor };
   const tmp2Result1 = require("VideoBackground");
   obj4.children = require("utils/ColorUtils").int2hex(pendingAccentColor);
   items2[1] = closure_9(require("Text/Text").Text, obj4);
   const tmp2Result2 = require("utils/ColorUtils");
-  items2[2] = closure_9(require("native").Icon, { style: tmp.rowArrow, size: require("native").Icon.Sizes.CUSTOM, source: pendingAccentColor(14679) });
+  items2[2] = closure_9(require("native").Icon, { style: tmp.rowArrow, size: require("native").Icon.Sizes.CUSTOM, source: pendingAccentColor(14655) });
   obj2.children = items2;
   obj.trailing = closure_10(View, obj2);
   obj.onPress = function handleChangeColor() {
@@ -89,7 +89,7 @@ const Constants = fn(1074);
 ({ AnalyticsObjects: closure_7, UPLOAD_BANNER_SIZE: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { label: null, sublabel: null, nitroWheel: null, bannerColor: null, selectedColor: null, selectedColorHex: null, rowArrow: null, upsellButton: null, remove: null, titleWrapper: null, titleContainer: null };
 createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
 createStyles.label = createStyles;
@@ -148,11 +148,11 @@ export default function ChangeBannerActionSheet(isTryItOut) {
             closure_128_0 = undefined;
             let base64;
             let originalMd5;
-            let obj3 = tmp5(4572);
+            let obj3 = tmp5(4573);
             obj3.hideActionSheet();
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = { value: tmp5(5188).openImagePicker(closure_1_8), done: false };
+            const obj1 = { value: tmp5(5189).openImagePicker(closure_1_8), done: false };
             return obj1;
           }
         } else if (dependencyMap === 1) {
@@ -167,8 +167,8 @@ export default function ChangeBannerActionSheet(isTryItOut) {
           base64 = closure_128_0.base64;
           originalMd5 = closure_128_0.originalMd5;
           if (null != base64) {
-            obj = tmp2(14670);
-            obj3 = { assetOrigin: tmp2(7041).AssetOriginTypes.NEW_ASSET, imageUri: base64, description: "", originalAsset: "Array", originalMd5 };
+            obj = tmp2(14646);
+            obj3 = { assetOrigin: tmp2(7062).AssetOriginTypes.NEW_ASSET, imageUri: base64, description: "", originalAsset: "Array", originalMd5 };
             closure_129_0(obj.createPendingImage(obj3));
           }
           c3 = 3;
@@ -182,8 +182,8 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   };
   const tmp = closure_12();
   if (!flag) {
-    flag = tmp2(4262).canUsePremiumProfileCustomization(user);
-    const tmp2Result = tmp2(4262);
+    flag = tmp2(4264).canUsePremiumProfileCustomization(user);
+    const tmp2Result = tmp2(4264);
   }
   let obj = { value: useAnalyticsLocationsDefault(isTryItOut.analyticsLocations).analyticsLocations, children: null };
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
@@ -235,7 +235,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     const obj6 = { style: tmp.upsellButton, children: null };
     const obj7 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-    obj6.children = closure_9(tmp2(14671), obj7);
+    obj6.children = closure_9(tmp2(14647), obj7);
     tmp4Result2 = closure_9(View, obj6);
   }
   items3[1] = tmp4Result2;

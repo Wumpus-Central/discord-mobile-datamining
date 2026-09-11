@@ -1,9 +1,9 @@
-// === Module 6233: HandheldSpotIllustration ===
+// === Module 6254: HandheldSpotIllustration ===
 
-// Module 6233 (HandheldSpotIllustration)
+// Module 6254 (HandheldSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6234 from "module_6234" /* 6234 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6255 from "module_6255" /* 6255 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const HandheldSpotIllustration = function HandheldSpotIllustration(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6234 };
+  obj = { uri: _modDef6255 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const HandheldSpotIllustration = function HandheldSpotIllustration(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6234 });
+  return jsx(FastImageDefault, { uri: _modDef6255 });
 };

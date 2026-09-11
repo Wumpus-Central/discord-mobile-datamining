@@ -1,16 +1,16 @@
-// === Module 8838: useTrackImpression ===
+// === Module 8859: useTrackImpression ===
 
-// Module 8838 (useTrackImpression)
+// Module 8859 (useTrackImpression)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtils2 from "AnalyticsUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import _modDef1332 from "module_1332" /* 1332 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4785 */;
-import uniqueIdDefault from "uniqueId" /* 4809 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4786 */;
+import uniqueIdDefault from "uniqueId" /* 4810 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 
 require = fn;
 function trackImpression(type) {
@@ -82,7 +82,7 @@ export default function useTrackImpression(FOR_LATER_POPOUT, arg1) {
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5042)(() => {
+  obj(5043)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = _modDef1332(ref.current, current);
       if (!tmp6) {

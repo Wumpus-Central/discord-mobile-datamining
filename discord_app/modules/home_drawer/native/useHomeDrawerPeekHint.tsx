@@ -1,21 +1,21 @@
-// === Module 16106: useHomeDrawerPeekHint ===
+// === Module 16095: useHomeDrawerPeekHint ===
 
-// Module 16106 (useHomeDrawerPeekHint)
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
-import spring from "spring" /* 5024 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16102 */;
+// Module 16095 (useHomeDrawerPeekHint)
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4607 */;
+import spring from "spring" /* 5025 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16103 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16092 */;
 
 require = fn;
 const ME = fn(1074).ME;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 let c8 = 2000;
-const Easing = fn(4341).Easing;
-let closure_9 = Easing.inOut(fn(4341).Easing.cubic);
+const Easing = fn(4343).Easing;
+let closure_9 = Easing.inOut(fn(4343).Easing.cubic);
 let closure_10 = [];
 let items = [fn(1943).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX];
 let __initData = { code: "function useHomeDrawerPeekHintTsx1(){const{gestureState,panelX,PEEK_HINT_DRAWER_DRAG_THRESHOLD}=this.__closure;return gestureState.get().active&&panelX.get()>PEEK_HINT_DRAWER_DRAG_THRESHOLD;}" };
@@ -24,9 +24,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerPeekHint.tsx");
 
 export const PEEK_HINT_DISTANCE = 40;
-export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHint, sharedValue2) {
+export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHint, sharedValue7) {
   let tmp = enablePeekHint;
-  _require = sharedValue2;
+  _require = sharedValue7;
   const tmp2 = noteInteraction();
   const panelX = tmp2.panelX;
   const gestureState = tmp2.gestureState;
@@ -84,7 +84,7 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
     __initData2 = obj6.useRef(null);
     obj6.useRef(false);
     obj6.useRef(null);
-    const items1 = [sharedValue2];
+    const items1 = [sharedValue7];
     const callback = obj6.useCallback(() => {
       if (null != ref2.current) {
         const _clearTimeout = clearTimeout;
@@ -93,11 +93,11 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
       }
       closure_14.current = true;
       let obj = { duration: 1500, easing };
-      let result = sharedValue2.set(obj.withTiming(40, obj));
+      let result = sharedValue7.set(obj.withTiming(40, obj));
       closure_13.current = setTimeout(() => {
         ref3.current = null;
         ref4.current = false;
-        const result = sharedValue2.set(closure_0(panelX[15]).withSpring(0, closure_0(panelX[16]).HOME_DRAWER_FLING_PHYSICS));
+        const result = sharedValue7.set(closure_0(panelX[15]).withSpring(0, closure_0(panelX[16]).HOME_DRAWER_FLING_PHYSICS));
         current = ref.current;
         if (current != null) {
           current(constants.AUTO_DISMISS);
@@ -119,7 +119,7 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
         callback();
       }
     }, items2);
-    const items3 = [sharedValue2];
+    const items3 = [sharedValue7];
     const callback1 = obj6.useCallback(() => {
       if (null != ref2.current) {
         const _clearTimeout = clearTimeout;
@@ -133,7 +133,7 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
       }
       if (ref4.current) {
         tmp7.current = false;
-        const result = sharedValue2.set(spring.withSpring(0, useHomeDrawerGesture.HOME_DRAWER_FLING_PHYSICS));
+        const result = sharedValue7.set(spring.withSpring(0, useHomeDrawerGesture.HOME_DRAWER_FLING_PHYSICS));
       }
     }, items3);
     const items4 = [tmp, first1, noteInteraction, lastInteractionAt, isPanelTouchActive];
@@ -219,13 +219,13 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
         tmp = closure_17;
         if (closure_17) {
           tmp2 = null;
-          tmp = null != sharedValue2;
+          tmp = null != sharedValue7;
         }
         if (tmp) {
           tmp = enablePeekHint;
         }
         if (tmp) {
-          tmp = !sharedValue2;
+          tmp = !sharedValue7;
         }
         if (tmp) {
           tmp3 = closure_0;

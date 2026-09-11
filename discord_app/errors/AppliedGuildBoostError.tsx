@@ -1,10 +1,10 @@
-// === Module 4511: AppliedGuildBoostError ===
+// === Module 4512: AppliedGuildBoostError ===
 
-// Module 4511 (AppliedGuildBoostError)
+// Module 4512 (AppliedGuildBoostError)
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
-import DateUtils from "DateUtils" /* 4286 */;
-import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4285 */;
+import DateUtils from "DateUtils" /* 4288 */;
+import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4287 */;
 
 require = fn;
 class AppliedGuildBoostError extends tmp2 {

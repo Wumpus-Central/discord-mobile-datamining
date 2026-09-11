@@ -1,14 +1,14 @@
-// === Module 12605: useGuildPowerupOnActivate ===
+// === Module 12628: useGuildPowerupOnActivate ===
 
-// Module 12605 (useGuildPowerupOnActivate)
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4499 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5484 */;
+// Module 12628 (useGuildPowerupOnActivate)
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4500 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5485 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4500 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4501 */;
 
 require = fn;
-const GuildPowerupsConstants = fn(4495);
+const GuildPowerupsConstants = fn(4496);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
@@ -68,7 +68,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                        return PERK(4808).popWithKey(diff(7464).PREMIUM_KEY);
+                        return PERK(4809).popWithKey(diff(7485).PREMIUM_KEY);
                       },
               onPaymentSuccess() {
                         let obj = GuildBoostingUtils;
@@ -89,7 +89,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                         }
                       },
               onPaymentDismiss() {
-                        return PERK(4808).popWithKey(diff(7464).PREMIUM_KEY);
+                        return PERK(4809).popWithKey(diff(7485).PREMIUM_KEY);
                       }
             };
             const result = tmp17Result.launchGuildBoostFlowOrAlert(obj);

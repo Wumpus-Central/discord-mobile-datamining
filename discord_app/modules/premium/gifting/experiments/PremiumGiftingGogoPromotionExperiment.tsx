@@ -1,6 +1,6 @@
-// === Module 10810: PremiumGiftingGogoPromotionExperiment ===
+// === Module 10829: PremiumGiftingGogoPromotionExperiment ===
 
-// Module 10810 (PremiumGiftingGogoPromotionExperiment)
+// Module 10829 (PremiumGiftingGogoPromotionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

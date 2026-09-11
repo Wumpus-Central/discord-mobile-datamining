@@ -1,6 +1,6 @@
-// === Module 5808: ? ===
+// === Module 5829: ? ===
 
-// Module 5808
+// Module 5829
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarDannoExample-2x.png.js");

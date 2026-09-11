@@ -1,13 +1,13 @@
-// === Module 15810: FRAME_BUDGET_MS ===
+// === Module 15795: FRAME_BUDGET_MS ===
 
-// Module 15810 (FRAME_BUDGET_MS)
-import startFrameMonitor from "startFrameMonitor" /* 15812 */;
-import useMountTimerDefault from "useMountTimer" /* 15813 */;
-import useFrameMonitorDefault from "useFrameMonitor" /* 15814 */;
-import useBenchmarkResultsDefault from "useBenchmarkResults" /* 15815 */;
-import BenchmarkResultsListDefault from "BenchmarkResultsList" /* 15816 */;
-import ScrollBenchmarkDefault from "ScrollBenchmark" /* 15817 */;
-import MountMeasureDefault from "MountMeasure" /* 15818 */;
+// Module 15795 (FRAME_BUDGET_MS)
+import startFrameMonitor from "startFrameMonitor" /* 15797 */;
+import useMountTimerDefault from "useMountTimer" /* 15798 */;
+import useFrameMonitorDefault from "useFrameMonitor" /* 15799 */;
+import useBenchmarkResultsDefault from "useBenchmarkResults" /* 15800 */;
+import BenchmarkResultsListDefault from "BenchmarkResultsList" /* 15801 */;
+import ScrollBenchmarkDefault from "ScrollBenchmark" /* 15802 */;
+import MountMeasureDefault from "MountMeasure" /* 15803 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/index.tsx");

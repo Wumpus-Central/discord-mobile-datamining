@@ -1,24 +1,24 @@
-// === Module 17466: GuildPowerupsManager ===
+// === Module 17456: GuildPowerupsManager ===
 
-// Module 17466 (GuildPowerupsManager)
+// Module 17456 (GuildPowerupsManager)
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 4503 */;
-import GameServerExperiment2 from "GameServerExperiment" /* 4518 */;
-import FileUpload250MbPowerupExperiment2 from "FileUpload250MbPowerupExperiment" /* 4532 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4533 */;
-import ServerThemeExperiment2 from "ServerThemeExperiment" /* 4534 */;
-import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 4535 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 4846 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12558 */;
-import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 12572 */;
-import GameServerPricingExperiment2 from "GameServerPricingExperiment" /* 12579 */;
-import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 12583 */;
-import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 16249 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 4504 */;
+import GameServerExperiment2 from "GameServerExperiment" /* 4519 */;
+import FileUpload250MbPowerupExperiment2 from "FileUpload250MbPowerupExperiment" /* 4533 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4534 */;
+import ServerThemeExperiment2 from "ServerThemeExperiment" /* 4535 */;
+import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 4536 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 4847 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12581 */;
+import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 12595 */;
+import GameServerPricingExperiment2 from "GameServerPricingExperiment" /* 12602 */;
+import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 12606 */;
+import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 16238 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4494 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4495 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
 
 require = fn;
 class GuildPowerupsManager extends tmp2 {

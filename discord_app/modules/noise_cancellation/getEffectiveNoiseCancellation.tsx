@@ -1,8 +1,8 @@
-// === Module 10065: getEffectiveNoiseCancellation ===
+// === Module 10085: getEffectiveNoiseCancellation ===
 
-// Module 10065 (getEffectiveNoiseCancellation)
+// Module 10085 (getEffectiveNoiseCancellation)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import WindowsEffectsExperiment from "WindowsEffectsExperiment" /* 10066 */;
+import WindowsEffectsExperiment from "WindowsEffectsExperiment" /* 10086 */;
 import size from "module_2" /* 2 */;
 
 const deep_noise_suppression = "deep_noise_suppression";

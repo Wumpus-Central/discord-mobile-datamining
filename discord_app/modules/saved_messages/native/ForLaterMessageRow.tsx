@@ -1,16 +1,16 @@
-// === Module 12286: ForLaterMessageRow ===
+// === Module 12309: ForLaterMessageRow ===
 
-// Module 12286 (ForLaterMessageRow)
+// Module 12309 (ForLaterMessageRow)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import RowGeneratorDefault from "RowGenerator" /* 7984 */;
+import RowGeneratorDefault from "RowGenerator" /* 8006 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { preview: { marginHorizontal: -16, marginTop: -9, overflow: "hidden" }, flushToCardBottom: null, footer: null };
 createStyles = { marginBottom: -16, borderBottomLeftRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS };
 createStyles.flushToCardBottom = createStyles;

@@ -1,10 +1,10 @@
-// === Module 16552: GuildDiscoveryCategoryActionCreators ===
+// === Module 16540: GuildDiscoveryCategoryActionCreators ===
 
-// Module 16552 (GuildDiscoveryCategoryActionCreators)
+// Module 16540 (GuildDiscoveryCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16553 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16541 */;
 
 const require = fn;
 let closure_7 = async function _maybeFetchGuildDiscoveryCategories() {
@@ -156,7 +156,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
           let about;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

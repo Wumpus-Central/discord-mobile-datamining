@@ -1,6 +1,6 @@
-// === Module 10809: useFetchSummer2026GogoPromoEligibility ===
+// === Module 10828: useFetchSummer2026GogoPromoEligibility ===
 
-// Module 10809 (useFetchSummer2026GogoPromoEligibility)
+// Module 10828 (useFetchSummer2026GogoPromoEligibility)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

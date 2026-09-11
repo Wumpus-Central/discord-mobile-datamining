@@ -1,12 +1,12 @@
-// === Module 15243: PremiumRewardGradient ===
+// === Module 15222: PremiumRewardGradient ===
 
-// Module 15243 (PremiumRewardGradient)
+// Module 15222 (PremiumRewardGradient)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4306 */;
-import design_shared from "design/shared" /* 4457 */;
-import useThemeDefault from "useTheme" /* 4540 */;
-import LinearGradientDefault from "LinearGradient" /* 5037 */;
-import _modDef5714 from "module_5714" /* 5714 */;
+import useToken from "useToken" /* 4308 */;
+import design_shared from "design/shared" /* 4459 */;
+import useThemeDefault from "useTheme" /* 4541 */;
+import LinearGradientDefault from "LinearGradient" /* 5038 */;
+import _modDef5715 from "module_5715" /* 5715 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -80,7 +80,7 @@ function PremiumRewardGlowGradient(arg0) {
   obj.maskElement = timestampProducer(LinearGradientDefault, obj1);
   obj2 = { style: React4.absoluteFill, colors: memo, start, end };
   obj.children = timestampProducer(LinearGradientDefault, obj2);
-  const items3 = [timestampProducer(_modDef5714, obj), children];
+  const items3 = [timestampProducer(_modDef5715, obj), children];
   obj.children = items3;
   return React5(hasOwnProperty, obj);
 }
@@ -88,16 +88,16 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4605);
+let createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({ wrapper: { position: "relative", overflow: "hidden" }, fill: { position: "absolute", left: 0, right: 0, bottom: 0, height: "100%" }, glow: { position: "absolute", left: 0, right: 0, bottom: 0, height: "50%" }, glowLight: { opacity: 0.5 } });
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 const start2 = { x: 0.5, y: 0 };
 const end2 = { x: 0.5, y: 1 };
-fn(4454);
-const ColorUtils = fn(4454);
+fn(4456);
+const ColorUtils = fn(4456);
 const hexOpacityToRgbaResult = ColorUtils.hexOpacityToRgba("#000000", 0);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let closure_13 = createStyles.createStyleProperties({ transparentBlack: hexOpacityToRgbaResult, opaqueBlack: nativeDefault.colors.BLACK, transparentWhite: ColorUtils.hexOpacityToRgba("#FFFFFF", 0), opaqueWhite: nativeDefault.colors.WHITE });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/PremiumRewardGradient.tsx");

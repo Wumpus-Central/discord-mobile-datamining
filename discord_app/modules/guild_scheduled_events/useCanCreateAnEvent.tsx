@@ -1,11 +1,11 @@
-// === Module 9743: useCanCreateAnEvent ===
+// === Module 9764: useCanCreateAnEvent ===
 
-// Module 9743 (useCanCreateAnEvent)
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9741 */;
+// Module 9764 (useCanCreateAnEvent)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9762 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;

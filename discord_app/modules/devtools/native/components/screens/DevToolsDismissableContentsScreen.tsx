@@ -1,23 +1,23 @@
-// === Module 15697: DevToolsDismissableContentsScreen ===
+// === Module 15680: DevToolsDismissableContentsScreen ===
 
-// Module 15697 (DevToolsDismissableContentsScreen)
+// Module 15680 (DevToolsDismissableContentsScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import TrashIcon from "TrashIcon" /* 4563 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5567 */;
-import TableRow from "TableRow" /* 5655 */;
-import TableRowArrow from "TableRowArrow" /* 5662 */;
-import TableRowGroup from "TableRowGroup" /* 5737 */;
-import SearchField from "SearchField" /* 7102 */;
-import TableSwitchRow from "TableSwitchRow" /* 7252 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10307 */;
-import SearchEmpty from "SearchEmpty" /* 10387 */;
-import useBountiesAutoScroll from "useBountiesAutoScroll" /* 15091 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 15698 */;
-import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 15699 */;
+import TrashIcon from "TrashIcon" /* 4564 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5568 */;
+import TableRow from "TableRow" /* 5656 */;
+import TableRowArrow from "TableRowArrow" /* 5663 */;
+import TableRowGroup from "TableRowGroup" /* 5738 */;
+import SearchField from "SearchField" /* 7123 */;
+import TableSwitchRow from "TableSwitchRow" /* 7273 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10326 */;
+import SearchEmpty from "SearchEmpty" /* 10406 */;
+import useBountiesAutoScroll from "useBountiesAutoScroll" /* 15068 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 15681 */;
+import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 15682 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 1947 */;
@@ -35,7 +35,7 @@ function DismissableContentsEmpty() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { container: null, contentContainer: null, headerSection: null, search: null, sectionHeader: null, emptyState: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj.container = obj;
@@ -92,7 +92,7 @@ export default function DevToolsDismissableContentsScreen() {
   const tmp = closure_10();
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
-  let obj = ref(10001);
+  let obj = ref(10022);
   const tmp2 = useSafeAreaInsetsDefault();
   [dependencyMap, tmp5] = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
   _slicedToArray = tmp5;
@@ -140,7 +140,7 @@ export default function DevToolsDismissableContentsScreen() {
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
   let tmp4 = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  const tmp9 = _slicedToArray(ref(15090).useForceBountiesSwipeUpNux(), 2);
+  const tmp9 = _slicedToArray(ref(15067).useForceBountiesSwipeUpNux(), 2);
   const first2 = tmp9[0];
   closure_10 = tmp11;
   const items1 = [tmp9[1]];
@@ -211,6 +211,6 @@ export default function DevToolsDismissableContentsScreen() {
   };
   obj.renderItem = callback4;
   obj.onScroll = callback3;
-  obj.children = dailyCapOverridden(ref(8943).FlashList, obj);
+  obj.children = dailyCapOverridden(ref(8964).FlashList, obj);
   return dailyCapOverridden(first1, obj);
 };

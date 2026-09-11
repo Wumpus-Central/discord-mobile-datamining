@@ -1,11 +1,11 @@
-// === Module 8030: RemoveRecipientSystemMessage ===
+// === Module 8052: RemoveRecipientSystemMessage ===
 
-// Module 8030 (RemoveRecipientSystemMessage)
+// Module 8052 (RemoveRecipientSystemMessage)
 import util from "util" /* 1114 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8012 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8014 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8016 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8034 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8036 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8038 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
 import size from "module_2" /* 2 */;

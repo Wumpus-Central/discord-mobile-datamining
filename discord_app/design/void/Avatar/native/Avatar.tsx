@@ -1,12 +1,12 @@
-// === Module 14189: Avatar ===
+// === Module 14165: Avatar ===
 
-// Module 14189 (Avatar)
+// Module 14165 (Avatar)
 import nativeDefault from "native" /* 576 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8220 */;
-import ClipView from "ClipView" /* 8884 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13098 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 14178 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14179 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8242 */;
+import ClipView from "ClipView" /* 8905 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13121 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 14154 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14155 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ const StatusConstants = fn(1179);
 ({ STATUS_PADDING: metroRequire, StatusSizes: closure_7 } = StatusConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles((NORMAL) => {
   const obj = { status: { position: "absolute", right: -3, bottom: -3 }, speaking: null, stageSpeaking: null, voiceStatus: null, decoration: null, container: null };
   const rect = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: nativeDefault.colors.STATUS_SPEAKING };
@@ -305,5 +305,5 @@ export default noop.memo((isMobileOnline) => {
     }
   }
 });
-export const AvatarSizes = fn(13098).AvatarSizes;
+export const AvatarSizes = fn(13121).AvatarSizes;
 export { getStatusSize };

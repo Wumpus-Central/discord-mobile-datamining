@@ -1,6 +1,6 @@
-// === Module 7819: ForumSearchStore ===
+// === Module 7840: ForumSearchStore ===
 
-// Module 7819 (ForumSearchStore)
+// Module 7840 (ForumSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

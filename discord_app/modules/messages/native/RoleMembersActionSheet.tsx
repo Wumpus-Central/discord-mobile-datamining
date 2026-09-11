@@ -1,21 +1,21 @@
-// === Module 11658: RoleMembersActionSheet ===
+// === Module 11680: RoleMembersActionSheet ===
 
-// Module 11658 (RoleMembersActionSheet)
+// Module 11680 (RoleMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7181 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7202 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 
 require = fn;
 const View = fn(17).View;
-const EVERYONE_CHANNEL_ID = fn(7331).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(7352).EVERYONE_CHANNEL_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { header: null, headerText: null, roleDot: null, memberCount: null };
 createStyles = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.header = createStyles;
@@ -60,7 +60,7 @@ export default function RoleMembersActionSheet(guildId) {
   const tmp3 = guildId;
   const tmp9 = roleId;
   const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-  const tmp11 = roleId(7179)(guildId);
+  const tmp11 = roleId(7200)(guildId);
   let tmp12 = null;
   if (roleId !== result) {
     let tmp13;
@@ -83,9 +83,9 @@ export default function RoleMembersActionSheet(guildId) {
     }
     obj.channelId = channelId;
     obj.roleId = roleId;
-    obj.children = closure_8(tmp9(11659), obj);
-    tmp16Result = closure_8(tmp3(7202).BottomSheet, obj);
-    let tmp9Result = tmp9(11659);
+    obj.children = closure_8(tmp9(11681), obj);
+    tmp16Result = closure_8(tmp3(7223).BottomSheet, obj);
+    let tmp9Result = tmp9(11681);
   }
   return tmp16Result;
 };

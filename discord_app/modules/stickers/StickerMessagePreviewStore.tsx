@@ -1,9 +1,9 @@
-// === Module 5317: StickerMessagePreviewStore ===
+// === Module 5318: StickerMessagePreviewStore ===
 
-// Module 5317 (StickerMessagePreviewStore)
+// Module 5318 (StickerMessagePreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DraftStore from "DraftStore" /* 4946 */;
+import DraftStore from "DraftStore" /* 4947 */;
 import size from "module_2" /* 2 */;
 
 const DraftType = DraftStore.DraftType;

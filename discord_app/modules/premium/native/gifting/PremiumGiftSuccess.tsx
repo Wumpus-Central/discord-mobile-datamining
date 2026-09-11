@@ -1,18 +1,18 @@
-// === Module 11143: PremiumGiftSuccess ===
+// === Module 11166: PremiumGiftSuccess ===
 
-// Module 11143 (PremiumGiftSuccess)
+// Module 11166 (PremiumGiftSuccess)
 import nativeDefault from "native" /* 576 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10735 */;
+import PromotionsStore from "PromotionsStore" /* 10754 */;
 
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles((arg0) => {
   let obj = { bodyContainer: null, actionContainer: null };
   obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 };

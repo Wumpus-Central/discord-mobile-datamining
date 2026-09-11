@@ -1,14 +1,14 @@
-// === Module 10294: FavoritesHooks ===
+// === Module 10313: FavoritesHooks ===
 
-// Module 10294 (FavoritesHooks)
+// Module 10313 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1885 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import FavoritesLimits from "FavoritesLimits" /* 10295 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10296 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import FavoritesLimits from "FavoritesLimits" /* 10314 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10315 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
 import UserStore from "UserStore" /* 1371 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 
@@ -92,8 +92,8 @@ export const useFavorites = function useFavorites() {
   const items = [FavoriteStore];
   return initialize.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
 };
-export const useFavorite = function useFavorite(arg0) {
-  _require = arg0;
+export const useFavorite = function useFavorite(id) {
+  _require = id;
   const items = [FavoriteStore];
   return require("initialize").useStateFromStores(items, () => FavoriteStore.getFavorite(closure_0));
 };

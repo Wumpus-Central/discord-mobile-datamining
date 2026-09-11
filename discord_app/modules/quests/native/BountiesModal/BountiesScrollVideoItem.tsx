@@ -1,17 +1,17 @@
-// === Module 15093: BountiesScrollVideoItem ===
+// === Module 15070: BountiesScrollVideoItem ===
 
-// Module 15093 (BountiesScrollVideoItem)
-import QuestContent from "QuestContent" /* 5499 */;
-import AdCreativeType from "AdCreativeType" /* 5501 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7779 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11568 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11849 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15094 */;
+// Module 15070 (BountiesScrollVideoItem)
+import QuestContent from "QuestContent" /* 5500 */;
+import AdCreativeType from "AdCreativeType" /* 5502 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11590 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11871 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15071 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8921 */;
-import BountyStore from "BountyStore" /* 7753 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8942 */;
+import BountyStore from "BountyStore" /* 7774 */;
 
 require = fn;
 function BountiesScrollVideoItemInner(bounty) {
@@ -417,7 +417,7 @@ function BountiesScrollVideoItemInner(bounty) {
   result1 = 1000 * rewardTimerSeconds;
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(5494).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5495).QuestsExperimentLocations;
 let jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx");
@@ -449,10 +449,10 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (softDownloadCapsEnabled === undefined) {
     softDownloadCapsEnabled = false;
   }
-  return flag3(bounty(11849).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(11871).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(5501).AdCreativeType.BOUNTY,
-    questContent: bounty(5499).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(5502).AdCreativeType.BOUNTY,
+    questContent: bounty(5500).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

@@ -1,9 +1,9 @@
-// === Module 6529: SpeakerSpotIllustration ===
+// === Module 6550: SpeakerSpotIllustration ===
 
-// Module 6529 (SpeakerSpotIllustration)
+// Module 6550 (SpeakerSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6530 from "module_6530" /* 6530 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6551 from "module_6551" /* 6551 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SpeakerSpotIllustration = function SpeakerSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6530 };
+  obj = { uri: _modDef6551 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const SpeakerSpotIllustration = function SpeakerSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6530 });
+  return jsx(FastImageDefault, { uri: _modDef6551 });
 };

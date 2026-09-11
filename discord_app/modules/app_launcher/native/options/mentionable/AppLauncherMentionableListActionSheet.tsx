@@ -1,9 +1,9 @@
-// === Module 12250: AppLauncherMentionableListActionSheet ===
+// === Module 12273: AppLauncherMentionableListActionSheet ===
 
-// Module 12250 (AppLauncherMentionableListActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5492 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7573 */;
+// Module 12273 (AppLauncherMentionableListActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5493 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7594 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,7 +33,7 @@ export default function AppLauncherMentionableListActionSheet(channel) {
   const effect = query.useEffect(() => {
     let obj = ApplicationCommandUtils;
     const applicationCommandOptionQueryOptions = obj.getApplicationCommandOptionQueryOptions(option);
-    obj = { query, channel, canMentionEveryone: applicationCommandOptionQueryOptions.canMentionEveryone, canMentionHere: applicationCommandOptionQueryOptions.canMentionHere, canMentionUsers: applicationCommandOptionQueryOptions.canMentionUsers, canMentionRoles: applicationCommandOptionQueryOptions.canMentionRoles, includeAllGuildUsers: applicationCommandOptionQueryOptions.canMentionAnyGuildUser, includeNonMentionableRoles: applicationCommandOptionQueryOptions.canMentionNonMentionableRoles, request: true, limit: 10, allowSnowflake: true };
+    obj = { query, channel, canMentionEveryone: applicationCommandOptionQueryOptions.canMentionEveryone, canMentionHere: applicationCommandOptionQueryOptions.canMentionHere, canMentionUsers: applicationCommandOptionQueryOptions.canMentionUsers, canMentionRoles: applicationCommandOptionQueryOptions.canMentionRoles, includeAllGuildUsers: applicationCommandOptionQueryOptions.canMentionAnyGuildUser, includeNonMentionableRoles: applicationCommandOptionQueryOptions.canMentionNonMentionableRoles, canMentionOtherGlobals: applicationCommandOptionQueryOptions.canMentionOtherGlobals, request: true, limit: 10, allowSnowflake: true };
     const queryMentionResultsResult = AutocompleteUtilsDefault.queryMentionResults(obj);
     const users = queryMentionResultsResult.users;
     const items = [...users.map((item) => ({ type: constants.USER, result: item })), ...roles.map((item) => ({ type: constants.ROLE, result: item })), ...globals.map((item) => ({ type: constants.GLOBAL, result: item }))];

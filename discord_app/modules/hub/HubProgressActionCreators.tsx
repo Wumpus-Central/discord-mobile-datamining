@@ -1,11 +1,11 @@
-// === Module 9900: HubProgressActionCreators ===
+// === Module 9921: HubProgressActionCreators ===
 
-// Module 9900 (HubProgressActionCreators)
+// Module 9921 (HubProgressActionCreators)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9901).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9922).HUB_PROGRESS_STEP_ORDER;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");

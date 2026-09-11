@@ -1,11 +1,11 @@
-// === Module 5737: TableRowGroup ===
+// === Module 5738: TableRowGroup ===
 
-// Module 5737 (TableRowGroup)
+// Module 5738 (TableRowGroup)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4306 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import TableRowDivider from "TableRowDivider" /* 5652 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 5656 */;
+import useToken from "useToken" /* 4308 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import TableRowDivider from "TableRowDivider" /* 5653 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 5657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ class TableRowGroupTitle {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { flexShrink: 0 }, content: null, title: null, description: null, hasTrailingText: null, helperText: null };
 createStyles = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
 createStyles.content = createStyles;

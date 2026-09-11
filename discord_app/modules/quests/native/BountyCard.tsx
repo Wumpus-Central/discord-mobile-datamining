@@ -1,11 +1,11 @@
-// === Module 15147: BountyCard ===
+// === Module 15124: BountyCard ===
 
-// Module 15147 (BountyCard)
+// Module 15124 (BountyCard)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
-import BountyStore from "BountyStore" /* 7753 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import BountyStore from "BountyStore" /* 7774 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 188;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_13 = createStyles.createStyles(() => {
   let obj = { tile: null, card: null, cardImage: null, previewVideo: null, badge: null, badgeContent: null, badgeText: null, startButton: null, cardFooter: null, advertiserRow: null, advertiserName: null, advertiserIcon: null };
   obj = { gap: nativeDefault.space.PX_12 };

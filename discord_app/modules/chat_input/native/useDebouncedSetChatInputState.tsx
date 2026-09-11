@@ -1,6 +1,6 @@
-// === Module 12461: useDebouncedSetChatInputState ===
+// === Module 12484: useDebouncedSetChatInputState ===
 
-// Module 12461 (useDebouncedSetChatInputState)
+// Module 12484 (useDebouncedSetChatInputState)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

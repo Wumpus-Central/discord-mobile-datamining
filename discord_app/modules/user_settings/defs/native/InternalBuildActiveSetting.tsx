@@ -1,17 +1,17 @@
-// === Module 15822: InternalBuildActiveSetting ===
+// === Module 15807: InternalBuildActiveSetting ===
 
-// Module 15822 (InternalBuildActiveSetting)
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14920 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14471 */;
+// Module 15807 (InternalBuildActiveSetting)
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14897 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14447 */;
 
 require = fn;
-fn(11540);
+fn(11562);
 let SettingBuilders = {
   useTitle() {
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: fn(15641).MobilePhoneSettingsIcon,
+  IconComponent: fn(15624).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },

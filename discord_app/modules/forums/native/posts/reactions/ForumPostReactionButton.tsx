@@ -1,21 +1,21 @@
-// === Module 10288: ForumPostReactionButton ===
+// === Module 10307: ForumPostReactionButton ===
 
-// Module 10288 (ForumPostReactionButton)
+// Module 10307 (ForumPostReactionButton)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ReactionUtils from "ReactionUtils" /* 4255 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Pressables from "Pressables" /* 5173 */;
-import EmojiDefault from "Emoji" /* 7182 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7814 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10289 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11326 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 11331 */;
-import useReactionPermissionsDefault from "useReactionPermissions" /* 11386 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 11388 */;
+import ReactionUtils from "ReactionUtils" /* 4257 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Pressables from "Pressables" /* 5174 */;
+import EmojiDefault from "Emoji" /* 7203 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7835 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10308 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11348 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 11353 */;
+import useReactionPermissionsDefault from "useReactionPermissions" /* 11408 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 11410 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -147,7 +147,7 @@ class ReactionButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, selected: null, textEmoji: null, imageEmoji: null, countContainer: null };
 createStyles = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 8, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT, minWidth: 32, minHeight: 26, maxHeight: 26 };
 createStyles.container = createStyles;

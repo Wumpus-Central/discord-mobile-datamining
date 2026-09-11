@@ -1,17 +1,17 @@
-// === Module 10221: NotificationSettingsMuteBanner ===
+// === Module 10240: NotificationSettingsMuteBanner ===
 
-// Module 10221 (NotificationSettingsMuteBanner)
+// Module 10240 (NotificationSettingsMuteBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { card: null };
 createStyles = { padding: 16, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 createStyles.card = createStyles;

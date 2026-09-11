@@ -1,7 +1,7 @@
-// === Module 11839: QuestHomeNavigationStore ===
+// === Module 11861: QuestHomeNavigationStore ===
 
-// Module 11839 (QuestHomeNavigationStore)
-import ZustandStore from "ZustandStore" /* 4474 */;
+// Module 11861 (QuestHomeNavigationStore)
+import ZustandStore from "ZustandStore" /* 4476 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => ({ sort: null, filter: null, scrollToQuestId: null }));

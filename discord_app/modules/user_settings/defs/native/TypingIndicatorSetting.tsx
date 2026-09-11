@@ -1,15 +1,15 @@
-// === Module 15435: TypingIndicatorSetting ===
+// === Module 15417: TypingIndicatorSetting ===
 
-// Module 15435 (TypingIndicatorSetting)
+// Module 15417 (TypingIndicatorSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import _modDef3592 from "module_3592" /* 3592 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 12037 */;
-import ChatDotsIcon from "ChatDotsIcon" /* 15436 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 15487 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14797 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 12060 */;
+import ChatDotsIcon from "ChatDotsIcon" /* 15418 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 15469 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14771 */;
+import SettingBuilders from "SettingBuilders" /* 11562 */;
 import size from "module_2" /* 2 */;
 
 const dismissibleBadgeRouteProps = DismissibleBadgeUtils.createDismissibleBadgeRouteProps(dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE);

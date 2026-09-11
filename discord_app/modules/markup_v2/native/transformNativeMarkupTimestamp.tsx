@@ -1,8 +1,8 @@
-// === Module 8164: transformNativeMarkupTimestamp ===
+// === Module 8186: transformNativeMarkupTimestamp ===
 
-// Module 8164 (transformNativeMarkupTimestamp)
-import MarkupTypes from "MarkupTypes" /* 5046 */;
-import TimestampUtils from "TimestampUtils" /* 5072 */;
+// Module 8186 (transformNativeMarkupTimestamp)
+import MarkupTypes from "MarkupTypes" /* 5047 */;
+import TimestampUtils from "TimestampUtils" /* 5073 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupTimestamp.tsx");

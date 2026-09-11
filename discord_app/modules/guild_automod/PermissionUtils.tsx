@@ -1,8 +1,8 @@
-// === Module 16930: guild_automod/PermissionUtils ===
+// === Module 16919: guild_automod/PermissionUtils ===
 
-// Module 16930 (guild_automod/PermissionUtils)
+// Module 16919 (guild_automod/PermissionUtils)
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4243 */;
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 const require = fn;
 const Constants = fn(1074);

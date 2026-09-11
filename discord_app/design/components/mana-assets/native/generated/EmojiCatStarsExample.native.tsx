@@ -1,9 +1,9 @@
-// === Module 5993: EmojiCatStarsExample ===
+// === Module 6014: EmojiCatStarsExample ===
 
-// Module 5993 (EmojiCatStarsExample)
+// Module 6014 (EmojiCatStarsExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef5994 from "module_5994" /* 5994 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6015 from "module_6015" /* 6015 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const EmojiCatStarsExample = function EmojiCatStarsExample(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5994 };
+  obj = { uri: _modDef6015 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const EmojiCatStarsExample = function EmojiCatStarsExample(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5994 });
+  return jsx(FastImageDefault, { uri: _modDef6015 });
 };

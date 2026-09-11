@@ -1,12 +1,12 @@
-// === Module 17152: soundboard/SoundboardActionCreators ===
+// === Module 17141: soundboard/SoundboardActionCreators ===
 
-// Module 17152 (soundboard/SoundboardActionCreators)
+// Module 17141 (soundboard/SoundboardActionCreators)
 import Constants from "Constants" /* 1074 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4425 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4427 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
 import size from "module_2" /* 2 */;
 
 const ComponentActions = Constants.ComponentActions;
@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardAct
 
 export const openSoundboardSoundPickerActionSheet = function openSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource, initialScrollLocation } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17153, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource, initialScrollLocation });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17142, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource, initialScrollLocation });
 };
 export const showSoundboardSoundPickerActionSheet = function showSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource } = arg0);
@@ -24,5 +24,5 @@ export const showSoundboardSoundPickerActionSheet = function showSoundboardSound
   const result = obj.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
   obj = { channel, analyticsSource };
   ({ channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation } = obj);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17153, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17142, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation });
 };

@@ -1,11 +1,11 @@
-// === Module 4306: useToken ===
+// === Module 4308: useToken ===
 
-// Module 4306 (useToken)
+// Module 4308 (useToken)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4315 */;
+import native from "native" /* 4317 */;
 
-const SemanticColorContext = obj(4307);
+const SemanticColorContext = obj(4309);
 require = fn;
 const map = new Map();
 const keys = Object.keys(nativeDefault.colors);
@@ -16,12 +16,13 @@ let closure_4 = Object.fromEntries(keys.map((item) => {
 const size = fn(2);
 let result = size.fileFinishedImporting("design/tokens/native/useToken.tsx");
 
-export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
+export const useToken = function useToken(BACKGROUND_BASE_LOW, DARK) {
+  let theme = DARK;
   let obj = require;
   let result = dependencyMap;
   const themeContext = native.useThemeContext();
   let tmp3 = null;
-  if (theme == null) {
+  if (DARK == null) {
     theme = themeContext.theme;
   }
   if (tmp3 == BACKGROUND_BASE_LOW) {

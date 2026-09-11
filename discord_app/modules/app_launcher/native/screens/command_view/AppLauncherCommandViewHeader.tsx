@@ -1,9 +1,9 @@
-// === Module 12224: AppLauncherCommandViewHeader ===
+// === Module 12247: AppLauncherCommandViewHeader ===
 
-// Module 12224 (AppLauncherCommandViewHeader)
+// Module 12247 (AppLauncherCommandViewHeader)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12121 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12144 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ const AppLauncherNativeConstants = fn(1482);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(12201).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(12224).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 const TOTAL_SCROLL_RANGE = sum - 56;
-fn(4605);
+fn(4606);
 let createStyles = { headerContainer: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", position: "absolute", top: -16, left: 0, right: 0, padding: DEFAULT_CONTENT_PADDING, zIndex: 1 }, loadingHeaderContainer: null, appIconMask: null, appIcon: null, loadingIcon: null, appSmallName: null, icon: null, headerBannerOverlay: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.loadingHeaderContainer = createStyles;
@@ -51,7 +51,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
     }
     return AppLauncherNativeUtils.getAppLauncherIconSource(application);
   }, items);
-  let obj = scrollOffsetY(4341);
+  let obj = scrollOffsetY(4343);
   class A {
     constructor() {
       obj = { opacity: null, transform: null };
@@ -70,12 +70,12 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
       return obj;
     }
   }
-  obj = { interpolate: scrollOffsetY(4341).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
+  obj = { interpolate: scrollOffsetY(4343).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
   A.__closure = obj;
   A.__workletHash = 15596175827193;
   A.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(A);
-  let obj2 = scrollOffsetY(4341);
+  let obj2 = scrollOffsetY(4343);
   class E {
     constructor() {
       obj = { transform: null, opacity: null };
@@ -102,12 +102,12 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
       return obj;
     }
   }
-  obj = { APP_ICON_SIZE: 72, APP_ICON_BORDER_WIDTH: 4, DEFAULT_CONTENT_PADDING, interpolate: scrollOffsetY(4341).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
+  obj = { APP_ICON_SIZE: 72, APP_ICON_BORDER_WIDTH: 4, DEFAULT_CONTENT_PADDING, interpolate: scrollOffsetY(4343).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
   E.__closure = obj;
   E.__workletHash = 13563524587234;
   E.__initData = __initData2;
   const animatedStyle1 = obj2.useAnimatedStyle(E);
-  let obj4 = scrollOffsetY(4341);
+  let obj4 = scrollOffsetY(4343);
   class N {
     constructor() {
       obj = { opacity: null };
@@ -118,13 +118,13 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
       return obj;
     }
   }
-  N.__closure = { interpolate: scrollOffsetY(4341).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
+  N.__closure = { interpolate: scrollOffsetY(4343).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
   N.__workletHash = 2637023147700;
   N.__initData = __initData3;
   const animatedStyle2 = obj4.useAnimatedStyle(N);
-  let obj6 = scrollOffsetY(4306);
+  let obj6 = scrollOffsetY(4308);
   let str = obj6.useToken(section(576).colors.BACKGROUND_BASE_LOW);
-  let obj1 = { interpolate: scrollOffsetY(4341).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
+  let obj1 = { interpolate: scrollOffsetY(4343).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
   if (typeof memo !== "number") {
     let uri;
     if (memo != null) {
@@ -134,10 +134,10 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   if (str == null) {
     str = "";
   }
-  const tmp9 = section(8195);
+  const tmp9 = section(8217);
   if (null != memo) {
     obj2 = { style: tmp.appIcon, source: memo };
-    let tmp15 = closure_6(tmp8(5637), obj2);
+    let tmp15 = closure_6(tmp8(5638), obj2);
     let tmp16 = closure_6;
   } else {
     const obj3 = { style: null };
@@ -158,7 +158,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   const obj5 = { style: null };
   let items3 = [tmp.headerBannerOverlay, animatedStyle2];
   obj5.style = items3;
-  const items4 = [tmp16(section(4341).View, obj5), tmp16(section(12201), { onPress: onPress.onPressBack }), , , ];
+  const items4 = [tmp16(section(4343).View, obj5), tmp16(section(12224), { onPress: onPress.onPressBack }), , , ];
   obj6 = { lineClamp: 1, animated: true, style: null, variant: "heading-lg/bold", color: "text-overlay-light", children: null };
   const items5 = [tmp.appSmallName, animatedStyle];
   obj6.style = items5;
@@ -167,12 +167,12 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
     displayName = command.displayName;
   }
   obj6.children = displayName;
-  items4[2] = tmp16(scrollOffsetY(4601).Text, obj6);
+  items4[2] = tmp16(scrollOffsetY(4602).Text, obj6);
   items4[3] = tmp16(scrollOffsetY(1178).Spacer, { size: 32 });
   const obj7 = { style: null, children: tmp15 };
   const items6 = [tmp.appIconMask, animatedStyle1];
   obj7.style = items6;
-  items4[4] = tmp16(section(4341).View, obj7);
+  items4[4] = tmp16(section(4343).View, obj7);
   obj4.children = items4;
   return closure_7(View, obj4);
 };

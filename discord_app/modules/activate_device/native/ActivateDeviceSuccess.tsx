@@ -1,20 +1,20 @@
-// === Module 13960: ActivateDeviceSuccess ===
+// === Module 13938: ActivateDeviceSuccess ===
 
-// Module 13960 (ActivateDeviceSuccess)
+// Module 13938 (ActivateDeviceSuccess)
 import util from "util" /* 1114 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import scopes2 from "scopes" /* 9307 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 13959 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import scopes2 from "scopes" /* 9328 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 13937 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ image: { width: 300, height: 200, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSuccess.tsx");

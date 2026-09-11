@@ -1,14 +1,14 @@
-// === Module 9834: AddMembersBody ===
+// === Module 9855: AddMembersBody ===
 
-// Module 9834 (AddMembersBody)
+// Module 9855 (AddMembersBody)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4248 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4316 */;
-import RegexUtilsDefault from "RegexUtils" /* 4592 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import GuildUtilsDefault from "GuildUtils" /* 5569 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9808 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4318 */;
+import RegexUtilsDefault from "RegexUtils" /* 4593 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import GuildUtilsDefault from "GuildUtils" /* 5570 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9829 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -50,12 +50,12 @@ function _toPropertyKey(obj) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(8466);
+const ChannelPermissionsConstants = fn(8487);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { inputContainer: null, inputDescContainer: null, inputDescText: null, tagRoleColor: null, tagAvatar: null, emptyState: null, emptyStateText: null, sectionRowWrapper: null, adminWarning: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 };
 createStyles.inputContainer = createStyles;
@@ -160,12 +160,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = guild(6677).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(6698).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = guild(6677).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(6698).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -193,13 +193,13 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj2.children = closure_16(pendingAdditions(9825), obj3);
+  obj2.children = closure_16(pendingAdditions(9846), obj3);
   const items5 = [closure_16(closure_7, obj2), , , ];
   let tmp27Result = null;
   if (null != inputDesc) {
     obj4 = { style: tmp3.inputDescContainer, children: null };
     const obj5 = { style: tmp3.inputDescText, variant: "text-xs/medium", color: "text-default", children: inputDesc };
-    obj4.children = closure_16(guild(4601).Text, obj5);
+    obj4.children = closure_16(guild(4602).Text, obj5);
     tmp27Result = closure_16(tmp28, obj4);
   }
   items5[1] = tmp27Result;
@@ -216,7 +216,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj8 = { children: null };
-        const obj9 = { Illustration: guild(9830).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj9 = { Illustration: guild(9851).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1114).intl;
         const obj10 = { query: str };
@@ -231,8 +231,8 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }
   const obj12 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
-  const tmp4Result = pendingAdditions(9825);
-  obj12.contentContainerStyle = { paddingHorizontal: pendingAdditions(576).space.PX_16, paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(7033)(obj).insets.bottom };
+  const tmp4Result = pendingAdditions(9846);
+  obj12.contentContainerStyle = { paddingHorizontal: pendingAdditions(576).space.PX_16, paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(7054)(obj).insets.bottom };
   obj12.renderItem = function renderItem(item) {
     item = item.item;
     ({ index, section } = item);
@@ -312,5 +312,5 @@ export default function AddMembersBody(pendingAdditions) {
   };
   obj12.sections = items3;
   tmp27Result = closure_16(BottomSheetSectionList, obj12);
-  const obj13 = { paddingHorizontal: pendingAdditions(576).space.PX_16, paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(7033)(obj).insets.bottom };
+  const obj13 = { paddingHorizontal: pendingAdditions(576).space.PX_16, paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(7054)(obj).insets.bottom };
 };

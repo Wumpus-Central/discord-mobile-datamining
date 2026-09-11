@@ -1,9 +1,9 @@
-// === Module 6417: ProfileEffectsAbstractUI ===
+// === Module 6438: ProfileEffectsAbstractUI ===
 
-// Module 6417 (ProfileEffectsAbstractUI)
+// Module 6438 (ProfileEffectsAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6418 from "module_6418" /* 6418 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6439 from "module_6439" /* 6439 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ProfileEffectsAbstractUI = function ProfileEffectsAbstractUI(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6418 };
+  obj = { uri: _modDef6439 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ProfileEffectsAbstractUI = function ProfileEffectsAbstractUI(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6418 });
+  return jsx(FastImageDefault, { uri: _modDef6439 });
 };

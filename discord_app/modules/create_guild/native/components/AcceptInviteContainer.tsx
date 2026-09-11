@@ -1,22 +1,23 @@
-// === Module 12786: AcceptInviteContainer ===
+// === Module 12809: AcceptInviteContainer ===
 
-// Module 12786 (AcceptInviteContainer)
+// Module 12809 (AcceptInviteContainer)
 import nativeDefault from "native" /* 576 */;
-import NavigatorHeader from "NavigatorHeader" /* 5674 */;
+import NavigatorHeader from "NavigatorHeader" /* 5675 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import InviteStore from "InviteStore" /* 4589 */;
+import InviteStore from "InviteStore" /* 4590 */;
 
 require = fn;
-const GuildMemberFlags = fn(4230).GuildMemberFlags;
+const ThemeTypes = fn(1074).ThemeTypes;
+const GuildMemberFlags = fn(4232).GuildMemberFlags;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { flex: { flex: 1 }, paddingContainer: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.paddingContainer = createStyles;
-let closure_10 = createStyles.createStyles(createStyles);
+let closure_11 = createStyles.createStyles(createStyles);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/create_guild/native/components/AcceptInviteContainer.tsx");
 
@@ -28,11 +29,11 @@ export default function AcceptInviteContainer(code) {
   let stateFromStoresObject;
   let callback;
   const isRegistration = merged.isRegistration;
-  let obj = code(inviteInstanceId[9]);
+  let obj = code(inviteInstanceId[10]);
   const navigation = obj.useNavigation();
-  const tmp2 = closure_10();
+  let obj1 = code(inviteInstanceId[11]);
   const items = [InviteStore, stateFromStoresObject, callback];
-  stateFromStoresObject = code(inviteInstanceId[10]).useStateFromStoresObject(items, () => {
+  stateFromStoresObject = obj1.useStateFromStoresObject(items, () => {
     const invite = InviteStore.getInvite(code);
     let guild;
     const inviteError = InviteStore.getInviteError(code);
@@ -124,7 +125,7 @@ export default function AcceptInviteContainer(code) {
             closure_129_0 = guildMember;
             if (isRegistration) {
               if (null != guildMember) {
-                let obj4 = v0(inviteInstanceId[12]);
+                let obj4 = v0(inviteInstanceId[13]);
                 const flags = guildMember.flags;
                 v0 = flags;
                 if (flags == null) {
@@ -133,7 +134,7 @@ export default function AcceptInviteContainer(code) {
                 if (!obj4.hasFlag(v0, constants.COMPLETED_ONBOARDING)) {
                   inviteInstanceId = 1;
                   c3 = 1;
-                  const obj1 = { value: tmp10(tmp11[14])(tmp11[13], tmp11.paths), done: false };
+                  const obj1 = { value: tmp10(tmp11[15])(tmp11[14], tmp11.paths), done: false };
                   return obj1;
                 }
                 tmp10 = v0;
@@ -240,7 +241,7 @@ export default function AcceptInviteContainer(code) {
                         closure_1 = tmp7;
                         closure_129_0 = closure_0;
                         if (null != closure_0) {
-                          let obj1 = closure_2_0(dependencyMap[15]);
+                          let obj1 = closure_2_0(dependencyMap[16]);
                           if (obj1.isGuildScheduledEventInviteEmbed(closure_0)) {
                             let prop;
                             if (closure_0 != null) {
@@ -251,7 +252,7 @@ export default function AcceptInviteContainer(code) {
                               return { value: "HermesInternal", done: null };
                             } else {
                               closure_1();
-                              let tmp11Result = closure_2_0(dependencyMap[16]);
+                              let tmp11Result = closure_2_0(dependencyMap[17]);
                               const result = tmp11Result.transitionToEventDetailsFromInvite(prop);
                               c6 = 3;
                               obj1 = { value: undefined, done: true };
@@ -262,13 +263,13 @@ export default function AcceptInviteContainer(code) {
                             if (guild != null) {
                               const id = guild.id;
                             }
-                            tmp11Result = closure_2_0(dependencyMap[15]);
+                            tmp11Result = closure_2_0(dependencyMap[16]);
                             if (tmp11Result.isRoleSubscriptionInvite(closure_0)) {
                               if (null != id) {
                                 c4 = 1;
                                 c5 = 2;
                                 c6 = 1;
-                                const obj2 = { value: v1(dependencyMap[17]).performRoleSubscriptionUpsellRedirect(id), done: false };
+                                const obj2 = { value: v1(dependencyMap[18]).performRoleSubscriptionUpsellRedirect(id), done: false };
                                 return obj2;
                               }
                             }
@@ -295,7 +296,7 @@ export default function AcceptInviteContainer(code) {
                       closure_1();
                       const _setTimeout = setTimeout;
                       const timerId = setTimeout(() => {
-                        closure_1(closure_2[18]).transitionToInvite(closure_1_0);
+                        closure_1(closure_2[19]).transitionToInvite(closure_1_0);
                       }, 1);
                     } else {
                       closure_1();
@@ -342,8 +343,8 @@ export default function AcceptInviteContainer(code) {
                   obj2.callback = function callback(c2) {
                     v1(c2);
                   };
-                  obj2 = v1(tmp23[18]).acceptInvite(obj2);
-                  const obj11 = v1(tmp23[18]);
+                  obj2 = v1(tmp23[19]).acceptInvite(obj2);
+                  const obj11 = v1(tmp23[19]);
                 }
               }
               v1 = 1;
@@ -351,7 +352,7 @@ export default function AcceptInviteContainer(code) {
               const obj6 = { value: callback(), done: false };
               return obj6;
             }
-            obj10 = tmp2(inviteInstanceId[19]);
+            obj10 = tmp2(inviteInstanceId[20]);
             tmp23 = inviteInstanceId;
           }
         } else if (arg0 === 1) {
@@ -373,13 +374,15 @@ export default function AcceptInviteContainer(code) {
     }
   }), items3);
   obj = { code, onPressClose, onPressJoin: callback1 };
-  let obj2 = code(inviteInstanceId[10]);
+  const tmp2 = closure_11();
   const merged1 = Object.assign(merged);
   const merged2 = Object.assign(stateFromStoresObject);
-  const tmp8 = onPressClose(inviteInstanceId[20]);
-  obj = { style: null, bottom: true, children: jsx(code(inviteInstanceId[22]).ThemeContextProvider, { theme: "darker", children: jsx(onPressClose(inviteInstanceId[20]), { code, onPressClose, onPressJoin: callback1 }) }) };
+  const tmp8 = onPressClose(inviteInstanceId[21]);
+  obj = { style: null, bottom: true, children: null };
   const items4 = [, ];
   ({ flex: arr5[0], paddingContainer: arr5[1] } = tmp2);
   obj.style = items4;
-  return jsx(code(inviteInstanceId[21]).SafeAreaPaddingView, { style: null, bottom: true, children: jsx(code(inviteInstanceId[22]).ThemeContextProvider, { theme: "darker", children: jsx(onPressClose(inviteInstanceId[20]), { code, onPressClose, onPressJoin: callback1 }) }) });
+  obj1 = { theme: ThemeTypes.DARK, children: jsx(onPressClose(inviteInstanceId[21]), { style: null, bottom: true, children: null }) };
+  obj.children = jsx(code(inviteInstanceId[23]).ThemeContextProvider, { theme: ThemeTypes.DARK, children: jsx(onPressClose(inviteInstanceId[21]), { style: null, bottom: true, children: null }) });
+  return jsx(code(inviteInstanceId[22]).SafeAreaPaddingView, { style: null, bottom: true, children: null });
 };

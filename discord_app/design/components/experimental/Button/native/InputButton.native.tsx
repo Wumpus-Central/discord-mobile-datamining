@@ -1,10 +1,10 @@
-// === Module 8975: InputButton ===
+// === Module 8996: InputButton ===
 
-// Module 8975 (InputButton)
+// Module 8996 (InputButton)
 import nativeDefault from "native" /* 576 */;
-import BaseTextButton from "BaseTextButton" /* 5026 */;
-import ButtonConstants from "ButtonConstants" /* 5030 */;
-import InputFieldContainer from "InputFieldContainer" /* 6671 */;
+import BaseTextButton from "BaseTextButton" /* 5027 */;
+import ButtonConstants from "ButtonConstants" /* 5031 */;
+import InputFieldContainer from "InputFieldContainer" /* 6692 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 let closure_2 = ["size", "isRound", "text", "value", "icon", "iconPosition", "accessibilityLabel", "accessibilityValue", "maxFontSizeMultiplier"];
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let obj = { buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" }, buttonTextPlaceholder: null, buttonTextValue: null };
 obj = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj.buttonTextPlaceholder = obj;

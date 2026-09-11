@@ -1,12 +1,12 @@
-// === Module 11772: ShareChatInput ===
+// === Module 11794: ShareChatInput ===
 
-// Module 11772 (ShareChatInput)
+// Module 11794 (ShareChatInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Pressables from "Pressables" /* 5173 */;
-import FormInputDefault from "FormInput" /* 8671 */;
-import ReactionIcon from "ReactionIcon" /* 8827 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9373 */;
+import Pressables from "Pressables" /* 5174 */;
+import FormInputDefault from "FormInput" /* 8692 */;
+import ReactionIcon from "ReactionIcon" /* 8848 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9394 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
 createStyles = { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 };
 createStyles.container = createStyles;

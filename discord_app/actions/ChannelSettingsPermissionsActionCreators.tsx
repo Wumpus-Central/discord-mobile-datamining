@@ -1,9 +1,9 @@
-// === Module 9809: ChannelSettingsPermissionsActionCreators ===
+// === Module 9830: ChannelSettingsPermissionsActionCreators ===
 
-// Module 9809 (ChannelSettingsPermissionsActionCreators)
+// Module 9830 (ChannelSettingsPermissionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4618 */;
-import DefaultChannelThresholdUtils from "DefaultChannelThresholdUtils" /* 9810 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4619 */;
+import DefaultChannelThresholdUtils from "DefaultChannelThresholdUtils" /* 9831 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 4584: DeviceUtils ===
+// === Module 4585: DeviceUtils ===
 
-// Module 4584 (DeviceUtils)
+// Module 4585 (DeviceUtils)
 import _mod17 from "module_17" /* 17 */;
 import Storage3 from "Storage" /* 510 */;
 import NativeDeviceModuleDefault from "NativeDeviceModule" /* 1343 */;

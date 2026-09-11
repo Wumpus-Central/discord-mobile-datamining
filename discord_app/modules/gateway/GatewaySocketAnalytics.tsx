@@ -1,6 +1,6 @@
-// === Module 13719: GatewaySocketAnalytics ===
+// === Module 13698: GatewaySocketAnalytics ===
 
-// Module 13719 (GatewaySocketAnalytics)
+// Module 13698 (GatewaySocketAnalytics)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

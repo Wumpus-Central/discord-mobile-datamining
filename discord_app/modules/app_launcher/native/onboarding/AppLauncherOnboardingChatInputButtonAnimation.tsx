@@ -1,26 +1,26 @@
-// === Module 12312: AppLauncherOnboardingChatInputButtonAnimation ===
+// === Module 12335: AppLauncherOnboardingChatInputButtonAnimation ===
 
-// Module 12312 (AppLauncherOnboardingChatInputButtonAnimation)
+// Module 12335 (AppLauncherOnboardingChatInputButtonAnimation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
-import timing from "timing" /* 4606 */;
-import timingPresets from "timingPresets" /* 4609 */;
-import ButtonConstants from "ButtonConstants" /* 5030 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5579 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 7923 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12107 */;
-import _mod12132 from "module_12132" /* 12132 */;
-import _mod12313 from "module_12313" /* 12313 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
+import timing from "timing" /* 4607 */;
+import timingPresets from "timingPresets" /* 4610 */;
+import ButtonConstants from "ButtonConstants" /* 5031 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5580 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 7945 */;
+import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12130 */;
+import _mod12155 from "module_12155" /* 12155 */;
+import _mod12336 from "module_12336" /* 12336 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import AccessibilityStore from "AccessibilityStore" /* 4598 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-let createStyles = fn(4605);
+let createStyles = fn(4606);
 let closure_9 = createStyles.createStyles(() => {
   const sum = ButtonConstants.SMALL_BUTTON_HEIGHT + ButtonConstants.SMALL_BUTTON_PADDING + 2;
   const obj = { fakeButton: null, glowMask: null, glowLottie: null, trinketsLottie: null, glowAnimation: null };
@@ -43,7 +43,7 @@ class EnteringAnimation {
     return obj;
   }
 }
-createStyles = { withTiming: fn(4606).withTiming, timingStandard: fn(4609).timingStandard };
+createStyles = { withTiming: fn(4607).withTiming, timingStandard: fn(4610).timingStandard };
 EnteringAnimation.__closure = createStyles;
 EnteringAnimation.__workletHash = 2327377243473;
 EnteringAnimation.__initData = { code: "function EnteringAnimation_AppLauncherOnboardingChatInputButtonAnimationTsx1(){const{withTiming,timingStandard}=this.__closure;const initialValues={opacity:0};const animations={opacity:withTiming(1,timingStandard)};return{initialValues:initialValues,animations:animations};}" };
@@ -57,7 +57,7 @@ class ExitingAnimation {
     return obj;
   }
 }
-createStyles = { withTiming: fn(4606).withTiming, timingStandard: fn(4609).timingStandard };
+createStyles = { withTiming: fn(4607).withTiming, timingStandard: fn(4610).timingStandard };
 ExitingAnimation.__closure = createStyles;
 ExitingAnimation.__workletHash = 1065249287738;
 ExitingAnimation.__initData = { code: "function ExitingAnimation_AppLauncherOnboardingChatInputButtonAnimationTsx2(){const{withTiming,timingStandard}=this.__closure;const initialValues={opacity:1};const animations={opacity:withTiming(0,timingStandard)};return{initialValues:initialValues,animations:animations};}" };
@@ -77,7 +77,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   obj = { entering: EnteringAnimation, exiting: ExitingAnimation, style: null, collapsable: false, children: null };
   const items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
   obj.style = items1;
-  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod12313, autoPlay: !stateFromStores };
+  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod12336, autoPlay: !stateFromStores };
   const items2 = [timestampProducer(LottieAnimationViewDefault, obj1), , ];
   const obj2 = { collapsable: false, style: null };
   const items3 = [tmp.glowMask, gradientBottom];
@@ -88,7 +88,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   const items4 = [React5(ReanimatedRexportDefault.View, obj), ];
   const obj4 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj3 = { collapsable: false, style: tmp.fakeButton };
-  obj4.source = _mod12132;
+  obj4.source = _mod12155;
   obj4.autoPlay = !stateFromStores;
   items4[1] = timestampProducer(LottieAnimationViewDefault, obj4);
   obj.children = items4;

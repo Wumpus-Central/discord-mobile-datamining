@@ -1,18 +1,18 @@
-// === Module 12525: ChatInputGuardLurking ===
+// === Module 12548: ChatInputGuardLurking ===
 
-// Module 12525 (ChatInputGuardLurking)
+// Module 12548 (ChatInputGuardLurking)
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4785 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5570 */;
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7393 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 9900 */;
-import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11397 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4786 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5571 */;
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7414 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 9921 */;
+import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11419 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4244 */;
+import LurkingStore from "LurkingStore" /* 4246 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
-const TextAreaCta = fn(12032).TextAreaCta;
+const TextAreaCta = fn(12055).TextAreaCta;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, JoinGuildSources: closure_9 } = Constants);
 const jsx = fn(21).jsx;
@@ -81,8 +81,8 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
     const intl8 = tmp2(1114).intl;
     obj.buttonPrimaryText = intl8.string(tmp2(1114).t.RLch70);
     obj.buttonPrimaryOnPress = callback2;
-    let tmp15Result = jsx(guildId(12518), { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
-    const tmp14 = guildId(12518);
+    let tmp15Result = jsx(guildId(12541), { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
+    const tmp14 = guildId(12541);
   } else {
     if (channel.isReadonlyAnnouncementsChannel) {
       obj = { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
@@ -111,8 +111,8 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
       obj1.buttonPrimaryText = intl2.string(tmp2(1114).t.RLch70);
       obj1.buttonPrimaryOnPress = callback2;
     }
-    tmp15Result = jsx(guildId(12518), obj1);
-    const tmp17 = guildId(12518);
+    tmp15Result = jsx(guildId(12541), obj1);
+    const tmp17 = guildId(12541);
   }
   return tmp15Result;
 });

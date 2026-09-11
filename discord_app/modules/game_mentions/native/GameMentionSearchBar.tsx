@@ -1,27 +1,27 @@
-// === Module 12472: GameMentionSearchBar ===
+// === Module 12495: GameMentionSearchBar ===
 
-// Module 12472 (GameMentionSearchBar)
+// Module 12495 (GameMentionSearchBar)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import Form from "Form" /* 8663 */;
-import GameControllerIcon from "GameControllerIcon" /* 9292 */;
-import useGameMentionSearchBarHeight from "useGameMentionSearchBarHeight" /* 12458 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import Form from "Form" /* 8684 */;
+import GameControllerIcon from "GameControllerIcon" /* 9313 */;
+import useGameMentionSearchBarHeight from "useGameMentionSearchBarHeight" /* 12481 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { container: null, headerRow: null, icon: null, description: null, divider: null };
 obj = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj.container = obj;
-const createStyles = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: fn(12458).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL };
+const createStyles = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: fn(12481).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL };
 obj.headerRow = createStyles;
 obj.icon = { marginRight: 12 };
-obj.description = { paddingHorizontal: 16, paddingBottom: fn(12458).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
-const obj2 = { paddingHorizontal: 16, paddingBottom: fn(12458).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
+obj.description = { paddingHorizontal: 16, paddingBottom: fn(12481).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
+const obj2 = { paddingHorizontal: 16, paddingBottom: fn(12481).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
 obj.divider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
 let closure_5 = createStyles.createStyles(obj);
 let obj3 = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };

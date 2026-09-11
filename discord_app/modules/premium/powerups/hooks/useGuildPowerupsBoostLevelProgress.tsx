@@ -1,7 +1,7 @@
-// === Module 4530: useGuildPowerupsBoostLevelProgress ===
+// === Module 4531: useGuildPowerupsBoostLevelProgress ===
 
-// Module 4530 (useGuildPowerupsBoostLevelProgress)
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 4514 */;
+// Module 4531 (useGuildPowerupsBoostLevelProgress)
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 4515 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 const useGuildPowerupsBoostCountDefault = useGuildPowerupsBoostCount;

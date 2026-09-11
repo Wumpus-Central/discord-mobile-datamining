@@ -1,21 +1,21 @@
-// === Module 11163: virtual_currency/BalanceWidgetPill ===
+// === Module 11186: virtual_currency/BalanceWidgetPill ===
 
-// Module 11163 (virtual_currency/BalanceWidgetPill)
+// Module 11186 (virtual_currency/BalanceWidgetPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 11164 */;
-import OrbLottieAnimation from "OrbLottieAnimation" /* 11165 */;
-import BalanceCounter from "BalanceCounter" /* 11170 */;
-import AnimationUtils from "AnimationUtils" /* 11171 */;
+import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 11187 */;
+import OrbLottieAnimation from "OrbLottieAnimation" /* 11188 */;
+import BalanceCounter from "BalanceCounter" /* 11193 */;
+import AnimationUtils from "AnimationUtils" /* 11194 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, orbsLottieContainer: null, balanceCounterContainer: null, balanceText: null };
-createStyles = { minHeight: fn(5030).SMALL_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, gap: 4 };
+createStyles = { minHeight: fn(5031).SMALL_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, gap: 4 };
 createStyles.container = createStyles;
 createStyles.orbsLottieContainer = { position: "relative", height: 18, width: 18, justifyContent: "center", alignItems: "center" };
 createStyles.balanceCounterContainer = { justifyContent: "center", alignItems: "flex-end" };

@@ -1,9 +1,9 @@
-// === Module 6621: WhiteboardAbstractUI ===
+// === Module 6642: WhiteboardAbstractUI ===
 
-// Module 6621 (WhiteboardAbstractUI)
+// Module 6642 (WhiteboardAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6622 from "module_6622" /* 6622 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6643 from "module_6643" /* 6643 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const WhiteboardAbstractUI = function WhiteboardAbstractUI(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6622 };
+  obj = { uri: _modDef6643 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const WhiteboardAbstractUI = function WhiteboardAbstractUI(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6622 });
+  return jsx(FastImageDefault, { uri: _modDef6643 });
 };

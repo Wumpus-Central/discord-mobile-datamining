@@ -1,15 +1,15 @@
-// === Module 8908: WishlistButton ===
+// === Module 8929: WishlistButton ===
 
-// Module 8908 (WishlistButton)
+// Module 8929 (WishlistButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
-import native from "native" /* 4315 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
-import spring from "spring" /* 5024 */;
-import springPresets from "springPresets" /* 5028 */;
-import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 8839 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 8911 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
+import native from "native" /* 4317 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import spring from "spring" /* 5025 */;
+import springPresets from "springPresets" /* 5029 */;
+import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 8860 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 8932 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -51,7 +51,7 @@ class WishlistButtonBase {
     theme = obj.useThemeContext().theme;
     obj2 = isWishlisted(busy[15]);
     isThemeLightResult = obj2.isThemeLight(theme);
-    closure_7 = theme === closure_11.MIDNIGHT;
+    closure_7 = theme === closure_11.ONYX;
     dark = isThemeLightResult ? tmp.light : tmp.dark;
     darkPressed = isThemeLightResult ? tmp.lightPressed : tmp.darkPressed;
     obj3 = onTrackPress;
@@ -146,38 +146,30 @@ class WishlistButtonBase {
       }
     }, items2);
     tmp2Result1 = tmp2(tmp3[9]);
-    class J {
-      constructor() {
-        obj = {};
-        merged = Object.assign(closure_6.animationFill);
-        tmp2 = closure_0;
-        tmp3 = closure_2;
-        obj2 = closure_0(closure_2[20]);
-        num = 1;
-        num2 = 1;
-        tmp4 = closure_13;
-        if (closure_13) {
-          num2 = 0;
-        }
-        obj.opacity = obj2.withSpring(num2, tmp2(tmp3[21]).SUBTLE_SPRING, "animate-always");
-        tmp2Result = tmp2(tmp3[20]);
-        if (tmp4) {
-          num = 0.9;
-        }
-        obj = { scale: tmp2Result.withSpring(num, tmp2(tmp3[21]).SUBTLE_SPRING, "animate-always") };
-        items = [];
-        items[0] = obj;
-        obj.transform = items;
-        return obj;
+    fn = function z() {
+      obj = {};
+      const merged = Object.assign(closure_6.animationFill);
+      let num = 1;
+      let num2 = 1;
+      if (first) {
+        num2 = 0;
       }
-    }
+      obj.opacity = spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always");
+      if (first) {
+        num = 0.9;
+      }
+      obj = { scale: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
+      const items = [obj];
+      obj.transform = items;
+      return obj;
+    };
     obj = { styles: tmp, withSpring: tmp2(tmp3[20]).withSpring, showFilled: tmp9, SUBTLE_SPRING: tmp2(tmp3[21]).SUBTLE_SPRING };
-    J.__closure = obj;
-    J.__workletHash = 1357254413161;
-    J.__initData = closure_19;
-    animatedStyle = tmp2Result1.useAnimatedStyle(J);
+    fn.__closure = obj;
+    fn.__workletHash = 1357254413161;
+    fn.__initData = closure_19;
+    animatedStyle = tmp2Result1.useAnimatedStyle(fn);
     tmp2Result2 = tmp2(tmp3[9]);
-    class Y {
+    class J {
       constructor() {
         value = closure_14.get();
         obj = {};
@@ -200,12 +192,12 @@ class WishlistButtonBase {
       }
     }
     obj1 = { animationFillProgress: sharedValue, styles: tmp, withSpring: tmp2(tmp3[20]).withSpring, showFilled: tmp9, SUBTLE_SPRING: tmp2(tmp3[21]).SUBTLE_SPRING, interpolate: tmp2(tmp3[9]).interpolate, Extrapolation: tmp2(tmp3[9]).Extrapolation };
-    Y.__closure = obj1;
-    Y.__workletHash = 15039903885060;
-    Y.__initData = closure_20;
-    animatedStyle1 = tmp2Result2.useAnimatedStyle(Y);
+    J.__closure = obj1;
+    J.__workletHash = 15039903885060;
+    J.__initData = closure_20;
+    animatedStyle1 = tmp2Result2.useAnimatedStyle(J);
     tmp2Result3 = tmp2(tmp3[9]);
-    class K {
+    class X {
       constructor() {
         value = closure_14.get();
         obj = {};
@@ -232,9 +224,9 @@ class WishlistButtonBase {
       }
     }
     obj2 = { animationFillProgress: sharedValue, styles: tmp, showFilled: tmp9, interpolate: tmp2(tmp3[9]).interpolate, Extrapolation: tmp2(tmp3[9]).Extrapolation };
-    K.__closure = obj2;
-    K.__workletHash = 12429379889426;
-    K.__initData = closure_21;
+    X.__closure = obj2;
+    X.__workletHash = 12429379889426;
+    X.__initData = closure_21;
     tmp17 = closure_12;
     obj3 = {
       style(pressed) {
@@ -268,7 +260,7 @@ class WishlistButtonBase {
       children: null
     };
     str = "togglebutton";
-    animatedStyle2 = tmp2Result3.useAnimatedStyle(K);
+    animatedStyle2 = tmp2Result3.useAnimatedStyle(X);
     tmp18 = closure_6;
     if (flag) {
       str = "none";
@@ -396,11 +388,11 @@ const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { duration: 400, easing: null };
-const Easing = fn(4341).Easing;
+const Easing = fn(4343).Easing;
 obj.easing = Easing.bezier(0.67, 0, 0.26, 1);
-obj = { sm: fn(5030).SMALL_BUTTON_HEIGHT, md: fn(5030).MEDIUM_BUTTON_HEIGHT };
+obj = { sm: fn(5031).SMALL_BUTTON_HEIGHT, md: fn(5031).MEDIUM_BUTTON_HEIGHT };
 let value = { sm: "sm", md: "md" };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_17 = createStyles.createStyles((arg0) => {
   obj = { button: null, light: null, lightPressed: null, dark: null, darkPressed: null, midnight: null, disabled: null, iconContainer: null, animationFill: null };
   const size = { width: obj[arg0], height: obj[arg0], display: "flex", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };

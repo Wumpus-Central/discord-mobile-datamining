@@ -1,9 +1,9 @@
-// === Module 6535: StickersSpotIllustration ===
+// === Module 6556: StickersSpotIllustration ===
 
-// Module 6535 (StickersSpotIllustration)
+// Module 6556 (StickersSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6536 from "module_6536" /* 6536 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6557 from "module_6557" /* 6557 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const StickersSpotIllustration = function StickersSpotIllustration(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6536 };
+  obj = { uri: _modDef6557 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const StickersSpotIllustration = function StickersSpotIllustration(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6536 });
+  return jsx(FastImageDefault, { uri: _modDef6557 });
 };

@@ -1,6 +1,6 @@
-// === Module 12750: ContactSyncUtils ===
+// === Module 12773: ContactSyncUtils ===
 
-// Module 12750 (ContactSyncUtils)
+// Module 12773 (ContactSyncUtils)
 import initialize from "initialize" /* 504 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
@@ -8,104 +8,40 @@ import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 125
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4798 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
-import ContactSyncManager from "ContactSyncManager" /* 12751 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4799 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import ContactSyncManager from "ContactSyncManager" /* 12774 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5331 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5332 */;
 
 require = fn;
-let closure_18 = async function _uploadContacts(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          const friend_suggestions = tmp5;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = false;
-          }
-          closure_130_1 = flag;
-          closure_130_2 = undefined;
-          let body;
-          c4 = 1;
-          c5 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          const _JSON = JSON;
-          closure_130_2 = JSON.parse(closure_130_0);
-          const request = { url: closure_131_12.CONNECTION_SYNC_CONTACTS, body: null, trackedActionData: null, rejectWithError: false };
-          const obj2 = { friend_list_entries: closure_130_2, background: closure_130_1, allowed_in_suggestions: closure_131_11.ANYONE_WITH_CONTACT_INFO, include_mutual_friends_count: false };
-          request.body = obj2;
-          const obj3 = { event: closure_131_0(closure_131_2[8]).NetworkActionNames.USER_CONTACTS_SYNC };
-          request.trackedActionData = obj3;
-          c4 = 2;
-          c5 = 1;
-          const obj4 = { value: closure_131_1(closure_131_2[7]).put(request), done: false };
-          return obj4;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
-      } else {
-        body = value.body;
-        obj = closure_131_1(closure_131_2[9]);
-        obj.wait(() => {
-          closure_1(closure_2[9]);
-          const obj = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: friend_suggestions.friend_suggestions };
-          return obj.dispatch(obj);
-        });
-        c5 = 3;
-        const obj6 = { value: body, done: true };
-        return obj6;
-      }
-    } catch (tmp12) {
-      c5 = tmp;
-      throw tmp12;
-    }
+let closure_18 = async function _uploadContacts() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag = closure_1;
+  if (closure_1 === undefined) {
+    flag = false;
   }
+  closure_130_1 = flag;
+  await "PX_16";
+  const _JSON = JSON;
+  closure_130_2 = JSON.parse(closure_130_0);
+  const request = { url: closure_131_12.CONNECTION_SYNC_CONTACTS, body: { friend_list_entries: closure_130_2, background: closure_130_1, allowed_in_suggestions: closure_131_11.ANYONE_WITH_CONTACT_INFO, include_mutual_friends_count: false }, trackedActionData: { event: closure_131_0(closure_131_2[8]).NetworkActionNames.USER_CONTACTS_SYNC }, rejectWithError: false };
+  await closure_131_1(closure_131_2[7]).put(request);
+  const body = value.body;
+  { event: closure_131_0(closure_131_2[8]).NetworkActionNames.USER_CONTACTS_SYNC };
+  closure_131_1(closure_131_2[9]).wait(() => {
+    closure_1(closure_2[9]);
+    const obj = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: friend_suggestions.friend_suggestions };
+    return obj.dispatch(obj);
+  });
+  return body;
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(12749);
+const ContactSyncPersistedStore = fn(12772);
 ({ useContactSyncStore: metroRequire, clearDismissState: closure_7, deleteStoredContacts: closure_8 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(12748);
+const ContactSyncConstants = fn(12771);
 ({ CONTACT_SYNC_MODAL_KEY: closure_9, ContactPermissions: c10, ContactSyncSuggestionsSetting: closure_11 } = ContactSyncConstants);
 const Constants = fn(1074);
 ({ Endpoints: closure_12, PlatformTypes: map1, FriendDiscoveryFlags: closure_14, HelpdeskArticles: closure_15 } = Constants);

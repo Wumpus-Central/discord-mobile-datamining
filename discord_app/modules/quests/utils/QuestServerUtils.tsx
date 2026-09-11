@@ -1,9 +1,9 @@
-// === Module 7761: QuestServerUtils ===
+// === Module 7782: QuestServerUtils ===
 
-// Module 7761 (QuestServerUtils)
-import _mod4790 from "module_4790" /* 4790 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7759 */;
-import Quest from "Quest" /* 7762 */;
+// Module 7782 (QuestServerUtils)
+import _mod4791 from "module_4791" /* 4791 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7780 */;
+import Quest from "Quest" /* 7783 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -79,14 +79,14 @@ const result = size.fileFinishedImporting("modules/quests/utils/QuestServerUtils
 
 export const isQuestWithKnownConfigVersion = function isQuestWithKnownConfigVersion(config) {
   try {
-    const match = _mod4790.match(config.config);
+    const match = _mod4791.match(config.config);
     return match.with({ config_version: 2 }, () => true).exhaustive();
   } catch (err) {
     return false;
   }
 };
 export const questConfigFromServer = function questConfigFromServer(body) {
-  const match = _mod4790.match(body);
+  const match = _mod4791.match(body);
   return match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
 };
 export const questUserStatusFromServer = function questUserStatusFromServer(body) {
@@ -107,7 +107,7 @@ export const questUserStatusFromServer = function questUserStatusFromServer(body
 };
 export const questWithUserStatusFromServer = function questWithUserStatusFromServer(body) {
   let obj = { id: body.id, preview: body.preview, config: null, userStatus: null, targetedContent: null, trafficMetadataSealed: null };
-  const match = _mod4790.match(body.config);
+  const match = _mod4791.match(body.config);
   obj.config = match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
   let tmp = null;
   if (null != body.user_status) {

@@ -1,9 +1,9 @@
-// === Module 15851: UserSettingsDesignSystemAlertModal ===
+// === Module 15836: UserSettingsDesignSystemAlertModal ===
 
-// Module 15851 (UserSettingsDesignSystemAlertModal)
-import useAlertStore from "useAlertStore" /* 4951 */;
-import AlertModal from "AlertModal" /* 4955 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
+// Module 15836 (UserSettingsDesignSystemAlertModal)
+import useAlertStore from "useAlertStore" /* 4952 */;
+import AlertModal from "AlertModal" /* 4956 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -68,7 +68,7 @@ function openDemoModal() {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx");

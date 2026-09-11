@@ -1,12 +1,12 @@
-// === Module 16161: HappeningNowCardActivitySubtitle ===
+// === Module 16150: HappeningNowCardActivitySubtitle ===
 
-// Module 16161 (HappeningNowCardActivitySubtitle)
+// Module 16150 (HappeningNowCardActivitySubtitle)
 import util from "util" /* 1114 */;
-import useChannelNameDefault from "useChannelName" /* 4758 */;
-import isStreamingDefault from "isStreaming" /* 8322 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9840 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10961 */;
-import HappeningNowCard from "HappeningNowCard" /* 15376 */;
+import useChannelNameDefault from "useChannelName" /* 4759 */;
+import isStreamingDefault from "isStreaming" /* 8343 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9861 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10980 */;
+import HappeningNowCard from "HappeningNowCard" /* 15358 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
@@ -31,7 +31,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     obj = { channel: stateFromStores };
     tmp8 = getChannelA11yLabelDefault(obj);
   }
-  obj.children = jsx(voiceState(15376).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
+  obj.children = jsx(voiceState(15358).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
   return <View style={closure_7().cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {

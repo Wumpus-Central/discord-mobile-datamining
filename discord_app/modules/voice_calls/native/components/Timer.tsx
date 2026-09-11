@@ -1,6 +1,6 @@
-// === Module 13873: Timer ===
+// === Module 13852: Timer ===
 
-// Module 13873 (Timer)
+// Module 13852 (Timer)
 import _modDef12 from "module_12" /* 12 */;
 import native from "native" /* 1178 */;
 import noop from "module_19" /* 19 */;

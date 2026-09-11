@@ -1,13 +1,13 @@
-// === Module 17802: CreatorHighlightSection ===
+// === Module 17793: CreatorHighlightSection ===
 
-// Module 17802 (CreatorHighlightSection)
+// Module 17793 (CreatorHighlightSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import LinkingDefault from "Linking" /* 4299 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import _modDef10372 from "module_10372" /* 10372 */;
-import EmojiIconDefault from "EmojiIcon" /* 15321 */;
+import LinkingDefault from "Linking" /* 4301 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import _modDef10391 from "module_10391" /* 10391 */;
+import EmojiIconDefault from "EmojiIcon" /* 15301 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ function GuildServerSubscriberCount(arg0) {
   obj.style = items;
   obj = { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount };
   const items1 = [timestampProducer(Text_Text.Text, obj), , ];
-  obj = { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef10372 };
+  obj = { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef10391 };
   items1[1] = timestampProducer(native.Icon, obj);
   const obj1 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
   const intl = util.intl;
@@ -39,12 +39,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(17803)(guild_id, 3, 60);
+  const tmp6 = guild_id(17794)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    obj = { style: tmp.cardContainer, children: closure_6(tmp5(17775), {}) };
+    obj = { style: tmp.cardContainer, children: closure_6(tmp5(17766), {}) };
     return closure_6(closure_4, obj);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;
@@ -55,10 +55,10 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj2 = { style: tmp.guildIcon, source: null };
     const obj3 = { uri: guildAvatarUrl };
     obj2.source = obj3;
-    const items1 = [closure_6(tmp5(5637), obj2), ];
+    const items1 = [closure_6(tmp5(5638), obj2), ];
     const obj4 = { style: tmp.cardHeaderContainer, children: null };
     const obj5 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: guildName };
-    const items2 = [closure_6(tmp2(4601).Text, obj5), ];
+    const items2 = [closure_6(tmp2(4602).Text, obj5), ];
     let tmp11Result = null != subscriberCount;
     if (tmp11Result) {
       const obj6 = { subscriberCount, style: tmp.serverSubscriberCount };
@@ -70,7 +70,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     obj1.children = items1;
     const items3 = [closure_7(closure_4, obj1), , , , ];
     const obj7 = { style: tmp.ownerQuote, variant: "text-md/normal", color: "text-default", children: quote };
-    items3[1] = closure_6(tmp2(4601).Text, obj7);
+    items3[1] = closure_6(tmp2(4602).Text, obj7);
     const obj8 = { style: tmp.ownerUsername, variant: "text-sm/normal", color: "text-default", lineClamp: 1, lineBreakMode: "tail", children: null };
     const intl = tmp2(1114).intl;
     const obj9 = { attributionName: quote_attribution, attributionTitle: null };
@@ -80,7 +80,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     }
     obj9.attributionTitle = quote_attribution_title;
     obj8.children = intl.format(tmp2(1114).t.m0b6Kj, obj9);
-    items3[2] = closure_6(tmp2(4601).Text, obj8);
+    items3[2] = closure_6(tmp2(4602).Text, obj8);
     let tmp9Result = null != emojisToShow;
     if (tmp9Result) {
       tmp9Result = emojisToShow.length > 0;
@@ -93,7 +93,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       obj11.variant = typeConsolidationEyebrow.variant;
       const intl3 = tmp2(1114).intl;
       obj11.children = intl3.string(tmp2(1114).t.wg53L8);
-      const items5 = [closure_6(tmp2(4601).Text, obj11), ];
+      const items5 = [closure_6(tmp2(4602).Text, obj11), ];
       const obj12 = { style: null, children: null };
       const items6 = [, ];
       ({ horizontalContainer: arr7[0], emojiContainer: arr7[1] } = tmp);
@@ -113,7 +113,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
         const obj13 = { style: tmp.emojiListItem, variant: "text-sm/semibold", color: "text-default", children: null };
         const _HermesInternal = HermesInternal;
         obj13.children = "+" + notShownEmojiCount;
-        tmp11Result = closure_6(tmp2(4601).Text, obj13);
+        tmp11Result = closure_6(tmp2(4602).Text, obj13);
       }
       items7[1] = tmp11Result;
       obj12.children = items7;
@@ -127,7 +127,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const intl4 = tmp2(1114).intl;
     obj15.text = intl4.string(tmp2(1114).t.mQ2IGa);
     obj15.onPress = tmp7;
-    obj14.children = closure_6(tmp2(5026).BaseTextButton, obj15);
+    obj14.children = closure_6(tmp2(5027).BaseTextButton, obj15);
     items3[4] = closure_6(closure_4, obj14);
     obj.children = items3;
     return closure_7(closure_4, obj);
@@ -139,7 +139,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { horizontalContainer: { flexDirection: "row" }, serverSubscriberCount: { marginTop: 8 }, subscriberCountContainer: null, subscriberCount: null, subscriberCountIcon: null, cardContainer: null, cardHeaderContainer: null, guildIcon: null, ownerQuote: null, ownerUsername: null, premiumEmojisTitle: null, viewServerButtonContainer: null, viewServerButton: null, emojiSectionContainer: null, emojiContainer: null, emojiListItem: null, emoji: null };
 createStyles = { alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BRAND_530, paddingEnd: 8, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 createStyles.subscriberCountContainer = createStyles;

@@ -1,8 +1,8 @@
-// === Module 13724: GatewayZstdUtils ===
+// === Module 13703: GatewayZstdUtils ===
 
-// Module 13724 (GatewayZstdUtils)
+// Module 13703 (GatewayZstdUtils)
 import _mod17 from "module_17" /* 17 */;
-import NativeCompressionModuleDefault from "NativeCompressionModule" /* 13725 */;
+import NativeCompressionModuleDefault from "NativeCompressionModule" /* 13704 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

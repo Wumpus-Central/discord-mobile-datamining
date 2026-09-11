@@ -1,9 +1,9 @@
-// === Module 6633: WumpusCouchSpotIllustration ===
+// === Module 6654: WumpusCouchSpotIllustration ===
 
-// Module 6633 (WumpusCouchSpotIllustration)
+// Module 6654 (WumpusCouchSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6634 from "module_6634" /* 6634 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6655 from "module_6655" /* 6655 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const WumpusCouchSpotIllustration = function WumpusCouchSpotIllustration(
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6634 };
+  obj = { uri: _modDef6655 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const WumpusCouchSpotIllustration = function WumpusCouchSpotIllustration(
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6634 });
+  return jsx(FastImageDefault, { uri: _modDef6655 });
 };

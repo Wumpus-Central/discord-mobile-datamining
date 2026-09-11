@@ -1,19 +1,19 @@
-// === Module 16272: GameClaimCoachmark ===
+// === Module 16261: GameClaimCoachmark ===
 
-// Module 16272 (GameClaimCoachmark)
+// Module 16261 (GameClaimCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import ButtonConstants from "ButtonConstants" /* 5030 */;
-import Pressables from "Pressables" /* 5173 */;
-import Card from "Card" /* 5657 */;
-import XSmallIcon from "XSmallIcon" /* 5730 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8648 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8989 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10189 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 16273 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16274 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import ButtonConstants from "ButtonConstants" /* 5031 */;
+import Pressables from "Pressables" /* 5174 */;
+import Card from "Card" /* 5658 */;
+import XSmallIcon from "XSmallIcon" /* 5731 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8669 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 9010 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10208 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 16262 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16263 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-fn(4605);
+fn(4606);
 let obj = { card: null, closeButton: null, centeredText: null, body: null, cta: null };
 obj = { padding: nativeDefault.space.PX_12 };
 obj.card = obj;

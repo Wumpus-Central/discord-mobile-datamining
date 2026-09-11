@@ -1,28 +1,28 @@
-// === Module 10484: StickerPickerList ===
+// === Module 10503: StickerPickerList ===
 
-// Module 10484 (StickerPickerList)
+// Module 10503 (StickerPickerList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7114 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10376 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10377 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10471 */;
-import _modDef10485 from "module_10485" /* 10485 */;
-import useStickerPickerListData from "useStickerPickerListData" /* 10486 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7135 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10395 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10396 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 10490 */;
+import _modDef10504 from "module_10504" /* 10504 */;
+import useStickerPickerListData from "useStickerPickerListData" /* 10505 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5552 */;
+import StickersStore from "StickersStore" /* 5553 */;
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10460).useStickerPickerStore;
-const StickerPickerConstants = fn(10343);
+const useStickerPickerStore = fn(10479).useStickerPickerStore;
+const StickerPickerConstants = fn(10362);
 ({ STICKER_SCROLL_LOAD_DELAY_MS: closure_8, STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9, STICKER_SIZE: c10 } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { listPlaceholder: null, section: null, sectionSticker: null, nsfwContainer: null, nsfwText: null };
 obj = { color: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj.listPlaceholder = obj;
@@ -38,7 +38,7 @@ let closure_15 = noop.memo((height) => {
   let obj = { style: null, children: null };
   const items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  obj = { source: _modDef10485, size: native.Icon.Sizes.SMALL };
+  obj = { source: _modDef10504, size: native.Icon.Sizes.SMALL };
   const items1 = [closure_1_11(native.Icon, obj), ];
   obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;

@@ -1,6 +1,6 @@
-// === Module 8490: AgeVerificationAuthSession ===
+// === Module 8511: AgeVerificationAuthSession ===
 
-// Module 8490 (AgeVerificationAuthSession)
+// Module 8511 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

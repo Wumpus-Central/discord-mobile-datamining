@@ -1,13 +1,13 @@
-// === Module 15930: EncryptionSetting ===
+// === Module 15915: EncryptionSetting ===
 
-// Module 15930 (EncryptionSetting)
+// Module 15915 (EncryptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 15931 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9220 */;
+import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 15916 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9241 */;
 
 require = fn;
-fn(11540);
+fn(11562);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -20,7 +20,7 @@ let SettingBuilders = {
     obj = { count: secureFramesVerifiedUserIds.length };
     return intl.formatToPlainString(util.t["6vrePS"], obj);
   },
-  parent: fn(8027).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8049).MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: function useSecureFramesPersistentCodesValue() {
     const items = [SecureFramesPersistedStore];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());

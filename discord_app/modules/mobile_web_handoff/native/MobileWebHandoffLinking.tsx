@@ -1,6 +1,6 @@
-// === Module 7368: MobileWebHandoffLinking ===
+// === Module 7389: MobileWebHandoffLinking ===
 
-// Module 7368 (MobileWebHandoffLinking)
+// Module 7389 (MobileWebHandoffLinking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import FingerprintUtils from "FingerprintUtils" /* 1255 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -84,7 +84,7 @@ let closure_10 = async function _redirectWithHandoffToken(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -155,34 +155,94 @@ let closure_10 = async function _redirectWithHandoffToken(arg0) {
     }
   }
 };
-let closure_11 = async function _redirectDeveloperPortalWithHandoffToken() {
-  const obj3 = {};
-  const merged = Object.assign(closure_131_1);
-  let nonce = closure_131_1.nonce;
-  if (nonce == null) {
-    let obj1 = closure_132_1(closure_132_2[5]);
-    nonce = obj1.generateNonce();
+let closure_11 = async function _redirectDeveloperPortalWithHandoffToken(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_1 = undefined;
+          closure_131_0 = closure_0;
+          let obj1 = closure_1;
+          if (closure_1 === undefined) {
+            obj1 = {};
+          }
+          closure_131_1 = obj1;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: null };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          const obj3 = {};
+          const merged = Object.assign(closure_131_1);
+          let nonce = closure_131_1.nonce;
+          if (nonce == null) {
+            obj1 = closure_132_1(closure_132_2[5]);
+            nonce = obj1.generateNonce();
+          }
+          obj3.nonce = nonce;
+          obj3.handoffSource = closure_132_0(closure_132_2[8]).LoginHandoffSource.ROLE_SUBSCRIPTION_SETTING;
+          closure_131_2 = obj3;
+          c5 = 2;
+          c6 = 1;
+          const obj4 = { value: closure_132_9(closure_131_2), done: false };
+          return obj4;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        closure_131_3 = value;
+        const _URL = URL;
+        const _location = location;
+        const _HermesInternal = HermesInternal;
+        const uRL = new URL("" + location.protocol + closure_132_6.DEVELOPER_PORTAL_LOGIN_HANDOFF(closure_131_2.nonce, closure_131_3, closure_131_0));
+        closure_131_4 = uRL;
+        closure_132_1(closure_132_2[10]).performURLNavigation(closure_131_4.href);
+        c6 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp17) {
+      c6 = tmp;
+      throw tmp17;
+    }
   }
-  obj3.nonce = nonce;
-  obj3.handoffSource = closure_132_0(closure_132_2[8]).LoginHandoffSource.ROLE_SUBSCRIPTION_SETTING;
-  closure_131_2 = obj3;
-  await closure_132_9(closure_131_2);
-  closure_131_3 = value;
-  const _URL = URL;
-  const _location = location;
-  const _HermesInternal = HermesInternal;
-  const uRL = new URL("" + location.protocol + closure_132_6.DEVELOPER_PORTAL_LOGIN_HANDOFF(closure_131_2.nonce, closure_131_3, closure_131_0));
-  closure_131_4 = uRL;
-  closure_132_1(closure_132_2[10]).performURLNavigation(closure_131_4.href);
-  await "HermesInternal";
-  closure_3 = tmp2;
-  closure_131_0 = closure_0;
-  obj1 = closure_1;
-  if (closure_1 === undefined) {
-    obj1 = {};
-  }
-  closure_131_1 = obj1;
-  return "PX_16";
 };
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, MarketingURLs: metroRequire, Routes: closure_7 } = Constants);

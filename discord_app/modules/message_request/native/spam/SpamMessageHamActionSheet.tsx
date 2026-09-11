@@ -1,18 +1,18 @@
-// === Module 12517: SpamMessageHamActionSheet ===
+// === Module 12540: SpamMessageHamActionSheet ===
 
-// Module 12517 (SpamMessageHamActionSheet)
+// Module 12540 (SpamMessageHamActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import components_Button_Button from "components/Button/Button" /* 5025 */;
-import _modDef5647 from "module_5647" /* 5647 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7201 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7202 */;
-import ActionSheetCloseButton from "ActionSheetCloseButton" /* 7250 */;
-import Form from "Form" /* 8663 */;
-import useMessageRequestActions from "useMessageRequestActions" /* 12512 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import components_Button_Button from "components/Button/Button" /* 5026 */;
+import _modDef5648 from "module_5648" /* 5648 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7222 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
+import ActionSheetCloseButton from "ActionSheetCloseButton" /* 7271 */;
+import Form from "Form" /* 8684 */;
+import useMessageRequestActions from "useMessageRequestActions" /* 12535 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { header: null, container: null, buttonContainer: null, switch: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.header = createStyles;
@@ -52,7 +52,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
       const obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = recipientId(1114).intl;
       obj.content = intl.string(recipientId(1114).t["EDYbS+"]);
-      obj.icon = _modDef5647;
+      obj.icon = _modDef5648;
       obj.open(obj);
     },
     onAcceptSuccess() {

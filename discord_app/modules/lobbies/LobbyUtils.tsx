@@ -1,7 +1,7 @@
-// === Module 11005: LobbyUtils ===
+// === Module 11025: LobbyUtils ===
 
-// Module 11005 (LobbyUtils)
-import PermissionStore from "PermissionStore" /* 4243 */;
+// Module 11025 (LobbyUtils)
+import PermissionStore from "PermissionStore" /* 4245 */;
 
 const require = fn;
 const Permissions = fn(1074).Permissions;

@@ -1,15 +1,15 @@
-// === Module 7977: ConversationListScreen ===
+// === Module 7999: ConversationListScreen ===
 
-// Module 7977 (ConversationListScreen)
+// Module 7999 (ConversationListScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7961 */;
-import ConversationListItemDefault from "ConversationListItem" /* 7978 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7983 */;
+import ConversationListItemDefault from "ConversationListItem" /* 8000 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7647 */;
+import ConversationsStore from "ConversationsStore" /* 7668 */;
 
 require = fn;
 function renderItem(item) {
@@ -21,11 +21,11 @@ function keyExtractor(conversationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ConversationConstants = fn(7649);
+const ConversationConstants = fn(7670);
 ({ MAX_CONVERSATIONS_PER_CHANNEL: closure_9, MOBILE_FETCH_LIMIT: c10, MOBILE_PREVIEW_MESSAGE_COUNT: closure_11 } = ConversationConstants);
 const jsx = fn(21).jsx;
 const viewabilityConfig = { waitForInteraction: false, itemVisiblePercentThreshold: 50, minimumViewTime: 1000 };
-let createStyles = fn(4605);
+let createStyles = fn(4606);
 let closure_14 = createStyles.createStyles((arg0) => {
   let obj = { container: null, content: null, footerSpacer: null, spinner: null };
   obj = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -37,7 +37,7 @@ let closure_14 = createStyles.createStyles((arg0) => {
   obj.spinner = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0, alignItems: "center" };
   return obj;
 });
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj = { empty: null };
 obj = { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.empty = obj;
@@ -239,6 +239,6 @@ export default function ConversationListScreen() {
   obj.ListFooterComponent = memo1;
   obj.onViewableItemsChanged = callback1;
   obj.viewabilityConfig = viewabilityConfig;
-  obj.children = jsx(tmp(8943).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
+  obj.children = jsx(tmp(8964).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
   return <memo data={memo} renderItem={renderItem} keyExtractor={keyExtractor} contentContainerStyle={tmp3.content} scrollIndicatorInsets={{ bottom }} onEndReached={null} ListEmptyComponent={null} ListFooterComponent={null} onViewableItemsChanged={null} viewabilityConfig={null} />;
 };

@@ -1,19 +1,19 @@
-// === Module 16970: MessageRequestsNavigator ===
+// === Module 16959: MessageRequestsNavigator ===
 
-// Module 16970 (MessageRequestsNavigator)
+// Module 16959 (MessageRequestsNavigator)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import HeaderShared from "HeaderShared" /* 7914 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10997 */;
+import HeaderShared from "HeaderShared" /* 7936 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11017 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let NativeStackNavigator = fn(7965);
+let NativeStackNavigator = fn(7987);
 let closure_7 = NativeStackNavigator.createNativeStackNavigator();
-fn(4605);
+fn(4606);
 NativeStackNavigator = { container: null, header: null };
 NativeStackNavigator = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 NativeStackNavigator.container = NativeStackNavigator;
@@ -28,7 +28,7 @@ export default function MessageRequestsNavigator() {
   _require = tmp;
   let obj = require("Navigator");
   importDefault = obj.useAccessibilityNativeStackOptions();
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7527).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7548).trackAppUIViewed(), []);
   const rect = useSafeAreaInsetsDefault();
   obj = { style: null, children: null };
   const items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
@@ -59,7 +59,7 @@ export default function MessageRequestsNavigator() {
   let merged = Object.assign(getNavigationModalPresentationDefault());
   obj1.options = obj2;
   obj1.getComponent = function getComponent() {
-    return closure_0(16971).default;
+    return closure_0(16960).default;
   };
   const items1 = [closure_5(Screen, obj1), , ];
   const obj3 = { name: "spam", options: null, getComponent: null };
@@ -69,7 +69,7 @@ export default function MessageRequestsNavigator() {
   let merged1 = Object.assign(getNavigationModalPresentationDefault());
   obj3.options = obj4;
   obj3.getComponent = function getComponent() {
-    return closure_0(16990).default;
+    return closure_0(16979).default;
   };
   items1[1] = closure_5(closure_7.Screen, obj3);
   const obj5 = { name: "preview", options: null, getComponent: null };
@@ -79,7 +79,7 @@ export default function MessageRequestsNavigator() {
   const merged2 = Object.assign(getNavigationModalPresentationDefault());
   obj5.options = obj6;
   obj5.getComponent = function getComponent() {
-    return closure_0(16991).default;
+    return closure_0(16980).default;
   };
   items1[2] = closure_5(closure_7.Screen, obj5);
   obj.children = items1;

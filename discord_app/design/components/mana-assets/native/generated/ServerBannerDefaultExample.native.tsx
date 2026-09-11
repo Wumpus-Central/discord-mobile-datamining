@@ -1,9 +1,9 @@
-// === Module 6459: ServerBannerDefaultExample ===
+// === Module 6480: ServerBannerDefaultExample ===
 
-// Module 6459 (ServerBannerDefaultExample)
+// Module 6480 (ServerBannerDefaultExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6460 from "module_6460" /* 6460 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6481 from "module_6481" /* 6481 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerBannerDefaultExample = function ServerBannerDefaultExample(wi
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6460 };
+  obj = { uri: _modDef6481 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ServerBannerDefaultExample = function ServerBannerDefaultExample(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6460 });
+  return jsx(FastImageDefault, { uri: _modDef6481 });
 };

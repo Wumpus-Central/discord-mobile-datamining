@@ -1,7 +1,7 @@
-// === Module 12389: GuildDirectoryCreateOrAddDescription ===
+// === Module 12412: GuildDirectoryCreateOrAddDescription ===
 
-// Module 12389 (GuildDirectoryCreateOrAddDescription)
-import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12387 */;
+// Module 12412 (GuildDirectoryCreateOrAddDescription)
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12410 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({ container: { flex: 1 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCreateOrAddDescription.tsx");
@@ -104,11 +104,11 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   let obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = directoryChannelId(1114).intl;
   obj1.children = intl.string(directoryChannelId(1114).t["5bQcoa"]);
-  const items = [closure_6(directoryChannelId(4601).Text, obj1), ];
+  const items = [closure_6(directoryChannelId(4602).Text, obj1), ];
   let obj2 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = directoryChannelId(1114).intl;
   obj2.children = intl2.string(directoryChannelId(1114).t.Ie60Wc);
-  items[1] = closure_6(directoryChannelId(4601).Text, obj2);
+  items[1] = closure_6(directoryChannelId(4602).Text, obj2);
   obj.children = items;
   const items1 = [closure_7(closure_4, obj), ];
   let obj3 = {
@@ -131,5 +131,5 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   items1[1] = closure_6(GuildDirectoryEditDescriptionTemplateDefault, obj3);
   obj.children = items1;
   obj.children = closure_7(closure_5, obj);
-  return closure_6(directoryChannelId(12379).GuildDirectoryAddModalScreen, obj);
+  return closure_6(directoryChannelId(12402).GuildDirectoryAddModalScreen, obj);
 };

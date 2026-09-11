@@ -1,6 +1,6 @@
-// === Module 8404: OAuth2Scopes ===
+// === Module 8425: OAuth2Scopes ===
 
-// Module 8404 (OAuth2Scopes)
+// Module 8425 (OAuth2Scopes)
 import size from "module_2" /* 2 */;
 
 let obj = { PUBLIC: new Set(["applications.builds.read", "applications.builds.upload", "applications.commands", "applications.commands.permissions.update", "applications.entitlements", "applications.store.update", "bot", "connections", "email", "gdm.join", "guilds", "guilds.join", "guilds.members.read", "identify", "messages.read", "openid", "role_connections.write", "rpc", "rpc.activities.write", "rpc.notifications.read", "rpc.screenshare.read", "rpc.screenshare.write", "rpc.video.read", "rpc.video.write", "rpc.voice.read", "rpc.voice.write", "webhook.incoming"]), PRIVATE: null, TEAM_USER: null, EMBEDDED_APPS: null, CLIENT_CREDENTIALS: null, CONFIDENTIAL_REQUEST_SCOPES: null, BYPASS: null, BASE_INTEGRATION: null, GUILD_INTEGRATION: null, USER_INTEGRATION: null, GUILD_INTEGRATION_EXCLUSIVE: null, ALL_INTEGRATION_SCOPES: null, PRIVATE_CHANNEL_INTEGRATION: null, SLAYER_UMBRELLA_DEFAULT_SCOPES_MASK: null, SLAYER_INTEGRATION_PROVISIONAL_ACCOUNT: null, UMBRELLA: null, UMBRELLA_PERMISSIBLE_SCOPES: null, SDK_SOCIAL_LAYER_UMBRELLA_SCOPES: null, SDK_SOCIAL_LAYER_UMBRELLA_DEFAULT_SCOPES: null, CONNECTED_ACCOUNT_SDK_SCOPES: null, APPLICATION_IDENTITIES_SCOPES: null, ALL: null };

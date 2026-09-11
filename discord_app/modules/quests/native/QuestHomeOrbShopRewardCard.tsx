@@ -1,10 +1,10 @@
-// === Module 15165: QuestHomeOrbShopRewardCard ===
+// === Module 15144: QuestHomeOrbShopRewardCard ===
 
-// Module 15165 (QuestHomeOrbShopRewardCard)
+// Module 15144 (QuestHomeOrbShopRewardCard)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7605 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8239 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7626 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8261 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1076).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { card: null, assetTile: null };
 createStyles = { overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, position: "relative" };
 createStyles.card = createStyles;

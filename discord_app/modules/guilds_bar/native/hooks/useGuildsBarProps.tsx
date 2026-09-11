@@ -1,21 +1,21 @@
-// === Module 16374: useGuildsBarProps ===
+// === Module 16363: useGuildsBarProps ===
 
-// Module 16374 (useGuildsBarProps)
+// Module 16363 (useGuildsBarProps)
 import useWindowDimensions from "useWindowDimensions" /* 1477 */;
-import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 16431 */;
+import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 16420 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
-import LurkingStore from "LurkingStore" /* 4244 */;
-import MessageRequestStore from "MessageRequestStore" /* 7271 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7272 */;
-import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 13821 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4947 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
+import LurkingStore from "LurkingStore" /* 4246 */;
+import MessageRequestStore from "MessageRequestStore" /* 7292 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7293 */;
+import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 13800 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4948 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13829 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
-import SortedGuildStore from "SortedGuildStore" /* 5488 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16367 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13808 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import SortedGuildStore from "SortedGuildStore" /* 5489 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16356 */;
 
 require = fn;
 function findGuildSectionIndex(arg0) {
@@ -73,8 +73,8 @@ function isAnchorIdEqual(arg0, arg1, arg2) {
   }
   return tmp;
 }
-const GuildsNodeType = fn(5488).GuildsNodeType;
-const GuildsBarConstants = fn(16364);
+const GuildsNodeType = fn(5489).GuildsNodeType;
+const GuildsBarConstants = fn(16353);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 let closure_21 = { MESSAGES: "section-messages", FAVORITES: "section-favorites", PENDING_JOIN_REQUESTS: "section-pending-join-requests", LURKING_GUILDS: "section-lurking-guilds", GUEST_GUILDS: "section-guest-guilds", UNREAD_PRIVATE_CHANNELS: "section-private-channels", SEPARATOR: "section-separator", GUILDS: "section-guilds" };
@@ -441,22 +441,22 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(16432), {}, item);
+              return closure_1_19(closure_1_1(16421), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(16433), {}, item);
+              return closure_1_19(closure_1_1(16422), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(16435), {}, item);
+              return closure_1_19(closure_1_1(16424), {}, item);
             }
           })
         };
         return jsx(GuildsBarFooterWrapperDefault, {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(16432), {}, item);
+              return closure_1_19(closure_1_1(16421), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(16433), {}, item);
+              return closure_1_19(closure_1_1(16422), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(16435), {}, item);
+              return closure_1_19(closure_1_1(16424), {}, item);
             }
           })
         });

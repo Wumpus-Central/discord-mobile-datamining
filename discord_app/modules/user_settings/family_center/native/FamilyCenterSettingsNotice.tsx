@@ -1,20 +1,20 @@
-// === Module 14894: FamilyCenterSettingsNotice ===
+// === Module 14870: FamilyCenterSettingsNotice ===
 
-// Module 14894 (FamilyCenterSettingsNotice)
+// Module 14870 (FamilyCenterSettingsNotice)
 import _modDef2396 from "module_2396" /* 2396 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4618 */;
-import LayerActionCreators from "LayerActionCreators" /* 7638 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14765 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4619 */;
+import LayerActionCreators from "LayerActionCreators" /* 7659 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14739 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SafetySettingsNoticeType = fn(8464).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(8485).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  let obj = activeLinkUserIds(8715);
+  let obj = activeLinkUserIds(8736);
   activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = {
     label: _modDef2396.i284fU,

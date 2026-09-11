@@ -1,19 +1,19 @@
-// === Module 12337: JumpToPresentButton ===
+// === Module 12360: JumpToPresentButton ===
 
-// Module 12337 (JumpToPresentButton)
+// Module 12360 (JumpToPresentButton)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4306 */;
+import useToken from "useToken" /* 4308 */;
 import noop from "module_19" /* 19 */;
-import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9555 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
-import MessageStore from "MessageStore" /* 4826 */;
+import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9576 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
+import MessageStore from "MessageStore" /* 4827 */;
 
 require = fn;
 const View = fn(17).View;
-let useChatBottomManagerUIStore = fn(9555);
+let useChatBottomManagerUIStore = fn(9576);
 ({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { container: null, containerIOS: null };
 createStyles = { borderRadius: nativeDefault.radii.round, position: "absolute", right: nativeDefault.modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING };
 createStyles.container = createStyles;
@@ -57,10 +57,10 @@ export default function JumpToPresentButton(channelId) {
     }
     return tmp;
   });
-  const isVoicePanelMounted = channelId(9751).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(9751);
-  const isVoicePanelOpen = channelId(9751).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(9751);
+  const isVoicePanelMounted = channelId(9772).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(9772);
+  const isVoicePanelOpen = channelId(9772).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(9772);
   const items1 = [MessageStore];
   const stateFromStores = channelId(504).useStateFromStores(items1, () => null != MessageStore.getMessages(channelId).jumpReturnTargetId);
   if (!tmp5) {
@@ -84,11 +84,11 @@ export default function JumpToPresentButton(channelId) {
   const items3 = [tmp.container, tmp10];
   obj.style = items3;
   if (tmp5) {
-    obj = { accessibilityLabel: stringResult, icon: screenIndex(12339), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(12338), { accessibilityLabel: stringResult, icon: screenIndex(12339), onPress: channelId.onJumpToPresent });
-    const tmp16 = screenIndex(12338);
+    obj = { accessibilityLabel: stringResult, icon: screenIndex(12362), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(12361), { accessibilityLabel: stringResult, icon: screenIndex(12362), onPress: channelId.onJumpToPresent });
+    const tmp16 = screenIndex(12361);
   } else {
-    tmp12Result = jsx(tmp3(12340).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(12363).MemoedVoicePanelDismissChatButton, {});
   }
   obj.children = tmp12Result;
   return <View style={null}>{null}</View>;

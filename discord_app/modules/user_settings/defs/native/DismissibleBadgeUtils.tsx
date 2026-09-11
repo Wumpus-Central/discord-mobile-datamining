@@ -1,7 +1,7 @@
-// === Module 14797: DismissibleBadgeUtils ===
+// === Module 14771: DismissibleBadgeUtils ===
 
-// Module 14797 (DismissibleBadgeUtils)
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14796 */;
+// Module 14771 (DismissibleBadgeUtils)
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14770 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,8 +17,8 @@ const result = size.fileFinishedImporting("modules/user_settings/defs/native/Dis
 
 export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS) {
   closure_0 = TINY_BRONCO_SETTINGS;
-  let tmp = useShouldShowTinyBroncoAccountStatus;
-  if (useShouldShowTinyBroncoAccountStatus === undefined) {
+  let tmp = useShouldShowAgeNotice;
+  if (useShouldShowAgeNotice === undefined) {
     tmp = useAlwaysShow;
   }
   closure_1 = tmp;

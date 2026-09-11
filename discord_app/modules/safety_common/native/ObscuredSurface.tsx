@@ -1,18 +1,18 @@
-// === Module 8781: ObscuredSurface ===
+// === Module 8802: ObscuredSurface ===
 
-// Module 8781 (ObscuredSurface)
+// Module 8802 (ObscuredSurface)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4601 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5131 */;
-import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 8782 */;
+import Text_Text from "Text/Text" /* 4602 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5132 */;
+import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 8803 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { position: "relative", overflow: "hidden" }, content: { pointerEvents: "none", userSelect: "none" }, cover: null, warning: null };
 createStyles = { position: "absolute", inset: 0, zIndex: 1, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 createStyles.cover = createStyles;

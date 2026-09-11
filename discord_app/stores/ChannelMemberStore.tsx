@@ -1,22 +1,22 @@
-// === Module 7331: ChannelMemberStore ===
+// === Module 7352: ChannelMemberStore ===
 
-// Module 7331 (ChannelMemberStore)
+// Module 7352 (ChannelMemberStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4248 */;
-import ExperimentStore from "ExperimentStore" /* 4521 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4627 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
+import ExperimentStore from "ExperimentStore" /* 4522 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4525 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4526 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PresenceStore from "PresenceStore" /* 4645 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5329 */;
+import PresenceStore from "PresenceStore" /* 4646 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
 import UserStore from "UserStore" /* 1371 */;
 
 let require = fn;

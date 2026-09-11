@@ -1,9 +1,9 @@
-// === Module 6241: HeadsetSpotIllustration ===
+// === Module 6262: HeadsetSpotIllustration ===
 
-// Module 6241 (HeadsetSpotIllustration)
+// Module 6262 (HeadsetSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5637 */;
-import _modDef6242 from "module_6242" /* 6242 */;
+import FastImageDefault from "FastImage" /* 5638 */;
+import _modDef6263 from "module_6263" /* 6263 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const HeadsetSpotIllustration = function HeadsetSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6242 };
+  obj = { uri: _modDef6263 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const HeadsetSpotIllustration = function HeadsetSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6242 });
+  return jsx(FastImageDefault, { uri: _modDef6263 });
 };
