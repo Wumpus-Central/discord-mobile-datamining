@@ -3,7 +3,7 @@ import _mod17 from "../../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../tokens/native/useToken.tsx";
-import _modDef5964 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscordSupergraphicLogo-2x.png.js";
+import _modDef5985 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscordSupergraphicLogo-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -44,7 +44,7 @@ export const DiscordSupergraphicLogo = function DiscordSupergraphicLogo(color) {
   }
   const obj1 = {
     fadeDuration: 0,
-    source: { uri: _modDef5964 },
+    source: { uri: _modDef5985 },
     style: null,
     accessible,
     accessibilityLabel,
@@ -56,7 +56,7 @@ export const DiscordSupergraphicLogo = function DiscordSupergraphicLogo(color) {
   return (
     <Image
       fadeDuration={0}
-      source={{ uri: _modDef5964 }}
+      source={{ uri: _modDef5985 }}
       style={null}
       accessible={accessible}
       accessibilityLabel={accessibilityLabel}

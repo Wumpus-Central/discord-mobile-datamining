@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(16376);
+  let obj = id(16365);
   importDefault = usePendingFolderGuildIdsDefault();
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
@@ -50,13 +50,13 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   ({ accessibilityActions, onAccessibilityAction } = memo);
   const obj2 = id(504);
   const items2 = [id];
-  const sharedValue = id(4341).useSharedValue("" + id);
+  const sharedValue = id(4343).useSharedValue("" + id);
   const memo1 = noop.useMemo(
     () => ({
       onPress() {
-        const result = id(4573).triggerHapticFeedback(id(4573).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj = id(4573);
-        const result1 = closure_1(5570).toggleGuildFolderExpand(closure_1_0);
+        const result = id(4574).triggerHapticFeedback(id(4574).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = id(4574);
+        const result1 = closure_1(5571).toggleGuildFolderExpand(closure_1_0);
       },
     }),
     items2,
@@ -72,12 +72,12 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "accessible",
-    config: "__esModule",
-    externalChildren: "y",
-    children: "isArray",
+    overState: "ip",
+    config: true,
+    externalChildren: true,
+    children: true,
   };
-  const obj3 = id(4341);
+  const obj3 = id(4343);
   obj.id = "" + id;
   obj.accessibilityActions = accessibilityActions;
   obj.onAccessibilityAction = onAccessibilityAction;
@@ -90,10 +90,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     obj = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(16375).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(16364).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj.externalChildren = tmp8Result;
-  obj.children = jsx(id(9099).HourglassIcon, {});
+  obj.children = jsx(id(9120).HourglassIcon, {});
   return jsx(GuildsBarAnimatedItemWrapperDefault, {
     id: null,
     accessibilityActions: null,
@@ -105,9 +105,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "accessible",
-    config: "__esModule",
-    externalChildren: "y",
-    children: "isArray",
+    overState: "ip",
+    config: true,
+    externalChildren: true,
+    children: true,
   });
 });

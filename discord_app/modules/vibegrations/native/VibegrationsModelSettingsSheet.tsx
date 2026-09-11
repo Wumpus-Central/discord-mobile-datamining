@@ -6,7 +6,7 @@ import VibegrationsConnectionStore from "../stores/VibegrationsConnectionStore.t
 
 require = fn;
 let closure_3 = ["fast"];
-const sendModelSettings = fn(16678).sendModelSettings;
+const sendModelSettings = fn(16666).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

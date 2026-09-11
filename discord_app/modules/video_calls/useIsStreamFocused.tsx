@@ -2,7 +2,7 @@
 import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
 
 const require = fn;
-const isStreamParticipant = fn(4626).isStreamParticipant;
+const isStreamParticipant = fn(4627).isStreamParticipant;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
 

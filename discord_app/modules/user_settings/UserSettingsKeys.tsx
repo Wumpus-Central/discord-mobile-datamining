@@ -76,6 +76,7 @@ export const WebUserSettings = {
   PERMISSIONS_GUILD_SELECTOR: "permissions_guild_selector",
   PERMISSIONS_DMS_SETTING: "permissions_dms_setting",
   PERMISSIONS_MESSAGE_REQUESTS_SETTING: "permissions_message_requests_setting",
+  MESSAGE_REQUESTS_NOTICE_SETTING: "message_requests_notice_setting",
   FRIEND_REQUESTS_EVERYONE_SETTING: "friend_requests_everyone_setting",
   FRIEND_REQUESTS_MUTUAL_FRIENDS_SETTING: "friend_requests_mutual_friends_setting",
   FRIEND_REQUESTS_MUTUAL_GUILDS_SETTING: "friend_requests_mutual_guilds_setting",

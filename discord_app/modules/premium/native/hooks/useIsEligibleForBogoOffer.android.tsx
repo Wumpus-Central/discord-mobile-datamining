@@ -19,13 +19,13 @@ export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );
   const obj2 = forceUpdate(504);
-  const premiumTrialOffer = forceUpdate(7499).usePremiumTrialOffer();
-  const obj4 = forceUpdate(7499);
-  const premiumDiscountOffer = forceUpdate(10776).usePremiumDiscountOffer();
-  const obj5 = forceUpdate(10776);
-  const isPaymentsBlocked = forceUpdate(7469).useIsPaymentsBlocked();
-  const obj6 = forceUpdate(7469);
-  forceUpdate = forceUpdate(7492).useForceUpdate();
+  const premiumTrialOffer = forceUpdate(7520).usePremiumTrialOffer();
+  const obj4 = forceUpdate(7520);
+  const premiumDiscountOffer = forceUpdate(10795).usePremiumDiscountOffer();
+  const obj5 = forceUpdate(10795);
+  const isPaymentsBlocked = forceUpdate(7490).useIsPaymentsBlocked();
+  const obj6 = forceUpdate(7490);
+  forceUpdate = forceUpdate(7513).useForceUpdate();
   let valueOfResult = null;
   if (null != stateFromStores) {
     const endDate = stateFromStores.endDate;

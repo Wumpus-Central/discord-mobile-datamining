@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
 require = fn;
-const constants = fn(4495).GuildPowerupNewPerkMarketingVersion;
+const constants = fn(4496).GuildPowerupNewPerkMarketingVersion;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 let closure_8 = fn(1943).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
 const size = fn(2);
@@ -64,7 +64,7 @@ export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildP
     GuildPowerupsStore.getStateForGuild(closure_0),
   );
   let obj = require("initialize");
-  const tmp2Result = num(12573)(guildId, stateFromStores);
+  const tmp2Result = num(12596)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

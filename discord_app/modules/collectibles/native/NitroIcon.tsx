@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/native/NitroIcon.tsx
-import inlineStyles from "../../../../_runtime/08521_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08542_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;

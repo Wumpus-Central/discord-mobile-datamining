@@ -164,7 +164,7 @@ const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_7, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: null, roleDot: null };
 createStyles = {
   flexDirection: "row",
@@ -203,8 +203,8 @@ export default function UserProfileRolesCard(userId) {
     obj.style = userId.style;
     obj = { guildId, guildMemberRoleIds: roles };
     obj.children = closure_9(RolesList, obj);
-    tmp4 = closure_9(guildId(7259), obj);
-    const tmp7 = guildId(7259);
+    tmp4 = closure_9(guildId(7280), obj);
+    const tmp7 = guildId(7280);
   }
   return tmp4;
 }

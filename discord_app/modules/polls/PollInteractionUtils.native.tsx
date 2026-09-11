@@ -12,5 +12,5 @@ export const showVotesForAnswer = function showVotesForAnswer(initialAnswerId) {
     messageId: message.id,
     initialAnswerId: initialAnswerId.initialAnswerId,
   };
-  obj.openLazy(asyncRequireImpl(11787, dependencyMap.paths), "PollVotesActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(11809, dependencyMap.paths), "PollVotesActionSheet", obj);
 };

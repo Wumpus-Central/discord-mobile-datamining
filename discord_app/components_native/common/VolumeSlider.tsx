@@ -5,13 +5,13 @@ import PlatformUtils2 from "../../utils/PlatformUtils.tsx";
 import useToken from "../../design/tokens/native/useToken.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
 import VoiceNormalIcon from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import _modDef8343 from "../../../_runtime/metro/08343__.js";
+import _modDef8364 from "../../../_runtime/metro/08364__.js";
 import VoiceXIcon from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(4630).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+let closure_4 = fn(4631).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let PlatformUtils = fn(1115);
@@ -19,7 +19,7 @@ let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 PlatformUtils = {
   volumerSlider: { flexDirection: "row", alignItems: "center" },
   leftIcon: { marginRight: num },
@@ -96,7 +96,7 @@ export default function VolumeSlider(maxTrackTintColor) {
     onResponderGrant = fn;
   }
   obj1.onResponderGrant = onResponderGrant;
-  items1[1] = closure_5(_modDef8343, obj1);
+  items1[1] = closure_5(_modDef8364, obj1);
   items1[2] = closure_5(VoiceNormalIcon.VoiceNormalIcon, { style: tmp4.rightIcon });
   obj.children = items1;
   return closure_6(View, obj);

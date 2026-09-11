@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { marginTop: 16 }, scrollView: null };
 createStyles = { marginTop: 8, marginBottom: 8, borderRadius: nativeDefault.radii.sm, maxHeight: 140 };
 createStyles.scrollView = createStyles;
@@ -35,7 +35,7 @@ export default function GuildEventRecurrences(guildEventId) {
   obj = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1114).intl;
   obj.children = intl.string(guildEventId(1114).t["D/jjoa"]);
-  const items = [closure_6(guildEventId(4601).Text, obj), ,];
+  const items = [closure_6(guildEventId(4602).Text, obj), ,];
   obj = {
     style: tmp2.scrollView,
     ref,
@@ -67,7 +67,7 @@ export default function GuildEventRecurrences(guildEventId) {
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = closure_6(tmp8(5025).Button, obj1);
+    canViewMoreRecurrences = closure_6(tmp8(5026).Button, obj1);
   }
   items[2] = canViewMoreRecurrences;
   obj.children = items;

@@ -58,7 +58,7 @@ function ProfileEffectPreviewImage(arg0) {
 }
 function ProfileFramePreviewImage(arg0) {
   ({ product, styles } = arg0);
-  const tmp3 = useMaybeFetchProfileFrameDefault(product.skuId, "FamilyCenterActivityItemPreview");
+  const tmp3 = useMaybeFetchProfileFrameDefault(product.skuId);
   let tmp4 = null;
   if (null != tmp3) {
     let obj = { style: styles.profileFrameContainer, children: null };
@@ -141,9 +141,9 @@ function CollectiblePreview(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-let closure_5 = fn(8285).PROFILE_FRAME_ASPECT_RATIO;
+let closure_5 = fn(8306).PROFILE_FRAME_ASPECT_RATIO;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 const createStyles = {
   purchasePlaceholder: null,
   avatarDecorationPreview: null,
@@ -152,8 +152,8 @@ const createStyles = {
   profileFrameContainer: null,
 };
 let size = {
-  width: fn(14980).PREVIEW_SIZE,
-  height: fn(14980).PREVIEW_SIZE,
+  width: fn(14957).PREVIEW_SIZE,
+  height: fn(14957).PREVIEW_SIZE,
   borderRadius: nativeDefault.radii.xs,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   display: "flex",
@@ -162,11 +162,11 @@ let size = {
   marginRight: 12,
 };
 createStyles.purchasePlaceholder = size;
-const size1 = { width: fn(14980).PREVIEW_SIZE, height: fn(14980).PREVIEW_SIZE, marginRight: 12 };
+const size1 = { width: fn(14957).PREVIEW_SIZE, height: fn(14957).PREVIEW_SIZE, marginRight: 12 };
 createStyles.avatarDecorationPreview = size1;
 const size2 = {
-  width: fn(14980).PREVIEW_SIZE,
-  height: fn(14980).PREVIEW_SIZE,
+  width: fn(14957).PREVIEW_SIZE,
+  height: fn(14957).PREVIEW_SIZE,
   marginRight: 12,
   borderRadius: nativeDefault.radii.xs,
   overflow: "hidden",
@@ -176,13 +176,13 @@ createStyles.nameplateContainer = size2;
 const size3 = {
   position: "absolute",
   right: 0,
-  width: fn(14980).PREVIEW_SIZE * fn(14980).NAMEPLATE_ASPECT_RATIO,
-  height: fn(14980).PREVIEW_SIZE,
+  width: fn(14957).PREVIEW_SIZE * fn(14957).NAMEPLATE_ASPECT_RATIO,
+  height: fn(14957).PREVIEW_SIZE,
 };
 createStyles.nameplatePreview = size3;
 const size4 = {
-  width: fn(14980).PREVIEW_SIZE,
-  height: fn(14980).PREVIEW_SIZE,
+  width: fn(14957).PREVIEW_SIZE,
+  height: fn(14957).PREVIEW_SIZE,
   marginRight: 12,
   alignItems: "center",
   justifyContent: "center",

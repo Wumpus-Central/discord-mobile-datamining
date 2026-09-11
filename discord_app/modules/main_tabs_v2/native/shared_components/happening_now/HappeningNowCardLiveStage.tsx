@@ -178,7 +178,7 @@ function getUsersSubtitle(arg0) {
   }
 }
 const View = fn(17).View;
-const HappeningNowConstants = fn(15375);
+const HappeningNowConstants = fn(15357);
 ({
   HappeningNowCardTrackingType: hasOwnProperty,
   HAPPENING_NOW_CONTENT_HEIGHT,
@@ -188,7 +188,7 @@ const HappeningNowConstants = fn(15375);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
   stagePreviewContainer: {
@@ -263,7 +263,7 @@ export default noop.memo((arg0) => {
   const callback = noop.useCallback(() => {
     const obj = { order: index, guild_id, type: constants.GUILD_LIVE_STAGE_CARD, destination_channel_id: channel_id };
     obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj);
-    asyncRequireImpl(9606, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(9627, dependencyMap.paths).then((result) => {
       result.default(channel_id, true);
     });
   }, items);

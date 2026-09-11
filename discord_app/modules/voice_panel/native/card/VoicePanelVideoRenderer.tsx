@@ -2,7 +2,7 @@
 import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06705_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06726_LegacyBaseButton.js";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import DCDVideoRendererDefault from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
@@ -14,12 +14,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12343);
+const VoicePanelConstants = fn(12366);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(12341).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17181).VoicePanelPIPModes;
-let SCALE_PHYSICS = fn(12344).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(12364).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17170).VoicePanelPIPModes;
+let SCALE_PHYSICS = fn(12367).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 25;
@@ -41,7 +41,7 @@ getScaleChangeWithOverscroll.__workletHash = 8727721301304;
 getScaleChangeWithOverscroll.__initData = {
   code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}",
 };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_18 = createStyles.createStyles({
   wrapper: {
     position: "absolute",
@@ -241,10 +241,10 @@ export default noop.memo(function VideoRenderer(streamKey) {
   let tmp = onReady();
   let tmp3 = sharedCoords;
   let obj = id(sharedCoords[16]);
-  let obj1 = isCamera;
   const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(userId, {
     location: "VoicePanelVideoRenderer",
   });
+  let obj1 = isCamera;
   const context = isCamera.useContext(streamId(sharedCoords[11]));
   const mode = context.mode;
   const focused = context.focused;
@@ -261,6 +261,9 @@ export default noop.memo(function VideoRenderer(streamKey) {
   let tmp11 = isCamera;
   if (isCamera) {
     tmp11 = pIPState.id === id;
+  }
+  if (tmp11) {
+    tmp11 = surfaceDirectRendererExperiment;
   }
   [tmp13, c16] = isScrollVisible(obj1.useState(true), 2);
   getScaleChangeWithOverscroll = obj1.useRef(() => {

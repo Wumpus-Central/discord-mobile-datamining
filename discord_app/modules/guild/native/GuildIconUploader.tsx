@@ -4,10 +4,10 @@ import util from "../../../intl/index.native.tsx";
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef11870 from "../../../../_runtime/metro/11870__.js";
-import _modDef11871 from "../../../../_runtime/metro/11871__.js";
-import _modDef11872 from "../../../../_runtime/metro/11872__.js";
-import _modDef11873 from "../../../../_runtime/metro/11873__.js";
+import _modDef11893 from "../../../../_runtime/metro/11893__.js";
+import _modDef11894 from "../../../../_runtime/metro/11894__.js";
+import _modDef11895 from "../../../../_runtime/metro/11895__.js";
+import _modDef11896 from "../../../../_runtime/metro/11896__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: { width: 82, height: 82, marginTop: 4 },
   guildPlaceholder: null,
@@ -92,9 +92,9 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1.style = items1;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef11870;
+      let tmp13Result = _modDef11893;
     } else {
-      tmp13Result = _modDef11871;
+      tmp13Result = _modDef11894;
     }
     obj = { source: tmp13Result };
     const items2 = [timestampProducer(React4, obj)];
@@ -125,12 +125,12 @@ prototype["renderUpload"] = function renderUpload() {
     const obj3 = { tintColor: iconBackgroundColor };
     items1[1] = obj3;
     obj2.style = items1;
-    obj2.source = _modDef11872;
+    obj2.source = _modDef11895;
     obj1.children = timestampProducer(React4, obj2);
     obj.children = timestampProducer(React3, obj1);
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj4 = { source: _modDef11873 };
+    const obj4 = { source: _modDef11896 };
     obj.children = timestampProducer(React4, obj4);
   }
   return timestampProducer(React3, obj);
@@ -156,7 +156,7 @@ prototype["render"] = function render() {
   obj.children = React5(React3, obj);
   return timestampProducer(Pressables.PressableOpacity, obj);
 };
-GuildIconUploader.contextType = fn(4315).ThemeContext;
+GuildIconUploader.contextType = fn(4317).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 

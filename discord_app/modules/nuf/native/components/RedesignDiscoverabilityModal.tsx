@@ -74,7 +74,7 @@ function DiscoverabilityNameScene(onComplete) {
     name = "";
   }
   obj.initialName = name;
-  obj.children = jsx(allowPhone(12767), { onNext: callback, loading: false, initialName: null });
+  obj.children = jsx(allowPhone(12790), { onNext: callback, loading: false, initialName: null });
   return <View onNext={callback} loading={false} initialName={null} />;
 }
 class RedesignDiscoverabilityModal {
@@ -137,9 +137,9 @@ class RedesignDiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12747).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12770).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { header: null, container: null };
 createStyles = {
   borderBottomWidth: 0,
@@ -152,7 +152,7 @@ createStyles.container = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   justifyContent: "center",
   paddingBottom: 44,
-  paddingTop: fn(5732).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5733).NAV_BAR_HEIGHT + 32,
 };
 const React6 = createStyles.createStyles(createStyles);
 RedesignDiscoverabilityModal.modalConfig = { animation: fn(1074).ModalAnimation.SLIDE_IN_OUT };

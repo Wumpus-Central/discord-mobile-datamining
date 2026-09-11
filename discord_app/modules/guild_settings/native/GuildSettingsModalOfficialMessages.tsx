@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildOfficialMessageUtils from "../../messages/GuildOfficialMessageUtils.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef15363 from "../../../../_runtime/metro/15363__.js";
+import _modDef15345 from "../../../../_runtime/metro/15345__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -45,7 +45,7 @@ function MessagePreview(theme) {
   const items1 = [tmp.chatContainerInner, { backgroundColor: obj2.alpha(closure_1_10).hex() }];
   obj.style = items1;
   const hexResult1 = obj2.alpha(closure_1_10).hex();
-  const items2 = [closure_1_12(native.Avatar, { source: _modDef15363 })];
+  const items2 = [closure_1_12(native.Avatar, { source: _modDef15345 })];
   obj2 = { style: tmp.chatContent, children: null };
   const obj3 = { style: tmp.chatHeader, children: null };
   const obj4 = {
@@ -76,12 +76,12 @@ function MessagePreview(theme) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const MessageConstants = fn(4598);
+const MessageConstants = fn(4599);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_9, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: c10 } = MessageConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: null,
   segmentedControlContainer: null,
@@ -117,8 +117,8 @@ let obj1 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   marginBottom: nativeDefault.space.PX_16,
 };
-createStyles.chatSection = { paddingHorizontal: fn(5653).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
-let obj2 = { paddingHorizontal: fn(5653).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+createStyles.chatSection = { paddingHorizontal: fn(5654).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+let obj2 = { paddingHorizontal: fn(5654).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
 createStyles.chatContainer = {
   paddingVertical: nativeDefault.space.PX_24,
   borderRadius: nativeDefault.radii.xl,
@@ -138,20 +138,20 @@ createStyles.chatContent = { flex: 1 };
 createStyles.chatHeader = { flexDirection: "row", alignItems: "baseline", gap: 6 };
 createStyles.chatTimestamp = { marginTop: -8 };
 let closure_14 = createStyles.createStyles(createStyles);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj4 = {
   flexDirection: "row",
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   gap: nativeDefault.space.PX_8,
 };
 let closure_15 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW });
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_16 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_STRONG });
-fn(4605);
+fn(4606);
 createStyles = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_17 = createStyles.createAnimatedThemedStyles(createStyles);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj6 = { borderColor: nativeDefault.colors.BORDER_STRONG };
 let closure_18 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_MUTED });
 const __initData = {
@@ -251,7 +251,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
       const obj = { officialMessageColor };
       obj.updateGuild(obj);
     };
-    obj.openLazy(asyncRequireImpl(16373, dependencyMap.paths), "RoleColorPicker", obj);
+    obj.openLazy(asyncRequireImpl(16362, dependencyMap.paths), "RoleColorPicker", obj);
   }, items5);
   const tmp8 = hasChanges(officialMessageColor.useState(0), 2);
   [tmp15, c7] = hasChanges(officialMessageColor.useState(0), 2);
@@ -268,13 +268,13 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj = { label: null, id: null, icon: null, page: null };
     const intl2 = guildId(submitting[12]).intl;
     obj.label = intl2.string(guildId(submitting[12]).t.b8Cei3);
-    obj.id = constants.DARKER;
+    obj.id = constants.DARK;
     obj.icon = closure_1_12(guildId(submitting[14]).ThemeDarkIcon, {});
     items[1] = obj;
     obj = { label: null, id: null, icon: null, page: null };
     const intl3 = guildId(submitting[12]).intl;
-    obj.label = intl3.string(guildId(submitting[12]).t.pQwSpQ);
-    obj.id = constants.MIDNIGHT;
+    obj.label = intl3.string(guildId(submitting[12]).t.Do4ZJx);
+    obj.id = constants.ONYX;
     obj.icon = closure_1_12(guildId(submitting[15]).ThemeMidnightIcon, {});
     items[2] = obj;
     return items;
@@ -287,15 +287,15 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
   });
   activeIndex = segmentedControlState.activeIndex;
   const tmp14 = hasChanges(officialMessageColor.useState(0), 2);
-  class B {
+  class H {
     constructor() {
       return activeIndex.get();
     }
   }
-  B.__closure = { activeIndex };
-  B.__workletHash = 4687220686460;
-  B.__initData = __initData;
-  class P {
+  H.__closure = { activeIndex };
+  H.__workletHash = 4687220686460;
+  H.__initData = __initData;
+  class E {
     constructor(arg0) {
       obj = closure_0(closure_2[26]);
       runOnJSResult = obj.runOnJS(closure_6);
@@ -304,10 +304,10 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     }
   }
   obj = { runOnJS: tmp2(tmp3[26]).runOnJS, setCurrentThemeIndex: tmp10 };
-  P.__closure = obj;
-  P.__workletHash = 5332792853021;
-  P.__initData = __initData2;
-  const animatedReaction = guildId(submitting[26]).useAnimatedReaction(B, P);
+  E.__closure = obj;
+  E.__workletHash = 5332792853021;
+  E.__initData = __initData2;
+  const animatedReaction = guildId(submitting[26]).useAnimatedReaction(H, E);
   obj = {
     bgBaseLow: closure_15(activeIndex),
     borderStrong: closure_16(activeIndex),

@@ -5,9 +5,10 @@ import FramesStore from "FramesStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
+const EmbeddedSurfaceType = fn(9602).EmbeddedSurfaceType;
 const Constants = fn(1074);
-({ AnalyticEvents: closure_4, RPCCloseCodes: hasOwnProperty } = Constants);
-const TransportTypes = fn(4510).TransportTypes;
+({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire } = Constants);
+const TransportTypes = fn(4511).TransportTypes;
 class FramesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,15 +19,50 @@ class FramesManager extends tmp3 {
       },
       FRAME_LAUNCH(arg0) {
         ({ applicationId, analyticsContext } = arg0);
-        const result = applyArgumentsResult(9588).trackFrameSessionStart(applicationId, analyticsContext);
+        const result = applyArgumentsResult(9609).trackFrameSessionStart(applicationId, analyticsContext);
       },
       FRAME_LAUNCH_FAIL(arg0) {
         ({ applicationId, error, analyticsContext } = arg0);
-        const result = applyArgumentsResult(9588).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+        const result = applyArgumentsResult(9609).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
       },
       FRAME_STOP(applicationId) {
-        applyArgumentsResult(9588).trackFrameSessionEnd(applicationId.applicationId);
+        applyArgumentsResult(9609).trackFrameSessionEnd(applicationId.applicationId);
       },
+      VOICE_CHANNEL_SELECT(arg0) {
+        const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);
+      },
+      CHANNEL_DELETE(channel) {
+        const framesForChannel = FramesStore.getFramesForChannel(channel.channel.id);
+        for (const item10010 of framesForChannel) {
+          let leaveFrameResult = applyArgumentsResult.leaveFrame(item10010.id);
+          continue;
+        }
+      },
+      CHANNEL_UPDATES(arg0) {
+        for (const item10008 of tmp) {
+          let framesForChannel = FramesStore.getFramesForChannel(item10008.id);
+          for (const item10018 of framesForChannel) {
+            if (item10018.applicationId !== item10008.application_id) {
+              let leaveFrameResult = applyArgumentsResult.leaveFrame(tmp7.id);
+            }
+            continue;
+          }
+          continue;
+        }
+      },
+    };
+    applyArgumentsResult.handleVoiceChannelSelect = function handleVoiceChannelSelect(currentVoiceChannelId) {
+      currentVoiceChannelId = currentVoiceChannelId.currentVoiceChannelId;
+      if (null != currentVoiceChannelId) {
+        if (currentVoiceChannelId !== currentVoiceChannelId.channelId) {
+          const obj = { type: EmbeddedSurfaceType.VOICE_CHANNEL, channelId: currentVoiceChannelId };
+          const framesForSurface = FramesStore.getFramesForSurface(obj);
+          for (const item10014 of framesForSurface) {
+            let leaveFrameResult = applyArgumentsResult.leaveFrame(item10014.id);
+            continue;
+          }
+        }
+      }
     };
     applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {
       ({ reason, source } = arg0);

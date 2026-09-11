@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { content: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.content = createStyles;
@@ -24,7 +24,7 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
   obj = { title: null };
   let intl = onChange(1114).intl;
   obj.title = intl.string(_modDef3592["X+ijyw"]);
-  obj.header = jsx(onChange(7201).BottomSheetTitleHeader, { title: null });
+  obj.header = jsx(onChange(7222).BottomSheetTitleHeader, { title: null });
   const intl2 = onChange(1114).intl;
   obj.dismissAccessibilityLabel = intl2.string(_modDef3592.hrl2cG);
   obj = {
@@ -37,14 +37,14 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
     children: null,
   };
   const tmp = closure_6();
-  const customTypingIndicatorSuggestionPresets = onChange(12041).getCustomTypingIndicatorSuggestionPresets();
+  const customTypingIndicatorSuggestionPresets = onChange(12064).getCustomTypingIndicatorSuggestionPresets();
   obj.children = customTypingIndicatorSuggestionPresets.map((value) => {
     const obj = { value, label: null };
     const intl = onChange(1114).intl;
-    obj.label = intl.string(onChange(12041).getCustomTypingIndicatorSuggestionMessage(value));
-    return jsx(onChange(5738).TableRadioRow, { value, label: null }, value);
+    obj.label = intl.string(onChange(12064).getCustomTypingIndicatorSuggestionMessage(value));
+    return jsx(onChange(5739).TableRadioRow, { value, label: null }, value);
   });
-  obj.children = jsx(onChange(5735).TableRadioGroup, {
+  obj.children = jsx(onChange(5736).TableRadioGroup, {
     value: tmp2[0],
     onChange(arg0) {
       closure_1(arg0);
@@ -53,7 +53,7 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
     hasIcons: false,
     children: null,
   });
-  return jsx(onChange(7249).ActionSheet, {
+  return jsx(onChange(7270).ActionSheet, {
     value: tmp2[0],
     onChange(arg0) {
       closure_1(arg0);

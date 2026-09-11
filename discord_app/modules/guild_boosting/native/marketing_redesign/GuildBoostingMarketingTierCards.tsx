@@ -9,14 +9,14 @@ import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05037_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import DeprecatedLayoutAnimation from "../../../animations/native/DeprecatedLayoutAnimation.tsx";
 import ServerBoostStreamQualityMarketingExperiment from "../../../premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx";
 import ChevronLargeUpIcon from "../../../../design/components/Icon/native/redesign/generated/ChevronLargeUpIcon.tsx";
 import ChevronLargeDownIcon2 from "../../../../design/components/Icon/native/redesign/generated/ChevronLargeDownIcon.tsx";
-import _modDef13669 from "../../../../../_runtime/metro/13669__.js";
-import _modDef13670 from "../../../../../_runtime/metro/13670__.js";
+import _modDef13648 from "../../../../../_runtime/metro/13648__.js";
+import _modDef13649 from "../../../../../_runtime/metro/13649__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -105,7 +105,7 @@ let obj = { tier: BoostedGuildTiers.TIER_1, features: null };
 obj = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(8827).ReactionIcon,
+  IconComponent: fn(8848).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Tlz0x1, {
@@ -117,7 +117,7 @@ let items = [
   obj,
   {
     isIncluded: true,
-    IconComponent: fn(10184).StickerIcon,
+    IconComponent: fn(10203).StickerIcon,
     getCopy() {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.WgHNGI, {
@@ -136,7 +136,7 @@ let items = [
 ];
 let obj1 = {
   isIncluded: true,
-  IconComponent: fn(10184).StickerIcon,
+  IconComponent: fn(10203).StickerIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.WgHNGI, {
@@ -146,7 +146,7 @@ let obj1 = {
 };
 items[2] = {
   isIncluded: true,
-  IconComponent: fn(12602).ScreenArrowIcon,
+  IconComponent: fn(12625).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Jbg8oY, {
@@ -156,7 +156,7 @@ items[2] = {
 };
 let obj2 = {
   isIncluded: true,
-  IconComponent: fn(12602).ScreenArrowIcon,
+  IconComponent: fn(12625).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Jbg8oY, {
@@ -167,7 +167,7 @@ let obj2 = {
 items[3] = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(5151).VoiceNormalIcon,
+  IconComponent: fn(5152).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { bitrate: null };
@@ -180,7 +180,7 @@ items[3] = {
 let obj3 = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(5151).VoiceNormalIcon,
+  IconComponent: fn(5152).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { bitrate: null };
@@ -192,7 +192,7 @@ let obj3 = {
 };
 items[4] = {
   isIncluded: true,
-  IconComponent: fn(5147).StageIcon,
+  IconComponent: fn(5148).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, {
@@ -202,7 +202,7 @@ items[4] = {
 };
 let obj4 = {
   isIncluded: true,
-  IconComponent: fn(5147).StageIcon,
+  IconComponent: fn(5148).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, {
@@ -213,7 +213,7 @@ let obj4 = {
 items[5] = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(10451).GifIcon,
+  IconComponent: fn(10470).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -222,7 +222,7 @@ items[5] = {
 let obj5 = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(10451).GifIcon,
+  IconComponent: fn(10470).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -230,7 +230,7 @@ let obj5 = {
 };
 items[6] = {
   isIncluded: true,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -238,7 +238,7 @@ items[6] = {
 };
 let obj6 = {
   isIncluded: true,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -246,7 +246,7 @@ let obj6 = {
 };
 items[7] = {
   isIncluded: false,
-  IconComponent: fn(9441).UploadIcon,
+  IconComponent: fn(9462).UploadIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { uploadSizeLimit: null };
@@ -258,7 +258,7 @@ items[7] = {
 };
 let obj7 = {
   isIncluded: false,
-  IconComponent: fn(9441).UploadIcon,
+  IconComponent: fn(9462).UploadIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { uploadSizeLimit: null };
@@ -270,7 +270,7 @@ let obj7 = {
 };
 items[8] = {
   isIncluded: false,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -278,7 +278,7 @@ items[8] = {
 };
 let obj8 = {
   isIncluded: false,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -286,7 +286,7 @@ let obj8 = {
 };
 items[9] = {
   isIncluded: false,
-  IconComponent: fn(8827).ReactionIcon,
+  IconComponent: fn(8848).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -294,7 +294,7 @@ items[9] = {
 };
 let obj9 = {
   isIncluded: false,
-  IconComponent: fn(8827).ReactionIcon,
+  IconComponent: fn(8848).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -302,7 +302,7 @@ let obj9 = {
 };
 items[10] = {
   isIncluded: false,
-  IconComponent: fn(4548).LinkIcon,
+  IconComponent: fn(4549).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -313,7 +313,7 @@ let items1 = [obj, ,];
 let obj11 = { tier: BoostedGuildTiers.TIER_2, features: null };
 let obj10 = {
   isIncluded: false,
-  IconComponent: fn(4548).LinkIcon,
+  IconComponent: fn(4549).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -322,7 +322,7 @@ let obj10 = {
 let items2 = [
   {
     isIncluded: true,
-    IconComponent: fn(8827).ReactionIcon,
+    IconComponent: fn(8848).ReactionIcon,
     getCopy() {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.Tlz0x1, {
@@ -342,7 +342,7 @@ let items2 = [
 ];
 let obj12 = {
   isIncluded: true,
-  IconComponent: fn(8827).ReactionIcon,
+  IconComponent: fn(8848).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Tlz0x1, {
@@ -352,7 +352,7 @@ let obj12 = {
 };
 items2[1] = {
   isIncluded: true,
-  IconComponent: fn(10184).StickerIcon,
+  IconComponent: fn(10203).StickerIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.WgHNGI, {
@@ -362,7 +362,7 @@ items2[1] = {
 };
 let obj13 = {
   isIncluded: true,
-  IconComponent: fn(10184).StickerIcon,
+  IconComponent: fn(10203).StickerIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.WgHNGI, {
@@ -373,7 +373,7 @@ let obj13 = {
 items2[2] = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(12602).ScreenArrowIcon,
+  IconComponent: fn(12625).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = {
@@ -387,7 +387,7 @@ items2[2] = {
 let obj14 = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(12602).ScreenArrowIcon,
+  IconComponent: fn(12625).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = {
@@ -400,7 +400,7 @@ let obj14 = {
 };
 items2[3] = {
   isIncluded: true,
-  IconComponent: fn(5151).VoiceNormalIcon,
+  IconComponent: fn(5152).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { bitrate: null };
@@ -412,7 +412,7 @@ items2[3] = {
 };
 let obj15 = {
   isIncluded: true,
-  IconComponent: fn(5151).VoiceNormalIcon,
+  IconComponent: fn(5152).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { bitrate: null };
@@ -424,7 +424,7 @@ let obj15 = {
 };
 items2[4] = {
   isIncluded: true,
-  IconComponent: fn(5147).StageIcon,
+  IconComponent: fn(5148).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, {
@@ -434,7 +434,7 @@ items2[4] = {
 };
 let obj16 = {
   isIncluded: true,
-  IconComponent: fn(5147).StageIcon,
+  IconComponent: fn(5148).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, {
@@ -444,7 +444,7 @@ let obj16 = {
 };
 items2[5] = {
   isIncluded: true,
-  IconComponent: fn(10451).GifIcon,
+  IconComponent: fn(10470).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -452,7 +452,7 @@ items2[5] = {
 };
 let obj17 = {
   isIncluded: true,
-  IconComponent: fn(10451).GifIcon,
+  IconComponent: fn(10470).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -460,7 +460,7 @@ let obj17 = {
 };
 items2[6] = {
   isIncluded: true,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -468,7 +468,7 @@ items2[6] = {
 };
 let obj18 = {
   isIncluded: true,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -477,7 +477,7 @@ let obj18 = {
 items2[7] = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(9441).UploadIcon,
+  IconComponent: fn(9462).UploadIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { uploadSizeLimit: null };
@@ -490,7 +490,7 @@ items2[7] = {
 let obj19 = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(9441).UploadIcon,
+  IconComponent: fn(9462).UploadIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { uploadSizeLimit: null };
@@ -503,7 +503,7 @@ let obj19 = {
 items2[8] = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -512,7 +512,7 @@ items2[8] = {
 const obj20 = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -521,7 +521,7 @@ const obj20 = {
 items2[9] = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(8827).ReactionIcon,
+  IconComponent: fn(8848).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -530,7 +530,7 @@ items2[9] = {
 const obj21 = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(8827).ReactionIcon,
+  IconComponent: fn(8848).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -538,7 +538,7 @@ const obj21 = {
 };
 items2[10] = {
   isIncluded: false,
-  IconComponent: fn(4548).LinkIcon,
+  IconComponent: fn(4549).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -549,7 +549,7 @@ items1[1] = obj11;
 const obj23 = { tier: BoostedGuildTiers.TIER_3, features: null };
 const obj22 = {
   isIncluded: false,
-  IconComponent: fn(4548).LinkIcon,
+  IconComponent: fn(4549).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -558,7 +558,7 @@ const obj22 = {
 let items3 = [
   {
     isIncluded: true,
-    IconComponent: fn(8827).ReactionIcon,
+    IconComponent: fn(8848).ReactionIcon,
     getCopy() {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.Tlz0x1, {
@@ -578,7 +578,7 @@ let items3 = [
 ];
 const obj24 = {
   isIncluded: true,
-  IconComponent: fn(8827).ReactionIcon,
+  IconComponent: fn(8848).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Tlz0x1, {
@@ -588,7 +588,7 @@ const obj24 = {
 };
 items3[1] = {
   isIncluded: true,
-  IconComponent: fn(10184).StickerIcon,
+  IconComponent: fn(10203).StickerIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.WgHNGI, {
@@ -598,7 +598,7 @@ items3[1] = {
 };
 const obj25 = {
   isIncluded: true,
-  IconComponent: fn(10184).StickerIcon,
+  IconComponent: fn(10203).StickerIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.WgHNGI, {
@@ -608,7 +608,7 @@ const obj25 = {
 };
 items3[2] = {
   isIncluded: true,
-  IconComponent: fn(12602).ScreenArrowIcon,
+  IconComponent: fn(12625).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = {
@@ -621,7 +621,7 @@ items3[2] = {
 };
 const obj26 = {
   isIncluded: true,
-  IconComponent: fn(12602).ScreenArrowIcon,
+  IconComponent: fn(12625).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = {
@@ -635,7 +635,7 @@ const obj26 = {
 items3[3] = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(5151).VoiceNormalIcon,
+  IconComponent: fn(5152).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { bitrate: null };
@@ -648,7 +648,7 @@ items3[3] = {
 const obj27 = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(5151).VoiceNormalIcon,
+  IconComponent: fn(5152).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { bitrate: null };
@@ -661,7 +661,7 @@ const obj27 = {
 items3[4] = {
   orderCollapsed: 4,
   isIncluded: true,
-  IconComponent: fn(5147).StageIcon,
+  IconComponent: fn(5148).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, {
@@ -672,7 +672,7 @@ items3[4] = {
 const obj28 = {
   orderCollapsed: 4,
   isIncluded: true,
-  IconComponent: fn(5147).StageIcon,
+  IconComponent: fn(5148).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, {
@@ -683,7 +683,7 @@ const obj28 = {
 items3[5] = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(10451).GifIcon,
+  IconComponent: fn(10470).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -692,7 +692,7 @@ items3[5] = {
 const obj29 = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(10451).GifIcon,
+  IconComponent: fn(10470).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -700,7 +700,7 @@ const obj29 = {
 };
 items3[6] = {
   isIncluded: true,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -708,7 +708,7 @@ items3[6] = {
 };
 const obj30 = {
   isIncluded: true,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -717,7 +717,7 @@ const obj30 = {
 items3[7] = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(9441).UploadIcon,
+  IconComponent: fn(9462).UploadIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { uploadSizeLimit: null };
@@ -730,7 +730,7 @@ items3[7] = {
 const obj31 = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(9441).UploadIcon,
+  IconComponent: fn(9462).UploadIcon,
   getCopy() {
     const intl = util.intl;
     let obj = { uploadSizeLimit: null };
@@ -742,7 +742,7 @@ const obj31 = {
 };
 items3[8] = {
   isIncluded: true,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -750,7 +750,7 @@ items3[8] = {
 };
 const obj32 = {
   isIncluded: true,
-  IconComponent: fn(13451).ServerGridIcon,
+  IconComponent: fn(13641).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -758,7 +758,7 @@ const obj32 = {
 };
 items3[9] = {
   isIncluded: true,
-  IconComponent: fn(8827).ReactionIcon,
+  IconComponent: fn(8848).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -766,7 +766,7 @@ items3[9] = {
 };
 const obj33 = {
   isIncluded: true,
-  IconComponent: fn(8827).ReactionIcon,
+  IconComponent: fn(8848).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -775,7 +775,7 @@ const obj33 = {
 items3[10] = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(4548).LinkIcon,
+  IconComponent: fn(4549).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -783,7 +783,7 @@ items3[10] = {
 };
 obj23.features = items3;
 items1[2] = obj23;
-fn(4605);
+fn(4606);
 const obj35 = {
   cardWrapper: { marginRight: 10, width: 290 },
   card: null,
@@ -820,7 +820,7 @@ const obj35 = {
 const obj34 = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(4548).LinkIcon,
+  IconComponent: fn(4549).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -848,7 +848,7 @@ obj35.cardFeatureExcluded = { opacity: 0.5 };
 obj35.cardFeatureExcludedCopy = { textDecorationLine: "line-through" };
 obj35.cardFeatureLast = { marginBottom: 0 };
 const obj36 = { borderRadius: nativeDefault.radii.lg, height: "100%" };
-obj35.cardsScroller = { flex: 1, marginTop: fn(13658).PROGRESS_BAR_SPACING };
+obj35.cardsScroller = { flex: 1, marginTop: fn(13635).PROGRESS_BAR_SPACING };
 obj35.cardsScrollerContent = {
   alignItems: "flex-start",
   display: "flex",
@@ -872,8 +872,8 @@ const rect = {
 };
 obj35.cardTierBadge = rect;
 obj35.cardTierBadgeCopy = { textTransform: "uppercase" };
-const obj38 = { flex: 1, marginTop: fn(13658).PROGRESS_BAR_SPACING };
-obj35.sparkleStar = { position: "absolute", tintColor: fn(5491).DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
+const obj38 = { flex: 1, marginTop: fn(13635).PROGRESS_BAR_SPACING };
+obj35.sparkleStar = { position: "absolute", tintColor: fn(5492).DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
 obj35.sparkleStarPointed = { height: 15, width: 18 };
 obj35.sparkleStarElongated = { height: 45, width: 23 };
 obj35.sparkleStarPointed1 = { top: -7, right: 35 };
@@ -1039,22 +1039,22 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
       ({ gradientHighlight: arr13[0], gradientHighlightBottom: arr13[1] } = tmp);
       obj13.style = items11;
       items9[1] = React7(tmp2Result1, obj13);
-      const obj14 = { source: _modDef13669, style: null };
+      const obj14 = { source: _modDef13648, style: null };
       const items12 = [, ,];
       ({ sparkleStar: arr14[0], sparkleStarPointed: arr14[1], sparkleStarPointed1: arr14[2] } = tmp);
       obj14.style = items12;
       items9[2] = React7(native.Icon, obj14);
-      const obj15 = { source: _modDef13669, style: null };
+      const obj15 = { source: _modDef13648, style: null };
       const items13 = [, ,];
       ({ sparkleStar: arr15[0], sparkleStarPointed: arr15[1], sparkleStarPointed2: arr15[2] } = tmp);
       obj15.style = items13;
       items9[3] = React7(native.Icon, obj15);
-      const obj16 = { source: _modDef13669, style: null };
+      const obj16 = { source: _modDef13648, style: null };
       const items14 = [, ,];
       ({ sparkleStar: arr16[0], sparkleStarPointed: arr16[1], sparkleStarPointed3: arr16[2] } = tmp);
       obj16.style = items14;
       items9[4] = React7(native.Icon, obj16);
-      const obj17 = { source: _modDef13670, style: null };
+      const obj17 = { source: _modDef13649, style: null };
       const items15 = [, ,];
       ({ sparkleStar: arr17[0], sparkleStarElongated: arr17[1], sparkleStarElongated1: arr17[2] } = tmp);
       obj17.style = items15;

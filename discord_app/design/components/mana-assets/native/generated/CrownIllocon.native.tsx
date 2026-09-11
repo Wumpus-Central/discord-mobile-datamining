@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/CrownIllocon.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef5932 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CrownIllocon-2x.png.js";
+import _modDef5953 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CrownIllocon-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -21,12 +21,12 @@ export const CrownIllocon = function CrownIllocon(size) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef5932 };
+  obj = { uri: _modDef5953 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5932 });
+  return jsx(FastImageDefault, { uri: _modDef5953 });
 };

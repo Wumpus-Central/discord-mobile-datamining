@@ -151,4 +151,17 @@ export const createCollectiblesItemsFromServerResponse = function createCollecti
   }
   return items;
 };
+export const transformProductToCollectiblesItem = function transformProductToCollectiblesItem(type) {
+  if (null != type) {
+    if (0 !== type.items.length) {
+      if (type.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
+        let obj = { type: "bundle", items: null, previewAssets: null };
+        ({ items: obj2.items, previewAssets: obj2.previewAssets } = type);
+      } else {
+        obj = { type: "single", item: type.items[0] };
+      }
+      return obj;
+    }
+  }
+};
 export { transformSKUToCollectiblesItem };

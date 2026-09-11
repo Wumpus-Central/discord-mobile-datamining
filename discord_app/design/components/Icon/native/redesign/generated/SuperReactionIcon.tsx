@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/SuperReactionIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod9444 from "../../../../../../../_runtime/metro/09444__.js";
+import _mod9465 from "../../../../../../../_runtime/metro/09465__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const SuperReactionIcon = function SuperReactionIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9444, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9465, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

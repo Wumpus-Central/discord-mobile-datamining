@@ -16,7 +16,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, paddingHorizontal: 16 },
   detailsAction: { marginBottom: 16 },
@@ -92,10 +92,10 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
             closure_1_1(573);
             const obj = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
             obj.dispatch(obj);
-            closure_1_1(4572).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+            closure_1_1(4573).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
           },
           onClose() {
-            return closure_1_1(4572).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+            return closure_1_1(4573).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
           },
         };
         return obj.openLazy(

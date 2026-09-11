@@ -9,11 +9,11 @@ import MobileGameCommunitiesStore from "MobileGameCommunitiesStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_8 = fn(16347).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_8 = fn(16336).MAX_DISPLAYED_UPSELL_GUILDS;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: null,
   header: null,
@@ -76,7 +76,7 @@ let items = [
     id: "hangout",
     title: fn(1114).t.ScXySs,
     description: fn(1114).t.DSCqxM,
-    Icon: fn(5742).BumpingFistsSpotIllustration,
+    Icon: fn(5743).BumpingFistsSpotIllustration,
   },
   ,
 ];
@@ -84,25 +84,25 @@ const obj11 = {
   id: "hangout",
   title: fn(1114).t.ScXySs,
   description: fn(1114).t.DSCqxM,
-  Icon: fn(5742).BumpingFistsSpotIllustration,
+  Icon: fn(5743).BumpingFistsSpotIllustration,
 };
 items[1] = {
   id: "gaming",
   title: fn(1114).t["F+MTAZ"],
   description: fn(1114).t.srNlJw,
-  Icon: fn(5742).ChatControllersSpotIllustration,
+  Icon: fn(5743).ChatControllersSpotIllustration,
 };
 const obj12 = {
   id: "gaming",
   title: fn(1114).t["F+MTAZ"],
   description: fn(1114).t.srNlJw,
-  Icon: fn(5742).ChatControllersSpotIllustration,
+  Icon: fn(5743).ChatControllersSpotIllustration,
 };
 items[2] = {
   id: "hobbies",
   title: fn(1114).t["0Ka6B5"],
   description: fn(1114).t["5oGAp/"],
-  Icon: fn(5742).MiniaturesSpotIllustration,
+  Icon: fn(5743).MiniaturesSpotIllustration,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");

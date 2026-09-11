@@ -5,10 +5,13 @@ import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
 const require = fn;
 function getVisibleUserVoiceActivity(arg0, arg1) {
-  ({ userId, guildId } = arg0);
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = closure_6;
+  }
+  ({ userId, guildId, includeNonDiscoverable } = arg0);
+  if (includeNonDiscoverable === undefined) {
+    includeNonDiscoverable = false;
   }
   let tmp3 = tmp;
   if (tmp === undefined) {
@@ -17,25 +20,31 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
   if (null != guildId) {
     if (null != userId) {
       const VoiceStateStore2 = tmp3.VoiceStateStore;
-      let discoverableVoiceState = VoiceStateStore2.getDiscoverableVoiceState(guildId, userId);
+      if (includeNonDiscoverable) {
+        let voiceState = VoiceStateStore2.getVoiceState(guildId, userId);
+      } else {
+        voiceState = VoiceStateStore2.getDiscoverableVoiceState(guildId, userId);
+      }
     }
-    let tmp5 = tmp;
+  }
+  if (null == userId) {
+    let tmp8 = tmp;
     if (!tmp2) {
-      tmp5 = closure_6;
+      tmp8 = closure_6;
     }
     let channelId;
-    if (discoverableVoiceState != null) {
-      channelId = discoverableVoiceState.channelId;
+    if (undefined != null) {
+      channelId = undefined.channelId;
     }
     if (null != channelId) {
-      ChannelStore = tmp5.ChannelStore;
-      const channel = ChannelStore.getChannel(discoverableVoiceState.channelId);
+      ChannelStore = tmp8.ChannelStore;
+      const channel = ChannelStore.getChannel(undefined.channelId);
     }
     if (!tmp2) {
       tmp = closure_6;
     }
-    let tmp7 = null != discoverableVoiceState;
-    if (tmp7) {
+    let tmp10 = null != undefined;
+    if (tmp10) {
       let isPrivateResult;
       if (channel != null) {
         isPrivateResult = channel.isPrivate();
@@ -44,36 +53,40 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
         PermissionStore = tmp.PermissionStore;
         isPrivateResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
       }
-      tmp7 = isPrivateResult;
+      tmp10 = isPrivateResult;
     }
-    if (tmp7) {
-      const obj = { voiceState: discoverableVoiceState, voiceChannel: channel };
-      let tmp10 = obj;
+    if (tmp10) {
+      const obj = { voiceState: undefined, voiceChannel: channel };
+      let tmp13 = obj;
     } else {
-      tmp10 = closure_7;
+      tmp13 = closure_7;
     }
-    return tmp10;
-  }
-  if (null != userId) {
+    return tmp13;
+  } else {
     VoiceStateStore = tmp3.VoiceStateStore;
-    discoverableVoiceState = VoiceStateStore.getDiscoverableVoiceStateForUser(userId);
+    if (includeNonDiscoverable) {
+      let voiceStateForUser = VoiceStateStore.getVoiceStateForUser(userId);
+    } else {
+      voiceStateForUser = VoiceStateStore.getDiscoverableVoiceStateForUser(userId);
+    }
   }
 }
 const Permissions = fn(1085).Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "call", voiceChannel: "accessibilityLabel" });
+let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "PX_16" });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 
 export default function useUserVoiceActivity(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
-  const items = [ChannelStore, PermissionStore, VoiceStateStore];
-  const items1 = [guildId, userId];
+  const includeNonDiscoverable = userId.includeNonDiscoverable;
+  const items = [includeNonDiscoverable, PermissionStore, VoiceStateStore];
+  const items1 = [guildId, userId, includeNonDiscoverable];
   return userId(guildId[4]).useStateFromStoresObject(
     items,
     () => {
-      let obj = { userId, guildId };
+      let obj = { userId, guildId, includeNonDiscoverable };
       obj = { ChannelStore, PermissionStore, VoiceStateStore };
       return getVisibleUserVoiceActivity(obj, obj);
     },
@@ -81,7 +94,10 @@ export default function useUserVoiceActivity(userId) {
   );
 }
 export const getUserVoiceState = function getUserVoiceState(arg0) {
-  ({ userId, guildId } = arg0);
+  ({ userId, guildId, includeNonDiscoverable } = arg0);
+  if (includeNonDiscoverable === undefined) {
+    includeNonDiscoverable = false;
+  }
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = closure_6;
@@ -89,20 +105,30 @@ export const getUserVoiceState = function getUserVoiceState(arg0) {
   if (null != guildId) {
     if (null != userId) {
       const VoiceStateStore2 = tmp.VoiceStateStore;
-      let discoverableVoiceState = VoiceStateStore2.getDiscoverableVoiceState(guildId, userId);
+      if (includeNonDiscoverable) {
+        let voiceState = VoiceStateStore2.getVoiceState(guildId, userId);
+      } else {
+        voiceState = VoiceStateStore2.getDiscoverableVoiceState(guildId, userId);
+      }
     }
-    return discoverableVoiceState;
   }
   if (null != userId) {
     VoiceStateStore = tmp.VoiceStateStore;
-    discoverableVoiceState = VoiceStateStore.getDiscoverableVoiceStateForUser(userId);
+    if (includeNonDiscoverable) {
+      let voiceStateForUser = VoiceStateStore.getVoiceStateForUser(userId);
+    } else {
+      voiceStateForUser = VoiceStateStore.getDiscoverableVoiceStateForUser(userId);
+    }
   }
 };
 export const canViewUserVoiceChannel = function canViewUserVoiceChannel(arg0) {
-  ({ userId, guildId } = arg0);
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = closure_6;
+  }
+  ({ userId, guildId, includeNonDiscoverable } = arg0);
+  if (includeNonDiscoverable === undefined) {
+    includeNonDiscoverable = false;
   }
   let tmp3 = tmp;
   if (tmp === undefined) {
@@ -111,25 +137,31 @@ export const canViewUserVoiceChannel = function canViewUserVoiceChannel(arg0) {
   if (null != guildId) {
     if (null != userId) {
       const VoiceStateStore2 = tmp3.VoiceStateStore;
-      let discoverableVoiceState = VoiceStateStore2.getDiscoverableVoiceState(guildId, userId);
+      if (includeNonDiscoverable) {
+        let voiceState = VoiceStateStore2.getVoiceState(guildId, userId);
+      } else {
+        voiceState = VoiceStateStore2.getDiscoverableVoiceState(guildId, userId);
+      }
     }
-    let tmp5 = tmp;
+  }
+  if (null == userId) {
+    let tmp8 = tmp;
     if (!tmp2) {
-      tmp5 = closure_6;
+      tmp8 = closure_6;
     }
     let channelId;
-    if (discoverableVoiceState != null) {
-      channelId = discoverableVoiceState.channelId;
+    if (undefined != null) {
+      channelId = undefined.channelId;
     }
     if (null != channelId) {
-      ChannelStore = tmp5.ChannelStore;
-      const channel = ChannelStore.getChannel(discoverableVoiceState.channelId);
+      ChannelStore = tmp8.ChannelStore;
+      const channel = ChannelStore.getChannel(undefined.channelId);
     }
     if (!tmp2) {
       tmp = closure_6;
     }
-    let tmp7 = null != discoverableVoiceState;
-    if (tmp7) {
+    let tmp10 = null != undefined;
+    if (tmp10) {
       let isPrivateResult;
       if (channel != null) {
         isPrivateResult = channel.isPrivate();
@@ -138,13 +170,16 @@ export const canViewUserVoiceChannel = function canViewUserVoiceChannel(arg0) {
         PermissionStore = tmp.PermissionStore;
         isPrivateResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
       }
-      tmp7 = isPrivateResult;
+      tmp10 = isPrivateResult;
     }
-    return tmp7;
-  }
-  if (null != userId) {
+    return tmp10;
+  } else {
     VoiceStateStore = tmp3.VoiceStateStore;
-    discoverableVoiceState = VoiceStateStore.getDiscoverableVoiceStateForUser(userId);
+    if (includeNonDiscoverable) {
+      let voiceStateForUser = VoiceStateStore.getVoiceStateForUser(userId);
+    } else {
+      voiceStateForUser = VoiceStateStore.getDiscoverableVoiceStateForUser(userId);
+    }
   }
 };
 export { getVisibleUserVoiceActivity };

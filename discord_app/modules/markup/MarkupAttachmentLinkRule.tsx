@@ -1,5 +1,5 @@
 // discord_app/modules/markup/MarkupAttachmentLinkRule.tsx
-import _modDef4301 from "../../../_runtime/metro/04301__.js";
+import _modDef4303 from "../../../_runtime/metro/04303__.js";
 import AttachmentUrlConstants from "../messages/AttachmentUrlConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -15,7 +15,7 @@ const regExp = new RegExp(
 );
 let obj = { attachmentLink: null };
 obj = {
-  order: _modDef4301.defaultRules.url.order - 0.5,
+  order: _modDef4303.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     return regExp.exec(arg0);

@@ -46,7 +46,7 @@ const jsxProd = fn(21);
 let closure_8 = {};
 let closure_9 = [];
 let c10 = "text-sm/medium";
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
@@ -136,7 +136,7 @@ let closure_12 = noop.memo((voiceState) => {
     channel: null,
     isGuest: null,
   };
-  tmp3 = closure_11(channel(7924)());
+  tmp3 = closure_11(channel(7946)());
   if (member == null) {
     member = storeMember;
   }
@@ -153,7 +153,7 @@ let closure_12 = noop.memo((voiceState) => {
   obj.sessionId = voiceState2.sessionId;
   obj.channel = channel;
   obj.isGuest = isGuest;
-  obj.children = closure_6(channel(16204), obj, user.id);
+  obj.children = closure_6(channel(16193), obj, user.id);
   return closure_6(View, obj);
 });
 const size = fn(2);

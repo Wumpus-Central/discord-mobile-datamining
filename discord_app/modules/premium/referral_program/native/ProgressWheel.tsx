@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import inlineStyles from "../../../../../_runtime/08521_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08542_inlineStyles.js";
 import useReferralProgramBannerDetails from "../hooks/useReferralProgramBannerDetails.tsx";
-import _modDef13532 from "../../../../../_runtime/metro/13532__.js";
-import _modDef13533 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
+import _modDef13499 from "../../../../../_runtime/metro/13499__.js";
+import _modDef13500 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = 160;
 const strokeDasharray = 2 * Math.PI * 77;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({
   progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 },
   progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 },
@@ -37,7 +37,7 @@ export default function ProgressWheel(arg0) {
   if (tmp9) {
     obj = { source: null, style: null };
     let tmp4Result = FastImageDefault;
-    obj.source = _modDef13532;
+    obj.source = _modDef13499;
     obj.style = tmp.glowImage;
     tmp9 = React4(tmp4Result, obj);
   }
@@ -62,7 +62,7 @@ export default function ProgressWheel(arg0) {
   size.children = items1;
   items[1] = hasOwnProperty(tmp4Result, size);
   if (altImage == null) {
-    altImage = _modDef13533;
+    altImage = _modDef13500;
   }
   items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj.children = items;

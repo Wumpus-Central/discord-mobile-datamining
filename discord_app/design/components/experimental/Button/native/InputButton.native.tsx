@@ -20,7 +20,7 @@ let closure_2 = [
 ];
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let obj = {
   buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" },
   buttonTextPlaceholder: null,

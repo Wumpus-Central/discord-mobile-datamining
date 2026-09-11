@@ -6,9 +6,9 @@ import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const SearchTabs = fn(7930).SearchTabs;
+const SearchTabs = fn(7952).SearchTabs;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { container: null };
 obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.container = obj;
@@ -29,7 +29,7 @@ export default noop.memo(() => {
     return guild_id;
   });
   const obj2 = channelId(504);
-  const channelDetailsSearchContext = channelId(12369).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(12392).useChannelDetailsSearchContext(channelId, stateFromStores);
   obj = { style: closure_7().container, children: null };
   obj = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
   obj.children = jsx(messages_PinsScreenDefault, {

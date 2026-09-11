@@ -11,7 +11,7 @@ import TypedEventEmitter from "../../discord_common/js/shared/utils/TypedEventEm
 
 require = fn;
 function noop() {}
-const Constants = fn(4630);
+const Constants = fn(4631);
 ({
   Features: hasOwnProperty,
   MediaEngineContextTypes: metroRequire,
@@ -103,6 +103,8 @@ obj = {
   [4802]: "RESET_BACKOFF",
   REPEATED_MLS_INVALID_MESSAGES: 4803,
   [4803]: "REPEATED_MLS_INVALID_MESSAGES",
+  DAVE_DOWNGRADE_REFUSED: 4804,
+  [4804]: "DAVE_DOWNGRADE_REFUSED",
 };
 const constants3 = {
   DISCONNECTED: 0,
@@ -201,7 +203,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     logger2.error("Connect called with already existing websocket");
     self.cleanupWebSocket((close) => close.close(4000));
   }
-  obj = self(4634);
+  obj = self(4635);
   self.connectionStartTime = obj.now();
   self.helloTimeout = setTimeout(() => {
     self.handleClose(
@@ -214,7 +216,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     );
   }, closure_13);
   obj = { location: "RTCControlSocket", supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE) };
-  const webSocket = new WebSocket("" + self.url + "?v=" + self(14154).getVoiceGatewayProtocolVersion(obj));
+  const webSocket = new WebSocket("" + self.url + "?v=" + self(14130).getVoiceGatewayProtocolVersion(obj));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";
   webSocket.onopen = () => {
@@ -521,7 +523,7 @@ prototype["handleHello"] = function handleHello(d) {
       tmp4 = require;
     }
   }
-  const diff = tmp4(4634).now() - self.connectionStartTime;
+  const diff = tmp4(4635).now() - self.connectionStartTime;
   ({ logger, heartbeatInterval } = self);
   if (heartbeatInterval == null) {
     heartbeatInterval = "??";
@@ -530,7 +532,7 @@ prototype["handleHello"] = function handleHello(d) {
     "[HELLO] heartbeat interval: " + heartbeatInterval + ", version: " + self.serverVersion + ", took " + diff + " ms",
   );
   self.startHeartbeater();
-  const tmp4Result = tmp4(4634);
+  const tmp4Result = tmp4(4635);
 };
 prototype["handleReady"] = function handleReady(experiments) {
   const self = this;
@@ -1085,6 +1087,12 @@ prototype["disconnectForRepeatedMLSInvalidMessages"] = function disconnectForRep
   logger.warn("[MLS] " + arg0 + " consecutive invalid commit/welcome messages.");
   this.cleanupWebSocket((close) => close.close(constants.REPEATED_MLS_INVALID_MESSAGES));
   this.disconnect(false, obj.REPEATED_MLS_INVALID_MESSAGES, "Repeated invalid MLS commit/welcome messages.");
+};
+prototype["disconnectForRefusedDaveDowngrade"] = function disconnectForRefusedDaveDowngrade(EPOCH) {
+  const logger = this.logger;
+  logger.warn("[DAVE] Refused protocol downgrade to version 0 at " + EPOCH + ".");
+  this.cleanupWebSocket((close) => close.close(constants.DAVE_DOWNGRADE_REFUSED));
+  this.disconnect(false, obj.DAVE_DOWNGRADE_REFUSED, "Refused DAVE protocol downgrade.");
 };
 prototype["noRoute"] = function noRoute() {
   this.send(obj.CLIENT_CANNOT_REACH_RTC_SERVER, {});

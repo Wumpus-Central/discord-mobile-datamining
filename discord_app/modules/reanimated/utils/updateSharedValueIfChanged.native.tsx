@@ -18,11 +18,11 @@ const fn = function u(get, arg1) {
       break;
     }
   } else {
-    obj = fn2(4341);
+    obj = fn2(4343);
     obj.runOnUI(fn)(get, arg1);
   }
 };
-let obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueIfChanged: "Array" };
+let obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueIfChanged: "a" };
 fn.__closure = obj;
 fn.__workletHash = 6367316923455;
 fn.__initData = {
@@ -46,11 +46,11 @@ const fn2 = function u(get, arg1) {
       }
     }
   } else {
-    closure_0(4341).runOnUI(fn2)(get, arg1);
-    const obj = closure_0(4341);
+    closure_0(4343).runOnUI(fn2)(get, arg1);
+    const obj = closure_0(4343);
   }
 };
-obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueArrayIfChanged: "Array" };
+obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueArrayIfChanged: "a" };
 fn2.__closure = obj;
 fn2.__workletHash = 10682766507787;
 fn2.__initData = {

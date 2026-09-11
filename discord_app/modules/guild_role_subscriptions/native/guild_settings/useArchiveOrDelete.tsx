@@ -46,7 +46,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
             const obj1 = { title, body, confirmText, confirmColor: tmp2(1178).ButtonColors.RED };
             v2 = 1;
             c2 = 1;
-            const obj2 = { value: v2(4950).confirm(obj1), done: false };
+            const obj2 = { value: v2(4951).confirm(obj1), done: false };
             return obj2;
           }
         } else {

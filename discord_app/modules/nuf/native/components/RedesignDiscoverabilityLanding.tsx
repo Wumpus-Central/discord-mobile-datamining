@@ -7,7 +7,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import ContactSyncUtils from "../../../contact_sync/native/ContactSyncUtils.tsx";
-import _modDef12820 from "../../../../../_runtime/metro/12820__.js";
+import _modDef12843 from "../../../../../_runtime/metro/12843__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: null,
   topContainer: null,
@@ -66,7 +66,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const intl2 = util.intl;
   obj2.children = intl2.string(util.t.KMW0kP);
   items[2] = hasOwnProperty(Text_Text.Text, obj2);
-  const obj3 = { resizeMode: "contain", style: tmp.image, source: _modDef12820 };
+  const obj3 = { resizeMode: "contain", style: tmp.image, source: _modDef12843 };
   items[3] = hasOwnProperty(FastImageDefault, obj3);
   const obj4 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;

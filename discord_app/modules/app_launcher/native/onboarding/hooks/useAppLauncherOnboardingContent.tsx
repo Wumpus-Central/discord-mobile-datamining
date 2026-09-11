@@ -27,14 +27,14 @@ export default function useAppLauncherOnboardingContent(channelId) {
     if (
       (function useHasUsedActivities(channel) {
         channel = channel.channel;
-        let obj = channelId(4425);
+        let obj = channelId(4427);
         let result = obj.useIsDismissibleContentDismissed_UNSAFE(
           channelId(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
         );
-        const result1 = channelId(4425).useIsDismissibleContentDismissed_UNSAFE(
+        const result1 = channelId(4427).useIsDismissibleContentDismissed_UNSAFE(
           channelId(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
         );
-        const obj2 = channelId(4425);
+        const obj2 = channelId(4427);
         const items = [ApplicationFrecencyStore];
         const stateFromStores = channelId(504).useStateFromStores(items, () =>
           applicationFrecencyWithoutLoadingLatest.getApplicationFrecencyWithoutLoadingLatest(),
@@ -49,7 +49,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
           result = result1;
         }
         obj.fetchesShelf = !result;
-        const activityApplications = channelId(12108).useActivityApplications(obj);
+        const activityApplications = channelId(12131).useActivityApplications(obj);
         let flag = false;
         for (const item10042 of activityApplications) {
           if (null != stateFromStores.getEntry(item10042.id)) {
@@ -60,7 +60,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
           obj = { hasUsedActivities: flag };
           return obj;
         }
-        const tmpResult = channelId(12108);
+        const tmpResult = channelId(12131);
       })(obj).hasUsedActivities
     ) {
       push(DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
@@ -70,7 +70,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
   }
   let obj2 = channelId(504);
   const tmp7 = _slicedToArray(
-    channelId(7440).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING),
+    channelId(7461).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING),
     2,
   );
   obj = { visibleContent: tmp7[0], markAsDismissed: tmp7[1] };

@@ -1,11 +1,11 @@
 // discord_app/modules/expression_picker/ExpressionPickerGridStores.tsx
 import identity from "../../../_runtime/metro/01244__.js";
-import 04475__ from "../../../_runtime/metro/04475__.js";
+import 04477__ from "../../../_runtime/metro/04477__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let closure_2 = Object.freeze({ inspectedExpressionPosition: { rowIndex: 0, columnIndex: 0 }, hasInteracted: false, activeCategoryIndex: 0, searchPlaceholder: null, bottomPosition: null, analyticsId: null });
 identity = identity.createWithEqualityFn();
-let withEqualityFnResult = identity(module_4475.subscribeWithSelector(() => closure_1_2));
+let withEqualityFnResult = identity(module_4477.subscribeWithSelector(() => closure_1_2));
 let store = {
   useStore: withEqualityFnResult,
   getState() {
@@ -43,7 +43,7 @@ let store = {
   }
 };
 identity = identity.createWithEqualityFn();
-const withEqualityFn1Result = identity(module_4475.subscribeWithSelector(() => closure_1_2));
+const withEqualityFn1Result = identity(module_4477.subscribeWithSelector(() => closure_1_2));
 const store1 = {
   useStore: withEqualityFn1Result,
   getState() {
@@ -81,7 +81,7 @@ const store1 = {
   }
 };
 identity = identity.createWithEqualityFn();
-const withEqualityFn2Result = identity(module_4475.subscribeWithSelector(() => closure_1_2));
+const withEqualityFn2Result = identity(module_4477.subscribeWithSelector(() => closure_1_2));
 const store2 = {
   useStore: withEqualityFn2Result,
   getState() {
@@ -119,7 +119,7 @@ const store2 = {
   }
 };
 identity = identity.createWithEqualityFn();
-const withEqualityFn3Result = identity(module_4475.subscribeWithSelector(() => closure_1_2));
+const withEqualityFn3Result = identity(module_4477.subscribeWithSelector(() => closure_1_2));
 let c0 = withEqualityFn3Result;
 const store3 = {
   useStore: withEqualityFn3Result,
@@ -162,7 +162,7 @@ const result = size.fileFinishedImporting("modules/expression_picker/ExpressionP
 export default function createStore() {
   const withEqualityFn = _undefined(1244).createWithEqualityFn();
   let obj = _undefined(1244);
-  const withEqualityFnResult = withEqualityFn(_undefined(4475).subscribeWithSelector(() => closure_1_2));
+  const withEqualityFnResult = withEqualityFn(_undefined(4477).subscribeWithSelector(() => closure_1_2));
   _undefined = withEqualityFnResult;
   const store = {
     useStore: withEqualityFnResult,

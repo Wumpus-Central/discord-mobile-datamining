@@ -147,13 +147,13 @@ function EmbedCard(embed) {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10165);
+const InAppNotificationConstants = fn(10185);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let PlatformUtils = fn(1116);
 let createStyles = { italic: null };
 createStyles = {
@@ -162,7 +162,7 @@ createStyles = {
 };
 createStyles.italic = createStyles;
 let closure_10 = createStyles.createStyles(createStyles);
-fn(4605);
+fn(4606);
 PlatformUtils = {
   embedContainer: {
     borderRadius: nativeDefault.radii.sm,

@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/rpc/server/commands/images.ts
 
 export default {
   [Constants.RPCCommands.GET_IMAGE]: {
-    scope: fn(4510).RPC_LOCAL_SCOPE,
+    scope: fn(4511).RPC_LOCAL_SCOPE,
     validation(string) {
       createRpcJoiSchemaObjectDefault(string);
       const obj = { type: null, id: null, format: null, size: null };

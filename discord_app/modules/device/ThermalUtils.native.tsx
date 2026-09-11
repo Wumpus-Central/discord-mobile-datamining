@@ -22,7 +22,7 @@ let closure_5 = module_560.create((arg0) => {
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = tmp(4584);
+    tmpResult = tmp(4585);
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();

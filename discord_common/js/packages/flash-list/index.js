@@ -1,6 +1,6 @@
 // discord_common/js/packages/flash-list/index.js
 import PlatformUtils2 from "../../../../discord_app/utils/PlatformUtils.tsx";
-import _mod6902 from "../../../../_runtime/metro/06902__.js";
+import _mod6923 from "../../../../_runtime/metro/06923__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../../../discord_app/modules/reanimated/ReanimatedRexport.tsx";
 
@@ -13,23 +13,23 @@ if (PlatformUtils.isAndroid()) {
   defaultMVCPConfig = { disabled: true };
 }
 noop = function noop() {};
-let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(6902).FlashList);
+let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(6923).FlashList);
 const forwardRefResult = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition = { maintainVisibleContentPosition, ref };
   const merged = Object.assign(arg0);
-  return jsx(_mod6902.FlashList, { maintainVisibleContentPosition, ref });
+  return jsx(_mod6923.FlashList, { maintainVisibleContentPosition, ref });
 });
 const forwardRefResult1 = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition = { maintainVisibleContentPosition, ref };
   const merged = Object.assign(arg0);
   return <closure_8 maintainVisibleContentPosition={maintainVisibleContentPosition} ref={ref} />;
 });
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6902).FlashList);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6923).FlashList);
 const forwardRefResult2 = noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0, Object.assign({ preventNativeModalDismiss: 0 }));
   maintainVisibleContentPosition = { ref, maintainVisibleContentPosition, masonry: true };
   const merged1 = Object.assign(merged);
-  return jsx(_mod6902.FlashList, { ref, maintainVisibleContentPosition, masonry: true });
+  return jsx(_mod6923.FlashList, { ref, maintainVisibleContentPosition, masonry: true });
 });
 const forwardRefResult3 = noop.forwardRef((arg0, ref) => {
   ({ preventNativeModalDismiss, refreshControl } = arg0);
@@ -53,12 +53,12 @@ const forwardRefResult3 = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition = { ref, maintainVisibleContentPosition };
   const merged1 = Object.assign(merged);
   maintainVisibleContentPosition.refreshControl = memo;
-  return jsx(refreshControl(6901), { ref, maintainVisibleContentPosition });
+  return jsx(refreshControl(6922), { ref, maintainVisibleContentPosition });
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/flash-list/index.js");
-for (const key10063 in require("../../../../_runtime/metro/06902__.js")) {
-  arg5[key10063] = require("../../../../_runtime/metro/06902__.js")[key10063];
+for (const key10063 in require("../../../../_runtime/metro/06923__.js")) {
+  arg5[key10063] = require("../../../../_runtime/metro/06923__.js")[key10063];
   continue;
 }
 const forwardRefResult4 = noop.forwardRef((arg0, ref) => {
@@ -81,7 +81,7 @@ const forwardRefResult4 = noop.forwardRef((arg0, ref) => {
     }
     return tmp2;
   }, items);
-  maintainVisibleContentPosition.renderScrollComponent = preventNativeModalDismiss(6677).BottomSheetScrollView;
+  maintainVisibleContentPosition.renderScrollComponent = preventNativeModalDismiss(6698).BottomSheetScrollView;
   const merged1 = Object.assign(merged);
   maintainVisibleContentPosition.refreshControl = memo;
   return (
@@ -119,7 +119,7 @@ export const BottomSheetMasonryFlashList = noop.forwardRef((arg0, ref) => {
     }
     return tmp2;
   }, items);
-  maintainVisibleContentPosition.renderScrollComponent = preventNativeModalDismiss(6677).BottomSheetScrollView;
+  maintainVisibleContentPosition.renderScrollComponent = preventNativeModalDismiss(6698).BottomSheetScrollView;
   const merged1 = Object.assign(merged);
   maintainVisibleContentPosition.refreshControl = memo;
   return (

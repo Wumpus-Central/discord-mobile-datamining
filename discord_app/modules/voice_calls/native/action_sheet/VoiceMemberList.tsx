@@ -5,7 +5,7 @@ import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLoc
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10101 from "../../../../../_runtime/metro/10101__.js";
+import _modDef10121 from "../../../../../_runtime/metro/10121__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import GuildEventVoiceBannerDefault from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
 import VoiceMemberUser from "VoiceMemberUser.tsx";
@@ -63,7 +63,7 @@ function extractKey(id) {
 function VoiceSectionRow(arg0) {
   ({ item, isActionSheet } = arg0);
   ({ channelId, onPressUser } = arg0);
-  let obj = isActionSheet(9689);
+  let obj = isActionSheet(9710);
   importDefault = obj.useAnalyticsContext();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   if (tmp3) {
@@ -153,13 +153,13 @@ function VoiceSectionRow(arg0) {
       },
       isActionSheet,
     };
-    return closure_21(tmp2(13860), obj);
+    return closure_21(tmp2(13839), obj);
   } else {
     obj = {};
     const merged = Object.assign(item);
     obj.onPress = onPressUser;
     obj.isActionSheet = isActionSheet;
-    return closure_21(tmp2(13861), obj);
+    return closure_21(tmp2(13840), obj);
   }
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
 }
@@ -168,11 +168,11 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1074);
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = Constants);
 const FORM_ROW_VERTICAL_PADDING = fn(1182).FORM_ROW_VERTICAL_PADDING;
-const ACTION_SHEET_MAX_WIDTH = fn(7203).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7224).ACTION_SHEET_MAX_WIDTH;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_24 = createStyles.createStyles({
   container: { flex: 1, flexShrink: 1 },
   sectionContainer: { paddingTop: 16, paddingHorizontal: 16 },
@@ -196,9 +196,9 @@ let closure_26 = noop.memo((channel) => {
       obj = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1114).intl;
       obj.accessibilityLabel = intl.string(tmp4(1114).t["6Qgrev"]);
-      obj.source = _modDef10101;
-      obj.size = tmp4(13542).CircularIconButton.Sizes.MEDIUM_32;
-      obj.leading = closure_21(tmp4(13542).CircularIconButton, obj);
+      obj.source = _modDef10121;
+      obj.size = tmp4(13514).CircularIconButton.Sizes.MEDIUM_32;
+      obj.leading = closure_21(tmp4(13514).CircularIconButton, obj);
       const intl2 = tmp4(1114).intl;
       obj.label = intl2.string(tmp4(1114).t["6Qgrev"]);
       obj.onPress = function onPress() {
@@ -209,7 +209,7 @@ let closure_26 = noop.memo((channel) => {
           const result = obj.showInstantInviteActionSheet(channel, obj);
         }
       };
-      items[1] = closure_21(tmp4(8663).FormRow, obj);
+      items[1] = closure_21(tmp4(8684).FormRow, obj);
       obj.children = items;
       tmp7 = closure_22(noop.Fragment, obj);
     }
@@ -401,7 +401,7 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(13860);
+                tmp4 = tmp4(13839);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

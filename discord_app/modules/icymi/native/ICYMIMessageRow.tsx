@@ -144,7 +144,7 @@ function ReplyMessageContent(message) {
   ({ channel, guild } = message);
   const tmp = closure_18();
   let obj = noop;
-  const context = noop.useContext(message(16536).ICYMIContext);
+  const context = noop.useContext(message(16524).ICYMIContext);
   let obj1 = message(504);
   const items = [UserStore];
   const stateFromStores = obj1.useStateFromStores(items, () => UserStore.getUser(message.author.id));
@@ -160,14 +160,14 @@ function ReplyMessageContent(message) {
   if (colorString == null) {
     colorString = closure_12;
   }
-  const width = obj.useContext(tmp2(16536).ICYMIContext).width;
+  const width = obj.useContext(tmp2(16524).ICYMIContext).width;
   let tmp8 = null;
   if (null != stateFromStores) {
     obj = { style: tmp.replyPreview, children: null };
     obj = { variant: "text-sm/semibold", color: "text-muted", style: { fontStyle: "italic" }, children: null };
     const intl = tmp2(1114).intl;
     obj.children = intl.string(tmp2(1114).t.mPPcez);
-    const items2 = [closure_14(tmp2(4601).Text, obj)];
+    const items2 = [closure_14(tmp2(4602).Text, obj)];
     obj1 = { style: tmp.replyInner, children: null };
     obj2 = { animate: false, guildId: guild.id, user: stateFromStores, size: tmp2(1178).AvatarSizes.SMALL };
     const items3 = [closure_14(tmp2(1178).Avatar, obj2)];
@@ -177,34 +177,34 @@ function ReplyMessageContent(message) {
     const obj5 = { variant: "text-md/semibold", style: null, lineClamp: 1, children: null };
     const obj6 = { color: colorString };
     obj5.style = obj6;
-    obj5.children = tmp2(4757).getName(guild.id, channel.id, stateFromStores);
-    const items4 = [closure_14(tmp2(4601).Text, obj5)];
+    obj5.children = tmp2(4758).getName(guild.id, channel.id, stateFromStores);
+    const items4 = [closure_14(tmp2(4602).Text, obj5)];
     const obj7 = { value: null, children: null };
     const obj8 = { width: width - 2 * PX_12 - 30 - PX_8 - 2, margin: null, inset: null };
     ({ margin: obj14.margin, inset: obj14.inset } = context);
     obj7.value = obj8;
     const obj9 = { message, channel, guild, nested: true };
     obj7.children = closure_14(MessageRowContent, obj9);
-    items4[1] = closure_14(tmp2(16536).ICYMIContext.Provider, obj7);
+    items4[1] = closure_14(tmp2(16524).ICYMIContext.Provider, obj7);
     obj3.children = items4;
     items3[1] = closure_15(View, obj3);
     obj1.children = items3;
     items2[1] = closure_15(View, obj1);
     obj.children = items2;
     tmp8 = closure_15(View, obj);
-    const tmp2Result = tmp2(4757);
+    const tmp2Result = tmp2(4758);
   }
   return tmp8;
 }
 const View = fn(17).View;
-const ITEM_PADDING = fn(16573).ITEM_PADDING;
+const ITEM_PADDING = fn(16561).ITEM_PADDING;
 const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_12, MessageEmbedTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_8 = nativeDefault.space.PX_8;
-const createICYMIStyles = fn(16535);
+const createICYMIStyles = fn(16523);
 const collapsedCategories = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   let obj = {
     pressable: null,
@@ -421,7 +421,7 @@ let result = size.fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.ts
 export default function MessageRowWrapper(arg0) {
   let gravityMessage;
   ({ message, messageContext, visible } = arg0);
-  let obj = gravityMessage(8415);
+  let obj = gravityMessage(8436);
   gravityMessage = obj.useGravityMessage(message);
   const items = [ChannelStore];
   const stateFromStores = gravityMessage(504).useStateFromStores(items, () =>

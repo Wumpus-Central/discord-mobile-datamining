@@ -6,13 +6,13 @@ import TabsPerformanceTracker from "../TabsPerformanceTracker.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useWindowDimensionsDefault = tmp(1477);
-const useChatLayoutDefault = tmp(4465);
-const YouScreenDefault = tmp(16880);
+const useChatLayoutDefault = tmp(4467);
+const YouScreenDefault = tmp(16868);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(11156).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11179).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let obj = { container: null, androidContainer: null, wrapper: null };
 obj = {
   flex: 1,

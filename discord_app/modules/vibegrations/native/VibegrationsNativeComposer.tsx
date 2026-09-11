@@ -17,11 +17,11 @@ function tooLargeText(contentType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(16678);
+const VibegrationsConnectionStore = fn(16666);
 ({ deleteStagedAttachment: closure_8, uploadAttachmentBytes: closure_9 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: null,
   box: null,
@@ -426,10 +426,10 @@ export default function VibegrationsNativeComposer(projectId) {
               return obj;
             } else {
               closure_128_0 = undefined;
-              let obj1 = tmp5(5200);
+              let obj1 = tmp5(5201);
               obj1 = {
                 mediaType: "any",
-                selectionLimit: tmp2(7297).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE,
+                selectionLimit: tmp2(7318).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE,
                 skipProcessing: true,
               };
               dependencyMap = 1;

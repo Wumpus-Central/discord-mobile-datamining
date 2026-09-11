@@ -93,16 +93,16 @@ export default {
                   "appearance",
                   async (arg0) => {
                     theme = theme.theme;
-                    if (constants.DARK === theme) {
+                    if (constants.ASH === theme) {
                       let DARK = closure_1_0(1187).Theme.DARK;
                       let tmp4 = closure_1_0;
                     } else if (constants.LIGHT === theme) {
                       DARK = closure_1_0(1187).Theme.LIGHT;
                       tmp4 = closure_1_0;
-                    } else if (constants.DARKER === theme) {
+                    } else if (constants.DARK === theme) {
                       DARK = closure_1_0(1187).Theme.DARKER;
                       tmp4 = closure_1_0;
-                    } else if (constants.MIDNIGHT === theme) {
+                    } else if (constants.ONYX === theme) {
                       DARK = closure_1_0(1187).Theme.MIDNIGHT;
                       tmp4 = closure_1_0;
                     } else {
@@ -232,13 +232,13 @@ export default {
       PreloadedUserSettingsActionCreators.updateAsync(
         "appearance",
         async (arg0) => {
-          if (ThemeTypes.DARK === closure_0) {
+          if (ThemeTypes.ASH === closure_0) {
             let DARK = preloaded_user_settings.Theme.DARK;
           } else if (ThemeTypes.LIGHT === closure_0) {
             DARK = preloaded_user_settings.Theme.LIGHT;
-          } else if (ThemeTypes.DARKER === closure_0) {
+          } else if (ThemeTypes.DARK === closure_0) {
             DARK = preloaded_user_settings.Theme.DARKER;
-          } else if (ThemeTypes.MIDNIGHT === closure_0) {
+          } else if (ThemeTypes.ONYX === closure_0) {
             DARK = preloaded_user_settings.Theme.MIDNIGHT;
           } else {
             DARK = preloaded_user_settings.Theme.DARK;
@@ -327,16 +327,16 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
     return PreloadedUserSettingsActionCreators.updateAsync(
       "appearance",
       async (arg0) => {
-        if (ThemeTypes.DARK === theme) {
+        if (ThemeTypes.ASH === theme) {
           let DARK = preloaded_user_settings.Theme.DARK;
           let tmp3 = require;
         } else if (ThemeTypes.LIGHT === theme) {
           DARK = preloaded_user_settings.Theme.LIGHT;
           tmp3 = require;
-        } else if (ThemeTypes.DARKER === theme) {
+        } else if (ThemeTypes.DARK === theme) {
           DARK = preloaded_user_settings.Theme.DARKER;
           tmp3 = require;
-        } else if (ThemeTypes.MIDNIGHT === theme) {
+        } else if (ThemeTypes.ONYX === theme) {
           DARK = preloaded_user_settings.Theme.MIDNIGHT;
           tmp3 = require;
         } else {

@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
+import shared from "../../../../../design/shared.tsx";
 import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import ChannelEmojiConstants from "../../../channel_emoji/ChannelEmojiConstants.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
@@ -22,12 +23,12 @@ export default function usePressUnderlayColor(arr) {
   if (null != substr) {
     hexWithOpacityResult = token;
     if (arr !== closure_3) {
+      const tmp3Result = shared;
       let num3 = 0.08;
-      if ("dark" === tmp2) {
+      if (tmp3Result.isThemeDark(tmp2)) {
         num3 = 0.12;
       }
-      hexWithOpacityResult = ColorUtils.hexWithOpacity(substr, num3);
-      const tmp3Result = ColorUtils;
+      hexWithOpacityResult = tmp3Result.hexWithOpacity(substr, num3);
     }
   }
   return hexWithOpacityResult;

@@ -27,7 +27,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   nitroWheel: { height: 32, width: 32 },
   nitroWheelPurple: null,
@@ -347,7 +347,7 @@ export default function CustomEmojiContent(emojiNode) {
       const obj15 = { accessibilityLabel: null, style: null, onPress: null, children: null };
       function handleOpenEmojiOptionsMenu() {
         obj = { emojiSrc: emojiNode.src };
-        obj.openLazy(asyncRequireImpl(10410, dependencyMap.paths), "EmojiOptionsActionSheet", obj, "stack");
+        obj.openLazy(asyncRequireImpl(10429, dependencyMap.paths), "EmojiOptionsActionSheet", obj, "stack");
       }
       const intl3 = tmp2(nonce[28]).intl;
       obj15.accessibilityLabel = intl3.string(tmp2(nonce[28]).t.PdRCRg);

@@ -6,7 +6,7 @@ import CollectiblePreviewSession from "../CollectiblePreviewSession.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const RootNavigatorScreen = fn(11156).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11179).RootNavigatorScreen;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
 

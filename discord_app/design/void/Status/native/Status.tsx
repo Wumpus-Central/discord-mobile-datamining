@@ -3,13 +3,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import Status_StatusUtils from "StatusUtils.tsx";
 import getStatusContainerStyleDefault from "getStatusContainerStyle.tsx";
-import _modDef14181 from "../../../../../_runtime/metro/14181__.js";
-import _modDef14182 from "../../../../../_runtime/metro/14182__.js";
-import _modDef14183 from "../../../../../_runtime/metro/14183__.js";
-import _modDef14184 from "../../../../../_runtime/metro/14184__.js";
-import _modDef14185 from "../../../../../_runtime/metro/14185__.js";
-import _modDef14186 from "../../../../../_runtime/metro/14186__.js";
-import _modDef14187 from "../../../../../_runtime/metro/14187__.js";
+import _modDef14157 from "../../../../../_runtime/metro/14157__.js";
+import _modDef14158 from "../../../../../_runtime/metro/14158__.js";
+import _modDef14159 from "../../../../../_runtime/metro/14159__.js";
+import _modDef14160 from "../../../../../_runtime/metro/14160__.js";
+import _modDef14161 from "../../../../../_runtime/metro/14161__.js";
+import _modDef14162 from "../../../../../_runtime/metro/14162__.js";
+import _modDef14163 from "../../../../../_runtime/metro/14163__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,13 +18,13 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const STATUS_PADDING = fn(1179).STATUS_PADDING;
 const StatusTypes = fn(1074).StatusTypes;
-const ChannelAnimationConstants = fn(13099);
+const ChannelAnimationConstants = fn(13122);
 ({ TYPING_ENTERING: closure_8, TYPING_EXITING: closure_9, CHANNEL_SPRING_CONFIG: c10 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4605);
+let createStyles = fn(4606);
 let closure_13 = createStyles.createStyles({ statusIcon: { width: "100%", height: "100%" } });
-createStyles = fn(4605);
+createStyles = fn(4606);
 let closure_14 = createStyles.createStyles((items, arg1) => {
   let obj = Status_StatusUtils;
   const statusTypingDimensions = obj.getStatusTypingDimensions(items);
@@ -93,23 +93,23 @@ export default function Status(isMobileOnline) {
   obj.style = items;
   obj = { style: closure_13().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = _modDef14181;
+    let tmp4Result = _modDef14157;
   } else if (flag2) {
-    tmp4Result = _modDef14182;
+    tmp4Result = _modDef14158;
   } else if (flag) {
-    tmp4Result = _modDef14183;
+    tmp4Result = _modDef14159;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef14184;
+    tmp4Result = _modDef14160;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef14185;
+    tmp4Result = _modDef14161;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef14187;
+        tmp4Result = _modDef14163;
       }
     }
-    tmp4Result = _modDef14186;
+    tmp4Result = _modDef14162;
   }
   obj.source = tmp4Result;
   obj.children = closure_1_11(React4, obj);

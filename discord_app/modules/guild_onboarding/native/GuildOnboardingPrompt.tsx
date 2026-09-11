@@ -237,18 +237,18 @@ function DropdownOption(option) {
   obj.children = closure_15(EmojiDefault, obj1);
   const items1 = [
     closure_15(closure_6, obj),
-    closure_15(option(4601).Text, { variant: "text-md/semibold", children: option.title }),
+    closure_15(option(4602).Text, { variant: "text-md/semibold", children: option.title }),
   ];
   obj.children = items1;
   return closure_16(closure_6, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-let closure_13 = fn(7149).GuildOnboardingModalStates;
+let closure_13 = fn(7170).GuildOnboardingModalStates;
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   flex: { flex: 1 },
   container: null,
@@ -275,7 +275,7 @@ createStyles = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5732).NAV_BAR_HEIGHT,
+  marginTop: fn(5733).NAV_BAR_HEIGHT,
   marginBottom: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -614,7 +614,7 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
         return selectOption(id.id, id.id, flag);
       },
     };
-    obj.openLazy(asyncRequireImpl(7187, dependencyMap.paths), "DropdownOptions", obj);
+    obj.openLazy(asyncRequireImpl(7208, dependencyMap.paths), "DropdownOptions", obj);
   }, items2);
   const items4 = [closure_15(PromptHeader, { currentPrompt, numberOfPrompts, currentPromptIndex })];
   const obj1 = { style: tmp.dropdownContainer, onPress: callback, children: null };

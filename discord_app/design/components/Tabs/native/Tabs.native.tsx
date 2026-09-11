@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06705_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06726_LegacyBaseButton.js";
 import cheapWorkletShallowEqual from "../../../../modules/reanimated/native/cheapWorkletShallowEqual.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../modules/user_settings/LocaleStore.tsx";
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(ScrollView);
 let c9 = 0.04;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles((gap, arg1) => {
   let obj = { container: null, controlsContainer: null, indicatorContainer: null, indicator: null };
   obj = {
@@ -44,7 +44,7 @@ let closure_11 = createStyles.createStyles((gap, arg1) => {
     marginLeft: nativeDefault.space.PX_16,
   };
   obj.indicatorContainer = size;
-  if ("gradient-background" === arg1) {
+  if ("overlay" === arg1) {
     let TEXT_BRAND = nativeDefault.colors.TEXT_STRONG;
   } else {
     TEXT_BRAND = nativeDefault.colors.TEXT_BRAND;
@@ -264,12 +264,15 @@ export const Tabs = function Tabs(state) {
     }
   }, items2);
   const animatedScrollHandler = state(formatCount[4]).useAnimatedScrollHandler(obj);
-  const fn3 = function k() {
-    return { scrollOffset: scrollOffset.get(), activeIndex: activeIndex.get(), itemDimensions: itemDimensions.get() };
-  };
-  fn3.__closure = { scrollOffset, activeIndex, itemDimensions };
-  fn3.__workletHash = 9993285637539;
-  fn3.__initData = length;
+  class P {
+    constructor() {
+      obj = { scrollOffset: scrollOffset.get(), activeIndex: activeIndex.get(), itemDimensions: itemDimensions.get() };
+      return obj;
+    }
+  }
+  P.__closure = { scrollOffset, activeIndex, itemDimensions };
+  P.__workletHash = 9993285637539;
+  P.__initData = length;
   class X {
     constructor(arg0, arg1) {
       tmp = arg1;
@@ -341,7 +344,7 @@ export const Tabs = function Tabs(state) {
   X.__closure = obj1;
   X.__workletHash = 15851319414889;
   X.__initData = ref;
-  const animatedReaction = state(formatCount[4]).useAnimatedReaction(fn3, X);
+  const animatedReaction = state(formatCount[4]).useAnimatedReaction(P, X);
   const items3 = [
     items,
     length,
@@ -396,7 +399,7 @@ export const Tabs = function Tabs(state) {
             const result = pressed.set(-1);
           };
           obj.variant = variant;
-          return variant(state(12685).TabItem, obj, id);
+          return variant(state(12708).TabItem, obj, id);
         }),
       }),
     items3,

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/AttachmentIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod10183 from "../../../../../../../_runtime/metro/10183__.js";
+import _mod10202 from "../../../../../../../_runtime/metro/10202__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const AttachmentIcon = function AttachmentIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10183, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10202, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

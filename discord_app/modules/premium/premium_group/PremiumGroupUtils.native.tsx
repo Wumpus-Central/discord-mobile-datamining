@@ -5,7 +5,7 @@ import UserUtils from "../../../utils/UserUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const PremiumGroupConstants = fn(4276);
+const PremiumGroupConstants = fn(4278);
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.native.tsx");

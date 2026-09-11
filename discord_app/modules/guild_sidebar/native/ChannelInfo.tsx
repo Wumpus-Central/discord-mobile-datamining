@@ -48,7 +48,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj.video = hasVideo;
     obj.channel = channel;
-    let tmp6Result = jsx(channel(16201).ConnectedUserLimit, {
+    let tmp6Result = jsx(channel(16190).ConnectedUserLimit, {
       userCount: voiceStatesCount,
       video: null,
       channel: null,
@@ -75,7 +75,7 @@ function DurationInfo(channel) {
 const Constants = fn(1074);
 ({ GuildFeatures: closure_8, Permissions: closure_9, Fonts } = Constants);
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 const createStyles = { activeTimestamp: { fontFamily: Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 16 } };
 let closure_11 = createStyles.createStyles(createStyles);
 const size = fn(2);
@@ -102,7 +102,7 @@ export default function ChannelInfo(channel) {
   }));
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
   const tmp5 = useEmbeddedAppsForChannelDefault(channel);
-  let obj1 = channel(7937);
+  let obj1 = channel(7959);
   const postsWithUnreadsCount = obj1.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     obj = {
@@ -135,7 +135,7 @@ export default function ChannelInfo(channel) {
           hasItem = features.has(constants.COMMUNITY);
         }
         if (hasItem) {
-          let tmpResult = tmp(4751);
+          let tmpResult = tmp(4752);
           if (tmpResult.hasStream(voiceStates)) {
             tmp11Result = jsx(tmp(1178).LiveTag, {});
           }
@@ -144,7 +144,7 @@ export default function ChannelInfo(channel) {
     }
     if (null != enableActivities) {
       if (enableActivities) {
-        tmpResult = tmp(16313);
+        tmpResult = tmp(16302);
         if (tmpResult.showChannelItemEmbeddedActivities(tmp5)) {
           obj = { embeddedApps: tmp5, muted };
           tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });

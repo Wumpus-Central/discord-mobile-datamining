@@ -1,5 +1,5 @@
 // discord_app/components_native/common/SequencedLottieAnimationView.tsx
-import _modDef5580 from "../../../_runtime/metro/05580__.js";
+import _modDef5581 from "../../../_runtime/metro/05581__.js";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -75,7 +75,7 @@ prototype["render"] = function render() {
   const tmp = _objectWithoutProperties(props, closure_2);
   const merged = Object.assign(tmp);
   ({ handleSetRef: obj3.ref, handleComplete: obj3.onAnimationFinish } = this);
-  obj.children = jsx(_modDef5580, { source, style: null });
+  obj.children = jsx(_modDef5581, { source, style: null });
   return <View source={source} style={null} />;
 };
 SequencedLottieAnimationView.defaultProps = { autoPlay: true };

@@ -4,7 +4,7 @@ import AuthorizedAppsActionCreatorsDefault from "../../oauth2/AuthorizedAppsActi
 import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 
 require = fn;
-const FetchState = fn(7159).FetchState;
+const FetchState = fn(7180).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
 

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidActionCreators.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4196 from "../../../_runtime/metro/04196__.js";
+import _modDef4198 from "../../../_runtime/metro/04198__.js";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import GuildSettingsActionCreatorsDefault from "../guild_settings/GuildSettingsActionCreators.tsx";
 import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId.tsx";
@@ -89,7 +89,7 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   let toISOStringResult = null;
   if (tmp5) {
-    const obj2 = _modDef4196();
+    const obj2 = _modDef4198();
     toISOStringResult = obj2.add(tmp8, "hours").toISOString();
     obj2.add(tmp8, "hours");
   }
@@ -252,21 +252,21 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8068).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(8090).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");
 
-export const trackReportRaidViewed = function trackReportRaidViewed(onChange) {
-  let items = onSubmit;
-  if (onSubmit === undefined) {
+export const trackReportRaidViewed = function trackReportRaidViewed(guildId, arg1) {
+  let items = arg1;
+  if (arg1 === undefined) {
     items = [];
   }
   if (0 !== items.length) {
     const obj = {};
-    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(onChange));
-    obj.guild_id = onChange;
+    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+    obj.guild_id = guildId;
     obj.raid_types = items;
     obj.track(constants.GUILD_RAID_REPORTED, obj);
   }

@@ -5,7 +5,7 @@ import ChatWarningIcon from "../../../../design/components/Icon/native/redesign/
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QUARANTINE_APPEAL_LINK = fn(12522).QUARANTINE_APPEAL_LINK;
+const QUARANTINE_APPEAL_LINK = fn(12545).QUARANTINE_APPEAL_LINK;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardQuarantineDM.tsx");

@@ -2,7 +2,7 @@
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
-import _modDef4196 from "../../../_runtime/metro/04196__.js";
+import _modDef4198 from "../../../_runtime/metro/04198__.js";
 import Constants2 from "Constants.tsx";
 import getClearAfterDurationDefault from "utils/getClearAfterDuration.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -31,10 +31,10 @@ export default function setCustomStatus(arg0) {
     str2 = "0";
     if (clearAfter !== ClearAfterValues.DONT_CLEAR) {
       const _String = String;
-      const obj2 = _modDef4196();
-      const addResult = _modDef4196().add(getClearAfterDurationDefault(clearAfter), "ms");
-      str2 = String(_modDef4196().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
-      const toDateResult = _modDef4196().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
+      const obj2 = _modDef4198();
+      const addResult = _modDef4198().add(getClearAfterDurationDefault(clearAfter), "ms");
+      str2 = String(_modDef4198().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
+      const toDateResult = _modDef4198().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
     }
   }
   obj.expiresAtMs = str2;
@@ -52,9 +52,9 @@ export default function setCustomStatus(arg0) {
   }
   obj.emojiName = str5;
   if (createdAtMs == null) {
-    const obj5 = _modDef4196();
-    createdAtMs = _modDef4196().toDate().getTime();
-    const toDateResult1 = _modDef4196().toDate();
+    const obj5 = _modDef4198();
+    createdAtMs = _modDef4198().toDate().getTime();
+    const toDateResult1 = _modDef4198().toDate();
   }
   obj.createdAtMs = String(createdAtMs);
   const updateSettingResult = CustomStatusSetting2.updateSetting(obj);

@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
 
 require = fn;
-const MessageRequestConstants = fn(12513);
+const MessageRequestConstants = fn(12536);
 ({ MessageRequestAnalyticsAction: closure_7, BATCH_REJECT_LIMIT: closure_8 } = MessageRequestConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);

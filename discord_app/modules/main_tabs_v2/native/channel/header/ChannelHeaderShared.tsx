@@ -8,9 +8,10 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
 import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import ManaTypeConsolidationExperiment from "../../../../design/ManaTypeConsolidationExperiment.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef13346 from "../../../../../../_runtime/metro/13346__.js";
+import _modDef13369 from "../../../../../../_runtime/metro/13369__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -99,7 +100,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj2 = { source: _modDef13346, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj2 = { source: _modDef13369, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj2);
   }
   items[2] = tmp5Result;
@@ -127,10 +128,10 @@ function UserAvatar(user) {
     guildId: "Boolean",
     size: native.AvatarSizes.REFRESH_MEDIUM_32,
     status: false,
-    isMobileOnline: "done",
-    isVROnline: "flowing",
-    style: "hourglass",
-    autoStatusCutout: "hours",
+    isMobileOnline: null,
+    isVROnline: true,
+    style: null,
+    autoStatusCutout: false,
   };
   let tmp3 = null;
   if (!user.isSystemUser()) {
@@ -165,18 +166,25 @@ function MemberCountText(arg0) {
       str = "total";
     }
   }
-  const obj = { type: str, count: null, color: "text-subtle", dotContainerWidth: null };
+  let obj = ManaTypeConsolidationExperiment;
+  let str2 = "text-sm/normal";
+  if (obj.useManaTypeConsolidationExperiment("ChannelHeaderMemberCount")) {
+    str2 = "text-xs/normal";
+  }
+  obj = { type: str, count: null, color: "text-subtle", dotContainerWidth: null, textVariant: null };
   if ("online" === str) {
     memberCount = presenceCount;
   }
   obj.count = memberCount;
   obj.dotContainerWidth = leadingAccessoryWidth;
+  obj.textVariant = str2;
   const children = [React6(GuildActionSheetMemberCountDefault, obj)];
-  let tmp4Result = null;
+  let tmp6Result = null;
   if (withSeparator) {
-    tmp4Result = React6(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });
+    obj = { variant: str2, color: "text-subtle", children: "\u2022" };
+    tmp6Result = React6(Text_Text.Text, obj);
   }
-  children[1] = tmp4Result;
+  children[1] = tmp6Result;
   return React7(closure_1_10, { children });
 }
 function ParentChannelSubTitle(channel) {
@@ -205,7 +213,7 @@ function EmptyIcon() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles(() => {
   let obj = {
     wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 },

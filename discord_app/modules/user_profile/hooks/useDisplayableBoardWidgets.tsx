@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplay
 
 export const useDisplayableBoardWidgets = function useDisplayableBoardWidgets(id) {
   isMobileGameCollectionExperimentEnabled =
-    isMobileGameCollectionExperimentEnabled(9102).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
+    isMobileGameCollectionExperimentEnabled(9123).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
   const tmp2 = useUserProfileWidgetsDefault(id);
   importDefault = tmp2;
   const items = [isMobileGameCollectionExperimentEnabled, tmp2];

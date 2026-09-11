@@ -6,11 +6,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const DOT_UNICODE = fn(10947).DOT_UNICODE;
+const DOT_UNICODE = fn(10966).DOT_UNICODE;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_13 = createStyles.createStyles({
   container: { flexDirection: "row", alignItems: "center", gap: 4 },
   icon: { marginTop: 1 },
@@ -40,7 +40,7 @@ export default function ActivityStatus(guildId) {
   let obj1 = userId(504);
   const items1 = [PresenceStore];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => PresenceStore.getActivities(userId));
-  const voiceChannel = stateFromStores1(10949)({ userId, guildId: guildId.guildId }).voiceChannel;
+  const voiceChannel = stateFromStores1(10968)({ userId, guildId: guildId.guildId }).voiceChannel;
   const items2 = [stateFromStores1];
   const memo = noop.useMemo(() => {
     let found;
@@ -69,13 +69,13 @@ export default function ActivityStatus(guildId) {
       return tmp4;
     }
   }, items2);
-  let obj2 = userId(10950);
+  let obj2 = userId(10969);
   let state;
   if (memo != null) {
     state = memo.state;
   }
   const gameMentionsAsPlainText = obj2.useGameMentionsAsPlainText(state);
-  const tmp6 = stateFromStores1(10948)(userId);
+  const tmp6 = stateFromStores1(10967)(userId);
   const items3 = [RelationshipStore];
   if (tmp2Result.useStateFromStores(items3, () => RelationshipStore.isBlockedOrIgnored(userId))) {
     return null;
@@ -91,7 +91,7 @@ export default function ActivityStatus(guildId) {
     if (null != tmp6) {
       let found;
       if (stateFromStores1 != null) {
-        found = stateFromStores1.find(tmp5(10956));
+        found = stateFromStores1.find(tmp5(10975));
       }
       obj = {
         game: found,
@@ -107,8 +107,8 @@ export default function ActivityStatus(guildId) {
       obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
       obj.hideIcon = tmp12;
       obj.hideText = tmp13;
-      let tmp18Result = closure_10(tmp5(10951), obj);
-      const tmp5Result = tmp5(10951);
+      let tmp18Result = closure_10(tmp5(10970), obj);
+      const tmp5Result = tmp5(10970);
     } else {
       let found1;
       if (stateFromStores1 != null) {
@@ -132,7 +132,7 @@ export default function ActivityStatus(guildId) {
         obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
         obj.hideIcon = tmp12;
         obj.hideText = tmp13;
-        tmp18Result = closure_10(tmp5(10957), obj);
+        tmp18Result = closure_10(tmp5(10976), obj);
       } else {
         tmp18Result = null;
         if (null != voiceChannel) {
@@ -150,7 +150,7 @@ export default function ActivityStatus(guildId) {
           obj1.maxFontSizeMultiplier = maxFontSizeMultiplier;
           obj1.hideIcon = tmp12;
           obj1.hideText = tmp13;
-          tmp18Result = closure_10(tmp5(10963), obj1);
+          tmp18Result = closure_10(tmp5(10982), obj1);
         }
       }
     }
@@ -164,7 +164,7 @@ export default function ActivityStatus(guildId) {
         }
         if (tmp25) {
           obj2 = { emoji: memo.emoji, size: emojiSize, animate, style: tmp.emoji };
-          tmp25 = closure_10(tmp5(10965), obj2);
+          tmp25 = closure_10(tmp5(10984), obj2);
         }
         const items7 = [tmp25];
         let tmp27 = null != memo.state;
@@ -175,7 +175,7 @@ export default function ActivityStatus(guildId) {
             maxFontSizeMultiplier,
             children: gameMentionsAsPlainText,
           };
-          tmp27 = closure_10(tmp5(10955), obj3);
+          tmp27 = closure_10(tmp5(10974), obj3);
         }
         const obj4 = { children: null };
         items7[1] = tmp27;
@@ -199,7 +199,7 @@ export default function ActivityStatus(guildId) {
         importantForAccessibility: "no-hide-descendants",
         children: DOT_UNICODE,
       };
-      tmp31 = closure_10(tmp5(10955), obj6);
+      tmp31 = closure_10(tmp5(10974), obj6);
     }
     items8[1] = tmp31;
     items8[2] = tmp21;

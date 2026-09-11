@@ -23,12 +23,12 @@ function getDefaultWants(wantsLevel) {
   return obj;
 }
 const VideoToggleState = fn(1074).VideoToggleState;
-const SimulcastOverrideQuality = fn(4630).SimulcastOverrideQuality;
+const SimulcastOverrideQuality = fn(4631).SimulcastOverrideQuality;
 let c7 = 100;
 let obj = { any: 0 };
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 let closure_10 = 120 * DurationsDefault.Millis.SECOND;
-const BrowserUtils = fn(4927);
+const BrowserUtils = fn(4928);
 let closure_11 = -1 !== BrowserUtils.getFirefoxVersion();
 obj = { UserSSRCUpdate: "user-ssrc-update", Update: "update" };
 class RTCMediaSinkWantsManager extends tmp2 {

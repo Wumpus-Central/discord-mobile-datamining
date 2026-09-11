@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_13 = createStyles.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
@@ -50,7 +50,7 @@ let closure_13 = createStyles.createStyles((arg0) => {
   return obj;
 });
 let c14 = "749054660769218631";
-const END = fn(4423).GradientPercentage.END;
+const END = fn(4425).GradientPercentage.END;
 const __initData = {
   code: "function DMMessageStickerGreetingTsx1(){const{styles,isRendered,hasInputText,hasMessages,HEIGHT_COMPACT,HEIGHT_FULL,withDelay,withTiming,STANDARD_EASING}=this.__closure;const gradientOverlayOffset=styles.gradient.height;const hasHeight=isRendered&&!hasInputText;const heightExpanded=(hasMessages?HEIGHT_COMPACT:HEIGHT_FULL)-1;const targetHeight=hasHeight?heightExpanded+gradientOverlayOffset:0;const targetMargin=hasHeight?-gradientOverlayOffset:0;function generateAnimationConfig(value){return withDelay(300,withTiming(value,{easing:STANDARD_EASING,duration:250}));}return{justifyContent:'flex-end',overflow:'hidden',marginTop:generateAnimationConfig(targetMargin),height:generateAnimationConfig(targetHeight)};}",
 };
@@ -156,8 +156,8 @@ export default function DMMessageStickerGreeting(channel) {
                 if (closure_1_1 !== content) {
                   dependencyMap(content);
                 }
-                closure_1(4303);
-                const obj = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12334) };
+                closure_1(4305);
+                const obj = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12357) };
                 obj.open(obj);
               }
               closure_128_0 = showErrorToast;

@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   scrollContainer: { minHeight: "100%" },
   container: { flexGrow: 1, alignItems: "center", justifyContent: "center" },
@@ -23,7 +23,7 @@ let createStyles = {
   primaryButtonContainer: null,
   trailing: null,
 };
-createStyles = { paddingTop: 80 + fn(5732).NAV_BAR_HEIGHT };
+createStyles = { paddingTop: 80 + fn(5733).NAV_BAR_HEIGHT };
 createStyles.alertContainer = createStyles;
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 createStyles.alert = {

@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNa
 
 export const useVisibleFontOrder = function useVisibleFontOrder() {
   isDisplayNameStylesFlywheelSettersEnabled =
-    isDisplayNameStylesFlywheelSettersEnabled(9246).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
+    isDisplayNameStylesFlywheelSettersEnabled(9267).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
   items = [isDisplayNameStylesFlywheelSettersEnabled];
   return noop.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items1 : items), items);
 };

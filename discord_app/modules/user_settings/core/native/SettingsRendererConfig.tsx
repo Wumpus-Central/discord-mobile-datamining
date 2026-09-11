@@ -136,16 +136,16 @@ import SwipeRightToLeftSettingDefault from "../../defs/native/SwipeRightToLeftSe
 import WebBrowserSettingDefault from "../../defs/native/WebBrowserSetting.tsx";
 import SelectWebBrowserSettingDefault from "../../defs/native/SelectWebBrowserSetting.tsx";
 import NotificationsSettingDefault from "../../defs/native/NotificationsSetting.tsx";
-import InAppNotificationsSettingDefault from "../../defs/native/InAppNotificationsSetting.tsx";
+import InAppNotificationsSetting from "../../defs/native/InAppNotificationsSetting.tsx";
 import SystemNotificationsSettingDefault from "../../defs/native/SystemNotificationsSetting.tsx";
 import ReactionNotificationsSettingsDefault from "../../defs/native/ReactionNotificationsSettings.tsx";
 import CustomStatusNotificationSettingsDefault from "../../defs/native/CustomStatusNotificationSettings.tsx";
-import IOSNativePhoneIntegrationSettingDefault from "../../defs/native/IOSNativePhoneIntegrationSetting.tsx";
-import AndroidMessageNotificationsSettingDefault from "../../defs/native/AndroidMessageNotificationsSetting.tsx";
-import AndroidNotificationLightsSettingDefault from "../../defs/native/AndroidNotificationLightsSetting.tsx";
-import AndroidNotificationVibrationsSettingDefault from "../../defs/native/AndroidNotificationVibrationsSetting.tsx";
-import AndroidNotificationSoundsSettingDefault from "../../defs/native/AndroidNotificationSoundsSetting.tsx";
-import InAppMessageSoundsSettingDefault from "../../defs/native/InAppMessageSoundsSetting.tsx";
+import IOSNativePhoneIntegrationSetting from "../../defs/native/IOSNativePhoneIntegrationSetting.tsx";
+import AndroidMessageNotificationsSetting from "../../defs/native/AndroidMessageNotificationsSetting.tsx";
+import AndroidNotificationLightsSetting from "../../defs/native/AndroidNotificationLightsSetting.tsx";
+import AndroidNotificationVibrationsSetting from "../../defs/native/AndroidNotificationVibrationsSetting.tsx";
+import AndroidNotificationSoundsSetting from "../../defs/native/AndroidNotificationSoundsSetting.tsx";
+import InAppMessageSoundsSetting from "../../defs/native/InAppMessageSoundsSetting.tsx";
 import FriendStreamNotificationsSettingDefault from "../../defs/native/FriendStreamNotificationsSetting.tsx";
 import FriendAnniversaryNotificationSettingDefault from "../../defs/native/FriendAnniversaryNotificationSetting.tsx";
 import VoiceActivityNotificationSettingDefault from "../../defs/native/VoiceActivityNotificationSetting.tsx";
@@ -258,6 +258,13 @@ import NotifyFriendsOnProfileUpdateSettingDefault from "../../defs/native/Notify
 import MobileNotifSettingsRendererConfig from "../../notifications/native/codegen/MobileNotifSettingsRendererConfig.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const InAppNotificationsSettingDefault = InAppNotificationsSetting;
+const IOSNativePhoneIntegrationSettingDefault = IOSNativePhoneIntegrationSetting;
+const AndroidMessageNotificationsSettingDefault = AndroidMessageNotificationsSetting;
+const AndroidNotificationLightsSettingDefault = AndroidNotificationLightsSetting;
+const AndroidNotificationVibrationsSettingDefault = AndroidNotificationVibrationsSetting;
+const AndroidNotificationSoundsSettingDefault = AndroidNotificationSoundsSetting;
+const InAppMessageSoundsSettingDefault = InAppMessageSoundsSetting;
 const UseDataForQuestsSettingDefault = UseDataForQuestsSetting;
 const UseDataForQuests3PSettingDefault = UseDataForQuests3PSetting;
 
@@ -409,6 +416,13 @@ const UseDataForQuests3PSettingDefault = UseDataForQuests3PSetting;
   ANDROID_NOTIFICATION_VIBRATIONS,
   ANDROID_NOTIFICATION_SOUNDS,
   IN_APP_MESSAGE_SOUNDS,
+  REDESIGN_IN_APP_NOTIFICATIONS,
+  REDESIGN_IN_APP_MESSAGE_SOUNDS,
+  REDESIGN_ANDROID_MESSAGE_NOTIFICATIONS,
+  REDESIGN_ANDROID_NOTIFICATION_LIGHTS,
+  REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS,
+  REDESIGN_ANDROID_NOTIFICATION_SOUNDS,
+  REDESIGN_IOS_NATIVE_PHONE_INTEGRATION,
   FRIEND_STREAM_NOTIFICATIONS,
   FRIEND_ANNIVERSARY_NOTIFICATIONS,
   VOICE_ACTIVITY_NOTIFICATIONS,
@@ -670,6 +684,15 @@ const frozen = Object.freeze({
   [ANDROID_NOTIFICATION_VIBRATIONS]: AndroidNotificationVibrationsSettingDefault,
   [ANDROID_NOTIFICATION_SOUNDS]: AndroidNotificationSoundsSettingDefault,
   [IN_APP_MESSAGE_SOUNDS]: InAppMessageSoundsSettingDefault,
+  [REDESIGN_IN_APP_NOTIFICATIONS]: InAppNotificationsSetting.RedesignInAppNotificationsSetting,
+  [REDESIGN_IN_APP_MESSAGE_SOUNDS]: InAppMessageSoundsSetting.RedesignInAppMessageSoundsSetting,
+  [REDESIGN_ANDROID_MESSAGE_NOTIFICATIONS]:
+    AndroidMessageNotificationsSetting.RedesignAndroidMessageNotificationsSetting,
+  [REDESIGN_ANDROID_NOTIFICATION_LIGHTS]: AndroidNotificationLightsSetting.RedesignAndroidNotificationLightsSetting,
+  [REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS]:
+    AndroidNotificationVibrationsSetting.RedesignAndroidNotificationVibrationsSetting,
+  [REDESIGN_ANDROID_NOTIFICATION_SOUNDS]: AndroidNotificationSoundsSetting.RedesignAndroidNotificationSoundsSetting,
+  [REDESIGN_IOS_NATIVE_PHONE_INTEGRATION]: IOSNativePhoneIntegrationSetting.RedesignIOSNativePhoneIntegrationSetting,
   [FRIEND_STREAM_NOTIFICATIONS]: FriendStreamNotificationsSettingDefault,
   [FRIEND_ANNIVERSARY_NOTIFICATIONS]: FriendAnniversaryNotificationSettingDefault,
   [VOICE_ACTIVITY_NOTIFICATIONS]: VoiceActivityNotificationSettingDefault,

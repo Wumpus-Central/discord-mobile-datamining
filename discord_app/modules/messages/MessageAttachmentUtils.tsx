@@ -172,8 +172,8 @@ export const useShouldObscure = function useShouldObscure(channel) {
   const RenderSpoilers = channel(1935).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(563);
-  const enabledHarmTypesBitmaskForChannelType = channel(7344).getEnabledHarmTypesBitmaskForChannelType(
-    channel(7349).ContentHarmTypeChannel.GUILD,
+  const enabledHarmTypesBitmaskForChannelType = channel(7365).getEnabledHarmTypesBitmaskForChannelType(
+    channel(7370).ContentHarmTypeChannel.GUILD,
   );
   return getForumPostShouldObscure(
     channel.media,

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod8194 from "../../../../../../../_runtime/metro/08194__.js";
+import _mod8216 from "../../../../../../../_runtime/metro/08216__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const UnknownGameIcon = function UnknownGameIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8194, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8216, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

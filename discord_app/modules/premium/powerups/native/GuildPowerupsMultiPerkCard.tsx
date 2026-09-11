@@ -11,12 +11,12 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/Guild
 export default function GuildPowerupsMultiPerkCard(guildId) {
   guildId = guildId.guildId;
   const listing = guildId.listing;
-  let badge = listing(12619)(guildId, listing);
+  let badge = listing(12642)(guildId, listing);
   let obj = guildId(504);
   const items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { guildId, powerups: listing.powerups };
-  costDecorator = listing(12643)(obj);
+  costDecorator = listing(12666)(obj);
   const items1 = [guildId, listing];
   let tmp5 = null;
   if (null != costDecorator) {
@@ -41,7 +41,7 @@ export default function GuildPowerupsMultiPerkCard(guildId) {
       obj.onPress = tmp4;
       badge = badge.badge;
       obj.badge = badge;
-      jsx(listing(12641), {
+      jsx(listing(12664), {
         title: null,
         description: null,
         cost: null,

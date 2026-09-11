@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/TrashIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod4564 from "../../../../../../../_runtime/metro/04564__.js";
+import _mod4565 from "../../../../../../../_runtime/metro/04565__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const TrashIcon = function TrashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod4564, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod4565, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

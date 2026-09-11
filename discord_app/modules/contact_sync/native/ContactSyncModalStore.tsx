@@ -3,7 +3,7 @@ import ConnectedAccountsStore from "../../../stores/ConnectedAccountsStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
-const ContactPermissions = fn(12748).ContactPermissions;
+const ContactPermissions = fn(12771).ContactPermissions;
 const PlatformTypes = fn(1074).PlatformTypes;
 let obj = {
   NORMAL: 0,

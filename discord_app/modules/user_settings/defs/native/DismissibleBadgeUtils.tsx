@@ -15,8 +15,8 @@ const result = size.fileFinishedImporting("modules/user_settings/defs/native/Dis
 
 export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS) {
   closure_0 = TINY_BRONCO_SETTINGS;
-  let tmp = useShouldShowTinyBroncoAccountStatus;
-  if (useShouldShowTinyBroncoAccountStatus === undefined) {
+  let tmp = useShouldShowAgeNotice;
+  if (useShouldShowAgeNotice === undefined) {
     tmp = useAlwaysShow;
   }
   closure_1 = tmp;

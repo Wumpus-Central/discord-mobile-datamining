@@ -73,12 +73,12 @@ function isQuestRobloxRelated(desktopApplicationIds, distributor) {
   }
   return tmp;
 }
-const QuestConstants = fn(5494);
+const QuestConstants = fn(5495);
 ({ DISCORD_APPLICATION_ID: closure_12, QuestsExperimentLocations } = QuestConstants);
-const isLaunched = fn(9581).isLaunched;
+const isLaunched = fn(9602).isLaunched;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 const SECOND = DurationsDefault.Millis.SECOND;
-fn(7760);
+fn(7781);
 const getQuestLogger = { location: QuestsExperimentLocations.QUESTS_MANAGER };
 const logger = getQuestLogger.getQuestLogger(getQuestLogger);
 class QuestProgressManager extends tmp4 {
@@ -99,9 +99,9 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = applyArgumentsResult(7775).getQuestTaskDetails(
+            const questTaskDetails = applyArgumentsResult(7796).getQuestTaskDetails(
               value,
-              applyArgumentsResult(5502).FirstPartyQuestTaskTypesSets.DESKTOP,
+              applyArgumentsResult(5503).FirstPartyQuestTaskTypesSets.DESKTOP,
             );
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
@@ -166,9 +166,9 @@ class QuestProgressManager extends tmp4 {
                 obj.terminateHeartbeat(questId, closure_1);
               } else {
                 const _HermesInternal4 = HermesInternal;
-                const timerIdResult = timerId(4657);
+                const timerIdResult = timerId(4658);
                 logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + questId);
-                const encodeStreamKeyResult = timerId(4657).encodeStreamKey(currentUserActiveStream);
+                const encodeStreamKeyResult = timerId(4658).encodeStreamKey(currentUserActiveStream);
                 obj = {
                   questId,
                   streamKey: encodeStreamKeyResult,
@@ -176,15 +176,15 @@ class QuestProgressManager extends tmp4 {
                   executablePath,
                   executableFingerprint: prop,
                 };
-                timerId(11348).sendHeartbeat(obj);
-                const timerIdResult1 = timerId(11348);
+                timerId(11370).sendHeartbeat(obj);
+                const timerIdResult1 = timerId(11370);
               }
             } else {
               const _HermesInternal2 = HermesInternal;
               logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + questId);
               obj = { questId, applicationId, executablePath, executableFingerprint: prop };
-              timerId(11348).sendHeartbeat(obj);
-              const timerIdResult2 = timerId(11348);
+              timerId(11370).sendHeartbeat(obj);
+              const timerIdResult2 = timerId(11370);
             }
             prop = obj.calculateHeartbeatDurationMs(questId);
             const _window = window;
@@ -293,13 +293,13 @@ class QuestProgressManager extends tmp4 {
       },
       GAME_FETCH_SUCCESS() {
         return DispatcherDefault.wait(() => {
-          const items = [applyArgumentsResult(5502).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          const items = [applyArgumentsResult(5503).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
           closure_1_0.syncHeartbeats(items, "GAME_FETCH_SUCCESS");
         });
       },
       APPLICATIONS_FETCH_SUCCESS() {
         return DispatcherDefault.wait(() => {
-          const items = [applyArgumentsResult(5502).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          const items = [applyArgumentsResult(5503).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
           closure_1_0.syncHeartbeats(items, "APPLICATIONS_FETCH_SUCCESS");
         });
       },
@@ -313,13 +313,13 @@ class QuestProgressManager extends tmp4 {
       },
       LOCAL_ACTIVITY_UPDATE() {
         return DispatcherDefault.wait(() => {
-          const items = [applyArgumentsResult(5502).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          const items = [applyArgumentsResult(5503).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
           closure_1_0.syncHeartbeats(items, "LOCAL_ACTIVITY_UPDATE");
         });
       },
       RPC_APP_DISCONNECTED() {
         return DispatcherDefault.wait(() => {
-          const items = [applyArgumentsResult(5502).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          const items = [applyArgumentsResult(5503).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
           closure_1_0.syncHeartbeats(items, "RPC_APP_DISCONNECTED");
         });
       },
@@ -354,20 +354,77 @@ class QuestProgressManager extends tmp4 {
     closure_129_0 = undefined;
     closure_129_1 = applyArgumentsResult;
     closure_129_0 = closure_3(async (arg0) => {
-      await closure_1_18(applicationId);
-      const items = [applyArgumentsResult(dependencyMap[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
-      closure_130_1.syncHeartbeats(items, "FRAME_LAUNCH", (config) => {
-        let hasItem = null != config;
-        if (hasItem) {
-          const features = config.config.features;
-          hasItem = features.includes(closure_1_0(closure_1_2[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+      if (c4 === 2) {
+        c4 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
         }
-        return !hasItem;
-      });
-      await "HermesInternal";
-      closure_1 = tmp2;
-      applicationId = applyArgumentsResult.applicationId;
-      return "PX_16";
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              dependencyMap = tmp5;
+              closure_1 = tmp2;
+              applicationId = undefined;
+              applicationId = applyArgumentsResult.applicationId;
+              c3 = 1;
+              c4 = 1;
+              return { value: "PX_16", done: null };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj1 = { value, done: true };
+              return obj1;
+            } else {
+              c3 = 2;
+              c4 = 1;
+              const obj2 = { value: handleEmbeddedActivityLaunchSuccess(applicationId), done: false };
+              return obj2;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            const items = [applyArgumentsResult(dependencyMap[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+            closure_130_1.syncHeartbeats(items, "FRAME_LAUNCH", (config) => {
+              let hasItem = null != config;
+              if (hasItem) {
+                const features = config.config.features;
+                hasItem = features.includes(closure_1_0(closure_1_2[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+              }
+              return !hasItem;
+            });
+            c4 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp17) {
+          c4 = tmp;
+          throw tmp17;
+        }
+      }
     });
     obj.FRAME_LAUNCH = function FRAME_LAUNCH(arg0) {
       const self = this;
@@ -406,7 +463,7 @@ class QuestProgressManager extends tmp4 {
           let hasItem = null != id;
           if (hasItem) {
             const features = id.config.features;
-            hasItem = features.includes(applyArgumentsResult(5495).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+            hasItem = features.includes(applyArgumentsResult(5496).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
           }
           tmp = hasItem;
         }

@@ -73,6 +73,7 @@ let closure_11 = async function _getSafetyHubData() {
                 expressive_modal_v2_enabled,
                 show_expressive_modal_subtitle_alt,
                 manual_review_fallback_enabled,
+                manual_review_decided_underage,
                 account_standing,
                 is_dsa_eligible,
                 username,
@@ -117,6 +118,7 @@ let closure_11 = async function _getSafetyHubData() {
                 expressiveModalV2Enabled: null,
                 showExpressiveModalSubtitleAlt: null,
                 manualReviewFallbackEnabled: null,
+                manualReviewDecidedUnderage: null,
               };
               if (appeal_eligibility == null) {
                 appeal_eligibility = [];
@@ -134,6 +136,10 @@ let closure_11 = async function _getSafetyHubData() {
                 manual_review_fallback_enabled = false;
               }
               obj.manualReviewFallbackEnabled = manual_review_fallback_enabled;
+              if (manual_review_decided_underage == null) {
+                manual_review_decided_underage = false;
+              }
+              obj.manualReviewDecidedUnderage = manual_review_decided_underage;
               closure_1_1(573).dispatch(obj);
             })
             .catch((error) => {
@@ -159,6 +165,7 @@ let closure_11 = async function _getSafetyHubData() {
               expressive_modal_v2_enabled,
               show_expressive_modal_subtitle_alt,
               manual_review_fallback_enabled,
+              manual_review_decided_underage,
               account_standing,
               is_dsa_eligible,
               username,
@@ -203,6 +210,7 @@ let closure_11 = async function _getSafetyHubData() {
               expressiveModalV2Enabled: null,
               showExpressiveModalSubtitleAlt: null,
               manualReviewFallbackEnabled: null,
+              manualReviewDecidedUnderage: null,
             };
             if (appeal_eligibility == null) {
               appeal_eligibility = [];
@@ -220,6 +228,10 @@ let closure_11 = async function _getSafetyHubData() {
               manual_review_fallback_enabled = false;
             }
             obj.manualReviewFallbackEnabled = manual_review_fallback_enabled;
+            if (manual_review_decided_underage == null) {
+              manual_review_decided_underage = false;
+            }
+            obj.manualReviewDecidedUnderage = manual_review_decided_underage;
             closure_1_1(573).dispatch(obj);
           });
         }
@@ -319,7 +331,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = classificationId(8483);
+                      obj3 = classificationId(8504);
                     }
                   }
                   let obj = {
@@ -382,7 +394,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                       items = [first];
                     }
                     found.flagged_content = items;
-                    obj3 = classificationId(8483);
+                    obj3 = classificationId(8504);
                   }
                 }
                 let obj = {
@@ -823,7 +835,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
     }
   })();
 };
-const SafetyHubConstants = fn(8484);
+const SafetyHubConstants = fn(8505);
 ({
   AGE_CHECK_POLL_INTERVAL_MS: metroRequire,
   AGE_CHECK_MAX_POLL_ATTEMPTS: closure_7,

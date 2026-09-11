@@ -1,6 +1,6 @@
 // discord_app/modules/auth/RedirectUnauthenticated.tsx
 import utils_PathUtils from "../../../discord_common/js/shared/utils/PathUtils.tsx";
-import _mod4437 from "../../../_runtime/metro/04437__.js";
+import _mod4439 from "../../../_runtime/metro/04439__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,7 +17,7 @@ export default function RedirectUnauthenticated() {
     to = utils_PathUtils.getLoginPath(tmp4, false);
     const tmp2Result = utils_PathUtils;
   }
-  return jsx(_mod4437.Redirect, { to });
+  return jsx(_mod4439.Redirect, { to });
 }
 export const getRedirectPath = function getRedirectPath() {
   if (CONFERENCE_MODE_ENABLED) {

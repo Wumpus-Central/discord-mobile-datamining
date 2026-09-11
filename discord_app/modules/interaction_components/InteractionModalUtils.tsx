@@ -2184,8 +2184,8 @@ let closure_19 = async function _submitModal(arg0) {
     }
   }
 };
-const DraftType = fn(4946).DraftType;
-const InteractionModalState = fn(14474).InteractionModalState;
+const DraftType = fn(4947).DraftType;
+const InteractionModalState = fn(14450).InteractionModalState;
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/InteractionModalUtils.tsx");

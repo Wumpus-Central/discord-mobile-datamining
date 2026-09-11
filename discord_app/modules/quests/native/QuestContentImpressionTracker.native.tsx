@@ -10,7 +10,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   const tmp3 = obj.useStateFromStores(items, () => state.getState()) === AppStates.ACTIVE;
   const ref = noop.useRef(null);
   const tmp5 = visibilityRef;
-  let obj1 = adContentIds2(11558);
+  let obj1 = adContentIds2(11580);
   const adContentImpressionTrackerProps = obj1.useAdContentImpressionTrackerProps(skipRemountKey);
   const adContentIds = adContentImpressionTrackerProps.adContentIds;
   obj = {};
@@ -20,9 +20,9 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   visibilityRef = obj.visibilityRef;
   let overrideVisibility = obj.overrideVisibility;
   const joined = adContentIds2.join("_");
-  let tmp6 = visibilityRef(8337)(tmp3);
+  let tmp6 = visibilityRef(8358)(tmp3);
   let items1 = [joined];
-  const tmp10 = _slicedToArray(adContentIds2(8943).useRecyclingState(false, items1), 2);
+  const tmp10 = _slicedToArray(adContentIds2(8964).useRecyclingState(false, items1), 2);
   dependencyMap = tmp11;
   let items2 = [adContentIds2, tmp10[1], visibilityRef];
   const effect = noop.useEffect(() => {
@@ -131,7 +131,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   if (overrideVisibility == null) {
     overrideVisibility = tmp10[0];
   }
-  obj = { visible: overrideVisibility, visibleChanged: overrideVisibility !== tmp5(8337)(overrideVisibility) };
+  obj = { visible: overrideVisibility, visibleChanged: overrideVisibility !== tmp5(8358)(overrideVisibility) };
   obj1 = {};
   const merged1 = Object.assign(skipRemountKey);
   const merged2 = Object.assign(obj);
@@ -148,15 +148,15 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   obj2.key = key;
   obj2.adContentIds = adContentIds;
   if (tmp17) {
-    obj2.adCreativeType = tmp(5501).AdCreativeType.QUEST;
+    obj2.adCreativeType = tmp(5502).AdCreativeType.QUEST;
     let tmp19 = obj2;
   } else {
     obj2.adCreativeType = skipRemountKey.adCreativeType;
     tmp19 = obj2;
   }
-  return createElement(adContentIds2(11559).QuestContentImpressionTracker, tmp19);
+  return createElement(adContentIds2(11581).QuestContentImpressionTracker, tmp19);
 }
-let closure_6 = fn(11268).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_6 = fn(11290).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const AppStates = fn(1074).AppStates;
 const createElement = fn(19).createElement;
 const jsx = fn(21).jsx;

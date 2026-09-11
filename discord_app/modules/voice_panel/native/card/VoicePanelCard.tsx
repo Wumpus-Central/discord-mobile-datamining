@@ -6,7 +6,7 @@ import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
 import StreamActionCreators from "../../../../actions/StreamActionCreators.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05037_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
@@ -943,7 +943,7 @@ function AnimatedWrapper(children) {
   return windowDimensions(cleanUp(id[52]).GestureDetector, obj5);
 }
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(12343);
+const VoicePanelConstants = fn(12366);
 ({
   VoicePanelCTACard: closure_9,
   VoicePanelModes: c10,
@@ -951,15 +951,15 @@ const VoicePanelConstants = fn(12343);
   SPEAKING_PHYSICS: closure_12,
   VoicePanelCardItemType: map1,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12341).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17181).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12346).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12364).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17170).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12369).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
-const ParticipantTypes = fn(4626).ParticipantTypes;
-let SCALE_PHYSICS = fn(12344).SCALE_PHYSICS;
+const ParticipantTypes = fn(4627).ParticipantTypes;
+let SCALE_PHYSICS = fn(12367).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-let closure_23 = ReanimatedRexport.createAnimatedComponent(fn(4601).Text);
+let closure_23 = ReanimatedRexport.createAnimatedComponent(fn(4602).Text);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
 let tmp4 = fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.XXLARGE];
 let __closure = {};
@@ -968,7 +968,7 @@ __closure.stiffness = 150;
 let closure_26 = { duration: 200 };
 let closure_27 = { duration: 0 };
 let c28 = 0.75;
-fn(4605);
+fn(4606);
 __closure = {
   positionWrapper: null,
   userRoundedCard: null,
@@ -1370,7 +1370,7 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
   return obj;
 }
 let obj2 = { position: "relative", borderRadius: nativeDefault.radii.round, overflow: "hidden" };
-layoutTransitionFunction.__closure = { withSpring: fn(5024).withSpring };
+layoutTransitionFunction.__closure = { withSpring: fn(5025).withSpring };
 layoutTransitionFunction.__workletHash = 4871152530917;
 layoutTransitionFunction.__initData = {
   code: "function layoutTransitionFunction_VoicePanelCardTsx13(values,physics,disableAnimation=false){const{withSpring}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,physics,!disableAnimation?'animate-always':'animate-never'),originY:withSpring(values.targetOriginY,physics,!disableAnimation?'animate-always':'animate-never'),width:withSpring(values.targetWidth,physics,!disableAnimation?'animate-always':'animate-never'),height:withSpring(values.targetHeight,physics,!disableAnimation?'animate-always':'animate-never')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}",
@@ -1399,7 +1399,7 @@ const __initData17 = {
 let closure_57 = {
   code: "function layoutTransition_VoicePanelCardTsx21(values,disableAnimation=false){const{layoutTransitionFunction,physics}=this.__closure;return layoutTransitionFunction(values,physics,disableAnimation);}",
 };
-let obj6 = { withSpring: fn(5024).withSpring };
+let obj6 = { withSpring: fn(5025).withSpring };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCard.tsx");
 

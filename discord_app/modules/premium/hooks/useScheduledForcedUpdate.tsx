@@ -1,5 +1,5 @@
 // discord_app/modules/premium/hooks/useScheduledForcedUpdate.tsx
-import areHookInputsEqual from "../../../../_runtime/07492_areHookInputsEqual.js";
+import areHookInputsEqual from "../../../../_runtime/07513_areHookInputsEqual.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

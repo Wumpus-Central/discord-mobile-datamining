@@ -1,8 +1,8 @@
 // discord_app/lib/guild/GuildSubscriptions.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import Constants from "../../Constants.tsx";
-import FavoritesUtils from "../../modules/favorites/FavoritesUtils.tsx";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
+import FavoritesUtils from "../../modules/favorites/FavoritesUtils.tsx";
 import GuildMemberSubscriptionsDefault from "GuildMemberSubscriptions.tsx";
 import GuildChannelSubscriptions from "GuildChannelSubscriptions.tsx";
 import GuildThreadSubscriptionsDefault from "GuildThreadSubscriptions.tsx";

@@ -160,7 +160,7 @@ obj.actions = {
     return obj.handleConnectionOpen(arg0, arg1);
   },
 };
-const isCacheEnabled = fn(7700);
+const isCacheEnabled = fn(7721);
 if (isCacheEnabled.isCacheEnabled()) {
   SelectedGuildStore.addChangeListener(
     _modDef12.throttle(() => {

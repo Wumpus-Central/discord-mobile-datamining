@@ -37,7 +37,7 @@ function FloatingSlot(arg0) {
   return jsx(ReanimatedRexportDefault.View, { style: null, children });
 }
 const View = fn(17).View;
-let closure_8 = fn(12032).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(12055).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = {
   BUTTON_SEND: "send-button",
@@ -45,7 +45,7 @@ const constants = {
   BUTTON_SEND_VOICE_MESSAGE: "voice-message-button",
   BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled",
 };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_11 = createStyles.createStyles((width, height) => {
   let obj = { button: null, buttonActive: null, iconActive: null };
   const size = { width, height };
@@ -121,11 +121,11 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
   let stateFromStores1;
   noop = undefined;
   canSendVoiceMessage = undefined;
-  let obj = channel(4306);
+  let obj = channel(4308);
   const token = obj.useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-  let obj1 = channel(4306);
+  let obj1 = channel(4308);
   const token1 = obj1.useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
-  let obj2 = channel(4306);
+  let obj2 = channel(4308);
   const token2 = obj2.useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   let obj3 = channel(504);
   let items = [AccessibilityStore];
@@ -180,7 +180,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
     obj.style = size;
     if (canSendVoiceMessage) {
       obj = { disabled: stateFromStores1, channelId: channel.id };
-      let tmp15Result = jsx(onSendMessage(12325), { disabled: stateFromStores1, channelId: channel.id });
+      let tmp15Result = jsx(onSendMessage(12348), { disabled: stateFromStores1, channelId: channel.id });
     } else {
       obj1 = {
         active: true,
@@ -193,12 +193,12 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
         disabled: null,
       };
       ({ button: obj11.style, buttonActive: obj11.activeStyle, iconActive: obj11.activeIconStyle } = tmp7);
-      obj1.IconComponent = tmp(4550).SendMessageIcon;
+      obj1.IconComponent = tmp(4551).SendMessageIcon;
       const intl = tmp(1114).intl;
       obj1.accessibilityLabel = intl.string(tmp(1114).t.TXNS7S);
       obj1.onPress = onSendMessage;
       obj1.disabled = !tmp12;
-      tmp15Result = jsx(onSendMessage(12309), {
+      tmp15Result = jsx(onSendMessage(12332), {
         active: true,
         style: null,
         activeStyle: null,
@@ -208,7 +208,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
         onPress: null,
         disabled: null,
       });
-      const tmp3Result = onSendMessage(12309);
+      const tmp3Result = onSendMessage(12332);
     }
     obj.children = tmp15Result;
     return <canSendVoiceMessage style={null}>{null}</canSendVoiceMessage>;
@@ -219,7 +219,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
       buttonHeight: token1,
       buttonMargin: token2,
       sendVoiceMessageEnabled: canSendVoiceMessage,
-      children: jsx(tmp(4315).TransitionGroup, {
+      children: jsx(tmp(4317).TransitionGroup, {
         items: memo,
         renderItem: renderChatInputSendButton,
         getItemKey: getChatInputSendButtonItemKey,
@@ -232,7 +232,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
         buttonMargin={token2}
         sendVoiceMessageEnabled={canSendVoiceMessage}
       >
-        {jsx(tmp(4315).TransitionGroup, {
+        {jsx(tmp(4317).TransitionGroup, {
           items: memo,
           renderItem: renderChatInputSendButton,
           getItemKey: getChatInputSendButtonItemKey,

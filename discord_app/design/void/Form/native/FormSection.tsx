@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const TitleStyleType = fn(1182).TitleStyleType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   titledSectionHeader: null,
   titledSectionNoBorder: null,

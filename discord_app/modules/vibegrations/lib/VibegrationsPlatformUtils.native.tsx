@@ -2,7 +2,7 @@
 import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
-const LocalNotificationTypes = fn(13792).LocalNotificationTypes;
+const LocalNotificationTypes = fn(13771).LocalNotificationTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPlatformUtils.native.tsx");
 

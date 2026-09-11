@@ -9,7 +9,7 @@ import actions_BillingActionCreatorsAll from "../../billing/actions/BillingActio
 import actions_BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import useCountdownDefault from "../../../hooks/useCountdown.tsx";
-import _modDef13578 from "../../../../_runtime/metro/13578__.js";
+import _modDef13555 from "../../../../_runtime/metro/13555__.js";
 import SubscriptionPlaceholderPattern from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
@@ -117,8 +117,8 @@ function GuildBoostSlot(guildBoostSlot) {
       const obj3 = { variant: "text-md/medium", color: "control-brand-foreground", children: null };
       const intl2 = guildBoostSlot(1114).intl;
       obj3.children = intl2.string(guildBoostSlot(1114).t.jqqLb6);
-      obj2.children = closure_11(guildBoostSlot(4601).Text, obj3);
-      tmp6Result = closure_11(guildBoostSlot(5173).PressableOpacity, obj2);
+      obj2.children = closure_11(guildBoostSlot(4602).Text, obj3);
+      tmp6Result = closure_11(guildBoostSlot(5174).PressableOpacity, obj2);
     }
     obj.action = tmp6Result;
     obj.isLast = tmp;
@@ -168,8 +168,8 @@ function UnusedGuildBoostSlots(unusedSlots) {
     const obj2 = { variant: "text-md/medium", color: "text-link", children: null };
     const intl2 = found(1114).intl;
     obj2.children = intl2.string(found(1114).t["7KyPor"]);
-    obj1.children = closure_11(found(4601).Text, obj2);
-    obj.action = closure_11(found(5173).PressableOpacity, obj1);
+    obj1.children = closure_11(found(4602).Text, obj2);
+    obj.action = closure_11(found(5174).PressableOpacity, obj1);
     obj.isLast = 0 === found.length;
     tmp4 = closure_11(GuildBoostSlotsInventoryRow, obj);
   }
@@ -211,7 +211,7 @@ function BoostedGuildInfo(guild) {
     };
     const items1 = [closure_1_11(Text_Text.Text, obj2)];
     const obj3 = { style: tmp.guildInfoRowBottom, children: null };
-    const obj4 = { source: _modDef13578, style: tmp.guildInfoRowIcon };
+    const obj4 = { source: _modDef13555, style: tmp.guildInfoRowIcon };
     const items2 = [closure_1_11(timestampProducer, obj4)];
     const obj5 = {
       style: tmp.guildInfoSubscriptionCount,
@@ -271,7 +271,7 @@ function BoostedGuild(arg0) {
     tmp11Result = closure_11(closure_5, obj3);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_11(guildBoostSlots(13583), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_11(guildBoostSlots(13560), { guild: stateFromStores, theme: stateFromStores1 });
   obj1.children = items3;
   const items4 = [
     closure_12(closure_5, obj1),
@@ -297,7 +297,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   inventory: { marginBottom: 32 },
   header: { marginHorizontal: 16, marginBottom: 16 },
@@ -376,7 +376,7 @@ export default function GuildBoostSlotsInventory() {
   const tmp = closure_14();
   const effect = noop.useEffect(() => {
     const subscriptions = actions_BillingActionCreatorsAll.fetchSubscriptions();
-    const guildBoostSlots = valueResult(4503).fetchGuildBoostSlots();
+    const guildBoostSlots = valueResult(4504).fetchGuildBoostSlots();
   }, []);
   let obj = initialize;
   const items = [SubscriptionStore];
@@ -419,7 +419,7 @@ export default function GuildBoostSlotsInventory() {
         const intl = tmp3(1114).intl;
         obj2.children = intl.string(tmp3(1114).t.gB9oQ7);
         const items3 = [
-          closure_11(tmp3(4601).Text, obj2),
+          closure_11(tmp3(4602).Text, obj2),
           found.map((guildId) =>
             closure_2_11(BoostedGuild, { guildId, guildBoostSlots: valueResult[guildId] }, guildId),
           ),

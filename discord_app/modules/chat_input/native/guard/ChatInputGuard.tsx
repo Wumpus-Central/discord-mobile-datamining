@@ -17,10 +17,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(9555).updateChatInputContainerHeight;
+let closure_6 = fn(9576).updateChatInputContainerHeight;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_9 = createStyles.createStyles((arg0) => {
   let obj = {
     container: null,
@@ -209,7 +209,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   const channelId = screenIndex.channelId;
   ({ onJumpToPresent, children } = screenIndex);
   const tmp3 = useIsUsingClientThemeDefault();
-  let obj = screenIndex(12331);
+  let obj = screenIndex(12354);
   const chatInputFloatingOverlayStyle = obj.useChatInputFloatingOverlayStyle();
   const tmp6 = closure_9(tmp3);
   const items = [screenIndex];
@@ -220,7 +220,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   const items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
   obj.style = items1;
   obj.onLayout = callback;
-  const items2 = [closure_7(screenIndex(12331).ChatInputScrimGradient, {})];
+  const items2 = [closure_7(screenIndex(12354).ChatInputScrimGradient, {})];
   obj = { style: tmp6.container, children: null };
   let tmp10Result = null;
   if (!tmp3) {

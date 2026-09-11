@@ -70,20 +70,20 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       tmp4 = null;
       tmp5 = null;
     }
-    if (themeType !== ThemeTypes.DARK) {
-      let isThemeLightResult = themeType === ThemeTypes.DARK;
+    if (themeType !== ThemeTypes.ASH) {
+      let isThemeLightResult = themeType === ThemeTypes.ASH;
       if (isThemeLightResult) {
         isThemeLightResult = shared.isThemeLight(tmp3);
       }
-      let DARKER = themeType;
+      let DARK = themeType;
       if (isThemeLightResult) {
-        DARKER = ThemeTypes.DARKER;
+        DARK = ThemeTypes.DARK;
       }
     } else {
       shared;
-      DARKER = tmp3;
+      DARK = tmp3;
     }
-    obj = { theme: DARKER, primaryColor: tmp5, secondaryColor: tmp4 };
+    obj = { theme: DARK, primaryColor: tmp5, secondaryColor: tmp4 };
     return obj;
   }
 };

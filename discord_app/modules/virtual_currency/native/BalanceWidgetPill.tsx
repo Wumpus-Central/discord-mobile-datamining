@@ -11,10 +11,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, orbsLottieContainer: null, balanceCounterContainer: null, balanceText: null };
 createStyles = {
-  minHeight: fn(5030).SMALL_BUTTON_HEIGHT,
+  minHeight: fn(5031).SMALL_BUTTON_HEIGHT,
   borderRadius: nativeDefault.radii.round,
   justifyContent: "center",
   alignItems: "center",

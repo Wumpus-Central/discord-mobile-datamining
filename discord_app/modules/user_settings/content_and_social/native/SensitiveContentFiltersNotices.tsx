@@ -7,7 +7,7 @@ import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySet
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SafetySettingsNoticeType = fn(8464).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(8485).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -15,24 +15,30 @@ let result = size.fileFinishedImporting(
 );
 
 export const SensitiveContentFiltersTeenNotice = function SensitiveContentFiltersTeenNotice() {
-  let obj = require("SensitiveMediaGoreRedactionSettingsUtils");
-  _require = obj.useSensitiveContentFilterHelpArticle();
-  obj = {
-    label: require("util").t.EUo0yj,
-    labelHook() {
-      const obj = LinkingDefault;
-      obj.openURL(HelpdeskUtilsDefault.getArticleURL(closure_0));
-    },
-    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
-  };
-  return jsx(SafetySettingsNoticeDefault, {
-    label: require("util").t.EUo0yj,
-    labelHook() {
-      const obj = LinkingDefault;
-      obj.openURL(HelpdeskUtilsDefault.getArticleURL(closure_0));
-    },
-    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
-  });
+  let obj = require("TinyBroncoSettingsNoticesLazy");
+  const isTinyBroncoSettingsNoticeEnabled = obj.useIsTinyBroncoSettingsNoticeEnabled();
+  _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
+  if (isTinyBroncoSettingsNoticeEnabled) {
+    let tmp4Result = jsx(tmp(14871).ContentFiltersTeenNotice, {});
+  } else {
+    obj = {
+      label: tmp(1114).t.EUo0yj,
+      labelHook() {
+        const obj = LinkingDefault;
+        obj.openURL(HelpdeskUtilsDefault.getArticleURL(closure_0));
+      },
+      noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
+    };
+    tmp4Result = jsx(SafetySettingsNoticeDefault, {
+      label: tmp(1114).t.EUo0yj,
+      labelHook() {
+        const obj = LinkingDefault;
+        obj.openURL(HelpdeskUtilsDefault.getArticleURL(closure_0));
+      },
+      noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
+    });
+  }
+  return tmp4Result;
 };
 export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveContentFiltersAgeVerificationNotice() {
   let obj = {

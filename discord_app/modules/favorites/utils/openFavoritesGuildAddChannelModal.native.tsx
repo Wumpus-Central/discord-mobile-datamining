@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/favorites/utils/openFavorites
 export default function openFavoritesGuildAddChannelModal(arg0) {
   ({ parentId, source } = arg0);
   showSearchableDestinationListModalDefault(
-    asyncRequireImpl(11050, dependencyMap.paths),
+    asyncRequireImpl(11071, dependencyMap.paths),
     { parentId, source },
     FavoritesGuildAddChannelModal,
   );

@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles({
   container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" },
   image: { height: 190, width: 220, resizeMode: "contain" },
@@ -39,7 +39,7 @@ export default function ConfirmEmailChangeStart() {
     obj = { oldEmail: stateFromStores.email };
     obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     obj1 = { style: tmp.container, children: null };
-    let obj2 = { style: tmp.image, source: navigation(6652) };
+    let obj2 = { style: tmp.image, source: navigation(6673) };
     const items1 = [closure_10(closure_7, obj2), , ,];
     const obj3 = {
       style: tmp.title,
@@ -50,7 +50,7 @@ export default function ConfirmEmailChangeStart() {
     };
     const intl2 = tmp2(1114).intl;
     obj3.children = intl2.string(tmp2(1114).t.dQ71Wa);
-    items1[1] = closure_10(tmp2(4601).Text, obj3);
+    items1[1] = closure_10(tmp2(4602).Text, obj3);
     items1[2] = intl
       .format(tmp2(1114).t.oMFSgi, obj)
       .map((children, index) =>
@@ -66,7 +66,7 @@ export default function ConfirmEmailChangeStart() {
     obj5.text = intl3.string(tmp2(1114).t.rXV81H);
     obj5.onPress = tmp7;
     obj5.loading = tmp6[0];
-    obj4.children = closure_10(tmp2(5025).Button, obj5);
+    obj4.children = closure_10(tmp2(5026).Button, obj5);
     items1[3] = closure_10(closure_6, obj4);
     obj1.children = items1;
     obj.children = closure_11(closure_6, obj1);

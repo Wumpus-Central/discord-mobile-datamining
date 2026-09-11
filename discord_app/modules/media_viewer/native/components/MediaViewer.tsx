@@ -19,15 +19,15 @@ function MediaViewer(arg0) {
   __initData = undefined;
   ({ onLongPress, originLayout, renderMedia, renderOverlay, swipeVelocityThreshold } = arg0);
   ({ useViewerProps, zoomed } = syncer);
-  value = [height(7234).MEDIA_VIEWER];
+  value = [height(7255).MEDIA_VIEWER];
   let tmp = height;
-  const tmp3 = height(7214);
+  const tmp3 = height(7235);
   [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
   const _require = tmp6;
   let obj = require("MediaViewerDimensionsContext");
   const mediaViewerDimensions = obj.useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(13056)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(13079)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj1 = require("ReanimatedRexport");
   sharedValue = obj1.useSharedValue(0);
@@ -236,9 +236,9 @@ function MediaViewer(arg0) {
   const obj15 = require("DeviceOrientation");
   obj5 = { barStyle: "light-content", hidden: !tmp5 };
   const items5 = [
-    translatePos(height(9551), obj5),
-    translatePos(height(4341).View, { style: animatedStyle }),
-    translatePos(height(4342), {
+    translatePos(height(9572), obj5),
+    translatePos(height(4343).View, { style: animatedStyle }),
+    translatePos(height(4344), {
       ref: animatedRef,
       style: animatedStyle2,
       children: translatePos(ref, {
@@ -287,11 +287,11 @@ function MediaViewer(arg0) {
   }
   obj6.pointerEvents = str;
   obj6.children = renderOverlay(dismiss, overlayEnabled);
-  items5[3] = translatePos(height(4342), obj6);
-  items5[4] = translatePos(tmp(9553), {});
+  items5[3] = translatePos(height(4344), obj6);
+  items5[4] = translatePos(tmp(9574), {});
   obj4.children = items5;
   const children = tmp28(tmp29, obj4);
-  return translatePos(tmp7(7214).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
+  return translatePos(tmp7(7235).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);

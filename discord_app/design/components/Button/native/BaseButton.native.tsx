@@ -11,12 +11,13 @@ require = fn;
 let closure_2 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
-const IOS_POINTER_STYLE = fn(5034).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5035).IOS_POINTER_STYLE;
+const ThemeTypes = fn(1074).ThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
-let closure_7 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
-let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let closure_9 = ReanimatedRexport.createAnimatedComponent(TouchableOpacity);
+const createStyles = fn(4606);
+let closure_8 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
+let closure_9 = ReanimatedRexport.createAnimatedComponent(Pressable);
+let closure_10 = ReanimatedRexport.createAnimatedComponent(TouchableOpacity);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
 
@@ -84,20 +85,17 @@ export const BaseButton = noop.forwardRef((disabled, ref) => {
     return obj;
   }, items);
   let tmp4Result = native;
-  let str = "light";
-  if ("primary-overlay" !== variant) {
-    let str3;
-    if ("secondary-overlay" === variant) {
-      if ("light" === tmp10) {
-        str3 = "dark";
-      }
+  if ("primary-overlay" === variant) {
+    let DARK = ThemeTypes.LIGHT;
+  } else if ("secondary-overlay" === variant) {
+    if (tmp10 === ThemeTypes.LIGHT) {
+      DARK = ThemeTypes.DARK;
     }
-    str = str3;
   }
-  let tmp11 = children;
-  if (null != str) {
-    const obj2 = { theme: str, children };
-    tmp11 = jsx(native.ThemeContextProvider, { theme: str, children });
+  let tmp12 = children;
+  if (null != DARK) {
+    const obj2 = { theme: DARK, children };
+    tmp12 = jsx(native.ThemeContextProvider, { theme: DARK, children });
   }
   const items1 = [disabled.style, , ,];
   if (flag) {
@@ -129,14 +127,14 @@ export const BaseButton = noop.forwardRef((disabled, ref) => {
     obj3.onLongPress = onLongPress;
     obj3.disabled = tmp2;
     obj3.hitSlop = hitSlop;
-    obj3.children = tmp11;
-    return <closure_8 />;
+    obj3.children = tmp12;
+    return <closure_9 />;
   } else {
-    let str5 = "";
+    let str3 = "";
     if (!accessibilityElementsHidden) {
       const items2 = [accessibilityLabel, accessibilityHint];
       const found = items2.filter(GlobalUtils.isNotNullish);
-      str5 = found.join(", ");
+      str3 = found.join(", ");
     }
     const obj4 = {};
     const merged1 = Object.assign(buttonAnimationProps);
@@ -148,7 +146,7 @@ export const BaseButton = noop.forwardRef((disabled, ref) => {
     }
     obj4.accessible = !isAndroidResult;
     obj4.accessibilityRole = "none";
-    obj4.accessibilityLabel = str5;
+    obj4.accessibilityLabel = str3;
     obj4.accessibilityElementsHidden = accessibilityElementsHidden;
     obj4.activeOpacity = 1;
     obj4.importantForAccessibility = importantForAccessibility;
@@ -167,8 +165,8 @@ export const BaseButton = noop.forwardRef((disabled, ref) => {
       }
     };
     obj4.hitSlop = hitSlop;
-    obj4.children = tmp11;
-    return <closure_9 />;
+    obj4.children = tmp12;
+    return <closure_10 />;
   }
-  tmp = closure_7();
+  tmp = closure_8();
 });

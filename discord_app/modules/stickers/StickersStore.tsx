@@ -61,7 +61,7 @@ let closure_11 = async function _loadSavedGuildStickers() {
               obj1 = {
                 value: obj2.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () =>
                   closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () =>
-                    closure_2_1(5555).getAsync(closure_1_0),
+                    closure_2_1(5556).getAsync(closure_1_0),
                   ),
                 ),
                 done: false,

@@ -91,7 +91,7 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj);
                   }
           };
-          lastAssetIndex(10715)(obj);
+          lastAssetIndex(10734)(obj);
         }
       }
     }

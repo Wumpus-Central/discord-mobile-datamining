@@ -17,7 +17,7 @@ export const useTypeConsolidationEyebrow = function useTypeConsolidationEyebrow(
   if (obj.useManaTypeConsolidationExperiment(BountiesScrollRecapFooter)) {
     obj = { variant: "experimental/body-sm/medium", style };
   } else {
-    obj = { variant, style: "Array" };
+    obj = { variant, style: "a" };
   }
   return obj;
 };

@@ -7,12 +7,12 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HubProgressBarConstants = fn(9901);
+const HubProgressBarConstants = fn(9922);
 ({ HUB_PROGRESS_ACTION_SHEET_ID: closure_4, HUB_PROGRESS_NUM_TOTAL_STEPS: hasOwnProperty } = HubProgressBarConstants);
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = {
-  container: { overflow: "hidden", height: fn(12380).GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 },
+  container: { overflow: "hidden", height: fn(12403).GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 },
   icon: { width: 48, height: 48 },
   innerContainer: null,
 };
@@ -76,7 +76,7 @@ export default function HubProgressHeader(guild) {
       }
       if (!tmp) {
         const obj = { guild, analyticsSource: "Directory Channel Header" };
-        obj.openLazy(asyncRequireImpl(12743, dependencyMap.paths), React4, obj);
+        obj.openLazy(asyncRequireImpl(12766, dependencyMap.paths), React4, obj);
       }
     };
     obj1.iconSource = flag(tmp3[14]);

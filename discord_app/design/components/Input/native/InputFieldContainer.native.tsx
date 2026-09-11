@@ -59,7 +59,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const RING_SPRING_CONFIG = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(4605);
+let createStyles = fn(4606);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -189,7 +189,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj6.splitBorder = obj12;
   return obj6;
 });
-fn(4605);
+fn(4606);
 createStyles = {
   error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT,
   default: "transparent",

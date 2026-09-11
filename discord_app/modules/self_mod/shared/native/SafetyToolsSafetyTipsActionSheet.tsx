@@ -8,9 +8,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(11435).getInappropriateConversationsSafetyTips;
+let closure_4 = fn(11457).getInappropriateConversationsSafetyTips;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { safetyTipsContainer: null };
 createStyles = { marginHorizontal: nativeDefault.space.PX_16 };
 createStyles.safetyTipsContainer = createStyles;

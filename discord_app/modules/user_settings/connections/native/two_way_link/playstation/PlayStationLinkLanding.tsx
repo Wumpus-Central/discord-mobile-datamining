@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef9326 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
+import _modDef9347 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(9324).PlayStationLinkModalScenes;
+let closure_4 = fn(9345).PlayStationLinkModalScenes;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ image: { width: 230, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -28,19 +28,19 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
     obj.label = intl.string(navigation(1114).t["+eJP7o"]);
     const intl2 = navigation(1114).intl;
     obj.subLabel = intl2.string(navigation(1114).t["+0VIUh"]);
-    obj.icon = navigation(5151).VoiceNormalIcon;
+    obj.icon = navigation(5152).VoiceNormalIcon;
     const items = [obj];
     obj = { label: null, icon: null };
     const intl3 = navigation(1114).intl;
     obj.label = intl3.string(navigation(1114).t.ZH4QFa);
-    obj.icon = navigation(9292).GameControllerIcon;
+    obj.icon = navigation(9313).GameControllerIcon;
     items[1] = obj;
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef9326 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef9347 }), []);
   obj = {
     platformType: platformType.platformType,
     img: memo1,
@@ -58,7 +58,7 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
   obj.body = intl.format(navigation(1114).t.kqZQNe, { helpdeskArticleUrl: articleURL });
   obj.onNext = callback;
   obj.valueProps = memo;
-  return jsx(navigation(9294).TwoWayLinkLanding, {
+  return jsx(navigation(9315).TwoWayLinkLanding, {
     platformType: platformType.platformType,
     img: memo1,
     imgStyle: tmp.image,

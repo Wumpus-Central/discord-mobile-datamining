@@ -11,7 +11,7 @@ import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx"
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11540);
+fn(11562);
 let SettingBuilders = {
   useTitle: function getPremiumSettingTitle() {
     const mobileNitroManageSubscriptionsSettingsExperiment =
@@ -38,7 +38,7 @@ let SettingBuilders = {
     }
   },
   parent: null,
-  IconComponent: fn(8732).NitroWheelIcon,
+  IconComponent: fn(8753).NitroWheelIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();

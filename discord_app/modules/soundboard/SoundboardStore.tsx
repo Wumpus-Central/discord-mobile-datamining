@@ -4,7 +4,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
-import _modDef4196 from "../../../_runtime/metro/04196__.js";
+import _modDef4198 from "../../../_runtime/metro/04198__.js";
 import FrecencyDefault from "../../lib/Frecency.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -70,7 +70,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const SoundboardConstants = fn(5064);
+const SoundboardConstants = fn(5065);
 ({ DEFAULT_SOUND_GUILD_ID: closure_7, EMPTY_SOUND_ID_LIST: closure_8 } = SoundboardConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
@@ -110,7 +110,7 @@ FetchState = {
       }
       return num2;
     }
-    obj = _modDef4196();
+    obj = _modDef4198();
   },
   lookupKey(arg0) {
     return arg0;
@@ -448,8 +448,8 @@ FetchState = {
   TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS: function handleTopSoundboardSoundsLoaded(topSoundsMetadata) {
     topSoundsMetadata = topSoundsMetadata.topSoundsMetadata;
     const obj = { soundIds: topSoundsMetadata.map((soundId) => soundId.soundId), topSoundsTTL: null };
-    const obj2 = _modDef4196();
-    obj.topSoundsTTL = _modDef4196().add(1, "days").valueOf();
+    const obj2 = _modDef4198();
+    obj.topSoundsTTL = _modDef4198().add(1, "days").valueOf();
     const result = map1.set(topSoundsMetadata.guildId, obj);
   },
 };

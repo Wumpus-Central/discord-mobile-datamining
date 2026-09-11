@@ -10,7 +10,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
 require = fn;
-const SecureFramesConstants = fn(9221);
+const SecureFramesConstants = fn(9242);
 ({
   SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: hasOwnProperty,
   SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: metroRequire,
@@ -24,12 +24,12 @@ const result = size.fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils
 export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
     const obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl(9235, dependencyMap.paths), timestampProducer, obj);
+    obj.openLazy(asyncRequireImpl(9256, dependencyMap.paths), timestampProducer, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, fn) {
     if (fn()) {
       const obj = { userId: id, channelId: id2 };
-      obj.pushLazy(asyncRequireImpl(9224, dependencyMap.paths), obj, React5);
+      obj.pushLazy(asyncRequireImpl(9245, dependencyMap.paths), obj, React5);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -66,7 +66,7 @@ export default {
       if (null != channel) {
         safeTransitionToDefault(React7.CHANNEL(guildId, channelId));
         let obj = { userId, channelId, guildId, fingerprint };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9238, dependencyMap.paths), hasOwnProperty, obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9259, dependencyMap.paths), hasOwnProperty, obj);
       }
     }
     obj = { title: null, body: null };

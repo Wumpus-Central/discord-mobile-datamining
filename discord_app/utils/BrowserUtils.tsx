@@ -1,14 +1,14 @@
 // discord_app/utils/BrowserUtils.tsx
-import _modDef4928 from "../../_runtime/metro/04928__.js";
+import _modDef4929 from "../../_runtime/metro/04929__.js";
 
-let str = _modDef4928.name;
+let str = _modDef4929.name;
 if (str == null) {
   str = "unknown";
 }
 const str2 = str.toLowerCase();
 let num = -1;
 if ("chrome" === str2.toLowerCase()) {
-  let str3 = _modDef4928.version;
+  let str3 = _modDef4929.version;
   if (str3 == null) {
     str3 = "";
   }
@@ -16,7 +16,7 @@ if ("chrome" === str2.toLowerCase()) {
 }
 let parsed = num;
 if ("electron" === str2.toLowerCase()) {
-  let str4 = _modDef4928.version;
+  let str4 = _modDef4929.version;
   if (str4 == null) {
     str4 = "";
   }
@@ -24,7 +24,7 @@ if ("electron" === str2.toLowerCase()) {
 }
 let parsed1 = num;
 if ("firefox" === str2.toLowerCase()) {
-  let str5 = _modDef4928.version;
+  let str5 = _modDef4929.version;
   if (str5 == null) {
     str5 = "";
   }
@@ -32,14 +32,14 @@ if ("firefox" === str2.toLowerCase()) {
 }
 let parsed2 = num;
 if ("edge" === str2.toLowerCase()) {
-  let str6 = _modDef4928.version;
+  let str6 = _modDef4929.version;
   if (str6 == null) {
     str6 = "";
   }
   parsed2 = parseInt(str6, 10);
 }
 if ("safari" === str2.toLowerCase()) {
-  let str7 = _modDef4928.version;
+  let str7 = _modDef4929.version;
   if (str7 == null) {
     str7 = "";
   }

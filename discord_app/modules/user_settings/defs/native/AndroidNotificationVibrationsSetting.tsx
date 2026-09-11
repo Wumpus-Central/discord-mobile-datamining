@@ -2,19 +2,20 @@
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import notifications_NotificationSettingsUtils from "../../../notifications/NotificationSettingsUtils.tsx";
 import SettingsNotificationUtils from "../../notifications/native/SettingsNotificationUtils.tsx";
+import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifSettings.tsx";
 import AndroidNotificationSettingsStore from "../../notifications/native/stores/AndroidNotificationSettingsStore.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 ({ useAndroidNotificationVibrationsEnabled: c2, setAndroidNotificationVibrationsEnabled } =
   AndroidNotificationSettingsStore);
-const toggle = SettingBuilders.createToggle({
+let obj = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["lFg/O1"]);
   },
-  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: function useAndroidNotificationVibrationsSettingValue() {
     let flag = React2();
     if (flag == null) {
@@ -23,20 +24,52 @@ const toggle = SettingBuilders.createToggle({
     return flag;
   },
   onValueChange: setAndroidNotificationVibrationsEnabled,
-  usePredicate: function useHasAndroidNotificationVibrationsSetting() {
-    const tmp = React2();
-    const isIOSResult = PlatformUtils.isIOS();
-    let tmp5 = !isIOSResult;
-    if (!isIOSResult) {
-      tmp5 = !SettingsNotificationUtils.hasAndroidNotificationChannels();
-      const tmp2Result = SettingsNotificationUtils;
-    }
-    if (tmp5) {
-      tmp5 = null != tmp;
-    }
-    return tmp5;
-  },
-});
+};
+obj = {};
+const merged = Object.assign(obj);
+obj.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
+obj.usePredicate = function usePredicate() {
+  const tmp = React2();
+  const isIOSResult = PlatformUtils.isIOS();
+  let tmp5 = !isIOSResult;
+  if (!isIOSResult) {
+    let tmp2Result = SettingsNotificationUtils;
+    tmp5 = !tmp2Result.hasAndroidNotificationChannels();
+  }
+  if (tmp5) {
+    tmp5 = null != tmp;
+  }
+  tmp2Result = notifications_NotificationSettingsUtils;
+  if (tmp5) {
+    tmp5 = !tmp2Result.useIsDeclarativeSettingsUIAvailable("AndroidNotificationVibrationsSetting");
+  }
+  return tmp5;
+};
+const toggle = SettingBuilders.createToggle(obj);
+obj = {};
+const merged1 = Object.assign(obj);
+obj.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
+obj.usePredicate = function usePredicate() {
+  const tmp = React2();
+  const isIOSResult = PlatformUtils.isIOS();
+  let isDeclarativeSettingsUIAvailable = !isIOSResult;
+  if (!isIOSResult) {
+    let tmp2Result = SettingsNotificationUtils;
+    isDeclarativeSettingsUIAvailable = !tmp2Result.hasAndroidNotificationChannels();
+  }
+  if (isDeclarativeSettingsUIAvailable) {
+    isDeclarativeSettingsUIAvailable = null != tmp;
+  }
+  tmp2Result = notifications_NotificationSettingsUtils;
+  if (isDeclarativeSettingsUIAvailable) {
+    isDeclarativeSettingsUIAvailable = tmp2Result.useIsDeclarativeSettingsUIAvailable(
+      "RedesignAndroidNotificationVibrationsSetting",
+    );
+  }
+  return isDeclarativeSettingsUIAvailable;
+};
+const toggle1 = SettingBuilders.createToggle(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidNotificationVibrationsSetting.tsx");
 
 export default toggle;
+export const RedesignAndroidNotificationVibrationsSetting = toggle1;

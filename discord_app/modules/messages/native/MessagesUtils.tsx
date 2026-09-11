@@ -30,7 +30,7 @@ import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
 import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import tracking_Tracking from "../../forums/tracking/Tracking.tsx";
-import _modDef11325 from "../../../../_runtime/metro/11325__.js";
+import _modDef11347 from "../../../../_runtime/metro/11347__.js";
 import reactions_ReactionUtils from "../../reactions/native/ReactionUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
@@ -211,8 +211,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9555).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(7985);
+let closure_5 = fn(9576).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8007);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1074);
 ({
@@ -433,7 +433,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       stringResult = string(t.X2L3Oa);
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = _modDef11325;
+    tmp36Result = _modDef11347;
     obj.icon = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();

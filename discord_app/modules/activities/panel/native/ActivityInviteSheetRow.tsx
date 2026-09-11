@@ -7,9 +7,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7787).InviteSendStates;
+const InviteSendStates = fn(7808).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { acronym: null };
 let size = {
   width: 32,

@@ -4,7 +4,7 @@ import _modDef672 from "../../../../../_runtime/metro/00672__.js";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05037_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles((arg0, arg1, arg2) => {
   let PX_24 = arg0;
   let obj = { wrap: null, container: null, buttonsContainer: null, button: null, gradient: null };
@@ -88,26 +88,26 @@ export default noop.memo(function MediaKeyboardBottomSheetActions(onHeightChange
   dependencyMap = undefined;
   noop = undefined;
   let variant;
-  let obj = onHeightChange(4423);
-  const gradientValue = obj.useGradientValue(onHeightChange(4423).GradientPercentage.END);
+  let obj = onHeightChange(4425);
+  const gradientValue = obj.useGradientValue(onHeightChange(4425).GradientPercentage.END);
   let hexResult = null;
   if (null != gradientValue) {
     let obj1 = _modDef672(gradientValue);
     hexResult = obj1.alpha(0.95).hex();
     let alphaResult = obj1.alpha(0.95);
   }
-  let tmpResult = tmp(4306);
+  let tmpResult = tmp(4308);
   const tmp6 = closure_8(
     useSafeAreaInsetsDefault().bottom,
     tmpResult.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER),
     hexResult,
   );
   importDefault = tmp6;
-  tmpResult = tmp(4306);
+  tmpResult = tmp(4308);
   dependencyMap = tmpResult.useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE);
-  noop = onHeightChange(4306).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
-  const tmpResult1 = onHeightChange(4306);
-  variant = onHeightChange(4306).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
+  noop = onHeightChange(4308).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
+  const tmpResult1 = onHeightChange(4308);
+  variant = onHeightChange(4308).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
   let items = [tmp6.gradient.color];
   const memo = noop.useMemo(() => {
     const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
@@ -129,7 +129,7 @@ export default noop.memo(function MediaKeyboardBottomSheetActions(onHeightChange
     children: null,
   };
   obj = { style: tmp6.gradient };
-  const tmpResult2 = onHeightChange(4306);
+  const tmpResult2 = onHeightChange(4308);
   const merged = Object.assign(memo);
   obj.pointerEvents = "none";
   const items2 = [closure_6(LinearGradientDefault, obj)];

@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
 import AppLauncherFlashList from "AppLauncherFlashList.tsx";
-import _modDef12238 from "../../../../../_runtime/metro/12238__.js";
+import _modDef12261 from "../../../../../_runtime/metro/12261__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const AppLauncherFlashListDefault = AppLauncherFlashList;
@@ -12,7 +12,7 @@ const AppLauncherFlashListDefault = AppLauncherFlashList;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_5 = createStyles.createStyles({
   searchBarContainer: { marginBottom: 16 },
   emptyState: { backgroundColor: "transparent", justifyContent: "flex-start" },
@@ -50,8 +50,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   const obj = {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef12238,
-    darkSource: _modDef12238,
+    lightSource: _modDef12261,
+    darkSource: _modDef12261,
     title: null,
     body: null,
   };
@@ -62,8 +62,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   return jsx(native.EmptyState, {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef12238,
-    darkSource: _modDef12238,
+    lightSource: _modDef12261,
+    darkSource: _modDef12261,
     title: null,
     body: null,
   });

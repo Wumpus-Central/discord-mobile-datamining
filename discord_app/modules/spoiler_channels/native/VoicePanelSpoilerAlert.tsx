@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/spoiler_channels/native/Voice
 
 export default function VoicePanelSpoilerAlert(channelId) {
   channelId = channelId.channelId;
-  let obj = channelId(4955);
+  let obj = channelId(4956);
   closure_1 = obj.useDismissModalCallback();
   obj = { title: null, content: null, actions: null };
   const intl = channelId(1114).intl;
@@ -30,7 +30,7 @@ export default function VoicePanelSpoilerAlert(channelId) {
   };
   const intl3 = channelId(1114).intl;
   obj1.text = intl3.string(channelId(1114).t.p89ACt);
-  const items = [closure_3(channelId(4955).AlertActionButton, obj1, "confirm")];
+  const items = [closure_3(channelId(4956).AlertActionButton, obj1, "confirm")];
   const obj2 = {
     variant: "secondary",
     onPress() {
@@ -40,9 +40,9 @@ export default function VoicePanelSpoilerAlert(channelId) {
   };
   const intl4 = channelId(1114).intl;
   obj2.text = intl4.string(channelId(1114).t["/g10LC"]);
-  items[1] = closure_3(channelId(4955).AlertActionButton, obj2, "cancel");
+  items[1] = closure_3(channelId(4956).AlertActionButton, obj2, "cancel");
   obj.children = items;
-  obj.actions = closure_4(channelId(4955).AlertActions, obj);
-  return closure_3(channelId(4955).AlertModal, obj);
+  obj.actions = closure_4(channelId(4956).AlertActions, obj);
+  return closure_3(channelId(4956).AlertModal, obj);
 }
 export const VOICE_PANEL_SPOILER_KEY = "voice-panel-spoiler";

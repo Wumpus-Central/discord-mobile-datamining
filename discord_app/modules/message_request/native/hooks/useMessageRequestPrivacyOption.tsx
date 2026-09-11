@@ -37,7 +37,7 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj.value = tmp5;
   obj.onValueChange = callback;
   obj.disabled = hasItem1;
-  return jsx(id(7251).ActionSheetSwitchRow, {
+  return jsx(id(7272).ActionSheetSwitchRow, {
     label: null,
     subLabel: null,
     value: null,

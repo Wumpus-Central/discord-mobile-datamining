@@ -31,7 +31,7 @@ class Coachmark {
       renderImgComponent,
     } = global);
     ({ buttonShiny, enterExitAnimatedStyles } = global);
-    tmp = closure_14();
+    tmp = closure_15();
     closure_3 = tmp;
     ref = closure_6.useRef(null);
     closure_4 = ref;
@@ -39,11 +39,11 @@ class Coachmark {
     [tmp4, closure_5] = tmp3;
     tmp5 = imgSource;
     tmp6 = renderImgComponent;
-    tmp7 = imgSource(renderImgComponent[8])(tmp4, surfaceMeasurements, targetMeasurements, position, -8 + num);
+    tmp7 = imgSource(renderImgComponent[9])(tmp4, surfaceMeasurements, targetMeasurements, position, -8 + num);
     adjustmentX = tmp7.adjustmentX;
     tmp8 = graphic;
     ({ tooltipX, tooltipY } = tmp7);
-    obj = graphic(renderImgComponent[5]);
+    obj = graphic(renderImgComponent[6]);
     sharedValue = obj.useSharedValue(0);
     closure_6 = sharedValue;
     items = [];
@@ -56,7 +56,7 @@ class Coachmark {
     callback1 = closure_6.useCallback(() => {
       const result = sharedValue.set(0);
     }, items1);
-    obj2 = graphic(renderImgComponent[9]);
+    obj2 = graphic(renderImgComponent[10]);
     buttonPressAnimationProps = obj2.useButtonPressAnimationProps(sharedValue);
     tmp13 = closure_4(buttonPressAnimationProps, closure_3);
     items2 = [, , ,];
@@ -90,10 +90,10 @@ class Coachmark {
         if (str == null) {
           str = "1/1";
         }
-        const size = { height: closure_15[str], width: "auto" };
+        const size = { height: closure_16[str], width: "auto" };
         obj.style = size;
-        obj.children = closure_2_10(Graphic.Graphic, obj);
-        return closure_2_10(React5, obj);
+        obj.children = closure_2_11(Graphic.Graphic, obj);
+        return closure_2_11(React5, obj);
       } else {
         let tmp2 = null;
         if (null != renderImgComponent) {
@@ -101,12 +101,12 @@ class Coachmark {
         }
         if (null != imgSource) {
           obj = { source: tmp3, style: closure_3.image };
-          tmp2 = closure_2_10(Image, obj);
+          tmp2 = closure_2_11(Image, obj);
         }
         let tmp7 = null;
         if (null != tmp2) {
           const obj1 = { style: closure_3.bottomMargin, children: tmp2 };
-          tmp7 = closure_2_10(React5, obj1);
+          tmp7 = closure_2_11(React5, obj1);
         }
         return tmp7;
       }
@@ -121,14 +121,14 @@ class Coachmark {
     }
     items4[1] = textOnlyPadding;
     items5 = [,];
-    items5[0] = tmp17(graphic(renderImgComponent[12]).Text, {
+    items5[0] = tmp17(graphic(renderImgComponent[13]).Text, {
       style: items4,
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       children: title,
     });
     obj2 = { style: tmp.text, variant: "text-sm/medium", color: "text-subtle", children: description };
-    items5[1] = tmp17(tmp8(tmp6[12]).Text, obj2);
+    items5[1] = tmp17(tmp8(tmp6[13]).Text, obj2);
     obj1.children = items5;
     items3[1] = tmp14(tmp16, obj1);
     obj.children = items3;
@@ -160,7 +160,7 @@ class Coachmark {
           obj5.shiny = buttonShiny;
         }
         obj6 = { children: null };
-        items7[1] = tmp17(tmp8(tmp6[13]).Button, obj5);
+        items7[1] = tmp17(tmp8(tmp6[14]).Button, obj5);
         obj6.children = items7;
         tmp14Result = tmp14(tmp15, obj6);
       }
@@ -176,14 +176,14 @@ class Coachmark {
       onPressOut: null,
       children: null,
     };
-    intl = tmp8(tmp6[14]).intl;
-    obj8.accessibilityLabel = intl.string(tmp8(tmp6[14]).t.cpT0Cq);
+    intl = tmp8(tmp6[15]).intl;
+    obj8.accessibilityLabel = intl.string(tmp8(tmp6[15]).t.cpT0Cq);
     obj8.style = tmp.closeButton;
     obj8.onPress = onDismiss;
     obj8.onPressIn = callback;
     obj8.onPressOut = callback1;
-    obj9 = { size: "xs", color: tmp5(tmp6[7]).colors.ICON_STRONG };
-    obj8.children = tmp17(tmp8(tmp6[15]).XSmallIcon, obj9);
+    obj9 = { size: "xs", color: tmp5(tmp6[8]).colors.ICON_STRONG };
+    obj8.children = tmp17(tmp8(tmp6[16]).XSmallIcon, obj9);
     items6[2] = tmp17(Pressable, obj8);
     obj7.children = items6;
     tmp14Result1 = tmp14(tmp15, obj7);
@@ -192,7 +192,7 @@ class Coachmark {
       obj10.style = tmp.bodyContainer;
       obj10.pressed = sharedValue;
       obj10.children = tmp14Result1;
-      tmp17Result = tmp17(tmp8(tmp6[16]).BackgroundBlurView, obj10);
+      tmp17Result = tmp17(tmp8(tmp6[17]).BackgroundBlurView, obj10);
     } else {
       obj11 = { style: null, children: null };
       items8 = [,];
@@ -203,8 +203,8 @@ class Coachmark {
         obj12 = { style: null, color: null, backgroundColor: null };
         obj12.style = tmp.gradient;
         obj12.color = gradientColor;
-        obj12.backgroundColor = tmp5(tmp6[7]).colors.MOBILE_COACHMARK_BACKGROUND_DEFAULT;
-        tmp17Result1 = tmp17(tmp8(tmp6[17]).ExpressiveGradient, obj12);
+        obj12.backgroundColor = tmp5(tmp6[8]).colors.MOBILE_COACHMARK_BACKGROUND_DEFAULT;
+        tmp17Result1 = tmp17(tmp8(tmp6[18]).ExpressiveGradient, obj12);
       }
       items9 = [,];
       items9[0] = tmp17Result1;
@@ -223,7 +223,7 @@ class Coachmark {
     };
     items10 = [, ,];
     items10[0] = tmp.container;
-    tmp8Result = tmp8(tmp6[18]);
+    tmp8Result = tmp8(tmp6[19]);
     shadow = undefined;
     if (tmp8Result.isIOS()) {
       shadow = tmp.shadow;
@@ -245,14 +245,14 @@ class Coachmark {
     items11 = [, ,];
     items11[0] = tmp17Result2;
     obj15 = {};
-    tmp27 = closure_13;
+    tmp27 = closure_14;
     merged = Object.assign(tmp13);
     obj15.onAccessibilityEscape = onDismiss;
     obj15.accessible = false;
     obj15.onPress = onDismiss;
     items12 = [,];
     items12[0] = tmp.body;
-    tmp8Result1 = tmp8(tmp6[18]);
+    tmp8Result1 = tmp8(tmp6[19]);
     if (tmp8Result1.isAndroid()) {
       items13 = [,];
       items13[0] = tmp.shadow;
@@ -279,7 +279,7 @@ class Coachmark {
 }
 function Cursor(arg0) {
   ({ position, adjustmentX } = arg0);
-  const tmp = closure_14();
+  const tmp = closure_15();
   let str = "column";
   if ("top" === position) {
     str = "column-reverse";
@@ -292,20 +292,21 @@ function Cursor(arg0) {
   ];
   obj.style = items;
   obj = { style: tmp.cursorHead };
-  const items1 = [closure_1_10(React5, obj)];
+  const items1 = [closure_1_11(React5, obj)];
   obj = { style: tmp.cursorSpine };
-  items1[1] = closure_1_10(React5, obj);
+  items1[1] = closure_1_11(React5, obj);
   obj.children = items1;
-  return closure_1_11(React5, obj);
+  return closure_1_12(React5, obj);
 }
 let closure_3 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, Pressable } = get_ActivityIndicator);
 const Image = get_ActivityIndicator.Image;
+const ThemeTypes = fn(1074).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-let closure_13 = ReanimatedRexport.createAnimatedComponent(Pressable);
-fn(4605);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+let closure_14 = ReanimatedRexport.createAnimatedComponent(Pressable);
+fn(4606);
 let obj = {
   container: { position: "absolute", alignItems: "center" },
   shadow: null,
@@ -378,21 +379,21 @@ const rect = {
   right: nativeDefault.modules.mobile.COACHMARK_BUTTON_SPACING,
 };
 obj.closeButton = rect;
-const value = createStyles.createStyles(obj);
-let closure_15 = { "21/9": 90, "16/9": 90, "6/4": 60, "2/1": 40, "1/1": 40 };
+const __initData = createStyles.createStyles(obj);
+let closure_16 = { "21/9": 90, "16/9": 90, "6/4": 60, "2/1": 40, "1/1": 40 };
 size = fn(2);
 let result = size.fileFinishedImporting("design/components/Coachmark/native/Coachmark.native.tsx");
 
 export { Coachmark };
 export const CoachmarkContainer = function CoachmarkContainer(experimental_withBlurBackground) {
   let obj = native;
-  let str = "dark";
-  if (!experimental_withBlurBackground.experimental_withBlurBackground) {
-    str = obj.useThemeContext().theme;
+  let DARK = obj.useThemeContext().theme;
+  if (experimental_withBlurBackground.experimental_withBlurBackground) {
+    DARK = ThemeTypes.DARK;
   }
-  obj = { theme: str, children: null };
+  obj = { theme: DARK, children: null };
   obj = {};
   const merged = Object.assign(experimental_withBlurBackground);
-  obj.children = closure_1_10(Coachmark, obj);
-  return closure_1_10(native.ThemeContextProvider, obj);
+  obj.children = closure_1_11(Coachmark, obj);
+  return closure_1_11(native.ThemeContextProvider, obj);
 };

@@ -81,11 +81,11 @@ function ChatInputNotificationNudgeImpl(children) {
 const noop = fn(19);
 ({ useCallback: closure_4, useEffect: hasOwnProperty } = noop);
 const View = fn(17).View;
-const PermissionPromptType = fn(12479).PermissionPromptType;
+const PermissionPromptType = fn(12502).PermissionPromptType;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, NOOP: closure_11 } = Constants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12480);
+const NotificationPermissionConstants = fn(12503);
 ({
   EventActionLocation: map1,
   EventActionType: closure_14,
@@ -94,7 +94,7 @@ const NotificationPermissionConstants = fn(12480);
 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_19 = createStyles.createStyles(() => {
   let obj = {
     container: null,
@@ -148,11 +148,11 @@ export default function ChatInputNotificationNudge(channel) {
   if (!stateFromStores) {
     tmp5 = !useIsAppDMDefault(channel);
   }
-  let tmpResult = tmp(12481);
+  let tmpResult = tmp(12504);
   const shouldShowPushNotificationNudgeByPromptType = tmpResult.useShouldShowPushNotificationNudgeByPromptType(
     PermissionPromptType.CHANNEL_BANNER,
   );
-  tmpResult = tmp(12481);
+  tmpResult = tmp(12504);
   const shouldShowPushNotificationNudgeByPromptType1 = tmpResult.useShouldShowPushNotificationNudgeByPromptType(
     PermissionPromptType.POST_REACTION_BANNER,
   );
@@ -165,13 +165,13 @@ export default function ChatInputNotificationNudge(channel) {
     }
   }
   obj = { cooldownDurationMs };
-  const tmpResult1 = channel(7440);
+  const tmpResult1 = channel(7461);
   [tmp13, tmp14] = _slicedToArray(
-    channel(7440).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true),
+    channel(7461).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true),
     2,
   );
   importDefault = tmp14;
-  const tmp12 = _slicedToArray(channel(7440).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
+  const tmp12 = _slicedToArray(channel(7461).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
   let prop1 = null;
   if (tmp5) {
     prop1 = null;
@@ -187,13 +187,13 @@ export default function ChatInputNotificationNudge(channel) {
   }
   obj = { cooldownDurationMs };
   const tmp11Result = _slicedToArray(
-    channel(7440).useSelectedTimeRecurringDismissibleContent(prop1, obj, undefined, true),
+    channel(7461).useSelectedTimeRecurringDismissibleContent(prop1, obj, undefined, true),
     2,
   );
   dependencyMap = tmp17;
   const items1 = [tmp14];
   const items2 = [tmp11Result[1]];
-  const tmpResult2 = channel(7440);
+  const tmpResult2 = channel(7461);
   const tmp18 = closure_4(() => _undefined(ContentDismissActionType.USER_DISMISS), items1);
   if (tmp13 === channel(1943).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER) {
     const obj1 = {

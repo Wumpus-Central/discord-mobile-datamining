@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { card: null, chips: null, chip: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
@@ -69,7 +69,7 @@ export default function VibegrationsSettingsRequestCard(projectId) {
   obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = tmp2(1114).intl;
   obj.children = intl.string(request(3590).wgDhiQ);
-  const items2 = [closure_6(projectId(4601).Text, obj), , ,];
+  const items2 = [closure_6(projectId(4602).Text, obj), , ,];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -93,7 +93,7 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     const obj3 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp2(1114).intl;
     obj3.text = intl3.string(tmp8(3590)["KO2xN+"]);
-    items2[3] = closure_6(tmp2(5025).Button, obj3);
+    items2[3] = closure_6(tmp2(5026).Button, obj3);
     obj.children = items2;
     return closure_7(View, obj);
   }

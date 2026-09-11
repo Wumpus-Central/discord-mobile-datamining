@@ -42,122 +42,54 @@ function loadJsonAsset() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _loadJsonAsset(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          c3 = 0;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = true;
-          }
-          closure_130_1 = flag;
-          let uri;
-          closure_130_3 = undefined;
-          closure_130_4 = undefined;
-          closure_130_5 = undefined;
-          c4 = 1;
-          c5 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          if (null != closure_131_6[closure_130_0]) {
-            if (closure_130_1) {
-              c5 = 3;
-              const obj2 = { value: closure_131_6[closure_130_0], done: true };
-              return obj2;
-            }
-          }
-          uri = closure_131_4.resolveAssetSource(closure_130_0).uri;
-          let obj3 = closure_131_0(closure_131_2[32]);
-          if (obj3.isAndroid()) {
-            let obj4 = closure_131_1(closure_131_2[33]);
-            let asset;
-            if (obj4 != null) {
-              asset = obj4.readAsset(uri, "utf8");
-            }
-            let asset1 = asset;
-          } else {
-            const DCDFileManager = closure_131_5.DCDFileManager;
-            asset1 = DCDFileManager.readAsset(uri, "utf8");
-          }
-          closure_130_3 = asset1;
-          if (null == closure_130_3) {
-            const _Error = Error;
-            const error = new Error("RTNFileManager doesn't exist?");
-            throw error;
-          } else {
-            c4 = 2;
-            c5 = 1;
-            obj3 = { value: closure_130_3, done: false };
-            return obj3;
-          }
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        obj4 = { value, done: true };
-        return obj4;
-      } else {
-        closure_130_4 = value;
-        if (null == closure_130_4) {
-          c5 = 3;
-          return { value: null, done: true };
-        } else {
-          if (null != closure_131_6[closure_130_0]) {
-            if (closure_130_1) {
-              c5 = 3;
-              const obj5 = { value: closure_131_6[closure_130_0], done: true };
-              return obj5;
-            }
-          }
-          const _JSON = JSON;
-          closure_130_5 = JSON.parse(closure_130_4);
-          closure_131_6[closure_130_0] = closure_130_5;
-          c5 = 3;
-          obj = { value: closure_130_5, done: true };
-          return obj;
-        }
-      }
-    } catch (tmp49) {
-      c5 = tmp;
-      throw tmp49;
+let closure_8 = async function _loadJsonAsset() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag = closure_1;
+  if (closure_1 === undefined) {
+    flag = true;
+  }
+  closure_130_1 = flag;
+  await "PX_16";
+  if (null != closure_131_6[closure_130_0]) {
+    if (closure_130_1) {
+      c5 = 3;
+      return { value: closure_131_6[closure_130_0], done: true };
     }
   }
+  const uri = closure_131_4.resolveAssetSource(closure_130_0).uri;
+  if (obj3.isAndroid()) {
+    const obj4 = closure_131_1(closure_131_2[33]);
+    let asset;
+    if (obj4 != null) {
+      asset = obj4.readAsset(uri, "utf8");
+    }
+    let asset1 = asset;
+  } else {
+    const DCDFileManager = closure_131_5.DCDFileManager;
+    asset1 = DCDFileManager.readAsset(uri, "utf8");
+  }
+  closure_130_3 = asset1;
+  if (null == closure_130_3) {
+    const _Error = Error;
+    const error = new Error("RTNFileManager doesn't exist?");
+    throw error;
+  }
+  await closure_130_3;
+  closure_130_4 = value;
+  if (null == closure_130_4) {
+    return null;
+  }
+  if (null != closure_131_6[closure_130_0]) {
+    if (closure_130_1) {
+      c5 = 3;
+      return { value: closure_131_6[closure_130_0], done: true };
+    }
+  }
+  const _JSON = JSON;
+  closure_130_5 = JSON.parse(closure_130_4);
+  closure_131_6[closure_130_0] = closure_130_5;
+  return closure_130_5;
 };
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, NativeModules: hasOwnProperty } = get_ActivityIndicator);

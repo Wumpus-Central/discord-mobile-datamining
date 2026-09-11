@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_1, jsx: c2 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_3 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 },
   titleContainer: { flex: 1, flexDirection: "column", justifyContent: "center", gap: 2 },

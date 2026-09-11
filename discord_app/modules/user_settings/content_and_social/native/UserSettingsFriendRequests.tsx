@@ -37,7 +37,7 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(tmp3);
   };
-  const items1 = [closure_7(setting(7252).TableSwitchRow, obj), ,];
+  const items1 = [closure_7(setting(7273).TableSwitchRow, obj), ,];
   const obj1 = { label: null, value: null, onValueChange: null };
   const intl3 = setting(1114).intl;
   obj1.label = intl3.string(setting(1114).t.IqlCSq);
@@ -52,7 +52,7 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[1] = closure_7(setting(7252).TableSwitchRow, obj1);
+  items1[1] = closure_7(setting(7273).TableSwitchRow, obj1);
   const obj2 = { label: null, value: null, onValueChange: null };
   const intl4 = setting(1114).intl;
   obj2.label = intl4.string(setting(1114).t.mozb8f);
@@ -67,8 +67,8 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[2] = closure_7(setting(7252).TableSwitchRow, obj2);
+  items1[2] = closure_7(setting(7273).TableSwitchRow, obj2);
   obj.children = items1;
-  obj.children = closure_8(setting(5737).TableRowGroup, obj);
+  obj.children = closure_8(setting(5738).TableRowGroup, obj);
   return closure_7(View, obj);
 }

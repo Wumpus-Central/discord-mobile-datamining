@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_5 = createStyles.createStyles({
   title: { textAlign: "center" },
   body: { marginTop: 8, textAlign: "center", lineHeight: 18 },
@@ -38,11 +38,11 @@ export default function SMSBackupWarningAlert(onConfirm) {
   };
   const intl3 = onConfirm(1114).intl;
   obj.children = intl3.string(onConfirm(1114).t.Ed4XQB);
-  const items = [closure_3(onConfirm(4601).Text, obj)];
+  const items = [closure_3(onConfirm(4602).Text, obj)];
   obj = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl4 = onConfirm(1114).intl;
   obj.children = intl4.string(onConfirm(1114).t.EDU2Eg);
-  items[1] = closure_3(onConfirm(4601).Text, obj);
+  items[1] = closure_3(onConfirm(4602).Text, obj);
   obj.children = items;
   return closure_4(common_AlertDefault, obj);
 }

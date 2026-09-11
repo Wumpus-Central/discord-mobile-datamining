@@ -36,7 +36,7 @@ class QuestThemePicker {
     items3[0] = allMobileThemes;
     memo = closure_3.useMemo(() => {
       const items = [, ,];
-      ({ LIGHT: arr[0], DARKER: arr[1], MIDNIGHT: arr[2] } = ThemeTypes);
+      ({ LIGHT: arr[0], DARK: arr[1], ONYX: arr[2] } = ThemeTypes);
       return allMobileThemes.filter((type) => {
         let hasItem = type.type === items(allMobileThemes[13]).ClientThemeType.STANDARD_BACKGROUND_THEME;
         if (hasItem) {
@@ -53,10 +53,10 @@ class QuestThemePicker {
     token = obj4.useToken(analyticsLocations(closure_2[8]).colors.BACKGROUND_BASE_LOW, closure_9.LIGHT);
     closure_7 = token;
     obj5 = closure_0(closure_2[14]);
-    token1 = obj5.useToken(analyticsLocations(closure_2[8]).colors.BACKGROUND_BASE_LOW, closure_9.DARKER);
+    token1 = obj5.useToken(analyticsLocations(closure_2[8]).colors.BACKGROUND_BASE_LOW, closure_9.DARK);
     closure_8 = token1;
     obj6 = closure_0(closure_2[14]);
-    token2 = obj6.useToken(analyticsLocations(closure_2[8]).colors.BACKGROUND_BASE_LOW, closure_9.MIDNIGHT);
+    token2 = obj6.useToken(analyticsLocations(closure_2[8]).colors.BACKGROUND_BASE_LOW, closure_9.ONYX);
     closure_9 = token2;
     items4 = [, , ,];
     items4[0] = memo;
@@ -64,7 +64,7 @@ class QuestThemePicker {
     items4[2] = token1;
     items4[3] = token2;
     memo1 = closure_3.useMemo(() => {
-      let obj = { [closure_2_9.LIGHT]: token, [closure_2_9.DARKER]: token1, [closure_2_9.MIDNIGHT]: token2 };
+      let obj = { [closure_2_9.LIGHT]: token, [closure_2_9.DARK]: token1, [closure_2_9.ONYX]: token2 };
       return memo.map((theme) => {
         theme = theme.theme;
         obj = closure_0(allMobileThemes[15]);
@@ -138,7 +138,7 @@ let closure_8 = fn(1230).LEGACY_STANDARD_BACKGROUND_THEMES;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   themeSection: null,
   themeSelector: null,

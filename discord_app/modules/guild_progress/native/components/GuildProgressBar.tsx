@@ -7,11 +7,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { wrapper: null, progress: null };
 createStyles = {
   position: "relative",
-  backgroundColor: fn(12544).PROGRESS_BACKGROUND_COLOR,
+  backgroundColor: fn(12567).PROGRESS_BACKGROUND_COLOR,
   borderRadius: nativeDefault.radii.xs,
   height: 8,
 };
@@ -32,7 +32,7 @@ let result = size.fileFinishedImporting("modules/guild_progress/native/component
 export default function GuildProgressBar(percent) {
   percent = percent.percent;
   const tmp = closure_6();
-  let obj = percent(4341);
+  let obj = percent(4343);
   const sharedValue = obj.useSharedValue(0);
   const items = [percent, sharedValue];
   const effect = noop.useEffect(() => {
@@ -47,10 +47,10 @@ export default function GuildProgressBar(percent) {
   obj = { style: null, children: null };
   const items1 = [tmp.wrapper, percent.style];
   obj.style = items1;
-  const animatedStyle = percent(4341).useAnimatedStyle(fn);
+  const animatedStyle = percent(4343).useAnimatedStyle(fn);
   obj = { style: null };
   const items2 = [tmp.progress, animatedStyle];
   obj.style = items2;
-  obj.children = jsx(sharedValue(4341).View, { style: null });
+  obj.children = jsx(sharedValue(4343).View, { style: null });
   return <View style={null} />;
 }

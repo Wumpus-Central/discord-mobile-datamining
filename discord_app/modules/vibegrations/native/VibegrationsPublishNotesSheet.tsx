@@ -20,13 +20,13 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
 let closure_9 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
 const Routes = fn(1074).Routes;
-const MessageSendLocation = fn(4598).MessageSendLocation;
+const MessageSendLocation = fn(4599).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const VibegrationsPublishNotesSheet = "VibegrationsPublishNotesSheet";
 let closure_18 = "<#" + "9".repeat(20) + ">";
 const VibegrationsPatchNotesLastChannels = "VibegrationsPatchNotesLastChannels";
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_20 = createStyles.createStyles((paddingBottom) => {
   let obj = { container: null, section: null, notesSection: null, statusRow: null, actions: null };
   obj = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -277,14 +277,14 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   _undefined(true);
                   _undefined2(false);
                   dependencyMap = 1;
-                  let obj2 = tmp3(7733);
+                  let obj2 = tmp3(7754);
                   let combined = trimmed;
                   if (null != combined1) {
                     const _HermesInternal = HermesInternal;
                     combined = "" + trimmed + tmp38;
                   }
                   const parsed = obj2.parse(found, combined);
-                  const tmp35Result = tmp3(7508);
+                  const tmp35Result = tmp3(7529);
                   const obj1 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
                   c3 = 2;
                   c4 = 1;

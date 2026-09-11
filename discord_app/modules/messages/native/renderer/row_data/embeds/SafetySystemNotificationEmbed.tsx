@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../../../Constants.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef4196 from "../../../../../../../_runtime/metro/04196__.js";
+import _modDef4198 from "../../../../../../../_runtime/metro/04198__.js";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import SafetyHubUtils from "../../../../../safety_hub/SafetyHubUtils.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
@@ -62,7 +62,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             obj = {
               titleText: str,
               titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(
-                Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8659 : 5086)),
+                Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8680 : 5087)),
               ),
               subtitleText: null,
               descriptionText: null,
@@ -81,8 +81,8 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             }
             obj = { daysAgo: null };
             const tmp6Result1 = renderer_EmbedUtils;
-            const obj7 = _modDef4196();
-            obj.daysAgo = obj7.diff(_modDef4196.unix(num), "days");
+            const obj7 = _modDef4198();
+            obj.daysAgo = obj7.diff(_modDef4198.unix(num), "days");
             obj.subtitleText = intl.formatToPlainString(util.t.eevFb6, obj);
             let str4 = parseMessageForPropsResult.body;
             if (str4 == null) {

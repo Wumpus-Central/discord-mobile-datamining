@@ -3,7 +3,7 @@ import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUti
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import NUFChannelsManagerDefault from "../NUFChannelsManager.tsx";
 import NUFTemplateDefault from "NUFTemplate.tsx";
-import _modDef13854 from "../../../../../_runtime/metro/13854__.js";
+import _modDef13833 from "../../../../../_runtime/metro/13833__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -18,7 +18,7 @@ export default function NUFVoiceChannelsTemplate(channel) {
   obj.title = intl.string(channel(1114).t.w5HAll);
   const intl2 = channel(1114).intl;
   obj.description = intl2.string(channel(1114).t.Ww4hhq);
-  obj.imageSrc = _modDef13854;
+  obj.imageSrc = _modDef13833;
   const intl3 = channel(1114).intl;
   obj.CTALabel = intl3.string(channel(1114).t.eIi3Om);
   obj.onCTAPress = function onCTAPress() {

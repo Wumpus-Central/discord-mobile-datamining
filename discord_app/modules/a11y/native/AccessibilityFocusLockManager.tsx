@@ -41,9 +41,9 @@ prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusL
     }
   }
   if (self._focusLockEnabled) {
-    item10014(4953).disableFocusLock();
+    item10014(4954).disableFocusLock();
     self._focusLockEnabled = false;
-    const obj = item10014(4953);
+    const obj = item10014(4954);
   }
 };
 prototype["_initialize"] = function _initialize() {

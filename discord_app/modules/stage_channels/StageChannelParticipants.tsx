@@ -98,7 +98,7 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-const getComparator = fn(4629).getComparator;
+const getComparator = fn(4630).getComparator;
 let obj = {
   SPEAKER: "SPEAKER",
   AUDIENCE: "AUDIENCE",

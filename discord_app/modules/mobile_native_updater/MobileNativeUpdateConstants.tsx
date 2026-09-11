@@ -1,6 +1,6 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateConstants.tsx
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
-import hooks from "../../../_runtime/metro/04196__.js";
+import hooks from "../../../_runtime/metro/04198__.js";
 
 let tmp3 = null;
 if (undefined !== process.env.INTERNAL_UPDATE_URL) {

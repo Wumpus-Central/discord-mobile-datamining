@@ -2,7 +2,7 @@
 import RouteConstants from "RouteConstants.tsx";
 import utils_PathUtils from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 import ChannelConstants from "../channel/ChannelConstants.tsx";
-import escapeRegExpDefault from "../../../_runtime/04446_escapeRegExp.js";
+import escapeRegExpDefault from "../../../_runtime/04448_escapeRegExp.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const PSEUDO_GUILD_IDS = RouteConstants.PSEUDO_GUILD_IDS;

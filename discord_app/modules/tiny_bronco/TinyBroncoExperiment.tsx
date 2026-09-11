@@ -19,22 +19,11 @@ export const useIsTinyBroncoEnabled = function useIsTinyBroncoEnabled(location) 
   }
   return enabled;
 };
-export const isTinyBroncoEnabled = function isTinyBroncoEnabled(stateFromStores) {
-  let enabled = TinyBroncoGate.TINY_BRONCO_DEV_ONLY;
-  if (enabled) {
-    const obj = { location: stateFromStores };
-    enabled = closure_2.getConfig(obj).enabled;
-  }
-  return enabled;
-};
-export const useShouldShowTinyBroncoDismissibleContent = function useShouldShowTinyBroncoDismissibleContent(location) {
+export const isTinyBroncoEnabled = function isTinyBroncoEnabled(location) {
   let enabled = TinyBroncoGate.TINY_BRONCO_DEV_ONLY;
   if (enabled) {
     const obj = { location };
-    enabled = closure_2.useConfig(obj).enabled;
-  }
-  if (enabled) {
-    enabled = !tmpResult.useIsVerifiedAdult();
+    enabled = closure_2.getConfig(obj).enabled;
   }
   return enabled;
 };

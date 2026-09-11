@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { flexDirection: "row", alignItems: "center", marginTop: -10 }, icon: null };
 createStyles = { alignSelf: "center", marginRight: 5, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 createStyles.icon = createStyles;
@@ -33,7 +33,7 @@ export default function PollCreationInputError(message) {
   const size = { width: 16, height: 16, style: tmp.icon };
   const items1 = [
     closure_4(message(1178).WarningCircle, size),
-    closure_4(message(4601).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message }),
+    closure_4(message(4602).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message }),
   ];
   obj.children = items1;
   return closure_5(View, obj);

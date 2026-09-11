@@ -1,7 +1,9 @@
 // discord_app/modules/frames/FramesConstants.tsx
+import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = { MAIN: 0, [0]: "MAIN", APP_CHANNEL: 1, [1]: "APP_CHANNEL" };
+const ChannelTypes = Constants.ChannelTypes;
+let obj = { MAIN: 0, [0]: "MAIN", APP_CHANNEL: 1, [1]: "APP_CHANNEL", VOICE_CHANNEL: 2, [2]: "VOICE_CHANNEL" };
 obj = { type: obj.MAIN };
 obj = { MAIN: 0, [0]: "MAIN", INLINE: 1, [1]: "INLINE" };
 const result = size.fileFinishedImporting("modules/frames/FramesConstants.tsx");
@@ -14,27 +16,44 @@ export const getFrameIntentForSurface = function getFrameIntentForSurface(type) 
   type = type.type;
   if (obj.MAIN === type) {
     return obj.MAIN;
-  } else if (tmp.APP_CHANNEL === type) {
+  } else {
     return obj.INLINE;
   }
 };
 export const makeFrameId = function makeFrameId(arg0, type) {
   type = type.type;
   if (obj.MAIN === type) {
-    const _HermesInternal2 = HermesInternal;
+    const _HermesInternal3 = HermesInternal;
     return "main:" + arg0;
-  } else if (tmp.APP_CHANNEL === type) {
-    const _HermesInternal = HermesInternal;
+  } else if (obj.APP_CHANNEL === type) {
+    const _HermesInternal2 = HermesInternal;
     return "app-channel:" + arg0 + ":" + type.channelId;
+  } else if (obj.VOICE_CHANNEL === type) {
+    const _HermesInternal = HermesInternal;
+    return "voice-channel:" + arg0 + ":" + type.channelId;
+  }
+};
+export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type) {
+  type = type.type;
+  if (ChannelTypes.GUILD_APP === type) {
+    obj = { type: null, channelId: null, guildId: null };
+    obj.type = obj.APP_CHANNEL;
+    ({ id: obj2.channelId, guild_id: obj2.guildId } = type);
+    return obj;
+  } else if (tmp.GUILD_VOICE === type) {
+    obj = { type: null, channelId: null, guildId: null };
+    obj.type = obj.VOICE_CHANNEL;
+    ({ id: obj.channelId, guild_id: obj.guildId } = type);
+    return obj;
+  } else {
+    return null;
   }
 };
 export const getChannelIdForSurface = function getChannelIdForSurface(type) {
   if (null != type) {
     type = type.type;
     if (obj.MAIN !== type) {
-      if (tmp.APP_CHANNEL === type) {
-        return type.channelId;
-      }
+      return type.channelId;
     }
   }
 };

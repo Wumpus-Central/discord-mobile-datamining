@@ -27,7 +27,7 @@ import ForumPostUnreadCountStore from "ForumPostUnreadCountStore.tsx";
 import ForumSearchStore from "ForumSearchStore.tsx";
 
 require = fn;
-const ForumTimestampFormats = fn(7325).ForumTimestampFormats;
+const ForumTimestampFormats = fn(7346).ForumTimestampFormats;
 const Constants = fn(1074);
 ({
   AnalyticsObjectTypes: closure_20,
@@ -432,7 +432,7 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
   let obj = id(504);
   const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(id));
-  const nullableMessageAuthor = id(4838).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(4839).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = noop.useEffect(() => {
     let tmp2 = null != id;

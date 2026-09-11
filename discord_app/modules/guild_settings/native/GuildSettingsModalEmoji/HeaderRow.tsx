@@ -85,7 +85,7 @@ function HeaderRow(guild) {
               if (null != base64) {
                 upload = function upload(image, originalMd5, roles) {
                   const combined = "emoji_" + closure_1 + 1;
-                  closure_1_0(10406);
+                  closure_1_0(10425);
                   let obj = { guildId: image.id, image, name: combined, roles, originalMd5 };
                   const uploadEmojiResult = obj.uploadEmoji(obj);
                   obj
@@ -166,7 +166,7 @@ function HeaderRow(guild) {
   [tmp5, c5] = _slicedToArray(noop.useState(null), 2);
   const tmp4 = _slicedToArray(noop.useState(null), 2);
   [c6, c7] = _slicedToArray(noop.useState(""), 2);
-  let obj = guild(9741);
+  let obj = guild(9762);
   let canCreateExpressions = obj.useManageResourcePermissions(guild).canCreateExpressions;
   let intl = guild(1114).intl;
   obj = { id: null, text: null };
@@ -214,26 +214,26 @@ function HeaderRow(guild) {
     const intl5 = tmp7(1114).intl;
     obj5.text = intl5.string(tmp7(1114).t["DU0dy/"]);
     obj5.disabled = uploadDisabled;
-    canCreateExpressions = closure_14(tmp7(5025).Button, obj5);
+    canCreateExpressions = closure_14(tmp7(5026).Button, obj5);
   }
   const items1 = [canCreateExpressions, ,];
   let tmp13Result = null != tmp5;
   if (tmp13Result) {
     const obj6 = { style: tmp.errorText, variant: "text-sm/medium", color: "text-feedback-critical", children: tmp5 };
-    tmp13Result = closure_14(tmp7(4601).Text, obj6);
+    tmp13Result = closure_14(tmp7(4602).Text, obj6);
   }
   let obj7 = { children: null };
   items1[1] = tmp13Result;
   let obj8 = { style: tmp.uploadInstructionsContainer, children: null };
   const items2 = [
-    closure_14(guild(4601).Text, { variant: "text-sm/medium", color: "text-muted", children: description }),
+    closure_14(guild(4602).Text, { variant: "text-sm/medium", color: "text-muted", children: description }),
     ,
   ];
   const obj9 = { variant: "text-xs/bold", color: "text-muted", style: tmp.uploadInstructionsHeading, children: null };
   const intl6 = tmp7(1114).intl;
   const stringResult2 = intl4.string(guild(1114).t["8Vr5Qd"]);
   obj9.children = intl6.string(guild(1114).t.jrXfyw).toUpperCase();
-  items2[1] = closure_14(guild(4601).Text, obj9);
+  items2[1] = closure_14(guild(4602).Text, obj9);
   items2[2] = closure_14(c7, {
     style: tmp.uploadInstructionsList,
     data: items,
@@ -267,7 +267,7 @@ const Constants = fn(1074);
 const EMOJI_MAX_FILESIZE_KB = fn(1374).EMOJI_MAX_FILESIZE_KB;
 const jsxProd = fn(21);
 ({ jsxs: map1, jsx: closure_14, Fragment: closure_15 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   uploadInstructionsContainer: null,
   uploadInstructionsHeading: null,

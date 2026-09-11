@@ -30,7 +30,7 @@ function ParticipantsSummary(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   ongoingActivityContainer: {
     position: "absolute",
@@ -52,7 +52,7 @@ createStyles = {
   backgroundColor: null,
   marginBottom: 8,
 };
-const ColorUtils = fn(4454);
+const ColorUtils = fn(4456);
 createStyles.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.64);
 createStyles.overlayActivityName = createStyles;
 createStyles.overlayActivityNameText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };

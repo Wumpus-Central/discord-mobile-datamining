@@ -9,16 +9,16 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
-const MessageConstants = fn(4598);
+const MessageConstants = fn(4599);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: metroRequire, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: closure_7 } = MessageConstants);
-const SwipeActionsType = fn(7985).SwipeActionsType;
+const SwipeActionsType = fn(8007).SwipeActionsType;
 const Constants = fn(1074);
 ({ MessageFlags: closure_9, MessageTypes: c10 } = Constants);
-let createStyles = fn(4605);
+let createStyles = fn(4606);
 const result = createStyles.experimental_createToken(() =>
   ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_500, 0.1),
 );
-fn(4605);
+fn(4606);
 createStyles = {
   ephemeralBackgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE,
   ephemeralGutterColor: nativeDefault.colors.BACKGROUND_BRAND,

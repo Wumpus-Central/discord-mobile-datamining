@@ -502,7 +502,7 @@ function ChatScene(guildId) {
                 const catchPromise2 = nextPromise1.catch(() => {});
                 nextPromise1
                   .then(() => {
-                    projectId(4303);
+                    projectId(4305);
                     const obj = { key: "VIBEGRATIONS_PUBLISH_SUCCESS", content: null };
                     const intl = guildId(1114).intl;
                     obj.content = intl.string(projectId(3590).wA0o0L);
@@ -515,11 +515,11 @@ function ChatScene(guildId) {
                       const intl = guildId(1114).intl;
                       message = intl.string(projectId(3590).fNP6Cd);
                     }
-                    projectId(4303).open({ key: "VIBEGRATIONS_PUBLISH_FAILED", content: message });
-                    const obj = projectId(4303);
+                    projectId(4305).open({ key: "VIBEGRATIONS_PUBLISH_FAILED", content: message });
+                    const obj = projectId(4305);
                   });
                 const nextPromise2 = nextPromise1.then(() => {
-                  projectId(4303);
+                  projectId(4305);
                   const obj = { key: "VIBEGRATIONS_PUBLISH_SUCCESS", content: null };
                   const intl = guildId(1114).intl;
                   obj.content = intl.string(projectId(3590).wA0o0L);
@@ -644,7 +644,7 @@ function ChatScene(guildId) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
             const obj = {
               ref,
-              IconComponent: closure_1_0(8742).MoreHorizontalIcon,
+              IconComponent: closure_1_0(8763).MoreHorizontalIcon,
               onPress,
               accessibilityLabel: null,
               accessibilityActions: null,
@@ -654,7 +654,7 @@ function ChatScene(guildId) {
             obj.accessibilityLabel = intl.string(closure_1_0(1114).t["UKOtz+"]);
             obj.accessibilityActions = accessibilityActions;
             obj.onAccessibilityAction = onAccessibilityAction;
-            return closure_1_23(closure_1_0(7429).HeaderActionButton, obj);
+            return closure_1_23(closure_1_0(7450).HeaderActionButton, obj);
           },
         };
         items[1] = closure_2_23(guildId(navigation[45]).ContextMenu, obj);
@@ -683,7 +683,7 @@ function ChatScene(guildId) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
             const obj = {
               ref,
-              IconComponent: closure_1_0(8742).MoreHorizontalIcon,
+              IconComponent: closure_1_0(8763).MoreHorizontalIcon,
               onPress,
               accessibilityLabel: null,
               accessibilityActions: null,
@@ -693,7 +693,7 @@ function ChatScene(guildId) {
             obj.accessibilityLabel = intl.string(closure_1_0(1114).t["UKOtz+"]);
             obj.accessibilityActions = accessibilityActions;
             obj.onAccessibilityAction = onAccessibilityAction;
-            return closure_1_23(closure_1_0(7429).HeaderActionButton, obj);
+            return closure_1_23(closure_1_0(7450).HeaderActionButton, obj);
           },
         };
         items[1] = closure_2_23(guildId(navigation[45]).ContextMenu, obj);
@@ -712,20 +712,20 @@ function ChatScene(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-let VibegrationsConnectionStore = fn(16678);
+let VibegrationsConnectionStore = fn(16666);
 ({
   draftPatchNotes: map1,
   ensureConnection: closure_14,
   publishProject: closure_15,
   sendUserMessage: closure_16,
 } = VibegrationsConnectionStore);
-let VibegrationsProjectStore = fn(16676);
+let VibegrationsProjectStore = fn(16664);
 ({ canPublishProject: closure_18, isProjectOwner: closure_19 } = VibegrationsProjectStore);
 const Permissions = fn(1074).Permissions;
-const MAIN_SURFACE = fn(9581).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9602).MAIN_SURFACE;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_25 = createStyles.createStyles((paddingBottom) => {
   let obj = {
     content: null,

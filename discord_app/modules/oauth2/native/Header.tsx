@@ -13,7 +13,7 @@ const View = fn(17).View;
 const UserFlags = fn(1074).UserFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   header: null,
   applicationNameWrapper: null,

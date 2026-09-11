@@ -15,12 +15,12 @@ import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 require = fn;
 const GuildRecord = fn(1975);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(16367).useItemDragState;
-const TRANSITION_PHYSICS = fn(16364).TRANSITION_PHYSICS;
+const useItemDragState = fn(16356).useItemDragState;
+const TRANSITION_PHYSICS = fn(16353).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,

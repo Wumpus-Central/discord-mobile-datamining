@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 const styles = createStyles.createStyles(() => {
   let obj = { button: null, iconButtonPill: null };
   obj = {};
@@ -37,7 +37,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
     positionRight,
     Object.assign({ icon: 0, positionBottom: 0, positionRight: 0, accessibilityLabel: 0 }),
   );
-  let obj = positionBottom(4341);
+  let obj = positionBottom(4343);
   class F {
     constructor() {
       tmp = closure_0;
@@ -59,7 +59,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
     }
   }
   obj = {
-    withSpring: positionBottom(5024).withSpring,
+    withSpring: positionBottom(5025).withSpring,
     positionBottom,
     DEFAULT_POSITION_OFFSET: 16,
     SPRING_CONFIG,
@@ -82,6 +82,6 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   }
   obj1.icon = cloneElementResult;
   ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = styles());
-  obj.children = jsx(positionBottom(8151).BaseIconButton, {});
-  return jsx(positionRight(4341).View, { style: animatedStyle, children: null });
+  obj.children = jsx(positionBottom(8173).BaseIconButton, {});
+  return jsx(positionRight(4343).View, { style: animatedStyle, children: null });
 };

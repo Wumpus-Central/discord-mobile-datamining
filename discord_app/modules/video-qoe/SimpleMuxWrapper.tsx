@@ -2,7 +2,7 @@
 import logger_Logger from "../../../discord_common/js/packages/logger/Logger.tsx";
 import SessionManager2 from "utils/SessionManager.tsx";
 import MuxIntegration2 from "integrations/MuxIntegration.tsx";
-import UDefault from "../../../_runtime/15219_U.js";
+import UDefault from "../../../_runtime/15198_U.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const logger = new logger_Logger.Logger("SimpleMuxWrapper");

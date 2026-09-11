@@ -15,7 +15,7 @@ import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmen
 import AttachmentPreviewDefault from "../../modules/media/native/AttachmentPreview.tsx";
 import showUploadPreviewActionSheetDefault from "../../modules/media_uploads/native/showUploadPreviewActionSheet.tsx";
 import MediaKeyboardUtils from "../../modules/media_keyboard/native/MediaKeyboardUtils.tsx";
-import _modDef11317 from "../../../_runtime/metro/11317__.js";
+import _modDef11339 from "../../../_runtime/metro/11339__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
 
@@ -171,7 +171,7 @@ function Tile(onEdit) {
     let tmp6Result = null;
     if (isThumbnail) {
       obj = { style: tileContainer.footerRightContainer, children: null };
-      obj = { source: _modDef11317, size: native.Icon.Sizes.SMALL_14 };
+      obj = { source: _modDef11339, size: native.Icon.Sizes.SMALL_14 };
       obj.children = closure_2_11(native.Icon, obj);
       tmp6Result = closure_2_11(React4, obj);
     }
@@ -324,14 +324,14 @@ function CustomScrollView(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(4946).DraftType;
-const ImageCarouselConstants = fn(10702);
+const DraftType = fn(4947).DraftType;
+const ImageCarouselConstants = fn(10721);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = {
   container: { width: "100%" },
   pressableContainer: { marginHorizontal: 4 },
@@ -513,7 +513,7 @@ export default noop.memo((arg0) => {
   return closure_11(closure_4, obj);
 });
 export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyle(arg0) {
-  let obj = sharedValue(4341);
+  let obj = sharedValue(4343);
   sharedValue = obj.useSharedValue(0);
   const items = [sharedValue, arg0];
   const effect = noop.useEffect(() => {
@@ -532,13 +532,13 @@ export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyl
     return obj;
   };
   obj = {
-    withTiming: sharedValue(4606).withTiming,
+    withTiming: sharedValue(4607).withTiming,
     animatedStylePropValue: sharedValue,
     STANDARD_EASING: sharedValue(1178).STANDARD_EASING,
-    withSpring: sharedValue(5024).withSpring,
+    withSpring: sharedValue(5025).withSpring,
   };
   fn.__closure = obj;
   fn.__workletHash = 14458898683767;
   fn.__initData = __initData;
-  return sharedValue(4341).useAnimatedStyle(fn);
+  return sharedValue(4343).useAnimatedStyle(fn);
 };

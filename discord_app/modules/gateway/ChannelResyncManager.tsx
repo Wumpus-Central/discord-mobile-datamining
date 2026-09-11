@@ -353,7 +353,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
               dependencyMap[id] = setTimeout(
                 () => {
                   delete tmp3[tmp2];
-                  let obj = closure_2_0(13744);
+                  let obj = closure_2_0(13723);
                   if (obj.isChannelMetadataObfuscationEnabled("triggerGuildChannelResync")) {
                     let str;
                     if (closure_2_17[id] != null) {

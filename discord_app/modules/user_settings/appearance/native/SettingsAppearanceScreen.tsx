@@ -8,19 +8,19 @@ import SelectivelySyncedUserSettingsStore from "../../SelectivelySyncedUserSetti
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const FontScaleStore = fn(15344);
+const FontScaleStore = fn(15326);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(8027).MobileUserSettings;
+const MobileUserSettings = fn(8049).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 
 export default noop.memo(() => {
-  nativeStackNavigation(5042)(() => {
+  nativeStackNavigation(5043)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(15345).fetchUserCustomThemes();
-      const obj = closure_0(15345);
+      const userCustomThemes = closure_0(15327).fetchUserCustomThemes();
+      const obj = closure_0(15327);
     }
   });
   let items = [ThemeStore, ClientThemesBackgroundStore];
@@ -60,7 +60,7 @@ export default noop.memo(() => {
       obj = { headerRight: null };
       const intl = util.intl;
       obj.headerRight = HeaderShared.getRenderHeaderTextButton(intl.string(util.t["R3BPH+"]), () =>
-        nativeStackNavigation(10190).setCustomFontScale(
+        nativeStackNavigation(10209).setCustomFontScale(
           closure_1_0.fontScale,
           closure_1_0.isClassicChatFontScaleEnabled,
         ),
@@ -76,7 +76,7 @@ export default noop.memo(() => {
     [],
   );
   const node = noop.useMemo(() => {
-    closure_0(11540);
+    closure_0(11562);
     let obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = closure_0(1114).intl;
@@ -139,5 +139,5 @@ export default noop.memo(() => {
     return obj.createList(obj);
   }, []);
   let obj2 = require("useNavigation");
-  return jsx(nativeStackNavigation(14767), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(14741), { node }, "" + theme + "-" + gradientPresetId);
 });

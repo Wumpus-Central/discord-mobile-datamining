@@ -5,7 +5,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06705_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06726_LegacyBaseButton.js";
 import native2 from "../../../../design/components/experimental/native.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
@@ -27,7 +27,7 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12343);
+const VoicePanelConstants = fn(12366);
 ({
   UI_SHOW_HIDE_PHYSICS: closure_7,
   MODE_CHANGE_PHYSICS: closure_8,
@@ -35,16 +35,16 @@ const VoicePanelConstants = fn(12343);
   PANEL_CONTROLS_HEIGHT_PHYSICS: c10,
   VoicePanelModes: closure_11,
 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(12346);
+const VoicePanelCardConstants = fn(12369);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(12341);
+const VoicePanelControlsConstants = fn(12364);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } =
   VoicePanelControlsConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { accessibilityWrapper: null, wrapper: null, buttonsWrapper: null, actionSheetDragHandleWrapper: null };
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -1127,13 +1127,13 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   const items6 = [tmp6.wrapper, animatedStyle, hiddenStyles];
   obj7.style = items6;
   const tmp45 = isScreenReaderEnabled(channelId[47]);
-  let MIDNIGHT;
+  let ONYX;
   if (tmp11) {
     if (!tmp38[0]) {
-      MIDNIGHT = constants3.MIDNIGHT;
+      ONYX = constants3.ONYX;
     }
   }
-  obj8 = { theme: MIDNIGHT, children: null };
+  obj8 = { theme: ONYX, children: null };
   obj9 = { matchAppTheme: !tmp11 };
   const items7 = [
     closure_18(gestureState(channelId[48]).VoicePanelVisualEffectView, obj9),

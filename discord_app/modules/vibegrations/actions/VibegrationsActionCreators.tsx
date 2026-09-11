@@ -58,6 +58,7 @@ let closure_12 = async function _listProjects() {
     } else {
       try {
         c6 = 2;
+        let tmp7 = c5;
         if (0 === c5) {
           if (arg0 === 1) {
             c6 = 3;
@@ -68,7 +69,7 @@ let closure_12 = async function _listProjects() {
             return obj;
           } else {
             closure_3 = tmp3;
-            closure_2 = tmp20;
+            closure_2 = tmp7;
             closure_130_0 = undefined;
             let body;
             closure_130_2 = undefined;
@@ -83,71 +84,69 @@ let closure_12 = async function _listProjects() {
               type = projectsFetchState.type;
             }
             if ("loading" !== type) {
-              closure_9 = tmp30;
-              let obj4 = DispatcherDefault;
-              obj4.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START" });
+              closure_9 = tmp32;
+              let obj5 = DispatcherDefault;
+              const obj1 = { type: "VIBEGRATIONS_PROJECTS_FETCH_START", guildId: tmp32 };
+              obj5.dispatch(obj1);
               c4 = 1;
               const HTTP = HTTPUtils.HTTP;
               const request = { url: constants.VIBEGRATIONS_PROJECTS, query: null, rejectWithError: true };
-              let tmp41;
+              let tmp43;
               if (null != guild_id) {
-                const obj1 = { guild_id };
-                tmp41 = obj1;
+                const obj2 = { guild_id };
+                tmp43 = obj2;
               }
-              request.query = tmp41;
+              request.query = tmp43;
               c5 = 2;
               c6 = 1;
-              const obj2 = { value: HTTP.get(request), done: false };
-              return obj2;
+              let obj3 = { value: HTTP.get(request), done: false };
+              return obj3;
             } else {
-              tmp20 = null != tmp30;
-              if (tmp20) {
-                tmp20 = tmp30 !== closure_9;
+              tmp7 = null != tmp32;
+              if (tmp7) {
+                tmp7 = tmp32 !== closure_9;
               }
-              if (tmp20) {
-                closure_10 = tmp30;
+              if (tmp7) {
+                closure_10 = tmp32;
               }
             }
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            let obj3 = closure_131_1(closure_131_2[5]);
-            obj3.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL" });
+            obj3 = closure_131_1(closure_131_2[5]);
+            const obj4 = { type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL", guildId: closure_130_0 };
+            obj3.dispatch(obj4);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 0;
             c6 = 3;
-            obj3 = { value, done: true };
-            return obj3;
+            obj5 = { value, done: true };
+            return obj5;
           } else {
             body = value.body;
             obj = closure_131_1(closure_131_2[5]);
-            obj4 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
-            obj.dispatch(obj4);
+            const obj6 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
+            obj.dispatch(obj6);
             c4 = 0;
           }
-          tmp20 = closure_3;
           closure_130_2 = closure_131_10;
           closure_131_10 = null;
-          let tmp23 = null != closure_130_2;
-          if (tmp23) {
-            tmp20 = closure_130_0;
-            tmp23 = closure_130_2 !== closure_130_0;
+          tmp7 = null != closure_130_2;
+          if (tmp7) {
+            tmp7 = closure_130_2 !== closure_130_0;
           }
-          if (tmp23) {
-            tmp20 = closure_131_11;
-            closure_131_11(closure_130_2);
+          if (tmp7) {
+            tmp7 = closure_131_11(closure_130_2);
           }
         }
         c6 = 3;
-      } catch (tmp42) {
-        tmp20 = c4;
+      } catch (tmp44) {
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp42;
+          throw tmp44;
         } else {
           c5 = tmp;
         }
@@ -344,143 +343,84 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
   c4 = 0;
   c5 = 0;
   let iter = (async (arg0, value) => {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    closure_2 = tmp2;
+    closure_130_0 = closure_0;
+    const isPreview2 = isPreview.isPreview;
+    await "PX_16";
+    await closure_131_13(closure_130_0);
+    if (2 === tmp5) {
       if (arg0 === 1) {
+        c5 = 3;
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        c5 = 3;
+        return { value, done: true };
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            closure_3 = tmp5;
-            closure_2 = tmp2;
-            let isPreview2;
-            closure_130_0 = closure_0;
-            isPreview2 = isPreview.isPreview;
-            let body;
-            closure_130_3 = undefined;
-            closure_130_4 = undefined;
-            let project;
-            closure_130_6 = undefined;
-            c4 = 1;
-            c5 = 1;
-            return { value: "PX_16", done: true };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
-          } else {
-            c4 = 2;
-            c5 = 1;
-            const obj2 = { value: closure_131_13(closure_130_0), done: false };
-            return obj2;
-          }
+        const body = value.body;
+        closure_130_3 = body.bot_permissions_changed;
+        closure_130_4 = body.integration_installed;
+        const project = body.project;
+        if (isPreview2) {
+          let application_id = tmp54.preview_application_id;
         } else {
-          if (2 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              body = value.body;
-              closure_130_3 = body.bot_permissions_changed;
-              closure_130_4 = body.integration_installed;
-              project = body.project;
-              if (isPreview2) {
-                let application_id = tmp54.preview_application_id;
-              } else {
-                application_id = tmp54.application_id;
-              }
-              closure_130_6 = application_id;
-              if (null != closure_130_6) {
-                let obj6 = closure_131_0(closure_131_2[10]);
-                c4 = 3;
-                c5 = 1;
-                let obj4 = { value: obj6.fetchApplication(closure_130_6), done: false };
-                return obj4;
-              } else {
-                obj4 = closure_131_0(closure_131_2[6]);
-                const obj5 = { isPreview: isPreview2 };
-                const result = obj4.trackVibegrationDeployed(closure_130_0, obj5);
-                c5 = 3;
-              }
-            }
-          } else if (3 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj6 = { value, done: true };
-              return obj6;
-            } else {
-              obj1 = closure_131_0(closure_131_2[11]);
-              const widgetConfigs = obj1.fetchWidgetConfigs(closure_130_6, { force: true });
-              c4 = 4;
-              c5 = 1;
-              const obj7 = {
-                value: widgetConfigs.catch(() => {
-
-                          }),
-                done: false
-              };
-              return obj7;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            let tmp8 = !isPreview2;
-            if (isPreview2) {
-              let tmp10 = closure_130_4;
-              if (closure_130_4) {
-                tmp10 = !closure_130_3;
-              }
-              tmp8 = tmp10;
-            }
-            if (tmp8) {
-              closure_131_8(closure_130_6);
-            }
-          }
-          c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          application_id = tmp54.application_id;
         }
-      } catch (tmp43) {
-        c5 = tmp;
-        throw tmp43;
+        closure_130_6 = application_id;
+        if (null != closure_130_6) {
+          let obj6 = closure_131_0(closure_131_2[10]);
+          c4 = 3;
+          c5 = 1;
+          let obj4 = { value: obj6.fetchApplication(closure_130_6), done: false };
+          return obj4;
+        } else {
+          obj4 = closure_131_0(closure_131_2[6]);
+          const result = obj4.trackVibegrationDeployed(closure_130_0, { isPreview: isPreview2 });
+          c5 = 3;
+        }
+      }
+    } else if (3 === tmp5) {
+      if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        obj6 = { value, done: true };
+        return obj6;
+      } else {
+        const widgetConfigs = closure_131_0(closure_131_2[11]).fetchWidgetConfigs(closure_130_6, { force: true });
+        c4 = 4;
+        c5 = 1;
+        closure_131_0(closure_131_2[11]);
+        return {
+          value: widgetConfigs.catch(() => {
+
+              }),
+          done: false
+        };
+      }
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      let tmp8 = !isPreview2;
+      if (isPreview2) {
+        let tmp10 = closure_130_4;
+        if (closure_130_4) {
+          tmp10 = !closure_130_3;
+        }
+        tmp8 = tmp10;
+      }
+      if (tmp8) {
+        closure_131_8(closure_130_6);
       }
     }
+    return value;
   })();
   iter.next();
   return iter;
 };
 const Endpoints = fn(1074).Endpoints;
-const isLaunched = fn(9581).isLaunched;
+const isLaunched = fn(9602).isLaunched;
 let c9 = null;
 let c10 = null;
 const size = fn(2);

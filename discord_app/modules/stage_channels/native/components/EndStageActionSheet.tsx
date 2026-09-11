@@ -8,10 +8,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(5464).EXPLICIT_END_STAGE_SHEET_KEY;
+let closure_4 = fn(5465).EXPLICIT_END_STAGE_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" },
   title: null,
@@ -45,7 +45,7 @@ export default function EndStageActionSheet(channel) {
   const obj1 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = channel(1114).intl;
   obj1.children = intl2.string(channel(1114).t.mT7jwN);
-  items[1] = closure_5(channel(4601).Text, obj1);
+  items[1] = closure_5(channel(4602).Text, obj1);
   let obj2 = { style: tmp.cancelButton, children: null };
   const obj3 = { variant: "secondary", text: null, onPress: null };
   const intl3 = channel(1114).intl;
@@ -54,7 +54,7 @@ export default function EndStageActionSheet(channel) {
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
     CallsUtils.handleDisconnect(channel);
   };
-  obj2.children = closure_5(channel(5025).Button, obj3);
+  obj2.children = closure_5(channel(5026).Button, obj3);
   items[2] = closure_5(View, obj2);
   const obj4 = { style: tmp.confirmButton, children: null };
   const obj5 = { variant: "destructive", text: null, onPress: null };
@@ -65,7 +65,7 @@ export default function EndStageActionSheet(channel) {
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
     CallsUtils.handleDisconnect(channel);
   };
-  obj4.children = closure_5(channel(5025).Button, obj5);
+  obj4.children = closure_5(channel(5026).Button, obj5);
   items[3] = closure_5(View, obj4);
   obj.children = items;
   obj.children = closure_6(View, obj);

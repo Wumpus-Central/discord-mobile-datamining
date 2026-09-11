@@ -4,7 +4,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const jsxProd = fn(21);
 ({ Fragment: closure_1, jsx: c2 } = jsxProd);
 let obj = {
-  theme: "light",
+  theme: fn(1085).ThemeTypes.LIGHT,
   primaryColor: null,
   secondaryColor: null,
   gradient: null,

@@ -1,6 +1,6 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef4196 from "../../../_runtime/metro/04196__.js";
+import _modDef4198 from "../../../_runtime/metro/04198__.js";
 import findCodedLinksDefault from "../coded_links/findCodedLinks.tsx";
 import useMessageAuthor from "useMessageAuthor.tsx";
 import isMessageMentioned from "isMessageMentioned.tsx";
@@ -197,11 +197,11 @@ function createMessageRecord(message) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp39Result = _modDef4196(date);
+      tmp39Result = _modDef4198(date);
     }
     let durationResult = null;
     if (null != tmp39Result) {
-      durationResult = _modDef4196.duration(tmp39Result.diff(tmp35));
+      durationResult = _modDef4198.duration(tmp39Result.diff(tmp35));
     }
     obj2 = { participants: call.participants, endedTimestamp: tmp39Result, duration: durationResult };
     tmp36 = obj2;
@@ -314,7 +314,7 @@ function createMessageRecord(message) {
   });
   const tmp9Result1 = GiftCodeUtils;
 }
-let MessageRecord = fn(4254);
+let MessageRecord = fn(4256);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 const Constants = fn(1074);
 ({ MessageFlags: closure_11, MessageTypes: closure_12, MessageTypesSets: map1 } = Constants);
@@ -350,11 +350,11 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = _modDef4196(date);
+          tmp = _modDef4198(date);
         }
         let durationResult = null;
         if (null != tmp) {
-          obj = _modDef4196;
+          obj = _modDef4198;
           durationResult = obj.duration(tmp.diff(tmp46));
         }
         obj = { participants: call.participants, endedTimestamp: tmp, duration: durationResult };

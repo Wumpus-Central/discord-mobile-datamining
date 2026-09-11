@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import SentGiftsStore from "../SentGiftsStore.tsx";
 
 require = fn;
-let closure_4 = fn(7598).transformSKUToCollectiblesItem;
+let closure_4 = fn(7619).transformSKUToCollectiblesItem;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/CollectiblesWishlistItemCard.tsx");

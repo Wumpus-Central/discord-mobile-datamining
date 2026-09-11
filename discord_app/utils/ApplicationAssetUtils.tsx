@@ -231,93 +231,144 @@ function fetchAssetIds() {
   return applyArgumentsResult;
 }
 let closure_22 = async function _fetchAssetIds(arg0) {
-  if (1 === tmp5) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c6 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c6 = 3;
-      let obj1 = { value, done: true };
-      return obj1;
+      let obj = { value, done: true };
+      return obj;
     } else {
-      closure_132_1(closure_132_2[7]).dispatch({ type: "APPLICATION_ASSETS_FETCH", applicationId: closure_131_0 });
-      closure_131_3 = [];
-      closure_131_4 = closure_131_1.filter((item) => {
-        let startsWithResult;
-        if (item != null) {
-          startsWithResult = item.startsWith("http:");
-        }
-        if (!startsWithResult) {
-          let startsWithResult1;
-          if (item != null) {
-            startsWithResult1 = item.startsWith("https:");
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let num13 = closure_2;
+          if (closure_2 === undefined) {
+            num13 = 1;
           }
-          startsWithResult = startsWithResult1;
+          closure_131_2 = num13;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          closure_131_5 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: null };
         }
-        return startsWithResult;
-      });
-      if (closure_131_4.length > 0) {
-        c5 = 3;
-        c6 = 1;
-        return {
-          value: (function resolveExternalAssets() {
-                  const self = this;
-                  const apply = closure_1_18.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })(closure_131_0, closure_131_4),
-          done: false
-        };
-      }
-      closure_132_1(closure_132_2[7]);
-    }
-  } else if (2 === tmp5) {
-    if (arg0 === 1) {
-      c6 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c6 = 3;
-      return { value, done: true };
-    } else {
-      closure_131_5 = value;
-      let obj5 = { type: "APPLICATION_ASSETS_UPDATE", applicationId: closure_131_0, assets: closure_131_5 };
-      closure_132_1(closure_132_2[7]).dispatch(obj5);
-      if (closure_132_20(closure_131_1, closure_131_3, closure_131_5, closure_131_2)) {
-        closure_132_13(closure_131_0).then(() => closure_2_21(closure_1_0, closure_1_1, closure_1_2 - 1));
-        closure_132_13(closure_131_0);
       } else {
-        obj1 = closure_132_1(closure_132_2[7]);
-        obj1.dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 });
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            let obj1 = { value, done: true };
+            return obj1;
+          } else {
+            const obj2 = { type: "APPLICATION_ASSETS_FETCH", applicationId: closure_131_0 };
+            closure_132_1(closure_132_2[7]).dispatch(obj2);
+            closure_131_3 = [];
+            closure_131_4 = closure_131_1.filter((item) => {
+              let startsWithResult;
+              if (item != null) {
+                startsWithResult = item.startsWith("http:");
+              }
+              if (!startsWithResult) {
+                let startsWithResult1;
+                if (item != null) {
+                  startsWithResult1 = item.startsWith("https:");
+                }
+                startsWithResult = startsWithResult1;
+              }
+              return startsWithResult;
+            });
+            if (closure_131_4.length > 0) {
+              c5 = 3;
+              c6 = 1;
+              const obj3 = {
+                value: (function resolveExternalAssets() {
+                              const self = this;
+                              const apply = closure_1_18.apply;
+                              if (typeof apply === "unknown") {
+                                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                              } else {
+                                applyArgumentsResult = apply(self, arguments);
+                              }
+                              return applyArgumentsResult;
+                            })(closure_131_0, closure_131_4),
+                done: false
+              };
+              return obj3;
+            }
+            const obj15 = closure_132_1(closure_132_2[7]);
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_131_5 = value;
+            let obj5 = { type: "APPLICATION_ASSETS_UPDATE", applicationId: closure_131_0, assets: closure_131_5 };
+            closure_132_1(closure_132_2[7]).dispatch(obj5);
+            if (closure_132_20(closure_131_1, closure_131_3, closure_131_5, closure_131_2)) {
+              closure_132_13(closure_131_0).then(() => closure_2_21(closure_1_0, closure_1_1, closure_1_2 - 1));
+              const promise = closure_132_13(closure_131_0);
+            } else {
+              obj1 = closure_132_1(closure_132_2[7]);
+              const obj6 = { type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 };
+              obj1.dispatch(obj6);
+            }
+            c6 = 3;
+            const obj13 = closure_132_1(closure_132_2[7]);
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+        if (closure_132_19(closure_131_1, closure_131_3)) {
+          obj5 = closure_132_1(closure_132_2[7]);
+          const obj7 = { type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 };
+          obj5.dispatch(obj7);
+          c6 = 3;
+          const obj8 = { value: closure_131_3, done: true };
+          return obj8;
+        } else {
+          c5 = 2;
+          c6 = 1;
+          const obj9 = { value: closure_132_16(closure_131_0), done: false };
+          return obj9;
+        }
       }
-      c6 = 3;
-      closure_132_1(closure_132_2[7]);
+    } catch (tmp32) {
+      c6 = tmp;
+      throw tmp32;
     }
-  } else if (arg0 === 1) {
-    c6 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c6 = 3;
-    return { value, done: true };
   }
-  if (closure_132_19(closure_131_1, closure_131_3)) {
-    obj5 = closure_132_1(closure_132_2[7]);
-    obj5.dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 });
-    return closure_131_3;
-  }
-  await closure_132_16(closure_131_0);
-  closure_3 = tmp2;
-  closure_131_0 = closure_0;
-  closure_131_1 = closure_1;
-  let num13 = closure_2;
-  if (closure_2 === undefined) {
-    num13 = 1;
-  }
-  closure_131_2 = num13;
-  return "PX_16";
 };
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, PlatformTypes } = Constants);

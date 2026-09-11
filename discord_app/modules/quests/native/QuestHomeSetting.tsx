@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/QuestHomeSetting.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod4227 from "../../../../_runtime/metro/04227__.js";
+import _mod4229 from "../../../../_runtime/metro/04229__.js";
 import useQuestHomeHeaderDefault from "useQuestHomeHeader.tsx";
 import QuestHomeDefault from "QuestHome.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -8,10 +8,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
 
 require = fn;
-const QuestConstants = fn(5494);
+const QuestConstants = fn(5495);
 ({ QuestHomeSortMethods: metroRequire, getQuestHomeFilterOptionItem: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { container: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.container = createStyles;
@@ -94,7 +94,7 @@ export default function QuestHomeSetting() {
             closure_1_1(found);
           }
         },
-        { equalityFn: _mod4227.shallow, fireImmediately: true },
+        { equalityFn: _mod4229.shallow, fireImmediately: true },
       ),
     [],
   );

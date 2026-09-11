@@ -31,7 +31,7 @@ function getBannerText(currentUser) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { accountWarning: null, accountWarningText: null, accountWarningButton: null };
 createStyles = {
   backgroundColor: nativeDefault.unsafe_rawColors.RED_400,

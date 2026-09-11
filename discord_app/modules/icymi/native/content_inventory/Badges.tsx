@@ -75,7 +75,7 @@ overlay = {
 };
 overlay.overlay = overlay;
 overlay["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles((arg0) => {
   let badgeContainer = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;

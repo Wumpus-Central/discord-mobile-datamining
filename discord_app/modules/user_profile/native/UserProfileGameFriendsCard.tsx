@@ -3,10 +3,10 @@ import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchAp
 import ApplicationIconAndNameDefault from "ApplicationIconAndName.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const UserProfileCardDefault = tmp2(7259);
+const UserProfileCardDefault = tmp2(7280);
 const require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_4 = createStyles.createStyles({ card: { flexDirection: "column" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendsCard.tsx");
@@ -70,7 +70,7 @@ export default function UserProfileGameFriendsCard(arg0) {
     const intl3 = tmp6(1114).intl;
     obj1.title = intl3.string(tmp6(1114).t["Uv/eTx"]);
     const obj2 = { variant: "text-md/normal", color: "text-default", children: formatResult };
-    obj1.children = jsx(tmp6(4601).Text, { variant: "text-md/normal", color: "text-default", children: formatResult });
+    obj1.children = jsx(tmp6(4602).Text, { variant: "text-md/normal", color: "text-default", children: formatResult });
     return jsx(UserProfileCardDefault, { style: null, title: null, children: null });
   }
   const arr = useGetOrFetchApplicationsDefault(applicationIds);

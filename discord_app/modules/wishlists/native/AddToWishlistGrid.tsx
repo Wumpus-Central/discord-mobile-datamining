@@ -6,12 +6,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 const createStyles = {
   itemsContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: fn(7260).WISHLIST_SUGGESTION_CARD_GAP,
+    gap: fn(7281).WISHLIST_SUGGESTION_CARD_GAP,
     justifyContent: "flex-start",
   },
 };

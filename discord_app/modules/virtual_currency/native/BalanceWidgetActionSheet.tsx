@@ -5,21 +5,21 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import _mod11174 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_animated.mp4.js";
-import _mod11175 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_static.png.js";
-import _mod11176 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_rewards.png.js";
+import _mod11197 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_animated.mp4.js";
+import _mod11198 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_static.png.js";
+import _mod11199 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_rewards.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1074);
-({ AnalyticEvents: metroRequire, Fonts: closure_7, HelpdeskArticles: closure_8 } = Constants);
+({ AnalyticEvents: metroRequire, Fonts: closure_7, HelpdeskArticles: closure_8, ThemeTypes: closure_9 } = Constants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4605);
-let closure_12 = createStyles.createStyles((color) => {
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4606);
+let closure_13 = createStyles.createStyles((color) => {
   let obj = {
     actions: null,
     balanceHeader: null,
@@ -120,9 +120,9 @@ export default function _default(balance) {
     let tmp = null;
     if (num > 4100) {
       const obj = {
-        backgroundVideo: _mod11174.default,
-        backgroundImage: _mod11175.default,
-        bannerImage: _mod11176.default,
+        backgroundVideo: _mod11197.default,
+        backgroundImage: _mod11198.default,
+        bannerImage: _mod11199.default,
         bannerText: null,
       };
       const intl = util.intl;
@@ -132,10 +132,10 @@ export default function _default(balance) {
     return tmp;
   }, items);
   if (tmp6) {
-    themeOverride = "dark";
+    themeOverride = constants3.DARK;
   }
   const token = num(ref[12]).useToken(require("native").colors.MOBILE_TEXT_HEADING_PRIMARY, themeOverride);
-  const tmp9 = closure_12(token);
+  const tmp10 = closure_13(token);
   const effect = obj.useEffect(() => {
     let obj = { type: "VIEW", source, balance: num };
     obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, obj);
@@ -158,12 +158,12 @@ export default function _default(balance) {
     ref,
     startExpanded: true,
     handleComponent() {
-      return closure_1_10(closure_1_4, {});
+      return closure_1_11(closure_1_4, {});
     },
     handleDisabled: false,
     children: null,
   };
-  const items1 = [tmp9.content];
+  const items1 = [tmp10.content];
   let promotionalBackgroundContainer = null != memo;
   if (promotionalBackgroundContainer) {
     promotionalBackgroundContainer = null != memo.backgroundVideo;
@@ -172,12 +172,12 @@ export default function _default(balance) {
     promotionalBackgroundContainer = null != memo.backgroundImage;
   }
   if (promotionalBackgroundContainer) {
-    promotionalBackgroundContainer = tmp9.promotionalBackgroundContainer;
+    promotionalBackgroundContainer = tmp10.promotionalBackgroundContainer;
   }
   const obj1 = { style: items1, children: null };
   items1[1] = promotionalBackgroundContainer;
   if (!(null != memo && null != memo.backgroundVideo && null != memo.backgroundImage)) {
-    const items2 = [tmp14, , , , ,];
+    const items2 = [tmp15, , , , ,];
     const obj2 = {
       onPress() {
         const current = ref.current;
@@ -186,22 +186,22 @@ export default function _default(balance) {
         }
       },
     };
-    items2[1] = closure_10(tmp3(tmp4[21]).ActionSheetHeaderBar, obj2);
-    let obj3 = { style: tmp9.infoIconContainer, children: null };
+    items2[1] = closure_11(tmp3(tmp4[21]).ActionSheetHeaderBar, obj2);
+    let obj3 = { style: tmp10.infoIconContainer, children: null };
     const obj4 = { onPress: callback, accessibilityRole: "link", accessibilityLabel: null, children: null };
     let intl = tmp3(tmp4[8]).intl;
     obj4.accessibilityLabel = intl.string(tmp3(tmp4[8]).t.B1oJtQ);
-    const obj5 = { style: tmp9.infoIconBackground, children: null };
+    const obj5 = { style: tmp10.infoIconBackground, children: null };
     const obj6 = { size: "sm", color: require("native").colors.INTERACTIVE_TEXT_DEFAULT };
-    obj5.children = closure_10(tmp3(tmp4[22]).CircleQuestionIcon, obj6);
-    obj4.children = closure_10(closure_4, obj5);
-    obj3.children = closure_10(closure_5, obj4);
-    items2[2] = closure_10(closure_4, obj3);
-    const obj7 = { style: tmp9.header, children: null };
-    const obj8 = { style: tmp9.balanceHeader, children: null };
+    obj5.children = closure_11(tmp3(tmp4[22]).CircleQuestionIcon, obj6);
+    obj4.children = closure_11(closure_4, obj5);
+    obj3.children = closure_11(closure_5, obj4);
+    items2[2] = closure_11(closure_4, obj3);
+    const obj7 = { style: tmp10.header, children: null };
+    const obj8 = { style: tmp10.balanceHeader, children: null };
     const obj9 = { size: "lg", color: token };
-    const items3 = [closure_10(tmp3(tmp4[23]).OrbsIcon, obj9)];
-    const obj10 = { variant: "display-md", style: tmp9.balanceText, accessibilityLabel: null, children: null };
+    const items3 = [closure_11(tmp3(tmp4[23]).OrbsIcon, obj9)];
+    const obj10 = { variant: "display-md", style: tmp10.balanceText, accessibilityLabel: null, children: null };
     const intl2 = tmp3(tmp4[8]).intl;
     let num2 = num;
     if (num == null) {
@@ -213,48 +213,48 @@ export default function _default(balance) {
       num = 0;
     }
     obj10.children = num;
-    items3[1] = closure_10(tmp3(tmp4[24]).Text, obj10);
+    items3[1] = closure_11(tmp3(tmp4[24]).Text, obj10);
     obj8.children = items3;
-    obj7.children = closure_11(closure_4, obj8);
-    items2[3] = closure_10(closure_4, obj7);
-    let tmp12Result = null != memo && null != memo.bannerImage;
-    if (tmp12Result) {
-      const obj12 = { style: tmp9.promotionalBannerContainer, children: null };
+    obj7.children = closure_12(closure_4, obj8);
+    items2[3] = closure_11(closure_4, obj7);
+    let tmp13Result = null != memo && null != memo.bannerImage;
+    if (tmp13Result) {
+      const obj12 = { style: tmp10.promotionalBannerContainer, children: null };
       const obj13 = { source: null, style: null, resizeMode: "contain" };
       const obj14 = { uri: memo.bannerImage };
       obj13.source = obj14;
-      obj13.style = tmp9.promotionalBannerAsset;
-      const items4 = [closure_10(require("FastImage"), obj13)];
-      let tmp11Result = null != memo.bannerText;
-      if (tmp11Result) {
-        tmp11Result = "" !== memo.bannerText;
+      obj13.style = tmp10.promotionalBannerAsset;
+      const items4 = [closure_11(require("FastImage"), obj13)];
+      let tmp12Result = null != memo.bannerText;
+      if (tmp12Result) {
+        tmp12Result = "" !== memo.bannerText;
       }
-      if (tmp11Result) {
-        const obj15 = { variant: "heading-xl/medium", style: tmp9.promotionalBannerText, children: memo.bannerText };
-        tmp11Result = closure_10(tmp3(tmp4[24]).Text, obj15);
+      if (tmp12Result) {
+        const obj15 = { variant: "heading-xl/medium", style: tmp10.promotionalBannerText, children: memo.bannerText };
+        tmp12Result = closure_11(tmp3(tmp4[24]).Text, obj15);
       }
-      items4[1] = tmp11Result;
+      items4[1] = tmp12Result;
       obj12.children = items4;
-      tmp12Result = closure_11(closure_4, obj12);
+      tmp13Result = closure_12(closure_4, obj12);
     }
-    items2[4] = tmp12Result;
-    const obj16 = { style: tmp9.actions, children: null };
+    items2[4] = tmp13Result;
+    const obj16 = { style: tmp10.actions, children: null };
     ({ buttonText: obj25.text, onButtonPress: obj25.onPress } = primaryButtonConfig);
-    const items5 = [closure_10(tmp3(tmp4[25]).Button, { text: null, variant: "primary", size: "lg", onPress: null })];
+    const items5 = [closure_11(tmp3(tmp4[25]).Button, { text: null, variant: "primary", size: "lg", onPress: null })];
     ({ buttonText: obj26.text, onButtonPress: obj26.onPress } = secondaryButtonConfig);
-    items5[1] = closure_10(tmp3(tmp4[25]).Button, { text: null, variant: "tertiary", size: "lg", onPress: null });
+    items5[1] = closure_11(tmp3(tmp4[25]).Button, { text: null, variant: "tertiary", size: "lg", onPress: null });
     obj16.children = items5;
-    items2[5] = closure_11(closure_4, obj16);
+    items2[5] = closure_12(closure_4, obj16);
     obj1.children = items2;
-    obj.children = closure_11(closure_4, obj1);
-    obj.children = closure_10(tmp3(tmp4[18]).BottomSheet, obj);
-    return closure_10(tmp3(tmp4[17]).ThemeContextProvider, obj);
+    obj.children = closure_12(closure_4, obj1);
+    obj.children = closure_11(tmp3(tmp4[18]).BottomSheet, obj);
+    return closure_11(tmp3(tmp4[17]).ThemeContextProvider, obj);
   } else if (enabled) {
     const obj19 = { source: null, style: null, resizeMode: "cover" };
     const obj20 = { uri: memo.backgroundImage };
     obj19.source = obj20;
-    obj19.style = tmp9.promotionalBackground;
-    tmp11Result = closure_10(require("FastImage"), obj19);
+    obj19.style = tmp10.promotionalBackground;
+    tmp12Result = closure_11(require("FastImage"), obj19);
   } else {
     const obj21 = {
       source: null,
@@ -271,9 +271,9 @@ export default function _default(balance) {
     const obj22 = { uri: memo.backgroundVideo };
     obj21.source = obj22;
     obj21.poster = memo.backgroundImage;
-    obj21.style = tmp9.promotionalBackground;
+    obj21.style = tmp10.promotionalBackground;
     obj21.paused = enabled;
-    tmp11Result = closure_10(tmp3(tmp4[20]).VideoComponent, obj21);
+    tmp12Result = closure_11(tmp3(tmp4[20]).VideoComponent, obj21);
   }
   let tmp3Result = num(ref[12]);
   tmp6 = undefined === themeOverride && null != memo;

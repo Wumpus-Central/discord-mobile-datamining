@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef8473 from "../../../../../_runtime/metro/08473__.js";
+import _modDef8494 from "../../../../../_runtime/metro/08494__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function StageSparkleInner(style) {
   ({ IconComponent, icon } = style);
   if (icon === undefined) {
-    icon = _modDef8473;
+    icon = _modDef8494;
   }
   const tmp3 = closure_6();
   let obj = { style: null, children: null };
@@ -27,15 +27,15 @@ function StageSparkleInner(style) {
   }
   obj.children = tmp6Result;
   const items1 = [React4(View, obj)];
-  const obj2 = { style: tmp3.sparkles, source: tmp10(8474) };
-  items1[1] = React4(tmp10(5637), obj2);
+  const obj2 = { style: tmp3.sparkles, source: tmp10(8495) };
+  items1[1] = React4(tmp10(5638), obj2);
   obj.children = items1;
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 const createStyles = {
   container: { width: 88, height: 88, alignItems: "center", justifyContent: "center" },
   iconContainer: null,

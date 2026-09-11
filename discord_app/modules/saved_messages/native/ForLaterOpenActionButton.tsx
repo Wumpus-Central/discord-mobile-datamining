@@ -54,18 +54,18 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const point = {
-  shape: fn(8884).CutoutShape.Circle,
-  x: fn(16488).ICON_SIZE.sm - 7,
-  y: fn(16488).ICON_SIZE.sm - 8,
+  shape: fn(8905).CutoutShape.Circle,
+  x: fn(16476).ICON_SIZE.sm - 7,
+  y: fn(16476).ICON_SIZE.sm - 8,
   size: 10,
 };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = {
   container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" },
   iconAnchor: null,
   dot: null,
 };
-let size = { width: fn(16488).ICON_SIZE.sm, height: fn(16488).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(16476).ICON_SIZE.sm, height: fn(16476).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = {
   position: "absolute",

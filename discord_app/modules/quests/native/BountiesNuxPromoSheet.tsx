@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { illustrationContainer: null };
 createStyles = { paddingTop: nativeDefault.space.PX_12 };
 createStyles.illustrationContainer = createStyles;
@@ -27,7 +27,7 @@ export default function BountiesNuxPromoSheet() {
   const intl = util.intl;
   obj.title = intl.string(util.t.DDpHZG);
   const intl2 = util.intl;
-  obj.description = intl2.string(util.t["LY+igv"]);
+  obj.description = intl2.string(util.t.xs7q1I);
   obj = {
     style: closure_6().illustrationContainer,
     children: jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 }),

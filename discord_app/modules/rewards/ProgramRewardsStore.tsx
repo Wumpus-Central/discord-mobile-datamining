@@ -2,9 +2,9 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef3841 from "../../../_runtime/metro/03841__.js";
-import _modDef3858 from "../../../_runtime/metro/03858__.js";
-import differenceInMillisecondsDefault from "../../../_runtime/03886_differenceInMilliseconds.js";
+import _modDef3843 from "../../../_runtime/metro/03843__.js";
+import _modDef3860 from "../../../_runtime/metro/03860__.js";
+import differenceInMillisecondsDefault from "../../../_runtime/03888_differenceInMilliseconds.js";
 import ProgramRewardsUtils from "ProgramRewardsUtils.tsx";
 import ProgramRewardsTypes from "ProgramRewardsTypes.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -30,7 +30,7 @@ function updateTtl() {
         let tmp7 = date1;
         let _isNaN = isNaN;
         if (!isNaN(date1.getTime())) {
-          let tmp11 = _modDef3858(tmp7, 10);
+          let tmp11 = _modDef3860(tmp7, 10);
           let tmp12 = tmp11;
           if (date >= tmp11) {
             obj = { state: closure_1_8.PAST_REWARD_DATE };
@@ -43,7 +43,7 @@ function updateTtl() {
             };
             obj7.return();
             return obj1;
-          } else if (date >= _modDef3841(tmp7, -1)) {
+          } else if (date >= _modDef3843(tmp7, -1)) {
             let obj2 = {
               state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
               msUntilReward: differenceInMillisecondsDefault(tmp12, date),
@@ -88,7 +88,7 @@ function updateTtl() {
         let tmp7 = date1;
         let _isNaN = isNaN;
         if (!isNaN(date1.getTime())) {
-          let tmp11 = _modDef3858(tmp7, 10);
+          let tmp11 = _modDef3860(tmp7, 10);
           let tmp12 = tmp11;
           if (date >= tmp11) {
             obj = { state: closure_1_8.PAST_REWARD_DATE };
@@ -101,7 +101,7 @@ function updateTtl() {
             };
             obj7.return();
             return obj1;
-          } else if (date >= _modDef3841(tmp7, -1)) {
+          } else if (date >= _modDef3843(tmp7, -1)) {
             let obj2 = {
               state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
               msUntilReward: differenceInMillisecondsDefault(tmp12, date),
@@ -122,7 +122,7 @@ let DidNotFetchReason = {
   CACHE_SHOULD_NOT_FETCH: "CACHE_SHOULD_NOT_FETCH",
 };
 let c6 = 86400000;
-const networkTtlCache = new fn(13801).NetworkTtlCache({ ttlMs: 86400000 });
+const networkTtlCache = new fn(13780).NetworkTtlCache({ ttlMs: 86400000 });
 let closure_8 = {
   MORE_THAN_24H_BEFORE_REWARD: "MORE_THAN_24H_BEFORE_REWARD",
   LESS_THAN_24H_BEFORE_REWARD: "LESS_THAN_24H_BEFORE_REWARD",
@@ -255,7 +255,7 @@ prototype["initialize"] = function initialize(cache) {
         let tmp7 = date1;
         let _isNaN = isNaN;
         if (!isNaN(date1.getTime())) {
-          let tmp11 = _modDef3858(tmp7, 10);
+          let tmp11 = _modDef3860(tmp7, 10);
           let tmp12 = tmp11;
           if (date >= tmp11) {
             obj = { state: closure_1_8.PAST_REWARD_DATE };
@@ -268,7 +268,7 @@ prototype["initialize"] = function initialize(cache) {
             };
             obj7.return();
             return obj1;
-          } else if (date >= _modDef3841(tmp7, -1)) {
+          } else if (date >= _modDef3843(tmp7, -1)) {
             let obj2 = {
               state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
               msUntilReward: differenceInMillisecondsDefault(tmp12, date),
@@ -313,7 +313,7 @@ prototype["initialize"] = function initialize(cache) {
         let tmp7 = date1;
         let _isNaN = isNaN;
         if (!isNaN(date1.getTime())) {
-          let tmp11 = _modDef3858(tmp7, 10);
+          let tmp11 = _modDef3860(tmp7, 10);
           let tmp12 = tmp11;
           if (date >= tmp11) {
             obj = { state: closure_1_8.PAST_REWARD_DATE };
@@ -326,7 +326,7 @@ prototype["initialize"] = function initialize(cache) {
             };
             obj7.return();
             return obj1;
-          } else if (date >= _modDef3841(tmp7, -1)) {
+          } else if (date >= _modDef3843(tmp7, -1)) {
             let obj2 = {
               state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
               msUntilReward: differenceInMillisecondsDefault(tmp12, date),
@@ -466,7 +466,7 @@ DidNotFetchReason = {
             let tmp7 = date1;
             let _isNaN = isNaN;
             if (!isNaN(date1.getTime())) {
-              let tmp11 = _modDef3858(tmp7, 10);
+              let tmp11 = _modDef3860(tmp7, 10);
               let tmp12 = tmp11;
               if (date >= tmp11) {
                 obj = { state: closure_1_8.PAST_REWARD_DATE };
@@ -479,7 +479,7 @@ DidNotFetchReason = {
                 };
                 obj7.return();
                 return obj1;
-              } else if (date >= _modDef3841(tmp7, -1)) {
+              } else if (date >= _modDef3843(tmp7, -1)) {
                 let obj2 = {
                   state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
                   msUntilReward: differenceInMillisecondsDefault(tmp12, date),
@@ -524,7 +524,7 @@ DidNotFetchReason = {
             let tmp7 = date1;
             let _isNaN = isNaN;
             if (!isNaN(date1.getTime())) {
-              let tmp11 = _modDef3858(tmp7, 10);
+              let tmp11 = _modDef3860(tmp7, 10);
               let tmp12 = tmp11;
               if (date >= tmp11) {
                 obj = { state: closure_1_8.PAST_REWARD_DATE };
@@ -537,7 +537,7 @@ DidNotFetchReason = {
                 };
                 obj7.return();
                 return obj1;
-              } else if (date >= _modDef3841(tmp7, -1)) {
+              } else if (date >= _modDef3843(tmp7, -1)) {
                 let obj2 = {
                   state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
                   msUntilReward: differenceInMillisecondsDefault(tmp12, date),

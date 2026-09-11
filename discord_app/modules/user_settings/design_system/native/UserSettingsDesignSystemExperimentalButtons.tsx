@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import _modDef4553 from "../../../../../_runtime/metro/04553__.js";
+import _modDef4554 from "../../../../../_runtime/metro/04554__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05037_LinearGradient.js";
-import _modDef5663 from "../../../../../_runtime/metro/05663__.js";
+import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
+import _modDef5664 from "../../../../../_runtime/metro/05664__.js";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef7104 from "../../../../../_runtime/metro/07104__.js";
-import _modDef7433 from "../../../../../_runtime/metro/07433__.js";
+import _modDef7125 from "../../../../../_runtime/metro/07125__.js";
+import _modDef7454 from "../../../../../_runtime/metro/07454__.js";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import native2 from "../../../../design/components/experimental/native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -18,8 +18,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const ThemeTypes = fn(1074).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/design_system/native/UserSettingsDesignSystemExperimentalButtons.tsx",
@@ -57,16 +58,16 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     backgroundColor: nativeDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_1,
     paddingVertical: nativeDefault.space.PX_48,
   };
-  obj3.children = hasOwnProperty(native2.HeaderButton, {
+  obj3.children = timestampProducer(native2.HeaderButton, {
     onPress() {},
     text: "Channel Name",
-    icon: _modDef5663,
+    icon: _modDef5664,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6,
   });
-  obj2.children = hasOwnProperty(React3, obj3);
-  const items = [hasOwnProperty(TableRowGroup.TableRowGroup, obj2), , , , , ,];
+  obj2.children = timestampProducer(React3, obj3);
+  const items = [timestampProducer(TableRowGroup.TableRowGroup, obj2), , , , , ,];
   const obj6 = {
     title: "Input Button",
     description: "A specialized button which looks like a text field, but functions as a button.",
@@ -77,17 +78,17 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   const obj5 = {
     onPress() {},
     text: "Channel Name",
-    icon: _modDef5663,
+    icon: _modDef5664,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6,
   };
   const items1 = [
-    hasOwnProperty(native2.InputButton, {
+    timestampProducer(native2.InputButton, {
       onPress() {},
       size: "lg",
       text: "Search",
-      icon: _modDef7104,
+      icon: _modDef7125,
       isRound: true,
     }),
   ];
@@ -95,20 +96,20 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     onPress() {},
     size: "lg",
     text: "Search",
-    icon: _modDef7104,
+    icon: _modDef7125,
     isRound: true,
   };
-  items1[1] = hasOwnProperty(native2.InputButton, {
+  items1[1] = timestampProducer(native2.InputButton, {
     onPress() {},
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef4553,
+    icon: _modDef4554,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   });
   obj7.children = items1;
-  obj6.children = timestampProducer(Stack_Stack.Stack, obj7);
-  items[1] = hasOwnProperty(TableRowGroup.TableRowGroup, obj6);
+  obj6.children = React5(Stack_Stack.Stack, obj7);
+  items[1] = timestampProducer(TableRowGroup.TableRowGroup, obj6);
   const obj10 = {
     title: "Twin Buttons",
     description:
@@ -118,18 +119,18 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   };
   const obj11 = { children: null };
   const items2 = [
-    hasOwnProperty(components_Button_Button.Button, {
+    timestampProducer(components_Button_Button.Button, {
       onPress() {},
       text: "Add Status",
     }),
-    hasOwnProperty(components_Button_Button.Button, {
+    timestampProducer(components_Button_Button.Button, {
       onPress() {},
       text: "Edit Profile",
     }),
   ];
   obj11.children = items2;
-  obj10.children = timestampProducer(native2.TwinButtons, obj11);
-  items[2] = hasOwnProperty(TableRowGroup.TableRowGroup, obj10);
+  obj10.children = React5(native2.TwinButtons, obj11);
+  items[2] = timestampProducer(TableRowGroup.TableRowGroup, obj10);
   const obj14 = {
     title: "PressableScale",
     description:
@@ -154,29 +155,29 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     onPress() {},
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef4553,
+    icon: _modDef4554,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   };
-  obj16.children = hasOwnProperty(React3, {
+  obj16.children = timestampProducer(React3, {
     style: { borderColor: "pink", borderWidth: 1, borderRadius: 8, padding: 12 },
-    children: hasOwnProperty(Text_Text.Text, { variant: "text-md/semibold", children: "This is a custom button" }),
+    children: timestampProducer(Text_Text.Text, { variant: "text-md/semibold", children: "This is a custom button" }),
   });
-  obj15.children = hasOwnProperty(native2.PressableScale, obj16);
-  obj14.children = hasOwnProperty(React3, obj15);
-  items[3] = hasOwnProperty(TableRowGroup.TableRowGroup, obj14);
+  obj15.children = timestampProducer(native2.PressableScale, obj16);
+  obj14.children = timestampProducer(React3, obj15);
+  items[3] = timestampProducer(TableRowGroup.TableRowGroup, obj14);
   const obj17 = {
     style: { borderColor: "pink", borderWidth: 1, borderRadius: 8, padding: 12 },
-    children: hasOwnProperty(Text_Text.Text, { variant: "text-md/semibold", children: "This is a custom button" }),
+    children: timestampProducer(Text_Text.Text, { variant: "text-md/semibold", children: "This is a custom button" }),
   };
-  items[4] = hasOwnProperty(TableRowGroup.TableRowGroup, {
+  items[4] = timestampProducer(TableRowGroup.TableRowGroup, {
     title: "Experimental Blur Background Row Button",
     description:
       "Row Button Row Buttons are full-width, high-emphasis buttons that are used as primary CTAs in a page.",
     hasIcons: false,
-    children: hasOwnProperty(React3, {}),
+    children: timestampProducer(React3, {}),
   });
-  const obj19 = { theme: "darker", children: null };
+  const obj19 = { theme: ThemeTypes.DARK, children: null };
   const obj20 = {
     style: { padding: 16 },
     start: { x: 0, y: 0 },
@@ -189,49 +190,49 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     description:
       "Row Button Row Buttons are full-width, high-emphasis buttons that are used as primary CTAs in a page.",
     hasIcons: false,
-    children: hasOwnProperty(React3, {}),
+    children: timestampProducer(React3, {}),
   };
   const tmp3 = LinearGradientDefault;
-  obj20.children = hasOwnProperty(RowButton.RowButton, {
-    icon: _modDef7433,
+  obj20.children = timestampProducer(RowButton.RowButton, {
+    icon: _modDef7454,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
     onPress() {},
   });
-  obj19.children = hasOwnProperty(tmp3, obj20);
-  items[5] = hasOwnProperty(native.ThemeContextProvider, obj19);
+  obj19.children = timestampProducer(tmp3, obj20);
+  items[5] = timestampProducer(native.ThemeContextProvider, obj19);
   const obj21 = {
-    icon: _modDef7433,
+    icon: _modDef7454,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
     onPress() {},
   };
-  items[6] = hasOwnProperty(TableRowGroup.TableRowGroup, {
+  items[6] = timestampProducer(TableRowGroup.TableRowGroup, {
     title: "Collapsible Floating Action Button",
     description:
       "A variation of the FloatingActionButton which will display some text until the user scrolls. We currently recommend the use of the FloatingActionButton over the CollapsibleFloatingActionButton, as a singular icon button without animation is more compact, understandable, and predictable.",
     hasIcons: false,
-    children: hasOwnProperty(React3, { style: { padding: 48 } }),
+    children: timestampProducer(React3, { style: { padding: 48 } }),
   });
   obj1.children = items;
-  obj.children = timestampProducer(Stack_Stack.Stack, obj1);
-  const items3 = [hasOwnProperty(React4, obj)];
+  obj.children = React5(Stack_Stack.Stack, obj1);
+  const items3 = [timestampProducer(React4, obj)];
   const obj22 = {
     title: "Collapsible Floating Action Button",
     description:
       "A variation of the FloatingActionButton which will display some text until the user scrolls. We currently recommend the use of the FloatingActionButton over the CollapsibleFloatingActionButton, as a singular icon button without animation is more compact, understandable, and predictable.",
     hasIcons: false,
-    children: hasOwnProperty(React3, { style: { padding: 48 } }),
+    children: timestampProducer(React3, { style: { padding: 48 } }),
   };
-  items3[1] = hasOwnProperty(native2.CollapsibleFloatingActionButton, {
-    icon: _modDef7433,
+  items3[1] = timestampProducer(native2.CollapsibleFloatingActionButton, {
+    icon: _modDef7454,
     onPress() {},
     positionBottom: 32,
     text: "Floating Action Button",
     state: collapsibleFloatingActionButtonState,
   });
   obj.children = items3;
-  return timestampProducer(React3, obj);
+  return React5(React3, obj);
 }

@@ -15,11 +15,11 @@ import SessionsStore from "../../../../stores/SessionsStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(9750).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(9771).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { bgNeutral: null, bg: null, container: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.bgNeutral = createStyles;
@@ -93,7 +93,7 @@ export default function ConnectivityGlobalStatusContent() {
   }
   let tmp2ResultResult = useCanSpeakInChannelDefault(id);
   const tmp2Result = useCanSpeakInChannelDefault;
-  let tmp5Result = tmp5(4456);
+  let tmp5Result = tmp5(4458);
   let tmp14 = tmp12;
   const tmp11 = useIsInvitedToSpeakDefault();
   if (isGuildStageVoiceResult) {
@@ -102,11 +102,11 @@ export default function ConnectivityGlobalStatusContent() {
     }
     tmp14 = tmp2ResultResult;
   }
-  tmp5Result = tmp5(5176);
+  tmp5Result = tmp5(5177);
   let isScreenLandscape = tmp5Result.useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4462).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result1 = tmp5(4462);
+    isScreenLandscape = tmp5(4464).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result1 = tmp5(4464);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(1115).isAndroid();

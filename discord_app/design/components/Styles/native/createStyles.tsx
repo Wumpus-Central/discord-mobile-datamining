@@ -13,7 +13,7 @@ import ClientThemesBackgroundStore from "../../../../modules/client_themes/Clien
 
 require = fn;
 function createCacheKey() {
-  const items = [...arguments];
+  items = [...arguments];
   return items.join("");
 }
 function parseThemedStyles(obj, enabledExperiments) {
@@ -122,7 +122,7 @@ new Set([
   "tintColor",
 ]);
 let closure_8 = Symbol.for("dynamicToken");
-let closure_10 = ["light", "darker", "midnight"];
+let items = [nativeDefault.themes.LIGHT, nativeDefault.themes.DARK, nativeDefault.themes.ONYX];
 let closure_11 = {
   code: "function createStylesTsx1(){const{resolvedStyles,withTiming,interpolateColor,themeIndex,stops,timingStandard}=this.__closure;const result={};for(const propertyName in resolvedStyles){const value=resolvedStyles[propertyName];if(Array.isArray(value)){result[propertyName]=withTiming(interpolateColor(themeIndex.get(),stops,value),timingStandard);}else{result[propertyName]=value;}}return result;}",
 };
@@ -137,7 +137,7 @@ export const createStyles = function createStyles(createStyles) {
   const map = new Map();
   closure_2 = typeof createStyles === "function";
   return () => {
-    let items = [...arguments];
+    items = [...arguments];
     let obj = createStyles(closure_2[4]);
     const themeContext = obj.useThemeContext();
     const items1 = [];
@@ -210,7 +210,7 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
         obj,
         Object.fromEntries(
           keys.map((item) => {
-            const items = [
+            items = [
               item,
               {
                 configurable: true,
@@ -238,7 +238,7 @@ export const createStyleProperties = function createStyleProperties(createStyles
   closure_0 = createStyles;
   const map = new Map();
   return () => {
-    const items = [...arguments];
+    items = [...arguments];
     const themeContext = native.useThemeContext();
     const items1 = [];
     items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
@@ -296,7 +296,7 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
       const json = JSON.stringify(obj);
       const merged1 = Object.assign(obj);
       obj.key = json;
-      const items = [];
+      items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(substr, 0);
       items[arraySpreadResult] = obj.key;
       const applyResult = HermesBuiltin.apply(items, undefined);
@@ -345,7 +345,7 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
 export const createAnimatedThemedStyles = function createAnimatedThemedStyles(createStyles) {
   let arr = items;
   if (items === undefined) {
-    arr = closure_10;
+    arr = items;
   }
   let stops;
   items = [];
@@ -397,7 +397,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
       obj.contrast = num4;
       obj = {};
       const merged = Object.assign(obj);
-      class T {
+      class S {
         constructor() {
           obj = {};
           for (const key10005 in closure_4) {
@@ -442,7 +442,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
       tmp3 = obj;
     }
     obj = tmp3;
-    class T {
+    class S {
       constructor() {
         obj = {};
         for (const key10005 in closure_4) {
@@ -470,7 +470,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
       }
     }
     const obj4 = arr(obj[8]);
-    T.__closure = {
+    S.__closure = {
       resolvedStyles: tmp3,
       withTiming: arr(obj[9]).withTiming,
       interpolateColor: arr(obj[8]).interpolateColor,
@@ -478,8 +478,8 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
       stops,
       timingStandard: arr(obj[10]).timingStandard,
     };
-    T.__workletHash = 6815805628278;
-    T.__initData = __initData;
-    return obj4.useAnimatedStyle(T);
+    S.__workletHash = 6815805628278;
+    S.__initData = __initData;
+    return obj4.useAnimatedStyle(S);
   };
 };

@@ -33,12 +33,12 @@ const logger = new LoggerDefault("BillingStandaloneNativeUtils");
 let result = size.fileFinishedImporting("modules/payments/native/utils/BillingStandaloneNativeUtils.tsx");
 
 export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalonePremiumCheckoutFromMobileApp(
-  premium_nitro_marketing_page,
+  premium_plan_selection_action_sheet,
   arg1,
   arg2,
   arg3,
 ) {
-  _require = premium_nitro_marketing_page;
+  _require = premium_plan_selection_action_sheet;
   const loadId = arg1;
   dependencyMap = arg2;
   CustomCheckoutFlow = arg3;
@@ -127,7 +127,7 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
   if (tmpResult.isMetaQuest()) {
     prop1 = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
   }
-  tmpResult = tmp(7459);
+  tmpResult = tmp(7480);
   return tmpResult.goToBillingStandalonePageWithHandoff(
     Routes.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(guild_id, prop, newAnalyticsLoadId, prop1),
     (body, searchParams) => {

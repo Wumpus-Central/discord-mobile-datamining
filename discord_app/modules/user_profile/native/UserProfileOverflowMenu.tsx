@@ -28,7 +28,7 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserProfileThemeTypes = fn(7260).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7281).UserProfileThemeTypes;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_11,
@@ -37,8 +37,8 @@ const Constants = fn(1074);
   NOOP: closure_14,
   RelationshipTypes: closure_15,
 } = Constants);
-const ParticipantTypes = fn(4626).ParticipantTypes;
-const RestrictionConfirmationConstants = fn(11454);
+const ParticipantTypes = fn(4627).ParticipantTypes;
+const RestrictionConfirmationConstants = fn(11476);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_17, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_18 } =
   RestrictionConfirmationConstants);
 const jsxProd = fn(21);
@@ -327,23 +327,16 @@ export default function UserProfileOverflowMenu(user) {
           const intl8 = tmp(tmp2[31]).intl;
           obj8.label = intl8.string(tmp(tmp2[31]).t.l4Emac);
           obj8.action = function action() {
-            let obj = { userId: id, channelId: null, onSuccess: null, impressionName: null };
+            const obj = { userId: id, channelId: null, onSuccess: null, impressionName: null };
             id = undefined;
             if (channel != null) {
               id = channel.id;
             }
             obj.channelId = id;
-            obj.onSuccess = function onSuccess() {
-              id = undefined;
-              if (id != null) {
-                id = id.id;
-              }
-              const result = displayProfile(channel[39]).showBlockSuccessToast(closure_1_15, id);
-              const obj = displayProfile(channel[39]);
-            };
+            obj.onSuccess = onSuccess;
             obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-            obj.openLazy(asyncRequireImpl(11455, dependencyMap.paths), closure_2_17, obj, "stack");
-            const tmp3 = asyncRequireImpl(11455, dependencyMap.paths);
+            obj.openLazy(asyncRequireImpl(11477, dependencyMap.paths), closure_2_17, obj, "stack");
+            const tmp3 = asyncRequireImpl(11477, dependencyMap.paths);
           };
           push(obj8);
           if (result) {
@@ -407,8 +400,8 @@ export default function UserProfileOverflowMenu(user) {
           obj.channelId = id;
           obj.onSuccess = onSuccess;
           obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION;
-          obj2.openLazy(asyncRequireImpl(11456, dependencyMap.paths), collapsedCategories, obj, "stack");
-          const tmp4 = asyncRequireImpl(11456, dependencyMap.paths);
+          obj2.openLazy(asyncRequireImpl(11478, dependencyMap.paths), collapsedCategories, obj, "stack");
+          const tmp4 = asyncRequireImpl(11478, dependencyMap.paths);
         };
         items7.push(obj12);
       }
@@ -427,7 +420,7 @@ export default function UserProfileOverflowMenu(user) {
           let obj = { action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations };
           trackUserProfileAction(obj);
           obj = { userId: id, showUserProfile };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13192, dependencyMap.paths), obj);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13215, dependencyMap.paths), obj);
           ActionSheetActionCreatorsDefault.hideActionSheet();
         },
       };

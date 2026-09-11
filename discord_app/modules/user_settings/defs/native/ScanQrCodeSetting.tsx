@@ -5,16 +5,16 @@ import NativePermissionUtilsDefault from "../../../native_permissions/NativePerm
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const NativePermissionTypes = fn(4815).NativePermissionTypes;
+const NativePermissionTypes = fn(4816).NativePermissionTypes;
 let apply = fn(12);
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11562);
 apply = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(14960).QrCodeIcon,
+  IconComponent: fn(14937).QrCodeIcon,
   onPress: apply.debounce(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {

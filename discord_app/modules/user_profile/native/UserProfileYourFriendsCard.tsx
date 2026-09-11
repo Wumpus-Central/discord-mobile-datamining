@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let obj = { direction: fn(1178).CutoutDirection.RIGHT, inset: -4 };
 let closure_12 = Object.freeze(obj);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 obj = { pressable: null, label: null, facepile: null, avatars: null };
 obj = { flex: 1, flexDirection: "row", alignItems: "center", padding: 16, borderRadius: nativeDefault.radii.lg };
 obj.pressable = obj;
@@ -48,7 +48,7 @@ export default function UserProfileYourFriendsCard(arg0) {
     RelationshipTypes.FRIEND,
   );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9918).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9939).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {

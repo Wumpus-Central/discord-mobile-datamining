@@ -5,7 +5,7 @@ import FastImageDefault from "../../../../../components_native/common/FastImage.
 import ProfileFrameLayerOrder from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
 import ProfileFrameDefault from "../ProfileFrame.tsx";
 import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
-import _modDef8894 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef8915 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,10 +14,10 @@ function filterLayer(responsive) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7260).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7281).UserProfileThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { profileFrameContainer: { flex: 1 }, profileContainer: null, sampleProfile: null };
 createStyles = {
   flex: 1,
@@ -27,7 +27,7 @@ createStyles = {
   borderRadius: nativeDefault.radii.xs,
 };
 createStyles.profileContainer = createStyles;
-createStyles.sampleProfile = { width: "100%", aspectRatio: fn(8869).SAMPLE_PROFILE_ASPECT_RATIO };
+createStyles.sampleProfile = { width: "100%", aspectRatio: fn(8890).SAMPLE_PROFILE_ASPECT_RATIO };
 let closure_9 = createStyles.createStyles(createStyles);
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -168,7 +168,7 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   const obj14 = { source: null, style: null, resizeMode: "cover" };
   const obj15 = { uri: null };
   let tmp3Result = FastImageDefault;
-  obj15.uri = _modDef8894;
+  obj15.uri = _modDef8915;
   obj14.source = obj15;
   obj14.style = tmp.sampleProfile;
   obj13.children = timestampProducer(tmp3Result, obj14);

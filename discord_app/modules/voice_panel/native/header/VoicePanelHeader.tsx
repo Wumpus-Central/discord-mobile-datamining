@@ -47,7 +47,7 @@ function MusicMuteButton(channelId) {
       }
       obj = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 9980 : 9982),
+        icon: importDefault(stateFromStores ? 10001 : 10003),
         onPress() {
           return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
         },
@@ -60,21 +60,21 @@ function MusicMuteButton(channelId) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12343);
+const VoicePanelConstants = fn(12366);
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(12346).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(12341).VoicePanelControlsModes;
-const ParticipantTypes = fn(4626).ParticipantTypes;
+const EDGE_GUTTER = fn(12369).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12364).VoicePanelControlsModes;
+const ParticipantTypes = fn(4627).ParticipantTypes;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-let createStyles = fn(4605);
+let createStyles = fn(4606);
 let obj = {
   headerWrapper: {
     zIndex: 1,
@@ -685,11 +685,11 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
       flag = isUserSecureFramesVerified;
     }
   }
-  let MIDNIGHT;
+  let ONYX;
   if (tmp38Result4) {
-    MIDNIGHT = ThemeTypes.MIDNIGHT;
+    ONYX = ThemeTypes.ONYX;
   }
-  obj4 = { theme: MIDNIGHT, children: null };
+  obj4 = { theme: ONYX, children: null };
   const obj5 = { style: null, pointerEvents: "box-none", layout, children: null };
   const items6 = [tmp.headerWrapper, animatedStyle];
   obj5.style = items6;

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ThemeGrayIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod16456 from "../../../../../../../_runtime/metro/16456__.js";
+import _mod16444 from "../../../../../../../_runtime/metro/16444__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const ThemeGrayIcon = function ThemeGrayIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16456, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16444, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

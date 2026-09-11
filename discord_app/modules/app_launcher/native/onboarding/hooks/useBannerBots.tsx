@@ -11,7 +11,7 @@ export const useBannerBots = function useBannerBots(context) {
   context = context.context;
   let first1;
   let obj = (function useAppsMap(context) {
-    const apps = first1(12137).useApplicationsInContext({
+    const apps = first1(12160).useApplicationsInContext({
       context: context.context,
       onlyWithCommands: true,
       includeBuiltIn: false,
@@ -28,17 +28,17 @@ export const useBannerBots = function useBannerBots(context) {
       return map;
     }, items);
   })({ context });
-  let apps = first1(12137).useApplicationsInContext({
+  let apps = first1(12160).useApplicationsInContext({
     context,
     onlyWithCommands: true,
     includeBuiltIn: false,
     includeEmbeddedApps: false,
     includeNonEmbeddedApps: true,
   }).apps;
-  const obj2 = first1(12137);
+  const obj2 = first1(12160);
   const tmp2 = first1;
   const obj3 = (function useCommandsMap(context) {
-    const commands = first1(12137).useApplicationCommandsInContext({
+    const commands = first1(12160).useApplicationCommandsInContext({
       context: context.context,
       includeBuiltIn: false,
     }).commands;
@@ -67,15 +67,15 @@ export const useBannerBots = function useBannerBots(context) {
         return guild.getGuild(guild_id);
       }),
     };
-    return context(9368).useTopCommands(obj);
+    return context(9389).useTopCommands(obj);
   })({ context });
   let channel = context.channel;
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const activityApplications = first1(12108).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-  const obj4 = first1(12108);
+  const activityApplications = first1(12131).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+  const obj4 = first1(12131);
   let items = [AppLauncherOnboardingStore];
   const stateFromStores = tmp2(504).useStateFromStores(items, () =>
     recentApplicationCommandMetadata.getRecentApplicationCommandMetadata(),

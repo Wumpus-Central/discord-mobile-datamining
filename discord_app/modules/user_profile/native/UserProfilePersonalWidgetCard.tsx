@@ -162,7 +162,7 @@ function CoverSection(section) {
     if (null != source) {
       if ("" !== section.title) {
         const obj6 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result = closure_1_10(tmp14(5037), obj6);
+        tmp24Result = closure_1_10(tmp14(5038), obj6);
       } else {
         tmp24Result = null;
       }
@@ -172,7 +172,7 @@ function CoverSection(section) {
     let tmp24Result1 = null;
     if (showGifTag) {
       const obj7 = { style: tmp.gifTag };
-      tmp24Result1 = closure_1_10(tmp14(8318), obj7);
+      tmp24Result1 = closure_1_10(tmp14(8339), obj7);
     }
     items2[3] = tmp24Result1;
     obj2.children = items2;
@@ -254,7 +254,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = closure_15();
   const tmp5 = disableInteraction;
-  obj.titleLeadingIcon = closure_10(userId(8732).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj.titleLeadingIcon = closure_10(userId(8753).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj.title = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -262,7 +262,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   }
   if (tmp4Result) {
     obj = { userId, widget };
-    tmp4Result = closure_10(tmp5(8733), obj);
+    tmp4Result = closure_10(tmp5(8754), obj);
   }
   obj.trailingAction = tmp4Result;
   const obj1 = { style: tmp.sectionsContainer, children: null };
@@ -288,7 +288,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items1[1] = tmp4Result;
   obj1.children = items1;
   obj.children = closure_11(closure_7, obj1);
-  return closure_10(disableInteraction(7259), obj);
+  return closure_10(disableInteraction(7280), obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
@@ -298,7 +298,7 @@ const jsxProd = fn(21);
 const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)", "#000"];
 const locations = [0, 0.4, 1];
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-fn(4605);
+fn(4606);
 let createStyles = {
   coverContainer: null,
   coverContent: null,

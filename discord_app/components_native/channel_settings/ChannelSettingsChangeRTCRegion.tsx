@@ -14,7 +14,7 @@ import RegionStore from "../../stores/RegionStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 const AUTOMATIC_RTC_REGION = "AUTOMATIC_RTC_REGION";
-fn(4605);
+fn(4606);
 let createStyles = { form: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -94,7 +94,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(8695).updateChannel({ rtcRegion: tmp });
+  self(8716).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     const obj = { rtcRegion };
     obj.saveChannel(self.props.channel.id, obj);
@@ -120,7 +120,7 @@ prototype["render"] = function render() {
   const tmp = closure_8(this.context);
   return jsx(Form.Form, { style: closure_8(this.context).form, children: this.renderRegions() });
 };
-ChannelSettingsChangeRTCRegion.contextType = fn(4315).ThemeContext;
+ChannelSettingsChangeRTCRegion.contextType = fn(4317).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");
 

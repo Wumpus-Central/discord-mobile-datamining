@@ -7,4 +7,4 @@ const result1 = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_c
 
 export const MIN_HEADER_HEIGHT = 56;
 export const HEADER_CORNER_RADIUS = 8;
-export const MIDNIGHT_BORDER_WIDTH = result;
+export const ONYX_BORDER_WIDTH = result;

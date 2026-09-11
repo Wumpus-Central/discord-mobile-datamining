@@ -129,7 +129,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
 const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = {
   container: null,
   scrollView: null,
@@ -145,8 +145,8 @@ createStyles.scrollViewContent = { gap: nativeDefault.space.PX_12, paddingHorizo
 const obj1 = { gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 createStyles.mediaItem = {
-  maxWidth: fn(8789).MEDIA_ITEM_MAX_WIDTH,
-  maxHeight: fn(8789).MEDIA_ITEM_MAX_HEIGHT,
+  maxWidth: fn(8810).MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: fn(8810).MEDIA_ITEM_MAX_HEIGHT,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };

@@ -6,9 +6,9 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
-import _modDef10479 from "../../../../../_runtime/metro/10479__.js";
-import _modDef10480 from "../../../../../_runtime/metro/10480__.js";
-import _modDef10481 from "../../../../../_runtime/metro/10481__.js";
+import _modDef10498 from "../../../../../_runtime/metro/10498__.js";
+import _modDef10499 from "../../../../../_runtime/metro/10499__.js";
+import _modDef10500 from "../../../../../_runtime/metro/10500__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
@@ -48,7 +48,7 @@ const PremiumConstants = fn(1373);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let obj = {
-  icon: _modDef10479,
+  icon: _modDef10498,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -57,7 +57,7 @@ let obj = {
 };
 let items = [obj, ,];
 obj = {
-  icon: _modDef10480,
+  icon: _modDef10499,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
@@ -65,7 +65,7 @@ obj = {
 };
 items[1] = obj;
 obj = {
-  icon: _modDef10481,
+  icon: _modDef10500,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -73,7 +73,7 @@ obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_GREEN,
 };
 items[2] = obj;
-fn(4605);
+fn(4606);
 let obj1 = {
   alert: { paddingTop: 18 },
   shortHeightAlert: { height: 500 },
@@ -121,12 +121,12 @@ export default function StickersPremiumUpsellAlert(arg0) {
       const obj = analyticsLocations(dependencyMap[14]);
     }
   }, []);
-  const tmp5 = analyticsLocations(9434)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(9455)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
   }
-  analyticsLocations = tmp3(7214)().analyticsLocations;
+  analyticsLocations = tmp3(7235)().analyticsLocations;
   let obj = {
     cancelText: null,
     confirmColor: null,
@@ -163,8 +163,8 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj.style = items;
   obj = { style: tmp.closeContainer, children: null };
   obj = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-  const tmp3Result = analyticsLocations(5044);
-  obj.children = closure_14(native.Icon, { source: analyticsLocations(7044) });
+  const tmp3Result = analyticsLocations(5045);
+  obj.children = closure_14(native.Icon, { source: analyticsLocations(7065) });
   obj.children = closure_14(Pressables.PressableOpacity, obj);
   const items1 = [closure_14(closure_4, obj)];
   const obj2 = {
@@ -174,8 +174,8 @@ export default function StickersPremiumUpsellAlert(arg0) {
     },
     children: null,
   };
-  const obj1 = { source: analyticsLocations(7044) };
-  const items2 = [closure_14(closure_5, { source: analyticsLocations(10482), style: tmp.imageHeader }), ,];
+  const obj1 = { source: analyticsLocations(7065) };
+  const items2 = [closure_14(closure_5, { source: analyticsLocations(10501), style: tmp.imageHeader }), ,];
   const obj4 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl3 = util.intl;
   if (priceString == null) {
@@ -184,7 +184,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj5 = { children: null };
   obj4.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_14(Text_Text.Text, obj4);
-  const obj3 = { source: analyticsLocations(10482), style: tmp.imageHeader };
+  const obj3 = { source: analyticsLocations(10501), style: tmp.imageHeader };
   items2[2] = closure_14(closure_4, {
     style: tmp.perks,
     children: items.map((perk, index) =>

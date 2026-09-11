@@ -5,7 +5,7 @@ import UserSettingsProtoActionCreators from "../../../../user_settings/UserSetti
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05567_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/05568_fuzzysearch.js";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -33,7 +33,7 @@ function DismissableContentsEmpty() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = {
   container: null,
   contentContainer: null,
@@ -182,7 +182,7 @@ export default function DevToolsDismissableContentsScreen() {
   const tmp = closure_10();
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
-  let obj = ref(10001);
+  let obj = ref(10022);
   const tmp2 = useSafeAreaInsetsDefault();
   [dependencyMap, tmp5] = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
   _slicedToArray = tmp5;
@@ -239,7 +239,7 @@ export default function DevToolsDismissableContentsScreen() {
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
   let tmp4 = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  const tmp9 = _slicedToArray(ref(15090).useForceBountiesSwipeUpNux(), 2);
+  const tmp9 = _slicedToArray(ref(15067).useForceBountiesSwipeUpNux(), 2);
   const first2 = tmp9[0];
   closure_10 = tmp11;
   const items1 = [tmp9[1]];
@@ -341,6 +341,6 @@ export default function DevToolsDismissableContentsScreen() {
   };
   obj.renderItem = callback4;
   obj.onScroll = callback3;
-  obj.children = dailyCapOverridden(ref(8943).FlashList, obj);
+  obj.children = dailyCapOverridden(ref(8964).FlashList, obj);
   return dailyCapOverridden(first1, obj);
 }

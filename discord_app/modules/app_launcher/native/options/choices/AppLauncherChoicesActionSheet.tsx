@@ -3,14 +3,14 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AutocompleteUtilsDefault from "../../../../../utils/AutocompleteUtils.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
-import _mod8943 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8964 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod8943;
+  const tmp3 = _mod8964;
   if (scrollable.scrollable) {
     let obj = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);
@@ -26,7 +26,7 @@ const View = fn(17).View;
 const DEFAULT_CONTENT_PADDING = fn(1482).DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   listItemContainer: { overflow: "hidden" },
   listItem: null,
@@ -145,11 +145,11 @@ export default function AppLauncherChoicesActionSheet(option) {
   let tmp16 = tmp13;
   if (tmp13) {
     obj = { onChange: callback };
-    tmp16 = closure_7(tmp3(12237).AppLauncherListSearchBar, obj);
+    tmp16 = closure_7(tmp3(12260).AppLauncherListSearchBar, obj);
   }
   const items3 = [tmp16];
   if (0 === data.length) {
-    let tmp20 = closure_7(tmp3(12237).AppLauncherListEmptyState, {});
+    let tmp20 = closure_7(tmp3(12260).AppLauncherListEmptyState, {});
   } else {
     const obj1 = {
       scrollable: tmp13,
@@ -175,5 +175,5 @@ export default function AppLauncherChoicesActionSheet(option) {
   }
   items3[1] = tmp20;
   obj.children = items3;
-  return closure_8(option(12236).AppLauncherCommandOptionActionSheet, obj);
+  return closure_8(option(12259).AppLauncherCommandOptionActionSheet, obj);
 }

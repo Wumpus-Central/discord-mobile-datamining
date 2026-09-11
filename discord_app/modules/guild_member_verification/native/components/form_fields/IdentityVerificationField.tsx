@@ -46,7 +46,7 @@ function BaseIdentityVerificationField(icon) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, icon: null, label: null, verifiedContainer: null, ctaButton: null };
 createStyles = {
   padding: 8,

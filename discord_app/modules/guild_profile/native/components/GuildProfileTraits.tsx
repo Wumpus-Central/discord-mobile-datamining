@@ -39,7 +39,7 @@ function GuildProfileTraitView(trait) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 },
   trait: null,

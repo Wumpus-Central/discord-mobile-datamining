@@ -3,13 +3,13 @@ import native from "../../../design/void/native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import _modDef8205 from "../../../../_runtime/metro/08205__.js";
+import _modDef8227 from "../../../../_runtime/metro/08227__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(8405);
+const SpotifyConstants = fn(8426);
 ({
   SPOTIFY_APP_PROTOCOL: metroRequire,
   SpotifyEndpoints: closure_7,
@@ -262,8 +262,8 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
   obj = { icon: null, text: null, size: "sm", onPress: null, grow: true };
-  obj = { source: _modDef8205 };
-  obj.icon = closure_9(activity(5025).Button.Icon, obj);
+  obj = { source: _modDef8227 };
+  obj.icon = closure_9(activity(5026).Button.Icon, obj);
   const intl = activity(1114).intl;
   obj.text = intl.formatToPlainString(activity(1114).t.LEgD7t, { platform: activity.name });
   obj.onPress = function onPress() {
@@ -285,7 +285,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
       })
       .catch(() => {});
   };
-  obj.children = closure_9(activity(5025).Button, obj);
+  obj.children = closure_9(activity(5026).Button, obj);
   return closure_9(closure_5, obj);
 };
 export { SpotifyTrack };

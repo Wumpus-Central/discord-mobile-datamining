@@ -31,10 +31,10 @@ class RoleSubscriptionsUnavailableNotice {
 function PurchasePage(arg0) {
   ({ guildId, gatedChannelId } = arg0);
   let obj = NativePaymentHooksDefault;
-  const storeFront = obj.useNativeIAPPayments().storeFront;
+  const mobileStoreFront = obj.useMobileStoreFront();
   let country;
-  if (storeFront != null) {
-    country = storeFront.country;
+  if (mobileStoreFront != null) {
+    country = mobileStoreFront.country;
   }
   obj = {
     guildId,

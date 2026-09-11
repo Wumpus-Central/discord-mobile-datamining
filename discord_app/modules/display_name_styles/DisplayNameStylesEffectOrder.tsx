@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNa
 
 export const useVisibleEffectOrder = function useVisibleEffectOrder() {
   isDisplayNameStylesFlywheelSettersEnabled =
-    isDisplayNameStylesFlywheelSettersEnabled(9246).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
+    isDisplayNameStylesFlywheelSettersEnabled(9267).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
   items = [isDisplayNameStylesFlywheelSettersEnabled];
   return noop.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items : EFFECT_ORDER), items);
 };

@@ -120,7 +120,7 @@ function handleSetLocalMute(arg0) {
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(14146).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(14122).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
           let obj = AudioSettingsUtils;
           const result = obj.coerceAudioContextForProto(arg0);
@@ -198,7 +198,7 @@ function handleSetLocalSoundboardMute(userId) {
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(14146).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(14122).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
           let obj = AudioSettingsUtils;
           const result = obj.coerceAudioContextForProto(arg0);
@@ -278,7 +278,7 @@ function handleResetMediaEngineSettings(arg0) {
     );
   }
 }
-const MediaEngineContextTypes = fn(4630).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4631).MediaEngineContextTypes;
 function SETTINGS_MIGRATION_KEY(id) {
   return "AudioContextSettingsMigrated:" + id;
 }
@@ -296,7 +296,7 @@ let closure_12 = apply.debounce(() => {
     "audioContextSettings",
     async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(14146).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(14122).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         let obj = AudioSettingsUtils;
         const result = obj.coerceAudioContextForProto(arg0);
@@ -360,7 +360,7 @@ let closure_12 = apply.debounce(() => {
     UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
 }, 2000);
-let closure_13 = apply.debounce(fn(9518).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
+let closure_13 = apply.debounce(fn(9539).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
 let prototype = function AudioSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {

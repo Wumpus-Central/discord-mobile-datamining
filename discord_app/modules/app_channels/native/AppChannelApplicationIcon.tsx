@@ -5,7 +5,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 const createStyles = { icon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.md };
 createStyles.icon = size;

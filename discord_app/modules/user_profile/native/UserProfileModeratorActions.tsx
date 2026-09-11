@@ -63,9 +63,9 @@ function ModeratorActionRow(isDestructive) {
 const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
-let GuildMemberFlags = fn(4230).GuildMemberFlags;
+let GuildMemberFlags = fn(4232).GuildMemberFlags;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { cardContainer: { paddingBottom: 0 }, refreshCardTitle: null };
 createStyles = { marginBottom: nativeDefault.space.PX_8 };
 createStyles.refreshCardTitle = createStyles;
@@ -88,7 +88,7 @@ export default function UserProfileModeratorActions(user) {
   let obj = user(showUserProfile[14]);
   const trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   const hideActionSheet = guildId(showUserProfile[15]).hideActionSheet;
-  obj = { userId: user.id, guildId };
+  obj = { userId: user.id, guildId, includeNonDiscoverable: true };
   const tmp5 = guildId(showUserProfile[16])(obj);
   const voiceState = tmp5.voiceState;
   const voiceChannel = tmp5.voiceChannel;
@@ -355,7 +355,7 @@ export default function UserProfileModeratorActions(user) {
           obj.onSelect = function onSelect(id) {
             return guildId(showUserProfile[34]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11402, dependencyMap.paths), "ChannelPicker", obj, "stack");
+          obj.openLazy(asyncRequireImpl(11424, dependencyMap.paths), "ChannelPicker", obj, "stack");
         };
         items7.push(
           <ModeratorActionRow
@@ -402,11 +402,11 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              let arr = guildId(4808);
+              let arr = guildId(4809);
               arr = arr.pop();
             },
           };
-          obj.pushLazy(asyncRequireImpl(11907, dependencyMap.paths), obj);
+          obj.pushLazy(asyncRequireImpl(11930, dependencyMap.paths), obj);
         };
         items7.push(<ModeratorActionRow key="manage" label={null} icon={null} onPress={null} />);
       }

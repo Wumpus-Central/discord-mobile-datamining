@@ -104,7 +104,7 @@ export default function useModalPanGesture(thresholdVelocity) {
       }
       obj4 = closure_0(closure_2[2]);
       fn = function n() {
-        num(4341).runOnJS(maxTranslate(4808).pop)();
+        num(4343).runOnJS(maxTranslate(4809).pop)();
       };
       obj = { runOnJS: closure_0(closure_2[0]).runOnJS, ModalActionCreators: closure_1(closure_2[3]) };
       fn.__closure = obj;

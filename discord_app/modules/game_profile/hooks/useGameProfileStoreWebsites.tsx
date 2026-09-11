@@ -6,12 +6,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const set = new Set(["1402418703554842694", "356877880938070016"]);
 let items = [
-  fn(8759).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES,
-  fn(8759).ThirdPartyGameApplicationWebsiteCategory.STEAM,
-  fn(8759).ThirdPartyGameApplicationWebsiteCategory.ROBLOX,
-  fn(8759).ThirdPartyGameApplicationWebsiteCategory.BATTLENET,
-  fn(8759).ThirdPartyGameApplicationWebsiteCategory.RIOT,
-  fn(8759).ThirdPartyGameApplicationWebsiteCategory.MINECRAFT,
+  fn(8780).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES,
+  fn(8780).ThirdPartyGameApplicationWebsiteCategory.STEAM,
+  fn(8780).ThirdPartyGameApplicationWebsiteCategory.ROBLOX,
+  fn(8780).ThirdPartyGameApplicationWebsiteCategory.BATTLENET,
+  fn(8780).ThirdPartyGameApplicationWebsiteCategory.RIOT,
+  fn(8780).ThirdPartyGameApplicationWebsiteCategory.MINECRAFT,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileStoreWebsites.tsx");
@@ -72,7 +72,7 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
         }
         if (!someResult) {
           someResult = found.some(
-            (category) => category.category === steamWebsiteUrl(8759).ThirdPartyGameApplicationWebsiteCategory.STEAM,
+            (category) => category.category === steamWebsiteUrl(8780).ThirdPartyGameApplicationWebsiteCategory.STEAM,
           );
         }
         if (!someResult) {
@@ -84,9 +84,9 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
         }
         const sorted = found.sort((category, category2) => {
           let num = -1;
-          if (category.category !== steamWebsiteUrl(8759).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+          if (category.category !== steamWebsiteUrl(8780).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
             let num2 = 0;
-            if (category2.category === steamWebsiteUrl(8759).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+            if (category2.category === steamWebsiteUrl(8780).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
               num2 = 1;
             }
             num = num2;

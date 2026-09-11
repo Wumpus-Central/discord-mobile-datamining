@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { image: { alignSelf: "center", justifySelf: "center" }, tips: null, text: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -24,19 +24,19 @@ export default function SafetyTipsContainer(children) {
   const safetyTips = children.safetyTips;
   let showHeader = children.showHeader;
   const tmp = closure_6();
-  let obj = { style: tmp.image, children: closure_4(safetyTips(5742).SafetyBookletSpotIllustration, {}) };
+  let obj = { style: tmp.image, children: closure_4(safetyTips(5743).SafetyBookletSpotIllustration, {}) };
   const items = [closure_4(View, obj), ,];
   if (showHeader) {
     obj = { style: tmp.text, variant: "heading-xl/semibold", children: null };
     const intl = tmp3(1114).intl;
     obj.children = intl.string(tmp3(1114).t.eAbVfS);
-    showHeader = closure_4(tmp3(4601).Text, obj);
+    showHeader = closure_4(tmp3(4602).Text, obj);
   }
   obj = { spacing: 16, children: null };
   const obj1 = { spacing: 8, align: "center", justify: "center", children: null };
   const items1 = [
     showHeader,
-    closure_4(safetyTips(4601).Text, {
+    closure_4(safetyTips(4602).Text, {
       style: tmp.text,
       accessibilityRole: "header",
       variant: "text-md/medium",
@@ -45,7 +45,7 @@ export default function SafetyTipsContainer(children) {
     }),
   ];
   obj1.children = items1;
-  items[1] = closure_5(safetyTips(5023).Stack, obj1);
+  items[1] = closure_5(safetyTips(5024).Stack, obj1);
   items[2] = closure_4(View, {
     style: tmp.tips,
     children: safetyTips.map((tip, index) =>
@@ -53,5 +53,5 @@ export default function SafetyTipsContainer(children) {
     ),
   });
   obj.children = items;
-  return closure_5(safetyTips(5023).Stack, obj);
+  return closure_5(safetyTips(5024).Stack, obj);
 }

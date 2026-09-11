@@ -3,7 +3,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const QuestsExperimentLocations = fn(5494).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5495).QuestsExperimentLocations;
 const BountyVideoEndMode = {
   END_CARD: "END_CARD",
   END_CARD_WITH_CTA: "END_CARD_WITH_CTA",

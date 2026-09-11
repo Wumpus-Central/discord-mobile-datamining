@@ -6,7 +6,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_5 = createStyles.createStyles({
   container: { paddingVertical: 0, flexDirection: "row", alignItems: "center", gap: 12 },
   titles: { justifyContent: "center", flex: 1 },

@@ -15,7 +15,7 @@ import SKUStore from "../../../stores/game_store/SKUStore.tsx";
 
 require = fn;
 const PaymentGateways = fn(1074).PaymentGateways;
-const InviteTypes = fn(7787).InviteTypes;
+const InviteTypes = fn(7808).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx",
@@ -112,13 +112,13 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
 export const useFetchSocialLayerStorefrontProductDetailsEmbedData =
   function useFetchSocialLayerStorefrontProductDetailsEmbedData(stateFromStores) {
     _require = stateFromStores;
-    const storeFront = country(first[12]).useNativeIAPPayments().storeFront;
+    const mobileStoreFront = country(first[12]).useMobileStoreFront();
     country = undefined;
-    if (storeFront != null) {
-      country = storeFront.country;
+    if (mobileStoreFront != null) {
+      country = mobileStoreFront.country;
     }
     let items = [stateFromStores];
-    const tmp4 = _slicedToArray(
+    let tmp5 = _slicedToArray(
       noop.useMemo(() => {
         let items = [[], []];
         return stateFromStores.reduce((acc, item) => {
@@ -139,9 +139,9 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData =
       }, items),
       2,
     );
-    first = tmp4[0];
-    _slicedToArray = tmp6;
-    let items1 = [first, tmp4[1], country];
+    first = tmp5[0];
+    _slicedToArray = tmp7;
+    let items1 = [first, tmp5[1], country];
     const effect = noop.useEffect(() => {
       while (tmp2 !== undefined) {
         let tmp5 = _slicedToArray(tmp3, 2);
@@ -207,7 +207,7 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData =
     let obj = country(first[12]);
     const tmp = country;
     const items2 = [SKUStore];
-    const items3 = [tmp4[1], first];
+    const items3 = [tmp5[1], first];
     const stateFromStoresArray = require("initialize").useStateFromStoresArray(
       items2,
       () => {

@@ -10,11 +10,11 @@ function filterLayer(responsive) {
   return true !== responsive.responsive;
 }
 const View = fn(17).View;
-const Constants = fn(7260);
+const Constants = fn(7281);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7, UserProfileThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   let num = arg2;
   if (arg2 == null) {
@@ -148,7 +148,7 @@ export default function UserProfilePreview(hideFrame) {
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const tmp4ResultResult = tmp4Result(skuId, "UserProfilePreview");
+  const tmp4ResultResult = tmp4Result(skuId);
   importDefault = tmp4ResultResult;
   const tmp6 = require("useProfileTheme")({ user, displayProfile: tmp5, pendingThemeColors });
   obj1 = { userId: user.id, image: pendingAvatar };

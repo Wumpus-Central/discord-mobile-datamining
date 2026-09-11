@@ -11,13 +11,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSwitchClientsRadioGroup.tsx");
 
 export default function YouSwitchClientsRadioGroup() {
-  const memo = noop.useMemo(() => memo(16464).getCurrentVariant(), []);
+  const memo = noop.useMemo(() => memo(16452).getCurrentVariant(), []);
   [arr, importDefault] = _slicedToArray(noop.useState(null), 2);
   const items = [memo];
   const effect = noop.useEffect(() => {
     if (null != c0) {
       c0 = false;
-      let DISCORD_VARIANT_LIST = memo(16465).DISCORD_VARIANT_LIST;
+      let DISCORD_VARIANT_LIST = memo(16453).DISCORD_VARIANT_LIST;
       const allPromises = Promise.all(
         DISCORD_VARIANT_LIST.map((item) => _true(dependencyMap[3]).isVariantInstalled(item)),
       );
@@ -52,22 +52,22 @@ export default function YouSwitchClientsRadioGroup() {
           onChange: tmp4,
           hasIcons: true,
           children: arr.map((value) => {
-            let obj = { value, label: memo(16465).DISCORD_VARIANTS[value].label, icon: null };
-            obj = { color: memo(16465).DISCORD_VARIANTS[value].color };
-            obj.icon = jsx(memo(10888).ClydeIcon, { color: memo(16465).DISCORD_VARIANTS[value].color });
-            return jsx(memo(5738).TableRadioRow, { color: memo(16465).DISCORD_VARIANTS[value].color }, value);
+            let obj = { value, label: memo(16453).DISCORD_VARIANTS[value].label, icon: null };
+            obj = { color: memo(16453).DISCORD_VARIANTS[value].color };
+            obj.icon = jsx(memo(10907).ClydeIcon, { color: memo(16453).DISCORD_VARIANTS[value].color });
+            return jsx(memo(5739).TableRadioRow, { color: memo(16453).DISCORD_VARIANTS[value].color }, value);
           }),
         };
-        tmp5 = jsx(memo(5735).TableRadioGroup, {
+        tmp5 = jsx(memo(5736).TableRadioGroup, {
           title: "Switch Clients",
           value: memo,
           onChange: tmp4,
           hasIcons: true,
           children: arr.map((value) => {
-            let obj = { value, label: memo(16465).DISCORD_VARIANTS[value].label, icon: null };
-            obj = { color: memo(16465).DISCORD_VARIANTS[value].color };
-            obj.icon = jsx(memo(10888).ClydeIcon, { color: memo(16465).DISCORD_VARIANTS[value].color });
-            return jsx(memo(5738).TableRadioRow, { color: memo(16465).DISCORD_VARIANTS[value].color }, value);
+            let obj = { value, label: memo(16453).DISCORD_VARIANTS[value].label, icon: null };
+            obj = { color: memo(16453).DISCORD_VARIANTS[value].color };
+            obj.icon = jsx(memo(10907).ClydeIcon, { color: memo(16453).DISCORD_VARIANTS[value].color });
+            return jsx(memo(5739).TableRadioRow, { color: memo(16453).DISCORD_VARIANTS[value].color }, value);
           }),
         });
       }

@@ -2,7 +2,7 @@
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05037_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
 import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -43,7 +43,7 @@ export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   const tmp = closure_7();
-  visible(4341);
+  visible(4343);
   const fn = function y() {
     let obj = timing;
     let num = 0;
@@ -53,7 +53,7 @@ export default function BountiesModalEndCard(visible) {
     obj = { opacity: obj.withTiming(num, timingPresets.timingStandard) };
     return obj;
   };
-  let obj = { withTiming: visible(4606).withTiming, visible, timingStandard: visible(4609).timingStandard };
+  let obj = { withTiming: visible(4607).withTiming, visible, timingStandard: visible(4610).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 15062259404736;
   fn.__initData = __initData;

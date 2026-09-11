@@ -11,11 +11,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(4946).DraftType;
-const ACTION_SHEET_MAX_WIDTH = fn(7203).ACTION_SHEET_MAX_WIDTH;
+const DraftType = fn(4947).DraftType;
+const ACTION_SHEET_MAX_WIDTH = fn(7224).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { contentContainer: { padding: 16 }, imageWrap: null, imageContainer: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -125,8 +125,8 @@ export default function UploadPreviewActionSheet(onAdd) {
       })
       .catch((error) => {
         if ("E_PICKER_CANCELLED" !== error.code) {
-          onEdit(4303);
-          const obj = { key: "CROP_ERROR", IconComponent: onAdd(6660).CircleErrorIcon, content: error.message };
+          onEdit(4305);
+          const obj = { key: "CROP_ERROR", IconComponent: onAdd(6681).CircleErrorIcon, content: error.message };
           obj.open(obj);
         }
       });

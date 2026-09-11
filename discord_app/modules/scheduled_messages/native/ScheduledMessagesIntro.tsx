@@ -5,7 +5,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AttachmentIcon from "../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import PlusLargeIcon from "../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
 import CalendarPlusIcon from "../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
-import _modDef12290 from "../../../../_runtime/metro/12290__.js";
+import _modDef12313 from "../../../../_runtime/metro/12313__.js";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -137,7 +137,7 @@ export default function ScheduledMessagesIntro() {
   const tmp = closure_8();
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: _modDef12290, style: tmp.upsellImage };
+  obj = { source: _modDef12313, style: tmp.upsellImage };
   const items = [timestampProducer(React3, obj), ,];
   const obj1 = { style: tmp.textContainer, children: null };
   const obj2 = {

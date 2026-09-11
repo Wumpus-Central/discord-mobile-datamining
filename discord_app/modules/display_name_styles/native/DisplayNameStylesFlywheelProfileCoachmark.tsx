@@ -14,7 +14,7 @@ function CoachmarkImage() {
 const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
 });
@@ -33,7 +33,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(4262).canUsePremiumProfileCustomization(stateFromStores);
+  const result = markAsDismissed(4264).canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1114).intl;
   const string = intl.string;
   const tmp6 = markAsDismissed(2786);
@@ -70,7 +70,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
     }),
     items2,
   );
-  const obj2 = markAsDismissed(4262);
-  const coachmark = visible(11199).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(4264);
+  const coachmark = visible(11222).useCoachmark(visible.targetRef, memo);
   return null;
 }

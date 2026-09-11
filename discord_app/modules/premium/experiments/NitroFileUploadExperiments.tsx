@@ -65,9 +65,6 @@ export const useNitroFileUploadRolloutEnabled = function useNitroFileUploadRollo
   }
   return closure_3.useConfig({ location: _location }).enabled;
 };
-export const getNonNitroFileUploadMarketingConfig = function getNonNitroFileUploadMarketingConfig(location) {
-  return closure_4.getConfig({ location: location.location });
-};
 export const useNonNitroFileUploadMarketingEnabled = function useNonNitroFileUploadMarketingEnabled(location) {
   return closure_4.useConfig({ location }).enabled;
 };

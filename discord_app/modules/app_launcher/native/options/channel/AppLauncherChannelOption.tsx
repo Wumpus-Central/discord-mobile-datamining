@@ -84,7 +84,7 @@ export default function AppLauncherChannelOption(option) {
       onActionSheetDismiss,
     };
     obj.openLazy(
-      asyncRequireImpl(12261, dependencyMap.paths),
+      asyncRequireImpl(12284, dependencyMap.paths),
       AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY,
       obj,
     );

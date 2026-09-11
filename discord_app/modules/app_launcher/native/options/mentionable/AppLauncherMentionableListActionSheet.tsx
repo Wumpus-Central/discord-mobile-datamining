@@ -42,6 +42,7 @@ export default function AppLauncherMentionableListActionSheet(channel) {
       canMentionRoles: applicationCommandOptionQueryOptions.canMentionRoles,
       includeAllGuildUsers: applicationCommandOptionQueryOptions.canMentionAnyGuildUser,
       includeNonMentionableRoles: applicationCommandOptionQueryOptions.canMentionNonMentionableRoles,
+      canMentionOtherGlobals: applicationCommandOptionQueryOptions.canMentionOtherGlobals,
       request: true,
       limit: 10,
       allowSnowflake: true,

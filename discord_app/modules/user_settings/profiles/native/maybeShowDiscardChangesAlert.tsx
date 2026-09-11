@@ -12,7 +12,7 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     if (onHasEdits != null) {
       onHasEdits();
     }
-    onConfirm(4950);
+    onConfirm(4951);
     const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.pvRCSu);

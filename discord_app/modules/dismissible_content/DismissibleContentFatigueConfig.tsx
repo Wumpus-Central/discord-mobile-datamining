@@ -115,6 +115,7 @@ const items = [
   dismissible_content.DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE,
   dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
   dismissible_content.DismissibleContent.BADGES_USER_PROFILE_NEW_BADGE,
+  dismissible_content.DismissibleContent.BADGE_CUSTOMIZATION_WEB_COACHMARK,
   dismissible_content.DismissibleContent.SOUNDBOARD_DESKTOP_NUX,
   dismissible_content.DismissibleContent.TINY_BRONCO,
   dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS,

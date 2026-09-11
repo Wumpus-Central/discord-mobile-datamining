@@ -9,9 +9,9 @@ export const isThemeLight = function isThemeLight(arg0) {
   return arg0 === ThemeTypes.LIGHT;
 };
 export const isThemeDark = function isThemeDark(theme) {
-  if (ThemeTypes.DARK !== theme) {
-    if (ThemeTypes.MIDNIGHT !== theme) {
-      if (ThemeTypes.DARKER !== theme) {
+  if (ThemeTypes.ASH !== theme) {
+    if (ThemeTypes.ONYX !== theme) {
+      if (ThemeTypes.DARK !== theme) {
         return false;
       }
     }

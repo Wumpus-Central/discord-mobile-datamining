@@ -7,7 +7,7 @@ import TextStyles from "../../../../modules/rebrand/native/TextStyles.tsx";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { paddingTop: 16, paddingHorizontal: 16 }, title: null, card: null };
 createStyles.title = TextStyles(fn(1074).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, {
   uppercase: true,

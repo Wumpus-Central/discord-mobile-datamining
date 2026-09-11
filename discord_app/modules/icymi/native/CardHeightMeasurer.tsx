@@ -17,7 +17,7 @@ export const CardHeightMeasurer = noop.memo((children) => {
         ICYMIActionCreatorsDefault.setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
       }, items)}
       pointerEvents="box-none"
-      style={{ width: noop.useContext(itemId(16536).ICYMIContext).width, alignSelf: "center" }}
+      style={{ width: noop.useContext(itemId(16524).ICYMIContext).width, alignSelf: "center" }}
     >
       {children.children}
     </View>

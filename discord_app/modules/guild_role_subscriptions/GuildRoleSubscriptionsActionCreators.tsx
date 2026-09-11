@@ -166,7 +166,7 @@ let closure_9 = async function _fetchAllSubscriptionListingsDataForGuild(arg0) {
           closure_135_10 = undefined;
           c11 = 1;
           c12 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -601,297 +601,77 @@ function fetchGuildRoleSubscriptionGroupListing() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _fetchGuildRoleSubscriptionGroupListing(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_4 = tmp5;
-          closure_3 = tmp2;
-          closure_131_2 = undefined;
-          closure_131_0 = closure_0;
-          closure_131_1 = closure_1;
-          let obj1 = closure_2;
-          if (closure_2 === undefined) {
-            obj1 = {};
-          }
-          closure_131_2 = obj1;
-          closure_131_3 = undefined;
-          c5 = 1;
-          c6 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          let obj4 = closure_132_2(closure_132_3[3]);
-          c5 = 2;
-          c6 = 1;
-          const obj3 = {
-            value: obj4.getGuildRoleSubscriptionGroupListing(closure_131_0, closure_131_1, closure_131_2),
-            done: false,
-          };
-          return obj3;
-        }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
-        obj4 = { value, done: true };
-        return obj4;
-      } else {
-        closure_131_3 = value;
-        obj = closure_132_1(closure_132_3[4]);
-        const obj5 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: closure_131_3 };
-        obj.dispatch(obj5);
-        c6 = 3;
-        const obj6 = { value: closure_131_3, done: true };
-        return obj6;
-      }
-    } catch (tmp21) {
-      c6 = tmp;
-      throw tmp21;
-    }
+let closure_18 = async function _fetchGuildRoleSubscriptionGroupListing() {
+  closure_3 = tmp2;
+  closure_131_0 = closure_0;
+  closure_131_1 = closure_1;
+  let obj1 = closure_2;
+  if (closure_2 === undefined) {
+    obj1 = {};
   }
+  closure_131_2 = obj1;
+  await "PX_16";
+  await closure_132_2(closure_132_3[3]).getGuildRoleSubscriptionGroupListing(
+    closure_131_0,
+    closure_131_1,
+    closure_131_2,
+  );
+  closure_131_3 = value;
+  closure_132_2(closure_132_3[3]);
+  closure_132_1(closure_132_3[4]).dispatch({
+    type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING",
+    listing: closure_131_3,
+  });
+  return closure_131_3;
 };
-let closure_19 = async function _createSubscriptionListing(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          ({
-            guildId: closure_129_0,
-            groupListingId: closure_129_1,
-            data: closure_129_2,
-            analyticsContext: closure_129_3,
-            onBeforeDispatchNewListing: closure_129_4,
-          } = closure_0);
-          closure_129_5 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          let obj6 = closure_130_2(closure_130_3[3]);
-          c3 = 2;
-          c4 = 1;
-          const obj2 = {
-            value: obj6.createGuildRoleSubscriptionListing(closure_129_0, closure_129_1, closure_129_2),
-            done: false,
-          };
-          return obj2;
-        }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_129_5 = value;
-          const obj4 = {
-            role_subscription_listing_id: closure_129_5.id,
-            role_subscription_group_listing_id: closure_129_1,
-            template_name: closure_129_3.templateCategory,
-            has_change_from_template: closure_129_3.hasChangeFromTemplate,
-          };
-          const obj12 = closure_130_1(closure_130_3[7]);
-          const merged = Object.assign(closure_130_0(closure_130_3[8]).collectGuildAnalyticsMetadata(closure_129_0));
-          obj12.track(closure_130_6.ROLE_SUBSCRIPTION_LISTING_CREATED, obj4);
-          c3 = 3;
-          c4 = 1;
-          const obj5 = {
-            value: closure_130_17(closure_129_0, closure_129_1, { includeArchivedListings: true }),
-            done: false,
-          };
-          return obj5;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        obj6 = { value, done: true };
-        return obj6;
-      } else {
-        if (closure_129_4 != null) {
-          tmp7(closure_129_5);
-        }
-        obj = closure_130_1(closure_130_3[4]);
-        const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: closure_129_5 };
-        obj.dispatch(obj7);
-        c4 = 3;
-        const obj8 = { value: closure_129_5, done: true };
-        return obj8;
-      }
-    } catch (tmp26) {
-      c4 = tmp;
-      throw tmp26;
-    }
+let closure_19 = async function _createSubscriptionListing() {
+  closure_1 = tmp2;
+  ({
+    guildId: closure_129_0,
+    groupListingId: closure_129_1,
+    data: closure_129_2,
+    analyticsContext: closure_129_3,
+    onBeforeDispatchNewListing: closure_129_4,
+  } = closure_0);
+  await "PX_16";
+  await closure_130_2(closure_130_3[3]).createGuildRoleSubscriptionListing(closure_129_0, closure_129_1, closure_129_2);
+  closure_129_5 = value;
+  closure_130_2(closure_130_3[3]);
+  const merged = Object.assign(closure_130_0(closure_130_3[8]).collectGuildAnalyticsMetadata(closure_129_0));
+  closure_130_1(closure_130_3[7]).track(closure_130_6.ROLE_SUBSCRIPTION_LISTING_CREATED, {
+    role_subscription_listing_id: closure_129_5.id,
+    role_subscription_group_listing_id: closure_129_1,
+    template_name: closure_129_3.templateCategory,
+    has_change_from_template: closure_129_3.hasChangeFromTemplate,
+  });
+  await closure_130_17(closure_129_0, closure_129_1, { includeArchivedListings: true });
+  if (closure_129_4 != null) {
+    tmp7(closure_129_5);
   }
+  closure_130_1(closure_130_3[7]);
+  closure_130_1(closure_130_3[4]).dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: closure_129_5 });
+  return closure_129_5;
 };
-let closure_20 = async function _updateSubscriptionListing(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          ({
-            guildId: closure_129_0,
-            listingId: closure_129_1,
-            groupListingId: closure_129_2,
-            data: closure_129_3,
-          } = closure_0);
-          closure_129_4 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          let obj6 = closure_130_2(closure_130_3[3]);
-          c3 = 2;
-          c4 = 1;
-          let obj2 = {
-            value: obj6.updateGuildRoleSubscriptionListing(closure_129_0, closure_129_2, closure_129_1, closure_129_3),
-            done: false,
-          };
-          return obj2;
-        }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_129_4 = value;
-          obj2 = closure_130_1(closure_130_3[4]);
-          const obj4 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: closure_129_4 };
-          obj2.dispatch(obj4);
-          c3 = 3;
-          c4 = 1;
-          const obj5 = {
-            value: closure_130_17(closure_129_0, closure_129_2, { includeArchivedListings: true }),
-            done: false,
-          };
-          return obj5;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        obj6 = { value, done: true };
-        return obj6;
-      } else {
-        c4 = 3;
-        obj = { value: closure_129_4, done: true };
-        return obj;
-      }
-    } catch (tmp26) {
-      c4 = tmp;
-      throw tmp26;
-    }
-  }
+let closure_20 = async function _updateSubscriptionListing() {
+  closure_1 = tmp2;
+  ({
+    guildId: closure_129_0,
+    listingId: closure_129_1,
+    groupListingId: closure_129_2,
+    data: closure_129_3,
+  } = closure_0);
+  await "PX_16";
+  await closure_130_2(closure_130_3[3]).updateGuildRoleSubscriptionListing(
+    closure_129_0,
+    closure_129_2,
+    closure_129_1,
+    closure_129_3,
+  );
+  closure_129_4 = value;
+  closure_130_2(closure_130_3[3]);
+  closure_130_1(closure_130_3[4]).dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: closure_129_4 });
+  await closure_130_17(closure_129_0, closure_129_2, { includeArchivedListings: true });
+  return closure_129_4;
 };
 let closure_21 = async function _fetchMonetizationRestrictions(arg0) {
   if (c8 === 2) {
@@ -932,7 +712,7 @@ let closure_21 = async function _fetchMonetizationRestrictions(arg0) {
           let restrictions2;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else {
         if (1 === tmp7) {

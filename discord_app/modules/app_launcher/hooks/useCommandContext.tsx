@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/hooks/useCommand
 
 export const getCommandContext = function getCommandContext(type) {
   if ("contextless" === type.type) {
-    let obj = { channel: "call", guild: "accessibilityLabel" };
+    let obj = { channel: "Array", guild: "PX_16" };
   } else {
     obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
   }
@@ -18,7 +18,7 @@ export const useCommandContext = function useCommandContext(context) {
   const items = [context];
   return noop.useMemo(() => {
     if ("contextless" === type.type) {
-      let obj = { channel: "call", guild: "accessibilityLabel" };
+      let obj = { channel: "Array", guild: "PX_16" };
     } else {
       obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
     }

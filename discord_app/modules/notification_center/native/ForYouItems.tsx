@@ -66,7 +66,7 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = closure_29();
   let SMALL = dependencyMap;
-  let obj = message_channel_id(5045);
+  let obj = message_channel_id(5046);
   const notifCenterV2MessagePreviewParser = obj.getNotifCenterV2MessagePreviewParser(
     closure_27(),
     closure_28,
@@ -125,10 +125,10 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(8095)(first);
+    const tmp15 = guild_id(8117)(first);
     let result = stringResult;
     if (null != tmp15) {
-      let tmp2Result = tmp2(7812);
+      let tmp2Result = tmp2(7833);
       result = tmp2Result.formatPollResultNotificationCenterText(tmp15);
     }
   } else if (stickers.length > 0) {
@@ -243,17 +243,17 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(7940).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, { textColor: str2 })];
+  const items5 = [item(7962).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, { textColor: str2 })];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj1.children = items5;
-    items3[1] = closure_22(tmp2(4601).Text, obj1);
+    items3[1] = closure_22(tmp2(4602).Text, obj1);
     obj.children = items3;
     return closure_22(closure_7, obj);
   } else {
     const obj3 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(11317);
+      let tmp29 = guild_id(11339);
       const obj4 = { source: tmp29, size: null, style: null };
       SMALL = tmp2(1178).IconSizes.SMALL;
       obj4.size = SMALL;
@@ -264,12 +264,12 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8689);
+        tmp29 = guild_id(8710);
       }
     }
-    tmp29 = guild_id(10490);
+    tmp29 = guild_id(10509);
   }
-  const tmp2Result4 = item(7940);
+  const tmp2Result4 = item(7962);
 }
 function ApplicationName(applicationId) {
   applicationId = applicationId.applicationId;
@@ -322,25 +322,25 @@ const Constants = fn(1074);
   MessageTypes: closure_18,
   EMPTY_STRING_SNOWFLAKE_ID: closure_19,
 } = Constants);
-const NotificationTypes = fn(6646).NotificationTypes;
+const NotificationTypes = fn(6667).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
-let createStyles = fn(4605);
+let createStyles = fn(4606);
 let obj = { strong: null };
 obj = {};
-const merged = Object.assign(fn(4601).TextStyleSheet["text-md/medium"]);
+const merged = Object.assign(fn(4602).TextStyleSheet["text-md/medium"]);
 obj.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj.strong = obj;
 let closure_24 = createStyles.createStyles(obj);
-fn(4605);
+fn(4606);
 createStyles = { strong: null };
 let obj2 = {};
-const merged1 = Object.assign(fn(4601).TextStyleSheet["text-md/medium"]);
+const merged1 = Object.assign(fn(4602).TextStyleSheet["text-md/medium"]);
 obj2.color = nativeDefault.colors.TEXT_MUTED;
 createStyles.strong = obj2;
 let closure_25 = createStyles.createStyles(createStyles);
-fn(4605);
+fn(4606);
 let obj3 = { mention: null };
 createStyles = {
   color: nativeDefault.colors.MENTION_FOREGROUND,
@@ -348,11 +348,11 @@ createStyles = {
 };
 obj3.mention = createStyles;
 let closure_26 = createStyles.createStyles(obj3);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj5 = { mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" } };
 let closure_27 = createStyles.createStyles(obj5);
 let closure_28 = { channelMentionText: "redesign/message-preview/medium" };
-fn(4605);
+fn(4606);
 createStyles = {
   container: { flex: 1 },
   row: null,
@@ -594,15 +594,15 @@ let closure_35 = noop.memo((item) => {
       obj.icon = tmp6(notificationCenterItemAcked[42]);
       obj.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(16497).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16485).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj2 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };
           const intl = tmp3(1114).intl;
           obj2.content = intl.string(tmp3(1114).t.WDxhvB);
-          rowIndex(4303).open(obj2);
+          rowIndex(4305).open(obj2);
           c4 = 3;
-          rowIndex(4303);
+          rowIndex(4305);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;

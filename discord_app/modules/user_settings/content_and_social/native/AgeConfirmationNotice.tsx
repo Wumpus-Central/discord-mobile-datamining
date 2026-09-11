@@ -8,17 +8,17 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(8464);
+const Constants = fn(8485);
 ({ SafetySettingsNoticeAction: hasOwnProperty, SafetySettingsNoticeType: metroRequire } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/AgeConfirmationNotice.tsx");
 
 export default function AgeConfirmationNotice() {
-  let obj = sensitiveContentFilterHelpArticle(7353);
+  let obj = sensitiveContentFilterHelpArticle(7374);
   sensitiveContentFilterHelpArticle = obj.useSensitiveContentFilterHelpArticle();
   const effect = noop.useEffect(() => {
-    const result = sensitiveContentFilterHelpArticle(14766).trackSafetySettingsNoticeAnalytics(
+    const result = sensitiveContentFilterHelpArticle(14740).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.VIEWED,
     );
@@ -35,12 +35,12 @@ export default function AgeConfirmationNotice() {
   obj = { style: null, children: null };
   obj = { marginBottom: null };
   const callback = noop.useCallback(() => {
-    onPress(8476);
+    onPress(8497);
     const obj = {
-      entryPoint: sensitiveContentFilterHelpArticle(8478).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
+      entryPoint: sensitiveContentFilterHelpArticle(8499).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
     };
     const result = obj.showAgeVerificationGetStartedModal(obj);
-    const result1 = sensitiveContentFilterHelpArticle(14766).trackSafetySettingsNoticeAnalytics(
+    const result1 = sensitiveContentFilterHelpArticle(14740).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.CONFIRM_AGE,
     );
@@ -57,7 +57,7 @@ export default function AgeConfirmationNotice() {
   const intl = sensitiveContentFilterHelpArticle(1114).intl;
   obj2.text = intl.string(sensitiveContentFilterHelpArticle(1114).t.FDSSia);
   obj2.onPress = callback;
-  obj1.button = jsx(sensitiveContentFilterHelpArticle(5025).Button, {
+  obj1.button = jsx(sensitiveContentFilterHelpArticle(5026).Button, {
     variant: "secondary",
     size: "sm",
     text: null,

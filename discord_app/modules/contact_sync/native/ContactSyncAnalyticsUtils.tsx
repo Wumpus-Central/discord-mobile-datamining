@@ -4,8 +4,8 @@ import NewUserAnalyticsUtils from "../../nuf/native/NewUserAnalyticsUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const getIsOnboarding = fn(12747).getIsOnboarding;
-const ContactPermissions = fn(12748).ContactPermissions;
+const getIsOnboarding = fn(12770).getIsOnboarding;
+const ContactPermissions = fn(12771).ContactPermissions;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const Steps = {
   INITIALIZED: "Flow Initialized",

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_space/gaming_leaderboard/GuildLeaderboardUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import GuildLeaderboardTypes from "GuildLeaderboardTypes.tsx";
+import GuildLeaderboardStatCopy from "GuildLeaderboardStatCopy.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -9,55 +9,20 @@ const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboar
 
 export const LEADERBOARD_WINNER_ROLE_NAME_PREFIX =
   "leaderboard-winner-badge-sentinel-deliberately-longer-than-the-100-character-maximum-role-name-length:";
-export const getStatName = function getStatName(winningStat) {
-  if (GuildLeaderboardTypes.GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED === winningStat) {
-    return "Gaming Time";
-  } else if (GuildLeaderboardTypes.GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED === winningStat) {
-    return "Gaming Days";
-  } else if (GuildLeaderboardTypes.GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED === winningStat) {
-    return "Unique Games";
-  } else {
-    return "Gaming";
-  }
-};
 export const getLeaderboardWinnerBadgeText = function getLeaderboardWinnerBadgeText(prop) {
-  let num = prop.winningStreak;
-  if (num == null) {
-    num = 0;
-  }
-  if (num > 1) {
-    const intl = util.intl;
-    let obj = { streakCount: num, statName: null };
-    const winningStat = prop.winningStat;
-    let str2 = "Gaming Time";
-    if (GuildLeaderboardTypes.GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED !== winningStat) {
-      str2 = "Gaming Days";
-      if (GuildLeaderboardTypes.GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED !== winningStat) {
-        str2 = "Gaming";
-        if (GuildLeaderboardTypes.GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED === winningStat) {
-          str2 = "Unique Games";
-        }
-      }
+  let obj = GuildLeaderboardStatCopy;
+  const name = obj.getStatName(prop.winningStat).name;
+  const winningStreak = prop.winningStreak;
+  if (null != winningStreak) {
+    if (winningStreak > 1) {
+      const intl2 = util.intl;
+      obj = { streakCount: winningStreak, statName: name };
+      let formatToPlainStringResult = intl2.formatToPlainString(util.t.owAd83, obj);
     }
-    obj.statName = str2;
-    let formatToPlainStringResult = intl.formatToPlainString(util.t.owAd83, obj);
-  } else {
-    const intl2 = util.intl;
-    const winningStat2 = prop.winningStat;
-    let str = "Gaming Time";
-    if (GuildLeaderboardTypes.GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED !== winningStat2) {
-      str = "Gaming Days";
-      if (GuildLeaderboardTypes.GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED !== winningStat2) {
-        str = "Gaming";
-        if (GuildLeaderboardTypes.GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED === winningStat2) {
-          str = "Unique Games";
-        }
-      }
-    }
-    obj = { statName: str };
-    formatToPlainStringResult = intl2.formatToPlainString(util.t.So4gmj, obj);
+    return formatToPlainStringResult;
   }
-  return formatToPlainStringResult;
+  const intl = util.intl;
+  formatToPlainStringResult = intl.formatToPlainString(util.t.So4gmj, { statName: name });
 };
 export const encodeWinnerData = function encodeWinnerData(prop) {
   let num = prop.winningStat;

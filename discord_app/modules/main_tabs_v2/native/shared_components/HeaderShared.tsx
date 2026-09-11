@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _mod5681 from "../../../../../_runtime/metro/05681__.js";
+import _mod5682 from "../../../../../_runtime/metro/05682__.js";
 import PressableNavigatorBackIcon from "navigator/PressableNavigatorBackIcon.tsx";
 import PressableNavigatorModalIconDefault from "navigator/PressableNavigatorModalIcon.tsx";
 import ChannelActionsDefault from "../channel/ChannelActions.tsx";
@@ -139,10 +139,10 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(7915).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(7937).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = {
   headerRightContainer: { marginRight: 16 },
   headerWrapper: null,
@@ -169,7 +169,7 @@ obj.actionButtonIcon = createStyles;
 obj.headerText = { textAlign: "center", fontSize: 18 };
 obj.subtitleText = { textAlign: "center" };
 const obj2 = {};
-let merged = Object.assign(fn(4601).TextStyleSheet["text-md/semibold"]);
+let merged = Object.assign(fn(4602).TextStyleSheet["text-md/semibold"]);
 obj2.color = nativeDefault.colors.TEXT_BRAND;
 obj.backButtonLabel = obj2;
 obj.titleContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };

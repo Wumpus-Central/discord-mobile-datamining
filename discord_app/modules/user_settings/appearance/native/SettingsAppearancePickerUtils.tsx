@@ -85,22 +85,18 @@ function convertBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
 }
 function convertStandardThemeToAnimatedTheme(theme, items, BACKGROUND_SURFACE_HIGH) {
   theme = theme.theme;
-  let str = "light";
-  if (ThemeTypes.LIGHT !== theme) {
-    str = "dark";
-    if (ThemeTypes.DARK !== theme) {
-      str = "darker";
-      if (ThemeTypes.DARKER !== theme) {
-        str = "midnight";
-        if (ThemeTypes.MIDNIGHT !== theme) {
-          str = "light";
-        }
-      }
-    }
+  if (ThemeTypes.LIGHT === theme) {
+    let DARK = ThemeTypes.LIGHT;
+  } else if (ThemeTypes.ASH === theme) {
+    DARK = ThemeTypes.ASH;
+  } else if (ThemeTypes.DARK === theme) {
+    DARK = ThemeTypes.DARK;
+  } else {
+    DARK = ThemeTypes.ONYX === theme ? ThemeTypes.ONYX : ThemeTypes.LIGHT;
   }
   const internal = nativeDefault.internal;
   let obj = { enabledExperiments: items };
-  const semanticColor = internal.resolveSemanticColor(str, BACKGROUND_SURFACE_HIGH, obj);
+  const semanticColor = internal.resolveSemanticColor(DARK, BACKGROUND_SURFACE_HIGH, obj);
   obj = { theme: theme.theme, name: theme.getName(), midpointPercentage: 50, angle: 0, colors: null };
   items = [
     { hex: semanticColor, stop: 20 },
@@ -153,8 +149,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     obj = { hex: null, stop: null };
     const hexToRgbResult = obj.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(4455)(r, g, b, num8);
-    obj.hex = tmp16Result.mixColors(tmp7, new tmp12(4455)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(4457)(r, g, b, num8);
+    obj.hex = tmp16Result.mixColors(tmp7, new tmp12(4457)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -216,8 +212,8 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
   return items1;
 };
 export const useLaunchWelcomeSystemTheme = function useLaunchWelcomeSystemTheme() {
-  const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARKER;
-  token = token(4306).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
+  token = token(4308).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return noop.useMemo(() => {
     let obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

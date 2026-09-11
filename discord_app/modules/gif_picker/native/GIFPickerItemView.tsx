@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles((height) => {
   let obj = { container: null, gifImage: null, gifImageSelected: null };
   const size = {
@@ -46,7 +46,7 @@ export default function GIFPickerItemView(onPressGIF) {
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
     const obj = { item };
-    obj.openLazy(asyncRequireImpl(10450, dependencyMap.paths), "GIFPickerItemActionSheet", obj, "stack");
+    obj.openLazy(asyncRequireImpl(10469, dependencyMap.paths), "GIFPickerItemActionSheet", obj, "stack");
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, items1);
   const memo = noop.useMemo(() => {

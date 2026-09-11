@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import UserProfileGameWidgetTypes from "../../../user_profile/UserProfileGameWidgetTypes.tsx";
 import UserProfilePersonalWidget from "../../../user_profile/UserProfilePersonalWidget.tsx";
 import UserProfileSharedStylesDefault from "../../../user_profile/native/UserProfileSharedStyles.tsx";
@@ -13,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   title: { lineHeight: 16, marginBottom: 8 },
@@ -30,35 +31,53 @@ const result = size.fileFinishedImporting(
 export default function WidgetPreview(arg0) {
   ({ widget, userId } = arg0);
   const tmp = closure_6();
-  const tmp4 = UserProfileSharedStylesDefault();
+  let SpsnDY = dependencyMap;
+  let obj = useTypeConsolidationTextTransform;
+  const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("InAppReportsWidgetPreview", "text-xs/bold");
+  const tmp5 = UserProfileSharedStylesDefault();
   if (widget instanceof UserProfilePersonalWidget.UserProfilePersonalWidget) {
-    let obj = { userId, widget, disableInteraction: true, cardStyle: null };
-    const items = [tmp4.card, tmp.card];
+    obj = { userId, widget, disableInteraction: true, cardStyle: null };
+    const items = [tmp5.card, tmp.card];
     obj.cardStyle = items;
     let tmp6 = React4(UserProfilePersonalWidgetCardDefault, obj);
   } else {
     tmp6 = null;
-    if (tmp5Result.isGameWidget(widget)) {
+    if (tmp2Result.isGameWidget(widget)) {
       tmp6 = null;
       if (widget.games.length > 0) {
         obj = { userId, widget, disableInteraction: true, cardStyle: null };
-        const items1 = [tmp4.card, tmp.card];
+        const items1 = [tmp5.card, tmp.card];
         obj.cardStyle = items1;
         tmp6 = React4(UserProfileWidgetsBoard.WidgetSection, obj);
       }
     }
-    tmp5Result = UserProfileGameWidgetTypes;
+    tmp2Result = UserProfileGameWidgetTypes;
   }
-  let tmp9 = null;
-  if (null !== tmp6) {
+  if (null === tmp6) {
+    return null;
+  } else {
     const obj1 = { style: tmp.container, children: null };
-    const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-    const intl = util.intl;
-    obj2.children = intl.string(util.t.SpsnDY).toUpperCase();
-    const items2 = [React4(Text_Text.Text, obj2), tmp6];
-    obj1.children = items2;
-    tmp9 = hasOwnProperty(View, obj1);
-    const str = intl.string(util.t.SpsnDY);
+    let Text = Text_Text.Text;
+    if (null != typeConsolidationEyebrow.style) {
+      const items2 = [tmp.title, typeConsolidationEyebrow.style];
+      let title = items2;
+    } else {
+      title = tmp.title;
+    }
+    let obj2 = { style: title, accessibilityRole: "header", variant: typeConsolidationEyebrow.variant, children: null };
+    if (null != typeConsolidationEyebrow.style) {
+      const intl2 = util.intl;
+      SpsnDY = util.t.SpsnDY;
+      let stringResult = intl2.string(SpsnDY);
+    } else {
+      const intl = util.intl;
+      stringResult = intl.string(util.t.SpsnDY).toUpperCase();
+      const str = intl.string(util.t.SpsnDY);
+    }
+    obj2.children = stringResult;
+    Text = React4(Text, obj2);
+    obj2 = [Text, tmp6];
+    obj1.children = obj2;
+    hasOwnProperty(View, obj1);
   }
-  return tmp9;
 }

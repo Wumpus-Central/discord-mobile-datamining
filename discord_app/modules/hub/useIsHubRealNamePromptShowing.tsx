@@ -8,7 +8,7 @@ import UserStore from "../../stores/UserStore.tsx";
 
 const require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
-const GuildPrompts = fn(12721).GuildPrompts;
+const GuildPrompts = fn(12744).GuildPrompts;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
 

@@ -28,7 +28,7 @@ const ThemeConstants = fn(1186);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   flex: 1,
   paddingHorizontal: nativeDefault.space.PX_16,
@@ -61,79 +61,79 @@ createStyles.segmentedControlContainer = PlatformUtils;
 createStyles.textCentered = { textAlign: "center" };
 let closure_17 = createStyles.createStyles(createStyles);
 let items = [, , ,];
-({ LIGHT: arr[0], DARKER: arr[1], MIDNIGHT: arr[2], DARK: arr[3] } = ThemeTypes);
+({ LIGHT: arr[0], DARK: arr[1], ONYX: arr[2], ASH: arr[3] } = ThemeTypes);
 let closure_19 = items.map((item) => {
   const internal = nativeDefault.internal;
   return internal.resolveSemanticColor(item, nativeDefault.colors.CARD_SECONDARY_BG);
 });
 let closure_20 = items.map((item, index) => index);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj1 = { flexDirection: "row", gap: nativeDefault.space.PX_16 };
 let closure_21 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   items,
 );
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_22 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE },
   items,
 );
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 let closure_23 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG },
   items,
 );
-fn(4605);
+fn(4606);
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 let closure_24 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 let closure_25 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   items,
 );
-fn(4605);
+fn(4606);
 createStyles = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_26 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_27 = createStyles.createAnimatedThemedStyles(
   { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
   items,
 );
-fn(4605);
+fn(4606);
 createStyles = { color: nativeDefault.colors.TEXT_SUBTLE };
 let closure_28 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj9 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let closure_29 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_MUTED }, items);
-fn(4605);
+fn(4606);
 createStyles = { borderColor: nativeDefault.colors.BORDER_MUTED };
 let closure_30 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj11 = { color: nativeDefault.colors.TEXT_MUTED };
 let closure_31 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_STRONG }, items);
-fn(4605);
+fn(4606);
 createStyles = { borderColor: nativeDefault.colors.BORDER_NORMAL };
 let closure_32 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj13 = { borderColor: nativeDefault.colors.BORDER_STRONG };
 let closure_33 = createStyles.createAnimatedThemedStyles(
   { tintColor: nativeDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON },
   items,
 );
-fn(4605);
+fn(4606);
 createStyles = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 let closure_34 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4605);
+createStyles = fn(4606);
 const obj15 = { tintColor: nativeDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON };
 let closure_35 = createStyles.createAnimatedThemedStyles(
   { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
   items,
 );
-fn(4605);
+fn(4606);
 createStyles = { color: nativeDefault.colors.TEXT_BRAND };
 let closure_36 = createStyles.createAnimatedThemedStyles(createStyles, items);
 function getSegmentedControlItems() {
@@ -146,13 +146,13 @@ function getSegmentedControlItems() {
   obj = { label: null, id: null, icon: null, page: null };
   const intl2 = util.intl;
   obj.label = intl2.string(util.t.b8Cei3);
-  obj.id = ThemeTypes.DARKER;
+  obj.id = ThemeTypes.DARK;
   obj.icon = closure_1_14(ThemeDarkIcon.ThemeDarkIcon, {});
   items[1] = obj;
   obj = { label: null, id: null, icon: null, page: null };
   const intl3 = util.intl;
-  obj.label = intl3.string(util.t.pQwSpQ);
-  obj.id = ThemeTypes.MIDNIGHT;
+  obj.label = intl3.string(util.t.Do4ZJx);
+  obj.id = ThemeTypes.ONYX;
   obj.icon = closure_1_14(ThemeMidnightIcon.ThemeMidnightIcon, {});
   items[2] = obj;
   return items;
@@ -186,7 +186,7 @@ function ThemePicker(defaultIndex) {
   let memo2;
   let callback1;
   let callback2;
-  ({ deviceHeight, themeSelector, hasMidnightNux } = defaultIndex);
+  ({ deviceHeight, themeSelector, hasOnyxNux } = defaultIndex);
   let tmp = c17();
   let obj = defaultIndex(isPreview[27]);
   const navigation = obj.useNavigation();
@@ -217,7 +217,7 @@ function ThemePicker(defaultIndex) {
   tmp3Result = tmp3(tmp4[20]);
   items = [navigation];
   stateFromStores = tmp3Result.useStateFromStores(items, () =>
-    defaultIndex(isPreview[24]).isThemeLight(navigation.systemTheme) ? _undefined.LIGHT : _undefined.DARKER,
+    defaultIndex(isPreview[24]).isThemeLight(navigation.systemTheme) ? _undefined.LIGHT : _undefined.DARK,
   );
   const tmp7 = mobileThemes(isPreview[28]);
   [tmp22, tmp23] = isSynced(obj1.useState(memo1), 2);
@@ -236,7 +236,7 @@ function ThemePicker(defaultIndex) {
   fn.__closure = { activeIndex };
   fn.__workletHash = 12670867470872;
   fn.__initData = __initData;
-  class Q {
+  class Z {
     constructor(arg0) {
       obj = closure_0(closure_2[32]);
       runOnJSResult = obj.runOnJS(closure_17);
@@ -245,10 +245,10 @@ function ThemePicker(defaultIndex) {
     }
   }
   obj = { runOnJS: tmp3(tmp4[32]).runOnJS, setPendingThemeIndex: tmp23 };
-  Q.__closure = obj;
-  Q.__workletHash = 7003433484889;
-  Q.__initData = __initData2;
-  const animatedReaction = defaultIndex(isPreview[32]).useAnimatedReaction(fn, Q);
+  Z.__closure = obj;
+  Z.__workletHash = 7003433484889;
+  Z.__initData = __initData2;
+  const animatedReaction = defaultIndex(isPreview[32]).useAnimatedReaction(fn, Z);
   const tmp3Result2 = defaultIndex(isPreview[32]);
   let num = 1;
   if ("light" === mobileThemes[defaultIndex].theme) {
@@ -267,38 +267,25 @@ function ThemePicker(defaultIndex) {
     [],
   );
   tmp3Result3 = defaultIndex(isPreview[32]);
-  class Re {
-    constructor() {
-      tmp = mobileThemes;
-      tmp2 = closure_14;
-      if (closure_14) {
-        value = closure_11;
-      } else {
-        tmp3 = closure_19;
-        value = closure_19.get();
-      }
-      if (tmp2) {
-        tmp5 = closure_0;
-        tmp6 = closure_2;
-        if (tmp[value].type !== closure_0(closure_2[23]).ClientThemeType.STANDARD_BACKGROUND_THEME) {
-          obj = { backgroundColor: null };
-          tmp8 = closure_0;
-          tmp9 = closure_2;
-          obj5 = closure_0(closure_2[35]);
-          tmp10 = closure_20;
-          tmp11 = closure_0;
-          tmp12 = closure_2;
-          obj.backgroundColor = obj5.withTiming(closure_20, closure_0(closure_2[36]).timingStandard);
-        }
-        return obj;
-      }
-      obj = { backgroundColor: null };
-      obj2 = closure_0(closure_2[35]);
-      obj3 = closure_0(closure_2[32]);
-      interpolateColorResult = obj3.interpolateColor(closure_19.get(), closure_20, closure_19);
-      obj.backgroundColor = obj2.withTiming(interpolateColorResult, closure_0(closure_2[36]).timingStandard);
-      return;
+  function be() {
+    if (closure_14) {
+      value = first;
+    } else {
+      value = activeIndex2.get();
     }
+    if (closure_14) {
+      if (mobileThemes[value].type !== ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME) {
+        let obj = { backgroundColor: timing.withTiming(memo2, timingPresets.timingStandard) };
+      }
+      return obj;
+    }
+    obj = { backgroundColor: null };
+    const obj2 = timing;
+    obj.backgroundColor = obj2.withTiming(
+      ReanimatedRexport.interpolateColor(activeIndex2.get(), closure_20, closure_19),
+      timingPresets.timingStandard,
+    );
+    const interpolateColorResult = ReanimatedRexport.interpolateColor(activeIndex2.get(), closure_20, closure_19);
   }
   obj = {
     mobileThemes,
@@ -313,9 +300,9 @@ function ThemePicker(defaultIndex) {
     timingStandard: tmp3(tmp4[36]).timingStandard,
     bgRaised: memo2,
   };
-  Re.__closure = obj;
-  Re.__workletHash = 10807943820408;
-  Re.__initData = __initData3;
+  be.__closure = obj;
+  be.__workletHash = 10807943820408;
+  be.__initData = __initData3;
   obj1 = {
     textNormal: null,
     textMuted: null,
@@ -335,7 +322,7 @@ function ThemePicker(defaultIndex) {
     bgSurfaceHigh: null,
     bgRaised: null,
   };
-  const animatedStyle = defaultIndex(isPreview[32]).useAnimatedStyle(Re);
+  const animatedStyle = defaultIndex(isPreview[32]).useAnimatedStyle(be);
   obj1.textNormal = closure_26(activeIndex2);
   obj1.textMuted = closure_29(activeIndex2);
   obj1.textBrand = closure_36(activeIndex2);
@@ -521,7 +508,7 @@ function ThemePicker(defaultIndex) {
       defaultIndex,
       deviceWidth: rounded,
       animatedStyles: obj1,
-      hasMidnightNux,
+      hasOnyxNux,
       onThemeSelected: callback3,
     };
     let tmp42 = closure_14(tmp6(tmp4[43]), obj2);
@@ -553,11 +540,11 @@ function ThemePicker(defaultIndex) {
   const items8 = [themeIndex, mobileThemes, activeIndex2, stateFromStores];
   const effect2 = obj1.useEffect(() => {
     if ("system" === mobileThemes[first].theme) {
-      let DARKER = stateFromStores;
+      let DARK = stateFromStores;
       if (stateFromStores == null) {
-        DARKER = ThemeTypes.DARKER;
+        DARK = ThemeTypes.DARK;
       }
-      let theme = DARKER;
+      let theme = DARK;
     } else {
       theme = tmp.theme;
     }
@@ -647,7 +634,7 @@ export default function ConnectedThemePicker(canGoBack) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let flag3 = canGoBack.hasMidnightNux;
+  let flag3 = canGoBack.hasOnyxNux;
   if (flag3 === undefined) {
     flag3 = false;
   }
@@ -733,7 +720,7 @@ export default function ConnectedThemePicker(canGoBack) {
     themeSelector: str,
     onSaveTheme,
     hasSaveButton: flag2,
-    hasMidnightNux: flag3,
+    hasOnyxNux: flag3,
     headerTitle,
     mode,
   };

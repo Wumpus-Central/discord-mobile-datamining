@@ -28,6 +28,7 @@ export const SafetySettingsNoticeType = {
   RESTRICTED_ACCOUNTS_SETTING_NOTICE: "restricted_accounts_setting_notice",
   CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE: "content_and_social_parental_controls_notice",
   AGE_CONFIRMATION_NOTICE: "age_confirmation_notice",
+  CONTENT_AND_SOCIAL_NOTICE: "content_and_social_notice",
 };
 export const SafetySettingsNoticeAction = {
   DISMISS: "dismiss",

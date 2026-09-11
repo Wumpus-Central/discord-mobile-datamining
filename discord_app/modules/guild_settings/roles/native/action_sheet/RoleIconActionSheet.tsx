@@ -147,7 +147,7 @@ export default function RoleIconActionSheet(arg0) {
   const intl5 = util.intl;
   obj2.label = intl5.string(util.t["/Ny2wZ"]);
   obj2.onPress = function handleSelectEmoji() {
-    guildId(11193);
+    guildId(11216);
     let obj = { guildId, pickerIntention: constants.COMMUNITY_CONTENT, onPressEmoji: null };
     guildId = asyncGeneratorStep(async (arg0) => {
       if (c8 === 2) {
@@ -182,25 +182,25 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(17717).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(17717);
+                  closure_0(17708).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(17708);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(17717);
+                const tmp22 = closure_0(17708);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                let obj1 = { value: closure_0(17721).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                let obj1 = { value: closure_0(17712).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj1;
               }
             }
           } else {
             if (1 === tmp7) {
               c6 = 0;
-              obj1 = closure_0(4302);
+              obj1 = closure_0(4304);
               const intl = closure_0(1114).intl;
               obj1.presentError(intl.string(closure_0(1114).t.R0RpRX));
             } else if (arg0 === 1) {

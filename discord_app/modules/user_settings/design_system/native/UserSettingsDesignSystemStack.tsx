@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { padding: 16, flex: 1, alignItems: "center" }, block: null };
 createStyles = {
   borderRadius: nativeDefault.radii.lg,

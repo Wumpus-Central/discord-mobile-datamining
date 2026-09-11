@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/GiftingTier5SmallBadge.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6222 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftingTier5SmallBadge-2x.png.js";
+import _modDef6243 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftingTier5SmallBadge-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const GiftingTier5SmallBadge = function GiftingTier5SmallBadge(width) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef6222 };
+  obj = { uri: _modDef6243 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -39,5 +39,5 @@ export const GiftingTier5SmallBadge = function GiftingTier5SmallBadge(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6222 });
+  return jsx(FastImageDefault, { uri: _modDef6243 });
 };

@@ -45,7 +45,7 @@ class OrbOnboardingPill {
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
 OrbOnboardingPill.displayName = "OrbOnboardingPill";
-fn(4605);
+fn(4606);
 let createStyles = { container: null };
 createStyles = {
   height: 36,

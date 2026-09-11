@@ -75,7 +75,7 @@ class NotificationSettingsMessageNotification {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { card: null, cta: null, label: null, header: null, headerTitle: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -106,7 +106,7 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
       const obj = { guildId: style.guildId };
-      obj.openLazy(asyncRequireImpl(10230, dependencyMap.paths), "MessageNotificationGuildActionSheet", obj);
+      obj.openLazy(asyncRequireImpl(10249, dependencyMap.paths), "MessageNotificationGuildActionSheet", obj);
     },
   };
   return closure_4(NotificationSettingsMessageNotification, obj);
@@ -121,7 +121,7 @@ export const NotificationSettingsChannelMessageNotification = function Notificat
     setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).notification,
     onCustomize() {
       const obj = { channel: style.channel };
-      obj.openLazy(asyncRequireImpl(10232, dependencyMap.paths), "MessageNotificationChannelActionSheet", obj);
+      obj.openLazy(asyncRequireImpl(10251, dependencyMap.paths), "MessageNotificationChannelActionSheet", obj);
     },
   };
   return closure_4(NotificationSettingsMessageNotification, obj);

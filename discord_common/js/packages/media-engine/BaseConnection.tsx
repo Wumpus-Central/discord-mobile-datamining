@@ -2,13 +2,13 @@
 import VideoQualityManager from "VideoQualityManager.tsx";
 import ConnectionEventFramerateReducer from "ConnectionEventFramerateReducer.tsx";
 import discord_common_BaseConnectionEvent from "BaseConnectionEvent.tsx";
-import cloneDeepDefault from "../../../../_runtime/04677_cloneDeep.js";
-import flatRestDefault from "../../../../_runtime/04706_flatRest.js";
+import cloneDeepDefault from "../../../../_runtime/04678_cloneDeep.js";
+import flatRestDefault from "../../../../_runtime/04707_flatRest.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import TypedEventEmitter from "../../shared/utils/TypedEventEmitter.tsx";
 
 require = fn;
-const Constants = fn(4630);
+const Constants = fn(4631);
 ({
   ConnectionStates: closure_4,
   DEFAULT_VOICE_BITRATE: hasOwnProperty,
@@ -397,4 +397,4 @@ let size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnection.tsx");
 
 export default BaseConnection;
-export const BaseConnectionEvent = fn(4676).BaseConnectionEvent;
+export const BaseConnectionEvent = fn(4677).BaseConnectionEvent;

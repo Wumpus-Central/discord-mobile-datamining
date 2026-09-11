@@ -5,7 +5,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef9319 from "../../../../_runtime/metro/09319__.js";
+import _modDef9340 from "../../../../_runtime/metro/09340__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, inner: null, text: null, image: null };
 createStyles = {
   flex: 1,
@@ -36,7 +36,7 @@ export default function ErrorResult(error) {
   const tmp = closure_7();
   let obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: tmp.inner, children: null };
-  obj = { source: _modDef9319, style: tmp.image };
+  obj = { source: _modDef9340, style: tmp.image };
   const items = [hasOwnProperty(React3, obj)];
   const obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (error == null) {

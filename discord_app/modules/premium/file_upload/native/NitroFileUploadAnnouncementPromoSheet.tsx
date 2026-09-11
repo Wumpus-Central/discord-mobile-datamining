@@ -1,6 +1,5 @@
 // discord_app/modules/premium/file_upload/native/NitroFileUploadAnnouncementPromoSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2496 from "../NitroFileUpload.messages.js";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -9,7 +8,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { illustration: null };
 createStyles = { paddingTop: nativeDefault.space.PX_12 };
 createStyles.illustration = createStyles;
@@ -21,68 +20,62 @@ const result = size.fileFinishedImporting(
 
 export default function NitroFileUploadAnnouncementPromoSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
-  let callback;
-  importDefault = callback.useRef(false);
-  dependencyMap = callback.useRef(markAsDismissed);
+  importDefault = noop.useRef(false);
   const items = [markAsDismissed];
-  const effect = callback.useEffect(() => {
-    closure_2.current = markAsDismissed;
-  }, items);
-  const effect1 = callback.useEffect(
-    () => () => {
-      if (!ref.current) {
-        ref2.current(constants.AUTO_DISMISS);
-      }
-    },
-    [],
-  );
-  callback = callback.useCallback((AUTO_DISMISS) => {
+  const callback = noop.useCallback((arg0) => {
     if (!ref.current) {
       tmp.current = true;
-      ref2.current(AUTO_DISMISS);
+      markAsDismissed(arg0);
     }
-  }, []);
+  }, items);
+  let obj = markAsDismissed(callback[7]);
+  const unmountEffect = obj.useUnmountEffect(() => {
+    callback(ContentDismissActionType.AUTO_DISMISS);
+  });
   const items1 = [callback];
   const items2 = [callback];
-  const callback1 = callback.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     callback(ContentDismissActionType.TAKE_ACTION);
     const obj = { screen: UserSettingsSections.PREMIUM };
     obj.openUserSettings(obj);
   }, items1);
-  const callback2 = callback.useCallback(() => {
+  const callback2 = noop.useCallback(() => {
     callback(ContentDismissActionType.USER_DISMISS);
   }, items2);
-  let obj = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
+  obj = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
   obj = {
     style: closure_8().illustration,
-    children: jsx(markAsDismissed(5742).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" }),
+    children: jsx(markAsDismissed(callback[10]).FileUploadSpotIllustration, {
+      accessible: false,
+      resizeMode: "contain",
+    }),
   };
   obj.illustration = (
     <View style={closure_8().illustration}>
-      {jsx(markAsDismissed(5742).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" })}
+      {jsx(markAsDismissed(callback[10]).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" })}
     </View>
   );
-  const intl = markAsDismissed(1114).intl;
-  obj.title = intl.string(_modDef2496.IyCdAU);
-  const intl2 = markAsDismissed(1114).intl;
-  obj.description = intl2.string(_modDef2496.LhfXZN);
+  const intl = markAsDismissed(callback[11]).intl;
+  obj.title = intl.string(require("../NitroFileUpload.messages.js").IyCdAU);
+  const intl2 = markAsDismissed(callback[11]).intl;
+  obj.description = intl2.string(require("../NitroFileUpload.messages.js").LhfXZN);
   obj.onDismiss = callback2;
-  obj = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
-  const intl3 = markAsDismissed(1114).intl;
-  obj.text = intl3.formatToPlainString(_modDef2496.Ocbn9P, { deepLinkToNitroHome: "" });
-  obj.onPress = callback1;
-  obj.actions = jsx(markAsDismissed(5025).Button, {
+  const obj1 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
+  const intl3 = markAsDismissed(callback[11]).intl;
+  obj1.text = intl3.formatToPlainString(require("../NitroFileUpload.messages.js").Ocbn9P, { deepLinkToNitroHome: "" });
+  obj1.onPress = callback1;
+  obj.actions = jsx(markAsDismissed(callback[13]).Button, {
     grow: true,
     size: "lg",
     variant: "primary",
     text: null,
     onPress: null,
   });
-  return jsx(markAsDismissed(10300).PromoSheet, {
-    grow: true,
-    size: "lg",
-    variant: "primary",
-    text: null,
-    onPress: null,
+  return jsx(markAsDismissed(callback[9]).PromoSheet, {
+    style: closure_8().illustration,
+    children: jsx(markAsDismissed(callback[10]).FileUploadSpotIllustration, {
+      accessible: false,
+      resizeMode: "contain",
+    }),
   });
 }

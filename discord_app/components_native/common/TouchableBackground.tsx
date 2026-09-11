@@ -6,7 +6,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { default: null };
 createStyles = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 createStyles.default = createStyles;

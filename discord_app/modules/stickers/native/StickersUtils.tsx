@@ -6,7 +6,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(10460).useStickerPickerStore;
+const useStickerPickerStore = fn(10479).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1074).GuildNSFWContentLevel;
 const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
 const size = fn(2);

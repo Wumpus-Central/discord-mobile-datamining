@@ -22,16 +22,16 @@ export default noop.memo((guildId) => {
       return null;
     };
     obj.headerRight = function headerRight() {
-      const obj = { source: onClose(7044), onPress, accessibilityLabel: null };
+      const obj = { source: onClose(7065), onPress, accessibilityLabel: null };
       const intl = guildId(1114).intl;
       obj.accessibilityLabel = intl.string(guildId(1114).t.cpT0Cq);
-      return jsx(guildId(7429).HeaderActionButton, { source: onClose(7044), onPress, accessibilityLabel: null });
+      return jsx(guildId(7450).HeaderActionButton, { source: onClose(7065), onPress, accessibilityLabel: null });
     };
     obj.render = function render() {
-      return jsx(onClose(11642), { guildId, onCloseModal });
+      return jsx(onClose(11664), { guildId, onCloseModal });
     };
     obj[GUILD_ROLE_CONNECTIONS_SCREEN] = obj;
     return obj;
   }, items);
-  return jsx(guildId(7052).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
+  return jsx(guildId(7073).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
 });

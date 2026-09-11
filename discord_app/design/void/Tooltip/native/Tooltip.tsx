@@ -9,7 +9,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = { UP: "UP", DOWN: "DOWN" };
 obj = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
-fn(4605);
+fn(4606);
 obj = {
   container: {
     padding: 10,

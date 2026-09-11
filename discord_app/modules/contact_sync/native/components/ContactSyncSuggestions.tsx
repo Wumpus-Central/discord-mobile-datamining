@@ -61,10 +61,10 @@ function SuggestionRow(suggestion) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SuggestedFriendSource = fn(12769).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12792).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: null,
   header: null,
@@ -79,7 +79,7 @@ let createStyles = {
 createStyles = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
-  paddingTop: fn(5732).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5733).NAV_BAR_HEIGHT + 32,
   justifyContent: "center",
 };
 createStyles.container = createStyles;
@@ -131,16 +131,16 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     acc[suggested_user.suggested_user.id] = true;
     return acc;
   }, {});
-  let obj = friendSuggestions(4306);
+  let obj = friendSuggestions(4308);
   const token = obj.useToken(onSubmit(576).colors.BACKGROUND_BASE_LOW);
-  let obj1 = friendSuggestions(4454);
+  let obj1 = friendSuggestions(4456);
   let items = [obj1.hexOpacityToRgba(token, 0)];
-  let obj2 = friendSuggestions(4454);
+  let obj2 = friendSuggestions(4456);
   items[1] = obj2.hexOpacityToRgba(token, 100);
   const tmp4 = first(noop.useState(reduced), 2);
   first = tmp4[0];
   noop = tmp4[1];
-  let obj3 = friendSuggestions(5032);
+  let obj3 = friendSuggestions(5033);
   const fontScale = obj3.useFontScale();
   const sum = onSubmit(576).space.PX_16 + onSubmit(576).space.PX_32 + 40;
   let items1 = [first];
@@ -226,13 +226,13 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   obj.contentContainerStyle = obj1;
   obj.data = memo;
   obj.renderItem = callback1;
-  const items5 = [closure_8(friendSuggestions(8943).FlashList, obj), ,];
+  const items5 = [closure_8(friendSuggestions(8964).FlashList, obj), ,];
   obj2 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
   const someResult = keys.some((item) => first[item]);
   obj2.start = friendSuggestions(1093).VerticalGradient.START;
   obj2.end = friendSuggestions(1093).VerticalGradient.END;
   obj2.colors = items;
-  items5[1] = closure_8(onSubmit(5037), obj2);
+  items5[1] = closure_8(onSubmit(5038), obj2);
   obj3 = { style: tmp.redesignButton, children: null };
   obj4 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   let intl = friendSuggestions(1114).intl;
@@ -252,7 +252,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     });
   };
   obj4.disabled = !someResult;
-  obj3.children = closure_8(friendSuggestions(5025).Button, obj4);
+  obj3.children = closure_8(friendSuggestions(5026).Button, obj4);
   items5[2] = closure_8(onSelect, obj3);
   obj.children = items5;
   return closure_10(onSelect, obj);

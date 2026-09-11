@@ -13,7 +13,7 @@ function AppInThisServer(onAppSelected) {
   onAppSelected = onAppSelected.onAppSelected;
   const tmp = closure_7();
   const application = onAppSelected.appItem.application;
-  let obj = onAppSelected(12121);
+  let obj = onAppSelected(12144);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   obj = {
     accessible: true,
@@ -35,11 +35,11 @@ function AppInThisServer(onAppSelected) {
   let tmp6 = null;
   if (null != appLauncherIconSource) {
     obj = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
-    tmp6 = closure_5(application(12126), obj);
+    tmp6 = closure_5(application(12149), obj);
   }
   const items = [
     tmp6,
-    closure_5(onAppSelected(4601).Text, {
+    closure_5(onAppSelected(4602).Text, {
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
@@ -47,13 +47,13 @@ function AppInThisServer(onAppSelected) {
     }),
   ];
   obj.children = items;
-  return closure_6(onAppSelected(8971).PressableScale, obj, application.id);
+  return closure_6(onAppSelected(8992).PressableScale, obj, application.id);
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: { marginBottom: 16 },
   headerContainer: { justifyContent: "center" },

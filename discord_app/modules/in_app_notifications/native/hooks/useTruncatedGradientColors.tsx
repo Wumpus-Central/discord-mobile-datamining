@@ -10,7 +10,7 @@ let closure_4 = createStyles.createStyles({ gradient: { height: 40 } });
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx");
 
 export default function useTruncatedGradientColors() {
-  let obj = token(4306);
+  let obj = token(4308);
   token = obj.useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
   obj = { gradientColors: null, gradientStyles: closure_4().gradient };
   let items = [token];

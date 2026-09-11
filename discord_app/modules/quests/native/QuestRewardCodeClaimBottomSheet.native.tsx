@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef5647 from "../../../../_runtime/metro/05647__.js";
+import _modDef5648 from "../../../../_runtime/metro/05648__.js";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -45,7 +45,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
       const obj = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
       const intl = util.intl;
       obj.content = intl.string(util.t.CKsXk3);
-      obj.icon = _modDef5647;
+      obj.icon = _modDef5648;
       obj.open(obj);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
@@ -114,7 +114,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
   const callback = obj2.useCallback(() => {
     if (null != rewardCode) {
       ClipboardUtils.copy(tmp.code, () => {
-        rewardCode(4303);
+        rewardCode(4305);
         const obj = { key: "TOAST_QUEST_REWARD_CODE_COPIED", content: null, icon: null };
         const intl = quest(1114).intl;
         obj.content = intl.string(quest(1114).t.MSaeTe);
@@ -230,10 +230,10 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(5494).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(5495).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
   let obj = {
     wrapper: null,

@@ -1054,10 +1054,10 @@ prototype2["mergeDelta"] = function mergeDelta() {
     const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
-    const mapped = items.map((item) => set(4828).createMessageRecord(item));
+    const mapped = items.map((item) => set(4829).createMessageRecord(item));
     const combined = found.concat(
       mapped,
-      items1.map((item) => set(4828).createMessageRecord(item)),
+      items1.map((item) => set(4829).createMessageRecord(item)),
     );
     _before._array = combined.sort((id, id2) => items1(11).compare(id.id, id2.id));
   });
@@ -1243,7 +1243,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     if (id === id1) {
       if (null != nonce.nonce) {
         if (value.id === nonce.nonce) {
-          const messageRecord = messageRecord1(4828).createMessageRecord(nonce);
+          const messageRecord = messageRecord1(4829).createMessageRecord(nonce);
           if (null != value.interactionData) {
             messageRecord.interactionData = value.interactionData;
           }
@@ -1258,7 +1258,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     }
     return self;
   } else {
-    messageRecord1 = messageRecord1(4828).createMessageRecord(nonce);
+    messageRecord1 = messageRecord1(4829).createMessageRecord(nonce);
     const lastResult = self.last();
     if (null != lastResult) {
       if (obj2.compare(nonce.id, lastResult.id) < 0) {
@@ -1289,7 +1289,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     }
     const items = [messageRecord1];
     mutation = self.merge(items);
-    let obj = messageRecord1(4828);
+    let obj = messageRecord1(4829);
   }
 };
 prototype2["receivePushNotification"] = function receivePushNotification(message, isConnectedResult) {
@@ -1593,7 +1593,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  let obj = reversed(5326);
+  let obj = reversed(5327);
   const result = obj.requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();

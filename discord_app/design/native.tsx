@@ -354,6 +354,7 @@ export const SegmentedControlItem = SegmentedControlState.SegmentedControlItem;
 export const StickyWrapper = StickyWrapper.StickyWrapper;
 export const Tabs = Tabs_Tabs.Tabs;
 export const TabsProps = Tabs_Tabs.TabsProps;
+export const TabsVariant = Tabs_Tabs.TabsVariant;
 export const ContextMenuItemOptions = ContextMenuItem.ContextMenuItemOptions;
 export const ContextMenu = ContextMenu.ContextMenu;
 export const ContextMenuProps = ContextMenu.ContextMenuProps;

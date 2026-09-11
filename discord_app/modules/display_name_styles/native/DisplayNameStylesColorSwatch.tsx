@@ -4,7 +4,7 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import DisplayNameEffect from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
-import LinearGradientDefault from "../../../../_runtime/05037_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05038_LinearGradient.js";
 import GummyStripesDefault from "effects/GummyStripes.tsx";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

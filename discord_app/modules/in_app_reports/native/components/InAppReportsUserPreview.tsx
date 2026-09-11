@@ -4,13 +4,14 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   borderColor: null,
@@ -38,31 +39,46 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 export default function UserPreview(user) {
   user = user.user;
   const tmp = closure_5();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-  const intl = util.intl;
-  const hexWithOpacityResult = obj.hexWithOpacity(tmp.borderColor.color, 0.08);
-  obj.children = intl.string(util.t.Rsth7z).toUpperCase();
-  const items = [React3(Text_Text.Text, obj)];
-  const obj1 = { style: null, children: null };
-  const items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
-  obj1.style = items1;
-  const str = intl.string(util.t.Rsth7z);
-  const items2 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" })];
-  const obj3 = { style: tmp.userProfileInfo, children: null };
-  let tmp7Result = null != user.globalName;
-  if (tmp7Result) {
-    const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: user.globalName };
-    tmp7Result = React3(Text_Text.Text, obj4);
+  let obj = useTypeConsolidationTextTransform;
+  const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("InAppReportsUserPreview", "text-xs/bold");
+  let obj1 = ColorUtils;
+  obj = { style: tmp.container, children: null };
+  if (null != typeConsolidationEyebrow.style) {
+    const items = [tmp.title, typeConsolidationEyebrow.style];
+    let title = items;
+  } else {
+    title = tmp.title;
   }
-  const items3 = [
-    tmp7Result,
+  obj = { style: title, accessibilityRole: "header", variant: typeConsolidationEyebrow.variant, children: null };
+  if (null != typeConsolidationEyebrow.style) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.Rsth7z);
+  } else {
+    const intl = util.intl;
+    stringResult = intl.string(util.t.Rsth7z).toUpperCase();
+    const str = intl.string(util.t.Rsth7z);
+  }
+  obj.children = stringResult;
+  const items1 = [React3(Text_Text.Text, obj)];
+  obj1 = { style: null, children: null };
+  const items2 = [tmp.userContainer, { borderColor: obj1.hexWithOpacity(tmp.borderColor.color, 0.08) }];
+  obj1.style = items2;
+  const hexWithOpacityResult = obj1.hexWithOpacity(tmp.borderColor.color, 0.08);
+  const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" })];
+  const obj3 = { style: tmp.userProfileInfo, children: null };
+  let tmp8Result = null != user.globalName;
+  if (tmp8Result) {
+    const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: user.globalName };
+    tmp8Result = React3(Text_Text.Text, obj4);
+  }
+  const items4 = [
+    tmp8Result,
     React3(Text_Text.Text, { color: "text-default", variant: "text-sm/normal", children: user.username }),
   ];
-  obj3.children = items3;
-  items2[1] = React4(View, obj3);
-  obj1.children = items2;
-  items[1] = React4(View, obj1);
-  obj.children = items;
+  obj3.children = items4;
+  items3[1] = React4(View, obj3);
+  obj1.children = items3;
+  items1[1] = React4(View, obj1);
+  obj.children = items1;
   return React4(View, obj);
 }

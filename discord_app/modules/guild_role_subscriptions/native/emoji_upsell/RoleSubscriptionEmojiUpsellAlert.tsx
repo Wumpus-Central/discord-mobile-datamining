@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/emoji_upsell/RoleSubscriptionEmojiUpsellAlert.tsx
 import util from "../../../../intl/index.native.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
-import _modDef9384 from "../../../../../_runtime/metro/09384__.js";
+import _modDef9405 from "../../../../../_runtime/metro/09405__.js";
 import CreatorRevenueButton from "../components/CreatorRevenueButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -48,7 +48,7 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
     if (stateFromStores != null) {
       name = stateFromStores.name;
     }
-    const obj = { image: _modDef9384, title: null, description: null };
+    const obj = { image: _modDef9405, title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.cBjkcx);
     const intl2 = util.intl;

@@ -262,7 +262,7 @@ const Constants = fn(1074);
 ({ AbortCodes, AnalyticEvents: closure_12, AppContext, InviteStates: map1, JoinGuildSources, Routes } = Constants);
 const CollectiblesShopConstants = fn(1076);
 ({ CollectibleShopTab: closure_14, CollectiblesMobileShopScreen: closure_15 } = CollectiblesShopConstants);
-const isGameShopPath = fn(7281).isGameShopPath;
+const isGameShopPath = fn(7302).isGameShopPath;
 let obj = { skipExtensionCheck: "Array", analyticsLocations: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/getOnClick.tsx");
@@ -306,7 +306,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "call", skuId: "accessibilityLabel" };
+            result = { applicationId: "Array", skuId: "PX_16" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -324,11 +324,11 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "Array" };
+      result = { applicationId: code, skuId: "a" };
     };
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4593).CodedLinkType.ACTIVITY_BOOKMARK) {
+    if (findCodedLinkResult.type === tmp2(4594).CodedLinkType.ACTIVITY_BOOKMARK) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -360,19 +360,80 @@ export default function getOnClick(url) {
               searchParams3.get("custom_id"),
             );
             url = pathname(function* (applicationId) {
-              yield applicationId(paths[32]).runPrimaryAppCommandOrJoinEmbeddedActivity({
-                channelId,
-                applicationId,
-                isStart: null == closure_1_5,
-                embeddedActivitiesManager,
-                customId,
-                referrerId,
-                analyticsLocations: uRL,
-              });
-              yield "HermesInternal";
-              closure_1 = tmp2;
-              customId = applicationId.customId;
-              return "PX_16";
+              if (channelId === 2) {
+                channelId = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp4 === 3) {
+                if (applicationId === 1) {
+                  throw value;
+                } else if (applicationId === 2) {
+                  obj = { value, done: true };
+                  return obj;
+                } else {
+                  return { value: "HermesInternal", done: null };
+                }
+              } else {
+                try {
+                  channelId = 2;
+                  if (0 === embeddedActivitiesManager) {
+                    if (applicationId === 1) {
+                      channelId = 3;
+                      throw value;
+                    } else if (applicationId === 2) {
+                      channelId = 3;
+                      obj = { value, done: true };
+                      return obj;
+                    } else {
+                      const referrerId = tmp5;
+                      closure_1 = tmp2;
+                      let customId;
+                      customId = applicationId.customId;
+                      embeddedActivitiesManager = 1;
+                      channelId = 1;
+                      return { value: "PX_16", done: null };
+                    }
+                  } else if (1 === tmp5) {
+                    if (applicationId === 1) {
+                      channelId = 3;
+                      throw value;
+                    } else if (applicationId === 2) {
+                      channelId = 3;
+                      const obj1 = { value, done: true };
+                      return obj1;
+                    } else {
+                      const obj2 = {
+                        channelId,
+                        applicationId,
+                        isStart: null == closure_1_5,
+                        embeddedActivitiesManager,
+                        customId,
+                        referrerId,
+                        analyticsLocations: uRL,
+                      };
+                      embeddedActivitiesManager = 2;
+                      channelId = 1;
+                      const obj3 = {
+                        value: applicationId(paths[32]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj2),
+                        done: false,
+                      };
+                      return obj3;
+                    }
+                  } else if (applicationId === 1) {
+                    channelId = 3;
+                    throw value;
+                  } else if (applicationId === 2) {
+                    channelId = 3;
+                    obj = { value, done: true };
+                    return obj;
+                  } else {
+                    channelId = 3;
+                    return { value: "HermesInternal", done: null };
+                  }
+                } catch (tmp7) {
+                  channelId = tmp;
+                  throw tmp7;
+                }
+              }
             });
             const tmp7Result = tmp7(paths[31]);
             customActivityLinkParams
@@ -520,14 +581,14 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4593).CodedLinkType.GUILD_PRODUCT) {
+    if (findCodedLinkResult.type === tmp2(4594).CodedLinkType.GUILD_PRODUCT) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
         [closure_0, closure_1] = _slicedToArray(_undefined.code.split("-"), 2);
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(13014, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(13037, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;
@@ -535,7 +596,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4593).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
+    if (findCodedLinkResult.type === tmp2(4594).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -550,7 +611,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4593).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (findCodedLinkResult.type === tmp2(4594).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -565,8 +626,8 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4593).CodedLinkType.QUESTS_EMBED) {
-      let tmp2Result = tmp2(11556);
+    if (findCodedLinkResult.type === tmp2(4594).CodedLinkType.QUESTS_EMBED) {
+      let tmp2Result = tmp2(11578);
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
@@ -605,7 +666,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4593).CodedLinkType.COLLECTIBLES_SHOP) {
+    if (findCodedLinkResult.type === tmp2(4594).CodedLinkType.COLLECTIBLES_SHOP) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -695,7 +756,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4593).CodedLinkType.APP_OAUTH2_LINK) {
+    if (findCodedLinkResult.type === tmp2(4594).CodedLinkType.APP_OAUTH2_LINK) {
       let fn = (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -708,7 +769,7 @@ export default function getOnClick(url) {
     }
     return fn;
   }
-  tmp2Result = tmp2(4759);
+  tmp2Result = tmp2(4760);
   let result = tmp2Result.tryParseEventDetailsPath(pathname);
   if (!tmp.skipExtensionCheck) {
     if (null != tmp2Result1.isSuspiciousDownload(url)) {
@@ -720,6 +781,6 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result1 = tmp2(8190);
+    tmp2Result1 = tmp2(8212);
   }
 }

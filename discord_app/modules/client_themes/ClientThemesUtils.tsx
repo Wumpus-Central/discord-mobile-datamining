@@ -13,14 +13,14 @@ const result = size.fileFinishedImporting("modules/client_themes/ClientThemesUti
 
 export const getThemeForColor = function getThemeForColor(l) {
   if (l.l <= 0.3) {
-    let LIGHT = ThemeTypes.DARKER;
+    let LIGHT = ThemeTypes.DARK;
   } else {
     LIGHT = ThemeTypes.LIGHT;
   }
   return LIGHT;
 };
 export const getCustomThemeBaseTheme = function getCustomThemeBaseTheme(theme) {
-  return shared.isThemeDark(theme) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
+  return shared.isThemeDark(theme) ? ThemeTypes.DARK : ThemeTypes.LIGHT;
 };
 export const hasCustomTheme = function hasCustomTheme(colors) {
   let tmp = null != colors;
@@ -37,7 +37,7 @@ export const resolveThemeWithCustomSettings = function resolveThemeWithCustomSet
   if (!tmp) {
     return theme;
   } else {
-    shared.isThemeDark(theme) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
+    shared.isThemeDark(theme) ? ThemeTypes.DARK : ThemeTypes.LIGHT;
   }
 };
 export const getLinearGradientForBackgroundGradient = function getLinearGradientForBackgroundGradient(gradientPreset) {
@@ -51,20 +51,20 @@ export const getLinearGradientForBackgroundGradient = function getLinearGradient
 export const areThemesEqualForGradientThemes = function areThemesEqualForGradientThemes(arg0, arg1) {
   let tmp = arg0 === arg1;
   if (!tmp) {
-    let tmp3 = arg0 === ThemeTypes.DARK && arg1 === ThemeTypes.DARKER;
+    let tmp3 = arg0 === ThemeTypes.ASH && arg1 === ThemeTypes.DARK;
     if (!tmp3) {
-      tmp3 = arg0 === ThemeTypes.DARKER && arg1 === ThemeTypes.DARK;
-      const tmp4 = arg0 === ThemeTypes.DARKER && arg1 === ThemeTypes.DARK;
+      tmp3 = arg0 === ThemeTypes.DARK && arg1 === ThemeTypes.ASH;
+      const tmp4 = arg0 === ThemeTypes.DARK && arg1 === ThemeTypes.ASH;
     }
     tmp = tmp3;
   }
   return tmp;
 };
 export const getBaseTheme = function getBaseTheme(UNSET) {
-  return shared.isThemeDark(closure_3[UNSET]) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
+  return shared.isThemeDark(closure_3[UNSET]) ? ThemeTypes.DARK : ThemeTypes.LIGHT;
 };
-export const getThemeName = function getThemeName(DARK) {
-  closure_0 = DARK;
+export const getThemeName = function getThemeName(ASH) {
+  closure_0 = ASH;
   const found = closure_2.find((theme) => theme.theme === closure_0);
   let str;
   if (found != null) {

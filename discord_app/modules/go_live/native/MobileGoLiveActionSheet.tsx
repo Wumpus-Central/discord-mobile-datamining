@@ -17,7 +17,7 @@ import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.
 import getStreamSettingsForPreset from "../utils/getStreamSettingsForPreset.tsx";
 import SpeedometerIcon from "../../../design/components/Icon/native/redesign/generated/SpeedometerIcon.tsx";
 import ImageSparkleIcon from "../../../design/components/Icon/native/redesign/generated/ImageSparkleIcon.tsx";
-import _modDef10033 from "../../../../_runtime/metro/10033__.js";
+import _modDef10054 from "../../../../_runtime/metro/10054__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingSettingsStore from "../../../stores/ApplicationStreamingSettingsStore.tsx";
@@ -30,12 +30,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 const getStreamSettingsForPresetDefault = getStreamSettingsForPreset;
 
 require = fn;
-let ApplicationStreamPresets = fn(4652).ApplicationStreamPresets;
+let ApplicationStreamPresets = fn(4653).ApplicationStreamPresets;
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(4630).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4631).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { wrapper: null, header: null, section: null, highQualityLabel: null };
 obj = { gap: nativeDefault.space.PX_24 };
 obj.wrapper = obj;
@@ -227,7 +227,7 @@ export default noop.memo(function MobileGoLiveActionSheet() {
         obj5.children = intl5.string(_modDef2234.nMcXo1);
         const items = [closure_2_14(Text_Text.Text, obj5)];
         const tmp8Result = NativeViewDefault;
-        items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef10033, size: "xs" });
+        items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef10054, size: "xs" });
         obj4.children = items;
         obj3.label = __initData(tmp8Result, obj4);
         if (null != maxSettingsForPreset2) {
@@ -328,5 +328,5 @@ export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(
   };
   obj = { location_stack };
   obj.impressionProperties = obj;
-  obj.openLazy(asyncRequireImpl(10022, dependencyMap.paths), MobileGoLiveActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(10043, dependencyMap.paths), MobileGoLiveActionSheet, obj);
 };

@@ -57,7 +57,7 @@ let obj = {
   },
 };
 let items = [obj, , , , ,];
-obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8198).isEntryNew };
+obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8220).isEntryNew };
 items[1] = obj;
 items[2] = {
   Badge: BadgesAll.StreakBadge,
@@ -116,7 +116,7 @@ items[5] = {
     return tmp3;
   },
 };
-fn(4605);
+fn(4606);
 let obj5 = {
   body: null,
   content: null,

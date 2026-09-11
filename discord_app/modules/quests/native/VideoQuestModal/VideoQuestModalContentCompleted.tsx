@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ANIMATED_CONTENT_SPRING_CONFIG = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: false };
-fn(4605);
+fn(4606);
 let obj = {
   wrapper: { flexGrow: 1, flexShrink: 1 },
   headerContentCopy: { flexGrow: 1, flexShrink: 1 },
@@ -35,7 +35,7 @@ let obj = {
 obj = { padding: nativeDefault.space.PX_16 };
 obj.content = obj;
 obj.contentRewardsAnimatedWrapper = { flexGrow: 1, flexShrink: 0 };
-const createStyles = { flexGrow: 1, flexShrink: 0, paddingTop: fn(15210).COMPLETION_GLOW_CLEARANCE };
+const createStyles = { flexGrow: 1, flexShrink: 0, paddingTop: fn(15189).COMPLETION_GLOW_CLEARANCE };
 obj.contentRewardsWrapper = createStyles;
 obj.contentRewards = { alignItems: "center" };
 obj.contentRewardsCopy = { textAlign: "center" };

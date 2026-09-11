@@ -8,10 +8,10 @@ import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7578).isGuildScheduledEventActive;
+let closure_6 = fn(7599).isGuildScheduledEventActive;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { header: null, descriptionContainerStyle: null, buttonContainer: null };
 obj = {
   margin: 12,

@@ -12,11 +12,11 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8484);
+const SafetyHubConstants = fn(8505);
 ({ AGE_APPEAL_ACTION_SHEET_NAME: metroRequire, SafetyHubLinks: closure_7 } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: null,
   header: null,
@@ -123,15 +123,15 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   const obj4 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = onClose(1114).intl;
   obj4.children = intl.string(onClose(1114).t["9SDLnj"]);
-  const items5 = [closure_8(onClose(4601).Text, obj4)];
+  const items5 = [closure_8(onClose(4602).Text, obj4)];
   const obj5 = { variant: "heading-md/medium", color: "text-default", children: null };
   const intl2 = onClose(1114).intl;
   obj5.children = intl2.string(onClose(1114).t["yvx//1"]);
-  items5[1] = closure_8(onClose(4601).Text, obj5);
+  items5[1] = closure_8(onClose(4602).Text, obj5);
   obj3.children = items5;
   const items6 = [closure_9(callback, obj3), , ,];
   const obj6 = {
-    children: closure_8(onClose(5737).TableRowGroup, {
+    children: closure_8(onClose(5738).TableRowGroup, {
       hasIcons: true,
       children: items.map((item, index) => {
         ({ title, description } = item);
@@ -157,8 +157,8 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   obj10.onPress = function onPress() {
     return classificationId(number[19]).openURL(constants.AGE_VERIFICATION_LINK);
   };
-  obj9.children = closure_8(onClose(5655).TableRow, obj10);
-  obj8.children = closure_8(onClose(5737).TableRowGroup, obj9);
+  obj9.children = closure_8(onClose(5656).TableRow, obj10);
+  obj8.children = closure_8(onClose(5738).TableRowGroup, obj9);
   items6[2] = closure_8(callback, obj8);
   const obj11 = { style: tmp.footer, children: null };
   const obj12 = {
@@ -171,15 +171,15 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   };
   const intl6 = onClose(1114).intl;
   obj12.text = intl6.string(onClose(1114).t["54b8V0"]);
-  const items7 = [closure_8(onClose(5025).Button, obj12)];
+  const items7 = [closure_8(onClose(5026).Button, obj12)];
   const obj13 = { variant: "heading-sm/medium", color: "text-subtle", style: tmp.learnMore, children: null };
   const intl7 = onClose(1114).intl;
   obj13.children = intl7.format(onClose(1114).t.ZbWsOF, { learnMoreLink: constants.LEARN_MORE_UU_APPEAL_LINK });
-  items7[1] = closure_8(onClose(4601).Text, obj13);
+  items7[1] = closure_8(onClose(4602).Text, obj13);
   obj11.children = items7;
   items6[3] = closure_9(callback, obj11);
   obj1.children = items6;
   obj.children = closure_9(callback, obj1);
-  obj.children = closure_8(onClose(6677).BottomSheetScrollView, obj);
-  return closure_8(onClose(7202).BottomSheet, obj);
+  obj.children = closure_8(onClose(6698).BottomSheetScrollView, obj);
+  return closure_8(onClose(7223).BottomSheet, obj);
 }

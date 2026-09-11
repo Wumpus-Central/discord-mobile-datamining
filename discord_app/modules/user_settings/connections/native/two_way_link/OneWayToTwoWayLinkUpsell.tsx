@@ -17,7 +17,7 @@ const Fonts = fn(1074).Fonts;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: null,
   header: null,
@@ -70,7 +70,7 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   obj1.contentTypes = items;
   const items1 = [
     closure_6(SelectedDismissibleContentDefault, obj1),
-    closure_6(newIndicatorDismissibleContent(4601).Text, {
+    closure_6(newIndicatorDismissibleContent(4602).Text, {
       style: tmp.title,
       variant: "text-md/semibold",
       children: title,
@@ -81,7 +81,7 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   obj.children = items2;
   const items3 = [
     closure_7(View, obj),
-    closure_6(newIndicatorDismissibleContent(4601).Text, {
+    closure_6(newIndicatorDismissibleContent(4602).Text, {
       style: tmp.body,
       variant: "text-sm/medium",
       children: body,
@@ -92,7 +92,7 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   const intl = newIndicatorDismissibleContent(1114).intl;
   obj5.text = intl.string(newIndicatorDismissibleContent(1114).t.vD60Pv);
   obj5.onPress = onPress;
-  obj4.children = closure_6(newIndicatorDismissibleContent(5025).Button, obj5);
+  obj4.children = closure_6(newIndicatorDismissibleContent(5026).Button, obj5);
   items3[2] = closure_6(View, obj4);
   obj.children = items3;
   return closure_7(View, obj);

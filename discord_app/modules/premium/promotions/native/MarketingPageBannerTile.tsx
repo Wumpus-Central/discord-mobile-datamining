@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: { width: "100%" }, card: null, image: null, bodyText: null, ctaButton: null };
 createStyles = {
   display: "flex",
@@ -46,7 +46,7 @@ export default function MarketingPageBannerTile(bannerFields) {
   let helpArticleLinkProps;
   ({ style, cardStyle, componentId, promotionId, analyticsPage, onPaymentSuccess, onPaymentDismiss } = bannerFields);
   const tmp = closure_7();
-  let obj = helpArticleLinkProps(13475);
+  let obj = helpArticleLinkProps(13478);
   const button = bannerFields.button;
   let buttonAction;
   if (button != null) {
@@ -78,14 +78,14 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj.name = helpArticleLinkProps(1250).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   const tmp2Result = useTrackImpressionDefault;
   obj.properties = {
-    component_type: helpArticleLinkProps(10812).MarketingComponentType.MARKETING_PAGE_BANNER,
+    component_type: helpArticleLinkProps(10831).MarketingComponentType.MARKETING_PAGE_BANNER,
     component_id: componentId,
     promotion_id: promotionId,
   };
   tmp2Result(obj);
-  let tmp4Result = tmp4(13478);
+  let tmp4Result = tmp4(13481);
   const formatStringWithCommonPremiumParams = tmp4Result.useFormatStringWithCommonPremiumParams(bannerFields.body);
-  tmp4Result = tmp4(13478);
+  tmp4Result = tmp4(13481);
   helpArticleLinkProps = tmp4Result.getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
   const obj2 = { style: null, children: null };
   const items = [tmp.container, style];
@@ -103,7 +103,7 @@ export default function MarketingPageBannerTile(bannerFields) {
   }
   const items2 = [
     tmp12Result,
-    closure_5(helpArticleLinkProps(4601).Text, {
+    closure_5(helpArticleLinkProps(4602).Text, {
       color: "mobile-text-heading-primary",
       variant: "text-lg/bold",
       children: bannerFields.header,
@@ -123,11 +123,11 @@ export default function MarketingPageBannerTile(bannerFields) {
       },
       children: helpArticleLinkProps.linkText,
     };
-    tmp12Result = closure_5(tmp4(4601).Text, obj8);
+    tmp12Result = closure_5(tmp4(4602).Text, obj8);
   }
   items3[2] = tmp12Result;
   obj7.children = items3;
-  items2[2] = closure_6(helpArticleLinkProps(4601).Text, obj7);
+  items2[2] = closure_6(helpArticleLinkProps(4602).Text, obj7);
   let tmp12Result1 = null != bannerFields.button;
   if (tmp12Result1) {
     const obj9 = { style: tmp.ctaButton, children: null };

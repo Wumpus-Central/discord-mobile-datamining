@@ -74,12 +74,12 @@ export default function useUploadAvatar(guildId) {
               let originalMd5;
               closure_128_3 = undefined;
               closure_128_4 = undefined;
-              tmp22(4572).hideActionSheet();
-              const obj13 = tmp22(4572);
+              tmp22(4573).hideActionSheet();
+              const obj13 = tmp22(4573);
               let obj1 = { size };
               dependencyMap = 1;
               c3 = 1;
-              const obj2 = { value: tmp22(5188).openImagePicker(obj1), done: false };
+              const obj2 = { value: tmp22(5189).openImagePicker(obj1), done: false };
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -98,7 +98,7 @@ export default function useUploadAvatar(guildId) {
             } else {
               let canUseAnimatedAvatarResult = closure_129_1;
               if (!closure_129_1) {
-                obj = tmp22(4262);
+                obj = tmp22(4264);
                 canUseAnimatedAvatarResult = obj.canUseAnimatedAvatar(closure_129_3);
               }
               closure_128_3 = canUseAnimatedAvatarResult;
@@ -113,22 +113,22 @@ export default function useUploadAvatar(guildId) {
                 }
               }
             }
-            obj1 = tmp2(14670);
+            obj1 = tmp2(14646);
             const obj4 = { imageUri: base64, description: null, originalMd5: null };
             tmp22 = tmp2;
-            obj3 = tmp2(8232);
+            obj3 = tmp2(8254);
             obj4.description = obj3.generateAvatarDescription();
             obj4.originalMd5 = originalMd5;
             closure_128_4 = obj1.createPendingImage(obj4);
             if (closure_129_1) {
-              let tmp28Result = tmp2(8230);
+              let tmp28Result = tmp2(8252);
               tmp28Result.setTryItOutAvatar(closure_128_4);
             } else {
-              tmp28Result = tmp2(8227);
+              tmp28Result = tmp2(8249);
               const obj5 = { guildId: closure_129_0, avatar: closure_128_4 };
               tmp28Result.setPendingChanges(obj5);
-              const result = tmp2(8229).announcePendingAvatarChange("set");
-              const obj7 = tmp2(8229);
+              const result = tmp2(8251).announcePendingAvatarChange("set");
+              const obj7 = tmp2(8251);
             }
           }
         } catch (tmp38) {

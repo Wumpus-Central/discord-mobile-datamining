@@ -10,14 +10,14 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({ slider: { marginTop: 4 }, text: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsSoundboardVolume.tsx");
 
 export default function SoundboardVolume() {
   const tmp = closure_8();
-  let obj = analyticsLocations(7396);
+  let obj = analyticsLocations(7417);
   const amplitudinalSoundboardVolume = obj.getAmplitudinalSoundboardVolume();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   obj = { title: null, hasIcons: false, children: null };
@@ -45,9 +45,9 @@ export default function SoundboardVolume() {
   const obj5 = { helpCenterArticle: null };
   obj5.helpCenterArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOUNDBOARD);
   obj4.children = intl4.format(analyticsLocations(1114).t.BPbGq7, obj5);
-  items[1] = closure_5(analyticsLocations(4601).Text, obj4);
+  items[1] = closure_5(analyticsLocations(4602).Text, obj4);
   obj1.children = items;
   obj.subLabel = closure_7(closure_6, obj1);
-  obj.children = closure_5(analyticsLocations(5655).TableRow, obj);
-  return closure_5(analyticsLocations(10049).UserSettingsTableRowGroup, obj);
+  obj.children = closure_5(analyticsLocations(5656).TableRow, obj);
+  return closure_5(analyticsLocations(10069).UserSettingsTableRowGroup, obj);
 }

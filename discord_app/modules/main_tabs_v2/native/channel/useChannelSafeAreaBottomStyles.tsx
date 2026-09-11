@@ -22,7 +22,7 @@ let closure_11 = {
   APPS: "apps",
   NONE: "none",
 };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   let obj = { lurker: null, chat: null, voice: null, expressionPickerBackground: null };
   obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

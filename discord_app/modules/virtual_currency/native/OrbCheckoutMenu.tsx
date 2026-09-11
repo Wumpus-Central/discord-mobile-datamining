@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles({ textInput: { marginBottom: 16 }, title: { marginBottom: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutMenu.tsx");
@@ -30,12 +30,12 @@ export default function OrbCheckoutMenu() {
           });
         },
       };
-      obj.pushLazy(asyncRequireImpl(13228, dependencyMap.paths), obj);
+      obj.pushLazy(asyncRequireImpl(13251, dependencyMap.paths), obj);
     }
   }, items);
   let obj = { children: null };
   obj = { style: tmp.title, variant: "text-md/bold", children: "Redeem SKU for Orbs" };
-  const items1 = [closure_5(value(4601).Text, obj), , ,];
+  const items1 = [closure_5(value(4602).Text, obj), , ,];
   obj = {
     containerStyle: tmp.textInput,
     label: "SKU ID",
@@ -45,18 +45,18 @@ export default function OrbCheckoutMenu() {
     },
     isClearable: true,
   };
-  items1[1] = closure_5(value(6656).TextInput, obj);
-  items1[2] = closure_5(value(4601).Text, {
+  items1[1] = closure_5(value(6677).TextInput, obj);
+  items1[2] = closure_5(value(4602).Text, {
     style: tmp.title,
     variant: "text-md/bold",
     children: "Checkout will open with the orb price of the product, if it exists",
   });
-  items1[3] = closure_5(value(5025).Button, {
+  items1[3] = closure_5(value(5026).Button, {
     text: "Open Orbs Checkout",
     variant: "primary",
     onPress: callback,
     disabled: null == value,
   });
   obj.children = items1;
-  return closure_6(value(5657).Card, obj);
+  return closure_6(value(5658).Card, obj);
 }

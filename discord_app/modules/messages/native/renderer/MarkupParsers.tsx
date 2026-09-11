@@ -9,7 +9,7 @@ import parseNativeMarkupDefault from "../../../markup_v2/native/parseNativeMarku
 import priv from "../../../../../_runtime/01437_priv.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const ChangeLogStandardTemplate = changelogRules(8144);
+const ChangeLogStandardTemplate = changelogRules(8166);
 function parseMessageContentToAST(message, result, enabled) {
   if (!enabled) {
     return renderMessageMarkup.renderMessageMarkupToAST(message, result);

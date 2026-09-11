@@ -33,7 +33,7 @@ prototype["render"] = function render() {
   }
   return children;
 };
-RiveErrorBoundary.contextType = fn(4386).ManaContext;
+RiveErrorBoundary.contextType = fn(4388).ManaContext;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx",

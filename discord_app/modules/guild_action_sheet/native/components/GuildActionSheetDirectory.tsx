@@ -1,7 +1,7 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetDirectory.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06677_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06698_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildActionSheetActions from "GuildActionSheetActions.tsx";
 import GuildActionSheetHeaderDefault from "GuildActionSheetHeader.tsx";
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, actions: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createStyles.container = createStyles;

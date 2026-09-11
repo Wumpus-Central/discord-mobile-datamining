@@ -16,7 +16,7 @@ const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const itemSize = fn(1182).FORM_ROW_VERTICAL_PADDING + 22;
-fn(4605);
+fn(4606);
 let createStyles = {
   list: null,
   label: null,
@@ -186,6 +186,6 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   };
   const items1 = [subscriptionListingsForGuild.length];
   obj3.sections = items1;
-  obj2.children = closure_6(emoji(7124), obj3);
+  obj2.children = closure_6(emoji(7145), obj3);
   return closure_6(ActionSheet.ActionSheet, obj2);
 }

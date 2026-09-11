@@ -1,6 +1,6 @@
 // discord_app/modules/markup/MarkupListRule.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import _modDef4301 from "../../../_runtime/metro/04301__.js";
+import _modDef4303 from "../../../_runtime/metro/04303__.js";
 
 const re2 = /\n{2,}$/;
 const re3 = /(?:^|\n)( *)$/;
@@ -17,7 +17,7 @@ const re9 = /\n *$/;
 let closure_10 = "\n".charCodeAt(0);
 const re11 = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/;
 let obj = {};
-let merged = Object.assign(_modDef4301.defaultRules.list);
+let merged = Object.assign(_modDef4303.defaultRules.list);
 obj.requiredFirstCharacters = "\n *-0123456789".split("");
 obj.match = function match(str, allowList) {
   if (allowList.allowList) {

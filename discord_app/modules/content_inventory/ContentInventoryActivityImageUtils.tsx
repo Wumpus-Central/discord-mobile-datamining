@@ -45,11 +45,11 @@ function useComputedImagesForActivity(activity, getIconURL) {
         const obj1 = { src: guildIconURL };
         tmp14 = obj1;
       }
-      const obj2 = { largeImage: tmp14, smallImage: "Array" };
+      const obj2 = { largeImage: tmp14, smallImage: "a" };
       obj8 = obj2;
       const tmp15Result = StageChannelRichPresenceUtils;
     } else if (isOnXboxDefault(activity)) {
-      const obj3 = { largeImage: null, smallImage: "Array" };
+      const obj3 = { largeImage: null, smallImage: "a" };
       const obj4 = { src: null, alt: null };
       let tmp2Result = PlatformsDefault;
       obj4.src = tmp2Result.get(constants2.XBOX).icon.customPNG;
@@ -60,7 +60,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
     } else {
       if (null == smallImage) {
         if (isOnPlayStationDefault(activity)) {
-          const obj5 = { largeImage: null, smallImage: "Array" };
+          const obj5 = { largeImage: null, smallImage: "a" };
           const obj6 = { src: null, alt: null };
           tmp2Result = PlatformsDefault;
           obj6.src = tmp2Result.get(constants2.PLAYSTATION).icon.lightPNG;
@@ -82,7 +82,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
           const obj7 = { largeImage: undefined, smallImage };
           obj8 = obj7;
         } else {
-          obj8 = { largeImage: smallImage, smallImage: "Array" };
+          obj8 = { largeImage: smallImage, smallImage: "a" };
         }
       } else {
         obj = { src: iconURL, alt: null };
@@ -209,7 +209,7 @@ function useRichImageForActivity(activity, activityApplication) {
     const application_id = activity.application_id;
   }
   if (null == activity) {
-    return { largeImage: "call", smallImage: "accessibilityLabel" };
+    return { largeImage: "Array", smallImage: "PX_16" };
   } else {
     let large_image;
     if (activity != null) {
@@ -363,18 +363,18 @@ export const useImageForContentEntry = function useImageForContentEntry(tracking
       obj = { largeImage, smallImage: tmp3.smallImage };
       let obj4 = obj;
     } else if (null != tmp7) {
-      obj1 = { largeImage: tmp7, smallImage: "Array" };
+      obj1 = { largeImage: tmp7, smallImage: "a" };
       obj4 = obj1;
     } else {
       if (null != coverURL) {
         if (showCoverImage) {
-          const obj2 = { largeImage: null, smallImage: "Array" };
+          const obj2 = { largeImage: null, smallImage: "a" };
           const obj3 = { src: coverURL };
           obj2.largeImage = obj3;
           obj4 = obj2;
         }
       }
-      obj4 = { largeImage: useComputedImagesForActivity(activity, obj).largeImage, smallImage: "Array" };
+      obj4 = { largeImage: useComputedImagesForActivity(activity, obj).largeImage, smallImage: "a" };
     }
     const obj5 = { activity, application: null, largeImageSrc: null, trackingSource: null };
     if (fallbackApplication == null) {

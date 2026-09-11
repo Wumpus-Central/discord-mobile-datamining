@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/hooks/useFileOrLinkImageDimensions.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const SearchConstants = fn(7930);
+const SearchConstants = fn(7952);
 ({
   FILES_OR_LINKS_GAP_WIDTH: closure_1,
   FILES_OR_LINKS_NUM_COLUMNS: c2,

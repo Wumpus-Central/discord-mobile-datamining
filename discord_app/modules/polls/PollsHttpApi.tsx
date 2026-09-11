@@ -35,7 +35,7 @@ let closure_4 = async function _submitPollVote(arg0) {
           ({ channelId: closure_129_0, messageId: closure_129_1, answerIds: closure_129_2 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -121,7 +121,7 @@ let closure_5 = async function _endPollEarly(arg0) {
           ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

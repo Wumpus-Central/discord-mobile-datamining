@@ -11,7 +11,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-let Constants = fn(5458);
+let Constants = fn(5459);
 ({ MetadataFields: metroRequire, OperatorTypes: closure_7 } = Constants);
 Constants = fn(1074);
 ({ Permissions: closure_8, PlatformTypes: closure_9 } = Constants);

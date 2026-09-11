@@ -13,8 +13,8 @@ export default function getTimestampString(arg0, fn) {
   }
   importDefault = undefined;
   let time;
-  const diffResult = require("../../../_runtime/metro/04196__.js")().diff(
-    require("../../../_runtime/metro/04196__.js")(arg0),
+  const diffResult = require("../../../_runtime/metro/04198__.js")().diff(
+    require("../../../_runtime/metro/04198__.js")(arg0),
     "s",
   );
   let tmp4;
@@ -120,6 +120,6 @@ export default function getTimestampString(arg0, fn) {
       }
     }
   }
-  let obj = require("../../../_runtime/metro/04196__.js")();
-  return require("../../../_runtime/metro/04196__.js")(arg0).format("LL");
+  let obj = require("../../../_runtime/metro/04198__.js")();
+  return require("../../../_runtime/metro/04198__.js")(arg0).format("LL");
 }

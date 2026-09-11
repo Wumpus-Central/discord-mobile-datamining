@@ -59,7 +59,7 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
                   if (null != value) {
                     return value;
                   } else {
-                    const obj4 = joined(9204);
+                    const obj4 = joined(9225);
                     const _Uint8Array = Uint8Array;
                     const uint8Array2 = new Uint8Array(secureFramesRosterMapEntry1);
                     const _Uint8Array2 = Uint8Array;
@@ -115,7 +115,7 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
     }
   }
 };
-let closure_6 = fn(9221).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+let closure_6 = fn(9242).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesBoundPairwiseFingerprint.tsx");

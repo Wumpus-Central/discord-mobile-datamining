@@ -13,7 +13,7 @@ import DismissibleContentUnsafeUtils from "../../dismissible_content/Dismissible
 import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05037_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05038_LinearGradient.js";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
 import ReferralProgramUtils from "../referral_program/ReferralProgramUtils.tsx";
@@ -22,7 +22,7 @@ import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.ts
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import usePromotionMarketingComponent from "../hooks/usePromotionMarketingComponent.tsx";
-import _modDef15060 from "../../../../_runtime/metro/15060__.js";
+import _modDef15037 from "../../../../_runtime/metro/15037__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";
@@ -70,7 +70,7 @@ function OfferBadge(componentId) {
   if (acked) {
     const obj2 = { style: tmp4.acked, children: null };
     const obj3 = {
-      source: _modDef15060,
+      source: _modDef15037,
       size: native.Icon.Sizes.EXTRA_SMALL,
       color: tmp4.icon.color,
       style: tmp4.icon,
@@ -92,10 +92,10 @@ function OfferBadge(componentId) {
 }
 const View = fn(17).View;
 let closure_6 = fn(1373).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-const Gradients = fn(7484).Gradients;
+const Gradients = fn(7505).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   tag: null,
   badge: null,
@@ -313,7 +313,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = intl);
           obj4.style = items4;
           obj5 = {
-            source: _modDef15060,
+            source: _modDef15037,
             size: native.Icon.Sizes.EXTRA_SMALL,
             color: intl.icon.color,
             style: intl.icon,

@@ -10,8 +10,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useIsEligibleSenderForReferralProgram = function useIsEligibleSenderForReferralProgram() {
-  let flag = result;
-  if (result === undefined) {
+  if (flag === undefined) {
     flag = false;
   }
   const maybeFetchReferralsRemaining = useMaybeFetchReferralsRemaining.useMaybeFetchReferralsRemaining(flag);

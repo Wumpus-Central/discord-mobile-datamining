@@ -37,11 +37,11 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7985);
+const RowGeneratorConstants = fn(8007);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: null,
@@ -303,7 +303,7 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          applyArgumentsResult(4616).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          applyArgumentsResult(4617).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -335,15 +335,15 @@ class ChatPreviewBase extends PureComponent {
           }
           channel = channel.getChannel(arg1);
           if (null != channel) {
-            applyArgumentsResult(4616);
+            applyArgumentsResult(4617);
             const obj = { source, navigationReplace: true };
             obj.transitionToThread(channel, obj);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: 58.939,
-        selectedChannelId: 4.707,
-        tapLinkData: 88.409,
+        messageChannel: "asc",
+        selectedChannelId: "asc",
+        tapLinkData: "isInRestrictedHours",
       };
       channel = applyArgumentsResult.props.channel;
       obj.messageChannel = channel;
@@ -614,7 +614,7 @@ prototype["render"] = function render() {
   };
   tmp9Result = PlatformUtils;
 };
-ChatPreviewBase.contextType = fn(4315).ThemeContext;
+ChatPreviewBase.contextType = fn(4317).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -633,10 +633,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(7381).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(7381);
-  const isChannelContentGated = channelId(4816).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4816);
+  const isChannelSpoilerGated = channelId(7402).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(7402);
+  const isChannelContentGated = channelId(4817).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4817);
   const items2 = [ActionSheetStore];
   obj = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

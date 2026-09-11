@@ -42,9 +42,9 @@ module_560 = {
   INDEX_BOUNDS_PAGE_Y_OFFSET: 1,
   INDEX_BOUNDS_PAGE_X_OFFSET: 0,
   INDEX_BOUNDS_OFFSET: 4,
-  runOnJS: fn(4341).runOnJS,
-  triggerHapticFeedback: fn(4573).triggerHapticFeedback,
-  HapticFeedbackTypes: fn(4573).HapticFeedbackTypes,
+  runOnJS: fn(4343).runOnJS,
+  triggerHapticFeedback: fn(4574).triggerHapticFeedback,
+  HapticFeedbackTypes: fn(4574).HapticFeedbackTypes,
 };
 updateContextMenuState.__closure = module_560;
 updateContextMenuState.__workletHash = 10158111154044;

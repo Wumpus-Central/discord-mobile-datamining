@@ -16,7 +16,7 @@ import PresenceStore from "../../../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(11381).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11403).CodedLinkExtendedType;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx",

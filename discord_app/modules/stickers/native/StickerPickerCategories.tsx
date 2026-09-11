@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10460).useStickerPickerStore;
+let useStickerPickerStore = fn(10479).useStickerPickerStore;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_8,
@@ -23,7 +23,7 @@ const NODE_SIZE = Constants.NODE_SIZE;
 const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   item: {
@@ -276,7 +276,7 @@ export default function _default(categories) {
   );
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(10428)();
+  const tmp19 = categoryIndex(10447)();
   obj = {
     estimatedListSize: "windowSize",
     horizontal: true,
@@ -293,7 +293,7 @@ export default function _default(categories) {
     showsHorizontalScrollIndicator: false,
     style: tmp.list,
   };
-  const items9 = [closure_14(categoryIndex(7107), obj)];
+  const items9 = [closure_14(categoryIndex(7128), obj)];
   let tmp22Result = null != first && first1;
   if (tmp22Result) {
     obj = { onPress: callback3, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -303,12 +303,12 @@ export default function _default(categories) {
     const items10 = [,];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj1.style = items10;
-    const obj2 = { style: tmp.guildIcon, source: tmp17(10490) };
+    const obj2 = { style: tmp.guildIcon, source: tmp17(10509) };
     obj1.children = closure_14(categories(1178).Icon, obj2);
     obj.children = closure_14(closure_5, obj1);
-    tmp22Result = closure_14(categories(5173).PressableOpacity, obj);
+    tmp22Result = closure_14(categories(5174).PressableOpacity, obj);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return closure_15(categoryIndex(10429), obj);
+  return closure_15(categoryIndex(10448), obj);
 }

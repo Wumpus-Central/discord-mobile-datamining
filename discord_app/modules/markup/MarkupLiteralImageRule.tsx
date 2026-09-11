@@ -1,11 +1,11 @@
 // discord_app/modules/markup/MarkupLiteralImageRule.tsx
-import _modDef4301 from "../../../_runtime/metro/04301__.js";
+import _modDef4303 from "../../../_runtime/metro/04303__.js";
 import MarkupTypes from "MarkupTypes.tsx";
 
 require = fn;
 const obj = {};
-const merged = Object.assign(_modDef4301.defaultRules.image);
-obj.order = _modDef4301.defaultRules.link.order - 0.5;
+const merged = Object.assign(_modDef4303.defaultRules.image);
+obj.order = _modDef4303.defaultRules.link.order - 0.5;
 obj.requiredFirstCharacters = ["!"];
 obj.parse = function parse(content) {
   return { type: MarkupTypes.AST_KEY.TEXT, content: content[0] };

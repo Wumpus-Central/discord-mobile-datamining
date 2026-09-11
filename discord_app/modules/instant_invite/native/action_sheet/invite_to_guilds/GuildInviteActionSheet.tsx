@@ -7,8 +7,8 @@ import SearchField from "../../../../../design/components/TextField/native/Searc
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import InstantInviteUtilsDefault from "../../../../../utils/InstantInviteUtils.tsx";
-import _modDef13178 from "../../../../../../_runtime/metro/13178__.js";
-import _modDef13179 from "../../../../../../_runtime/metro/13179__.js";
+import _modDef13201 from "../../../../../../_runtime/metro/13201__.js";
+import _modDef13202 from "../../../../../../_runtime/metro/13202__.js";
 import GuildInviteRowDefault from "GuildInviteRow.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -26,8 +26,8 @@ function EmptyGuildList() {
   obj.title = intl.string(util.t["2bfiLk"]);
   const intl2 = util.intl;
   obj.body = intl2.string(util.t.V6nAfF);
-  obj.darkSource = _modDef13178;
-  obj.lightSource = _modDef13179;
+  obj.darkSource = _modDef13201;
+  obj.lightSource = _modDef13202;
   return timestampProducer(native.ThemedEmptyState, obj);
 }
 function GuildList(recipientId) {
@@ -35,7 +35,7 @@ function GuildList(recipientId) {
   const source = recipientId.source;
   _slicedToArray = undefined;
   dependencyMap = closure_8();
-  let obj = recipientId(13175);
+  let obj = recipientId(13198);
   [arr, arr2] = _slicedToArray(obj.useServerInviteRows(recipientId, recipientId.query), 2);
   if (0 === arr.length) {
     if (0 === arr2.length) {
@@ -62,7 +62,7 @@ function GuildList(recipientId) {
     if (tmp5) {
       num = 24;
     }
-    obj = { paddingTop: num, paddingBottom: source(7033)().insets.bottom + source(576).space.PX_16 };
+    obj = { paddingTop: num, paddingBottom: source(7054)().insets.bottom + source(576).space.PX_16 };
     obj.contentContainerStyle = obj;
     obj.sections = items;
     obj.renderSectionHeader = function renderSectionHeader(section) {
@@ -87,7 +87,7 @@ function GuildList(recipientId) {
       return guild.guild.id;
     };
     obj.ListEmptyComponent = EmptyGuildList;
-    return closure_6(tmp(11223).UserProfileStackedActionSheetSectionList, obj);
+    return closure_6(tmp(11246).UserProfileStackedActionSheetSectionList, obj);
   }
   const obj1 = { title: null, data: null };
   const intl = tmp(1114).intl;
@@ -104,7 +104,7 @@ function GuildList(recipientId) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { content: null, searchbarWrapper: null, sectionTitle: null, emptyStateContainer: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.content = createStyles;

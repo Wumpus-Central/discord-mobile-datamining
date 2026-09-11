@@ -8,7 +8,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(15375);
+const HappeningNowConstants = fn(15357);
 ({ HAPPENING_NOW_CARD_HEIGHT: closure_4, HappeningNowItem } = HappeningNowConstants);
 const jsx = fn(21).jsx;
 const items = [, , , , , ,];
@@ -22,7 +22,7 @@ const items = [, , , , , ,];
   USER: arr[6],
 } = HappeningNowItem);
 const set = new Set(items);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_7 = createStyles.createStyles((height) => {
   let obj = { container: null };
   obj = { height, paddingStart: nativeDefault.space.PX_8, overflow: "hidden" };

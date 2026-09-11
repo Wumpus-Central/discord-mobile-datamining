@@ -159,7 +159,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(16535);
+const createICYMIStyles = fn(16523);
 createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let obj = PlatformUtils;
   let num = 0;
@@ -663,15 +663,15 @@ export const SimplePost = function SimplePost(arg0) {
   }
   let token;
   const tmp = closure_21();
-  let obj = highlight(4306);
-  token = obj.useToken(token(576).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, token(4540)());
-  let obj1 = highlight(4454);
+  let obj = highlight(4308);
+  token = obj.useToken(token(576).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, token(4541)());
+  let obj1 = highlight(4456);
   const hexWithOpacityResult = obj1.hexWithOpacity(token(576).unsafe_rawColors.BRAND_360, 0.25);
   dependencyMap = hexWithOpacityResult;
-  let obj2 = highlight(4341);
+  let obj2 = highlight(4343);
   const sharedValue = obj2.useSharedValue(0);
   const tmp2 = token;
-  const tmp4 = token(4540)();
+  const tmp4 = token(4541)();
   const fn = function c() {
     const obj = { backgroundColor: null };
     const items = [token, c2];
@@ -679,7 +679,7 @@ export const SimplePost = function SimplePost(arg0) {
     return obj;
   };
   obj = {
-    interpolateColor: highlight(4341).interpolateColor,
+    interpolateColor: highlight(4343).interpolateColor,
     progress: sharedValue,
     bgColor: token,
     bgColorHighlighted: hexWithOpacityResult,
@@ -688,7 +688,7 @@ export const SimplePost = function SimplePost(arg0) {
   fn.__workletHash = 11116019021445;
   fn.__initData = __initData;
   let items = [highlight, sharedValue];
-  const animatedStyle = highlight(4341).useAnimatedStyle(fn);
+  const animatedStyle = highlight(4343).useAnimatedStyle(fn);
   const effect = sharedValue.useEffect(() => {
     if (highlight) {
       const obj = ReanimatedRexport;
@@ -705,7 +705,7 @@ export const SimplePost = function SimplePost(arg0) {
     const items1 = [tmp.simplePostContent, animatedStyle];
     obj1.style = items1;
     obj1.children = children;
-    const items2 = [closure_18(tmp2(4341).View, obj1)];
+    const items2 = [closure_18(tmp2(4343).View, obj1)];
     let tmp12Result = null;
     if (!hideDivider) {
       tmp12Result = closure_18(Separator, {});
@@ -794,18 +794,18 @@ export const ThreadAsComments = function ThreadAsComments(arg0) {
           parseInlineReplyResult = intl.string(parentMessage(1114).t["6kp9H2"]);
         }
         obj1.children = parseInlineReplyResult;
-        items4[1] = closure_18(parentMessage(4601).Text, obj1);
+        items4[1] = closure_18(parentMessage(4602).Text, obj1);
         let obj2 = { style: tmp.commentCount, children: null };
         const obj3 = { style: tmp.commentsIcon };
-        const items5 = [closure_18(parentMessage(5121).ChatIcon, obj3), ,];
+        const items5 = [closure_18(parentMessage(5122).ChatIcon, obj3), ,];
         const obj4 = { variant: "text-sm/bold", color: "interactive-text-default", children: str };
-        items5[1] = closure_18(parentMessage(4601).Text, obj4);
+        items5[1] = closure_18(parentMessage(4602).Text, obj4);
         obj5 = { style: tmp.chevron, size: "xxs" };
-        items5[2] = closure_18(parentMessage(7261).ChevronSmallRightIcon, obj5);
+        items5[2] = closure_18(parentMessage(7282).ChevronSmallRightIcon, obj5);
         obj2.children = items5;
         items4[2] = closure_19(View, obj2);
         obj.children = items4;
-        return closure_19(parentMessage(5173).PressableHighlight, obj);
+        return closure_19(parentMessage(5174).PressableHighlight, obj);
       }
     }
     const obj6 = { style: null, onPress: null, children: null };
@@ -821,16 +821,16 @@ export const ThreadAsComments = function ThreadAsComments(arg0) {
     };
     const intl2 = parentMessage(1114).intl;
     obj7.children = intl2.string(parentMessage(1114).t.VMWjXW);
-    const items7 = [closure_18(parentMessage(4601).Text, obj7)];
+    const items7 = [closure_18(parentMessage(4602).Text, obj7)];
     const obj8 = { style: tmp.commentCount, children: null };
     const obj9 = { style: tmp.commentsIcon };
-    const items8 = [closure_18(parentMessage(5121).ChatIcon, obj9)];
+    const items8 = [closure_18(parentMessage(5122).ChatIcon, obj9)];
     const obj10 = { style: tmp.chevron, size: "xxs" };
-    items8[1] = closure_18(parentMessage(7261).ChevronSmallRightIcon, obj10);
+    items8[1] = closure_18(parentMessage(7282).ChevronSmallRightIcon, obj10);
     obj8.children = items8;
     items7[1] = closure_19(View, obj8);
     obj6.children = items7;
-    return closure_19(parentMessage(5173).PressableHighlight, obj6);
+    return closure_19(parentMessage(5174).PressableHighlight, obj6);
   } else {
     return null;
   }

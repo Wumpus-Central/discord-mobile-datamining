@@ -14,7 +14,7 @@ import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 require = fn;
 const Constants = fn(1074);
 ({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
-const GuildMemberFlags = fn(4230).GuildMemberFlags;
+const GuildMemberFlags = fn(4232).GuildMemberFlags;
 let closure_12 = fn(1084).ProfileCustomizationSubsection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodQuarantineUtils.tsx");
@@ -47,7 +47,7 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      let obj = { nick: "call", bio: "accessibilityLabel" };
+      let obj = { nick: "Array", bio: "PX_16" };
       let guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {

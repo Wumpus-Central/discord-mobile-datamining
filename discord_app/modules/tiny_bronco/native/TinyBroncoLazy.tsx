@@ -3,6 +3,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoLazy.tsx");
 
+export function useShouldShowAgeNotice() {
+  return false;
+}
 export function useIsTinyBroncoEligible() {
   return false;
 }

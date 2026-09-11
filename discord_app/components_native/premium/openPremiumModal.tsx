@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("components_native/premium/openPremiumModal.tsx");
 
 export default function openPremiumModal(merged) {
-  return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7464, dependencyMap.paths), merged, "PREMIUM_KEY", {
+  return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7485, dependencyMap.paths), merged, "PREMIUM_KEY", {
     presentation: "modal",
   });
 }

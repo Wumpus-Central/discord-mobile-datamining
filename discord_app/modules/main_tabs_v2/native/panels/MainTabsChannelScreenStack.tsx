@@ -15,17 +15,17 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const MIDNIGHT_BORDER_WIDTH = fn(7915).MIDNIGHT_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(7937).ONYX_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: c10, AnalyticsSections: closure_11 } = Constants);
-const FramesConstants = fn(9581);
+const FramesConstants = fn(9602);
 ({ FrameIntent: closure_12, getChannelIdForSurface: map1 } = FramesConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_17 = createStyles.createStyles({
-  midnightContainerStyles: { marginTop: -MIDNIGHT_BORDER_WIDTH, marginLeft: -MIDNIGHT_BORDER_WIDTH },
+  onyxContainerStyles: { marginTop: -ONYX_BORDER_WIDTH, marginLeft: -ONYX_BORDER_WIDTH },
 });
 const __initData = {
   code: "function MainTabsChannelScreenStackTsx1(){const{translateX}=this.__closure;return translateX.get()>0;}",
@@ -77,7 +77,7 @@ let closure_21 = noop.memo(function FirstChannelScreen(cleanup) {
     }
   });
   let obj3 = index(translateX[11]);
-  const fn3 = function u() {
+  const fn3 = function o() {
     let tmp = enabled;
     if (enabled) {
       tmp = highestFullyRenderedScreenIndex.get() > index;
@@ -111,14 +111,14 @@ let closure_21 = noop.memo(function FirstChannelScreen(cleanup) {
     tmp13 = obj;
   }
   items1[1] = tmp13;
-  let prop;
-  if (tmp3 === ThemeTypes.MIDNIGHT) {
+  let onyxContainerStyles;
+  if (tmp3 === ThemeTypes.ONYX) {
     if (!highestFullyRenderedScreenIndex(translateX[14])().isChatBesideChannelList) {
-      prop = tmp4.midnightContainerStyles;
+      onyxContainerStyles = tmp4.onyxContainerStyles;
     }
   }
   obj = { style: items1, children: null };
-  items1[2] = prop;
+  items1[2] = onyxContainerStyles;
   obj1 = { freeze, children: null };
   obj2 = {
     collapsable: false,
@@ -221,7 +221,7 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
     }
   });
   const tmp8 = highestFullyRenderedScreenIndex(translateX[21]);
-  const fn3 = function u() {
+  const fn3 = function o() {
     let tmp = enabled;
     if (enabled) {
       tmp = highestFullyRenderedScreenIndex.get() > index;
@@ -234,31 +234,27 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
   const derivedValue = index(translateX[11]).useDerivedValue(fn3);
   const disallowGesture = noop.useContext(highestFullyRenderedScreenIndex(translateX[23])).disallowGesture;
   const obj6 = index(translateX[11]);
-  const fn4 = function y() {
-    return 0 === translateX.get();
-  };
-  fn4.__closure = { translateX };
-  fn4.__workletHash = 1803281708382;
-  fn4.__initData = __initData4;
   class C {
-    constructor(arg0, arg1) {
-      tmp = transitionState !== arg1;
-      if (tmp) {
-        tmp2 = translateX;
-        num = 1;
-        tmp = 1 === translateX;
-      }
-      if (tmp) {
-        tmp3 = disallowGesture;
-        result = disallowGesture.set(transitionState);
-      }
-      return;
+    constructor() {
+      return 0 === translateX.get();
     }
   }
-  C.__closure = { index, mainTabsDisallowGesture: disallowGesture };
-  C.__workletHash = 4369586160197;
-  C.__initData = __initData5;
-  const animatedReaction1 = index(translateX[11]).useAnimatedReaction(fn4, C);
+  C.__closure = { translateX };
+  C.__workletHash = 1803281708382;
+  C.__initData = __initData4;
+  const fn4 = function y(arg0, arg1) {
+    let tmp = arg0 !== arg1;
+    if (tmp) {
+      tmp = 1 === translateX;
+    }
+    if (tmp) {
+      const result = disallowGesture.set(arg0);
+    }
+  };
+  fn4.__closure = { index, mainTabsDisallowGesture: disallowGesture };
+  fn4.__workletHash = 4369586160197;
+  fn4.__initData = __initData5;
+  const animatedReaction1 = index(translateX[11]).useAnimatedReaction(C, fn4);
   current = { cleanup, movePanel };
   noop.useRef(current);
   const effect = noop.useEffect(() => {
@@ -291,11 +287,11 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
   const obj1 = { gesture, children: null };
   obj2 = { value: panelGestureContext, children: null };
   const items2 = [mainTabsChannelScreenStyles];
-  let prop;
+  let onyxContainerStyles;
   const obj9 = index(translateX[15]);
-  if (tmp3 === ThemeTypes.MIDNIGHT) {
+  if (tmp3 === ThemeTypes.ONYX) {
     if (!highestFullyRenderedScreenIndex(translateX[14])().isChatBesideChannelList) {
-      prop = tmp4.midnightContainerStyles;
+      onyxContainerStyles = tmp4.onyxContainerStyles;
     }
   }
   obj3 = {
@@ -304,7 +300,7 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
     importantForAccessibility: "no-hide-descendants",
     children: null,
   };
-  items2[1] = prop;
+  items2[1] = onyxContainerStyles;
   obj4 = {
     freeze,
     children: closure_15(tmp(tmp2[19]), {
@@ -347,15 +343,15 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
   let tmp3 = isDragging(maxWidth.useState(translateX.get() === maxWidth), 2);
   closure_9 = tmp4;
   let obj1 = screens(translateX[11]);
-  class M {
+  class R {
     constructor() {
       return translateX.get() === maxWidth;
     }
   }
-  M.__closure = { translateX, maxWidth };
-  M.__workletHash = 9963940499904;
-  M.__initData = __initData6;
-  class A {
+  R.__closure = { translateX, maxWidth };
+  R.__workletHash = 9963940499904;
+  R.__initData = __initData6;
+  class D {
     constructor(arg0, arg1) {
       if (screens !== arg1) {
         tmp = closure_0;
@@ -368,10 +364,10 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
     }
   }
   obj = { runOnJS: screens(translateX[11]).runOnJS, setIsHidden: tmp4 };
-  A.__closure = obj;
-  A.__workletHash = 10167608718442;
-  A.__initData = __initData7;
-  const animatedReaction = obj1.useAnimatedReaction(M, A);
+  D.__closure = obj;
+  D.__workletHash = 10167608718442;
+  D.__initData = __initData7;
+  const animatedReaction = obj1.useAnimatedReaction(R, D);
   const items = [screens];
   memo = maxWidth.useMemo(() => {
     const atResult = screens.at(-1);

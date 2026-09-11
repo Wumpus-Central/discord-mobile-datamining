@@ -21,20 +21,23 @@ function validateEmbeddedAppFrame(transport) {
       let tmp13 = null;
       if (null != tmp35) {
         const type = tmp35.surface.type;
-        if (constants3.APP_CHANNEL === type) {
-          obj = { channelId: tmp35.surface.channelId, guildId: tmp35.surface.guildId };
-          tmp13 = obj;
-        } else {
-          tmp13 = null;
-          if (tmp12.MAIN === type) {
-            if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-              obj1 = { channelId: "call", guildId: "accessibilityLabel" };
+        if (constants3.APP_CHANNEL !== type) {
+          if (constants3.VOICE_CHANNEL !== type) {
+            if (constants3.MAIN === type) {
+              if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
+                obj = { channelId: "Array", guildId: "PX_16" };
+              } else {
+                obj = null;
+              }
+              tmp13 = obj;
             } else {
-              obj1 = null;
+              const surface = tmp35.surface;
+              tmp13 = null;
             }
-            tmp13 = obj1;
           }
         }
+        obj1 = { channelId: tmp35.surface.channelId, guildId: tmp35.surface.guildId };
+        tmp13 = obj1;
       }
       if (null == tmp13) {
         obj2 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
@@ -53,10 +56,10 @@ function validateEmbeddedAppFrame(transport) {
   }
   validateApplicationResult = obj1.validateApplication(transport.application);
 }
-const TransportTypes = fn(4510).TransportTypes;
+const TransportTypes = fn(4511).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const FramesConstants = fn(9581);
+const FramesConstants = fn(9602);
 ({ asLaunched: closure_8, EmbeddedSurfaceType: closure_9 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");

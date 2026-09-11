@@ -34,11 +34,11 @@ class OrSeparator {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const CreateGuildConstants = fn(7030);
+const CreateGuildConstants = fn(7051);
 ({ CREATE_GUILD_SMALL_SCREEN_MAX_HEIGHT: metroRequire, CreateGuildModalStates: closure_7 } = CreateGuildConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   growSpacing: null,
   container: null,
@@ -102,11 +102,11 @@ export default function JoinServer(arg0) {
     };
     const intl = tmp4(1114).intl;
     obj2.children = intl.string(tmp4(1114).t.jlfuFW);
-    const items2 = [closure_8(tmp4(4601).Text, obj2)];
+    const items2 = [closure_8(tmp4(4602).Text, obj2)];
     const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
     const intl2 = tmp4(1114).intl;
     obj3.children = intl2.string(tmp4(1114).t.lVvN3A);
-    items2[1] = closure_8(tmp4(4601).Text, obj3);
+    items2[1] = closure_8(tmp4(4602).Text, obj3);
     obj1.children = items2;
     tmp7Result = closure_9(closure_10, obj1);
   }
@@ -151,7 +151,7 @@ export default function JoinServer(arg0) {
       );
     },
   });
-  items3[2] = closure_8(navigation(4601).Text, obj6);
+  items3[2] = closure_8(navigation(4602).Text, obj6);
   obj4.children = items3;
   const items4 = [closure_9(closure_4, obj4)];
   const obj8 = { children: null };
@@ -164,7 +164,7 @@ export default function JoinServer(arg0) {
   obj10.loading = submitting;
   obj10.disabled = submitting;
   obj10.onPress = onDone;
-  items5[1] = closure_8(navigation(5025).Button, obj10);
+  items5[1] = closure_8(navigation(5026).Button, obj10);
   items5[2] = closure_8(OrSeparator, {});
   const obj11 = { size: "lg", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
   const intl8 = tmp4(1114).intl;
@@ -172,7 +172,7 @@ export default function JoinServer(arg0) {
   const intl9 = tmp4(1114).intl;
   obj11.accessibilityLabel = intl9.string(navigation(1114).t["MOqX/G"]);
   obj11.onPress = callback;
-  items5[3] = closure_8(navigation(5025).Button, obj11);
+  items5[3] = closure_8(navigation(5026).Button, obj11);
   obj8.children = items5;
   items4[1] = closure_9(closure_10, obj8);
   obj.children = items4;

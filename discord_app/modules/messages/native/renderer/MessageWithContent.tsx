@@ -5,7 +5,7 @@ import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
 import GuildAutomodMessageStore from "../../../guild_automod/GuildAutomodMessageStore.tsx";
 
 require = fn;
-const RowType = fn(7985).RowType;
+const RowType = fn(8007).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 

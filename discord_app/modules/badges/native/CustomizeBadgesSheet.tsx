@@ -12,6 +12,7 @@ import timingPresets from "../../../design/animation/reanimated/timing/timingPre
 import Card from "../../../design/components/Card/native/Card.native.tsx";
 import EyeSlashIcon from "../../../design/components/Icon/native/redesign/generated/EyeSlashIcon.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
+import UserProfileAnalyticsUtils from "../../user_profile/UserProfileAnalyticsUtils.tsx";
 import BadgeDirectoryActionCreators from "../BadgeDirectoryActionCreators.tsx";
 import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import ContextMenuConstants from "../../../design/components/ContextMenu/native/ContextMenuConstants.native.tsx";
@@ -118,13 +119,13 @@ const Constants = fn(1074);
   AnalyticsPages: closure_11,
   AnalyticsSections: closure_12,
 } = Constants);
-let closure_13 = fn(7203).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_13 = fn(7224).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 80;
 let c18 = 16.666666666666668;
-fn(4605);
+fn(4606);
 let obj = {
   gridInset: null,
   grid: null,
@@ -157,7 +158,7 @@ obj.message = {
 };
 obj.messageText = { textAlign: "center" };
 let closure_19 = createStyles.createStyles(obj);
-createStyles = fn(4605);
+createStyles = fn(4606);
 let obj7 = {
   position: { position: "absolute" },
   fill: { flex: 1 },
@@ -202,8 +203,8 @@ let obj6 = {
   paddingVertical: nativeDefault.space.PX_32,
 };
 getSlotOffset.__closure = {
-  BADGE_GRID_COLUMNS: fn(14698).BADGE_GRID_COLUMNS,
-  BADGE_GRID_GAP: fn(14698).BADGE_GRID_GAP,
+  BADGE_GRID_COLUMNS: fn(14674).BADGE_GRID_COLUMNS,
+  BADGE_GRID_GAP: fn(14674).BADGE_GRID_GAP,
 };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = {
@@ -1001,8 +1002,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     items6,
   );
   hasCatalog = stateFromStoresObject.hasCatalog;
-  const items7 = [stateFromStores1, hasCatalog, analyticsLocations];
   const effect = analyticsLocations.useEffect(() => {
+    const obj = { action: "VIEW_BADGE_CUSTOMIZATION", analyticsLocations };
+    const result = obj.trackUserProfileAction(obj);
+  }, []);
+  const items7 = [stateFromStores1, hasCatalog, analyticsLocations];
+  const effect1 = analyticsLocations.useEffect(() => {
     let tmp = !stateFromStores1;
     if (!stateFromStores1) {
       tmp = hasCatalog;
@@ -1016,7 +1021,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     }
   }, items7);
   const items8 = [stateFromStores];
-  const effect1 = analyticsLocations.useEffect(() => {
+  const effect2 = analyticsLocations.useEffect(() => {
     if (null != stateFromStores) {
       if (!tmp2) {
         const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(stateFromStores);
@@ -1061,7 +1066,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const tmp5Result2 = tenureBadgeHideable(stateFromStores1[23]);
   sharedValue1 = tenureBadgeHideable(stateFromStores1[23]).useSharedValue(false);
   const items14 = [memo2, sharedValue1, sharedValue];
-  const effect2 = analyticsLocations.useEffect(() => {
+  const effect3 = analyticsLocations.useEffect(() => {
     if (!sharedValue1.get()) {
       const result = sharedValue.set(memo2);
     }
@@ -1106,7 +1111,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.q3t0Ht, { count: 1 }));
   });
   const tmp5Result3 = tenureBadgeHideable(stateFromStores1[23]);
-  badgeTileSize = tenureBadgeHideable(stateFromStores1[13]).getBadgeTileSize(tmp2(tmp3[42])().width);
+  badgeTileSize = tenureBadgeHideable(stateFromStores1[13]).getBadgeTileSize(tmp2(tmp3[43])().width);
   const sum1 = fixedBadges.length + reorderableBadges.length + hiddenBadges.length;
   const rounded = Math.ceil(sum1 / tmp5(tmp3[13]).BADGE_GRID_COLUMNS);
   let num = 0;
@@ -1154,7 +1159,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     AUTO_SCROLL_PIXELS_PER_SECOND: 700,
     scrollTo: tmp5(tmp3[23]).scrollTo,
     scrollRef: animatedRef,
-    roundToNearestPixel: tmp2(tmp3[43]),
+    roundToNearestPixel: tmp2(tmp3[44]),
     scrollOffset: scrollViewOffset,
   };
   ee.__closure = obj;
@@ -1186,7 +1191,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const animatedReaction = tenureBadgeHideable(stateFromStores1[23]).useAnimatedReaction(ie, te);
   if (hasCatalog) {
     obj1 = { style: tmp.gridInset, children: null };
-    let tmp39 = !stateFromStores1;
+    let tmp40 = !stateFromStores1;
     if (!stateFromStores1) {
       obj2 = {
         style: tmp.upsell,
@@ -1205,11 +1210,11 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       obj3 = { variant: "text-sm/normal", style: tmp.upsellText, children: null };
       const intl3 = tmp5(tmp3[15]).intl;
       obj3.children = intl3.string(tmp5(tmp3[15]).t.JrOki0);
-      obj2.children = sharedValue(tmp5(tmp3[45]).Text, obj3);
-      tmp39 = sharedValue(tmp2(tmp3[44]), obj2);
-      const tmp2Result = tmp2(tmp3[44]);
+      obj2.children = sharedValue(tmp5(tmp3[46]).Text, obj3);
+      tmp40 = sharedValue(tmp2(tmp3[45]), obj2);
+      const tmp2Result = tmp2(tmp3[45]);
     }
-    const items16 = [tmp39];
+    const items16 = [tmp40];
     let obj4 = { accessibilityRole: "list", style: null, children: null };
     const items17 = [tmp.grid];
     let obj5 = { height: num };
@@ -1273,22 +1278,22 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     obj4.children = items18;
     items16[1] = onCommitOrder(stateFromStoresArray, obj4);
     obj1.children = items16;
-    let tmp34Result = tmp37(tmp38, obj1);
+    let tmp35Result = tmp38(tmp39, obj1);
   } else {
     if (stateFromStoresObject.hasCatalogError) {
       const obj6 = { style: tmp.message, accessibilityRole: "alert", children: null };
       const obj7 = { variant: "text-md/normal", color: "text-muted", style: tmp.messageText, children: null };
       let intl = tmp5(tmp3[15]).intl;
       obj7.children = intl.string(tmp5(tmp3[15]).t["rTU7/z"]);
-      obj6.children = tmp34(tmp5(tmp3[45]).Text, obj7);
+      obj6.children = tmp35(tmp5(tmp3[46]).Text, obj7);
       let obj8 = obj6;
     } else {
       obj8 = {
         style: tmp.message,
-        children: tmp34(tmp5(tmp3[46]).ActivityIndicator, { animating: true, size: "large" }),
+        children: tmp35(tmp5(tmp3[47]).ActivityIndicator, { animating: true, size: "large" }),
       };
     }
-    tmp34Result = tmp34(stateFromStoresArray, obj8);
+    tmp35Result = tmp35(stateFromStoresArray, obj8);
   }
   const obj9 = { startExpanded: true, scrollable: true, dismissAccessibilityLabel: null, header: null, children: null };
   const intl4 = tmp5(tmp3[15]).intl;
@@ -1299,11 +1304,11 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const intl6 = tmp5(tmp3[15]).intl;
   let t = tmp5(tmp3[15]).t;
   obj10.subtitle = intl6.string(stateFromStores1 ? t["Vzc4+8"] : t.ZuXSRp);
-  obj9.header = sharedValue(tenureBadgeHideable(stateFromStores1[48]).BottomSheetTitleHeader, obj10);
-  obj9.children = sharedValue(tenureBadgeHideable(stateFromStores1[49]).BottomSheetScrollView, {
+  obj9.header = sharedValue(tenureBadgeHideable(stateFromStores1[49]).BottomSheetTitleHeader, obj10);
+  obj9.children = sharedValue(tenureBadgeHideable(stateFromStores1[50]).BottomSheetScrollView, {
     ref: animatedRef,
     contentContainerStyle: { paddingBottom: sum },
-    children: tmp34Result,
+    children: tmp35Result,
   });
-  return sharedValue(tenureBadgeHideable(stateFromStores1[47]).BottomSheet, obj9);
+  return sharedValue(tenureBadgeHideable(stateFromStores1[48]).BottomSheet, obj9);
 }

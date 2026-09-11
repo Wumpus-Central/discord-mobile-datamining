@@ -59,11 +59,11 @@ function SystemNotificationsSubLabel() {
   return React6(React7, { children });
 }
 const View = fn(17).View;
-let closure_5 = fn(15562).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8027).MobileUserSettings;
+let closure_5 = fn(15544).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8049).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { card: null, cardContent: null, text: null };
 obj = {
   marginBottom: 8,
@@ -79,10 +79,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationScreen.tsx");
 
 export default noop.memo(() => {
-  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7645).useIsFamilyCenterV3Enabled({
+  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7666).useIsFamilyCenterV3Enabled({
     location: "SettingsNotificationsScreen",
   });
-  let obj = isFamilyCenterV3Enabled(7645);
+  let obj = isFamilyCenterV3Enabled(7666);
   let tmp2 = !ContextualOptInNudgeHoldoutExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" })
     .inHoldout;
   importDefault = tmp2;

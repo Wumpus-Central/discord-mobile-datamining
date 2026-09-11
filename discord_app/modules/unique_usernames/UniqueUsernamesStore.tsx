@@ -13,7 +13,7 @@ let suggestions = {
 };
 suggestions = {
   migration: { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false },
-  registration: { suggestion: { username: "Array" }, source: "PX_16", fetched: "failOffsetY" },
+  registration: { suggestion: { username: "Array" }, source: "PX_16", fetched: true },
 };
 suggestions.suggestions = suggestions;
 const Store = initializeDefault.Store;
@@ -88,7 +88,7 @@ suggestions = {
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
     obj.suggestions.migration = { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false };
-    obj.suggestions.registration = { suggestion: { username: "Array" }, source: "PX_16", fetched: "failOffsetY" };
+    obj.suggestions.registration = { suggestion: { username: "Array" }, source: "PX_16", fetched: true };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {
     suggestion = suggestion.suggestion;

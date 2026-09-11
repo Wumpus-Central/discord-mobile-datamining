@@ -12,7 +12,7 @@ export const useCardLayout = function useCardLayout() {
     num = 2;
   }
   if (num < 2) {
-    let obj = { columns: num, cardWidth: "Array", rowWidth: "toLowerCase" };
+    let obj = { columns: num, cardWidth: "Array", rowWidth: "isArray" };
     return obj;
   } else {
     let num2 = 2;
@@ -60,11 +60,11 @@ export const useCardLayout = function useCardLayout() {
     }
     const _Math2 = Math;
     const _Math3 = Math;
-    const bound1 = Math.max(tmp11, tmp14(8834).COLLECTIBLES_SHOP_CARD_WIDTH);
-    const bound2 = Math.min(bound1, tmp14(8834).COLLECTIBLES_SHOP_CARD_MAX_WIDTH);
+    const bound1 = Math.max(tmp11, tmp14(8855).COLLECTIBLES_SHOP_CARD_WIDTH);
+    const bound2 = Math.min(bound1, tmp14(8855).COLLECTIBLES_SHOP_CARD_MAX_WIDTH);
     const result3 = bound2 * tmp12;
     const diff2 = tmp12 - 1;
-    if (result3 + (bound + tmp10(8834).COLLECTIBLES_SHOP_CARD_GAP * diff2) > width) {
+    if (result3 + (bound + tmp10(8855).COLLECTIBLES_SHOP_CARD_GAP * diff2) > width) {
       if (1 < tmp12) {
         obj = { columns: 1, cardWidth: "Array", rowWidth: "padding" };
       }
@@ -72,6 +72,6 @@ export const useCardLayout = function useCardLayout() {
     }
     obj = { columns: tmp12, cardWidth: bound2, rowWidth: null };
     const result4 = bound2 * tmp12;
-    obj.rowWidth = result4 + tmp14(8834).COLLECTIBLES_SHOP_CARD_GAP * diff2;
+    obj.rowWidth = result4 + tmp14(8855).COLLECTIBLES_SHOP_CARD_GAP * diff2;
   }
 };

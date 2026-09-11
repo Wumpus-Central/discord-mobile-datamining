@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/icymi/native/NativeICYMIUtils
 export const pushICYMIInfoModal = function pushICYMIInfoModal(arg0) {
   ({ extendedOnboarding, skipIntro } = arg0);
   const obj = { extendedOnboarding, skipIntro };
-  obj.pushLazy(asyncRequireImpl(16549, dependencyMap.paths), obj, ICYMIInfoModalTypes.ICYMI_INFO_MODAL_KEY, {
+  obj.pushLazy(asyncRequireImpl(16537, dependencyMap.paths), obj, ICYMIInfoModalTypes.ICYMI_INFO_MODAL_KEY, {
     presentation: "fullScreenModal",
   });
 };

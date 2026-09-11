@@ -7,185 +7,63 @@ import GuildBoostSlotRecord from "../records/GuildBoostSlotRecord.tsx";
 import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
 
 require = fn;
-let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let obj1 = closure_1;
-          if (closure_1 === undefined) {
-            obj1 = {};
-          }
-          let flag = obj1.includeEnded;
-          if (flag === undefined) {
-            flag = false;
-          }
-          closure_130_1 = flag;
-          closure_130_2 = undefined;
-          c4 = 1;
-          c5 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          let obj3;
-          const HTTP = closure_131_0(closure_131_2[5]).HTTP;
-          const request = {
-            url: closure_131_7.APPLIED_GUILD_BOOSTS_FOR_GUILD(closure_130_0),
-            oldFormErrors: true,
-            query: null,
-            rejectWithError: true,
-          };
-          if (closure_130_1) {
-            obj3 = { include_ended: true };
-          }
-          request.query = obj3;
-          c4 = 2;
-          c5 = 1;
-          const obj4 = { value: HTTP.get(request), done: false };
-          return obj4;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
-      } else {
-        const body = value.body;
-        closure_130_2 = body.map((item) => closure_1_4.createFromServer(item));
-        obj = closure_131_1(closure_131_2[6]);
-        const obj6 = {
-          type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS",
-          guildId: closure_130_0,
-          appliedBoosts: closure_130_2,
-        };
-        obj.dispatch(obj6);
-        c5 = 3;
-        const obj7 = { value: closure_130_2, done: true };
-        return obj7;
-      }
-    } catch (tmp14) {
-      c5 = tmp;
-      throw tmp14;
-    }
+let closure_8 = async function _fetchAppliedGuildBoostsForGuild() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let obj1 = closure_1;
+  if (closure_1 === undefined) {
+    obj1 = {};
   }
+  let flag = obj1.includeEnded;
+  if (flag === undefined) {
+    flag = false;
+  }
+  closure_130_1 = flag;
+  await "PX_16";
+  const HTTP = closure_131_0(closure_131_2[5]).HTTP;
+  const request = {
+    url: closure_131_7.APPLIED_GUILD_BOOSTS_FOR_GUILD(closure_130_0),
+    oldFormErrors: true,
+    query: null,
+    rejectWithError: true,
+  };
+  if (closure_130_1) {
+    const obj3 = { include_ended: true };
+  }
+  request.query = obj3;
+  await HTTP.get(request);
+  const body = value.body;
+  closure_130_2 = body.map((item) => closure_1_4.createFromServer(item));
+  closure_131_1(closure_131_2[6]).dispatch({
+    type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS",
+    guildId: closure_130_0,
+    appliedBoosts: closure_130_2,
+  });
+  return closure_130_2;
 };
 let closure_9 = async function _fetchAppliedGuildBoostsForUser() {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          let flag = closure_0;
-          if (closure_0 === undefined) {
-            flag = false;
-          }
-          closure_129_0 = flag;
-          closure_129_1 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-          const request = {
-            url: closure_130_7.USER_APPLIED_GUILD_BOOSTS,
-            oldFormErrors: true,
-            query: null,
-            rejectWithError: true,
-          };
-          const obj2 = { paused: closure_129_0 };
-          request.query = obj2;
-          c3 = 2;
-          c4 = 1;
-          const obj3 = { value: HTTP.get(request), done: false };
-          return obj3;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
-      } else {
-        const body = value.body;
-        closure_129_1 = body.map((item) => closure_1_4.createFromServer(item));
-        obj = closure_130_1(closure_130_2[6]);
-        const obj5 = { type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS", appliedGuildBoosts: closure_129_1 };
-        obj.dispatch(obj5);
-        c4 = 3;
-        const obj6 = { value: closure_129_1, done: true };
-        return obj6;
-      }
-    } catch (tmp18) {
-      c4 = tmp;
-      throw tmp18;
-    }
+  closure_1 = tmp2;
+  let flag = closure_0;
+  if (closure_0 === undefined) {
+    flag = false;
   }
+  closure_129_0 = flag;
+  await "PX_16";
+  const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+  const request = {
+    url: closure_130_7.USER_APPLIED_GUILD_BOOSTS,
+    oldFormErrors: true,
+    query: { paused: closure_129_0 },
+    rejectWithError: true,
+  };
+  await HTTP.get(request);
+  const body = value.body;
+  closure_129_1 = body.map((item) => closure_1_4.createFromServer(item));
+  closure_130_1(closure_130_2[6]).dispatch({
+    type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS",
+    appliedGuildBoosts: closure_129_1,
+  });
+  return closure_129_1;
 };
 function fetchGuildBoostSlots() {
   const self = this;
@@ -336,7 +214,7 @@ let closure_13 = async function _applyToGuild(arg0) {
           closure_131_5 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

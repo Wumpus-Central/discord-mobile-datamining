@@ -70,7 +70,7 @@ let obj = {
   },
 };
 obj = {
-  scope: fn(4510).RPC_LOCAL_SCOPE,
+  scope: fn(4511).RPC_LOCAL_SCOPE,
   handler(socket) {
     const id = socket.socket.application.id;
     if (null == id) {

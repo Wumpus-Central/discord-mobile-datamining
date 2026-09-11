@@ -173,7 +173,7 @@ function handleGuildCreateOrDelete(guild) {
   delete tmp2[tmp];
 }
 const ME = fn(1074).ME;
-const VoicePlatforms = fn(4626).VoicePlatforms;
+const VoicePlatforms = fn(4627).VoicePlatforms;
 let c9 = 0;
 let closure_10 = 0;
 const dependencyMap = {};
@@ -254,11 +254,11 @@ prototype["getVoiceStateForChannel"] = function getVoiceStateForChannel(channelI
   }
   return tmp4;
 };
-prototype["getVoiceStateForUser"] = function getVoiceStateForUser(id) {
-  let tmp2 = dependencyMap4[id];
+prototype["getVoiceStateForUser"] = function getVoiceStateForUser(userId) {
+  let tmp2 = dependencyMap4[userId];
   if (null == tmp2) {
     const obj = {};
-    tmp[id] = obj;
+    tmp[userId] = obj;
     tmp2 = obj;
   }
   return Object.values(tmp2)[0];

@@ -6,10 +6,10 @@ import renderer_EmbedUtils from "../../../EmbedUtils.tsx";
 import useCodedLinksExperimentEmbeds from "../../../../../../experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx";
 import useLegacyExperiments from "../../../../../../experiments/client_override_hooks/useLegacyExperiments.tsx";
 import useApexExperiments from "../../../../../../experiments/client_override_hooks/useApexExperiments.tsx";
-import _modDef11879 from "../../../../../../../../_runtime/metro/11879__.js";
-import _modDef11880 from "../../../../../../../../_runtime/metro/11880__.js";
+import _modDef11902 from "../../../../../../../../_runtime/metro/11902__.js";
+import _modDef11903 from "../../../../../../../../_runtime/metro/11903__.js";
 import useExperimentAssignments from "../../../../../../experiments/client_override_hooks/useExperimentAssignments.tsx";
-import _modDef11882 from "../../../../../../../../_runtime/metro/11882__.js";
+import _modDef11905 from "../../../../../../../../_runtime/metro/11905__.js";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../../../../stores/AuthenticationStore.tsx";
 
@@ -76,8 +76,8 @@ function ExperimentOverrideActionSheet(override) {
   return jsx(id(memo[19]).BottomSheet, { title: experiment.title, subtitle: id });
 }
 const Image = fn(17).Image;
-const ExperimentEmbedType = fn(4522).ExperimentEmbedType;
-const InviteTypes = fn(7787).InviteTypes;
+const ExperimentEmbedType = fn(4523).ExperimentEmbedType;
+const InviteTypes = fn(7808).InviteTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -184,7 +184,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
         obj.titleColor = colors.titleColor;
         obj.subtitle = label;
         obj.subtitleColor = colors.subtitleColor;
-        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef11882);
+        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef11905);
         obj.thumbnailBackgroundColor = colors.backgroundColor;
         obj.acceptLabelColor =
           null != tmp12 && null != iter && tmp12.variantId === iter.value
@@ -219,7 +219,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
         }
         obj.subtitle = combined1;
         obj.subtitleColor = colors.subtitleColor;
-        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef11882);
+        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef11905);
         ({
           backgroundColor: obj13.thumbnailBackgroundColor,
           acceptLabelGreenColor: obj13.acceptLabelColor,
@@ -248,9 +248,9 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
     "This client is missing this experiment. You may need to open the surface where the experiment is used first.";
   obj1.bodyTextColor = colors.bodyTextColor;
   if (tmp4Result4.isThemeDark(theme)) {
-    let tmpResult = _modDef11879;
+    let tmpResult = _modDef11902;
   } else {
-    tmpResult = _modDef11880;
+    tmpResult = _modDef11903;
   }
   obj1.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj1.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

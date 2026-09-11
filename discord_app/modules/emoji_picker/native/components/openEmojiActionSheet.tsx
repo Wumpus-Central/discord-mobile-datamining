@@ -24,7 +24,7 @@ export const openEmojiActionSheet = function openEmojiActionSheet(uniqueName) {
       const obj6 = ActionSheetActionCreatorsDefault;
       obj = { emojiNode: null };
       obj.emojiNode = obj;
-      obj6.openLazy(asyncRequireImpl(10399, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
+      obj6.openLazy(asyncRequireImpl(10418, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
     }
     obj = { id: uniqueName.id, alt: name, src: null };
     if (null != uniqueName.id) {

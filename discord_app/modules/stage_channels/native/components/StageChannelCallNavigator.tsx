@@ -69,7 +69,7 @@ function JoinStageOverlay(channel) {
   const tmp = _slicedToArray(noop.useState(false), 2);
   const showOverlay = tmp[0];
   importDefault = tmp[1];
-  showOverlay(4341);
+  showOverlay(4343);
   const fn = function s() {
     let obj = spring;
     let num = 0;
@@ -79,7 +79,7 @@ function JoinStageOverlay(channel) {
     obj = { opacity: obj.withSpring(num, closure_11) };
     return obj;
   };
-  let obj = { withSpring: showOverlay(5024).withSpring, showOverlay, viewAnimationConfig };
+  let obj = { withSpring: showOverlay(5025).withSpring, showOverlay, viewAnimationConfig };
   fn.__closure = obj;
   fn.__workletHash = 1929951426580;
   fn.__initData = __initData2;
@@ -134,7 +134,7 @@ const __initData = {
 const __initData2 = {
   code: "function StageChannelCallNavigatorTsx2(){const{withSpring,showOverlay,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};}",
 };
-fn(4605);
+fn(4606);
 let createStyles = { startStagePrompt: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.startStagePrompt = createStyles;

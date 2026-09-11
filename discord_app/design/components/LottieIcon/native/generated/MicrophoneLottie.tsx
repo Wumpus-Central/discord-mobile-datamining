@@ -1,6 +1,6 @@
 // discord_app/design/components/LottieIcon/native/generated/MicrophoneLottie.tsx
 import LottieIcon from "../LottieIcon.tsx";
-import _mod14219 from "../../../../../../_runtime/metro/14219__.js";
+import _mod14195 from "../../../../../../_runtime/metro/14195__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,5 +15,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 
 export const MicrophoneLottie = noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14219, ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14195, ref, layers, markers: items });
 });

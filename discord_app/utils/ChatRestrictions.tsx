@@ -50,7 +50,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "call",
+    animation: "channel_id",
   },
   {
     check(arg0) {

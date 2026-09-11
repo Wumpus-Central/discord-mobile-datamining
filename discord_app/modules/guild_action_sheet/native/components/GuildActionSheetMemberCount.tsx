@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = {
   wrapper: { flexDirection: "row", alignItems: "center" },
   dot: null,
@@ -37,7 +37,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default noop.memo(function MemberCount(arg0) {
-  ({ type, count, color, dotContainerWidth } = arg0);
+  ({ type, count, color, dotContainerWidth, textVariant } = arg0);
   if (null == count) {
     const intl2 = util.intl;
     if ("online" === type) {
@@ -71,16 +71,16 @@ export default noop.memo(function MemberCount(arg0) {
     obj2.style = items1;
     obj1.children = React3(View, obj2);
     const items2 = [React3(View, obj1)];
+    if (textVariant == null) {
+      textVariant = "text-sm/normal";
+    }
+    const obj3 = { variant: textVariant, color: null, lineClamp: 1, style: null, children: null };
     if (color == null) {
       color = "text-default";
     }
-    const obj3 = {
-      variant: "text-sm/normal",
-      color,
-      lineClamp: 1,
-      style: tmp12.refreshText,
-      children: intl.format(etqpUG, obj),
-    };
+    obj3.color = color;
+    obj3.style = tmp12.refreshText;
+    obj3.children = intl.format(etqpUG, obj);
     items2[1] = React3(Text_Text.Text, obj3);
     obj.children = items2;
     return React4(View, obj);

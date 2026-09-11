@@ -10,7 +10,7 @@ export default {
   showModal(arg0) {
     ({ bountyId, sourceQuestContent, variant } = arg0);
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(15081, dependencyMap.paths),
+      asyncRequireImpl(15058, dependencyMap.paths),
       { bountyId, sourceQuestContent, variant },
       BOUNTIES_MODAL,
     );

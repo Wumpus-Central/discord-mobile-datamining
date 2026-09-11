@@ -135,7 +135,7 @@ let closure_18 = async function _getNextOnboardingStep() {
           let transitionStep2;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -236,8 +236,8 @@ let closure_18 = async function _getNextOnboardingStep() {
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
 ({ PlatformTypes: closure_8, Routes: closure_9 } = Constants);
-const ContactPermissions = fn(12748).ContactPermissions;
-let closure_11 = fn(4815).NotificationAuthorizationStatus;
+const ContactPermissions = fn(12771).ContactPermissions;
+let closure_11 = fn(4816).NotificationAuthorizationStatus;
 let obj = {
   key: "choose-avatar",
   shouldShowStep() {
@@ -403,7 +403,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9890).hasDeferredInvite,
+    shouldShowStep: fn(9911).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     },

@@ -20,7 +20,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(4626).ParticipantTypes;
+const ParticipantTypes = fn(4627).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
@@ -48,8 +48,8 @@ export default function useStableParticipant(id, arg1, arg2) {
               userAvatarDecoration: null,
               streamId: "flex",
               ringing: null,
-              hasVideo: 41.774,
-              isSelf: 42.358,
+              hasVideo: 0,
+              isSelf: 2,
             };
             id = AuthenticationStore.getId();
             obj.userNick = NicknameUtils.getName(closure_2, closure_1, user);

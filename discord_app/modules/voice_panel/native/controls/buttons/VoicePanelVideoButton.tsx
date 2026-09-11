@@ -40,7 +40,7 @@ function VideoButtonRive(arg0) {
   return <View dataBinding={{ fill: color, on: isVideoEnabled }} defaultViewModelInstance={null} fallback={null} />;
 }
 const View = fn(17).View;
-const Features = fn(4630).Features;
+const Features = fn(4631).Features;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx");

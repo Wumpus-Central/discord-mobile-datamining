@@ -2,15 +2,16 @@
 import _modDef12 from "../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(7996).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8018).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = {
   titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" },
   guildIcon: { marginLeft: 4 },
@@ -31,8 +32,7 @@ obj.itemTrailingStyle = { flexDirection: "row", alignItems: "center", gap: 8, he
 let closure_8 = createStyles.createStyles(obj);
 let closure_9 = noop.memo((item) => {
   item = item.item;
-  const selected = item.selected;
-  const onSelectGuild = item.onSelectGuild;
+  ({ selected, onSelectGuild: importDefault } = item);
   ({ start, end } = item);
   const tmp = closure_8();
   if (item != null) {
@@ -40,55 +40,57 @@ let closure_9 = noop.memo((item) => {
   }
   let guildTagBadgeUrl = null != item;
   if (guildTagBadgeUrl) {
-    let obj = item(onSelectGuild[7]);
+    let obj = item(8250);
     let badge;
     if (profile != null) {
       badge = profile.badge;
     }
     guildTagBadgeUrl = obj.getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
   }
+  let obj1 = item(4325);
+  const radioA11yNative = obj1.useRadioA11yNative({ selected });
+  ({ accessibilityRole, accessibilityState } = radioA11yNative);
   obj = {
     start,
     end,
     onPress() {
-      let tmp2 = null;
-      if (!selected) {
-        let id;
-        if (item != null) {
-          id = item.id;
-        }
-        if (id == null) {
-          id = null;
-        }
-        tmp2 = id;
+      let id;
+      if (item != null) {
+        id = item.id;
       }
-      onSelectGuild(tmp2);
+      if (id == null) {
+        id = null;
+      }
+      closure_1_1(id);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     label: null,
     icon: null,
+    accessibilityRole: null,
+    accessibilityState: null,
     trailing: null,
   };
   if (null != item) {
     let name = item.name;
   } else {
-    const intl = tmp8(tmp9[10]).intl;
-    name = intl.string(tmp8(tmp9[10]).t.PoWNfe);
+    const intl = tmp7(1114).intl;
+    name = intl.string(tmp7(1114).t.PoWNfe);
   }
   obj.label = name;
-  let tmp7Result = null;
+  let tmp10Result = null;
   if (null != item) {
-    obj = { style: tmp.guildIcon, guild: item, size: tmp8(tmp9[11]).GuildIconSizes.SMALL_32 };
-    tmp7Result = closure_6(selected(tmp9[11]), obj);
-    const tmp12 = selected(tmp9[11]);
+    obj = { style: tmp.guildIcon, guild: item, size: tmp7(5635).GuildIconSizes.SMALL_32 };
+    tmp10Result = closure_6(GuildIconDefault, obj);
   }
-  obj.icon = tmp7Result;
-  const obj1 = { style: tmp.itemTrailingStyle, children: null };
-  tmp7Result = null != item;
-  if (tmp7Result) {
-    tmp7Result = null != profile;
+  obj.icon = tmp10Result;
+  obj.accessibilityRole = accessibilityRole;
+  obj.accessibilityState = accessibilityState;
+  obj1 = { style: tmp.itemTrailingStyle, children: null };
+  tmp10Result = null != item;
+  if (tmp10Result) {
+    tmp10Result = null != profile;
   }
-  if (tmp7Result) {
+  if (tmp10Result) {
     const obj2 = {
       containerStyles: null,
       textStyle: null,
@@ -98,17 +100,17 @@ let closure_9 = noop.memo((item) => {
       textVariant: "heading-md/semibold",
       textColor: "text-strong",
     };
-    ({ tag: obj5.containerStyles, tagStyles: obj5.textStyle } = tmp);
+    ({ tag: obj6.containerStyles, tagStyles: obj6.textStyle } = tmp);
     const tag = profile.tag;
     obj2.guildTag = tag;
     obj2.guildBadge = guildTagBadgeUrl;
     obj2.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp7Result = closure_6(tmp8(tmp9[12]).BaseGuildTagChiplet, obj2);
+    tmp10Result = closure_6(tmp7(9274).BaseGuildTagChiplet, obj2);
   }
-  const items = [tmp7Result, closure_6(item(onSelectGuild[13]).FormRadio, { selected })];
+  const items = [tmp10Result, closure_6(item(5740).FormRadio, { selected })];
   obj1.children = items;
   obj.trailing = closure_7(View, obj1);
-  return closure_6(item(onSelectGuild[8]).TableRow, obj);
+  return closure_6(item(5656).TableRow, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
@@ -137,9 +139,9 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   };
   const intl = availableGuilds(1114).intl;
   obj.children = intl.string(availableGuilds(1114).t.Fo0g9x);
-  obj.children = closure_6(availableGuilds(4601).Text, obj);
+  obj.children = closure_6(availableGuilds(4602).Text, obj);
   obj.header = closure_6(memo, obj);
-  obj.children = closure_6(availableGuilds(8943).BottomSheetFlashList, {
+  obj.children = closure_6(availableGuilds(8964).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
     },
@@ -171,5 +173,5 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
       return timestampProducer(closure_9, obj);
     },
   });
-  return closure_6(availableGuilds(7202).BottomSheet, obj);
+  return closure_6(availableGuilds(7223).BottomSheet, obj);
 }

@@ -53,7 +53,7 @@ function renderCategoryItem(muted) {
       style: styles.categoryText,
       children: name,
     };
-    tmp34Result = closure_11(trailingAction(4601).Text, obj);
+    tmp34Result = closure_11(trailingAction(4602).Text, obj);
   }
   let tmp3 = null;
   if (null != icon) {
@@ -65,7 +65,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(12823).PlusMediumIcon;
+    Icon = trailingAction(12846).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , ,];
@@ -121,7 +121,7 @@ function renderCategoryItem(muted) {
         obj4.onLongPress = onLongPress;
         obj4.style = items;
         obj4.children = tmp18Result;
-        let tmp28Result = closure_11(trailingAction(5173).PressableHighlight, obj4);
+        let tmp28Result = closure_11(trailingAction(5174).PressableHighlight, obj4);
       } else {
         const obj5 = { accessibilityRole: "header", style: items, children: tmp18Result };
         tmp28Result = closure_11(View, obj5);
@@ -157,13 +157,13 @@ function renderCategoryItem(muted) {
     const obj8 = { size: "xxs", color: flag ? colors.ICON_MUTED : colors.TEXT_SUBTLE };
     colors = closure_11(Icon, obj8);
     obj7.children = colors;
-    obj7 = closure_11(trailingAction(5173).PressableOpacity, obj7);
+    obj7 = closure_11(trailingAction(5174).PressableOpacity, obj7);
     obj6.children = obj7;
     closure_11(View, obj6);
   }
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10188);
+const RedesignChannelListConstants = fn(10207);
 ({
   CATEGORY_MARGIN_BOTTOM: closure_8,
   CATEGORY_MARGIN_TOP: closure_9,
@@ -171,7 +171,7 @@ const RedesignChannelListConstants = fn(10188);
 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(4605);
+let createStyles = fn(4606);
 const styles = createStyles.createStyles(() => {
   let obj = {
     categoryWrapper: null,
@@ -285,7 +285,7 @@ export const CategoryChannel = function CategoryChannel(channel) {
   if (null != tmp10) {
     obj = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
     ({ tooltip: obj3.accessibilityLabel, label: obj3.children } = tmp10);
-    tmp13 = closure_11(tmp2(4601).Text, obj);
+    tmp13 = closure_11(tmp2(4602).Text, obj);
   }
   obj.note = tmp13;
   obj.trailingAction = useFavoritesGuildCategoryAddActionDefault(channel);
@@ -295,7 +295,7 @@ export const CategoryChannel = function CategoryChannel(channel) {
   const colors = nativeDefault.colors;
   obj1 = {};
   const merged1 = Object.assign(merged);
-  obj1.icon = closure_11(channel(11225).ChevronSmallDownIcon, {
+  obj1.icon = closure_11(channel(11248).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed2 ? createStyles : obj1,
@@ -325,7 +325,7 @@ export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   const colors = stateFromStores(576).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = closure_11(guildId(11225).ChevronSmallDownIcon, {
+  obj.icon = closure_11(guildId(11248).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed ? createStyles : obj1,

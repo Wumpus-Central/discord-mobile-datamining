@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: null,
   section: null,
@@ -65,7 +65,7 @@ export default function FamilyCenterTopActivity() {
   [][0] = stateFromStores1;
   const callback = noop.useCallback(() => {
     const obj = { topUserActivities: stateFromStores };
-    obj.openLazy(asyncRequireImpl(14975, dependencyMap.paths), "FamilyCenterTopUsers", obj);
+    obj.openLazy(asyncRequireImpl(14952, dependencyMap.paths), "FamilyCenterTopUsers", obj);
   }, items2);
   if (0 !== stateFromStores.length) {
     obj = { style: tmp.container, children: null };

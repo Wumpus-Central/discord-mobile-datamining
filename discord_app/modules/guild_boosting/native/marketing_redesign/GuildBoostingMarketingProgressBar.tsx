@@ -15,7 +15,7 @@ const View = fn(17).View;
 const BoostedGuildTiers = fn(1074).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   progressBarContainer: null,
   progressBar: null,
@@ -29,14 +29,14 @@ createStyles = {
   alignItems: "center",
   width: "100%",
   marginTop: 40,
-  paddingHorizontal: fn(13659).MARKER_DIMENSIONS / 2 + 34,
+  paddingHorizontal: fn(13636).MARKER_DIMENSIONS / 2 + 34,
 };
 createStyles.progressBarContainer = createStyles;
 createStyles.progressBar = { height: 54, maxWidth: 660, width: "100%" };
 createStyles.progressBarScrubber = {
   height: 8,
-  top: fn(13659).MARKER_DIMENSIONS / 2 - 4,
-  marginHorizontal: fn(13659).MARKER_DIMENSIONS / 2 + 2,
+  top: fn(13636).MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: fn(13636).MARKER_DIMENSIONS / 2 + 2,
 };
 let size = {
   borderRadius: 8,

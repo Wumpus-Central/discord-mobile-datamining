@@ -5,11 +5,11 @@ import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05037_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05038_LinearGradient.js";
 import common_AlertDefault from "../../common/Alert.tsx";
 import actions_BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import SequencedLottieAnimationViewDefault from "../../common/SequencedLottieAnimationView.tsx";
-import _mod13699 from "../../../../_runtime/metro/13699__.js";
+import _mod13678 from "../../../../_runtime/metro/13678__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -27,10 +27,10 @@ class PremiumPaymentGuildAnimation {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const Gradients = fn(7484).Gradients;
+const Gradients = fn(7505).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" },
   animation: { width: "auto", height: 112, alignSelf: "center" },
@@ -89,8 +89,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = util.intl;
   obj.confirmText = intl.string(util.t.YKxJCI);
   obj.onConfirm = function onConfirm() {
-    closure_1(4950).close();
-    const obj = closure_1(4950);
+    closure_1(4951).close();
+    const obj = closure_1(4951);
     actions_BoostingActionCreators.closeApplyBoostModal();
   };
   obj = {
@@ -114,9 +114,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const obj3 = { style: tmp.activatedImage, source: null };
   const tmp14 = LinearGradientDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13700);
+    let tmp8Result = tmp8(13679);
   } else {
-    tmp8Result = tmp8(13701);
+    tmp8Result = tmp8(13680);
   }
   obj3.source = tmp8Result;
   obj2.children = closure_9(closure_6, obj3);

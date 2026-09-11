@@ -46,7 +46,7 @@ function EditGuildProfileBanner(user) {
     if (c4) {
       let tmpResult = ActionSheetActionCreatorsDefault;
       let obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null };
-      const tmp13 = asyncRequireImpl(14669, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(14645, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -83,12 +83,12 @@ function EditGuildProfileBanner(user) {
   obj.editButtonAccessibilityLabel = intl.string(user(1114).t["95hPAe"]);
   obj.editDisabled = disabled;
   obj.children = closure_17(UserProfileEditBannerButtonDefault, obj);
-  return closure_17(user(7214).AnalyticsLocationProvider, obj);
+  return closure_17(user(7235).AnalyticsLocationProvider, obj);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7260).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7281).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_11, AnalyticsSections } = Constants);
 ({

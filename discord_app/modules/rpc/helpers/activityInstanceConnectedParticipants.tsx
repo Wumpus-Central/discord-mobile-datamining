@@ -4,7 +4,7 @@ import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.ts
 import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
-const Constants = fn(4510);
+const Constants = fn(4511);
 let obj = { [Constants.RPC_SCOPE_CONFIG.ANY]: items };
 items = [Constants.RPC_AUTHENTICATED_SCOPE];
 obj = {
@@ -18,16 +18,16 @@ obj = {
       if (null == currentEmbeddedActivity) {
         let obj = { participants: [] };
       } else {
-        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4233).getEmbeddedActivityLocationGuildId(
+        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4235).getEmbeddedActivityLocationGuildId(
           currentEmbeddedActivity.location,
         );
-        const obj4 = embeddedActivityLocationGuildId(4233);
-        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4233).getEmbeddedActivityLocationChannelId(
+        const obj4 = embeddedActivityLocationGuildId(4235);
+        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4235).getEmbeddedActivityLocationChannelId(
           currentEmbeddedActivity.location,
         );
         obj = { participants: null };
         const _Array = Array;
-        const obj5 = embeddedActivityLocationGuildId(4233);
+        const obj5 = embeddedActivityLocationGuildId(4235);
         obj.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           user = user.getUser(arg0);
           if (null != user) {

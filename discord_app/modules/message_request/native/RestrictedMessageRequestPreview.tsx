@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, scroll: null, hidden: null, scrollContent: null, footer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -120,9 +120,9 @@ export default function RestrictedMessageRequestPreview(channelId) {
         }
       };
       obj1 = { channel: stateFromStores, user: stateFromStores1 };
-      const items8 = [closure_10(tmp2(16993), obj1)];
+      const items8 = [closure_10(tmp2(16982), obj1)];
       obj2 = { channelId };
-      items8[1] = closure_10(tmp2(16995), obj2);
+      items8[1] = closure_10(tmp2(16984), obj2);
       obj.children = items8;
       const items9 = [closure_11(closure_5, obj)];
       const obj3 = { style: null, children: null };
@@ -131,7 +131,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       items10[1] = obj4;
       obj3.style = items10;
       const obj5 = { channel: stateFromStores };
-      obj3.children = closure_10(tmp2(12509), obj5);
+      obj3.children = closure_10(tmp2(12532), obj5);
       items9[1] = closure_10(first1, obj3);
       obj.children = items9;
       tmp13Result = closure_11(tmp14, obj);

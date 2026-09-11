@@ -8,18 +8,23 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const SettingsScreenNoticesDefault = SettingsScreenNotices;
 
 require = fn;
-const MobileUserSettings = fn(8027).MobileUserSettings;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+function SensitiveContentFiltersNotices() {
+  const obj = { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
+  return jsx(SettingsScreenNoticesDefault, {
+    isListHeader: true,
+    screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS,
+  });
+}
+const MobileUserSettings = fn(8049).MobileUserSettings;
+const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx",
 );
 
 export default function UserSettingsSensitiveContentFilters() {
-  let obj = { children: null };
-  const memo = noop.useMemo(() => {
-    let obj = { sections: null };
+  const node = noop.useMemo(() => {
+    let obj = { sections: null, ListHeaderComponent: null };
     obj = { label: null, settings: null, subLabel: null };
     const intl = util.intl;
     obj.label = intl.string(util.t.GYpoAq);
@@ -47,10 +52,8 @@ export default function UserSettingsSensitiveContentFilters() {
     obj1.subLabel = intl4.string(util.t.XgH9eh);
     items1[1] = obj1;
     obj.sections = items1;
+    obj.ListHeaderComponent = ListHeaderComponent;
     return obj.createList(obj);
   }, []);
-  obj = { screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
-  let items = [hasOwnProperty(SettingsScreenNoticesDefault, obj), hasOwnProperty(SettingLayoutDefault, { node: memo })];
-  obj.children = items;
-  return React5(timestampProducer, obj);
+  return jsx(SettingLayoutDefault, { node });
 }

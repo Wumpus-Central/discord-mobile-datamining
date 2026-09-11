@@ -6,8 +6,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8246).TrackUserProfileActions;
-const AVATAR_SIZE_VARIANT = fn(7260).AVATAR_SIZE_VARIANT;
+const TrackUserProfileActions = fn(8268).TrackUserProfileActions;
+const AVATAR_SIZE_VARIANT = fn(7281).AVATAR_SIZE_VARIANT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const forwardRefResult = noop.forwardRef((backgroundColor, ref) => {

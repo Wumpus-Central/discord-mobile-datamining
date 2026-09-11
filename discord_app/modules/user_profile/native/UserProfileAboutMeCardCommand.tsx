@@ -12,7 +12,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxs = fn(21).jsxs;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { commandClickable: null };
 obj = {
   color: nativeDefault.colors.MENTION_FOREGROUND,

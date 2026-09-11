@@ -151,11 +151,11 @@ export const updateRunningGameWithRobloxSubgameInfo = function updateRunningGame
           let tmp9 = require;
         }
         const obj1 = {};
-        obj1[tmp9(4736).RobloxMetadataKeys.ROBLOX_TIME_STARTED] = str.toString();
+        obj1[tmp9(4737).RobloxMetadataKeys.ROBLOX_TIME_STARTED] = str.toString();
         const universeId = subgameInfo.universeId;
         obj.sku = universeId;
         if (null != subgameInfo.placeId) {
-          obj1[tmp9(4736).RobloxMetadataKeys.PLACE_ID] = subgameInfo.placeId;
+          obj1[tmp9(4737).RobloxMetadataKeys.PLACE_ID] = subgameInfo.placeId;
         }
         const _Object = Object;
         let tmp13;

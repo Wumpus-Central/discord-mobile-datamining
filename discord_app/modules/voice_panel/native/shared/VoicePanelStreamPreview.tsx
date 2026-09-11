@@ -13,9 +13,9 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5025).Button);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5026).Button);
 const OPACITY_TIMING = { duration: 200 };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
 let size = {
   position: "absolute",
@@ -62,7 +62,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(10132)(guildId, channelId, ownerId).previewUrl;
+  const previewUrl = stream(10152)(guildId, channelId, ownerId).previewUrl;
   let obj = mode(504);
   const items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
@@ -82,7 +82,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     },
     items1,
   );
-  let obj1 = mode(4341);
+  let obj1 = mode(4343);
   class T {
     constructor() {
       obj = mode;
@@ -104,7 +104,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
       return obj;
     }
   }
-  obj = { mode, withTiming: mode(4606).withTiming, OPACITY_TIMING };
+  obj = { mode, withTiming: mode(4607).withTiming, OPACITY_TIMING };
   T.__closure = obj;
   T.__workletHash = 15496474861955;
   T.__initData = __initData;
@@ -121,17 +121,17 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     let obj2 = { uri: previewUrl };
     obj1.source = obj2;
     obj1.style = tmp.streamPreviewImage;
-    tmp14 = closure_6(tmp2(4341).Image, obj1);
+    tmp14 = closure_6(tmp2(4343).Image, obj1);
   }
   const items2 = [tmp14];
   const obj3 = { style: animatedStyle, layout, children: null };
-  const tmp4 = stream(10132);
+  const tmp4 = stream(10152);
   if (stateFromStores) {
     const obj4 = { style: tmp.ownStreamTextContainer, children: null };
     const obj5 = { variant: "text-sm/semibold", color: "text-overlay-light", style: tmp.ownStreamText, children: null };
     const intl2 = tmp8(1114).intl;
     obj5.children = intl2.string(tmp8(1114).t["ro/HN8"]);
-    obj4.children = closure_6(tmp8(4601).Text, obj5);
+    obj4.children = closure_6(tmp8(4602).Text, obj5);
     let tmp16Result = closure_6(closure_3, obj4);
   } else {
     const obj6 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
@@ -141,7 +141,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     tmp16Result = closure_6(closure_9, obj6);
   }
   obj3.children = tmp16Result;
-  items2[1] = closure_6(stream(7125), obj3);
+  items2[1] = closure_6(stream(7146), obj3);
   obj.children = items2;
   return closure_7(closure_8, obj);
 };

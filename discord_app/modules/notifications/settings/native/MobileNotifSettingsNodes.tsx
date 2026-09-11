@@ -6,6 +6,7 @@ import NotifSettings from "../../../../../discord_common/js/shared/shared-consta
 import notifications_NotificationSettingsUtils from "../../NotificationSettingsUtils.tsx";
 import MobileNotifSettings from "../../../user_settings/notifications/native/codegen/MobileNotifSettings.tsx";
 import NotifSettingsActionCreators from "../NotifSettingsActionCreators.tsx";
+import useIsNotifSettingDisabledDefault from "useIsNotifSettingDisabled.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -19,6 +20,9 @@ let obj = {
   },
   onValueChange(arg0) {
     return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.REACTIONS, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.REACTIONS);
   },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.REACTIONS);
@@ -39,6 +43,9 @@ obj = {
       NotifSettings.NotifSettings.MISSED_MESSAGES_LOW,
       arg0,
     );
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.MISSED_MESSAGES_LOW);
   },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(
@@ -62,6 +69,9 @@ const toggle2 = SettingBuilders.createToggle({
       arg0,
     );
   },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT);
+  },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(
       NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT,
@@ -82,6 +92,9 @@ const obj1 = {
       NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT,
       arg0,
     );
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT);
   },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(
@@ -104,6 +117,9 @@ const toggle3 = SettingBuilders.createToggle({
       arg0,
     );
   },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW);
+  },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(
       NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW,
@@ -124,6 +140,9 @@ const obj2 = {
       NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW,
       arg0,
     );
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW);
   },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(
@@ -146,6 +165,9 @@ const toggle4 = SettingBuilders.createToggle({
       arg0,
     );
   },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
+  },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(
       NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT,
@@ -167,6 +189,9 @@ const obj3 = {
       arg0,
     );
   },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
+  },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(
       NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT,
@@ -185,6 +210,9 @@ const toggle5 = SettingBuilders.createToggle({
   onValueChange(arg0) {
     return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.GAMING_LOW, arg0);
   },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.GAMING_LOW);
+  },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.GAMING_LOW);
   },
@@ -201,6 +229,9 @@ const obj4 = {
   onValueChange(arg0) {
     return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.GAMING_LOW, arg0);
   },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.GAMING_LOW);
+  },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.GAMING_LOW);
   },
@@ -216,6 +247,9 @@ const toggle6 = SettingBuilders.createToggle({
   },
   onValueChange(arg0) {
     return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.GAMING_DEFAULT, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.GAMING_DEFAULT);
   },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(

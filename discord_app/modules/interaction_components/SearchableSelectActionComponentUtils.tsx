@@ -26,7 +26,7 @@ export const queryMentionables = function queryMentionables(type, query, channel
     const tmp2 =
       type === require("Server").ComponentType.USER_SELECT ||
       type === require("Server").ComponentType.MENTIONABLE_SELECT;
-    channel(5492);
+    channel(5493);
     let obj = {
       query,
       channel,

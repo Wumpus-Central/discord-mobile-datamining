@@ -8,7 +8,7 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
 import useAgeGroupPresentation from "../../../age_assurance/useAgeGroupPresentation.tsx";
-import TinyBroncoAccountStatusVisibility from "../../../tiny_bronco/TinyBroncoAccountStatusVisibility.tsx";
+import TinyBroncoLazy from "../../../tiny_bronco/native/TinyBroncoLazy.tsx";
 import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -32,10 +32,10 @@ const obj1 = {
     const tmp = closure_6();
     let obj = useAgeGroupPresentation;
     const ageGroupValueLabel = obj.useAgeGroupValueLabel();
-    const shouldShowTinyBroncoAccountStatus = TinyBroncoAccountStatusVisibility.useShouldShowTinyBroncoAccountStatus();
+    const shouldShowAgeNotice = TinyBroncoLazy.useShouldShowAgeNotice();
     obj = { style: tmp.trailing, children: null };
-    let tmp8 = shouldShowTinyBroncoAccountStatus;
-    if (shouldShowTinyBroncoAccountStatus) {
+    let tmp8 = shouldShowAgeNotice;
+    if (shouldShowAgeNotice) {
       obj = {
         dismissibleContent: dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS,
         containerStyle: tmp.badge,
@@ -53,7 +53,7 @@ const obj1 = {
 };
 obj1.usePreNavigationAction = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(
   dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS,
-  TinyBroncoAccountStatusVisibility.useShouldShowTinyBroncoAccountStatus,
+  TinyBroncoLazy.useShouldShowAgeNotice,
 );
 obj1.usePredicate = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled;
 obj1.screen = {

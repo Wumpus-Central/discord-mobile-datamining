@@ -9,8 +9,8 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 let module_560 = fn(560);
-module_560 = module_560.create(() => ({ controls: "PX_16", paused: true }));
-const createStyles = fn(4605);
+module_560 = module_560.create(() => ({ controls: "PX_16", paused: null }));
+const createStyles = fn(4606);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
@@ -68,7 +68,7 @@ export default function useVideoControls(index, portal, controls) {
 export const useVideoStateStore = module_560;
 export const initVideoStateStore = function initVideoStateStore() {
   ReactBatchUpdates.batchUpdates(() => {
-    state.setState({ controls: "PX_16", paused: true });
+    state.setState({ controls: "PX_16", paused: null });
   });
 };
 export const setMuted = function setMuted(isMuted) {

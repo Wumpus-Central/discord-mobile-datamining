@@ -16,7 +16,7 @@ import PresenceStore from "../../../stores/PresenceStore.tsx";
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9555).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(9576).updateShouldShowJumpToPresentButton;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 

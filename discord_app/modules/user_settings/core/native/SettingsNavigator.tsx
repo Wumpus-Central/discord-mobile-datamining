@@ -52,9 +52,9 @@ const Constants = fn(1074);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let NativeStackNavigator = fn(7965);
+let NativeStackNavigator = fn(7987);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
-fn(4605);
+fn(4606);
 let obj = {
   statusBarSpacer: null,
   headerContainer: null,

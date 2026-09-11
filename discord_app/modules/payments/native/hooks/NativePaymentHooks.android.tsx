@@ -69,7 +69,7 @@ function useGoogleSkuIds(arg0, arg1) {
                       ref = 1;
                       v2 = 2;
                       c5 = 1;
-                      const obj1 = { value: closure_2_0(9437).loadInAppSkus(differenceResult), done: false };
+                      const obj1 = { value: closure_2_0(9458).loadInAppSkus(differenceResult), done: false };
                       return obj1;
                     }
                   }
@@ -85,7 +85,7 @@ function useGoogleSkuIds(arg0, arg1) {
               closure_128_1 = closure_2;
               logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
               v2("Unable to fetch");
-              let obj2 = closure_2_0(4277);
+              let obj2 = closure_2_0(4279);
               const result = obj2.captureBillingException(closure_128_1);
             } else if (arg0 === 1) {
               c5 = 3;
@@ -143,8 +143,11 @@ function useCreateSubscription(arg0) {
     return obj;
   }
 }
+function useMobileStoreFront() {
+  return null;
+}
 let closure_7 = new LoggerDefault("NativePaymentHooks.android.tsx");
-let closure_8 = { nativePaymentsConnected: true, storeFront: null };
+let closure_8 = { nativePaymentsConnected: true, storeFront: null, canMakePayments: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/native/hooks/NativePaymentHooks.android.tsx");
 
@@ -154,9 +157,11 @@ export default {
   useCreateSubscription,
   useCancelSubscription,
   useResubscribeSubscription,
+  useMobileStoreFront,
 };
 export { useNativeIAPPayments };
 export { useGoogleSkuIds };
 export { useResubscribeSubscription };
 export { useCancelSubscription };
 export { useCreateSubscription };
+export { useMobileStoreFront };

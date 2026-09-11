@@ -8,10 +8,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8255).getSingleRequirementThreshold;
+let closure_4 = fn(8277).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, barRow: null, progressBarTrack: null, progressBarFill: null, labels: null };
 createStyles = { gap: nativeDefault.space.PX_4, width: "100%" };
 createStyles.container = createStyles;

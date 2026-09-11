@@ -32,7 +32,7 @@ obj = {
   },
 };
 obj.SHADOW_BORDER = {
-  [Themes.DARK]: obj,
+  [Themes.ASH]: obj,
   [Themes.LIGHT]: {
     boxShadow: "0 0 0 1px hsl(none 0% 0% / 0.08)",
     filter: "drop-shadow(0 0 1px hsl(none 0% 0% / 0.08))",
@@ -45,7 +45,7 @@ obj.SHADOW_BORDER = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 0 0 1px hsl(none 0% 100% / 0.08)",
     filter: "drop-shadow(0 0 1px hsl(none 0% 100% / 0.08))",
     nativeStyles: {
@@ -57,7 +57,7 @@ obj.SHADOW_BORDER = {
       shadowColorAndroid: "#ffffff",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 0 0 1px hsl(none 0% 100% / 0.08)",
     filter: "drop-shadow(0 0 1px hsl(none 0% 100% / 0.08))",
     nativeStyles: {
@@ -71,7 +71,7 @@ obj.SHADOW_BORDER = {
   },
 };
 obj.SHADOW_BUTTON_OVERLAY = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
     filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -95,7 +95,7 @@ obj.SHADOW_BUTTON_OVERLAY = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
     filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -107,7 +107,7 @@ obj.SHADOW_BUTTON_OVERLAY = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
     filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -121,7 +121,7 @@ obj.SHADOW_BUTTON_OVERLAY = {
   },
 };
 obj.SHADOW_HIGH = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
     filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -145,7 +145,7 @@ obj.SHADOW_HIGH = {
       shadowColorAndroid: "#a5abb3",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
     filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -157,7 +157,7 @@ obj.SHADOW_HIGH = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
     filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -171,7 +171,7 @@ obj.SHADOW_HIGH = {
   },
 };
 obj.SHADOW_LEDGE = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow: "0 2px 0 0 hsl(none 0% 0% / 0.05), 0 1.5px 0 0 hsl(none 0% 0% / 0.05), 0 1px 0 0 hsl(none 0% 0% / 0.16)",
     filter: "drop-shadow(0 1.5px 0 hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -195,7 +195,7 @@ obj.SHADOW_LEDGE = {
       shadowColorAndroid: "#a5abb3",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 2px 0 0 hsl(none 0% 0% / 0.05), 0 1.5px 0 0 hsl(none 0% 0% / 0.05), 0 1px 0 0 hsl(none 0% 0% / 0.16)",
     filter: "drop-shadow(0 1.5px 0 hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -207,7 +207,7 @@ obj.SHADOW_LEDGE = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 2px 0 0 hsl(none 0% 0% / 0.05), 0 1.5px 0 0 hsl(none 0% 0% / 0.05), 0 1px 0 0 hsl(none 0% 0% / 0.16)",
     filter: "drop-shadow(0 1.5px 0 hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -221,7 +221,7 @@ obj.SHADOW_LEDGE = {
   },
 };
 obj.SHADOW_LOW = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow: "0 1px 4px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 1px 4px hsl(none 0% 0% / 0.14))",
     nativeStyles: {
@@ -245,7 +245,7 @@ obj.SHADOW_LOW = {
       shadowColorAndroid: "#a5abb3",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 1px 4px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 1px 4px hsl(none 0% 0% / 0.14))",
     nativeStyles: {
@@ -257,7 +257,7 @@ obj.SHADOW_LOW = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 1px 4px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 1px 4px hsl(none 0% 0% / 0.14))",
     nativeStyles: {
@@ -271,7 +271,7 @@ obj.SHADOW_LOW = {
   },
 };
 obj.SHADOW_LOW_ACTIVE = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow: "0 0 4px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 0 4px hsl(none 0% 0% / 0.14))",
     nativeStyles: {
@@ -295,7 +295,7 @@ obj.SHADOW_LOW_ACTIVE = {
       shadowColorAndroid: "#a5abb3",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 0 4px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 0 4px hsl(none 0% 0% / 0.14))",
     nativeStyles: {
@@ -307,7 +307,7 @@ obj.SHADOW_LOW_ACTIVE = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 0 4px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 0 4px hsl(none 0% 0% / 0.14))",
     nativeStyles: {
@@ -321,7 +321,7 @@ obj.SHADOW_LOW_ACTIVE = {
   },
 };
 obj.SHADOW_LOW_HOVER = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow: "0 4px 10px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 4px 10px hsl(none 0% 0% / 0.14))",
     nativeStyles: {
@@ -345,7 +345,7 @@ obj.SHADOW_LOW_HOVER = {
       shadowColorAndroid: "#a5abb3",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 4px 10px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 4px 10px hsl(none 0% 0% / 0.14))",
     nativeStyles: {
@@ -357,7 +357,7 @@ obj.SHADOW_LOW_HOVER = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 4px 10px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 4px 10px hsl(none 0% 0% / 0.14))",
     nativeStyles: {
@@ -371,7 +371,7 @@ obj.SHADOW_LOW_HOVER = {
   },
 };
 obj.SHADOW_MEDIUM = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow: "0 4px 8px 0 hsl(none 0% 0% / 0.16)",
     filter: "drop-shadow(0 4px 8px hsl(none 0% 0% / 0.16))",
     nativeStyles: {
@@ -395,7 +395,7 @@ obj.SHADOW_MEDIUM = {
       shadowColorAndroid: "#a5abb3",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 4px 8px 0 hsl(none 0% 0% / 0.16)",
     filter: "drop-shadow(0 4px 8px hsl(none 0% 0% / 0.16))",
     nativeStyles: {
@@ -407,7 +407,7 @@ obj.SHADOW_MEDIUM = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 4px 8px 0 hsl(none 0% 0% / 0.16)",
     filter: "drop-shadow(0 4px 8px hsl(none 0% 0% / 0.16))",
     nativeStyles: {
@@ -421,7 +421,7 @@ obj.SHADOW_MEDIUM = {
   },
 };
 obj.SHADOW_MOBILE_CHATINPUT = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow: "0 -1px 4px 0 hsl(240 7.1% 11% / 0.5)",
     filter: "drop-shadow(0 -1px 4px hsl(240 7.1% 11% / 0.5))",
     nativeStyles: {
@@ -445,7 +445,7 @@ obj.SHADOW_MOBILE_CHATINPUT = {
       shadowColorAndroid: "#1a1a1e",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 -1px 4px 0 hsl(240 7.1% 11% / 0.5)",
     filter: "drop-shadow(0 -1px 4px hsl(240 7.1% 11% / 0.5))",
     nativeStyles: {
@@ -457,7 +457,7 @@ obj.SHADOW_MOBILE_CHATINPUT = {
       shadowColorAndroid: "#1a1a1e",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 -1px 4px 0 hsl(240 7.1% 11% / 0.5)",
     filter: "drop-shadow(0 -1px 4px hsl(240 7.1% 11% / 0.5))",
     nativeStyles: {
@@ -471,7 +471,7 @@ obj.SHADOW_MOBILE_CHATINPUT = {
   },
 };
 obj.SHADOW_MOBILE_NAVIGATOR_X = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow: "0 0 10px 0 hsl(none 0% 0% / 0.22)",
     filter: "drop-shadow(0 0 10px hsl(none 0% 0% / 0.22))",
     nativeStyles: {
@@ -495,7 +495,7 @@ obj.SHADOW_MOBILE_NAVIGATOR_X = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 0 10px 0 hsl(none 0% 0% / 0.22)",
     filter: "drop-shadow(0 0 10px hsl(none 0% 0% / 0.22))",
     nativeStyles: {
@@ -507,7 +507,7 @@ obj.SHADOW_MOBILE_NAVIGATOR_X = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 0 10px 0 hsl(none 0% 0% / 0.22)",
     filter: "drop-shadow(0 0 10px hsl(none 0% 0% / 0.22))",
     nativeStyles: {
@@ -521,7 +521,7 @@ obj.SHADOW_MOBILE_NAVIGATOR_X = {
   },
 };
 obj.SHADOW_TOP_HIGH = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow: "0 -12px 32px 0 hsl(none 0% 0% / 0.24)",
     filter: "drop-shadow(0 -12px 32px hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -545,7 +545,7 @@ obj.SHADOW_TOP_HIGH = {
       shadowColorAndroid: "#a5abb3",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 -12px 32px 0 hsl(none 0% 0% / 0.24)",
     filter: "drop-shadow(0 -12px 32px hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -557,7 +557,7 @@ obj.SHADOW_TOP_HIGH = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 -12px 32px 0 hsl(none 0% 0% / 0.24)",
     filter: "drop-shadow(0 -12px 32px hsl(none 0% 0% / 0.24))",
     nativeStyles: {
@@ -571,7 +571,7 @@ obj.SHADOW_TOP_HIGH = {
   },
 };
 obj.SHADOW_TOP_LEDGE = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow:
       "0 -2px 0 0 hsl(none 0% 0% / 0.05), 0 -1.5px 0 0 hsl(none 0% 0% / 0.05), 0 -1px 0 0 hsl(none 0% 0% / 0.16)",
     filter: "drop-shadow(0 -1.5px 0 hsl(none 0% 0% / 0.24))",
@@ -597,7 +597,7 @@ obj.SHADOW_TOP_LEDGE = {
       shadowColorAndroid: "#a5abb3",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow:
       "0 -2px 0 0 hsl(none 0% 0% / 0.05), 0 -1.5px 0 0 hsl(none 0% 0% / 0.05), 0 -1px 0 0 hsl(none 0% 0% / 0.16)",
     filter: "drop-shadow(0 -1.5px 0 hsl(none 0% 0% / 0.24))",
@@ -610,7 +610,7 @@ obj.SHADOW_TOP_LEDGE = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow:
       "0 -2px 0 0 hsl(none 0% 0% / 0.05), 0 -1.5px 0 0 hsl(none 0% 0% / 0.05), 0 -1px 0 0 hsl(none 0% 0% / 0.16)",
     filter: "drop-shadow(0 -1.5px 0 hsl(none 0% 0% / 0.24))",
@@ -625,7 +625,7 @@ obj.SHADOW_TOP_LEDGE = {
   },
 };
 obj.SHADOW_TOP_LOW = {
-  [Themes.DARK]: {
+  [Themes.ASH]: {
     boxShadow: "0 -1px 4px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 -1px 4px hsl(none 0% 0% / 0.14))",
     nativeStyles: {
@@ -649,7 +649,7 @@ obj.SHADOW_TOP_LOW = {
       shadowColorAndroid: "#a5abb3",
     },
   },
-  [Themes.MIDNIGHT]: {
+  [Themes.ONYX]: {
     boxShadow: "0 -1px 4px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 -1px 4px hsl(none 0% 0% / 0.14))",
     nativeStyles: {
@@ -661,7 +661,7 @@ obj.SHADOW_TOP_LOW = {
       shadowColorAndroid: "#000000",
     },
   },
-  [Themes.DARKER]: {
+  [Themes.DARK]: {
     boxShadow: "0 -1px 4px 0 hsl(none 0% 0% / 0.14)",
     filter: "drop-shadow(0 -1px 4px hsl(none 0% 0% / 0.14))",
     nativeStyles: {

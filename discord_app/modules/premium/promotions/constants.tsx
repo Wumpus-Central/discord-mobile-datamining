@@ -2,6 +2,7 @@
 import size from "../../../../_runtime/metro/00002__.js";
 
 const items = ["logitech", "call_of_duty", "youtube"];
+const items1 = ["logitech", "steelseries"];
 const result = size.fileFinishedImporting("modules/premium/promotions/constants.tsx");
 
 export const CountryListMode = { BLOCKLIST: "blocklist", ALLOWLIST: "allowlist" };
@@ -25,13 +26,12 @@ export const PromotionTypes = {
 };
 export const RECURRING_PARTNERS = {
   steelseries: { id: "steelseries", label: "SteelSeries" },
-  kontrolfreek: { id: "kontrolfreek", label: "KontrolFreek" },
   logitech: { id: "logitech", label: "Logitech" },
 };
 export const STEELSERIES_PARTNER_ID = "steelseries";
-export const KONTROLFREEK_PARTNER_ID = "kontrolfreek";
 export const LOGITECH_PARTNER_ID = "logitech";
 export const CALL_OF_DUTY_PARTNER_ID = "call_of_duty";
 export const XBOX_PARTNER_ID = "xbox";
 export const YOUTUBE_PARTNER_ID = "youtube";
 export const DEDICATED_SURFACE_PARTNER_IDS = new Set(items);
+export const RECURRING_3P_PARTNER_ORDER = items1;

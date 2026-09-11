@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItem.tsx
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06705_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06726_LegacyBaseButton.js";
 import useMediaViewerSources from "../useMediaViewerSources.tsx";
 import useEntranceAnimation from "../useEntranceAnimation.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";

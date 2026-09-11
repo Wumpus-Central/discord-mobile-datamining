@@ -5,7 +5,7 @@ import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod14870 from "../../../../../../_runtime/metro/14870__.js";
+import _mod14846 from "../../../../../../_runtime/metro/14846__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   container: {
     alignSelf: "stretch",
@@ -76,92 +76,32 @@ export default function TwoFASetupSuccess() {
   [tmp5, importDefault] = _slicedToArray(noop.useState(""), 2);
   const callback = noop.useCallback(() => {
     setRegistering = async function _onRegisterSuccess(arg0) {
-      if (c6 === 2) {
+      closure_2 = tmp3;
+      ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
+      await "PX_16";
+      const intl = setRegistering(1114).intl;
+      await closure_2_0(6668).finishRegisterWebAuthnCredential(
+        intl.string(closure_2_0(1114).t["8H5RmH"]),
+        closure_129_0,
+        closure_129_1,
+      );
+      if (2 === tmp8) {
+        c4 = 0;
+        tmp5(tmp19.body.message);
         c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              closure_129_0 = undefined;
-              closure_129_1 = undefined;
-              ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp8) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj1 = { value, done: true };
-              return obj1;
-            } else {
-              c4 = 1;
-              const intl = setRegistering(1114).intl;
-              c5 = 3;
-              c6 = 1;
-              const obj2 = {
-                value: setRegistering(6647).finishRegisterWebAuthnCredential(
-                  intl.string(setRegistering(1114).t["8H5RmH"]),
-                  closure_129_0,
-                  closure_129_1,
-                ),
-                done: false,
-              };
-              return obj2;
-            }
-          } else {
-            if (2 === tmp8) {
-              c4 = 0;
-              tmp5(tmp19.body.message);
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              obj = setError(14859);
-              obj.close();
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          }
-        } catch (tmp19) {
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp19;
-          } else {
-            c5 = tmp;
-          }
-        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        setError(14835).close();
+        c4 = 0;
+        setError(14835);
       }
+      return value;
     };
     setError("");
     setError(dependencyMap[10]);
-    let obj = {
+    const obj = {
       setRegistering,
       setError,
       onRegisterSuccess(arg0) {
@@ -180,13 +120,18 @@ export default function TwoFASetupSuccess() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.flex };
   const items = [closure_8(closure_6, obj), , , , , , ,];
-  obj = { source: _mod14870, style: tmp.image };
+  obj = { source: _mod14846, style: tmp.image };
   items[1] = closure_8(closure_7, obj);
-  let obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj1 = {
+    style: tmp.success,
+    variant: "text-lg/semibold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   let intl = util.intl;
   obj1.children = intl.string(util.t.Awk3Gw);
   items[2] = closure_8(Text_Text.Text, obj1);
-  let obj2 = { style: tmp.successBody, children: null };
+  const obj2 = { style: tmp.successBody, children: null };
   const intl2 = util.intl;
   obj2.children = intl2.string(util.t["0d1bXM"]);
   items[3] = closure_8(native.LegacyText, obj2);

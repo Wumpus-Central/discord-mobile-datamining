@@ -12,7 +12,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const UserFlags = fn(1074).UserFlags;
-let closure_5 = fn(7095).PHONE_VERIFICATION_MODAL_KEY;
+let closure_5 = fn(7116).PHONE_VERIFICATION_MODAL_KEY;
 let apply = fn(12);
 let closure_6 = apply.debounce(function toggleSMS(user) {
   user = user.user;
@@ -45,17 +45,17 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
     }
     obj = ModalActionCreatorsDefault;
     const obj1 = { reason: PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE };
-    obj.pushLazy(asyncRequireImpl(7094, dependencyMap.paths), obj1, closure_5);
-    const tmp5 = asyncRequireImpl(7094, dependencyMap.paths);
+    obj.pushLazy(asyncRequireImpl(7115, dependencyMap.paths), obj1, closure_5);
+    const tmp5 = asyncRequireImpl(7115, dependencyMap.paths);
   }
 }, 200);
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11562);
 apply = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uHAJ5v);
   },
-  parent: fn(8027).MobileUserSettings.ACCOUNT,
+  parent: fn(8049).MobileUserSettings.ACCOUNT,
   useIsDisabled: function useAccountSMSBackupSettingIsDisabled() {
     const items = [UserStore];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -95,7 +95,7 @@ apply = {
     }
     return sMSBackupDisabledMessage;
   },
-  usePredicate: fn(14759).useIsTOTPEnabled,
+  usePredicate: fn(14733).useIsTOTPEnabled,
 };
 apply = SettingBuilders.createToggle(apply);
 const size = fn(2);

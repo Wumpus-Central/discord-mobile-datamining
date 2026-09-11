@@ -28,7 +28,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
         } else {
           const websites = game.websites;
           const found = websites.find(
-            (category) => category.category === id(8759).ThirdPartyGameApplicationWebsiteCategory.STEAM,
+            (category) => category.category === id(8780).ThirdPartyGameApplicationWebsiteCategory.STEAM,
           );
           if (found != null) {
             const url = found.url;

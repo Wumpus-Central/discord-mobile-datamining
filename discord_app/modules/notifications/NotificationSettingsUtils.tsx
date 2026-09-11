@@ -16,41 +16,46 @@ function getNamedExperiment(experiment) {
     return tmp;
   }
 }
-const NotificationSettingsConstants = fn(14521);
+const NotificationSettingsConstants = fn(14497);
 ({ NOTIF_SETTING_MAPPING: closure_4, NOTIF_SETTINGS: hasOwnProperty } = NotificationSettingsConstants);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");
+let result = size.fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");
 
 export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSettingsAndMappings() {
   const settings = [];
   const mappings = [];
+  let obj = DeclarativeNotificationSettingsRedesignExperiment;
+  const result = obj.isDeclarativeNotificationSettingsRedesignEnabled("getAssignedNotifSettingsAndMappings");
   const set = new Set();
   const iter = dependencyMap[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = nextResult;
-    if (null != nextResult.experiment) {
-      let obj2 = getNamedExperiment(tmp3.experiment);
-      let variations = tmp3.variations;
-      continue;
+    let tmp4 = nextResult;
+    let redesignState = nextResult.redesignState;
+    if (null == redesignState) {
+      if (null != tmp4.experiment) {
+        let obj3 = getNamedExperiment(tmp4.experiment);
+        let variations = tmp4.variations;
+        continue;
+      }
+      let arr = settings.push(tmp4);
+      let addResult = set.add(tmp4.id);
     }
-    let arr = settings.push(tmp3);
-    let addResult = set.add(tmp3.id);
     continue;
   }
   const entries = Object.entries(React4);
-  while (tmp10 !== undefined) {
-    let tmp13 = _slicedToArray(tmp11, 2);
-    let tmp14 = tmp13[1];
+  while (tmp14 !== undefined) {
+    let tmp17 = _slicedToArray(tmp15, 2);
+    let tmp18 = tmp17[1];
     let _parseInt = parseInt;
-    let parsed = parseInt(tmp13[0]);
-    for (const item10059 of tmp14) {
-      if (set.has(item10059)) {
-        let obj = { notifType: null, notifSetting: null };
+    let parsed = parseInt(tmp17[0]);
+    for (const item10071 of tmp18) {
+      if (set.has(item10071)) {
+        obj = { notifType: null, notifSetting: null };
         obj.notifType = parsed;
-        obj.notifSetting = item10059;
+        obj.notifSetting = item10071;
         arr = mappings.push(obj);
-        obj3.return();
+        obj4.return();
         break;
       }
       continue;
@@ -60,10 +65,10 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
   return { settings, mappings };
 };
 export const useIsDeclarativeSettingsUIAvailable = function useIsDeclarativeSettingsUIAvailable(
-  LegacyNotificationsSetting,
+  AndroidMessageNotificationsSetting,
 ) {
   return DeclarativeNotificationSettingsRedesignExperiment.useIsDeclarativeNotificationSettingsRedesignEnabled(
-    "useIsDeclarativeSettingsUIAvailable:" + LegacyNotificationsSetting,
+    "useIsDeclarativeSettingsUIAvailable:" + AndroidMessageNotificationsSetting,
   );
 };
 export const useNotifCategoryVisibility = function useNotifCategoryVisibility(CATEGORY_OTHER) {
@@ -80,11 +85,18 @@ export const useNotifSettingVisibility = function useNotifSettingVisibility(GAMI
         const iter = dependencyMap[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
+          let tmp3 = nextResult;
           if (nextResult.id === arg0) {
+            let redesignState = tmp3.redesignState;
             if (null != tmp3.experiment) {
-              let obj = { experiment: null, variations: null };
+              let obj = { redesignState, experiment: null, variations: null };
               obj.experiment = closure_1_6(nextResult.experiment);
               obj.variations = nextResult.variations;
+              iter.return();
+              return obj;
+            } else if (null != redesignState) {
+              obj = { redesignState: null };
+              obj.redesignState = redesignState;
               iter.return();
               return obj;
             }
@@ -116,9 +128,12 @@ export const useNotifSettingVisibility = function useNotifSettingVisibility(GAMI
       "useIsDeclarativeSettingsUIAvailable:" + "useNotifSettingVisibility",
     );
   if (isDeclarativeNotificationSettingsRedesignEnabled) {
-    isDeclarativeNotificationSettingsRedesignEnabled =
-      null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
-    const tmp5 = null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
+    let tmp4 = false !== memo.redesignState;
+    if (tmp4) {
+      tmp4 = null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
+      let tmp6 = null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
+    }
+    isDeclarativeNotificationSettingsRedesignEnabled = tmp4;
   }
   return isDeclarativeNotificationSettingsRedesignEnabled;
 };

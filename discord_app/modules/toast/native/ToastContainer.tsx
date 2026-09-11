@@ -174,14 +174,14 @@ function wrapChildren(children) {
   return jsx(native.NonExpandingOverlayView, { children });
 }
 const jsx = fn(21).jsx;
-let createStyles = fn(4605);
+let createStyles = fn(4606);
 let obj = { container: null };
 obj = {
   position: "absolute",
   alignSelf: "center",
   flexDirection: "row",
   justifyContent: "center",
-  shadowColor: fn(5491).TOAST_CONTAINER_SHADOW_COLOR,
+  shadowColor: fn(5492).TOAST_CONTAINER_SHADOW_COLOR,
 };
 obj.container = obj;
 let closure_7 = createStyles.createStyles(obj);
@@ -223,7 +223,7 @@ export default noop.memo(() => {
     }
   }, items1);
   obj = { items: stateFromStoresArray, renderItem, getItemKey, wrapChildren };
-  return jsx(stateFromStoresArray(4315).TransitionGroup, {
+  return jsx(stateFromStoresArray(4317).TransitionGroup, {
     items: stateFromStoresArray,
     renderItem,
     getItemKey,

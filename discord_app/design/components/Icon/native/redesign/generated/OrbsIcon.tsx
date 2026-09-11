@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/OrbsIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod8907 from "../../../../../../../_runtime/metro/08907__.js";
+import _mod8928 from "../../../../../../../_runtime/metro/08928__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const OrbsIcon = function OrbsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8907, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8928, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

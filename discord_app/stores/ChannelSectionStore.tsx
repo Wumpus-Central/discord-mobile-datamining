@@ -510,7 +510,15 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     let flag = null != guildSidebars[arg0.guildId];
     if (flag) {
       delete tmp[tmp2];
+      let hasSearchStateResult = null != searchContextId;
+      if (hasSearchStateResult) {
+        hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
+      }
       flag = true;
+      if (hasSearchStateResult !== c24) {
+        c24 = hasSearchStateResult;
+        flag = true;
+      }
     }
     return flag;
   },

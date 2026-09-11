@@ -5,7 +5,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import InitialMemberVerificationStore from "InitialMemberVerificationStore.tsx";
 
 require = fn;
-const setInitialVerification = fn(5625).setInitialVerification;
+const setInitialVerification = fn(5626).setInitialVerification;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
 

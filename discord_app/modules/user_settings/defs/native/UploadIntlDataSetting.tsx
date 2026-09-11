@@ -303,13 +303,13 @@ const Constants = fn(1074);
 const jsx = fn(21).jsx;
 let module_560 = fn(560);
 let closure_9 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11562);
 module_560 = {
   useTitle() {
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(15620).FileUpIcon,
+  IconComponent: fn(15603).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_11.apply;
@@ -320,7 +320,7 @@ module_560 = {
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14920).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(14897).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useUploadIntlDataTrailing() {
     let tmp = null;
     if (closure_9().isUploading) {

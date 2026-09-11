@@ -9,145 +9,193 @@ import GuildStore from "../stores/GuildStore.tsx";
 
 require = fn;
 let closure_11 = async function _startLurking(arg0) {
-  if (1 === tmp5) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c8 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c8 = 3;
-      return { value, done: true };
+      let obj = { value, done: true };
+      return obj;
     } else {
-      const channelId = closure_133_2.channelId;
-      const onSuccess = closure_133_2.onSuccess;
-      const joinSource = closure_133_2.joinSource;
-      const loadId = closure_133_2.loadId;
-      const shouldNavigate = closure_133_2.shouldNavigate;
-      let tmp24 = undefined === shouldNavigate;
-      if (!tmp24) {
-        tmp24 = shouldNavigate;
-      }
-      closure_133_9 = tmp24;
-      let obj6 = closure_134_0(closure_134_2[5]);
-      const history = obj6.getHistory();
-      const guild = closure_134_6.getGuild(closure_133_0);
-      const obj3 = { sourceLocationStack: closure_133_3, state: null };
-      obj3.state = { analyticsSource: closure_133_1 };
-      closure_133_12 = obj3;
-      if (null != guild) {
-        if (null != guild.joinedAt) {
-          if (closure_133_9) {
-            if (null == channelId) {
-              closure_134_0(closure_134_2[6]).transitionToGuild(closure_133_0, closure_133_12);
-              closure_134_0(closure_134_2[6]);
-            } else {
-              const obj5 = {};
-              const merged = Object.assign(closure_133_12);
-              obj5.navigationReplace = true;
-              obj5.openChannel = true;
-              closure_134_1(closure_134_2[7])(
-                closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId),
-                obj5,
-              );
-              closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId);
-              closure_134_1(closure_134_2[7]);
-            }
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_6 = tmp5;
+          closure_5 = tmp2;
+          closure_133_2 = undefined;
+          closure_133_3 = undefined;
+          closure_133_0 = closure_0;
+          closure_133_1 = closure_1;
+          let obj1 = closure_2;
+          if (closure_2 === undefined) {
+            obj1 = {};
           }
+          closure_133_2 = obj1;
+          closure_133_3 = closure_3;
+          let channelId;
+          let onSuccess;
+          let joinSource;
+          let loadId;
+          let shouldNavigate;
+          closure_133_9 = undefined;
+          let history;
+          let guild;
+          closure_133_12 = undefined;
+          closure_133_13 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: null };
         }
-      }
-      if (null != guild) {
-        if (closure_134_4.isLurking(closure_133_0)) {
-          if (closure_133_9) {
-            let obj12 = closure_134_1(closure_134_2[8]);
-            obj6 = {};
-            const merged1 = Object.assign(closure_133_12);
-            obj6.welcomeModalChannelId = channelId;
-            obj6.navigationReplace = null != channelId;
-            obj6.openChannel = null != channelId;
-            obj6.search = history.location.search;
-            c7 = 2;
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            channelId = closure_133_2.channelId;
+            onSuccess = closure_133_2.onSuccess;
+            joinSource = closure_133_2.joinSource;
+            loadId = closure_133_2.loadId;
+            shouldNavigate = closure_133_2.shouldNavigate;
+            let tmp24 = undefined === shouldNavigate;
+            if (!tmp24) {
+              tmp24 = shouldNavigate;
+            }
+            closure_133_9 = tmp24;
+            let obj6 = closure_134_0(closure_134_2[5]);
+            history = obj6.getHistory();
+            guild = closure_134_6.getGuild(closure_133_0);
+            const obj3 = { sourceLocationStack: closure_133_3, state: null };
+            const obj4 = { analyticsSource: closure_133_1 };
+            obj3.state = obj4;
+            closure_133_12 = obj3;
+            if (null != guild) {
+              if (null != guild.joinedAt) {
+                if (closure_133_9) {
+                  if (null == channelId) {
+                    closure_134_0(closure_134_2[6]).transitionToGuild(closure_133_0, closure_133_12);
+                    const obj17 = closure_134_0(closure_134_2[6]);
+                  } else {
+                    const obj5 = {};
+                    const tmp84 = closure_134_1(closure_134_2[7]);
+                    const merged = Object.assign(closure_133_12);
+                    obj5.navigationReplace = true;
+                    obj5.openChannel = true;
+                    tmp84(closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId), obj5);
+                    const CHANNELResult = closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId);
+                  }
+                }
+              }
+            }
+            if (null != guild) {
+              if (closure_134_4.isLurking(closure_133_0)) {
+                if (closure_133_9) {
+                  let obj12 = closure_134_1(closure_134_2[8]);
+                  obj6 = {};
+                  const merged1 = Object.assign(closure_133_12);
+                  obj6.welcomeModalChannelId = channelId;
+                  obj6.navigationReplace = null != channelId;
+                  obj6.openChannel = null != channelId;
+                  obj6.search = history.location.search;
+                  c7 = 2;
+                  c8 = 1;
+                  const obj7 = {
+                    value: obj12.transitionToGuildSync(closure_133_0, obj6, channelId, closure_133_2.messageId),
+                    done: false,
+                  };
+                  return obj7;
+                }
+              }
+            }
+            let tmp45;
+            if (closure_133_3 != null) {
+              tmp45 = tmp44[closure_133_3.length - 1];
+            }
+            let page = tmp45;
+            if (tmp45 == null) {
+              page = undefined;
+              if (closure_133_1 != null) {
+                page = closure_133_1.page;
+              }
+            }
+            closure_133_13 = page;
+            let obj9 = closure_134_1(closure_134_2[8]);
+            const obj8 = { lurker: true, source: joinSource, loadId, lurkLocation: closure_133_13 };
+            c7 = 3;
             c8 = 1;
-            return {
-              value: obj12.transitionToGuildSync(closure_133_0, obj6, channelId, closure_133_2.messageId),
+            obj9 = { value: null, done: false };
+            obj9.value = obj9.joinGuild(closure_133_0, obj8);
+            return obj9;
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj10 = { value, done: true };
+            return obj10;
+          }
+        } else if (3 === tmp5) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj11 = { value, done: true };
+            return obj11;
+          } else if (closure_133_9) {
+            obj1 = closure_134_1(closure_134_2[8]);
+            obj12 = {};
+            const merged2 = Object.assign(closure_133_12);
+            obj12.welcomeModalChannelId = channelId;
+            obj12.navigationReplace = null != channelId;
+            obj12.openChannel = null != channelId;
+            obj12.search = history.location.search;
+            c7 = 4;
+            c8 = 1;
+            const obj13 = {
+              value: obj1.transitionToGuildSync(closure_133_0, obj12, channelId, closure_133_2.messageId),
               done: false,
             };
+            return obj13;
           }
+        } else if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
         }
-      }
-      let tmp45;
-      if (closure_133_3 != null) {
-        tmp45 = tmp44[closure_133_3.length - 1];
-      }
-      let page = tmp45;
-      if (tmp45 == null) {
-        page = undefined;
-        if (closure_133_1 != null) {
-          page = closure_133_1.page;
+        if (onSuccess != null) {
+          tmp102();
         }
+        c8 = 3;
+        return { value: "HermesInternal", done: null };
       }
-      closure_133_13 = page;
-      closure_134_1(closure_134_2[8]);
-      c7 = 3;
-      c8 = 1;
-      const obj9 = { value: null, done: false };
-      obj9.value = obj9.joinGuild(closure_133_0, {
-        lurker: true,
-        source: joinSource,
-        loadId,
-        lurkLocation: closure_133_13,
-      });
-      return obj9;
+    } catch (tmp106) {
+      c8 = tmp;
+      throw tmp106;
     }
-  } else if (2 === tmp5) {
-    if (arg0 === 1) {
-      c8 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c8 = 3;
-      return { value, done: true };
-    }
-  } else if (3 === tmp5) {
-    if (arg0 === 1) {
-      c8 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c8 = 3;
-      return { value, done: true };
-    } else if (closure_133_9) {
-      let obj1 = closure_134_1(closure_134_2[8]);
-      obj12 = {};
-      const merged2 = Object.assign(closure_133_12);
-      obj12.welcomeModalChannelId = channelId;
-      obj12.navigationReplace = null != channelId;
-      obj12.openChannel = null != channelId;
-      obj12.search = history.location.search;
-      c7 = 4;
-      c8 = 1;
-      return {
-        value: obj1.transitionToGuildSync(closure_133_0, obj12, channelId, closure_133_2.messageId),
-        done: false,
-      };
-    }
-  } else if (arg0 === 1) {
-    c8 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c8 = 3;
-    return { value, done: true };
   }
-  if (onSuccess != null) {
-    tmp102();
-  }
-  await "HermesInternal";
-  closure_5 = tmp2;
-  closure_133_0 = closure_0;
-  closure_133_1 = closure_1;
-  obj1 = closure_2;
-  if (closure_2 === undefined) {
-    obj1 = {};
-  }
-  closure_133_2 = obj1;
-  closure_133_3 = closure_3;
-  return "PX_16";
 };
 function makeDiscoverableGuild(body) {
   const obj = {

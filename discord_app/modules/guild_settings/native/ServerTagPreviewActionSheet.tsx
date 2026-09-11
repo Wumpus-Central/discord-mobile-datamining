@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(9134).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(9155).GuildProfileFetchStatus;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { error: null };
 createStyles = { paddingVertical: nativeDefault.space.PX_24, alignItems: "center", rowGap: nativeDefault.space.PX_12 };
 createStyles.error = createStyles;
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/ServerT
 
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(9256);
+  let obj = guildId(9277);
   let guildProfile = obj.useGuildProfile(guildId);
   guildProfile = guildProfile.guildProfile;
   const items = [guildId];
@@ -54,26 +54,26 @@ export default function ServerTagPreviewActionSheet(guildId) {
     const obj1 = { variant: "text-md/medium", color: "text-muted", children: null };
     const intl = tmp2(1114).intl;
     obj1.children = intl.string(tmp2(1114).t.tmGHjc);
-    const items1 = [closure_6(tmp2(4601).Text, obj1)];
+    const items1 = [closure_6(tmp2(4602).Text, obj1)];
     const obj2 = { variant: "secondary", text: null, onPress: null };
     const intl2 = tmp2(1114).intl;
     obj2.text = intl2.string(tmp2(1114).t["5911Lb"]);
     obj2.onPress = function onPress() {
       return GuildProfileActionCreators.getGuildProfile(guildId, true);
     };
-    items1[1] = closure_6(tmp2(5025).Button, obj2);
+    items1[1] = closure_6(tmp2(5026).Button, obj2);
     obj.children = items1;
     tmp7 = closure_7(View, obj);
     tmp8 = closure_6;
   } else {
-    tmp7 = closure_6(tmp2(7091).SceneLoadingIndicator, {});
+    tmp7 = closure_6(tmp2(7112).SceneLoadingIndicator, {});
     tmp8 = closure_6;
   }
   const obj3 = { children: null };
   const obj4 = { title: null };
   const intl3 = tmp2(1114).intl;
   obj4.title = intl3.string(guildId(1114).t["2QmKZ2"]);
-  const items2 = [tmp8(guildId(7201).BottomSheetTitleHeader, obj4), tmp7];
+  const items2 = [tmp8(guildId(7222).BottomSheetTitleHeader, obj4), tmp7];
   obj3.children = items2;
-  return closure_7(guildId(7249).ActionSheet, obj3);
+  return closure_7(guildId(7270).ActionSheet, obj3);
 }

@@ -1,11 +1,22 @@
 // discord_common/js/packages/i18n/i18n.tsx
 import getSystemLocale from "getSystemLocale.tsx";
-import _modDef17325 from "../../../../_runtime/metro/17325__.js";
-import _mod17366 from "../../../../_runtime/metro/17366__.js";
+import _modDef17314 from "../../../../_runtime/metro/17314__.js";
+import _mod17355 from "../../../../_runtime/metro/17355__.js";
 import parse from "parse.tsx";
 
 require = fn;
-global.IntlMessageFormat = _modDef17325;
+global.IntlMessageFormat = _modDef17314;
+const module_17323 = fn(17323);
+const module_17324 = fn(17324);
+const module_17325 = fn(17325);
+const module_17326 = fn(17326);
+const module_17327 = fn(17327);
+const module_17328 = fn(17328);
+const module_17329 = fn(17329);
+const module_17330 = fn(17330);
+const module_17331 = fn(17331);
+const module_17332 = fn(17332);
+const module_17333 = fn(17333);
 const module_17334 = fn(17334);
 const module_17335 = fn(17335);
 const module_17336 = fn(17336);
@@ -23,20 +34,9 @@ const module_17347 = fn(17347);
 const module_17348 = fn(17348);
 const module_17349 = fn(17349);
 const module_17350 = fn(17350);
-const module_17351 = fn(17351);
-const module_17352 = fn(17352);
-const module_17353 = fn(17353);
-const module_17354 = fn(17354);
-const module_17355 = fn(17355);
-const module_17356 = fn(17356);
-const module_17357 = fn(17357);
-const module_17358 = fn(17358);
-const module_17359 = fn(17359);
-const module_17360 = fn(17360);
-const module_17361 = fn(17361);
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
-  fn(17362);
+  fn(17351);
 }
 const React2 = "en-US";
 class Provider {
@@ -139,11 +139,11 @@ _instance_members_initializer_I18N_ = function () {
       return _createProxy(obj);
     } else {
       try {
-        obj = self(17367);
+        obj = self(17356);
         return obj.getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(17367).getMessage(tmp7, tmp);
+          return self(17356).getMessage(tmp7, tmp);
         } else {
           return "";
         }

@@ -10,7 +10,7 @@ import FileSystemStore from "../../stores/FileSystemStore.tsx";
 import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-let SaveableChannelsStore = fn(7530);
+let SaveableChannelsStore = fn(7551);
 ({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: metroRequire, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: closure_7 } =
   SaveableChannelsStore);
 let closure_10 = 5 * DurationsDefault.Millis.MINUTE;

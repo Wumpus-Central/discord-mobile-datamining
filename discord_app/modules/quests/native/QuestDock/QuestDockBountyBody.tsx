@@ -4,27 +4,31 @@ import AdCreativeType from "../../../../../discord_common/js/shared/shared-const
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserActionTypes.tsx";
+import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
 import BountiesModalActionCreatorsDefault from "../BountiesModal/BountiesModalActionCreators.tsx";
 import BountiesModalTypes from "../BountiesModal/BountiesModalTypes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5494).QuestDockMode;
+const QuestDockMode = fn(5495).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");
+let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");
 
 export default noop.memo(function QuestDockBountyBody() {
   const isRendered = noop.useContext(setRestingQuestDockMode(getQuestImpressionId[3])).isRendered;
   let obj = questDockBounty(getQuestImpressionId[4]);
   questDockBounty = obj.useQuestDockBounty();
-  let isQuestDockExpanded = questDockBounty(getQuestImpressionId[5]).useIsQuestDockExpanded();
+  let obj1 = questDockBounty(getQuestImpressionId[5]);
+  let isQuestDockExpanded = obj1.useIsQuestDockExpanded();
   setRestingQuestDockMode = noop.useContext(
     questDockBounty(getQuestImpressionId[6]).QuestDockExternalCoordinationContext,
   ).setRestingQuestDockMode;
-  const obj2 = questDockBounty(getQuestImpressionId[5]);
   getQuestImpressionId = questDockBounty(getQuestImpressionId[7]).useGetQuestImpressionId();
   const items = [questDockBounty, getQuestImpressionId, setRestingQuestDockMode];
+  const items1 = [, ,];
+  ({ id: arr2[0], cta: arr2[1] } = questDockBounty);
+  items1[2] = getQuestImpressionId;
   const callback = noop.useCallback(() => {
     let obj = {
       type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
@@ -44,32 +48,48 @@ export default noop.memo(function QuestDockBountyBody() {
     BountiesModalActionCreatorsDefault.showModal(obj);
     setRestingQuestDockMode(QuestDockMode.COLLAPSED);
   }, items);
+  const callback1 = noop.useCallback(() => {
+    let obj = {
+      adContentId: questDockBounty.id,
+      adCreativeType: AdCreativeType.AdCreativeType.BOUNTY,
+      cta: questDockBounty.cta,
+    };
+    obj = {
+      content: QuestTypes.QuestContent.QUEST_BAR_MOBILE,
+      ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK,
+      impressionId: getQuestImpressionId(),
+      sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE,
+    };
+    const result = obj.openAdGameLinkDirectly(obj, obj);
+  }, items1);
   const obj3 = questDockBounty(getQuestImpressionId[7]);
   obj = {
-    assetUrl: setRestingQuestDockMode(getQuestImpressionId[16]),
+    assetUrl: setRestingQuestDockMode(getQuestImpressionId[17]),
     isAnimatedAsset: true,
     paused: null,
     withAnimation: null,
   };
-  let tmp9 = !isQuestDockExpanded;
+  let tmp11 = !isQuestDockExpanded;
   if (isQuestDockExpanded) {
-    tmp9 = !isRendered;
+    tmp11 = !isRendered;
   }
-  obj.paused = tmp9;
+  obj.paused = tmp11;
   if (isQuestDockExpanded) {
     isQuestDockExpanded = isRendered;
   }
   obj = {
-    rewardTile: jsx(questDockBounty(getQuestImpressionId[15]).QuestDockBodyRewardTile, {
-      assetUrl: setRestingQuestDockMode(getQuestImpressionId[16]),
+    rewardTile: jsx(questDockBounty(getQuestImpressionId[16]).QuestDockBodyRewardTile, {
+      assetUrl: setRestingQuestDockMode(getQuestImpressionId[17]),
       isAnimatedAsset: true,
       paused: null,
       withAnimation: null,
     }),
+    contentBadge: jsx(tmp(tmp2[18]), {}),
     title: null,
     description: null,
     ctaText: null,
     onCtaPress: null,
+    secondaryCta: null,
     withAnimation: isQuestDockExpanded,
   };
   let str = questDockBounty.productName;
@@ -77,22 +97,44 @@ export default noop.memo(function QuestDockBountyBody() {
     str = "";
   }
   obj.title = str;
-  const intl = tmp2(tmp[17]).intl;
-  obj.description = intl.string(questDockBounty(getQuestImpressionId[17]).t["1uzE2S"]);
-  const intl2 = tmp2(tmp[17]).intl;
-  obj.ctaText = intl2.string(questDockBounty(getQuestImpressionId[17]).t["1IPUq9"]);
+  const intl = tmp3(tmp2[19]).intl;
+  obj.description = intl.string(questDockBounty(getQuestImpressionId[19]).t["1uzE2S"]);
+  const intl2 = tmp3(tmp2[19]).intl;
+  const tmp10 = setRestingQuestDockMode(getQuestImpressionId[16]);
+  obj.ctaText = intl2.format(
+    questDockBounty(getQuestImpressionId[19]).t.zCbUvd,
+    questDockBounty(getQuestImpressionId[20]).bountyProductNameIntlParams(),
+  );
   obj.onCtaPress = callback;
-  return jsx(setRestingQuestDockMode(getQuestImpressionId[15]), {
-    rewardTile: jsx(questDockBounty(getQuestImpressionId[15]).QuestDockBodyRewardTile, {
-      assetUrl: setRestingQuestDockMode(getQuestImpressionId[16]),
-      isAnimatedAsset: true,
-      paused: null,
-      withAnimation: null,
-    }),
-    title: null,
-    description: null,
-    ctaText: null,
-    onCtaPress: null,
-    withAnimation: isQuestDockExpanded,
+  obj1 = {
+    variant: "secondary",
+    size: "md",
+    icon: tmp(tmp2[22]),
+    accessibilityLabel: questDockBounty.cta.buttonLabel,
+    onPress: callback1,
+  };
+  obj.secondaryCta = jsx(questDockBounty(getQuestImpressionId[21]).IconButton, {
+    variant: "secondary",
+    size: "md",
+    icon: tmp(tmp2[22]),
+    accessibilityLabel: questDockBounty.cta.buttonLabel,
+    onPress: callback1,
   });
+  return (
+    <tmp10
+      rewardTile={jsx(questDockBounty(getQuestImpressionId[16]).QuestDockBodyRewardTile, {
+        assetUrl: setRestingQuestDockMode(getQuestImpressionId[17]),
+        isAnimatedAsset: true,
+        paused: null,
+        withAnimation: null,
+      })}
+      contentBadge={jsx(tmp(tmp2[18]), {})}
+      title={null}
+      description={null}
+      ctaText={null}
+      onCtaPress={null}
+      secondaryCta={null}
+      withAnimation={isQuestDockExpanded}
+    />
+  );
 });

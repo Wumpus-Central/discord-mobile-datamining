@@ -19,7 +19,7 @@ function GroupDMInviteManagement(channelId) {
   dependencyMap = tmp2[1];
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   closure_3 = tmp3[1];
-  first(5042)(() => {
+  first(5043)(() => {
     closure_0 = async function _fetchInvites() {
       if (v3 === 2) {
         v3 = 3;
@@ -125,16 +125,16 @@ function GroupDMInviteManagement(channelId) {
   [][0] = first;
   const callback = noop.useCallback((code) => code.code, []);
   if (tmp3[0]) {
-    let tmp14 = jsx(channelId(7091).SceneLoadingIndicator, {});
+    let tmp14 = jsx(channelId(7112).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj = { lightSource: tmp4(11021), darkSource: tmp4(11022), title: null, body: null };
+    let obj = { lightSource: tmp4(11041), darkSource: tmp4(11042), title: null, body: null };
     const intl = channelId(1114).intl;
     obj.title = intl.string(channelId(1114).t["+nLJkZ"]);
     const intl2 = channelId(1114).intl;
     obj.body = intl2.string(channelId(1114).t.F53CAc);
     tmp14 = jsx(channelId(1178).EmptyState, {
-      lightSource: tmp4(11021),
-      darkSource: tmp4(11022),
+      lightSource: tmp4(11041),
+      darkSource: tmp4(11042),
       title: null,
       body: null,
     });
@@ -162,11 +162,11 @@ function GroupDMInviteManagement(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const ChannelSettingsStore = fn(8696);
+const ChannelSettingsStore = fn(8717);
 const Constants = fn(1074);
 ({ ChannelSettingsSections: closure_9, Endpoints: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_12 = createStyles.createStyles({ list: { paddingTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx");
@@ -188,5 +188,5 @@ export default noop.memo(function GroupDMInviteManagementScreen(channelId) {
     obj[constants.INSTANT_INVITES_MANAGEMENT] = obj;
     return obj;
   }, items);
-  return jsx(channelId(7052).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+  return jsx(channelId(7073).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 });

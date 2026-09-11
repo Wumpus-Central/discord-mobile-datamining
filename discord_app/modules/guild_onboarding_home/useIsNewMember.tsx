@@ -5,7 +5,7 @@ import ImpersonateStore from "../impersonate/ImpersonateStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 
 require = fn;
-const GuildMemberFlags = fn(4230).GuildMemberFlags;
+const GuildMemberFlags = fn(4232).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");
 

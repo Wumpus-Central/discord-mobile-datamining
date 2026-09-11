@@ -13,10 +13,10 @@ import AppStateStore from "../../stores/native/AppStateStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1074).AppStates;
-const NativePermissionTypes = fn(4815).NativePermissionTypes;
+const NativePermissionTypes = fn(4816).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   sensitivity: { position: "relative", height: 20 },
   sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" },
@@ -43,7 +43,7 @@ createStyles = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
 createStyles.sensitivityMin = createStyles;
 createStyles.sensitivityMax = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 let obj2 = { flex: 1, backgroundColor: null };
-const ColorUtils = fn(4454);
+const ColorUtils = fn(4456);
 obj2.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6);
 createStyles.sensitivityDefault = obj2;
 let obj1 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -131,7 +131,7 @@ export default function VoiceSensitivity(auto) {
               return obj;
             } else {
               closure_0 = tmp4;
-              let obj2 = onThresholdChange(5189);
+              let obj2 = onThresholdChange(5190);
               c1 = 1;
               c2 = 1;
               const obj1 = {
@@ -154,7 +154,7 @@ export default function VoiceSensitivity(auto) {
             }
             if (tmp5) {
               mediaEngine = mediaEngine.getMediaEngine();
-              mediaEngine.on(auto(4660).MediaEngineEvent.VoiceActivity, callback);
+              mediaEngine.on(auto(4661).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
             return { value: "HermesInternal", done: null };

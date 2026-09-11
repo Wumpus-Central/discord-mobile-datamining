@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let obj = { list: null, searchBar: null, sectionHeader: null };
 obj = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.list = obj;
@@ -30,22 +30,23 @@ let closure_10 = noop.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  let obj = item(10257);
-  const featureId = obj.getFeatureId(item);
-  const featureId1 = item(10257).getFeatureId(feature);
-  obj = {
+  const obj = {
     start,
     end,
+    value: item(10276).getFeatureId(item),
     label: item.name,
-    onPress() {
-      setFeature(item);
-      ActionSheetActionCreatorsDefault.hideActionSheet();
-    },
-    trailing: null,
+    legacyCompat_selected: null,
+    legacyCompat_onPress: null,
   };
-  obj = { selected: featureId === featureId1 };
-  obj.trailing = closure_6(item(5739).FormRadio, obj);
-  return closure_6(item(5655).TableRow, obj);
+  const obj2 = item(10276);
+  const featureId = item(10276).getFeatureId(item);
+  const obj3 = item(10276);
+  obj.legacyCompat_selected = featureId === item(10276).getFeatureId(feature);
+  obj.legacyCompat_onPress = function legacyCompat_onPress() {
+    setFeature(item);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+  };
+  return closure_6(item(5739).TableRadioRow, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");
@@ -64,9 +65,9 @@ export default function BugReporterFeatureActionSheet(features) {
     const found = features.filter((asana_inbox_id) => {
       let tmp = null != asana_inbox_id.asana_inbox_id;
       if (tmp) {
-        let isEmptyResult = feature(setFeature[12]).isEmpty(first);
+        let isEmptyResult = feature(setFeature[11]).isEmpty(first);
         if (!isEmptyResult) {
-          let tmp2Result = feature(setFeature[13]);
+          let tmp2Result = feature(setFeature[12]);
           let str3;
           const formatted = first.toLowerCase();
           if (asana_inbox_id.name != null) {
@@ -78,7 +79,7 @@ export default function BugReporterFeatureActionSheet(features) {
           isEmptyResult = tmp2Result(formatted, str3);
         }
         if (!isEmptyResult) {
-          tmp2Result = feature(setFeature[13]);
+          tmp2Result = feature(setFeature[12]);
           let str5;
           const formatted1 = first.toLowerCase();
           if (asana_inbox_id.squad != null) {
@@ -90,7 +91,7 @@ export default function BugReporterFeatureActionSheet(features) {
           isEmptyResult = tmp2Result(formatted1, str5);
         }
         tmp = isEmptyResult;
-        const obj = feature(setFeature[12]);
+        const obj = feature(setFeature[11]);
       }
       return tmp;
     });
@@ -109,7 +110,7 @@ export default function BugReporterFeatureActionSheet(features) {
     return obj;
   }, items);
   items = memo.items;
-  const tmp6 = feature(setFeature[15])();
+  const tmp6 = feature(setFeature[14])();
   const height = tmp6;
   const items1 = [items, setFeature, feature];
   const items2 = [tmp6, items];
@@ -130,28 +131,28 @@ export default function BugReporterFeatureActionSheet(features) {
   );
   let obj = { scrollable: true, startExpanded: true, header: null, children: null };
   obj = { title: null };
-  const intl = features(setFeature[18]).intl;
-  obj.title = intl.string(features(setFeature[18]).t["77VVd8"]);
-  obj.header = closure_6(features(setFeature[17]).BottomSheetTitleHeader, obj);
+  const intl = features(setFeature[17]).intl;
+  obj.title = intl.string(features(setFeature[17]).t["77VVd8"]);
+  obj.header = closure_6(features(setFeature[16]).BottomSheetTitleHeader, obj);
   obj = {
     style: tmp.searchBar,
-    children: closure_6(features(setFeature[19]).SearchField, { size: "md", onChange: tmp2[1] }),
+    children: closure_6(features(setFeature[18]).SearchField, { size: "md", onChange: tmp2[1] }),
   };
   const items3 = [closure_6(height, obj)];
   const obj1 = {
     style: tmp.list,
     inActionSheet: true,
     sections: memo.sections,
-    itemSize: feature(setFeature[14])(),
+    itemSize: feature(setFeature[13])(),
     estimatedListSize: "windowSize",
     renderItem: callback,
     renderSectionHeader: callback1,
     sectionHeaderSize: tmp6,
     insetEnd: null,
   };
-  const tmp5 = feature(setFeature[14])();
-  obj1.insetEnd = feature(setFeature[5]).space.PX_16 + feature(setFeature[11])().insets.bottom;
-  items3[1] = closure_6(feature(setFeature[20]), obj1);
+  const tmp5 = feature(setFeature[13])();
+  obj1.insetEnd = feature(setFeature[5]).space.PX_16 + feature(setFeature[10])().insets.bottom;
+  items3[1] = closure_6(feature(setFeature[19]), obj1);
   obj.children = items3;
-  return closure_7(features(setFeature[16]).BottomSheet, obj);
+  return closure_7(features(setFeature[15]).BottomSheet, obj);
 }

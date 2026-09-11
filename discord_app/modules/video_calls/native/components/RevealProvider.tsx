@@ -44,7 +44,7 @@ function useRevealProviderValue(arg0, channel) {
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
 }
-const ChannelCallStore = fn(9537);
+const ChannelCallStore = fn(9558);
 ({
   useChannelCallStore: metroRequire,
   focusTimeout: closure_7,
@@ -68,7 +68,7 @@ export default function RevealProvider(showStatus) {
     flag2 = false;
   }
   const tmp = closure_6((focus) => focus.focus);
-  closure_0 = tmp;
+  _require = tmp;
   const tmp2 = useRevealProviderValue(tmp, channel);
   ({ reveal, prefersDeferringSystemGestures } = tmp2);
   const items = [tmp];
@@ -79,26 +79,25 @@ export default function RevealProvider(showStatus) {
       React5.stop();
     }
   }, items);
-  let str = "light-content";
-  if (flag2) {
-    str = "light-content";
-    if ("dark" !== tmp6) {
-      str = "dark-content";
-    }
+  if (!flag2) {
+    let str = "light-content";
+  } else {
+    let obj = require("shared");
+    str = "dark-content";
   }
-  const obj = { value: tmp2, children: null };
-  let tmp10 = !reveal;
+  obj = { value: tmp2, children: null };
+  let tmp11 = !reveal;
   let tmp4Result = StatusBarDefault;
   if (!reveal) {
-    tmp10 = !flag;
+    tmp11 = !flag;
   }
-  const items1 = [closure_10(tmp4Result, { hidden: tmp10, animated: true, barStyle: str }), children];
-  let tmp12 = !reveal;
+  const items1 = [closure_10(tmp4Result, { hidden: tmp11, animated: true, barStyle: str }), children];
+  let tmp13 = !reveal;
   tmp4Result = HomeIndicatorDefault;
   if (!reveal) {
-    tmp12 = !prefersDeferringSystemGestures;
+    tmp13 = !prefersDeferringSystemGestures;
   }
-  items1[2] = closure_10(tmp4Result, { prefersHidden: tmp12, prefersDeferringSystemGestures });
+  items1[2] = closure_10(tmp4Result, { prefersHidden: tmp13, prefersDeferringSystemGestures });
   obj.children = items1;
   return closure_11(context.Provider, obj);
 }

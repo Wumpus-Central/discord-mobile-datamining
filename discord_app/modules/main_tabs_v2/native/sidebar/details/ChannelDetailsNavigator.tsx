@@ -3,7 +3,7 @@ import util from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import HeaderShared from "../../shared_components/HeaderShared.tsx";
 import navigateToThreadCreation from "../../../../threads/native/navigateToThreadCreation.tsx";
-import _modDef12843 from "../../../../../../_runtime/metro/12843__.js";
+import _modDef12866 from "../../../../../../_runtime/metro/12866__.js";
 import ChannelSettingsModal from "../../../../../components_native/channel_settings/ChannelSettingsModal.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -23,7 +23,7 @@ function ConnectedCreateThreadHeaderButton(channelId) {
 }
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
-  let obj = channel(7321);
+  let obj = channel(7342);
   [][0] = channel;
   const canStartThread = obj.useCanStartThread(channel);
   let tmp5 = null;
@@ -32,19 +32,19 @@ function CreateThreadHeaderButton(channel) {
     const intl = tmp(1114).intl;
     obj.accessibilityLabel = intl.string(tmp(1114).t.rBIGBL);
     obj.onPress = tmp4;
-    obj.source = _modDef12843;
-    tmp5 = closure_9(tmp(7914).HeaderIconButton, obj);
+    obj.source = _modDef12866;
+    tmp5 = closure_9(tmp(7936).HeaderIconButton, obj);
   }
   return tmp5;
 }
 const View = fn(17).View;
-const constants = fn(10988).ChannelDetailsNavigatorScreens;
+const constants = fn(11008).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SearchNavigatorScreens = fn(16735).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16723).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = Object.freeze({});
-const NativeStackNavigator = fn(7965);
+const NativeStackNavigator = fn(7987);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
@@ -148,7 +148,7 @@ export default noop.memo((navigation) => {
         route = route.route;
         let obj = {
           header(arg0) {
-            route(7914);
+            route(7936);
             const obj = {};
             const merged = Object.assign(arg0);
             obj.shouldHandleSafeArea = route(1115).isAndroid();

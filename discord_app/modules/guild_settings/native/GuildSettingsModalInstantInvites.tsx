@@ -5,7 +5,7 @@ import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef5647 from "../../../../_runtime/metro/05647__.js";
+import _modDef5648 from "../../../../_runtime/metro/05648__.js";
 import TableCheckboxRow from "../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import TableRowIcon from "../../../design/components/TableRow/native/TableRowIcon.native.tsx";
 import GuildAntiRaidUtils from "../../guild_antiraid/GuildAntiRaidUtils.tsx";
@@ -167,7 +167,7 @@ function GuildSettingsModalInstantInvites(invites) {
         obj = { guild, analyticsData: null };
         obj.analyticsData = obj;
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(11900, dependencyMap.paths),
+          asyncRequireImpl(11923, dependencyMap.paths),
           "GuildIncidentActionsActionSheet",
           obj,
         );
@@ -221,7 +221,7 @@ const Constants = fn(1074);
 ({ GuildFeatures: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_15 = createStyles.createStyles({
   list: { paddingTop: 8 },
   content: { padding: 16, gap: 24 },
@@ -249,7 +249,7 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
       contentContainerStyle: guildId.contentContainerStyle,
       showChannel: true,
     };
-    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj), closure_12(guildId(7092).NavScrim, {})];
+    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj), closure_12(guildId(7113).NavScrim, {})];
     obj.children = items1;
     tmp6 = closure_14(closure_13, obj);
   }

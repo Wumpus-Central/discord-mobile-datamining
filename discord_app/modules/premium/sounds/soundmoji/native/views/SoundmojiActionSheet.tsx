@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, soundmojiContainer: null, emoji: null, textContainer: null };
 createStyles = { padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;

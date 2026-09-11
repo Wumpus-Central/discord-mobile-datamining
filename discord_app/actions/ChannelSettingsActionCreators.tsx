@@ -188,7 +188,7 @@ let closure_9 = async function _saveChannel(arg0) {
           let channel;
           c4 = 1;
           c5 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -200,8 +200,15 @@ let closure_9 = async function _saveChannel(arg0) {
           return obj1;
         } else {
           channel = closure_131_5.getChannel(closure_130_0);
-          closure_131_1(closure_131_2[4]).dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" });
-          const obj10 = closure_131_1(closure_131_2[4]);
+          let isGameInvitesChannelResult;
+          if (channel != null) {
+            isGameInvitesChannelResult = channel.isGameInvitesChannel();
+          }
+          if (isGameInvitesChannelResult) {
+            closure_130_12 = undefined;
+          }
+          let obj5 = closure_131_1(closure_131_2[4]);
+          obj5.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" });
           c4 = 2;
           c5 = 1;
           const obj2 = {
@@ -285,7 +292,7 @@ let closure_9 = async function _saveChannel(arg0) {
         obj4.default_forum_layout = closure_130_22;
         obj4.default_tag_setting = closure_130_23;
         if (null != closure_130_24) {
-          const obj5 = { id: closure_130_24.id, name: closure_130_24.name };
+          obj5 = { id: closure_130_24.id, name: closure_130_24.name };
           let tmp22 = obj5;
         } else if (null === closure_130_24) {
           tmp22 = null;
@@ -316,8 +323,8 @@ let closure_9 = async function _saveChannel(arg0) {
               tmp5 = isThreadResult;
             }
             if (!tmp5) {
-              const result = closure_1(7375).checkGuildTemplateDirty(guildId);
-              const tmpResult = closure_1(7375);
+              const result = closure_1(7396).checkGuildTemplateDirty(guildId);
+              const tmpResult = closure_1(7396);
             }
             return arg0;
           },
@@ -331,9 +338,9 @@ let closure_9 = async function _saveChannel(arg0) {
         c5 = 3;
         arr = closure_130_20;
       }
-    } catch (tmp32) {
+    } catch (tmp41) {
       c5 = tmp;
-      throw tmp32;
+      throw tmp41;
     }
   }
 };

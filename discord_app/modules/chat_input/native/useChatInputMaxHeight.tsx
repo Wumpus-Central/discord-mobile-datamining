@@ -29,7 +29,7 @@ function getChatInputMaxHeight() {
     ),
   );
 }
-const CHAT_INPUT_PILL_CONTENT_SIZE = fn(12032).CHAT_INPUT_PILL_CONTENT_SIZE;
+const CHAT_INPUT_PILL_CONTENT_SIZE = fn(12055).CHAT_INPUT_PILL_CONTENT_SIZE;
 let c6 = 200;
 function getChatInputMaxHeightWorklet() {
   const keyboardStateWorklet = useKeyboardStateSharedValue.getKeyboardStateWorklet();
@@ -46,9 +46,9 @@ function getChatInputMaxHeightWorklet() {
   );
 }
 let obj = {
-  getKeyboardStateWorklet: fn(12102).getKeyboardStateWorklet,
+  getKeyboardStateWorklet: fn(12125).getKeyboardStateWorklet,
   KeyboardTypes: fn(1609).KeyboardTypes,
-  getWindowDimensionsWorklet: fn(12103).getWindowDimensionsWorklet,
+  getWindowDimensionsWorklet: fn(12126).getWindowDimensionsWorklet,
   MAX_HEIGHT: 200,
   MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE,
 };
@@ -87,9 +87,9 @@ function getChatInputHeightAnimationTimingWorklet(height, textFieldMinHeight) {
 }
 obj = {
   getChatInputMaxHeightWorklet,
-  withTiming: fn(4606).withTiming,
-  timingFastDuration: fn(4609).timingFastDuration,
-  Easing: fn(4341).Easing,
+  withTiming: fn(4607).withTiming,
+  timingFastDuration: fn(4610).timingFastDuration,
+  Easing: fn(4343).Easing,
 };
 getChatInputHeightAnimationTimingWorklet.__closure = obj;
 getChatInputHeightAnimationTimingWorklet.__workletHash = 17042993287975;
@@ -109,14 +109,14 @@ export default function useChatInputMaxHeight(arg0) {
       closure_1((arg0) => {
         let systemKeyboardHeight = closure_0(1877).getSystemKeyboardHeight();
         const obj = closure_0(1877);
-        const customKeyboardHeight = closure_0(5629).getCustomKeyboardHeight();
-        const obj2 = closure_0(5629);
-        const keyboardType = closure_0(4472).getKeyboardType();
+        const customKeyboardHeight = closure_0(5630).getCustomKeyboardHeight();
+        const obj2 = closure_0(5630);
+        const keyboardType = closure_0(4474).getKeyboardType();
         if (keyboardType !== closure_0(1609).KeyboardTypes.SYSTEM) {
           systemKeyboardHeight = customKeyboardHeight;
         }
         let tmp6 = arg0;
-        const obj3 = closure_0(4472);
+        const obj3 = closure_0(4474);
         const bound = Math.min(
           closure_2_6,
           Math.max(

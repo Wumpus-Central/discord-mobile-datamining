@@ -112,81 +112,22 @@ let closure_8 = async function _setLearnedWords(arg0) {
     }
   }
 };
-let closure_9 = async function _isMisspelled(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = false;
-          }
-          closure_130_1 = flag;
-          closure_130_2 = undefined;
-          c4 = 1;
-          c5 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          c4 = 2;
-          c5 = 1;
-          const obj2 = { value: closure_131_5, done: false };
-          return obj2;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        closure_130_2 = value;
-        let isMisspelledResult = null != closure_130_2;
-        if (isMisspelledResult) {
-          isMisspelledResult = closure_130_2.isMisspelled(closure_130_0, closure_130_1);
-        }
-        c5 = 3;
-        obj = { value: isMisspelledResult, done: true };
-        return obj;
-      }
-    } catch (tmp16) {
-      c5 = tmp;
-      throw tmp16;
-    }
+let closure_9 = async function _isMisspelled() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag = closure_1;
+  if (closure_1 === undefined) {
+    flag = false;
   }
+  closure_130_1 = flag;
+  await "PX_16";
+  await closure_131_5;
+  closure_130_2 = value;
+  let isMisspelledResult = null != closure_130_2;
+  if (isMisspelledResult) {
+    isMisspelledResult = closure_130_2.isMisspelled(closure_130_0, closure_130_1);
+  }
+  return isMisspelledResult;
 };
 let closure_10 = async function _getCorrections(arg0) {
   if (c6 === 2) {
@@ -231,7 +172,7 @@ let closure_10 = async function _getCorrections(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "PX_16", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -271,87 +212,23 @@ let closure_10 = async function _getCorrections(arg0) {
   }
 };
 let closure_11 = async function _getCachedMisspelling() {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          let num11 = closure_0;
-          if (closure_0 === undefined) {
-            num11 = 5;
-          }
-          closure_129_0 = num11;
-          closure_129_1 = undefined;
-          let cachedMisspelling;
-          c3 = 1;
-          c4 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          c3 = 2;
-          c4 = 1;
-          const obj2 = { value: closure_130_5, done: false };
-          return obj2;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        closure_129_1 = value;
-        if (null == closure_129_1) {
-          const obj4 = { misspelledWord: "", corrections: [] };
-          c4 = 3;
-          const obj5 = { value: obj4, done: true };
-          return obj5;
-        } else {
-          cachedMisspelling = closure_129_1.getCachedMisspelling();
-          obj = { misspelledWord: cachedMisspelling.misspelledWord, corrections: null };
-          const corrections = cachedMisspelling.corrections;
-          obj.corrections = corrections.slice(0, closure_129_0);
-          c4 = 3;
-          const obj6 = { value: obj, done: true };
-          return obj6;
-        }
-      }
-    } catch (tmp12) {
-      c4 = tmp;
-      throw tmp12;
-    }
+  closure_1 = tmp2;
+  let num11 = closure_0;
+  if (closure_0 === undefined) {
+    num11 = 5;
   }
+  closure_129_0 = num11;
+  await "PX_16";
+  await closure_130_5;
+  closure_129_1 = value;
+  if (null == closure_129_1) {
+    return { misspelledWord: "", corrections: [] };
+  }
+  const cachedMisspelling = closure_129_1.getCachedMisspelling();
+  const obj = { misspelledWord: cachedMisspelling.misspelledWord, corrections: null };
+  const corrections = cachedMisspelling.corrections;
+  obj.corrections = corrections.slice(0, closure_129_0);
+  return obj;
 };
 let closure_12 = async function _replaceWithCorrection(arg0) {
   if (c3 === 2) {
@@ -407,7 +284,7 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
     }
   }
 };
-fn(5608).addPostConnectionCallback;
+fn(5609).addPostConnectionCallback;
 let PlatformUtils = fn(1115);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {

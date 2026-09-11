@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/QuestDockDismissalToast.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef12356 from "../../../../_runtime/metro/12356__.js";
-import _modDef12839 from "../../../../_runtime/metro/12839__.js";
+import _modDef12379 from "../../../../_runtime/metro/12379__.js";
+import _modDef12862 from "../../../../_runtime/metro/12862__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -13,25 +13,25 @@ function QuestDockDismissalNotification() {
   obj = {
     arrowHook() {
       let obj = { style: closure_0.toastArrowForwardIconContainer, children: null };
-      obj = { resizeMode: "contain", source: _modDef12356, style: closure_0.toastArrowForwardIcon };
-      obj.children = <React3 resizeMode="contain" source={_modDef12356} style={closure_0.toastArrowForwardIcon} />;
-      return <React4 resizeMode="contain" source={_modDef12356} style={closure_0.toastArrowForwardIcon} />;
+      obj = { resizeMode: "contain", source: _modDef12379, style: closure_0.toastArrowForwardIcon };
+      obj.children = <React3 resizeMode="contain" source={_modDef12379} style={closure_0.toastArrowForwardIcon} />;
+      return <React4 resizeMode="contain" source={_modDef12379} style={closure_0.toastArrowForwardIcon} />;
     },
   };
   obj.children = intl.format(require("util").t.dYE1px, obj);
   return jsx(require("Text/Text").Text, {
     arrowHook() {
       let obj = { style: closure_0.toastArrowForwardIconContainer, children: null };
-      obj = { resizeMode: "contain", source: _modDef12356, style: closure_0.toastArrowForwardIcon };
-      obj.children = <React3 resizeMode="contain" source={_modDef12356} style={closure_0.toastArrowForwardIcon} />;
-      return <React4 resizeMode="contain" source={_modDef12356} style={closure_0.toastArrowForwardIcon} />;
+      obj = { resizeMode: "contain", source: _modDef12379, style: closure_0.toastArrowForwardIcon };
+      obj.children = <React3 resizeMode="contain" source={_modDef12379} style={closure_0.toastArrowForwardIcon} />;
+      return <React4 resizeMode="contain" source={_modDef12379} style={closure_0.toastArrowForwardIcon} />;
     },
   });
 }
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_6 = createStyles.createStyles(() => {
   const obj = { toastArrowForwardIconContainer: { height: 6, width: 16 }, toastArrowForwardIcon: null };
   const size = {
@@ -56,7 +56,7 @@ export const displayQuestDismissalToast = function displayQuestDismissalToast() 
   const obj = {
     key: "QUEST_BAR_DISMISS_TOAST",
     content: QuestDockDismissalNotification,
-    icon: _modDef12839,
+    icon: _modDef12862,
     position: "bottom",
   };
   obj.open(obj);

@@ -100,8 +100,8 @@ export const useFavorites = function useFavorites() {
   const items = [FavoriteStore];
   return initialize.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
 };
-export const useFavorite = function useFavorite(arg0) {
-  _require = arg0;
+export const useFavorite = function useFavorite(id) {
+  _require = id;
   const items = [FavoriteStore];
   return require("initialize").useStateFromStores(items, () => FavoriteStore.getFavorite(closure_0));
 };

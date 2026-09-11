@@ -5,7 +5,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(10165).NOTIFICATION_PREVIEW_LINE_CLAMP;
+let closure_4 = fn(10185).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
@@ -37,7 +37,7 @@ export default function ForumThreadCreatedNotification(notification) {
   }, items1);
   const callback1 = guild.useCallback(() => {
     const obj = { channelId: notification.parentChannel.id };
-    return obj.pushLazy(asyncRequireImpl(10212, dependencyMap.paths), obj);
+    return obj.pushLazy(asyncRequireImpl(10231, dependencyMap.paths), obj);
   }, items2);
   obj = { icon: null, children: null, header: null, onPress: null, onSettingsPress: null, notification: null };
   obj = { size: notification(tmp[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id };

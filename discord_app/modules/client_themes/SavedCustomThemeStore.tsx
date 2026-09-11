@@ -25,7 +25,7 @@ function validateSavedTheme(colors) {
     return false;
   }
 }
-({ PROTO_THEME_MAP_WEB_REFRESH, PROTO_THEME_MAP_MOBILE: c2 } = ThemeConstants);
+({ PROTO_THEME_MAP_MOBILE_REFRESH: c2, PROTO_THEME_MAP_WEB_REFRESH } = ThemeConstants);
 let FetchState = {
   NOT_FETCHED: 0,
   [0]: "NOT_FETCHED",

@@ -6,11 +6,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const COLLECTIBLES_PREVIEW_SIZE = fn(7260).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7281).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { profileEffectPreviewContainer: null, sampleProfile: null, noneIcon: null };
 let size = {
   height: COLLECTIBLES_PREVIEW_SIZE,
@@ -20,7 +20,7 @@ let size = {
   overflow: "hidden",
 };
 createStyles.profileEffectPreviewContainer = size;
-createStyles.sampleProfile = { aspectRatio: fn(8869).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+createStyles.sampleProfile = { aspectRatio: fn(8890).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 createStyles = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 createStyles.noneIcon = createStyles;
 let closure_8 = createStyles.createStyles(createStyles);
@@ -69,7 +69,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   let name;
   const callback = userProfileEffect.useCallback(() => {
     const obj = { user, currentProfileEffect: userProfileEffect, guildId, isTryItOut };
-    obj.openLazy(asyncRequireImpl(14704, dependencyMap.paths), "Profile Effect", obj);
+    obj.openLazy(asyncRequireImpl(14680, dependencyMap.paths), "Profile Effect", obj);
   }, items);
   if (product != null) {
     name = product.name;

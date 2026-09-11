@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import FlagUtils from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef9695 from "../../../../../_runtime/metro/09695__.js";
+import _modDef9716 from "../../../../../_runtime/metro/09716__.js";
 import GuildSettingsUtils from "../../GuildSettingsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const RoleFlags = fn(1074).RoleFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { promptRow: null, promptText: null, icon: null };
 createStyles = {
   paddingHorizontal: nativeDefault.space.PX_16,
@@ -40,7 +40,7 @@ export default function InRolePromptNotice(role) {
     const tmpResult = GuildSettingsUtils;
     let Icon = native.Icon;
     if (isRolePowerfulResult) {
-      obj = { style: string.icon, source: _modDef9695, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+      obj = { style: string.icon, source: _modDef9716, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
       const items = [hasOwnProperty(Icon, obj)];
       const obj1 = { style: string.promptText, variant: "text-sm/medium", children: null };
       const intl2 = util.intl;
@@ -52,7 +52,7 @@ export default function InRolePromptNotice(role) {
       obj.children = items;
       let tmp4Result = timestampProducer(View, obj);
     } else {
-      const obj2 = { style: string.icon, source: _modDef9695 };
+      const obj2 = { style: string.icon, source: _modDef9716 };
       const items1 = [hasOwnProperty(Icon, obj2)];
       const obj3 = { style: string.promptText, variant: "text-sm/medium", children: null };
       const intl = util.intl;

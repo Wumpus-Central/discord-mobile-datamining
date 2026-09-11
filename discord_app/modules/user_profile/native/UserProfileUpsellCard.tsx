@@ -1,16 +1,16 @@
 // discord_app/modules/user_profile/native/UserProfileUpsellCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
-import LinearGradientDefault from "../../../../_runtime/05037_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05038_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(7484).Gradients;
+const Gradients = fn(7505).Gradients;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = {
   upsellButton: null,
   titleContainer: null,
@@ -23,8 +23,8 @@ createStyles = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.
 createStyles.upsellButton = createStyles;
 createStyles.titleContainer = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 };
 createStyles.linearGradient = { width: "100%", height: "100%", position: "absolute", overflow: "hidden" };
-createStyles.outer = { marginHorizontal: fn(7260).PROFILE_SIDE_PADDING - 1 };
-let obj1 = { marginHorizontal: fn(7260).PROFILE_SIDE_PADDING - 1 };
+createStyles.outer = { marginHorizontal: fn(7281).PROFILE_SIDE_PADDING - 1 };
+let obj1 = { marginHorizontal: fn(7281).PROFILE_SIDE_PADDING - 1 };
 createStyles.scroll = {
   borderRadius: nativeDefault.radii.lg,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -58,9 +58,9 @@ export default function UserProfileUpsellCard(headerText) {
   if (null != headerText) {
     obj = { style: tmp.titleContainer, children: null };
     const obj1 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-    const items3 = [closure_6(tmp3(8732).NitroWheelIcon, obj1)];
+    const items3 = [closure_6(tmp3(8753).NitroWheelIcon, obj1)];
     const obj2 = { variant: "heading-sm/bold", children: headerText };
-    items3[1] = closure_6(tmp3(4601).Text, obj2);
+    items3[1] = closure_6(tmp3(4602).Text, obj2);
     obj.children = items3;
     tmp6Result = closure_7(closure_3, obj);
   }

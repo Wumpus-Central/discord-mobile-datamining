@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const VerificationModalScenes = fn(1074).VerificationModalScenes;
-let closure_5 = fn(7095).PHONE_VERIFICATION_MODAL_KEY;
+let closure_5 = fn(7116).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
@@ -126,7 +126,7 @@ export default function PhoneVerificationModal(onClose) {
                   return obj;
                 } else {
                   c4 = 1;
-                  let obj3 = v3(7097);
+                  let obj3 = v3(7118);
                   c2 = 2;
                   c1 = 1;
                   const obj1 = { value: obj3.addPhone(reason, reason, reason.reason), done: false };
@@ -174,7 +174,7 @@ export default function PhoneVerificationModal(onClose) {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        closure_1(4808).popWithKey(closure_1_5);
+        closure_1(4809).popWithKey(closure_1_5);
       };
       closure_0.push(VerificationModalScenes.VERIFY_PASSWORD, obj);
     };

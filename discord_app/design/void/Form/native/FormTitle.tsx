@@ -18,7 +18,7 @@ let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 PlatformUtils = {
   titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 },
   horizontalPadding: { paddingHorizontal: 16 },

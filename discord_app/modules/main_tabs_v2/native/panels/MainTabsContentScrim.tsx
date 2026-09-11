@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/Ma
 export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
-  translateX(4341);
+  translateX(4343);
   const fn = function c() {
     const obj = { opacity: null };
     value = translateX.get();
@@ -31,10 +31,10 @@ export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
     return obj;
   };
   let obj = {
-    interpolate: translateX(4341).interpolate,
+    interpolate: translateX(4343).interpolate,
     translateX,
     maxWidth,
-    Extrapolation: translateX(4341).Extrapolation,
+    Extrapolation: translateX(4343).Extrapolation,
   };
   fn.__closure = obj;
   fn.__workletHash = 7933670426250;
@@ -43,5 +43,5 @@ export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
   obj = { style: null, pointerEvents: "none" };
   let items = [closure_4().scrim, animatedStyle];
   obj.style = items;
-  return jsx(maxWidth(4341).View, { style: null, pointerEvents: "none" });
+  return jsx(maxWidth(4343).View, { style: null, pointerEvents: "none" });
 };

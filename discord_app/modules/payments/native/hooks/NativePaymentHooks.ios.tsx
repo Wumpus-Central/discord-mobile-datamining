@@ -1,5 +1,6 @@
 // discord_app/modules/payments/native/hooks/NativePaymentHooks.ios.tsx
 import LoggerDefault from "../../../debug/Logger.tsx";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import BillingUtils from "../../../../utils/BillingUtils.tsx";
 import ProductIds from "../../../premium/native/ProductIds.android.tsx";
 import BillingActionCreatorsDefault from "../../../../actions/native/BillingActionCreators.tsx";
@@ -14,131 +15,80 @@ import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
 require = fn;
 function useNativeIAPPayments() {
-  const items = [GenericIAPStore, IAPStore];
+  let items = [GenericIAPStore, IAPStore];
   const tmp2 = nativePaymentsConnected(
-    nativePaymentsConnected(storeFront[9]).useStateFromStoresArray(items, () => {
-      const items = [
-        GenericIAPStore.isGenericIapConnected(),
-        GenericIAPStore.genericProductsLoaded(),
-        GenericIAPStore.getStoreFront(),
-        products.getProducts(),
-      ];
+    genericProductsLoaded(504).useStateFromStoresArray(items, () => {
+      const items = [GenericIAPStore.genericProductsLoaded(), GenericIAPStore.getStoreFront(), products.getProducts()];
       return items;
     }),
-    4,
+    3,
   );
-  nativePaymentsConnected = tmp2[0];
-  importDefault = tmp4;
-  storeFront = tmp2[2];
-  closure_3 = tmp2[3];
-  if (nativePaymentsConnected) {
-    nativePaymentsConnected = tmp4;
+  genericProductsLoaded = tmp2[0];
+  const storeFront = tmp2[1];
+  dependencyMap = tmp2[2];
+  let obj = genericProductsLoaded(504);
+  const items1 = [GenericIAPStore];
+  const canMakePayments = genericProductsLoaded(504).useStateFromStores(items1, () =>
+    GenericIAPStore.canMakePurchase(),
+  );
+  const effect = noop.useEffect(() => {
+    const result = storeFront(closure_2[10]).canStorekitMakePayments();
+  }, []);
+  const items2 = [genericProductsLoaded];
+  const effect1 = noop.useEffect(() => {
+    if (!first) {
+      products = BillingActionCreatorsDefault.loadProducts();
+    }
+  }, items2);
+  nativePaymentsConnected = canMakePayments;
+  if (canMakePayments) {
+    nativePaymentsConnected = genericProductsLoaded;
   }
   if (nativePaymentsConnected) {
     nativePaymentsConnected = null != storeFront;
   }
-  const items1 = [tmp2[1]];
-  const effect = noop.useEffect(() => {
-    if (!first) {
-      products = BillingActionCreatorsDefault.loadProducts();
-    }
-  }, items1);
-  require("useTimeout")(() => {
-    let tmp = memo;
-    if (!memo) {
+  storeFront(10844)(() => {
+    let tmp = nativePaymentsConnected;
+    if (!nativePaymentsConnected) {
       tmp = c15;
+    }
+    if (!tmp) {
+      tmp = false === canMakePayments;
     }
     if (!tmp) {
       c15 = true;
       let obj = { tags: { alertPriority: "0" }, extra: null };
       let mapped;
-      if (stateFromStores != null) {
-        mapped = stateFromStores.map((identifier) => identifier.identifier);
+      if (closure_2 != null) {
+        mapped = closure_2.map((identifier) => identifier.identifier);
       }
       if (mapped == null) {
         mapped = [];
       }
-      obj = { loadedProducts: mapped, connected, genericProductsLoaded, storeFront };
+      obj = { loadedProducts: mapped, genericProductsLoaded, storeFront };
       obj.extra = obj;
       const result = obj.captureBillingMessage("useNativeIAPPayments failed to load required context", obj);
     }
   }, 5000);
-  return { nativePaymentsConnected, storeFront };
+  return { nativePaymentsConnected, storeFront, canMakePayments };
 }
 function useCreateSubscription(planId) {
   planId = planId.planId;
   const skuId = planId.skuId;
   const applicationId = planId.applicationId;
   const analyticsLocation = planId.analyticsLocation;
-  let nativePaymentsConnected;
-  noop = undefined;
-  let load_id;
   let callback;
-  closure_129_4 = undefined;
+  const tmp = useNativeIAPPayments();
+  const nativePaymentsConnected = tmp.nativePaymentsConnected;
   let obj = planId(applicationId[9]);
-  const items = [load_id, IAPStore];
-  const tmp3 = nativePaymentsConnected(
-    obj.useStateFromStoresArray(items, () => {
-      const items = [
-        GenericIAPStore.isGenericIapConnected(),
-        GenericIAPStore.genericProductsLoaded(),
-        GenericIAPStore.getStoreFront(),
-        products.getProducts(),
-      ];
-      return items;
-    }),
-    4,
-  );
-  nativePaymentsConnected = tmp3[0];
-  closure_129_0 = nativePaymentsConnected;
-  closure_129_1 = tmp5;
-  closure_129_2 = tmp6;
-  closure_129_3 = tmp3[3];
-  if (nativePaymentsConnected) {
-    nativePaymentsConnected = tmp5;
-  }
-  if (nativePaymentsConnected) {
-    nativePaymentsConnected = null != tmp6;
-  }
-  closure_129_4 = nativePaymentsConnected;
-  const items1 = [tmp3[1]];
-  const effect = noop.useEffect(() => {
-    if (!first) {
-      products = BillingActionCreatorsDefault.loadProducts();
-    }
-  }, items1);
-  skuId(applicationId[11])(() => {
-    let tmp = memo;
-    if (!memo) {
-      tmp = c15;
-    }
-    if (!tmp) {
-      c15 = true;
-      let obj = { tags: { alertPriority: "0" }, extra: null };
-      let mapped;
-      if (stateFromStores != null) {
-        mapped = stateFromStores.map((identifier) => identifier.identifier);
-      }
-      if (mapped == null) {
-        mapped = [];
-      }
-      obj = { loadedProducts: mapped, connected, genericProductsLoaded, storeFront };
-      obj.extra = obj;
-      const result = obj.captureBillingMessage("useNativeIAPPayments failed to load required context", obj);
-    }
-  }, 5000);
-  const items2 = [callback];
-  const items3 = [planId];
-  const stateFromStores = planId(applicationId[9]).useStateFromStores(
-    items2,
-    () => SubscriptionPlanStore.get(planId),
-    items3,
-  );
-  const tmp11 = skuId(applicationId[13])(stateFromStores, tmp3[2]);
-  noop = tmp11;
-  const tmp12 = skuId(applicationId[14])(() => planId(applicationId[15]).getNewAnalyticsLoadId());
-  load_id = tmp12;
-  const items4 = [tmp12, analyticsLocation, applicationId, planId, skuId];
+  const items = [callback];
+  const items1 = [planId];
+  const stateFromStores = obj.useStateFromStores(items, () => SubscriptionPlanStore.get(planId), items1);
+  const tmp3 = skuId(applicationId[13])(stateFromStores, tmp.storeFront);
+  noop = tmp3;
+  const tmp4 = skuId(applicationId[14])(() => planId(applicationId[15]).getNewAnalyticsLoadId());
+  const load_id = tmp4;
+  const items2 = [tmp4, analyticsLocation, applicationId, planId, skuId];
   callback = noop.useCallback(() => {
     const obj = {
       load_id,
@@ -152,12 +102,12 @@ function useCreateSubscription(planId) {
       sku_id: skuId,
     };
     const result = obj.trackPaymentFlowStartedAnalyticsAndCTP(obj);
-  }, items4);
+  }, items2);
   obj = { createSubscription: null, nativePaymentsConnected };
-  const items5 = [tmp11, nativePaymentsConnected, callback];
+  const items3 = [tmp3, nativePaymentsConnected, callback];
   obj.createSubscription = noop.useCallback(
     analyticsLocation(function* () {
-      v4(tmp30[18])(first, "cannot connect to IAP API");
+      v4(tmp30[18])(nativePaymentsConnected, "cannot connect to IAP API");
       v4(tmp30[18])(null != closure_5, "plan not found");
       yield v4(tmp30[10]).restoreAndApplyPurchases();
       if (1 === tmp7) {
@@ -201,166 +151,22 @@ function useCreateSubscription(planId) {
       }
       return value;
     }),
-    items5,
+    items3,
   );
   return obj;
 }
 function useCancelSubscription(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
+  const tmp = useNativeIAPPayments();
+  const nativePaymentsConnected = tmp.nativePaymentsConnected;
+  const storeFront = tmp.storeFront;
   let obj = require("initialize");
-  const items = [closure_6, IAPStore];
-  let tmp3 = stateFromStores(
-    obj.useStateFromStoresArray(items, () => {
-      const items = [
-        GenericIAPStore.isGenericIapConnected(),
-        GenericIAPStore.genericProductsLoaded(),
-        GenericIAPStore.getStoreFront(),
-        products.getProducts(),
-      ];
-      return items;
-    }),
-    4,
-  );
-  nativePaymentsConnected = tmp3[0];
-  closure_129_0 = nativePaymentsConnected;
-  closure_129_1 = tmp5;
-  closure_129_2 = tmp6;
-  closure_129_3 = tmp3[3];
-  if (nativePaymentsConnected) {
-    nativePaymentsConnected = tmp5;
-  }
-  if (nativePaymentsConnected) {
-    nativePaymentsConnected = null != tmp6;
-  }
-  closure_129_4 = nativePaymentsConnected;
-  const items1 = [tmp3[1]];
-  const effect = memo.useEffect(() => {
-    if (!first) {
-      products = BillingActionCreatorsDefault.loadProducts();
-    }
-  }, items1);
-  require("useTimeout")(() => {
-    let tmp = memo;
-    if (!memo) {
-      tmp = c15;
-    }
-    if (!tmp) {
-      c15 = true;
-      let obj = { tags: { alertPriority: "0" }, extra: null };
-      let mapped;
-      if (stateFromStores != null) {
-        mapped = stateFromStores.map((identifier) => identifier.identifier);
-      }
-      if (mapped == null) {
-        mapped = [];
-      }
-      obj = { loadedProducts: mapped, connected, genericProductsLoaded, storeFront };
-      obj.extra = obj;
-      const result = obj.captureBillingMessage("useNativeIAPPayments failed to load required context", obj);
-    }
-  }, 5000);
-  asyncGeneratorStep = tmp6;
-  const items2 = [SubscriptionStore];
-  const items3 = [arg0];
-  stateFromStores = require("initialize").useStateFromStores(
-    items2,
-    () => SubscriptionStore.getSubscriptionById(closure_0),
-    items3,
-  );
-  const items4 = [tmp3[2], stateFromStores];
+  const items = [SubscriptionStore];
+  const items1 = [arg0];
+  const stateFromStores = obj.useStateFromStores(items, () => SubscriptionStore.getSubscriptionById(closure_0), items1);
+  const items2 = [storeFront, stateFromStores];
   memo = memo.useMemo(() => {
-    let tmp3 = null != stateFromStores;
-    if (tmp3) {
-      tmp3 = null != currency;
-    }
-    if (tmp3) {
-      tmp3 = stateFromStores.currency === currency.currency;
-    }
-    return tmp3;
-  }, items4);
-  const tmp12 = require("useCancelSubscriptionParams")(arg0);
-  closure_6 = tmp12;
-  obj = { cancelSubscription: null, nativePaymentsConnected };
-  const items5 = [memo, tmp12, nativePaymentsConnected, arg1];
-  obj.cancelSubscription = memo.useCallback(
-    asyncGeneratorStep(async () => {
-      closure_1(38)(memo, "Cannot update subscription");
-      closure_1(38)(first, "Cannot connect to IAP API");
-      closure_1(38)(null != closure_6, "Subscription not found");
-      await tmp2(7471).cancelGenericSubscription(closure_6.requestIdentifier, closure_6.subscriptionId, closure_1);
-      closure_128_0 = value;
-      await tmp2(4929).fetchSubscriptions();
-      return closure_128_0;
-    }),
-    items5,
-  );
-  return obj;
-}
-function useResubscribeSubscription(connected) {
-  _require = connected;
-  let obj = require("initialize");
-  let items = [GenericIAPStore, IAPStore];
-  let tmp3 = memo(
-    obj.useStateFromStoresArray(items, () => {
-      const items = [
-        GenericIAPStore.isGenericIapConnected(),
-        GenericIAPStore.genericProductsLoaded(),
-        GenericIAPStore.getStoreFront(),
-        products.getProducts(),
-      ];
-      return items;
-    }),
-    4,
-  );
-  let nativePaymentsConnected = tmp3[0];
-  closure_129_0 = nativePaymentsConnected;
-  closure_129_1 = tmp5;
-  closure_129_2 = tmp6;
-  closure_129_3 = tmp3[3];
-  if (nativePaymentsConnected) {
-    nativePaymentsConnected = tmp5;
-  }
-  if (nativePaymentsConnected) {
-    nativePaymentsConnected = null != tmp6;
-  }
-  closure_129_4 = nativePaymentsConnected;
-  const items1 = [tmp3[1]];
-  const effect = noop.useEffect(() => {
-    if (!first) {
-      products = BillingActionCreatorsDefault.loadProducts();
-    }
-  }, items1);
-  nativePaymentsConnected(10825)(() => {
-    let tmp = memo;
-    if (!memo) {
-      tmp = c15;
-    }
-    if (!tmp) {
-      c15 = true;
-      let obj = { tags: { alertPriority: "0" }, extra: null };
-      let mapped;
-      if (stateFromStores != null) {
-        mapped = stateFromStores.map((identifier) => identifier.identifier);
-      }
-      if (mapped == null) {
-        mapped = [];
-      }
-      obj = { loadedProducts: mapped, connected, genericProductsLoaded, storeFront };
-      obj.extra = obj;
-      const result = obj.captureBillingMessage("useNativeIAPPayments failed to load required context", obj);
-    }
-  }, 5000);
-  dependencyMap = tmp6;
-  const items2 = [SubscriptionStore];
-  const items3 = [connected];
-  const stateFromStores = require("initialize").useStateFromStores(
-    items2,
-    () => SubscriptionStore.getSubscriptionById(closure_0),
-    items3,
-  );
-  const items4 = [tmp3[2], stateFromStores];
-  memo = noop.useMemo(() => {
     let tmp3 = null != stateFromStores;
     if (tmp3) {
       tmp3 = null != storeFront;
@@ -369,28 +175,70 @@ function useResubscribeSubscription(connected) {
       tmp3 = stateFromStores.currency === storeFront.currency;
     }
     return tmp3;
-  }, items4);
-  const tmp12 = nativePaymentsConnected(10881)(connected);
-  noop = tmp12;
-  obj = { resubscribeSubscription: null, nativePaymentsConnected };
-  const items5 = [memo, nativePaymentsConnected, tmp12, stateFromStores];
-  obj.resubscribeSubscription = noop.useCallback(
-    stateFromStores(function* () {
+  }, items2);
+  const tmp4 = require("useCancelSubscriptionParams")(arg0);
+  closure_6 = tmp4;
+  obj = { cancelSubscription: null, nativePaymentsConnected };
+  const items3 = [memo, tmp4, nativePaymentsConnected, arg1];
+  obj.cancelSubscription = memo.useCallback(
+    storeFront(function* () {
       closure_1(38)(memo, "Cannot update subscription");
-      closure_1(38)(first, "Cannot connect to IAP API");
-      closure_1(38)(null != closure_5, "Subscription not found");
-      closure_1(38)(null != stateFromStores, "Subscription not found");
-      yield tmp2(7471).resubscribeGenericSubscription(closure_5, stateFromStores.isACOM);
+      closure_1(38)(nativePaymentsConnected, "Cannot connect to IAP API");
+      closure_1(38)(null != closure_6, "Subscription not found");
+      yield tmp2(7492).cancelGenericSubscription(closure_6.requestIdentifier, closure_6.subscriptionId, closure_1);
       closure_128_0 = value;
-      yield tmp2(4929).fetchSubscriptions();
+      yield tmp2(4930).fetchSubscriptions();
       return closure_128_0;
     }),
-    items5,
+    items3,
+  );
+  return obj;
+}
+function useResubscribeSubscription(arg0) {
+  _require = arg0;
+  const tmp = useNativeIAPPayments();
+  const nativePaymentsConnected = tmp.nativePaymentsConnected;
+  const storeFront = tmp.storeFront;
+  let obj = require("initialize");
+  const items = [SubscriptionStore];
+  const items1 = [arg0];
+  const stateFromStores = obj.useStateFromStores(items, () => SubscriptionStore.getSubscriptionById(closure_0), items1);
+  const items2 = [storeFront, stateFromStores];
+  const memo = noop.useMemo(() => {
+    let tmp3 = null != stateFromStores;
+    if (tmp3) {
+      tmp3 = null != storeFront;
+    }
+    if (tmp3) {
+      tmp3 = stateFromStores.currency === storeFront.currency;
+    }
+    return tmp3;
+  }, items2);
+  const tmp4 = nativePaymentsConnected(storeFront[21])(arg0);
+  noop = tmp4;
+  obj = { resubscribeSubscription: null, nativePaymentsConnected };
+  const items3 = [memo, nativePaymentsConnected, tmp4, stateFromStores];
+  obj.resubscribeSubscription = noop.useCallback(
+    stateFromStores(function* () {
+      nativePaymentsConnected(38)(memo, "Cannot update subscription");
+      nativePaymentsConnected(38)(nativePaymentsConnected, "Cannot connect to IAP API");
+      nativePaymentsConnected(38)(null != closure_5, "Subscription not found");
+      nativePaymentsConnected(38)(null != stateFromStores, "Subscription not found");
+      yield tmp2(7492).resubscribeGenericSubscription(closure_5, stateFromStores.isACOM);
+      closure_128_0 = value;
+      yield tmp2(4930).fetchSubscriptions();
+      return closure_128_0;
+    }),
+    items3,
   );
   return obj;
 }
 function useGoogleSkuIds() {
   return closure_14;
+}
+function useMobileStoreFront() {
+  const items = [GenericIAPStore];
+  return initialize.useStateFromStores(items, () => storeFront.getStoreFront());
 }
 const Constants = fn(1074);
 ({ PurchaseTypeToAnalyticsPaymentType: c10, PurchaseTypes: closure_11, SubscriptionTypes: closure_12 } = Constants);
@@ -406,9 +254,11 @@ export default {
   useCreateSubscription,
   useCancelSubscription,
   useResubscribeSubscription,
+  useMobileStoreFront,
 };
 export { useNativeIAPPayments };
 export { useCreateSubscription };
 export { useCancelSubscription };
 export { useResubscribeSubscription };
 export { useGoogleSkuIds };
+export { useMobileStoreFront };

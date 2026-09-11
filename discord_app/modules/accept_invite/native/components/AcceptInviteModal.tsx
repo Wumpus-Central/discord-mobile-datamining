@@ -5,7 +5,7 @@ import AcceptInviteContainerDefault from "../../../create_guild/native/component
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const CreateGuildModalStates = fn(7030).CreateGuildModalStates;
+const CreateGuildModalStates = fn(7051).CreateGuildModalStates;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/accept_invite/native/components/AcceptInviteModal.tsx");
@@ -32,7 +32,7 @@ export default function AcceptInviteModal(arg0) {
     obj.render = function render() {
       const obj = {};
       const merged = Object.assign(closure_0);
-      obj.onPressClose = closure_0(8808).clearDisplayedInvite;
+      obj.onPressClose = closure_0(8829).clearDisplayedInvite;
       return jsx(AcceptInviteContainerDefault, {});
     };
     obj[CreateGuildModalStates.ACCEPT_INVITE] = obj;

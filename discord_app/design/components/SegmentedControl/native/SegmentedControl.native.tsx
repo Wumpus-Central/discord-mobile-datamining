@@ -17,7 +17,7 @@ let SELECTED_INDICATOR_SPRING = {
   restDisplacementThreshold: 0.001,
   overshootClamping: true,
 };
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_10 = createStyles.createStyles((borderRadius, paddingVertical) => {
   let obj = {
     scrollContentContainer: { flexGrow: 1 },
@@ -130,8 +130,6 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   }, items1);
   sharedValue3 = state(activeIndex[6]).useSharedValue(activeIndex.get());
   const obj6 = state(activeIndex[6]);
-  const tmp2 = state;
-  let tmp3 = activeIndex;
   const fn = function k() {
     return Math.min(Math.max(activeIndex.get(), 0), length - 1);
   };
@@ -377,26 +375,37 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   H.__initData = derivedValue1;
   const onUpdateResult = Gesture.Pan().onStart(J).onUpdate(onPanGestureUpdate);
   const onEndResult = Gesture.Pan().onStart(J).onUpdate(onPanGestureUpdate).onEnd(H);
-  let str2 = "tabbar";
-  if (obj15.isAndroid()) {
-    str2 = "tablist";
+  let str2 = "tablist";
+  if (!obj15.isAndroid()) {
+    let str3;
+    if (tmp) {
+      str3 = "tabbar";
+    }
+    str2 = str3;
   }
   obj1 = { accessibilityRole: str2, style: tmp4.controlsContainer, children: null };
   obj2 = { accessible: false, style: tmp4.indicatorContainer, children: memo };
   const items4 = [setActiveIndex(items, obj2), memo1];
   obj1.children = items4;
   const tmp18 = closure_7(items, obj1, items.length);
+  obj15 = state(activeIndex[10]);
+  const tmp19 = pressedIndex;
+  let str4;
+  if (tmp2Result.isIOS()) {
+    str4 = "tabbar";
+  }
   obj3 = {
     horizontal: true,
+    accessibilityRole: str4,
     alwaysBounceHorizontal: false,
     contentContainerStyle: tmp4.scrollContentContainer,
     keyboardShouldPersistTaps: keyboardShouldPersistTaps.keyboardShouldPersistTaps,
     children: tmp18,
   };
-  let tmp17Result = setActiveIndex(pressedIndex, obj3);
+  let tmp17Result = tmp17(tmp19, obj3);
   if ("experimental_Large" === str) {
     obj4 = { gesture: onEndResult, children: tmp18 };
-    tmp17Result = setActiveIndex(tmp2(tmp3[9]).GestureDetector, obj4);
+    tmp17Result = tmp17(tmp2(tmp3[9]).GestureDetector, obj4);
   }
   return tmp17Result;
 };

@@ -6,7 +6,7 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef8104 from "../../../../_runtime/metro/08104__.js";
+import _modDef8126 from "../../../../_runtime/metro/08126__.js";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
 import GroupDMNitroCapExperimentDefault from "../GroupDMNitroCapExperiment.tsx";
 import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction.tsx";
@@ -161,7 +161,7 @@ function FloatingBanner(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11664).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11686).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
@@ -170,7 +170,7 @@ const PX_24 = nativeDefault.space.PX_24;
 const PX_8 = nativeDefault.space.PX_8;
 const locations = [0, 0.225, 1];
 let closure_16 = { mass: 0.8, stiffness: 400, damping: 32, overshootClamping: true };
-fn(4605);
+fn(4606);
 let createStyles = {
   floatingOverlay: { position: "absolute", left: 0, right: 0, bottom: 0 },
   floatingContent: { justifyContent: "flex-end" },
@@ -231,7 +231,7 @@ export default function GroupDMNitroUpsellBanner(wrapperStyle) {
     tmp15 = !stateFromStores;
   }
   obj1.shiny = tmp15;
-  obj1.icon = _modDef8104;
+  obj1.icon = _modDef8126;
   obj1.onPress = tmp7Result;
   obj.trailing = React7(components_Button_Button.Button, obj1);
   obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

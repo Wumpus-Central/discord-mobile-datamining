@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { content: null, badge: null, overflowCount: null };
 createStyles = {
   flexGrow: 1,
@@ -65,7 +65,7 @@ export default function UserProfileBadgesEditButton(arg0) {
   const items2 = [analyticsLocations, tmp8, tmp6[1]];
   onPress = noop.useCallback(() => {
     const obj = { analyticsLocations };
-    obj.openLazy(asyncRequireImpl(14697, dependencyMap.paths), "Customize Badges", obj);
+    obj.openLazy(asyncRequireImpl(14673, dependencyMap.paths), "Customize Badges", obj);
     if (closure_5) {
       closure_4(ContentDismissActionType.TAKE_ACTION);
     }

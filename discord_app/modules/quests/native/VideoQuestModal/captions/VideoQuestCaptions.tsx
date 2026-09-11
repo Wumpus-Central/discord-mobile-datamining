@@ -7,7 +7,7 @@ import n from "../../../../../../_runtime/metro/00672__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4605);
+fn(4606);
 let createStyles = { container: null, captionBox: null, captionText: null };
 const rect = {
   position: "absolute",

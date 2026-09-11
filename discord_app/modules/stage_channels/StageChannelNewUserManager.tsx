@@ -7,7 +7,7 @@ import StageChannelRoleStore from "StageChannelRoleStore.tsx";
 import LifecycleManager from "../../lib/LifecycleManager.tsx";
 
 let require = fn;
-let closure_7 = fn(5464).STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY;
+let closure_7 = fn(5465).STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY;
 class StageChannelNewUserManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

@@ -9,8 +9,8 @@ require = fn;
 const Image = fn(17).Image;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(11406), fn(11407), fn(11408)];
-let items1 = [fn(11409), fn(11410), fn(11411)];
+let items = [fn(11428), fn(11429), fn(11430)];
+let items1 = [fn(11431), fn(11432), fn(11433)];
 const items2 = [
   () => {
     const intl = util.intl;
@@ -53,7 +53,7 @@ const items2 = [
     return intl.string(util.t.jgC65t);
   },
 ];
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_9 = createStyles.createStyles({
   text: { marginTop: 16, lineHeight: 20, textAlign: "center" },
   header: { textAlign: "center" },
@@ -67,10 +67,10 @@ export default function ChannelFollowSuccessAlert(arg0) {
   let obj = require("shared");
   const tmp6 = obj.isThemeDark(useThemeDefault()) ? items1 : items;
   _require = tmp6;
-  let tmp5Result = tmp5(7492);
+  let tmp5Result = tmp5(7513);
   items = [tmp6];
   const stableMemo = tmp5Result.useStableMemo(() => _modDef12.sample(closure_0), items);
-  tmp5Result = tmp5(7492);
+  tmp5Result = tmp5(7513);
   const stableMemo1 = tmp5Result.useStableMemo(() => _modDef12.sample(items2), []);
   obj = {};
   const tmp4 = useThemeDefault();

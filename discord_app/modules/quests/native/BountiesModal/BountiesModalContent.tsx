@@ -94,18 +94,18 @@ function BountiesModalContentInner(bounty) {
   let obj1 = bounty(504);
   const items4 = [handleVideoProgressAnalytics];
   const stateFromStores = obj1.useStateFromStores(items4, () => BountyStore.isBountyCompleted(bounty.id));
-  let obj2 = bounty(8919);
-  let obj3 = bounty(11592);
+  let obj2 = bounty(8940);
+  let obj3 = bounty(11614);
   const bountiesExperience = obj3.useBountiesExperience(isEndCardVisible.VIDEO_MODAL_MOBILE);
   ({ loopingEnabled, ownedByVerticalScrollExperiment, stage1Enabled, rewardTimerSeconds } = bountiesExperience);
-  const BountyVideoEndMode = bounty(15095).BountyVideoEndMode;
+  const BountyVideoEndMode = bounty(15072).BountyVideoEndMode;
   const tmp12 = loopingEnabled ? BountyVideoEndMode.LOOP : BountyVideoEndMode.END_CARD;
   if (!stage1Enabled) {
     if (!ownedByVerticalScrollExperiment) {
       let result = 1000 * bounty.rewardTimerSeconds;
     }
     asyncGeneratorStep = result;
-    let tmp9Result = tmp9(15099);
+    let tmp9Result = tmp9(15076);
     obj = { bountyId: bounty.id, endMode: tmp12 };
     const bountyVideoProgressPersistence = tmp9Result.useBountyVideoProgressPersistence(obj);
     ({ initialProgress, handleProgress } = bountyVideoProgressPersistence);
@@ -131,7 +131,7 @@ function BountiesModalContentInner(bounty) {
       }),
       items5,
     );
-    tmp9Result = tmp9(15100);
+    tmp9Result = tmp9(15077);
     obj = {
       bountyId: bounty.id,
       sourceQuestContent,
@@ -186,7 +186,7 @@ function BountiesModalContentInner(bounty) {
       duration = initialProgress.duration;
     }
     obj1.initialVideoDurationSec = duration;
-    const bountiesModalTiming = tmp9(15095).useBountiesModalTiming(obj1);
+    const bountiesModalTiming = tmp9(15072).useBountiesModalTiming(obj1);
     isEndCardVisible = bountiesModalTiming.isEndCardVisible;
     maxVideoProgressSeconds = bountiesModalTiming.maxVideoProgressSeconds;
     videoDuration = bountiesModalTiming.videoDuration;
@@ -299,31 +299,31 @@ function BountiesModalContentInner(bounty) {
       height: null,
     };
     ({ width: obj13.width, height: obj13.height } = memo);
-    obj3.children = closure_11(tmp9(15103).BountyVideo, size);
+    obj3.children = closure_11(tmp9(15080).BountyVideo, size);
     const items9 = [closure_11(flushProgress, obj3), ,];
     let obj4 = { style: memo2, children: null };
     let obj5 = { onPress: callback2 };
-    obj4.children = closure_11(tmp2(15133), obj5);
+    obj4.children = closure_11(tmp2(15111), obj5);
     items9[1] = closure_11(flushProgress, obj4);
     let rect = { left: null, right: null, bottom: true, style: null, pointerEvents: "box-none", children: null };
     ({ isFullWidth: obj16.left, isFullWidth: obj16.right } = memo);
     rect.style = memo3;
     let obj6 = { bounty, visible: isEndCardVisible, sourceQuestContent, onClose: callback3 };
-    rect.children = closure_11(tmp2(15124), obj6);
-    items9[2] = closure_11(tmp9(7175).SafeAreaPaddingView, rect);
+    rect.children = closure_11(tmp2(15101), obj6);
+    items9[2] = closure_11(tmp9(7196).SafeAreaPaddingView, rect);
     obj2.children = items9;
     return closure_13(closure_12, obj2);
   }
   result = 1000 * rewardTimerSeconds;
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(5494).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5495).QuestsExperimentLocations;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
 let c14 = 0.5625;
-const createStyles = fn(4605);
+const createStyles = fn(4606);
 let closure_15 = createStyles.createStyles(() => {
   let obj = {
     videoWrapper: { position: "absolute" },
@@ -374,7 +374,7 @@ export default function BountiesModalContent(bountyId) {
     }
   }, items);
   if (null != bounty) {
-    let obj = { theme: ThemeTypes.DARKER, children: null };
+    let obj = { theme: ThemeTypes.DARK, children: null };
     obj = {
       adContentId: bounty.id,
       adCreativeType: bountyId(bounty[22]).AdCreativeType.BOUNTY,

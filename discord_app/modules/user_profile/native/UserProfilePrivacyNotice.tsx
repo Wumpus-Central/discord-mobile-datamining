@@ -20,7 +20,7 @@ const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4605);
+fn(4606);
 let createStyles = { container: null, icon: null, text: null, closeButton: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
