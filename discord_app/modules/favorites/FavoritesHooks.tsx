@@ -1,14 +1,14 @@
-// === Module 10313: FavoritesHooks ===
+// === Module 10352: FavoritesHooks ===
 
-// Module 10313 (FavoritesHooks)
+// Module 10352 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1885 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import FavoritesLimits from "FavoritesLimits" /* 10314 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10315 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import FavoritesLimits from "FavoritesLimits" /* 10353 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10354 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 import UserStore from "UserStore" /* 1371 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 

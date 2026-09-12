@@ -1,12 +1,12 @@
-// === Module 16578: ReactActionSheet ===
+// === Module 16602: ReactActionSheet ===
 
-// Module 16578 (ReactActionSheet)
+// Module 16602 (ReactActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7835 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8437 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11216 */;
-import ICYMIContext from "ICYMIContext" /* 16524 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
+import ICYMIContext from "ICYMIContext" /* 16548 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -112,10 +112,10 @@ function ReactActionSheetBase(content) {
               return obj;
             } else {
               closure_5(true);
-              v1(8437).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-              const obj5 = v1(8437);
+              v1(8469).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+              const obj5 = v1(8469);
               const obj1 = { itemId: tmp4.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null } };
-              v1(8437).feedItemActioned(obj1);
+              v1(8469).feedItemActioned(obj1);
               v1 = 1;
               dependencyMap = 1;
               const obj2 = { value: sendMessage(first1), done: false };
@@ -361,11 +361,11 @@ function ReactActionSheetBase(content) {
   stringResult = intl.string(require("util").t["5IEsGx"]);
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7224).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { header: { width: "100%", display: "flex", alignItems: "center", padding: 8 }, container: { gap: 12 }, preview: null, loading: null, base: null, contentContainer: null, inputRow: null, input: null, emojis: null, submitting: null, emoji: null, defaultEmoji: null, emojiImage: null, emojiText: null };
 createStyles = { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
 createStyles.preview = createStyles;

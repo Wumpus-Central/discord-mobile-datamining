@@ -1,10 +1,10 @@
-// === Module 16496: ForYouItemImage ===
+// === Module 16520: ForYouItemImage ===
 
-// Module 16496 (ForYouItemImage)
+// Module 16520 (ForYouItemImage)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Pressables from "Pressables" /* 5174 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8331 */;
+import Pressables from "Pressables" /* 5204 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8363 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -12,10 +12,10 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 const View = fn(17).View;
 const getGuildAcronym = fn(1975).getGuildAcronym;
-const Constants = fn(16497);
+const Constants = fn(16521);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 48;
   if (arg0) {
@@ -34,7 +34,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj.guildFallbackImage = size1;
   return obj;
 });
-fn(4606);
+fn(4636);
 let obj = { fallbackImage: null, fallbackImageV2: null, brandBackground: null, profileBackground: null, friendBackground: null, messageBackground: null, guildGridBackground: null };
 obj = { color: nativeDefault.colors.WHITE };
 obj.fallbackImage = obj;

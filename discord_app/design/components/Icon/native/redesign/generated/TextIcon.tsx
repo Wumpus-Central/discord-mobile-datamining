@@ -1,9 +1,9 @@
-// === Module 5131: TextIcon ===
+// === Module 5161: TextIcon ===
 
-// Module 5131 (TextIcon)
+// Module 5161 (TextIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod5083 from "module_5083" /* 5083 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod5113 from "module_5113" /* 5113 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const TextIcon = function TextIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5083, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5113, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

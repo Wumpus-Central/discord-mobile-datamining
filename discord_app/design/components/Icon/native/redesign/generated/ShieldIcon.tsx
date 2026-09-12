@@ -1,9 +1,9 @@
-// === Module 9493: ShieldIcon ===
+// === Module 9532: ShieldIcon ===
 
-// Module 9493 (ShieldIcon)
+// Module 9532 (ShieldIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod9492 from "module_9492" /* 9492 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod9531 from "module_9531" /* 9531 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ShieldIcon = function ShieldIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9492, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9531, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

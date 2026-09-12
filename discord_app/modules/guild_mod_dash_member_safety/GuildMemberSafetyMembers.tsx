@@ -1,13 +1,13 @@
-// === Module 7569: GuildMemberSafetyMembers ===
+// === Module 7599: GuildMemberSafetyMembers ===
 
-// Module 7569 (GuildMemberSafetyMembers)
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4241 */;
-import _modDef4725 from "module_4725" /* 4725 */;
-import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7570 */;
-import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 7571 */;
-import SortUtils from "SortUtils" /* 7573 */;
-import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7574 */;
-import isSpam from "isSpam" /* 7580 */;
+// Module 7599 (GuildMemberSafetyMembers)
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4271 */;
+import _modDef4755 from "module_4755" /* 4755 */;
+import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7600 */;
+import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 7601 */;
+import SortUtils from "SortUtils" /* 7603 */;
+import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7604 */;
+import isSpam from "isSpam" /* 7610 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -174,7 +174,7 @@ prototype["updateMember"] = function updateMember(userId, arg1) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
         let tmp15 = obj[tmp6];
-        if (_modDef4725(tmp15, obj[tmp6])) {
+        if (_modDef4755(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;

@@ -1,9 +1,9 @@
-// === Module 6604: SwordAndStoneSpotIllustration ===
+// === Module 6634: SwordAndStoneSpotIllustration ===
 
-// Module 6604 (SwordAndStoneSpotIllustration)
+// Module 6634 (SwordAndStoneSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6605 from "module_6605" /* 6605 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6635 from "module_6635" /* 6635 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SwordAndStoneSpotIllustration = function SwordAndStoneSpotIllustrat
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6605 };
+  obj = { uri: _modDef6635 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const SwordAndStoneSpotIllustration = function SwordAndStoneSpotIllustrat
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6605 });
+  return jsx(FastImageDefault, { uri: _modDef6635 });
 };

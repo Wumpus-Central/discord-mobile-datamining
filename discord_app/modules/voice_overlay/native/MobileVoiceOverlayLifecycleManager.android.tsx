@@ -1,38 +1,38 @@
-// === Module 14581: MobileVoiceOverlayLifecycleManager ===
+// === Module 14616: MobileVoiceOverlayLifecycleManager ===
 
-// Module 14581 (MobileVoiceOverlayLifecycleManager)
+// Module 14616 (MobileVoiceOverlayLifecycleManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import useChannelName from "useChannelName" /* 4759 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4786 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5493 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7828 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10081 */;
-import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 14588 */;
+import useChannelName from "useChannelName" /* 4789 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5523 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7858 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10120 */;
+import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 14623 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
-import SpeakingStore from "SpeakingStore" /* 5470 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
+import SpeakingStore from "SpeakingStore" /* 5500 */;
 import UserStore from "UserStore" /* 1371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4625 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10070 */;
+import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10109 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 
 require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(14582);
-fn(14583);
-fn(14584);
-fn(14585);
-fn(7065);
-fn(13841);
-fn(14586);
-fn(14587);
-const registerAsset = fn(8714);
+fn(14617);
+fn(14618);
+fn(14619);
+fn(14620);
+fn(7095);
+fn(13875);
+fn(14621);
+fn(14622);
+const registerAsset = fn(8746);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants3 = { DISABLED: 0, [0]: "DISABLED", NOT_SHOWING: 1, [1]: "NOT_SHOWING", WAITING_FOR_SERVICE: 2, [2]: "WAITING_FOR_SERVICE", SHOWING: 3, [3]: "SHOWING" };
 let obj = { useSpeaker: null, mute: null, disconnectFromVoice: null, getInvite: null, switchChannels: null, openDiscord: null, inviteLinkCopied: null, channelSelect: null, closeWindow: null, searchChannels: null, noResults: null };

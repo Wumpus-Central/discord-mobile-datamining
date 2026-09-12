@@ -1,8 +1,8 @@
-// === Module 7490: BlockedPaymentsCountryExperiment ===
+// === Module 7520: BlockedPaymentsCountryExperiment ===
 
-// Module 7490 (BlockedPaymentsCountryExperiment)
-import useGeoForUserDefault from "useGeoForUser" /* 7491 */;
-import createExperiment from "module_4520" /* 4520 */;
+// Module 7520 (BlockedPaymentsCountryExperiment)
+import useGeoForUserDefault from "useGeoForUser" /* 7521 */;
+import createExperiment from "module_4550" /* 4550 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

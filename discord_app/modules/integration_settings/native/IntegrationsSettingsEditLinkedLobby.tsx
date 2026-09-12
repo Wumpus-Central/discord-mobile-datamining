@@ -1,9 +1,9 @@
-// === Module 16938: IntegrationsSettingsEditLinkedLobby ===
+// === Module 16965: IntegrationsSettingsEditLinkedLobby ===
 
-// Module 16938 (IntegrationsSettingsEditLinkedLobby)
+// Module 16965 (IntegrationsSettingsEditLinkedLobby)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { screenContainer: null, header: null, divider: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.screenContainer = createStyles;

@@ -1,8 +1,8 @@
-// === Module 13872: SystemResponsiveness ===
+// === Module 13906: SystemResponsiveness ===
 
-// Module 13872 (SystemResponsiveness)
+// Module 13906 (SystemResponsiveness)
 import _modDef12 from "module_12" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4661 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/SystemResponsiveness.tsx");

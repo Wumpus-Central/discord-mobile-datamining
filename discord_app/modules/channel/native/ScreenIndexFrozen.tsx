@@ -1,6 +1,6 @@
-// === Module 4473: ScreenIndexFrozen ===
+// === Module 4503: ScreenIndexFrozen ===
 
-// Module 4473 (ScreenIndexFrozen)
+// Module 4503 (ScreenIndexFrozen)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

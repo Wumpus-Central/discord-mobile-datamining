@@ -2,7 +2,7 @@
 
 // Module 2004 (StartupData)
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 2005 */;
 import size from "module_2" /* 2 */;
 

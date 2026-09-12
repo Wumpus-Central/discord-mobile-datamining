@@ -1,28 +1,28 @@
-// === Module 10341: ForumComposerModal ===
+// === Module 10380: ForumComposerModal ===
 
-// Module 10341 (ForumComposerModal)
+// Module 10380 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1481 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7849 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9397 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10340 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7879 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10379 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9775 */;
+import NativeMenuStore from "NativeMenuStore" /* 9814 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import DraftStore from "DraftStore" /* 4947 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4946 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7350 */;
+import DraftStore from "DraftStore" /* 4977 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7380 */;
 
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(4947).DraftType;
+const DraftType = fn(4977).DraftType;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { container: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;

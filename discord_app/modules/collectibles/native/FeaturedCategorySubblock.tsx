@@ -1,13 +1,13 @@
-// === Module 15895: FeaturedCategorySubblock ===
+// === Module 15919: FeaturedCategorySubblock ===
 
-// Module 15895 (FeaturedCategorySubblock)
+// Module 15919 (FeaturedCategorySubblock)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7614 */;
-import VisibilitySensorDefault from "VisibilitySensor" /* 15890 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
+import VisibilitySensorDefault from "VisibilitySensor" /* 15914 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_10 = createStyles.createStyles({ container: { position: "relative" }, bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" }, limitedTimeBadge: { position: "absolute", bottom: "68%", left: "3%", zIndex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/FeaturedCategorySubblock.tsx");
@@ -26,13 +26,13 @@ export default function _default(subblock) {
   const tmp = closure_10();
   let obj = subblock(1483);
   importDefault = obj.useNavigation();
-  let obj1 = subblock(8858);
+  let obj1 = subblock(8893);
   dependencyMap = obj1.useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
   let obj2 = subblock(504);
   let items = [CollectiblesCategoryStore];
   const stateFromStores = obj2.useStateFromStores(items, () => CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId));
-  let obj3 = subblock(15885);
+  let obj3 = subblock(15909);
   let unpublishedAt = subblock.unpublishedAt;
   if (unpublishedAt == null) {
     unpublishedAt = undefined;
@@ -102,13 +102,13 @@ export default function _default(subblock) {
   }
   const items1 = [tmp11Result, ];
   const tmp12 = VisibilitySensorDefault;
-  let result = subblock(7627).shouldShowLimitedTimeBadge(date);
+  let result = subblock(7657).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj5 = { style: tmp.limitedTimeBadge };
-    result = closure_8(tmp2(8922).LimitedTimeBadge, obj5);
+    result = closure_8(tmp2(8957).LimitedTimeBadge, obj5);
   }
   items1[1] = result;
   obj.children = items1;
-  obj.children = closure_9(subblock(5174).PressableOpacity, obj);
+  obj.children = closure_9(subblock(5204).PressableOpacity, obj);
   return closure_8(tmp12, obj);
 };

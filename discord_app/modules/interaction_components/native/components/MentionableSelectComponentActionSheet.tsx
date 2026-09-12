@@ -1,20 +1,20 @@
-// === Module 11917: MentionableSelectComponentActionSheet ===
+// === Module 11953: MentionableSelectComponentActionSheet ===
 
-// Module 11917 (MentionableSelectComponentActionSheet)
+// Module 11953 (MentionableSelectComponentActionSheet)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 4838 */;
-import RoleIconUtils from "RoleIconUtils" /* 7260 */;
-import RoleIconDefault from "RoleIcon" /* 7278 */;
-import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8205 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9843 */;
-import DiscordTagDefault from "DiscordTag" /* 9894 */;
-import UserIcon from "UserIcon" /* 11919 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 4868 */;
+import RoleIconUtils from "RoleIconUtils" /* 7290 */;
+import RoleIconDefault from "RoleIcon" /* 7308 */;
+import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8237 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9882 */;
+import DiscordTagDefault from "DiscordTag" /* 9933 */;
+import UserIcon from "UserIcon" /* 11955 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PresenceStore from "PresenceStore" /* 4646 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -23,7 +23,7 @@ const Constants = fn(1074);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { name: null, discriminator: null, roleCountContainer: null, roleCountText: null };
 createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
 createStyles.name = createStyles;

@@ -1,11 +1,11 @@
-// === Module 8909: NameplateDummyUserPreview ===
+// === Module 8944: NameplateDummyUserPreview ===
 
-// Module 8909 (NameplateDummyUserPreview)
+// Module 8944 (NameplateDummyUserPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import themes from "themes" /* 4315 */;
-import NameplateDefault from "Nameplate" /* 8910 */;
+import themes from "themes" /* 4345 */;
+import NameplateDefault from "Nameplate" /* 8945 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
@@ -19,7 +19,7 @@ NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1178).AvatarSizes.XSMALL_20] = NAMEPLATE_
 NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1178).AvatarSizes.XSMALL] = { padding: 6, avatarMarginRight: 6, placeholderBarHeight: 8 };
 NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = { padding: nativeDefault.space.PX_8, avatarMarginRight: nativeDefault.space.PX_8, placeholderBarHeight: 14 };
 NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1178).AvatarSizes.NORMAL] = NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles((arg0, arg1) => {
   let avatarContainer = { container: null, avatarContainer: null, avatar: null, placeholderBar: null, nameplate: null };
   avatarContainer = { padding: tmp.padding, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", width: "100%", position: "relative", borderRadius: nativeDefault.radii.sm };
@@ -66,7 +66,7 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   const stateFromStores = obj.useStateFromStores(items, () => themes.isThemeDark(theme.theme));
   obj = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
   const items2 = [hasOwnProperty(NameplateDefault, obj), , ];
-  const obj1 = { style: tmp3.avatarContainer, children: hasOwnProperty(native.Avatar, { source: importDefault(stateFromStores ? 8912 : 8913), size: NORMAL, "aria-hidden": true, style: tmp3.avatar }) };
+  const obj1 = { style: tmp3.avatarContainer, children: hasOwnProperty(native.Avatar, { source: importDefault(stateFromStores ? 8947 : 8948), size: NORMAL, "aria-hidden": true, style: tmp3.avatar }) };
   items2[1] = hasOwnProperty(View, obj1);
   const obj3 = { style: null };
   const items3 = [tmp3.placeholderBar, { width: hideAvatar.width }];

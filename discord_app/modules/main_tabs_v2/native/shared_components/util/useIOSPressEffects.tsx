@@ -1,9 +1,9 @@
-// === Module 5661: useIOSPressEffects ===
+// === Module 5691: useIOSPressEffects ===
 
-// Module 5661 (useIOSPressEffects)
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import spring from "spring" /* 5025 */;
+// Module 5691 (useIOSPressEffects)
+import PlatformUtils from "PlatformUtils" /* 1150 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import spring from "spring" /* 5055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

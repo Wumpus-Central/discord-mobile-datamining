@@ -1,9 +1,9 @@
-// === Module 6624: VendingMachineSpotIllustration ===
+// === Module 6654: VendingMachineSpotIllustration ===
 
-// Module 6624 (VendingMachineSpotIllustration)
+// Module 6654 (VendingMachineSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6625 from "module_6625" /* 6625 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6655 from "module_6655" /* 6655 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const VendingMachineSpotIllustration = function VendingMachineSpotIllustr
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6625 };
+  obj = { uri: _modDef6655 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const VendingMachineSpotIllustration = function VendingMachineSpotIllustr
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6625 });
+  return jsx(FastImageDefault, { uri: _modDef6655 });
 };

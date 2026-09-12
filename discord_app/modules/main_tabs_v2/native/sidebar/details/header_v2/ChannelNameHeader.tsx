@@ -1,20 +1,20 @@
-// === Module 16815: ChannelNameHeader ===
+// === Module 16842: ChannelNameHeader ===
 
-// Module 16815 (ChannelNameHeader)
+// Module 16842 (ChannelNameHeader)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import _modDef3526 from "module_3526" /* 3526 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import transitionToChannel from "transitionToChannel" /* 4617 */;
-import ChannelUtils from "ChannelUtils" /* 4751 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5079 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11002 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import transitionToChannel from "transitionToChannel" /* 4647 */;
+import ChannelUtils from "ChannelUtils" /* 4781 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11041 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import PresenceStore from "PresenceStore" /* 4646 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -47,7 +47,7 @@ function DirectMessageIcon(channel) {
   }, items2);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    obj = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1178).AvatarSizes.NORMAL, status: false, isMobileOnline: null, isVROnline: true, statusStyle: null };
+    obj = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1178).AvatarSizes.NORMAL, status: false, isMobileOnline: "done", isVROnline: "flowing", statusStyle: "hourglass" };
     let isSystemUserResult;
     if (stateFromStores != null) {
       isSystemUserResult = stateFromStores.isSystemUser();
@@ -107,7 +107,7 @@ function ChannelSubtitle(channel) {
       tmp8 = null;
       if ("" !== stateFromStores) {
         obj = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(4602).Text, obj);
+        tmp8 = closure_12(tmp(4632).Text, obj);
       }
     }
     return tmp8;
@@ -115,8 +115,8 @@ function ChannelSubtitle(channel) {
     const intl = tmp(1114).intl;
     let stringResult = intl.string(_modDef3526["D+2/QP"]);
   } else {
-    stringResult = tmp(4751).channelTypeString(channel);
-    const tmpResult = tmp(4751);
+    stringResult = tmp(4781).channelTypeString(channel);
+    const tmpResult = tmp(4781);
   }
 }
 function ChannelNameHeaderContent(channel) {
@@ -221,7 +221,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7235)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7265)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -233,7 +233,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(5174).PressableOpacity, obj);
+  return closure_12(channel(5204).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
@@ -248,7 +248,7 @@ const Constants = fn(1074);
 ({ Permissions: c10, StatusTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { container: null, channelIcon: null, channelTypeBox: null, channelData: null, statusStyle: null };
 obj = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj.container = obj;

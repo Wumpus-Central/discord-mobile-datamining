@@ -1,14 +1,14 @@
-// === Module 11649: ChannelBrowser ===
+// === Module 11685: ChannelBrowser ===
 
-// Module 11649 (ChannelBrowser)
+// Module 11685 (ChannelBrowser)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NewChannelsStore from "NewChannelsStore" /* 7605 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7184 */;
+import NewChannelsStore from "NewChannelsStore" /* 7635 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7214 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
 const require = fn;
 function keyExtractor(section) {
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { container: { flex: 1 }, header: null, categoryContainer: null, categoryTitle: null, channelTitle: null, selectAllContainer: null, selectAllCheckbox: null, newBadge: null, nuxCard: null, nuxCloseContainer: null, nuxHeader: null, nuxHeaderText: null, nuxBody: null };
 obj = { marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16 };
 obj.header = obj;
@@ -47,7 +47,7 @@ let closure_17 = noop.memo((channel) => {
   let obj = channel(504);
   const items = [UserGuildSettingsStore];
   const stateFromStores = obj.useStateFromStores(items, () => UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.id));
-  let obj1 = channel(4325);
+  let obj1 = channel(4355);
   const checkboxA11yNative = obj1.useCheckboxA11yNative({ checked: stateFromStores });
   obj = {
     style: tmp.categoryContainer,
@@ -68,25 +68,25 @@ let closure_17 = noop.memo((channel) => {
     accessibilityState = checkboxA11yNative.accessibilityState;
   }
   obj.accessibilityState = accessibilityState;
-  obj = { style: tmp.categoryTitle, title: onChannelClick(4759)(channel), lineClamp: 1 };
-  const items1 = [closure_12(channel(5738).TableRowGroupTitle, obj), ];
+  obj = { style: tmp.categoryTitle, title: onChannelClick(4789)(channel), lineClamp: 1 };
+  const items1 = [closure_12(channel(5768).TableRowGroupTitle, obj), ];
   let tmp10Result = null;
   if ("null" !== channel.id) {
     obj1 = { style: tmp.selectAllContainer, children: null };
     const obj2 = { style: tmp.selectAllCheckbox, children: null };
     const obj3 = { checked: stateFromStores };
-    obj2.children = closure_12(tmp4(5668).FormCheckbox, obj3);
+    obj2.children = closure_12(tmp4(5698).FormCheckbox, obj3);
     const items2 = [closure_12(View, obj2), ];
     const obj4 = { variant: "text-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1114).intl;
     obj4.children = intl.string(tmp4(1114).t.mSQwnW);
-    items2[1] = closure_12(tmp4(4602).Text, obj4);
+    items2[1] = closure_12(tmp4(4632).Text, obj4);
     obj1.children = items2;
     tmp10Result = closure_13(View, obj1);
   }
   items1[1] = tmp10Result;
   obj.children = closure_13(closure_14, { children: items1 });
-  return closure_12(channel(5174).PressableOpacity, obj);
+  return closure_12(channel(5204).PressableOpacity, obj);
 });
 let closure_18 = noop.memo((channel) => {
   channel = channel.channel;

@@ -1,9 +1,9 @@
-// === Module 5852: AvatarWumpusExample ===
+// === Module 5882: AvatarWumpusExample ===
 
-// Module 5852 (AvatarWumpusExample)
+// Module 5882 (AvatarWumpusExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5853 from "module_5853" /* 5853 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5883 from "module_5883" /* 5883 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarWumpusExample = function AvatarWumpusExample(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5853 };
+  obj = { uri: _modDef5883 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const AvatarWumpusExample = function AvatarWumpusExample(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5853 });
+  return jsx(FastImageDefault, { uri: _modDef5883 });
 };

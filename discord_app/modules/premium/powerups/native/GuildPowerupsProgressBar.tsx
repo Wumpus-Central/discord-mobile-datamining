@@ -1,16 +1,16 @@
-// === Module 16291: GuildPowerupsProgressBar ===
+// === Module 16315: GuildPowerupsProgressBar ===
 
-// Module 16291 (GuildPowerupsProgressBar)
+// Module 16315 (GuildPowerupsProgressBar)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4607 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12572 */;
-import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 16294 */;
+import timing from "timing" /* 4637 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12608 */;
+import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 16318 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 16292 */;
+import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 16316 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 const colors = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let result = 2 * nativeDefault.space.PX_4;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-fn(4606);
+fn(4636);
 let obj = { container: null, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, headerText: null, rightContent: null, descriptionText: null };
 obj = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.container = obj;

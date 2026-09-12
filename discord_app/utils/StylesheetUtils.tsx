@@ -1,6 +1,6 @@
-// === Module 12753: StylesheetUtils ===
+// === Module 12789: StylesheetUtils ===
 
-// Module 12753 (StylesheetUtils)
+// Module 12789 (StylesheetUtils)
 import StringUtils from "StringUtils" /* 1925 */;
 import size from "module_2" /* 2 */;
 

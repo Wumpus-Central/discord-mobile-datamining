@@ -1,14 +1,14 @@
-// === Module 8999: FloatingActionButton ===
+// === Module 9038: FloatingActionButton ===
 
-// Module 8999 (FloatingActionButton)
+// Module 9038 (FloatingActionButton)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5025 */;
-import ButtonConstants from "ButtonConstants" /* 5031 */;
+import spring from "spring" /* 5055 */;
+import ButtonConstants from "ButtonConstants" /* 5061 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const styles = createStyles.createStyles(() => {
   let obj = { button: null, iconButtonPill: null };
   obj = {};
@@ -29,7 +29,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   ({ icon, positionBottom } = positionRight);
   positionRight = positionRight.positionRight;
   const merged = Object.assign(positionRight, Object.assign({ icon: 0, positionBottom: 0, positionRight: 0, accessibilityLabel: 0 }));
-  let obj = positionBottom(4343);
+  let obj = positionBottom(4373);
   class F {
     constructor() {
       tmp = closure_0;
@@ -50,7 +50,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
       return rect;
     }
   }
-  obj = { withSpring: positionBottom(5025).withSpring, positionBottom, DEFAULT_POSITION_OFFSET: 16, SPRING_CONFIG, positionRight };
+  obj = { withSpring: positionBottom(5055).withSpring, positionBottom, DEFAULT_POSITION_OFFSET: 16, SPRING_CONFIG, positionRight };
   F.__closure = obj;
   F.__workletHash = 10762818944671;
   F.__initData = __initData;
@@ -68,6 +68,6 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   }
   obj1.icon = cloneElementResult;
   ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = styles());
-  obj.children = jsx(positionBottom(8173).BaseIconButton, {});
-  return jsx(positionRight(4343).View, { style: animatedStyle, children: null });
+  obj.children = jsx(positionBottom(8203).BaseIconButton, {});
+  return jsx(positionRight(4373).View, { style: animatedStyle, children: null });
 };

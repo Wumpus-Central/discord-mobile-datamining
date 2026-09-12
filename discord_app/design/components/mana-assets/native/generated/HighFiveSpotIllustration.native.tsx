@@ -1,9 +1,9 @@
-// === Module 6274: HighFiveSpotIllustration ===
+// === Module 6304: HighFiveSpotIllustration ===
 
-// Module 6274 (HighFiveSpotIllustration)
+// Module 6304 (HighFiveSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6275 from "module_6275" /* 6275 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6305 from "module_6305" /* 6305 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const HighFiveSpotIllustration = function HighFiveSpotIllustration(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6275 };
+  obj = { uri: _modDef6305 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const HighFiveSpotIllustration = function HighFiveSpotIllustration(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6275 });
+  return jsx(FastImageDefault, { uri: _modDef6305 });
 };

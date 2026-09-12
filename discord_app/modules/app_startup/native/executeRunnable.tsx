@@ -1,13 +1,13 @@
-// === Module 17309: executeRunnable ===
+// === Module 17339: executeRunnable ===
 
-// Module 17309 (executeRunnable)
+// Module 17339 (executeRunnable)
 import LoggerDefault from "Logger" /* 3 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7829 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13721 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7859 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13755 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-const NativeAppStartup = fn(17310);
+const NativeAppStartup = fn(17340);
 ({ init: hasOwnProperty, applicationReady: metroRequire } = NativeAppStartup);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_startup/native/executeRunnable.tsx");
@@ -25,7 +25,7 @@ export default function executeRunnable(arg0, arg1) {
     await init.measureAsync(closure_1_5);
     await promise.promise;
     const _HermesInternal = HermesInternal;
-    v2(7829).startBridgeTo("AppContainer:" + closure_129_0.toLowerCase());
+    v2(7859).startBridgeTo("AppContainer:" + closure_129_0.toLowerCase());
     return closure_1(10).time("\u{1F3C3}", "Run", () => {
       const Emitter = closure_1(c3[8]).Emitter;
       return Emitter.batched(closure_1_1);

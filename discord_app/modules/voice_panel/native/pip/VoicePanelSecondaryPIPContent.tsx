@@ -1,20 +1,20 @@
-// === Module 17248: VoicePanelSecondaryPIPContent ===
+// === Module 17275: VoicePanelSecondaryPIPContent ===
 
-// Module 17248 (VoicePanelSecondaryPIPContent)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11086 */;
-import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17102 */;
+// Module 17275 (VoicePanelSecondaryPIPContent)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11125 */;
+import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17129 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import FramesStore from "FramesStore" /* 9601 */;
+import FramesStore from "FramesStore" /* 9640 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = fn;
 const ActivityLayoutMode = fn(1920).ActivityLayoutMode;
-const ActivityPanelModes = fn(9596).ActivityPanelModes;
-const FramesConstants = fn(9602);
+const ActivityPanelModes = fn(9635).ActivityPanelModes;
+const FramesConstants = fn(9641);
 ({ asLaunched: closure_9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: closure_11 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_13 = createStyles.createStyles({ activityContainer: { flex: 1 } });
 const __initData = { code: "function VoicePanelSecondaryPIPContentTsx1(){const{getActivityContainerPipStylesSpec,pipState,activePipOrientationLockState,windowDimensions}=this.__closure;const{width:width,height:height,shouldVerticallyCenter:shouldVerticallyCenter,shouldHorizontallyCenter:shouldHorizontallyCenter,marginLeft:marginLeft,marginTop:marginTop}=getActivityContainerPipStylesSpec({pipWidth:pipState.width,pipHeight:pipState.height,pipOrientationLockState:activePipOrientationLockState,isLandscape:windowDimensions.get().landscape});return{width:width,height:height,left:shouldHorizontallyCenter?'50%':'0%',top:shouldVerticallyCenter?'50%':'0%',marginLeft:marginLeft,marginTop:marginTop};}" };
 let size = fn(2);

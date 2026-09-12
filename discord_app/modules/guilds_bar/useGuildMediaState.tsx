@@ -1,20 +1,20 @@
-// === Module 16402: useGuildMediaState ===
+// === Module 16426: useGuildMediaState ===
 
-// Module 16402 (useGuildMediaState)
+// Module 16426 (useGuildMediaState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ChannelTypes from "ChannelTypes" /* 1094 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 13764 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 13798 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
-import VoiceStateStore from "VoiceStateStore" /* 4625 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
+import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
 require = fn;
 function canConnectToChannel(type, afkChannelId) {

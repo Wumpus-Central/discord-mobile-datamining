@@ -1,8 +1,8 @@
-// === Module 9255: SecureFramesCode ===
+// === Module 9294: SecureFramesCode ===
 
-// Module 9255 (SecureFramesCode)
+// Module 9294 (SecureFramesCode)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4602 */;
+import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { codeText: { fontFamily: fn(1085).Fonts.CODE_NORMAL }, row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 }, divider: null, codeHeader: null, code: null, loading: null };
 createStyles = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 createStyles.divider = createStyles;

@@ -1,27 +1,27 @@
-// === Module 16296: TextChannel ===
+// === Module 16320: TextChannel ===
 
-// Module 16296 (TextChannel)
+// Module 16320 (TextChannel)
 import nativeDefault from "native" /* 576 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1112 */;
-import transitionToChannel from "transitionToChannel" /* 4617 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4619 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5058 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11005 */;
+import transitionToChannel from "transitionToChannel" /* 4647 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5088 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import ReadStateStore from "ReadStateStore" /* 4621 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import ReadStateStore from "ReadStateStore" /* 4651 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10207);
+const RedesignChannelListConstants = fn(10246);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_15 = createStyles.createStyles((arg0, arg1) => {
   let obj = { container: null, selected: null, selectedBorder: null, row: null, rowWithSubtitle: null, channelLabel: null, channelLabelText: null };
   obj = { position: "relative", marginVertical, marginHorizontal: 8, borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 };

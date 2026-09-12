@@ -1,15 +1,15 @@
-// === Module 4427: DismissibleContentUnsafeUtils ===
+// === Module 4457: DismissibleContentUnsafeUtils ===
 
-// Module 4427 (DismissibleContentUnsafeUtils)
+// Module 4457 (DismissibleContentUnsafeUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 1942 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 1944 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4449 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4479 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 
 require = fn;
 class UNSAFE_isDismissibleContentDismissed {
@@ -122,46 +122,8 @@ class UNSAFE_isDismissibleContentDismissed {
   }
 }
 let closure_7 = async function _UNSAFE_markDismissibleContentAsDismissed(arg0) {
-  closure_2 = tmp2;
-  closure_130_0 = closure_0;
-  let obj1 = closure_1;
-  if (closure_1 === undefined) {
-    obj1 = {};
-  }
-  closure_130_1 = obj1;
-  await "PX_16";
-  if (1 === tmp5) {
-    if (arg0 === 1) {
-      c5 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c5 = 3;
-      let obj2 = { value, done: true };
-      return obj2;
-    } else if (closure_131_6(closure_130_0, { bypassNewUserCheck: true })) {
-      c5 = 3;
-    } else {
-      obj2 = closure_131_0(closure_131_2[6]);
-      const result = obj2.markDismissibleContentAsDismissedPreProcessing(closure_130_0, closure_130_1);
-      closure_131_0(closure_131_2[10]);
-      c4 = 2;
-      c5 = 1;
-      const obj3 = { value: null, done: false };
-      obj3.value = obj3.addDismissedContent(closure_130_0);
-      return obj3;
-    }
-  } else if (arg0 === 1) {
+  if (c5 === 2) {
     c5 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    const result1 = closure_131_0(closure_131_2[6]).markDismissibleContentAsDismissedPostProcessing(closure_130_0, closure_130_1);
-    closure_131_0(closure_131_2[6]);
-  }
-  return value;
-};
-let closure_8 = async function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp4 === 3) {
     if (arg0 === 1) {
@@ -174,66 +136,83 @@ let closure_8 = async function _UNSAFE_markSingleUseGuildDismissibleContentAsDis
     }
   } else {
     try {
-      c6 = 2;
-      if (0 === c5) {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          c6 = 3;
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
+          c5 = 3;
           obj = { value, done: true };
           return obj;
         } else {
-          closure_4 = tmp5;
-          closure_3 = tmp2;
-          closure_131_2 = undefined;
-          closure_131_0 = closure_0;
-          closure_131_1 = closure_1;
-          let obj1 = closure_2;
-          if (closure_2 === undefined) {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let obj1 = closure_1;
+          if (closure_1 === undefined) {
             obj1 = {};
           }
-          closure_131_2 = obj1;
+          closure_130_1 = obj1;
+          c4 = 1;
           c5 = 1;
-          c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c6 = 3;
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            let obj2 = { value, done: true };
+            return obj2;
+          } else if (closure_131_6(closure_130_0, { bypassNewUserCheck: true })) {
+            c5 = 3;
+          } else {
+            obj2 = closure_131_0(closure_131_2[6]);
+            const result = obj2.markDismissibleContentAsDismissedPreProcessing(closure_130_0, closure_130_1);
+            let obj3 = closure_131_0(closure_131_2[10]);
+            c4 = 2;
+            c5 = 1;
+            obj3 = { value: null, done: false };
+            obj3.value = obj3.addDismissedContent(closure_130_0);
+            return obj3;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
           throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          let obj2 = { value, done: true };
-          return obj2;
-        } else {
-          obj2 = closure_132_0(closure_132_2[6]);
-          const result = obj2.markDismissibleContentAsDismissedPreProcessing(closure_131_0, closure_131_2);
-          let obj3 = closure_132_0(closure_132_2[6]);
-          c5 = 2;
-          c6 = 1;
-          obj3 = { value: null, done: false };
-          obj3.value = obj3.UNSAFE_addGuildDismissedContent(closure_131_0, closure_131_1, 1);
-          return obj3;
+        } else if (arg0 !== 2) {
+          obj = closure_131_0(closure_131_2[6]);
+          const result1 = obj.markDismissibleContentAsDismissedPostProcessing(closure_130_0, closure_130_1);
         }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
+        c5 = 3;
         const obj4 = { value, done: true };
         return obj4;
-      } else {
-        obj = closure_132_0(closure_132_2[6]);
-        const result1 = obj.markDismissibleContentAsDismissedPostProcessing(closure_131_0, closure_131_2);
-        c6 = 3;
-        return { value: "HermesInternal", done: null };
       }
-    } catch (tmp26) {
-      c6 = tmp;
-      throw tmp26;
+    } catch (tmp24) {
+      c5 = tmp;
+      throw tmp24;
     }
   }
+};
+let closure_8 = async function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
+  const result = closure_132_0(closure_132_2[6]).markDismissibleContentAsDismissedPreProcessing(closure_131_0, closure_131_2);
+  closure_132_0(closure_132_2[6]);
+  await closure_132_0(closure_132_2[6]).UNSAFE_addGuildDismissedContent(closure_131_0, closure_131_1, 1);
+  closure_132_0(closure_132_2[6]);
+  const result1 = closure_132_0(closure_132_2[6]).markDismissibleContentAsDismissedPostProcessing(closure_131_0, closure_131_2);
+  await "HermesInternal";
+  closure_3 = tmp2;
+  closure_131_0 = closure_0;
+  closure_131_1 = closure_1;
+  let obj1 = closure_2;
+  if (closure_2 === undefined) {
+    obj1 = {};
+  }
+  closure_131_2 = obj1;
+  return "PX_16";
 };
 let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(arg0) {
   if (c6 === 2) {

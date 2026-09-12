@@ -1,7 +1,7 @@
-// === Module 7716: MobileAppDatabaseManager ===
+// === Module 7746: MobileAppDatabaseManager ===
 
-// Module 7716 (MobileAppDatabaseManager)
-import AppDatabaseManager from "AppDatabaseManager" /* 7717 */;
+// Module 7746 (MobileAppDatabaseManager)
+import AppDatabaseManager from "AppDatabaseManager" /* 7747 */;
 import size from "module_2" /* 2 */;
 
 const items = [

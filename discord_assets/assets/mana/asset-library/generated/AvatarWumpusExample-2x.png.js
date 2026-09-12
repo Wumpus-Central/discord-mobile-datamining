@@ -1,6 +1,6 @@
-// === Module 5853: ? ===
+// === Module 5883: ? ===
 
-// Module 5853
+// Module 5883
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarWumpusExample-2x.png.js");

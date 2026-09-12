@@ -1,6 +1,6 @@
-// === Module 7324: useIsCreatorMonetizationEnabledGuild ===
+// === Module 7354: useIsCreatorMonetizationEnabledGuild ===
 
-// Module 7324 (useIsCreatorMonetizationEnabledGuild)
+// Module 7354 (useIsCreatorMonetizationEnabledGuild)
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = fn;

@@ -1,9 +1,9 @@
-// === Module 13170: useSegmentedPagesHeight ===
+// === Module 13207: useSegmentedPagesHeight ===
 
-// Module 13170 (useSegmentedPagesHeight)
+// Module 13207 (useSegmentedPagesHeight)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

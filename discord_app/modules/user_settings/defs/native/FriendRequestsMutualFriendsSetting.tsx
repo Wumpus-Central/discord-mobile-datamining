@@ -1,22 +1,22 @@
-// === Module 15032: FriendRequestsMutualFriendsSetting ===
+// === Module 15066: FriendRequestsMutualFriendsSetting ===
 
-// Module 15032 (FriendRequestsMutualFriendsSetting)
+// Module 15066 (FriendRequestsMutualFriendsSetting)
 import util from "util" /* 1114 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7068 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14879 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const FriendSourceFlags = fn(1074).FriendSourceFlags;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IqlCSq);
   },
-  parent: fn(8049).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8079).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsMutualFriendsSettingValue() {
     const FriendSourceFlagsSetting = setting(1935).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();

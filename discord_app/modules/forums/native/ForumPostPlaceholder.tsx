@@ -1,16 +1,16 @@
-// === Module 12120: ForumPostPlaceholder ===
+// === Module 12156: ForumPostPlaceholder ===
 
-// Module 12120 (ForumPostPlaceholder)
+// Module 12156 (ForumPostPlaceholder)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4607 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import timing from "timing" /* 4637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { postPlaceholder: null };
 obj = { height: 2 * nativeDefault.space.PX_64, marginBottom: nativeDefault.space.PX_12 };
 obj.postPlaceholder = obj;
@@ -27,12 +27,12 @@ export default noop.memo(() => {
   const timingConfig = _slicedToArray(noop.useState(() => {
     let obj = { timingConfig: null };
     obj = { duration: 1000 + 500 * Math.random(), easing: null };
-    const Easing = stateFromStores(4343).Easing;
-    obj.easing = Easing.inOut(stateFromStores(4343).Easing.sin);
+    const Easing = stateFromStores(4373).Easing;
+    obj.easing = Easing.inOut(stateFromStores(4373).Easing.sin);
     obj.timingConfig = obj;
     return obj;
   }), 1)[0].timingConfig;
-  let obj1 = stateFromStores(4343);
+  let obj1 = stateFromStores(4373);
   const fn = function _() {
     const obj = { opacity: null };
     if (stateFromStores) {
@@ -48,13 +48,13 @@ export default noop.memo(() => {
     }
     return tmp6;
   };
-  obj = { reducedMotion: stateFromStores, ROW_OPACITY_END, withDelay: stateFromStores(4343).withDelay, INITIAL_DELAY_MS: 1000, withRepeat: stateFromStores(4343).withRepeat, withSequence: stateFromStores(4343).withSequence, withTiming: stateFromStores(4607).withTiming, timingConfig };
+  obj = { reducedMotion: stateFromStores, ROW_OPACITY_END, withDelay: stateFromStores(4373).withDelay, INITIAL_DELAY_MS: 1000, withRepeat: stateFromStores(4373).withRepeat, withSequence: stateFromStores(4373).withSequence, withTiming: stateFromStores(4637).withTiming, timingConfig };
   fn.__closure = obj;
   fn.__workletHash = 9488742940898;
   fn.__initData = __initData;
   const animatedStyle = obj1.useAnimatedStyle(fn);
   obj = { style: animatedStyle, pointerEvents: "none", children: null };
   obj1 = { variant: "secondary", style: closure_7().postPlaceholder };
-  obj.children = jsx(stateFromStores(5658).Card, { variant: "secondary", style: closure_7().postPlaceholder });
-  return jsx(timingConfig(4343).View, { style: animatedStyle, pointerEvents: "none", children: null });
+  obj.children = jsx(stateFromStores(5688).Card, { variant: "secondary", style: closure_7().postPlaceholder });
+  return jsx(timingConfig(4373).View, { style: animatedStyle, pointerEvents: "none", children: null });
 });

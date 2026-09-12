@@ -1,11 +1,11 @@
-// === Module 6372: NitroSupergraphicLogo ===
+// === Module 6402: NitroSupergraphicLogo ===
 
-// Module 6372 (NitroSupergraphicLogo)
+// Module 6402 (NitroSupergraphicLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4308 */;
-import _modDef6373 from "module_6373" /* 6373 */;
+import useToken from "useToken" /* 4338 */;
+import _modDef6403 from "module_6403" /* 6403 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -42,9 +42,9 @@ export const NitroSupergraphicLogo = function NitroSupergraphicLogo(color) {
     }
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
-  const obj1 = { fadeDuration: 0, source: { uri: _modDef6373 }, style: null, accessible, accessibilityLabel, resizeMode };
+  const obj1 = { fadeDuration: 0, source: { uri: _modDef6403 }, style: null, accessible, accessibilityLabel, resizeMode };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj1.style = items;
-  return <Image fadeDuration={0} source={{ uri: _modDef6373 }} style={null} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
+  return <Image fadeDuration={0} source={{ uri: _modDef6403 }} style={null} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
 };

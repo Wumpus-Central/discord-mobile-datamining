@@ -1,10 +1,10 @@
-// === Module 17883: useInviteAssignableRoles ===
+// === Module 17913: useInviteAssignableRoles ===
 
-// Module 17883 (useInviteAssignableRoles)
-import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
+// Module 17913 (useInviteAssignableRoles)
+import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;

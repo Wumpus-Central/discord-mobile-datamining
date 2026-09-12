@@ -1,10 +1,10 @@
-// === Module 5197: mobile/NativePermissionUtils ===
+// === Module 5227: mobile/NativePermissionUtils ===
 
-// Module 5197 (mobile/NativePermissionUtils)
+// Module 5227 (mobile/NativePermissionUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1114 */;
-import useAlertStore from "useAlertStore" /* 4952 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 5198 */;
+import useAlertStore from "useAlertStore" /* 4982 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 5228 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -100,10 +100,10 @@ let closure_9 = async function _combineStatuses(arg0) {
 };
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
-const NativePermissionConstants = fn(4816);
+const NativePermissionConstants = fn(4846);
 ({ NativePermissionTypes, NativePermissionStatus: metroRequire } = NativePermissionConstants);
 const jsx = fn(21).jsx;
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 PlatformUtils = PlatformUtils.isAndroid();
 if (PlatformUtils) {
   PlatformUtils = get_ActivityIndicator.Platform.constants.Version <= 28;
@@ -141,7 +141,7 @@ if (MetaQuestUtils) {
 }
 HermesBuiltin.arraySpread(items9, tmp8);
 let NativePermissionIOSUtils;
-const NativePermissionBaseUtils = fn(5194).NativePermissionBaseUtils;
+const NativePermissionBaseUtils = fn(5224).NativePermissionBaseUtils;
 class NativePermissionIOSUtils extends NativePermissionBaseUtils {
 }
 const prototype = NativePermissionIOSUtils.prototype;
@@ -180,7 +180,7 @@ prototype["openAlertModal"] = function openAlertModal(arg0) {
   obj.openAlert("permission-denied", jsx(noop.lazy(() => require("asyncRequireImpl")(paths[10], paths.paths)), { title: null, body: null, onConfirm: null }));
 };
 PlatformUtils = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items2), [NativePermissionTypes.HEADSET_CAMERA]: NativeModules.NativePermissionManager.requestHeadsetCameraAuthorization };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 if (PlatformUtils.isAndroid()) {
   fn = () => {
     const items = [NativeModules.NativePermissionManager.requestMicrophoneAuthorization, NativeModules.NativePermissionManager.requestModifyAudioAuthorization];
@@ -195,7 +195,7 @@ PlatformUtils[NativePermissionTypes.CONTACTS] = NativeModules.NativePermissionMa
 PlatformUtils[NativePermissionTypes.INPUT_MONITORING] = () => Promise.resolve(constants.AUTHORIZED);
 NativePermissionIOSUtils.requestPermissionLookup = PlatformUtils;
 PlatformUtils = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items7), [NativePermissionTypes.HEADSET_CAMERA]: NativeModules.NativePermissionManager.hasHeadsetCameraAuthorization };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 if (PlatformUtils.isAndroid()) {
   let fn2 = () => {
     const items = [NativeModules.NativePermissionManager.hasMicrophoneAuthorization, NativeModules.NativePermissionManager.hasModifyAudioAuthorization];

@@ -1,19 +1,19 @@
-// === Module 11994: AppealIngestionExternalLink ===
+// === Module 12030: AppealIngestionExternalLink ===
 
-// Module 11994 (AppealIngestionExternalLink)
+// Module 12030 (AppealIngestionExternalLink)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import LinkingDefault from "Linking" /* 4301 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Pressables from "Pressables" /* 5174 */;
-import _mod8730 from "module_8730" /* 8730 */;
+import LinkingDefault from "Linking" /* 4331 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Pressables from "Pressables" /* 5204 */;
+import _mod8762 from "module_8762" /* 8762 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { childButton: null, childContainer: null, childButtonText: null, chevron: null };
 createStyles = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
 createStyles.childButton = createStyles;
@@ -41,7 +41,7 @@ export default function AppealIngestionExternalLink(children) {
   };
   obj = { style: tmp.childContainer, children: null };
   obj = { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.text };
-  const items = [closure_4(Text_Text.Text, obj), closure_4(native.Icon, { source: _mod8730, color: tmp.chevron.color })];
+  const items = [closure_4(Text_Text.Text, obj), closure_4(native.Icon, { source: _mod8762, color: tmp.chevron.color })];
   obj.children = items;
   obj.children = closure_5(View, obj);
   return closure_4(Pressables.PressableHighlight, obj);

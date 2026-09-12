@@ -1,13 +1,13 @@
-// === Module 11597: AppStoreOverlayStatsCarousel ===
+// === Module 11636: AppStoreOverlayStatsCarousel ===
 
-// Module 11597 (AppStoreOverlayStatsCarousel)
+// Module 11636 (AppStoreOverlayStatsCarousel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11598 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11599 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11637 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11638 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -115,7 +115,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { carousel: null, carouselContent: null, statCard: null, statCardExpanded: null, expandedCarouselContent: null, secondaryRow: null };
 createStyles = { marginHorizontal: -nativeDefault.space.PX_16 };
 createStyles.carousel = createStyles;

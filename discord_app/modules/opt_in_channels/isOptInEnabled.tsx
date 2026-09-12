@@ -1,9 +1,9 @@
-// === Module 7608: isOptInEnabled ===
+// === Module 7638: isOptInEnabled ===
 
-// Module 7608 (isOptInEnabled)
+// Module 7638 (isOptInEnabled)
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;

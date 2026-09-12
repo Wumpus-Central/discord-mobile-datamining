@@ -1,18 +1,18 @@
-// === Module 16623: GuildRoleSubscriptionPurchaseCard ===
+// === Module 16647: GuildRoleSubscriptionPurchaseCard ===
 
-// Module 16623 (GuildRoleSubscriptionPurchaseCard)
+// Module 16647 (GuildRoleSubscriptionPurchaseCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import BottomSheetModal from "BottomSheetModal" /* 6698 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7052 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15288 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15298 */;
-import Elements from "Elements" /* 16618 */;
-import SubscribeButtonDefault from "SubscribeButton" /* 16624 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import BottomSheetModal from "BottomSheetModal" /* 6728 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7082 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15310 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15320 */;
+import Elements from "Elements" /* 16642 */;
+import SubscribeButtonDefault from "SubscribeButton" /* 16648 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, header: null, content: null, headerText: null, headerDot: null, seperator: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 createStyles.container = createStyles;

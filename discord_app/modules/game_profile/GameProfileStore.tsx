@@ -1,6 +1,6 @@
-// === Module 8773: GameProfileStore ===
+// === Module 8805: GameProfileStore ===
 
-// Module 8773 (GameProfileStore)
+// Module 8805 (GameProfileStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 
@@ -19,18 +19,18 @@ const prototype = GameProfileStore.prototype;
 prototype["getSimilarGames"] = function getSimilarGames(gameId) {
   return closure_0[gameId];
 };
-prototype["getShopCollectionSkuIds"] = function getShopCollectionSkuIds(arg0) {
-  return closure_1[arg0];
+prototype["getShopCollectionSkuIds"] = function getShopCollectionSkuIds(skuIds) {
+  return closure_1[skuIds];
 };
-prototype["hasShopCollectionBeenFetched"] = function hasShopCollectionBeenFetched(arg0) {
-  let flag = closure_2[arg0];
+prototype["hasShopCollectionBeenFetched"] = function hasShopCollectionBeenFetched(skuIds) {
+  let flag = closure_2[skuIds];
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
-prototype["isShopCollectionFetching"] = function isShopCollectionFetching(arg0) {
-  let flag = closure_3[arg0];
+prototype["isShopCollectionFetching"] = function isShopCollectionFetching(skuIds) {
+  let flag = closure_3[skuIds];
   if (flag == null) {
     flag = false;
   }

@@ -1,9 +1,9 @@
-// === Module 5850: AvatarValExample ===
+// === Module 5880: AvatarValExample ===
 
-// Module 5850 (AvatarValExample)
+// Module 5880 (AvatarValExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5851 from "module_5851" /* 5851 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5881 from "module_5881" /* 5881 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarValExample = function AvatarValExample(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5851 };
+  obj = { uri: _modDef5881 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const AvatarValExample = function AvatarValExample(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5851 });
+  return jsx(FastImageDefault, { uri: _modDef5881 });
 };

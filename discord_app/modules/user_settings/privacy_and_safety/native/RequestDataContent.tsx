@@ -1,9 +1,9 @@
-// === Module 14917: RequestDataContent ===
+// === Module 14951: RequestDataContent ===
 
-// Module 14917 (RequestDataContent)
+// Module 14951 (RequestDataContent)
 import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
-import DataHarvestActionCreators from "DataHarvestActionCreators" /* 14918 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
+import DataHarvestActionCreators from "DataHarvestActionCreators" /* 14952 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const constants = { USERS: "Account", MESSAGES: "Messages", GUILDS: "Servers", ANALYTICS: "Analytics", ACTIVITIES: "Activities", ADS: "Ads", ZENDESK: "Zendesk" };
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles({ content: { padding: 16 }, header: { marginBottom: 8 }, title: { marginBottom: 8 }, description: { marginBottom: 0 }, checkboxContainer: { marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/RequestDataContent.tsx");
@@ -144,7 +144,7 @@ export default noop.memo(() => {
           const intl = closure_1_0(1114).intl;
           message = intl.string(closure_1_0(1114).t["0F5Jyt"]);
         }
-        closure_1_1(4950);
+        closure_1_1(4980);
         const obj = { title: null, body: null };
         const intl2 = closure_1_0(1114).intl;
         obj.title = intl2.string(closure_1_0(1114).t.OjbtDm);
@@ -190,7 +190,7 @@ export default noop.memo(() => {
           const intl = closure_1_0(1114).intl;
           message = intl.string(closure_1_0(1114).t["0F5Jyt"]);
         }
-        closure_1_1(4950);
+        closure_1_1(4980);
         const obj = { title: null, body: null };
         const intl2 = closure_1_0(1114).intl;
         obj.title = intl2.string(closure_1_0(1114).t.OjbtDm);

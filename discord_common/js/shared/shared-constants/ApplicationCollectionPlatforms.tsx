@@ -1,6 +1,6 @@
-// === Module 12169: ApplicationCollectionPlatforms ===
+// === Module 12205: ApplicationCollectionPlatforms ===
 
-// Module 12169 (ApplicationCollectionPlatforms)
+// Module 12205 (ApplicationCollectionPlatforms)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationCollectionPlatforms.tsx");

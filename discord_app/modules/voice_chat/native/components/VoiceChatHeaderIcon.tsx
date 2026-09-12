@@ -1,14 +1,14 @@
-// === Module 10090: VoiceChatHeaderIcon ===
+// === Module 10129: VoiceChatHeaderIcon ===
 
-// Module 10090 (VoiceChatHeaderIcon)
+// Module 10129 (VoiceChatHeaderIcon)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import native2 from "native" /* 4317 */;
-import Pressables from "Pressables" /* 5174 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10015 */;
+import native2 from "native" /* 4347 */;
+import Pressables from "Pressables" /* 5204 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10054 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 4621 */;
+import ReadStateStore from "ReadStateStore" /* 4651 */;
 
 require = fn;
 function VoiceChatCallScreenHeaderIconInner(onPress) {
@@ -29,12 +29,12 @@ const View = fn(17).View;
 const ThemeTypes = fn(1074).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { headerButton: null, disabledOpacity: null, chatIconContainer: null, chatIcon: null, badge: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, alignSelf: "center", padding: 6, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 createStyles.headerButton = size;
 createStyles.disabledOpacity = { opacity: 0.6 };
-createStyles = { marginRight: 12, height: fn(5733).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+createStyles = { marginRight: 12, height: fn(5763).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 createStyles.chatIconContainer = createStyles;
 createStyles.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
 createStyles.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };

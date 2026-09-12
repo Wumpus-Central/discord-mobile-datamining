@@ -1,8 +1,8 @@
-// === Module 11045: openFavoritesGuildMoveToCategoryActionSheet ===
+// === Module 11084: openFavoritesGuildMoveToCategoryActionSheet ===
 
-// Module 11045 (openFavoritesGuildMoveToCategoryActionSheet)
-import FolderIcon2 from "FolderIcon" /* 5125 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7268 */;
+// Module 11084 (openFavoritesGuildMoveToCategoryActionSheet)
+import FolderIcon2 from "FolderIcon" /* 5155 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7298 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/favorites/native/openFavoritesGuildMoveToCategoryActionSheet.tsx");

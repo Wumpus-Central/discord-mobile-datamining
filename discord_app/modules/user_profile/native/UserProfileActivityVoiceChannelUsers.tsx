@@ -1,11 +1,11 @@
-// === Module 13119: UserProfileActivityVoiceChannelUsers ===
+// === Module 13156: UserProfileActivityVoiceChannelUsers ===
 
-// Module 13119 (UserProfileActivityVoiceChannelUsers)
+// Module 13156 (UserProfileActivityVoiceChannelUsers)
 import util from "util" /* 1114 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11246 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11285 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4646 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
 
 const UserProfileStackedActionSheetDefault = UserProfileStackedActionSheet;
 
@@ -14,7 +14,7 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  let obj = user(8301);
+  let obj = user(8333);
   const avatarDecoration = obj.useAvatarDecoration(user, channel.guild_id);
   const items = [PresenceStore];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({ status: PresenceStore.getStatus(user.id), isMobileOnline: PresenceStore.isMobileOnline(user.id), isVROnline: PresenceStore.isVROnline(user.id) }));
@@ -26,7 +26,7 @@ function UserRow(user) {
   obj.icon = jsx(user(1178).Avatar, { user, avatarDecoration, size: user(1178).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
   obj.start = start;
   obj.end = end;
-  return jsx(user(5656).TableRow, { user, avatarDecoration, size: user(1178).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
+  return jsx(user(5686).TableRow, { user, avatarDecoration, size: user(1178).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

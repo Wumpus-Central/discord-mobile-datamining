@@ -1,20 +1,20 @@
-// === Module 8727: NodeView ===
+// === Module 8759: NodeView ===
 
-// Module 8727 (NodeView)
+// Module 8759 (NodeView)
 import nativeDefault from "native" /* 576 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4318 */;
-import ColorUtils from "ColorUtils" /* 4456 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4561 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4786 */;
-import CustomMarkupAll from "CustomMarkup" /* 5046 */;
-import MenuTypes from "MenuTypes" /* 8721 */;
-import ArrowDefault from "Arrow" /* 8729 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
+import ColorUtils from "ColorUtils" /* 4486 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4591 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
+import CustomMarkupAll from "CustomMarkup" /* 5076 */;
+import MenuTypes from "MenuTypes" /* 8753 */;
+import ArrowDefault from "Arrow" /* 8761 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4605 */;
+import DevSettingsStore from "DevSettingsStore" /* 4635 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 
 require = fn;
 function HeaderView(node) {
@@ -88,20 +88,20 @@ function ChildItem(child) {
   obj = { style: tmp.childButton, accessibilityRole: "button", onPress: _slicedToArray(noop.useState(() => () => closure_1_1.onPress(child)), 1)[0], children: null };
   obj = { style: tmp.childContainer, children: null };
   const obj1 = { style: tmp.childContent, children: null };
-  const items1 = [closure_16(child(4602).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
+  const items1 = [closure_16(child(4632).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
   if (stateFromStores) {
     stateFromStores = null != report_type;
   }
   if (stateFromStores) {
     const obj3 = { style: tmp.debugText, variant: "text-xs/normal", color: "text-muted", children: report_type };
-    stateFromStores = closure_16(tmp5(4602).Text, obj3);
+    stateFromStores = closure_16(tmp5(4632).Text, obj3);
   }
   items1[1] = stateFromStores;
   obj1.children = items1;
   const items2 = [closure_17(closure_6, obj1), closure_16(ArrowDefault, {})];
   obj.children = items2;
   obj.children = closure_17(closure_6, obj);
-  return closure_16(child(5174).PressableHighlight, obj);
+  return closure_16(child(5204).PressableHighlight, obj);
 }
 function ChildrenView(node) {
   const children = node.node.children;
@@ -127,14 +127,14 @@ function NullComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8728).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8726).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(8760).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(8758).IN_APP_REPORTS_NODE;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, scrollView: null, childrenContainer: null, headerContainer: null, header: null, subheader: null, description: null, infoBox: null, infoBoxText: null, childButton: null, childContainer: null, childContent: null, childButtonText: null, debugText: null };
 createStyles = { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 };
 createStyles.container = createStyles;

@@ -1,7 +1,7 @@
-// === Module 4723: transformStats ===
+// === Module 4753: transformStats ===
 
-// Module 4723 (transformStats)
-import transformStatsUtils from "transformStatsUtils" /* 4724 */;
+// Module 4753 (transformStats)
+import transformStatsUtils from "transformStatsUtils" /* 4754 */;
 import size from "module_2" /* 2 */;
 
 function sumBytes(rtpStats) {
@@ -566,9 +566,9 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         closure_2 = num + audio.bytesReceived;
         arr = tmp[id];
         codec = { type: "audio", ssrc: audio.ssrc, sinkWant: null, sinkWantAsInt: null, codec: null, bytesReceived: null, packetsReceived: null, packetsLost: null, fractionLost: null, fecPacketsReceived: null, fecPacketsDiscarded: null, audioLevel: null, audioDetected: null, currentSampleRate: null, jitter: null, jitterBuffer: null, jitterBufferPreferred: null, decodingCNG: null, decodingMutedOutput: null, decodingNormal: null, decodingPLC: null, decodingPLCCNG: null, nackCount: null, accelerateRate: null, expandRate: null, preemptiveExpandRate: null, speechExpandRate: null, secondaryDecodedRate: null, opSilence: null, opNormal: null, opMerge: null, opExpand: null, opAccelerate: null, opPreemptiveExpand: null, opCNG: null, delayEstimate: null, passthroughCount: null, decryptSuccessCount: null, decryptFailureCount: null, decryptDuration: null, decryptAttempts: null, decryptMissingKeyCount: null, decryptInvalidNonceCount: null };
-        let obj2 = id(4724);
+        let obj2 = id(4754);
         codec.sinkWant = obj2.formatSinkWantStat(id, audio.ssrc, false);
-        codec.sinkWantAsInt = id(4724).formatSinkWantAsInt(id, audio.ssrc);
+        codec.sinkWantAsInt = id(4754).formatSinkWantAsInt(id, audio.ssrc);
         codec = { id: null, name: null };
         ({ codecPayloadType: obj4.id, codecName: obj4.name } = audio);
         codec.codec = codec;
@@ -592,7 +592,7 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         }
         const merged = Object.assign(obj2);
         codec = arr.push(codec);
-        const obj3 = id(4724);
+        const obj3 = id(4754);
       }
     });
   }

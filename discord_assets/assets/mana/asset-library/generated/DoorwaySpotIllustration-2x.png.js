@@ -1,6 +1,6 @@
-// === Module 6005: ? ===
+// === Module 6035: ? ===
 
-// Module 6005
+// Module 6035
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DoorwaySpotIllustration-2x.png.js");

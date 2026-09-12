@@ -1,13 +1,13 @@
-// === Module 13350: IconActionButton ===
+// === Module 13383: IconActionButton ===
 
-// Module 13350 (IconActionButton)
+// Module 13383 (IconActionButton)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import useFontScale from "useFontScale" /* 5033 */;
-import Pressables from "Pressables" /* 5174 */;
-import Badge from "Badge" /* 7942 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import useFontScale from "useFontScale" /* 5063 */;
+import Pressables from "Pressables" /* 5204 */;
+import Badge from "Badge" /* 7972 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ class ButtonBadge {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const timestampProducer = createStyles.createStyles(() => {
   let obj = { actionIconButtonPressable: { minWidth: 32, minHeight: 32, borderRadius: 20, marginEnd: 12, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 12 }, withoutMargin: { marginEnd: 0 }, filled: {}, outlined: null, roundButton: null, actionIcon: null, actionText: null, unreadBadgeLeft: null, unreadBadgeRight: null, unreadBadgeMask: null, countStyle: null };
   obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };

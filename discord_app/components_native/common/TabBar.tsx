@@ -1,6 +1,6 @@
-// === Module 11356: TabBar ===
+// === Module 11395: TabBar ===
 
-// Module 11356 (TabBar)
+// Module 11395 (TabBar)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -47,7 +47,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableWithoutFeedback: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
 const NOOP = fn(1074).NOOP;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { innerContainer: { flexDirection: "row", alignItems: "stretch" }, tab: { flexGrow: 1, flexBasis: "auto", flexShrink: 0, alignItems: "center", justifyContent: "center", marginBottom: 1, marginHorizontal: 1, padding: 10, borderBottomWidth: 2, borderBottomColor: "transparent" }, tabActive: { backgroundColor: "rgba(0,0,0,0.1)" }, tabSelected: null, container: null };
 createStyles = { borderBottomColor: nativeDefault.unsafe_rawColors.BRAND_600 };
 createStyles.tabSelected = createStyles;

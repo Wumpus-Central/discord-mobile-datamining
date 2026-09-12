@@ -24,7 +24,7 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1) {
   closure_6 = undefined;
   const tmp2 = state(null);
   if (null == tmp2.current) {
-    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: getCurrentRestrictedHoursState, prevDeps: "Boolean", state: "call" };
+    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: getCurrentRestrictedHoursState, prevDeps: "Boolean", state: "w" };
     tmp2.current = obj;
   }
   current = tmp2.current;

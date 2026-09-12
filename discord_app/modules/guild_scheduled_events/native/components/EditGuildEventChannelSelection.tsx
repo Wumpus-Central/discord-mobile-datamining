@@ -1,17 +1,17 @@
-// === Module 9819: EditGuildEventChannelSelection ===
+// === Module 9858: EditGuildEventChannelSelection ===
 
-// Module 9819 (EditGuildEventChannelSelection)
+// Module 9858 (EditGuildEventChannelSelection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import StageChannelUpsellDefault from "StageChannelUpsell" /* 9820 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import StageChannelUpsellDefault from "StageChannelUpsell" /* 9859 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7599 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
 
 require = fn;
 const View = fn(17).View;
@@ -19,7 +19,7 @@ const Constants = fn(1074);
 ({ ChannelTypes: closure_9, Permissions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { flexDirection: "column" }, channelSelectorButton: null, channelIcon: null, channelTypeText: null, channelNameText: null };
 createStyles = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 createStyles.channelSelectorButton = createStyles;
@@ -36,14 +36,14 @@ export default function EditGuildEventChannelSelection(guild) {
   const guildEventId = guild.guildEventId;
   ({ recurrenceId: dependencyMap, onChangeChannel: View } = guild);
   const tmp = closure_13();
-  let obj = guild(6692);
+  let obj = guild(6722);
   const inputStyles = obj.useInputStyles({ hasLeadingIcon: true });
   closure_5 = tmp5;
-  let obj1 = guild(9817);
+  let obj1 = guild(9856);
   closure_6 = obj1.useGetEventChannelsByType(guild.id, channelType);
-  let obj2 = guild(9803);
+  let obj2 = guild(9842);
   obj2.useChannelsUserCanStartStageIn(guild);
-  const tmp7 = channel(4759)(channel);
+  const tmp7 = channel(4789)(channel);
   let obj3 = guild(504);
   const items = [closure_5];
   closure_8 = obj3.useStateFromStores(items, () => PermissionStore.can(constants2.MANAGE_CHANNELS, guild));
@@ -52,16 +52,16 @@ export default function EditGuildEventChannelSelection(guild) {
   const items2 = [guildEventId];
   constants = obj4.useStateFromStores(items1, () => GuildScheduledEventStore.getGuildScheduledEvent(guildEventId), items2);
   if (null != channel) {
-    let tmp2Result = tmp2(5079);
+    let tmp2Result = tmp2(5109);
     let channelIcon = tmp2Result.getChannelIcon(channel);
   } else {
-    channelIcon = channel(9805);
+    channelIcon = channel(9844);
   }
   if (null != channel) {
-    tmp2Result = tmp2(5079);
+    tmp2Result = tmp2(5109);
     let LocationIcon = tmp2Result.getChannelIconComponent(channel);
   } else {
-    LocationIcon = tmp2(9806).LocationIcon;
+    LocationIcon = tmp2(9845).LocationIcon;
   }
   let intl = tmp2(1114).intl;
   let string = intl.string;
@@ -75,7 +75,7 @@ export default function EditGuildEventChannelSelection(guild) {
   const items3 = [tmp.container, guild.style];
   obj.style = items3;
   obj = { style: tmp.channelTypeText, variant: "text-sm/semibold", color: "text-subtle", children: stringResult };
-  const items4 = [closure_11(guild(4602).Heading, obj), ];
+  const items4 = [closure_11(guild(4632).Heading, obj), ];
   obj1 = { accessibilityLabel: stringResult, accessibilityHint: null, accessibilityValue: null, accessibilityRole: "button", style: null, onPress: null, children: null };
   const intl2 = tmp2(1114).intl;
   obj1.accessibilityHint = intl2.string(guild(1114).t.AaXbMD);
@@ -98,7 +98,7 @@ export default function EditGuildEventChannelSelection(guild) {
         obj = {
           guildId: guild.id,
           onCreate(channel) {
-                guild(9789);
+                guild(9828);
                 const obj = { channel, guildEvent, recurrenceId };
                 const result = obj.openCreateOrEditGuildEventModal(closure_1_0, obj);
               }
@@ -125,8 +125,8 @@ export default function EditGuildEventChannelSelection(guild) {
         if (null != found) {
           closure_1_4(found);
         }
-        channel(4573).hideActionSheet();
-        const obj = channel(4573);
+        channel(4603).hideActionSheet();
+        const obj = channel(4603);
       },
       selectedItem: null,
       hasIcons: false
@@ -136,8 +136,8 @@ export default function EditGuildEventChannelSelection(guild) {
       id = channel.id;
     }
     obj.selectedItem = id;
-    obj3.openLazy(asyncRequireImpl(9517, dependencyMap.paths), "SelectUpdatesChannel", obj);
-    const tmp9 = asyncRequireImpl(9517, dependencyMap.paths);
+    obj3.openLazy(asyncRequireImpl(9556, dependencyMap.paths), "SelectUpdatesChannel", obj);
+    const tmp9 = asyncRequireImpl(9556, dependencyMap.paths);
   };
   if (null != LocationIcon) {
     obj2 = { style: tmp.channelIcon };
@@ -148,10 +148,10 @@ export default function EditGuildEventChannelSelection(guild) {
   }
   const items6 = [tmp12Result, , ];
   obj4 = { style: tmp.channelNameText, variant: "text-md/medium", color: "interactive-text-active", children: tmp7 };
-  items6[1] = closure_11(guild(4602).Text, obj4);
-  items6[2] = closure_11(guild(1178).Icon, { source: channel(9802) });
+  items6[1] = closure_11(guild(4632).Text, obj4);
+  items6[2] = closure_11(guild(1178).Icon, { source: channel(9841) });
   obj1.children = items6;
-  items4[1] = closure_12(guild(5174).PressableOpacity, obj1);
+  items4[1] = closure_12(guild(5204).PressableOpacity, obj1);
   obj.children = items4;
   return closure_12(View, obj);
 };

@@ -1,7 +1,7 @@
-// === Module 12686: useIsRelationshipTypeSpamReportable ===
+// === Module 12722: useIsRelationshipTypeSpamReportable ===
 
-// Module 12686 (useIsRelationshipTypeSpamReportable)
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+// Module 12722 (useIsRelationshipTypeSpamReportable)
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 const require = fn;
 const RelationshipTypes = fn(1074).RelationshipTypes;

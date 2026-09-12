@@ -1,8 +1,8 @@
-// === Module 16973: Pending ===
+// === Module 17000: Pending ===
 
-// Module 16973 (Pending)
-import shared from "shared" /* 4458 */;
-import _mod8317 from "module_8317" /* 8317 */;
+// Module 17000 (Pending)
+import shared from "shared" /* 4488 */;
+import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getPendingSource = function getPendingSource(theme) {
   const obj = {
     dark() {
-      return require("module_16974");
+      return require("module_17001");
     },
     darker() {
-      return require("module_16975");
+      return require("module_17002");
     },
     light() {
-      return require("module_16976");
+      return require("module_17003");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,31 +28,31 @@ export const getPendingSource = function getPendingSource(theme) {
 export const usePendingSource = function usePendingSource() {
   const obj = {
     dark() {
-      return require("module_16974");
+      return require("module_17001");
     },
     darker() {
-      return require("module_16975");
+      return require("module_17002");
     },
     light() {
-      return require("module_16976");
+      return require("module_17003");
     }
   };
-  return _mod8317.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const Pending = function Pending(arg0) {
   let obj = {
     dark() {
-      return require("module_16974");
+      return require("module_17001");
     },
     darker() {
-      return require("module_16975");
+      return require("module_17002");
     },
     light() {
-      return require("module_16976");
+      return require("module_17003");
     }
   };
   obj = {};
-  const illustrationSource = _mod8317.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

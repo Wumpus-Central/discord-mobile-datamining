@@ -1,28 +1,102 @@
-// === Module 7020: NativeCeremonies ===
+// === Module 7050: NativeCeremonies ===
 
-// Module 7020 (NativeCeremonies)
+// Module 7050 (NativeCeremonies)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 let closure_5 = async function _promptForRegisterCredential() {
-  closure_3 = tmp3;
-  closure_2 = tmp2;
-  let register = closure_0;
-  if (closure_0 === undefined) {
-    register = NativeModules.DCDSecurityKeyManager.register;
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_3 = tmp3;
+          closure_2 = tmp2;
+          closure_130_0 = undefined;
+          let register = closure_0;
+          if (closure_0 === undefined) {
+            register = NativeModules.DCDSecurityKeyManager.register;
+          }
+          closure_130_0 = register;
+          closure_130_1 = undefined;
+          let ticket;
+          let challenge;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp6) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          let obj5 = closure_131_0(closure_131_1[3]);
+          c4 = 2;
+          c5 = 1;
+          const obj2 = { value: obj5.startRegisterWebAuthnCredential(), done: false };
+          return obj2;
+        }
+      } else if (2 === tmp6) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_130_1 = value;
+          ticket = closure_130_1.ticket;
+          challenge = closure_130_1.challenge;
+          const obj4 = { ticket };
+          c4 = 3;
+          c5 = 1;
+          obj5 = { value: closure_130_0(challenge), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        obj4.credential = value;
+        c5 = 3;
+        obj = { value: obj4, done: true };
+        return obj;
+      }
+    } catch (tmp19) {
+      c5 = tmp;
+      throw tmp19;
+    }
   }
-  closure_130_0 = register;
-  await "PX_16";
-  await closure_131_0(closure_131_1[3]).startRegisterWebAuthnCredential();
-  closure_130_1 = value;
-  const ticket = closure_130_1.ticket;
-  const challenge = closure_130_1.challenge;
-  const obj4 = { ticket };
-  await closure_130_0(challenge);
-  obj4.credential = value;
-  return obj4;
 };
 const NativeModules = fn(17).NativeModules;
 let closure_4 = new LoggerDefault("WebAuthnUtils");
@@ -55,7 +129,7 @@ Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
 });
 obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   let authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticate;
-  let isAndroidResult = authenticatePasskey(1115).isAndroid();
+  let isAndroidResult = authenticatePasskey(1150).isAndroid();
   if (isAndroidResult) {
     const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
     authenticatePasskey = undefined;
@@ -101,7 +175,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               closure_129_0 = closure_0;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {

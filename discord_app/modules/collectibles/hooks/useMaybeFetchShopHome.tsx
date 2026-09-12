@@ -1,12 +1,12 @@
-// === Module 15876: useMaybeFetchShopHome ===
+// === Module 15900: useMaybeFetchShopHome ===
 
-// Module 15876 (useMaybeFetchShopHome)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7614 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7661 */;
+// Module 15900 (useMaybeFetchShopHome)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7691 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4522 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7658 */;
+import ExperimentStore from "ExperimentStore" /* 4552 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7688 */;
 
 require = fn;
 const noop = fn(19);

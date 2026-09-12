@@ -1,30 +1,30 @@
-// === Module 13081: BotUserProfileOverflowMenu ===
+// === Module 13118: BotUserProfileOverflowMenu ===
 
-// Module 13081 (BotUserProfileOverflowMenu)
+// Module 13118 (BotUserProfileOverflowMenu)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ToastUtils from "ToastUtils" /* 4304 */;
-import UserUtilsDefault from "UserUtils" /* 4451 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import ClipboardUtils from "ClipboardUtils" /* 7262 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8490 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9132 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12225 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12713 */;
-import BotReportChooser from "BotReportChooser" /* 13084 */;
-import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 13085 */;
+import ToastUtils from "ToastUtils" /* 4334 */;
+import UserUtilsDefault from "UserUtils" /* 4481 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import ClipboardUtils from "ClipboardUtils" /* 7292 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8522 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12261 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12749 */;
+import BotReportChooser from "BotReportChooser" /* 13121 */;
+import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 13122 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, ApplicationFlags: closure_9, ChannelTypesSets: c10, RelationshipTypes: closure_11 } = Constants);
-const RestrictionConfirmationConstants = fn(11476);
+const RestrictionConfirmationConstants = fn(11515);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_12, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: map1 } = RestrictionConfirmationConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -142,8 +142,8 @@ export default function BotUserProfileOverflowMenu(application) {
           showUserProfile();
         };
         obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-        obj2.openLazy(asyncRequireImpl(11477, dependencyMap.paths), closure_2_12, obj, "stack");
-        const tmp4 = asyncRequireImpl(11477, dependencyMap.paths);
+        obj2.openLazy(asyncRequireImpl(11516, dependencyMap.paths), closure_2_12, obj, "stack");
+        const tmp4 = asyncRequireImpl(11516, dependencyMap.paths);
       };
       items3.push(obj1);
       if (result) {
@@ -166,8 +166,8 @@ export default function BotUserProfileOverflowMenu(application) {
             id = channel.id;
           }
           obj.contextualChannelId = id;
-          obj2.openLazy(asyncRequireImpl(13084, dependencyMap.paths), BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj, "replaceAll");
-          const tmp5 = asyncRequireImpl(13084, dependencyMap.paths);
+          obj2.openLazy(asyncRequireImpl(13121, dependencyMap.paths), BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj, "replaceAll");
+          const tmp5 = asyncRequireImpl(13121, dependencyMap.paths);
         };
         items3.push(obj2);
       } else {
@@ -299,7 +299,7 @@ export default function BotUserProfileOverflowMenu(application) {
         },
         impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION
       };
-      obj2.openLazy(asyncRequireImpl(11478, dependencyMap.paths), map1, obj, "stack");
+      obj2.openLazy(asyncRequireImpl(11517, dependencyMap.paths), map1, obj, "stack");
     };
     items3.push(obj11);
   }

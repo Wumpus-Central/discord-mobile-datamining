@@ -1,7 +1,7 @@
-// === Module 5677: useDesignToggle ===
+// === Module 5707: useDesignToggle ===
 
-// Module 5677 (useDesignToggle)
-import DesignTogglesStore from "DesignTogglesStore" /* 5678 */;
+// Module 5707 (useDesignToggle)
+import DesignTogglesStore from "DesignTogglesStore" /* 5708 */;
 
 const require = fn;
 const size = fn(2);

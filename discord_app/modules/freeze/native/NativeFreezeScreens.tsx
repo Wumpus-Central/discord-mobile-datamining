@@ -1,14 +1,14 @@
-// === Module 16089: NativeFreezeScreens ===
+// === Module 16113: NativeFreezeScreens ===
 
-// Module 16089 (NativeFreezeScreens)
-import enableScreens from "enableScreens" /* 4958 */;
+// Module 16113 (NativeFreezeScreens)
+import enableScreens from "enableScreens" /* 4988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({ screens: { flex: 1, overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/freeze/native/NativeFreezeScreens.tsx");

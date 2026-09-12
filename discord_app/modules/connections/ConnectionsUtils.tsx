@@ -1,19 +1,19 @@
-// === Module 5458: ConnectionsUtils ===
+// === Module 5488: ConnectionsUtils ===
 
-// Module 5458 (ConnectionsUtils)
+// Module 5488 (ConnectionsUtils)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4427 */;
-import getConnectionsRolesDefault from "getConnectionsRoles" /* 5460 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
+import getConnectionsRolesDefault from "getConnectionsRoles" /* 5490 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 
 require = fn;
-let Constants = fn(5459);
+let Constants = fn(5489);
 ({ MetadataFields: metroRequire, OperatorTypes: closure_7 } = Constants);
 Constants = fn(1074);
 ({ Permissions: closure_8, PlatformTypes: closure_9 } = Constants);

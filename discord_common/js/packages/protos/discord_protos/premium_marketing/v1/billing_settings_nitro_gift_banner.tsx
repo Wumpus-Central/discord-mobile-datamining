@@ -1,10 +1,10 @@
-// === Module 10772: billing_settings_nitro_gift_banner ===
+// === Module 10811: billing_settings_nitro_gift_banner ===
 
-// Module 10772 (billing_settings_nitro_gift_banner)
+// Module 10811 (billing_settings_nitro_gift_banner)
 import _mod1188 from "module_1188" /* 1188 */;
-import localized_string from "localized_string" /* 10759 */;
-import gradient from "gradient" /* 10767 */;
-import theme_aware_asset from "theme_aware_asset" /* 10769 */;
+import localized_string from "localized_string" /* 10798 */;
+import gradient from "gradient" /* 10806 */;
+import theme_aware_asset from "theme_aware_asset" /* 10808 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

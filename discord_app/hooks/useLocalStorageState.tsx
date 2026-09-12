@@ -1,8 +1,8 @@
-// === Module 10022: useLocalStorageState ===
+// === Module 10061: useLocalStorageState ===
 
-// Module 10022 (useLocalStorageState)
+// Module 10061 (useLocalStorageState)
 import Storage3 from "Storage" /* 510 */;
-import useMountEffectDefault from "useMountEffect" /* 5043 */;
+import useMountEffectDefault from "useMountEffect" /* 5073 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,8 +10,8 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("hooks/useLocalStorageState.tsx");
 
-export const useLocalStorageState = function useLocalStorageState(c2, arg1) {
-  closure_0 = c2;
+export const useLocalStorageState = function useLocalStorageState(arg0, arg1) {
+  closure_0 = arg0;
   importDefault = arg1;
   const tmp = _slicedToArray(noop.useState(() => {
     const Storage = Storage3.Storage;
@@ -30,7 +30,7 @@ export const useLocalStorageState = function useLocalStorageState(c2, arg1) {
     }
   });
   const items = [tmp[0], ];
-  const items1 = [c2];
+  const items1 = [arg0];
   items[1] = noop.useCallback((arg0) => {
     closure_2(arg0);
     const Storage = Storage3.Storage;

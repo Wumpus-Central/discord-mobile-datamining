@@ -1,9 +1,9 @@
-// === Module 11387: QuestOrbMultiplierUtils ===
+// === Module 11426: QuestOrbMultiplierUtils ===
 
-// Module 11387 (QuestOrbMultiplierUtils)
+// Module 11426 (QuestOrbMultiplierUtils)
 import PerksStateUtils from "PerksStateUtils" /* 1377 */;
 import user from "user" /* 1379 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import size from "module_2" /* 2 */;
 
 let QuestOrbMultiplierSource = { UPSELL: "UPSELL", NITRO: "NITRO", XBOX_GAME_PASS: "XBOX_GAME_PASS", INELIGIBLE: "INELIGIBLE" };

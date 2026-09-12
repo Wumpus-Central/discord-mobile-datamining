@@ -1,20 +1,20 @@
-// === Module 16989: SettingsNavigator ===
+// === Module 17016: SettingsNavigator ===
 
-// Module 16989 (SettingsNavigator)
+// Module 17016 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Pressables from "Pressables" /* 5174 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7068 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14745 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 15469 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 16474 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Pressables from "Pressables" /* 5204 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14779 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 15491 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 16498 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14743 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14777 */;
 
 require = fn;
 function SettingHeaderBadge(badge) {
@@ -47,9 +47,9 @@ const Constants = fn(1074);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let NativeStackNavigator = fn(7987);
+let NativeStackNavigator = fn(8017);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
-fn(4606);
+fn(4636);
 let obj = { statusBarSpacer: null, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null, backIcon: null };
 obj = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.statusBarSpacer = obj;

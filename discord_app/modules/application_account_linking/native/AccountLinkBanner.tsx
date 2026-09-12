@@ -1,9 +1,9 @@
-// === Module 16265: AccountLinkBanner ===
+// === Module 16289: AccountLinkBanner ===
 
-// Module 16265 (AccountLinkBanner)
+// Module 16289 (AccountLinkBanner)
 import nativeDefault from "native" /* 576 */;
-import ButtonConstants from "ButtonConstants" /* 5031 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10208 */;
+import ButtonConstants from "ButtonConstants" /* 5061 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10247 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -83,12 +83,12 @@ const PX_82 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_4 = nativeDefault.space.PX_4;
-const NORMAL = fn(7245).GameIconSizes.NORMAL;
-let closure_14 = fn(7245).GameIconImageSize[NORMAL];
+const NORMAL = fn(7275).GameIconSizes.NORMAL;
+let closure_14 = fn(7275).GameIconImageSize[NORMAL];
 let c15 = "heading-md/bold";
 let c16 = "text-sm/medium";
 const PX_162 = nativeDefault.space.PX_16;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { card: { padding: PX_12 }, closeButton: null, imagesContainer: null, ellipsisContainer: null, ellipsisDot: null, title: null, body: null, ctaContainer: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj.closeButton = size;

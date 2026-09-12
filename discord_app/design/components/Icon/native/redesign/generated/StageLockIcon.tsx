@@ -1,9 +1,9 @@
-// === Module 5147: StageLockIcon ===
+// === Module 5177: StageLockIcon ===
 
-// Module 5147 (StageLockIcon)
+// Module 5177 (StageLockIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod5094 from "module_5094" /* 5094 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod5124 from "module_5124" /* 5124 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const StageLockIcon = function StageLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5094, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5124, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

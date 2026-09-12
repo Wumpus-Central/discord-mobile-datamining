@@ -1,9 +1,9 @@
-// === Module 6460: RubberDuckSpotIllustration ===
+// === Module 6490: RubberDuckSpotIllustration ===
 
-// Module 6460 (RubberDuckSpotIllustration)
+// Module 6490 (RubberDuckSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6461 from "module_6461" /* 6461 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6491 from "module_6491" /* 6491 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const RubberDuckSpotIllustration = function RubberDuckSpotIllustration(wi
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6461 };
+  obj = { uri: _modDef6491 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const RubberDuckSpotIllustration = function RubberDuckSpotIllustration(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6461 });
+  return jsx(FastImageDefault, { uri: _modDef6491 });
 };

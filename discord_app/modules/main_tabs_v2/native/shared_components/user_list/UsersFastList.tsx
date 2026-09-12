@@ -1,18 +1,18 @@
-// === Module 10955: UsersFastList ===
+// === Module 10994: UsersFastList ===
 
-// Module 10955 (UsersFastList)
+// Module 10994 (UsersFastList)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Pressables from "Pressables" /* 5174 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5176 */;
-import TableRow from "TableRow" /* 5656 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 7945 */;
-import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 10956 */;
-import UserRowDefault from "UserRow" /* 10957 */;
-import GroupDMRowDefault from "GroupDMRow" /* 11001 */;
-import ChannelRowDefault from "ChannelRow" /* 11004 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Pressables from "Pressables" /* 5204 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5206 */;
+import TableRow from "TableRow" /* 5686 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 7975 */;
+import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 10995 */;
+import UserRowDefault from "UserRow" /* 10996 */;
+import GroupDMRowDefault from "GroupDMRow" /* 11040 */;
+import ChannelRowDefault from "ChannelRow" /* 11043 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,11 +35,11 @@ function PlaceholderSection() {
   return React5(View, {});
 }
 const View = fn(17).View;
-const UsersFastListConstants = fn(10302);
+const UsersFastListConstants = fn(10341);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { sectionHeader: null, stickyHeader: null, list: null, emptySection: null, section: null, interactiveSection: null, titlePressable: null, titleRow: null, badgeWrapper: null, badge: null };
 obj = { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING };
 obj.sectionHeader = obj;

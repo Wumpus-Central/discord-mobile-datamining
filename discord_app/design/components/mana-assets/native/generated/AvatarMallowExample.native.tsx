@@ -1,9 +1,9 @@
-// === Module 5840: AvatarMallowExample ===
+// === Module 5870: AvatarMallowExample ===
 
-// Module 5840 (AvatarMallowExample)
+// Module 5870 (AvatarMallowExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5841 from "module_5841" /* 5841 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5871 from "module_5871" /* 5871 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarMallowExample = function AvatarMallowExample(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5841 };
+  obj = { uri: _modDef5871 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const AvatarMallowExample = function AvatarMallowExample(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5841 });
+  return jsx(FastImageDefault, { uri: _modDef5871 });
 };

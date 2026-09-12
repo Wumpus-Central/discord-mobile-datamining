@@ -1,10 +1,10 @@
-// === Module 5109: MemberVerificationUtils ===
+// === Module 5139: MemberVerificationUtils ===
 
-// Module 5109 (MemberVerificationUtils)
+// Module 5139 (MemberVerificationUtils)
 import Constants from "Constants" /* 1074 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4431 */;
-import MemberVerificationConstants from "MemberVerificationConstants" /* 5110 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4461 */;
+import MemberVerificationConstants from "MemberVerificationConstants" /* 5140 */;
 import size from "module_2" /* 2 */;
 
 ({ AUTOMATIC_APPROVAL_FORM_FIELDS: c2, MANUAL_APPROVAL_FORM_FIELDS: c3 } = MemberVerificationConstants);

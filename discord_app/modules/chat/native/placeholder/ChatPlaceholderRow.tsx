@@ -1,27 +1,27 @@
-// === Module 12734: ChatPlaceholderRow ===
+// === Module 12770: ChatPlaceholderRow ===
 
-// Module 12734 (ChatPlaceholderRow)
+// Module 12770 (ChatPlaceholderRow)
 import nativeDefault from "native" /* 576 */;
-import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12430 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12466 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const tmp3 = fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL];
-fn(4606);
+fn(4636);
 let obj = { row: null, rowInner: null, placeholderAvatar: null, placeholderText: null, placeholderBody: null };
-obj = { paddingLeft: nativeDefault.space.PX_12, paddingTop: fn(12733).CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" };
+obj = { paddingLeft: nativeDefault.space.PX_12, paddingTop: fn(12769).CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" };
 obj.row = obj;
 const createStyles = { marginHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.rowInner = createStyles;
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: tmp3, width: tmp3, borderRadius: nativeDefault.radii.round };
 obj.placeholderAvatar = size;
-obj.placeholderText = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: fn(12733).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: nativeDefault.radii.sm };
-let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: fn(12733).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: nativeDefault.radii.sm };
-obj.placeholderBody = { marginTop: fn(12733).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
+obj.placeholderText = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: fn(12769).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: nativeDefault.radii.sm };
+let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: fn(12769).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: nativeDefault.radii.sm };
+obj.placeholderBody = { marginTop: fn(12769).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
 let closure_5 = createStyles.createStyles(obj);
-let obj3 = { marginTop: fn(12733).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
+let obj3 = { marginTop: fn(12769).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholderRow.tsx");
 

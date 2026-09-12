@@ -1,17 +1,17 @@
-// === Module 11184: usePreviewCollectiblesProduct ===
+// === Module 11223: usePreviewCollectiblesProduct ===
 
-// Module 11184 (usePreviewCollectiblesProduct)
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8249 */;
-import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11183 */;
+// Module 11223 (usePreviewCollectiblesProduct)
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8281 */;
+import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11222 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8245 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8277 */;
 
 require = fn;
-const isAvatarDecorationRecord = fn(7620).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7650).isAvatarDecorationRecord;
 const isNameplateRecord = fn(1887).isNameplateRecord;
-const isProfileEffectRecord = fn(7621).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7622).isProfileFrameRecord;
+const isProfileEffectRecord = fn(7651).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7652).isProfileFrameRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");
 
@@ -27,7 +27,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
   const items = [product, arg1, firstProfileEffect, firstAvatarDecoration, firstNameplate, firstProfileFrame, arg2];
   const effect = firstProfileEffect.useEffect(() => {
     let obj = product;
-    let obj1 = product(11183);
+    let obj1 = product(11222);
     product = obj1.currentPreviewGeneration();
     const pendingChanges = firstAvatarDecoration.getPendingChanges();
     dependencyMap = { avatarDecoration: pendingChanges.pendingAvatarDecoration, profileEffect: pendingChanges.pendingProfileEffect, nameplate: pendingChanges.pendingNameplate, profileFrame: pendingChanges.pendingProfileFrame };
@@ -59,26 +59,26 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
           obj.nameplate = nameplate;
         }
       }
-      obj = obj(8249);
+      obj = obj(8281);
       obj.setPendingChanges(obj);
     } else {
       const first = nameplate(tmp3.items, 1)[0];
       if (firstNameplate(first)) {
-        let objResult = obj(8249);
+        let objResult = obj(8281);
         obj = { avatarDecoration: first };
         objResult.setPendingChanges(obj);
       } else if (isProfileEffectRecord(first)) {
-        objResult = obj(8249);
+        objResult = obj(8281);
         obj1 = { profileEffect: first };
         objResult.setPendingChanges(obj1);
       } else if (firstProfileFrame(first)) {
         let obj2 = { nameplate: first };
-        obj(8249).setPendingChanges(obj2);
-        const objResult1 = obj(8249);
+        obj(8281).setPendingChanges(obj2);
+        const objResult1 = obj(8281);
       } else if (isProfileFrameRecord(first)) {
         const obj3 = { profileFrame: first };
-        obj(8249).setPendingChanges(obj3);
-        const objResult2 = obj(8249);
+        obj(8281).setPendingChanges(obj3);
+        const objResult2 = obj(8281);
       }
       return () => {
         let tmp = closure_1;

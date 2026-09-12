@@ -1,15 +1,15 @@
-// === Module 15121: QuestHomeEmptyState ===
+// === Module 15144: QuestHomeEmptyState ===
 
-// Module 15121 (QuestHomeEmptyState)
+// Module 15144 (QuestHomeEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import useToken from "useToken" /* 4308 */;
-import useChatLayoutDefault from "useChatLayout" /* 4467 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
-import _modDef15122 from "module_15122" /* 15122 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
+import useToken from "useToken" /* 4338 */;
+import useChatLayoutDefault from "useChatLayout" /* 4497 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
+import _modDef15145 from "module_15145" /* 15145 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { flex: 1 }, emptyStateContainer: { justifyContent: "center", alignItems: "center", flex: 1 }, emptyStateContentContainer: null, emptyStateContentTitle: null, emptyStateContentDescription: null, emptyImage: null, gradient: null, actionWrapper: null };
 createStyles = { top: -55, paddingHorizontal: nativeDefault.space.PX_32 };
 createStyles.emptyStateContentContainer = createStyles;
@@ -64,7 +64,7 @@ export default function QuestHomeEmptyState(subtitle) {
   let tmp11Result = null;
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj6 = { children: null };
-    const obj7 = { style: tmp5.emptyImage, source: _modDef15122, resizeMode: "cover" };
+    const obj7 = { style: tmp5.emptyImage, source: _modDef15145, resizeMode: "cover" };
     const items2 = [timestampProducer(React4, obj7), ];
     const obj8 = { style: tmp5.gradient, end: null, start: null, colors: null };
     ({ END: obj12.end, START: obj12.start } = VerticalGradient);

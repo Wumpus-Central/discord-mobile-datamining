@@ -1,12 +1,12 @@
-// === Module 17686: GuildSettingsModalSecurity ===
+// === Module 17716: GuildSettingsModalSecurity ===
 
-// Module 17686 (GuildSettingsModalSecurity)
+// Module 17716 (GuildSettingsModalSecurity)
 import nativeDefault from "native" /* 576 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9154 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9193 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 ({ GuildFeatures: c10, MFALevels: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 }, center: null, label: null, image: null, infoWrapper: null, button: null };
 createStyles = { alignItems: "center", flexDirection: "column", paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 createStyles.center = createStyles;
@@ -69,7 +69,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   obj1 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1114).intl;
   obj1.children = intl.string(guildId(1114).t.Wi9LEV);
-  const items4 = [closure_12(guildId(4602).Text, obj1), , ];
+  const items4 = [closure_12(guildId(4632).Text, obj1), , ];
   const obj2 = { style: tmp.button, children: null };
   const intl2 = tmp2(1114).intl;
   const string = intl2.string;
@@ -86,7 +86,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   }
   obj3.variant = str;
   obj3.onPress = callback;
-  obj2.children = closure_12(guildId(5026).Button, obj3);
+  obj2.children = closure_12(guildId(5056).Button, obj3);
   items4[1] = closure_12(closure_4, obj2);
   let hasItem;
   if (stateFromStores != null) {
@@ -98,24 +98,24 @@ export default function GuildSettingsModalSecurity(guildId) {
     const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1114).intl;
     obj4.children = intl3.string(tmp2(1114).t["KG1V/E"]);
-    tmp17Result = closure_12(tmp2(4602).Text, obj4);
+    tmp17Result = closure_12(tmp2(4632).Text, obj4);
   }
   const obj5 = { children: null };
   items4[2] = tmp17Result;
   obj.children = items4;
   const items5 = [closure_13(closure_4, obj), ];
   const obj6 = { style: tmp.center, children: null };
-  const items6 = [closure_12(closure_5, { source: stateFromStores(14846), style: tmp.image, resizeMode: "contain" }), ];
+  const items6 = [closure_12(closure_5, { source: stateFromStores(14880), style: tmp.image, resizeMode: "contain" }), ];
   const obj8 = { style: tmp.infoWrapper, children: null };
   const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1114).intl;
   obj9.children = intl4.format(guildId(1114).t["FK0+iX"], {});
-  obj8.children = closure_12(guildId(4602).Text, obj9);
+  obj8.children = closure_12(guildId(4632).Text, obj9);
   items6[1] = closure_12(closure_4, obj8);
   obj6.children = items6;
   items5[1] = closure_13(closure_4, obj6);
   obj.children = items5;
-  const items7 = [closure_13(closure_4, obj), closure_12(guildId(7113).NavScrim, {})];
+  const items7 = [closure_13(closure_4, obj), closure_12(guildId(7143).NavScrim, {})];
   obj5.children = items7;
   return closure_13(closure_14, obj5);
 };

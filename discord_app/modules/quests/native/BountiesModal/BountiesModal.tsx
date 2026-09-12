@@ -1,6 +1,6 @@
-// === Module 15058: BountiesModal ===
+// === Module 15092: BountiesModal ===
 
-// Module 15058 (BountiesModal)
+// Module 15092 (BountiesModal)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -13,8 +13,9 @@ export default noop.memo(function BountiesModal(bountyId) {
   bountyId = bountyId.bountyId;
   const sourceQuestContent = bountyId.sourceQuestContent;
   const variant = bountyId.variant;
-  const items = [bountyId, sourceQuestContent, variant];
-  const memo = noop.useMemo(() => ({
+  const bounty = bountyId.bounty;
+  const items = [bounty, bountyId, sourceQuestContent, variant];
+  const memo = bounty.useMemo(() => ({
     [closure_2_5]: {
       fullscreen: true,
       headerLeft() {
@@ -23,16 +24,16 @@ export default noop.memo(function BountiesModal(bountyId) {
       render() {
         if (closure_1_2 === bountyId(variant[2]).BountiesModalVariant.VERTICAL_SCROLL) {
           let obj = { bountyId, sourceQuestContent };
-          let tmp6 = jsx(sourceQuestContent(variant[3]), { bountyId, sourceQuestContent });
+          let tmp7 = jsx(sourceQuestContent(variant[3]), { bountyId, sourceQuestContent });
         } else {
-          obj = { bountyId, sourceQuestContent };
-          tmp6 = jsx(sourceQuestContent(variant[4]), { bountyId, sourceQuestContent });
+          obj = { bountyId, sourceQuestContent, bounty };
+          tmp7 = jsx(sourceQuestContent(variant[4]), { bountyId, sourceQuestContent, bounty });
         }
-        return tmp6;
+        return tmp7;
       }
     }
   }), items);
-  const layoutEffect = noop.useLayoutEffect(() => {
+  const layoutEffect = bounty.useLayoutEffect(() => {
     bountyId(variant[5]).applyOrientationLock("PORTRAIT");
     return bountyId(variant[5]).restoreDefaultOrientationLock;
   }, []);

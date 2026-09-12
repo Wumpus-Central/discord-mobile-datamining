@@ -1,10 +1,10 @@
-// === Module 9110: UserProfileApplicationWidgetBottomCollectionLayout ===
+// === Module 9149: UserProfileApplicationWidgetBottomCollectionLayout ===
 
-// Module 9110 (UserProfileApplicationWidgetBottomCollectionLayout)
+// Module 9149 (UserProfileApplicationWidgetBottomCollectionLayout)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9016 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9104 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9055 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9143 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -59,7 +59,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { grid: null, item: null, itemImage: null, itemContent: null };
 createStyles = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_16 };
 createStyles.grid = createStyles;

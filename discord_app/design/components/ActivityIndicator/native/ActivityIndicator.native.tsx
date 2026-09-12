@@ -1,10 +1,10 @@
-// === Module 5628: ActivityIndicator/ActivityIndicator ===
+// === Module 5658: ActivityIndicator/ActivityIndicator ===
 
-// Module 5628 (ActivityIndicator/ActivityIndicator)
+// Module 5658 (ActivityIndicator/ActivityIndicator)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4308 */;
+import useToken from "useToken" /* 4338 */;
 import size from "module_2" /* 2 */;
 
 const ActivityIndicator = _mod17.ActivityIndicator;

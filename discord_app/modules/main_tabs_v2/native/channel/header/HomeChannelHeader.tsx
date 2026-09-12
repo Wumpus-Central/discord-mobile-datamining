@@ -1,18 +1,18 @@
-// === Module 13363: HomeChannelHeader ===
+// === Module 13396: HomeChannelHeader ===
 
-// Module 13363 (HomeChannelHeader)
+// Module 13396 (HomeChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import _modDef12870 from "module_12870" /* 12870 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import _modDef12906 from "module_12906" /* 12906 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { container: null };
 obj = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj.container = obj;
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/h
 
 export default noop.memo(function HomeChannelHeader() {
   let obj = { style: closure_6().container, children: null };
-  obj = { source: _modDef12870, size: native.Icon.Sizes.MEDIUM, disableColor: true };
+  obj = { source: _modDef12906, size: native.Icon.Sizes.MEDIUM, disableColor: true };
   const items = [React4(native.Icon, obj), ];
   obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
   const intl = util.intl;

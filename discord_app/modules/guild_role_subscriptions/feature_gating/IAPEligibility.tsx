@@ -1,8 +1,8 @@
-// === Module 5550: IAPEligibility ===
+// === Module 5580: IAPEligibility ===
 
-// Module 5550 (IAPEligibility)
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import getSystemVersion from "getSystemVersion" /* 5551 */;
+// Module 5580 (IAPEligibility)
+import PlatformUtils from "PlatformUtils" /* 1150 */;
+import getSystemVersion from "getSystemVersion" /* 5581 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -75,7 +75,7 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
 export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIAP(guildId) {
   _require = guildId;
   const memo = noop.useMemo(() => {
-    const str = guildId(5551).getSystemVersion();
+    const str = guildId(5581).getSystemVersion();
     let tmp = null != str;
     if (tmp) {
       const parts = str.split(".");
@@ -120,7 +120,7 @@ export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIA
     }
     return tmp;
   }, []);
-  let memo1 = noop.useMemo(() => guildId(1115).isIOS(), []);
+  let memo1 = noop.useMemo(() => guildId(1150).isIOS(), []);
   items = [GuildStore];
   if (memo1) {
     memo1 = obj.useStateFromStores(items, () => {

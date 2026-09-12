@@ -1,10 +1,10 @@
-// === Module 10783: guild_boost_checkout_banner ===
+// === Module 10822: guild_boost_checkout_banner ===
 
-// Module 10783 (guild_boost_checkout_banner)
+// Module 10822 (guild_boost_checkout_banner)
 import _mod1188 from "module_1188" /* 1188 */;
-import localized_string from "localized_string" /* 10759 */;
-import help_article from "help_article" /* 10760 */;
-import theme_aware_asset from "theme_aware_asset" /* 10769 */;
+import localized_string from "localized_string" /* 10798 */;
+import help_article from "help_article" /* 10799 */;
+import theme_aware_asset from "theme_aware_asset" /* 10808 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

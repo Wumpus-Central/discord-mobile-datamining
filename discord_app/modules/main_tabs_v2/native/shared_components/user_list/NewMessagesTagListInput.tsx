@@ -1,23 +1,23 @@
-// === Module 12460: NewMessagesTagListInput ===
+// === Module 12496: NewMessagesTagListInput ===
 
-// Module 12460 (NewMessagesTagListInput)
+// Module 12496 (NewMessagesTagListInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4318 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10952 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10991 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let obj = { searchBarContainer: null, header: null, showSearchButton: null };
 obj = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.searchBarContainer = obj;
 const createStyles = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;

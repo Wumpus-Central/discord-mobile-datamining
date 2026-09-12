@@ -1,14 +1,14 @@
-// === Module 9243: SecureFramesActionCreators ===
+// === Module 9282: SecureFramesActionCreators ===
 
-// Module 9243 (SecureFramesActionCreators)
+// Module 9282 (SecureFramesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9240 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9244 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9279 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import VoiceStateStore from "VoiceStateStore" /* 4625 */;
+import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
 require = fn;
 function savePersistentCodesEnabled() {
@@ -217,9 +217,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj1 = {
                         value: closure_1_9(closure_0, () => {
-                                  c1(5462).disconnect();
-                                  const obj = c1(5462);
-                                  const voiceChannel = c1(5462).selectVoiceChannel(dependencyMap);
+                                  c1(5492).disconnect();
+                                  const obj = c1(5492);
+                                  const voiceChannel = c1(5492).selectVoiceChannel(dependencyMap);
                                 }),
                         done: false
                       };
@@ -277,7 +277,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(9242).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_7 = fn(9281).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesActionCreators.tsx");

@@ -1,17 +1,17 @@
-// === Module 13859: RTCMediaSinkWantsManager ===
+// === Module 13893: RTCMediaSinkWantsManager ===
 
-// Module 13859 (RTCMediaSinkWantsManager)
+// Module 13893 (RTCMediaSinkWantsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4661 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9700 */;
-import BrowserInvertedWantsExperiment from "BrowserInvertedWantsExperiment" /* 13860 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9739 */;
+import BrowserInvertedWantsExperiment from "BrowserInvertedWantsExperiment" /* 13894 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4664 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4694 */;
 
 require = fn;
 function getDefaultWants(wantsLevel) {
@@ -25,12 +25,12 @@ function getDefaultWants(wantsLevel) {
   return obj;
 }
 const VideoToggleState = fn(1074).VideoToggleState;
-const SimulcastOverrideQuality = fn(4631).SimulcastOverrideQuality;
+const SimulcastOverrideQuality = fn(4661).SimulcastOverrideQuality;
 let c7 = 100;
 let obj = { any: 0 };
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 let closure_10 = 120 * DurationsDefault.Millis.SECOND;
-const BrowserUtils = fn(4928);
+const BrowserUtils = fn(4958);
 let closure_11 = -1 !== BrowserUtils.getFirefoxVersion();
 obj = { UserSSRCUpdate: "user-ssrc-update", Update: "update" };
 class RTCMediaSinkWantsManager extends tmp2 {

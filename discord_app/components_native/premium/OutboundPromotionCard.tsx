@@ -1,14 +1,14 @@
-// === Module 13609: OutboundPromotionCard ===
+// === Module 13642: OutboundPromotionCard ===
 
-// Module 13609 (OutboundPromotionCard)
+// Module 13642 (OutboundPromotionCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7222 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,13 +29,13 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { card: null, mainContainer: null, textContainer: null, imageContainer: null, image: null, title: null, subText: null, claimButton: null, moreDetails: null, termsAndConditionsText: null, buttonContainer: null };
 createStyles = { flex: 1, flexDirection: "column", paddingHorizontal: fn(1074).USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 8 };
 createStyles.card = createStyles;
 createStyles.mainContainer = { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createStyles.textContainer = { flexDirection: "row", flexShrink: 1, alignItems: "center" };
-let size = { width: 32, height: 32, marginRight: 8, borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5492).DARK_BLACK_500_LIGHT_PRIMARY_100 };
+let size = { width: 32, height: 32, marginRight: 8, borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5522).DARK_BLACK_500_LIGHT_PRIMARY_100 };
 createStyles.imageContainer = size;
 createStyles.image = { width: 28, height: 28, resizeMode: "contain" };
 createStyles.title = { lineHeight: 20 };

@@ -1,21 +1,21 @@
-// === Module 15103: BountiesScrollRecapFooter ===
+// === Module 15134: BountiesScrollRecapFooter ===
 
-// Module 15103 (BountiesScrollRecapFooter)
+// Module 15134 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 4317 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7052 */;
-import OrbsIcon from "OrbsIcon" /* 8927 */;
+import native from "native" /* 4347 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7082 */;
+import OrbsIcon from "OrbsIcon" /* 8962 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles(() => {
   let obj = { container: null, headerLabel: null, orbRow: null, rive: null, orbAmount: null };
   obj = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };
@@ -40,7 +40,7 @@ export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbA
   let obj = useTypeConsolidationTextTransform;
   const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("BountiesScrollRecapFooter", "text-xs/bold");
   const intl = util.intl;
-  const stringResult = intl.string(util.t.CzRXoC);
+  const stringResult = intl.string(util.t.d6Rrn6);
   obj = { style: tmp.container, pointerEvents: "none", accessible: true, accessibilityRole: "text", accessibilityLabel: "" + stringResult + ", +" + orbAmount, children: null };
   obj = { variant: typeConsolidationEyebrow.variant, color: "text-brand", style: null, accessible: false, children: stringResult };
   const items = [tmp.headerLabel, typeConsolidationEyebrow.style];

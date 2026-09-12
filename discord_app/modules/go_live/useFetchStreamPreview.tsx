@@ -1,11 +1,11 @@
-// === Module 10152: useFetchStreamPreview ===
+// === Module 10191: useFetchStreamPreview ===
 
-// Module 10152 (useFetchStreamPreview)
-import StreamActionCreators from "StreamActionCreators" /* 4748 */;
+// Module 10191 (useFetchStreamPreview)
+import StreamActionCreators from "StreamActionCreators" /* 4778 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 4750 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 4780 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;
@@ -76,5 +76,5 @@ export default function useFetchStreamPreview(guildId, channelId, id) {
     }
     return obj;
   }
-  obj = { previewUrl: "PX_16", isLoading: null };
+  obj = { previewUrl: "PX_16", isLoading: true };
 };

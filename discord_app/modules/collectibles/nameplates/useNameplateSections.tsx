@@ -1,11 +1,11 @@
-// === Module 14690: useNameplateSections ===
+// === Module 14724: useNameplateSections ===
 
-// Module 14690 (useNameplateSections)
+// Module 14724 (useNameplateSections)
 import util from "util" /* 1114 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7627 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7630 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;

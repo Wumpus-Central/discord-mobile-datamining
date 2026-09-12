@@ -1,9 +1,9 @@
-// === Module 6428: PowerupSpotIllustration ===
+// === Module 6458: PowerupSpotIllustration ===
 
-// Module 6428 (PowerupSpotIllustration)
+// Module 6458 (PowerupSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6429 from "module_6429" /* 6429 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6459 from "module_6459" /* 6459 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PowerupSpotIllustration = function PowerupSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6429 };
+  obj = { uri: _modDef6459 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const PowerupSpotIllustration = function PowerupSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6429 });
+  return jsx(FastImageDefault, { uri: _modDef6459 });
 };

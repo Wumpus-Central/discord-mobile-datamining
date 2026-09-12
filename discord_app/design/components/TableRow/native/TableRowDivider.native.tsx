@@ -1,15 +1,15 @@
-// === Module 5653: TableRowDivider ===
+// === Module 5683: TableRowDivider ===
 
-// Module 5653 (TableRowDivider)
+// Module 5683 (TableRowDivider)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4308 */;
+import useToken from "useToken" /* 4338 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const TABLE_DIVIDER_WIDTH = fn(5654).TABLE_DIVIDER_WIDTH;
+const TABLE_DIVIDER_WIDTH = fn(5684).TABLE_DIVIDER_WIDTH;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles((arg0, arg1) => {
   let obj = { height: TABLE_DIVIDER_WIDTH, paddingStart: null, marginTop: null };
   let num = 12;

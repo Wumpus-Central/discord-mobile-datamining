@@ -1,15 +1,15 @@
-// === Module 17742: GuildSettingsModalCommunityIntro ===
+// === Module 17772: GuildSettingsModalCommunityIntro ===
 
-// Module 17742 (GuildSettingsModalCommunityIntro)
+// Module 17772 (GuildSettingsModalCommunityIntro)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4304 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17747 */;
+import ToastUtils from "ToastUtils" /* 4334 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17777 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9154 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9193 */;
 
 require = fn;
 function FeatureCard(arg0) {
@@ -31,7 +31,7 @@ const Constants = fn(1074);
 ({ HelpdeskArticles: c10, GuildFeatures: closure_11, GuildSettingsSections: closure_12, Permissions: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { height: "100%" }, contentPadding: { padding: 16 }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", marginBottom: 24 }, details: { textAlign: "center", marginTop: 24 }, headerImage: { width: "100%" }, features: { marginTop: 32, marginBottom: 32 }, featureCard: null, featureIcon: null, featureDescription: null };
 createStyles = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.sm, marginTop: 8, alignItems: "flex-start" };
 createStyles.featureCard = createStyles;

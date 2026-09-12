@@ -1,9 +1,9 @@
-// === Module 8740: InAppReportsTextLineElement ===
+// === Module 8772: InAppReportsTextLineElement ===
 
-// Module 8740 (InAppReportsTextLineElement)
+// Module 8772 (InAppReportsTextLineElement)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4304 */;
-import ClipboardUtils from "ClipboardUtils" /* 7262 */;
+import ToastUtils from "ToastUtils" /* 4334 */;
+import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_7, Linking: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { marginBottom: 16, paddingHorizontal: 16 }, header: { marginBottom: 8 }, description: { marginBottom: 16 }, trailingButtonContainer: { paddingHorizontal: 8 }, smsInfoContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, smsNumberContainer: null, smsNumberContainerSuccess: null, startButtonContainer: null };
 createStyles = { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, padding: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8 };
 createStyles.smsNumberContainer = createStyles;

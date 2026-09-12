@@ -1,12 +1,12 @@
-// === Module 14517: activityInstanceConnectedParticipants ===
+// === Module 14552: activityInstanceConnectedParticipants ===
 
-// Module 14517 (activityInstanceConnectedParticipants)
-import transformUserDefault from "transformUser" /* 9651 */;
+// Module 14552 (activityInstanceConnectedParticipants)
+import transformUserDefault from "transformUser" /* 9690 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
-const Constants = fn(4511);
+const Constants = fn(4541);
 let obj = { [Constants.RPC_SCOPE_CONFIG.ANY]: items };
 items = [Constants.RPC_AUTHENTICATED_SCOPE];
 obj = {
@@ -20,12 +20,12 @@ obj = {
       if (null == currentEmbeddedActivity) {
         let obj = { participants: [] };
       } else {
-        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4235).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-        const obj4 = embeddedActivityLocationGuildId(4235);
-        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4235).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4265).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+        const obj4 = embeddedActivityLocationGuildId(4265);
+        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4265).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
         obj = { participants: null };
         const _Array = Array;
-        const obj5 = embeddedActivityLocationGuildId(4235);
+        const obj5 = embeddedActivityLocationGuildId(4265);
         obj.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           user = user.getUser(arg0);
           if (null != user) {

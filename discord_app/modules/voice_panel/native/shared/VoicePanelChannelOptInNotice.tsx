@@ -1,7 +1,7 @@
-// === Module 17197: VoicePanelChannelOptInNotice ===
+// === Module 17224: VoicePanelChannelOptInNotice ===
 
-// Module 17197 (VoicePanelChannelOptInNotice)
-import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7186 */;
+// Module 17224 (VoicePanelChannelOptInNotice)
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7216 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,9 +23,9 @@ export default noop.memo(function VoicePanelChannelOptInNotice(channel) {
   obj.label = intl.string(channel(1114).t["9mysCh"]);
   const intl2 = channel(1114).intl;
   obj.subLabel = intl2.string(channel(1114).t.PDUCIN);
-  obj = { IconComponent: channel(13897).ChannelListMagnifyingGlassIcon };
-  obj.icon = jsx(channel(5662).TableRowIcon, { IconComponent: channel(13897).ChannelListMagnifyingGlassIcon });
+  obj = { IconComponent: channel(13931).ChannelListMagnifyingGlassIcon };
+  obj.icon = jsx(channel(5692).TableRowIcon, { IconComponent: channel(13931).ChannelListMagnifyingGlassIcon });
   obj.onPress = callback;
-  obj.children = jsx(channel(5656).TableRow, { IconComponent: channel(13897).ChannelListMagnifyingGlassIcon });
-  return jsx(analyticsSection(5640), { IconComponent: channel(13897).ChannelListMagnifyingGlassIcon });
+  obj.children = jsx(channel(5686).TableRow, { IconComponent: channel(13931).ChannelListMagnifyingGlassIcon });
+  return jsx(analyticsSection(5670), { IconComponent: channel(13931).ChannelListMagnifyingGlassIcon });
 });

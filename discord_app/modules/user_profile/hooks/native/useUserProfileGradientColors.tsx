@@ -1,9 +1,9 @@
-// === Module 8323: useUserProfileGradientColors ===
+// === Module 8355: useUserProfileGradientColors ===
 
-// Module 8323 (useUserProfileGradientColors)
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8313 */;
+// Module 8355 (useUserProfileGradientColors)
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8345 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 7974: ForumChannelSeenManager ===
+// === Module 8004: ForumChannelSeenManager ===
 
-// Module 7974 (ForumChannelSeenManager)
-import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 7973 */;
-import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 7975 */;
+// Module 8004 (ForumChannelSeenManager)
+import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 8003 */;
+import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 8005 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsFeedItemSeenManager = AnalyticsFeedItemSeenManager2.AnalyticsFeedItemSeenManager;

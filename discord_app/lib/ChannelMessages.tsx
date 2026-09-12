@@ -1,13 +1,13 @@
-// === Module 5323: ChannelMessages ===
+// === Module 5353: ChannelMessages ===
 
-// Module 5323 (ChannelMessages)
+// Module 5353 (ChannelMessages)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import Client from "Client" /* 4537 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4829 */;
-import SortedArrayUtilsAll from "SortedArrayUtils" /* 5325 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5326 */;
+import Client from "Client" /* 4567 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4859 */;
+import SortedArrayUtilsAll from "SortedArrayUtils" /* 5355 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5356 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -943,8 +943,8 @@ prototype2["mergeDelta"] = function mergeDelta() {
     const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
-    const mapped = items.map((item) => set(4829).createMessageRecord(item));
-    const combined = found.concat(mapped, items1.map((item) => set(4829).createMessageRecord(item)));
+    const mapped = items.map((item) => set(4859).createMessageRecord(item));
+    const combined = found.concat(mapped, items1.map((item) => set(4859).createMessageRecord(item)));
     _before._array = combined.sort((id, id2) => items1(11).compare(id.id, id2.id));
   });
 };
@@ -1129,7 +1129,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     if (id === id1) {
       if (null != nonce.nonce) {
         if (value.id === nonce.nonce) {
-          const messageRecord = messageRecord1(4829).createMessageRecord(nonce);
+          const messageRecord = messageRecord1(4859).createMessageRecord(nonce);
           if (null != value.interactionData) {
             messageRecord.interactionData = value.interactionData;
           }
@@ -1144,7 +1144,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     }
     return self;
   } else {
-    messageRecord1 = messageRecord1(4829).createMessageRecord(nonce);
+    messageRecord1 = messageRecord1(4859).createMessageRecord(nonce);
     const lastResult = self.last();
     if (null != lastResult) {
       if (obj2.compare(nonce.id, lastResult.id) < 0) {
@@ -1173,7 +1173,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     }
     const items = [messageRecord1];
     mutation = self.merge(items);
-    let obj = messageRecord1(4829);
+    let obj = messageRecord1(4859);
   }
 };
 prototype2["receivePushNotification"] = function receivePushNotification(message, isConnectedResult) {
@@ -1290,9 +1290,9 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
     flag6 = false;
   }
   const self = this;
-  let obj = _modDef12(items);
+  let obj = requestStartTime(12)(items);
   const reversed = obj.reverse();
-  const valueResult = reversed.map((item) => MessageRecordUtils.createMessageRecord(item)).value();
+  const valueResult = reversed.map((item) => id(dependencyMap[2]).createMessageRecord(item)).value();
   if (flag) {
     if (null == jump) {
       if (self.ready) {
@@ -1310,7 +1310,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = Client.JumpType.ANIMATED;
+        jumpType = id(4567).JumpType.ANIMATED;
       }
       obj = { ready: true, loadingMore: false, jumpType, jumpFlash: null, jumped: null, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpSequenceId: null, jumpReturnTargetId: null, onJumpComplete: null, hasMoreBefore: null, hasMoreAfter: null, cached: null, hasFetched: null, error: false, initialScrollSequenceId: null, suppressRowAnimationSequenceId: null };
       let flag8;
@@ -1411,45 +1411,73 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
   const found = _array.filter((state) => state.state === constants.SENDING);
   const _array1 = self._array;
   const found1 = _array1.filter((state) => state.state === constants.SEND_FAILED);
-  const resetResult = self.reset(valueResult);
-  if (tmp4) {
-    if (!flag) {
-      if (!flag2) {
-        let messageId1;
-        if (jump != null) {
-          messageId1 = jump.messageId;
+  id = undefined;
+  if (valueResult[valueResult.length - 1] != null) {
+    id = tmp3.id;
+  }
+  requestStartTime = newMessages.requestStartTime;
+  if (null != id) {
+    if (null != requestStartTime) {
+      const _array2 = self._array;
+      let found2 = _array2.filter((state) => {
+        let tmp = state.state === constants.SENT;
+        if (tmp) {
+          tmp = SnowflakeUtilsDefault.compare(state.id, id) > 0;
         }
-        if (null == messageId1) {
-          let offset;
+        if (tmp) {
+          tmp = SnowflakeUtilsDefault.extractTimestamp(state.id) >= requestStartTime;
+        }
+        return tmp;
+      });
+    }
+    const resetResult = self.reset(valueResult);
+    if (tmp5) {
+      if (!flag) {
+        if (!flag2) {
+          let messageId1;
           if (jump != null) {
-            offset = jump.offset;
+            messageId1 = jump.messageId;
           }
-          if (null == offset) {
-            let mergeResult1 = resetResult;
-            if (found1.length > 0) {
-              const _HermesInternal = HermesInternal;
-              logger.info("loadComplete: merging with SEND_FAILED messages for channelId=" + self.channelId);
-              mergeResult1 = resetResult.merge(found1);
+          if (null == messageId1) {
+            let offset;
+            if (jump != null) {
+              offset = jump.offset;
             }
-            mergeResult = mergeResult1;
-            if (found.length > 0) {
-              const _HermesInternal2 = HermesInternal;
-              logger.info("loadComplete: merging with SENDING messages for channelId=" + self.channelId);
-              mergeResult = mergeResult1.merge(found);
+            if (null == offset) {
+              let mergeResult1 = resetResult;
+              if (found2.length > 0) {
+                const _HermesInternal = HermesInternal;
+                logger.info("loadComplete: merging with " + found2.length + " message(s) received during the fetch for channelId=" + self.channelId);
+                mergeResult1 = resetResult.merge(found2);
+              }
+              let mergeResult2 = mergeResult1;
+              if (found1.length > 0) {
+                const _HermesInternal2 = HermesInternal;
+                logger.info("loadComplete: merging with SEND_FAILED messages for channelId=" + self.channelId);
+                mergeResult2 = mergeResult1.merge(found1);
+              }
+              mergeResult = mergeResult2;
+              if (found.length > 0) {
+                const _HermesInternal4 = HermesInternal;
+                logger.info("loadComplete: merging with SENDING messages for channelId=" + self.channelId);
+                mergeResult = mergeResult2.merge(found);
+              }
             }
           }
         }
       }
     }
+    const _HermesInternal3 = HermesInternal;
+    logger.info("loadComplete: resetting state for channelId=" + self.channelId + ", sending.length=" + found.length);
+    mergeResult = resetResult;
+    tmp5 = found.length > 0 || found1.length > 0 || found2.length > 0;
   }
-  logger.info("loadComplete: resetting state for channelId=" + self.channelId + ", sending.length=" + found.length);
-  mergeResult = resetResult;
-  const iter = reversed.map((item) => MessageRecordUtils.createMessageRecord(item));
-  tmp4 = found.length > 0 || found1.length > 0;
+  found2 = [];
+  const iter = reversed.map((item) => id(dependencyMap[2]).createMessageRecord(item));
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  let obj = reversed(5327);
+  let obj = reversed(5357);
   const result = obj.requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();

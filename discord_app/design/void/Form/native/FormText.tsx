@@ -1,14 +1,14 @@
-// === Module 8697: FormText ===
+// === Module 8729: FormText ===
 
-// Module 8697 (FormText)
+// Module 8729 (FormText)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import LegacyTokens from "LegacyTokens" /* 5492 */;
+import LegacyTokens from "LegacyTokens" /* 5522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_3 = createStyles.createStyles((arg0) => {
   let obj = { primary: null, text: null };
   obj = { color: LegacyTokens.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };

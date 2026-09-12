@@ -1,6 +1,6 @@
-// === Module 8948: useRedeemVirtualCurrency ===
+// === Module 8983: useRedeemVirtualCurrency ===
 
-// Module 8948 (useRedeemVirtualCurrency)
+// Module 8983 (useRedeemVirtualCurrency)
 import util from "util" /* 1114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -21,7 +21,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   const isSubmitting = _slicedToArray(enabled(false), 2);
   _slicedToArray = isSubmitting[1];
   const tmp5 = _slicedToArray(enabled(null), 2);
-  enabled = entitlements(8949).useConfig({ location: "orb_checkout_modal" }).enabled;
+  enabled = entitlements(8984).useConfig({ location: "orb_checkout_modal" }).enabled;
   order = undefined;
   if (order != null) {
     order = order.order;
@@ -33,7 +33,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   if (order != null) {
     onSignFailure = order.onSignFailure;
   }
-  let obj = entitlements(8949);
+  let obj = entitlements(8984);
   const orderSigning = require("useOrderSigning").useOrderSigning({ order, errorSource: "orb_redeem_orders_api", onSignFailure });
   const signOrder = orderSigning.signOrder;
   const _reportError = orderSigning.reportError;
@@ -98,7 +98,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
                 closure_131_3 = value;
                 if ("signed" === closure_131_3.type) {
                   v0 = 2;
-                  obj2 = skuId(7316);
+                  obj2 = skuId(7346);
                   v4 = 4;
                   c8 = 1;
                   const obj5 = { value: obj2.fetchOrderEntitlementsWithRetry(closure_131_3.order.id), done: false };
@@ -125,7 +125,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
               } else {
                 closure_131_4 = value;
                 if (0 === closure_131_4.length) {
-                  const orderProcessingPendingError = new skuId(7316).OrderProcessingPendingError();
+                  const orderProcessingPendingError = new skuId(7346).OrderProcessingPendingError();
                   throw orderProcessingPendingError;
                 } else {
                   dependencyMap(closure_131_4);

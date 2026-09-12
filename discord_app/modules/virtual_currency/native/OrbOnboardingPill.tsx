@@ -1,11 +1,11 @@
-// === Module 15763: OrbOnboardingPill ===
+// === Module 15785: OrbOnboardingPill ===
 
-// Module 15763 (OrbOnboardingPill)
+// Module 15785 (OrbOnboardingPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Pressables from "Pressables" /* 5174 */;
-import OrbsIcon from "OrbsIcon" /* 8927 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Pressables from "Pressables" /* 5204 */;
+import OrbsIcon from "OrbsIcon" /* 8962 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ class OrbOnboardingPill {
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
 OrbOnboardingPill.displayName = "OrbOnboardingPill";
-fn(4606);
+fn(4636);
 let createStyles = { container: null };
 createStyles = { height: 36, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 };
 createStyles.container = createStyles;

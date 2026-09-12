@@ -1,8 +1,8 @@
-// === Module 11460: useIsMessageRequest ===
+// === Module 11499: useIsMessageRequest ===
 
-// Module 11460 (useIsMessageRequest)
-import MessageRequestStore from "MessageRequestStore" /* 7292 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7293 */;
+// Module 11499 (useIsMessageRequest)
+import MessageRequestStore from "MessageRequestStore" /* 7322 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7323 */;
 
 const require = fn;
 const size = fn(2);

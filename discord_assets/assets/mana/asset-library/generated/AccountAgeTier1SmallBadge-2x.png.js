@@ -1,6 +1,6 @@
-// === Module 5751: ? ===
+// === Module 5781: ? ===
 
-// Module 5751
+// Module 5781
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AccountAgeTier1SmallBadge-2x.png.js");

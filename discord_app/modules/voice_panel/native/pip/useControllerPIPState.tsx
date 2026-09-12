@@ -1,20 +1,20 @@
-// === Module 17166: useControllerPIPState ===
+// === Module 17193: useControllerPIPState ===
 
-// Module 17166 (useControllerPIPState)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4235 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9637 */;
+// Module 17193 (useControllerPIPState)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4265 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9676 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
-import FramesStore from "FramesStore" /* 9601 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
+import FramesStore from "FramesStore" /* 9640 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SpeakingStore from "SpeakingStore" /* 5470 */;
+import SpeakingStore from "SpeakingStore" /* 5500 */;
 
 require = fn;
-const VoicePanelModes = fn(12366).VoicePanelModes;
-const ActivityPanelModes = fn(9596).ActivityPanelModes;
-const asLaunched = fn(9602).asLaunched;
+const VoicePanelModes = fn(12402).VoicePanelModes;
+const ActivityPanelModes = fn(9635).ActivityPanelModes;
+const asLaunched = fn(9641).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
 
@@ -27,7 +27,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   noop = undefined;
   c7 = undefined;
   let current = noop;
-  const ref = noop.useRef({ id: "sa", mode: "isArray", width: false, height: "detectTypeByAdditionalCheck", containerHeight: null, showSecondaryPIP: "\u{1F7E5}" });
+  const ref = noop.useRef({ id: "sa", mode: "isArray", width: false, height: "helmi", containerHeight: "juoma", showSecondaryPIP: "kupla" });
   const tmp2 = current(noop.useState(undefined), 2);
   current = tmp2[0];
   noop = tmp2[1];
@@ -37,7 +37,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   });
   closure_129_0 = channelId;
   closure_129_1 = mode;
-  const tmp7 = ref(17119)(channelId);
+  const tmp7 = ref(17146)(channelId);
   closure_129_2 = tmp7;
   let items = [closure_5, c7, ChannelStore];
   const items1 = [channelId, tmp7, mode];
@@ -84,7 +84,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       return result;
     }
   }, items1);
-  let tmp10 = ref(17167)(channelId);
+  let tmp10 = ref(17194)(channelId);
   const first1 = current(noop.useState(() => ref(closure_2[16])((fn) => fn(), 1000, { leading: true })), 1)[0];
   const items2 = [first1];
   const layoutEffect = noop.useLayoutEffect(() => () => first1.cancel(), items2);
@@ -93,7 +93,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   [tmp14, c7] = current(noop.useState(() => closure_2.getTargetDimensions(ref)), 2);
   current = { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores };
   let tmp13 = current(noop.useState(() => closure_2.getTargetDimensions(ref)), 2);
-  ({ participant, dimensions } = ref(17168)(channelId, layoutManager, focusedId, current, current));
+  ({ participant, dimensions } = ref(17195)(channelId, layoutManager, focusedId, current, current));
   current = {};
   const merged = Object.assign(ref.current);
   const merged1 = Object.assign(dimensions);
@@ -103,9 +103,9 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   }
   current.id = id;
   current.showSecondaryPIP = stateFromStores;
-  let tmp8Result = tmp8(17169);
+  let tmp8Result = tmp8(17196);
   current.mode = tmp8Result.getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp10 });
-  tmp8Result = tmp8(9586);
+  tmp8Result = tmp8(9625);
   let result = tmp8Result.cheapWorkletShallowEqual(current, ref.current);
   dependencyMap = !result;
   const effect = current.useEffect(() => {
@@ -166,6 +166,6 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       });
     });
   }, items4);
-  tmp5(17171)(channelId, layoutManager, focusedId);
+  tmp5(17198)(channelId, layoutManager, focusedId);
   return current;
 };

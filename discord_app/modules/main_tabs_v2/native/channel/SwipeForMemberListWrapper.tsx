@@ -1,14 +1,14 @@
-// === Module 16701: SwipeForMemberListWrapper ===
+// === Module 16728: SwipeForMemberListWrapper ===
 
-// Module 16701 (SwipeForMemberListWrapper)
+// Module 16728 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
-import RootNavigationRef from "RootNavigationRef" /* 4465 */;
-import useChatLayout from "useChatLayout" /* 4467 */;
-import ChatInputUtils from "ChatInputUtils" /* 4472 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4786 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
+import RootNavigationRef from "RootNavigationRef" /* 4495 */;
+import useChatLayout from "useChatLayout" /* 4497 */;
+import ChatInputUtils from "ChatInputUtils" /* 4502 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,16 +16,16 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(7950);
+const ChannelDetailsStore = fn(7980);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(7937).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(7967).ONYX_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let context = noop.createContext(undefined);
-fn(4606);
+fn(4636);
 let obj = { memberListPreview: null, content: null, memberListContainer: null, onyxBorder: null, onyxRightOverflow: null };
 obj = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.memberListPreview = obj;

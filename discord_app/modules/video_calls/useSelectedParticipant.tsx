@@ -1,7 +1,7 @@
-// === Module 9561: useSelectedParticipant ===
+// === Module 9600: useSelectedParticipant ===
 
-// Module 9561 (useSelectedParticipant)
-import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
+// Module 9600 (useSelectedParticipant)
+import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 
 const require = fn;
 const size = fn(2);

@@ -1,19 +1,19 @@
-// === Module 12514: ChatInputContextBar ===
+// === Module 12550: ChatInputContextBar ===
 
-// Module 12514 (ChatInputContextBar)
+// Module 12550 (ChatInputContextBar)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import useToken from "useToken" /* 4308 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Pressables from "Pressables" /* 5174 */;
-import _modDef7011 from "module_7011" /* 7011 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7849 */;
-import ScheduledMessageTypes from "ScheduledMessageTypes" /* 7919 */;
-import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 12304 */;
+import useToken from "useToken" /* 4338 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Pressables from "Pressables" /* 5204 */;
+import _modDef7041 from "module_7041" /* 7041 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7879 */;
+import ScheduledMessageTypes from "ScheduledMessageTypes" /* 7949 */;
+import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 12340 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
-import DraftStore from "DraftStore" /* 4947 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import DraftStore from "DraftStore" /* 4977 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -38,7 +38,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
   }
   obj2.hitSlop = tmp10;
   obj2.onPress = onCancelReplying.onCancelReplying;
-  obj2.children = closure_1_12(native.Icon, { source: _modDef7011, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
+  obj2.children = closure_1_12(native.Icon, { source: _modDef7041, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
   obj1.children = closure_1_12(Pressables.PressableOpacity, obj2);
   items[1] = closure_1_12(component, obj1);
   obj.children = items;
@@ -323,7 +323,7 @@ function ChatInputEditBar(onCancelEditing) {
   }
   obj.hitSlop = tmp9;
   obj.onPress = onCancelEditing.onCancelEditing;
-  obj1 = { source: _modDef7011, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  obj1 = { source: _modDef7041, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   obj.children = closure_1_12(native.Icon, obj1);
   const obj2 = { style: tmp.contextBarRow, children: null };
   const obj3 = { children: null };
@@ -361,11 +361,11 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   obj2.hitSlop = tmp9;
   obj2.onPress = onCancelScheduling;
   const tmp8 = closure_1_12(Pressables.PressableOpacity, obj);
-  obj2.children = closure_1_12(native.Icon, { source: _modDef7011, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
+  obj2.children = closure_1_12(native.Icon, { source: _modDef7041, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
   const obj4 = { style: tmp.contextBarRow, children: null };
   const obj5 = { children: null };
   const items = [tmp8, ];
-  const obj3 = { source: _modDef7011, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj3 = { source: _modDef7041, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = closure_1_12(component, { style: tmp.floatingRightActions, children: closure_1_12(Pressables.PressableOpacity, obj2) });
   obj5.children = items;
   obj4.children = map1(closure_1_14, obj5);
@@ -373,13 +373,13 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(4947).DraftType;
+const DraftType = fn(4977).DraftType;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let obj = { duration: 250, easing: fn(1178).STANDARD_EASING };
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_16 = createStyles.createStyles((arg0) => {
   let MOBILE_FLOATING_ACCESSORY_BACKGROUND = arg0;
   if (arg0 == null) {
@@ -387,7 +387,7 @@ let closure_16 = createStyles.createStyles((arg0) => {
   }
   return { contextBar: { backgroundColor: MOBILE_FLOATING_ACCESSORY_BACKGROUND } };
 });
-createStyles = fn(4606);
+createStyles = fn(4636);
 let closure_17 = createStyles.createStyles(() => {
   let floatingContextBar = { contextBarRow: null, floatingReplyTextWrapper: null, floatingContextBar: null, replyMentionButtonActive: null, replyMentionIcon: null, replyMentionIconActive: null, floatingRightActions: null, floatingMentionGroup: null, floatingDivider: null, floatingCloseIcon: null };
   floatingContextBar = { overflow: "hidden", flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_HORIZONTAL, paddingVertical: nativeDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_VERTICAL, gap: nativeDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_GAP };

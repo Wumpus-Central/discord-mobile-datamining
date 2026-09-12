@@ -1,6 +1,6 @@
-// === Module 7372: SettingsDefaultFeature ===
+// === Module 7402: SettingsDefaultFeature ===
 
-// Module 7372 (SettingsDefaultFeature)
+// Module 7402 (SettingsDefaultFeature)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx");

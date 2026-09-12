@@ -1,11 +1,11 @@
-// === Module 15894: FeaturedBlock ===
+// === Module 15918: FeaturedBlock ===
 
-// Module 15894 (FeaturedBlock)
+// Module 15918 (FeaturedBlock)
 import nativeDefault from "native" /* 576 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7235 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8858 */;
-import FeaturedCategorySubblockDefault from "FeaturedCategorySubblock" /* 15895 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7265 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8893 */;
+import FeaturedCategorySubblockDefault from "FeaturedCategorySubblock" /* 15919 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -24,7 +24,7 @@ function Subblocks(style) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 const createStyles = { container: { display: "flex", width: "100%", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, featuredSubblock: { flex: 1, flexBasis: 400, maxWidth: "100%" } };
 let closure_5 = createStyles.createStyles(createStyles);
 const size = fn(2);

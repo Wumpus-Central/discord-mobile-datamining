@@ -1,16 +1,16 @@
-// === Module 12314: NitroLimitUpsellBar ===
+// === Module 12350: NitroLimitUpsellBar ===
 
-// Module 12314 (NitroLimitUpsellBar)
+// Module 12350 (NitroLimitUpsellBar)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import WarningIcon from "WarningIcon" /* 8679 */;
-import _modDef10054 from "module_10054" /* 10054 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10060 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import WarningIcon from "WarningIcon" /* 8711 */;
+import _modDef10093 from "module_10093" /* 10093 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10099 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4606 */;
+import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
@@ -33,7 +33,7 @@ export default function NitroLimitUpsellBar(isAtLimit) {
     let tmp4Result = hasOwnProperty(WarningIcon.WarningIcon, obj);
     let tmp9 = hasOwnProperty;
   } else {
-    obj = { source: _modDef10054, style: tmp.icon };
+    obj = { source: _modDef10093, style: tmp.icon };
     tmp4Result = hasOwnProperty(React3, obj);
     tmp9 = hasOwnProperty;
   }

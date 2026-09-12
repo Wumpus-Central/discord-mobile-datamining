@@ -1,9 +1,9 @@
-// === Module 12590: useGuildPowerupRollbackNotificationConfig ===
+// === Module 12626: useGuildPowerupRollbackNotificationConfig ===
 
-// Module 12590 (useGuildPowerupRollbackNotificationConfig)
+// Module 12626 (useGuildPowerupRollbackNotificationConfig)
 import _modDef2428 from "module_2428" /* 2428 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12593 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4495 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12629 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4525 */;
 
 const require = fn;
 const size = fn(2);
@@ -16,7 +16,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
   const stateFromStores = obj.useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let tmp4;
   if (stateFromStores != null) {
-    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4499).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4529).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
   }
   if (tmp4 != null) {
     const storeRemovalDate = tmp4.storeRemovalDate;

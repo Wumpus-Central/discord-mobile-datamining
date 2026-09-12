@@ -1,9 +1,9 @@
-// === Module 5886: BuildingBlocksSpotIllustration ===
+// === Module 5916: BuildingBlocksSpotIllustration ===
 
-// Module 5886 (BuildingBlocksSpotIllustration)
+// Module 5916 (BuildingBlocksSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5887 from "module_5887" /* 5887 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5917 from "module_5917" /* 5917 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const BuildingBlocksSpotIllustration = function BuildingBlocksSpotIllustr
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5887 };
+  obj = { uri: _modDef5917 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const BuildingBlocksSpotIllustration = function BuildingBlocksSpotIllustr
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5887 });
+  return jsx(FastImageDefault, { uri: _modDef5917 });
 };

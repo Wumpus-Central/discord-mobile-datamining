@@ -1,13 +1,13 @@
-// === Module 16572: GamingLikeEntryRow ===
+// === Module 16596: GamingLikeEntryRow ===
 
-// Module 16572 (GamingLikeEntryRow)
+// Module 16596 (GamingLikeEntryRow)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8215 */;
-import utils from "utils" /* 8220 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8437 */;
-import BadgesAll from "Badges" /* 13101 */;
-import TrendingType from "TrendingType" /* 13106 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8247 */;
+import utils from "utils" /* 8252 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
+import BadgesAll from "Badges" /* 13138 */;
+import TrendingType from "TrendingType" /* 13143 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8220).isEntryNew };
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8252).isEntryNew };
 let items = [obj, , , , ];
 obj = {
   Badge: BadgesAll.StreakBadge,
@@ -54,7 +54,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   }
 };
-const createICYMIStyles = fn(16523);
+const createICYMIStyles = fn(16547);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   let obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   obj = { flexDirection: "row", gap: gap.margin, alignItems: "center", padding: gap.margin, marginLeft: gap.inset, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -129,7 +129,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(16573, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(16597, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         let obj = author_id(openReplyActionSheet[19]);

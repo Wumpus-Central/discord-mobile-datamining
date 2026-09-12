@@ -1,23 +1,23 @@
-// === Module 17291: VoicePanelVoiceControls ===
+// === Module 17318: VoicePanelVoiceControls ===
 
-// Module 17291 (VoicePanelVoiceControls)
+// Module 17318 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import TableRowGroup from "TableRowGroup" /* 5738 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9673 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10072 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 10082 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12365 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13847 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17119 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17183 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17292 */;
+import TableRowGroup from "TableRowGroup" /* 5768 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9712 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10111 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 10121 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12401 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13881 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17146 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17210 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17319 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
 
@@ -25,10 +25,10 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(12364).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(12400).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { scrollView: null, scrollViewScreenReader: null, blurRegion: null };
 obj = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.scrollView = obj;
@@ -135,7 +135,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   let sharedValue;
   let gestureRef;
   let scrollerRef;
-  let tmp = closure_8();
+  const tmp = closure_8();
   channelId = gestureRef.useContext(channelId(sharedValue[8])).channelId;
   let obj = isVisible(sharedValue[20]);
   const items = [scrollerRef];
@@ -150,19 +150,16 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   fn.__initData = __initData;
   const items1 = [sharedValue];
   const callback = gestureRef.useCallback(fn, items1);
-  const tmp8 = gestureRef.useContext(isVisible(sharedValue[21]).ControlsGestureScrollLock)({ onScrollHandlerWorkletized: callback });
-  gestureRef = tmp8.gestureRef;
-  scrollerRef = tmp8.scrollerRef;
-  ({ onScroll, animatedProps } = tmp8);
-  let obj2 = isVisible(sharedValue[22]);
-  const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
+  let obj2 = isVisible(sharedValue[21]);
+  const animatedScrollLock = obj2.useAnimatedScrollLock({ onScrollHandlerWorkletized: callback });
+  gestureRef = animatedScrollLock.gestureRef;
+  scrollerRef = animatedScrollLock.scrollerRef;
+  ({ onScroll, animatedProps } = animatedScrollLock);
+  let obj3 = isVisible(sharedValue[22]);
+  const isScreenReaderEnabled = obj3.useIsScreenReaderEnabled();
   const items2 = [isVisible, scrollerRef];
   const effect = gestureRef.useEffect(() => {
-    let tmp = isVisible;
     if (isVisible) {
-      tmp = null != scrollerRef;
-    }
-    if (tmp) {
       const current = scrollerRef.current;
       if (current != null) {
         current.scrollTo({ x: 0, y: 0, animated: false });
@@ -173,12 +170,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   const memo = gestureRef.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const NativeResult = Gesture.Native();
-    const enabledResult = NativeResult.enabled(!MetaQuestUtils.isMetaQuest());
-    let result = enabledResult;
-    if (null != gestureRef) {
-      result = enabledResult.simultaneousWithExternalGesture(tmp);
-    }
-    return result;
+    return NativeResult.enabled(!MetaQuestUtils.isMetaQuest()).simultaneousWithExternalGesture(gestureRef);
   }, items3);
   obj = { gesture: memo, children: null };
   obj = { style: isScreenReaderEnabled ? tmp.scrollViewScreenReader : tmp.scrollView, ref: scrollerRef, onScroll, animatedProps, onMomentumScrollEnd: NOOP, scrollEventThrottle: 8.333333333333334, scrollIndicatorInsets, children: null };
@@ -200,7 +192,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   const children = [closure_5(isVisible(sharedValue[23]).GestureDetector, obj), ];
   let tmp14Result1 = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
-    const obj3 = { shown: sharedValue, style: tmp.blurRegion };
+    obj3 = { shown: sharedValue, style: tmp.blurRegion };
     tmp14Result1 = closure_5(tmp2(tmp3[27]), obj3);
   }
   children[1] = tmp14Result1;

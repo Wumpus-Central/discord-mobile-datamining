@@ -1,23 +1,23 @@
-// === Module 17150: SoundboardSoundPickerList ===
+// === Module 17177: SoundboardSoundPickerList ===
 
-// Module 17150 (SoundboardSoundPickerList)
+// Module 17177 (SoundboardSoundPickerList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
-import ClockIcon from "ClockIcon" /* 4569 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import SoundboardTypes from "SoundboardTypes" /* 5071 */;
-import GuildIcon from "GuildIcon" /* 5635 */;
-import FastListDefault from "FastList" /* 7145 */;
-import TrophyIcon from "TrophyIcon" /* 8808 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10056 */;
-import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 10395 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10396 */;
-import chunkDefault from "chunk" /* 10433 */;
-import _modDef10480 from "module_10480" /* 10480 */;
-import SoundButton from "SoundButton" /* 17151 */;
-import _modDef17159 from "module_17159" /* 17159 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
+import ClockIcon from "ClockIcon" /* 4599 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import SoundboardTypes from "SoundboardTypes" /* 5101 */;
+import GuildIcon from "GuildIcon" /* 5665 */;
+import FastListDefault from "FastList" /* 7175 */;
+import TrophyIcon from "TrophyIcon" /* 8842 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10095 */;
+import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 10434 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10435 */;
+import chunkDefault from "chunk" /* 10472 */;
+import _modDef10519 from "module_10519" /* 10519 */;
+import SoundButton from "SoundButton" /* 17178 */;
+import _modDef17186 from "module_17186" /* 17186 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -100,12 +100,12 @@ function SoundPickerButtonRow(row) {
   }
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(17144);
+const SoundboardStyleConstants = fn(17171);
 ({ SOUND_ROW_HORIZONTAL_PADDING, SOUNDS_PER_ROW: metroRequire, SOUND_BUTTON_HEIGHT, SOUND_ROW_SPACING } = SoundboardStyleConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let sum = SOUND_BUTTON_HEIGHT + 8;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { row: { height: sum, display: "flex", flexDirection: "row", paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING }, sectionHeader: null, sectionIcon: null, soundButtonNotFirst: null };
 obj = { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", paddingTop: 16, paddingBottom: 8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING };
 obj.sectionHeader = obj;
@@ -166,7 +166,7 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
     START = END;
   }
   const currentUser = closure_10();
-  let obj = channel(5033);
+  let obj = channel(5063);
   const fontScale = obj.useFontScale();
   const tmp3 = (function getFastListSectionsFromCategories(categories, arg1, fontScale) {
     const items = [];
@@ -310,10 +310,10 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
         obj = { size: GuildIcon.GuildIconSizes.XXSMALL_12, guild: tmp2.category.categoryInfo.guild, style: currentUser.sectionIcon };
         let tmp8Result = React5(GuildIconDefault, obj);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-        const obj1 = { source: _modDef17159, style: currentUser.sectionIcon };
+        const obj1 = { source: _modDef17186, style: currentUser.sectionIcon };
         tmp8Result = React5(native.Icon, obj1);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
-        const obj2 = { source: _modDef10480, style: currentUser.sectionIcon };
+        const obj2 = { source: _modDef10519, style: currentUser.sectionIcon };
         tmp8Result = React5(native.Icon, obj2);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
         const obj3 = { style: currentUser.sectionIcon };

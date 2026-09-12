@@ -1,9 +1,9 @@
-// === Module 6186: GemLevel3Illocon ===
+// === Module 6216: GemLevel3Illocon ===
 
-// Module 6186 (GemLevel3Illocon)
+// Module 6216 (GemLevel3Illocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6187 from "module_6187" /* 6187 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6217 from "module_6217" /* 6217 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const GemLevel3Illocon = function GemLevel3Illocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6187 };
+  obj = { uri: _modDef6217 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6187 });
+  return jsx(FastImageDefault, { uri: _modDef6217 });
 };

@@ -1,13 +1,13 @@
-// === Module 17179: VoicePanelAccessibilityView ===
+// === Module 17206: VoicePanelAccessibilityView ===
 
-// Module 17179 (VoicePanelAccessibilityView)
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17174 */;
+// Module 17206 (VoicePanelAccessibilityView)
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17201 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const VoicePanelPIPModes = fn(17170).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(17197).VoicePanelPIPModes;
 const jsx = fn(21).jsx;
-let closure_4 = noop.memo(fn(5010).AccessibilityViewAnimated);
+let closure_4 = noop.memo(fn(5040).AccessibilityViewAnimated);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
 

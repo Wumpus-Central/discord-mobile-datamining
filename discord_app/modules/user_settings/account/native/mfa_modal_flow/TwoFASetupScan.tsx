@@ -1,15 +1,15 @@
-// === Module 14842: TwoFASetupScan ===
+// === Module 14876: TwoFASetupScan ===
 
-// Module 14842 (TwoFASetupScan)
+// Module 14876 (TwoFASetupScan)
 import nativeDefault from "native" /* 576 */;
-import ClipboardUtils from "ClipboardUtils" /* 7262 */;
+import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, copy: null };
 createStyles = { color: nativeDefault.colors.TEXT_BRAND };
 createStyles.copy = createStyles;
@@ -27,7 +27,7 @@ export default function TwoFASetupScan(totpSecret) {
     closure_1(true);
     ClipboardUtils.copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
   }, items);
-  let obj = totpSecret(14840);
+  let obj = totpSecret(14874);
   const twoFASetupStyles = obj.useTwoFASetupStyles();
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: null, children: null };
@@ -44,7 +44,7 @@ export default function TwoFASetupScan(totpSecret) {
   const intl2 = totpSecret(1114).intl;
   obj1.children = intl2.string(totpSecret(1114).t["UQR+Qy"]);
   items2[1] = closure_4(totpSecret(1178).LegacyText, obj1);
-  items2[2] = closure_4(totpSecret(4602).Text, { variant: "text-md/bold", style: { textAlign: "center" }, children: totpSecret });
+  items2[2] = closure_4(totpSecret(4632).Text, { variant: "text-md/bold", style: { textAlign: "center" }, children: totpSecret });
   const obj2 = { accessibilityRole: "button", onPress: callback, children: null };
   const obj3 = { style: tmp.copy, children: null };
   const intl3 = totpSecret(1114).intl;
@@ -58,8 +58,8 @@ export default function TwoFASetupScan(totpSecret) {
   const obj4 = { children: null };
   obj3.children = stringResult;
   obj2.children = closure_4(totpSecret(1178).LegacyText, obj3);
-  items2[3] = closure_4(totpSecret(5174).PressableOpacity, obj2);
+  items2[3] = closure_4(totpSecret(5204).PressableOpacity, obj2);
   obj.children = items2;
-  obj4.children = closure_5(totpSecret(7196).SafeAreaPaddingView, obj);
-  return closure_4(totpSecret(14836).TwoFASetupModalScreen, obj4);
+  obj4.children = closure_5(totpSecret(7226).SafeAreaPaddingView, obj);
+  return closure_4(totpSecret(14870).TwoFASetupModalScreen, obj4);
 };

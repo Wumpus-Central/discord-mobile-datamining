@@ -1,23 +1,16 @@
-// === Module 16036: getDeviceCountry ===
+// === Module 16060: getDeviceCountry ===
 
-// Module 16036 (getDeviceCountry)
-import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1117 */;
+// Module 16060 (getDeviceCountry)
+import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1115 */;
 import size from "module_2" /* 2 */;
 
-const NativeModules = _mod17.NativeModules;
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
 
 export const getDeviceCountry = function getDeviceCountry() {
-  if (obj.isAndroid()) {
-    let LocalizationManager = NativeDeviceLocaleModule.default;
-  } else {
-    LocalizationManager = NativeModules.LocalizationManager;
-  }
+  const _default = NativeDeviceLocaleModule.default;
   let Language;
-  if (LocalizationManager != null) {
-    Language = LocalizationManager.getConstants().Language;
+  if (_default != null) {
+    Language = _default.getConstants().Language;
   }
   if (null == Language) {
     return null;
@@ -29,5 +22,4 @@ export const getDeviceCountry = function getDeviceCountry() {
     }
     return formatted;
   }
-  obj = PlatformUtils;
 };

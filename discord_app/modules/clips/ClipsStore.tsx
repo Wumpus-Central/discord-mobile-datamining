@@ -6,12 +6,12 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import DiscordNativeDefault from "DiscordNative" /* 4227 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4658 */;
-import isClipsEnabled from "isClipsEnabled" /* 13729 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 14044 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14046 */;
-import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 14047 */;
+import DiscordNativeDefault from "DiscordNative" /* 4257 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
+import isClipsEnabled from "isClipsEnabled" /* 13763 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 14078 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14080 */;
+import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 14081 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -230,11 +230,11 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(5183);
+const ClipsConstants = fn(5213);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire, ClipSaveTypes: closure_7, ClipsUserEducationType: closure_8, ClipsLogger: closure_9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsHardwareClassification: closure_11, ClipsSaveNoOpReason: closure_12, ClipsLengthSettings, DEFAULT_CLIPS_BITRATE_PERCENT } = ClipsConstants);
 const Constants = fn(1074);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(4653);
+const StreamSettingsConstants = fn(4683);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};

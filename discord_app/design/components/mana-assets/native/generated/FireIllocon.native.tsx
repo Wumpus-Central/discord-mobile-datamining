@@ -1,9 +1,9 @@
-// === Module 6068: FireIllocon ===
+// === Module 6098: FireIllocon ===
 
-// Module 6068 (FireIllocon)
+// Module 6098 (FireIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6069 from "module_6069" /* 6069 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6099 from "module_6099" /* 6099 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const FireIllocon = function FireIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6069 };
+  obj = { uri: _modDef6099 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6069 });
+  return jsx(FastImageDefault, { uri: _modDef6099 });
 };

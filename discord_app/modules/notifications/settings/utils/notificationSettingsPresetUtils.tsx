@@ -1,10 +1,10 @@
-// === Module 4790: notificationSettingsPresetUtils ===
+// === Module 4820: notificationSettingsPresetUtils ===
 
-// Module 4790 (notificationSettingsPresetUtils)
+// Module 4820 (notificationSettingsPresetUtils)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import ReadStateConstants from "ReadStateConstants" /* 4788 */;
-import _mod4791 from "module_4791" /* 4791 */;
+import ReadStateConstants from "ReadStateConstants" /* 4818 */;
+import _mod4821 from "module_4821" /* 4821 */;
 import size from "module_2" /* 2 */;
 
 const UserNotificationSettings = Constants.UserNotificationSettings;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/notifications/settings/utils/
 export { Presets };
 export const presetFromSettings = function presetFromSettings(unreadSetting, UserGuildSettingsStore) {
   const items = [UserGuildSettingsStore, unreadSetting];
-  const match = _mod4791.match(items);
+  const match = _mod4821.match(items);
   const items1 = [UserNotificationSettings.ALL_MESSAGES, UnreadSetting.ALL_MESSAGES];
   const items2 = [UserNotificationSettings.ONLY_MENTIONS, UnreadSetting.UNSET];
   const withResult = match.with(items1, () => constants.ALL_MESSAGES);
@@ -28,7 +28,7 @@ export const presetFromSettings = function presetFromSettings(unreadSetting, Use
   return match.with(items1, () => constants.ALL_MESSAGES).with(items2, () => constants.MENTIONS).with(items3, () => constants.MENTIONS).with(items4, () => constants.NOTHING).with(items5, () => constants.NOTHING).otherwise(() => constants.CUSTOM);
 };
 export const presetName = function presetName(tmp4Result) {
-  const match = _mod4791.match(tmp4Result);
+  const match = _mod4821.match(tmp4Result);
   const withResult = match.with(obj.ALL_MESSAGES, () => {
     const intl = util.intl;
     return intl.string(util.t.hZrr6k);

@@ -1,28 +1,28 @@
-// === Module 14955: FamilyCenterActivityRow ===
+// === Module 14989: FamilyCenterActivityRow ===
 
-// Module 14955 (FamilyCenterActivityRow)
+// Module 14989 (FamilyCenterActivityRow)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import UserUtilsDefault from "UserUtils" /* 4451 */;
-import GuildIconDefault from "GuildIcon" /* 5635 */;
-import GuildBadgeDefault from "GuildBadge" /* 5641 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7665 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14956 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 14959 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14960 */;
+import UserUtilsDefault from "UserUtils" /* 4481 */;
+import GuildIconDefault from "GuildIcon" /* 5665 */;
+import GuildBadgeDefault from "GuildBadge" /* 5671 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7695 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14990 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 14993 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14994 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7610 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_TO_TEXT = fn(7611).ACTION_TO_TEXT;
+const ACTION_TO_TEXT = fn(7641).ACTION_TO_TEXT;
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { container: null, avatar: null, avatarContainer: null, textContainer: null, text: null };
 obj = { display: "flex", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
 obj.container = obj;
@@ -54,12 +54,12 @@ const memoResult = noop.memo((action) => {
     const obj3 = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
     tmp3Result = UserUtilsDefault;
     obj3.children = tmp3Result.getName(stateFromStores);
-    const items2 = [closure_8(tmp6(4602).Text, obj3), ];
+    const items2 = [closure_8(tmp6(4632).Text, obj3), ];
     const obj4 = { variant: "text-xs/medium", color: "channels-default", children: null };
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj4.children = tmp6(7665).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
-    items2[1] = closure_8(tmp6(4602).Text, obj4);
+    obj4.children = tmp6(7695).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    items2[1] = closure_8(tmp6(4632).Text, obj4);
     obj2.children = items2;
     items1[1] = closure_9(View, obj2);
     obj.children = items1;
@@ -67,7 +67,7 @@ const memoResult = noop.memo((action) => {
   }
 });
 memoResult.displayName = "FamilyCenterActivityRowUser";
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj2 = { container: { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, avatar: null, avatarText: null, text: null, headerContainer: null, badge: null, header: null, headerAndIconContainer: null };
 let size = { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: 40, width: 40, margin: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, marginRight: 12 };
 obj2.avatar = size;
@@ -101,7 +101,7 @@ const memoResult1 = noop.memo((action) => {
     ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp);
     obj.guild = stateFromStores;
     let tmp6Result = GuildIconDefault;
-    obj.size = tmp2(5635).GuildIconSizes.NORMAL;
+    obj.size = tmp2(5665).GuildIconSizes.NORMAL;
     const items1 = [closure_8(tmp6Result, obj), ];
     const obj1 = { style: tmp.text, children: null };
     const obj2 = { style: tmp.headerContainer, children: null };
@@ -115,7 +115,7 @@ const memoResult1 = noop.memo((action) => {
     }
     const items2 = [tmp11Result, ];
     const obj5 = { style: tmp.header, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: stateFromStores.name };
-    items2[1] = closure_8(tmp2(4602).Text, obj5);
+    items2[1] = closure_8(tmp2(4632).Text, obj5);
     obj3.children = items2;
     obj2.children = closure_9(View, obj3);
     const items3 = [closure_8(View, obj2), ];
@@ -125,7 +125,7 @@ const memoResult1 = noop.memo((action) => {
       const intl = tmp2(1114).intl;
       const obj7 = { members: stateFromStores.approximateMemberCount };
       obj6.children = intl.format(_modDef2396["5JmNgg"], obj7);
-      tmp11Result = closure_8(tmp2(4602).Text, obj6);
+      tmp11Result = closure_8(tmp2(4632).Text, obj6);
     }
     items3[1] = tmp11Result;
     obj1.children = items3;

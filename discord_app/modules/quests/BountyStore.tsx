@@ -1,9 +1,9 @@
-// === Module 7774: BountyStore ===
+// === Module 7804: BountyStore ===
 
-// Module 7774 (BountyStore)
+// Module 7804 (BountyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AdCreativeType from "AdCreativeType" /* 5502 */;
+import AdCreativeType from "AdCreativeType" /* 5532 */;
 
 require = fn;
 function resetStateForDeliveredBounties(items) {
@@ -72,8 +72,8 @@ prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByP
   }
   return value;
 };
-prototype["getBountyVideoProgress"] = function getBountyVideoProgress(id) {
-  value = map.get(id);
+prototype["getBountyVideoProgress"] = function getBountyVideoProgress(bountyId) {
+  value = map.get(bountyId);
   if (value == null) {
     value = null;
   }

@@ -1,14 +1,14 @@
-// === Module 16876: useHasNewAdContent ===
+// === Module 16903: useHasNewAdContent ===
 
-// Module 16876 (useHasNewAdContent)
+// Module 16903 (useHasNewAdContent)
 import DurationsDefault from "Durations" /* 1090 */;
-import AdCreativeType from "AdCreativeType" /* 5502 */;
+import AdCreativeType from "AdCreativeType" /* 5532 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AdContentSeenStore from "AdContentSeenStore" /* 15138 */;
-import QuestStore from "QuestStore" /* 7775 */;
+import AdContentSeenStore from "AdContentSeenStore" /* 15160 */;
+import QuestStore from "QuestStore" /* 7805 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5495).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5525).QuestsExperimentLocations;
 const DAY = DurationsDefault.Millis.DAY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/hooks/useHasNewAdContent.tsx");

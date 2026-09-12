@@ -1,7 +1,7 @@
-// === Module 10914: UnsupportedFeatureModal ===
+// === Module 10953: UnsupportedFeatureModal ===
 
-// Module 10914 (UnsupportedFeatureModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+// Module 10953 (UnsupportedFeatureModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ export default function UnsupportedFeatureModal(onDismiss) {
   obj = { Unsupported: null };
   obj = {
     title: onDismiss.title,
-    headerLeft: onDismiss(5675).getHeaderCloseButton(() => {
+    headerLeft: onDismiss(5705).getHeaderCloseButton(() => {
       let arr = ModalActionCreatorsDefault;
       arr = arr.pop();
       if (onDismiss != null) {
@@ -28,15 +28,15 @@ export default function UnsupportedFeatureModal(onDismiss) {
       obj = { variant: "text-lg/normal", color: "text-default", children: null };
       const intl = onDismiss(1114).intl;
       obj.children = intl.string(onDismiss(1114).t.I22zuX);
-      obj.children = jsx(onDismiss(4602).Text, { variant: "text-lg/normal", color: "text-default", children: null });
+      obj.children = jsx(onDismiss(4632).Text, { variant: "text-lg/normal", color: "text-default", children: null });
       return <View variant="text-lg/normal" color="text-default">{null}</View>;
     }
   };
   obj.Unsupported = obj;
   obj.screens = obj;
-  return jsx(onDismiss(7073).Navigator, {
+  return jsx(onDismiss(7103).Navigator, {
     title: onDismiss.title,
-    headerLeft: onDismiss(5675).getHeaderCloseButton(() => {
+    headerLeft: onDismiss(5705).getHeaderCloseButton(() => {
       let arr = ModalActionCreatorsDefault;
       arr = arr.pop();
       if (onDismiss != null) {
@@ -48,7 +48,7 @@ export default function UnsupportedFeatureModal(onDismiss) {
       obj = { variant: "text-lg/normal", color: "text-default", children: null };
       const intl = onDismiss(1114).intl;
       obj.children = intl.string(onDismiss(1114).t.I22zuX);
-      obj.children = jsx(onDismiss(4602).Text, { variant: "text-lg/normal", color: "text-default", children: null });
+      obj.children = jsx(onDismiss(4632).Text, { variant: "text-lg/normal", color: "text-default", children: null });
       return <View variant="text-lg/normal" color="text-default">{null}</View>;
     }
   });

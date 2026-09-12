@@ -1,13 +1,13 @@
-// === Module 15585: UserSettingsHighlightNotifications ===
+// === Module 15607: UserSettingsHighlightNotifications ===
 
-// Module 15585 (UserSettingsHighlightNotifications)
-import GuildIconDefault from "GuildIcon" /* 5635 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7187 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7192 */;
+// Module 15607 (UserSettingsHighlightNotifications)
+import GuildIconDefault from "GuildIcon" /* 5665 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7217 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7222 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import SortedGuildStore from "SortedGuildStore" /* 5489 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import SortedGuildStore from "SortedGuildStore" /* 5519 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
 require = fn;
 function Row(guildId) {
@@ -41,7 +41,7 @@ function Row(guildId) {
     obj.onValueChange = callback;
     obj.start = isStart;
     obj.end = isEnd;
-    return jsx(tmp2(7273).TableSwitchRow, { label: guild.name, icon: null, value: null, onValueChange: null, start: null, end: null });
+    return jsx(tmp2(7303).TableSwitchRow, { label: guild.name, icon: null, value: null, onValueChange: null, start: null, end: null });
   }
   tmp2 = guildId;
 }
@@ -58,7 +58,7 @@ export default function UserSettingsHighlightNotifications() {
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     obj = { children: tmp3 };
-    tmp4 = jsx(stateFromStoresArray(8684).Form, { children: tmp3 });
+    tmp4 = jsx(stateFromStoresArray(8716).Form, { children: tmp3 });
   }
   return tmp4;
 };

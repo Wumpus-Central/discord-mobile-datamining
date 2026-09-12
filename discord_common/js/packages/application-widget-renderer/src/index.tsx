@@ -1,7 +1,7 @@
-// === Module 9016: resolvedValuesFromUserApplicationIdentityProfile ===
+// === Module 9055: resolvedValuesFromUserApplicationIdentityProfile ===
 
-// Module 9016 (resolvedValuesFromUserApplicationIdentityProfile)
-import discord_common_resolvedValuesFromUserApplicationIdentityProfile from "discord_common/resolvedValuesFromUserApplicationIdentityProfile" /* 9101 */;
+// Module 9055 (resolvedValuesFromUserApplicationIdentityProfile)
+import discord_common_resolvedValuesFromUserApplicationIdentityProfile from "discord_common/resolvedValuesFromUserApplicationIdentityProfile" /* 9140 */;
 import size from "module_2" /* 2 */;
 
 const discord_common_resolvedValuesFromUserApplicationIdentityProfileDefault = discord_common_resolvedValuesFromUserApplicationIdentityProfile;

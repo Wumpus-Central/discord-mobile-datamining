@@ -1,20 +1,11 @@
-// === Module 5198: openPrivacySettings ===
+// === Module 5228: openPrivacySettings ===
 
-// Module 5198 (openPrivacySettings)
-import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5199 */;
+// Module 5228 (openPrivacySettings)
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5229 */;
 import size from "module_2" /* 2 */;
 
-const NativeModules = _mod17.NativeModules;
 const result = size.fileFinishedImporting("modules/native_permissions/mobile/openPrivacySettings.native.tsx");
 
 export default function openPrivacySettings() {
-  if (obj.isAndroid()) {
-    NativeDeviceSettingsModuleDefault.openPrivacySettings();
-  } else {
-    const DeviceSettingsManager = NativeModules.DeviceSettingsManager;
-    DeviceSettingsManager.openPrivacySettings();
-  }
-  obj = PlatformUtils;
+  NativeDeviceSettingsModuleDefault.openPrivacySettings();
 };

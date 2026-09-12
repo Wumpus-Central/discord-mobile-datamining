@@ -1,9 +1,9 @@
-// === Module 6522: SharingGemSpotIllustration ===
+// === Module 6552: SharingGemSpotIllustration ===
 
-// Module 6522 (SharingGemSpotIllustration)
+// Module 6552 (SharingGemSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6523 from "module_6523" /* 6523 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6553 from "module_6553" /* 6553 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SharingGemSpotIllustration = function SharingGemSpotIllustration(wi
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6523 };
+  obj = { uri: _modDef6553 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const SharingGemSpotIllustration = function SharingGemSpotIllustration(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6523 });
+  return jsx(FastImageDefault, { uri: _modDef6553 });
 };

@@ -1,11 +1,11 @@
-// === Module 8041: MessageAccessibilityActions ===
+// === Module 8071: MessageAccessibilityActions ===
 
-// Module 8041 (MessageAccessibilityActions)
+// Module 8071 (MessageAccessibilityActions)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8042 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8045 */;
-import canReplyToMessage from "canReplyToMessage" /* 8050 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8072 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8075 */;
+import canReplyToMessage from "canReplyToMessage" /* 8080 */;
 import size from "module_2" /* 2 */;
 
 const MessageAccessibilityAction = { VIEW_PROFILE: "view_profile", ADD_REACTION: "add_reaction", ADD_QUICK_REACTION: "add_quick_reaction", REPLY: "reply", MESSAGE_ACTIONS_MENU: "message_actions_menu", EDIT_GDM: "edit_gdm", OPEN_PINS: "open_pins", JUMP_TO_MESSAGE: "jump_to_message" };

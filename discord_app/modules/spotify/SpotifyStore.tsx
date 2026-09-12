@@ -1,6 +1,6 @@
-// === Module 5331: SpotifyStore ===
+// === Module 5361: SpotifyStore ===
 
-// Module 5331 (SpotifyStore)
+// Module 5361 (SpotifyStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -9,18 +9,18 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import Timers from "Timers" /* 1952 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8224 */;
-import useIsSpeaking from "useIsSpeaking" /* 9569 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 11844 */;
-import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 13682 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8256 */;
+import useIsSpeaking from "useIsSpeaking" /* 9608 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 11880 */;
+import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 13716 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5332 */;
-import IdleStore from "IdleStore" /* 5461 */;
-import PresenceStore from "PresenceStore" /* 4646 */;
-import SpeakingStore from "SpeakingStore" /* 5470 */;
-import VoiceStateStore from "VoiceStateStore" /* 4625 */;
-import Platforms from "Platforms" /* 5334 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
+import IdleStore from "IdleStore" /* 5491 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
+import SpeakingStore from "SpeakingStore" /* 5500 */;
+import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+import Platforms from "Platforms" /* 5364 */;
 
 require = fn;
 function upsertAccount(accountId, accessToken) {
@@ -487,7 +487,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(8426);
+const SpotifyConstants = fn(8458);
 ({ getSpotifyResourceType: map1, isSpotifyParty: closure_14, SPOTIFY_PARTY_PREFIX: closure_15, SpotifyEndpoints: closure_16, SpotifyResourceTypes: closure_17 } = SpotifyConstants);
 const Constants = fn(1074);
 const PlatformTypes = Constants.PlatformTypes;
@@ -579,7 +579,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11844).SpotifyAPI;
+    const SpotifyAPI = self(11880).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1181,7 +1181,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(9569);
+        obj9 = device(9608);
       }
       if (null != tmp10) {
         if (!tmp22) {

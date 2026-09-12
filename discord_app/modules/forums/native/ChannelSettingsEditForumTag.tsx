@@ -1,14 +1,14 @@
-// === Module 16941: ChannelSettingsEditForumTag ===
+// === Module 16968: ChannelSettingsEditForumTag ===
 
-// Module 16941 (ChannelSettingsEditForumTag)
+// Module 16968 (ChannelSettingsEditForumTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 7972 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11216 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 8002 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5510 */;
+import EmojiStore from "EmojiStore" /* 5540 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const EmojiConstants = fn(1374);
 ({ EMOJI_URL_BASE_SIZE: closure_8, EmojiIntention: closure_9 } = EmojiConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, sections: null, hint: null, emojiIconWrapper: null, imageEmoji: null, textEmoji: null, nameInput: null, saveButton: null };
 createStyles = { display: "flex", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.container = createStyles;
@@ -158,7 +158,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
         } else {
           children = string(t.zeVg5d);
         }
-        return closure_10(channelId(4602).Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children });
+        return closure_10(channelId(4632).Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children });
       }
     });
   }, items3);
@@ -223,7 +223,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       };
       setOptions(obj);
     } else {
-      setOptions({ headerRight: "Array" });
+      setOptions({ headerRight: "r" });
     }
   }, items5);
   obj = { style: tmp.container, children: null };
@@ -264,22 +264,22 @@ export default function ChannelSettingsEditForumTag(channelId) {
                   closure_6(null);
                   closure_8("");
                 },
-          children: tmp27(tmp3(6687).CircleXIcon, { size: "xs" })
+          children: tmp27(tmp3(6717).CircleXIcon, { size: "xs" })
         };
-        let tmp27Result = tmp27(tmp3(5174).PressableOpacity, obj5);
+        let tmp27Result = tmp27(tmp3(5204).PressableOpacity, obj5);
       } else {
         tmp27Result = null;
       }
       const obj6 = { children: null };
       const obj7 = { hasIcons: true, children: null };
       obj3.trailing = tmp27Result;
-      obj7.children = tmp27(tmp3(5656).TableRow, obj3);
-      const items6 = [tmp27(tmp3(5738).TableRowGroup, obj7), ];
+      obj7.children = tmp27(tmp3(5686).TableRow, obj3);
+      const items6 = [tmp27(tmp3(5768).TableRowGroup, obj7), ];
       const obj8 = { style: tmp.hint, children: null };
       const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
       let intl2 = tmp3(1114).intl;
       obj9.children = intl2.string(tmp3(1114).t["3v8kZH"]);
-      obj8.children = tmp27(tmp3(4602).Text, obj9);
+      obj8.children = tmp27(tmp3(4632).Text, obj9);
       items6[1] = tmp27(tmp28, obj8);
       obj6.children = items6;
       const items7 = [tmp29(tmp28, obj6), , ];
@@ -303,8 +303,8 @@ export default function ChannelSettingsEditForumTag(channelId) {
         }
         closure_10(tmp2);
       };
-      obj11.children = tmp27(tmp3(7273).TableSwitchRow, obj10);
-      items7[1] = tmp27(tmp3(5738).TableRowGroup, obj11);
+      obj11.children = tmp27(tmp3(7303).TableSwitchRow, obj10);
+      items7[1] = tmp27(tmp3(5768).TableRowGroup, obj11);
       tmp27Result = null;
       if (!tmp2) {
         const obj12 = { hasIcons: false, children: null };
@@ -330,12 +330,12 @@ export default function ChannelSettingsEditForumTag(channelId) {
           };
           obj.show(obj);
         };
-        obj12.children = tmp27(tmp3(5656).TableRow, obj13);
-        tmp27Result = tmp27(tmp3(5738).TableRowGroup, obj12);
+        obj12.children = tmp27(tmp3(5686).TableRow, obj13);
+        tmp27Result = tmp27(tmp3(5768).TableRowGroup, obj12);
       }
       items7[2] = tmp27Result;
       obj1.children = items7;
-      obj.children = tmp29(tmp3(5024).Stack, obj1);
+      obj.children = tmp29(tmp3(5054).Stack, obj1);
       return tmp27(tmp28, obj);
     }
     const obj14 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
@@ -357,9 +357,9 @@ export default function ChannelSettingsEditForumTag(channelId) {
       str2 = "";
     }
     obj14.name = str2;
-    tmp27Result1 = tmp27(tag(7203), obj14);
+    tmp27Result1 = tmp27(tag(7233), obj14);
     tmp31 = tag;
-    const tmp32 = tag(7203);
+    const tmp32 = tag(7233);
   }
-  tmp27Result1 = tmp27(tmp3(8848).ReactionIcon, {});
+  tmp27Result1 = tmp27(tmp3(8883).ReactionIcon, {});
 };

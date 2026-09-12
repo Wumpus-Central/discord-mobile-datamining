@@ -1,6 +1,6 @@
-// === Module 7055: EnterEmail ===
+// === Module 7085: EnterEmail ===
 
-// Module 7055 (EnterEmail)
+// Module 7085 (EnterEmail)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -10,12 +10,12 @@ import UserStore from "UserStore" /* 1371 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(5674);
+const ChangeEmailStore = fn(5704);
 ({ useChangeEmailError: c10, useChangeEmailStore: closure_11, ChangeEmailFields: closure_12 } = ChangeEmailStore);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { background: null, container: null, title: null, prompt: null, input: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.background = createStyles;

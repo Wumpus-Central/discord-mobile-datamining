@@ -1,7 +1,7 @@
-// === Module 17100: ActivityPanelNativeConstants ===
+// === Module 17127: ActivityPanelNativeConstants ===
 
-// Module 17100 (ActivityPanelNativeConstants)
-import ActivityPanelConstants from "ActivityPanelConstants" /* 9596 */;
+// Module 17127 (ActivityPanelNativeConstants)
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9635 */;
 import size from "module_2" /* 2 */;
 
 let obj = { top: null };

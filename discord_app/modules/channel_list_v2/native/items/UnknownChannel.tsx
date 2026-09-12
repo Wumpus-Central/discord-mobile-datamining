@@ -1,13 +1,13 @@
-// === Module 16295: UnknownChannel ===
+// === Module 16319: UnknownChannel ===
 
-// Module 16295 (UnknownChannel)
+// Module 16319 (UnknownChannel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4561 */;
-import useChannelNameDefault from "useChannelName" /* 4759 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11005 */;
-import ChannelItemDefault from "ChannelItem" /* 16187 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4591 */;
+import useChannelNameDefault from "useChannelName" /* 4789 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
+import ChannelItemDefault from "ChannelItem" /* 16211 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,11 +18,11 @@ function handlePress() {
   obj.IconComponent = CircleInformationIcon.CircleInformationIcon;
   obj.open(obj);
 }
-const UnreadSetting = fn(4788).UnreadSetting;
+const UnreadSetting = fn(4818).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { container: null };
-obj = { marginVertical: fn(10207).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+obj = { marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 obj.container = obj;
 let closure_6 = createStyles.createStyles(obj);
 const size = fn(2);

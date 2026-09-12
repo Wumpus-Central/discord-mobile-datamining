@@ -1,17 +1,17 @@
-// === Module 11475: StrangerDangerWarningBanner ===
+// === Module 11514: StrangerDangerWarningBanner ===
 
-// Module 11475 (StrangerDangerWarningBanner)
+// Module 11514 (StrangerDangerWarningBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11464 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11465 */;
-import StrangerDangerMoreTipsModalActionItemsDefault from "StrangerDangerMoreTipsModalActionItems" /* 11479 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11503 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11504 */;
+import StrangerDangerMoreTipsModalActionItemsDefault from "StrangerDangerMoreTipsModalActionItems" /* 11518 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 require = fn;
 class StrangerDangerWarningBanner {
@@ -78,13 +78,13 @@ class StrangerDangerWarningBanner {
           },
           onIgnore() {
             closure_1_4();
-            channelId(11464);
-            const obj = { channelId, warningId, senderId, warningType: constants.STRANGER_DANGER, cta: channelId(11464).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM };
+            channelId(11503);
+            const obj = { channelId, warningId, senderId, warningType: constants.STRANGER_DANGER, cta: channelId(11503).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM };
             obj.trackCtaEvent(obj);
           },
           impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION
         };
-        obj.openLazy(asyncRequireImpl(11477, dependencyMap.paths), closure_9, obj);
+        obj.openLazy(asyncRequireImpl(11516, dependencyMap.paths), closure_9, obj);
       };
     }, items5);
     closure_6 = callback2;
@@ -103,7 +103,7 @@ class StrangerDangerWarningBanner {
       let obj = { modalKey, headerStyle: moreTipsHeader.moreTipsHeader, channelId, warningId, senderId, description: null, safetyTips: null, actionItems: null };
       const intl = util.intl;
       obj.description = intl.string(util.t.DJMZX6);
-      const tmp = asyncRequireImpl(11469, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11508, dependencyMap.paths);
       obj.safetyTips = React5().map((children, index) => closure_1_10(channelId(senderId[20]).Text, { variant: "text-sm/medium", children }, index));
       obj = { channelId, warningId, senderId, onBlockPressed: null };
       const arr = React5();
@@ -130,13 +130,13 @@ class StrangerDangerWarningBanner {
     return tmp8(tmp9, obj);
   }
 }
-const SafetyWarningTypes = fn(11007).SafetyWarningTypes;
-const Constants = fn(11457);
+const SafetyWarningTypes = fn(11046).SafetyWarningTypes;
+const Constants = fn(11496);
 ({ STRANGER_DANGER_MORE_TIPS_MODAL_KEY: metroRequire, getStrangerDangerSafetyTips: closure_7 } = Constants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-let closure_9 = fn(11476).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_9 = fn(11515).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { moreTipsHeader: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
 createStyles.moreTipsHeader = createStyles;

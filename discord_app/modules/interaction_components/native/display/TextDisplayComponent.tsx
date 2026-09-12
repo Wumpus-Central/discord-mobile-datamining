@@ -1,17 +1,17 @@
-// === Module 15782: TextDisplayComponent ===
+// === Module 15804: TextDisplayComponent ===
 
-// Module 15782 (TextDisplayComponent)
-import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 7962 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 11709 */;
+// Module 15804 (TextDisplayComponent)
+import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 7992 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 11745 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;
-let closure_8 = fn(8196).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+let closure_8 = fn(8228).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/display/TextDisplayComponent.tsx");

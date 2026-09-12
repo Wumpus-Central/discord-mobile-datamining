@@ -1,10 +1,10 @@
-// === Module 9887: GuildEventRecurrences ===
+// === Module 9926: GuildEventRecurrences ===
 
-// Module 9887 (GuildEventRecurrences)
+// Module 9926 (GuildEventRecurrences)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9888 */;
-import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 9890 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9927 */;
+import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 9929 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { marginTop: 16 }, scrollView: null };
 createStyles = { marginTop: 8, marginBottom: 8, borderRadius: nativeDefault.radii.sm, maxHeight: 140 };
 createStyles.scrollView = createStyles;
@@ -33,7 +33,7 @@ export default function GuildEventRecurrences(guildEventId) {
   obj = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1114).intl;
   obj.children = intl.string(guildEventId(1114).t["D/jjoa"]);
-  const items = [closure_6(guildEventId(4602).Text, obj), , ];
+  const items = [closure_6(guildEventId(4632).Text, obj), , ];
   obj = {
     style: tmp2.scrollView,
     ref,
@@ -60,7 +60,7 @@ export default function GuildEventRecurrences(guildEventId) {
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = closure_6(tmp8(5026).Button, obj1);
+    canViewMoreRecurrences = closure_6(tmp8(5056).Button, obj1);
   }
   items[2] = canViewMoreRecurrences;
   obj.children = items;

@@ -1,8 +1,8 @@
-// === Module 17667: showGuildSettingsModalStickerInfoActionSheet ===
+// === Module 17697: showGuildSettingsModalStickerInfoActionSheet ===
 
-// Module 17667 (showGuildSettingsModalStickerInfoActionSheet)
+// Module 17697 (showGuildSettingsModalStickerInfoActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import size from "module_2" /* 2 */;
 
 const GuildSettingsModalStickerInfoActionSheet = "GuildSettingsModalStickerInfoActionSheet";
@@ -17,5 +17,5 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
       ActionSheetActionCreatorsDefault.hideActionSheet(GuildSettingsModalStickerInfoActionSheet);
     }
   };
-  obj.openLazy(asyncRequireImpl(17668, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(17698, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
 };

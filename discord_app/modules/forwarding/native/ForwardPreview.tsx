@@ -1,26 +1,26 @@
-// === Module 11787: ForwardPreview ===
+// === Module 11823: ForwardPreview ===
 
-// Module 11787 (ForwardPreview)
+// Module 11823 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1476 */;
 import Server from "Server" /* 1894 */;
 import _modDef2914 from "module_2914" /* 2914 */;
-import useThemeDefault from "useTheme" /* 4541 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import ImageIcon from "ImageIcon" /* 5138 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8211 */;
-import CheckpointUtils from "CheckpointUtils" /* 8228 */;
-import ChatItemDefault from "ChatItem" /* 8743 */;
-import ClipView from "ClipView" /* 8905 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10201 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 10221 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11788 */;
-import CheckpointColors from "CheckpointColors" /* 11789 */;
-import MosaicMediaType from "MosaicMediaType" /* 11790 */;
-import ImagesIcon2 from "ImagesIcon" /* 11792 */;
+import useThemeDefault from "useTheme" /* 4571 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import ImageIcon from "ImageIcon" /* 5168 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8243 */;
+import CheckpointUtils from "CheckpointUtils" /* 8260 */;
+import ChatItemDefault from "ChatItem" /* 8775 */;
+import ClipView from "ClipView" /* 8940 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10240 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 10260 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11824 */;
+import CheckpointColors from "CheckpointColors" /* 11825 */;
+import MosaicMediaType from "MosaicMediaType" /* 11826 */;
+import ImagesIcon2 from "ImagesIcon" /* 11828 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -34,7 +34,7 @@ function MessagePreview(content) {
   } else {
     TEXT_SUBTLE = tmp(576).colors.TEXT_SUBTLE;
   }
-  let obj = attachmentCount(4606);
+  let obj = attachmentCount(4636);
   const tmp4 = obj.createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(useThemeDefault());
   importDefault = tmp4;
   const items = [tmp4.seeMoreLabelColor, attachmentCount];
@@ -63,7 +63,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-fn(4606);
+fn(4636);
 let createStyles = { forwardPreview: null, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
 createStyles = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 createStyles.forwardPreview = createStyles;

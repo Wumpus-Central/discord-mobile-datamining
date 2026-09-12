@@ -1,10 +1,10 @@
-// === Module 14984: UserSettingsFamilyCenterParentalControls ===
+// === Module 15018: UserSettingsFamilyCenterParentalControls ===
 
-// Module 14984 (UserSettingsFamilyCenterParentalControls)
+// Module 15018 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7612 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7642 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,10 +12,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const FamilyCenterSubPages = fn(7611).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7641).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { display: "flex", flex: 1 }, segmentedControlContainer: null, content: null };
 createStyles = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.segmentedControlContainer = createStyles;

@@ -3,9 +3,9 @@
 // Module 2026 (IntlLoaderStore)
 import util from "util" /* 1114 */;
 import _modDef2027 from "module_2027" /* 2027 */;
-import bg from "bg" /* 3690 */;
-import formatjs from "formatjs" /* 4165 */;
-import moment from "moment" /* 4196 */;
+import bg from "bg" /* 3720 */;
+import formatjs from "formatjs" /* 4195 */;
+import moment from "moment" /* 4226 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

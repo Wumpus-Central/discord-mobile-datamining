@@ -1,9 +1,9 @@
-// === Module 5912: ChestAndGemSpotIllustration ===
+// === Module 5942: ChestAndGemSpotIllustration ===
 
-// Module 5912 (ChestAndGemSpotIllustration)
+// Module 5942 (ChestAndGemSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5913 from "module_5913" /* 5913 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5943 from "module_5943" /* 5943 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ChestAndGemSpotIllustration = function ChestAndGemSpotIllustration(
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5913 };
+  obj = { uri: _modDef5943 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ChestAndGemSpotIllustration = function ChestAndGemSpotIllustration(
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5913 });
+  return jsx(FastImageDefault, { uri: _modDef5943 });
 };

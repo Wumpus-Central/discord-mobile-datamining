@@ -1,9 +1,9 @@
-// === Module 6072: FlowerIllocon ===
+// === Module 6102: FlowerIllocon ===
 
-// Module 6072 (FlowerIllocon)
+// Module 6102 (FlowerIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6073 from "module_6073" /* 6073 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6103 from "module_6103" /* 6103 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const FlowerIllocon = function FlowerIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6073 };
+  obj = { uri: _modDef6103 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6073 });
+  return jsx(FastImageDefault, { uri: _modDef6103 });
 };

@@ -1,18 +1,18 @@
-// === Module 13174: UserProfilePrivacyNotice ===
+// === Module 13211: UserProfilePrivacyNotice ===
 
-// Module 13174 (UserProfilePrivacyNotice)
+// Module 13211 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4561 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Pressables from "Pressables" /* 5174 */;
-import XSmallIcon from "XSmallIcon" /* 5731 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7461 */;
-import useUserIsTeen from "useUserIsTeen" /* 8735 */;
-import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13175 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4591 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Pressables from "Pressables" /* 5204 */;
+import XSmallIcon from "XSmallIcon" /* 5761 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7491 */;
+import useUserIsTeen from "useUserIsTeen" /* 8767 */;
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13212 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, icon: null, text: null, closeButton: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 };
 createStyles.container = createStyles;

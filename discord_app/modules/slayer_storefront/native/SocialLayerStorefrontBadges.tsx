@@ -1,22 +1,22 @@
-// === Module 10906: SocialLayerStorefrontBadges ===
+// === Module 10945: SocialLayerStorefrontBadges ===
 
-// Module 10906 (SocialLayerStorefrontBadges)
+// Module 10945 (SocialLayerStorefrontBadges)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import ClydeIcon from "ClydeIcon" /* 10907 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import ClydeIcon from "ClydeIcon" /* 10946 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { exclusiveBadge: null, exclusiveBadgeText: null };
 createStyles = { flexDirection: "row", alignItems: "center", textAlignVertical: "center", alignSelf: "flex-start", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 createStyles.exclusiveBadge = createStyles;
 const obj1 = { textTransform: "uppercase", fontSize: nativeDefault.space.PX_12, lineHeight: null };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 obj1.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;

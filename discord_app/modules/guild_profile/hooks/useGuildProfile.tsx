@@ -1,9 +1,9 @@
-// === Module 9277: useGuildProfile ===
+// === Module 9316: useGuildProfile ===
 
-// Module 9277 (useGuildProfile)
+// Module 9316 (useGuildProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildProfileStore from "GuildProfileStore" /* 9155 */;
+import GuildProfileStore from "GuildProfileStore" /* 9194 */;
 
 const require = fn;
 const size = fn(2);
@@ -19,14 +19,74 @@ export const useGuildProfile = function useGuildProfile(guildId) {
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => GuildProfileStore.getFetchStatus(closure_0));
   const items2 = [guildId];
   obj.fetchGuildProfile = noop.useCallback(asyncGeneratorStep(async () => {
-    let flag = guildId;
-    if (guildId === undefined) {
-      flag = false;
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp5;
+            closure_129_0 = undefined;
+            let flag = guildId;
+            if (guildId === undefined) {
+              flag = false;
+            }
+            closure_129_0 = flag;
+            c3 = 1;
+            c4 = 1;
+            return { value: "PX_16", done: true };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            let obj2 = guildId(tmp2[4]);
+            c3 = 2;
+            c4 = 1;
+            obj2 = { value: null, done: false };
+            obj2.value = obj2.getGuildProfile(closure_130_0, closure_129_0);
+            return obj2;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp12) {
+        c4 = tmp;
+        throw tmp12;
+      }
     }
-    closure_129_0 = flag;
-    await "PX_16";
-    await closure_0(tmp2[4]).getGuildProfile(closure_130_0, closure_129_0);
-    return value;
   }), items2);
   obj.fetchStatus = stateFromStores1;
   return obj;

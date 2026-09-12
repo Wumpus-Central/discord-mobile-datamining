@@ -1,10 +1,10 @@
-// === Module 12781: NewUserPermissionsOnboarding ===
+// === Module 12817: NewUserPermissionsOnboarding ===
 
-// Module 12781 (NewUserPermissionsOnboarding)
+// Module 12817 (NewUserPermissionsOnboarding)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: null, alert: null, alertContent: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
-createStyles = { paddingTop: 80 + fn(5733).NAV_BAR_HEIGHT };
+createStyles = { paddingTop: 80 + fn(5763).NAV_BAR_HEIGHT };
 createStyles.alertContainer = createStyles;
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 createStyles.alert = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, alignItems: "center", maxWidth: 290 };

@@ -1,12 +1,12 @@
-// === Module 8805: GameProfileHeader ===
+// === Module 8839: GameProfileHeader ===
 
-// Module 8805 (GameProfileHeader)
+// Module 8839 (GameProfileHeader)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import SKUUtils from "SKUUtils" /* 8806 */;
-import GameProfileRankPillDefault from "GameProfileRankPill" /* 8807 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import SKUUtils from "SKUUtils" /* 8840 */;
+import GameProfileRankPillDefault from "GameProfileRankPill" /* 8841 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, iconContainer: null, image: null, titleContainer: null, textShadow: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.container = createStyles;
@@ -25,8 +25,8 @@ const rect = { width: "100%", position: "absolute", top: 0, bottom: -nativeDefau
 createStyles.artHero = rect;
 createStyles.artHeroImage = { height: "100%", width: "100%", resizeMode: "cover" };
 createStyles.artHeroGradient = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 };
-createStyles.headerContent = { paddingTop: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: 520, alignSelf: "center", width: "100%" };
-let obj1 = { paddingTop: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: 520, alignSelf: "center", width: "100%" };
+createStyles.headerContent = { paddingTop: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: fn(8837).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+let obj1 = { paddingTop: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: fn(8837).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 createStyles.shadowContainer = { borderRadius: nativeDefault.radii.sm };
 let size = { width: 85, height: 114, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
@@ -53,7 +53,7 @@ export default function GameProfileHeader(game) {
   if (scrollY == null) {
     scrollY = obj1.useSharedValue(0);
   }
-  const fn = function _() {
+  const fn = function x() {
     return { top: -Math.max(0, -scrollY.get()) };
   };
   fn.__closure = { effectiveScrollY: scrollY };

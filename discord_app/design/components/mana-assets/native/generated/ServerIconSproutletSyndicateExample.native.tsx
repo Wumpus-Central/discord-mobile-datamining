@@ -1,9 +1,9 @@
-// === Module 6506: ServerIconSproutletSyndicateExample ===
+// === Module 6536: ServerIconSproutletSyndicateExample ===
 
-// Module 6506 (ServerIconSproutletSyndicateExample)
+// Module 6536 (ServerIconSproutletSyndicateExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6507 from "module_6507" /* 6507 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6537 from "module_6537" /* 6537 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerIconSproutletSyndicateExample = function ServerIconSproutletS
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6507 };
+  obj = { uri: _modDef6537 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ServerIconSproutletSyndicateExample = function ServerIconSproutletS
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6507 });
+  return jsx(FastImageDefault, { uri: _modDef6537 });
 };

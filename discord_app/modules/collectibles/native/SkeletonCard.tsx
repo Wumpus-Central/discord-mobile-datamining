@@ -1,16 +1,16 @@
-// === Module 15143: SkeletonCard ===
+// === Module 8997: SkeletonCard ===
 
-// Module 15143 (SkeletonCard)
+// Module 8997 (SkeletonCard)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4607 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import timing from "timing" /* 4637 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles((width, height) => {
   const obj = { skeletonCard: null };
   const size = { width, height, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm };
@@ -24,14 +24,14 @@ let result = size.fileFinishedImporting("modules/collectibles/native/SkeletonCar
 export default function _default(width) {
   let COLLECTIBLES_SHOP_CARD_WIDTH = width.width;
   if (COLLECTIBLES_SHOP_CARD_WIDTH === undefined) {
-    COLLECTIBLES_SHOP_CARD_WIDTH = sharedValue(8855).COLLECTIBLES_SHOP_CARD_WIDTH;
+    COLLECTIBLES_SHOP_CARD_WIDTH = sharedValue(8890).COLLECTIBLES_SHOP_CARD_WIDTH;
   }
   let COLLECTIBLES_SHOP_CARD_HEIGHT = width.height;
   sharedValue = undefined;
   if (COLLECTIBLES_SHOP_CARD_HEIGHT == null) {
-    COLLECTIBLES_SHOP_CARD_HEIGHT = sharedValue(8855).COLLECTIBLES_SHOP_CARD_HEIGHT;
+    COLLECTIBLES_SHOP_CARD_HEIGHT = sharedValue(8890).COLLECTIBLES_SHOP_CARD_HEIGHT;
   }
-  let obj = sharedValue(4343);
+  let obj = sharedValue(4373);
   sharedValue = obj.useSharedValue(0.3);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
@@ -48,7 +48,7 @@ export default function _default(width) {
   C.__closure = { opacity: sharedValue };
   C.__workletHash = 5620456625640;
   C.__initData = __initData;
-  const animatedStyle = sharedValue(4343).useAnimatedStyle(C);
+  const animatedStyle = sharedValue(4373).useAnimatedStyle(C);
   obj = { style: null };
   const items1 = [tmp3Result.skeletonCard, width.style, animatedStyle];
   obj.style = items1;

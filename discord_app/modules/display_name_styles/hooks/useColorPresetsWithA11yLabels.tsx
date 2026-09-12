@@ -1,6 +1,6 @@
-// === Module 15408: useColorPresetsWithA11yLabels ===
+// === Module 15430: useColorPresetsWithA11yLabels ===
 
-// Module 15408 (useColorPresetsWithA11yLabels)
+// Module 15430 (useColorPresetsWithA11yLabels)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

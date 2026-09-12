@@ -1,16 +1,16 @@
-// === Module 15904: useCollectiblesShopHeader ===
+// === Module 15928: useCollectiblesShopHeader ===
 
-// Module 15904 (useCollectiblesShopHeader)
+// Module 15928 (useCollectiblesShopHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 7206 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
-import ShopIcon from "ShopIcon" /* 12231 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 7236 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
+import ShopIcon from "ShopIcon" /* 12267 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -49,11 +49,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     const intl = util.intl;
     obj.label = intl.string(util.t["xNiB/O"]);
     obj.action = function action() {
-      currentScreen(7614);
+      currentScreen(7644);
       const obj = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(7255).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
+      const items = [stateFromStores(7285).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
       obj.analyticsLocations = items;
-      obj.analyticsSource = stateFromStores(7255).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
+      obj.analyticsSource = stateFromStores(7285).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
       obj.screen = constants.FEATURED_PAGE;
       const result = obj.openCollectiblesShopMobile(obj);
     };
@@ -67,11 +67,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     const intl2 = util.intl;
     obj.label = intl2.string(util.t.RSyoZu);
     obj.action = function action() {
-      currentScreen(7614);
+      currentScreen(7644);
       const obj = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(7255).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
+      const items = [stateFromStores(7285).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
       obj.analyticsLocations = items;
-      obj.analyticsSource = stateFromStores(7255).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
+      obj.analyticsSource = stateFromStores(7285).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
       obj.screen = constants.SHOP_ALL;
       const result = obj.openCollectiblesShopMobile(obj);
     };
@@ -85,11 +85,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     const intl3 = util.intl;
     obj.label = intl3.string(util.t.EBYkzk);
     obj.action = function action() {
-      currentScreen(7614);
+      currentScreen(7644);
       const obj = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(7255).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
+      const items = [stateFromStores(7285).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
       obj.analyticsLocations = items;
-      obj.analyticsSource = stateFromStores(7255).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
+      obj.analyticsSource = stateFromStores(7285).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
       obj.screen = constants.ORBS;
       const result = obj.openCollectiblesShopMobile(obj);
     };
@@ -194,11 +194,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
 const View = fn(17).View;
 const constants = fn(1076).CollectiblesMobileShopScreen;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const RewardFilterTypes = fn(5495).RewardFilterTypes;
-const UserProfileSections = fn(8268).UserProfileSections;
+const RewardFilterTypes = fn(5525).RewardFilterTypes;
+const UserProfileSections = fn(8300).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { headerTitleContainer: null, headerTitle: null, headerRightContainer: null };
 createStyles = { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 createStyles.headerTitleContainer = createStyles;

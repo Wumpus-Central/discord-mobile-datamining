@@ -1,9 +1,9 @@
-// === Module 11307: SlashBoxIcon ===
+// === Module 11346: SlashBoxIcon ===
 
-// Module 11307 (SlashBoxIcon)
+// Module 11346 (SlashBoxIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod11308 from "module_11308" /* 11308 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod11347 from "module_11347" /* 11347 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const SlashBoxIcon = function SlashBoxIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11308, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11347, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,10 +1,10 @@
-// === Module 16961: MessageRequestList ===
+// === Module 16988: MessageRequestList ===
 
-// Module 16961 (MessageRequestList)
+// Module 16988 (MessageRequestList)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import transitionToChannel from "transitionToChannel" /* 4617 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import transitionToChannel from "transitionToChannel" /* 4647 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -153,7 +153,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { sectionContainer: null, rowContainer: null, actionContainer: null, actionButton: null, acceptButton: null, acceptButtonRestricted: null, pressableRow: null, activityIndicator: null, list: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 };
 createStyles.sectionContainer = createStyles;

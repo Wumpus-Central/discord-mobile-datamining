@@ -1,18 +1,18 @@
-// === Module 15281: LabeledDataBlock ===
+// === Module 15303: LabeledDataBlock ===
 
-// Module 15281 (LabeledDataBlock)
+// Module 15303 (LabeledDataBlock)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Pressables from "Pressables" /* 5174 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Pressables from "Pressables" /* 5204 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5575 */;
+import TextStyles from "TextStyles" /* 5605 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, title: null, data: null, titleSection: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, flexBasis: "auto", flexGrow: 1, padding: 16 };
 createStyles.container = createStyles;

@@ -1,9 +1,9 @@
-// === Module 8700: FormRadioGroup ===
+// === Module 8732: FormRadioGroup ===
 
-// Module 8700 (FormRadioGroup)
-import TableRadioGroup from "TableRadioGroup" /* 5736 */;
-import RedesignCompat from "RedesignCompat" /* 5737 */;
-import FormSectionDefault from "FormSection" /* 8693 */;
+// Module 8732 (FormRadioGroup)
+import TableRadioGroup from "TableRadioGroup" /* 5766 */;
+import RedesignCompat from "RedesignCompat" /* 5767 */;
+import FormSectionDefault from "FormSection" /* 8725 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

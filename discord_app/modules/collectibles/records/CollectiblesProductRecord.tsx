@@ -1,13 +1,13 @@
-// === Module 7617: CollectiblesProductRecord ===
+// === Module 7647: CollectiblesProductRecord ===
 
-// Module 7617 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 5564 */;
+// Module 7647 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5594 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7618 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7624 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7648 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7654 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7619);
+const CollectiblesItemRecord = fn(7649);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1074);
@@ -171,7 +171,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              obj = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "accessible", items: "<string:16778466>", categorySkuId: "<string:301451089>", isCategoryReward: "<string:815361>", prices: "<string:508690432>", previewAssets: "<string:1373239002>", googleSkuIds: "<string:1359071782>", eligibleOffers: "<string:17954351>", variants: "<string:858993457>", bundledProducts: "<string:674444083>", isFirstParty: "men_holding_hands_tone1_tone2" };
+              obj = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "channelId", items: 1275620616, categorySkuId: 241727, isCategoryReward: 237699, prices: 238824, previewAssets: 240024, googleSkuIds: "safetyTips", eligibleOffers: "ferris_wheel", variants: "dismiss_type", bundledProducts: "displayType", isFirstParty: "MEMBER_LIST_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES" };
               let str;
               if (first != null) {
                 str = first.optionValue;

@@ -1,7 +1,7 @@
-// === Module 16774: useAnimatedKeyboardHeight ===
+// === Module 16801: useAnimatedKeyboardHeight ===
 
-// Module 16774 (useAnimatedKeyboardHeight)
-import AnimatedKeyboardProviderDefault from "AnimatedKeyboardProvider" /* 14626 */;
+// Module 16801 (useAnimatedKeyboardHeight)
+import AnimatedKeyboardProviderDefault from "AnimatedKeyboardProvider" /* 14661 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/keyboard/native/useAnimatedKeyboardHeight.tsx");

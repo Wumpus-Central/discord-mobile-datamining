@@ -1,6 +1,6 @@
-// === Module 8029: BasicGuildStore ===
+// === Module 8059: BasicGuildStore ===
 
-// Module 8029 (BasicGuildStore)
+// Module 8059 (BasicGuildStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 
@@ -27,8 +27,8 @@ prototype["isGuildFetching"] = function isGuildFetching(arg0) {
   }
   return tmp2;
 };
-prototype["getGuildOrStatus"] = function getGuildOrStatus(guildId) {
-  return dependencyMap[guildId];
+prototype["getGuildOrStatus"] = function getGuildOrStatus(guild_id) {
+  return dependencyMap[guild_id];
 };
 prototype["getVersion"] = function getVersion() {
   return closure_0;

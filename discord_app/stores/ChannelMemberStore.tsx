@@ -1,22 +1,22 @@
-// === Module 7352: ChannelMemberStore ===
+// === Module 7382: ChannelMemberStore ===
 
-// Module 7352 (ChannelMemberStore)
+// Module 7382 (ChannelMemberStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
-import ExperimentStore from "ExperimentStore" /* 4522 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
+import ExperimentStore from "ExperimentStore" /* 4552 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4526 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PresenceStore from "PresenceStore" /* 4646 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 import UserStore from "UserStore" /* 1371 */;
 
 let require = fn;
@@ -195,7 +195,7 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj = { type: null, key: null, id: null, title: null, count: null, index: "accessible" };
+          let obj = { type: null, key: null, id: null, title: null, count: null, index: "WireType" };
           obj.type = obj.GROUP;
           obj.key = id;
           obj.id = id;
@@ -295,7 +295,7 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          obj = { type: null, key: null, id: null, title: null, count: null, index: "accessible" };
+          obj = { type: null, key: null, id: null, title: null, count: null, index: "WireType" };
           obj.type = obj.GROUP;
           obj.key = id2;
           obj.id = id2;

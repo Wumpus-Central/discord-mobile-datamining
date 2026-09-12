@@ -1,9 +1,9 @@
-// === Module 5874: BotIllocon ===
+// === Module 5904: BotIllocon ===
 
-// Module 5874 (BotIllocon)
+// Module 5904 (BotIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5875 from "module_5875" /* 5875 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5905 from "module_5905" /* 5905 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const BotIllocon = function BotIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5875 };
+  obj = { uri: _modDef5905 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5875 });
+  return jsx(FastImageDefault, { uri: _modDef5905 });
 };

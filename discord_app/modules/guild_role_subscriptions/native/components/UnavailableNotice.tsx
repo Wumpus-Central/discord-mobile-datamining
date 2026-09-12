@@ -1,17 +1,17 @@
-// === Module 16611: UnavailableNotice ===
+// === Module 16635: UnavailableNotice ===
 
-// Module 16611 (UnavailableNotice)
+// Module 16635 (UnavailableNotice)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef16314 from "module_16314" /* 16314 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef16338 from "module_16338" /* 16338 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, brightTitle: null, unavailableContainer: null, unavailableInfo: null, unavailableDescription: null, joinCtaTitle: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -33,7 +33,7 @@ export default function UnavailableNotice(brightTitle) {
   ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
   obj.style = items;
   obj = { style: tmp.unavailableInfo, children: null };
-  obj = { source: _modDef16314 };
+  obj = { source: _modDef16338 };
   const items1 = [React4(FastImageDefault, obj), , ];
   const items2 = [tmp.joinCtaTitle, ];
   if (brightTitle) {

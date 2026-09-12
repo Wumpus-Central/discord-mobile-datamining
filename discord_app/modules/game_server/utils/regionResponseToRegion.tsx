@@ -1,6 +1,6 @@
-// === Module 12580: regionResponseToRegion ===
+// === Module 12616: regionResponseToRegion ===
 
-// Module 12580 (regionResponseToRegion)
+// Module 12616 (regionResponseToRegion)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_server/utils/regionResponseToRegion.tsx");

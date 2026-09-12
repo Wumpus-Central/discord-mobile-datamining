@@ -1,21 +1,21 @@
-// === Module 7906: MessageQueue ===
+// === Module 7936: MessageQueue ===
 
-// Module 7906 (MessageQueue)
+// Module 7936 (MessageQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import getOverlayMessageAnaylticsLocationDefault from "getOverlayMessageAnaylticsLocation" /* 7908 */;
+import getOverlayMessageAnaylticsLocationDefault from "getOverlayMessageAnaylticsLocation" /* 7938 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import DevSettingsStore from "DevSettingsStore" /* 4605 */;
+import DevSettingsStore from "DevSettingsStore" /* 4635 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NetworkStore from "NetworkStore" /* 4655 */;
-import Queue from "Queue" /* 7907 */;
+import NetworkStore from "NetworkStore" /* 4685 */;
+import Queue from "Queue" /* 7937 */;
 
 let handleCommand = fn;
 let closure_3 = ["channelId", "analyticsLocation"];
 let closure_4 = ["channelId", "analyticsLocation"];
 const Constants = fn(1074);
 ({ AbortCodes: closure_9, Endpoints: c10, AnalyticEvents: closure_11 } = Constants);
-let closure_12 = fn(4599).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
+let closure_12 = fn(4629).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
 const MessageDataType = { SEND: 0, [0]: "SEND", EDIT: 1, [1]: "EDIT", COMMAND: 2, [2]: "COMMAND", SEND_ANNOUNCEMENT: 3, [3]: "SEND_ANNOUNCEMENT" };
 let items = [DurationsDefault.Millis.MINUTE, 5 * DurationsDefault.Millis.MINUTE];
 class MessageQueue extends tmp5 {
@@ -199,7 +199,7 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     const tmp4 = body;
   }
   const tmp = _objectWithoutProperties(nonce, closure_3);
-  const signalStrength = handleCommand(7532).getSignalStrength();
+  const signalStrength = handleCommand(7562).getSignalStrength();
   body = { mobile_network_type: NetworkStore.getType() };
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
@@ -230,7 +230,7 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     HTTP.post(request, self.createResponseHandler(nonce.nonce, fn));
     const responseHandler = self.createResponseHandler(nonce.nonce, fn);
   }
-  const obj2 = handleCommand(7532);
+  const obj2 = handleCommand(7562);
 };
 prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, fn) {
   ({ channelId, analyticsLocation } = message);
@@ -243,7 +243,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     const tmp4 = body;
   }
   const tmp = _objectWithoutProperties(message, closure_4);
-  const signalStrength = handleCommand(7532).getSignalStrength();
+  const signalStrength = handleCommand(7562).getSignalStrength();
   body = { mobile_network_type: NetworkStore.getType() };
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
@@ -274,7 +274,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     HTTP.post(request, self.createResponseHandler(message.nonce, fn));
     const responseHandler = self.createResponseHandler(message.nonce, fn);
   }
-  const obj2 = handleCommand(7532);
+  const obj2 = handleCommand(7562);
 };
 handleCommand = function handleCommand(dependencyMap, fn) {
   const self = this;

@@ -1,19 +1,19 @@
-// === Module 14174: RoleDot ===
+// === Module 14209: RoleDot ===
 
-// Module 14174 (RoleDot)
+// Module 14209 (RoleDot)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import useFontScale from "useFontScale" /* 5033 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5055 */;
+import useFontScale from "useFontScale" /* 5063 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5085 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { flexShrink: 0 }, background: { position: "relative" }, backgroundColor: null, borderBase: null, borderColor: null, dot: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.xs };
 createStyles.backgroundColor = createStyles;

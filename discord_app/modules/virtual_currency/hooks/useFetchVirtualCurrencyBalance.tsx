@@ -1,9 +1,9 @@
-// === Module 8941: useFetchVirtualCurrencyBalance ===
+// === Module 8976: useFetchVirtualCurrencyBalance ===
 
-// Module 8941 (useFetchVirtualCurrencyBalance)
+// Module 8976 (useFetchVirtualCurrencyBalance)
 import _mod19 from "module_19" /* 19 */;
-import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 8943 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8942 */;
+import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 8978 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8977 */;
 import size from "module_2" /* 2 */;
 
 const useEffect = _mod19.useEffect;

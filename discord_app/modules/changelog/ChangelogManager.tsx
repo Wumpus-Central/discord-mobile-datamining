@@ -1,11 +1,11 @@
-// === Module 17407: ChangelogManager ===
+// === Module 17437: ChangelogManager ===
 
-// Module 17407 (ChangelogManager)
+// Module 17437 (ChangelogManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import ChangelogStore from "ChangelogStore" /* 4620 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import ChangelogStore from "ChangelogStore" /* 4650 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 let require = fn;
 let prototype = function ChangelogManager() {

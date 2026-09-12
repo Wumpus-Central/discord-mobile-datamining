@@ -1,15 +1,15 @@
-// === Module 12791: ContactSyncSuggestions ===
+// === Module 12827: ContactSyncSuggestions ===
 
-// Module 12791 (ContactSyncSuggestions)
+// Module 12827 (ContactSyncSuggestions)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import UserUtils from "UserUtils" /* 4451 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5655 */;
-import Form from "Form" /* 8684 */;
+import UserUtils from "UserUtils" /* 4481 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5685 */;
+import Form from "Form" /* 8716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -60,12 +60,12 @@ function SuggestionRow(suggestion) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SuggestedFriendSource = fn(12792).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12828).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, header: null, title: null, subtitle: null, list: null, divider: null, linearGradient: null, redesignButton: null, sectionHeader: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(5733).NAV_BAR_HEIGHT + 32, justifyContent: "center" };
+createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(5763).NAV_BAR_HEIGHT + 32, justifyContent: "center" };
 createStyles.container = createStyles;
 createStyles.header = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
 createStyles.title = { marginBottom: 8, textAlign: "center" };
@@ -94,16 +94,16 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     acc[suggested_user.suggested_user.id] = true;
     return acc;
   }, {});
-  let obj = friendSuggestions(4308);
+  let obj = friendSuggestions(4338);
   const token = obj.useToken(onSubmit(576).colors.BACKGROUND_BASE_LOW);
-  let obj1 = friendSuggestions(4456);
+  let obj1 = friendSuggestions(4486);
   let items = [obj1.hexOpacityToRgba(token, 0), ];
-  let obj2 = friendSuggestions(4456);
+  let obj2 = friendSuggestions(4486);
   items[1] = obj2.hexOpacityToRgba(token, 100);
   const tmp4 = first(noop.useState(reduced), 2);
   first = tmp4[0];
   noop = tmp4[1];
-  let obj3 = friendSuggestions(5033);
+  let obj3 = friendSuggestions(5063);
   const fontScale = obj3.useFontScale();
   const sum = onSubmit(576).space.PX_16 + onSubmit(576).space.PX_32 + 40;
   let items1 = [first];
@@ -174,13 +174,13 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   obj.contentContainerStyle = obj1;
   obj.data = memo;
   obj.renderItem = callback1;
-  const items5 = [closure_8(friendSuggestions(8964).FlashList, obj), , ];
+  const items5 = [closure_8(friendSuggestions(9003).FlashList, obj), , ];
   obj2 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
   const someResult = keys.some((item) => first[item]);
   obj2.start = friendSuggestions(1093).VerticalGradient.START;
   obj2.end = friendSuggestions(1093).VerticalGradient.END;
   obj2.colors = items;
-  items5[1] = closure_8(onSubmit(5038), obj2);
+  items5[1] = closure_8(onSubmit(5068), obj2);
   obj3 = { style: tmp.redesignButton, children: null };
   obj4 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   let intl = friendSuggestions(1114).intl;
@@ -196,7 +196,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     });
   };
   obj4.disabled = !someResult;
-  obj3.children = closure_8(friendSuggestions(5026).Button, obj4);
+  obj3.children = closure_8(friendSuggestions(5056).Button, obj4);
   items5[2] = closure_8(onSelect, obj3);
   obj.children = items5;
   return closure_10(onSelect, obj);

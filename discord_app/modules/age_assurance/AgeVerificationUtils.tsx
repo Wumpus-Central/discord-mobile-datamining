@@ -1,27 +1,27 @@
-// === Module 4819: AgeVerificationUtils ===
+// === Module 4849: AgeVerificationUtils ===
 
-// Module 4819 (AgeVerificationUtils)
+// Module 4849 (AgeVerificationUtils)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import Server from "Server" /* 1894 */;
 import _modDef2946 from "module_2946" /* 2946 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5474 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5475 */;
-import usePreviousDefault from "usePrevious" /* 8358 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8503 */;
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 8522 */;
-import FamilyCenterConnectionPrereqExperiment2 from "FamilyCenterConnectionPrereqExperiment" /* 12021 */;
-import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 13818 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5504 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5505 */;
+import usePreviousDefault from "usePrevious" /* 8390 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8535 */;
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 8554 */;
+import FamilyCenterConnectionPrereqExperiment2 from "FamilyCenterConnectionPrereqExperiment" /* 12057 */;
+import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 13852 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 4820 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4821 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 4850 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4851 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 4827 */;
+import MessageStore from "MessageStore" /* 4857 */;
 import UserStore from "UserStore" /* 1371 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 8539 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 8571 */;
 
 require = fn;
 function useAgeVerificationRunner(onComplete) {
@@ -202,8 +202,8 @@ function useShouldCallReactiveCheck() {
     tmp5 = prop1 !== tmp(1894).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   _require = tmp5;
-  let tmpResult = tmp(5474);
-  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5475).AgeGatedFeature.REACTIVE_CHECK);
+  let tmpResult = tmp(5504);
+  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5505).AgeGatedFeature.REACTIVE_CHECK);
   tmpResult = tmp(504);
   const items1 = [AgeVerificationStore];
   const items2 = [tmp5, isFeatureAgeGated];
@@ -297,13 +297,13 @@ let closure_24 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(8498).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(8530).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const Constants = fn(1074);
 ({ AbortCodes: map1, MessageEmbedTypes: closure_14 } = Constants);
 const AgeGateConstants = fn(1098);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: closure_15 } = AgeGateConstants);
-const SafetyToastType = fn(8485).SafetyToastType;
-let items = [fn(8499).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(8499).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(8499).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
+const SafetyToastType = fn(8517).SafetyToastType;
+let items = [fn(8531).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(8531).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(8531).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
 const set = new Set(items);
 let items1 = [, , , , , ];
 ({ NSFW_SERVER: arr2[0], NSFW_SERVER_INVITE: arr2[1], NSFW_SERVER_INVITE_EMBED: arr2[2], LARGE_GUILD: arr2[3], JOIN_LARGE_GUILD_UNDERAGE: arr2[4], ACCESS_LARGE_GUILD_UNDERAGE: arr2[5] } = AgeGateSource);

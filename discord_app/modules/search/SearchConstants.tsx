@@ -1,7 +1,7 @@
-// === Module 7952: SearchConstants ===
+// === Module 7982: SearchConstants ===
 
-// Module 7952 (SearchConstants)
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7953 */;
+// Module 7982 (SearchConstants)
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7983 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

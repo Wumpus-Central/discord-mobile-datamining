@@ -1,12 +1,12 @@
-// === Module 4472: ChatInputUtils ===
+// === Module 4502: ChatInputUtils ===
 
-// Module 4472 (ChatInputUtils)
+// Module 4502 (ChatInputUtils)
 import KeyboardUIStore from "KeyboardUIStore" /* 1481 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
-import ScreenIndexFrozen from "ScreenIndexFrozen" /* 4473 */;
-import useKeyboardType from "useKeyboardType" /* 4474 */;
-import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 4475 */;
+import ScreenIndexFrozen from "ScreenIndexFrozen" /* 4503 */;
+import useKeyboardType from "useKeyboardType" /* 4504 */;
+import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 4505 */;
 import size from "module_2" /* 2 */;
 
 function getBestActiveInput() {
@@ -175,9 +175,9 @@ export const getChatInputRef = function getChatInputRef(id, screenIndex) {
     return current;
   }
 };
-export const getBestActiveInputForChannelId = function getBestActiveInputForChannelId(channelId) {
-  if (null != channelId) {
-    value = map.get(channelId);
+export const getBestActiveInputForChannelId = function getBestActiveInputForChannelId(id) {
+  if (null != id) {
+    value = map.get(id);
     if (null != value) {
       let obj2 = value;
       if (value === undefined) {

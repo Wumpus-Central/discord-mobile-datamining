@@ -1,21 +1,21 @@
-// === Module 10398: EmojiPickerListComponents ===
+// === Module 10437: EmojiPickerListComponents ===
 
-// Module 10398 (EmojiPickerListComponents)
+// Module 10437 (EmojiPickerListComponents)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import _modDef8241 from "module_8241" /* 8241 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10396 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import _modDef8273 from "module_8273" /* 8273 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10435 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerListConstants = fn(10379);
+const EmojiPickerListConstants = fn(10418);
 ({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = EmojiPickerListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { section: null, nsfwContainer: null, nsfwText: null };
 obj = { justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, paddingTop: LABEL_TOP_PADDING, paddingBottom: LABEL_BOTTOM_PADDING };
 obj.section = obj;
@@ -26,7 +26,7 @@ let closure_6 = createStyles.createStyles(obj);
 const memoResult = noop.memo(() => {
   const tmp = closure_6();
   let obj = { style: tmp.nsfwContainer, children: null };
-  obj = { source: _modDef8241, size: native.Icon.Sizes.SMALL };
+  obj = { source: _modDef8273, size: native.Icon.Sizes.SMALL };
   const items = [React4(native.Icon, obj), ];
   obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;

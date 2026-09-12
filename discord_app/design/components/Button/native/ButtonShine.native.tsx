@@ -1,8 +1,8 @@
-// === Module 5037: ButtonShine ===
+// === Module 5067: ButtonShine ===
 
-// Module 5037 (ButtonShine)
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4607 */;
+// Module 5067 (ButtonShine)
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import timing from "timing" /* 4637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

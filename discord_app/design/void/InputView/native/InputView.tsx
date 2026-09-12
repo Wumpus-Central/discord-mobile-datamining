@@ -1,14 +1,14 @@
-// === Module 14234: InputView ===
+// === Module 14269: InputView ===
 
-// Module 14234 (InputView)
+// Module 14269 (InputView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import native from "native" /* 1178 */;
-import shared from "shared" /* 4458 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import CircleXIcon from "CircleXIcon" /* 6687 */;
-import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 12266 */;
+import shared from "shared" /* 4488 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import CircleXIcon from "CircleXIcon" /* 6717 */;
+import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 12302 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,21 +19,21 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { disabled: { opacity: 0.5 }, topContainer: { minHeight: 16, alignItems: "center", flexDirection: "row", marginBottom: 5, flexWrap: "wrap" }, inputViewTitle: { marginRight: 5 }, inputViewError: null, inputBorder: null, inputView: null, inputViewBorder: null, inputViewBorderActive: null, inputContainer: null, bottomContainer: null, charactersLength: null, closeIcon: null, clearButton: null, required: null };
 createStyles = { fontSize: 10, color: nativeDefault.unsafe_rawColors.RED_400 };
 createStyles.inputViewError = createStyles;
 createStyles.inputBorder = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
 let obj1 = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
-createStyles.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5492).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+createStyles.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 createStyles.inputViewBorder = { marginTop: 8, height: 2 };
-let obj2 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5492).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+let obj2 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 createStyles.inputViewBorderActive = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 createStyles.inputContainer = { flexDirection: "row", alignItems: "center", position: "relative" };
 createStyles.bottomContainer = { marginTop: 5 };
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
-createStyles.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5492).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
-let obj4 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5492).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+createStyles.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5522).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+let obj4 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5522).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 createStyles.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createStyles.clearButton = { position: "absolute", right: 6 };
 let obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -386,7 +386,7 @@ prototype["render"] = function render() {
   obj.children = closure_1_10(hasOwnProperty, obj);
   return React7(React5, obj);
 };
-InputView.contextType = fn(4317).ThemeContext;
+InputView.contextType = fn(4347).ThemeContext;
 InputView.defaultProps = { showBorder: true, value: "", returnKeyType: "next", disabled: false, autoFocus: false, multiline: false, numberOfLines: 1, showTopContainer: true, showCharactersRemaining: false, clearButtonVisibility: "never", inActionSheet: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/InputView/native/InputView.tsx");

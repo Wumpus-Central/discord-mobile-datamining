@@ -1,6 +1,6 @@
-// === Module 12162: SearchAppsRequestSource ===
+// === Module 12198: SearchAppsRequestSource ===
 
-// Module 12162 (SearchAppsRequestSource)
+// Module 12198 (SearchAppsRequestSource)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SearchAppsRequestSource.tsx");

@@ -1,10 +1,10 @@
-// === Module 8102: StageTopicSystemMessage ===
+// === Module 8132: StageTopicSystemMessage ===
 
-// Module 8102 (StageTopicSystemMessage)
+// Module 8132 (StageTopicSystemMessage)
 import util from "util" /* 1114 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8034 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8036 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8038 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8064 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8066 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8068 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageTopicSystemMessage.tsx");

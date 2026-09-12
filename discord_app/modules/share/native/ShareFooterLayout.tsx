@@ -1,18 +1,18 @@
-// === Module 11786: ShareFooterLayout ===
+// === Module 11822: ShareFooterLayout ===
 
-// Module 11786 (ShareFooterLayout)
+// Module 11822 (ShareFooterLayout)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
-import spring from "spring" /* 5025 */;
-import springPresets from "springPresets" /* 5029 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7054 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
+import spring from "spring" /* 5055 */;
+import springPresets from "springPresets" /* 5059 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { footer: null, footerSeparator: null, warningWrapper: null, chatRow: null };
 createStyles = { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 createStyles.footer = createStyles;

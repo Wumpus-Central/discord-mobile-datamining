@@ -1,14 +1,14 @@
-// === Module 12740: VoiceMessageChat ===
+// === Module 12776: VoiceMessageChat ===
 
-// Module 12740 (VoiceMessageChat)
+// Module 12776 (VoiceMessageChat)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4607 */;
-import spring from "spring" /* 5025 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 5219 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
+import timing from "timing" /* 4637 */;
+import spring from "spring" /* 5055 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 5249 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
@@ -183,13 +183,13 @@ function Duration(animationValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-let useVoiceMessagesUIStore = fn(12053).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(12054);
+let useVoiceMessagesUIStore = fn(12089).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(12090);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: c10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = ReanimatedRexport.createAnimatedComponent(ActivityIndicator);
-fn(4606);
+fn(4636);
 let obj = { container: null, loading: null, dot: null, dotDismissed: null, waveformContainer: null, waveformBar: null, durationContainer: null, duration: null };
 obj = { height: "100%", flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL, gap: nativeDefault.modules.mobile.VOICE_MESSAGE_CHAT_GAP, borderRadius: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
 obj.container = obj;
@@ -201,11 +201,11 @@ obj.waveformContainer = { flex: 1, height: "100%", overflow: "hidden", justifyCo
 obj.waveformBar = { backgroundColor: nativeDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_WAVEFORM_BAR_BACKGROUND, borderRadius: 1 };
 const createStyles = { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: nativeDefault.modules.mobile.VOICE_MESSAGE_DURATION_MARGIN_LEFT };
 obj.durationContainer = createStyles;
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 PlatformUtils = PlatformUtils.isAndroid();
 const mobile = nativeDefault.modules.mobile;
 let obj3 = { lineHeight: PlatformUtils ? mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID : mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS, textAlignVertical: null };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";

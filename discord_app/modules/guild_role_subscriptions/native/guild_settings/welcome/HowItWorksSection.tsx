@@ -1,14 +1,14 @@
-// === Module 17780: HowItWorksSection ===
+// === Module 17810: HowItWorksSection ===
 
-// Module 17780 (HowItWorksSection)
+// Module 17810 (HowItWorksSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef17781 from "module_17781" /* 17781 */;
-import _modDef17782 from "module_17782" /* 17782 */;
-import _modDef17783 from "module_17783" /* 17783 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef17811 from "module_17811" /* 17811 */;
+import _modDef17812 from "module_17812" /* 17812 */;
+import _modDef17813 from "module_17813" /* 17813 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function HowItWorksCard(iconSource) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { flex: 1 }, horizontalContainer: { flex: 1, flexDirection: "row" }, card: null, cardNumber: null, howItWorksCardDescription: null, howItWorksCardIcon: null };
 createStyles = { flex: 1, marginVertical: 6, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 createStyles.card = createStyles;
@@ -46,19 +46,19 @@ export default function HowItWorksSection() {
   obj = { cardNumber: 1, description: null, iconSource: null };
   const intl = util.intl;
   obj.description = intl.string(util.t.lT0ZNS);
-  obj.iconSource = _modDef17781;
+  obj.iconSource = _modDef17811;
   const items = [React4(HowItWorksCard, obj), React4(native.Spacer, { size: 12 }), ];
   const obj1 = { cardNumber: 2, description: null, iconSource: null };
   const intl2 = util.intl;
   obj1.description = intl2.string(util.t.ihN2Wb);
-  obj1.iconSource = _modDef17782;
+  obj1.iconSource = _modDef17812;
   items[2] = React4(HowItWorksCard, obj1);
   obj.children = items;
   const items1 = [hasOwnProperty(View, obj), ];
   const obj2 = { cardNumber: 3, description: null, iconSource: null };
   const intl3 = util.intl;
   obj2.description = intl3.string(util.t.c8krDQ);
-  obj2.iconSource = _modDef17783;
+  obj2.iconSource = _modDef17813;
   items1[1] = React4(HowItWorksCard, obj2);
   obj.children = items1;
   return hasOwnProperty(View, obj);

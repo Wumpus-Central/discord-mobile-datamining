@@ -1,10 +1,10 @@
-// === Module 16690: VibegrationsNativeComposer ===
+// === Module 16715: VibegrationsNativeComposer ===
 
-// Module 16690 (VibegrationsNativeComposer)
+// Module 16715 (VibegrationsNativeComposer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7318 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7348 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,11 +19,11 @@ function tooLargeText(contentType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(16666);
+const VibegrationsConnectionStore = fn(16690);
 ({ deleteStagedAttachment: closure_8, uploadAttachmentBytes: closure_9 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, box: null, boxFocused: null, boxContents: null, input: null, inputText: null, inputPlaceholder: null, draftRow: null, draftPill: null, draftName: null, trailingButton: null, sendButtonActive: null, sendIconActive: null };
 createStyles = { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 createStyles.container = createStyles;
@@ -331,8 +331,8 @@ export default function VibegrationsNativeComposer(projectId) {
             return obj;
           } else {
             closure_128_0 = undefined;
-            let obj1 = tmp5(5201);
-            obj1 = { mediaType: "any", selectionLimit: tmp2(7318).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
+            let obj1 = tmp5(5231);
+            obj1 = { mediaType: "any", selectionLimit: tmp2(7348).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
             dependencyMap = 1;
             c3 = 1;
             const obj2 = { value: obj1.launchImageLibraryAsync(obj1), done: false };

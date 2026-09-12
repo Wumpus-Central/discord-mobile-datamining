@@ -1,7 +1,7 @@
-// === Module 5596: useCurrentUserGuildJoinRequest ===
+// === Module 5626: useCurrentUserGuildJoinRequest ===
 
-// Module 5596 (useCurrentUserGuildJoinRequest)
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4429 */;
+// Module 5626 (useCurrentUserGuildJoinRequest)
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4459 */;
 
 const require = fn;
 const size = fn(2);

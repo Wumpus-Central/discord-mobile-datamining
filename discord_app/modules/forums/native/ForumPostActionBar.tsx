@@ -1,15 +1,15 @@
-// === Module 11507: ForumPostActionBar ===
+// === Module 11546: ForumPostActionBar ===
 
-// Module 11507 (ForumPostActionBar)
+// Module 11546 (ForumPostActionBar)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import Client from "Client" /* 4537 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7529 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11346 */;
+import Client from "Client" /* 4567 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4246 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4247 */;
+import LurkingStore from "LurkingStore" /* 4276 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { actionBarContainer: null, actionRow: null, reactionRow: null, actionButton: null, actionButtonsContainer: null, lastActionButton: null, buttonText: null };
 createStyles = { overflow: "hidden", paddingHorizontal: 12, paddingVertical: 8, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: -1 };
 createStyles.actionBarContainer = createStyles;
@@ -38,7 +38,7 @@ export default function ForumPostActionBar(channel) {
   let obj = channel(504);
   const items = [ChannelStore];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channel.parent_id));
-  let obj1 = channel(7377);
+  let obj1 = channel(7407);
   const firstMessage = obj1.useFirstForumPostMessage(channel).firstMessage;
   let obj2 = channel(504);
   const items1 = [JoinedThreadsStore];
@@ -60,7 +60,7 @@ export default function ForumPostActionBar(channel) {
   const callback = noop.useCallback((nativeEvent) => {
     closure_4(width - nativeEvent.nativeEvent.layout.width - 40);
   }, items3);
-  let obj4 = channel(7945);
+  let obj4 = channel(7975);
   obj = { style: null, children: null };
   const items4 = [tmp.actionBarContainer, obj4.useGradientTop()];
   obj.style = items4;
@@ -68,7 +68,7 @@ export default function ForumPostActionBar(channel) {
   if (tmp11) {
     obj = { style: tmp.reactionRow, children: null };
     obj1 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-    obj.children = closure_10(tmp2(11508).ForumPostActionBarReactions, obj1);
+    obj.children = closure_10(tmp2(11547).ForumPostActionBarReactions, obj1);
     tmp11 = closure_10(View, obj);
   }
   const items5 = [tmp11, ];
@@ -89,8 +89,8 @@ export default function ForumPostActionBar(channel) {
         const result = obj.handleCopyLinkForumPost(guildId, channel.id, obj);
       }
     };
-    obj3.children = closure_10(tmp2(4549).LinkIcon, { size: "xs" });
-    items7[1] = closure_10(tmp2(5174).PressableOpacity, obj3);
+    obj3.children = closure_10(tmp2(4579).LinkIcon, { size: "xs" });
+    items7[1] = closure_10(tmp2(5204).PressableOpacity, obj3);
     obj4 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl5 = tmp2(1114).intl;
     obj4.accessibilityLabel = intl5.string(tmp2(1114).t.nFP4oa);
@@ -101,8 +101,8 @@ export default function ForumPostActionBar(channel) {
       const obj = { channelId: channel.id, messageId: SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id), flash: true, jumpType: Client.JumpType.ANIMATED };
       obj.jumpToMessage(obj);
     };
-    obj4.children = closure_10(tmp2(11509).ArrowLargeUpIcon, { size: "xs" });
-    items7[2] = closure_10(tmp2(5174).PressableOpacity, obj4);
+    obj4.children = closure_10(tmp2(11548).ArrowLargeUpIcon, { size: "xs" });
+    items7[2] = closure_10(tmp2(5204).PressableOpacity, obj4);
     obj2.children = items7;
     items5[1] = closure_11(View, obj2);
     obj.children = items5;
@@ -120,8 +120,8 @@ export default function ForumPostActionBar(channel) {
       obj5.style = tmp.actionButton;
       obj5.onPress = items9;
       intl = closure_10;
-      items9 = [closure_10(tmp2(4557).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
-      Text = tmp2(4602).Text;
+      items9 = [closure_10(tmp2(4587).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
+      Text = tmp2(4632).Text;
       const obj6 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
       const items10 = [tmp.buttonText];
       obj6.style = items10;
@@ -135,14 +135,14 @@ export default function ForumPostActionBar(channel) {
       obj5.accessibilityLabel = Text(t["DjZ+6E"]);
       obj5.style = tmp.actionButton;
       obj5.onPress = items9;
-      const items11 = [closure_10(tmp2(9867).BellIcon, { size: "xs" }), ];
+      const items11 = [closure_10(tmp2(9906).BellIcon, { size: "xs" }), ];
       const obj7 = { style: tmp.buttonText, variant: "text-sm/semibold", color: "interactive-text-default", children: null };
       const intl2 = tmp2(1114).intl;
       obj7.children = intl2.string(tmp2(1114).t["0rQinA"]);
-      items11[1] = closure_10(tmp2(4602).Text, obj7);
+      items11[1] = closure_10(tmp2(4632).Text, obj7);
       obj5.children = items11;
       tmp15 = obj5;
     }
-    closure_11(tmp2(5174).PressableOpacity, tmp15);
+    closure_11(tmp2(5204).PressableOpacity, tmp15);
   }
 };

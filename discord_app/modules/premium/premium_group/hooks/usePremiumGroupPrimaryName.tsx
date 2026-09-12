@@ -1,9 +1,9 @@
-// === Module 13540: usePremiumGroupPrimaryName ===
+// === Module 13573: usePremiumGroupPrimaryName ===
 
-// Module 13540 (usePremiumGroupPrimaryName)
-import UserUtils from "UserUtils" /* 4451 */;
-import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 13541 */;
-import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 13545 */;
+// Module 13573 (usePremiumGroupPrimaryName)
+import UserUtils from "UserUtils" /* 4481 */;
+import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 13574 */;
+import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 13578 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");

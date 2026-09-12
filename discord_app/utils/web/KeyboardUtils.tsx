@@ -1,10 +1,10 @@
-// === Module 14116: utils/KeyboardUtils ===
+// === Module 14151: utils/KeyboardUtils ===
 
-// Module 14116 (utils/KeyboardUtils)
-import PlatformUtils2 from "PlatformUtils" /* 1115 */;
+// Module 14151 (utils/KeyboardUtils)
+import PlatformUtils2 from "PlatformUtils" /* 1150 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import keyCodeDefault from "keyCode" /* 14117 */;
-import KeyboardLayoutMapUtils from "KeyboardLayoutMapUtils" /* 14118 */;
+import keyCodeDefault from "keyCode" /* 14152 */;
+import KeyboardLayoutMapUtils from "KeyboardLayoutMapUtils" /* 14153 */;
 import _slicedToArray from "module_32" /* 32 */;
 import apply from "module_12" /* 12 */;
 
@@ -190,12 +190,12 @@ function toPrettyKey(str) {
   }
   return str;
 }
-const KeyboardConstants = fn(7577);
+const KeyboardConstants = fn(7607);
 ({ KeyboardDeviceTypes: hasOwnProperty, LinuxKeyToCode } = KeyboardConstants);
 const MacosKeyToCode = KeyboardConstants.MacosKeyToCode;
 const WindowsKeyToCode = KeyboardConstants.WindowsKeyToCode;
 const KeyboardEnvs = KeyboardConstants.KeyboardEnvs;
-fn(1115);
+fn(1150);
 let PlatformUtils = LinuxKeyToCode;
 if (!PlatformUtils.isLinux()) {
   let tmp3 = MacosKeyToCode;
@@ -205,10 +205,10 @@ if (!PlatformUtils.isLinux()) {
       PlatformUtils = {};
     }
     tmp3 = PlatformUtils;
-    obj4 = fn(1115);
+    obj4 = fn(1150);
   }
   PlatformUtils = tmp3;
-  obj3 = fn(1115);
+  obj3 = fn(1150);
 }
 const invertResult = apply.invert(LinuxKeyToCode);
 invertResult[223] = "`";
@@ -221,7 +221,7 @@ if (PlatformUtils == null) {
   PlatformUtils = {};
 }
 apply.invert(PlatformUtils);
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 if (!PlatformUtils.isMac()) {
   PlatformUtils[223] = "`";
 }
@@ -481,7 +481,7 @@ export const toCombo = function toCombo(shortcut) {
     }
     const str2 = shortcut.replace(/numpad plus/i, "");
     const str4 = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus");
-    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(14119).modKey).split("+");
+    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(14154).modKey).split("+");
     const mapped = parts.map((item) => item.trim().replace("plus", "+"));
     return mapped.reduce((arr, item) => {
       const tmp3 = keyToCode((function toUglyKey(item) {
@@ -507,15 +507,15 @@ export const toCombo = function toCombo(shortcut) {
     if (obj.isLinux()) {
       let MACOS = KeyboardEnvs.LINUX;
     } else {
-      let tmpResult = tmp(1115);
+      let tmpResult = tmp(1150);
       if (tmpResult.isMac()) {
         MACOS = KeyboardEnvs.MACOS;
       } else {
-        tmpResult = tmp(1115);
+        tmpResult = tmp(1150);
         MACOS = tmpResult.isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
       }
     }
-    obj = KEYBOARD_KEY(1115);
+    obj = KEYBOARD_KEY(1150);
   }
 };
 export { toKeyNames };

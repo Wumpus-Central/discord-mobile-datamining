@@ -1,16 +1,16 @@
-// === Module 16157: HappeningNowCardVoice ===
+// === Module 16181: HappeningNowCardVoice ===
 
-// Module 16157 (HappeningNowCardVoice)
+// Module 16181 (HappeningNowCardVoice)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4758 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7731 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7761 */;
 import UserStore from "UserStore" /* 1371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4625 */;
+import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
 require = fn;
 function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
@@ -32,11 +32,11 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(15357).HappeningNowCardTrackingType;
+let closure_8 = fn(15379).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");

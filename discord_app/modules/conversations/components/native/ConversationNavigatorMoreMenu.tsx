@@ -1,18 +1,18 @@
-// === Module 13347: ConversationNavigatorMoreMenu ===
+// === Module 13380: ConversationNavigatorMoreMenu ===
 
-// Module 13347 (ConversationNavigatorMoreMenu)
+// Module 13380 (ConversationNavigatorMoreMenu)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import IconButton from "IconButton" /* 8172 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 8763 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 9006 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 9008 */;
+import IconButton from "IconButton" /* 8202 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 8795 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 9045 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 9047 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { container: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_12 };
 createStyles.container = createStyles;

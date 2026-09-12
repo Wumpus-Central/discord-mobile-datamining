@@ -1,16 +1,16 @@
-// === Module 9108: UserProfileApplicationWidgetBottomStatsLayout ===
+// === Module 9147: UserProfileApplicationWidgetBottomStatsLayout ===
 
-// Module 9108 (UserProfileApplicationWidgetBottomStatsLayout)
+// Module 9147 (UserProfileApplicationWidgetBottomStatsLayout)
 import nativeDefault from "native" /* 576 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9016 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9103 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9055 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9142 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { statsGrid: null, stat: null };
 createStyles = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_12 };
 createStyles.statsGrid = createStyles;
@@ -37,7 +37,7 @@ export default function UserProfileApplicationWidgetBottomStatsLayout(arg0) {
         obj = { field: iter.value, variant: "text-sm/medium", color: "text-default", skeletonWidthChars: 8 };
         const items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj), ];
         if ("value" === iter.label.status) {
-          Text = Text(4602).Text;
+          Text = Text(4632).Text;
           obj = { variant: "text-xs/normal", color: "text-muted", children: null };
           iter = iter.label.text;
           obj.children = iter;
@@ -45,7 +45,7 @@ export default function UserProfileApplicationWidgetBottomStatsLayout(arg0) {
         } else {
           tmp5Result = null;
           if ("skeleton" === iter.label.status) {
-            tmp5Result = React3(Text(9104).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+            tmp5Result = React3(Text(9143).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
           }
         }
         items[1] = tmp5Result;

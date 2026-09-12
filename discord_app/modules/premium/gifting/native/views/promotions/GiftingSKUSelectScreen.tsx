@@ -1,12 +1,12 @@
-// === Module 11135: GiftingSKUSelectScreen ===
+// === Module 11174: GiftingSKUSelectScreen ===
 
-// Module 11135 (GiftingSKUSelectScreen)
+// Module 11174 (GiftingSKUSelectScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid" /* 11136 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid" /* 11175 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, scroll: null, contentContainer: null, header: null, subtitle: null, buttonContainer: null, headerContainer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;

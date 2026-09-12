@@ -1,10 +1,10 @@
-// === Module 15410: DisplayNameStylesGummyCustomColorSheet ===
+// === Module 15432: DisplayNameStylesGummyCustomColorSheet ===
 
-// Module 15410 (DisplayNameStylesGummyCustomColorSheet)
+// Module 15432 (DisplayNameStylesGummyCustomColorSheet)
 import nativeDefault from "native" /* 576 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1388 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import HapticUtils from "HapticUtils" /* 4574 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import HapticUtils from "HapticUtils" /* 4604 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const DisplayNameStylesConstants = fn(1389);
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: hasOwnProperty, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: metroRequire } = DisplayNameStylesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { body: null, huePickerInset: null, previewWrapper: null, preview: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, alignItems: "center" };
 createStyles.body = createStyles;
@@ -28,13 +28,13 @@ let result = size.fileFinishedImporting("modules/display_name_styles/native/Disp
 export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   onSelect = onSelect.onSelect;
   const tmp = closure_9();
-  let obj = onSelect(4343);
+  let obj = onSelect(4373);
   let obj1 = onSelect(1388);
   let obj2 = onSelect(1091);
   const sharedValue = obj.useSharedValue(obj1.wrapHue(obj2.int2hslRaw(onSelect.initialColor).h));
   const items = [sharedValue, onSelect];
   const callback = noop.useCallback(() => {
-    const result = onSelect(4574).triggerHapticFeedback(onSelect(4574).HapticFeedbackTypes.IMPACT_LIGHT);
+    const result = onSelect(4604).triggerHapticFeedback(onSelect(4604).HapticFeedbackTypes.IMPACT_LIGHT);
   }, []);
   const callback1 = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -49,14 +49,14 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const intl2 = onSelect(1114).intl;
   obj1.text = intl2.string(onSelect(1114).t.XqMe3N);
   obj1.onPress = callback1;
-  obj.trailing = closure_7(onSelect(5026).Button, obj1);
-  obj.header = closure_7(onSelect(7222).BottomSheetTitleHeader, obj);
+  obj.trailing = closure_7(onSelect(5056).Button, obj1);
+  obj.header = closure_7(onSelect(7252).BottomSheetTitleHeader, obj);
   obj2 = { style: tmp.body, children: null };
-  const obj3 = { style: tmp.previewWrapper, children: closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(15411), { hue: sharedValue }) }) };
+  const obj3 = { style: tmp.previewWrapper, children: closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(15433), { hue: sharedValue }) }) };
   const items1 = [closure_7(View, obj3), ];
-  const obj5 = { style: tmp.huePickerInset, children: closure_7(sharedValue(14654), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
+  const obj5 = { style: tmp.huePickerInset, children: closure_7(sharedValue(14688), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
   items1[1] = closure_7(View, obj5);
   obj2.children = items1;
   obj.children = closure_8(View, obj2);
-  return closure_7(onSelect(7223).BottomSheet, obj);
+  return closure_7(onSelect(7253).BottomSheet, obj);
 };

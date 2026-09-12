@@ -1,17 +1,17 @@
-// === Module 12492: ApplicationCommandLoadingItem ===
+// === Module 12528: ApplicationCommandLoadingItem ===
 
-// Module 12492 (ApplicationCommandLoadingItem)
+// Module 12528 (ApplicationCommandLoadingItem)
 import nativeDefault from "native" /* 576 */;
-import useFontScale from "useFontScale" /* 5033 */;
+import useFontScale from "useFontScale" /* 5063 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10352).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10391).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 16;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles((arg0) => {
   let obj = { applicationCommandLoadingItem: null, applicationCommandLoadingLeftWrapper: null, applicationCommandLoadingName: null, applicationCommandLoadingDescription: null, applicationCommandLoadingSectionName: null };
   obj = { flexDirection: "row", paddingVertical: 4, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) };

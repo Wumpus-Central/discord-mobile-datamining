@@ -1,8 +1,8 @@
-// === Module 5555: StickersPackStore ===
+// === Module 5585: StickersPackStore ===
 
-// Module 5555 (StickersPackStore)
+// Module 5585 (StickersPackStore)
 import DurationsDefault from "Durations" /* 1090 */;
-import StickersTypes from "StickersTypes" /* 5319 */;
+import StickersTypes from "StickersTypes" /* 5349 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

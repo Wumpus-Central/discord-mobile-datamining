@@ -1,28 +1,28 @@
-// === Module 12111: ForumPostMessageCount ===
+// === Module 12147: ForumPostMessageCount ===
 
-// Module 12111 (ForumPostMessageCount)
+// Module 12147 (ForumPostMessageCount)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import ChatIcon from "ChatIcon" /* 5122 */;
-import ForumHooks from "ForumHooks" /* 7959 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 11410 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import ChatIcon from "ChatIcon" /* 5152 */;
+import ForumHooks from "ForumHooks" /* 7989 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 11449 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { tintColor: nativeDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
 }
 createStyles = { iconRead: createStyles, iconUnread: null, messageUnreadCount: null, container: null, marginTop: num };
 let obj1 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

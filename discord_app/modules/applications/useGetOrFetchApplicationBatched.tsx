@@ -1,9 +1,9 @@
-// === Module 11656: useGetOrFetchApplicationBatched ===
+// === Module 11692: useGetOrFetchApplicationBatched ===
 
-// Module 11656 (useGetOrFetchApplicationBatched)
+// Module 11692 (useGetOrFetchApplicationBatched)
 import Timers from "Timers" /* 1952 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4834 */;
+import ApplicationStore from "ApplicationStore" /* 4864 */;
 
 require = fn;
 class ApplicationFetchManager {

@@ -1,8 +1,8 @@
-// === Module 4280: BraintreeUtils ===
+// === Module 4310: BraintreeUtils ===
 
-// Module 4280 (BraintreeUtils)
-import core_CodeSplittingUtils from "core/CodeSplittingUtils" /* 4282 */;
-import BraintreeStore from "BraintreeStore" /* 4281 */;
+// Module 4310 (BraintreeUtils)
+import core_CodeSplittingUtils from "core/CodeSplittingUtils" /* 4312 */;
+import BraintreeStore from "BraintreeStore" /* 4311 */;
 
 require = fn;
 const PaymentSettings = fn(1074).PaymentSettings;
@@ -14,7 +14,7 @@ export const getBraintreeSDK = function getBraintreeSDK() {
     createPromise() {
       return client(paths[4])(paths[3], paths.paths);
     },
-    webpackId: 4285
+    webpackId: 4315
   };
   return obj.importWithRetry(obj).then((result) => result.default);
 };
@@ -25,7 +25,7 @@ export const collectDeviceData = function collectDeviceData() {
       createPromise() {
           return client(paths[4])(paths[3], paths.paths);
         },
-      webpackId: 4285
+      webpackId: 4315
     };
     let importWithRetryResult = core_CodeSplittingUtils.importWithRetry(obj);
     let nextPromise1 = core_CodeSplittingUtils.importWithRetry(obj).then((result) => result.default).then((client) => {
@@ -34,12 +34,12 @@ export const collectDeviceData = function collectDeviceData() {
       obj = client.create(obj);
       return obj.then((result) => {
         client = result;
-        client(4282);
+        client(4312);
         let obj = {
           createPromise() {
             return client(paths[4])(paths[3], paths.paths);
           },
-          webpackId: 4285
+          webpackId: 4315
         };
         const importWithRetryResult = obj.importWithRetry(obj);
         return obj.importWithRetry(obj).then((result) => result.default).then((dataCollector) => {
@@ -56,7 +56,7 @@ export const collectDeviceData = function collectDeviceData() {
       createPromise() {
           return client(paths[4])(paths[3], paths.paths);
         },
-      webpackId: 4285
+      webpackId: 4315
     };
     const importWithRetryResult1 = obj.importWithRetry(obj);
     nextPromise1 = obj.importWithRetry(obj).then((result) => result.default).then((dataCollector) => {

@@ -1,12 +1,12 @@
-// === Module 5046: CustomMarkup ===
+// === Module 5076: CustomMarkup ===
 
-// Module 5046 (CustomMarkup)
-import _modDef4303 from "module_4303" /* 4303 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
-import MarkupReactRules from "MarkupReactRules" /* 4597 */;
-import MarkupTypes from "MarkupTypes" /* 5047 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 5048 */;
-import MarkupRulesDefault from "MarkupRules" /* 5049 */;
+// Module 5076 (CustomMarkup)
+import _modDef4333 from "module_4333" /* 4333 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
+import MarkupReactRules from "MarkupReactRules" /* 4627 */;
+import MarkupTypes from "MarkupTypes" /* 5077 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 5078 */;
+import MarkupRulesDefault from "MarkupRules" /* 5079 */;
 import size from "module_2" /* 2 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;
@@ -20,19 +20,19 @@ function createRules(arg0) {
   items = [MarkupUtilsDefault.defaultRules, tmp, ];
   obj = {};
   obj = {};
-  const merged = Object.assign(_modDef4303.defaultRules.link);
+  const merged = Object.assign(_modDef4333.defaultRules.link);
   obj.react = tmp[MarkupTypes.AST_KEY.LINK].react;
   obj[MarkupTypes.AST_KEY.LINK] = obj;
   const obj1 = {};
-  const merged1 = Object.assign(_modDef4303.defaultRules.url);
+  const merged1 = Object.assign(_modDef4333.defaultRules.url);
   obj1.react = tmp[MarkupTypes.AST_KEY.URL].react;
   obj[MarkupTypes.AST_KEY.URL] = obj1;
   const obj2 = {};
-  const merged2 = Object.assign(_modDef4303.defaultRules.autolink);
+  const merged2 = Object.assign(_modDef4333.defaultRules.autolink);
   obj2.react = tmp[MarkupTypes.AST_KEY.AUTOLINK].react;
   obj[MarkupTypes.AST_KEY.AUTOLINK] = obj2;
   const obj3 = {};
-  const merged3 = Object.assign(_modDef4303.defaultRules.blockQuote);
+  const merged3 = Object.assign(_modDef4333.defaultRules.blockQuote);
   obj3.react = tmp[MarkupTypes.AST_KEY.BLOCK_QUOTE].react;
   obj[MarkupTypes.AST_KEY.BLOCK_QUOTE] = obj3;
   items[2] = obj;

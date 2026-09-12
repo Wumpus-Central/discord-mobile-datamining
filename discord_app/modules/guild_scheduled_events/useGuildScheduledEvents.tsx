@@ -1,17 +1,17 @@
-// === Module 9753: useGuildScheduledEvents ===
+// === Module 9792: useGuildScheduledEvents ===
 
-// Module 9753 (useGuildScheduledEvents)
+// Module 9792 (useGuildScheduledEvents)
 import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7599 */;
-import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 9754 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
+import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 9793 */;
 
 const require = fn;
-let GuildScheduledEventStore = fn(7599);
+let GuildScheduledEventStore = fn(7629);
 ({ isGuildScheduledEventActive: closure_7, StaticGuildEventIndexes: closure_8 } = GuildScheduledEventStore);
 const GuildScheduledEventsConstants = fn(1963);
 ({ GuildScheduledEventEntityTypes: closure_11, GuildScheduledEventStatus: closure_12 } = GuildScheduledEventsConstants);
@@ -324,11 +324,11 @@ export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildE
   }, items1);
   const items2 = [stateFromStores];
   return noop.useMemo(() => stateFromStores.filter((status) => {
-    const eventSchedule = id(9759).getEventSchedule(status);
+    const eventSchedule = id(9798).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
-    const obj = id(9759);
+    const obj = id(9798);
     let toISOStringResult1;
-    const obj2 = id(9756);
+    const obj2 = id(9795);
     if (endTime != null) {
       toISOStringResult1 = endTime.toISOString();
     }

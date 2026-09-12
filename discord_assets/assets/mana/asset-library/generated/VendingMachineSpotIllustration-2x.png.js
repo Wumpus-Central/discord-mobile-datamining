@@ -1,6 +1,6 @@
-// === Module 6625: ? ===
+// === Module 6655: ? ===
 
-// Module 6625
+// Module 6655
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VendingMachineSpotIllustration-2x.png.js");

@@ -1,6 +1,6 @@
-// === Module 6547: ? ===
+// === Module 6577: ? ===
 
-// Module 6547
+// Module 6577
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SoundIllocon-2x.png.js");

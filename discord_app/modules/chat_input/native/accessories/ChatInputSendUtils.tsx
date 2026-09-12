@@ -1,25 +1,25 @@
-// === Module 12090: ChatInputSendUtils ===
+// === Module 12126: ChatInputSendUtils ===
 
-// Module 12090 (ChatInputSendUtils)
+// Module 12126 (ChatInputSendUtils)
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
-import KestrelExperiment from "KestrelExperiment" /* 5230 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
-import MessageParserDefault from "MessageParser" /* 7754 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7849 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7971 */;
-import useMessageMaxLength from "useMessageMaxLength" /* 9394 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9397 */;
-import handleUploadAttachmentErrors from "handleUploadAttachmentErrors" /* 9400 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9404 */;
-import ChatRestrictions from "ChatRestrictions" /* 10346 */;
-import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12084 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
+import KestrelExperiment from "KestrelExperiment" /* 5260 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
+import MessageParserDefault from "MessageParser" /* 7784 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7879 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8001 */;
+import useMessageMaxLength from "useMessageMaxLength" /* 9433 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
+import handleUploadAttachmentErrors from "handleUploadAttachmentErrors" /* 9439 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9443 */;
+import ChatRestrictions from "ChatRestrictions" /* 10385 */;
+import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12120 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DraftStore from "DraftStore" /* 4947 */;
-import SlowmodeStore from "SlowmodeStore" /* 7759 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4946 */;
+import DraftStore from "DraftStore" /* 4977 */;
+import SlowmodeStore from "SlowmodeStore" /* 7789 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -64,7 +64,7 @@ function chatInputSendMessage(params) {
     obj.message = "Empty text from " + tmp;
     obj.addBreadcrumb(obj);
   }
-  let obj2 = chatInputRef(7849);
+  let obj2 = chatInputRef(7879);
   obj2.saveDraft(channel.id, "", scheduledTimestamp.ChannelMessage);
   const current = chatInputRef.current;
   if (current != null) {
@@ -74,7 +74,7 @@ function chatInputSendMessage(params) {
   if (current2 != null) {
     current2.showSideActions();
   }
-  let obj3 = channel(12089);
+  let obj3 = channel(12125);
   const handleLegacyCommandsResult = obj3.handleLegacyCommands(text, { channel, isEdit: false });
   let tmp14 = tts;
   parsed = parsedMessage;
@@ -106,17 +106,17 @@ function chatInputSendMessage(params) {
   if (null != mentionTimestamps) {
     result = tmp16;
     if (mentionTimestamps.size > 0) {
-      let tmp12Result = tmp12(12084);
+      let tmp12Result = tmp12(12120);
       result = tmp12Result.serializeComposerTimestampMentions(tmp16, mentionTimestamps);
     }
   }
   if (parsed == null) {
-    let tmp6Result = tmp6(7754);
+    let tmp6Result = tmp6(7784);
     parsed = tmp6Result.parse(channel, result, undefined, mentionGames);
   }
   parsed.tts = tmp14;
   obj = {};
-  tmp6Result = tmp6(7529);
+  tmp6Result = tmp6(7559);
   const merged = Object.assign(tmp6Result.getSendMessageOptionsForReply(params.pendingReply));
   obj.location = MessageSendLocation.CHAT_INPUT;
   const id = channel.id;
@@ -125,8 +125,8 @@ function chatInputSendMessage(params) {
     if (null == uploads) {
       uploads = [];
     } else {
-      tmp6(9397).clearAll(id, tmp8.ChannelMessage);
-      const tmp6Result1 = tmp6(9397);
+      tmp6(9436).clearAll(id, tmp8.ChannelMessage);
+      const tmp6Result1 = tmp6(9436);
     }
   } else {
     items = [];
@@ -145,12 +145,12 @@ function chatInputSendMessage(params) {
     if (scheduledMessage != null) {
       scheduledTimestamp = scheduledMessage.scheduledTimestamp;
     }
-    tmp12Result = tmp12(11762);
+    tmp12Result = tmp12(11798);
     tmp12Result.deletePendingReply(channel.id);
     if (applicationCommandManager != null) {
       const result1 = applicationCommandManager.clearTimestampMentions();
     }
-    const tmp6Result3 = tmp6(7529);
+    const tmp6Result3 = tmp6(7559);
     const id2 = channel.id;
     obj3 = {};
     const merged1 = Object.assign(obj);
@@ -241,7 +241,7 @@ function showFileSizeExceededAlert(c8, largestFileSize) {
       obj = { title: stringResult, body: null };
       const intl3 = obj6(1114).intl;
       obj = { maxSize: null };
-      obj6 = obj6(5185);
+      obj6 = obj6(5215);
       sizeStringResult = obj6.sizeString(c8);
       obj.maxSize = sizeStringResult;
       obj.body = intl3.formatToPlainString(obj6(1114).t.fxEKdS, obj);
@@ -263,117 +263,57 @@ function showFileSizeExceededAlert(c8, largestFileSize) {
   }
 }
 let closure_18 = async function _chatInputSendApplicationCommand(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  const channel = params.channel;
+  const chatInputRef = params.chatInputRef;
+  const current = chatInputRef.current;
+  if (current != null) {
+    current.clearText();
+  }
+  let obj7 = closure_130_0(closure_130_2[31]);
+  await obj7.installApplicationOnDemandIfNeeded({ applicationId: closure_129_0.applicationId, channel: params.channel, commandIntegrationTypes: closure_129_0.integration_types });
+  if (2 === tmp5) {
     if (arg0 === 1) {
+      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      c4 = 3;
+      return { value, done: true };
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          let params;
-          ({ command: closure_129_0, optionValues: closure_129_1 } = _require.applicationCommand);
-          params = _require.params;
-          let channel;
-          let chatInputRef;
-          closure_129_5 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "PX_16", done: null };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
-        } else {
-          channel = params.channel;
-          chatInputRef = params.chatInputRef;
-          const current = chatInputRef.current;
-          if (current != null) {
-            current.clearText();
-          }
-          let obj7 = closure_130_0(closure_130_2[31]);
-          const obj2 = { applicationId: closure_129_0.applicationId, channel: params.channel, commandIntegrationTypes: closure_129_0.integration_types };
-          c3 = 3;
-          c4 = 1;
-          const obj3 = { value: obj7.installApplicationOnDemandIfNeeded(obj2), done: false };
-          return obj3;
-        }
-      } else {
-        if (2 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_129_5 = value;
-            let tmp20 = closure_129_0.inputType === closure_130_0(closure_130_2[34]).ApplicationCommandInputType.BUILT_IN_TEXT;
-            if (tmp20) {
-              tmp20 = null != closure_129_5;
-            }
-            if (tmp20) {
-              const obj5 = { text: closure_129_5.content, parsedMessage: "Array", tts: closure_129_5.tts, source: null, params };
-              closure_130_15(obj5);
-            }
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else if (value.isAuthorized) {
-          obj = { command: closure_129_0, optionValues: closure_129_1, context: null, maxSizeCallback: null };
-          obj1 = closure_130_0(closure_130_2[33]);
-          obj7 = { channel, type: "channel" };
-          obj.context = obj1.getCommandContext(obj7);
-          obj.maxSizeCallback = closure_130_17;
-          c3 = 2;
-          c4 = 1;
-          const obj8 = { value: closure_130_1(closure_130_2[32])(obj), done: false };
-          return obj8;
-        }
-        c4 = 3;
-        return { value: "HermesInternal", done: null };
+      closure_129_5 = value;
+      let tmp20 = closure_129_0.inputType === closure_130_0(closure_130_2[34]).ApplicationCommandInputType.BUILT_IN_TEXT;
+      if (tmp20) {
+        tmp20 = null != closure_129_5;
       }
-    } catch (tmp37) {
-      c4 = tmp;
-      throw tmp37;
+      if (tmp20) {
+        closure_130_15({ text: closure_129_5.content, parsedMessage: "Array", tts: closure_129_5.tts, source: null, params });
+      }
     }
+  } else if (arg0 === 1) {
+    c4 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c4 = 3;
+    return { value, done: true };
+  } else if (value.isAuthorized) {
+    const obj = { command: closure_129_0, optionValues: closure_129_1, context: null, maxSizeCallback: null };
+    obj7 = { channel, type: "channel" };
+    obj.context = closure_130_0(closure_130_2[33]).getCommandContext(obj7);
+    obj.maxSizeCallback = closure_130_17;
+    c3 = 2;
+    c4 = 1;
+    closure_130_0(closure_130_2[33]);
+    return { value: closure_130_1(closure_130_2[32])(obj), done: false };
   }
+  await "HermesInternal";
+  closure_1 = tmp2;
+  ({ command: closure_129_0, optionValues: closure_129_1 } = _require.applicationCommand);
+  params = _require.params;
+  return "PX_16";
 };
-const DraftType = fn(4947).DraftType;
+const DraftType = fn(4977).DraftType;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, UpsellTypes: closure_11 } = Constants);
-const MessageSendLocation = fn(4599).MessageSendLocation;
+const MessageSendLocation = fn(4629).MessageSendLocation;
 const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputSendUtils.tsx");
@@ -396,7 +336,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
         while (iter !== undefined) {
           let checkResult = iter.next().check(text, channel, null != channel.getGuildId());
           if (false !== checkResult) {
-            let obj1 = params(4950);
+            let obj1 = params(4980);
             obj = { title: null, body: null, confirmText: null, onConfirm: null, cancelText: null };
             let intl = util.intl;
             obj.title = intl.string(util.t.mY3Y38);
@@ -404,7 +344,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             let intl2 = util.intl;
             obj.confirmText = intl2.string(util.t.KJnHq3);
             obj.onConfirm = function onConfirm() {
-              const obj = { text, parsedMessage, tts: "accessible", source: "Array", params };
+              const obj = { text, parsedMessage, tts: "accessible", source: "<string:1359020033>", params };
               chatInputSendMessage(obj);
             };
             let intl3 = util.intl;
@@ -420,18 +360,18 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
               threadId: channel.id,
               attachments: uploads,
               sendMessage() {
-                          const obj = { text, parsedMessage, tts: "accessible", source: "r", params };
+                          const obj = { text, parsedMessage, tts: "accessible", source: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000283526770727663, params };
                           chatInputSendMessage(obj);
                         }
             };
-            params(4573).openLazy(tmp19(1896)(12091, tmp20.paths), "add-media-to-original-forum-post", obj);
-            const obj6 = params(4573);
+            params(4603).openLazy(tmp19(1896)(12127, tmp20.paths), "add-media-to-original-forum-post", obj);
+            const obj6 = params(4603);
           }
           obj4 = ForumPostMediaUtils;
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        obj1 = { text, parsedMessage: tmp2, tts: "accessible", source: "split", params };
+        obj1 = { text, parsedMessage: tmp2, tts: "accessible", source: null, params };
         chatInputSendMessage(obj1);
       }
     }

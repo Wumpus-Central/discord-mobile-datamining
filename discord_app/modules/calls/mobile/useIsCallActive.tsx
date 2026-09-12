@@ -1,11 +1,11 @@
-// === Module 8055: useIsCallActive ===
+// === Module 8085: useIsCallActive ===
 
-// Module 8055 (useIsCallActive)
-import CallStore from "CallStore" /* 5329 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4622 */;
+// Module 8085 (useIsCallActive)
+import CallStore from "CallStore" /* 5359 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 
 const require = fn;
-const ParticipantTypes = fn(4627).ParticipantTypes;
+const ParticipantTypes = fn(4657).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");
 

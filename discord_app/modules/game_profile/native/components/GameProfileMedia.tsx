@@ -1,11 +1,11 @@
-// === Module 8809: GameProfileMedia ===
+// === Module 8843: GameProfileMedia ===
 
-// Module 8809 (GameProfileMedia)
+// Module 8843 (GameProfileMedia)
 import nativeDefault from "native" /* 576 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
-import openMediaModal from "openMediaModal" /* 8345 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8777 */;
-import GameProfileMediaSources from "GameProfileMediaSources" /* 8810 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import openMediaModal from "openMediaModal" /* 8377 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8809 */;
+import GameProfileMediaSources from "GameProfileMediaSources" /* 8844 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -122,7 +122,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
 const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { container: null, scrollView: null, scrollViewContent: null, mediaItem: null, mediaImage: null, mediaVideo: null };
 createStyles = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 createStyles.container = createStyles;
@@ -130,7 +130,7 @@ createStyles.scrollView = { flexDirection: "row", overflow: "visible" };
 createStyles.scrollViewContent = { gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 const obj1 = { gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-createStyles.mediaItem = { maxWidth: fn(8810).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8810).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+createStyles.mediaItem = { maxWidth: fn(8844).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8844).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 createStyles.mediaImage = { width: "100%", height: "100%", resizeMode: "cover" };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BLACK };
 createStyles.mediaVideo = size;

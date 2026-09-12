@@ -1,8 +1,8 @@
-// === Module 17608: useChannelsAllowedToUnlink ===
+// === Module 17638: useChannelsAllowedToUnlink ===
 
-// Module 17608 (useChannelsAllowedToUnlink)
+// Module 17638 (useChannelsAllowedToUnlink)
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 
 const require = fn;
 let closure_3 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;

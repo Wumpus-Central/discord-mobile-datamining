@@ -1,20 +1,20 @@
-// === Module 9379: AppLauncherUtils ===
+// === Module 9418: AppLauncherUtils ===
 
-// Module 9379 (AppLauncherUtils)
+// Module 9418 (AppLauncherUtils)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Server from "Server" /* 1894 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7594 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8946 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9500 */;
-import getPlatformDefault from "getPlatform" /* 9501 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 9509 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7624 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8981 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9539 */;
+import getPlatformDefault from "getPlatform" /* 9540 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 9548 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9380 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9419 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
-import AppLauncherStore from "AppLauncherStore" /* 9499 */;
+import AppLauncherStore from "AppLauncherStore" /* 9538 */;
 
 require = fn;
 function getShelfBadgeTypeIfActive(application) {
@@ -63,8 +63,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1074).ApplicationFlags;
-const BuiltInSectionId = fn(5050).BuiltInSectionId;
-const MessageSendLocation = fn(4599).MessageSendLocation;
+const BuiltInSectionId = fn(5080).BuiltInSectionId;
+const MessageSendLocation = fn(4629).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 

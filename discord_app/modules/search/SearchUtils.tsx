@@ -1,27 +1,27 @@
-// === Module 12433: SearchUtils ===
+// === Module 12469: SearchUtils ===
 
-// Module 12433 (SearchUtils)
+// Module 12469 (SearchUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
-import _modDef4198 from "module_4198" /* 4198 */;
-import UserUtilsDefault from "UserUtils" /* 4451 */;
-import useChannelName from "useChannelName" /* 4759 */;
-import SearchTokens from "SearchTokens" /* 12434 */;
-import QueryTokenizerDefault from "QueryTokenizer" /* 12439 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12440 */;
+import _modDef4228 from "module_4228" /* 4228 */;
+import UserUtilsDefault from "UserUtils" /* 4481 */;
+import useChannelName from "useChannelName" /* 4789 */;
+import SearchTokens from "SearchTokens" /* 12470 */;
+import QueryTokenizerDefault from "QueryTokenizer" /* 12475 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12476 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 4818 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 4848 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(7952).SearchTabs;
+const SearchTabs = fn(7982).SearchTabs;
 const Constants = fn(1074);
 ({ SearchTypes: c10, SearchTokenTypes } = Constants);
 ({ SearchPopoutModes: closure_12, IS_SEARCH_ANSWER_TOKEN: map1, IS_SEARCH_FILTER_TOKEN: closure_14, SearchModes: closure_15, ME } = Constants);
@@ -86,8 +86,8 @@ export const getSearchTabFetchId = function getSearchTabFetchId(searchContext, M
   return "" + channelId + "-" + MEDIA + "-" + searchResultsQuery;
 };
 export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestamp(arg0) {
-  let obj = _modDef4198();
-  const diffResult = obj.diff(_modDef4198(arg0), "s");
+  let obj = _modDef4228();
+  const diffResult = obj.diff(_modDef4228(arg0), "s");
   if (diffResult > c17) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);

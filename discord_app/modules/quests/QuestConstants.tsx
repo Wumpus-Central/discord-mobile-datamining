@@ -1,13 +1,13 @@
-// === Module 5495: QuestConstants ===
+// === Module 5525: QuestConstants ===
 
-// Module 5495 (QuestConstants)
+// Module 5525 (QuestConstants)
 import DurationsDefault from "Durations" /* 1090 */;
-import QuestVariants from "QuestVariants" /* 5496 */;
-import Quests from "Quests" /* 5497 */;
-import QuestTypes from "QuestTypes" /* 5498 */;
-import AdCreativeType from "AdCreativeType" /* 5502 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5503 */;
-import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 5504 */;
+import QuestVariants from "QuestVariants" /* 5526 */;
+import Quests from "Quests" /* 5527 */;
+import QuestTypes from "QuestTypes" /* 5528 */;
+import AdCreativeType from "AdCreativeType" /* 5532 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5533 */;
+import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 5534 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
@@ -22,7 +22,7 @@ if (-1 !== HTTPUtils.indexOf("localhost")) {
   str2 = "https://cdn.discordapp.com/";
 }
 const text = `${str2}quests/`;
-const items1 = [QuestTypes.AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA, QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA, QuestTypes.AdPlacement.QUEST_HOME_BANNER_DESKTOP, QuestTypes.AdPlacement.QUEST_HOME_MOBILE_CAROUSEL, QuestTypes.AdPlacement.VIDEO_MODAL_MOBILE];
+const items1 = [QuestTypes.AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA, QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA, QuestTypes.AdPlacement.QUEST_HOME_BANNER_DESKTOP, QuestTypes.AdPlacement.VIDEO_MODAL_MOBILE];
 const set = new Set(items);
 const items2 = [AdCreativeType.AdCreativeType.NO_FILL];
 const set1 = new Set(items1);
@@ -84,6 +84,8 @@ export const PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID = "1402418703554842694";
 export const DEFAULT_VIRTUAL_CURRENCY_QUEST_HOME_HERO_ID = "1496993616537587813";
 export const DEFAULT_GENERIC_QUEST_HOME_HERO_ID = "1496993616537587812";
 export const DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID = "1514687533122982012";
+export const BOUNTY_ORB_AMOUNT = 50;
+export const BOUNTY_CTA_TIMER_MILLISECONDS = 0;
 export const BILLABLE_PLACEMENTS = set1;
 export const NON_BILLABLE_CREATIVE_TYPES = set2;
 export const ACTIVE_NOW_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES = set3;

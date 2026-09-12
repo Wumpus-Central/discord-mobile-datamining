@@ -1,10 +1,10 @@
-// === Module 17143: ExpressionPickerStore ===
+// === Module 17170: ExpressionPickerStore ===
 
-// Module 17143 (ExpressionPickerStore)
+// Module 17170 (ExpressionPickerStore)
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1219 */;
-import uniqueIdDefault from "uniqueId" /* 4810 */;
+import uniqueIdDefault from "uniqueId" /* 4840 */;
 import identity from "module_1244" /* 1244 */;
-import module_4477 from "module_4477" /* 4477 */;
+import module_4507 from "module_4507" /* 4507 */;
 import size from "module_2" /* 2 */;
 
 const ExpressionPickerViewType = ExpressionPickerConstants.ExpressionPickerViewType;
@@ -17,7 +17,7 @@ obj = {
     return { lastActiveView: lastActiveView.lastActiveView };
   }
 };
-const withEqualityFnResult = identity(module_4477.persist(() => closure_3, obj));
+const withEqualityFnResult = identity(module_4507.persist(() => closure_3, obj));
 const result = size.fileFinishedImporting("modules/expression_picker/ExpressionPickerStore.tsx");
 
 export const openExpressionPicker = function openExpressionPicker(arg0, arg1, arg2) {

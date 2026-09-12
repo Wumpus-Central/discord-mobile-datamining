@@ -1,6 +1,6 @@
-// === Module 8940: ? ===
+// === Module 8975: ? ===
 
-// Module 8940
+// Module 8975
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/index.tsx");

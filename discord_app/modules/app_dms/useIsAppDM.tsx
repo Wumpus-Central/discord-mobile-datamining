@@ -1,6 +1,6 @@
-// === Module 12238: useIsAppDM ===
+// === Module 12274: useIsAppDM ===
 
-// Module 12238 (useIsAppDM)
+// Module 12274 (useIsAppDM)
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;

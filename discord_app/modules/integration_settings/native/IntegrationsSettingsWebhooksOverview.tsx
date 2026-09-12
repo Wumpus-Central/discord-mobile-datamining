@@ -1,23 +1,23 @@
-// === Module 16927: IntegrationsSettingsWebhooksOverview ===
+// === Module 16954: IntegrationsSettingsWebhooksOverview ===
 
-// Module 16927 (IntegrationsSettingsWebhooksOverview)
+// Module 16954 (IntegrationsSettingsWebhooksOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import Stack_Stack from "Stack/Stack" /* 5024 */;
-import NavScrim from "NavScrim" /* 7113 */;
-import Form from "Form" /* 8684 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 16929 */;
+import Stack_Stack from "Stack/Stack" /* 5054 */;
+import NavScrim from "NavScrim" /* 7143 */;
+import Form from "Form" /* 8716 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 16956 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
-import WebhooksStore from "WebhooksStore" /* 16928 */;
+import WebhooksStore from "WebhooksStore" /* 16955 */;
 
 require = fn;
 function WebhookItem(avatar) {
@@ -180,7 +180,7 @@ const Constants = fn(1074);
 ({ HelpdeskArticles: map1, ChannelSettingsSections: closure_14, NON_USER_BOT_DISCRIMINATOR: closure_15, Permissions: closure_16, WebhookTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { form: null, content: null, hint: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.form = createStyles;
@@ -213,7 +213,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
-  const items = [closure_18(webhookType(4602).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
+  const items = [closure_18(webhookType(4632).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
   let tmp4Result = webhookType === constants3.INCOMING;
   if (tmp4Result) {
     let obj = { guild: self.props.guild, channel: self.props.channel };
@@ -221,7 +221,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    obj = { Illustration: webhookType(16932).WebhookEmpty, title: null };
+    obj = { Illustration: webhookType(16959).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1114).intl;
       dkHRkE = webhookType(1114).t.dkHRkE;
@@ -243,7 +243,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
         })
     };
     const obj1 = { children: null };
-    items[2] = closure_18(webhookType(5738).TableRowGroup, obj);
+    items[2] = closure_18(webhookType(5768).TableRowGroup, obj);
     obj1.children = items;
     return closure_20(closure_19, obj1);
   }
@@ -258,7 +258,7 @@ prototype["render"] = function render() {
   obj.children = items;
   return closure_1_20(closure_1_19, obj);
 };
-WebhooksOverview.contextType = fn(4317).ThemeContext;
+WebhooksOverview.contextType = fn(4347).ThemeContext;
 let closure_26 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsWebhooksOverview.tsx");

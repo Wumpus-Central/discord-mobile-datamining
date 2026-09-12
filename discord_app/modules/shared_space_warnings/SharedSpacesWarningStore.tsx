@@ -1,14 +1,14 @@
-// === Module 13789: SharedSpacesWarningStore ===
+// === Module 13823: SharedSpacesWarningStore ===
 
-// Module 13789 (SharedSpacesWarningStore)
+// Module 13823 (SharedSpacesWarningStore)
 import module_560 from "module_560" /* 560 */;
-import "module_4477";
-import module_4477 from "module_4477" /* 4477 */;
+import "module_4507";
+import module_4507 from "module_4507" /* 4507 */;
 import size from "module_2" /* 2 */;
 
 let useSharedSpacesWarningStore = { name: "shared-spaces-warning-storage", storage: null };
-useSharedSpacesWarningStore.storage = module_4477.createJSONStorage(() => require("LocalStorageWrapper"));
-useSharedSpacesWarningStore = module_560.create(module_4477.persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), useSharedSpacesWarningStore));
+useSharedSpacesWarningStore.storage = module_4507.createJSONStorage(() => require("LocalStorageWrapper"));
+useSharedSpacesWarningStore = module_560.create(module_4507.persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), useSharedSpacesWarningStore));
 const result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningStore.tsx");
 
 export { useSharedSpacesWarningStore };

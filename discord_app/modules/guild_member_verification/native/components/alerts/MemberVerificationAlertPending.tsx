@@ -1,7 +1,7 @@
-// === Module 5587: MemberVerificationAlertPending ===
+// === Module 5617: MemberVerificationAlertPending ===
 
-// Module 5587 (MemberVerificationAlertPending)
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5578 */;
+// Module 5617 (MemberVerificationAlertPending)
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5608 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export default function MemberVerificationAlertPending(guildId) {
   }, items);
   let obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = guildId(5589).ClipboardListIcon;
+  obj.icon = guildId(5619).ClipboardListIcon;
   const intl = guildId(1114).intl;
   obj.header = intl.string(guildId(1114).t.zhfXbs);
   const intl2 = guildId(1114).intl;
@@ -34,13 +34,13 @@ export default function MemberVerificationAlertPending(guildId) {
   const intl3 = guildId(1114).intl;
   obj.text = intl3.string(guildId(1114).t.f293OM);
   obj.onPress = onClose;
-  const items1 = [closure_4(guildId(5026).Button, obj), ];
+  const items1 = [closure_4(guildId(5056).Button, obj), ];
   const obj1 = { text: null, variant: "destructive", onPress: null };
   const intl4 = guildId(1114).intl;
   obj1.text = intl4.string(guildId(1114).t.mqtdmQ);
   obj1.onPress = callback;
-  items1[1] = closure_4(guildId(5026).Button, obj1);
+  items1[1] = closure_4(guildId(5056).Button, obj1);
   obj.children = items1;
   obj.buttons = closure_6(closure_5, obj);
-  return closure_4(onClose(5588), obj);
+  return closure_4(onClose(5618), obj);
 };

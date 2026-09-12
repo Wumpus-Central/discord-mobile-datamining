@@ -1,11 +1,11 @@
-// === Module 4256: MessageRecord ===
+// === Module 4286: MessageRecord ===
 
-// Module 4256 (MessageRecord)
+// Module 4286 (MessageRecord)
 import FlagUtils from "FlagUtils" /* 1384 */;
-import ReactionUtils from "ReactionUtils" /* 4257 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7375 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7835 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9335 */;
+import ReactionUtils from "ReactionUtils" /* 4287 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7405 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9374 */;
 import Record from "Record" /* 1386 */;
 
 require = fn;

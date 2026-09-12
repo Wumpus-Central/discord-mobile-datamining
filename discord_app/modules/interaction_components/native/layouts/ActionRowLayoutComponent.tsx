@@ -1,6 +1,6 @@
-// === Module 17476: ActionRowLayoutComponent ===
+// === Module 17506: ActionRowLayoutComponent ===
 
-// Module 17476 (ActionRowLayoutComponent)
+// Module 17506 (ActionRowLayoutComponent)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

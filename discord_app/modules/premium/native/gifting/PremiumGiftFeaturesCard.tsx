@@ -1,27 +1,27 @@
-// === Module 10839: PremiumGiftFeaturesCard ===
+// === Module 10878: PremiumGiftFeaturesCard ===
 
-// Module 10839 (PremiumGiftFeaturesCard)
+// Module 10878 (PremiumGiftFeaturesCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import StringUtils from "StringUtils" /* 1925 */;
-import native from "native" /* 4317 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import TextStylesDefault from "TextStyles" /* 5575 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8923 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9461 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9473 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9475 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9482 */;
-import MarketingComponentType from "MarketingComponentType" /* 10831 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10840 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10841 */;
-import MarketingComponentHooks from "MarketingComponentHooks" /* 10842 */;
-import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10843 */;
+import native from "native" /* 4347 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import TextStylesDefault from "TextStyles" /* 5605 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8958 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9500 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9512 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9514 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9521 */;
+import MarketingComponentType from "MarketingComponentType" /* 10870 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10879 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10880 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10881 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10882 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10754 */;
+import PromotionsStore from "PromotionsStore" /* 10793 */;
 
 require = fn;
 function PremiumGiftPlanSelectPromotionDetails(config) {
@@ -95,7 +95,7 @@ const obj11 = { marginTop: nativeDefault.space.PX_24 };
 obj10.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj12 = { marginTop: nativeDefault.space.PX_12 };
 obj10.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_15 = createStyles.createStyles(() => {
   let logo = { card: null, logo: null, pricing: null, featureTitle: null, features: null, button: null, featureIcon: null, featureText: null, promotionDetailsContainer: null };
   logo = { justifyContent: "flex-start", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED };

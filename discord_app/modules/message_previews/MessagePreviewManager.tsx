@@ -1,16 +1,16 @@
-// === Module 15382: MessagePreviewManager ===
+// === Module 15404: MessagePreviewManager ===
 
-// Module 15382 (MessagePreviewManager)
+// Module 15404 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 15383 */;
+import RemoteFetchData from "RemoteFetchData" /* 15405 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5328 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13773 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
 const isThread = fn(1961).isThread;
@@ -103,7 +103,7 @@ class MessagePreviewManager extends tmp3 {
               closure_131_4 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp4) {

@@ -1,14 +1,14 @@
-// === Module 15932: DataAndPrivacyScreen ===
+// === Module 15956: DataAndPrivacyScreen ===
 
-// Module 15932 (DataAndPrivacyScreen)
+// Module 15956 (DataAndPrivacyScreen)
 import util from "util" /* 1114 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9240 */;
-import SettingBuilders from "SettingBuilders" /* 11562 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9279 */;
+import SettingBuilders from "SettingBuilders" /* 11601 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6666 */;
+import ConsentStore from "ConsentStore" /* 6696 */;
 
 require = fn;
-const MobileUserSettings = fn(8049).MobileUserSettings;
+const MobileUserSettings = fn(8079).MobileUserSettings;
 const Constants = fn(1074);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
@@ -81,11 +81,11 @@ export default function DataAndPrivacySettings() {
   items1.push(obj11);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(14910).fetchConsents();
-      const obj = stackNavigation(14910);
+      const consents = stackNavigation(14944).fetchConsents();
+      const obj = stackNavigation(14944);
     }
-    const harvestStatus = stackNavigation(14913).fetchHarvestStatus();
-    const obj2 = stackNavigation(14913);
+    const harvestStatus = stackNavigation(14947).fetchHarvestStatus();
+    const obj2 = stackNavigation(14947);
   }, []);
   const items8 = [stackNavigation, items1];
   obj12 = { children: null };
@@ -127,8 +127,8 @@ export default function DataAndPrivacySettings() {
     }
   };
   const obj16 = items1(2024);
-  obj13.screen = stackNavigation(14869).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(14869), obj13), closure_8(items1(14741), { node: memo })];
+  obj13.screen = stackNavigation(14903).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(14903), obj13), closure_8(items1(14775), { node: memo })];
   obj12.children = items9;
   return closure_10(closure_9, obj12);
 };

@@ -1,11 +1,11 @@
-// === Module 14750: useSettingSearchResults ===
+// === Module 14784: useSettingSearchResults ===
 
-// Module 14750 (useSettingSearchResults)
+// Module 14784 (useSettingSearchResults)
 import debounceDefault from "debounce" /* 551 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14743 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 14636 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14777 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 14670 */;
 
 const require = fn;
 let closure_7 = [];
@@ -14,8 +14,8 @@ const result = size.fileFinishedImporting("modules/settings/native/search/hooks/
 
 export const useSettingSearchResults = function useSettingSearchResults() {
   const memo = memo1.useMemo(() => {
-    let tmp = closure_1(14751);
-    tmp = new tmp(memo(14745).getSettingSearchableTitles());
+    let tmp = closure_1(14785);
+    tmp = new tmp(memo(14779).getSettingSearchableTitles());
     return tmp;
   }, []);
   const settings = _slicedToArray(memo1.useState(closure_7), 2);
@@ -30,10 +30,10 @@ export const useSettingSearchResults = function useSettingSearchResults() {
     scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
     const found = scoredSearchResults.filter((setting) => {
       setting = setting.setting;
-      const isBlockedResult = closure_2_1(14746).isBlocked(setting, closure_0);
+      const isBlockedResult = closure_2_1(14780).isBlocked(setting, closure_0);
       let tmp3 = !isBlockedResult;
       if (!isBlockedResult) {
-        tmp3 = !scoredSearchResults(14637).SETTING_RENDERER_CONFIG[setting].unsearchable;
+        tmp3 = !scoredSearchResults(14671).SETTING_RENDERER_CONFIG[setting].unsearchable;
       }
       return tmp3;
     });

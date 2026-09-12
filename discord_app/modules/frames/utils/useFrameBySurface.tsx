@@ -1,7 +1,7 @@
-// === Module 16692: useFrameBySurface ===
+// === Module 16717: useFrameBySurface ===
 
-// Module 16692 (useFrameBySurface)
-import FramesStore from "FramesStore" /* 9601 */;
+// Module 16717 (useFrameBySurface)
+import FramesStore from "FramesStore" /* 9640 */;
 
 const require = fn;
 const size = fn(2);

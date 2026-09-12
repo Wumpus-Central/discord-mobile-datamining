@@ -1,15 +1,15 @@
-// === Module 12810: AcceptInvite ===
+// === Module 12846: AcceptInvite ===
 
-// Module 12810 (AcceptInvite)
+// Module 12846 (AcceptInvite)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import useToken from "useToken" /* 4308 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5632 */;
-import Card from "Card" /* 5658 */;
-import _modDef12819 from "module_12819" /* 12819 */;
+import useToken from "useToken" /* 4338 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5662 */;
+import Card from "Card" /* 5688 */;
+import _modDef12855 from "module_12855" /* 12855 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -85,12 +85,12 @@ function AcceptInviteCardComponent(invite) {
     let obj = {};
     const merged = Object.assign(invite);
     obj.invite = invite;
-    return closure_9(first(12811), obj);
+    return closure_9(first(12847), obj);
   } else if (tmp22.ERROR === first) {
     obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_9(first(12814), obj);
+    return closure_9(first(12850), obj);
   } else {
     return closure_9(InviteResolving, {});
   }
@@ -100,7 +100,7 @@ get_ActivityIndicator = fn(17);
 const InviteStates = fn(1074).InviteStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { parentContainer: null, imageStyle: null, cardContainer: null, cardContent: null, resolvingContainer: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
 createStyles.parentContainer = createStyles;
@@ -128,7 +128,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef12819;
+    let guildSplashSource = _modDef12855;
   } else {
     obj = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

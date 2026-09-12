@@ -1,6 +1,6 @@
-// === Module 7067: useSettingNavigationRoute ===
+// === Module 7097: useSettingNavigationRoute ===
 
-// Module 7067 (useSettingNavigationRoute)
+// Module 7097 (useSettingNavigationRoute)
 import Link from "Link" /* 1484 */;
 import size from "module_2" /* 2 */;
 

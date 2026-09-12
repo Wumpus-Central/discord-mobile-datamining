@@ -1,13 +1,13 @@
-// === Module 16740: ChannelContent ===
+// === Module 16767: ChannelContent ===
 
-// Module 16740 (ChannelContent)
-import Text_Text from "Text/Text" /* 4602 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5113 */;
-import LockIcon from "LockIcon" /* 5146 */;
-import WarningIcon from "WarningIcon" /* 8679 */;
-import ChannelListLayout from "ChannelListLayout" /* 10210 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16189 */;
-import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 16741 */;
+// Module 16767 (ChannelContent)
+import Text_Text from "Text/Text" /* 4632 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5143 */;
+import LockIcon from "LockIcon" /* 5176 */;
+import WarningIcon from "WarningIcon" /* 8711 */;
+import ChannelListLayout from "ChannelListLayout" /* 10249 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16213 */;
+import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 16768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -139,18 +139,18 @@ function ChannelContentComponent(arg0) {
   return timestampProducer(View, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(4788).UnreadSetting;
+const UnreadSetting = fn(4818).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4606);
-let PlatformUtils = fn(1115);
+let createStyles = fn(4636);
+let PlatformUtils = fn(1150);
 let num = -1;
 if (PlatformUtils.isIOS()) {
   num = 2;
 }
 createStyles = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
-createStyles = { opacity: fn(10207).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
-PlatformUtils = fn(1115);
+createStyles = { opacity: fn(10246).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+PlatformUtils = fn(1150);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

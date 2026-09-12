@@ -1,19 +1,19 @@
-// === Module 9179: AudioActionCreators ===
+// === Module 9218: AudioActionCreators ===
 
-// Module 9179 (AudioActionCreators)
+// Module 9218 (AudioActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 9182 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 9184 */;
-import applyBackgroundOption from "applyBackgroundOption" /* 9185 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 9199 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 9221 */;
+import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 9223 */;
+import applyBackgroundOption from "applyBackgroundOption" /* 9224 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 9238 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CertifiedDeviceStore from "CertifiedDeviceStore" /* 9180 */;
+import CertifiedDeviceStore from "CertifiedDeviceStore" /* 9219 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -55,8 +55,8 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
 }
 const Constants = fn(1074);
 ({ InputModes: c10, AnalyticEvents: closure_11 } = Constants);
-const SoundOutputChannel = fn(9181).SoundOutputChannel;
-const MediaEngineContextTypes = fn(4631).MediaEngineContextTypes;
+const SoundOutputChannel = fn(9220).SoundOutputChannel;
+const MediaEngineContextTypes = fn(4661).MediaEngineContextTypes;
 let settings = new LoggerDefault("AudioActionCreators");
 settings.enableNativeLogger(true);
 let closure_15 = debounceDefault((target_user_id, context, volume) => {
@@ -628,7 +628,7 @@ settings = {
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj1 = { value: v1(9184)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()), done: false };
+              const obj1 = { value: v1(9223)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()), done: false };
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -710,7 +710,7 @@ settings = {
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj1 = { value: v1(9184)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()), done: false };
+              const obj1 = { value: v1(9223)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()), done: false };
               return obj1;
             }
           } else if (arg0 === 1) {

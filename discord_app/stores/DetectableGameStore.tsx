@@ -14,7 +14,7 @@ import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import CachedEntriesMapDefault from "CachedEntriesMap" /* 1932 */;
 import GameDetectionTypes from "GameDetectionTypes" /* 1934 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import size from "module_2" /* 2 */;
 
 function gameFromServer(id) {

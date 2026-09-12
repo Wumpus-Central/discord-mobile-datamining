@@ -1,17 +1,17 @@
-// === Module 12467: useEventsButtonProps ===
+// === Module 12503: useEventsButtonProps ===
 
-// Module 12467 (useEventsButtonProps)
+// Module 12503 (useEventsButtonProps)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5620 */;
-import useGuildScheduledEventsDefault from "useGuildScheduledEvents" /* 9753 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9789 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5650 */;
+import useGuildScheduledEventsDefault from "useGuildScheduledEvents" /* 9792 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9828 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 4621 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import ReadStateStore from "ReadStateStore" /* 4651 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
 require = fn;
-const ReadStateTypes = fn(4788).ReadStateTypes;
+const ReadStateTypes = fn(4818).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
 
@@ -39,7 +39,7 @@ export default function useEventsButtonProps(id) {
   }, items3);
   const handleLongPress = noop.useCallback(() => {
     const obj = { guildId: user.id };
-    obj.openLazy(asyncRequireImpl(12468, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, obj);
+    obj.openLazy(asyncRequireImpl(12504, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, obj);
   }, items4);
   if (arr4.length > 0) {
     const intl2 = tmp(1114).intl;
@@ -49,13 +49,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1114).intl;
     name = intl.string(tmp(1114).t.tlopTM);
   }
-  let mode = tmp(12472).ChannelModes.DEFAULT;
+  let mode = tmp(12508).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(12472).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(12508).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 };

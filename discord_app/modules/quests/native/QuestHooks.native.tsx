@@ -1,18 +1,18 @@
-// === Module 15149: QuestHooks ===
+// === Module 15171: QuestHooks ===
 
-// Module 15149 (QuestHooks)
-import QuestTypes from "QuestTypes" /* 5498 */;
-import AdCreativeType from "AdCreativeType" /* 5502 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7236 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7796 */;
-import AssetUtils from "AssetUtils" /* 11379 */;
-import useQuestForPlacement from "useQuestForPlacement" /* 15174 */;
+// Module 15171 (QuestHooks)
+import QuestTypes from "QuestTypes" /* 5528 */;
+import AdCreativeType from "AdCreativeType" /* 5532 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7266 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7826 */;
+import AssetUtils from "AssetUtils" /* 11418 */;
+import useQuestForPlacement from "useQuestForPlacement" /* 15196 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4297 */;
-import ApplicationStore from "ApplicationStore" /* 4834 */;
-import BountyStore from "BountyStore" /* 7774 */;
-import QuestStore from "QuestStore" /* 7775 */;
+import ActionSheetStore from "ActionSheetStore" /* 4327 */;
+import ApplicationStore from "ApplicationStore" /* 4864 */;
+import BountyStore from "BountyStore" /* 7804 */;
+import QuestStore from "QuestStore" /* 7805 */;
 
 require = fn;
 function useDeliveredDockCreative() {
@@ -73,7 +73,7 @@ function useDeliveredDockCreative() {
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   _require = mobileQuestDock;
   const deliveredQuest = require("QuestDockCreativeContext").getDeliveredQuest(mobileQuestDock);
-  const tmp4 = deliveredAdCreativeId(7016)();
+  const tmp4 = deliveredAdCreativeId(7046)();
   const obj = require("QuestDockCreativeContext");
   const items = [QuestStore];
   let userStatus;
@@ -83,8 +83,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7771);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5498).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7801);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5528).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -93,7 +93,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(11577);
+  tmpResult = tmp(11616);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = require("initialize");
   let isEligibleForQuests = require("QuestsEligibility").getIsEligibleForQuests();
@@ -122,7 +122,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }, items4);
   if (require("AdCreativeType").AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(5502).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(5532).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -133,7 +133,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(5502).AdCreativeType.QUEST === type) {
+  } else if (tmp(5532).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
         let tmp16 = null != deliveredQuest && !tmp4;
@@ -145,10 +145,10 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   const tmpResult4 = require("initialize");
 }
-const QuestConstants = fn(5495);
+const QuestConstants = fn(5525);
 ({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_9, QuestVariants: c10 } = QuestConstants);
-const CAPTCHA_MODAL_KEY = fn(11373).CAPTCHA_MODAL_KEY;
-const MAIN_SURFACE = fn(9602).MAIN_SURFACE;
+const CAPTCHA_MODAL_KEY = fn(11412).CAPTCHA_MODAL_KEY;
+const MAIN_SURFACE = fn(9641).MAIN_SURFACE;
 const ThemeTypes = fn(1085).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestHooks.native.tsx");
@@ -329,7 +329,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
               return obj;
             } else if (canLaunchActivityResult) {
               if (canLaunchFrameResult) {
-                let obj5 = v2(9598);
+                let obj5 = v2(9637);
                 const obj1 = { applicationId: stateFromStores.id, surface, analyticsContext: null };
                 let obj2 = { isStart: true, analyticsLocations };
                 obj1.analyticsContext = obj2;
@@ -346,7 +346,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
                   }
                 }
                 if (null != id) {
-                  obj2 = v3(11613);
+                  obj2 = v3(11652);
                   const obj4 = { appId: stateFromStores.id, botId: stateFromStores.bot.id, analyticsLocations: [] };
                   v2 = 2;
                   v3 = 1;

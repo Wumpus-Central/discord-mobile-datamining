@@ -1,6 +1,6 @@
-// === Module 6523: ? ===
+// === Module 6553: ? ===
 
-// Module 6523
+// Module 6553
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SharingGemSpotIllustration-2x.png.js");

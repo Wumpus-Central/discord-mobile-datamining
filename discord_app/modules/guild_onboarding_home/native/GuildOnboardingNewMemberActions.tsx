@@ -1,17 +1,17 @@
-// === Module 16639: GuildOnboardingNewMemberActions ===
+// === Module 16663: GuildOnboardingNewMemberActions ===
 
-// Module 16639 (GuildOnboardingNewMemberActions)
+// Module 16663 (GuildOnboardingNewMemberActions)
 import nativeDefault from "native" /* 576 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12377 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12413 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5510 */;
+import EmojiStore from "EmojiStore" /* 5540 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4793 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4794 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4823 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4824 */;
 
 require = fn;
 function MemberActionRow(channelId) {
@@ -107,10 +107,10 @@ function MemberActionRow(channelId) {
 const View = fn(17).View;
 const Permissions = fn(1074).Permissions;
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
-const GuildMemberFlags = fn(4232).GuildMemberFlags;
+const GuildMemberFlags = fn(4262).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { actionsContainer: { paddingHorizontal: 12 }, actionsHeader: { display: "flex", marginBottom: 16 }, actionContainer: null, channelNameContainer: null, icon: null, emoji: null, textEmoji: null, emojiPlaceholder: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: nativeDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "center" };
 createStyles.actionContainer = createStyles;

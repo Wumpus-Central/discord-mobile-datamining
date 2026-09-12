@@ -1,32 +1,32 @@
-// === Module 15241: QuestDock ===
+// === Module 15263: QuestDock ===
 
-// Module 15241 (QuestDock)
+// Module 15263 (QuestDock)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import native from "native" /* 4317 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import spring from "spring" /* 5025 */;
-import springPresets from "springPresets" /* 5029 */;
-import QuestTypes from "QuestTypes" /* 5498 */;
-import AdCreativeType from "AdCreativeType" /* 5502 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7674 */;
-import MetricEvents from "MetricEvents" /* 7679 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7800 */;
-import QuestActionCreators from "QuestActionCreators" /* 11370 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11577 */;
-import QuestsEligibility from "QuestsEligibility" /* 11578 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11871 */;
-import QuestDockUtils from "QuestDockUtils" /* 15152 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 15154 */;
-import QuestDockBountyHeaderDefault from "QuestDockBountyHeader" /* 15261 */;
-import QuestDockBountyBodyDefault from "QuestDockBountyBody" /* 15262 */;
-import QuestDockBountyBackgroundDefault from "QuestDockBountyBackground" /* 15264 */;
+import native from "native" /* 4347 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import spring from "spring" /* 5055 */;
+import springPresets from "springPresets" /* 5059 */;
+import QuestTypes from "QuestTypes" /* 5528 */;
+import AdCreativeType from "AdCreativeType" /* 5532 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
+import MetricEvents from "MetricEvents" /* 7709 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
+import QuestActionCreators from "QuestActionCreators" /* 11409 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11616 */;
+import QuestsEligibility from "QuestsEligibility" /* 11617 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11907 */;
+import QuestDockUtils from "QuestDockUtils" /* 15174 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 15176 */;
+import QuestDockBountyHeaderDefault from "QuestDockBountyHeader" /* 15283 */;
+import QuestDockBountyBodyDefault from "QuestDockBountyBody" /* 15284 */;
+import QuestDockBountyBackgroundDefault from "QuestDockBountyBackground" /* 15286 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 15151 */;
+import QuestDockStore from "QuestDockStore" /* 15173 */;
 
 require = fn;
 function QuestDockWithGestureAnimation(backgroundColor) {
@@ -362,7 +362,7 @@ function QuestDockWithEntranceAnimation(arg0) {
   ({ renderModeChangeTracker: require, identifierMetricTag } = arg0);
   ({ backgroundImageUrl, iconUrl, layoutVariant: dependencyMap, theme: closure_3, backgroundColor: asyncGeneratorStep, expandedHeight: _slicedToArray, collapsedContent: _objectWithoutProperties, expandedContent: noop, backgroundContent: closure_8 } = arg0);
   ({ renderImpressionTracker, trackAssetLoadingFailure } = arg0);
-  const context = noop.useContext(identifierMetricTag(15240));
+  const context = noop.useContext(identifierMetricTag(15262));
   const isRendered = context.isRendered;
   let obj1 = initialize;
   let items = [closure_11];
@@ -619,7 +619,7 @@ function QuestDockWithEntranceAnimation(arg0) {
       overrideVisibility: context.isVisibleToUser
     };
     obj.children = renderImpressionTracker(obj1);
-    tmp16 = closure_23(identifierMetricTag(4343).View, obj);
+    tmp16 = closure_23(identifierMetricTag(4373).View, obj);
   }
   return tmp16;
 }
@@ -697,9 +697,9 @@ class QuestDockQuestContent {
 }
 function QuestDockBountyContent(bounty) {
   bounty = bounty.bounty;
-  let obj = bounty(15150);
+  let obj = bounty(15172);
   const bountyPreviewImageUrl = obj.useBountyPreviewImageUrl(bounty);
-  const questDockBountyBackgroundColor = bounty(15150).useQuestDockBountyBackgroundColor();
+  const questDockBountyBackgroundColor = bounty(15172).useQuestDockBountyBackgroundColor();
   obj = { bounty, children: null };
   obj = {
     identifierMetricTag: "ad_creative_id:" + bounty.id,
@@ -724,20 +724,20 @@ function QuestDockBountyContent(bounty) {
     }
   };
   obj.children = closure_23(QuestDockWithEntranceAnimation, obj);
-  return closure_23(bounty(15160).QuestDockBountyProvider, obj);
+  return closure_23(bounty(15182).QuestDockBountyProvider, obj);
 }
 let closure_3 = ["mode"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, StyleSheet, Pressable: closure_9, Image: c10 } = get_ActivityIndicator);
-const QuestConstants = fn(5495);
+const QuestConstants = fn(5525);
 ({ QuestDockMode: closure_12, QuestsExperimentLocations: map1 } = QuestConstants);
-const QuestDockConstants = fn(15153);
+const QuestDockConstants = fn(15175);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_14, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_15, QUEST_DOCK_CONTENT_BORDER_RADII: closure_16, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_17, QUEST_DOCK_COLLAPSED_HEIGHT: closure_18, QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT: closure_19, QUEST_DOCK_PORTRAIT_MEDIA_EXPANDED_HEIGHT: closure_20 } = QuestDockConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { wrapper: { position: "absolute", left: "50%", bottom: 0, zIndex: 1 }, accessibilityWrapper: null, questDockWrapper: null, questDockContentWrapper: null, questDockHeaderBorder: null, nestedPressable: null };
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -771,10 +771,10 @@ const __initData5 = { code: "function QuestDockTsx5(){const{activeQuestDockMode,
 const __initData6 = { code: "function QuestDockTsx6(){const{questDockWrapperSpecs,windowDimensions,safeAreaTop}=this.__closure;const specs=questDockWrapperSpecs.get();const windowHeight=windowDimensions.get().height;return windowHeight-safeAreaTop-specs.height;}" };
 const __initData7 = { code: "function QuestDockTsx7(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.CLOSED||activeQuestDockMode.get()===QuestDockMode.SOFT_DISMISSED?0:1,QUEST_DOCK_MODE_CHANGE_PHYSICS)};}" };
 const __initData8 = { code: "function QuestDockTsx8(){const{hasInsetHeaderTile,activeQuestDockMode,QuestDockMode,QUEST_DOCK_CONTENT_BORDER_RADII,questDockBorderRadius,bottomBorderRadius,withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,QUEST_DOCK_COLLAPSED_HEIGHT,questDockWrapperSpecs,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED}=this.__closure;return{borderTopLeftRadius:hasInsetHeaderTile&&activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderTopRightRadius:hasInsetHeaderTile&&activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderBottomLeftRadius:hasInsetHeaderTile&&activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:bottomBorderRadius.get(),borderBottomRightRadius:hasInsetHeaderTile&&activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:bottomBorderRadius.get(),opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?0:1,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),height:activeQuestDockMode.get()===QuestDockMode.EXPANDED?hasInsetHeaderTile?QUEST_DOCK_COLLAPSED_HEIGHT:questDockWrapperSpecs.get().height:questDockWrapperSpecs.get().height,width:activeQuestDockMode.get()===QuestDockMode.EXPANDED&&hasInsetHeaderTile?questDockWrapperSpecs.get().width-QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED*2:questDockWrapperSpecs.get().width,transform:[{translateX:hasInsetHeaderTile?withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED):0},{translateY:hasInsetHeaderTile?withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED):0}],borderBottomWidth:bottomBorderRadius.get()>0?1:0};}" };
-createStyles = fn(4606);
+createStyles = fn(4636);
 let closure_38 = createStyles.createStyles(() => ({ wrapperAnimated: { position: "absolute", bottom: 0, padding: 0, width: "100%" } }));
 let obj4 = {};
-const merged4 = Object.assign(fn(5029).SUBTLE_SPRING);
+const merged4 = Object.assign(fn(5059).SUBTLE_SPRING);
 obj4.overshootClamping = true;
 obj4.damping = 54;
 const constants2 = { PENDING: "pending", SUCCEEDED: "succeeded", FAILED: "failed" };

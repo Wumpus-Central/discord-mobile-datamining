@@ -1,19 +1,19 @@
-// === Module 16516: ForYouShowAllRow ===
+// === Module 16540: ForYouShowAllRow ===
 
-// Module 16516 (ForYouShowAllRow)
+// Module 16540 (ForYouShowAllRow)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import useFontScale from "useFontScale" /* 5033 */;
-import Pressables from "Pressables" /* 5174 */;
-import _modDef7215 from "module_7215" /* 7215 */;
-import ChannelListLayout from "ChannelListLayout" /* 10210 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 14230 */;
-import ChannelPressableWrapper from "ChannelPressableWrapper" /* 16511 */;
-import ChannelWrapper from "ChannelWrapper" /* 16512 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import useFontScale from "useFontScale" /* 5063 */;
+import Pressables from "Pressables" /* 5204 */;
+import _modDef7245 from "module_7245" /* 7245 */;
+import ChannelListLayout from "ChannelListLayout" /* 10249 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 14265 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 16535 */;
+import ChannelWrapper from "ChannelWrapper" /* 16536 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ function ForYouShowAllRow(panelVariant) {
   obj4.children = intl.format(util.t.NrzztX, { count });
   obj3.children = React5(Text_Text.Text, obj4);
   items1[1] = React5(View, obj3);
-  const obj5 = { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7215, size: native.IconSizes.CUSTOM };
+  const obj5 = { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7245, size: native.IconSizes.CUSTOM };
   items1[2] = React5(native.Icon, obj5);
   obj1.children = items1;
   obj.children = obj5.renderChannelWrapper(React7(React6, obj1), { layout, fontScale, panelVariant });
@@ -53,10 +53,10 @@ function ForYouShowAllRow(panelVariant) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Sections = fn(12792).Sections;
+const Sections = fn(12828).Sections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_10 = createStyles.createStyles((layout) => {
   let obj = ChannelListLayout;
   const layoutStyles = obj.getLayoutStyles(layout);
@@ -107,7 +107,7 @@ export const ForYouSuggestedFriendShowAllRow = function ForYouSuggestedFriendSho
     children: noop.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: "r" };
+        const obj = { user: user.user, guildId: "Array", size: -1 };
         const obj2 = suggestedFriends(messagesTabLayout[6]);
         const AvatarSizes = suggestedFriends(messagesTabLayout[11]).AvatarSizes;
         obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;

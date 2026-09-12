@@ -1,25 +1,25 @@
-// === Module 16983: RestrictedMessagePreviewActions ===
+// === Module 17010: RestrictedMessagePreviewActions ===
 
-// Module 16983 (RestrictedMessagePreviewActions)
+// Module 17010 (RestrictedMessagePreviewActions)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import UserUtilsDefault from "UserUtils" /* 4451 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import ReportModals from "ReportModals" /* 8720 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9132 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10959 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12713 */;
+import UserUtilsDefault from "UserUtils" /* 4481 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import ReportModals from "ReportModals" /* 8752 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10998 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12749 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticsPages: metroRequire, RelationshipTypes: closure_7 } = Constants);
-let closure_8 = fn(11476).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_8 = fn(11515).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, buttonRow: null };
 createStyles = { gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
 createStyles.container = createStyles;
@@ -74,7 +74,7 @@ export default function RestrictedMessagePreviewActions(channel) {
   const items7 = [user.id];
   const callback4 = noop.useCallback(() => {
     const obj = { userId: user.id, channelId: channel.id };
-    obj.openLazy(asyncRequireImpl(11477, dependencyMap.paths), closure_8, obj);
+    obj.openLazy(asyncRequireImpl(11516, dependencyMap.paths), closure_8, obj);
   }, items6);
   const items8 = [message, channel.id];
   const callback5 = noop.useCallback(() => {

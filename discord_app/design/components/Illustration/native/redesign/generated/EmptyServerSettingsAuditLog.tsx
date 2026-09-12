@@ -1,8 +1,8 @@
-// === Module 17640: EmptyServerSettingsAuditLog ===
+// === Module 17670: EmptyServerSettingsAuditLog ===
 
-// Module 17640 (EmptyServerSettingsAuditLog)
-import shared from "shared" /* 4458 */;
-import _mod8317 from "module_8317" /* 8317 */;
+// Module 17670 (EmptyServerSettingsAuditLog)
+import shared from "shared" /* 4488 */;
+import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getEmptyServerSettingsAuditLogSource = function getEmptyServerSettingsAuditLogSource(theme) {
   const obj = {
     dark() {
-      return require("module_17641");
+      return require("module_17671");
     },
     darker() {
-      return require("module_17642");
+      return require("module_17672");
     },
     light() {
-      return require("module_17643");
+      return require("module_17673");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,31 +28,31 @@ export const getEmptyServerSettingsAuditLogSource = function getEmptyServerSetti
 export const useEmptyServerSettingsAuditLogSource = function useEmptyServerSettingsAuditLogSource() {
   const obj = {
     dark() {
-      return require("module_17641");
+      return require("module_17671");
     },
     darker() {
-      return require("module_17642");
+      return require("module_17672");
     },
     light() {
-      return require("module_17643");
+      return require("module_17673");
     }
   };
-  return _mod8317.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const EmptyServerSettingsAuditLog = function EmptyServerSettingsAuditLog(arg0) {
   let obj = {
     dark() {
-      return require("module_17641");
+      return require("module_17671");
     },
     darker() {
-      return require("module_17642");
+      return require("module_17672");
     },
     light() {
-      return require("module_17643");
+      return require("module_17673");
     }
   };
   obj = {};
-  const illustrationSource = _mod8317.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

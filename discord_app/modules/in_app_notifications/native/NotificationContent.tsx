@@ -1,8 +1,8 @@
-// === Module 10260: NotificationContent ===
+// === Module 10299: NotificationContent ===
 
-// Module 10260 (NotificationContent)
+// Module 10299 (NotificationContent)
 import nativeDefault from "native" /* 576 */;
-import MessageNotificationHeader from "MessageNotificationHeader" /* 10261 */;
+import MessageNotificationHeader from "MessageNotificationHeader" /* 10300 */;
 import noop from "module_19" /* 19 */;
 
 const MessageNotificationHeaderDefault = MessageNotificationHeader;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { body: { flex: 1 }, iconContainer: null, contentContainer: null, headerContainer: null, labelContainer: null };
 createStyles = { marginRight: nativeDefault.space.PX_8 };
 createStyles.iconContainer = createStyles;

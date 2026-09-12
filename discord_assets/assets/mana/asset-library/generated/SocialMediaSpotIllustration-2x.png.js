@@ -1,6 +1,6 @@
-// === Module 6543: ? ===
+// === Module 6573: ? ===
 
-// Module 6543
+// Module 6573
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SocialMediaSpotIllustration-2x.png.js");

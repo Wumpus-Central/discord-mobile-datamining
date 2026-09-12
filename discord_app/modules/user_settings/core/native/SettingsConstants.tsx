@@ -1,6 +1,6 @@
-// === Module 8049: SettingsConstants ===
+// === Module 8079: SettingsConstants ===
 
-// Module 8049 (SettingsConstants)
+// Module 8079 (SettingsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/core/native/SettingsConstants.tsx");

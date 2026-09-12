@@ -1,27 +1,27 @@
-// === Module 13189: EditWishlistActionSheet ===
+// === Module 13226: EditWishlistActionSheet ===
 
-// Module 13189 (EditWishlistActionSheet)
+// Module 13226 (EditWishlistActionSheet)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4607 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8276 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8874 */;
-import WishlistVisibility2 from "WishlistVisibility" /* 13187 */;
+import timing from "timing" /* 4637 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8308 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8909 */;
+import WishlistVisibility2 from "WishlistVisibility" /* 13224 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
-import WishlistStore from "WishlistStore" /* 8868 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import WishlistStore from "WishlistStore" /* 8903 */;
 import UserStore from "UserStore" /* 1371 */;
-import UserProfileStore from "UserProfileStore" /* 7693 */;
+import UserProfileStore from "UserProfileStore" /* 7723 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const getWishlistProductLines = fn(8869).getWishlistProductLines;
-let closure_12 = fn(8268).TrackUserProfileWishlistActions;
-const ACTION_SHEET_MAX_WIDTH = fn(7224).ACTION_SHEET_MAX_WIDTH;
+const getWishlistProductLines = fn(8904).getWishlistProductLines;
+let closure_12 = fn(8300).TrackUserProfileWishlistActions;
+const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, loadingContainer: null, toggleRow: null, itemsContainer: null, itemWrapper: null, deleteButton: null };
 createStyles = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;
@@ -33,7 +33,7 @@ createStyles.itemWrapper = { position: "relative" };
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8, zIndex: 1 };
 createStyles.deleteButton = rect;
 let closure_16 = createStyles.createStyles(createStyles);
-const LinearTransition = fn(4343).LinearTransition;
+const LinearTransition = fn(4373).LinearTransition;
 let obj2 = { marginBottom: nativeDefault.space.PX_16 };
 const springifyResult = LinearTransition.springify();
 const massResult = LinearTransition.springify().mass(0.8);
@@ -53,7 +53,7 @@ function exitingAnimation() {
   return obj;
 }
 const dampingResult = LinearTransition.springify().mass(0.8).damping(100);
-exitingAnimation.__closure = { withTiming: fn(4607).withTiming };
+exitingAnimation.__closure = { withTiming: fn(4637).withTiming };
 exitingAnimation.__workletHash = 17293915965800;
 exitingAnimation.__initData = { code: "function exitingAnimation_EditWishlistActionSheetTsx1(_values){const{withTiming}=this.__closure;return{animations:{opacity:withTiming(0,{duration:150}),transform:[{scale:withTiming(0.8,{duration:150})}]},initialValues:{opacity:1,transform:[{scale:1}]}};}" };
 const size = fn(2);
@@ -77,10 +77,10 @@ export default function EditWishlistActionSheet(wishlistId) {
   if (analyticsLocations == null) {
     analyticsLocations = [];
   }
-  analyticsLocations = analyticsContext(7235)(analyticsLocations, tmp4(7255).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET).analyticsLocations;
+  analyticsLocations = analyticsContext(7265)(analyticsLocations, tmp4(7285).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET).analyticsLocations;
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  const tmp5 = analyticsContext(7235);
-  ({ cardWidth: c5, rowWidth } = analyticsContext(13186)(obj));
+  const tmp5 = analyticsContext(7265);
+  ({ cardWidth: c5, rowWidth } = analyticsContext(13223)(obj));
   if (null != rowWidth) {
     obj = { width: rowWidth };
     let tmp7 = obj;
@@ -91,7 +91,7 @@ export default function EditWishlistActionSheet(wishlistId) {
   tmp2Result = tmp2(504);
   const items2 = [value];
   const stateFromStores1 = tmp2Result.useStateFromStores(items2, () => WishlistStore.isFetching(wishlistId));
-  let tmp6 = analyticsContext(13186)(obj);
+  let tmp6 = analyticsContext(13223)(obj);
   const items3 = [closure_10, UserProfileStore];
   stateFromStores2 = wishlistId(504).useStateFromStores(items3, () => {
     const currentUser = UserStore.getCurrentUser();
@@ -169,8 +169,8 @@ export default function EditWishlistActionSheet(wishlistId) {
   obj6.subLabel = intl3.string(wishlistId(1114).t.dw58pE);
   obj6.value = value;
   obj6.onValueChange = callback;
-  obj5.children = closure_14(wishlistId(7273).TableSwitchRow, obj6);
-  obj4.children = closure_14(wishlistId(5738).TableRowGroup, obj5);
+  obj5.children = closure_14(wishlistId(7303).TableSwitchRow, obj6);
+  obj4.children = closure_14(wishlistId(5768).TableRowGroup, obj5);
   const items8 = [closure_14(stateFromStores, obj4), ];
   if (stateFromStores1) {
     if (null == stateFromStores) {
@@ -180,7 +180,7 @@ export default function EditWishlistActionSheet(wishlistId) {
     items8[1] = tmp16Result;
     obj3.children = items8;
     obj2.children = closure_15(tmp19, obj3);
-    obj1.children = closure_14(tmp2(6698).BottomSheetScrollView, obj2);
+    obj1.children = closure_14(tmp2(6728).BottomSheetScrollView, obj2);
     return closure_14(tmp4Result, obj1);
   }
   tmp16Result = null;
@@ -242,5 +242,5 @@ export default function EditWishlistActionSheet(wishlistId) {
     });
     tmp16Result = closure_14(tmp19, obj8);
   }
-  tmp4Result = analyticsContext(11246);
+  tmp4Result = analyticsContext(11285);
 };

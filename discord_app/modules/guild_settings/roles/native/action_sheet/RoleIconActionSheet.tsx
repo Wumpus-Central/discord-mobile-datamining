@@ -1,18 +1,18 @@
-// === Module 17711: RoleIconActionSheet ===
+// === Module 17741: RoleIconActionSheet ===
 
-// Module 17711 (RoleIconActionSheet)
+// Module 17741 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import TableRow from "TableRow" /* 5656 */;
-import TableRowGroup from "TableRowGroup" /* 5738 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7222 */;
-import ActionSheet from "ActionSheet" /* 7270 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17708 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import TableRow from "TableRow" /* 5686 */;
+import TableRowGroup from "TableRowGroup" /* 5768 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
+import ActionSheet from "ActionSheet" /* 7300 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17738 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17694 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17724 */;
 
 require = fn;
 const UPLOAD_SMALL_SIZE = fn(1074).UPLOAD_SMALL_SIZE;
@@ -145,7 +145,7 @@ export default function RoleIconActionSheet(arg0) {
   const intl5 = util.intl;
   obj2.label = intl5.string(util.t["/Ny2wZ"]);
   obj2.onPress = function handleSelectEmoji() {
-    guildId(11216);
+    guildId(11255);
     let obj = { guildId, pickerIntention: constants.COMMUNITY_CONTENT, onPressEmoji: null };
     guildId = asyncGeneratorStep(async (arg0) => {
       if (c8 === 2) {
@@ -180,25 +180,25 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(17708).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(17708);
+                  closure_0(17738).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(17738);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(17708);
+                const tmp22 = closure_0(17738);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                let obj1 = { value: closure_0(17712).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                let obj1 = { value: closure_0(17742).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj1;
               }
             }
           } else {
             if (1 === tmp7) {
               c6 = 0;
-              obj1 = closure_0(4304);
+              obj1 = closure_0(4334);
               const intl = closure_0(1114).intl;
               obj1.presentError(intl.string(closure_0(1114).t.R0RpRX));
             } else if (arg0 === 1) {

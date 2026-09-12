@@ -1,15 +1,15 @@
-// === Module 14989: ScheduleDowntimeScreen ===
+// === Module 15023: ScheduleDowntimeScreen ===
 
-// Module 14989 (ScheduleDowntimeScreen)
+// Module 15023 (ScheduleDowntimeScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Stack_Stack from "Stack/Stack" /* 5024 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10173 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Stack_Stack from "Stack/Stack" /* 5054 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10212 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -45,7 +45,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { flex: 1 }, scrollContent: null, section: null, sectionHeader: null, daysContainer: null, dayButton: null, dayButtonSelected: null, overlapWarningContent: null, footer: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
 createStyles.scrollContent = createStyles;
@@ -534,7 +534,7 @@ export default function ScheduleDowntimeScreen() {
     obj8.trailing = closure_11(tmp2(stringResult[14]).Text, obj9);
     obj8.onPress = function handleStartTimePress() {
       const intl = util.intl;
-      const f116572 = (first1) => {
+      const f116625 = (first1) => {
         closure_1_11(first1);
         const result = (closure_0(rule[19]).timeToMinutes(first1) + 540) % 1440;
         const time = { hours: Math.floor(result / 60), minutes: result % 60 };
@@ -542,7 +542,7 @@ export default function ScheduleDowntimeScreen() {
       };
       const obj = { title: intl.string(_modDef2396["8bLRt0"]), mode: "time", startDate: null, onSubmit: null };
       const stringResult = intl.string(_modDef2396["8bLRt0"]);
-      const tmp2 = asyncRequireImpl(9808, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(9847, dependencyMap.paths);
       obj.startDate = new Date(2025, 0, 1, first1.hours, first1.minutes, 0, 0);
       obj.onSubmit = function onSubmit(hours) {
         const time = { hours: hours.hours(), minutes: hours.minutes() };
@@ -564,7 +564,7 @@ export default function ScheduleDowntimeScreen() {
       closure_0 = closure_13;
       const obj = { title: intl.string(_modDef2396["+JkWJV"]), mode: "time", startDate: null, onSubmit: null };
       const stringResult = intl.string(_modDef2396["+JkWJV"]);
-      const tmp2 = asyncRequireImpl(9808, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(9847, dependencyMap.paths);
       obj.startDate = new Date(2025, 0, 1, first2.hours, first2.minutes, 0, 0);
       obj.onSubmit = function onSubmit(hours) {
         const time = { hours: hours.hours(), minutes: hours.minutes() };

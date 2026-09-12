@@ -1,6 +1,6 @@
-// === Module 5459: Constants ===
+// === Module 5489: Constants ===
 
-// Module 5459 (Constants)
+// Module 5489 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/connections/Constants.tsx");

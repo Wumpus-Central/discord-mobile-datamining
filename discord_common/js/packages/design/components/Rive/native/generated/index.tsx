@@ -1,6 +1,6 @@
-// === Module 4335: ? ===
+// === Module 4365: ? ===
 
-// Module 4335
+// Module 4365
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/index.tsx");

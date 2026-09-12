@@ -1,10 +1,10 @@
-// === Module 10070: MobileVoiceOverlayStore ===
+// === Module 10109: MobileVoiceOverlayStore ===
 
-// Module 10070 (MobileVoiceOverlayStore)
+// Module 10109 (MobileVoiceOverlayStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import size from "module_2" /* 2 */;

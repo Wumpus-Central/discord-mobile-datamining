@@ -1,6 +1,6 @@
-// === Module 8238: ? ===
+// === Module 8270: ? ===
 
-// Module 8238
+// Module 8270
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-cassette.png.js");

@@ -1,7 +1,7 @@
-// === Module 12366: VoicePanelConstants ===
+// === Module 12402: VoicePanelConstants ===
 
-// Module 12366 (VoicePanelConstants)
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+// Module 12402 (VoicePanelConstants)
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import size from "module_2" /* 2 */;
 
 let MODE_CHANGE_PHYSICS_CLAMPED = { DISMISSED: "dismissed", PIP: "pip", PANEL: "panel" };

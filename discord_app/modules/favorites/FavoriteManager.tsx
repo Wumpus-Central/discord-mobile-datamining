@@ -1,10 +1,10 @@
-// === Module 17583: FavoriteManager ===
+// === Module 17613: FavoriteManager ===
 
-// Module 17583 (FavoriteManager)
+// Module 17613 (FavoriteManager)
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10312 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10351 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
 function handleChannelDelete(channel) {
@@ -86,7 +86,7 @@ function handleThreadMemberUpdate(joinTimestamp) {
     result.catch(NOOP);
   }
 }
-const FavoritesGuildSuggestionsStore = fn(16273);
+const FavoritesGuildSuggestionsStore = fn(16297);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4 } = FavoritesGuildSuggestionsStore);
 const NOOP = fn(1074).NOOP;
 let prototype = function FavoriteManager() {

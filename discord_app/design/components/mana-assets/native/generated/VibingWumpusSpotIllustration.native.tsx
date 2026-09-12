@@ -1,9 +1,9 @@
-// === Module 6626: VibingWumpusSpotIllustration ===
+// === Module 6656: VibingWumpusSpotIllustration ===
 
-// Module 6626 (VibingWumpusSpotIllustration)
+// Module 6656 (VibingWumpusSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6627 from "module_6627" /* 6627 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6657 from "module_6657" /* 6657 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const VibingWumpusSpotIllustration = function VibingWumpusSpotIllustratio
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6627 };
+  obj = { uri: _modDef6657 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const VibingWumpusSpotIllustration = function VibingWumpusSpotIllustratio
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6627 });
+  return jsx(FastImageDefault, { uri: _modDef6657 });
 };

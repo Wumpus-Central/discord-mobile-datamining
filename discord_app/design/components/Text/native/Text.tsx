@@ -1,18 +1,18 @@
-// === Module 4602: Text/Text ===
+// === Module 4632: Text/Text ===
 
-// Module 4602 (Text/Text)
+// Module 4632 (Text/Text)
 import _modDef12 from "module_12" /* 12 */;
 import NativeText2 from "NativeText" /* 299 */;
 import nativeDefault from "native" /* 576 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
-import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 4604 */;
-import PlainTextExperimentContext from "PlainTextExperimentContext" /* 4611 */;
-import useTypographyVariantRemap from "useTypographyVariantRemap" /* 4612 */;
-import PlainTextEligibility from "PlainTextEligibility" /* 4615 */;
-import _modDef4616 from "module_4616" /* 4616 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 4634 */;
+import PlainTextExperimentContext from "PlainTextExperimentContext" /* 4641 */;
+import useTypographyVariantRemap from "useTypographyVariantRemap" /* 4642 */;
+import PlainTextEligibility from "PlainTextEligibility" /* 4645 */;
+import _modDef4646 from "module_4646" /* 4646 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 
 require = fn;
 let closure_3 = ["color", "fontSize", "fontFamily", "fontWeight", "fontStyle", "textAlign", "textAlignVertical", "verticalAlign", "textDecorationLine", "lineHeight", "letterSpacing"];
@@ -41,7 +41,7 @@ obj3[800] = Fonts.GINTO_NORD_EXTRA_BOLD_ITALIC;
 ({ GINTO_DISCORD_NORD_BOLD_ITALIC: obj8[700], GINTO_DISCORD_NORD_BLACK_ITALIC: obj8[900] } = Fonts);
 const dependencyMap = { headline: obj, nitro: obj1, primary: obj, code: { 400: null, 700: null } };
 let closure_14 = { headline: obj3, nitro: { 700: null, 900: null } };
-const TextVariantsFlat = fn(4603).TextVariantsFlat;
+const TextVariantsFlat = fn(4633).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((name) => {
   let tmp = null;
   if ("code" !== name.name) {
@@ -81,9 +81,9 @@ const mapped = TextVariantsFlat.map((name) => {
   return tmp;
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
-const useManaTextMigrationHighlight = fn(4604);
+const useManaTextMigrationHighlight = fn(4634);
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_16 = createStyles.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {
@@ -167,7 +167,7 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
     }
     obj.ellipsizeMode = ellipsizeMode;
     const merged1 = Object.assign(merged);
-    return jsx(_modDef4616, { text: children, color: color2, fontSize, fontFamily, fontWeight: null, fontStyle: null, textAlign: null, textAlignVertical: null, textDecorationLine: null, lineHeight: null, letterSpacing: null, hasLetterSpacing: null, style: null, numberOfLines: null, ellipsizeMode: null, allowFontScaling: true });
+    return jsx(_modDef4646, { text: children, color: color2, fontSize, fontFamily, fontWeight: null, fontStyle: null, textAlign: null, textAlignVertical: null, textDecorationLine: null, lineHeight: null, letterSpacing: null, hasLetterSpacing: null, style: null, numberOfLines: null, ellipsizeMode: null, allowFontScaling: true });
   } else {
     if (flag2) {
       let NativeText = NativeText2.NativeText;

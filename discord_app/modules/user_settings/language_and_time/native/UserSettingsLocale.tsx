@@ -1,10 +1,10 @@
-// === Module 15486: UserSettingsLocale ===
+// === Module 15508: UserSettingsLocale ===
 
-// Module 15486 (UserSettingsLocale)
+// Module 15508 (UserSettingsLocale)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import TableRadioRow from "TableRadioRow" /* 5739 */;
-import flags from "flags" /* 15487 */;
+import TableRadioRow from "TableRadioRow" /* 5769 */;
+import flags from "flags" /* 15509 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -76,7 +76,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const setAppLocale = fn(2026).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { content: null, flagImage: null };
 obj = { padding: nativeDefault.space.PX_16 };
 obj.content = obj;

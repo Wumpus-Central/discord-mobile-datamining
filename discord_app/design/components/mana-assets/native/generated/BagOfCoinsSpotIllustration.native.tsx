@@ -1,9 +1,9 @@
-// === Module 5858: BagOfCoinsSpotIllustration ===
+// === Module 5888: BagOfCoinsSpotIllustration ===
 
-// Module 5858 (BagOfCoinsSpotIllustration)
+// Module 5888 (BagOfCoinsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5859 from "module_5859" /* 5859 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5889 from "module_5889" /* 5889 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const BagOfCoinsSpotIllustration = function BagOfCoinsSpotIllustration(wi
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5859 };
+  obj = { uri: _modDef5889 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const BagOfCoinsSpotIllustration = function BagOfCoinsSpotIllustration(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5859 });
+  return jsx(FastImageDefault, { uri: _modDef5889 });
 };

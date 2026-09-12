@@ -1,9 +1,9 @@
-// === Module 11423: openChannelPicker ===
+// === Module 11462: openChannelPicker ===
 
-// Module 11423 (openChannelPicker)
+// Module 11462 (openChannelPicker)
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -36,5 +36,5 @@ export default function openChannelPicker(onClose) {
   obj.channels = found.map((channel) => channel.channel);
   obj.selectedChannel = selectedChannel;
   const merged1 = Object.assign(merged);
-  obj.openLazy(asyncRequireImpl(11424, dependencyMap.paths), "ChannelPicker", obj);
+  obj.openLazy(asyncRequireImpl(11463, dependencyMap.paths), "ChannelPicker", obj);
 };

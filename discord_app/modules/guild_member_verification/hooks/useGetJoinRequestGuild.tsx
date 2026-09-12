@@ -1,9 +1,9 @@
-// === Module 9301: useGetJoinRequestGuild ===
+// === Module 9340: useGetJoinRequestGuild ===
 
-// Module 9301 (useGetJoinRequestGuild)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5592 */;
+// Module 9340 (useGetJoinRequestGuild)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5622 */;
 import noop from "module_19" /* 19 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4429 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4459 */;
 
 const require = fn;
 const size = fn(2);

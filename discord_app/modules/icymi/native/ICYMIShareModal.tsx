@@ -1,27 +1,27 @@
-// === Module 16573: ICYMIShareModal ===
+// === Module 16597: ICYMIShareModal ===
 
-// Module 16573 (ICYMIShareModal)
+// Module 16597 (ICYMIShareModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import native from "native" /* 4317 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4425 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4460 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5176 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7054 */;
-import HeaderShared from "HeaderShared" /* 7936 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 7945 */;
-import ShareEventUtils from "ShareEventUtils" /* 9866 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 11785 */;
-import ShareChatInputDefault from "ShareChatInput" /* 11794 */;
-import _modDef16575 from "module_16575" /* 16575 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import native from "native" /* 4347 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4455 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4490 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5206 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
+import HeaderShared from "HeaderShared" /* 7966 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 7975 */;
+import ShareEventUtils from "ShareEventUtils" /* 9905 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 11821 */;
+import ShareChatInputDefault from "ShareChatInput" /* 11830 */;
+import _modDef16599 from "module_16599" /* 16599 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4946 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
 
 require = fn;
 function Screenshot(setUri) {
@@ -55,7 +55,7 @@ function Screenshot(setUri) {
   const tmp4 = useColorThemeBackgroundDefault();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = _modDef16575;
+  const tmp6 = _modDef16599;
   obj4.dark = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_7;
   obj4.light = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_8;
   obj3.mixAmount = obj4;
@@ -372,13 +372,13 @@ class ICYMIShareModal {
   }
 }
 const View = fn(17).View;
-const DraftType = fn(4947).DraftType;
+const DraftType = fn(4977).DraftType;
 const AbortCodes = fn(1074).AbortCodes;
-const UserRowModes = fn(10949).UserRowModes;
-const MessageSendLocation = fn(4599).MessageSendLocation;
+const UserRowModes = fn(10988).UserRowModes;
+const MessageSendLocation = fn(4629).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { headerLeftContainer: null, headerRightContainer: null, preview: null, base: null, contentContainer: null, footer: null };
 createStyles = { paddingLeft: nativeDefault.space.PX_16 };
 createStyles.headerLeftContainer = createStyles;
@@ -445,7 +445,7 @@ export const GameShareModal = function GameShareModal(content) {
             closure_1 = tmp7;
             closure_129_0 = undefined;
             c4 = 1;
-            let obj3 = entry(16574);
+            let obj3 = entry(16598);
             let obj1 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;

@@ -1,19 +1,19 @@
-// === Module 12263: AppLauncherAutocompleteOption ===
+// === Module 12299: AppLauncherAutocompleteOption ===
 
-// Module 12263 (AppLauncherAutocompleteOption)
+// Module 12299 (AppLauncherAutocompleteOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Pressables from "Pressables" /* 5174 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12262 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Pressables from "Pressables" /* 5204 */;
+import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12298 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { container: null, hasError: null, inputText: null };
 createStyles = { width: "100%", backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12, borderWidth: 2, borderColor: "transparent", flexDirection: "row", alignItems: "center" };
 createStyles.container = createStyles;
@@ -44,7 +44,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
       onDismissAutocompleteSheet,
       optionValues: ref.current
     };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12264, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12300, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", obj);
   }
   ({ style, autoFocus } = arg0);
   const tmp = _slicedToArray(noop.useState(() => {

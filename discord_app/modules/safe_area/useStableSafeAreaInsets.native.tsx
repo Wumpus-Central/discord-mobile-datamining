@@ -1,10 +1,10 @@
-// === Module 9736: useStableSafeAreaInsets ===
+// === Module 9775: useStableSafeAreaInsets ===
 
-// Module 9736 (useStableSafeAreaInsets)
+// Module 9775 (useStableSafeAreaInsets)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1611 */;
 import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1623 */;
-import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 9737 */;
+import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 9776 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -42,7 +42,7 @@ export default function useStableSafeAreaInsets() {
       const tmp4Result = appEntryKey(1611);
     }
     closure_1_1(stableSafeAreaInsets);
-    obj = appEntryKey(1115);
+    obj = appEntryKey(1150);
   }, appEntryKey), items);
   return tmp2[0];
 };

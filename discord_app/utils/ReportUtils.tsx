@@ -1,9 +1,9 @@
-// === Module 7362: ReportUtils ===
+// === Module 7392: ReportUtils ===
 
-// Module 7362 (ReportUtils)
+// Module 7392 (ReportUtils)
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4526 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const Constants = fn(1074);

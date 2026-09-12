@@ -1,9 +1,9 @@
-// === Module 16303: ChannelItemEmbeddedActivities ===
+// === Module 16327: ChannelItemEmbeddedActivities ===
 
-// Module 16303 (ChannelItemEmbeddedActivities)
+// Module 16327 (ChannelItemEmbeddedActivities)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import GameIcon from "GameIcon" /* 7245 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import GameIcon from "GameIcon" /* 7275 */;
 import noop from "module_19" /* 19 */;
 
 const GameIconDefault = GameIcon;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { overflow: { lineHeight: 16, textAlign: "center", textAlignVertical: "center", padding: 4 }, overflowContainer: null, container: null, modeMuted: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, display: "flex", alignItems: "center", justifyContent: "center" };
 createStyles.overflowContainer = createStyles;

@@ -1,13 +1,13 @@
-// === Module 12206: NoPermsState ===
+// === Module 12242: NoPermsState ===
 
-// Module 12206 (NoPermsState)
+// Module 12242 (NoPermsState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import shared from "shared" /* 4458 */;
-import useThemeDefault from "useTheme" /* 4541 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9500 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12144 */;
+import shared from "shared" /* 4488 */;
+import useThemeDefault from "useTheme" /* 4571 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9539 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12180 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, textContainer: null, image: null };
 createStyles = { paddingVertical: 16, paddingHorizontal: 24, gap: 12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "flex-start", display: "flex", flexDirection: "row" };
 createStyles.container = createStyles;
@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 export default function EmptyState() {
   const tmp = closure_7();
   let obj = shared;
-  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12207 : 12208);
+  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12243 : 12244);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, resizeMode: "contain", source: tmp4Result };

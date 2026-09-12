@@ -1,19 +1,19 @@
-// === Module 8742: InAppReportsMessagePreview ===
+// === Module 8774: InAppReportsMessagePreview ===
 
-// Module 8742 (InAppReportsMessagePreview)
+// Module 8774 (InAppReportsMessagePreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ColorUtils from "ColorUtils" /* 4456 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import RowGeneratorDefault from "RowGenerator" /* 8006 */;
-import ChatItemDefault from "ChatItem" /* 8743 */;
+import ColorUtils from "ColorUtils" /* 4486 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import RowGeneratorDefault from "RowGenerator" /* 8036 */;
+import ChatItemDefault from "ChatItem" /* 8775 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: null, title: null, chatItemContainer: null };
 createStyles = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createStyles.borderColor = createStyles;

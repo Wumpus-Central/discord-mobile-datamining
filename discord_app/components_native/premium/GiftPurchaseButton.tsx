@@ -1,10 +1,10 @@
-// === Module 13620: GiftPurchaseButton ===
+// === Module 13653: GiftPurchaseButton ===
 
-// Module 13620 (GiftPurchaseButton)
+// Module 13653 (GiftPurchaseButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 4270 */;
-import IAPStore from "IAPStore" /* 7310 */;
+import SubscriptionStore from "SubscriptionStore" /* 4300 */;
+import IAPStore from "IAPStore" /* 7340 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -55,12 +55,12 @@ export default function GiftPurchaseButton(style) {
     let obj1 = { planId, recipientUserId, productId: productIdForGift };
     yield createOrReuseGiftOrder(obj1);
     closure_128_0 = value;
-    const premiumTypeFromPlanId = planId(4264).getPremiumTypeFromPlanId(closure_129_0);
+    const premiumTypeFromPlanId = planId(4294).getPremiumTypeFromPlanId(closure_129_0);
     const premiumType = premiumTypeFromPlanId.premiumType;
     const planInterval = premiumTypeFromPlanId.planInterval;
-    planId(10750).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
+    planId(10789).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
     yield "HermesInternal";
-    obj1 = tmp3(4951);
+    obj1 = tmp3(4981);
     const obj3 = { title: null, body: null };
     const intl = planId(1114).intl;
     obj3.title = intl.string(planId(1114).t.R0RpRX);

@@ -1,9 +1,9 @@
-// === Module 12831: HubEmailConnectionPinVerify ===
+// === Module 12867: HubEmailConnectionPinVerify ===
 
-// Module 12831 (HubEmailConnectionPinVerify)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import _modDef9974 from "module_9974" /* 9974 */;
-import HubJoinManagerDefault from "HubJoinManager" /* 12832 */;
+// Module 12867 (HubEmailConnectionPinVerify)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import _modDef10013 from "module_10013" /* 10013 */;
+import HubJoinManagerDefault from "HubJoinManager" /* 12868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -11,14 +11,14 @@ import GuildStore from "GuildStore" /* 1979 */;
 
 const require = fn;
 function presentResendToast(content) {
-  const obj = { key: "HUB_EMAIL_RESET", content, icon: _modDef9974 };
+  const obj = { key: "HUB_EMAIL_RESET", content, icon: _modDef10013 };
   obj.open(obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles({ container: { alignItems: "center" }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center", marginBottom: 24 }, label: { textAlign: "center", marginBottom: 12 }, error: { alignSelf: "center", marginVertical: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionPinVerify.tsx");
@@ -57,7 +57,7 @@ export default function HubEmailConnectionPinVerify(email) {
       require("navigateToLastChannel")();
     });
     return () => {
-      closure_1_1(12832).terminate();
+      closure_1_1(12868).terminate();
     };
   }, items);
   let obj = require("module_12");
@@ -92,7 +92,7 @@ export default function HubEmailConnectionPinVerify(email) {
   }), 1000);
   [obj2, c3] = _slicedToArray(noop.useState(null), 2);
   obj = { style: tmp.container, children: null };
-  obj = { source: require("module_12833") };
+  obj = { source: require("module_12869") };
   const items1 = [closure_9(closure_7, obj), , , , , ];
   let obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = email(onClose[13]).intl;

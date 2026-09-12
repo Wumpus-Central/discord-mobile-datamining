@@ -1,10 +1,10 @@
-// === Module 17486: InteractionIframeModal ===
+// === Module 17516: InteractionIframeModal ===
 
-// Module 17486 (InteractionIframeModal)
+// Module 17516 (InteractionIframeModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 17487 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 17517 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1350).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { wrapper: null, header: null, headerCenterContainer: null, headerTitleContainer: null, closeButton: null, spacerView: null, botTag: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 createStyles.wrapper = createStyles;
@@ -71,7 +71,7 @@ export default function InteractionIframeModal(children) {
       referrerPolicy: "origin",
       isPipOrGridMode: false,
       webViewKey: "PX_16",
-      ignoreSilentHardwareSwitch: "jente"
+      ignoreSilentHardwareSwitch: "kj\u00F8nnsn\u00F8ytral"
     };
     ({ channel_id: obj2.channelId, guild_id: obj2.guildId } = queryParams);
     obj.activityUrl = iframeModalState.iframeUrl;

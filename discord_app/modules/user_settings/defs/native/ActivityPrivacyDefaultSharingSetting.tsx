@@ -1,23 +1,23 @@
-// === Module 15973: ActivityPrivacyDefaultSharingSetting ===
+// === Module 15997: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 15973 (ActivityPrivacyDefaultSharingSetting)
+// Module 15997 (ActivityPrivacyDefaultSharingSetting)
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14906 */;
-import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 15974 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14940 */;
+import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 15998 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(8049).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8079).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   usePredicate() {
     return ActivityPrivacyMatchingExperiment.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
   },
@@ -62,7 +62,7 @@ let SettingBuilders = {
         obj = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
         obj.settingName = activityRestrictionSettingName;
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15975, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15999, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
       }
     }
   }

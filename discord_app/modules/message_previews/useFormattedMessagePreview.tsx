@@ -1,16 +1,16 @@
-// === Module 10183: useFormattedMessagePreview ===
+// === Module 10222: useFormattedMessagePreview ===
 
-// Module 10183 (useFormattedMessagePreview)
+// Module 10222 (useFormattedMessagePreview)
 import _mod12 from "module_12" /* 12 */;
 import MessageTypes from "MessageTypes" /* 1089 */;
 import util from "util" /* 1114 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 4839 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7375 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 8055 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8060 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 8146 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 4869 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7405 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 8085 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8090 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 8176 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -385,7 +385,7 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
     }
     return user;
   });
-  tmpResult = tmp(4839);
+  tmpResult = tmp(4869);
   obj = { message, channel, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmpResult.useNullableUserAuthor(stateFromStores1, channel).nick, isBlocked, isIgnored, isCallActive: tmp4 };
   return formatMessagePreview(message, obj);
 };

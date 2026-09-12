@@ -1,14 +1,14 @@
-// === Module 16676: VibegrationsModelSettingsSheet ===
+// === Module 16701: VibegrationsModelSettingsSheet ===
 
-// Module 16676 (VibegrationsModelSettingsSheet)
-import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16677 */;
+// Module 16701 (VibegrationsModelSettingsSheet)
+import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16702 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16666 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16690 */;
 
 require = fn;
 let closure_3 = ["fast"];
-const sendModelSettings = fn(16666).sendModelSettings;
+const sendModelSettings = fn(16690).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

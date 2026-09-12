@@ -1,9 +1,9 @@
-// === Module 6442: PurchaseDiscountSpotIllustration ===
+// === Module 6472: PurchaseDiscountSpotIllustration ===
 
-// Module 6442 (PurchaseDiscountSpotIllustration)
+// Module 6472 (PurchaseDiscountSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6443 from "module_6443" /* 6443 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6473 from "module_6473" /* 6473 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PurchaseDiscountSpotIllustration = function PurchaseDiscountSpotIll
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6443 };
+  obj = { uri: _modDef6473 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const PurchaseDiscountSpotIllustration = function PurchaseDiscountSpotIll
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6443 });
+  return jsx(FastImageDefault, { uri: _modDef6473 });
 };

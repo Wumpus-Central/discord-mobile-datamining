@@ -1,18 +1,18 @@
-// === Module 15483: LanguageSetting ===
+// === Module 15505: LanguageSetting ===
 
-// Module 15483 (LanguageSetting)
+// Module 15505 (LanguageSetting)
 import util from "util" /* 1114 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 require = fn;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IHMsPn);
   },
   parent: null,
-  IconComponent: fn(15484).LanguageIcon,
+  IconComponent: fn(15506).LanguageIcon,
   useTrailing: function useLanguageSettingTrailing() {
     const items = [LocaleStore];
     _require = require("initialize").useStateFromStores(items, () => locale.locale);

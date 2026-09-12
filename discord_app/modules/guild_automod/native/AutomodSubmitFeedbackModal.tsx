@@ -1,15 +1,15 @@
-// === Module 11960: AutomodSubmitFeedbackModal ===
+// === Module 11996: AutomodSubmitFeedbackModal ===
 
-// Module 11960 (AutomodSubmitFeedbackModal)
+// Module 11996 (AutomodSubmitFeedbackModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import _modDef7065 from "module_7065" /* 7065 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
-import HeaderActionButton from "HeaderActionButton" /* 7450 */;
-import AutomodFeedback from "AutomodFeedback" /* 7591 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import _modDef7095 from "module_7095" /* 7095 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
+import HeaderActionButton from "HeaderActionButton" /* 7480 */;
+import AutomodFeedback from "AutomodFeedback" /* 7621 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ function Navbar(onClose) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj.onPress = onClose.onClose;
-  obj.source = _modDef7065;
+  obj.source = _modDef7095;
   obj.children = React5(HeaderActionButton.HeaderActionButton, obj);
   obj.children = React5(View, obj);
   return React5(common_SafeAreaView.SafeAreaPaddingView, obj);
@@ -100,7 +100,7 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
-fn(4606);
+fn(4636);
 let createStyles = { container: null, header: null, headerTitle: null, headerSubtitle: null, closeButtonContainer: null, formBody: null, formRow: null, radioIndicator: null, submitButtonContainer: null };
 createStyles = { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 };
 createStyles.container = createStyles;

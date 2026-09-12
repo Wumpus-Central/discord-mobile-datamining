@@ -1,7 +1,7 @@
-// === Module 17364: getTimeZone ===
+// === Module 17394: getTimeZone ===
 
-// Module 17364 (getTimeZone)
-import DeviceUtils from "DeviceUtils" /* 4585 */;
+// Module 17394 (getTimeZone)
+import DeviceUtils from "DeviceUtils" /* 4615 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/getTimeZone.native.tsx");

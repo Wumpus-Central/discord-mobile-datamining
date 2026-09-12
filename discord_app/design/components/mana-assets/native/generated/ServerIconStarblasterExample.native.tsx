@@ -1,9 +1,9 @@
-// === Module 6510: ServerIconStarblasterExample ===
+// === Module 6540: ServerIconStarblasterExample ===
 
-// Module 6510 (ServerIconStarblasterExample)
+// Module 6540 (ServerIconStarblasterExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6511 from "module_6511" /* 6511 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6541 from "module_6541" /* 6541 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerIconStarblasterExample = function ServerIconStarblasterExampl
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6511 };
+  obj = { uri: _modDef6541 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ServerIconStarblasterExample = function ServerIconStarblasterExampl
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6511 });
+  return jsx(FastImageDefault, { uri: _modDef6541 });
 };

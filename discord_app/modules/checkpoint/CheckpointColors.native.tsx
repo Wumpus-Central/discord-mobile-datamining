@@ -1,8 +1,8 @@
-// === Module 11789: CheckpointColors ===
+// === Module 11825: CheckpointColors ===
 
-// Module 11789 (CheckpointColors)
+// Module 11825 (CheckpointColors)
 import nativeDefault from "native" /* 576 */;
-import CheckpointConstants from "CheckpointConstants" /* 4832 */;
+import CheckpointConstants from "CheckpointConstants" /* 4862 */;
 import size from "module_2" /* 2 */;
 
 const CheckpointPersonas = CheckpointConstants.CheckpointPersonas;

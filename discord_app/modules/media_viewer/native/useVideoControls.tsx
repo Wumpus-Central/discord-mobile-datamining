@@ -1,18 +1,18 @@
-// === Module 8348: useVideoControls ===
+// === Module 8380: useVideoControls ===
 
-// Module 8348 (useVideoControls)
+// Module 8380 (useVideoControls)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8346 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8349 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8378 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let module_560 = fn(560);
-module_560 = module_560.create(() => ({ controls: "PX_16", paused: null }));
-const createStyles = fn(4606);
+module_560 = module_560.create(() => ({ controls: "PX_16", paused: true }));
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
@@ -70,7 +70,7 @@ export default function useVideoControls(index, portal, controls) {
 export const useVideoStateStore = module_560;
 export const initVideoStateStore = function initVideoStateStore() {
   ReactBatchUpdates.batchUpdates(() => {
-    state.setState({ controls: "PX_16", paused: null });
+    state.setState({ controls: "PX_16", paused: true });
   });
 };
 export const setMuted = function setMuted(isMuted) {

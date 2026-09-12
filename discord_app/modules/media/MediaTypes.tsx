@@ -1,11 +1,11 @@
-// === Module 4837: MediaTypes ===
+// === Module 4867: MediaTypes ===
 
-// Module 4837 (MediaTypes)
+// Module 4867 (MediaTypes)
 import Constants from "Constants" /* 1074 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import Server from "Server" /* 1894 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4756 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4786 */;
 import size from "module_2" /* 2 */;
 
 function messageAttachmentToUnfurledMediaItem(flags) {
@@ -42,7 +42,7 @@ obj = { IS_ANIMATED: 1, [1]: "IS_ANIMATED" };
 const result = size.fileFinishedImporting("modules/media/MediaTypes.tsx");
 
 export const ContentScanFlags = obj;
-export const ImageEncoder = { NATIVE: "native", JPEGLI: "jpegli", JPEG_IOS: "jpeg_ios", PASSTHROUGH: "passthrough" };
+export const ImageEncoder = { NATIVE: "native", JPEGLI: "jpegli", JPEG_IOS: "jpeg_ios", PASSTHROUGH: "passthrough", WIC: "wic", IMAGEIO: "imageio", SYSIMG_STUB: "sysimg_stub", SYSIMG_UNKNOWN: "sysimg_unknown" };
 export const toContentScanMetadata = function toContentScanMetadata(version) {
   return { version: version.version, flags: version.flags };
 };

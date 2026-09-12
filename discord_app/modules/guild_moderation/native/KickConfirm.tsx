@@ -1,8 +1,8 @@
-// === Module 11943: KickConfirm ===
+// === Module 11979: KickConfirm ===
 
-// Module 11943 (KickConfirm)
+// Module 11979 (KickConfirm)
 import nativeDefault from "native" /* 576 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5571 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { container: null, iconLabelBlock: null, iconStyles: null, redText: null, blurb: null, errorText: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.container = obj;
@@ -60,7 +60,7 @@ export default noop.memo(function KickConfirm(arg0) {
       obj = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj.contentContainerStyle = obj;
       obj1 = { style: tmp.iconLabelBlock, children: null };
-      obj2 = { style: tmp.iconStyles, source: require("module_11944"), resizeMode: "contain" };
+      obj2 = { style: tmp.iconStyles, source: require("module_11980"), resizeMode: "contain" };
       const items4 = [closure_10(ref, obj2), , ];
       const obj3 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = require("util").intl;

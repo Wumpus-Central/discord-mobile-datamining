@@ -1,16 +1,16 @@
-// === Module 16706: ChannelDetailsSearchBar ===
+// === Module 16733: ChannelDetailsSearchBar ===
 
-// Module 16706 (ChannelDetailsSearchBar)
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12454 */;
+// Module 16733 (ChannelDetailsSearchBar)
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12490 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12432 */;
+import SearchQueryStore from "SearchQueryStore" /* 12468 */;
 
 const require = fn;
-let closure_5 = fn(7950).setIsChannelDetailsSearchActive;
+let closure_5 = fn(7980).setIsChannelDetailsSearchActive;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { back: null };
-obj = { justifyContent: "center", height: fn(12463).SEARCH_BAR_HEIGHT, paddingStart: fn(11008).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
+obj = { justifyContent: "center", height: fn(12499).SEARCH_BAR_HEIGHT, paddingStart: fn(11047).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
 obj.back = obj;
 let closure_7 = createStyles.createStyles(obj);
 const size = fn(2);

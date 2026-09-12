@@ -1,26 +1,26 @@
-// === Module 14686: EditProfileFrameSection ===
+// === Module 14720: EditProfileFrameSection ===
 
-// Module 14686 (EditProfileFrameSection)
+// Module 14720 (EditProfileFrameSection)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8914 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13267 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13268 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 14685 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8949 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13300 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13301 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 14719 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isProfileFrameRecord = fn(7622).isProfileFrameRecord;
-let closure_6 = fn(8306).PROFILE_FRAME_ASPECT_RATIO;
+const isProfileFrameRecord = fn(7652).isProfileFrameRecord;
+let closure_6 = fn(8338).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-fn(4606);
+fn(4636);
 let obj = { row: null, rowSpacer: null, previewContainer: null };
-obj = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13267).GUTTER_SIZE };
+obj = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13300).GUTTER_SIZE };
 obj.row = obj;
-const createStyles = { height: fn(13267).GUTTER_SIZE };
+const createStyles = { height: fn(13300).GUTTER_SIZE };
 obj.rowSpacer = createStyles;
 obj.previewContainer = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj);

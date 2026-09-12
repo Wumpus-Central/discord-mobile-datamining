@@ -1,9 +1,9 @@
-// === Module 6524: ShieldSpotIllustration ===
+// === Module 6554: ShieldSpotIllustration ===
 
-// Module 6524 (ShieldSpotIllustration)
+// Module 6554 (ShieldSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6525 from "module_6525" /* 6525 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6555 from "module_6555" /* 6555 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ShieldSpotIllustration = function ShieldSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6525 };
+  obj = { uri: _modDef6555 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ShieldSpotIllustration = function ShieldSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6525 });
+  return jsx(FastImageDefault, { uri: _modDef6555 });
 };

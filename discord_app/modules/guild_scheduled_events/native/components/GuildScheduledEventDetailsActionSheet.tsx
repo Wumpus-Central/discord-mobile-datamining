@@ -1,13 +1,13 @@
-// === Module 9881: GuildScheduledEventDetailsActionSheet ===
+// === Module 9920: GuildScheduledEventDetailsActionSheet ===
 
-// Module 9881 (GuildScheduledEventDetailsActionSheet)
+// Module 9920 (GuildScheduledEventDetailsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9872 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9911 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7599 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
 
 require = fn;
 const View = fn(17).View;
@@ -15,7 +15,7 @@ const GuildScheduledEventsConstants = fn(1963);
 ({ EventDetailSections: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: closure_9 } = GuildScheduledEventsConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { segmentedControl: null, header: null };
 createStyles = { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12 };
 createStyles.segmentedControl = createStyles;

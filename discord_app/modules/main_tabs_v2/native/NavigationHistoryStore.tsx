@@ -1,11 +1,11 @@
-// === Module 7401: NavigationHistoryStore ===
+// === Module 7431: NavigationHistoryStore ===
 
-// Module 7401 (NavigationHistoryStore)
+// Module 7431 (NavigationHistoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
-import RootNavigationRef from "RootNavigationRef" /* 4465 */;
-import useChatLayout from "useChatLayout" /* 4467 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
+import RootNavigationRef from "RootNavigationRef" /* 4495 */;
+import useChatLayout from "useChatLayout" /* 4497 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;

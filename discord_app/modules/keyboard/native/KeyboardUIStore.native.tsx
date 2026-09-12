@@ -13,7 +13,7 @@ import useSafeAreaInsets from "useSafeAreaInsets" /* 1611 */;
 import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1623 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1625 */;
 import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1873 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import module_560 from "module_560" /* 560 */;
 import SafeAreaStore from "SafeAreaStore" /* 1612 */;
 import size from "module_2" /* 2 */;

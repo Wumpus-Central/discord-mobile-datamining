@@ -1,8 +1,8 @@
-// === Module 5662: TableRowIcon ===
+// === Module 5692: TableRowIcon ===
 
-// Module 5662 (TableRowIcon)
+// Module 5692 (TableRowIcon)
 import nativeDefault from "native" /* 576 */;
-import Icon from "Icon" /* 5028 */;
+import Icon from "Icon" /* 5058 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 let closure_3 = ["color"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { container: null, default: null, statusOnline: null, statusIdle: null, statusDND: null, statusOffline: null, xbox: null, playstation: null, danger: null, secondary: null, translucent: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg };
 createStyles.container = size;

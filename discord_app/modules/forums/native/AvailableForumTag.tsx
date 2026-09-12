@@ -1,19 +1,19 @@
-// === Module 11343: AvailableForumTag ===
+// === Module 11382: AvailableForumTag ===
 
-// Module 11343 (AvailableForumTag)
+// Module 11382 (AvailableForumTag)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import EmojiDefault from "Emoji" /* 7203 */;
-import native from "native" /* 8992 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import EmojiDefault from "Emoji" /* 7233 */;
+import native from "native" /* 9031 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5510 */;
+import EmojiStore from "EmojiStore" /* 5540 */;
 
 require = fn;
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { pill: null, pillSelected: null, pillDisabled: null, emoji: null, imageEmoji: null, textEmoji: null };
 createStyles = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 6, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden", height: 32 };
 createStyles.pill = createStyles;

@@ -1,11 +1,11 @@
-// === Module 13073: MediaViewer ===
+// === Module 13110: MediaViewer ===
 
-// Module 13073 (MediaViewer)
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4607 */;
-import useVideoControls from "useVideoControls" /* 8348 */;
-import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8379 */;
-import MediaViewerItem from "MediaViewerItem" /* 13075 */;
+// Module 13110 (MediaViewer)
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import timing from "timing" /* 4637 */;
+import useVideoControls from "useVideoControls" /* 8380 */;
+import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8411 */;
+import MediaViewerItem from "MediaViewerItem" /* 13112 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,15 +21,15 @@ function MediaViewer(arg0) {
   __initData = undefined;
   ({ onLongPress, originLayout, renderMedia, renderOverlay, swipeVelocityThreshold } = arg0);
   ({ useViewerProps, zoomed } = syncer);
-  value = [height(7255).MEDIA_VIEWER];
+  value = [height(7285).MEDIA_VIEWER];
   let tmp = height;
-  const tmp3 = height(7235);
+  const tmp3 = height(7265);
   [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
   const _require = tmp6;
   let obj = require("MediaViewerDimensionsContext");
   const mediaViewerDimensions = obj.useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(13079)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(13116)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj1 = require("ReanimatedRexport");
   sharedValue = obj1.useSharedValue(0);
@@ -215,7 +215,7 @@ function MediaViewer(arg0) {
   obj4 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
   const obj15 = require("DeviceOrientation");
   obj5 = { barStyle: "light-content", hidden: !tmp5 };
-  const items5 = [translatePos(height(9572), obj5), translatePos(height(4343).View, { style: animatedStyle }), translatePos(height(4344), { ref: animatedRef, style: animatedStyle2, children: translatePos(ref, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed }) }), , ];
+  const items5 = [translatePos(height(9611), obj5), translatePos(height(4373).View, { style: animatedStyle }), translatePos(height(4374), { ref: animatedRef, style: animatedStyle2, children: translatePos(ref, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed }) }), , ];
   const obj6 = { style: null, pointerEvents: null, children: null };
   const items6 = [sharedValue(sharedValue1.useState(obj), 1)[0], animatedStyle1];
   obj6.style = items6;
@@ -228,17 +228,17 @@ function MediaViewer(arg0) {
   }
   obj6.pointerEvents = str;
   obj6.children = renderOverlay(dismiss, overlayEnabled);
-  items5[3] = translatePos(height(4344), obj6);
-  items5[4] = translatePos(tmp(9574), {});
+  items5[3] = translatePos(height(4374), obj6);
+  items5[4] = translatePos(tmp(9613), {});
   obj4.children = items5;
   const children = tmp28(tmp29, obj4);
-  return translatePos(tmp7(7235).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
+  return translatePos(tmp7(7265).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let closure_9 = PlatformUtils.isAndroid();
 let closure_10 = { code: "function MediaViewerTsx1(){const{zoomed,pinching}=this.__closure;return!zoomed.get()&&!pinching.get();}" };
 let closure_11 = { code: "function MediaViewerTsx2(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}" };

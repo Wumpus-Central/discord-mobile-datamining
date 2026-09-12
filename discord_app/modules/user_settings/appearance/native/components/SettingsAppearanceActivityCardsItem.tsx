@@ -1,8 +1,8 @@
-// === Module 15355: SettingsAppearanceActivityCardsItem ===
+// === Module 15377: SettingsAppearanceActivityCardsItem ===
 
-// Module 15355 (SettingsAppearanceActivityCardsItem)
+// Module 15377 (SettingsAppearanceActivityCardsItem)
 import nativeDefault from "native" /* 576 */;
-import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem" /* 15356 */;
+import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem" /* 15378 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -23,5 +23,5 @@ export default function ActivityCardsItem(animatedStyles) {
   obj.keyExtractor = function keyExtractor(title) {
     return title.title;
   };
-  return jsx(animatedStyles(8964).FlashList, { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 });
+  return jsx(animatedStyles(9003).FlashList, { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 });
 };

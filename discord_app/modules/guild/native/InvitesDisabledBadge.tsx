@@ -1,15 +1,15 @@
-// === Module 16374: InvitesDisabledBadge ===
+// === Module 16398: InvitesDisabledBadge ===
 
-// Module 16374 (InvitesDisabledBadge)
+// Module 16398 (InvitesDisabledBadge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import _modDef12818 from "module_12818" /* 12818 */;
+import _modDef12854 from "module_12854" /* 12854 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { pause: { alignContent: "center", justifyContent: "center", width: 10, height: 10 }, pauseBackground: null, pauseRing: null };
 let size = { borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, padding: fn(1178).BADGE_PADDING, height: 16, width: 16, alignContent: "center", justifyContent: "center" };
 obj.pauseBackground = size;
@@ -25,8 +25,8 @@ export default noop.memo(function InvitesDisabledBadge(style) {
   const items = [tmp.pauseRing, style.style];
   obj.style = items;
   obj = { style: tmp.pauseBackground, children: null };
-  obj = { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12818 };
-  obj.children = jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12818 });
-  obj.children = <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12818} />;
-  return <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12818} />;
+  obj = { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12854 };
+  obj.children = jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12854 });
+  obj.children = <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12854} />;
+  return <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12854} />;
 });

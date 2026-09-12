@@ -1,9 +1,9 @@
-// === Module 6042: ExperimentalCustomUrlAbstractUI ===
+// === Module 6072: ExperimentalCustomUrlAbstractUI ===
 
-// Module 6042 (ExperimentalCustomUrlAbstractUI)
+// Module 6072 (ExperimentalCustomUrlAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6043 from "module_6043" /* 6043 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6073 from "module_6073" /* 6073 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ExperimentalCustomUrlAbstractUI = function ExperimentalCustomUrlAbs
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6043 };
+  obj = { uri: _modDef6073 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ExperimentalCustomUrlAbstractUI = function ExperimentalCustomUrlAbs
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6043 });
+  return jsx(FastImageDefault, { uri: _modDef6073 });
 };

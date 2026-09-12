@@ -1,6 +1,6 @@
-// === Module 12601: NewGamesCoachmarkExperiment ===
+// === Module 12637: NewGamesCoachmarkExperiment ===
 
-// Module 12601 (NewGamesCoachmarkExperiment)
+// Module 12637 (NewGamesCoachmarkExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

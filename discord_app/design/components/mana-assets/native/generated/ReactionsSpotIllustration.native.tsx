@@ -1,9 +1,9 @@
-// === Module 6452: ReactionsSpotIllustration ===
+// === Module 6482: ReactionsSpotIllustration ===
 
-// Module 6452 (ReactionsSpotIllustration)
+// Module 6482 (ReactionsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6453 from "module_6453" /* 6453 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6483 from "module_6483" /* 6483 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ReactionsSpotIllustration = function ReactionsSpotIllustration(widt
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6453 };
+  obj = { uri: _modDef6483 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ReactionsSpotIllustration = function ReactionsSpotIllustration(widt
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6453 });
+  return jsx(FastImageDefault, { uri: _modDef6483 });
 };

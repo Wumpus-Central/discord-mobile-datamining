@@ -1,11 +1,11 @@
-// === Module 16937: IconLabelBlock ===
+// === Module 16964: IconLabelBlock ===
 
-// Module 16937 (IconLabelBlock)
+// Module 16964 (IconLabelBlock)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import shared from "shared" /* 4458 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import IconUploaderDefault from "IconUploader" /* 11020 */;
+import shared from "shared" /* 4488 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import IconUploaderDefault from "IconUploader" /* 11059 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 }, error: null, label: null, iconUploaderWrapper: null, text: null };
 createStyles = { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: nativeDefault.unsafe_rawColors.RED_400 };
 createStyles.error = createStyles;
@@ -94,7 +94,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return React6(hasOwnProperty, obj);
 };
-IconLabelBlock.contextType = fn(4317).ThemeContext;
+IconLabelBlock.contextType = fn(4347).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 

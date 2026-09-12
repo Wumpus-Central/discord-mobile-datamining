@@ -1,6 +1,6 @@
-// === Module 8723: ReportMenuType ===
+// === Module 8755: ReportMenuType ===
 
-// Module 8723 (ReportMenuType)
+// Module 8755 (ReportMenuType)
 import size from "module_2" /* 2 */;
 
 const obj = { IN_APP: new Set(["application", "first_dm", "guild", "guild_directory_entry", "guild_discovery", "guild_scheduled_event", "message", "report_to_mod_message", "stage_channel", "user", "widget"]), REPORT_TO_MOD: null, UNAUTHENTICATED: null, CONSOLE: null };

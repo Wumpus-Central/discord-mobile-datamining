@@ -1,6 +1,6 @@
-// === Module 16858: UsernameSearchScreen ===
+// === Module 16885: UsernameSearchScreen ===
 
-// Module 16858 (UsernameSearchScreen)
+// Module 16885 (UsernameSearchScreen)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { background: null, content: null, iosPaddingThemeAdjust: null, container: null, inputContainer: null, headerText: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createStyles.background = createStyles;
@@ -36,14 +36,14 @@ export default function UsernameSearchScreen(navigation) {
     const obj = { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL };
     obj.track(constants.FRIEND_ADD_VIEWED, obj);
   }, []);
-  const insets = ref(7054)().insets;
+  const insets = ref(7084)().insets;
   ref = noop.useRef(null);
   const items = [navigation];
   const effect1 = noop.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     let closing = data.data.closing;
     if (!closing) {
-      closing = navigation(5013).getIsScreenReaderEnabled();
-      const obj = navigation(5013);
+      closing = navigation(5043).getIsScreenReaderEnabled();
+      const obj = navigation(5043);
     }
     if (!closing) {
       const current = ref.current;
@@ -52,9 +52,9 @@ export default function UsernameSearchScreen(navigation) {
       }
     }
   }), items);
-  let obj = navigation(7945);
+  let obj = navigation(7975);
   const clientThemesOverride = obj.useClientThemesOverride();
-  let obj1 = navigation(1115);
+  let obj1 = navigation(1150);
   let prop = null;
   if (obj1.isIOS()) {
     prop = null;
@@ -69,13 +69,13 @@ export default function UsernameSearchScreen(navigation) {
   obj = { style: null, children: null };
   const items1 = [tmp.content, clientThemesOverride];
   obj.style = items1;
-  tmp3(5629);
-  const items2 = [closure_8(ref(5176), { absolute: true }), ];
+  tmp3(5659);
+  const items2 = [closure_8(ref(5206), { absolute: true }), ];
   obj1 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items3 = [tmp.container, prop, { paddingBottom: insets.bottom + ref(576).space.PX_16 }];
   obj1.contentContainerStyle = items3;
   const obj3 = { style: tmp.inputContainer, autoFocusInput: false, headerText: null, headerTextStyle: null, ref: null };
-  const tmp3Result = tmp3(13909);
+  const tmp3Result = tmp3(13943);
   const intl = tmp7(1114).intl;
   obj3.headerText = intl.string(navigation(1114).t.YEOwDM);
   obj3.headerTextStyle = tmp.headerText;

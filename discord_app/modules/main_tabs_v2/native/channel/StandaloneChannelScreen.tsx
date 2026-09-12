@@ -1,11 +1,11 @@
-// === Module 16603: StandaloneChannelScreen ===
+// === Module 16627: StandaloneChannelScreen ===
 
-// Module 16603 (StandaloneChannelScreen)
+// Module 16627 (StandaloneChannelScreen)
 import nativeDefault from "native" /* 576 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7938 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7968 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 7949 */;
+import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 7979 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
@@ -137,14 +137,14 @@ function Header(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const MainTabsV2Constants = fn(7937);
+const MainTabsV2Constants = fn(7967);
 ({ ONYX_BORDER_WIDTH, MIN_HEADER_HEIGHT: closure_7 } = MainTabsV2Constants);
 const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, ME: closure_9, ThemeTypes: c10 } = Constants);
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { container: { flex: 1 }, onyxContainerBorder: null, contentContainer: null, containerEmpty: null, headerWrapper: null, headerBottomBorder: null, headerWithFadingFrame: null, splitDivider: null, splitDividerTop: null, actions: null, spacer: null };
 obj = { borderLeftWidth: ONYX_BORDER_WIDTH, borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopWidth: ONYX_BORDER_WIDTH, borderTopColor: "transparent" };
 obj.onyxContainerBorder = obj;
@@ -185,18 +185,18 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
   dependencyMap = tmp;
   let obj = channelId(1484);
   noop = obj.useNavigation();
-  let obj1 = channelId(11560);
+  let obj1 = channelId(11599);
   const isSwipeToMemberListEnabled = obj1.useIsSwipeToMemberListEnabled();
-  const needSubscriptionToAccess = frame(5058)(channelId).needSubscriptionToAccess;
-  let obj2 = channelId(7295);
+  const needSubscriptionToAccess = frame(5088)(channelId).needSubscriptionToAccess;
+  let obj2 = channelId(7325);
   let tmp6 = guildId;
   if (guildId == null) {
     tmp6 = closure_8;
   }
   const canSeeOnboardingHome = obj2.useCanSeeOnboardingHome(tmp6);
-  const tmp9 = frame(4541)() === constants.ONYX;
+  const tmp9 = frame(4571)() === constants.ONYX;
   closure_4 = tmp9;
-  const tmp10 = frame(4467)();
+  const tmp10 = frame(4497)();
   isChatBesideChannelList = tmp10.isChatBesideChannelList;
   const isChatLockedOpen = tmp10.isChatLockedOpen;
   let items = [frame, tmp9, isChatBesideChannelList, , ];
@@ -225,7 +225,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
     items[1] = splitDivider;
     return items;
   }, items1);
-  let tmp2Result = channelId(13373);
+  let tmp2Result = channelId(13406);
   let tmp14 = !isChatLockedOpen;
   const isForumChannelSearchActive = tmp2Result.useIsForumChannelSearchActive(channelId);
   if (isChatLockedOpen) {
@@ -246,7 +246,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
     return channel;
   }, items3);
   const ref = noop.useRef(null);
-  const isVibegrationsChannelCandidate = channelId(7317).useIsVibegrationsChannelCandidate(stateFromStores, "StandaloneChannelScreen");
+  const isVibegrationsChannelCandidate = channelId(7347).useIsVibegrationsChannelCandidate(stateFromStores, "StandaloneChannelScreen");
   channelId(504);
   [][0] = channelId;
   if (null != channelId) {
@@ -261,7 +261,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
             let tmp32Result = null;
             if (canSeeOnboardingHome) {
               obj2 = { guildId };
-              tmp32Result = closure_12(frame(16627), obj2);
+              tmp32Result = closure_12(frame(16651), obj2);
             }
             obj1.children = tmp32Result;
             items4[1] = closure_12(closure_4, obj1);
@@ -269,10 +269,10 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
             return closure_13(closure_4, obj);
           } else if (channelId === StaticChannelRoute.MEMBER_SAFETY) {
             const obj3 = { guildId };
-            return closure_12(frame(16645), obj3);
+            return closure_12(frame(16669), obj3);
           } else if (channelId === StaticChannelRoute.VIBEGRATIONS) {
             const obj4 = { guildId };
-            return closure_12(frame(16662), obj4);
+            return closure_12(frame(16686), obj4);
           } else {
             if (isVibegrationsChannelCandidate) {
               if (!tmp18) {
@@ -282,7 +282,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
                   const items5 = [closure_12(Header, obj6), ];
                   const obj7 = { style: memo1, children: null };
                   const obj8 = { channel: stateFromStores };
-                  obj7.children = closure_12(frame(16691), obj8);
+                  obj7.children = closure_12(frame(16716), obj8);
                   items5[1] = closure_12(closure_4, obj7);
                   obj5.children = items5;
                   return closure_13(closure_4, obj5);
@@ -294,7 +294,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
               const obj10 = { channelId, frame, guildId, isNavigationScreen, screenIndex, showCreateThread, isBackEnabled: tmp14, measureNavigationTTI: false };
               const items6 = [closure_12(Header, obj10), ];
               const obj11 = { channelId, screenIndex };
-              items6[1] = closure_12(channelId(16697).CreateThreadView, obj11);
+              items6[1] = closure_12(channelId(16724).CreateThreadView, obj11);
               obj9.children = items6;
               return closure_13(closure_4, obj9);
             } else {
@@ -303,17 +303,17 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
               const items7 = [closure_12(Header, obj13), ];
               const obj14 = { spanComponent: "chat_container", tracking: "include", style: memo1, children: null };
               const obj15 = { guildId, channelId, chatInputRef: ref, screenIndex };
-              obj14.children = closure_12(frame(11434), obj15);
-              items7[1] = closure_12(channelId(16604).NavTTIView, obj14);
+              obj14.children = closure_12(frame(11473), obj15);
+              items7[1] = closure_12(channelId(16628).NavTTIView, obj14);
               obj12.children = items7;
               const tmp19Result = closure_13(closure_14, obj12);
               if (isSwipeToMemberListEnabled) {
                 const obj16 = { style: memo, channelId, screenIndex, isBackEnabled: tmp14, children: tmp19Result };
-                let tmp21Result = closure_12(frame(16701), obj16);
+                let tmp21Result = closure_12(frame(16728), obj16);
               } else {
                 const obj17 = {
                   navigationKey: channelId,
-                  definition: channelId(16703).CHANNEL_NAVIGATION_TTI,
+                  definition: channelId(16730).CHANNEL_NAVIGATION_TTI,
                   accessible: false,
                   onAccessibilityEscape() {
                                   if (closure_6) {
@@ -323,7 +323,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
                   style: memo,
                   children: tmp19Result
                 };
-                tmp21Result = closure_12(channelId(16702).NavTTISurfaceProvider, obj17);
+                tmp21Result = closure_12(channelId(16729).NavTTISurfaceProvider, obj17);
               }
               return tmp21Result;
             }
@@ -334,14 +334,14 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
       const obj19 = { channelId, frame, guildId, isNavigationScreen, screenIndex, showCreateThread, isBackEnabled: tmp14, measureNavigationTTI: false };
       const items8 = [closure_12(Header, obj19), ];
       const obj20 = { style: memo1, children: null };
-      const items9 = [closure_12(frame(5176), { absolute: true }), ];
+      const items9 = [closure_12(frame(5206), { absolute: true }), ];
       const obj21 = { guildId, gatedChannelId: null };
       let tmp40;
       if (needSubscriptionToAccess) {
         tmp40 = channelId;
       }
       obj21.gatedChannelId = tmp40;
-      items9[1] = closure_12(frame(16610), obj21);
+      items9[1] = closure_12(frame(16634), obj21);
       obj20.children = items9;
       items8[1] = closure_13(closure_4, obj20);
       obj18.children = items8;

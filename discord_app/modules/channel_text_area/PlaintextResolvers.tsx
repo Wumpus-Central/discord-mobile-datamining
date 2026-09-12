@@ -1,21 +1,21 @@
-// === Module 9506: PlaintextResolvers ===
+// === Module 9545: PlaintextResolvers ===
 
-// Module 9506 (PlaintextResolvers)
+// Module 9545 (PlaintextResolvers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4259 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4263 */;
-import useChannelName from "useChannelName" /* 4759 */;
-import SlateUtils from "SlateUtils" /* 7758 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4293 */;
+import useChannelName from "useChannelName" /* 4789 */;
+import SlateUtils from "SlateUtils" /* 7788 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 5510 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5557 */;
+import EmojiStore from "EmojiStore" /* 5540 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5587 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

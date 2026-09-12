@@ -1,13 +1,13 @@
-// === Module 12865: useCreateGameInvitePost ===
+// === Module 12901: useCreateGameInvitePost ===
 
-// Module 12865 (useCreateGameInvitePost)
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7345 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11854 */;
+// Module 12901 (useCreateGameInvitePost)
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7375 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11890 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 11551 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5330 */;
+import LocalActivityStore from "LocalActivityStore" /* 11590 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 
 require = fn;
 const ActivityActionTypes = fn(1074).ActivityActionTypes;

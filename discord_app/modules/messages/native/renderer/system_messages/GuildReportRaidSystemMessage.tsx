@@ -1,15 +1,15 @@
-// === Module 8114: GuildReportRaidSystemMessage ===
+// === Module 8144: GuildReportRaidSystemMessage ===
 
-// Module 8114 (GuildReportRaidSystemMessage)
+// Module 8144 (GuildReportRaidSystemMessage)
 import util from "util" /* 1114 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8027 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8034 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8036 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8038 */;
-import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8107 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8108 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8057 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8064 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8066 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8068 */;
+import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8137 */;
+import getTagPropertiesDefault from "getTagProperties" /* 8138 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 

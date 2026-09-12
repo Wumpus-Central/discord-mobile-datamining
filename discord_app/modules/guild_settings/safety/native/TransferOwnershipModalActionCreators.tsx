@@ -1,9 +1,9 @@
-// === Module 11938: TransferOwnershipModalActionCreators ===
+// === Module 11974: TransferOwnershipModalActionCreators ===
 
-// Module 11938 (TransferOwnershipModalActionCreators)
+// Module 11974 (TransferOwnershipModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import size from "module_2" /* 2 */;
 
 const TRANSFER_OWNERSHIP_MODAL_KEY = "TRANSFER_OWNERSHIP_MODAL_KEY";
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/safety/native/
 export default {
   open(guild, toUser) {
     const obj = { guild, toUser };
-    obj.pushLazy(asyncRequireImpl(11939, dependencyMap.paths), obj, TRANSFER_OWNERSHIP_MODAL_KEY);
+    obj.pushLazy(asyncRequireImpl(11975, dependencyMap.paths), obj, TRANSFER_OWNERSHIP_MODAL_KEY);
   },
   close() {
     DispatcherDefault.wait(() => {

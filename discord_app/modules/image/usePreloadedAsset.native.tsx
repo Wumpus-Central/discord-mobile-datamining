@@ -1,9 +1,9 @@
-// === Module 17039: usePreloadedAsset ===
+// === Module 17066: usePreloadedAsset ===
 
-// Module 17039 (usePreloadedAsset)
+// Module 17066 (usePreloadedAsset)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 const require = fn;
 const size = fn(2);
@@ -33,7 +33,7 @@ export default function usePreloadedAsset(arg0) {
   dependencyMap = tmp3;
   let tmp4 = !tmp3;
   if (tmp3) {
-    tmp4 = null != num(17040);
+    tmp4 = null != num(17067);
   }
   _slicedToArray = tmp4;
   let str = "image";
@@ -73,9 +73,9 @@ export default function usePreloadedAsset(arg0) {
           }
         }, timeout);
         if (dependencyMap) {
-          if (null != num(17040)) {
-            let preloadResult = num(17040).preload(tmp);
-            const obj2 = num(17040);
+          if (null != num(17067)) {
+            let preloadResult = num(17067).preload(tmp);
+            const obj2 = num(17067);
           }
           preloadResult.then(() => {
             if (!c0) {
@@ -95,8 +95,8 @@ export default function usePreloadedAsset(arg0) {
             clearTimeout(closure_1);
           };
         }
-        preloadResult = num(5638).preload(tmp, timeout + 1000);
-        let obj = num(5638);
+        preloadResult = num(5668).preload(tmp, timeout + 1000);
+        let obj = num(5668);
       }
     }
   }, items1);

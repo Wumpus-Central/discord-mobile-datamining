@@ -1,10 +1,10 @@
-// === Module 11096: PileOverflow ===
+// === Module 11135: PileOverflow ===
 
-// Module 11096 (PileOverflow)
+// Module 11135 (PileOverflow)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import NumberUtils from "NumberUtils" /* 1880 */;
-import Text_Text from "Text/Text" /* 4602 */;
+import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null };
 createStyles = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, flexShrink: 0 };
 createStyles.container = createStyles;

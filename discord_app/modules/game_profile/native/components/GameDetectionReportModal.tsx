@@ -1,11 +1,11 @@
-// === Module 8988: GameDetectionReportModal ===
+// === Module 9027: GameDetectionReportModal ===
 
-// Module 8988 (GameDetectionReportModal)
+// Module 9027 (GameDetectionReportModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import NavigatorHeader from "NavigatorHeader" /* 5675 */;
-import Navigator from "Navigator" /* 7073 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8777 */;
+import NavigatorHeader from "NavigatorHeader" /* 5705 */;
+import Navigator from "Navigator" /* 7103 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8809 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -229,7 +229,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "game-detection-report";
-fn(4606);
+fn(4636);
 let createStyles = { container: null, content: null, submitContainer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;

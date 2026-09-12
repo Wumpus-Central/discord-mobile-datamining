@@ -1,6 +1,6 @@
-// === Module 4738: RobloxSubgamePlatformUtils ===
+// === Module 4768: RobloxSubgamePlatformUtils ===
 
-// Module 4738 (RobloxSubgamePlatformUtils)
+// Module 4768 (RobloxSubgamePlatformUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -35,7 +35,7 @@ export default {
               obj = { value, done: true };
               return obj;
             } else {
-              let obj2 = tmp4(4739);
+              let obj2 = tmp4(4769);
               dependencyMap = 1;
               c2 = 1;
               const obj1 = { value: obj2.canOpenUrlScheme("roblox"), done: false };
@@ -49,7 +49,7 @@ export default {
             obj2 = { value, done: true };
             return obj2;
           } else {
-            obj = tmp4(4737);
+            obj = tmp4(4767);
             if (value) {
               obj.ROBLOX_PROTOCOL_URL(closure_128_0);
             } else {

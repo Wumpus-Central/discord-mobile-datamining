@@ -1,6 +1,6 @@
-// === Module 7589: AutomodNotificationEmbedKeys ===
+// === Module 7619: AutomodNotificationEmbedKeys ===
 
-// Module 7589 (AutomodNotificationEmbedKeys)
+// Module 7619 (AutomodNotificationEmbedKeys)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodNotificationEmbedKeys.tsx");

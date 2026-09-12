@@ -1,16 +1,16 @@
-// === Module 17290: VoicePanelControlsDrawer ===
+// === Module 17317: VoicePanelControlsDrawer ===
 
-// Module 17290 (VoicePanelControlsDrawer)
+// Module 17317 (VoicePanelControlsDrawer)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import Suspender from "Suspender" /* 4981 */;
-import spring from "spring" /* 5025 */;
-import useRefValueDefault from "useRefValue" /* 5637 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9586 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 12363 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12372 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17291 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17302 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import Suspender from "Suspender" /* 5011 */;
+import spring from "spring" /* 5055 */;
+import useRefValueDefault from "useRefValue" /* 5667 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9625 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 12399 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12408 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17318 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17329 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,11 +23,11 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12366);
+const VoicePanelConstants = fn(12402);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { drawer: null };
 obj = { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.drawer = obj;

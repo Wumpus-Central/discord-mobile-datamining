@@ -1,22 +1,22 @@
-// === Module 16820: FavoritesEmptyState ===
+// === Module 16847: FavoritesEmptyState ===
 
-// Module 16820 (FavoritesEmptyState)
+// Module 16847 (FavoritesEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Stack_Stack from "Stack/Stack" /* 5024 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import native from "native" /* 5743 */;
-import FavoritesHooks from "FavoritesHooks" /* 10313 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 12846 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Stack_Stack from "Stack/Stack" /* 5054 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import native from "native" /* 5773 */;
+import FavoritesHooks from "FavoritesHooks" /* 10352 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 12882 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, text: null };
 createStyles = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_48 };
 createStyles.container = createStyles;

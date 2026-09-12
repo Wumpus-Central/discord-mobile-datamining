@@ -1,8 +1,8 @@
-// === Module 8759: ContextMenuConstants ===
+// === Module 8791: ContextMenuConstants ===
 
-// Module 8759 (ContextMenuConstants)
-import HapticUtils from "HapticUtils" /* 4574 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+// Module 8791 (ContextMenuConstants)
+import HapticUtils from "HapticUtils" /* 4604 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import size from "module_2" /* 2 */;
 
 PlatformUtils = PlatformUtils.isIOS();

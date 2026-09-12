@@ -1,6 +1,6 @@
-// === Module 7305: SKUPricesStore ===
+// === Module 7335: SKUPricesStore ===
 
-// Module 7305 (SKUPricesStore)
+// Module 7335 (SKUPricesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;

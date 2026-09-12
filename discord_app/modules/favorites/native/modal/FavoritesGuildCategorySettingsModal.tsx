@@ -1,11 +1,11 @@
-// === Module 16183: FavoritesGuildCategorySettingsModal ===
+// === Module 16207: FavoritesGuildCategorySettingsModal ===
 
-// Module 16183 (FavoritesGuildCategorySettingsModal)
+// Module 16207 (FavoritesGuildCategorySettingsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4950 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10312 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10351 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
@@ -123,7 +123,7 @@ const ScrollView = fn(17).ScrollView;
 let maxLength = fn(1970).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, content: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -135,12 +135,12 @@ let result = size.fileFinishedImporting("modules/favorites/native/modal/Favorite
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(11014)().onGoBack;
+  onGoBack = onGoBack(11053)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1114).intl;
   obj.title = intl.string(categoryId(1114).t["/uELTj"]);
   obj.render = function render() {
     return React6(FavoritesGuildCategorySettings, { categoryId, onGoBack });
   };
-  return closure_8(onGoBack(11016), obj);
+  return closure_8(onGoBack(11055), obj);
 };

@@ -1,11 +1,11 @@
-// === Module 5597: useCanReapplyToRejectedMemberVerificationApplication ===
+// === Module 5627: useCanReapplyToRejectedMemberVerificationApplication ===
 
-// Module 5597 (useCanReapplyToRejectedMemberVerificationApplication)
+// Module 5627 (useCanReapplyToRejectedMemberVerificationApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 4590 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4429 */;
+import InviteStore from "InviteStore" /* 4620 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4459 */;
 
 const require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;

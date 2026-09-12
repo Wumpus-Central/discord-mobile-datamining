@@ -1,13 +1,13 @@
-// === Module 16318: CreatorMonetizationOnboardingV2UpsellActionSheet ===
+// === Module 16342: CreatorMonetizationOnboardingV2UpsellActionSheet ===
 
-// Module 16318 (CreatorMonetizationOnboardingV2UpsellActionSheet)
+// Module 16342 (CreatorMonetizationOnboardingV2UpsellActionSheet)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9153 */;
-import _modDef16319 from "module_16319" /* 16319 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
+import _modDef16343 from "module_16343" /* 16343 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const GuildSettingsSections = fn(1074).GuildSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles({ container: { paddingLeft: 24, paddingRight: 24, paddingTop: 24 }, title: { marginBottom: 6 }, description: { marginBottom: 24 }, image: { marginBottom: 24, width: "100%" }, dismissButton: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/CreatorMonetizationOnboardingV2UpsellActionSheet.tsx");
@@ -40,7 +40,7 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   const intl2 = util.intl;
   obj1.children = intl2.string(util.t.kUUFbG);
   items[1] = closure_6(Text_Text.Text, obj1);
-  const obj2 = { style: tmp.image, resizeMode: "contain", source: _modDef16319 };
+  const obj2 = { style: tmp.image, resizeMode: "contain", source: _modDef16343 };
   items[2] = closure_6(FastImageDefault, obj2);
   const obj3 = {
     onPress() {

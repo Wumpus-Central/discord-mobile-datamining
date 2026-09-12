@@ -1,6 +1,6 @@
-// === Module 12488: ApplicationCommandsCategoriesConstants ===
+// === Module 12524: ApplicationCommandsCategoriesConstants ===
 
-// Module 12488 (ApplicationCommandsCategoriesConstants)
+// Module 12524 (ApplicationCommandsCategoriesConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategoriesConstants.tsx");

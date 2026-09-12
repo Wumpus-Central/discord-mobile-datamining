@@ -1,6 +1,6 @@
-// === Module 6379: ? ===
+// === Module 6409: ? ===
 
-// Module 6379
+// Module 6409
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWordmarkLogo-2x.png.js");

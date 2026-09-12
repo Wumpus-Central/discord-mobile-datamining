@@ -1,7 +1,7 @@
-// === Module 10488: StickerPackBanner ===
+// === Module 10527: StickerPackBanner ===
 
-// Module 10488 (StickerPackBanner)
-import StickersUtils from "StickersUtils" /* 4945 */;
+// Module 10527 (StickerPackBanner)
+import StickersUtils from "StickersUtils" /* 4975 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,11 +1,11 @@
-// === Module 12110: ForumPostGridFooter ===
+// === Module 12146: ForumPostGridFooter ===
 
-// Module 12110 (ForumPostGridFooter)
+// Module 12146 (ForumPostGridFooter)
 import nativeDefault from "native" /* 576 */;
-import ForumPostReactions from "ForumPostReactions" /* 11508 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 12059 */;
-import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 12111 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 12112 */;
+import ForumPostReactions from "ForumPostReactions" /* 11547 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 12095 */;
+import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 12147 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 12148 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1074).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 const createStyles = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", marginTop: 12 }, dot: null };
 let size = { height: 4, width: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
 createStyles.dot = size;

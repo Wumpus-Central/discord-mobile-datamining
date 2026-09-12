@@ -1,7 +1,7 @@
-// === Module 8766: useOpenGameProfileModal ===
+// === Module 8798: useOpenGameProfileModal ===
 
-// Module 8766 (useOpenGameProfileModal)
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8771 */;
+// Module 8798 (useOpenGameProfileModal)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8803 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");

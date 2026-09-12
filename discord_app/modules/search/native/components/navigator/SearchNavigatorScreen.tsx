@@ -1,22 +1,22 @@
-// === Module 16951: SearchNavigatorScreen ===
+// === Module 16978: SearchNavigatorScreen ===
 
-// Module 16951 (SearchNavigatorScreen)
+// Module 16978 (SearchNavigatorScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4469 */;
-import Pressables from "Pressables" /* 5174 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5176 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5679 */;
-import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16707 */;
-import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16716 */;
-import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16952 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4499 */;
+import Pressables from "Pressables" /* 5204 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5206 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5709 */;
+import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16734 */;
+import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16743 */;
+import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16979 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { wrapper: null, tabs: null, back: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createStyles.wrapper = createStyles;
@@ -32,7 +32,7 @@ export default function SearchNavigatorScreen(navigation) {
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  let obj = navigation(16705);
+  let obj = navigation(16732);
   const searchSuggestionsGesture = obj.useSearchSuggestionsGesture(searchContext);
   ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
@@ -58,7 +58,7 @@ export default function SearchNavigatorScreen(navigation) {
   items3[1] = closure_5(View, { style: tmp.tabs, children: closure_5(SearchScreenLayoutDefault, { searchContext, width: useBaseAppContainerDimensionsDefault().width }) });
   obj1.children = items3;
   obj.children = closure_6(View, obj1);
-  items1[1] = closure_5(navigation(16433).NonCollapsableGestureDetector, obj);
+  items1[1] = closure_5(navigation(16457).NonCollapsableGestureDetector, obj);
   obj.children = items1;
   return closure_6(closure_7, obj);
 };

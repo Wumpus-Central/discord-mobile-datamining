@@ -1,20 +1,20 @@
-// === Module 11868: QuestCopyHooks ===
+// === Module 11904: QuestCopyHooks ===
 
-// Module 11868 (QuestCopyHooks)
+// Module 11904 (QuestCopyHooks)
 import initialize from "initialize" /* 504 */;
 import NumberUtils from "NumberUtils" /* 1880 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import QuestTypes from "QuestTypes" /* 5498 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7796 */;
-import QuestType from "QuestType" /* 7799 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8766 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8777 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9620 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11384 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11389 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11577 */;
-import useInGameQuestConnectState from "useInGameQuestConnectState" /* 11870 */;
+import QuestTypes from "QuestTypes" /* 5528 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7826 */;
+import QuestType from "QuestType" /* 7829 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8798 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8809 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9659 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11423 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11428 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11616 */;
+import useInGameQuestConnectState from "useInGameQuestConnectState" /* 11906 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,8 +22,8 @@ import LocaleStore from "LocaleStore" /* 2025 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const util = v1votF6(1114);
-const utils_QuestUtils = v1votF6(7794);
-const SponsoredQuestUtils = v1votF6(11869);
+const utils_QuestUtils = v1votF6(7824);
+const SponsoredQuestUtils = v1votF6(11905);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -435,7 +435,7 @@ function useQuestsInstructionsToWinReward(arg0) {
   obj.needsToConnect = false === inGameQuestConnectState;
   return _getQuestsInstructionsToWinReward(obj);
 }
-const QuestConstants = fn(5495);
+const QuestConstants = fn(5525);
 ({ QuestsExperimentLocations: closure_8, ORBS_INTRO_QUEST_ID: closure_9, QuestVariants: c10 } = QuestConstants);
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const PremiumTypes = fn(1373).PremiumTypes;
@@ -752,7 +752,7 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(arg0) {
     }
     PLAY = constants.PLAY;
   }, items);
-  quest(11577);
+  quest(11616);
   if (constants3.PLAY === memo) {
     const features2 = quest.config.features;
     let hasItem = features2.includes(constants2.MOBILE_ACTIVITY_QUEST);
@@ -776,7 +776,7 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(arg0) {
         const intl6 = quest(1114).intl;
         return intl6.string(quest(1114).t["+qoymD"]);
       } else {
-        let tmp2Result = quest(7794);
+        let tmp2Result = quest(7824);
         if (tmp2Result.canLaunchActivity(quest)) {
           const intl5 = quest(1114).intl;
           const t2 = quest(1114).t;
@@ -790,7 +790,7 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(arg0) {
     const intl3 = quest(1114).intl;
     return intl3.string(quest(1114).t.l7E81v);
   } else if (constants3.WATCH_VIDEO === memo) {
-    tmp2Result = quest(11607);
+    tmp2Result = quest(11646);
     return tmp2Result.getVideoQuestWatchCtaText(tmp5);
   } else if (constants3.IN_GAME === memo) {
     if (tmp2Result1.canLaunchActivity(quest)) {
@@ -932,14 +932,14 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
           obj = { value, done: true };
           return obj;
         } else {
-          const obj2 = { content: closure_128_1, ctaContent: tmp4(7800).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
+          const obj2 = { content: closure_128_1, ctaContent: tmp4(7830).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
           let tmp5;
           if (closure_128_3 != null) {
             tmp5 = closure_128_3();
           }
           obj2.impressionId = tmp5;
           obj2.sourceQuestContent = closure_128_4;
-          tmp4(11590).openGameLinkDirectly(closure_128_0, obj2);
+          tmp4(11629).openGameLinkDirectly(closure_128_0, obj2);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -983,7 +983,7 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
       obj3 = QuestTaskUtils;
     }
   }, items);
-  obj.ctaText = quest(11389).getExternalCtaLabel(quest);
+  obj.ctaText = quest(11428).getExternalCtaLabel(quest);
   obj.onClickCta = function defaultOnClickCta() {
     const self = this;
     const apply = closure_5.apply;

@@ -1,23 +1,22 @@
-// === Module 15105: BountiesScrollRecapPage ===
+// === Module 15135: BountiesScrollRecapPage ===
 
-// Module 15105 (BountiesScrollRecapPage)
+// Module 15135 (BountiesScrollRecapPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7052 */;
-import common_Video from "common/Video" /* 8393 */;
-import APNGPlayer from "APNGPlayer" /* 8900 */;
-import OrbsIcon from "OrbsIcon" /* 8927 */;
-import _modDef15106 from "module_15106" /* 15106 */;
-import _modDef15107 from "module_15107" /* 15107 */;
-import _modDef15108 from "module_15108" /* 15108 */;
-import QuestProductDisplayNames from "QuestProductDisplayNames" /* 15109 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7082 */;
+import common_Video from "common/Video" /* 8425 */;
+import APNGPlayer from "APNGPlayer" /* 8935 */;
+import OrbsIcon from "OrbsIcon" /* 8962 */;
+import _modDef15136 from "module_15136" /* 15136 */;
+import _modDef15137 from "module_15137" /* 15137 */;
+import _modDef15138 from "module_15138" /* 15138 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 function BountiesRecapOrbsBackground(arg0) {
@@ -25,12 +24,12 @@ function BountiesRecapOrbsBackground(arg0) {
   let obj = PlatformUtils;
   if (obj.isAndroid()) {
     obj = { style, needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, pointerEvents: "none", children: null };
-    obj = { url: _modDef15106, style: React3.absoluteFillObject, autoplay: !reducedMotion };
+    obj = { url: _modDef15136, style: React3.absoluteFillObject, autoplay: !reducedMotion };
     obj.children = timestampProducer(APNGPlayer.APNGPlayer, obj);
     let tmp3Result = timestampProducer(React4, obj);
   } else {
     const obj1 = { source: null, style: null, resizeMode: "contain", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
-    const obj2 = { uri: _modDef15107 };
+    const obj2 = { uri: _modDef15137 };
     obj1.source = obj2;
     obj1.style = style;
     obj1.paused = reducedMotion;
@@ -43,7 +42,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const lg = nativeDefault.radii.lg;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles(() => {
   let obj = { root: null, content: null, centeredCopy: null, orbsBackground: null, headerLabel: null, titleRow: null, actions: null, orbAmount: null };
   obj = { overflow: "hidden", borderRadius: lg, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -83,7 +82,7 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
   obj = { style: React3.absoluteFillObject, pointerEvents: "none", children: null };
   obj1 = { source: null, style: null, resizeMode: "cover", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
   const tmp3 = useSafeAreaInsetsDefault();
-  obj1.source = { uri: _modDef15108 };
+  obj1.source = { uri: _modDef15138 };
   obj1.style = React3.absoluteFillObject;
   obj1.paused = stateFromStores;
   const items2 = [timestampProducer(common_Video.VideoComponent, obj1), timestampProducer(BountiesRecapOrbsBackground, { style: tmp.orbsBackground, reducedMotion: stateFromStores })];
@@ -95,12 +94,12 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
   const items4 = [tmp.headerLabel, typeConsolidationEyebrow.style];
   obj6.style = items4;
   const intl = util.intl;
-  obj6.children = intl.string(util.t.CzRXoC);
+  obj6.children = intl.string(util.t.d6Rrn6);
   const items5 = [timestampProducer(Text_Text.Text, obj6), , ];
   const obj7 = { accessible: true, accessibilityRole: "text", accessibilityLabel: "+" + orbAmount, children: null };
   const obj8 = { style: tmp.titleRow, children: null };
   const items6 = [timestampProducer(OrbsIcon.OrbsIcon, { size: "lg", color: "icon-strong", accessible: false }), ];
-  const obj2 = { uri: _modDef15108 };
+  const obj2 = { uri: _modDef15138 };
   const obj3 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };
   items6[1] = timestampProducer(Text_Text.Text, { variant: "display-lg", color: "text-strong", accessible: false, style: tmp.orbAmount, children: "+" + orbAmount });
   obj8.children = items6;
@@ -108,13 +107,13 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
   items5[1] = timestampProducer(React4, obj7);
   const obj10 = { variant: "text-md/medium", color: "text-muted", style: { textAlign: "center" }, children: null };
   const intl2 = util.intl;
-  const obj9 = { variant: "display-lg", color: "text-strong", accessible: false, style: tmp.orbAmount, children: "+" + orbAmount };
-  obj10.children = intl2.format(util.t["2MEL67"], QuestProductDisplayNames.bountyProductNameIntlParams());
+  obj10.children = intl2.string(util.t.x0Ffz3);
   items5[2] = timestampProducer(Text_Text.Text, obj10);
   obj5.children = items5;
   const items7 = [React5(React4, obj5), ];
   const obj11 = { style: null, children: null };
   const items8 = [tmp.actions, ];
+  const obj9 = { variant: "display-lg", color: "text-strong", accessible: false, style: tmp.orbAmount, children: "+" + orbAmount };
   items8[1] = { bottom: tmp3.bottom + nativeDefault.space.PX_8 };
   obj11.style = items8;
   const obj13 = { grow: true, variant: "primary", text: null, size: "lg", onPress: null };

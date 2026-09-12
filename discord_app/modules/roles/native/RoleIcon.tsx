@@ -1,13 +1,13 @@
-// === Module 7278: RoleIcon ===
+// === Module 7308: RoleIcon ===
 
-// Module 7278 (RoleIcon)
-import Text_Text from "Text/Text" /* 4602 */;
+// Module 7308 (RoleIcon)
+import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
 
@@ -17,7 +17,7 @@ export default function RoleIcon(arg0) {
     size = 20;
   }
   size = { height: size, width: size };
-  let obj = { fontFamily: "System", fontSize: size * num, lineHeight: "call", textAlign: "Array", width: size, marginBottom: "withSpring" };
+  let obj = { fontFamily: "System", fontSize: size * num, lineHeight: "call", textAlign: null, width: size, marginBottom: null };
   if (null != src) {
     obj = { resizeMode: "contain", source: null, style: null };
     const obj1 = { uri: src };

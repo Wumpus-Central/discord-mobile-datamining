@@ -1,21 +1,21 @@
-// === Module 7627: CollectiblesUtils ===
+// === Module 7657: CollectiblesUtils ===
 
-// Module 7627 (CollectiblesUtils)
+// Module 7657 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1085 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import PerksStateUtils from "PerksStateUtils" /* 1377 */;
 import user from "user" /* 1379 */;
 import NameplateRecord from "NameplateRecord" /* 1887 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
-import PriceUtils from "PriceUtils" /* 7307 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7620 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7621 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7622 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7626 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7628 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
+import PriceUtils from "PriceUtils" /* 7337 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7650 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7651 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7652 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7656 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7658 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1076 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
@@ -281,7 +281,7 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
         return acc + num;
       }, 0);
     } else {
-      tmp(1115);
+      tmp(1150);
     }
     DEFAULT = constants3.DEFAULT;
     obj = require("PlatformUtils");
@@ -391,7 +391,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
           return acc + num;
         }, 0);
       } else {
-        tmp(1115);
+        tmp(1150);
       }
       DEFAULT = constants3.DEFAULT;
       tmp = _require;

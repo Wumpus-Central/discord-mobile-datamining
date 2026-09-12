@@ -1,7 +1,7 @@
-// === Module 14175: Shadows ===
+// === Module 14210: Shadows ===
 
-// Module 14175 (Shadows)
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+// Module 14210 (Shadows)
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");

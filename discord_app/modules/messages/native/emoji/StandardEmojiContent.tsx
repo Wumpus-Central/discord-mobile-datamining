@@ -1,15 +1,15 @@
-// === Module 10419: StandardEmojiContent ===
+// === Module 10458: StandardEmojiContent ===
 
-// Module 10419 (StandardEmojiContent)
+// Module 10458 (StandardEmojiContent)
 import nativeDefault from "native" /* 576 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4259 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4263 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10420 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10425 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4293 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10459 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10464 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 
 require = fn;
 function Emoji(surrogate) {
@@ -37,7 +37,7 @@ function Emoji(surrogate) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { emojiSurrogate: { lineHeight: 48, fontSize: 40, margin: 8 }, ctaContainer: null };
 createStyles = { paddingTop: nativeDefault.space.PX_4 };
 createStyles.ctaContainer = createStyles;

@@ -1,14 +1,14 @@
-// === Module 12511: NotificationUtils ===
+// === Module 12547: NotificationUtils ===
 
-// Module 12511 (NotificationUtils)
+// Module 12547 (NotificationUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import PushNotificationDefault from "PushNotification" /* 9778 */;
-import SoundUtils from "SoundUtils" /* 9993 */;
+import PushNotificationDefault from "PushNotification" /* 9817 */;
+import SoundUtils from "SoundUtils" /* 10032 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const PermissionStateType = fn(12502).PermissionStateType;
+const PermissionStateType = fn(12538).PermissionStateType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/NotificationUtils.tsx");

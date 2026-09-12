@@ -1,11 +1,11 @@
-// === Module 15914: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 15938: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 15914 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 15938 (CollectiblesShopViewAllCategoryItemsHeader)
 import util from "util" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import HeaderShared from "HeaderShared" /* 7936 */;
-import _modDef7940 from "module_7940" /* 7940 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13507 */;
+import HeaderShared from "HeaderShared" /* 7966 */;
+import _modDef7970 from "module_7970" /* 7970 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13540 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({ headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: 12, paddingLeft: 8 }, backButton: { flex: 1 }, logo: { flex: 2, height: 36 }, dummyRightButton: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx");
@@ -31,7 +31,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj.paddingTop = youBarSettingsCustomHeaderPaddingTop;
   obj.style = obj;
   obj1 = { style: tmp.backButton, children: null };
-  const obj2 = { source: _modDef7940, color: buttonColor, accessibilityLabel: null, onPress: null };
+  const obj2 = { source: _modDef7970, color: buttonColor, accessibilityLabel: null, onPress: null };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
   obj2.onPress = function onPress() {

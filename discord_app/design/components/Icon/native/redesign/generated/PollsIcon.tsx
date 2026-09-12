@@ -1,9 +1,9 @@
-// === Module 10727: PollsIcon ===
+// === Module 10766: PollsIcon ===
 
-// Module 10727 (PollsIcon)
+// Module 10766 (PollsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod10728 from "module_10728" /* 10728 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod10767 from "module_10767" /* 10767 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const PollsIcon = function PollsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10728, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10767, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

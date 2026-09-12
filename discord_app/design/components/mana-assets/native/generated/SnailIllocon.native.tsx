@@ -1,9 +1,9 @@
-// === Module 6538: SnailIllocon ===
+// === Module 6568: SnailIllocon ===
 
-// Module 6538 (SnailIllocon)
+// Module 6568 (SnailIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6539 from "module_6539" /* 6539 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6569 from "module_6569" /* 6569 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const SnailIllocon = function SnailIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6539 };
+  obj = { uri: _modDef6569 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6539 });
+  return jsx(FastImageDefault, { uri: _modDef6569 });
 };

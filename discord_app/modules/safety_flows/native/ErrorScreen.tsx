@@ -1,6 +1,6 @@
-// === Module 17970: ErrorScreen ===
+// === Module 18000: ErrorScreen ===
 
-// Module 17970 (ErrorScreen)
+// Module 18000 (ErrorScreen)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, buttonContainer: null };
 createStyles = { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_16, alignItems: "center" };
 createStyles.container = createStyles;

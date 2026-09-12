@@ -1,7 +1,7 @@
-// === Module 16180: openFavoritesGuildCategoryActionSheet ===
+// === Module 16204: openFavoritesGuildCategoryActionSheet ===
 
-// Module 16180 (openFavoritesGuildCategoryActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+// Module 16204 (openFavoritesGuildCategoryActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/favorites/native/openFavoritesGuildCategoryActionSheet.tsx");
@@ -14,5 +14,5 @@ export default function openFavoritesGuildCategoryActionSheet(categoryId) {
       ActionSheetActionCreatorsDefault.hideActionSheet(combined);
     }
   };
-  obj.openLazy(combined(1896)(16181, dependencyMap.paths), combined, obj);
+  obj.openLazy(combined(1896)(16205, dependencyMap.paths), combined, obj);
 };

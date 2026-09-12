@@ -1,6 +1,6 @@
-// === Module 9324: TwoWayLinkDiscordConsent ===
+// === Module 9363: TwoWayLinkDiscordConsent ===
 
-// Module 9324 (TwoWayLinkDiscordConsent)
+// Module 9363 (TwoWayLinkDiscordConsent)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsxs: closure_8, jsx: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLinkDiscordConsentNative");
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx");

@@ -1,13 +1,13 @@
-// === Module 7497: NativeCheckoutStore ===
+// === Module 7527: NativeCheckoutStore ===
 
-// Module 7497 (NativeCheckoutStore)
+// Module 7527 (NativeCheckoutStore)
 import _mod1244 from "module_1244" /* 1244 */;
-import _mod4229 from "module_4229" /* 4229 */;
-import ContextUtilsDefault from "ContextUtils" /* 7501 */;
+import _mod4259 from "module_4259" /* 4259 */;
+import ContextUtilsDefault from "ContextUtils" /* 7531 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import OrderRecord from "OrderRecord" /* 7498 */;
+import OrderRecord from "OrderRecord" /* 7528 */;
 
 require = fn;
 const importDefaultResultResult = _slicedToArray(ContextUtilsDefault(), 2);
@@ -18,23 +18,22 @@ let result = size.fileFinishedImporting("modules/checkout/native/NativeCheckoutS
 
 export const NativeCheckoutStoreContextOrNull = context;
 export const useNativeCheckoutStore = function useNativeCheckoutStore(arg0) {
-  let shallow = arg1;
-  if (arg1 === undefined) {
-    shallow = _mod4229.shallow;
+  if (shallow === undefined) {
+    shallow = _mod4259.shallow;
   }
-  return closure_6()(arg0, shallow);
+  const tmp3 = closure_6();
+  return _mod1244.useStoreWithEqualityFn(tmp3, arg0, shallow);
 };
 export const useNativeCheckoutStoreOrNull = function useNativeCheckoutStoreOrNull(arg0) {
-  let shallow = arg1;
-  if (arg1 === undefined) {
-    shallow = _mod4229.shallow;
+  if (shallow === undefined) {
+    shallow = _mod4259.shallow;
   }
   context = noop.useContext(context);
-  let contextResult = null;
+  let storeWithEqualityFn = null;
   if ("unset_context" !== context) {
-    contextResult = context(arg0, shallow);
+    storeWithEqualityFn = _mod1244.useStoreWithEqualityFn(context, arg0, shallow);
   }
-  return contextResult;
+  return storeWithEqualityFn;
 };
 export const createNativeStore = function createNativeStore(arg0) {
   ({ order: require, checkoutInitParameters: importDefault, contextMetadata: dependencyMap, analyticsFields: asyncGeneratorStep, paymentGateway: noop, orderRequired: OrderRecord, onOrderRetryCancellation: closure_6, initialSubscriptionFacet: context } = arg0);
@@ -446,6 +445,6 @@ export const createNativeStore = function createNativeStore(arg0) {
     };
     obj.onOrderRetryCancellation = onOrderRetryCancellation;
     return obj;
-  }, _mod4229.shallow);
+  }, _mod4259.shallow);
 };
 export const NativeCheckoutStoreContext = importDefaultResultResult[0];

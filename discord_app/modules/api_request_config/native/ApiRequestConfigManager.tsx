@@ -1,12 +1,12 @@
-// === Module 17907: ApiRequestConfigManager ===
+// === Module 17937: ApiRequestConfigManager ===
 
-// Module 17907 (ApiRequestConfigManager)
+// Module 17937 (ApiRequestConfigManager)
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 import size from "module_2" /* 2 */;
 
 function updateApiRequestConfig() {

@@ -1,22 +1,22 @@
-// === Module 16529: ItemDetailsActionSheet ===
+// === Module 16553: ItemDetailsActionSheet ===
 
-// Module 16529 (ItemDetailsActionSheet)
+// Module 16553 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import useChannelNameDefault from "useChannelName" /* 4759 */;
-import GuildIcon from "GuildIcon" /* 5635 */;
-import TableRow from "TableRow" /* 5656 */;
-import useDesignToggleDefault from "useDesignToggle" /* 5677 */;
-import TableRowGroup from "TableRowGroup" /* 5738 */;
-import ActionSheet from "ActionSheet" /* 7270 */;
-import ICYMIUtils from "ICYMIUtils" /* 8436 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11093 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16530 */;
+import useChannelNameDefault from "useChannelName" /* 4789 */;
+import GuildIcon from "GuildIcon" /* 5665 */;
+import TableRow from "TableRow" /* 5686 */;
+import useDesignToggleDefault from "useDesignToggle" /* 5707 */;
+import TableRowGroup from "TableRowGroup" /* 5768 */;
+import ActionSheet from "ActionSheet" /* 7300 */;
+import ICYMIUtils from "ICYMIUtils" /* 8468 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11132 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16554 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ICYMIStore from "ICYMIStore" /* 8421 */;
+import ICYMIStore from "ICYMIStore" /* 8453 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { divider: null };
 createStyles = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 createStyles.divider = createStyles;

@@ -1,13 +1,13 @@
-// === Module 5625: MemberVerificationModalHooks ===
+// === Module 5655: MemberVerificationModalHooks ===
 
-// Module 5625 (MemberVerificationModalHooks)
+// Module 5655 (MemberVerificationModalHooks)
 import initialize from "initialize" /* 504 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import InitialMemberVerificationStore from "InitialMemberVerificationStore" /* 5626 */;
+import InitialMemberVerificationStore from "InitialMemberVerificationStore" /* 5656 */;
 
 require = fn;
-const setInitialVerification = fn(5626).setInitialVerification;
+const setInitialVerification = fn(5656).setInitialVerification;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
 

@@ -1,14 +1,14 @@
-// === Module 15773: DevToolsTogglesScreen ===
+// === Module 15795: DevToolsTogglesScreen ===
 
-// Module 15773 (DevToolsTogglesScreen)
+// Module 15795 (DevToolsTogglesScreen)
 import nativeDefault from "native" /* 576 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5568 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7054 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5598 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DesignTogglesStore from "DesignTogglesStore" /* 5678 */;
-import DevSettingsStore from "DevSettingsStore" /* 4605 */;
+import DesignTogglesStore from "DesignTogglesStore" /* 5708 */;
+import DevSettingsStore from "DevSettingsStore" /* 4635 */;
 
 const require = fn;
 function fuzzySearchToggle(str, str2, str3) {
@@ -29,7 +29,7 @@ function ToggleTableRow(toggleName) {
   toggleName = toggleName.toggleName;
   const description = toggleName.description;
   ({ value, onValueChange } = toggleName);
-  return closure_9(toggleName(5656).TableRow, {
+  return closure_9(toggleName(5686).TableRow, {
     label: description,
     labelLineClamp: 1,
     subLabel: toggleName,
@@ -38,7 +38,7 @@ function ToggleTableRow(toggleName) {
       const obj = { content: description, key: toggleName };
       obj.open(obj);
     },
-    trailing: closure_9(toggleName(7274).FormSwitch, { value, onValueChange })
+    trailing: closure_9(toggleName(7304).FormSwitch, { value, onValueChange })
   }, toggleName);
 }
 function DevTogglesForCategory(title) {
@@ -67,15 +67,15 @@ function DevTogglesForCategory(title) {
           }, tmp);
         })
     };
-    tmp3 = closure_9(category(5738).TableRowGroup, obj);
+    tmp3 = closure_9(category(5768).TableRowGroup, obj);
   }
   return tmp3;
 }
 const ScrollView = fn(17).ScrollView;
-const CATEGORY_LABELS = fn(4605).CATEGORY_LABELS;
+const CATEGORY_LABELS = fn(4635).CATEGORY_LABELS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { wrap: null, container: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.wrap = createStyles;
@@ -88,7 +88,7 @@ export default function DevToolsTogglesScreen() {
   let tmp = closure_12();
   const tmp3 = _slicedToArray(noop.useState(""), 2);
   const query = tmp3[0];
-  let obj = query(15774);
+  let obj = query(15796);
   const manaTextMigrationHighlightRestartNotice = obj.useManaTextMigrationHighlightRestartNotice();
   let obj1 = query(504);
   const items = [DesignTogglesStore];
@@ -115,20 +115,20 @@ export default function DevToolsTogglesScreen() {
   obj.contentContainerStyle = items2;
   obj1 = { title: "Actions", hasIcons: false, children: null };
   const items3 = [
-    closure_9(query(5656).TableRow, {
+    closure_9(query(5686).TableRow, {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(15775).clearAll();
-        const obj = first(15775);
-        first(15757).clearAll();
+        first(15797).clearAll();
+        const obj = first(15797);
+        first(15779).clearAll();
       },
       arrow: true
     }),
-    closure_9(query(5656).TableRow, { label: closure_9(query(7123).SearchField, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] }) })
+    closure_9(query(5686).TableRow, { label: closure_9(query(7153).SearchField, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] }) })
   ];
   obj1.children = items3;
-  const items4 = [closure_10(query(5738).TableRowGroup, obj1), , ];
+  const items4 = [closure_10(query(5768).TableRowGroup, obj1), , ];
   let tmp7Result = null;
   if (stateFromStores.length > 0) {
     const obj4 = {
@@ -141,12 +141,12 @@ export default function DevToolsTogglesScreen() {
             description: tmp3,
             value: tmp2,
             onValueChange(arg0) {
-              return first(15775).toggle(query, arg0);
+              return first(15797).toggle(query, arg0);
             }
           }, tmp);
         })
     };
-    tmp7Result = closure_9(query(5738).TableRowGroup, obj4);
+    tmp7Result = closure_9(query(5768).TableRowGroup, obj4);
   }
   const obj5 = { spacing: 16, children: null };
   items4[1] = tmp7Result;
@@ -156,6 +156,6 @@ export default function DevToolsTogglesScreen() {
     return React7(DevTogglesForCategory, { category: parseInt(tmp), title: tmp2, query }, tmp);
   });
   obj5.children = items4;
-  obj.children = closure_10(query(5024).Stack, obj5);
+  obj.children = closure_10(query(5054).Stack, obj5);
   return closure_9(ScrollView, obj);
 };

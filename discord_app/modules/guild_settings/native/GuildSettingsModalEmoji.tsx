@@ -1,18 +1,18 @@
-// === Module 17645: GuildSettingsModalEmoji ===
+// === Module 17675: GuildSettingsModalEmoji ===
 
-// Module 17645 (GuildSettingsModalEmoji)
+// Module 17675 (GuildSettingsModalEmoji)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5515 */;
-import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 17648 */;
-import HeaderRow from "HeaderRow" /* 17652 */;
-import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 17653 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5545 */;
+import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 17678 */;
+import HeaderRow from "HeaderRow" /* 17682 */;
+import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 17683 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 17646 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 17676 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -177,8 +177,8 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-let closure_12 = apply.throttle(fn(10425).fetchEmoji, 1000);
-fn(4606);
+let closure_12 = apply.throttle(fn(10464).fetchEmoji, 1000);
+fn(4636);
 let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: null, section: null, titleContainer: null };
 obj = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.list = obj;

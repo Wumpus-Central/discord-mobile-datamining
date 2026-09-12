@@ -1,14 +1,14 @@
-// === Module 16592: NewContentPill ===
+// === Module 16616: NewContentPill ===
 
-// Module 16592 (NewContentPill)
+// Module 16616 (NewContentPill)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5025 */;
-import GuildIcon from "GuildIcon" /* 5635 */;
-import ClipView from "ClipView" /* 8905 */;
+import spring from "spring" /* 5055 */;
+import GuildIcon from "GuildIcon" /* 5665 */;
+import ClipView from "ClipView" /* 8940 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ICYMIStore from "ICYMIStore" /* 8421 */;
+import ICYMIStore from "ICYMIStore" /* 8453 */;
 
 const GuildIconDefault = GuildIcon;
 const ClipViewDefault = ClipView;
@@ -35,7 +35,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, guildIconBG: null, refreshMorePillContainer: null };
 createStyles = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 createStyles.container = createStyles;

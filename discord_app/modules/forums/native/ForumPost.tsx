@@ -1,12 +1,12 @@
-// === Module 12093: ForumPost ===
+// === Module 12129: ForumPost ===
 
-// Module 12093 (ForumPost)
-import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 12095 */;
-import ForumPostGridBodyDefault from "ForumPostGridBody" /* 12099 */;
-import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 12110 */;
+// Module 12129 (ForumPost)
+import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 12131 */;
+import ForumPostGridBodyDefault from "ForumPostGridBody" /* 12135 */;
+import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 12146 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 const require = fn;
 function ForumPostGrid(arg0) {
@@ -97,7 +97,7 @@ function ConnectedForumPost(arg0) {
   }
   const obj8 = require("initialize");
 }
-const useForumChannelStore = fn(12094).useForumChannelStore;
+const useForumChannelStore = fn(12130).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -128,14 +128,14 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   const obj2 = threadId(504);
   const tmp = threadId;
   const tmp4 = stateFromStores;
-  const firstForumPostMessage = threadId(7377).useFirstForumPostMessage(stateFromStores);
+  const firstForumPostMessage = threadId(7407).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
-  threadId(7959);
+  threadId(7989);
   if (loaded) {
     obj = { style, children: null };
     obj = { thread: stateFromStores, parentChannel: stateFromStores1, firstMessage, messageContent: tmp10, media: localDeviceMedia, hasUnreads: true, isNew: false, firstMessageLoaded: loaded, isLocalDeviceMedia: true };
-    obj.children = closure_6(tmp4(12114), obj);
-    tmp5 = closure_6(tmp(12113).ForumPostDisabledContainer, obj);
+    obj.children = closure_6(tmp4(12150), obj);
+    tmp5 = closure_6(tmp(12149).ForumPostDisabledContainer, obj);
   }
   return tmp5;
 };

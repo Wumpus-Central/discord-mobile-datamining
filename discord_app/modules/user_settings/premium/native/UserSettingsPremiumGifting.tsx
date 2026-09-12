@@ -1,22 +1,22 @@
-// === Module 13607: UserSettingsPremiumGifting ===
+// === Module 13640: UserSettingsPremiumGifting ===
 
-// Module 13607 (UserSettingsPremiumGifting)
+// Module 13640 (UserSettingsPremiumGifting)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 4845 */;
-import TableRowGroup from "TableRowGroup" /* 5738 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7063 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7068 */;
-import BadgeId from "BadgeId" /* 8269 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8282 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9453 */;
-import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 13609 */;
-import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 13615 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4875 */;
+import TableRowGroup from "TableRowGroup" /* 5768 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7093 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
+import BadgeId from "BadgeId" /* 8301 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8314 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9492 */;
+import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 13642 */;
+import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 13648 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8277 */;
-import EntitlementStore from "EntitlementStore" /* 7467 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8309 */;
+import EntitlementStore from "EntitlementStore" /* 7497 */;
 
 require = fn;
 function GiftingSectionTitle(title) {
@@ -30,7 +30,7 @@ const PremiumConstants = fn(1373);
 ({ PremiumTypes: closure_12, SubscriptionPlans: map1 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { scrollView: null, giftingSettingsContainer: null, inventorySectionWrapper: null, giftPurchaseSectionWrapper: null, emptyGiftLinks: null, emptyImage: null, emptyGiftHeader: null, emptyGiftDescription: null, emptyGiftInformation: null, titleWrapper: null, cardText: null, tierCard: null, giftPurchaseButton: null, buttonWrapper: null, loading: null, warningMargins: null };
 obj = { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL };
 obj.scrollView = obj;

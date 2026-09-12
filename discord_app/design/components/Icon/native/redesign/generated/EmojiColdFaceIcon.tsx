@@ -1,9 +1,9 @@
-// === Module 15426: EmojiColdFaceIcon ===
+// === Module 15448: EmojiColdFaceIcon ===
 
-// Module 15426 (EmojiColdFaceIcon)
+// Module 15448 (EmojiColdFaceIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod15427 from "module_15427" /* 15427 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod15449 from "module_15449" /* 15449 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const EmojiColdFaceIcon = function EmojiColdFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15427, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15449, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,9 +1,9 @@
-// === Module 15097: BountiesModalTimer ===
+// === Module 15129: BountiesModalTimer ===
 
-// Module 15097 (BountiesModalTimer)
+// Module 15129 (BountiesModalTimer)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
-import timing from "timing" /* 4607 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
+import timing from "timing" /* 4637 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -13,18 +13,18 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "#2ECC71";
-let result = (fn(5031).SMALL_BUTTON_HEIGHT - 4) / 2;
+let result = (fn(5061).SMALL_BUTTON_HEIGHT - 4) / 2;
 let closure_9 = 2 * Math.PI * result;
-const Easing = fn(4343).Easing;
+const Easing = fn(4373).Easing;
 let closure_10 = Easing.bezier(0.15, 0.21, 0.58, 1);
-const Easing2 = fn(4343).Easing;
+const Easing2 = fn(4373).Easing;
 let closure_11 = Easing2.bezier(0.61, 0, 0.58, 1);
-const Easing3 = fn(4343).Easing;
+const Easing3 = fn(4373).Easing;
 let closure_12 = Easing3.bezier(0.42, 0, 0.58, 1);
-let closure_13 = ReanimatedRexport.createAnimatedComponent(fn(8542).Circle);
-fn(4606);
+let closure_13 = ReanimatedRexport.createAnimatedComponent(fn(8574).Circle);
+fn(4636);
 let obj = { progress: null, ring: null, trackPath: null, countdownText: null, checkmarkLayer: null, checkmarkBackground: null, checkmarkIcon: null };
-let size = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round, width: fn(5031).SMALL_BUTTON_HEIGHT, height: fn(5031).SMALL_BUTTON_HEIGHT };
+let size = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round, width: fn(5061).SMALL_BUTTON_HEIGHT, height: fn(5061).SMALL_BUTTON_HEIGHT };
 obj.progress = size;
 obj = { position: "absolute", transform: null };
 let items = [{ rotate: "-90deg" }];
@@ -33,7 +33,7 @@ obj.ring = obj;
 const createStyles = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 obj.trackPath = createStyles;
 let obj2 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, lineHeight: null };
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

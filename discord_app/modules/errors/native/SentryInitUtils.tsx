@@ -4,17 +4,17 @@
 import LoggerDefault from "Logger" /* 3 */;
 import _mod675 from "module_675" /* 675 */;
 import router_utils from "router_utils" /* 1100 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import TelemetryRingLifecycle from "TelemetryRingLifecycle" /* 1234 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import DesignIds from "DesignIds" /* 1345 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1364 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import DeviceUtils from "DeviceUtils" /* 4585 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 7675 */;
-import MetricEvents from "MetricEvents" /* 7679 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 14133 */;
+import DeviceUtils from "DeviceUtils" /* 4615 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 7705 */;
+import MetricEvents from "MetricEvents" /* 7709 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 14168 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -553,8 +553,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj1.tags = items;
-  tmp26(7674).increment(obj1, true);
-  const tmp26Result = tmp26(7674);
+  tmp26(7704).increment(obj1, true);
+  const tmp26Result = tmp26(7704);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
@@ -635,7 +635,7 @@ export const initSentry = function initSentry() {
           if (tmp14Result2.isAndroid()) {
             str2 = "android";
           }
-          obj = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "6407", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@346.5.0-2+346205", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          obj = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "6411", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@346.6.0-2+346206", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           items = [PRIMARY_DOMAIN];
           obj.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, , ];
@@ -666,7 +666,7 @@ export const initSentry = function initSentry() {
           };
           tmp14Result1.init(obj);
           const tmp14Result4 = _mod675;
-          _mod675.setTag("buildNumber", "6407");
+          _mod675.setTag("buildNumber", "6411");
           const tmp14Result5 = _mod675;
           _mod675.setTag("appVersion", constants.Version);
           const tmp14Result6 = _mod675;

@@ -1,14 +1,14 @@
-// === Module 8267: UserProfileSpeedBumpActionSheet ===
+// === Module 8299: UserProfileSpeedBumpActionSheet ===
 
-// Module 8267 (UserProfileSpeedBumpActionSheet)
+// Module 8299 (UserProfileSpeedBumpActionSheet)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import TableRow from "TableRow" /* 5656 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
-import UserActionCreators from "UserActionCreators" /* 8266 */;
-import _modDef8270 from "module_8270" /* 8270 */;
+import TableRow from "TableRow" /* 5686 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
+import UserActionCreators from "UserActionCreators" /* 8298 */;
+import _modDef8302 from "module_8302" /* 8302 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -18,11 +18,11 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 function InformationTable(speedBumpType) {
   let items;
-  let obj = { icon: _modDef8270, text: null };
+  let obj = { icon: _modDef8302, text: null };
   const intl = items(1114).intl;
   obj.text = intl.string(items(1114).t.kcuWva);
   items = [obj, ];
-  obj = { icon: _modDef8270, text: null };
+  obj = { icon: _modDef8302, text: null };
   if ("block" === speedBumpType.speedBumpType) {
     const intl3 = tmp2(1114).intl;
     let stringResult = intl3.string(tmp2(1114).t.QxrDY1);
@@ -42,15 +42,15 @@ function InformationTable(speedBumpType) {
       return closure_2_12(TableRow.TableRow, obj, index);
     })
   };
-  return closure_12(items(5738).TableRowGroup, obj);
+  return closure_12(items(5768).TableRowGroup, obj);
 }
 const View = fn(17).View;
-const UserProfileAnalyticsTypes = fn(8268).UserProfileAnalyticsTypes;
+const UserProfileAnalyticsTypes = fn(8300).UserProfileAnalyticsTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { button: null, tableContainer: null, header: null, bodyText: null, headerText: null, avatar: null, avatarContainer: null, avatarIconContainer: null, suppress: null };
 obj = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 };
 obj.button = obj;

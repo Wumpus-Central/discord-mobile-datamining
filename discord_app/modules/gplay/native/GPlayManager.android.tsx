@@ -1,17 +1,17 @@
-// === Module 10797: GPlayManager ===
+// === Module 10836: GPlayManager ===
 
-// Module 10797 (GPlayManager)
+// Module 10836 (GPlayManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4930 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 9458 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4960 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9497 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GiftPromotionStore from "GiftPromotionStore" /* 7493 */;
+import GiftPromotionStore from "GiftPromotionStore" /* 7523 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SubscriptionStore from "SubscriptionStore" /* 4270 */;
-import IAPStore from "IAPStore" /* 7310 */;
+import SubscriptionStore from "SubscriptionStore" /* 4300 */;
+import IAPStore from "IAPStore" /* 7340 */;
 
 require = fn;
 function handleConnectionStateUpdated(connectionState) {
@@ -87,7 +87,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
               closure_130_11 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           break;
           case 1:
@@ -388,88 +388,47 @@ let closure_37 = async function _handleDowngradeCommand(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    if (1 === tmp4) {
       if (arg0 === 1) {
+        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        c4 = 3;
+        return { value, done: true };
+      } else if (closure_130_14.EXECUTE === downgradeCommand2) {
+        c3 = 2;
+        c4 = 1;
+        return {
+          value: (function executePendingDowngrade() {
+                const self = this;
+                const apply = closure_1_38.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(),
+          done: false
+        };
+      } else if (closure_130_14.CLEAR === tmp26) {
+        closure_130_39();
       } else {
-        return { value: "HermesInternal", done: null };
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error = new Error("Invalid downgrade state " + downgradeCommand2);
+        throw error;
       }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            closure_2 = tmp4;
-            c1 = 0;
-            let downgradeCommand2;
-            downgradeCommand2 = downgradeCommand.downgradeCommand;
-            c3 = 1;
-            c4 = 1;
-            return { value: "PX_16", done: null };
-          }
-        } else {
-          if (1 === tmp4) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj1 = { value, done: true };
-              return obj1;
-            } else if (closure_130_14.EXECUTE === downgradeCommand2) {
-              c3 = 2;
-              c4 = 1;
-              const obj2 = {
-                value: (function executePendingDowngrade() {
-                            const self = this;
-                            const apply = closure_1_38.apply;
-                            if (typeof apply === "unknown") {
-                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                            } else {
-                              applyArgumentsResult = apply(self, arguments);
-                            }
-                            return applyArgumentsResult;
-                          })(),
-                done: false
-              };
-              return obj2;
-            } else if (closure_130_14.CLEAR === tmp26) {
-              closure_130_39();
-            } else {
-              const _Error = Error;
-              const _HermesInternal = HermesInternal;
-              const error = new Error("Invalid downgrade state " + downgradeCommand2);
-              throw error;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value, done: true };
-            return obj;
-          }
-          c4 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp19) {
-        c4 = tmp;
-        throw tmp19;
-      }
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c4 = 3;
+      return { value, done: true };
     }
+    await "HermesInternal";
+    downgradeCommand2 = downgradeCommand.downgradeCommand;
+    return "PX_16";
   })();
   iter.next();
   return iter;
@@ -731,7 +690,7 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
             state2 = state.state;
             c5 = 1;
             c6 = 1;
-            return { value: "PX_16", done: null };
+            return { value: "PX_16", done: true };
           }
         } else {
           if (1 === tmp8) {
@@ -789,14 +748,14 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
 let closure_3 = ["succeededOnlyFields"];
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const PremiumPlanPurchasedStore = fn(7494);
+const PremiumPlanPurchasedStore = fn(7524);
 ({ setPaymentSuccess: closure_7, showOldPaymentFlowSuccess: closure_8 } = PremiumPlanPurchasedStore);
-const useGPlayAnalyticsStore = fn(9459).useGPlayAnalyticsStore;
-let Constants = fn(7311);
+const useGPlayAnalyticsStore = fn(9498).useGPlayAnalyticsStore;
+let Constants = fn(7341);
 ({ GPlayConnectionState: map1, GPlayDowngradeCommand: closure_14, GPlayPurchaseState: closure_15 } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: closure_16, AppStates: closure_17, PaymentGateways: closure_18 } = Constants);
-const OrderStatus = fn(4588).OrderStatus;
+const OrderStatus = fn(4618).OrderStatus;
 const SubscriptionPlanInfo = fn(1373).SubscriptionPlanInfo;
 const jsx = fn(21).jsx;
 let closure_22 = new LoggerDefault("GPlayManager.android");
@@ -807,7 +766,7 @@ let closure_26 = null;
 let closure_27 = null;
 let closure_28 = null;
 let closure_29 = null;
-const items = [fn(7313).ProductIds.PREMIUM_TIER_2_MONTHLY];
+const items = [fn(7343).ProductIds.PREMIUM_TIER_2_MONTHLY];
 giftInfoOptionsCache = {
   giftInfoOptionsCache,
   initialize() {

@@ -1,9 +1,9 @@
-// === Module 5940: CompassSpotIllustration ===
+// === Module 5970: CompassSpotIllustration ===
 
-// Module 5940 (CompassSpotIllustration)
+// Module 5970 (CompassSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5941 from "module_5941" /* 5941 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5971 from "module_5971" /* 5971 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const CompassSpotIllustration = function CompassSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5941 };
+  obj = { uri: _modDef5971 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const CompassSpotIllustration = function CompassSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5941 });
+  return jsx(FastImageDefault, { uri: _modDef5971 });
 };

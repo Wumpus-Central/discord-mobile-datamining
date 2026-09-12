@@ -1,6 +1,6 @@
-// === Module 4949: DraftCommand ===
+// === Module 4979: DraftCommand ===
 
-// Module 4949 (DraftCommand)
+// Module 4979 (DraftCommand)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_commands/DraftCommand.tsx");

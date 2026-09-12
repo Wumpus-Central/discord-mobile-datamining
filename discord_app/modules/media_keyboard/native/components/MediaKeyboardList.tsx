@@ -1,14 +1,14 @@
-// === Module 10732: MediaKeyboardList ===
+// === Module 10771: MediaKeyboardList ===
 
-// Module 10732 (MediaKeyboardList)
+// Module 10771 (MediaKeyboardList)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9586 */;
-import DeviceMediaDefault from "DeviceMedia" /* 10733 */;
-import MediaKeyboardItem from "MediaKeyboardItem" /* 10737 */;
-import MediaKeyboardFooterDefault from "MediaKeyboardFooter" /* 10744 */;
-import MediaKeyboardLimitedPickerNoticeDefault from "MediaKeyboardLimitedPickerNotice" /* 10746 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9625 */;
+import DeviceMediaDefault from "DeviceMedia" /* 10772 */;
+import MediaKeyboardItem from "MediaKeyboardItem" /* 10776 */;
+import MediaKeyboardFooterDefault from "MediaKeyboardFooter" /* 10783 */;
+import MediaKeyboardLimitedPickerNoticeDefault from "MediaKeyboardLimitedPickerNotice" /* 10785 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DimensionsStore from "DimensionsStore" /* 1478 */;
@@ -19,11 +19,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_7 = fn(1607).InAppCameraUsedCameraPreviewTypes;
-let closure_8 = fn(7224).ACTION_SHEET_START_HEIGHT_RATIO;
-const NativePermissionStatus = fn(4816).NativePermissionStatus;
+let closure_8 = fn(7254).ACTION_SHEET_START_HEIGHT_RATIO;
+const NativePermissionStatus = fn(4846).NativePermissionStatus;
 const jsx = fn(21).jsx;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.PhotoLibraryHelper);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { listContainer: null };
 obj = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, marginTop: 8, paddingTop: 8 };
 obj.listContainer = obj;

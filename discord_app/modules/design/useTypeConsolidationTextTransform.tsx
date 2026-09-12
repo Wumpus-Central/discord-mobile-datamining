@@ -1,7 +1,7 @@
-// === Module 7052: useTypeConsolidationTextTransform ===
+// === Module 7082: useTypeConsolidationTextTransform ===
 
-// Module 7052 (useTypeConsolidationTextTransform)
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7053 */;
+// Module 7082 (useTypeConsolidationTextTransform)
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7083 */;
 import size from "module_2" /* 2 */;
 
 const style = { textTransform: "none" };

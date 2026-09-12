@@ -1,20 +1,20 @@
-// === Module 15397: DisplayNameStylesEditScreen ===
+// === Module 15419: DisplayNameStylesEditScreen ===
 
-// Module 15397 (DisplayNameStylesEditScreen)
+// Module 15419 (DisplayNameStylesEditScreen)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1388 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import HapticUtils from "HapticUtils" /* 4574 */;
-import spring from "spring" /* 5025 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8249 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 8252 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import HapticUtils from "HapticUtils" /* 4604 */;
+import spring from "spring" /* 5055 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8281 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8284 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -96,7 +96,7 @@ const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1607).MEDIA_PICKER_SEND_BUTTON_SPRING
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let items = [fn(1390).DisplayNameEffect.GRADIENT, fn(1390).DisplayNameEffect.GUMMY, fn(1390).DisplayNameEffect.PRISM];
-fn(4606);
+fn(4636);
 let createStyles = { container: null, contentContainer: null, fieldButtonGroup: null, fieldButton: null, fieldButtonBorder: null, fieldButtonLabel: null, fieldButtonChevron: null, fieldButtonTrailing: null, buttonContainer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -327,7 +327,7 @@ export default function DisplayNameStylesEditScreen() {
         dismissFontsBadge();
       }
       const obj = { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName };
-      obj.openLazy(asyncRequireImpl(15405, dependencyMap.paths), "DisplayNameStylesFontPickerSheet", obj);
+      obj.openLazy(asyncRequireImpl(15427, dependencyMap.paths), "DisplayNameStylesFontPickerSheet", obj);
     }, items6);
     if (stateFromStores != null) {
       id1 = stateFromStores.id;
@@ -346,8 +346,8 @@ export default function DisplayNameStylesEditScreen() {
         id = stateFromStores.id;
       }
       obj = { userId: id, selectedEffectId: first1, onSelectEffect };
-      obj.openLazy(asyncRequireImpl(15406, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", obj);
-      const tmp3 = asyncRequireImpl(15406, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(15428, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", obj);
+      const tmp3 = asyncRequireImpl(15428, dependencyMap.paths);
     }, items7);
     const callback6 = obj7.useCallback(() => {
       if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -357,7 +357,7 @@ export default function DisplayNameStylesEditScreen() {
               return callback(navigation(isTryItOut[8]).DisplayNameEffect.GUMMY, arg0);
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15407, dependencyMap.paths), "DisplayNameStylesGummyColorPickerSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15429, dependencyMap.paths), "DisplayNameStylesGummyColorPickerSheet", obj);
       } else {
         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
         const tmp2Result = asyncRequireImpl;
@@ -369,10 +369,10 @@ export default function DisplayNameStylesEditScreen() {
                   return callback(first1, arg0);
                 }
           };
-          openLazy(tmp2Result(15412, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj);
+          openLazy(tmp2Result(15434, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj);
         } else {
           obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-          openLazy(tmp2Result(15415, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+          openLazy(tmp2Result(15437, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
         }
       }
     }, items8);

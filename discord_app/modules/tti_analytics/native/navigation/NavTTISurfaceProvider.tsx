@@ -1,7 +1,7 @@
-// === Module 16702: NavTTISurfaceProvider ===
+// === Module 16729: NavTTISurfaceProvider ===
 
-// Module 16702 (NavTTISurfaceProvider)
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16607 */;
+// Module 16729 (NavTTISurfaceProvider)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16631 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ export const NavTTISurfaceProvider = function NavTTISurfaceProvider(navigationKe
   const definition = navigationKey.definition;
   const merged = Object.assign(navigationKey, Object.assign({ navigationKey: 0, definition: 0, children: 0 }));
   let syncExternalStore;
-  let obj = navigationKey(16609);
+  let obj = navigationKey(16633);
   const result = obj.isNavigationTTIEnabled();
   dependencyMap = result;
   const items = [definition, result, navigationKey];
@@ -45,5 +45,5 @@ export const NavTTISurfaceProvider = function NavTTISurfaceProvider(navigationKe
   const merged1 = Object.assign(merged);
   obj.children = navigationKey.children;
   obj.children = <View />;
-  return jsx(navigationKey(16608).NavTTISurfaceContext.Provider, {});
+  return jsx(navigationKey(16632).NavTTISurfaceContext.Provider, {});
 };

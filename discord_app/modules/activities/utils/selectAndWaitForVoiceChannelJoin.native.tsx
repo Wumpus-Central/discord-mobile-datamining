@@ -1,6 +1,6 @@
-// === Module 9636: selectAndWaitForVoiceChannelJoin ===
+// === Module 9675: selectAndWaitForVoiceChannelJoin ===
 
-// Module 9636 (selectAndWaitForVoiceChannelJoin)
+// Module 9675 (selectAndWaitForVoiceChannelJoin)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
@@ -41,7 +41,7 @@ let closure_5 = async function _selectAndWaitForVoiceChannelJoin(arg0) {
           closure_129_2 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

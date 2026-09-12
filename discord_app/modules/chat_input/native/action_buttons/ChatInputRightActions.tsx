@@ -1,12 +1,12 @@
-// === Module 12523: ChatInputRightActions ===
+// === Module 12559: ChatInputRightActions ===
 
-// Module 12523 (ChatInputRightActions)
+// Module 12559 (ChatInputRightActions)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4317 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
-import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 12338 */;
-import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 12339 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12340 */;
+import native from "native" /* 4347 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
+import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 12374 */;
+import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 12375 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12376 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,14 +21,14 @@ function LeftSlot(state) {
   obj.style = items;
   const tmp = useChatInputFloatingBounceDefault(obj);
   const merged = Object.assign(ChatInputActionButtonTransitionItem.interactivityProps(isInteractive));
-  obj.children = React5(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "PX_16", shouldShowThread: "Path fill rule" });
+  obj.children = React5(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "PX_16", shouldShowThread: "PC_SEAT_1" });
   return React5(ReanimatedRexportDefault.View, obj);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(12055).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(12091).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles(() => {
   let obj = { container: null, leftSlot: null };
   obj = { flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP };
@@ -41,9 +41,9 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
   const onPressAction = channel.onPressAction;
   noop = undefined;
   ({ keyboardType, showKeyboardIcon, shouldShowGiftButton, onPressExpression } = channel);
-  let obj = channel(4308);
+  let obj = channel(4338);
   const token = obj.useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  let obj1 = channel(4308);
+  let obj1 = channel(4338);
   const sum = token + 2 * obj1.useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   dependencyMap = sum;
   const tmp6 = closure_9();
@@ -68,11 +68,11 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
       tmp15 = memo;
     }
     obj = { item: tmp15, renderItem: tmp10 };
-    tmp14Result = closure_7(tmp(4317).TransitionItem, obj);
+    tmp14Result = closure_7(tmp(4347).TransitionItem, obj);
   }
   const items1 = [tmp14Result, ];
   obj1 = { active: keyboardType === channel(1609).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
-  items1[1] = closure_7(onPressAction(12267), obj1);
+  items1[1] = closure_7(onPressAction(12303), obj1);
   obj.children = items1;
   return closure_8(View, obj);
 });

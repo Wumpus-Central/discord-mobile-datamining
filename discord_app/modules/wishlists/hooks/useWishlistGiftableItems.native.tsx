@@ -1,6 +1,6 @@
-// === Module 8886: useWishlistGiftableItems ===
+// === Module 8921: useWishlistGiftableItems ===
 
-// Module 8886 (useWishlistGiftableItems)
+// Module 8921 (useWishlistGiftableItems)
 import noop from "module_19" /* 19 */;
 
 let items = [, , ];

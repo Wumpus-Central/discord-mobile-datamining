@@ -1,17 +1,17 @@
-// === Module 17026: ConnectionDeprecationBottomSheet ===
+// === Module 17053: ConnectionDeprecationBottomSheet ===
 
-// Module 17026 (ConnectionDeprecationBottomSheet)
+// Module 17053 (ConnectionDeprecationBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
-import themes from "themes" /* 4315 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import Icon from "Icon" /* 5028 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 7238 */;
-import GameIcon from "GameIcon" /* 7245 */;
-import AccountLinkManager from "AccountLinkManager" /* 17027 */;
+import themes from "themes" /* 4345 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import Icon from "Icon" /* 5058 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 7268 */;
+import GameIcon from "GameIcon" /* 7275 */;
+import AccountLinkManager from "AccountLinkManager" /* 17054 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4834 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5332 */;
+import ApplicationStore from "ApplicationStore" /* 4864 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 
 const IconDefault = Icon;
 const GameIconDefault = GameIcon;
@@ -47,7 +47,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { iconContainer: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, content: null, text: null, connectionIcon: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.content = createStyles;
@@ -202,7 +202,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(7241).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(7271).useGetOrFetchApplication(replacedBy);
   const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {

@@ -1,9 +1,9 @@
-// === Module 10470: GifIcon ===
+// === Module 10509: GifIcon ===
 
-// Module 10470 (GifIcon)
+// Module 10509 (GifIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod8159 from "module_8159" /* 8159 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod8189 from "module_8189" /* 8189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const GifIcon = function GifIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8159, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8189, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

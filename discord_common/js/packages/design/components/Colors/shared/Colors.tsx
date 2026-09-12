@@ -1,6 +1,6 @@
-// === Module 4423: Colors ===
+// === Module 4453: Colors ===
 
-// Module 4423 (Colors)
+// Module 4453 (Colors)
 import _modDef672 from "module_672" /* 672 */;
 import _slicedToArray from "module_32" /* 32 */;
 

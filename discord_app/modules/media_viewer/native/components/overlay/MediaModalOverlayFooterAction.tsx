@@ -1,12 +1,12 @@
-// === Module 13063: MediaModalOverlayFooterAction ===
+// === Module 13100: MediaModalOverlayFooterAction ===
 
-// Module 13063 (MediaModalOverlayFooterAction)
+// Module 13100 (MediaModalOverlayFooterAction)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5016 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 13056 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5046 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 13093 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, buttonContainer: null };
 createStyles = { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 createStyles.container = createStyles;

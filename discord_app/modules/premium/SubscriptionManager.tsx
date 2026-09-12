@@ -1,12 +1,12 @@
-// === Module 17575: SubscriptionManager ===
+// === Module 17605: SubscriptionManager ===
 
-// Module 17575 (SubscriptionManager)
+// Module 17605 (SubscriptionManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
-import BillingInfoStore from "BillingInfoStore" /* 4266 */;
-import SubscriptionStore from "SubscriptionStore" /* 4270 */;
-import EntitlementStore from "EntitlementStore" /* 7467 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import BillingInfoStore from "BillingInfoStore" /* 4296 */;
+import SubscriptionStore from "SubscriptionStore" /* 4300 */;
+import EntitlementStore from "EntitlementStore" /* 7497 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 let require = fn;
 const PremiumConstants = fn(1373);
@@ -55,7 +55,7 @@ let prototype = function SubscriptionManager() {
                 isSubscriptionFetching = BillingInfoStore.isSubscriptionFetching;
               }
               if (!isSubscriptionFetching) {
-                let obj2 = tmp2(4930);
+                let obj2 = tmp2(4960);
                 c2 = 1;
                 currentUser = 1;
                 const obj1 = { value: obj2.fetchSubscriptions(), done: false };
@@ -95,7 +95,7 @@ let prototype = function SubscriptionManager() {
         if (!hasItem) {
           c2 = 2;
           currentUser = 1;
-          const obj3 = { value: tmp2(7473).fetchUserEntitlementsForApplication(closure_1_7), done: false };
+          const obj3 = { value: tmp2(7503).fetchUserEntitlementsForApplication(closure_1_7), done: false };
           return obj3;
         }
       } catch (tmp22) {
@@ -214,7 +214,7 @@ let prototype = function SubscriptionManager() {
             applyArgumentsResult = tmp4;
             dependencyMap = 1;
             c2 = 1;
-            let obj1 = { value: applyArgumentsResult(4930).fetchIpCountryCode(), done: false };
+            let obj1 = { value: applyArgumentsResult(4960).fetchIpCountryCode(), done: false };
             return obj1;
           }
         } else {
@@ -227,7 +227,7 @@ let prototype = function SubscriptionManager() {
               const obj2 = { value, done: true };
               return obj2;
             } else if (null != ipCountryCode.ipCountryCode) {
-              obj1 = applyArgumentsResult(4930);
+              obj1 = applyArgumentsResult(4960);
               dependencyMap = 2;
               c2 = 1;
               const obj3 = { value: obj1.fetchPaymentSources(), done: false };

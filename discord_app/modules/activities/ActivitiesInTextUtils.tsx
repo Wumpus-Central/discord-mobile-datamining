@@ -1,9 +1,9 @@
-// === Module 9637: ActivitiesInTextUtils ===
+// === Module 9676: ActivitiesInTextUtils ===
 
-// Module 9637 (ActivitiesInTextUtils)
+// Module 9676 (ActivitiesInTextUtils)
 import ChannelTypes from "ChannelTypes" /* 1094 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 
 require = fn;
 function isActivityInTextSupportedForChannel(channel) {

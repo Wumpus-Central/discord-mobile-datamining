@@ -1,10 +1,10 @@
-// === Module 10365: ExpressionPicker ===
+// === Module 10404: ExpressionPicker ===
 
-// Module 10365 (ExpressionPicker)
+// Module 10404 (ExpressionPicker)
 import nativeDefault from "native" /* 576 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4786 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 10367 */;
-import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 10369 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 10406 */;
+import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 10408 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { expressionPickerContainer: null, expressionPickerContent: null, segmentedControl: null, segmentedControlUnpadded: null };
 obj = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, position: "relative", paddingHorizontal: PADDING_HORIZONTAL };
 obj.expressionPickerContainer = obj;

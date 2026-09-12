@@ -1,21 +1,21 @@
-// === Module 16086: MainChannels ===
+// === Module 16110: MainChannels ===
 
-// Module 16086 (MainChannels)
+// Module 16110 (MainChannels)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
-import useChatLayoutDefault from "useChatLayout" /* 4467 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4470 */;
-import useRefValueDefault from "useRefValue" /* 5637 */;
-import StartupProfiler from "StartupProfiler" /* 11626 */;
-import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16087 */;
-import useChannelListWidthDefault from "useChannelListWidth" /* 16088 */;
-import NativeFreezeScreens from "NativeFreezeScreens" /* 16089 */;
-import messages_MessagesDefault from "messages/Messages" /* 16090 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16091 */;
-import RedesignChannelListDefault from "RedesignChannelList" /* 16174 */;
-import HomePanelContent from "HomePanelContent" /* 16352 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16433 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
+import useChatLayoutDefault from "useChatLayout" /* 4497 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4500 */;
+import useRefValueDefault from "useRefValue" /* 5667 */;
+import StartupProfiler from "StartupProfiler" /* 11662 */;
+import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16111 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 16112 */;
+import NativeFreezeScreens from "NativeFreezeScreens" /* 16113 */;
+import messages_MessagesDefault from "messages/Messages" /* 16114 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16115 */;
+import RedesignChannelListDefault from "RedesignChannelList" /* 16198 */;
+import HomePanelContent from "HomePanelContent" /* 16376 */;
+import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16457 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -108,7 +108,7 @@ const DM_WIDTH = Constants.DM_WIDTH;
 const ME = Constants.ME;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
 const rect = { position: "absolute", top: 0, left: DM_WIDTH, bottom: 0, right: 0, flexDirection: "row", borderLeftWidth: 1, borderTopWidth: 1, borderColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopLeftRadius: nativeDefault.radii.xl };
 obj.sideContainer = rect;

@@ -1,6 +1,6 @@
-// === Module 17622: AuditLogUtils ===
+// === Module 17652: AuditLogUtils ===
 
-// Module 17622 (AuditLogUtils)
+// Module 17652 (AuditLogUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
@@ -8,24 +8,24 @@ import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import util from "util" /* 1114 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
-import _modDef4198 from "module_4198" /* 4198 */;
-import DateUtils from "DateUtils" /* 4288 */;
-import UserUtilsDefault from "UserUtils" /* 4451 */;
-import TimeUtils from "TimeUtils" /* 4635 */;
-import useChannelName from "useChannelName" /* 4759 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9913 */;
-import GuildFeedItemTypes from "GuildFeedItemTypes" /* 17623 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 17624 */;
-import EmojiStore from "EmojiStore" /* 5510 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7173 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4793 */;
+import _modDef4228 from "module_4228" /* 4228 */;
+import DateUtils from "DateUtils" /* 4318 */;
+import UserUtilsDefault from "UserUtils" /* 4481 */;
+import TimeUtils from "TimeUtils" /* 4665 */;
+import useChannelName from "useChannelName" /* 4789 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9952 */;
+import GuildFeedItemTypes from "GuildFeedItemTypes" /* 17653 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 17654 */;
+import EmojiStore from "EmojiStore" /* 5540 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7203 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4823 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
-import StickersStore from "StickersStore" /* 5553 */;
+import StickersStore from "StickersStore" /* 5583 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17620 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17650 */;
 
 require = fn;
 function getPermissionChanges(oldValue, newValue) {
@@ -247,18 +247,18 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(17621).AuditLogChange;
+const AuditLogChange = fn(17651).AuditLogChange;
 const Constants = fn(1074);
 ({ AuditLogActions: closure_15, AuditLogChangeKeys } = Constants);
 const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
 ({ MFALevels: closure_18, VerificationLevels: closure_19, UserNotificationSettings: closure_20, GuildExplicitContentFilterTypes: closure_21, ChannelTypes: closure_22, Permissions: closure_23, NOOP_NULL: closure_24, VideoQualityMode: closure_25, ApplicationCommandPermissionTypes: closure_26, AuditLogSubtargetTypes: closure_27, SystemChannelFlags: closure_28, AuditLogActionTypes: closure_29 } = Constants);
 const ChannelFlags = fn(1964).ChannelFlags;
-const AutomodTriggerType = fn(11956).AutomodTriggerType;
-const GuildOnboardingMode = fn(7174).GuildOnboardingMode;
+const AutomodTriggerType = fn(11992).AutomodTriggerType;
+const GuildOnboardingMode = fn(7204).GuildOnboardingMode;
 const GuildScheduledEventsConstants = fn(1963);
 ({ GuildScheduledEventEntityTypes: closure_33, GuildScheduledEventStatus: closure_34, GuildScheduledEventPrivacyLevel: closure_35 } = GuildScheduledEventsConstants);
 let closure_36 = new LoggerDefault("AuditLogUtils");
-let items = [fn(4635).TimeUnits.DAYS, fn(4635).TimeUnits.HOURS, fn(4635).TimeUnits.MINUTES, fn(4635).TimeUnits.SECONDS];
+let items = [fn(4665).TimeUnits.DAYS, fn(4665).TimeUnits.HOURS, fn(4665).TimeUnits.MINUTES, fn(4665).TimeUnits.SECONDS];
 let closure_38 = { [AuditLogTargetTypes.CHANNEL]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true }, [AuditLogTargetTypes.CHANNEL_OVERWRITE]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true }, [AuditLogTargetTypes.INVITE]: { [AuditLogChangeKeys.INVITER_ID]: true, [AuditLogChangeKeys.USES]: true }, [AuditLogTargetTypes.WEBHOOK]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.APPLICATION_ID]: true }, [AuditLogTargetTypes.INTEGRATION]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.NAME]: true }, [AuditLogTargetTypes.THREAD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.TYPE]: true }, [AuditLogTargetTypes.STICKER]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.ASSET]: true, [AuditLogChangeKeys.FORMAT_TYPE]: true, [AuditLogChangeKeys.AVAILABLE]: true, [AuditLogChangeKeys.GUILD_ID]: true }, [AuditLogTargetTypes.GUILD_HOME]: { [AuditLogChangeKeys.ENTITY_TYPE]: true }, [AuditLogTargetTypes.GUILD_ONBOARDING]: { [AuditLogChangeKeys.PROMPTS]: true }, [AuditLogTargetTypes.GUILD_SOUNDBOARD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.SOUND_ID]: true } };
 class ACTION_FILTER_ITEMS {
   constructor() {
@@ -537,19 +537,19 @@ class ACTION_FILTER_ITEMS {
   }
 }
 let obj = {
-  [fn(4635).TimeUnits.SECONDS]: (seconds) => {
+  [fn(4665).TimeUnits.SECONDS]: (seconds) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.geSp4K, { seconds });
   },
-  [fn(4635).TimeUnits.MINUTES]: (minutes) => {
+  [fn(4665).TimeUnits.MINUTES]: (minutes) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.iXLF9W, { minutes });
   },
-  [fn(4635).TimeUnits.HOURS]: (hours) => {
+  [fn(4665).TimeUnits.HOURS]: (hours) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.xCjYxK, { hours });
   },
-  [fn(4635).TimeUnits.DAYS]: (days) => {
+  [fn(4665).TimeUnits.DAYS]: (days) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t["k2UNz+"], { days });
   }
@@ -800,7 +800,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = __3TkD(1114).t.MWp6H7;
           obj17[AuditLogChangeKeys.TEMPORARY] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
           const obj20 = {};
-          obj20[__3TkD(8478).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1114).t.XYZMbL;
+          obj20[__3TkD(8510).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1114).t.XYZMbL;
           __3TkD = obj20;
           obj17[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj17[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1114).t.gb1Owj;
@@ -2420,7 +2420,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             let tmp7 = ((targetId) => closure_1_10.getChannel(targetId))(targetId);
                             let tmp10 = null;
                             if (tmp9) {
-                              tmp10 = ((channel) => result3(4759).computeChannelName(channel, user, closure_1_12, true))(tmp7);
+                              tmp10 = ((channel) => result3(4789).computeChannelName(channel, user, closure_1_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2502,7 +2502,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
           const tmp205 = ((targetId16) => closure_1_10.getChannel(targetId16))(targetId16);
           let tmp208 = null;
           if (tmp207) {
-            tmp208 = ((channel) => result3(4759).computeChannelName(channel, user, closure_1_12, true))(tmp205);
+            tmp208 = ((channel) => result3(4789).computeChannelName(channel, user, closure_1_12, true))(tmp205);
           }
           let tmp209 = tmp208;
           if (null == tmp208) {
@@ -2545,8 +2545,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
           let id = result1.options.id;
           user = user.getUser(id);
           if (tmp224) {
-            id = items(4451).getUserTag(user);
-            const obj4 = items(4451);
+            id = items(4481).getUserTag(user);
+            const obj4 = items(4481);
           }
           obj.subtarget = id;
           tmp224 = null != user && true;
@@ -2614,8 +2614,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
             const prop = found19.guild_scheduled_event_exceptions;
             found20 = prop.find((event_exception_id) => event_exception_id.event_exception_id === result3.options.event_exception_id);
           }
-          const obj5 = closure_0(4288);
-          const tmp244 = items(4198);
+          const obj5 = closure_0(4318);
+          const tmp244 = items(4228);
           let str5;
           if (found20 != null) {
             str5 = found20.event_exception_id;
@@ -3191,14 +3191,14 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               obj = DateUtils;
                                               const _Date = Date;
                                               const date = new Date(newValue2);
-                                              newValue = obj.dateFormat(_modDef4198(date), "LLLL");
+                                              newValue = obj.dateFormat(_modDef4228(date), "LLLL");
                                             }
                                             if (null != newValue.oldValue) {
                                               oldValue2 = newValue.oldValue;
                                               obj1 = DateUtils;
                                               const _Date2 = Date;
                                               const date1 = new Date(oldValue2);
-                                              oldValue = obj1.dateFormat(_modDef4198(date1), "LLLL");
+                                              oldValue = obj1.dateFormat(_modDef4228(date1), "LLLL");
                                             }
                                             if (!oldValue) {
                                               oldValue = newValue.oldValue;

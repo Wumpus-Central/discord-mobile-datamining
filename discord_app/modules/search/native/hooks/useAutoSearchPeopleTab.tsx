@@ -1,15 +1,15 @@
-// === Module 16807: useAutoSearchPeopleTab ===
+// === Module 16834: useAutoSearchPeopleTab ===
 
-// Module 16807 (useAutoSearchPeopleTab)
+// Module 16834 (useAutoSearchPeopleTab)
 import _mod12 from "module_12" /* 12 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9939 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12431 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12454 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9978 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12467 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12490 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12432 */;
+import SearchQueryStore from "SearchQueryStore" /* 12468 */;
 
 require = fn;
-let closure_5 = fn(12446).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(12482).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchPeopleTab.tsx");
 
@@ -28,8 +28,8 @@ export const useAutoSearchPeopleTab = function useAutoSearchPeopleTab(searchCont
     if (!closure_1) {
       const debounceResult = _mod12.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          closure_1(12454).searchPeopleTab(searchContext, searchQueryString);
-          const obj = closure_1(12454);
+          closure_1(12490).searchPeopleTab(searchContext, searchQueryString);
+          const obj = closure_1(12490);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -37,6 +37,6 @@ export const useAutoSearchPeopleTab = function useAutoSearchPeopleTab(searchCont
   }, items1);
   const items2 = [searchContext];
   const effect2 = noop.useEffect(() => () => {
-    closure_1(12454).cleanupPeopleTab(searchContext);
+    closure_1(12490).cleanupPeopleTab(searchContext);
   }, items2);
 };

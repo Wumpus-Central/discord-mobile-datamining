@@ -1,10 +1,10 @@
-// === Module 17464: HolidayEventsConfig ===
+// === Module 17494: HolidayEventsConfig ===
 
-// Module 17464 (HolidayEventsConfig)
+// Module 17494 (HolidayEventsConfig)
 import util from "util" /* 1114 */;
-import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17465 */;
-import _modDef17466 from "module_17466" /* 17466 */;
-import _modDef17467 from "module_17467" /* 17467 */;
+import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17495 */;
+import _modDef17496 from "module_17496" /* 17496 */;
+import _modDef17497 from "module_17497" /* 17497 */;
 
 require = fn;
 let obj = {
@@ -18,14 +18,14 @@ let obj = {
   startTimeMs: 1791388800000,
   endTimeMs: 1793638800000,
   isDesktopOnly: true,
-  soundpack: fn(9995).Soundpacks.HALLOWEEN,
+  soundpack: fn(10034).Soundpacks.HALLOWEEN,
   soundpackLabel: fn(1114).t["+LasFV"],
   appSpinnerSources: null,
   coachmarkDismissibleContent: null,
   coachmarkBackgroundColor: "#1170ed",
   getLoadingTips: null
 };
-obj = { webmDark: _modDef17466, webmLight: _modDef17467 };
+obj = { webmDark: _modDef17496, webmLight: _modDef17497 };
 obj.appSpinnerSources = obj;
 obj.coachmarkDismissibleContent = fn(1943).DismissibleContent.HOLIDAY_COACHMARK_WINTER_2025;
 obj.getLoadingTips = function getLoadingTips() {

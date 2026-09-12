@@ -1,7 +1,7 @@
-// === Module 11172: ProductPurchaseSuccessActionCreators ===
+// === Module 11211: ProductPurchaseSuccessActionCreators ===
 
-// Module 11172 (ProductPurchaseSuccessActionCreators)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
+// Module 11211 (ProductPurchaseSuccessActionCreators)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

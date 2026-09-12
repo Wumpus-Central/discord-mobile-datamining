@@ -1,10 +1,10 @@
-// === Module 14965: useScheduleTimeControlsRowProps ===
+// === Module 14999: useScheduleTimeControlsRowProps ===
 
-// Module 14965 (useScheduleTimeControlsRowProps)
+// Module 14999 (useScheduleTimeControlsRowProps)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import Text_Text from "Text/Text" /* 4602 */;
+import Text_Text from "Text/Text" /* 4632 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

@@ -1,11 +1,11 @@
-// === Module 16235: GuildThemePreviewArt ===
+// === Module 16259: GuildThemePreviewArt ===
 
-// Module 16235 (GuildThemePreviewArt)
+// Module 16259 (GuildThemePreviewArt)
 import nativeDefault from "native" /* 576 */;
-import GuildThemePresets from "GuildThemePresets" /* 4461 */;
-import useThemeDefault from "useTheme" /* 4541 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 16236 */;
+import GuildThemePresets from "GuildThemePresets" /* 4491 */;
+import useThemeDefault from "useTheme" /* 4571 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 16260 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ function PreviewOverlay() {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { previewArt: null, previewOverlay: null };
 createStyles = { position: "relative", width: 256, aspectRatio: 1.5705521472392638, overflow: "hidden", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.previewArt = createStyles;

@@ -1,16 +1,16 @@
-// === Module 12257: AppLauncherChoicesOption ===
+// === Module 12293: AppLauncherChoicesOption ===
 
-// Module 12257 (AppLauncherChoicesOption)
+// Module 12293 (AppLauncherChoicesOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { container: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", padding: 12 };
 createStyles.container = createStyles;
@@ -65,7 +65,7 @@ export default function AppLauncherChoicesOption(option) {
       onSelect(choice);
     };
     obj.onDismiss = onDismissChoicesSheet;
-    obj2.openLazy(asyncRequireImpl(12258, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj);
+    obj2.openLazy(asyncRequireImpl(12294, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj);
   }, items);
   let obj = option(onSelect[9]);
   const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, callback);

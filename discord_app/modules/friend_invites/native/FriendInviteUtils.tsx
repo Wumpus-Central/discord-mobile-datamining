@@ -1,13 +1,13 @@
-// === Module 17385: FriendInviteUtils ===
+// === Module 17415: FriendInviteUtils ===
 
-// Module 17385 (FriendInviteUtils)
+// Module 17415 (FriendInviteUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8464 */;
-import _modDef9657 from "module_9657" /* 9657 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8496 */;
+import _modDef9696 from "module_9696" /* 9696 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 require = fn;
 const size = fn(2);
@@ -20,7 +20,7 @@ export const revokeAllFriendInvites = function revokeAllFriendInvites() {
     const obj = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
     const intl = util.intl;
     obj.content = intl.string(util.t.jSHEOQ);
-    obj.icon = _modDef9657;
+    obj.icon = _modDef9696;
     obj.open(obj);
   });
 };
@@ -45,7 +45,7 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
               if (inviter != null) {
                 username = inviter.username;
               }
-              obj = { key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: _modDef9657 };
+              obj = { key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: _modDef9696 };
               obj.open(obj);
               DispatcherDefault.wait(() => closure_1_1(closure_1_2[7])());
               const tmpResult = DispatcherDefault;

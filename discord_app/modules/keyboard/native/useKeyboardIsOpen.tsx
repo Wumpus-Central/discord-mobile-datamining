@@ -1,6 +1,6 @@
-// === Module 6696: useKeyboardIsOpen ===
+// === Module 6726: useKeyboardIsOpen ===
 
-// Module 6696 (useKeyboardIsOpen)
+// Module 6726 (useKeyboardIsOpen)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
 import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1481 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;

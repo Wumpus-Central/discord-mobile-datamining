@@ -1,6 +1,6 @@
-// === Module 7053: ManaTypeConsolidationExperiment ===
+// === Module 7083: ManaTypeConsolidationExperiment ===
 
-// Module 7053 (ManaTypeConsolidationExperiment)
+// Module 7083 (ManaTypeConsolidationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 16045: components/VerifyPhone ===
+// === Module 16069: components/VerifyPhone ===
 
-// Module 16045 (components/VerifyPhone)
-import RegistrationBailoutButtonDefault from "RegistrationBailoutButton" /* 16046 */;
+// Module 16069 (components/VerifyPhone)
+import RegistrationBailoutButtonDefault from "RegistrationBailoutButton" /* 16070 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_6 = fn(16017).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(16018);
+let closure_6 = fn(16041).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(16042);
 ({ authStateToRegisterTransitionStep: closure_7, RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
 const Links = fn(1074).Links;
 const jsx = fn(21).jsx;
@@ -32,7 +32,7 @@ export default function VerifyPhone(phone) {
   closure_7 = noop.useRef(false);
   const context = noop.useContext(require("Auth").TrackRegistrationContext);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  onPhoneTokenReceived(16033)(closure_7(sourceState));
+  onPhoneTokenReceived(16057)(closure_7(sourceState));
   const items = [context];
   const effect = noop.useEffect(() => {
     if (_undefined()) {
@@ -40,7 +40,7 @@ export default function VerifyPhone(phone) {
       context(obj);
     }
   }, items);
-  onPhoneTokenReceived(5043)(() => () => {
+  onPhoneTokenReceived(5073)(() => () => {
     let tmpResult;
     if (dependencyMap != null) {
       tmpResult = tmp(ref.current);
@@ -54,7 +54,7 @@ export default function VerifyPhone(phone) {
     if (v3()) {
       context({ step: context.PHONE_VERIFICATION, actionType: callback.SUBMITTED });
     }
-    let obj4 = onPhoneTokenReceived(7118);
+    let obj4 = onPhoneTokenReceived(7148);
     yield obj4.verifyPhone(closure_0, closure_0, false);
     if (1 === tmp7) {
       v0 = 0;
@@ -159,7 +159,7 @@ export default function VerifyPhone(phone) {
     }
     return applyArgumentsResult;
   }, items2);
-  onPhoneTokenReceived(7152)(callback1);
+  onPhoneTokenReceived(7182)(callback1);
   const items3 = [onBail];
   const memo = noop.useMemo(() => {
     let tmp2 = null;
@@ -170,10 +170,10 @@ export default function VerifyPhone(phone) {
     return tmp2;
   }, items3);
   let obj = { title, description, error: tmp3, onCodeEntered, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true };
-  const tmp7 = onPhoneTokenReceived(16033);
+  const tmp7 = onPhoneTokenReceived(16057);
   obj.codeType = require("CodeField").CodeType.NUMERIC;
   obj.footer = memo;
   obj.disabled = tmp5;
   obj.loading = tmp[0];
-  return jsx(onPhoneTokenReceived(7153), { title, description, error: tmp3, onCodeEntered, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true });
+  return jsx(onPhoneTokenReceived(7183), { title, description, error: tmp3, onCodeEntered, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true });
 };

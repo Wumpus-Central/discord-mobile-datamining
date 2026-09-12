@@ -1,9 +1,9 @@
-// === Module 11761: SendMessageOptionsStore ===
+// === Module 11797: SendMessageOptionsStore ===
 
-// Module 11761 (SendMessageOptionsStore)
+// Module 11797 (SendMessageOptionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageConstants from "MessageConstants" /* 4599 */;
+import MessageConstants from "MessageConstants" /* 4629 */;
 import size from "module_2" /* 2 */;
 
 const MessageSendLocation = MessageConstants.MessageSendLocation;

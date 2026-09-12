@@ -1,7 +1,7 @@
-// === Module 17382: ManagerRegistry ===
+// === Module 17412: ManagerRegistry ===
 
-// Module 17382 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 17976 */;
+// Module 17412 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 18006 */;
 import size from "module_2" /* 2 */;
 
 const obj = {

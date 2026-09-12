@@ -1,10 +1,10 @@
-// === Module 15573: ServerTrendingNotificationUtils ===
+// === Module 15595: ServerTrendingNotificationUtils ===
 
-// Module 15573 (ServerTrendingNotificationUtils)
+// Module 15595 (ServerTrendingNotificationUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import NotificationConstants from "NotificationConstants" /* 4258 */;
+import NotificationConstants from "NotificationConstants" /* 4288 */;
 import size from "module_2" /* 2 */;
 
 const constants = NotificationConstants.NotificationSettingsUpdateType;

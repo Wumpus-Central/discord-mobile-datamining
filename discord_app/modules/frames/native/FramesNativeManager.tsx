@@ -1,18 +1,18 @@
-// === Module 9659: FramesNativeManager ===
+// === Module 9698: FramesNativeManager ===
 
-// Module 9659 (FramesNativeManager)
+// Module 9698 (FramesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
 import v1 from "v1" /* 1256 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4951 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 9607 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9608 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9641 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 9646 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9647 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9680 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 9601 */;
-import FramesManager from "FramesManager" /* 9660 */;
+import FramesStore from "FramesStore" /* 9640 */;
+import FramesManager from "FramesManager" /* 9699 */;
 
 require = fn;
 function postMessageToWebView() {
@@ -42,13 +42,13 @@ let closure_12 = async function _postMessageToWebView(arg0) {
   }
   return value;
 };
-const isLaunched = fn(9602).isLaunched;
+const isLaunched = fn(9641).isLaunched;
 const ComponentActions = fn(1074).ComponentActions;
 let closure_7 = fn(1920).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(4511).TransportTypes;
-const WebView = fn(8384);
+const TransportTypes = fn(4541).TransportTypes;
+const WebView = fn(8416);
 const React7 = WebView.getWebViewProxy("FRAME_WEB_VIEW_KEY");
-const PlatformUtils = fn(1116);
+const PlatformUtils = fn(1151);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);

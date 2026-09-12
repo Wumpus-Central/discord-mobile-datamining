@@ -1,9 +1,9 @@
-// === Module 9759: useEventSchedule ===
+// === Module 9798: useEventSchedule ===
 
-// Module 9759 (useEventSchedule)
-import ScheduleUtils from "ScheduleUtils" /* 9756 */;
-import useEventException from "useEventException" /* 9760 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7599 */;
+// Module 9798 (useEventSchedule)
+import ScheduleUtils from "ScheduleUtils" /* 9795 */;
+import useEventException from "useEventException" /* 9799 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
 
 const useEventExceptionDefault = useEventException;
 
@@ -47,7 +47,7 @@ export const useEventScheduleById = function useEventScheduleById(guildEventId, 
   let stateFromStores = obj.useStateFromStores(items, () => GuildScheduledEventStore.getGuildScheduledEvent(closure_0));
   let tmp5 = null;
   if (recurrenceId == null) {
-    let tmp2Result = tmp2(9756);
+    let tmp2Result = tmp2(9795);
     nextRecurrenceIdInEvent = tmp2Result.getNextRecurrenceIdInEvent(stateFromStores);
   }
   useEventExceptionDefault;
@@ -59,9 +59,9 @@ export const useEventScheduleById = function useEventScheduleById(guildEventId, 
   } else {
     if (tmp5 != stateFromStores.recurrence_rule) {
       if (tmp5 != nextRecurrenceIdInEvent) {
-        tmp2Result = tmp2(9756);
+        tmp2Result = tmp2(9795);
         const baseScheduleForRecurrence = tmp2Result.getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, stateFromStores);
-        const scheduleForRecurrenceWithException = tmp2(9756).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp7);
+        const scheduleForRecurrenceWithException = tmp2(9795).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp7);
         ({ startDate, endDate } = scheduleForRecurrenceWithException);
         obj = { startTime: startDate.toDate(), endTime: null };
         let toDateResult;
@@ -69,7 +69,7 @@ export const useEventScheduleById = function useEventScheduleById(guildEventId, 
           toDateResult = endDate.toDate();
         }
         obj.endTime = toDateResult;
-        const tmp2Result1 = tmp2(9756);
+        const tmp2Result1 = tmp2(9795);
       }
     }
     obj = { startTime: null, endTime: null };

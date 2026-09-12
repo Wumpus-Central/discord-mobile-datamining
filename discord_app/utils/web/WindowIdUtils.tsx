@@ -1,6 +1,6 @@
-// === Module 5606: WindowIdUtils ===
+// === Module 5636: WindowIdUtils ===
 
-// Module 5606 (WindowIdUtils)
+// Module 5636 (WindowIdUtils)
 import _mod12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

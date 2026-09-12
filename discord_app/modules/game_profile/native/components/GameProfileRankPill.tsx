@@ -1,17 +1,17 @@
-// === Module 8807: GameProfileRankPill ===
+// === Module 8841: GameProfileRankPill ===
 
-// Module 8807 (GameProfileRankPill)
+// Module 8841 (GameProfileRankPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import TrophyIcon from "TrophyIcon" /* 8808 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import TrophyIcon from "TrophyIcon" /* 8842 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { flex: 1, flexDirection: "row", alignItems: "flex-end" }, gameRankPill: null };
 createStyles = { flexDirection: "row", backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, alignItems: "center", gap: nativeDefault.space.PX_4 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);

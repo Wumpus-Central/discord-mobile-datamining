@@ -1,9 +1,9 @@
-// === Module 13195: AddToWishlistItemCard ===
+// === Module 13232: AddToWishlistItemCard ===
 
-// Module 13195 (AddToWishlistItemCard)
+// Module 13232 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 576 */;
-import SKUPreviewDefault from "SKUPreview" /* 8863 */;
-import HeartOutlineIcon from "HeartOutlineIcon" /* 8930 */;
+import SKUPreviewDefault from "SKUPreview" /* 8898 */;
+import HeartOutlineIcon from "HeartOutlineIcon" /* 8965 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 const createStyles = { heartOverlay: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_4, right: nativeDefault.space.PX_4, zIndex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 createStyles.heartOverlay = rect;

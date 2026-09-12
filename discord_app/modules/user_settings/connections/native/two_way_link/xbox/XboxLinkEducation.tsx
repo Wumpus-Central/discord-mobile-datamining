@@ -1,13 +1,13 @@
-// === Module 9536: XboxLinkEducation ===
+// === Module 9575: XboxLinkEducation ===
 
-// Module 9536 (XboxLinkEducation)
+// Module 9575 (XboxLinkEducation)
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9316 */;
-import _modDef9354 from "module_9354" /* 9354 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9355 */;
+import _modDef9393 from "module_9393" /* 9393 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkEducation.tsx");
@@ -28,7 +28,7 @@ export default function XboxLinkEducation(onClose) {
   const articleURL = obj1.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
-  obj1 = { source: noop.useMemo(() => ({ uri: _modDef9354 }), []), style: closure_9().image };
+  obj1 = { source: noop.useMemo(() => ({ uri: _modDef9393 }), []), style: closure_9().image };
   const items = [React5(React4, obj1), , ];
   const obj2 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;

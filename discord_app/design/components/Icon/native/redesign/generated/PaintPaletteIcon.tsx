@@ -1,9 +1,9 @@
-// === Module 15323: PaintPaletteIcon ===
+// === Module 15345: PaintPaletteIcon ===
 
-// Module 15323 (PaintPaletteIcon)
+// Module 15345 (PaintPaletteIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4307 */;
-import _mod15324 from "module_15324" /* 15324 */;
+import BaseIconImage from "BaseIconImage" /* 4337 */;
+import _mod15346 from "module_15346" /* 15346 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const PaintPaletteIcon = function PaintPaletteIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15324, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15346, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

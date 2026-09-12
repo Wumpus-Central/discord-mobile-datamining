@@ -1,6 +1,6 @@
-// === Module 4290: NativeTimezoneHermesFixModule ===
+// === Module 4320: NativeTimezoneHermesFixModule ===
 
-// Module 4290 (NativeTimezoneHermesFixModule)
+// Module 4320 (NativeTimezoneHermesFixModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 13249: ProductDetailsActionSheetVariants ===
+// === Module 13282: ProductDetailsActionSheetVariants ===
 
-// Module 13249 (ProductDetailsActionSheetVariants)
+// Module 13282 (ProductDetailsActionSheetVariants)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Pressables from "Pressables" /* 5174 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7206 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 8932 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 8956 */;
+import Pressables from "Pressables" /* 5204 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7236 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 8967 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 8991 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,7 +42,7 @@ function VariantCheckmark(variant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, headerRow: null, variantsContainer: null, text: null };
 createStyles = { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 createStyles.container = createStyles;
@@ -51,7 +51,7 @@ let obj1 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 createStyles.variantsContainer = { display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 createStyles.text = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
 let closure_6 = createStyles.createStyles(createStyles);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let closure_7 = createStyles.createStyles((arg0) => {
   const size = { width: 28, height: 28, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: null };
   const colors = nativeDefault.colors;

@@ -1,6 +1,6 @@
-// === Module 17062: useSimpleGuildSize ===
+// === Module 17089: useSimpleGuildSize ===
 
-// Module 17062 (useSimpleGuildSize)
+// Module 17089 (useSimpleGuildSize)
 import noop from "module_19" /* 19 */;
 
 let size = fn(2);

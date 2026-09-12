@@ -1,6 +1,6 @@
-// === Module 6391: ? ===
+// === Module 6421: ? ===
 
-// Module 6391
+// Module 6421
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWumpusHero3dIllustration-2x.png.js");

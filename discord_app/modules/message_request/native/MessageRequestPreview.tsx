@@ -1,18 +1,18 @@
-// === Module 16964: MessageRequestPreview ===
+// === Module 16991: MessageRequestPreview ===
 
-// Module 16964 (MessageRequestPreview)
+// Module 16991 (MessageRequestPreview)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
-import TextStyles from "TextStyles" /* 5575 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
+import TextStyles from "TextStyles" /* 5605 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ Fonts, AnalyticEvents: metroRequire, MessageFlags: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let obj = { systemContent: null, messageContent: null };
 obj = { fontStyle: "italic" };
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_DEFAULT, 12));
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/message_request/native/Messag
 export default noop.memo(function MessageRequestPreview(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  let obj = channel(12687);
+  let obj = channel(12723);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
@@ -86,7 +86,7 @@ export default noop.memo(function MessageRequestPreview(channel) {
       }
       if (null != content) {
         if ("" !== message.content) {
-          const content1 = message(7962)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
+          const content1 = message(7992)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
           const _Array = Array;
           if (!Array.isArray(content1)) {
             flag = true;
@@ -120,7 +120,7 @@ export default noop.memo(function MessageRequestPreview(channel) {
         }
         stringResult = stringResult1;
         flag = false;
-        tmp2Result = tmp2(4945);
+        tmp2Result = tmp2(4975);
       } else {
         const intl = tmp2(1114).intl;
         stringResult = intl.string(tmp2(1114).t["0KfDxM"]);

@@ -1,8 +1,8 @@
-// === Module 7897: BurstReactionAnimationPreview ===
+// === Module 7927: BurstReactionAnimationPreview ===
 
-// Module 7897 (BurstReactionAnimationPreview)
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7835 */;
-import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 7898 */;
+// Module 7927 (BurstReactionAnimationPreview)
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
+import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 7928 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,19 +1,19 @@
-// === Module 15051: QuestHomeSetting ===
+// === Module 15085: QuestHomeSetting ===
 
-// Module 15051 (QuestHomeSetting)
+// Module 15085 (QuestHomeSetting)
 import nativeDefault from "native" /* 576 */;
-import _mod4229 from "module_4229" /* 4229 */;
-import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 15052 */;
-import QuestHomeDefault from "QuestHome" /* 15056 */;
+import _mod4259 from "module_4259" /* 4259 */;
+import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 15086 */;
+import QuestHomeDefault from "QuestHome" /* 15090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 11861 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 11897 */;
 
 require = fn;
-const QuestConstants = fn(5495);
+const QuestConstants = fn(5525);
 ({ QuestHomeSortMethods: metroRequire, getQuestHomeFilterOptionItem: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { container: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.container = createStyles;
@@ -82,7 +82,7 @@ export default function QuestHomeSetting() {
       }
       closure_1_1(found);
     }
-  }, { equalityFn: _mod4229.shallow, fireImmediately: true }), []);
+  }, { equalityFn: _mod4259.shallow, fireImmediately: true }), []);
   let navigation;
   let obj = navigation(1483);
   navigation = obj.useNavigation();

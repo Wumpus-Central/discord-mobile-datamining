@@ -1,6 +1,6 @@
-// === Module 4258: NotificationConstants ===
+// === Module 4288: NotificationConstants ===
 
-// Module 4258 (NotificationConstants)
+// Module 4288 (NotificationConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/notifications/NotificationConstants.tsx");

@@ -1,11 +1,11 @@
-// === Module 11600: AppStoreOverlayMediaCarousel ===
+// === Module 11639: AppStoreOverlayMediaCarousel ===
 
-// Module 11600 (AppStoreOverlayMediaCarousel)
+// Module 11639 (AppStoreOverlayMediaCarousel)
 import nativeDefault from "native" /* 576 */;
-import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 11601 */;
-import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 11602 */;
+import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 11640 */;
+import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 11641 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 function getMeasurableUrl(type) {
@@ -120,7 +120,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { carousel: null, carouselContent: null, mediaItem: null, media: null, playIconWrapper: null };
 createStyles = { marginHorizontal: -nativeDefault.space.PX_16 };
 createStyles.carousel = createStyles;

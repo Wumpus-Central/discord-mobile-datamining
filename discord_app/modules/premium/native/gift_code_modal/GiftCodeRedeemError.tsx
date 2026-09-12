@@ -1,15 +1,15 @@
-// === Module 11547: GiftCodeRedeemError ===
+// === Module 11586: GiftCodeRedeemError ===
 
-// Module 11547 (GiftCodeRedeemError)
+// Module 11586 (GiftCodeRedeemError)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Link from "Link" /* 1484 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7196 */;
-import _modDef11548 from "module_11548" /* 11548 */;
-import _modDef11549 from "module_11549" /* 11549 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
+import _modDef11587 from "module_11587" /* 11587 */;
+import _modDef11588 from "module_11588" /* 11588 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, body: null, header: null, message: null, footer: null };
 createStyles = { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -36,9 +36,9 @@ export default function GiftCodeRedeemError(children) {
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = _modDef11548;
+    let tmp9Result = _modDef11587;
   } else {
-    tmp9Result = _modDef11549;
+    tmp9Result = _modDef11588;
   }
   const items = [timestampProducer(React3, { source: tmp9Result }), , ];
   const obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };

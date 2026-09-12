@@ -1,8 +1,8 @@
-// === Module 16836: getFriendStatusCounts ===
+// === Module 16863: getFriendStatusCounts ===
 
-// Module 16836 (getFriendStatusCounts)
-import PresenceStore from "PresenceStore" /* 4646 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+// Module 16863 (getFriendStatusCounts)
+import PresenceStore from "PresenceStore" /* 4676 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 const StatusTypes = fn(1074).StatusTypes;
 const size = fn(2);

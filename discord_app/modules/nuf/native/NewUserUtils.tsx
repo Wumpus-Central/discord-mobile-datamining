@@ -1,19 +1,19 @@
-// === Module 17531: NewUserUtils ===
+// === Module 17561: NewUserUtils ===
 
-// Module 17531 (NewUserUtils)
+// Module 17561 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import Link from "Link" /* 1484 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4464 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4809 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12773 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12776 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12839 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 17532 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12809 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12812 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12875 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 17562 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 16029 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5332 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 16053 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -137,7 +137,7 @@ let closure_18 = async function _getNextOnboardingStep() {
           let transitionStep2;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -230,8 +230,8 @@ let closure_18 = async function _getNextOnboardingStep() {
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
 ({ PlatformTypes: closure_8, Routes: closure_9 } = Constants);
-const ContactPermissions = fn(12771).ContactPermissions;
-let closure_11 = fn(4816).NotificationAuthorizationStatus;
+const ContactPermissions = fn(12807).ContactPermissions;
+let closure_11 = fn(4846).NotificationAuthorizationStatus;
 let obj = {
   key: "choose-avatar",
   shouldShowStep() {
@@ -397,7 +397,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9911).hasDeferredInvite,
+    shouldShowStep: fn(9950).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }

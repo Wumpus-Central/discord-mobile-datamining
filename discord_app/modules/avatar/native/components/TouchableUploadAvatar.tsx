@@ -1,20 +1,20 @@
-// === Module 17529: TouchableUploadAvatar ===
+// === Module 17559: TouchableUploadAvatar ===
 
-// Module 17529 (TouchableUploadAvatar)
+// Module 17559 (TouchableUploadAvatar)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Pressables from "Pressables" /* 5174 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef12866 from "module_12866" /* 12866 */;
-import _modDef13916 from "module_13916" /* 13916 */;
+import Pressables from "Pressables" /* 5204 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef12902 from "module_12902" /* 12902 */;
+import _modDef13950 from "module_13950" /* 13950 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { avatarContainer: { display: "flex", paddingTop: 24 }, defaultLogoStyle: null, uploadedAvatarStyle: null, avatarWrapper: null, uploadAvatarWrapper: null, uploadAvatarIcon: null };
 createStyles = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 96 };
 createStyles.defaultLogoStyle = createStyles;
@@ -35,7 +35,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
   }
   const tmp = closure_6();
   if (!showPendingAvatar) {
-    let tmp3 = _modDef13916;
+    let tmp3 = _modDef13950;
   } else {
     tmp3 = avatarSource;
   }
@@ -51,7 +51,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     const obj1 = { resizeMode: "contain", style: defaultLogoStyle, source: tmp3 };
     const items = [React4(FastImageDefault, obj1), ];
     const obj2 = { style: tmp.uploadAvatarWrapper, children: null };
-    const obj3 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12866, style: tmp.uploadAvatarIcon };
+    const obj3 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12902, style: tmp.uploadAvatarIcon };
     obj2.children = React4(native.Icon, obj3);
     items[1] = React4(View, obj2);
     obj.children = items;

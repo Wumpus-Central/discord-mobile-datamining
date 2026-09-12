@@ -1,9 +1,9 @@
-// === Module 6038: EnvelopeOpenSpotIllustration ===
+// === Module 6068: EnvelopeOpenSpotIllustration ===
 
-// Module 6038 (EnvelopeOpenSpotIllustration)
+// Module 6068 (EnvelopeOpenSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6039 from "module_6039" /* 6039 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6069 from "module_6069" /* 6069 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const EnvelopeOpenSpotIllustration = function EnvelopeOpenSpotIllustratio
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6039 };
+  obj = { uri: _modDef6069 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const EnvelopeOpenSpotIllustration = function EnvelopeOpenSpotIllustratio
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6039 });
+  return jsx(FastImageDefault, { uri: _modDef6069 });
 };

@@ -1,18 +1,18 @@
-// === Module 8262: ProductDetailsActionSheet ===
+// === Module 8294: ProductDetailsActionSheet ===
 
-// Module 8262 (ProductDetailsActionSheet)
+// Module 8294 (ProductDetailsActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7223 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7626 */;
-import ShopStandalonePdpMobileExperiment from "ShopStandalonePdpMobileExperiment" /* 8259 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8858 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7656 */;
+import ShopStandalonePdpMobileExperiment from "ShopStandalonePdpMobileExperiment" /* 8291 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8893 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7615 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
 
 require = fn;
 function PreviewProfileTrigger(handlePreviewPress) {
@@ -20,9 +20,9 @@ function PreviewProfileTrigger(handlePreviewPress) {
   const onTrackPress = handlePreviewPress.onTrackPress;
   const tmp = closure_17();
   dependencyMap = tmp;
-  let obj = handlePreviewPress(4317);
+  let obj = handlePreviewPress(4347);
   const theme = obj.useThemeContext().theme;
-  const isThemeLightResult = handlePreviewPress(4458).isThemeLight(theme);
+  const isThemeLightResult = handlePreviewPress(4488).isThemeLight(theme);
   closure_3 = theme === ThemeTypes.ONYX;
   noop = isThemeLightResult ? tmp.previewProfileButtonLight : tmp.previewProfileButtonDark;
   closure_5 = isThemeLightResult ? tmp.previewProfileButtonLightPressed : tmp.previewProfileButtonDarkPressed;
@@ -53,7 +53,7 @@ function PreviewProfileTrigger(handlePreviewPress) {
   const intl = tmp2(1114).intl;
   obj.accessibilityLabel = intl.string(handlePreviewPress(1114).t["3Qcx6K"]);
   obj = { size: "md", color: onTrackPress(576).colors.INTERACTIVE_ICON_DEFAULT };
-  obj.children = closure_13(handlePreviewPress(7041).EyeIcon, obj);
+  obj.children = closure_13(handlePreviewPress(7071).EyeIcon, obj);
   return closure_13(closure_7, obj);
 }
 function ProductDetailsActionSheetInner(arg0) {
@@ -87,12 +87,12 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   skuId = skuId.skuId;
   const initialVariantIndex = skuId.initialVariantIndex;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  let obj = skuId(13208);
+  let obj = skuId(8999);
   const collectiblesShopProduct = obj.useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  let obj1 = skuId(10823);
+  let obj1 = skuId(10862);
   const getOrFetchPurchases = obj1.useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
   const ref1 = noop.useRef(null);
@@ -124,22 +124,22 @@ function ManagedProductDetailsActionSheetInner(skuId) {
           children: null
         };
         obj.children = closure_13(closure_19, obj);
-        return closure_13(tmp(7223).BottomSheet, obj);
+        return closure_13(tmp(7253).BottomSheet, obj);
       }
     }
   }
   if ("error" === state) {
-    obj1 = { Illustration: tmp(8316).NoResults, body: null, children: null };
+    obj1 = { Illustration: tmp(8348).NoResults, body: null, children: null };
     const intl = tmp(1114).intl;
     obj1.body = intl.string(tmp(1114).t.eAn6z2);
     const obj2 = { text: null, onPress: null };
     const intl2 = tmp(1114).intl;
     obj2.text = intl2.string(tmp(1114).t["+hivLW"]);
     obj2.onPress = retry;
-    obj1.children = closure_13(tmp(5026).Button, obj2);
+    obj1.children = closure_13(tmp(5056).Button, obj2);
     closure_13(tmp(1178).EmptyState, obj1);
   } else {
-    closure_13(initialVariantIndex(13264), {});
+    closure_13(initialVariantIndex(13297), {});
   }
   ref = noop.useRef(null);
 }
@@ -179,18 +179,18 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = {};
 const logger = new LoggerDefault("ProductDetailsActionSheet");
-fn(4606);
+fn(4636);
 let obj = { container: { position: "relative", flex: 1 }, actionButtons: null, previewProfileButton: null, previewProfileButtonLight: null, previewProfileButtonLightPressed: null, previewProfileButtonDark: null, previewProfileButtonDarkPressed: null, previewProfileButtonMidnight: null, badgeWrapper: null };
 const rect = { position: "absolute", top: 0, right: nativeDefault.space.PX_16, zIndex: 2, flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj.actionButtons = rect;
-let size = { width: fn(5031).MEDIUM_BUTTON_HEIGHT, height: fn(5031).MEDIUM_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
+let size = { width: fn(5061).MEDIUM_BUTTON_HEIGHT, height: fn(5061).MEDIUM_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
 obj.previewProfileButton = size;
 obj = { backgroundColor: null };
-let native = fn(4317);
+let native = fn(4347);
 obj.backgroundColor = native.setColorOpacity("white", 0.72);
 obj.previewProfileButtonLight = obj;
 const createStyles = { backgroundColor: null };
-native = fn(4317);
+native = fn(4347);
 createStyles.backgroundColor = native.setColorOpacity("white", 0.62);
 obj.previewProfileButtonLightPressed = createStyles;
 const tmp5 = new LoggerDefault("ProductDetailsActionSheet");

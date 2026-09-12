@@ -1,19 +1,19 @@
-// === Module 10253: NotificationSettingsMockChannels ===
+// === Module 10292: NotificationSettingsMockChannels ===
 
-// Module 10253 (NotificationSettingsMockChannels)
+// Module 10292 (NotificationSettingsMockChannels)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import TextIcon from "TextIcon" /* 5131 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 10254 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import TextIcon from "TextIcon" /* 5161 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 10293 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(4788).UnreadSetting;
+const UnreadSetting = fn(4818).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { card: null, channel: null, channelName: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, paddingVertical: 8 };
 createStyles.card = createStyles;

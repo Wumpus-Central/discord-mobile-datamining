@@ -1,9 +1,9 @@
-// === Module 5976: DiamondSpotIllustration ===
+// === Module 6006: DiamondSpotIllustration ===
 
-// Module 5976 (DiamondSpotIllustration)
+// Module 6006 (DiamondSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5977 from "module_5977" /* 5977 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6007 from "module_6007" /* 6007 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DiamondSpotIllustration = function DiamondSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5977 };
+  obj = { uri: _modDef6007 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const DiamondSpotIllustration = function DiamondSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5977 });
+  return jsx(FastImageDefault, { uri: _modDef6007 });
 };

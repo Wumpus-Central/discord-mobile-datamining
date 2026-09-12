@@ -1,19 +1,19 @@
-// === Module 17401: AudioSettingsManager ===
+// === Module 17431: AudioSettingsManager ===
 
-// Module 17401 (AudioSettingsManager)
+// Module 17431 (AudioSettingsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Storage2 from "Storage" /* 510 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 9182 */;
-import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9183 */;
-import AudioSettingsPending from "AudioSettingsPending" /* 14122 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 9221 */;
+import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9222 */;
+import AudioSettingsPending from "AudioSettingsPending" /* 14157 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameConsoleStore from "GameConsoleStore" /* 4623 */;
-import SoundboardStore from "SoundboardStore" /* 5063 */;
+import GameConsoleStore from "GameConsoleStore" /* 4653 */;
+import SoundboardStore from "SoundboardStore" /* 5093 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import apply from "module_12" /* 12 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -116,7 +116,7 @@ function handleSetLocalMute(arg0) {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(14122).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(14157).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         let obj = AudioSettingsUtils;
         const result = obj.coerceAudioContextForProto(arg0);
@@ -190,7 +190,7 @@ function handleSetLocalSoundboardMute(userId) {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(14122).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(14157).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         let obj = AudioSettingsUtils;
         const result = obj.coerceAudioContextForProto(arg0);
@@ -264,7 +264,7 @@ function handleResetMediaEngineSettings(arg0) {
     }, UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION);
   }
 }
-const MediaEngineContextTypes = fn(4631).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4661).MediaEngineContextTypes;
 function SETTINGS_MIGRATION_KEY(id) {
   return "AudioContextSettingsMigrated:" + id;
 }
@@ -280,7 +280,7 @@ let closure_12 = apply.debounce(() => {
   const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
     closure_0 = arg0;
-    let result = closure_0(14122).drainPendingAudioSettings((arg0, arg1, arg2) => {
+    let result = closure_0(14157).drainPendingAudioSettings((arg0, arg1, arg2) => {
       let diff;
       let obj = AudioSettingsUtils;
       const result = obj.coerceAudioContextForProto(arg0);
@@ -342,7 +342,7 @@ let closure_12 = apply.debounce(() => {
     return false;
   }, UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION);
 }, 2000);
-let closure_13 = apply.debounce(fn(9539).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
+let closure_13 = apply.debounce(fn(9578).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
 let prototype = function AudioSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: handleConnectionOpen, AUDIO_SET_LOCAL_VOLUME: handleSetLocalVolume, AUDIO_TOGGLE_LOCAL_MUTE: handleSetLocalMute, AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: handleSetLocalSoundboardMute, MEDIA_ENGINE_RESET_SETTINGS: handleResetMediaEngineSettings };

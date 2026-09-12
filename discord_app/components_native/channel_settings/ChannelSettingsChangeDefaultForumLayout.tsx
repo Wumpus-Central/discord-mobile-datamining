@@ -1,9 +1,9 @@
-// === Module 16942: ChannelSettingsChangeDefaultForumLayout ===
+// === Module 16969: ChannelSettingsChangeDefaultForumLayout ===
 
-// Module 16942 (ChannelSettingsChangeDefaultForumLayout)
+// Module 16969 (ChannelSettingsChangeDefaultForumLayout)
 import nativeDefault from "native" /* 576 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8716 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8748 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -79,7 +79,7 @@ class ChannelSettingsChangeDefaultForumLayout {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, description: null, thumbnailImagePortrait: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;

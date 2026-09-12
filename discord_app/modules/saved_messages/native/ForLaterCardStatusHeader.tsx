@@ -1,11 +1,11 @@
-// === Module 12310: ForLaterCardStatusHeader ===
+// === Module 12346: ForLaterCardStatusHeader ===
 
-// Module 12310 (ForLaterCardStatusHeader)
+// Module 12346 (ForLaterCardStatusHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4602 */;
+import Text_Text from "Text/Text" /* 4632 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4606 */;
+import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

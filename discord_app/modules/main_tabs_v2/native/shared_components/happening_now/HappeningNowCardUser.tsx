@@ -1,19 +1,19 @@
-// === Module 16161: HappeningNowCardUser ===
+// === Module 16185: HappeningNowCardUser ===
 
-// Module 16161 (HappeningNowCardUser)
+// Module 16185 (HappeningNowCardUser)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4646 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(15357).HappeningNowCardTrackingType;
+let closure_7 = fn(15379).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
 const LARGE = fn(1178).AvatarSizes.LARGE;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx");
@@ -39,8 +39,8 @@ export default noop.memo((index) => {
     obj.highlighted_user_ids = items;
     obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj);
     if (null != stateFromStores) {
-      asyncRequireImpl(8264, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
-      const promise = asyncRequireImpl(8264, dependencyMap.paths);
+      asyncRequireImpl(8296, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8296, dependencyMap.paths);
     }
   }, items2);
   let obj1 = index(guildId[10]);

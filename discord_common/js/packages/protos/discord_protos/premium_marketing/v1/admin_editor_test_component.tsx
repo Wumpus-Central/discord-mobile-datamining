@@ -1,11 +1,11 @@
-// === Module 10781: admin_editor_test_component ===
+// === Module 10820: admin_editor_test_component ===
 
-// Module 10781 (admin_editor_test_component)
+// Module 10820 (admin_editor_test_component)
 import _mod1188 from "module_1188" /* 1188 */;
-import localized_string from "localized_string" /* 10759 */;
-import help_article from "help_article" /* 10760 */;
-import cta_button from "cta_button" /* 10761 */;
-import theme_aware_asset from "theme_aware_asset" /* 10769 */;
+import localized_string from "localized_string" /* 10798 */;
+import help_article from "help_article" /* 10799 */;
+import cta_button from "cta_button" /* 10800 */;
+import theme_aware_asset from "theme_aware_asset" /* 10808 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

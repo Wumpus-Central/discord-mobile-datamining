@@ -1,7 +1,7 @@
-// === Module 16093: HomeDrawerAnimations ===
+// === Module 16117: HomeDrawerAnimations ===
 
-// Module 16093 (HomeDrawerAnimations)
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
+// Module 16117 (HomeDrawerAnimations)
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import size from "module_2" /* 2 */;
 
 let obj = { duration: 200, easing: null };

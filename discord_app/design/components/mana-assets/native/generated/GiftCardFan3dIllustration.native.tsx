@@ -1,9 +1,9 @@
-// === Module 6204: GiftCardFan3dIllustration ===
+// === Module 6234: GiftCardFan3dIllustration ===
 
-// Module 6204 (GiftCardFan3dIllustration)
+// Module 6234 (GiftCardFan3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6205 from "module_6205" /* 6205 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6235 from "module_6235" /* 6235 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GiftCardFan3dIllustration = function GiftCardFan3dIllustration(widt
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6205 };
+  obj = { uri: _modDef6235 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const GiftCardFan3dIllustration = function GiftCardFan3dIllustration(widt
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6205 });
+  return jsx(FastImageDefault, { uri: _modDef6235 });
 };

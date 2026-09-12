@@ -1,9 +1,9 @@
-// === Module 16110: MessagesItemChannelWave ===
+// === Module 16134: MessagesItemChannelWave ===
 
-// Module 16110 (MessagesItemChannelWave)
+// Module 16134 (MessagesItemChannelWave)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

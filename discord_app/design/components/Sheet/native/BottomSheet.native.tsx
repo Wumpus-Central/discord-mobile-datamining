@@ -1,18 +1,18 @@
-// === Module 7223: Sheet/BottomSheet ===
+// === Module 7253: Sheet/BottomSheet ===
 
-// Module 7223 (Sheet/BottomSheet)
+// Module 7253 (Sheet/BottomSheet)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5013 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import NavigatorConstants from "NavigatorConstants" /* 5733 */;
-import BottomSheetModal from "BottomSheetModal" /* 6698 */;
-import NavScrim from "NavScrim" /* 7113 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7227 */;
-import Sheet_BottomSheetBackdrop from "Sheet/BottomSheetBackdrop" /* 7228 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import NavigatorConstants from "NavigatorConstants" /* 5763 */;
+import BottomSheetModal from "BottomSheetModal" /* 6728 */;
+import NavScrim from "NavScrim" /* 7143 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7257 */;
+import Sheet_BottomSheetBackdrop from "Sheet/BottomSheetBackdrop" /* 7258 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,11 +32,11 @@ function GradientBackground(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire, Platform } = get_ActivityIndicator);
-const ActionSheetConstants = fn(7224);
+const ActionSheetConstants = fn(7254);
 ({ ACTION_SHEET_START_HEIGHT_RATIO: closure_7, ACTION_SHEET_MAX_WIDTH: closure_8, ACTION_SHEET_SPRING_CONFIG: closure_9, ACTION_SHEET_SPRING_CONFIG_REDUCED_MOTION: c10, ACTION_SHEET_GRADIENT_BORDER_WIDTH: closure_11, ACTION_SHEET_GRADIENT_BORDER_RADIUS: closure_12, ACTION_SHEET_BORDER_RADIUS: map1, ACTION_SHEET_INNER_BORDER_RADIUS: closure_14, ACTION_SHEET_MINIMUM_BOTTOM_PADDING: closure_15 } = ActionSheetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_18 = createStyles.createStyles((arg0) => {
   let num = arg1;
   if (arg1 === undefined) {

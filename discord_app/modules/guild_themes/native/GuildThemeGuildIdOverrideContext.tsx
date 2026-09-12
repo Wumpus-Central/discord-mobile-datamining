@@ -1,6 +1,6 @@
-// === Module 4490: GuildThemeGuildIdOverrideContext ===
+// === Module 4520: GuildThemeGuildIdOverrideContext ===
 
-// Module 4490 (GuildThemeGuildIdOverrideContext)
+// Module 4520 (GuildThemeGuildIdOverrideContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext(undefined);

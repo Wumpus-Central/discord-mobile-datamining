@@ -1,9 +1,9 @@
-// === Module 5744: AccountAgeTier10LargeBadge ===
+// === Module 5774: AccountAgeTier10LargeBadge ===
 
-// Module 5744 (AccountAgeTier10LargeBadge)
+// Module 5774 (AccountAgeTier10LargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5745 from "module_5745" /* 5745 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5775 from "module_5775" /* 5775 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AccountAgeTier10LargeBadge = function AccountAgeTier10LargeBadge(wi
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5745 };
+  obj = { uri: _modDef5775 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const AccountAgeTier10LargeBadge = function AccountAgeTier10LargeBadge(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5745 });
+  return jsx(FastImageDefault, { uri: _modDef5775 });
 };

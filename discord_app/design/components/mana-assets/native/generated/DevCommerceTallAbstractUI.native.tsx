@@ -1,9 +1,9 @@
-// === Module 5958: DevCommerceTallAbstractUI ===
+// === Module 5988: DevCommerceTallAbstractUI ===
 
-// Module 5958 (DevCommerceTallAbstractUI)
+// Module 5988 (DevCommerceTallAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5959 from "module_5959" /* 5959 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5989 from "module_5989" /* 5989 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DevCommerceTallAbstractUI = function DevCommerceTallAbstractUI(widt
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5959 };
+  obj = { uri: _modDef5989 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const DevCommerceTallAbstractUI = function DevCommerceTallAbstractUI(widt
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5959 });
+  return jsx(FastImageDefault, { uri: _modDef5989 });
 };

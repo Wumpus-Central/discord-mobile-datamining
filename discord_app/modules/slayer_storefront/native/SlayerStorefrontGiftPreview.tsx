@@ -1,10 +1,10 @@
-// === Module 11541: SlayerStorefrontGiftPreview ===
+// === Module 11580: SlayerStorefrontGiftPreview ===
 
-// Module 11541 (SlayerStorefrontGiftPreview)
+// Module 11580 (SlayerStorefrontGiftPreview)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8917 */;
-import InfoBox from "InfoBox" /* 9550 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8952 */;
+import InfoBox from "InfoBox" /* 9589 */;
 import noop from "module_19" /* 19 */;
 
 const InfoBoxDefault = InfoBox;
@@ -51,7 +51,7 @@ function WarningBox(application) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 }, text: { textAlign: "center", paddingHorizontal: 32 }, warningBox: { marginHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");

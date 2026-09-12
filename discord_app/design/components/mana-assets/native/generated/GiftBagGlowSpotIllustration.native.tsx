@@ -1,9 +1,9 @@
-// === Module 6198: GiftBagGlowSpotIllustration ===
+// === Module 6228: GiftBagGlowSpotIllustration ===
 
-// Module 6198 (GiftBagGlowSpotIllustration)
+// Module 6228 (GiftBagGlowSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6199 from "module_6199" /* 6199 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6229 from "module_6229" /* 6229 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GiftBagGlowSpotIllustration = function GiftBagGlowSpotIllustration(
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6199 };
+  obj = { uri: _modDef6229 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const GiftBagGlowSpotIllustration = function GiftBagGlowSpotIllustration(
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6199 });
+  return jsx(FastImageDefault, { uri: _modDef6229 });
 };

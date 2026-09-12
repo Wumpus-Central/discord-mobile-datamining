@@ -1,20 +1,20 @@
-// === Module 5016: VisualEffectView ===
+// === Module 5046: VisualEffectView ===
 
-// Module 5016 (VisualEffectView)
+// Module 5046 (VisualEffectView)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4308 */;
-import VisualEffectViewIOS from "VisualEffectViewIOS" /* 5018 */;
-import VisualEffectViewAndroid from "VisualEffectViewAndroid" /* 5021 */;
+import useToken from "useToken" /* 4338 */;
+import VisualEffectViewIOS from "VisualEffectViewIOS" /* 5048 */;
+import VisualEffectViewAndroid from "VisualEffectViewAndroid" /* 5051 */;
 import noop from "module_19" /* 19 */;
 
 const VisualEffectViewAndroidDefault = VisualEffectViewAndroid;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(5017).useVisualEffectViewOverrides;
+let closure_4 = fn(5047).useVisualEffectViewOverrides;
 const ThemeTypes = fn(1074).ThemeTypes;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let closure_7 = PlatformUtils.isAndroid();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectView.tsx");

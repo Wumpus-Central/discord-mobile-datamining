@@ -1,10 +1,10 @@
-// === Module 8843: AnnouncementMessageUtils ===
+// === Module 8878: AnnouncementMessageUtils ===
 
-// Module 8843 (AnnouncementMessageUtils)
+// Module 8878 (AnnouncementMessageUtils)
 import util from "util" /* 1114 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
-import MessageRecord from "MessageRecord" /* 4256 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8845 */;
+import MessageRecord from "MessageRecord" /* 4286 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8880 */;
 import size from "module_2" /* 2 */;
 
 const isMessageComponentsV2 = MessageRecord.isMessageComponentsV2;
@@ -230,7 +230,7 @@ export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   }
   return result;
 };
-export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c12) {
+export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, arg2) {
   URLUtilsDefault.toURLSafe(proxyUrl);
   let str = null;
   if (null != str) {
@@ -240,9 +240,9 @@ export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c12) {
       const searchParams2 = str.searchParams;
       searchParams2.append("width", arg1.toString());
     }
-    if (null != c12) {
+    if (null != arg2) {
       const searchParams3 = str.searchParams;
-      searchParams3.append("height", c12.toString());
+      searchParams3.append("height", arg2.toString());
     }
     str = str.toString();
   }

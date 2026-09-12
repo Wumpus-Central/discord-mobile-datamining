@@ -1,18 +1,18 @@
-// === Module 10238: notficationSettingsChannelFlagUtils ===
+// === Module 10277: notficationSettingsChannelFlagUtils ===
 
-// Module 10238 (notficationSettingsChannelFlagUtils)
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 4790 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7187 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7192 */;
-import notifications_NotificationUtils from "notifications/NotificationUtils" /* 10236 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10239 */;
+// Module 10277 (notficationSettingsChannelFlagUtils)
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 4820 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7217 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7222 */;
+import notifications_NotificationUtils from "notifications/NotificationUtils" /* 10275 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10278 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4788).UnreadSetting;
+const UnreadSetting = fn(4818).UnreadSetting;
 const constants = fn(1084).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/utils/notficationSettingsChannelFlagUtils.tsx");

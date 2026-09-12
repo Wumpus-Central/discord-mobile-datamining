@@ -1,12 +1,13 @@
-// === Module 13624: GiftingBadgesUtils ===
+// === Module 13657: GiftingBadgesUtils ===
 
-// Module 13624 (GiftingBadgesUtils)
+// Module 13657 (GiftingBadgesUtils)
 import initialize from "initialize" /* 504 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4427 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8277 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10832 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 13625 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8309 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10871 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 13658 */;
+import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 13659 */;
 import UserStore from "UserStore" /* 1371 */;
 import size from "module_2" /* 2 */;
 
@@ -53,6 +54,29 @@ export const getIsGiftingBadgesDesktopEnabled = function getIsGiftingBadgesDeskt
     enabled = GiftingBadgeDesktopExperiment.getConfig(obj).enabled;
   }
   return enabled;
+};
+export const useIsGiftingBadgeComplexArtEnabled = function useIsGiftingBadgeComplexArtEnabled(location) {
+  const GiftingBadgeComplexArtExperiment = GiftingBadgeComplexArtExperiment2.GiftingBadgeComplexArtExperiment;
+  return GiftingBadgeComplexArtExperiment.useConfig({ location }).enabled;
+};
+export const getGiftingBadgeTierIconUrl = function getGiftingBadgeTierIconUrl(complex_icon_static_url, arg1) {
+  if (arg1) {
+    let prop;
+    if (!tmp) {
+      prop = complex_icon_static_url.complex_icon_static_url;
+    }
+    if (prop == null) {
+      let simple_icon_url;
+      if (complex_icon_static_url != null) {
+        simple_icon_url = complex_icon_static_url.simple_icon_url;
+      }
+      prop = simple_icon_url;
+    }
+    simple_icon_url = prop;
+  } else if (!tmp) {
+    simple_icon_url = complex_icon_static_url.simple_icon_url;
+  }
+  return simple_icon_url;
 };
 export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleToShowGiftingBadgeCoachmark(location) {
   const _location = location.location;

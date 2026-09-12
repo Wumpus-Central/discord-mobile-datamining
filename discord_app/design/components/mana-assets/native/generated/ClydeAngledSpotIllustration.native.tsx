@@ -1,9 +1,9 @@
-// === Module 5922: ClydeAngledSpotIllustration ===
+// === Module 5952: ClydeAngledSpotIllustration ===
 
-// Module 5922 (ClydeAngledSpotIllustration)
+// Module 5952 (ClydeAngledSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5923 from "module_5923" /* 5923 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5953 from "module_5953" /* 5953 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ClydeAngledSpotIllustration = function ClydeAngledSpotIllustration(
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5923 };
+  obj = { uri: _modDef5953 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ClydeAngledSpotIllustration = function ClydeAngledSpotIllustration(
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5923 });
+  return jsx(FastImageDefault, { uri: _modDef5953 });
 };

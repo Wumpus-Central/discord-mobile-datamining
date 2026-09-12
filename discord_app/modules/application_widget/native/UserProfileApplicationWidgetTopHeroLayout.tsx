@@ -1,13 +1,13 @@
-// === Module 9015: UserProfileApplicationWidgetTopHeroLayout ===
+// === Module 9054: UserProfileApplicationWidgetTopHeroLayout ===
 
-// Module 9015 (UserProfileApplicationWidgetTopHeroLayout)
+// Module 9054 (UserProfileApplicationWidgetTopHeroLayout)
 import nativeDefault from "native" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import _modDef5715 from "module_5715" /* 5715 */;
-import UserProfileSharedStyles from "UserProfileSharedStyles" /* 8325 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9016 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9103 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9104 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import _modDef5745 from "module_5745" /* 5745 */;
+import UserProfileSharedStyles from "UserProfileSharedStyles" /* 8357 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9055 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9142 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9143 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,11 +15,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const HorizontalGradient = fn(1074).HorizontalGradient;
-const CARD_PADDING = fn(7281).CARD_PADDING;
+const CARD_PADDING = fn(7311).CARD_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const colors = ["transparent", "black"];
-fn(4606);
+fn(4636);
 let createStyles = { root: { position: "relative" }, contentRow: null, heroText: null, heroImageColumn: null, heroImageSkeleton: null, heroImagePositioner: null, heroImageMask: null, heroImageFadeGradient: null, heroImageMaskRemainder: null };
 createStyles = { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 };
 createStyles.contentRow = createStyles;
@@ -107,7 +107,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
       obj10.source = obj11;
       obj10.style = { width: "100%", height: "100%" };
       obj6.children = React6(hasOwnProperty, obj10);
-      tmp15Result = React6(_modDef5715, obj6);
+      tmp15Result = React6(_modDef5745, obj6);
     }
     obj4.children = tmp15Result;
     tmp15Result1 = React6(timestampProducer, obj4);

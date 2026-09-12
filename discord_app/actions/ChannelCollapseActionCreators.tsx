@@ -1,9 +1,9 @@
-// === Module 11057: ChannelCollapseActionCreators ===
+// === Module 11096: ChannelCollapseActionCreators ===
 
-// Module 11057 (ChannelCollapseActionCreators)
+// Module 11096 (ChannelCollapseActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7189 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7219 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/ChannelCollapseActionCreators.tsx");

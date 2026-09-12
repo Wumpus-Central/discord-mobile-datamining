@@ -1,11 +1,11 @@
-// === Module 8278: BadgeIdResolution ===
+// === Module 8310: BadgeIdResolution ===
 
-// Module 8278 (BadgeIdResolution)
-import Constants from "Constants" /* 8268 */;
-import BadgeId from "BadgeId" /* 8269 */;
-import Constants2 from "Constants" /* 8279 */;
-import LegacyBadgeIdMap from "LegacyBadgeIdMap" /* 8280 */;
-import types from "types" /* 8281 */;
+// Module 8310 (BadgeIdResolution)
+import Constants from "Constants" /* 8300 */;
+import BadgeId from "BadgeId" /* 8301 */;
+import Constants2 from "Constants" /* 8311 */;
+import LegacyBadgeIdMap from "LegacyBadgeIdMap" /* 8312 */;
+import types from "types" /* 8313 */;
 import size from "module_2" /* 2 */;
 
 const getBadgeName = Constants.getBadgeName;

@@ -1,18 +1,18 @@
-// === Module 14650: ColorBlock ===
+// === Module 14684: ColorBlock ===
 
-// Module 14650 (ColorBlock)
+// Module 14684 (ColorBlock)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import native from "native" /* 1178 */;
-import ColorUtils from "ColorUtils" /* 4456 */;
-import Pressables from "Pressables" /* 5174 */;
-import _modDef11657 from "module_11657" /* 11657 */;
+import ColorUtils from "ColorUtils" /* 4486 */;
+import Pressables from "Pressables" /* 5204 */;
+import _modDef11693 from "module_11693" /* 11693 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { colorBlock: null };
 obj = { minWidth: 44, height: 44, borderRadius: nativeDefault.radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" };
 obj.colorBlock = obj;
@@ -48,7 +48,7 @@ export default noop.memo((color) => {
       obj.children = null;
       let tmp10Result = jsx(Pressables.PressableOpacity, obj);
     } else {
-      const obj2 = { source: _modDef11657, color: null };
+      const obj2 = { source: _modDef11693, color: null };
       if (v < 0.5) {
         unsafe_rawColors = nativeDefault.unsafe_rawColors;
         let BLACK2 = unsafe_rawColors.WHITE;
@@ -56,7 +56,7 @@ export default noop.memo((color) => {
         BLACK2 = nativeDefault.unsafe_rawColors.BLACK;
       }
       obj2.color = BLACK2;
-      jsx(native.Icon, { source: _modDef11657, color: null });
+      jsx(native.Icon, { source: _modDef11693, color: null });
     }
     const tmp2Result1 = utils_ColorUtils;
   } else {
@@ -69,14 +69,14 @@ export default noop.memo((color) => {
       obj3.children = null;
       tmp10Result = <View {...obj3} />;
     } else {
-      const obj5 = { source: _modDef11657, color: null };
+      const obj5 = { source: _modDef11693, color: null };
       if (v < 0.5) {
         let BLACK = nativeDefault.unsafe_rawColors.WHITE;
       } else {
         BLACK = nativeDefault.unsafe_rawColors.BLACK;
       }
       obj5.color = BLACK;
-      tmp10Result = jsx(native.Icon, { source: _modDef11657, color: null });
+      tmp10Result = jsx(native.Icon, { source: _modDef11693, color: null });
     }
     const tmp2Result2 = utils_ColorUtils;
   }

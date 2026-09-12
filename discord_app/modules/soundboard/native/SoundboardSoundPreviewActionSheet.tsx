@@ -1,16 +1,16 @@
-// === Module 17158: SoundboardSoundPreviewActionSheet ===
+// === Module 17185: SoundboardSoundPreviewActionSheet ===
 
-// Module 17158 (SoundboardSoundPreviewActionSheet)
+// Module 17185 (SoundboardSoundPreviewActionSheet)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7411 */;
-import SoundboardUtils from "SoundboardUtils" /* 7417 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17141 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7441 */;
+import SoundboardUtils from "SoundboardUtils" /* 7447 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17168 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
-import SoundboardStore from "SoundboardStore" /* 5063 */;
+import SoundboardStore from "SoundboardStore" /* 5093 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -19,7 +19,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: c10, AnalyticsObjects: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { soundPresentation: null, soundPresentationPlaying: null, emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null, primaryIcon: null };
 createStyles = { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 };
 createStyles.soundPresentation = createStyles;
@@ -27,7 +27,7 @@ createStyles.soundPresentationPlaying = { borderColor: nativeDefault.colors.STAT
 let size = { marginTop: nativeDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 createStyles.emoji = size;
 createStyles.emojiFastImage = { width: 128, height: 128 };
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 60;

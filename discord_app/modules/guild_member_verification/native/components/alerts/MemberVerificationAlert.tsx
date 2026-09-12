@@ -1,16 +1,16 @@
-// === Module 5588: MemberVerificationAlert ===
+// === Module 5618: MemberVerificationAlert ===
 
-// Module 5588 (MemberVerificationAlert)
+// Module 5618 (MemberVerificationAlert)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import common_AlertDefault from "common/Alert" /* 5045 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import common_AlertDefault from "common/Alert" /* 5075 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { headerImage: null, header: null, subtitle: null, buttons: null };
 createStyles = { marginLeft: "auto", marginRight: "auto", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.round, padding: 12, marginTop: 8, marginBottom: 8 };
 createStyles.headerImage = createStyles;

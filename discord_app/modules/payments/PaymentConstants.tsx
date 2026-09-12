@@ -1,6 +1,6 @@
-// === Module 4588: PaymentConstants ===
+// === Module 4618: PaymentConstants ===
 
-// Module 4588 (PaymentConstants)
+// Module 4618 (PaymentConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/payments/PaymentConstants.tsx");

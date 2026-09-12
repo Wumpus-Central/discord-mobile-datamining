@@ -1,20 +1,20 @@
-// === Module 9858: EditGuildEventDetails ===
+// === Module 9897: EditGuildEventDetails ===
 
-// Module 9858 (EditGuildEventDetails)
+// Module 9897 (EditGuildEventDetails)
 import util from "util" /* 1114 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
-import _modDef4198 from "module_4198" /* 4198 */;
-import ScheduleUtils from "ScheduleUtils" /* 9756 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9795 */;
+import _modDef4228 from "module_4228" /* 4228 */;
+import ScheduleUtils from "ScheduleUtils" /* 9795 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9834 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_6 = fn(7599).isGuildScheduledEventActive;
+let closure_6 = fn(7629).isGuildScheduledEventActive;
 let constants = fn(1963).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles({ error: { paddingVertical: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx");
@@ -32,28 +32,28 @@ export default function EditGuildEventDetails(guildEvent) {
   const recurrenceRule = guildEvent.recurrenceRule;
   const items = [scheduledStartTime];
   ({ name, entityType } = guildEvent);
-  memo = memo.useMemo(() => _modDef4198(scheduledStartTime), items);
+  memo = memo.useMemo(() => _modDef4228(scheduledStartTime), items);
   const items1 = [scheduledEndTime, scheduledStartTime];
   const memo1 = memo.useMemo(() => {
     if (null != scheduledEndTime) {
-      let addResult = _modDef4198(tmp);
+      let addResult = _modDef4228(tmp);
     } else {
-      addResult = _modDef4198(scheduledStartTime).add(1, "hour");
-      const obj = _modDef4198(scheduledStartTime);
+      addResult = _modDef4228(scheduledStartTime).add(1, "hour");
+      const obj = _modDef4228(scheduledStartTime);
     }
     return addResult;
   }, items1);
   const tmp = c11();
-  [c7, c8] = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4198(scheduledStartTime), recurrenceRule)), 2);
+  [c7, c8] = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4228(scheduledStartTime), recurrenceRule)), 2);
   const memo2 = memo.useMemo(() => onChange(scheduledEndTime[7])(), []);
   const items2 = [memo];
   const memo3 = memo.useMemo(() => onChange(scheduledEndTime[7])().add(guildEvent(scheduledEndTime[8]).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"), []);
-  const memo4 = memo.useMemo(() => _modDef4198(memo).add(15, "minutes"), items2);
+  const memo4 = memo.useMemo(() => _modDef4228(memo).add(15, "minutes"), items2);
   const memo5 = memo.useMemo(() => onChange(scheduledEndTime[7])().add(guildEvent(scheduledEndTime[8]).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"), []);
   const ref = memo.useRef(null);
   const tmp10 = memo1(guildEvent.initialGuildEvent);
   closure_10 = tmp10;
-  const tmp4 = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4198(scheduledStartTime), recurrenceRule)), 2);
+  const tmp4 = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4228(scheduledStartTime), recurrenceRule)), 2);
   [tmp12, c11] = recurrenceRule(memo.useState(null), 2);
   let obj = guildEvent(scheduledEndTime[9]);
   const navigation = obj.useNavigation();
@@ -125,9 +125,9 @@ export default function EditGuildEventDetails(guildEvent) {
           isBeforeResult = memo1.isBefore(toISOString);
         }
         if (isBeforeResult) {
-          const obj2 = _modDef4198(toISOString);
-          obj.scheduledEndTime = _modDef4198(toISOString).add(1, "hour").toISOString();
-          const addResult = _modDef4198(toISOString).add(1, "hour");
+          const obj2 = _modDef4228(toISOString);
+          obj.scheduledEndTime = _modDef4228(toISOString).add(1, "hour").toISOString();
+          const addResult = _modDef4228(toISOString).add(1, "hour");
         }
         let tmp8 = null != toISOString;
         if (tmp8) {

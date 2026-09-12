@@ -1,13 +1,13 @@
-// === Module 16848: MediaKeyboardBottomSheet ===
+// === Module 16875: MediaKeyboardBottomSheet ===
 
-// Module 16848 (MediaKeyboardBottomSheet)
+// Module 16875 (MediaKeyboardBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4343 */;
-import ChatInputUtils from "ChatInputUtils" /* 4472 */;
-import HapticUtils from "HapticUtils" /* 4574 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4575 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import ChatInputUtils from "ChatInputUtils" /* 4502 */;
+import HapticUtils from "HapticUtils" /* 4604 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,9 +29,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const MetaQuestUtils = fn(1608);
 let closure_11 = MetaQuestUtils.isMetaQuest();
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { background: null };
 obj = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS };
 obj.background = obj;

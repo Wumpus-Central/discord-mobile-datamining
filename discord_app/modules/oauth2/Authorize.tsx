@@ -1,13 +1,13 @@
-// === Module 9327: Authorize ===
+// === Module 9366: Authorize ===
 
-// Module 9327 (Authorize)
+// Module 9366 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
-import keysSorter from "keysSorter" /* 5507 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8425 */;
-import scopes from "scopes" /* 9328 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
+import keysSorter from "keysSorter" /* 5537 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8457 */;
+import scopes from "scopes" /* 9367 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4428 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 
 require = fn;
 const Constants = fn(1074);

@@ -1,9 +1,9 @@
-// === Module 12874: PanGestureAnimations ===
+// === Module 12910: PanGestureAnimations ===
 
-// Module 12874 (PanGestureAnimations)
+// Module 12910 (PanGestureAnimations)
 import native from "native" /* 1178 */;
-import timing from "timing" /* 4607 */;
-import spring from "spring" /* 5025 */;
+import timing from "timing" /* 4637 */;
+import spring from "spring" /* 5055 */;
 import size from "module_2" /* 2 */;
 
 let obj = { damping: 30, mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };

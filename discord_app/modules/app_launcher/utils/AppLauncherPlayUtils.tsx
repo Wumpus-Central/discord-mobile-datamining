@@ -1,6 +1,6 @@
-// === Module 11613: AppLauncherPlayUtils ===
+// === Module 11652: AppLauncherPlayUtils ===
 
-// Module 11613 (AppLauncherPlayUtils)
+// Module 11652 (AppLauncherPlayUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -41,7 +41,7 @@ let closure_4 = async function _launchActivityInBotDM(arg0) {
           closure_129_6 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

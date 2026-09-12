@@ -1,16 +1,16 @@
-// === Module 9185: applyBackgroundOption ===
+// === Module 9224: applyBackgroundOption ===
 
-// Module 9185 (applyBackgroundOption)
+// Module 9224 (applyBackgroundOption)
 import AvatarUtils from "AvatarUtils" /* 1396 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4661 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 9188 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 9190 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 9191 */;
-import getFilterImageDefault from "getFilterImage" /* 9196 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9197 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 9227 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 9229 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 9230 */;
+import getFilterImageDefault from "getFilterImage" /* 9235 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9236 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 9186 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 9225 */;
 
 require = fn;
 let closure_9 = async function _getFilterBlob() {
@@ -208,80 +208,21 @@ let closure_14 = async function _applyBackgroundOptionLive(arg0, arg1) {
   c4 = 0;
   c5 = 0;
   let iter = (async (arg0, value) => {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            closure_3 = tmp5;
-            closure_2 = tmp2;
-            closure_130_1 = undefined;
-            let _location;
-            closure_130_0 = closure_0;
-            let flag = track.track;
-            if (flag === undefined) {
-              flag = true;
-            }
-            closure_130_1 = flag;
-            _location = track.location;
-            c4 = 1;
-            c5 = 1;
-            return { value: "PX_16", done: null };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
-          } else {
-            const obj2 = { type: closure_131_0(closure_131_2[6]).FilterTargetType.INPUT_DEVICE };
-            c4 = 2;
-            c5 = 1;
-            const obj3 = { value: closure_131_11(closure_131_0(closure_131_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_LIVE, obj2, closure_130_0), done: false };
-            return obj3;
-          }
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          if (closure_130_1) {
-            obj = closure_131_0(closure_131_2[10]);
-            const result = obj.trackBackgroundOptionUpdated(closure_130_0, _location, "Enabled");
-          }
-          c5 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp24) {
-        c5 = tmp;
-        throw tmp24;
-      }
+    await closure_131_11(closure_131_0(closure_131_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_LIVE, { type: closure_131_0(closure_131_2[6]).FilterTargetType.INPUT_DEVICE }, closure_130_0);
+    if (closure_130_1) {
+      const result = closure_131_0(closure_131_2[10]).trackBackgroundOptionUpdated(closure_130_0, _location, "Enabled");
+      closure_131_0(closure_131_2[10]);
     }
+    await "HermesInternal";
+    closure_2 = tmp2;
+    closure_130_0 = closure_0;
+    let flag = track.track;
+    if (flag === undefined) {
+      flag = true;
+    }
+    closure_130_1 = flag;
+    _location = track.location;
+    return "PX_16";
   })();
   iter.next();
   return iter;
@@ -293,87 +234,28 @@ let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) 
   c5 = 0;
   c6 = 0;
   let iter = (async (arg0, value, arg2) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            closure_4 = tmp5;
-            closure_3 = tmp2;
-            closure_131_2 = undefined;
-            let _location;
-            closure_131_0 = closure_0;
-            closure_131_1 = closure_1;
-            let flag = track.track;
-            if (flag === undefined) {
-              flag = true;
-            }
-            closure_131_2 = flag;
-            _location = track.location;
-            c5 = 1;
-            c6 = 1;
-            return { value: "PX_16", done: null };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
-          } else {
-            const result = closure_132_0(closure_132_2[5]).startApplyMediaFilterSettings();
-            const obj2 = { type: closure_132_0(closure_132_2[6]).FilterTargetType.STREAM, streamId: closure_131_1 };
-            c5 = 2;
-            c6 = 1;
-            const obj3 = { value: closure_132_11(closure_132_0(closure_132_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW, obj2, closure_131_0), done: false };
-            return obj3;
-          }
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          if (closure_131_2) {
-            obj = closure_132_0(closure_132_2[10]);
-            const result1 = obj.trackBackgroundOptionUpdated(closure_131_0, _location, "Preview");
-          }
-          c6 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp17) {
-        c6 = tmp;
-        throw tmp17;
-      }
+    const result = closure_132_0(closure_132_2[5]).startApplyMediaFilterSettings();
+    await closure_132_11(closure_132_0(closure_132_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW, { type: closure_132_0(closure_132_2[6]).FilterTargetType.STREAM, streamId: closure_131_1 }, closure_131_0);
+    if (closure_131_2) {
+      const result1 = closure_132_0(closure_132_2[10]).trackBackgroundOptionUpdated(closure_131_0, _location, "Preview");
+      closure_132_0(closure_132_2[10]);
     }
+    await "HermesInternal";
+    closure_3 = tmp2;
+    closure_131_0 = closure_0;
+    closure_131_1 = closure_1;
+    let flag = track.track;
+    if (flag === undefined) {
+      flag = true;
+    }
+    closure_131_2 = flag;
+    _location = track.location;
+    return "PX_16";
   })();
   iter.next();
   return iter;
 };
-const VideoBackgroundConstants = fn(7060);
+const VideoBackgroundConstants = fn(7090);
 ({ BACKGROUND_REPLACEMENT_SIZE: metroRequire, BLUR_BACKGROUND_OPTION: closure_7 } = VideoBackgroundConstants);
 const NOOP = fn(1074).NOOP;
 const size = fn(2);

@@ -1,15 +1,15 @@
-// === Module 17013: GiftingPromotionCoachmark ===
+// === Module 17040: GiftingPromotionCoachmark ===
 
-// Module 17013 (GiftingPromotionCoachmark)
+// Module 17040 (GiftingPromotionCoachmark)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7235 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
-import usePreviousDefault from "usePrevious" /* 8358 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10750 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
+import usePreviousDefault from "usePrevious" /* 8390 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10789 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
-import PromotionsStore from "PromotionsStore" /* 10754 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import PromotionsStore from "PromotionsStore" /* 10793 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,7 +18,7 @@ const Constants = fn(1074);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, textContainer: null, text: null, countdownBadge: null, countdownBadgeText: null, imageShared: null, imageWrapperAndroid: null };
 createStyles = { alignItems: "center", padding: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;
@@ -26,11 +26,11 @@ createStyles.textContainer = { gap: nativeDefault.space.PX_8, paddingHorizontal:
 createStyles.text = { textAlign: "center" };
 let obj1 = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_24 };
 createStyles.countdownBadge = { flexDirection: "row", alignSelf: "center", borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 let obj3 = { lineHeight: PlatformUtils ? space.PX_12 : space.PX_16, paddingVertical: null };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let PX_4;
 if (PlatformUtils.isAndroid()) {
   PX_4 = nativeDefault.space.PX_4;
@@ -55,7 +55,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   let obj = markAsDismissed(504);
   const items = [analyticsLocations];
   const stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
-  let obj1 = markAsDismissed(10842);
+  let obj1 = markAsDismissed(10881);
   let asset;
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
@@ -64,7 +64,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   let tmp2Result = markAsDismissed(504);
   const items1 = [PromotionsStore];
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
-  tmp2Result = markAsDismissed(17014);
+  tmp2Result = markAsDismissed(17041);
   let endDate;
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
@@ -110,24 +110,24 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       if (tmp18Result) {
         obj1 = { style: tmp.countdownBadge, children: null };
         let obj2 = { variant: "text-xs/bold", color: "text-overlay-light", style: tmp.countdownBadgeText, children: str.toUpperCase() };
-        obj1.children = closure_11(markAsDismissed(4602).Text, obj2);
+        obj1.children = closure_11(markAsDismissed(4632).Text, obj2);
         tmp18Result = closure_11(tmp21, obj1);
       }
       items4[1] = tmp18Result;
       const obj3 = { style: tmp.textContainer, children: null };
       const obj4 = { style: tmp.text, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: coachmarkComponent.header };
-      const items5 = [closure_11(markAsDismissed(4602).Heading, obj4), ];
+      const items5 = [closure_11(markAsDismissed(4632).Heading, obj4), ];
       const obj5 = { style: tmp.text, variant: "text-md/normal", color: "text-default", children: coachmarkComponent.body };
-      items5[1] = closure_11(markAsDismissed(4602).Text, obj5);
+      items5[1] = closure_11(markAsDismissed(4632).Text, obj5);
       obj3.children = items5;
       items4[2] = closure_12(tmp21, obj3);
       const obj6 = { grow: true, icon: null, text: null, onPress: null };
       const obj7 = { size: "sm", color: tmp10(576).colors.WHITE };
-      obj6.icon = closure_11(markAsDismissed(11125).GiftIcon, obj7);
+      obj6.icon = closure_11(markAsDismissed(11164).GiftIcon, obj7);
       const intl = markAsDismissed(1114).intl;
       obj6.text = intl.string(markAsDismissed(1114).t.Ve9Ge6);
       obj6.onPress = tmp16;
-      items4[3] = closure_11(markAsDismissed(5026).Button, obj6);
+      items4[3] = closure_11(markAsDismissed(5056).Button, obj6);
       obj.children = items4;
       obj.children = closure_12(tmp21, obj);
       tmp18Result = closure_11(tmp19, obj);
@@ -139,7 +139,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
           ({ imageShared: arr5[0], imageWrapperAndroid: arr5[1] } = tmp);
           obj8.style = items6;
           const obj9 = { url: themeAndReducedMotionAwareAssetUrl, style: tmp.imageShared, autoplay: true };
-          obj8.children = closure_11(markAsDismissed(8900).APNGPlayer, obj9);
+          obj8.children = closure_11(markAsDismissed(8935).APNGPlayer, obj9);
           let tmp18Result1 = closure_11(tmp21, obj8);
         }
       }
@@ -147,8 +147,8 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       const obj11 = { uri: themeAndReducedMotionAwareAssetUrl };
       obj10.source = obj11;
       obj10.style = tmp.imageShared;
-      tmp18Result1 = closure_11(tmp10(5638), obj10);
-      tmp2Result1 = markAsDismissed(1115);
+      tmp18Result1 = closure_11(tmp10(5668), obj10);
+      tmp2Result1 = markAsDismissed(1150);
     }
   }
   return tmp18Result;

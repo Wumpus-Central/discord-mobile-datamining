@@ -1,9 +1,9 @@
-// === Module 6222: GiftTrollIllocon ===
+// === Module 6252: GiftTrollIllocon ===
 
-// Module 6222 (GiftTrollIllocon)
+// Module 6252 (GiftTrollIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6223 from "module_6223" /* 6223 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6253 from "module_6253" /* 6253 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const GiftTrollIllocon = function GiftTrollIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6223 };
+  obj = { uri: _modDef6253 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6223 });
+  return jsx(FastImageDefault, { uri: _modDef6253 });
 };

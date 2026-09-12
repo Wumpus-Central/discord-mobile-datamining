@@ -1,8 +1,8 @@
-// === Module 8511: AgeVerificationAuthSession ===
+// === Module 8543: AgeVerificationAuthSession ===
 
-// Module 8511 (AgeVerificationAuthSession)
+// Module 8543 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -60,7 +60,7 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
             c4 = 1;
             c5 = 2;
             c6 = 1;
-            const obj1 = { value: BrowserManager.openAuthSessionURL(closure_0), done: false };
+            const obj1 = { value: BrowserManager.openAuthSessionURL(closure_0, true), done: false };
             return obj1;
           } else {
             c6 = 3;

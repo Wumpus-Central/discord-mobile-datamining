@@ -1,7 +1,7 @@
-// === Module 9571: ContentClassificationReference ===
+// === Module 9610: ContentClassificationReference ===
 
-// Module 9571 (ContentClassificationReference)
-import utils from "utils" /* 5163 */;
+// Module 9610 (ContentClassificationReference)
+import utils from "utils" /* 5193 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");

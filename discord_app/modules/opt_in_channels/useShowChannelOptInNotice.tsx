@@ -1,7 +1,7 @@
-// === Module 11516: useShowChannelOptInNotice ===
+// === Module 11555: useShowChannelOptInNotice ===
 
-// Module 11516 (useShowChannelOptInNotice)
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+// Module 11555 (useShowChannelOptInNotice)
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
 const require = fn;
 const NULL_STRING_GUILD_ID = fn(1074).NULL_STRING_GUILD_ID;
@@ -25,7 +25,7 @@ export default function useShowChannelOptInNotice(getGuildId) {
     }
     return result;
   });
-  tmpResult = tmp(7295);
+  tmpResult = tmp(7325);
   let guild_id;
   if (getGuildId != null) {
     guild_id = getGuildId.guild_id;

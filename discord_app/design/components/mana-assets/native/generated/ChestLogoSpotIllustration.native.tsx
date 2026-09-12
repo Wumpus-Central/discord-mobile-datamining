@@ -1,9 +1,9 @@
-// === Module 5914: ChestLogoSpotIllustration ===
+// === Module 5944: ChestLogoSpotIllustration ===
 
-// Module 5914 (ChestLogoSpotIllustration)
+// Module 5944 (ChestLogoSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5915 from "module_5915" /* 5915 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5945 from "module_5945" /* 5945 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ChestLogoSpotIllustration = function ChestLogoSpotIllustration(widt
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5915 };
+  obj = { uri: _modDef5945 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ChestLogoSpotIllustration = function ChestLogoSpotIllustration(widt
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5915 });
+  return jsx(FastImageDefault, { uri: _modDef5945 });
 };

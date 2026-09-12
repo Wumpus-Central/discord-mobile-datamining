@@ -1,12 +1,12 @@
-// === Module 15907: ShopFlashList ===
+// === Module 15931: ShopFlashList ===
 
-// Module 15907 (ShopFlashList)
+// Module 15931 (ShopFlashList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import generated_NoResults from "generated/NoResults" /* 8316 */;
-import _mod8964 from "module_8964" /* 8964 */;
-import useScrollToInitialIndexOnce from "useScrollToInitialIndexOnce" /* 15880 */;
+import generated_NoResults from "generated/NoResults" /* 8348 */;
+import _mod9003 from "module_9003" /* 9003 */;
+import useScrollToInitialIndexOnce from "useScrollToInitialIndexOnce" /* 15904 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ function ShopEmptyState() {
   return jsx(native.EmptyState, { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null });
 }
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { contentContainer: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.contentContainer = createStyles;
@@ -37,5 +37,5 @@ export default function ShopFlashList(initialScrollIndex) {
   obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS };
   const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce(obj);
   obj = { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: closure_4().contentContainer };
-  return jsx(_mod8964.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: closure_4().contentContainer });
+  return jsx(_mod9003.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: closure_4().contentContainer });
 };

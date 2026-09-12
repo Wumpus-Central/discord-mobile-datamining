@@ -1,17 +1,17 @@
-// === Module 13117: UserProfileActivityVoiceChannel ===
+// === Module 13154: UserProfileActivityVoiceChannel ===
 
-// Module 13117 (UserProfileActivityVoiceChannel)
+// Module 13154 (UserProfileActivityVoiceChannel)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4305 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4813 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4843 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4606 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import createStyles from "createStyles" /* 4636 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -134,7 +134,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
         return channel(onAction[25])(obj);
       }
     };
-    obj.openLazy(asyncRequireImpl(13119, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", obj, "stack");
+    obj.openLazy(asyncRequireImpl(13156, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", obj, "stack");
   };
   const obj12 = { size: guild(onAction[27]).AvatarSizes.SIZE_16, totalCount: users.length, names: users.map((username) => username.username), children: null };
   let substr = users;

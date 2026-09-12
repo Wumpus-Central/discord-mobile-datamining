@@ -1,11 +1,11 @@
-// === Module 4308: useToken ===
+// === Module 4338: useToken ===
 
-// Module 4308 (useToken)
+// Module 4338 (useToken)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4317 */;
+import native from "native" /* 4347 */;
 
-const SemanticColorContext = obj(4309);
+const SemanticColorContext = obj(4339);
 require = fn;
 const map = new Map();
 const keys = Object.keys(nativeDefault.colors);

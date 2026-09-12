@@ -1,8 +1,8 @@
-// === Module 17685: GuildSettingsModalLobbiesLinked ===
+// === Module 17715: GuildSettingsModalLobbiesLinked ===
 
-// Module 17685 (GuildSettingsModalLobbiesLinked)
+// Module 17715 (GuildSettingsModalLobbiesLinked)
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
@@ -11,7 +11,7 @@ function SyncingToGamesItem(channels) {
   const isOnlySection = channels.isOnlySection;
   let obj = channels(1483);
   dependencyMap = obj.useNavigation();
-  const getOrFetchApplication = channels(7241).useGetOrFetchApplication(channels.applicationId);
+  const getOrFetchApplication = channels(7271).useGetOrFetchApplication(channels.applicationId);
   let tmp5Result = null;
   if (0 !== channels.length) {
     let name;
@@ -23,11 +23,11 @@ function SyncingToGamesItem(channels) {
       hasIcons: true,
       children: channels.map((id) => {
           const channel = id;
-          let obj = { label: channels(4759).computeChannelName(id, UserStore, RelationshipStore), icon: null, arrow: true, onPress: null };
+          let obj = { label: channels(4789).computeChannelName(id, UserStore, RelationshipStore), icon: null, arrow: true, onPress: null };
           obj = { IconComponent: null };
-          const obj2 = channels(4759);
-          obj.IconComponent = channels(5079).getChannelIconComponent(id);
-          obj.icon = closure_1_6(channels(5656).TableRow.Icon, obj);
+          const obj2 = channels(4789);
+          obj.IconComponent = channels(5109).getChannelIconComponent(id);
+          obj.icon = closure_1_6(channels(5686).TableRow.Icon, obj);
           obj.onPress = function onPress() {
             const obj = { channel, numScreensToPop: null };
             let num = 1;
@@ -40,10 +40,10 @@ function SyncingToGamesItem(channels) {
             obj.numScreensToPop = num;
             closure_2.push(GuildSettingsSections.EDIT_LINKED_LOBBY, obj);
           };
-          return closure_1_6(channels(5656).TableRow, obj, id.id);
+          return closure_1_6(channels(5686).TableRow, obj, id.id);
         })
     };
-    tmp5Result = closure_6(channels(5738).TableRowGroup, obj);
+    tmp5Result = closure_6(channels(5768).TableRowGroup, obj);
   }
   return tmp5Result;
 }

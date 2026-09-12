@@ -1,9 +1,9 @@
-// === Module 12788: useBackHandlerSkipPhoneScreens ===
+// === Module 12824: useBackHandlerSkipPhoneScreens ===
 
-// Module 12788 (useBackHandlerSkipPhoneScreens)
+// Module 12824 (useBackHandlerSkipPhoneScreens)
 import _mod17 from "module_17" /* 17 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5681 */;
-import ContactSyncConstants from "ContactSyncConstants" /* 12771 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5711 */;
+import ContactSyncConstants from "ContactSyncConstants" /* 12807 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

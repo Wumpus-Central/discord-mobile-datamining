@@ -1,18 +1,18 @@
-// === Module 13399: PaymentFlowWarningMessage ===
+// === Module 13432: PaymentFlowWarningMessage ===
 
-// Module 13399 (PaymentFlowWarningMessage)
+// Module 13432 (PaymentFlowWarningMessage)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
+import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, icon: null, text: null };
-createStyles = { padding: 10, marginVertical: 5, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: fn(5492).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+createStyles = { padding: 10, marginVertical: 5, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: fn(5522).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
 createStyles.container = createStyles;
 createStyles.icon = { marginRight: 10 };
 createStyles.text = { flexShrink: 1 };

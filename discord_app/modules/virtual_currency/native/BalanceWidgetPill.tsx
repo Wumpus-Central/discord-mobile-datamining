@@ -1,26 +1,26 @@
-// === Module 11186: virtual_currency/BalanceWidgetPill ===
+// === Module 11225: virtual_currency/BalanceWidgetPill ===
 
-// Module 11186 (virtual_currency/BalanceWidgetPill)
+// Module 11225 (virtual_currency/BalanceWidgetPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 11187 */;
-import OrbLottieAnimation from "OrbLottieAnimation" /* 11188 */;
-import BalanceCounter from "BalanceCounter" /* 11193 */;
-import AnimationUtils from "AnimationUtils" /* 11194 */;
+import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 11226 */;
+import OrbLottieAnimation from "OrbLottieAnimation" /* 11227 */;
+import BalanceCounter from "BalanceCounter" /* 11232 */;
+import AnimationUtils from "AnimationUtils" /* 11233 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, orbsLottieContainer: null, balanceCounterContainer: null, balanceText: null };
-createStyles = { minHeight: fn(5031).SMALL_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, gap: 4 };
+createStyles = { minHeight: fn(5061).SMALL_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, gap: 4 };
 createStyles.container = createStyles;
 createStyles.orbsLottieContainer = { position: "relative", height: 18, width: 18, justifyContent: "center", alignItems: "center" };
 createStyles.balanceCounterContainer = { justifyContent: "center", alignItems: "flex-end" };
 let obj1 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, textAlign: "right", lineHeight: null };
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

@@ -1,6 +1,6 @@
-// === Module 6463: ? ===
+// === Module 6493: ? ===
 
-// Module 6463
+// Module 6493
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/RulebookSpotIllustration-2x.png.js");

@@ -1,23 +1,23 @@
-// === Module 16777: MediaScreen ===
+// === Module 16804: MediaScreen ===
 
-// Module 16777 (MediaScreen)
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8497 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8499 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12431 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14876 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 16780 */;
+// Module 16804 (MediaScreen)
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8531 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12467 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14910 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 16807 */;
 import noop from "module_19" /* 19 */;
-import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 7403 */;
+import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 7433 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SearchMessageStore from "SearchMessageStore" /* 7354 */;
-import SearchQueryStore from "SearchQueryStore" /* 12432 */;
+import SearchMessageStore from "SearchMessageStore" /* 7384 */;
+import SearchQueryStore from "SearchQueryStore" /* 12468 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
-const SearchConstants = fn(7952);
+const SearchConstants = fn(7982);
 ({ SearchListItemTypes: closure_8, MEDIA_NUM_COLUMNS: closure_9, MEDIA_ITEM_GAP_WIDTH: c10, SearchMediaTypes: closure_11 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(12446).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(12482).EMPTY_MEDIA_RESULTS;
 const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_15 = [];
@@ -30,12 +30,12 @@ export default noop.memo(function MediaScreen(searchContext) {
   let placeholderCount;
   let memo;
   ({ isFocused, width } = searchContext);
-  let obj = searchContext(16770);
+  let obj = searchContext(16797);
   const contentContainerStyles = obj.useContentContainerStyles();
-  let tmp2 = tab(16725)(width);
+  let tmp2 = tab(16752)(width);
   dependencyMap = tmp2;
-  const searchMessages = searchContext(16778).useSearchMessages(searchContext, tab);
-  const obj2 = searchContext(16778);
+  const searchMessages = searchContext(16805).useSearchMessages(searchContext, tab);
+  const obj2 = searchContext(16805);
   let items = [placeholderCount, memo];
   const items1 = [searchMessages];
   const stateFromStoresArray = searchContext(504).useStateFromStoresArray(items, () => {
@@ -65,7 +65,7 @@ export default noop.memo(function MediaScreen(searchContext) {
   }, items1);
   let obj3 = searchContext(504);
   obj = { searchContext, tab, placeholderHeight: tmp2, numColumns };
-  const searchMessagesLoadingState = searchContext(16779).useSearchMessagesLoadingState(obj);
+  const searchMessagesLoadingState = searchContext(16806).useSearchMessagesLoadingState(obj);
   placeholderCount = searchMessagesLoadingState.placeholderCount;
   const items2 = [searchMessages, searchContext, stateFromStoresArray];
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
@@ -101,8 +101,8 @@ export default noop.memo(function MediaScreen(searchContext) {
       obj = searchContext(dependencyMap[15]);
     });
   }, items3);
-  let obj4 = searchContext(16779);
-  const onPressMediaItem = searchContext(16722).useOnPressMediaItem({ searchContext, allMediaResults: memo, onEndReached: callback, onEndReachedThreshold: 500 });
+  let obj4 = searchContext(16806);
+  const onPressMediaItem = searchContext(16749).useOnPressMediaItem({ searchContext, allMediaResults: memo, onEndReached: callback, onEndReachedThreshold: 500 });
   const items4 = [onPressMediaItem, searchContext, searchMessages];
   const callback1 = searchMessages.useCallback((media, index) => {
     media = media.media;
@@ -161,10 +161,10 @@ export default noop.memo(function MediaScreen(searchContext) {
     return items;
   }, items5);
   obj = { data: memo1, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.mediaContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null };
-  const obj6 = searchContext(16722);
-  obj.ItemSeparatorComponent = searchContext(16729).MediaVerticalSeparator;
+  const obj6 = searchContext(16749);
+  obj.ItemSeparatorComponent = searchContext(16756).MediaVerticalSeparator;
   obj.numColumns = numColumns;
   obj.isFirstPageLoading = isFirstPageLoading;
   obj.isNextPageLoading = isNextPageLoading;
-  return jsx(tab(16780), { data: memo1, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.mediaContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null });
+  return jsx(tab(16807), { data: memo1, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.mediaContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null });
 });

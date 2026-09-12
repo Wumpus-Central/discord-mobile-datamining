@@ -1,11 +1,11 @@
-// === Module 7478: BillingStandaloneNativeUtils ===
+// === Module 7508: BillingStandaloneNativeUtils ===
 
-// Module 7478 (BillingStandaloneNativeUtils)
+// Module 7508 (BillingStandaloneNativeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1074 */;
-import LinkingDefault from "Linking" /* 4301 */;
-import PaymentConstants from "PaymentConstants" /* 4588 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7479 */;
+import LinkingDefault from "Linking" /* 4331 */;
+import PaymentConstants from "PaymentConstants" /* 4618 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7509 */;
 import size from "module_2" /* 2 */;
 
 function emitMWRCSentryErrorOnFailure(items, source, loadId) {
@@ -99,7 +99,7 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
   if (tmpResult.isMetaQuest()) {
     prop1 = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
   }
-  tmpResult = tmp(7480);
+  tmpResult = tmp(7510);
   return tmpResult.goToBillingStandalonePageWithHandoff(Routes.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(guild_id, prop, newAnalyticsLoadId, prop1), (body, searchParams) => {
     searchParams = searchParams.searchParams;
     searchParams.append("handoff_token", body.body.handoff_token);

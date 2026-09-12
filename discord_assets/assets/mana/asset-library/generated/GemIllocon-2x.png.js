@@ -1,6 +1,6 @@
-// === Module 6171: ? ===
+// === Module 6201: ? ===
 
-// Module 6171
+// Module 6201
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemIllocon-2x.png.js");

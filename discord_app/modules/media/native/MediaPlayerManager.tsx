@@ -1,24 +1,24 @@
-// === Module 14589: MediaPlayerManager ===
+// === Module 14624: MediaPlayerManager ===
 
-// Module 14589 (MediaPlayerManager)
+// Module 14624 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import Constants2 from "Constants" /* 1085 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
-import RootNavigationRef from "RootNavigationRef" /* 4465 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7529 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 9596 */;
+import RootNavigationRef from "RootNavigationRef" /* 4495 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9635 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import VoicePanelStore from "VoicePanelStore" /* 4814 */;
+import VoicePanelStore from "VoicePanelStore" /* 4844 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4827 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import MessageStore from "MessageStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14590 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14625 */;
 import module_560 from "module_560" /* 560 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 import size from "module_2" /* 2 */;
@@ -31,7 +31,7 @@ const Permissions = Constants2.Permissions;
 let closure_16 = new LoggerDefault("MediaPlayerManager");
 const useMediaPlayerManagerStore = module_560.create((arg0) => {
   closure_0 = arg0;
-  const obj = {
+  return {
     activeMediaPlayerSource: "HermesInternal",
     mediaSourceMessage: "flex",
     canAccessMedia: "ip",
@@ -39,14 +39,13 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "PX_16",
-    showPip: "Path fill rule",
+    showPip: "PC_SEAT_1",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: 6
+    currentlyDisplayedChannelId: -125
   };
-  return obj;
 });
 class MediaPlayerManager extends tmp8 {
   constructor() {

@@ -1,14 +1,14 @@
-// === Module 11016: ModalStackNavigator ===
+// === Module 11055: ModalStackNavigator ===
 
-// Module 11016 (ModalStackNavigator)
-import Navigator from "Navigator" /* 7073 */;
-import HeaderShared from "HeaderShared" /* 7936 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11017 */;
+// Module 11055 (ModalStackNavigator)
+import Navigator from "Navigator" /* 7103 */;
+import HeaderShared from "HeaderShared" /* 7966 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11056 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(7987);
+const NativeStackNavigator = fn(8017);
 let closure_4 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/ModalStackNavigator.tsx");

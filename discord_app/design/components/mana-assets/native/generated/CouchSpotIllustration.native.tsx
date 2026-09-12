@@ -1,9 +1,9 @@
-// === Module 5948: CouchSpotIllustration ===
+// === Module 5978: CouchSpotIllustration ===
 
-// Module 5948 (CouchSpotIllustration)
+// Module 5978 (CouchSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5949 from "module_5949" /* 5949 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5979 from "module_5979" /* 5979 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const CouchSpotIllustration = function CouchSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5949 };
+  obj = { uri: _modDef5979 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const CouchSpotIllustration = function CouchSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5949 });
+  return jsx(FastImageDefault, { uri: _modDef5979 });
 };

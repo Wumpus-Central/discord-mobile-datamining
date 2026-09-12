@@ -1,9 +1,9 @@
-// === Module 13115: UserProfileActivityTimebar ===
+// === Module 13152: UserProfileActivityTimebar ===
 
-// Module 13115 (UserProfileActivityTimebar)
+// Module 13152 (UserProfileActivityTimebar)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import useActivityTimer from "useActivityTimer" /* 13116 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import useActivityTimer from "useActivityTimer" /* 13153 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityTimerDefault = useActivityTimer;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { bar: null, progress: null, textRow: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, height: 4, marginBottom: 4 };
 createStyles.bar = createStyles;

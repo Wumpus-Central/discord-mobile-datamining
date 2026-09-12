@@ -1,16 +1,16 @@
-// === Module 13239: NameplateProductPreview ===
+// === Module 13272: NameplateProductPreview ===
 
-// Module 13239 (NameplateProductPreview)
+// Module 13272 (NameplateProductPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import utils from "utils" /* 1886 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import TableRow from "TableRow" /* 5656 */;
-import useShopProductItems from "useShopProductItems" /* 8256 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import TableRow from "TableRow" /* 5686 */;
+import useShopProductItems from "useShopProductItems" /* 8288 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
 function NameplateUser(arg0) {
@@ -44,7 +44,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = noop.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: "flex-start", "aria-hidden": "center" };
+    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: "carburante", "aria-hidden": "fare il pieno" };
     return timestampProducer(native.Avatar, obj);
   }, items1);
   return closure_6(currentUser(stateFromStores[20]).UserNameplateRow, { nameplate, icon, label, isPreviewRow: true });
@@ -69,7 +69,7 @@ function PlaceholderUser(end) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" }, memberListContainer: null, memberListTitle: null, memberListGradient: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.memberListContainer = createStyles;

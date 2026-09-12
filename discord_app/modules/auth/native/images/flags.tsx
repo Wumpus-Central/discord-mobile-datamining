@@ -1,28 +1,6 @@
-// === Module 15487: flags ===
+// === Module 15509: flags ===
 
-// Module 15487 (flags)
-import _mod15488 from "module_15488" /* 15488 */;
-import _mod15489 from "module_15489" /* 15489 */;
-import _mod15490 from "module_15490" /* 15490 */;
-import _mod15491 from "module_15491" /* 15491 */;
-import _mod15492 from "module_15492" /* 15492 */;
-import _mod15493 from "module_15493" /* 15493 */;
-import _mod15494 from "module_15494" /* 15494 */;
-import _mod15495 from "module_15495" /* 15495 */;
-import _mod15496 from "module_15496" /* 15496 */;
-import _mod15497 from "module_15497" /* 15497 */;
-import _mod15498 from "module_15498" /* 15498 */;
-import _mod15499 from "module_15499" /* 15499 */;
-import _mod15500 from "module_15500" /* 15500 */;
-import _mod15501 from "module_15501" /* 15501 */;
-import _mod15502 from "module_15502" /* 15502 */;
-import _mod15503 from "module_15503" /* 15503 */;
-import _mod15504 from "module_15504" /* 15504 */;
-import _mod15505 from "module_15505" /* 15505 */;
-import _mod15506 from "module_15506" /* 15506 */;
-import _mod15507 from "module_15507" /* 15507 */;
-import _mod15508 from "module_15508" /* 15508 */;
-import _mod15509 from "module_15509" /* 15509 */;
+// Module 15509 (flags)
 import _mod15510 from "module_15510" /* 15510 */;
 import _mod15511 from "module_15511" /* 15511 */;
 import _mod15512 from "module_15512" /* 15512 */;
@@ -32,8 +10,30 @@ import _mod15515 from "module_15515" /* 15515 */;
 import _mod15516 from "module_15516" /* 15516 */;
 import _mod15517 from "module_15517" /* 15517 */;
 import _mod15518 from "module_15518" /* 15518 */;
+import _mod15519 from "module_15519" /* 15519 */;
+import _mod15520 from "module_15520" /* 15520 */;
+import _mod15521 from "module_15521" /* 15521 */;
+import _mod15522 from "module_15522" /* 15522 */;
+import _mod15523 from "module_15523" /* 15523 */;
+import _mod15524 from "module_15524" /* 15524 */;
+import _mod15525 from "module_15525" /* 15525 */;
+import _mod15526 from "module_15526" /* 15526 */;
+import _mod15527 from "module_15527" /* 15527 */;
+import _mod15528 from "module_15528" /* 15528 */;
+import _mod15529 from "module_15529" /* 15529 */;
+import _mod15530 from "module_15530" /* 15530 */;
+import _mod15531 from "module_15531" /* 15531 */;
+import _mod15532 from "module_15532" /* 15532 */;
+import _mod15533 from "module_15533" /* 15533 */;
+import _mod15534 from "module_15534" /* 15534 */;
+import _mod15535 from "module_15535" /* 15535 */;
+import _mod15536 from "module_15536" /* 15536 */;
+import _mod15537 from "module_15537" /* 15537 */;
+import _mod15538 from "module_15538" /* 15538 */;
+import _mod15539 from "module_15539" /* 15539 */;
+import _mod15540 from "module_15540" /* 15540 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
-export const flags = { bg: _mod15488, cs: _mod15489, da: _mod15490, de: _mod15491, el: _mod15492, "en-GB": _mod15493, "en-US": _mod15494, "es-ES": _mod15495, "es-419": _mod15496, fi: _mod15497, fr: _mod15498, hi: _mod15499, hr: _mod15500, hu: _mod15501, it: _mod15502, ja: _mod15503, ko: _mod15504, lt: _mod15505, nl: _mod15506, no: _mod15507, pl: _mod15508, "pt-BR": _mod15509, ro: _mod15510, ru: _mod15511, "sv-SE": _mod15512, th: _mod15513, tr: _mod15514, uk: _mod15515, vi: _mod15516, "zh-CN": _mod15517, "zh-TW": _mod15518 };
+export const flags = { bg: _mod15510, cs: _mod15511, da: _mod15512, de: _mod15513, el: _mod15514, "en-GB": _mod15515, "en-US": _mod15516, "es-ES": _mod15517, "es-419": _mod15518, fi: _mod15519, fr: _mod15520, hi: _mod15521, hr: _mod15522, hu: _mod15523, it: _mod15524, ja: _mod15525, ko: _mod15526, lt: _mod15527, nl: _mod15528, no: _mod15529, pl: _mod15530, "pt-BR": _mod15531, ro: _mod15532, ru: _mod15533, "sv-SE": _mod15534, th: _mod15535, tr: _mod15536, uk: _mod15537, vi: _mod15538, "zh-CN": _mod15539, "zh-TW": _mod15540 };

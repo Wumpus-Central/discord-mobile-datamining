@@ -1,9 +1,9 @@
-// === Module 6632: VoiceFiltersSpotIllustration ===
+// === Module 6662: VoiceFiltersSpotIllustration ===
 
-// Module 6632 (VoiceFiltersSpotIllustration)
+// Module 6662 (VoiceFiltersSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6633 from "module_6633" /* 6633 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6663 from "module_6663" /* 6663 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const VoiceFiltersSpotIllustration = function VoiceFiltersSpotIllustratio
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6633 };
+  obj = { uri: _modDef6663 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const VoiceFiltersSpotIllustration = function VoiceFiltersSpotIllustratio
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6633 });
+  return jsx(FastImageDefault, { uri: _modDef6663 });
 };

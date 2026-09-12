@@ -1,11 +1,11 @@
-// === Module 8303: StorefrontProductActionCreators ===
+// === Module 8335: StorefrontProductActionCreators ===
 
-// Module 8303 (StorefrontProductActionCreators)
+// Module 8335 (StorefrontProductActionCreators)
 import DurationsDefault from "Durations" /* 1090 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8304 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7635 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8336 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7665 */;
 
 const require = fn;
 let closure_10 = async function _maybeFetchProductsWithSkus(arg0) {
@@ -46,7 +46,7 @@ let closure_10 = async function _maybeFetchProductsWithSkus(arg0) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -187,7 +187,7 @@ let closure_12 = async function _maybeFetchProductsBySkuIds(arg0) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp7) {

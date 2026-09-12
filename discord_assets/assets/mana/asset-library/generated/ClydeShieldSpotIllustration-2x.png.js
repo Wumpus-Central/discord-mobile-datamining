@@ -1,6 +1,6 @@
-// === Module 5933: ? ===
+// === Module 5963: ? ===
 
-// Module 5933
+// Module 5963
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ClydeShieldSpotIllustration-2x.png.js");

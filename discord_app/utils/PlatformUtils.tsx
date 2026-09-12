@@ -1,6 +1,6 @@
-// === Module 1115: PlatformUtils ===
+// === Module 1150: PlatformUtils ===
 
-// Module 1115 (PlatformUtils)
+// Module 1150 (PlatformUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/PlatformUtils.tsx");

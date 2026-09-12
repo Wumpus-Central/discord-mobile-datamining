@@ -1,9 +1,9 @@
-// === Module 15750: CaptchaTestModal ===
+// === Module 15772: CaptchaTestModal ===
 
-// Module 15750 (CaptchaTestModal)
+// Module 15772 (CaptchaTestModal)
 import nativeDefault from "native" /* 576 */;
-import NavigatorHeader from "NavigatorHeader" /* 5675 */;
-import CaptchaTestActionCreators from "CaptchaTestActionCreators" /* 15752 */;
+import NavigatorHeader from "NavigatorHeader" /* 5705 */;
+import CaptchaTestActionCreators from "CaptchaTestActionCreators" /* 15774 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -160,7 +160,7 @@ function CaptchaTestScreen(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, separator: null, footerContainer: null, footerButton: null, content: null };
 createStyles = { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -172,15 +172,15 @@ createStyles.footerButton = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.content = { margin: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 let closure_9 = createStyles.createStyles(createStyles);
-const prop = fn(15751).HCAPTCHA_DIFFICULTY_OPTIONS;
+const prop = fn(15773).HCAPTCHA_DIFFICULTY_OPTIONS;
 const options = prop.map((label) => ({ name: label.label, value: label.value }));
-let items = [fn(15752).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(15752).CaptchaDeciderType.SMITE_RQDATA];
+let items = [fn(15774).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(15774).CaptchaDeciderType.SMITE_RQDATA];
 const set = new Set(items);
-const prop1 = fn(15751).CAPTCHA_DECIDER_TYPE_OPTIONS;
+const prop1 = fn(15773).CAPTCHA_DECIDER_TYPE_OPTIONS;
 const mapped = prop1.map((label) => ({ name: label.label, value: label.value }));
 const options2 = mapped.filter((value) => set.has(value.value));
 const constants = { TEST_CAPTCHA: "TEST_CAPTCHA" };
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj5 = { headerStyle: null };
 let obj4 = { margin: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj5.headerStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

@@ -14,7 +14,7 @@ import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1881 */;
 import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1883 */;
 import _modDef1884 from "module_1884" /* 1884 */;
 import Constants from "Constants" /* 1074 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import size from "module_2" /* 2 */;
 
 function getAvatarURL(canAnimate) {

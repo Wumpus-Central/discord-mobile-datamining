@@ -1,9 +1,9 @@
-// === Module 10496: openStickersPremiumUpsellAlert ===
+// === Module 10535: openStickersPremiumUpsellAlert ===
 
-// Module 10496 (openStickersPremiumUpsellAlert)
+// Module 10535 (openStickersPremiumUpsellAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4930 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7330 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4960 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7360 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -68,7 +68,8 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
                         return closure_3_6(closure_0, obj);
                       };
                     });
-                  }
+                  },
+            isDismissable: true
           };
           obj.openLazy(obj4);
           c4 = 3;

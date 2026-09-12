@@ -1,9 +1,9 @@
-// === Module 5894: CampfireSceneSpotIllustration ===
+// === Module 5924: CampfireSceneSpotIllustration ===
 
-// Module 5894 (CampfireSceneSpotIllustration)
+// Module 5924 (CampfireSceneSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5895 from "module_5895" /* 5895 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5925 from "module_5925" /* 5925 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const CampfireSceneSpotIllustration = function CampfireSceneSpotIllustrat
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5895 };
+  obj = { uri: _modDef5925 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const CampfireSceneSpotIllustration = function CampfireSceneSpotIllustrat
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5895 });
+  return jsx(FastImageDefault, { uri: _modDef5925 });
 };

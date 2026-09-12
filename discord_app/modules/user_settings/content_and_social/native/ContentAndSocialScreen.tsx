@@ -1,27 +1,27 @@
-// === Module 15934: ContentAndSocialScreen ===
+// === Module 15958: ContentAndSocialScreen ===
 
-// Module 15934 (ContentAndSocialScreen)
+// Module 15958 (ContentAndSocialScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import SettingBuilders from "SettingBuilders" /* 11562 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12773 */;
-import SettingLayoutDefault from "SettingLayout" /* 14741 */;
-import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 14871 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 15935 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15939 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import SettingBuilders from "SettingBuilders" /* 11601 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12809 */;
+import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 14905 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 15959 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15963 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(8049).MobileUserSettings;
+const MobileUserSettings = fn(8079).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { loadingIndicator: null, emptyContainer: null };
 createStyles = { marginTop: nativeDefault.space.PX_32 };
 createStyles.loadingIndicator = createStyles;

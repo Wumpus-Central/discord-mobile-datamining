@@ -1,25 +1,25 @@
-// === Module 5622: MemberVerificationModal ===
+// === Module 5652: MemberVerificationModal ===
 
-// Module 5622 (MemberVerificationModal)
+// Module 5652 (MemberVerificationModal)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4343 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4431 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5578 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4461 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5608 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5623 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5653 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(5624);
+const MemberVerificationFormConstants = fn(5654);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
-fn(4606);
+fn(4636);
 let obj = { flex: { flex: 1 }, flexLoading: null, scrollContainer: null, closeButtonContainer: null, closeIconContainer: null, closeIconOverBanner: null, closeIconAfterBanner: null, headerSeparator: null };
 obj = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.flexLoading = obj;

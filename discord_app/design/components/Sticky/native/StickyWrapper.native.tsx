@@ -1,7 +1,7 @@
-// === Module 11454: StickyWrapper ===
+// === Module 11493: StickyWrapper ===
 
-// Module 11454 (StickyWrapper)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
+// Module 11493 (StickyWrapper)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

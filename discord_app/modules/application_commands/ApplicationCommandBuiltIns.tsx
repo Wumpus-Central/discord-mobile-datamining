@@ -1,15 +1,15 @@
-// === Module 9390: ApplicationCommandBuiltIns ===
+// === Module 9429: ApplicationCommandBuiltIns ===
 
-// Module 9390 (ApplicationCommandBuiltIns)
+// Module 9429 (ApplicationCommandBuiltIns)
 import UserSettings from "UserSettings" /* 1935 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 7321 */;
-import ThreadHooks from "ThreadHooks" /* 7342 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7529 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7596 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9393 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 7351 */;
+import ThreadHooks from "ThreadHooks" /* 7372 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7626 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9432 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -22,15 +22,15 @@ function getOptionValue(arr, arg1) {
   }
   return value;
 }
-const BuiltInSectionId = fn(5050).BuiltInSectionId;
+const BuiltInSectionId = fn(5080).BuiltInSectionId;
 const Constants = fn(1074);
 ({ Permissions: closure_7, MARKDOWN_SPOILER_WRAPPER: closure_8, ME: closure_9, DISPLAY_NAME_MAX_LENGTH, MAX_CHANNEL_NAME_LENGTH } = Constants);
-const DiceRollConstants = fn(9391);
+const DiceRollConstants = fn(9430);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = DiceRollConstants);
 let closure_11 = fn(2023).getDisableCommunicationDurationOptions;
-const MessageSendLocation = fn(4599).MessageSendLocation;
+const MessageSendLocation = fn(4629).MessageSendLocation;
 let obj = {};
-obj = { id: BuiltInSectionId.BUILT_IN, type: fn(7596).ApplicationCommandSectionType.BUILT_IN };
+obj = { id: BuiltInSectionId.BUILT_IN, type: fn(7626).ApplicationCommandSectionType.BUILT_IN };
 Object.defineProperty(obj, "name", {
   get: () => {
     const intl = require("util").intl;
@@ -39,7 +39,7 @@ Object.defineProperty(obj, "name", {
   set: undefined
 });
 obj[BuiltInSectionId.BUILT_IN] = obj;
-obj = { id: BuiltInSectionId.FRECENCY, type: fn(7596).ApplicationCommandSectionType.BUILT_IN };
+obj = { id: BuiltInSectionId.FRECENCY, type: fn(7626).ApplicationCommandSectionType.BUILT_IN };
 Object.defineProperty(obj, "name", {
   get: () => {
     const intl = require("util").intl;
@@ -48,8 +48,8 @@ Object.defineProperty(obj, "name", {
   set: undefined
 });
 obj[BuiltInSectionId.FRECENCY] = obj;
-let items = [...fn(9392).default];
-let obj1 = { id: "-1", untranslatedName: "shrug", displayName: "shrug", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let items = [...fn(9431).default];
+let obj1 = { id: "-1", untranslatedName: "shrug", displayName: "shrug", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj1, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -96,7 +96,7 @@ obj1.execute = function execute(arr) {
 };
 items[tmp5] = obj1;
 const sum = tmp5 + 1;
-let obj3 = { id: "-2", untranslatedName: "tableflip", displayName: "tableflip", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let obj3 = { id: "-2", untranslatedName: "tableflip", displayName: "tableflip", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj3, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -143,7 +143,7 @@ obj3.execute = function execute(arr) {
 };
 items[sum] = obj3;
 const sum1 = sum + 1;
-let obj5 = { id: "-3", untranslatedName: "unflip", displayName: "unflip", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let obj5 = { id: "-3", untranslatedName: "unflip", displayName: "unflip", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj5, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -190,7 +190,7 @@ obj5.execute = function execute(arr) {
 };
 items[sum1] = obj5;
 const sum2 = sum1 + 1;
-let obj7 = { id: "-4", untranslatedName: "tts", displayName: "tts", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let obj7 = { id: "-4", untranslatedName: "tts", displayName: "tts", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj7, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -249,7 +249,7 @@ obj7.execute = function execute(arr) {
 };
 items[sum2] = obj7;
 const sum3 = sum2 + 1;
-const obj9 = { id: "-5", untranslatedName: "me", displayName: "me", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+const obj9 = { id: "-5", untranslatedName: "me", displayName: "me", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj9, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -296,7 +296,7 @@ obj9.execute = function execute(arr) {
 };
 items[sum3] = obj9;
 const sum4 = sum3 + 1;
-const obj11 = { id: "-6", untranslatedName: "spoiler", displayName: "spoiler", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+const obj11 = { id: "-6", untranslatedName: "spoiler", displayName: "spoiler", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj11, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -344,7 +344,7 @@ obj11.execute = function execute(arr) {
 };
 items[sum4] = obj11;
 const sum5 = sum4 + 1;
-const obj13 = { id: "-7", untranslatedName: "nick", displayName: "nick", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj13 = { id: "-7", untranslatedName: "nick", displayName: "nick", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj13, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -411,7 +411,7 @@ obj13.execute = function execute(arr, arg1) {
 };
 items[sum5] = obj13;
 const sum6 = sum5 + 1;
-const obj15 = { id: "-10", untranslatedName: "thread", displayName: "thread", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj15 = { id: "-10", untranslatedName: "thread", displayName: "thread", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj15, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -477,92 +477,28 @@ let closure_14 = asyncGeneratorStep(async (arg0, arg1) => {
   c6 = 0;
   c7 = 0;
   const iter = (async (arg0, value) => {
-    if (c7 === 2) {
-      c7 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c7 = 2;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            closure_5 = tmp5;
-            closure_4 = tmp2;
-            let channel2;
-            closure_132_0 = closure_0;
-            channel2 = channel.channel;
-            closure_132_2 = undefined;
-            closure_132_3 = undefined;
-            closure_132_4 = undefined;
-            c6 = 1;
-            c7 = 1;
-            return { value: "PX_16", done: null };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
-          } else {
-            const tmp49 = closure_133_13(closure_132_0, "name");
-            c2 = tmp49;
-            if (tmp49 == null) {
-              c2 = "";
-            }
-            closure_132_2 = c2;
-            const tmp11 = closure_133_13(closure_132_0, "message");
-            c3 = tmp11;
-            if (tmp11 == null) {
-              c3 = "";
-            }
-            closure_132_3 = c3;
-            obj1 = closure_133_0(closure_133_2[17]);
-            let obj2 = closure_133_0(closure_133_2[19]);
-            c6 = 2;
-            c7 = 1;
-            obj2 = { value: null, done: false };
-            obj2.value = obj1.createThread(channel2, closure_132_2, closure_133_0(closure_133_2[18]).ChannelTypes.PUBLIC_THREAD, obj2.getAutoArchiveDuration(channel2, null), "Slash Command");
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_132_4 = value;
-          const obj8 = closure_133_1(closure_133_2[20]);
-          const id = closure_132_4.id;
-          const obj3 = { location: closure_133_12.THREAD_CREATION };
-          obj8.sendMessage(id, closure_133_1(closure_133_2[21]).parse(closure_132_4, closure_132_3), true, obj3);
-          c7 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp27) {
-        c7 = tmp;
-        throw tmp27;
-      }
+    const tmp49 = closure_133_13(closure_132_0, "name");
+    c2 = tmp49;
+    if (tmp49 == null) {
+      c2 = "";
     }
+    closure_132_2 = c2;
+    const tmp11 = closure_133_13(closure_132_0, "message");
+    c3 = tmp11;
+    if (tmp11 == null) {
+      c3 = "";
+    }
+    closure_132_3 = c3;
+    await closure_133_0(closure_133_2[17]).createThread(channel2, closure_132_2, closure_133_0(closure_133_2[18]).ChannelTypes.PUBLIC_THREAD, closure_133_0(closure_133_2[19]).getAutoArchiveDuration(channel2, null), "Slash Command");
+    closure_132_4 = value;
+    closure_133_0(closure_133_2[19]);
+    const id = closure_132_4.id;
+    closure_133_1(closure_133_2[20]).sendMessage(id, closure_133_1(closure_133_2[21]).parse(closure_132_4, closure_132_3), true, { location: closure_133_12.THREAD_CREATION });
+    await "HermesInternal";
+    closure_4 = tmp2;
+    closure_132_0 = closure_0;
+    channel2 = channel.channel;
+    return "PX_16";
   })();
   iter.next();
   return iter;
@@ -579,7 +515,7 @@ obj15.execute = function() {
 };
 items[sum6] = obj15;
 const sum7 = sum6 + 1;
-const obj18 = { id: "-11", untranslatedName: "kick", displayName: "kick", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj18 = { id: "-11", untranslatedName: "kick", displayName: "kick", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj18, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -754,7 +690,7 @@ obj18.execute = function execute(arr, guild) {
 };
 items[sum7] = obj18;
 const sum8 = sum7 + 1;
-const obj21 = { id: "-12", untranslatedName: "ban", displayName: "ban", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj21 = { id: "-12", untranslatedName: "ban", displayName: "ban", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj21, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -1007,7 +943,7 @@ obj21.execute = function execute(arr, guild) {
 };
 items[sum8] = obj21;
 const sum9 = sum8 + 1;
-const obj25 = { id: "-13", untranslatedName: "timeout", displayName: "timeout", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj25 = { id: "-13", untranslatedName: "timeout", displayName: "timeout", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj25, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -1220,7 +1156,7 @@ obj25.execute = function execute(arr, guild) {
 };
 items[sum9] = obj25;
 const sum10 = sum9 + 1;
-const obj29 = { id: "-14", untranslatedName: "msg", displayName: "msg", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj29 = { id: "-14", untranslatedName: "msg", displayName: "msg", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj29, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -1301,7 +1237,7 @@ obj29.execute = function execute(arr, channel) {
             obj = { value, done: true };
             return obj;
           } else {
-            let obj1 = v1(4619);
+            let obj1 = v1(4649);
             obj1 = { recipientIds };
             v1 = 1;
             c0 = 1;
@@ -1309,9 +1245,9 @@ obj29.execute = function execute(arr, channel) {
               value: obj1.openPrivateChannel(obj1).then((result) => {
                         channel = channel.getChannel(result);
                         c1(38)(null != channel, "Newly created PrivateChannel is null");
-                        c1(7529);
+                        c1(7559);
                         const obj = { location: constants.PRIVATE_MESSAGE_COMMAND };
-                        obj.sendMessage(channel.id, c1(7754).parse(channel, dependencyMap), true, obj);
+                        obj.sendMessage(channel.id, c1(7784).parse(channel, dependencyMap), true, obj);
                       }),
               done: false
             };
@@ -1377,7 +1313,7 @@ obj29.execute = function execute(arr, channel) {
   }
 };
 items[sum10] = obj29;
-const obj32 = { id: "-18", untranslatedName: "roll-dice", displayName: "roll-dice", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7596).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj32 = { id: "-18", untranslatedName: "roll-dice", displayName: "roll-dice", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7626).ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj32, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -1462,7 +1398,7 @@ const found = items.filter((untranslatedName) => {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
 
-export const PLATFORM_COMMANDS = fn(9392).default;
+export const PLATFORM_COMMANDS = fn(9431).default;
 export const BUILT_IN_SECTIONS = obj;
 export const BUILT_IN_COMMANDS = items;
 export const BUILT_IN_COMMANDS_ORIGINAL = found;

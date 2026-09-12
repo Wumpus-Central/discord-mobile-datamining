@@ -1,6 +1,6 @@
-// === Module 4234: GuildLeaderboardTypes ===
+// === Module 4264: GuildLeaderboardTypes ===
 
-// Module 4234 (GuildLeaderboardTypes)
+// Module 4264 (GuildLeaderboardTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/GuildLeaderboardTypes.tsx");

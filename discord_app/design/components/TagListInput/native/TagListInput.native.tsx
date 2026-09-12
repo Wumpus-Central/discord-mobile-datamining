@@ -1,15 +1,15 @@
-// === Module 9846: TagListInput ===
+// === Module 9885: TagListInput ===
 
-// Module 9846 (TagListInput)
+// Module 9885 (TagListInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4318 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4343 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import spring from "spring" /* 5025 */;
-import springPresets from "springPresets" /* 5029 */;
-import LinearGradientDefault from "LinearGradient" /* 5038 */;
-import _modDef5715 from "module_5715" /* 5715 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import spring from "spring" /* 5055 */;
+import springPresets from "springPresets" /* 5059 */;
+import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import _modDef5745 from "module_5745" /* 5745 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_10 = createStyles.createStyles(() => {
   let obj = { placeholder: null, iconContainer: null, iconLeft: null, scrollViewContent: null, horizontalScrollViewContent: null, inputInner: null, horizontalInputInner: null, searchInput: null, horizontalSearchInput: null };
   obj = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
@@ -43,7 +43,7 @@ let closure_10 = createStyles.createStyles(() => {
 let closure_11 = { x: 0, y: 0.5 };
 let closure_12 = { x: 1, y: 0.5 };
 let closure_13 = ["transparent", "black"];
-createStyles = fn(4606);
+createStyles = fn(4636);
 let closure_14 = createStyles.createStyles(() => {
   let obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
   obj = {};
@@ -356,7 +356,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       obj.children = items2;
       obj.maskElement = React7(hasOwnProperty, obj);
       obj.children = children;
-      tmp = React6(_modDef5715, obj);
+      tmp = React6(_modDef5745, obj);
     }
     return tmp;
   }, items5);

@@ -1,6 +1,6 @@
-// === Module 11968: MediaAnalytics ===
+// === Module 12004: MediaAnalytics ===
 
-// Module 11968 (MediaAnalytics)
+// Module 12004 (MediaAnalytics)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import size from "module_2" /* 2 */;

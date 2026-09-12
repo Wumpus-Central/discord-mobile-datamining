@@ -1,10 +1,10 @@
-// === Module 16967: useSortedMessageRequests ===
+// === Module 16994: useSortedMessageRequests ===
 
-// Module 16967 (useSortedMessageRequests)
+// Module 16994 (useSortedMessageRequests)
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
-import MessageRequestStore from "MessageRequestStore" /* 7292 */;
+import MessageRequestStore from "MessageRequestStore" /* 7322 */;
 
 const require = fn;
 const size = fn(2);

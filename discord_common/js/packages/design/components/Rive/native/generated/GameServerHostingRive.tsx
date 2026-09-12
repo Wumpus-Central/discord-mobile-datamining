@@ -1,8 +1,8 @@
-// === Module 4411: GameServerHostingRive ===
+// === Module 4441: GameServerHostingRive ===
 
-// Module 4411 (GameServerHostingRive)
-import BaseRive from "BaseRive" /* 4337 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4392 */;
+// Module 4441 (GameServerHostingRive)
+import BaseRive from "BaseRive" /* 4367 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4422 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

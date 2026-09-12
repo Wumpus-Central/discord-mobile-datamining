@@ -224,7 +224,7 @@ PersistedStore["migrateAndReadStoreState"] = function migrateAndReadStoreState(E
     if (PersistedStore.shouldClear(c7, EmojiStore)) {
       const Storage2 = Storage3.Storage;
       Storage2.remove(EmojiStore);
-      return { state: "PX_16", requiresPersist: null };
+      return { state: "PX_16", requiresPersist: true };
     }
   }
   value = null;

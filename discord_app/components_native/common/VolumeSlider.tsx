@@ -1,27 +1,27 @@
-// === Module 10076: VolumeSlider ===
+// === Module 10115: VolumeSlider ===
 
-// Module 10076 (VolumeSlider)
+// Module 10115 (VolumeSlider)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils2 from "PlatformUtils" /* 1115 */;
-import useToken from "useToken" /* 4308 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5066 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5152 */;
-import _modDef8364 from "module_8364" /* 8364 */;
-import VoiceXIcon from "VoiceXIcon" /* 10077 */;
+import PlatformUtils2 from "PlatformUtils" /* 1150 */;
+import useToken from "useToken" /* 4338 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5096 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5182 */;
+import _modDef8396 from "module_8396" /* 8396 */;
+import VoiceXIcon from "VoiceXIcon" /* 10116 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(4631).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+let closure_4 = fn(4661).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 PlatformUtils = { volumerSlider: { flexDirection: "row", alignItems: "center" }, leftIcon: { marginRight: num }, rightIcon: { marginLeft: num }, volumerSliderNative: { flex: 1, marginVertical: -10, backgroundColor: "transparent" } };
 let closure_7 = createStyles.createStyles(PlatformUtils);
 const size = fn(2);
@@ -72,7 +72,7 @@ export default function VolumeSlider(maxTrackTintColor) {
     onResponderGrant = fn;
   }
   obj1.onResponderGrant = onResponderGrant;
-  items1[1] = closure_5(_modDef8364, obj1);
+  items1[1] = closure_5(_modDef8396, obj1);
   items1[2] = closure_5(VoiceNormalIcon.VoiceNormalIcon, { style: tmp4.rightIcon });
   obj.children = items1;
   return closure_6(View, obj);

@@ -1,21 +1,21 @@
-// === Module 5057: MarkupChannelMentionRule ===
+// === Module 5087: MarkupChannelMentionRule ===
 
-// Module 5057 (MarkupChannelMentionRule)
+// Module 5087 (MarkupChannelMentionRule)
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import StringUtils from "StringUtils" /* 1925 */;
-import _modDef4303 from "module_4303" /* 4303 */;
-import ChannelUtils from "ChannelUtils" /* 4751 */;
-import useChannelName from "useChannelName" /* 4759 */;
-import LinkUtils from "LinkUtils" /* 4760 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5056 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5058 */;
-import markup_ChannelUtils from "markup/ChannelUtils" /* 5059 */;
+import _modDef4333 from "module_4333" /* 4333 */;
+import ChannelUtils from "ChannelUtils" /* 4781 */;
+import useChannelName from "useChannelName" /* 4789 */;
+import LinkUtils from "LinkUtils" /* 4790 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5086 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5088 */;
+import markup_ChannelUtils from "markup/ChannelUtils" /* 5089 */;
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import RelationshipStore from "RelationshipStore" /* 4255 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -127,7 +127,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, combined1) {
           obj.content = items3;
           let obj6 = obj;
         } else if (null != combined1) {
-          const obj4 = { type: "link", content: null, target: null, title: "WireType" };
+          const obj4 = { type: "link", content: null, target: null, title: "call" };
           const obj5 = { type: "text", content: combined1 };
           const items4 = [obj5];
           obj4.content = items4;
@@ -295,7 +295,7 @@ obj = {
 };
 obj.channelMention = obj;
 obj = {
-  order: _modDef4303.defaultRules.url.order - 0.5,
+  order: _modDef4333.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_RE;
@@ -319,7 +319,7 @@ obj = {
   parse(arg0, arg1, channelId) {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     if (null == tmp3) {
-      let obj = { type: "link", content: null, target: null, title: "WireType" };
+      let obj = { type: "link", content: null, target: null, title: "call" };
       obj = { type: "text", content: tmp };
       const items = [obj];
       obj.content = items;
@@ -348,7 +348,7 @@ obj = {
 };
 obj.channelOrMessageUrl = obj;
 obj.mediaPostLink = {
-  order: _modDef4303.defaultRules.url.order - 0.5,
+  order: _modDef4333.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;
@@ -387,7 +387,7 @@ obj.mediaPostLink = {
         }
       }
     }
-    const obj = { type: "link", content: null, target: tmp, title: "WireType" };
+    const obj = { type: "link", content: null, target: tmp, title: "call" };
     const items = [{ type: "text", content: tmp }];
     obj.content = items;
     return obj;

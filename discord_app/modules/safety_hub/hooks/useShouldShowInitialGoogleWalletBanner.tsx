@@ -1,13 +1,13 @@
-// === Module 14822: useShouldShowInitialGoogleWalletBanner ===
+// === Module 14856: useShouldShowInitialGoogleWalletBanner ===
 
-// Module 14822 (useShouldShowInitialGoogleWalletBanner)
+// Module 14856 (useShouldShowInitialGoogleWalletBanner)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8516 */;
+import SafetyHubStore from "SafetyHubStore" /* 8548 */;
 
 const require = fn;
-const AgeCheckStatus = fn(8505).AgeCheckStatus;
+const AgeCheckStatus = fn(8537).AgeCheckStatus;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useShouldShowInitialGoogleWalletBanner.tsx");
 
@@ -66,7 +66,7 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
                 c2 = 1;
                 c3 = 2;
                 c4 = 1;
-                let obj1 = { value: _true(8523).fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
+                let obj1 = { value: _true(8555).fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
                 return obj1;
               }
             } else {
@@ -112,7 +112,7 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
                 }
                 c2 = 0;
               }
-              obj1 = _true(8526);
+              obj1 = _true(8558);
               c3 = 3;
               c4 = 1;
               const obj3 = { value: obj1.checkGoogleWalletAvailable(), done: false };

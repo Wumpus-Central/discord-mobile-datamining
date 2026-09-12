@@ -1,13 +1,13 @@
-// === Module 17716: InRolePromptNotice ===
+// === Module 17746: InRolePromptNotice ===
 
-// Module 17716 (InRolePromptNotice)
+// Module 17746 (InRolePromptNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import _modDef9716 from "module_9716" /* 9716 */;
-import GuildSettingsUtils from "GuildSettingsUtils" /* 17717 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import _modDef9755 from "module_9755" /* 9755 */;
+import GuildSettingsUtils from "GuildSettingsUtils" /* 17747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const RoleFlags = fn(1074).RoleFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { promptRow: null, promptText: null, icon: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
 createStyles.promptRow = createStyles;
@@ -37,7 +37,7 @@ export default function InRolePromptNotice(role) {
     const tmpResult = GuildSettingsUtils;
     let Icon = native.Icon;
     if (isRolePowerfulResult) {
-      obj = { style: string.icon, source: _modDef9716, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+      obj = { style: string.icon, source: _modDef9755, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
       const items = [hasOwnProperty(Icon, obj), ];
       const obj1 = { style: string.promptText, variant: "text-sm/medium", children: null };
       const intl2 = util.intl;
@@ -49,7 +49,7 @@ export default function InRolePromptNotice(role) {
       obj.children = items;
       let tmp4Result = timestampProducer(View, obj);
     } else {
-      const obj2 = { style: string.icon, source: _modDef9716 };
+      const obj2 = { style: string.icon, source: _modDef9755 };
       const items1 = [hasOwnProperty(Icon, obj2), ];
       const obj3 = { style: string.promptText, variant: "text-sm/medium", children: null };
       const intl = util.intl;

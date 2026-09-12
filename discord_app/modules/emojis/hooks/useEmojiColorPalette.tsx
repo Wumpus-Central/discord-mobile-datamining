@@ -1,10 +1,10 @@
-// === Module 11353: useEmojiColorPalette ===
+// === Module 11392: useEmojiColorPalette ===
 
-// Module 11353 (useEmojiColorPalette)
+// Module 11392 (useEmojiColorPalette)
 import initialize from "initialize" /* 504 */;
-import shared from "shared" /* 4458 */;
-import EmojiColorUtils from "EmojiColorUtils" /* 8031 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import shared from "shared" /* 4488 */;
+import EmojiColorUtils from "EmojiColorUtils" /* 8061 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
 require = fn;

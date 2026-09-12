@@ -1,9 +1,9 @@
-// === Module 10303: BugReportManager ===
+// === Module 10342: BugReportManager ===
 
-// Module 10303 (BugReportManager)
+// Module 10342 (BugReportManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7191 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 const require = fn;
 function showNotification(uri) {
@@ -105,7 +105,7 @@ function showNotification(uri) {
               let obj1 = { uri: tmp35 };
               let tmp7 = obj1;
             } else {
-              obj1 = tmp2(1115);
+              obj1 = tmp2(1150);
               if (!obj1.isIOS()) {
                 dependencyMap = 1;
                 c3 = 1;
@@ -127,10 +127,10 @@ function showNotification(uri) {
             }
             closure_128_0 = tmp7;
             BUG_REPORTER = constants.BUG_REPORTER;
-            notificationDuration = tmp2(10184).getNotificationDuration(BUG_REPORTER);
-            const obj5 = tmp2(10184);
+            notificationDuration = tmp2(10223).getNotificationDuration(BUG_REPORTER);
+            const obj5 = tmp2(10223);
             const obj3 = { type: BUG_REPORTER, duration: notificationDuration, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
-            const obj6 = tmp3(10186);
+            const obj6 = tmp3(10225);
             obj3.key = tmp2(1256).v4();
             obj3.image = closure_128_0;
             uri = undefined;
@@ -168,7 +168,7 @@ function showNotification(uri) {
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
 const InAppNotificationTypes = fn(1074).InAppNotificationTypes;
-const NativePermissionStatus = fn(4816).NativePermissionStatus;
+const NativePermissionStatus = fn(4846).NativePermissionStatus;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.ScreenshotHelper);
 class BugReportManager extends tmp4 {
 }

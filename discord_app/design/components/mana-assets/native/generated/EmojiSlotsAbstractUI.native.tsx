@@ -1,9 +1,9 @@
-// === Module 6024: EmojiSlotsAbstractUI ===
+// === Module 6054: EmojiSlotsAbstractUI ===
 
-// Module 6024 (EmojiSlotsAbstractUI)
+// Module 6054 (EmojiSlotsAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6025 from "module_6025" /* 6025 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6055 from "module_6055" /* 6055 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const EmojiSlotsAbstractUI = function EmojiSlotsAbstractUI(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6025 };
+  obj = { uri: _modDef6055 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const EmojiSlotsAbstractUI = function EmojiSlotsAbstractUI(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6025 });
+  return jsx(FastImageDefault, { uri: _modDef6055 });
 };

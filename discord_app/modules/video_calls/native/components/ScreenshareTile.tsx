@@ -1,13 +1,13 @@
-// === Module 9682: ScreenshareTile ===
+// === Module 9721: ScreenshareTile ===
 
-// Module 9682 (ScreenshareTile)
+// Module 9721 (ScreenshareTile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6726 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9683 */;
-import _modDef9684 from "module_9684" /* 9684 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9722 */;
+import _modDef9723 from "module_9723" /* 9723 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, image: null, label: null, liveContainer: null };
 createStyles = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BLACK, overflow: "hidden", flex: 1 };
 createStyles.container = createStyles;
@@ -42,7 +42,7 @@ export default function ScreenShareTile(onSingleTap) {
   obj = { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) };
   const items = [timestampProducer(React3, obj), , ];
   const tmp2 = useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
-  items[1] = timestampProducer(React4, { source: _modDef9684, style: tmp.image, resizeMode: "contain" });
+  items[1] = timestampProducer(React4, { source: _modDef9723, style: tmp.image, resizeMode: "contain" });
   const obj2 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.G84gtR);

@@ -1,7 +1,7 @@
-// === Module 17094: getAdjustedBottomOffsets ===
+// === Module 17121: getAdjustedBottomOffsets ===
 
-// Module 17094 (getAdjustedBottomOffsets)
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+// Module 17121 (getAdjustedBottomOffsets)
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import size from "module_2" /* 2 */;
 
 PlatformUtils = PlatformUtils.isAndroid();

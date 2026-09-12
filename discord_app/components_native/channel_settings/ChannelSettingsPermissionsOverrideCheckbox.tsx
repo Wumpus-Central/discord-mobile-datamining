@@ -1,8 +1,8 @@
-// === Module 16921: ChannelSettingsPermissionsOverrideCheckbox ===
+// === Module 16948: ChannelSettingsPermissionsOverrideCheckbox ===
 
-// Module 16921 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 16948 (ChannelSettingsPermissionsOverrideCheckbox)
 import nativeDefault from "native" /* 576 */;
-import PermissionUtils from "PermissionUtils" /* 4250 */;
+import PermissionUtils from "PermissionUtils" /* 4280 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -78,7 +78,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
 const md = nativeDefault.radii.md;
-fn(4606);
+fn(4636);
 let obj = { ternaryCheckBox: null, iconWrapper: null, icon: null, denyActive: null, denySelected: null, allowActive: null, allowSelected: null, passthroughSelected: null, passthroughActive: null, disabled: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: nativeDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" };
 obj.ternaryCheckBox = obj;
@@ -98,7 +98,7 @@ const obj6 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELE
 obj.passthroughActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 obj.disabled = { opacity: 0.3 };
 let closure_6 = createStyles.createStyles(obj);
-let items = [fn(4250).DENY, fn(4250).PASSTHROUGH, fn(4250).ALLOW];
+let items = [fn(4280).DENY, fn(4280).PASSTHROUGH, fn(4280).ALLOW];
 const obj7 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx");

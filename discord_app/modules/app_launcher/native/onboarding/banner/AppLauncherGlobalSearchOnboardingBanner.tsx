@@ -1,8 +1,8 @@
-// === Module 12209: AppLauncherGlobalSearchOnboardingBanner ===
+// === Module 12245: AppLauncherGlobalSearchOnboardingBanner ===
 
-// Module 12209 (AppLauncherGlobalSearchOnboardingBanner)
+// Module 12245 (AppLauncherGlobalSearchOnboardingBanner)
 import nativeDefault from "native" /* 576 */;
-import AppsIcon from "AppsIcon" /* 5157 */;
+import AppsIcon from "AppsIcon" /* 5187 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const View = fn(17).View;
 const DEFAULT_CONTENT_PADDING = fn(1482).DEFAULT_CONTENT_PADDING;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 const createStyles = { appsIcon: null, appsIconImage: null };
 let size = { height: 40, width: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
 createStyles.appsIcon = size;
@@ -60,7 +60,7 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
     obj.targetMeasurements = size;
     const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
     obj.surfaceMeasurements = size1;
-    tmp3 = jsx(markAsDismissed(11230).Coachmark, {
+    tmp3 = jsx(markAsDismissed(11269).Coachmark, {
       renderImgComponent: function appsIcon() {
           let obj = { style: closure_2.appsIcon, children: null };
           obj = { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };

@@ -1,9 +1,9 @@
-// === Module 9393: ChangeNicknameActionCreators ===
+// === Module 9432: ChangeNicknameActionCreators ===
 
-// Module 9393 (ChangeNicknameActionCreators)
+// Module 9432 (ChangeNicknameActionCreators)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7529 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

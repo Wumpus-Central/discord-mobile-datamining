@@ -1,9 +1,9 @@
-// === Module 11583: apexExperiment ===
+// === Module 11622: apexExperiment ===
 
-// Module 11583 (apexExperiment)
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11386 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11387 */;
-import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 11584 */;
+// Module 11622 (apexExperiment)
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11425 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11426 */;
+import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 11623 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
@@ -40,7 +40,7 @@ obj15[1] = { enabled: true };
 obj14.variations = obj15;
 const apexExperiment6 = ApexExperiment.createApexExperiment(obj14);
 const apexExperiment7 = ApexExperiment.createApexExperiment({ name: "2026-03-mobile-quest-home-red-dot-notification", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const apexExperiment8 = ApexExperiment.createApexExperiment({ name: "2026-05-quest-home-tile-redesign", kind: "user", defaultConfig: { useNewLayoutWithSearch: false, useNewTile: false, useLargeFeaturedTiles: false, ctaOnHover: false }, variations: { 0: { useNewLayoutWithSearch: false, useNewTile: false, useLargeFeaturedTiles: false, ctaOnHover: false }, 1: { useNewLayoutWithSearch: true, useNewTile: false, useLargeFeaturedTiles: false, ctaOnHover: false }, 2: { useNewLayoutWithSearch: true, useNewTile: true, useLargeFeaturedTiles: true, ctaOnHover: true }, 3: { useNewLayoutWithSearch: true, useNewTile: true, useLargeFeaturedTiles: false, ctaOnHover: true }, 4: { useNewLayoutWithSearch: true, useNewTile: true, useLargeFeaturedTiles: true, ctaOnHover: false } } });
+const apexExperiment8 = ApexExperiment.createApexExperiment({ name: "2026-05-quest-home-tile-redesign", kind: "user", defaultConfig: { useNewLayoutWithSearch: false, useNewTile: false, useNewFeaturedTiles: false, ctaOnHover: false }, variations: { 0: { useNewLayoutWithSearch: false, useNewTile: false, useNewFeaturedTiles: false, ctaOnHover: false }, 1: { useNewLayoutWithSearch: true, useNewTile: false, useNewFeaturedTiles: false, ctaOnHover: false }, 2: { useNewLayoutWithSearch: true, useNewTile: true, useNewFeaturedTiles: true, ctaOnHover: true }, 3: { useNewLayoutWithSearch: true, useNewTile: true, useNewFeaturedTiles: false, ctaOnHover: true }, 4: { useNewLayoutWithSearch: true, useNewTile: true, useNewFeaturedTiles: true, ctaOnHover: false } } });
 const obj19 = { CONTROL: 0, [0]: "CONTROL", NEW_LAYOUT_WITH_SEARCH: 1, [1]: "NEW_LAYOUT_WITH_SEARCH", LARGE_MASK_MARGIN: 2, [2]: "LARGE_MASK_MARGIN", REMOVE_QUEST_TITLE_SUFFIX: 3, [3]: "REMOVE_QUEST_TITLE_SUFFIX", REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER: 4, [4]: "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER" };
 const apexExperiment9 = ApexExperiment.createApexExperiment({ name: "2026-05-bounty-stale-refresh-quest-home", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const obj20 = { name: "2026-06-quest-home-layout-visual-tweaks", kind: "user", defaultConfig: { enabled: false, variant: obj19.CONTROL }, variations: { 0: { enabled: false, variant: obj19.CONTROL }, 1: { enabled: true, variant: obj19.NEW_LAYOUT_WITH_SEARCH }, 2: { enabled: true, variant: obj19.LARGE_MASK_MARGIN }, 3: { enabled: true, variant: obj19.REMOVE_QUEST_TITLE_SUFFIX }, 4: { enabled: true, variant: obj19.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER } } };

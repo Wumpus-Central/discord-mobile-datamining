@@ -1,14 +1,14 @@
-// === Module 11859: useCanFulfillStreamRequest ===
+// === Module 11895: useCanFulfillStreamRequest ===
 
-// Module 11859 (useCanFulfillStreamRequest)
+// Module 11895 (useCanFulfillStreamRequest)
 import RunningGameStore from "RunningGameStore" /* 1915 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import PresenceStore from "PresenceStore" /* 4646 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4629 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import PresenceStore from "PresenceStore" /* 4676 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 
 const require = fn;
 function canFulfillStreamRequest(channel_id) {

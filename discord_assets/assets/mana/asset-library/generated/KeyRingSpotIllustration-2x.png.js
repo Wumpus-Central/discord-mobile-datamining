@@ -1,6 +1,6 @@
-// === Module 6285: ? ===
+// === Module 6315: ? ===
 
-// Module 6285
+// Module 6315
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/KeyRingSpotIllustration-2x.png.js");

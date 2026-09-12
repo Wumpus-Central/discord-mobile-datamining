@@ -1,6 +1,6 @@
-// === Module 6149: ? ===
+// === Module 6179: ? ===
 
-// Module 6149
+// Module 6179
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDiversityTier7LargeBadge-2x.png.js");

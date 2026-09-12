@@ -1,13 +1,13 @@
-// === Module 12315: ScheduledMessageEditContentModal ===
+// === Module 12351: ScheduledMessageEditContentModal ===
 
-// Module 12315 (ScheduledMessageEditContentModal)
+// Module 12351 (ScheduledMessageEditContentModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Pressables from "Pressables" /* 5174 */;
-import MessageParserDefault from "MessageParser" /* 7754 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 7917 */;
-import HeaderShared from "HeaderShared" /* 7936 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Pressables from "Pressables" /* 5204 */;
+import MessageParserDefault from "MessageParser" /* 7784 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 7947 */;
+import HeaderShared from "HeaderShared" /* 7966 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { modal: null, headerLeftContainer: null, headerRightContainer: null, container: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.modal = createStyles;
@@ -71,11 +71,11 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             obj = { value, done: true };
             return obj;
           } else {
-            const obj5 = v1(7754);
+            const obj5 = v1(7784);
             const obj1 = { content: obj5.parse(stateFromStores, first).content, flags: scheduledMessage.createArgs.flags };
             v1 = 1;
             dependencyMap = 1;
-            const obj2 = { value: tmp4(12304).editScheduledMessage(scheduledMessage.scheduledMessageId, obj1), done: false };
+            const obj2 = { value: tmp4(12340).editScheduledMessage(scheduledMessage.scheduledMessageId, obj1), done: false };
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -87,7 +87,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
           return obj;
         } else {
           if (value) {
-            let arr = v1(4809);
+            let arr = v1(4839);
             arr = arr.pop();
           }
           dependencyMap = 3;

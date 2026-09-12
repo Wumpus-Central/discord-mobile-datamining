@@ -1,7 +1,7 @@
-// === Module 10397: getEmojiPickerDataRowItemSlimEmoji ===
+// === Module 10436: getEmojiPickerDataRowItemSlimEmoji ===
 
-// Module 10397 (getEmojiPickerDataRowItemSlimEmoji)
-import EmojiTypes from "EmojiTypes" /* 4262 */;
+// Module 10436 (getEmojiPickerDataRowItemSlimEmoji)
+import EmojiTypes from "EmojiTypes" /* 4292 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx");

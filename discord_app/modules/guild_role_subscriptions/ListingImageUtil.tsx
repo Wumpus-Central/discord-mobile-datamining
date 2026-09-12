@@ -1,7 +1,7 @@
-// === Module 17808: ListingImageUtil ===
+// === Module 17838: ListingImageUtil ===
 
-// Module 17808 (ListingImageUtil)
-import StoreUtils from "StoreUtils" /* 4848 */;
+// Module 17838 (ListingImageUtil)
+import StoreUtils from "StoreUtils" /* 4878 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/ListingImageUtil.tsx");

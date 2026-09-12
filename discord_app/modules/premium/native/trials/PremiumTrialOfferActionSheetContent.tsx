@@ -1,18 +1,18 @@
-// === Module 15755: PremiumTrialOfferActionSheetContent ===
+// === Module 15777: PremiumTrialOfferActionSheetContent ===
 
-// Module 15755 (PremiumTrialOfferActionSheetContent)
+// Module 15777 (PremiumTrialOfferActionSheetContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 4264 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import components_Button_Button from "components/Button/Button" /* 5026 */;
-import FolderIcon from "FolderIcon" /* 5125 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5181 */;
-import native from "native" /* 5743 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8753 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 9512 */;
-import UserIcon from "UserIcon" /* 11919 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 15756 */;
+import PremiumUtils from "PremiumUtils" /* 4294 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import components_Button_Button from "components/Button/Button" /* 5056 */;
+import FolderIcon from "FolderIcon" /* 5155 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5211 */;
+import native from "native" /* 5773 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 9551 */;
+import UserIcon from "UserIcon" /* 11955 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 15778 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { contentContainer: null, buttonContainer: null, title: null, heroIllustrationContainer: null };
 obj = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };
 obj.contentContainer = obj;

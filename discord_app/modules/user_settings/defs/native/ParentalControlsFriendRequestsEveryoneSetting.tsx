@@ -1,25 +1,25 @@
-// === Module 15961: ParentalControlsFriendRequestsEveryoneSetting ===
+// === Module 15985: ParentalControlsFriendRequestsEveryoneSetting ===
 
-// Module 15961 (ParentalControlsFriendRequestsEveryoneSetting)
+// Module 15985 (ParentalControlsFriendRequestsEveryoneSetting)
 import util from "util" /* 1114 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7068 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14880 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14914 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7610 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8049).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8079).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsEveryoneSettingValue() {
-    const selectedTeenId = controlledSetting(8738).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(14880).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(8770).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(14914).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;

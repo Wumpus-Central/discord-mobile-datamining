@@ -1,16 +1,16 @@
-// === Module 17152: SoundboardHooks ===
+// === Module 17179: SoundboardHooks ===
 
-// Module 17152 (SoundboardHooks)
+// Module 17179 (SoundboardHooks)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
 const require = fn;
-const SoundboardStyleConstants = fn(17144);
+const SoundboardStyleConstants = fn(17171);
 ({ SOUNDS_PER_ROW: closure_7, SOUND_ROW_PADDING: closure_8 } = SoundboardStyleConstants);
-const ACTION_SHEET_MAX_WIDTH = fn(7224).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
 
@@ -52,7 +52,7 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
             } else if (c0) {
               const FrecencyUserSettingsActionCreators = shouldFetch(1940).FrecencyUserSettingsActionCreators;
               const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
-              let obj1 = shouldFetch(7411);
+              let obj1 = shouldFetch(7441);
               c1 = 1;
               c0 = 1;
               obj1 = { value: null, done: false };

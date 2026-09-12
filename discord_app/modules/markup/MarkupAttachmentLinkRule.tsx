@@ -1,15 +1,15 @@
-// === Module 5060: MarkupAttachmentLinkRule ===
+// === Module 5090: MarkupAttachmentLinkRule ===
 
-// Module 5060 (MarkupAttachmentLinkRule)
-import _modDef4303 from "module_4303" /* 4303 */;
-import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5061 */;
+// Module 5090 (MarkupAttachmentLinkRule)
+import _modDef4333 from "module_4333" /* 4333 */;
+import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5091 */;
 import size from "module_2" /* 2 */;
 
 const mapped = Array.from(AttachmentUrlConstants.ATTACHMENT_PATH_PREFIXES).map((item) => item.replaceAll("/", ""));
 const regExp = new RegExp("^https://(?:[A-Za-z0-9-]+\\.)*(?:(?:media|images)" + "(?:-[A-Za-z0-9]+)?" + "\\.discordapp\\.net|(?:cdn" + "(?:-[A-Za-z0-9]+)?" + "\\.discordapp\\.com))/(?:" + mapped.join("|") + ")/\\d+/\\d+/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?");
 let obj = { attachmentLink: null };
 obj = {
-  order: _modDef4303.defaultRules.url.order - 0.5,
+  order: _modDef4333.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     return regExp.exec(arg0);

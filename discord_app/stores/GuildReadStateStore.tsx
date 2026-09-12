@@ -1,23 +1,23 @@
-// === Module 7708: GuildReadStateStore ===
+// === Module 7738: GuildReadStateStore ===
 
-// Module 7708 (GuildReadStateStore)
+// Module 7738 (GuildReadStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4253 */;
-import isOptInEnabled from "isOptInEnabled" /* 7608 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 7709 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7711 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5557 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4247 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4283 */;
+import isOptInEnabled from "isOptInEnabled" /* 7638 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 7739 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7741 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5587 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import ReadStateStore from "ReadStateStore" /* 4621 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import ReadStateStore from "ReadStateStore" /* 4651 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4787 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -928,7 +928,7 @@ function handleRecentMentionsSuccess(messages) {
 const ChannelRecord = fn(1961);
 ({ getBasicAccessPermissions: closure_7, isGuildVocalChannelType: closure_8, isThread: closure_9 } = ChannelRecord);
 const ChannelFlags = fn(1964).ChannelFlags;
-const ReadStateConstants = fn(4788);
+const ReadStateConstants = fn(4818);
 ({ ReadStateTypes: closure_19, UnreadSetting: closure_20 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1074).NULL_STRING_GUILD_ID;
 let guilds = {};

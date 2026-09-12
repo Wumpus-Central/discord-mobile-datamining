@@ -1,21 +1,21 @@
-// === Module 15815: CreateBugReportSetting ===
+// === Module 15839: CreateBugReportSetting ===
 
-// Module 15815 (CreateBugReportSetting)
+// Module 15839 (CreateBugReportSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1348 */;
-import BugReportManagerDefault from "BugReportManager" /* 10303 */;
+import BugReportManagerDefault from "BugReportManager" /* 10342 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
 
 require = fn;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.aIkGJD);
   },
   parent: null,
-  IconComponent: fn(15627).WrenchIcon,
+  IconComponent: fn(15649).WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
     const setDeveloperOptionSettings = DeveloperOptionsActionCreators.setDeveloperOptionSettings;
     if (arg0) {
@@ -33,7 +33,7 @@ let SettingBuilders = {
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";
   },
-  usePredicate: fn(15804).useBugReporterExperimentSettingPredicate
+  usePredicate: fn(15826).useBugReporterExperimentSettingPredicate
 };
 SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
 const size = fn(2);

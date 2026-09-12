@@ -1,8 +1,8 @@
-// === Module 9471: useDiscountedPremiumPlan ===
+// === Module 9510: useDiscountedPremiumPlan ===
 
-// Module 9471 (useDiscountedPremiumPlan)
+// Module 9510 (useDiscountedPremiumPlan)
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7310 */;
+import IAPStore from "IAPStore" /* 7340 */;
 
 const require = fn;
 const size = fn(2);

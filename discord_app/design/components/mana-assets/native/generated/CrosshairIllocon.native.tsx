@@ -1,9 +1,9 @@
-// === Module 5950: CrosshairIllocon ===
+// === Module 5980: CrosshairIllocon ===
 
-// Module 5950 (CrosshairIllocon)
+// Module 5980 (CrosshairIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef5951 from "module_5951" /* 5951 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef5981 from "module_5981" /* 5981 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const CrosshairIllocon = function CrosshairIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5951 };
+  obj = { uri: _modDef5981 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5951 });
+  return jsx(FastImageDefault, { uri: _modDef5981 });
 };

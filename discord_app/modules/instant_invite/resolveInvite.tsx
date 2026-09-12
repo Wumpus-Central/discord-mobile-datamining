@@ -1,15 +1,15 @@
-// === Module 8828: resolveInvite ===
+// === Module 13061: resolveInvite ===
 
-// Module 8828 (resolveInvite)
+// Module 13061 (resolveInvite)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import TypeUtils from "TypeUtils" /* 1969 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7807 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7837 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
-const TrackedHTTPUtilsDefault = tmp4(4799);
+const TrackedHTTPUtilsDefault = tmp4(4829);
 require = fn;
-let Constants = fn(7808);
+let Constants = fn(7838);
 ({ InviteTargetTypes: hasOwnProperty, InviteTypes: metroRequire } = Constants);
 Constants = fn(1074);
 ({ Endpoints: closure_7, AnalyticEvents: closure_8, LoggingInviteTypes: closure_9, AbortCodes: c10 } = Constants);

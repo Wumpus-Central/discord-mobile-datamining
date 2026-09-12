@@ -1,15 +1,15 @@
-// === Module 16564: ICYMICardInCard ===
+// === Module 16588: ICYMICardInCard ===
 
-// Module 16564 (ICYMICardInCard)
+// Module 16588 (ICYMICardInCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import TextIcon2 from "TextIcon" /* 5131 */;
-import GuildIcon from "GuildIcon" /* 5635 */;
-import ClipView from "ClipView" /* 8905 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 16563 */;
-import getIconForChannel from "getIconForChannel" /* 16565 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import TextIcon2 from "TextIcon" /* 5161 */;
+import GuildIcon from "GuildIcon" /* 5665 */;
+import ClipView from "ClipView" /* 8940 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 16587 */;
+import getIconForChannel from "getIconForChannel" /* 16589 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -41,7 +41,7 @@ const View = fn(17).View;
 const DEFAULT_ROLE_COLOR_HEX = fn(1074).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createICYMIStyles = fn(16523);
+const createICYMIStyles = fn(16547);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   let obj = { container: { marginTop: marginHorizontal.margin }, content: { flex: 1, overflow: "hidden" }, channelNameAndAccessory: null, channelNameAndAccessoryLarge: null, header: null, headerInfo: null, title: null, titleLeft: null, subTitleContainer: null, subtitle: null, genContentSubtitle: null, genContentSubtitleChannel: null, subtitleTrailing: null, separator: null, normalContent: null, authorAvatar: null };
   obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: nativeDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };

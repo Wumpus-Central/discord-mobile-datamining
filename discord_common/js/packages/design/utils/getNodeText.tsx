@@ -1,6 +1,6 @@
-// === Module 4312: utils/getNodeText ===
+// === Module 4342: utils/getNodeText ===
 
-// Module 4312 (utils/getNodeText)
+// Module 4342 (utils/getNodeText)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

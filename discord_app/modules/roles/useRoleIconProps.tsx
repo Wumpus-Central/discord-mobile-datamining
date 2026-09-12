@@ -1,7 +1,7 @@
-// === Module 7259: useRoleIconProps ===
+// === Module 7289: useRoleIconProps ===
 
-// Module 7259 (useRoleIconProps)
-import RoleIconUtils from "RoleIconUtils" /* 7260 */;
+// Module 7289 (useRoleIconProps)
+import RoleIconUtils from "RoleIconUtils" /* 7290 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -121,7 +121,7 @@ export const useRoleIconPropsForPreview = function useRoleIconPropsForPreview(gu
       let obj = RoleIconUtils;
       const roleIconData = obj.getRoleIconData(stateFromStores, undefined);
       if (null != roleIconData) {
-        obj = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: 0 };
+        obj = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: "words" };
         ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
         obj.unicodeEmoji = roleIconData.unicodeEmoji;
         tmp2 = obj;

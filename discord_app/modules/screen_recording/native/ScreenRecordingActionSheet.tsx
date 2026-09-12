@@ -1,17 +1,17 @@
-// === Module 16007: ScreenRecordingActionSheet ===
+// === Module 16031: ScreenRecordingActionSheet ===
 
-// Module 16007 (ScreenRecordingActionSheet)
+// Module 16031 (ScreenRecordingActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const useScreenRecordingStore = fn(16003).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16027).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, closeButton: null, buttonContainer: null };
 createStyles = { justifyContent: "center", alignItems: "center", gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xl };
 createStyles.container = createStyles;
@@ -127,5 +127,5 @@ export default function ScreenRecordingActionSheet() {
   if (tmp3) {
     children = tmp11;
   }
-  return closure_5(tmp9(7270).ActionSheet, { children });
+  return closure_5(tmp9(7300).ActionSheet, { children });
 };

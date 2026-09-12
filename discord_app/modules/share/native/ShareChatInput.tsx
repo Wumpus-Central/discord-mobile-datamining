@@ -1,12 +1,12 @@
-// === Module 11794: ShareChatInput ===
+// === Module 11830: ShareChatInput ===
 
-// Module 11794 (ShareChatInput)
+// Module 11830 (ShareChatInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Pressables from "Pressables" /* 5174 */;
-import FormInputDefault from "FormInput" /* 8692 */;
-import ReactionIcon from "ReactionIcon" /* 8848 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9394 */;
+import Pressables from "Pressables" /* 5204 */;
+import FormInputDefault from "FormInput" /* 8724 */;
+import ReactionIcon from "ReactionIcon" /* 8883 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9433 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,13 +14,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
 createStyles = { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 };
 createStyles.container = createStyles;
 createStyles.chatInput = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
 const obj2 = { fontSize: 16, lineHeight: 20, fontFamily: fn(1074).Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_STRONG, paddingTop: null, paddingBottom: null };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 2;
 if (PlatformUtils.isAndroid()) {
   num = 0;

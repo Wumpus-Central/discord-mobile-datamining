@@ -1,6 +1,6 @@
-// === Module 13071: MediaModalLoader ===
+// === Module 13108: MediaModalLoader ===
 
-// Module 13071 (MediaModalLoader)
+// Module 13108 (MediaModalLoader)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { loader: null, loaderIndicator: null, loaderText: null };
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

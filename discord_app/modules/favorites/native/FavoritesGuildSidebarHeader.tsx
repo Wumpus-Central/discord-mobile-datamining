@@ -1,19 +1,19 @@
-// === Module 16349: FavoritesGuildSidebarHeader ===
+// === Module 16373: FavoritesGuildSidebarHeader ===
 
-// Module 16349 (FavoritesGuildSidebarHeader)
+// Module 16373 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef3236 from "module_3236" /* 3236 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4573 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import Stack_Stack from "Stack/Stack" /* 5024 */;
-import ChatIcon from "ChatIcon" /* 5122 */;
-import TextIcon from "TextIcon" /* 5131 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5152 */;
-import FavoritesHooks from "FavoritesHooks" /* 10313 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10316 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11069 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import Stack_Stack from "Stack/Stack" /* 5054 */;
+import ChatIcon from "ChatIcon" /* 5152 */;
+import TextIcon from "TextIcon" /* 5161 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5182 */;
+import FavoritesHooks from "FavoritesHooks" /* 10352 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10355 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11108 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -69,10 +69,10 @@ function PlaceholderRows() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16273).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16297).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { copy: null, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 createStyles = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.copy = createStyles;

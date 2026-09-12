@@ -1,8 +1,8 @@
-// === Module 9018: resolvedDisplayField ===
+// === Module 9057: resolvedDisplayField ===
 
-// Module 9018 (resolvedDisplayField)
-import resolvedValues from "resolvedValues" /* 9019 */;
-import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 9020 */;
+// Module 9057 (resolvedDisplayField)
+import resolvedValues from "resolvedValues" /* 9058 */;
+import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 9059 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx");

@@ -1,10 +1,10 @@
-// === Module 7526: ReferralTrialActionCreators ===
+// === Module 7556: ReferralTrialActionCreators ===
 
-// Module 7526 (ReferralTrialActionCreators)
+// Module 7556 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7527 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7557 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 

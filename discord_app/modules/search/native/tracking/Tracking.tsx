@@ -1,16 +1,16 @@
-// === Module 12451: search/tracking/Tracking ===
+// === Module 12487: search/tracking/Tracking ===
 
-// Module 12451 (search/tracking/Tracking)
+// Module 12487 (search/tracking/Tracking)
 import v1 from "v1" /* 1256 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4786 */;
-import SearchUtils from "SearchUtils" /* 12433 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12452 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
+import SearchUtils from "SearchUtils" /* 12469 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12488 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SearchQueryStore from "SearchQueryStore" /* 12432 */;
+import SearchQueryStore from "SearchQueryStore" /* 12468 */;
 
 require = fn;
-let closure_5 = fn(7951).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;
+let closure_5 = fn(7981).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;
 const Constants = fn(1074);
 ({ SearchTokenTypes: metroRequire, AnalyticEvents: closure_7 } = Constants);
 const size = fn(2);

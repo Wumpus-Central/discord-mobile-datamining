@@ -1,18 +1,18 @@
-// === Module 9361: CrunchyrollLinkModal ===
+// === Module 9400: CrunchyrollLinkModal ===
 
-// Module 9361 (CrunchyrollLinkModal)
+// Module 9400 (CrunchyrollLinkModal)
 import util from "util" /* 1114 */;
-import _modDef7065 from "module_7065" /* 7065 */;
-import HeaderActionButton from "HeaderActionButton" /* 7450 */;
-import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators" /* 9360 */;
-import CrunchyrollLinkSuccessDefault from "CrunchyrollLinkSuccess" /* 9368 */;
-import CrunchyrollLinkErrorDefault from "CrunchyrollLinkError" /* 9370 */;
+import _modDef7095 from "module_7095" /* 7095 */;
+import HeaderActionButton from "HeaderActionButton" /* 7480 */;
+import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators" /* 9399 */;
+import CrunchyrollLinkSuccessDefault from "CrunchyrollLinkSuccess" /* 9407 */;
+import CrunchyrollLinkErrorDefault from "CrunchyrollLinkError" /* 9409 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function CloseButton() {
   const obj = {
-    source: _modDef7065,
+    source: _modDef7095,
     onPress() {
       return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
@@ -21,14 +21,14 @@ function CloseButton() {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef7065,
+    source: _modDef7095,
     onPress() {
       return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
     accessibilityLabel: null
   });
 }
-const constants = fn(9362).CrunchyrollLinkModalScenes;
+const constants = fn(9401).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -36,12 +36,12 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 
 export default function CrunchyrollLinkModal(locationStack) {
   let twoWayLinkStyles;
-  let obj = twoWayLinkStyles(9316);
+  let obj = twoWayLinkStyles(9355);
   twoWayLinkStyles = obj.useTwoWayLinkStyles();
   const items = [twoWayLinkStyles];
   const memo = noop.useMemo(() => {
     function onClose() {
-      return closure_1_1(9360).hideModal();
+      return closure_1_1(9399).hideModal();
     }
     function blank() {
       return null;
@@ -52,7 +52,7 @@ export default function CrunchyrollLinkModal(locationStack) {
       headerTitle: blank,
       headerStyle: twoWayLinkStyles.navHeader,
       render() {
-        return closure_1_6(closure_1_1(9363), {});
+        return closure_1_6(closure_1_1(9402), {});
       }
     };
     obj = {
@@ -60,10 +60,10 @@ export default function CrunchyrollLinkModal(locationStack) {
       headerRight: CloseButton,
       headerStyle: twoWayLinkStyles.navHeader,
       headerTitle() {
-        return closure_1_6(onClose(9317).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        return closure_1_6(onClose(9356).TwoWayLinkStepHeader, { idx: 1, total: 2 });
       },
       render() {
-        return closure_1_6(closure_1_1(9365), {});
+        return closure_1_6(closure_1_1(9404), {});
       }
     };
     obj = {
@@ -71,11 +71,11 @@ export default function CrunchyrollLinkModal(locationStack) {
       headerRight: CloseButton,
       headerStyle: twoWayLinkStyles.navHeader,
       headerTitle() {
-        return closure_1_6(onClose(9317).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        return closure_1_6(onClose(9356).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
         ({ callbackCode, callbackState } = arg0);
-        return closure_1_6(closure_1_1(9367), { callbackCode, callbackState });
+        return closure_1_6(closure_1_1(9406), { callbackCode, callbackState });
       }
     };
     return {
@@ -102,9 +102,9 @@ export default function CrunchyrollLinkModal(locationStack) {
       }
     };
   }, items);
-  const accountLinkStepTracking = twoWayLinkStyles(9359).useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack.locationStack);
+  const accountLinkStepTracking = twoWayLinkStyles(9398).useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack.locationStack);
   obj = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null };
   const intl = twoWayLinkStyles(1114).intl;
   obj.headerBackTitle = intl.string(twoWayLinkStyles(1114).t["13/7kX"]);
-  return jsx(twoWayLinkStyles(7073).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null });
+  return jsx(twoWayLinkStyles(7103).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null });
 };

@@ -1,17 +1,17 @@
-// === Module 10163: ModeratorStartStageHeader ===
+// === Module 10202: ModeratorStartStageHeader ===
 
-// Module 10163 (ModeratorStartStageHeader)
-import StageActionHeader from "StageActionHeader" /* 10117 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10123 */;
+// Module 10202 (ModeratorStartStageHeader)
+import StageActionHeader from "StageActionHeader" /* 10156 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10162 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { header: null };
-obj = { height: fn(5733).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" };
+obj = { height: fn(5763).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" };
 obj.header = obj;
 let closure_6 = createStyles.createStyles(obj);
 const size = fn(2);

@@ -2,7 +2,7 @@
 
 // Module 1874 (KeyboardManagerUtils)
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import NativeKeyboardModuleDefault from "NativeKeyboardModule" /* 1875 */;
 import size from "module_2" /* 2 */;
 

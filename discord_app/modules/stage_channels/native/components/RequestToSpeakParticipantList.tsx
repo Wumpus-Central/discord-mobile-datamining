@@ -1,9 +1,9 @@
-// === Module 10013: RequestToSpeakParticipantList ===
+// === Module 10052: RequestToSpeakParticipantList ===
 
-// Module 10013 (RequestToSpeakParticipantList)
+// Module 10052 (RequestToSpeakParticipantList)
 import nativeDefault from "native" /* 576 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8264 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8484 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 8516 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -78,7 +78,7 @@ function RequestToSpeakParticipant(participant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { paddingVertical: 4, flexDirection: "column", minHeight: 288, flex: 1 }, listContainer: { paddingVertical: 4, flexDirection: "column", flex: 1 }, participantItemContainer: { padding: 12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, touchableContainer: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, participantAvatarContainer: { paddingLeft: 4 }, participantNameplateContainer: { paddingHorizontal: 16, flex: 1 }, participantNameplateText: null, participantActionContainer: null, participantActionIcon: null, emptyContainer: null, emptyParticipant: null, emptyTitle: null, emptyBody: null };
 createStyles = { fontSize: 16, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, marginTop: 0, marginBottom: 0, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createStyles.participantNameplateText = createStyles;
@@ -102,7 +102,7 @@ export default function RequestToSpeakParticipantList(channel) {
   if (0 === sortedRequestToSpeakParticipants.length) {
     obj = { style: tmp.container, children: null };
     obj = { style: tmp.emptyContainer, children: null };
-    const obj1 = { source: require("module_10017") };
+    const obj1 = { source: require("module_10056") };
     const items = [closure_4(require("FastImage"), obj1), , ];
     const obj2 = { style: tmp.emptyTitle, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(tmp3[13]).intl;

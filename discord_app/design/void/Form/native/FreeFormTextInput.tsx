@@ -1,12 +1,12 @@
-// === Module 7010: FreeFormTextInput ===
+// === Module 7040: FreeFormTextInput ===
 
-// Module 7010 (FreeFormTextInput)
+// Module 7040 (FreeFormTextInput)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Pressables from "Pressables" /* 5174 */;
-import _modDef7011 from "module_7011" /* 7011 */;
+import Pressables from "Pressables" /* 5204 */;
+import _modDef7041 from "module_7041" /* 7041 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function ClearButton(onPress) {
   obj.accessibilityLabel = intl.string(util.t.VkKicb);
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
-  obj = { source: _modDef7011, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM };
+  obj = { source: _modDef7041, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM };
   obj.children = React5(native.Icon, obj);
   return React5(Pressables.PressableOpacity, obj);
 }
@@ -24,7 +24,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { container: null, onPress: null, input: null, error: null, closeIcon: null, placeholder: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" };
 obj.container = obj;

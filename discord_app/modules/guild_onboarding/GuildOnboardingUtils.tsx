@@ -1,18 +1,18 @@
-// === Module 7179: GuildOnboardingUtils ===
+// === Module 7209: GuildOnboardingUtils ===
 
-// Module 7179 (GuildOnboardingUtils)
+// Module 7209 (GuildOnboardingUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
 import StringUtils from "StringUtils" /* 1925 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4250 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5113 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 7175 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5143 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 7205 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5332 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
 
 require = fn;
 function isChattableChannel(channel) {
@@ -78,10 +78,10 @@ function areStatesEqual(arg0, arg1) {
   return tmp;
 }
 let closure_7 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(7174).OnboardingConnectionType;
+const OnboardingConnectionType = fn(7204).OnboardingConnectionType;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4232).GuildMemberFlags;
+const GuildMemberFlags = fn(4262).GuildMemberFlags;
 let date = new Date(1682488800000);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingUtils.tsx");

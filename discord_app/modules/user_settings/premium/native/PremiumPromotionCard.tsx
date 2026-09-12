@@ -1,10 +1,10 @@
-// === Module 13523: PremiumPromotionCard ===
+// === Module 13556: PremiumPromotionCard ===
 
-// Module 13523 (PremiumPromotionCard)
+// Module 13556 (PremiumPromotionCard)
 import nativeDefault from "native" /* 576 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7495 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7525 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -13,7 +13,7 @@ const Constants = fn(1074);
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: { width: "100%" }, card: null, image: null, nitroWheelIcon: null };
 createStyles = { display: "flex", width: "100%", flexDirection: "column", justifyContent: "flex-start", paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT, marginBottom: nativeDefault.space.PX_24, overflow: "hidden" };
 createStyles.card = createStyles;

@@ -1,15 +1,15 @@
-// === Module 9486: ForumExplicitMediaAlert ===
+// === Module 9525: ForumExplicitMediaAlert ===
 
-// Module 9486 (ForumExplicitMediaAlert)
+// Module 9525 (ForumExplicitMediaAlert)
 import nativeDefault from "native" /* 576 */;
-import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 9487 */;
+import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 9526 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, title: null, body: null, buttonContainer: null, text: null };
 createStyles = { padding: nativeDefault.space.PX_16, alignItems: "stretch" };
 createStyles.container = createStyles;

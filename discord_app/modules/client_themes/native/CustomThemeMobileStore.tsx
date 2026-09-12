@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 4454 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 4484 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;

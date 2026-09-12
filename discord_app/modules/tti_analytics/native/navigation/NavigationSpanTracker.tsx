@@ -1,9 +1,9 @@
-// === Module 16607: NavigationSpanTracker ===
+// === Module 16631: NavigationSpanTracker ===
 
-// Module 16607 (NavigationSpanTracker)
+// Module 16631 (NavigationSpanTracker)
 import LoggerDefault from "Logger" /* 3 */;
 import v1 from "v1" /* 1256 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 16606 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 16630 */;
 
 require = fn;
 let obj = new LoggerDefault("NavTTI");

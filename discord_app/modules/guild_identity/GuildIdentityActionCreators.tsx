@@ -1,6 +1,6 @@
-// === Module 9300: GuildIdentityActionCreators ===
+// === Module 9339: GuildIdentityActionCreators ===
 
-// Module 9300 (GuildIdentityActionCreators)
+// Module 9339 (GuildIdentityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -48,7 +48,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {

@@ -1,26 +1,26 @@
-// === Module 13246: InlinePriceTag ===
+// === Module 13279: InlinePriceTag ===
 
-// Module 13246 (InlinePriceTag)
+// Module 13279 (InlinePriceTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1150 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4264 */;
-import Text_Text from "Text/Text" /* 4602 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7626 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7627 */;
-import useCurrentUser from "useCurrentUser" /* 8263 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8753 */;
-import OrbsIcon from "OrbsIcon" /* 8927 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8938 */;
-import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 8951 */;
-import TagIcon from "TagIcon" /* 8952 */;
-import useProductDisableState from "useProductDisableState" /* 8959 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13247 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 13248 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
+import Text_Text from "Text/Text" /* 4632 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7656 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
+import useCurrentUser from "useCurrentUser" /* 8295 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
+import OrbsIcon from "OrbsIcon" /* 8962 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8973 */;
+import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 8986 */;
+import TagIcon from "TagIcon" /* 8987 */;
+import useProductDisableState from "useProductDisableState" /* 8994 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13280 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 13281 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7310 */;
+import IAPStore from "IAPStore" /* 7340 */;
 
 require = fn;
 function PriceTag(accessibilityLabel) {
@@ -132,7 +132,7 @@ const Constants = fn(1074);
 ({ AnalyticsSections: closure_7, CurrencyCodes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { priceTag: { flexDirection: "row", alignItems: "center" }, strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 }, strikedOrbPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7, marginRight: 4 }, regularPrice: {}, nitroIcon: { width: 20, height: 20, marginLeft: 8, marginRight: 4 }, nitroIconSubscribeNow: { marginLeft: 0 }, container: { flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between" }, priceTagRow: { flexDirection: "row", alignItems: "center" }, priceTagColumn: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, underline: { textDecorationLine: "underline" }, subscribeNowPressable: null, androidTextPadding: null, orbsIcon: null, disabled: null };
 createStyles = { marginBottom: -2, marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 createStyles.subscribeNowPressable = createStyles;
@@ -140,7 +140,7 @@ createStyles.androidTextPadding = { paddingBottom: 2 };
 createStyles.orbsIcon = { marginRight: 4 };
 createStyles.disabled = { opacity: 0.5 };
 let closure_12 = createStyles.createStyles(createStyles);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let closure_15 = createStyles.createStyles(() => {
   const discount = { backgroundColor: "rgba(46, 204, 113, 0.25)", flexDirection: "row", flexShrink: 1, borderRadius: nativeDefault.radii.xs - 1, paddingHorizontal: 6, marginLeft: 6, paddingTop: null, paddingBottom: null };
   let num;

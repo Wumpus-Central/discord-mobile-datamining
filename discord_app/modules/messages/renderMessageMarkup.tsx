@@ -1,8 +1,8 @@
-// === Module 7962: renderMessageMarkup ===
+// === Module 7992: renderMessageMarkup ===
 
-// Module 7962 (renderMessageMarkup)
-import MarkupUtilsDefault from "MarkupUtils" /* 4596 */;
-import MarkupPostProcessors from "MarkupPostProcessors" /* 7963 */;
+// Module 7992 (renderMessageMarkup)
+import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
+import MarkupPostProcessors from "MarkupPostProcessors" /* 7993 */;
 import size from "module_2" /* 2 */;
 
 function getInitialParserState(channelId) {
@@ -108,9 +108,9 @@ export const renderMessageMarkupWithParser = function renderMessageMarkupWithPar
   }
   return render(NativeSearchResultLinkPreviewParser, arg1, obj);
 };
-export const renderMessageMarkupToAST = function renderMessageMarkupToAST(message) {
-  let obj = result;
-  if (result === undefined) {
+export const renderMessageMarkupToAST = function renderMessageMarkupToAST(message, arg1) {
+  let obj = arg1;
+  if (arg1 === undefined) {
     obj = {};
   }
   const tmp2 = MarkupUtilsDefault;
@@ -119,9 +119,9 @@ export const renderMessageMarkupToAST = function renderMessageMarkupToAST(messag
   obj.toAST = true;
   return render(obj.formatInline ? tmp2.parseInlineReplyToAST : tmp2.parseToAST, message, obj);
 };
-export const renderMessageMarkupToASTWithParser = function renderMessageMarkupToASTWithParser(arg0, message) {
-  let obj = result;
-  if (result === undefined) {
+export const renderMessageMarkupToASTWithParser = function renderMessageMarkupToASTWithParser(arg0, message, arg2) {
+  let obj = arg2;
+  if (arg2 === undefined) {
     obj = {};
   }
   obj = {};

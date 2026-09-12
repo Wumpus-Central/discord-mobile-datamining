@@ -1,14 +1,14 @@
-// === Module 10124: ChannelCallHeaderButtons ===
+// === Module 10163: ChannelCallHeaderButtons ===
 
-// Module 10124 (ChannelCallHeaderButtons)
+// Module 10163 (ChannelCallHeaderButtons)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4807 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9179 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 9561 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10015 */;
-import _modDef10125 from "module_10125" /* 10125 */;
-import _modDef10126 from "module_10126" /* 10126 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 9600 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10054 */;
+import _modDef10164 from "module_10164" /* 10164 */;
+import _modDef10165 from "module_10165" /* 10165 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
@@ -27,7 +27,7 @@ export const CameraButton = function CameraButton() {
     obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t["t9eQ/g"]);
-    obj.source = _modDef10125;
+    obj.source = _modDef10164;
     obj.onPress = function onPress() {
       const keys = Object.keys(closure_1_1);
       const found = keys.find((item) => item !== closure_1_0);
@@ -48,7 +48,7 @@ export const GridButton = function GridButton(channel) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
       const intl = channel(1114).intl;
       obj.accessibilityLabel = intl.string(channel(1114).t.HK4JIu);
-      obj.source = _modDef10126;
+      obj.source = _modDef10165;
       obj.onPress = function onPress() {
         return ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
       };

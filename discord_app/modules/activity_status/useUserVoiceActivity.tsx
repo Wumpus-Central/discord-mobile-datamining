@@ -1,9 +1,9 @@
-// === Module 10968: useUserVoiceActivity ===
+// === Module 11007: useUserVoiceActivity ===
 
-// Module 10968 (useUserVoiceActivity)
+// Module 11007 (useUserVoiceActivity)
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4245 */;
-import VoiceStateStore from "VoiceStateStore" /* 4625 */;
+import PermissionStore from "PermissionStore" /* 4275 */;
+import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
 const require = fn;
 function getVisibleUserVoiceActivity(arg0, arg1) {

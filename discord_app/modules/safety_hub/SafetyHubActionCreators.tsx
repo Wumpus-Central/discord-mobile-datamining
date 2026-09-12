@@ -1,11 +1,11 @@
-// === Module 11975: SafetyHubActionCreators ===
+// === Module 12011: SafetyHubActionCreators ===
 
-// Module 11975 (SafetyHubActionCreators)
+// Module 12011 (SafetyHubActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SafetyHubStore from "SafetyHubStore" /* 8516 */;
+import SafetyHubStore from "SafetyHubStore" /* 8548 */;
 
 require = fn;
 function getSafetyHubData() {
@@ -279,7 +279,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                       items = [first];
                     }
                     found.flagged_content = items;
-                    obj3 = classificationId(8504);
+                    obj3 = classificationId(8536);
                   }
                 }
                 let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: found, accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible };
@@ -330,7 +330,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                       items = [first];
                     }
                     found.flagged_content = items;
-                    obj3 = classificationId(8504);
+                    obj3 = classificationId(8536);
                   }
                 }
                 let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: found, accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible };
@@ -730,7 +730,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
     }
   })();
 };
-const SafetyHubConstants = fn(8505);
+const SafetyHubConstants = fn(8537);
 ({ AGE_CHECK_POLL_INTERVAL_MS: metroRequire, AGE_CHECK_MAX_POLL_ATTEMPTS: closure_7, SuspendedAgeCheckStatus: closure_8 } = SafetyHubConstants);
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);

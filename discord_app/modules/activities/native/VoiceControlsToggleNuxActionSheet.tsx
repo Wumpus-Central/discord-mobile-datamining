@@ -1,10 +1,10 @@
-// === Module 17181: VoiceControlsToggleNuxActionSheet ===
+// === Module 17208: VoiceControlsToggleNuxActionSheet ===
 
-// Module 17181 (VoiceControlsToggleNuxActionSheet)
+// Module 17208 (VoiceControlsToggleNuxActionSheet)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -12,7 +12,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4" };
-fn(4606);
+fn(4636);
 let createStyles = { videoContainer: null, bottomSheetWrapper: null, contentContainer: null, title: null, body: null };
 createStyles = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 createStyles.videoContainer = createStyles;

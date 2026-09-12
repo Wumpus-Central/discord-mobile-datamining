@@ -1,6 +1,6 @@
-// === Module 16100: ? ===
+// === Module 16124: ? ===
 
-// Module 16100
+// Module 16124
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/index.tsx");

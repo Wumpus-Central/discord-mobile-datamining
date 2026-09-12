@@ -1,6 +1,6 @@
-// === Module 6359: ? ===
+// === Module 6389: ? ===
 
-// Module 6359
+// Module 6389
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroRocketSpotIllustration-2x.png.js");

@@ -1,6 +1,6 @@
-// === Module 10319: PromoSheet ===
+// === Module 10358: PromoSheet ===
 
-// Module 10319 (PromoSheet)
+// Module 10358 (PromoSheet)
 import nativeDefault from "native" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ let closure_3 = ["title", "description", "illustration", "graphic", "gradientCol
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { content: { paddingHorizontal: 20, position: "relative" }, title: { textAlign: "center" }, description: { textAlign: "center" }, illustration: { alignSelf: "stretch", alignItems: "center" }, graphic: null };
 createStyles = { alignSelf: "center", maxWidth: nativeDefault.modules.mobile.PROMO_SHEET_GRAPHIC_MAX_WIDTH };
 createStyles.graphic = createStyles;
@@ -27,7 +27,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     let obj = {};
     const merged = Object.assign(arg0);
     obj = { offsetBottom: 0.25, color, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-    obj.children = closure_2_7(gradientColor(10320).ExpressiveGradient, obj);
+    obj.children = closure_2_7(gradientColor(10359).ExpressiveGradient, obj);
     return closure_2_7(View, obj);
   }) : undefined, items);
   let obj = {};
@@ -39,7 +39,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     obj = {};
     const merged1 = Object.assign(graphic);
     obj.style = tmp2.graphic;
-    let tmp4Result = closure_7(gradientColor(10321).Graphic, obj);
+    let tmp4Result = closure_7(gradientColor(10360).Graphic, obj);
   } else {
     tmp4Result = null;
     if (null != illustration) {
@@ -48,17 +48,17 @@ export const PromoSheet = function PromoSheet(arg0) {
     }
   }
   const items1 = [tmp4Result, , ];
-  const items2 = [closure_7(gradientColor(4602).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
+  const items2 = [closure_7(gradientColor(4632).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
   tmp4Result = null;
   if (null != description) {
     const obj2 = { variant: "redesign/heading-18/medium", color: "text-subtle", style: tmp2.description, children: description };
-    tmp4Result = closure_7(gradientColor(4602).Text, obj2);
+    tmp4Result = closure_7(gradientColor(4632).Text, obj2);
   }
   const obj3 = { spacing: 24, children: null };
   items2[1] = tmp4Result;
-  items1[1] = closure_8(gradientColor(5024).Stack, { children: items2 });
+  items1[1] = closure_8(gradientColor(5054).Stack, { children: items2 });
   items1[2] = actions;
   obj3.children = items1;
-  obj.children = closure_8(gradientColor(5024).Stack, obj3);
-  return closure_7(gradientColor(7223).BottomSheet, obj);
+  obj.children = closure_8(gradientColor(5054).Stack, obj3);
+  return closure_7(gradientColor(7253).BottomSheet, obj);
 };

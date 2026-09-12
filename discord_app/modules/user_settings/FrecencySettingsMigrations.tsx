@@ -1,6 +1,6 @@
-// === Module 14509: FrecencySettingsMigrations ===
+// === Module 14544: FrecencySettingsMigrations ===
 
-// Module 14509 (FrecencySettingsMigrations)
+// Module 14544 (FrecencySettingsMigrations)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;

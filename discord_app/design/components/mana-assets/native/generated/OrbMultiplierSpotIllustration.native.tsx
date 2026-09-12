@@ -1,9 +1,9 @@
-// === Module 6402: OrbMultiplierSpotIllustration ===
+// === Module 6432: OrbMultiplierSpotIllustration ===
 
-// Module 6402 (OrbMultiplierSpotIllustration)
+// Module 6432 (OrbMultiplierSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5638 */;
-import _modDef6403 from "module_6403" /* 6403 */;
+import FastImageDefault from "FastImage" /* 5668 */;
+import _modDef6433 from "module_6433" /* 6433 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const OrbMultiplierSpotIllustration = function OrbMultiplierSpotIllustrat
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6403 };
+  obj = { uri: _modDef6433 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const OrbMultiplierSpotIllustration = function OrbMultiplierSpotIllustrat
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6403 });
+  return jsx(FastImageDefault, { uri: _modDef6433 });
 };

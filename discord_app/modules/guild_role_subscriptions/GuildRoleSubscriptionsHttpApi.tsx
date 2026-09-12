@@ -1,6 +1,6 @@
-// === Module 7329: GuildRoleSubscriptionsHttpApi ===
+// === Module 7359: GuildRoleSubscriptionsHttpApi ===
 
-// Module 7329 (GuildRoleSubscriptionsHttpApi)
+// Module 7359 (GuildRoleSubscriptionsHttpApi)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -254,7 +254,7 @@ let closure_8 = async function _createGuildRoleSubscriptionListing(arg0, arg1, a
             closure_131_3 = Object.assign(priceTier, Object.assign({ priceTier: 0 }));
             c7 = 1;
             c8 = 1;
-            return { value: "PX_16", done: null };
+            return { value: "PX_16", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -355,7 +355,7 @@ let closure_9 = async function _updateGuildRoleSubscriptionListing(arg0, arg1, a
             closure_132_4 = Object.assign(priceTier, Object.assign({ priceTier: 0 }));
             c8 = 1;
             c9 = 1;
-            return { value: "PX_16", done: null };
+            return { value: "PX_16", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -449,7 +449,7 @@ let closure_10 = async function _getGuildRoleSubscriptionGroupListingsForGuild(a
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -686,7 +686,7 @@ let closure_14 = async function _getGuildRoleSubscriptionGroupListing(arg0) {
           closure_131_2 = obj1;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -1170,7 +1170,7 @@ let closure_21 = async function _getGuildMonetizationRestrictions(arg0) {
           signal = obj1.signal;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

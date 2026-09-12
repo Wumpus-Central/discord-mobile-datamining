@@ -1,6 +1,6 @@
-// === Module 6451: ? ===
+// === Module 6481: ? ===
 
-// Module 6451
+// Module 6481
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/QuestsIllocon-2x.png.js");

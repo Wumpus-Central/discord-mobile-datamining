@@ -1,6 +1,6 @@
-// === Module 16299: showChannelBadge ===
+// === Module 16323: showChannelBadge ===
 
-// Module 16299 (showChannelBadge)
+// Module 16323 (showChannelBadge)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_sidebar/showChannelBadge.tsx");

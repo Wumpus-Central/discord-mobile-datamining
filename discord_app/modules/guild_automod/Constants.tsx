@@ -1,9 +1,9 @@
-// === Module 11956: Constants ===
+// === Module 11992: Constants ===
 
-// Module 11956 (Constants)
-import AutomodTriggerType from "AutomodTriggerType" /* 11957 */;
-import AutomodEventType from "AutomodEventType" /* 11958 */;
-import AutomodActionType from "AutomodActionType" /* 11959 */;
+// Module 11992 (Constants)
+import AutomodTriggerType from "AutomodTriggerType" /* 11993 */;
+import AutomodEventType from "AutomodEventType" /* 11994 */;
+import AutomodActionType from "AutomodActionType" /* 11995 */;
 import size from "module_2" /* 2 */;
 
 const items = [AutomodTriggerType.AutomodTriggerType.USER_PROFILE, AutomodTriggerType.AutomodTriggerType.SERVER_POLICY, AutomodTriggerType.AutomodTriggerType.MENTION_SPAM, AutomodTriggerType.AutomodTriggerType.ML_SPAM, AutomodTriggerType.AutomodTriggerType.DEFAULT_KEYWORD_LIST, AutomodTriggerType.AutomodTriggerType.KEYWORD];

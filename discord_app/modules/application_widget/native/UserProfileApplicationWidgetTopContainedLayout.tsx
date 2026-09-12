@@ -1,10 +1,10 @@
-// === Module 9107: UserProfileApplicationWidgetTopContainedLayout ===
+// === Module 9146: UserProfileApplicationWidgetTopContainedLayout ===
 
-// Module 9107 (UserProfileApplicationWidgetTopContainedLayout)
+// Module 9146 (UserProfileApplicationWidgetTopContainedLayout)
 import nativeDefault from "native" /* 576 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9016 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9103 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9104 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9055 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9142 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9143 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { contentRow: null, text: null, imageContainer: null, image: null, imageSkeleton: null };
 createStyles = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 createStyles.contentRow = createStyles;

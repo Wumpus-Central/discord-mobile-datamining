@@ -1,11 +1,11 @@
-// === Module 14447: MobileNativeUpdateStore ===
+// === Module 14482: MobileNativeUpdateStore ===
 
-// Module 14447 (MobileNativeUpdateStore)
+// Module 14482 (MobileNativeUpdateStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MobileNativeUpdateUtils from "MobileNativeUpdateUtils" /* 13959 */;
-import MobileNativeUpdateConstants from "MobileNativeUpdateConstants" /* 4587 */;
+import MobileNativeUpdateUtils from "MobileNativeUpdateUtils" /* 13993 */;
+import MobileNativeUpdateConstants from "MobileNativeUpdateConstants" /* 4617 */;
 import size from "module_2" /* 2 */;
 
 ({ UPDATE_CONFIG: c3, UPDATE_CHECK_INTERVAL: closure_4 } = MobileNativeUpdateConstants);

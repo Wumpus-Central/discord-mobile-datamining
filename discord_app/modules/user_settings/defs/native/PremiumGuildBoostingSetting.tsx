@@ -1,10 +1,10 @@
-// === Module 15046: PremiumGuildBoostingSetting ===
+// === Module 15080: PremiumGuildBoostingSetting ===
 
-// Module 15046 (PremiumGuildBoostingSetting)
+// Module 15080 (PremiumGuildBoostingSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import BoostGemIcon from "BoostGemIcon" /* 9466 */;
-import SettingBuilders from "SettingBuilders" /* 11562 */;
+import BoostGemIcon from "BoostGemIcon" /* 9505 */;
+import SettingBuilders from "SettingBuilders" /* 11601 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

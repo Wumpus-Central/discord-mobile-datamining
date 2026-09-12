@@ -1,19 +1,19 @@
-// === Module 10042: useScreenshareUtils ===
+// === Module 10081: useScreenshareUtils ===
 
-// Module 10042 (useScreenshareUtils)
+// Module 10081 (useScreenshareUtils)
 import util from "util" /* 1114 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import inject from "inject" /* 1910 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4658 */;
-import StreamActionCreators from "StreamActionCreators" /* 4748 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7235 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7828 */;
-import CallsUtils from "CallsUtils" /* 9172 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9179 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 10037 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 10049 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
+import StreamActionCreators from "StreamActionCreators" /* 4778 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7858 */;
+import CallsUtils from "CallsUtils" /* 9211 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 10076 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 10088 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4628 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 const useHasVideoPermissionDefault = useHasVideoPermission;
@@ -47,8 +47,8 @@ function startStream() {
   obj = inject;
 }
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
-const Features = fn(4631).Features;
-const DeviceUtils = fn(4585);
+const Features = fn(4661).Features;
+const DeviceUtils = fn(4615);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 const BroadcastUploadManager = fn(17).NativeModules.BroadcastUploadManager;
 const size = fn(2);
@@ -95,7 +95,7 @@ export default function useScreenshareUtils(arg0) {
         if (tmp11) {
           if (flag) {
             let fn = function l() {
-              return closure_0(10043).showMobileGoLiveActionSheet(closure_1);
+              return closure_0(10082).showMobileGoLiveActionSheet(closure_1);
             };
           } else {
             fn = tmp14;
@@ -108,20 +108,20 @@ export default function useScreenshareUtils(arg0) {
         }
       } else {
         fn = function l() {
-          closure_0(9200);
-          const obj = { type: closure_0(9200).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
+          closure_0(9239);
+          const obj = { type: closure_0(9239).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
           obj.reportAVError(obj);
-          const result = closure_0(9172).showMinOSScreenshareRequirementAlert();
+          const result = closure_0(9211).showMinOSScreenshareRequirementAlert();
         };
       }
       obj.onPress = fn;
       if (obj2.isMetaQuest()) {
-        importDefault(tmp ? 10061 : 10062);
+        importDefault(tmp ? 10100 : 10101);
       } else {
         if (showMobileGoLiveUpsell) {
-          let tmp20 = 10063;
+          let tmp20 = 10102;
         } else {
-          tmp20 = tmp ? 10064 : 10063;
+          tmp20 = tmp ? 10103 : 10102;
         }
         obj.imgSource = importDefault(tmp20);
         return obj;
@@ -157,7 +157,7 @@ export const getStreamPressHandler = function getStreamPressHandler(analyticsLoc
     if (hasPermission) {
       if (showMobileGoLiveUpsell) {
         let fn = function l() {
-          return closure_0(10043).showMobileGoLiveActionSheet(closure_1);
+          return closure_0(10082).showMobileGoLiveActionSheet(closure_1);
         };
       } else {
         fn = tmp;
@@ -170,10 +170,10 @@ export const getStreamPressHandler = function getStreamPressHandler(analyticsLoc
     }
   } else {
     fn = function l() {
-      closure_0(9200);
-      const obj = { type: closure_0(9200).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
+      closure_0(9239);
+      const obj = { type: closure_0(9239).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
       obj.reportAVError(obj);
-      const result = closure_0(9172).showMinOSScreenshareRequirementAlert();
+      const result = closure_0(9211).showMinOSScreenshareRequirementAlert();
     };
   }
   return fn;

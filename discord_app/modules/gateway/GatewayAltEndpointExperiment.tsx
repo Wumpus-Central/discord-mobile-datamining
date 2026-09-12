@@ -1,7 +1,7 @@
-// === Module 14605: GatewayAltEndpointExperiment ===
+// === Module 14640: GatewayAltEndpointExperiment ===
 
-// Module 14605 (GatewayAltEndpointExperiment)
-import GatewayAltEndpointCache from "GatewayAltEndpointCache" /* 14606 */;
+// Module 14640 (GatewayAltEndpointExperiment)
+import GatewayAltEndpointCache from "GatewayAltEndpointCache" /* 14641 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
