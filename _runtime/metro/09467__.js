@@ -1,7 +1,7 @@
 // === Module 9467: ? ===
 
 // Module 9467
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "30bd17a4fc8d423d981d2ea586a3ca6e", name: "BoostGemIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/SunsetIcon", width: 60, height: 60, scales: [2, 3], hash: "9f9f6665c181624b81b98f40c0532d57", name: "SunsetIcon", type: "png" });

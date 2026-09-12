@@ -81,8 +81,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "ProfileBadgeRows",
-      reduceMotion: "text-md/normal"
+      startTimestamp: "GUILD_SETTINGS_VANITY_URL_RESET",
+      reduceMotion: "GUILD_SETTINGS_VANITY_URL_SET"
     };
     let num = obj.velocity;
     if (num == null) {

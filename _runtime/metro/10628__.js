@@ -1,113 +1,97 @@
 // === Module 10628: ? ===
 
 // Module 10628
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10528 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10596 */;
+import _mod10602 from "module_10602" /* 10602 */;
+import JPStandardParser2 from "JPStandardParser" /* 10629 */;
+import _mod10631 from "module_10631" /* 10631 */;
+import _mod10632 from "module_10632" /* 10632 */;
+import _mod10633 from "module_10633" /* 10633 */;
+import _mod10634 from "module_10634" /* 10634 */;
+import _mod10635 from "module_10635" /* 10635 */;
+import _mod10636 from "module_10636" /* 10636 */;
+import _mod10637 from "module_10637" /* 10637 */;
+import _mod10638 from "module_10638" /* 10638 */;
 
-const ZHHansDateParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
   }
+  const obj = { parsers: null, refiners: null };
+  const items = [new JPStandardParser.default(), , , , ];
+  const _default = new JPStandardParser.default();
+  items[1] = new regExp.default();
+  const _default1 = new regExp.default();
+  items[2] = new regExp.default();
+  const _default2 = new regExp.default();
+  items[3] = new regExp.default();
+  const _default3 = new regExp.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default4 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), , ];
+  const _default5 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  const _default6 = new _isNativeReflectConstruct.default();
+  items1[2] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  const result = includeCommonConfiguration.includeCommonConfiguration(obj, flag);
+  const refiners = result.refiners;
+  result.refiners = refiners.filter((item) => !(item instanceof _isNativeReflectConstruct.default));
+  return result;
 }
-class ZHHansDateParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, ZHHansDateParser);
-    tmp2 = closure_4;
-    obj = closure_4(ZHHansDateParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
 }
-_inherits(ZHHansDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    const keys = Object.keys(ZHHansDateParser(10629).NUMBER);
-    const text = `(\\d{2,4}|[${obj.join("")}`;
-    const keys1 = Object.keys(ZHHansDateParser(10629).NUMBER);
-    const text1 = `${`(\\d{2,4}|[${obj.join("")}`}]{4}|[${obj2.join("")}`;
-    const keys2 = Object.keys(ZHHansDateParser(10629).NUMBER);
-    const text2 = `${tmp2}]{2})?(?:\\s*)(?:年)?(?:[\\s|,|，]*)(\\d{1,2}|[${obj3.join("")}`;
-    const keys3 = Object.keys(ZHHansDateParser(10629).NUMBER);
-    const regExp = new RegExp(text2 + "]{1,3})(?:\\s*)(?:\u6708)(?:\\s*)(\\d{1,2}|[" + keys3.join("") + "]{1,3})?(?:\\s*)(?:\u65E5|\u53F7)?");
-    return regExp;
-  }
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+function createCasualConfiguration() {
+  const tmp = createConfiguration(false);
+  const parsers = tmp.parsers;
+  parsers.unshift(new module_10632.default());
+  return tmp;
+}
+const JPStandardParser = fn(JPStandardParser2);
+fn(_mod10631);
+const module_10632 = fn(_mod10632);
+fn(_mod10633);
+fn(_mod10634);
+fn(_mod10635);
+fn(_mod10636);
+fn(_mod10637);
+const regExp = fn(_mod10638);
+const _isNativeReflectConstruct = fn(_mod10602);
+const configuration = createConfiguration(false);
+let parsers = configuration.parsers;
+parsers.unshift(new module_10632.default());
+const chrono = new require("module_10556").Chrono(configuration);
+const chrono1 = new require("module_10556").Chrono(createConfiguration(true));
+
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const parsed = parseInt(index[2]);
-      let zhStringToNumberResult = parsed;
-      if (isNaN(parsed)) {
-        zhStringToNumberResult = ZHHansDateParser(10629).zhStringToNumber(index[2]);
-      }
-      const start = parsingResult.start;
-      start.assign("month", zhStringToNumberResult);
-      if (index[3]) {
-        const _parseInt = parseInt;
-        const parsed1 = parseInt(index[3]);
-        const _isNaN = isNaN;
-        let zhStringToNumberResult1 = parsed1;
-        if (isNaN(parsed1)) {
-          zhStringToNumberResult1 = ZHHansDateParser(10629).zhStringToNumber(index[3]);
-        }
-        const start3 = parsingResult.start;
-        start3.assign("day", zhStringToNumberResult1);
-      } else {
-        const start2 = parsingResult.start;
-        const refDate = createParsingResult.refDate;
-        start2.imply("day", refDate.getDate());
-      }
-      if (index[1]) {
-        const _parseInt2 = parseInt;
-        let parsed2 = parseInt(index[1]);
-        const _isNaN2 = isNaN;
-        if (isNaN(parsed2)) {
-          parsed2 = ZHHansDateParser(10629).zhStringToYear(index[1]);
-        }
-        const start5 = parsingResult.start;
-        start5.assign("year", parsed2);
-      } else {
-        const start4 = parsingResult.start;
-        const refDate2 = createParsingResult.refDate;
-        start4.imply("year", refDate2.getFullYear());
-      }
-      return parsingResult;
-    }
-  }
-];
-
-export default _createClass(ZHHansDateParser, items);
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("ReferenceWithTimezone").ParsingComponents;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingComponents;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

@@ -1,7 +1,7 @@
 // === Module 8826: ? ===
 
 // Module 8826
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e8a96141e48bf46350215d4dadeaaebc", name: "ExperimentalGameControllerLinkIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "119c03ecfe749b5d0f4e60c612bb714f", name: "RiotGamesNeutralIcon", type: "png" });

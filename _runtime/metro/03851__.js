@@ -1,42 +1,14 @@
 // === Module 3851: ? ===
 
 // Module 3851
-import module_3699 from "module_3699" /* 3699 */;
-import module_3852 from "module_3852" /* 3852 */;
-import module_3855 from "module_3855" /* 3855 */;
-import requiredArgs from "requiredArgs" /* 3696 */;
+import module_2030 from "module_2030" /* 2030 */;
 
-if (!module_3699) {
-  let obj = { default: module_3699 };
-  let tmp3 = obj;
+if (!module_2030) {
+  let obj = { default: module_2030 };
 } else {
-  tmp3 = module_3699;
+  obj = module_2030;
 }
-module_3699 = tmp3;
-if (!module_3852) {
-  obj = { default: module_3852 };
-  let tmp5 = obj;
-} else {
-  tmp5 = module_3852;
-}
-module_3852 = tmp5;
-if (!module_3855) {
-  obj = { default: module_3855 };
-  let tmp7 = obj;
-} else {
-  tmp7 = module_3855;
-}
-module_3855 = tmp7;
-if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
+obj = { date: obj.default({ formats: { full: "EEEE d MMMM y", long: "d MMMM y", medium: "d MMM y", short: "y-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "'kl'. HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'kl.' {{time}}", long: "{{date}} 'kl.' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 
-export default function addISOWeekYears(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_3855.default(arg0, module_3852.default(arg0) + module_3699.default(arg1));
-};
+export default obj;
 export default exports.default;

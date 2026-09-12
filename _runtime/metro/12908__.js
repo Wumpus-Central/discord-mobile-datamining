@@ -1,30 +1,7 @@
 // === Module 12908: ? ===
 
 // Module 12908
-import _mod12891 from "module_12891" /* 12891 */;
-import _mod12892 from "module_12892" /* 12892 */;
+import registerAsset from "module_1120" /* 1120 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const getMainCarrier = function getMainCarrier() {
-  const GLOBAL_OBJ = _mod12891.GLOBAL_OBJ;
-  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
-  GLOBAL_OBJ.__SENTRY__ = tmp3;
-  tmp3.version = tmp3.version || _mod12892.SDK_VERSION;
-  const tmp4 = tmp3.version || _mod12892.SDK_VERSION;
-  tmp3[_mod12892.SDK_VERSION] = tmp3[_mod12892.SDK_VERSION] || {};
-  return _mod12891.GLOBAL_OBJ;
-};
-export const getSentryCarrier = function getSentryCarrier(__SENTRY__) {
-  const tmp = __SENTRY__.__SENTRY__ || {};
-  __SENTRY__.__SENTRY__ = tmp;
-  let SDK_VERSION = tmp.version;
-  if (!SDK_VERSION) {
-    SDK_VERSION = _mod12892.SDK_VERSION;
-  }
-  tmp.version = SDK_VERSION;
-  const tmp4 = tmp[_mod12892.SDK_VERSION] || {};
-  tmp[_mod12892.SDK_VERSION] = tmp4;
-  return tmp4;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "9f983315273ecf4164927351f28f2400", name: "ic_premium_overview_24px", type: "png" });

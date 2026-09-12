@@ -54,9 +54,9 @@ class IntlManager {
 }
 const entry = {
   key: "withFormatters",
-  value: function withFormatters(PlatformUtils) {
+  value: function withFormatters(util) {
     const self = this;
-    const entries = Object.entries(PlatformUtils);
+    const entries = Object.entries(util);
     while (tmp2 !== undefined) {
       let tmp5 = _slicedToArray(tmp3, 2);
       self[tmp5[0]] = self.makeFormatFunction(tmp5[1]);

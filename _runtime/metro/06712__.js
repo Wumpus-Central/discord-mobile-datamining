@@ -1,9 +1,7 @@
 // === Module 6712: ? ===
 
 // Module 6712
-import _mod19 from "module_19" /* 19 */;
+import registerAsset from "module_1120" /* 1120 */;
 
-const context = _mod19.createContext(null);
 
-export const BottomSheetModalInternalContext = context;
-export const BottomSheetModalInternalProvider = context.Provider;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "80a1b67e775ddb8de80fde27e63a5302", name: "CircleErrorIcon-secondary", type: "png" });

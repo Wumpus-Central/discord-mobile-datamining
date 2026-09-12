@@ -1,15 +1,24 @@
 // === Module 14401: ? ===
 
 // Module 14401
-import _mod14399 from "module_14399" /* 14399 */;
+import _mod14385 from "module_14385" /* 14385 */;
+import _mod14386 from "module_14386" /* 14386 */;
+import _mod14402 from "module_14402" /* 14402 */;
 
+let prop = _mod14385["__core-js_shared__"];
+if (!prop) {
+  prop = _mod14386("__core-js_shared__", {});
+}
+let versions = prop.versions;
+if (!versions) {
+  const items = [];
+  prop.versions = items;
+  versions = items;
+}
+let str2 = "global";
+if (_mod14402) {
+  str2 = "pure";
+}
+versions.push({ version: "3.41.0", mode: str2, copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)", license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE", source: "https://github.com/zloirock/core-js" });
 
-export default (arg0, arg1) => {
-  const tmp = _mod14399(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
-  }
-  return tmp3;
-};
+export default prop;

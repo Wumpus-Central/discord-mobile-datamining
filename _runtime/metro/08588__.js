@@ -1,14 +1,18 @@
 // === Module 8588: ? ===
 
 // Module 8588
-import _modDef8581 from "module_8581" /* 8581 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 8582 */;
+import extractPropsDefault from "extractProps" /* 8589 */;
+import _modDef8597 from "module_8597" /* 8597 */;
+import _modDef8598 from "module_8598" /* 8598 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeDiffuseLighting = arg1;
+const G = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,38 +32,86 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeDiffuseLighting {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class G {
   constructor() {
     self = this;
-    tmp = c2(this, FeDiffuseLighting);
-    tmp2 = closure_4;
-    obj = closure_4(FeDiffuseLighting);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, G);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(G);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      matrix = matrix.matrix;
+      let tmp = !matrix;
+      if (!matrix) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      root = root.root;
+      if (root != null) {
+        root.setNativeProps(matrix);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeDiffuseLighting, _modDef8581);
+_inherits(G, _modDef8598);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeDiffuseLighting(8558).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    let obj = G(8589);
+    const propsAndStylesResult = obj.propsAndStyles(props);
+    const tmp5 = extractPropsDefault(propsAndStylesResult, this);
+    const extractFontResult = G(8596).extractFont(propsAndStylesResult);
+    if (typeof hasProps === "function") {
+      const keys = Object.keys();
+      if (keys !== undefined) {
+        let flag = true;
+        if (flag) {
+          tmp5.font = extractFontResult;
+        }
+        obj = {
+          ref(arg0) {
+                return self.refMethod(arg0);
+              }
+        };
+        const merged = Object.assign(tmp5);
+        obj.children = props.children;
+        return jsx(_modDef8597, {
+          ref(arg0) {
+                return self.refMethod(arg0);
+              }
+        });
+      }
+      flag = false;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+    const obj2 = G(8596);
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(FeDiffuseLighting, items);
-importDefaultResultResult.displayName = "FeDiffuseLighting";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+let items = [entry];
+const importDefaultResultResult = _createClass(G, items);
+importDefaultResultResult.displayName = "G";
+function hasProps(arg0) {
+
+}
 
 export default importDefaultResultResult;

@@ -1,7 +1,18 @@
 // === Module 8023: ? ===
 
 // Module 8023
-import registerAsset from "module_1122" /* 1122 */;
+import noop from "module_19" /* 19 */;
 
+let context = noop.createContext(undefined);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "348e12a01e4923ab4918827c81373de7", name: "BellIcon", type: "png" });
+export const AnimatedHeaderHeightContext = context;
+export const useAnimatedHeaderHeight = function useAnimatedHeaderHeight() {
+  context = noop.useContext(context);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height. Are you inside a screen in a native stack navigator?");
+    throw error;
+  } else {
+    return context;
+  }
+};

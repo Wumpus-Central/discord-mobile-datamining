@@ -1,14 +1,7 @@
 // === Module 4582: ? ===
 
 // Module 4582
-import PATTERN_CHARS from "PATTERN_CHARS" /* 4583 */;
+import registerAsset from "module_1120" /* 1120 */;
 
-const obj = { success: null, error: null, warning: null, heartbeat: null, tripleClick: null, notification: null };
-obj.success = PATTERN_CHARS.pattern("oO.O");
-obj.error = PATTERN_CHARS.pattern("OO.OO");
-obj.warning = PATTERN_CHARS.pattern("O.O");
-obj.heartbeat = PATTERN_CHARS.pattern("oO--oO");
-obj.tripleClick = PATTERN_CHARS.pattern("o.o.o");
-obj.notification = PATTERN_CHARS.pattern("o-O=o");
 
-export const Patterns = obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "4c483b0c9e54993ee793f71f5dfd0dd4", name: "SendMessageIcon", type: "png" });

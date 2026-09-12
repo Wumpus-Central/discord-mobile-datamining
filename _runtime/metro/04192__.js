@@ -1,26 +1,14 @@
 // === Module 4192: ? ===
 
 // Module 4192
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    let obj = { data: null, locale: "vi" };
-    obj = { conjunction: null, disjunction: null, unit: null };
-    const obj1 = { long: { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" } };
-    obj.conjunction = obj1;
-    const obj2 = { long: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" }, narrow: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" }, short: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" } };
-    obj.disjunction = obj2;
-    const obj3 = { long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } };
-    obj.unit = obj3;
-    obj.data = obj;
-    ListFormat.__addLocaleData(obj);
-  }
+import module_2030 from "module_2030" /* 2030 */;
+
+if (!module_2030) {
+  let obj = { default: module_2030 };
+} else {
+  obj = module_2030;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
-}
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-obj = { data: { conjunction: { long: { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" }, narrow: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" }, short: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } } }, locale: "vi" };
-prop.push(obj);
+obj = { date: obj.default({ formats: { full: "EEEE, do MMMM, y", long: "do MMMM, y", medium: "d MMM, y", short: "dd/MM/yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "h:mm:ss a zzzz", long: "h:mm:ss a z", medium: "h:mm:ss a", short: "h:mm a" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u0915\u094B' {{time}}", long: "{{date}} '\u0915\u094B' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
+
+export default obj;
+export default exports.default;

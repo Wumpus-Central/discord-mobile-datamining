@@ -1,80 +1,9 @@
 // === Module 8611: ? ===
 
 // Module 8611
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8556 from "module_8556" /* 8556 */;
-import _modDef8612 from "module_8612" /* 8612 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import module_65 from "module_65" /* 65 */;
 
-const ForeignObject = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class ForeignObject {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, ForeignObject);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(ForeignObject);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(ForeignObject, _modDef8556);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(ForeignObject(8557).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = props.children;
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
-  }
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(ForeignObject, items);
-importDefaultResultResult.displayName = "ForeignObject";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeBlend", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, in2: true, mode: true } };
 
-export default importDefaultResultResult;
+export default module_65.get("RNSVGFeBlend", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

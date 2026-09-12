@@ -1,26 +1,278 @@
 // === Module 3957: ? ===
 
 // Module 3957
-import _typeof from "module_3695" /* 3695 */;
-import requiredArgs from "requiredArgs" /* 3696 */;
+import throwProtectedError from "throwProtectedError" /* 3972 */;
+import module_3907 from "module_3907" /* 3907 */;
+import subMilliseconds from "subMilliseconds" /* 3958 */;
+import _typeof from "module_3725" /* 3725 */;
+import G from "G" /* 3959 */;
+import dateLongFormatter from "dateLongFormatter" /* 3970 */;
+import module_3888 from "module_3888" /* 3888 */;
+import module_3729 from "module_3729" /* 3729 */;
+import requiredArgs from "requiredArgs" /* 3726 */;
+import code from "module_3971" /* 3971 */;
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!module_3907) {
+  let obj = { default: module_3907 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3907;
 }
-_typeof = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+module_3907 = tmp3;
+if (!subMilliseconds) {
+  obj = { default: subMilliseconds };
   let tmp5 = obj;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = subMilliseconds;
 }
-requiredArgs = tmp5;
+subMilliseconds = tmp5;
+if (!_typeof) {
+  obj = { default: _typeof };
+  let tmp7 = obj;
+} else {
+  tmp7 = _typeof;
+}
+_typeof = tmp7;
+if (!G) {
+  const obj1 = { default: G };
+  let tmp9 = obj1;
+} else {
+  tmp9 = G;
+}
+let closure_5 = tmp9;
+if (!dateLongFormatter) {
+  const obj2 = { default: dateLongFormatter };
+  let tmp11 = obj2;
+} else {
+  tmp11 = dateLongFormatter;
+}
+dateLongFormatter = tmp11;
+if (!module_3888) {
+  const obj3 = { default: module_3888 };
+  let tmp13 = obj3;
+} else {
+  tmp13 = module_3888;
+}
+module_3888 = tmp13;
+if (!module_3729) {
+  const obj4 = { default: module_3729 };
+  let tmp15 = obj4;
+} else {
+  tmp15 = module_3729;
+}
+module_3729 = tmp15;
+if (!requiredArgs) {
+  const obj5 = { default: requiredArgs };
+  let tmp17 = obj5;
+} else {
+  tmp17 = requiredArgs;
+}
+requiredArgs = tmp17;
+if (!code) {
+  const obj6 = { default: code };
+  let tmp19 = obj6;
+} else {
+  tmp19 = code;
+}
+code = tmp19;
+const re11 = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g;
+const re12 = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
+const re13 = /^'([^]*?)'?$/;
+const re14 = /''/g;
+const re15 = /[a-zA-Z]/;
 
-export default function getDate(arg0) {
-  requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getDate();
+export default function format(arg0, arg1, locale) {
+  _require = arg0;
+  dependencyMap = arg1;
+  module_3907 = locale;
+  requiredArgs.default(2, arguments);
+  const defaultOptions = require("module_3730").getDefaultOptions();
+  locale = undefined;
+  if (null != locale) {
+    locale = locale.locale;
+  }
+  if (null === locale) {
+    locale = defaultOptions.locale;
+  }
+  if (null === locale) {
+    locale = code.default;
+  }
+  let prop;
+  let obj = module_3729;
+  if (null != locale) {
+    prop = locale.firstWeekContainsDate;
+  }
+  if (null === prop) {
+    let prop1;
+    if (null != locale) {
+      locale = locale.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              prop1 = options.firstWeekContainsDate;
+            }
+          }
+        }
+      }
+    }
+    prop = prop1;
+  }
+  if (null === prop) {
+    prop = defaultOptions.firstWeekContainsDate;
+  }
+  if (null === prop) {
+    const locale2 = defaultOptions.locale;
+    let prop2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            prop2 = options2.firstWeekContainsDate;
+          }
+        }
+      }
+    }
+    prop = prop2;
+  }
+  let num = 1;
+  if (null !== prop) {
+    num = 1;
+    if (undefined !== prop) {
+      num = prop;
+    }
+  }
+  const defaultResult1 = module_3729.default(num);
+  if (defaultResult1 >= 1) {
+    if (defaultResult1 <= 7) {
+      let weekStartsOn;
+      if (null != locale) {
+        weekStartsOn = locale.weekStartsOn;
+      }
+      if (null === weekStartsOn) {
+        let weekStartsOn1;
+        if (null != locale) {
+          const locale3 = locale.locale;
+          if (null !== locale3) {
+            if (undefined !== locale3) {
+              const options3 = locale3.options;
+              if (null !== options3) {
+                if (undefined !== options3) {
+                  weekStartsOn1 = options3.weekStartsOn;
+                }
+              }
+            }
+          }
+        }
+        weekStartsOn = weekStartsOn1;
+      }
+      if (null === weekStartsOn) {
+        weekStartsOn = defaultOptions.weekStartsOn;
+      }
+      if (null === weekStartsOn) {
+        const locale4 = defaultOptions.locale;
+        let weekStartsOn2;
+        if (null !== locale4) {
+          if (undefined !== locale4) {
+            const options4 = locale4.options;
+            if (null !== options4) {
+              if (undefined !== options4) {
+                weekStartsOn2 = options4.weekStartsOn;
+              }
+            }
+          }
+        }
+        weekStartsOn = weekStartsOn2;
+      }
+      let num4 = 0;
+      if (null !== weekStartsOn) {
+        num4 = 0;
+        if (undefined !== weekStartsOn) {
+          num4 = weekStartsOn;
+        }
+      }
+      const defaultResult2 = obj.default(num4);
+      if (defaultResult2 >= 0) {
+        if (defaultResult2 <= 6) {
+          if (locale.localize) {
+            if (locale.formatLong) {
+              const defaultResult3 = _typeof.default(arg0);
+              if (module_3907.default(defaultResult3)) {
+                _typeof = locale.default(defaultResult3, module_3888.default(defaultResult3));
+                obj = { firstWeekContainsDate: defaultResult1, weekStartsOn: defaultResult2, locale, _originalDate: defaultResult3 };
+                let match = str.match(closure_12);
+                const mapped = match.map((item) => {
+                  const first = item[0];
+                  if ("p" === first) {
+                    let tmp2 = dateLongFormatter.default[first](item, locale.formatLong);
+                  } else {
+                    tmp2 = item;
+                  }
+                  return tmp2;
+                });
+                const match1 = mapped.join("").match(closure_11);
+                const mapped1 = match1.map((item) => {
+                  let str = item;
+                  if ("''" === item) {
+                    return "'";
+                  } else if ("'" === str[0]) {
+                    const match = str.match(re13);
+                    if (match) {
+                      str = match[1].replace(re14, "'");
+                    }
+                    return str;
+                  } else if (closure_5.default[str6]) {
+                    let tmp9 = null != locale && locale.useAdditionalWeekYearTokens;
+                    if (!tmp9) {
+                      tmp9 = !throwProtectedError.isProtectedWeekYearToken(str);
+                    }
+                    if (!tmp9) {
+                      const _String = String;
+                      throwProtectedError.throwProtectedError(str, closure_1, String(closure_0));
+                    }
+                    let tmp18 = null != locale && locale.useAdditionalDayOfYearTokens;
+                    if (!tmp18) {
+                      tmp18 = !throwProtectedError.isProtectedDayOfYearToken(str);
+                    }
+                    if (!tmp18) {
+                      const _String2 = String;
+                      throwProtectedError.throwProtectedError(str, closure_1, String(closure_0));
+                    }
+                    return tmp35(closure_4, str, locale.localize, obj);
+                  } else if (str6.match(re15)) {
+                    const _RangeError = RangeError;
+                    const rangeError = new RangeError("Format string contains an unescaped latin alphabet character `" + str6 + "`");
+                    throw rangeError;
+                  } else {
+                    return str;
+                  }
+                });
+                return mapped1.join("");
+              } else {
+                const _RangeError4 = RangeError;
+                let rangeError = new RangeError("Invalid time value");
+                throw rangeError;
+              }
+            } else {
+              const _RangeError3 = RangeError;
+              const rangeError1 = new RangeError("locale must contain formatLong property");
+              throw rangeError1;
+            }
+          } else {
+            const _RangeError2 = RangeError;
+            const rangeError2 = new RangeError("locale must contain localize property");
+            throw rangeError2;
+          }
+        }
+      }
+      let _RangeError = RangeError;
+      const rangeError3 = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+      throw rangeError3;
+    }
+  }
+  const rangeError4 = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+  throw rangeError4;
 };
 export default exports.default;

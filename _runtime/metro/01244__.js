@@ -57,12 +57,12 @@ export const createWithEqualityFn = (arg0, shallow) => {
   }
   return tmp2;
 };
-export const useStoreWithEqualityFn = function useStoreWithEqualityFn(subscribe, arg1) {
+export const useStoreWithEqualityFn = function useStoreWithEqualityFn(context, arg1) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = identity;
   }
-  const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(subscribe.subscribe, subscribe.getState, subscribe.getInitialState, tmp, shallow);
+  const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(context.subscribe, context.getState, context.getInitialState, tmp, shallow);
   const debugValue = noop.useDebugValue(syncExternalStoreWithSelector);
   return syncExternalStoreWithSelector;
 };

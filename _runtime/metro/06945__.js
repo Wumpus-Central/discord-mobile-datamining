@@ -1,12 +1,7 @@
 // === Module 6945: ? ===
 
 // Module 6945
-import PlatformConfig2 from "PlatformConfig" /* 6943 */;
+import _modDef6946 from "module_6946" /* 6946 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const getInvertedTransformStyle = function getInvertedTransformStyle(horizontal) {
-  const PlatformConfig = PlatformConfig2.PlatformConfig;
-  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
-};
+export default _modDef6946;

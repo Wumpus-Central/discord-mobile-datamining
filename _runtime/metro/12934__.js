@@ -1,232 +1,192 @@
 // === Module 12934: ? ===
 
 // Module 12934
-import _mod12891 from "module_12891" /* 12891 */;
-import _mod12896 from "module_12896" /* 12896 */;
-import _mod12935 from "module_12935" /* 12935 */;
-import _mod12937 from "module_12937" /* 12937 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod12927 from "module_12927" /* 12927 */;
+import _mod12933 from "module_12933" /* 12933 */;
 
-function forEachEnvelopeItem(arg0, fn) {
-  for (const item10007 of tmp) {
-    if (arg1(item10007, item10007[0].type)) {
-      obj.return();
-      let flag = true;
-      return true;
-    }
-  }
-  return false;
-}
-let closure_4 = { session: "session", sessions: "session", attachment: "attachment", transaction: "transaction", event: "error", client_report: "internal", user_report: "default", profile: "profile", profile_chunk: "profile", replay_event: "replay", replay_recording: "replay", check_in: "monitor", feedback: "feedback", span: "span", statsd: "metric_bucket", raw_security: "security" };
-
-export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
-  const tmp = _slicedToArray(arg0, 2);
-  const items = [tmp[0], ];
-  const items1 = [];
-  items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
-  items[1] = items1;
-  return items;
-};
-export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeItem(data) {
-  if (typeof data.data === "string") {
-    data = data.data;
-    let __SENTRY__ = require;
-    let encodePolyfill = dependencyMap;
-    if (!_mod12891.GLOBAL_OBJ.__SENTRY__) {
-      const _TextEncoder = TextEncoder;
-      const encoder = new TextEncoder();
-      let encodeResult = encoder.encode(data);
-    }
-    __SENTRY__ = __SENTRY__(12891).GLOBAL_OBJ.__SENTRY__;
-    encodePolyfill = __SENTRY__.encodePolyfill;
-    encodeResult = encodePolyfill(data);
-  } else {
-    data = data.data;
-    const obj = { type: "attachment", length: data.length, filename: null, content_type: null, attachment_type: null };
-    ({ filename: obj2.filename, contentType: obj2.content_type, attachmentType: obj2.attachment_type } = data);
-    const items = [obj.dropUndefinedKeys(obj), data];
-    return items;
-  }
-};
-export function createEnvelope(eventEnvelopeHeaders) {
-  let items = items1;
-  if (items1 === undefined) {
-    items = [];
-  }
-  items1 = [eventEnvelopeHeaders, items];
-  return items1;
-}
-export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(event_id, sdk, arg2, url) {
-  let obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
-  let tmp2 = sdk;
-  if (sdk) {
-    obj = { sdk };
-    tmp2 = obj;
-  }
-  const merged = Object.assign(tmp2);
-  let tmp4 = arg2 && url;
-  if (tmp4) {
-    obj = { dsn: _mod12937.dsnToString(url) };
-    tmp4 = obj;
-  }
-  const merged1 = Object.assign(tmp4);
-  let tmp8 = tmp;
-  if (event_id.sdkProcessingMetadata && event_id.sdkProcessingMetadata.dynamicSamplingContext) {
-    const obj1 = { trace: null };
-    const obj2 = {};
-    const merged2 = Object.assign(tmp);
-    obj1.trace = _mod12896.dropUndefinedKeys(obj2);
-    tmp8 = obj1;
-  }
-  const merged3 = Object.assign(tmp8);
-  return obj;
-};
-export function createSpanEnvelopeItem(arg0) {
-  const items = [{ type: "span" }, arg0];
-  return items;
-}
-export const envelopeContainsItemType = function envelopeContainsItemType(arg0, arg1) {
-  closure_0 = arg1;
-  return forEachEnvelopeItem(arg0, (arg0, arg1) => closure_0.includes(arg1));
-};
-export const envelopeItemTypeToDataCategory = function envelopeItemTypeToDataCategory(arg0) {
-  return closure_4[arg0];
-};
-export { forEachEnvelopeItem };
-export const getSdkMetadataForEnvelopeHeader = function getSdkMetadataForEnvelopeHeader(sdk) {
-  if (sdk) {
-    if (sdk.sdk) {
-      const obj = { name: null, version: null };
-      ({ name: obj.name, version: obj.version } = sdk.sdk);
-      return obj;
-    }
-  }
-};
-export const parseEnvelope = function parseEnvelope(arr) {
-  if (typeof arr !== "string") {
-    function readJson() {
-      let length = closure_0.indexOf(10);
-      if (length < 0) {
-        length = closure_0.length;
-      }
-      const subarrayResult = closure_0.subarray(0, length);
-      closure_0 = closure_0.subarray(length + 1);
-      if (_mod12891.GLOBAL_OBJ.__SENTRY__) {
-        if (_mod12891.GLOBAL_OBJ.__SENTRY__.decodePolyfill) {
-          const __SENTRY__ = _mod12891.GLOBAL_OBJ.__SENTRY__;
-          let decodePolyfillResult = __SENTRY__.decodePolyfill(subarrayResult);
-        }
-        return JSON.parse(decodePolyfillResult);
-      }
-      const decoder = new TextDecoder();
-      decodePolyfillResult = decoder.decode(subarrayResult);
-    }
-    _require = arr;
-    const items = [];
-    const json = readJson();
-    while (_require.length) {
-      let json1 = readJson();
-      let length;
-      if (typeof json1.length === "number") {
-        length = json1.length;
-      }
-      let items1 = [json1, ];
-      if (length) {
-        let subarrayResult = require("Discord");
-        _require = _require.subarray(length + 1);
-      } else {
-        subarrayResult = readJson();
-      }
-      items1[1] = subarrayResult;
-      arr = items.push(items1);
-    }
-    const items2 = [json, items];
-    return items2;
-  } else {
-    let __SENTRY__ = _require;
-    let encodePolyfill = dependencyMap;
-    if (!require("module_12891").GLOBAL_OBJ.__SENTRY__) {
-      const _TextEncoder = TextEncoder;
-      const encoder = new TextEncoder();
-      let encodeResult = encoder.encode(arr);
-    }
-    __SENTRY__ = __SENTRY__(12891).GLOBAL_OBJ.__SENTRY__;
-    encodePolyfill = __SENTRY__.encodePolyfill;
-    encodeResult = encodePolyfill(arr);
-  }
-};
-export const serializeEnvelope = function serializeEnvelope(dependencyMap) {
-  function append(json) {
-    let arr = sum;
-    if (typeof sum === "string") {
-      if (typeof json === "string") {
-        sum = arr + json;
-      } else {
-        if (_mod12891.GLOBAL_OBJ.__SENTRY__) {
-          if (_mod12891.GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
-            const __SENTRY__2 = _mod12891.GLOBAL_OBJ.__SENTRY__;
-            let encodePolyfillResult = __SENTRY__2.encodePolyfill(arr);
+require = arg1;
+const dependencyMap = arg6;
+function _htmlElementAsString(tagName, arr) {
+  let items = [];
+  if (tagName) {
+    if (tagName.tagName) {
+      if (_mod12927.GLOBAL_OBJ.HTMLElement) {
+        if (tagName instanceof globalThis.HTMLElement) {
+          if (tagName.dataset) {
+            const dataset = tagName.dataset;
+            if (tagName.dataset.sentryComponent) {
+              return dataset.sentryComponent;
+            } else if (dataset.sentryElement) {
+              return tagName.dataset.sentryElement;
+            }
           }
-          sum = [encodePolyfillResult, json];
         }
-        const _TextEncoder2 = TextEncoder;
-        const encoder2 = new TextEncoder();
-        encodePolyfillResult = encoder2.encode(arr);
       }
-    } else if (typeof json !== "string") {
-      arr = arr.push(json);
-    } else {
-      let __SENTRY__ = require;
-      let encodePolyfill = dependencyMap;
-      if (!_mod12891.GLOBAL_OBJ.__SENTRY__) {
-        const _TextEncoder = TextEncoder;
-        const encoder = new TextEncoder();
-        let encodeResult = encoder.encode(json);
+      arr = items.push(tagName.tagName.toLowerCase());
+      let mapped = null;
+      if (arr) {
+        mapped = null;
+        if (arr.length) {
+          const found = arr.filter((item) => tagName.getAttribute(item));
+          mapped = found.map((item) => {
+            items = [item, tagName.getAttribute(item)];
+            return items;
+          });
+        }
       }
-      __SENTRY__ = __SENTRY__(12891).GLOBAL_OBJ.__SENTRY__;
-      encodePolyfill = __SENTRY__.encodePolyfill;
-      encodeResult = encodePolyfill(json);
-    }
-  }
-  const tmp4 = _slicedToArray(dependencyMap, 2);
-  const require = JSON.stringify(tmp4[0]);
-  if (tmp5 === undefined) {
-    let tmp22 = require;
-    if (typeof require !== "string") {
-      tmp22 = (function concatBuffers(arr) {
-        const uint8Array = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
-        let num = 0;
-        const iter = arr[Symbol.iterator]();
+      if (mapped) {
+        if (mapped.length) {
+          const item = mapped.forEach((item) => {
+            items.push("[" + item[0] + "=\"" + item[1] + "\"]");
+          });
+        }
+        const items1 = ["aria-label", "type", "name", "title", "alt"];
+        const iter = items1[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let result = uint8Array.set(nextResult, num);
-          num = num + nextResult.length;
+          let tmp22 = nextResult;
+          let attr = tagName.getAttribute(nextResult);
+          if (attr) {
+            let _HermesInternal3 = HermesInternal;
+            let str8 = "[";
+            let str9 = "=\"";
+            let str10 = "\"]";
+            arr = items.push("[" + tmp22 + "=\"" + tmp24 + "\"]");
+          }
           continue;
         }
-        return uint8Array;
-      })(tmp21);
-    }
-    return tmp22;
-  } else {
-    const tmp8 = _slicedToArray(tmp6, 2);
-    const _JSON = JSON;
-    const _HermesInternal = HermesInternal;
-    append("\n" + JSON.stringify(tmp8[0]) + "\n");
-    if (typeof tmp8[1] !== "string") {
-      const _Uint8Array = Uint8Array;
-      if (!(tmp10 instanceof Uint8Array)) {
-        try {
-          const _JSON2 = JSON;
-          let json = JSON.stringify(tmp10);
-          append(json);
-        } catch (err) {
-          const _JSON3 = tmp2.JSON;
-          const normalizer = _mod12935;
-          json = _JSON3.stringify(normalizer.normalize(tmp3));
+        return items.join("");
+      }
+      if (tagName.id) {
+        const _HermesInternal = HermesInternal;
+        items.push("#" + tagName.id);
+      }
+      if (tagName.className) {
+        if (tmpResult.isString(str3)) {
+          const parts = str3.split(/\s+/);
+          const tmp11 = parts[Symbol.iterator]();
+          while (tmp11 !== undefined) {
+            let _HermesInternal2 = HermesInternal;
+            let arr2 = items.push("." + tmp14);
+            continue;
+          }
         }
+        tmpResult = _mod12933;
       }
     }
-    append(tmp8[1]);
   }
-  tmp5 = tmp4[1][Symbol.iterator]();
+  return "";
+}
+
+export const getComponentName = function getComponentName(arg0) {
+  let parentNode = arg0;
+  let num = 0;
+  if (_mod12927.GLOBAL_OBJ.HTMLElement) {
+    while (parentNode) {
+      if (parentNode instanceof globalThis.HTMLElement) {
+        let dataset = parentNode.dataset;
+        if (parentNode.dataset.sentryComponent) {
+          return dataset.sentryComponent;
+        } else if (dataset.sentryElement) {
+          return parentNode.dataset.sentryElement;
+        }
+      }
+      parentNode = parentNode.parentNode;
+      num = num + 1;
+      if (num < 5) {
+        continue;
+      } else {
+        return null;
+      }
+    }
+    return null;
+  } else {
+    return null;
+  }
+};
+export const getDomElement = function getDomElement(arg0) {
+  let element = null;
+  if (_mod12927.GLOBAL_OBJ.document) {
+    element = null;
+    if (_mod12927.GLOBAL_OBJ.document.querySelector) {
+      const _document = _mod12927.GLOBAL_OBJ.document;
+      element = _document.querySelector(arg0);
+    }
+  }
+  return element;
+};
+export const getLocationHref = function getLocationHref() {
+  try {
+    return _mod12927.GLOBAL_OBJ.document.location.href;
+  } catch (err) {
+    return "";
+  }
+};
+export const htmlTreeAsString = function htmlTreeAsString(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  if (arg0) {
+    try {
+      let tmp = arg0;
+      const items = [];
+      let num2 = 0;
+      const _Array = Array;
+      let keyAttrs = obj;
+      if (!Array.isArray(obj)) {
+        keyAttrs = obj.keyAttrs;
+      }
+      const _Array2 = Array;
+      const isArray = Array.isArray(obj);
+      let num3 = !isArray;
+      if (!isArray) {
+        num3 = obj.maxStringLength;
+      }
+      if (!num3) {
+        num3 = 80;
+      }
+      if (tmp) {
+        let sum = tmp7 + 1;
+        if (+0 < 5) {
+          const tmp33 = _htmlElementAsString(tmp, tmp3);
+          let arr2 = tmp33;
+          if ("html" !== tmp33) {
+            if (sum <= 1) {
+              items.push(arr2);
+              num2 = num2 + arr2.length;
+              const parentNode = tmp.parentNode;
+              tmp = parentNode;
+              while (parentNode) {
+                let tmp19 = +sum;
+                sum = tmp19 + 1;
+                if (tmp19 >= 5) {
+                  break;
+                } else {
+                  let tmp23 = _htmlElementAsString(tmp, tmp3);
+                  arr2 = tmp23;
+                  if ("html" === tmp23) {
+                    break;
+                  } else {
+                    if (sum <= 1) {
+                      continue;
+                    } else if (num2 + 3 * items.length + arr2.length >= num3) {
+                      break;
+                    }
+                    continue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      const reversed = items.reverse();
+      return reversed.join(" > ");
+    } catch (err) {
+      return "<unknown>";
+    }
+  } else {
+    return "<unknown>";
+  }
 };

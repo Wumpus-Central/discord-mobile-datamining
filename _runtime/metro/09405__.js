@@ -1,7 +1,7 @@
 // === Module 9405: ? ===
 
 // Module 9405
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "e92f31ca34ceaeec68c2321f683014ca", name: "img_nitro_global_emoji", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/user_settings", width: 152, height: 123, scales: [2, 3], hash: "0669c0bbd186eac68c76b3fb934f05f4", name: "crunchyroll_connect", type: "png" });

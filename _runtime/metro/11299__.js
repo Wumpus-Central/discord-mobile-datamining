@@ -1,7 +1,7 @@
 // === Module 11299: ? ===
 
 // Module 11299
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "80a1b67e775ddb8de80fde27e63a5302", name: "CirclePlusIcon-secondary", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 59.666666666666664, height: 59.666666666666664, scales: [3], hash: "98f28dd3128f04f38057757d2f825a42", name: "asset_gold_badge_small", type: "png" });

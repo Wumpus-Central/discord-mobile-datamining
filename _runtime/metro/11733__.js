@@ -1,7 +1,7 @@
 // === Module 11733: ? ===
 
 // Module 11733
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback/light-theme-desaturated", width: 64, height: 64, scales: [2, 3], hash: "69e9e79e44fff2fca6c7a210e9bf5b9f", name: "feedback-modal-neutral-desaturated", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 275, height: 150, scales: [1, 2, 3], hash: "bbcef4a2b8c5f48f13fd62c2f6250775", name: "img_group_dm_illustration", type: "png" });

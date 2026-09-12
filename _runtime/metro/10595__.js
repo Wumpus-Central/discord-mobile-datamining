@@ -1,53 +1,88 @@
 // === Module 10595: ? ===
 
 // Module 10595
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import Filter from "Filter" /* 10579 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const JPSlashDateFormatParser = require;
-const regExp = new RegExp("([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))", "i");
-class JPSlashDateFormatParser {
-  constructor() {
-    tmp = c2(this, JPSlashDateFormatParser);
-    return;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+_possibleConstructorReturn;
+class ENUnlikelyFormatFilter {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ENUnlikelyFormatFilter);
+    tmp2 = c2;
+    obj = c2(ENUnlikelyFormatFilter);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_classCallCheck = ENUnlikelyFormatFilter;
+_inherits(ENUnlikelyFormatFilter, Filter.Filter);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
+  key: "isValid",
+  value: function isValid(text, text2) {
+    closure_0 = text2;
+    const str2 = text2.text.trim();
+    if (str2 === str3.trim()) {
+      return true;
+    } else {
+      if ("may" === str2.toLowerCase()) {
+        const str5 = text.text.substring(0, text2.index);
+        if (!str6.match(/\b(in)$/i)) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + closure_0);
+          });
+          return false;
+        }
+        str6 = text.text.substring(0, text2.index).trim();
+      }
+      const formatted = str2.toLowerCase();
+      const endsWithResult = formatted.endsWith("the second");
+      let flag2 = !endsWithResult;
+      if (endsWithResult) {
+        flag2 = false;
+        if (str9.trim().length > 0) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + closure_0);
+          });
+          flag2 = false;
+        }
+        str9 = text.text.substring(text2.index + text2.text.length);
+      }
+      return flag2;
+    }
+    str3 = text.text;
   }
 };
-const items = [
-  entry,
-  {
-    key: "extract",
-    value: function extract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const parsed = parseInt(JPSlashDateFormatParser(10591).toHankaku(arg1[2]));
-      const parsed1 = parseInt(JPSlashDateFormatParser(10591).toHankaku(arg1[3]));
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          if (parsed1 >= 1) {
-            if (parsed1 <= 31) {
-              parsingComponents.assign("day", parsed1);
-              parsingComponents.assign("month", parsed);
-              if (arg1[1]) {
-                const _parseInt = parseInt;
-                const parsed2 = parseInt(JPSlashDateFormatParser(10591).toHankaku(arg1[1]));
-                parsingComponents.assign("year", JPSlashDateFormatParser(10522).findMostLikelyADYear(parsed2));
-              } else {
-                parsingComponents.imply("year", JPSlashDateFormatParser(10522).findYearClosestToRef(createParsingComponents.reference.instant, parsed1, parsed));
-              }
-              return parsingComponents;
-            }
-          }
-          return null;
-        }
-      }
-      return null;
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(JPSlashDateFormatParser, items);
+export default _createClass(ENUnlikelyFormatFilter, items);

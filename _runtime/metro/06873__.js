@@ -1,27 +1,9 @@
 // === Module 6873: ? ===
 
 // Module 6873
-import noop from "module_19" /* 19 */;
+import module_65 from "module_65" /* 65 */;
 
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { moduleId: true, unstable_forceActive: true } };
 
-export const useStableCallback = function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  framebus(() => () => {
-    ref.current = undefined;
-  }, []);
-  return React(() => {
-    const items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, ref);
-    }
-    return applyResult;
-  }, []);
-};
+export default module_65.get("RNGestureHandlerRootView", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

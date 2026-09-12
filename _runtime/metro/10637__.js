@@ -1,15 +1,13 @@
 // === Module 10637: ? ===
 
 // Module 10637
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10528 */;
-import _mod10636 from "module_10636" /* 10636 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import Filter from "Filter" /* 10579 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ZHHantDeadlineFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,16 +27,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const keys = Object.keys(_mod10636.NUMBER);
-const regExp = new RegExp("(\\d+|[" + keys.join("") + "]+|\u534A|\u5E7E)(?:\\s*)(?:\u500B)?(\u79D2(?:\u9418)?|\u5206\u9418|\u5C0F\u6642|\u9418|\u65E5|\u5929|\u661F\u671F|\u79AE\u62DC|\u6708|\u5E74)(?:(?:\u4E4B|\u904E)?\u5F8C|(?:\u4E4B)?\u5167)", "i");
-class ZHHantDeadlineFormatParser {
+_possibleConstructorReturn;
+class JPMergeWeekdayComponentRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, ZHHantDeadlineFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ZHHantDeadlineFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, JPMergeWeekdayComponentRefiner);
+    tmp2 = c2;
+    obj = c2(JPMergeWeekdayComponentRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -51,88 +48,45 @@ class ZHHantDeadlineFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHantDeadlineFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = JPMergeWeekdayComponentRefiner;
+_inherits(JPMergeWeekdayComponentRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "mergeResults",
+  value: function mergeResults(arg0, clone, text) {
+    const cloneResult = clone.clone();
+    cloneResult.text = clone.text + arg0 + text.text;
+    const start = cloneResult.start;
+    const start2 = text.start;
+    start.assign("weekday", start2.get("weekday"));
+    if (cloneResult.end) {
+      const end = cloneResult.end;
+      const start3 = text.start;
+      end.assign("weekday", start3.get("weekday"));
+    }
+    return cloneResult;
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      let num = parseInt(index[1]);
-      if (isNaN(num)) {
-        num = ZHHantDeadlineFormatParser(10636).zhStringToNumber(index[1]);
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, start, start2) {
+      start = start.start;
+      let isCertainResult = start.isCertain("day");
+      if (isCertainResult) {
+        start2 = start2.start;
+        isCertainResult = start2.isOnlyWeekdayComponent();
       }
-      if (isNaN(num)) {
-        num = 3;
-        if ("\u5E7E" !== index[1]) {
-          num = 0.5;
-          if ("\u534A" !== tmp4) {
-            return null;
-          }
-        }
+      if (isCertainResult) {
+        const start3 = start2.start;
+        isCertainResult = !start3.isCertain("hour");
       }
-      let obj = {};
-      if (index[2][0].match(/[日天星禮月年]/)) {
-        if ("\u65E5" != str3) {
-          if ("\u5929" != str3) {
-            if ("\u661F" != str3) {
-              if ("\u79AE" != str3) {
-                if ("\u6708" == str3) {
-                  obj.month = num;
-                } else if ("\u5E74" == str3) {
-                  obj.year = num;
-                }
-              }
-            }
-            obj.week = num;
-          }
-          const addDurationResult = ZHHantDeadlineFormatParser(10523).addDuration(createParsingResult.refDate, obj);
-          const start7 = parsingResult.start;
-          start7.assign("year", addDurationResult.getFullYear());
-          const start8 = parsingResult.start;
-          obj = start8.assign("month", addDurationResult.getMonth() + 1);
-          const start9 = parsingResult.start;
-          start9.assign("day", addDurationResult.getDate());
-          return parsingResult;
-        }
-        obj.day = num;
-      } else {
-        if ("\u79D2" == str3) {
-          obj.second = num;
-        } else if ("\u5206" == str3) {
-          obj.minute = num;
-        } else {
-          let tmp6 = "\u5C0F" != str3;
-          if (tmp6) {
-            tmp6 = "\u9418" != str3;
-          }
-          if (!tmp6) {
-            obj.hour = num;
-          }
-        }
-        const addDurationResult1 = ZHHantDeadlineFormatParser(10523).addDuration(createParsingResult.refDate, obj);
-        const start = parsingResult.start;
-        start.imply("year", addDurationResult1.getFullYear());
-        const start2 = parsingResult.start;
-        start2.imply("month", addDurationResult1.getMonth() + 1);
-        const start3 = parsingResult.start;
-        start3.imply("day", addDurationResult1.getDate());
-        const start4 = parsingResult.start;
-        start4.assign("hour", addDurationResult1.getHours());
-        const start5 = parsingResult.start;
-        start5.assign("minute", addDurationResult1.getMinutes());
-        const start6 = parsingResult.start;
-        start6.assign("second", addDurationResult1.getSeconds());
-        return parsingResult;
+      if (isCertainResult) {
+        isCertainResult = null !== str.match(/^[,、の]?\s*$/);
       }
+      return isCertainResult;
     }
   }
 ];
 
-export default _createClass(ZHHantDeadlineFormatParser, items);
+export default _createClass(JPMergeWeekdayComponentRefiner, items);

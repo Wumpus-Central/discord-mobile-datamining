@@ -1,7 +1,7 @@
 // === Module 8796: ? ===
 
 // Module 8796
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "eaee56f86ca7905c61b8b9a3d1c990d4", name: "MinecraftNeutralIcon-primary", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3badf2b48a53beb45ce4acb0a2b90dbd", name: "MoreHorizontalIcon", type: "png" });

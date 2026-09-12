@@ -1,64 +1,13 @@
 // === Module 6834: ? ===
 
 // Module 6834
-const require = arg1;
-const dependencyMap = arg6;
+import noop from "module_19" /* 19 */;
 
-export const useComposedGesture = function useComposedGesture(type) {
-  const substr = [...arguments].slice();
-  const flatMapResult = substr.flatMap((handlerTags) => {
-    if (obj.isComposedGesture(handlerTags)) {
-      handlerTags = handlerTags.handlerTags;
-    } else {
-      handlerTags = [];
-      handlerTags[0] = handlerTags.handlerTag;
-    }
-    return handlerTags;
-  });
-  let obj = substr(6794);
-  if (obj.containsDuplicates(flatMapResult)) {
-    const _Error2 = Error;
-    let tmp2Result = tmp2(6731);
-    const error = new Error(tmp2Result.tagMessage("Each gesture can be used only once in the gesture composition."));
-    throw error;
-  } else {
-    obj = { shouldUseReanimatedDetector: substr.some((config) => config.config.shouldUseReanimatedDetector), dispatchesAnimatedEvents: substr.some((config) => config.config.dispatchesAnimatedEvents) };
-    if (obj.shouldUseReanimatedDetector) {
-      if (obj.dispatchesAnimatedEvents) {
-        const _Error = Error;
-        tmp2Result = tmp2(6731);
-        const error1 = new Error(tmp2Result.tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."));
-        throw error1;
-      }
-    }
-    const Reanimated = tmp2(6769).Reanimated;
-    let composedEventHandler;
-    if (Reanimated != null) {
-      composedEventHandler = Reanimated.useComposedEventHandler(substr.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null));
-    }
-    const found = substr.filter((detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler);
-    let animatedEventHandler;
-    if (found.length > 0) {
-      animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
-    }
-    obj = { handlerTags: flatMapResult, type, config: null, detectorCallbacks: null, externalSimultaneousHandlers: null, gestures: null };
-    obj.config = obj;
-    const obj1 = {
-      jsEventHandler(arg0) {
-          for (const item10007 of substr) {
-            if (item10007.detectorCallbacks.jsEventHandler) {
-              let detectorCallbacks = tmp.detectorCallbacks;
-              let jsEventHandlerResult = detectorCallbacks.jsEventHandler(arg0);
-            }
-            continue;
-          }
-        },
-      reanimatedEventHandler: composedEventHandler,
-      animatedEventHandler
-    };
-    obj.detectorCallbacks = obj1;
-    obj.externalSimultaneousHandlers = [];
-    obj.gestures = substr;
-    return obj;
-  }
+const use = noop.use;
+const context = noop.createContext(null);
+
+export const InterceptingDetectorMode = { DEFAULT: 0, [0]: "DEFAULT", ANIMATED: 1, [1]: "ANIMATED", REANIMATED: 2, [2]: "REANIMATED" };
+export const InterceptingDetectorContext = context;
+export const useInterceptingDetectorContext = function useInterceptingDetectorContext() {
+  return use(context);
 };

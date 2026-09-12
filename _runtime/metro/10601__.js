@@ -1,16 +1,13 @@
 // === Module 10601: ? ===
 
 // Module 10601
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10521 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10528 */;
-import _mod10602 from "module_10602" /* 10602 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10567 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const PTWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,15 +27,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|passado|pr[o\u00F3]ximo)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10602.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|passado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)", "i");
-class PTWeekdayParser {
+_possibleConstructorReturn;
+const regExp = new RegExp("([0-9]{4})\\-([0-9]{1,2})\\-([0-9]{1,2})(?:T([0-9]{1,2}):([0-9]{1,2})(?::([0-9]{1,2})(?:\\.(\\d{1,4}))?)?(Z|([+-]\\d{2}):?(\\d{2})?)?)?(?=\\W|$)", "i");
+class ISOFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, PTWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(PTWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, ISOFormatParser);
+    tmp2 = c2;
+    obj = c2(ISOFormatParser);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -51,7 +49,8 @@ class PTWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(PTWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = ISOFormatParser;
+_inherits(ISOFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,30 +61,44 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      const tmp4 = PTWeekdayParser(10602).WEEKDAY_DICTIONARY[formatted];
-      if (undefined === tmp4) {
-        return null;
-      } else {
-        const formatted1 = arg1[1] || arg1[3] || "".toLowerCase();
-        let str5 = "this";
-        if ("passado" != formatted1) {
-          str5 = "next";
-          if ("pr\u00F3ximo" != formatted1) {
-            str5 = "next";
-            if ("proximo" != formatted1) {
-              str5 = null;
-              if ("este" == formatted1) {
-                str5 = "this";
-              }
+    value: function innerExtract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents({ year: parseInt(arg1[1]), month: parseInt(arg1[2]), day: parseInt(arg1[3]) });
+      if (null != arg1[4]) {
+        const _parseInt5 = parseInt;
+        parsingComponents.assign("hour", parseInt(arg1[4]));
+        const _parseInt6 = parseInt;
+        parsingComponents.assign("minute", parseInt(arg1[5]));
+        if (null != arg1[6]) {
+          const _parseInt = parseInt;
+          parsingComponents.assign("second", parseInt(arg1[6]));
+        }
+        if (null != arg1[7]) {
+          const _parseInt2 = parseInt;
+          parsingComponents.assign("millisecond", parseInt(arg1[7]));
+        }
+        if (null != arg1[8]) {
+          let num2 = 0;
+          if (!arg1[9]) {
+            let num3 = parsingComponents.assign("timezoneOffset", num2);
+          } else {
+            const _parseInt3 = parseInt;
+            num3 = 0;
+            const parsed = parseInt(arg1[9]);
+            if (null != arg1[10]) {
+              const _parseInt4 = parseInt;
+              num3 = parseInt(arg1[10]);
+            }
+            const result = 60 * parsed;
+            if (result >= 0) {
+              num2 = result + num3;
             }
           }
+          num2 = result - num3;
         }
-        return PTWeekdayParser(10548).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
       }
+      return parsingComponents.addTag("parser/ISOFormatParser");
     }
   }
 ];
 
-export default _createClass(PTWeekdayParser, items);
+export default _createClass(ISOFormatParser, items);

@@ -1,16 +1,14 @@
 // === Module 10694: ? ===
 
 // Module 10694
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10521 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10528 */;
-import _mod10690 from "module_10690" /* 10690 */;
+import _mod10691 from "module_10691" /* 10691 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENCasualYearMonthDayParser = require;
+const RUTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("([0-9]{4})[\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod10690.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
-class ENCasualYearMonthDayParser {
+class RUTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENCasualYearMonthDayParser);
+    tmp = c2(this, RUTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENCasualYearMonthDayParser);
+    obj = closure_4(RUTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,39 +48,23 @@ class ENCasualYearMonthDayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(RUTimeUnitAgoFormatParser, _mod10691.AbstractParserWithLeftBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(" + RUTimeUnitAgoFormatParser(10689).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))";
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(arg0, arg1) {
-      if (arg1[3]) {
-        const _parseInt = parseInt;
-        let parsed = parseInt(arg1[3]);
-      } else {
-        parsed = ENCasualYearMonthDayParser(10690).MONTH_DICTIONARY[str.toLowerCase(str)];
-      }
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          const _parseInt2 = parseInt;
-          const date = { day: null, month: null, year: null };
-          const _parseInt3 = parseInt;
-          const parsed1 = parseInt(arg1[1]);
-          date.day = parseInt(arg1[4]);
-          date.month = parsed;
-          date.year = parsed1;
-          return date;
-        }
-      }
-      return null;
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = RUTimeUnitAgoFormatParser(10689).parseDuration(arg1[1]);
+      const ParsingComponents = RUTimeUnitAgoFormatParser(10563).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitAgoFormatParser(10562).reverseDuration(RUTimeUnitAgoFormatParser(10689).parseDuration(arg1[1])));
     }
   }
 ];
 
-export default _createClass(ENCasualYearMonthDayParser, items);
+export default _createClass(RUTimeUnitAgoFormatParser, items);

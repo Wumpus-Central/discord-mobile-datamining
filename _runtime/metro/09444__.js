@@ -1,7 +1,7 @@
 // === Module 9444: ? ===
 
 // Module 9444
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 77.5, height: 72, scales: [2, 3], hash: "215c6cf6cc2b74cad508b12b0e602266", name: "empty", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "e92f31ca34ceaeec68c2321f683014ca", name: "img_nitro_global_emoji", type: "png" });

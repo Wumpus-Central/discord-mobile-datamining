@@ -1,39 +1,32 @@
 // === Module 12930: ? ===
 
 // Module 12930
-import _mod12890 from "module_12890" /* 12890 */;
-import _mod12918 from "module_12918" /* 12918 */;
+import _mod12924 from "module_12924" /* 12924 */;
+import _mod12927 from "module_12927" /* 12927 */;
 
 require = arg1;
 const dependencyMap = arg6;
-
-export const parseSampleRate = function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
-  } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
-    }
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            return parsed;
-          }
-        }
+function instrumentUnhandledRejection() {
+  onunhandledrejection = _mod12927.GLOBAL_OBJ.onunhandledrejection;
+  _mod12927.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
+    _mod12924.triggerHandlers("unhandledrejection", arg0);
+    if (!onunhandledrejection) {
+      return !onunhandledrejection;
+    } else {
+      const self = this;
+      const apply = onunhandledrejection.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
       }
     }
-    if (_mod12918.DEBUG_BUILD) {
-      const logger = _mod12890.logger;
-      const _JSON = JSON;
-      const json = JSON.stringify(flag);
-      const _JSON2 = JSON;
-      const _HermesInternal = HermesInternal;
-      logger.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
-    }
-  }
+  };
+  _mod12927.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
+}
+let onunhandledrejection = null;
+
+export const addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
+  _mod12924.addHandler("unhandledrejection", errorCallback);
+  _mod12924.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
 };

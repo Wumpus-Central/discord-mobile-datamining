@@ -2,176 +2,88 @@
 
 // Module 14294
 import e from "e" /* 1162 */;
-import data from "data" /* 14295 */;
-import regions from "regions" /* 14296 */;
+import monadic from "monadic" /* 14295 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function isMatched(region, str, arg2) {
-  const parts = str.split("-");
-  [tmp2, tmp3, arr] = parts;
-  if (arr) {
-    if ("$" === arr[0]) {
-      const slice = arr.slice;
-      if ("!" !== arr[1]) {
-        let arr2 = arg2[slice(arr, 1)];
-      } else {
-        arr2 = arg2[slice(arr, 2)];
-      }
-      const mapped = arr2.map((item) => {
-        let tmp = regions.regions[item];
-        if (!tmp) {
-          const items = [item];
-          tmp = items;
-        }
-        return tmp;
-      });
-      const reduced = mapped.reduce((acc, item) => {
-        const obj = e;
-        return obj.__spreadArray(e.__spreadArray([], acc, true), item, true);
-      }, []);
-      let str4 = region.region;
-      if (!str4) {
-        str4 = "";
-      }
-      let tmp4 = reduced.indexOf(str4) > -1 === tmp7;
-    }
-    if (tmp4) {
-      const script = region.script;
-      let tmp8 = !script;
-      if (script) {
-        tmp8 = "*" === tmp3 || tmp3 === region.script;
-        const tmp9 = "*" === tmp3 || tmp3 === region.script;
-      }
-      tmp4 = tmp8;
-    }
-    if (tmp4) {
-      const language = region.language;
-      let tmp10 = !language;
-      if (language) {
-        tmp10 = "*" === tmp2 || tmp2 === region.language;
-        const tmp11 = "*" === tmp2 || tmp2 === region.language;
-      }
-      tmp4 = tmp10;
-    }
-    return tmp4;
+function getMultiInternalSlots(get, arg1) {
+  let length;
+  const items = [];
+  let num = 2;
+  if (2 < arguments.length) {
+    do {
+      items[num - 2] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
   }
-  region = region.region;
-  tmp4 = !region;
-  if (region) {
-    tmp4 = "*" === arr || arr === region.region;
-    const tmp5 = "*" === arr || arr === region.region;
+  value = get.get(arg1);
+  require = value;
+  if (value) {
+    const _Object = Object;
+    return items.reduce((acc, item) => {
+      acc[item] = value[item];
+      return acc;
+    }, Object.create(null));
+  } else {
+    const _TypeError = TypeError;
+    const concat = "".concat;
+    const typeError = new TypeError("".concat(arg1, " InternalSlot has not been initialized"));
+    throw typeError;
   }
 }
-function findMatchingDistanceForLSR(arg0, arg1, matches) {
-  let tmp;
-  matches = matches.matches;
-  let num = 0;
-  if (0 < matches.length) {
-    while (true) {
-      tmp = matches[num];
-      let tmp2Result = isMatched(arg0, tmp.desired, matches.matchVariables);
-      if (tmp2Result) {
-        tmp2Result = isMatched(arg1, tmp.supported, matches.matchVariables);
-      }
-      let tmp5 = tmp.oneway || tmp2Result;
-      if (!tmp5) {
-        let tmp6 = isMatched(arg0, tmp.supported, matches.matchVariables) && isMatched(arg1, tmp.desired, matches.matchVariables);
-        tmp2Result = tmp6;
-      }
-      if (tmp2Result) {
-        break;
-      } else {
+let obj = { strategy: monadic.strategies.variadic };
+obj = { strategy: monadic.strategies.variadic };
+obj = { strategy: monadic.strategies.variadic };
+const obj1 = { strategy: monadic.strategies.variadic };
+
+export const repeat = function repeat(str, arg1) {
+  let length;
+  if (typeof str.repeat === "function") {
+    return str.repeat(arg1);
+  } else {
+    const _Array = Array;
+    const arr = new Array(arg1);
+    let num = 0;
+    if (0 < arr.length) {
+      do {
+        arr[num] = str;
         num = num + 1;
-      }
+        length = arr.length;
+      } while (num < length);
     }
-    const result = 10 * tmp.distance;
-    const paradigmLocales = matches.paradigmLocales;
-    const items = [, , ];
-    ({ language: arr3[0], script: arr3[1], region: arr3[2] } = arg0);
-    const _Boolean = Boolean;
-    const found = items.filter(Boolean);
-    const paradigmLocales1 = matches.paradigmLocales;
-    const items1 = [, , ];
-    ({ language: arr5[0], script: arr5[1], region: arr5[2] } = arg1);
-    const _Boolean2 = Boolean;
-    const found1 = items1.filter(Boolean);
-    let diff = result;
-    if (tmp10 !== paradigmLocales1.indexOf(found1.join("-")) > -1) {
-      diff = result - 1;
+    return arr.join("");
+  }
+};
+export const setInternalSlot = function setInternalSlot(get, arg1, arg2, arg3) {
+  if (!get.get(arg1)) {
+    const _Object = Object;
+    const result = get.set(arg1, Object.create(null));
+  }
+  get.get(arg1)[arg2] = arg3;
+};
+export const setMultiInternalSlots = function setMultiInternalSlots(get, arg1, arg2) {
+  const keys = Object.keys(arg2);
+  for (let num = 0; num < keys.length; num = num + 1) {
+    let tmp = keys[num];
+    if (!get.get(arg1)) {
+      let _Object = Object;
+      let result = get.set(arg1, Object.create(null));
     }
-    return diff;
+    get.get(arg1)[tmp] = arg2[tmp];
   }
-  const error = new Error("No matching distance found");
-  throw error;
-}
-function findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) {
-  locale = new Intl.Locale(matchedDesiredLocale);
-  const maximizeResult = locale.maximize();
-  const locale1 = new Intl.Locale(matchedSupportedLocale);
-  const maximizeResult1 = locale1.maximize();
-  let obj = { language: maximizeResult.language, script: maximizeResult.script || "", region: maximizeResult.region || "" };
-  obj = { language: maximizeResult1.language, script: maximizeResult1.script || "", region: maximizeResult1.region || "" };
-  let tmp3 = obj1;
-  if (!obj1) {
-    let first = data.data.supplemental.languageMatching["written-new"][0];
-    let paradigmLocales;
-    if (null !== first) {
-      if (undefined !== first) {
-        paradigmLocales = first.paradigmLocales;
-      }
-    }
-    let parts;
-    if (null !== paradigmLocales) {
-      if (undefined !== paradigmLocales) {
-        parts = paradigmLocales._locales.split(" ");
-      }
-    }
-    const prop = data.data.supplemental.languageMatching["written-new"];
-    let substr = prop.slice(1, 5);
-    const prop1 = data.data.supplemental.languageMatching["written-new"];
-    const substr1 = prop1.slice(5);
-    obj1 = {
-      matches: substr1.map((item) => {
-          const first = Object.keys(item)[0];
-          return { supported: first, desired: item[first]._desired, distance: +item[first]._distance, oneway: "true" === item[first].oneway };
-        }, {}),
-      matchVariables: substr.reduce((acc, item) => {
-          const first = Object.keys(item)[0];
-          const substr = first.slice(1);
-          acc[substr] = item[first]._value.split("+");
-          return acc;
-        }, {}),
-      paradigmLocales: null
-    };
-    const tmp4Result = e;
-    obj1.paradigmLocales = tmp4Result.__spreadArray(tmp4Result.__spreadArray([], parts, true), parts.map((item) => {
-      locale = new Intl.Locale(item.replace(/_/g, "-"));
-      return locale.maximize().toString();
-    }), true);
-    tmp3 = obj1;
-    const __spreadArrayResult = tmp4Result.__spreadArray([], parts, true);
-  }
-  let num3 = 0;
-  if (obj.language !== obj.language) {
-    const obj2 = { language: maximizeResult.language, script: "", region: "" };
-    const obj3 = { language: maximizeResult1.language, script: "", region: "" };
-    num3 = findMatchingDistanceForLSR(obj2, obj3, tmp3);
-  }
-  let sum = num3;
-  if (obj.script !== obj.script) {
-    const obj4 = { language: maximizeResult.language, script: obj.script, region: "" };
-    const obj5 = { language: maximizeResult1.language, script: obj.script, region: "" };
-    sum = num3 + findMatchingDistanceForLSR(obj4, obj5, tmp3);
-  }
-  let sum1 = sum;
-  if (obj.region !== obj.region) {
-    sum1 = sum + findMatchingDistanceForLSR(obj, obj, tmp3);
-  }
-  return sum1;
-}
-let c3 = 838;
-
+};
+export const getInternalSlot = function getInternalSlot(arg0, arg1, arg2) {
+  return getMultiInternalSlots(arg0, arg1, arg2)[arg2];
+};
+export { getMultiInternalSlots };
+export const isLiteralPart = function isLiteralPart(type) {
+  return "literal" === type.type;
+};
+export const defineProperty = function defineProperty(arg0, arg1, value) {
+  Object.defineProperty(arg0, arg1, { configurable: true, enumerable: false, writable: true, value: value.value });
+};
+export const createDataProperty = function createDataProperty(module_14287, direction, firstDay) {
+  Object.defineProperty(module_14287, direction, { configurable: true, enumerable: true, writable: true, value: firstDay });
+};
 export const invariant = function invariant(arg0, arg1, arg2) {
   let _Error = arg2;
   if (undefined === arg2) {
@@ -182,35 +94,79 @@ export const invariant = function invariant(arg0, arg1, arg2) {
     throw _Error;
   }
 };
-export { findMatchingDistance };
-export const findBestMatch = function findBestMatch(arr, arg1, arg2) {
-  closure_0 = arg1;
-  let tmp = arg2;
-  if (undefined === arg2) {
-    tmp = c3;
-  }
-  let Infinity = Infinity;
-  const obj = { matchedDesiredLocale: "", distances: {} };
-  let item = arr.forEach((item, index) => {
-    const matchedDesiredLocale = item;
-    closure_1 = index;
-    if (!obj.distances[item]) {
-      obj.distances[item] = {};
-    }
-    item = matchedDesiredLocale.forEach((matchedSupportedLocale) => {
-      const sum = findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) + 40 * closure_1;
-      obj.distances[matchedDesiredLocale][matchedSupportedLocale] = sum;
-      if (sum < Infinity) {
-        Infinity = sum;
-        obj.matchedDesiredLocale = matchedDesiredLocale;
-        obj.matchedSupportedLocale = matchedSupportedLocale;
-      }
-    });
-  });
-  if (Infinity >= tmp) {
-    obj.matchedDesiredLocale = undefined;
-    obj.matchedSupportedLocale = undefined;
-  }
-  return obj;
-};
 export const UNICODE_EXTENSION_SEQUENCE_REGEX = /-u(?:-[0-9a-z]{2,8})+/gi;
+export const createMemoizedNumberFormat = monadic.memoize(() => {
+  let length;
+  const items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = NumberFormat.bind;
+  const items1 = [undefined];
+  return new bind.apply(NumberFormat, e.__spreadArray(items1, items, false))();
+}, obj);
+export const createMemoizedDateTimeFormat = monadic.memoize(() => {
+  let length;
+  const items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = DateTimeFormat.bind;
+  const items1 = [undefined];
+  return new bind.apply(DateTimeFormat, e.__spreadArray(items1, items, false))();
+}, obj);
+export const createMemoizedPluralRules = monadic.memoize(() => {
+  let length;
+  const items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = PluralRules.bind;
+  const items1 = [undefined];
+  return new bind.apply(PluralRules, e.__spreadArray(items1, items, false))();
+}, obj);
+export const createMemoizedLocale = monadic.memoize(() => {
+  let length;
+  const items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = Locale.bind;
+  const items1 = [undefined];
+  return new bind.apply(Locale, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });
+export const createMemoizedListFormat = monadic.memoize(() => {
+  let length;
+  const items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = ListFormat.bind;
+  const items1 = [undefined];
+  return new bind.apply(ListFormat, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });

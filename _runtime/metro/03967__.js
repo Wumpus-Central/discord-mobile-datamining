@@ -1,10 +1,11 @@
 // === Module 3967: ? ===
 
 // Module 3967
-import _typeof from "module_3695" /* 3695 */;
-import startOfISOWeek from "startOfISOWeek" /* 3853 */;
-import startOfISOWeekYear from "startOfISOWeekYear" /* 3856 */;
-import requiredArgs from "requiredArgs" /* 3696 */;
+import _mod3730 from "module_3730" /* 3730 */;
+import _typeof from "module_3725" /* 3725 */;
+import requiredArgs from "requiredArgs" /* 3726 */;
+import startOfUTCWeek from "startOfUTCWeek" /* 3728 */;
+import module_3729 from "module_3729" /* 3729 */;
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -13,34 +14,105 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-if (!startOfISOWeek) {
-  obj = { default: startOfISOWeek };
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
-  tmp5 = startOfISOWeek;
+  tmp5 = requiredArgs;
 }
-startOfISOWeek = tmp5;
-if (!startOfISOWeekYear) {
-  obj = { default: startOfISOWeekYear };
+requiredArgs = tmp5;
+if (!startOfUTCWeek) {
+  obj = { default: startOfUTCWeek };
   let tmp7 = obj;
 } else {
-  tmp7 = startOfISOWeekYear;
+  tmp7 = startOfUTCWeek;
 }
-startOfISOWeekYear = tmp7;
-if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
+startOfUTCWeek = tmp7;
+if (!module_3729) {
+  const obj1 = { default: module_3729 };
   let tmp9 = obj1;
 } else {
-  tmp9 = requiredArgs;
+  tmp9 = module_3729;
 }
-requiredArgs = tmp9;
-let c4 = 604800000;
+module_3729 = tmp9;
 
-export default function getISOWeek(arg0) {
+export default function getUTCWeekYear(arg0, firstWeekContainsDate) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const time = startOfISOWeek.default(defaultResult1).getTime();
-  const defaultResult2 = startOfISOWeek.default(defaultResult1);
-  return Math.round((time - startOfISOWeekYear.default(defaultResult1).getTime()) / c4) + 1;
+  const uTCFullYear = defaultResult1.getUTCFullYear();
+  const defaultOptions = _mod3730.getDefaultOptions();
+  let prop;
+  if (null != firstWeekContainsDate) {
+    prop = firstWeekContainsDate.firstWeekContainsDate;
+  }
+  if (null === prop) {
+    let prop1;
+    if (null != firstWeekContainsDate) {
+      locale = firstWeekContainsDate.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              prop1 = options.firstWeekContainsDate;
+            }
+          }
+        }
+      }
+    }
+    prop = prop1;
+  }
+  if (null === prop) {
+    prop = defaultOptions.firstWeekContainsDate;
+  }
+  if (null === prop) {
+    const locale2 = defaultOptions.locale;
+    let prop2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            prop2 = options2.firstWeekContainsDate;
+          }
+        }
+      }
+    }
+    prop = prop2;
+  }
+  let num = 1;
+  if (null !== prop) {
+    num = 1;
+    if (undefined !== prop) {
+      num = prop;
+    }
+  }
+  const defaultResult2 = module_3729.default(num);
+  if (defaultResult2 >= 1) {
+    if (defaultResult2 <= 7) {
+      const _Date = Date;
+      const date = new Date(0);
+      date.setUTCFullYear(uTCFullYear + 1, 0, defaultResult2);
+      date.setUTCHours(0, 0, 0, 0);
+      const _Date2 = Date;
+      const date1 = new Date(0);
+      date1.setUTCFullYear(uTCFullYear, 0, defaultResult2);
+      date1.setUTCHours(0, 0, 0, 0);
+      const defaultResult3 = startOfUTCWeek.default(date, firstWeekContainsDate);
+      const time = defaultResult1.getTime();
+      if (time >= defaultResult3.getTime()) {
+        let sum = uTCFullYear + 1;
+      } else {
+        const time1 = defaultResult1.getTime();
+        sum = uTCFullYear;
+        if (time1 < defaultResult4.getTime()) {
+          sum = uTCFullYear - 1;
+        }
+      }
+      return sum;
+    }
+  }
+  const rangeError = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+  throw rangeError;
 };
 export default exports.default;

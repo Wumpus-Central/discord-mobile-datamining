@@ -1,7 +1,7 @@
 // === Module 16341: ? ===
 
 // Module 16341
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/tabs/guilds/empty_states/images", width: 193.5, height: 205.5, scales: [2, 3, 4], hash: "c4e35cf59b65ee25c9dfc91c26e34f5e", name: "guilds-empty-illustration", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 375, height: 120, scales: [2, 3], hash: "5ac140c0ecf6d86d0e8c0b66480112aa", name: "IAP_feature_education", type: "png" });

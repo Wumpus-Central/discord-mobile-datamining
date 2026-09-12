@@ -1,7 +1,7 @@
 // === Module 11275: ? ===
 
 // Module 11275
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 99.66666666666667, height: 66.66666666666667, scales: [3], hash: "0fef0a9d83d27dc691bf77b0bdae0680", name: "asset_opal_badge_small", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "18d0a2a6cf6cc6fa0358c3bbfd2bce6e", name: "wumpus-mario", type: "png" });

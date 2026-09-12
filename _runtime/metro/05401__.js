@@ -1,7 +1,7 @@
 // === Module 5401: ? ===
 
 // Module 5401
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "576340e1ed4deb81baadbae498cf3ba0", name: "img_account_sync_github_white", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "eee65ba7b1514e4ac5eb13df20b9cde9", name: "img_account_sync_reddit_light_and_dark", type: "svg" });

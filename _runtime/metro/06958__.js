@@ -1,23 +1,12 @@
 // === Module 6958: ? ===
 
 // Module 6958
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    exports = getPrototypeOf.bind();
-  } else {
-    exports = (arg0) => {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0);
-}
-let exports = _getPrototypeOf;
+import _mod6959 from "module_6959" /* 6959 */;
+import _mod6960 from "module_6960" /* 6960 */;
+import _mod6961 from "module_6961" /* 6961 */;
+import _mod6963 from "module_6963" /* 6963 */;
 
-export default _getPrototypeOf;
+
+export default function _slicedToArray(arg0, arg1) {
+  return _mod6959(arg0) || _mod6960(arg0, arg1) || _mod6961(arg0, arg1) || _mod6963();
+};

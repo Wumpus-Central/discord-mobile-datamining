@@ -1,15 +1,8 @@
 // === Module 6947: ? ===
 
 // Module 6947
-import noop from "module_19" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
+const StyleSheet = _mod17.StyleSheet;
 
-export const RecyclerViewContextProvider = context.Provider;
-export const useRecyclerViewContext = function useRecyclerViewContext() {
-  return useContext(context);
-};
-export const useFlashListContext = function useFlashListContext() {
-  return useContext(context);
-};
+export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });

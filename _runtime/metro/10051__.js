@@ -1,7 +1,7 @@
 // === Module 10051: ? ===
 
 // Module 10051
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "623eff85d27fd4ffd7a4c28c327682e8", name: "SpeedometerIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "da62561340ac0cea2169f7776825bdc0", name: "ic_channel_arrow_collapsed_24px", type: "png" });

@@ -1,7 +1,7 @@
 // === Module 8715: ? ===
 
 // Module 8715
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/chat_sidebar", width: 24, height: 24, scales: [2, 3], hash: "f15a8eea867ca31909b0a1cf49c6c7d8", name: "ic_notif", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 251, height: 120, scales: [1, 2, 3], hash: "ded9c31a2e9dd512048ecebbadd9fab8", name: "audience_welcome", type: "png" });

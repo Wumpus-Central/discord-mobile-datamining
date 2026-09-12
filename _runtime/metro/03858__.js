@@ -1,16 +1,9 @@
 // === Module 3858: ? ===
 
 // Module 3858
+let closure_0 = { lastWeek: "eeee'\u0E17\u0E35\u0E48\u0E41\u0E25\u0E49\u0E27\u0E40\u0E27\u0E25\u0E32' p", yesterday: "'\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E27\u0E32\u0E19\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", today: "'\u0E27\u0E31\u0E19\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", tomorrow: "'\u0E1E\u0E23\u0E38\u0E48\u0E07\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", nextWeek: "eeee '\u0E40\u0E27\u0E25\u0E32' p", other: "P" };
 
-export default function getTimezoneOffsetInMilliseconds(getFullYear) {
-  const fullYear = getFullYear.getFullYear();
-  const month = getFullYear.getMonth();
-  const hours = getFullYear.getHours();
-  const minutes = getFullYear.getMinutes();
-  const seconds = getFullYear.getSeconds();
-  const date1 = new Date(Date.UTC(fullYear, month, getFullYear.getDate(), hours, minutes, seconds, getFullYear.getMilliseconds()));
-  date1.setUTCFullYear(getFullYear.getFullYear());
-  const time = getFullYear.getTime();
-  return time - date1.getTime();
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
 };
 export default exports.default;

@@ -1249,8 +1249,8 @@ export const createHashHistory = function createHashHistory(props) {
         }
       });
     },
-    go: function H(diff) {
-      _null.go(diff);
+    go: function H(arg0) {
+      _null.go(arg0);
     },
     goBack() {
       _null.go(-1);

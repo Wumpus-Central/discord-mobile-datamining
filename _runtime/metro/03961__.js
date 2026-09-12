@@ -1,9 +1,10 @@
 // === Module 3961: ? ===
 
 // Module 3961
-import _typeof from "module_3695" /* 3695 */;
-import module_3962 from "module_3962" /* 3962 */;
-import requiredArgs from "requiredArgs" /* 3696 */;
+import _typeof from "module_3725" /* 3725 */;
+import startOfUTCISOWeek from "startOfUTCISOWeek" /* 3962 */;
+import startOfUTCISOWeekYear from "startOfUTCISOWeekYear" /* 3963 */;
+import requiredArgs from "requiredArgs" /* 3726 */;
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -12,33 +13,34 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-if (!module_3962) {
-  obj = { default: module_3962 };
+if (!startOfUTCISOWeek) {
+  obj = { default: startOfUTCISOWeek };
   let tmp5 = obj;
 } else {
-  tmp5 = module_3962;
+  tmp5 = startOfUTCISOWeek;
 }
-module_3962 = tmp5;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+startOfUTCISOWeek = tmp5;
+if (!startOfUTCISOWeekYear) {
+  obj = { default: startOfUTCISOWeekYear };
   let tmp7 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = startOfUTCISOWeekYear;
 }
-requiredArgs = tmp7;
+startOfUTCISOWeekYear = tmp7;
+if (!requiredArgs) {
+  const obj1 = { default: requiredArgs };
+  let tmp9 = obj1;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function getDaysInYear(arg0) {
+export default function getUTCISOWeek(arg0) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  if ("Invalid Date" === String(date)) {
-    return NaN;
-  } else {
-    let num = 365;
-    if (module_3962.default(defaultResult1)) {
-      num = 366;
-    }
-    return num;
-  }
-  date = new Date(defaultResult1);
+  const time = startOfUTCISOWeek.default(defaultResult1).getTime();
+  const defaultResult2 = startOfUTCISOWeek.default(defaultResult1);
+  return Math.round((time - startOfUTCISOWeekYear.default(defaultResult1).getTime()) / c4) + 1;
 };
 export default exports.default;

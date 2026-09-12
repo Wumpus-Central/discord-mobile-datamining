@@ -1,7 +1,7 @@
 // === Module 13618: ? ===
 
 // Module 13618
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 158, height: 32, scales: [1, 2, 3], hash: "18951c7ea15f41ff544471dfa4f446f0", name: "img_logo_premium_tier_0_full", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 20, height: 20, scales: [2, 3], hash: "b8e06ae6b6de6ac4efb5803ebe56348e", name: "star", type: "png" });

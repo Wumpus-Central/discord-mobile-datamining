@@ -1,159 +1,200 @@
 // === Module 12937: ? ===
 
 // Module 12937
-import _mod12890 from "module_12890" /* 12890 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod12927 from "module_12927" /* 12927 */;
+import _mod12932 from "module_12932" /* 12932 */;
+import _mod12935 from "module_12935" /* 12935 */;
 
-function dsnFromString(arg0) {
-  closure_0 = arg0;
-  const match = re3.exec(arg0);
-  if (match) {
-    const tmp5 = _slicedToArray(match.slice(1), 6);
-    let str = tmp5[1];
-    let str3 = "";
-    if (undefined !== tmp5[2]) {
-      str3 = tmp6;
+require = arg1;
+const dependencyMap = arg6;
+const re2 = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
+
+export const addContextToFrame = function addContextToFrame(arr, lineno) {
+  let num = arg2;
+  if (arg2 === undefined) {
+    num = 5;
+  }
+  if (undefined !== lineno.lineno) {
+    const _Math2 = Math;
+    const _Math3 = Math;
+    const bound = Math.max(Math.min(length - 1, lineno.lineno - 1), 0);
+    const _Math4 = Math;
+    const substr = arr.slice(Math.max(0, bound - num), bound);
+    lineno.pre_context = substr.map((item) => _mod12935.snipLine(item, 0));
+    const _Math5 = Math;
+    const bound1 = Math.min(length - 1, bound);
+    let num2 = lineno.colno;
+    if (!num2) {
+      num2 = 0;
     }
-    let str4 = "";
-    if (undefined !== tmp5[3]) {
-      str4 = tmp7;
+    lineno.context_line = _mod12935.snipLine(arr[bound1], num2);
+    const _Math = Math;
+    const substr1 = arr.slice(Math.min(bound + 1, length), bound + 1 + num);
+    lineno.post_context = substr1.map((item) => _mod12935.snipLine(item, 0));
+  }
+};
+export const addExceptionMechanism = function addExceptionMechanism(exception, data) {
+  let first;
+  if (exception.exception) {
+    if (exception.exception.values) {
+      first = exception.exception.values[0];
     }
-    let str5 = "";
-    if (undefined !== tmp5[4]) {
-      str5 = tmp8;
-    }
-    let str6 = "";
-    if (undefined !== tmp5[5]) {
-      str6 = tmp9;
-    }
-    const parts = str6.split("/");
-    let str8 = str6;
-    let str9 = "";
-    if (parts.length > 1) {
-      const substr = parts.slice(0, -1);
-      str9 = substr.join("/");
-      str8 = parts.pop();
-    }
-    let first = str8;
-    if (str8) {
-      const match1 = str8.match(/^\d+/);
-      first = str8;
-      if (match1) {
-        first = match1[0];
+  }
+  if (first) {
+    const mechanism = first.mechanism;
+    let obj = { type: "generic", handled: true };
+    const merged = Object.assign(mechanism);
+    const merged1 = Object.assign(data);
+    first.mechanism = obj;
+    if (data) {
+      if ("data" in data) {
+        data = mechanism;
+        if (mechanism) {
+          data = mechanism.data;
+        }
+        obj = {};
+        const merged2 = Object.assign(data);
+        const merged3 = Object.assign(data.data);
+        first.mechanism.data = obj;
       }
     }
-    const url = { protocol: tmp5[0], publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
-    if (!str) {
+  }
+};
+export const addExceptionTypeValue = function addExceptionTypeValue(exception, arg1, arg2) {
+  const tmp = exception.exception || {};
+  exception.exception = tmp;
+  const tmp2 = tmp.values || [];
+  tmp.values = tmp2;
+  const iter = tmp2[0] || {};
+  tmp2[0] = iter;
+  if (!iter.value) {
+    let str = arg1;
+    if (!arg1) {
       str = "";
     }
-    url.publicKey = str;
-    if (!str3) {
-      str3 = "";
+    iter.value = str;
+  }
+  if (!iter.type) {
+    let str2 = arg2;
+    if (!arg2) {
+      str2 = "Error";
     }
-    url.pass = str3;
-    url.host = str4;
-    if (!str5) {
-      str5 = "";
-    }
-    url.port = str5;
-    if (!str9) {
-      str9 = "";
-    }
-    url.path = str9;
-    url.projectId = first;
-    return url;
-  } else {
-    _mod12890.consoleSandbox(() => {
-      console.error("Invalid Sentry Dsn: " + closure_0);
-    });
+    iter.type = str2;
   }
-}
-const re3 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
-
-export { dsnFromString };
-export const dsnToString = function dsnToString(url) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  ({ host, path, pass, port, projectId, protocol, publicKey } = url);
-  let str = "";
-  if (flag) {
-    str = "";
-    if (pass) {
-      const _HermesInternal = HermesInternal;
-      str = ":" + pass;
-    }
-  }
-  let str3 = "";
-  if (port) {
-    const _HermesInternal2 = HermesInternal;
-    str3 = ":" + port;
-  }
-  let combined = path;
-  if (path) {
-    const _HermesInternal3 = HermesInternal;
-    combined = "" + path + "/";
-  }
-  return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
 };
-export const makeDsn = function makeDsn(protocol) {
-  if (typeof protocol === "string") {
-    let url = dsnFromString(protocol);
-  } else {
-    url = { protocol: protocol.protocol, publicKey: protocol.publicKey || "", pass: protocol.pass || "", host: protocol.host, port: protocol.port || "", path: protocol.path || "", projectId: protocol.projectId };
+export const arrayify = function arrayify(arg0) {
+  let tmp = arg0;
+  if (!Array.isArray(arg0)) {
+    const items = [arg0];
+    tmp = items;
   }
-  if (url) {
-    let error = url;
-    let flag = true;
-    if (url(12889).DEBUG_BUILD) {
-      ({ port, projectId, protocol } = url);
-      const items = ["protocol", "publicKey", "host", "projectId"];
-      const found = items.find((item) => {
-        let flag = !tmp;
-        if (!url[item]) {
-          const logger = _mod12890.logger;
-          const _HermesInternal = HermesInternal;
-          logger.error("Invalid Sentry Dsn: " + item + " missing");
-          flag = true;
-        }
-        return flag;
-      });
-      if (found) {
-        flag = !found;
-      } else {
-        if (!projectId.match(/^\d+$/)) {
-          let logger = error(12890).logger;
-          let _HermesInternal = HermesInternal;
-          logger.error("Invalid Sentry Dsn: Invalid projectId " + projectId);
-        }
-        let tmp6 = "http" === protocol;
-        if (!tmp6) {
-          tmp6 = "https" === protocol;
-        }
-        if (tmp6) {
-          let num3 = port;
-          if (port) {
-            const _isNaN = isNaN;
-            const _parseInt = parseInt;
-            num3 = isNaN(parseInt(port, 10));
-          }
-          if (num3) {
-            const logger3 = error(12890).logger;
-            error = logger3.error;
-            const _HermesInternal3 = HermesInternal;
-            error("Invalid Sentry Dsn: Invalid port " + port);
-            num3 = 1;
-          }
-        } else {
-          const logger2 = error(12890).logger;
-          const _HermesInternal2 = HermesInternal;
-          logger2.error("Invalid Sentry Dsn: Invalid protocol " + protocol);
-        }
+  return tmp;
+};
+export const checkOrSetAlreadyCaught = function checkOrSetAlreadyCaught(__sentry_captured__) {
+  if ((function isAlreadyCaptured(__sentry_captured__) {
+    try {
+      return __sentry_captured__.__sentry_captured__;
+    } catch (err) {
+    }
+  })(__sentry_captured__)) {
+    return true;
+  } else {
+    try {
+      const result = _mod12932.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
+      return false;
+    } catch (err) {
+    }
+  }
+};
+export const getEventDescription = function getEventDescription(exception) {
+  ({ message, event_id } = exception);
+  if (message) {
+    return message;
+  } else {
+    let str;
+    if (exception.exception) {
+      if (exception.exception.values) {
+        str = exception.exception.values[0];
       }
     }
-    if (flag) {
-      return url;
+    if (str) {
+      if (!str.type) {
+        let combined = str.type || str.value || event_id || "<unknown>";
+      }
+      const _HermesInternal = HermesInternal;
+      ({ type, value } = str);
+      str = "";
+      combined = "" + type + ": " + value;
+    } else {
+      let str2 = event_id;
+      if (!event_id) {
+        str2 = "<unknown>";
+      }
+      return str2;
     }
+  }
+};
+export const parseSemver = function parseSemver(str) {
+  const tmp = str.match(re2) || [];
+  str = tmp[1];
+  if (!str) {
+    str = "";
+  }
+  const parsed = parseInt(str, 10);
+  let str2 = tmp[2];
+  if (!str2) {
+    str2 = "";
+  }
+  const parsed1 = parseInt(str2, 10);
+  let str3 = tmp[3];
+  if (!str3) {
+    str3 = "";
+  }
+  const parsed2 = parseInt(str3, 10);
+  const obj = { buildmetadata: tmp[5], major: null, minor: null, patch: null, prerelease: null };
+  let tmp5;
+  if (!isNaN(parsed)) {
+    tmp5 = parsed;
+  }
+  obj.major = tmp5;
+  let tmp6;
+  if (!isNaN(parsed1)) {
+    tmp6 = parsed1;
+  }
+  obj.minor = tmp6;
+  let tmp7;
+  if (!isNaN(parsed2)) {
+    tmp7 = parsed2;
+  }
+  obj.patch = tmp7;
+  obj.prerelease = tmp[4];
+  return obj;
+};
+export const uuid4 = function uuid4() {
+  const GLOBAL_OBJ = _mod12927.GLOBAL_OBJ;
+  const obj = GLOBAL_OBJ.crypto || GLOBAL_OBJ.msCrypto;
+  function getRandomByte() {
+    return 16 * Math.random();
+  }
+  try {
+    if (obj) {
+      if (obj.randomUUID) {
+        return obj.randomUUID().replace(/-/g, "");
+      }
+    }
+    let getRandomValues = obj;
+    if (obj) {
+      getRandomValues = obj.getRandomValues;
+    }
+    if (getRandomValues) {
+      getRandomByte = function getRandomByte() {
+        const uint8Array = new Uint8Array(1);
+        const randomValues = obj.getRandomValues(uint8Array);
+        return uint8Array[0];
+      };
+    }
+    const replace = "10000000100040008000100000000000".replace;
+    return "10000000100040008000100000000000".replace(/[018]/g, (arg0) => arg0 ^ (15 & getRandomByte()) >> arg0 / 4.toString(16));
+  } catch (err) {
   }
 };

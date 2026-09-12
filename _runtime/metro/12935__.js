@@ -1,221 +1,140 @@
 // === Module 12935: ? ===
 
 // Module 12935
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12893 */;
-import _mod12896 from "module_12896" /* 12896 */;
-import _mod12897 from "module_12897" /* 12897 */;
-import memoBuilder from "memoBuilder" /* 12936 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod12933 from "module_12933" /* 12933 */;
 
-function normalize(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 100;
-  }
-  let num2 = arg2;
+require = arg1;
+const dependencyMap = arg6;
+
+export const isMatchingPattern = function isMatchingPattern(arr, test) {
+  let flag = arg2;
   if (arg2 === undefined) {
-    num2 = Infinity;
+    flag = false;
   }
-  try {
-    return visit("", arg0, num, num2);
-  } catch (tmp5) {
-    const obj = { ERROR: null };
-    const _HermesInternal = HermesInternal;
-    obj.ERROR = "**non-serializable** (" + tmp5 + ")";
-    return obj;
-  }
-}
-function visit(arg0, __sentry_skip_normalization__) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = Infinity;
-  }
-  let num2 = arg3;
-  if (arg3 === undefined) {
-    num2 = Infinity;
-  }
-  let memoBuilderResult = arg4;
-  if (arg4 === undefined) {
-    memoBuilderResult = memoBuilder.memoBuilder();
-  }
-  _slicedToArray(memoBuilderResult, 2);
-  if (null != __sentry_skip_normalization__) {
-    const items = ["boolean", "string"];
-    if (!items.includes(typeof __sentry_skip_normalization__)) {
-      if (typeof __sentry_skip_normalization__ === "number") {
-        let _Number = Number;
-      }
-      let str = (function stringifyValue(arg0, _events) {
-        try {
-          if ("domain" === arg0) {
-            if (_events) {
-              if (typeof _events === "object") {
-                if (_events._events) {
-                  return "[Domain]";
-                }
-              }
-            }
-          }
-          if ("domainEmitter" === arg0) {
-            return "[DomainEmitter]";
-          } else {
-            if (undefined !== global) {
-              if (_events === global) {
-                return "[Global]";
-              }
-            }
-            const _window = window;
-            if (typeof window !== "undefined") {
-              const _window2 = window;
-              if (_events === window) {
-                return "[Window]";
-              }
-            }
-            const _document = document;
-            if (typeof document !== "undefined") {
-              const _document2 = document;
-              if (_events === document) {
-                return "[Document]";
-              }
-            }
-            if (obj.isVueViewModel(_events)) {
-              return "[VueViewModel]";
-            } else {
-              let tmp4Result = _mod12897;
-              if (tmp4Result.isSyntheticEvent(_events)) {
-                return "[SyntheticEvent]";
-              } else {
-                if (typeof _events === "number") {
-                  const _Number = Number;
-                  if (!Number.isFinite(_events)) {
-                    const _HermesInternal = HermesInternal;
-                    return "[" + _events + "]";
-                  }
-                }
-                if (typeof _events === "function") {
-                  tmp4Result = stackParserFromStackParserOptions;
-                  const _HermesInternal4 = HermesInternal;
-                  return "[Function: " + tmp4Result.getFunctionName(_events) + "]";
-                } else if (typeof _events === "symbol") {
-                  const _String2 = String;
-                  const _HermesInternal3 = HermesInternal;
-                  return "[" + String(_events) + "]";
-                } else if (typeof _events === "bigint") {
-                  const _String = String;
-                  const _HermesInternal2 = HermesInternal;
-                  return "[BigInt: " + String(_events) + "]";
-                } else {
-                  const tmp9 = (function getConstructorName(_events) {
-                    const prototypeOf = Object.getPrototypeOf(_events);
-                    let str = "null prototype";
-                    if (prototypeOf) {
-                      str = prototypeOf.constructor.name;
-                    }
-                    return str;
-                  })(_events);
-                  const _HermesInternal6 = HermesInternal;
-                  if (obj4.test(tmp9)) {
-                    let combined = concat(tmp10, "]");
-                  } else {
-                    combined = concat(tmp10, "]");
-                  }
-                  return combined;
-                }
-              }
-            }
-            obj = _mod12897;
-          }
-        } catch (tmp7) {
-          const _HermesInternal5 = HermesInternal;
-          return "**non-serializable** (" + tmp7 + ")";
-        }
-      })(arg0, __sentry_skip_normalization__);
-      if (str.startsWith("[object ")) {
-        if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
-          return __sentry_skip_normalization__;
+  const isStringResult = _mod12933.isString(arr);
+  if (!isStringResult) {
+    return isStringResult;
+  } else {
+    let tmpResult = _mod12933;
+    if (tmpResult.isRegExp(test)) {
+      let isMatch = test.test(arr);
+    } else {
+      tmpResult = _mod12933;
+      isMatch = tmpResult.isString(test);
+      if (isMatch) {
+        if (flag) {
+          let hasItem = arr === test;
         } else {
-          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ === "number") {
-            num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
-          }
-          if (0 === num) {
-            return str.replace("object ", "");
-          } else if (tmp6(__sentry_skip_normalization__)) {
-            return "[Circular ~]";
-          } else {
-            if (__sentry_skip_normalization__) {
-              if (typeof __sentry_skip_normalization__.toJSON === "function") {
-                try {
-                  return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp8);
-                } catch (err) {
-                }
-              }
-            }
-            const _Array = Array;
-            const tmp14 = Array.isArray(__sentry_skip_normalization__) ? [] : {};
-            const convertToPlainObjectResult = _mod12896.convertToPlainObject(__sentry_skip_normalization__);
-            const keys = Object.keys();
-            if (keys !== undefined) {
-              while (keys[tmp] !== undefined) {
-                let _Object = Object;
-                hasOwnProperty = Object.prototype.hasOwnProperty;
-                let call = hasOwnProperty.call;
-                let tmp28 = tmp21;
-                if (!(typeof call === "unknown" ? hasOwnProperty(tmp21) : call(convertToPlainObjectResult, tmp21))) {
-                  continue;
-                } else {
-                  if (tmp20 >= num2) {
-                    let str4 = "[MaxProperties ~]";
-                    tmp14[tmp21] = "[MaxProperties ~]";
-                    break;
-                  } else {
-                    tmp14[tmp21] = visit(tmp28, convertToPlainObjectResult[tmp21], num - 1, num2, tmp8);
-                    let num6 = tmp20 + 1;
-                    continue;
-                  }
-                  break;
-                }
-                break;
-              }
-            }
-            tmp7(__sentry_skip_normalization__);
-            return tmp14;
-          }
+          hasItem = arr.includes(test);
         }
-      } else {
-        return str;
       }
     }
   }
-  return __sentry_skip_normalization__;
-}
-function normalizeToSize(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 3;
+};
+export const safeJoin = function safeJoin(arg0, arg1) {
+  if (Array.isArray(arg0)) {
+    const items = [];
+    let num = 0;
+    if (0 < arg0.length) {
+      try {
+        const push = items.push;
+        if (obj.isVueViewModel(tmp2)) {
+          let arr = push("[VueViewModel]");
+        } else {
+          const _String = String;
+          arr = push(String(tmp2));
+        }
+        num = num + 1;
+        obj = _mod12933;
+      } catch (err) {
+        arr.push(tmp);
+      }
+    }
+    return items.join(arg1);
+  } else {
+    return "";
   }
-  let num2 = arg2;
+};
+export const snipLine = function snipLine(arr, lineno) {
+  if (arr.length <= 150) {
+    return arr;
+  } else {
+    let tmp = lineno;
+    if (lineno > length) {
+      tmp = length;
+    }
+    const _Math = Math;
+    let num3 = Math.max(tmp - 60, 0);
+    if (num3 < 5) {
+      num3 = 0;
+    }
+    const _Math2 = Math;
+    let bound = Math.min(num3 + 140, length);
+    if (bound > length - 5) {
+      bound = length;
+    }
+    if (bound === length) {
+      const _Math3 = Math;
+      num3 = Math.max(bound - 140, 0);
+    }
+    const substr = arr.slice(num3, bound);
+    let combined = substr;
+    if (num3 > 0) {
+      const _HermesInternal = HermesInternal;
+      combined = "'{snip} " + substr;
+    }
+    let text = combined;
+    if (bound < length) {
+      text = `${tmp6} {snip}`;
+    }
+    return text;
+  }
+};
+export const stringMatchesSomePattern = function stringMatchesSomePattern(transaction) {
+  if (items === undefined) {
+    items = [];
+  }
+  let flag = arg2;
   if (arg2 === undefined) {
-    num2 = 102400;
+    flag = false;
   }
-  let tmp = normalize(arg0, num);
-  if (~-str.split(/%..|./).length > num2) {
-    tmp = normalizeToSize(arg0, num - 1, num2);
+  return items.some((test) => {
+    const isStringResult = _mod12933.isString(transaction);
+    if (!isStringResult) {
+      return isStringResult;
+    } else {
+      let tmpResult = _mod12933;
+      if (tmpResult.isRegExp(test)) {
+        let isMatch = test.test(transaction);
+      } else {
+        tmpResult = _mod12933;
+        isMatch = tmpResult.isString(test);
+        if (isMatch) {
+          if (flag) {
+            let hasItem = transaction === test;
+          } else {
+            hasItem = transaction.includes(test);
+          }
+        }
+      }
+    }
+  });
+};
+export const truncate = function truncate(str) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 0;
   }
-  return tmp;
-}
-
-export { normalize };
-export { normalizeToSize };
-export const normalizeUrlToBase = function normalizeUrlToBase(arg0, str) {
-  const replaced = str.replace(/\\/g, "/");
-  try {
-    const _decodeURI = decodeURI;
-    str = decodeURI(arg0);
-    const str2 = str.replace(/\\/g, "/");
-    const _RegExp = RegExp;
-    const _HermesInternal = HermesInternal;
-    const regExp = new RegExp("(file://)?/*" + tmp2 + "/*", "ig");
-    return str.replace(/\\/g, "/").replace(/webpack:\/?/g, "").replace(regExp, "app:///");
-  } catch (err) {
+  let combined = str;
+  if (typeof str === "string") {
+    combined = str;
+    if (0 !== num) {
+      combined = str;
+      if (str.length > num) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + str.slice(0, num) + "...";
+      }
+    }
   }
+  return combined;
 };

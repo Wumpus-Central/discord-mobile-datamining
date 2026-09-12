@@ -1,42 +1,36 @@
 // === Module 4147: ? ===
 
 // Module 4147
-import module_4148 from "module_4148" /* 4148 */;
-import module_4149 from "module_4149" /* 4149 */;
-import module_4150 from "module_4150" /* 4150 */;
-import date from "module_4151" /* 4151 */;
-import date from "module_4152" /* 4152 */;
+import module_3729 from "module_3729" /* 3729 */;
+import _typeof from "module_3725" /* 3725 */;
+import requiredArgs from "requiredArgs" /* 3726 */;
 
-if (!module_4148) {
-  let obj = { default: module_4148 };
+if (!module_3729) {
+  let obj = { default: module_3729 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4148;
+  tmp3 = module_3729;
 }
-if (!module_4149) {
-  obj = { default: module_4149 };
+module_3729 = tmp3;
+if (!_typeof) {
+  obj = { default: _typeof };
   let tmp5 = obj;
 } else {
-  tmp5 = module_4149;
+  tmp5 = _typeof;
 }
-if (!module_4150) {
-  obj = { default: module_4150 };
+_typeof = tmp5;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
-  tmp7 = module_4150;
+  tmp7 = requiredArgs;
 }
-if (!date) {
-  const obj1 = { default: date };
-  let tmp9 = obj1;
-} else {
-  tmp9 = date;
-}
-if (!date) {
-  const obj2 = { default: date };
-  let tmp11 = obj2;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp7;
 
-export default { code: "zh-CN", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function setMinutes(module_3729, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(module_3729);
+  defaultResult1.setMinutes(module_3729.default(arg1));
+  return defaultResult1;
+};
 export default exports.default;

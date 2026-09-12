@@ -1,12 +1,10 @@
 // === Module 6740: ? ===
 
 // Module 6740
-import _modDef6741 from "module_6741" /* 6741 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
 
-({ Animated, StyleSheet } = get_ActivityIndicator);
-const animatedComponent = Animated.createAnimatedComponent(_modDef6741);
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export const GestureDetectorType = { Native: 0, [0]: "Native", Virtual: 1, [1]: "Virtual", Intercepting: 2, [2]: "Intercepting" };
-export const AnimatedNativeDetector = animatedComponent;
-export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

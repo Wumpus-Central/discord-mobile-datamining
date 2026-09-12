@@ -1,155 +1,114 @@
 // === Module 10683: ? ===
 
 // Module 10683
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import now from "now" /* 10545 */;
-import _mod10677 from "module_10677" /* 10677 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10596 */;
+import _mod10598 from "module_10598" /* 10598 */;
+import _mod10667 from "module_10667" /* 10667 */;
+import _mod10669 from "module_10669" /* 10669 */;
+import _mod10670 from "module_10670" /* 10670 */;
+import _mod10671 from "module_10671" /* 10671 */;
+import _mod10672 from "module_10672" /* 10672 */;
+import _mod10684 from "module_10684" /* 10684 */;
+import _mod10685 from "module_10685" /* 10685 */;
+import _mod10686 from "module_10686" /* 10686 */;
 
-let self = this;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+function createConfiguration() {
+  const obj = { parsers: null, refiners: null };
+  const items = [new _isNativeReflectConstruct.default(), , , , ];
+  const _default = new _isNativeReflectConstruct.default();
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default4 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), ];
+  const _default5 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  const result = includeCommonConfiguration.includeCommonConfiguration(obj);
+  const refiners = result.refiners;
+  result.refiners = refiners.filter((item) => !(item instanceof regExp.default));
+  return result;
 }
-_possibleConstructorReturn;
-let self2 = this;
+let fn = this;
 if (this) {
-  self2 = self.__createBinding;
+  fn = this.__importDefault;
 }
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
-  }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
     }
-    if (!fn) {
-      fn = function o(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_7 = fn(now);
-    class UKCasualDateParser {
-      constructor() {
-        self = this;
-        tmp = closure_0(this, UKCasualDateParser);
-        tmp2 = c2;
-        obj = c2(UKCasualDateParser);
-        tmp3 = closure_1;
-        if (closure_3()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
-      }
-    }
-    _classCallCheck = UKCasualDateParser;
-    _inherits(UKCasualDateParser, _mod10677.AbstractParserWithLeftRightBoundaryChecking);
-    const entry = {
-      key: "innerPatternString",
-      value: function innerPatternString(arg0) {
-            return "(?:\u0437|\u0456\u0437|\u0432\u0456\u0434)?\\s*(\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456|\u0432\u0447\u043E\u0440\u0430|\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u0456\u0441\u043B\u044F\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430|\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430)";
-          }
-    };
-    let items = [entry, ];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(reference, arg1) {
-            const formatted = arg1[1].toLowerCase();
-            if ("\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456" === formatted) {
-              return closure_7.today(reference.reference);
-            } else if ("\u0432\u0447\u043E\u0440\u0430" === formatted) {
-              return closure_7.yesterday(reference.reference);
-            } else if ("\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
-              return closure_7.tomorrow(reference.reference);
-            } else if ("\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
-              return closure_7.theDayAfter(reference.reference, 2);
-            } else if ("\u043F\u0456\u0441\u043B\u044F\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
-              return closure_7.theDayAfter(reference.reference, 3);
-            } else if ("\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430" === formatted) {
-              return closure_7.theDayBefore(reference.reference, 2);
-            } else if ("\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430" === formatted) {
-              return closure_7.theDayBefore(reference.reference, 3);
-            } else {
-              return tmp2;
-            }
-          }
-    };
-    items[1] = entry1;
-    exports.default = _createClass(UKCasualDateParser, items);
-  } else {
-    const _Object2 = Object;
-  }
-} else {
-  let _Object = Object;
+    return tmp;
+  };
 }
+function createCasualConfiguration() {
+  const tmp = createConfiguration();
+  const parsers = tmp.parsers;
+  parsers.unshift(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+const regExp = fn(_mod10598);
+fn(_mod10684);
+fn(_mod10667);
+fn(_mod10669);
+fn(_mod10670);
+fn(_mod10671);
+fn(_mod10672);
+fn(_mod10685);
+const _isNativeReflectConstruct = fn(_mod10686);
+const configuration = createConfiguration();
+let parsers = configuration.parsers;
+parsers.unshift(new _isNativeReflectConstruct.default());
+const chrono = new require("module_10556").Chrono(configuration);
+const configuration1 = createConfiguration();
+const parsers1 = configuration1.parsers;
+let _default = new _isNativeReflectConstruct.default();
+const obj1 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+  }
+};
+const obj2 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Meridiem;
+  }
+};
+const obj3 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Weekday;
+  }
+};
+parsers1.unshift(new _isNativeReflectConstruct.default());
+const chrono1 = new require("module_10556").Chrono(configuration1);
+const chrono2 = new require("module_10556").Chrono(createConfiguration());
+
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+};
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("ReferenceWithTimezone").ParsingComponents;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingComponents;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const hans = chrono;
+export const casual = chrono1;
+export const strict = chrono2;

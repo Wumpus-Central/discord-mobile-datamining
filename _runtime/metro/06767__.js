@@ -1,94 +1,175 @@
 // === Module 6767: ? ===
 
 // Module 6767
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
+import ButtonComponentDefault from "ButtonComponent" /* 6852 */;
+import _mod6854 from "module_6854" /* 6854 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
+import module_6768 from "module_6768" /* 6768 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+require = fn;
+let closure_2 = ["onLongPress", "onPress", "onActiveStateChange", "style"];
+let closure_3 = ["children", "style", "activeOpacity", "underlayColor"];
+let closure_4 = ["children", "style", "ref"];
+const useRef = fn(19).useRef;
+get_ActivityIndicator = fn(17);
+const Animated = get_ActivityIndicator.Animated;
+({ Platform, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const ButtonComponent = module_6768(ButtonComponentDefault, { shouldCancelWhenOutside: false, shouldActivateOnStart: false });
+class RawButton {
+  constructor(arg0) {
+    obj = {};
+    merged = Object.assign(global);
+    obj.needsOffscreenAlphaCompositing = true;
+    return jsx(closure_11, obj);
+  }
+}
+class BaseButton {
+  constructor(arg0) {
+    closure_0 = global;
+    closure_1 = useRef(false);
+    closure_2 = useRef(undefined);
+    num = global.delayLongPress;
+    if (num == null) {
+      num = 600;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturnDefault;
-function changeEventCalculator(arg0, arg1) {
-  if (undefined === arg1) {
-    let obj = { changeX: null, changeY: null };
-    ({ x: obj2.changeX, y: obj2.changeY } = arg0);
-  } else {
-    obj = { changeX: arg0.x - arg1.x, changeY: arg0.y - arg1.y };
-  }
-  obj = {};
-  const merged = Object.assign(arg0);
-  const merged1 = Object.assign(obj);
-  return obj;
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 2074844346342;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}" };
-class HoverGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, HoverGesture);
-    tmp2 = c2;
-    obj = c2(HoverGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "HoverGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = HoverGesture;
-_inherits(HoverGesture, fn(6747).ContinousBaseGesture);
-const entry = {
-  key: "effect",
-  value: function effect(hoverEffect) {
-    this.config.hoverEffect = hoverEffect;
-    return this;
-  }
-};
-let items = [
-  entry,
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = hasOwnProperty;
-      const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
+    c3 = num;
+    ({ onLongPress, onPress, onActiveStateChange } = global);
+    tmp = closure_5(global, closure_2);
+    wrappedLongPress = function wrappedLongPress() {
+      closure_1.current = true;
+      if (closure_1_4 != null) {
+        tmp();
       }
-      const items = [arg0];
-      return fn(items);
-    }
+    };
+    obj = closure_0(closure_1[6]);
+    tVProps = obj.getTVProps(tmp);
+    obj = { style: null };
+    items = [, ];
+    items[0] = global.style;
+    items[1] = false;
+    obj.style = items;
+    merged = Object.assign(tmp);
+    merged1 = Object.assign(tVProps);
+    obj.onBegin = function onBegin(pointerInside) {
+      if (pointerInside.pointerInside) {
+        if (useRef != null) {
+          tmp(true);
+        }
+        closure_1.current = false;
+        if (closure_1_4) {
+          const _setTimeout = setTimeout;
+          closure_2.current = setTimeout(wrappedLongPress, num);
+        }
+        const onBegin = delayLongPress.onBegin;
+        if (onBegin != null) {
+          onBegin(pointerInside);
+        }
+      }
+    };
+    obj.onActivate = function onActivate(pointerInside) {
+      pointerInside = pointerInside.pointerInside;
+      if (!pointerInside) {
+        pointerInside = undefined === ref2.current;
+      }
+      if (!pointerInside) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(ref2.current);
+        ref2.current = undefined;
+      }
+      const onActivate = delayLongPress.onActivate;
+      if (onActivate != null) {
+        onActivate(pointerInside);
+      }
+    };
+    obj.onDeactivate = function onDeactivate(arg0) {
+      const onDeactivate = delayLongPress.onDeactivate;
+      if (onDeactivate != null) {
+        onDeactivate(arg0);
+      }
+    };
+    obj.onFinalize = function onFinalize(canceled) {
+      if (useRef != null) {
+        tmp(false);
+      }
+      let current = canceled.canceled;
+      if (!current) {
+        current = ref.current;
+      }
+      if (!current) {
+        if (_objectWithoutProperties != null) {
+          tmp4(canceled.pointerInside);
+        }
+      }
+      if (undefined !== ref2.current) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(ref2.current);
+        ref2.current = undefined;
+      }
+      const onFinalize = delayLongPress.onFinalize;
+      if (onFinalize != null) {
+        onFinalize(canceled);
+      }
+    };
+    return jsx(RawButton, obj);
   }
-];
+}
+let closure_14 = Animated.createAnimatedComponent(BaseButton);
+const underlay = StyleSheet.create({ underlay: { position: "absolute", left: 0, right: 0, bottom: 0, top: 0 } });
 
-export const HoverEffect = { NONE: 0, [0]: "NONE", LIFT: 1, [1]: "LIFT", HIGHLIGHT: 2, [2]: "HIGHLIGHT" };
-export const hoverGestureHandlerProps = ["hoverEffect"];
-export const HoverGesture = _createClass(HoverGesture, items);
+export { RawButton };
+export { BaseButton };
+export const RectButton = (children) => {
+  let onActiveStateChange = children;
+  ({ style, activeOpacity, underlayColor } = children);
+  let str = "black";
+  if (undefined !== underlayColor) {
+    str = underlayColor;
+  }
+  value = new Animated.Value(0);
+  if (style == null) {
+    style = {};
+  }
+  const flattenResult = StyleSheet.flatten(style);
+  let obj = {};
+  const merged = Object.assign(_objectWithoutProperties(children, closure_3));
+  obj.style = flattenResult;
+  obj.onActiveStateChange = function onActiveStateChange(arg0) {
+    onActiveStateChange = onActiveStateChange.onActiveStateChange;
+    if (onActiveStateChange != null) {
+      onActiveStateChange(arg0);
+    }
+  };
+  obj = { style: null };
+  const items = [underlay.underlay, { opacity: useRef(value).current, backgroundColor: str, borderRadius: flattenResult.borderRadius, borderTopLeftRadius: flattenResult.borderTopLeftRadius, borderTopRightRadius: flattenResult.borderTopRightRadius, borderBottomLeftRadius: flattenResult.borderBottomLeftRadius, borderBottomRightRadius: flattenResult.borderBottomRightRadius }];
+  obj.style = items;
+  const items1 = [React7(Animated.View, obj), children.children];
+  obj.children = items1;
+  return closure_1_10(BaseButton, obj);
+};
+export const BorderlessButton = (ref) => {
+  let onActiveStateChange = ref;
+  value = new Animated.Value(1);
+  const current = useRef(value).current;
+  ref = ref.ref;
+  ({ children, style } = ref);
+  const obj = { borderless: true };
+  const merged = Object.assign(_objectWithoutProperties(ref, closure_4));
+  if (ref == null) {
+    ref = null;
+  }
+  obj.ref = ref;
+  obj.onActiveStateChange = function onActiveStateChange(arg0) {
+    onActiveStateChange = onActiveStateChange.onActiveStateChange;
+    if (onActiveStateChange != null) {
+      onActiveStateChange(arg0);
+    }
+  };
+  const items = [style, false];
+  obj.style = items;
+  obj.children = children;
+  return React7(closure_14, obj);
+};
+export const PureNativeButton = ButtonComponentDefault;

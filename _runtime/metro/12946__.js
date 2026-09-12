@@ -1,131 +1,234 @@
 // === Module 12946: ? ===
 
 // Module 12946
-import _mod12890 from "module_12890" /* 12890 */;
-import _mod12917 from "module_12917" /* 12917 */;
-import _mod12918 from "module_12918" /* 12918 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-function setupIntegration(on, name, arg2) {
-  closure_0 = on;
-  if (arg2[name.name]) {
-    if (_mod12918.DEBUG_BUILD) {
-      const logger2 = _mod12890.logger;
-      const _HermesInternal2 = HermesInternal;
-      logger2.log("Integration skipped because it was already installed: " + name.name);
-    }
-  } else {
-    arg2[name.name] = name;
-    let arr = items;
-    if (tmp) {
-      name.setupOnce();
-      arr = arr.push(name.name);
-    }
-    if (tmp4) {
-      name.setup(on);
-    }
-    if (typeof name.preprocessEvent === "function") {
-      const preprocessEvent = name.preprocessEvent;
-      closure_1 = preprocessEvent.bind(name);
-      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
-    }
-    if (typeof name.processEvent === "function") {
-      const processEvent = name.processEvent;
-      closure_2 = processEvent.bind(name);
-      const _Object = Object;
-      const obj = { id: name.name };
-      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
-    }
-    if (_mod12918.DEBUG_BUILD) {
-      const logger = _mod12890.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Integration installed: " + name.name);
-    }
-    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
-    tmp4 = name.setup && typeof name.setup === "function";
+let AsyncContextStack = require;
+function withScope(arg0) {
+  const mainCarrier = AsyncContextStack(12944).getMainCarrier();
+  const obj = AsyncContextStack(12944);
+  const sentryCarrier = AsyncContextStack(12944).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    let tmpResult = AsyncContextStack(12952);
+    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+    tmpResult = AsyncContextStack(12952);
+    stack = new _moduleResult(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
   }
+  sentryCarrier.stack = stack;
+  return stack.withScope(arg0);
 }
-let items = [];
-
-export const addIntegration = function addIntegration(name) {
-  const client = _mod12917.getClient();
-  if (client) {
-    client.addIntegration(name);
-  } else if (_mod12918.DEBUG_BUILD) {
-    const logger = _mod12890.logger;
-    const _HermesInternal = HermesInternal;
-    logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
+function withSetScope(scope, arg1) {
+  closure_1 = arg1;
+  const mainCarrier = AsyncContextStack(12944).getMainCarrier();
+  const obj = AsyncContextStack(12944);
+  const sentryCarrier = AsyncContextStack(12944).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    let tmpResult = AsyncContextStack(12952);
+    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+    tmpResult = AsyncContextStack(12952);
+    stack = new _moduleResult(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
   }
-};
-export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
-  const iter = arg1[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let obj = nextResult;
-    if (nextResult) {
-      let afterAllSetup = obj.afterAllSetup;
-    }
-    if (nextResult) {
-      let afterAllSetupResult = obj.afterAllSetup(arg0);
-    }
-    continue;
-  }
-};
-export function defineIntegration(arg0) {
-  return arg0;
-}
-export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
-  let arr = defaultIntegrations.defaultIntegrations || [];
-  const integrations = defaultIntegrations.integrations;
-  const item = arr.forEach((item) => {
-    item.isDefaultInstance = true;
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    stack.getStackTop().scope = scope;
+    return closure_1(scope);
   });
-  if (Array.isArray(integrations)) {
+}
+function withIsolationScope(arg0) {
+  AsyncContextStack = arg0;
+  const mainCarrier = AsyncContextStack(12944).getMainCarrier();
+  const obj = AsyncContextStack(12944);
+  const sentryCarrier = AsyncContextStack(12944).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    let tmpResult = tmp(12952);
+    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+    tmpResult = tmp(12952);
+    stack = new closure_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    const mainCarrier = AsyncContextStack(12944).getMainCarrier();
+    const obj = AsyncContextStack(12944);
+    const sentryCarrier = AsyncContextStack(12944).getSentryCarrier(mainCarrier);
+    let stack = sentryCarrier.stack;
+    if (!stack) {
+      let tmp2Result = AsyncContextStack(12952);
+      const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
+      tmp2Result = AsyncContextStack(12952);
+      stack = new closure_2_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
+    }
+    sentryCarrier.stack = stack;
+    return closure_0(stack.getIsolationScope());
+  });
+}
+class AsyncContextStack {
+  constructor(arg0, arg1) {
+    self = this;
+    scope = global;
+    tmp2 = c2(this, AsyncContextStack);
+    if (!global) {
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      tmp5 = new.target;
+      tmp6 = new.target;
+      scope = new closure_0(closure_1[2]).Scope();
+    }
+    scope1 = require;
+    if (!require) {
+      tmp8 = closure_0;
+      tmp9 = closure_1;
+      tmp10 = new.target;
+      tmp11 = new.target;
+      scope1 = new closure_0(closure_1[2]).Scope();
+    }
     items = [];
-    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
-    let arr2 = items;
-  } else {
-    arr2 = arr;
-    if (typeof integrations === "function") {
-      const integrationsResult = integrations(arr);
-      const _Array = Array;
-      let tmp2 = integrationsResult;
-      if (!Array.isArray(integrationsResult)) {
-        const items1 = [integrationsResult];
-        tmp2 = items1;
+    items[0] = { scope };
+    self._stack = items;
+    self._isolationScope = scope1;
+    return;
+  }
+}
+const entry = {
+  key: "withScope",
+  value: function withScope(fn) {
+    const self = this;
+    try {
+      const promise = fn(tmp);
+      if (obj2.isThenable(promise)) {
+        let nextPromise = promise.then((result) => {
+          self._popScope();
+          return result;
+        }, (arg0) => {
+          self._popScope();
+          throw arg0;
+        });
+      } else {
+        self._popScope();
+        nextPromise = promise;
       }
-      arr2 = tmp2;
+      return nextPromise;
+    } catch (tmp9) {
+      obj._popScope();
+      throw tmp9;
     }
   }
-  const item1 = arr2.forEach((name) => {
-    name = name.name;
-    let isDefaultInstance = tmp2;
-    if (obj[name]) {
-      isDefaultInstance = !tmp2.isDefaultInstance;
+};
+let items = [
+  entry,
+  {
+    key: "getClient",
+    value: function getClient() {
+      return this.getStackTop().client;
     }
-    if (isDefaultInstance) {
-      isDefaultInstance = name.isDefaultInstance;
+  },
+  {
+    key: "getScope",
+    value: function getScope() {
+      return this.getStackTop().scope;
     }
-    if (!isDefaultInstance) {
-      obj[name] = name;
+  },
+  {
+    key: "getIsolationScope",
+    value: function getIsolationScope() {
+      return this._isolationScope;
     }
-  });
-  const values = Object.values({});
-  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
-  if (findIndexResult > -1) {
-    arr = values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
+  },
+  {
+    key: "getStackTop",
+    value: function getStackTop() {
+      return this._stack[this._stack.length - 1];
+    }
+  },
+  {
+    key: "_pushScope",
+    value: function _pushScope() {
+      const scope = this.getScope();
+      const cloneResult = scope.clone();
+      const _stack = this._stack;
+      _stack.push({ client: this.getClient(), scope: cloneResult });
+      return cloneResult;
+    }
+  },
+  {
+    key: "_popScope",
+    value: function _popScope() {
+      let arr = this._stack.length > 1;
+      if (arr) {
+        const _stack = this._stack;
+        arr = _stack.pop();
+      }
+      return arr;
+    }
   }
-  return values;
-};
-export const installedIntegrations = items;
-export { setupIntegration };
-export const setupIntegrations = function setupIntegrations(arg0, arr) {
-  closure_0 = arg0;
-  const obj = {};
-  const item = arr.forEach((item) => {
-    if (item) {
-      setupIntegration(closure_0, item, obj);
+];
+const _moduleResult = _createClass(AsyncContextStack, items);
+let c3 = _moduleResult;
+
+export const AsyncContextStack = _moduleResult;
+export function getStackAsyncContextStrategy() {
+  return {
+    withIsolationScope,
+    withScope,
+    withSetScope,
+    withSetIsolationScope(arg0, arg1) {
+      closure_0 = arg1;
+      let mainCarrier = closure_0(12944).getMainCarrier();
+      let obj = closure_0(12944);
+      let sentryCarrier = closure_0(12944).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        let tmpResult = tmp(12952);
+        let defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+        tmpResult = tmp(12952);
+        stack = new closure_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+      }
+      sentryCarrier.stack = stack;
+      return stack.withScope(() => {
+        const mainCarrier = AsyncContextStack(12944).getMainCarrier();
+        const obj = AsyncContextStack(12944);
+        const sentryCarrier = AsyncContextStack(12944).getSentryCarrier(mainCarrier);
+        let stack = sentryCarrier.stack;
+        if (!stack) {
+          let tmp2Result = AsyncContextStack(12952);
+          const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
+          tmp2Result = AsyncContextStack(12952);
+          stack = new closure_2_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
+        }
+        sentryCarrier.stack = stack;
+        return closure_0(stack.getIsolationScope());
+      });
+    },
+    getCurrentScope() {
+      const mainCarrier = AsyncContextStack(12944).getMainCarrier();
+      const obj = AsyncContextStack(12944);
+      const sentryCarrier = AsyncContextStack(12944).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        let tmpResult = AsyncContextStack(12952);
+        const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+        tmpResult = AsyncContextStack(12952);
+        stack = new closure_1_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+      }
+      sentryCarrier.stack = stack;
+      return stack.getScope();
+    },
+    getIsolationScope() {
+      const mainCarrier = AsyncContextStack(12944).getMainCarrier();
+      const obj = AsyncContextStack(12944);
+      const sentryCarrier = AsyncContextStack(12944).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        let tmpResult = AsyncContextStack(12952);
+        const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
+        tmpResult = AsyncContextStack(12952);
+        stack = new closure_1_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+      }
+      sentryCarrier.stack = stack;
+      return stack.getIsolationScope();
     }
-  });
-  return obj;
-};
+  };
+}

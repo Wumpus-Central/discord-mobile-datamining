@@ -1,26 +1,45 @@
 // === Module 13010: ? ===
 
 // Module 13010
-import _mod12891 from "module_12891" /* 12891 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const vercelWaitUntil = function vercelWaitUntil(arg0) {
-  let obj = _mod12891.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
-  if (obj) {
-    if (obj.get) {
-      if (obj.get()) {
-        obj = obj.get();
+export const parseCookie = function parseCookie(arr) {
+  const obj = {};
+  let num = 0;
+  if (0 < arr.length) {
+    let index = arr.indexOf("=", num);
+    while (-1 !== index) {
+      let length = arr.indexOf(";", num);
+      if (-1 === length) {
+        length = arr.length;
+      } else if (length < index) {
+        let sum = arr.lastIndexOf(";", index - 1) + 1;
+        num = sum;
+        if (sum >= arr.length) {
+          break;
+        }
       }
-      let waitUntil = obj;
-      if (obj) {
-        waitUntil = obj.waitUntil;
+      let str = arr.slice(num, index);
+      let trimmed = str.trim();
+      if (undefined === obj[trimmed]) {
+        let str2 = arr.slice(index + 1, length);
+        let trimmed1 = str2.trim();
+        index = trimmed1;
+        if (34 === trimmed1.charCodeAt(0)) {
+          index = trimmed1.slice(1, -1);
+        }
+        try {
+          let decodeURIComponentResult = index;
+          if (-1 !== index.indexOf("%")) {
+            let _decodeURIComponent = decodeURIComponent;
+            decodeURIComponentResult = decodeURIComponent(index);
+          }
+          obj[trimmed] = decodeURIComponentResult;
+        } catch (err) {
+          obj[trimmed] = index;
+        }
       }
-      if (waitUntil) {
-        obj.waitUntil(arg0);
-      }
+      let sum1 = length + 1;
     }
   }
-  obj = {};
+  return obj;
 };

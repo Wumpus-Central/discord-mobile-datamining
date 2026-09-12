@@ -1,7 +1,7 @@
 // === Module 15485: ? ===
 
 // Module 15485
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "26310276feb1290ca5d9d3ec8d0b1231", name: "LanguageIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d54bf56841039bee9b0ab658257be5d8", name: "EmojiZanyFaceIcon", type: "png" });

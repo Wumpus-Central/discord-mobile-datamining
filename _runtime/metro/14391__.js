@@ -1,20 +1,21 @@
 // === Module 14391: ? ===
 
 // Module 14391
-import _mod14357 from "module_14357" /* 14357 */;
-import _mod14378 from "module_14378" /* 14378 */;
-import f2 from "f" /* 14392 */;
-import _mod14402 from "module_14402" /* 14402 */;
-import _mod14403 from "module_14403" /* 14403 */;
+import _mod14389 from "module_14389" /* 14389 */;
+import _mod14392 from "module_14392" /* 14392 */;
+import _mod14394 from "module_14394" /* 14394 */;
 
-let closure_2 = _mod14357([].concat);
+let fn = Object;
+let closure_3 = _mod14392("".split);
+if (_mod14389(() => !Object("z").propertyIsEnumerable(0))) {
+  fn = (arg0) => {
+    if ("String" === _mod14394(arg0)) {
+      let tmp2 = closure_3(arg0, "");
+    } else {
+      tmp2 = Object(arg0);
+    }
+    return tmp2;
+  };
+}
 
-export default _mod14378("Reflect", "ownKeys") || (function ownKeys(arg0) {
-  const fResult = f2.f(_mod14402(arg0));
-  const f = _mod14403.f;
-  let tmp2 = fResult;
-  if (f) {
-    tmp2 = closure_2(fResult, f(arg0));
-  }
-  return tmp2;
-});
+export default fn;

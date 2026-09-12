@@ -1,7 +1,7 @@
 // === Module 9481: ? ===
 
 // Module 9481
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 134, height: 100, scales: [2, 3], hash: "216dd506f9a84ac881f2bef990d5a382", name: "img_wumpus_nitro", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_identity/images", width: 303, height: 198, scales: [2, 3], hash: "af6f5b1f2e3f6f41820436ec96e0f065", name: "guild_identity_education_light", type: "png" });

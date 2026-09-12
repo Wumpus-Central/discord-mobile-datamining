@@ -1,5 +1,7 @@
 // === Module 8398: ? ===
 
 // Module 8398
+import _mod8399 from "module_8399" /* 8399 */;
 
-export default { WIDEVINE: "widevine", PLAYREADY: "playready", CLEARKEY: "clearkey", FAIRPLAY: "fairplay" };
+
+export default _mod8399.default;

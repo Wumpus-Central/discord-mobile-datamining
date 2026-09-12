@@ -1,16 +1,21 @@
 // === Module 8578: ? ===
 
 // Module 8578
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8579 from "module_8579" /* 8579 */;
-import _modDef8581 from "module_8581" /* 8581 */;
+import extractOpacityDefault from "extractOpacity" /* 8580 */;
+import extractResponderDefault from "extractResponder" /* 8581 */;
+import _modDef8586 from "module_8586" /* 8586 */;
+import reducedDefault from "reduced" /* 8587 */;
+import _modDef8588 from "module_8588" /* 8588 */;
+import _modDef8598 from "module_8598" /* 8598 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import metroRequire from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const FeBlend = fn;
+const Svg = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,54 +35,182 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
+let closure_3 = ["style", "opacity", "viewBox", "children", "onLayout", "preserveAspectRatio"];
+get_ActivityIndicator = fn(17);
+({ findNodeHandle: closure_8, Platform, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-class FeBlend {
+const svg = StyleSheet.create({ svg: { backgroundColor: "transparent", borderWidth: 0 } }).svg;
+class Svg {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeBlend);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeBlend);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = hasOwnProperty(this, Svg);
+    items1 = [...items];
+    tmp2 = closure_7;
+    obj = closure_7(Svg);
+    tmp3 = metroRequire;
+    if (closure_11()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.measureInWindow = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measureInWindow(arg0);
+      }
+    };
+    tmp3Result.measure = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measure(arg0);
+      }
+    };
+    tmp3Result.measureLayout = (arg0, arg1, arg2) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measureLayout(arg0, arg1, arg2);
+      }
+    };
+    tmp3Result.setNativeProps = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.setNativeProps(arg0);
+      }
+    };
+    tmp3Result.toDataURL = (arg0, arg1) => {
+      if (arg0) {
+        const tmp4 = React6(closure_0.root);
+        Svg(8579).default.toDataURL(tmp4, arg1, arg0);
+        const _default = Svg(8579).default;
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeBlend, _modDef8581);
+_inherits(Svg, _modDef8598);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
+    const props = this.props;
+    ({ style, opacity } = props);
+    ({ viewBox, children, onLayout, preserveAspectRatio } = props);
+    const tmp = _objectWithoutProperties(props, closure_3);
+    let applyResult = style;
+    if (Array.isArray(style)) {
+      const _Object = Object;
+      const items = [{}];
+      HermesBuiltin.arraySpread(style, 1);
+      const _Object2 = Object;
+      applyResult = HermesBuiltin.apply(items, Object);
+    }
+    let obj = {};
+    const merged = Object.assign(applyResult);
+    const merged1 = Object.assign(tmp);
+    ({ width, height, focusable } = obj);
+    let tmp10 = undefined === width;
+    ({ transform, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, position } = obj);
+    if (tmp10) {
+      tmp10 = undefined === height;
+    }
+    if (tmp10) {
+      tmp10 = "absolute" !== position;
+    }
+    if (tmp10) {
+      height = "100%";
+      width = "100%";
+    }
+    let BooleanResult = Boolean(focusable);
+    if (BooleanResult) {
+      BooleanResult = "false" !== focusable;
+    }
+    tmp.focusable = BooleanResult;
+    let items1 = [svg];
+    if (style) {
+      items1.push(style);
+    }
+    let num2 = NaN;
+    if (null != opacity) {
+      num2 = extractOpacityDefault(opacity);
+    }
+    obj = {};
+    let flag = false;
+    if (!isNaN(num2)) {
+      obj.opacity = num2;
+      flag = true;
+    }
+    let flag2 = flag;
+    if (width) {
+      flag2 = flag;
+      if (height) {
+        const _parseInt = parseInt;
+        let parsed = parseInt(width, 10);
+        const _parseInt2 = parseInt;
+        let parsed1 = parseInt(height, 10);
+        const _isNaN = isNaN;
+        let isNaNResult = isNaN(parsed);
+        if (!isNaNResult) {
+          isNaNResult = "%" === width[width.length - 1];
+        }
+        const _isNaN2 = isNaN;
+        let isNaNResult1 = isNaN(parsed1);
+        if (!isNaNResult1) {
+          isNaNResult1 = "%" === height[height.length - 1];
+        }
+        if (isNaNResult) {
+          parsed = width;
+        }
+        obj.width = parsed;
+        if (isNaNResult1) {
+          parsed1 = height;
+        }
+        obj.height = parsed1;
+        obj.flex = 0;
+        flag2 = true;
       }
-    };
-    const merged = Object.assign(FeBlend(8580).extractFilter(this.props));
-    const obj2 = FeBlend(8580);
-    const merged1 = Object.assign(FeBlend(8580).extractIn(this.props));
-    const obj3 = FeBlend(8580);
-    const merged2 = Object.assign(FeBlend(8580).extractFeBlend(this.props));
-    return <tmp ref={function ref(arg0) {
+    }
+    if (flag2) {
+      items1.push(obj);
+    }
+    if (items1.length <= 1) {
+      items1 = svg;
+    }
+    tmp.style = items1;
+    if (null != width) {
+      tmp.bbWidth = width;
+    }
+    if (null != height) {
+      tmp.bbHeight = height;
+    }
+    extractResponderDefault(tmp, tmp, this);
+    const merged2 = Object.assign({}, StyleSheet.flatten(style));
+    if (transform) {
+      if (merged2.transform) {
+        tmp.transform = merged2.transform;
+        merged2.transform = undefined;
+      }
+      tmp.transform = Svg(8582).extractTransformSvgView(tmp);
+      const obj3 = Svg(8582);
+    }
+    obj = {};
+    const merged3 = Object.assign(tmp);
+    obj.ref = function ref(arg0) {
       return self.refMethod(arg0);
-    }} />;
+    };
+    const merged4 = Object.assign(reducedDefault({ viewBox, preserveAspectRatio }));
+    obj.children = jsx(_modDef8588, { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
+    return jsx(_modDef8586, {});
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(FeBlend, items);
-importDefaultResultResult.displayName = "FeBlend";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.mode = "normal";
-importDefaultResultResult.defaultProps = obj;
+let items = [entry];
+const importDefaultResultResult = _createClass(Svg, items);
+importDefaultResultResult.displayName = "Svg";
+importDefaultResultResult.defaultProps = { preserveAspectRatio: "xMidYMid meet" };
 
 export default importDefaultResultResult;

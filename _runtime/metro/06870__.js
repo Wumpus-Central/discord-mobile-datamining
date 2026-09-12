@@ -1,13 +1,73 @@
 // === Module 6870: ? ===
 
 // Module 6870
-const fn = function t(arg0, velocityY, substr) {
-  closure_0 = arg0 + 0.2 * velocityY;
-  closure_1 = min.apply(null, substr.map((item) => Math.abs(closure_0 - item)));
-  return substr.filter((item) => Math.abs(closure_0 - item) === closure_1)[0];
-};
-fn.__closure = {};
-fn.__workletHash = 8913698095371;
-fn.__initData = { code: "function pnpm_snapPointTs1(value,velocity,points){const point=value+0.2*velocity;const deltas=points.map(function(p){return Math.abs(point-p);});const minDelta=Math.min.apply(null,deltas);return points.filter(function(p){return Math.abs(point-p)===minDelta;})[0];}" };
+import nativeViewGestureHandlerProps from "nativeViewGestureHandlerProps" /* 6798 */;
+import "module_19";
 
-export const snapPoint = fn;
+require = fn;
+const noop = fn(19);
+({ useImperativeHandle: c2, useRef: c3 } = noop);
+const jsx = fn(21).jsx;
+let items = [...fn(6798).nativeViewProps, "onGestureHandlerEvent", "onGestureHandlerStateChange"];
+
+export default function createNativeWrapper(displayName) {
+  _require = displayName;
+  if (gestureHandlerProps === undefined) {
+    gestureHandlerProps = {};
+  }
+  let str;
+  if (displayName != null) {
+    str = displayName.displayName;
+  }
+  if (!str) {
+    let name;
+    if (displayName != null) {
+      const render = displayName.render;
+      if (render != null) {
+        name = render.name;
+      }
+    }
+    str = name;
+  }
+  if (!str) {
+    let tmp2 = typeof displayName === "string";
+    if (typeof displayName === "string") {
+      tmp2 = displayName;
+    }
+    str = tmp2;
+  }
+  if (!str) {
+    str = "ComponentWrapper";
+  }
+  class ComponentWrapper {
+    constructor(arg0) {
+      closure_0 = displayName;
+      keys = Object.keys(displayName);
+      obj = { gestureHandlerProps: null, childProps: null };
+      obj = {};
+      merged = Object.assign(closure_1);
+      obj.gestureHandlerProps = obj;
+      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
+      reduced = keys.reduce(() => { ... }, obj);
+      ({ gestureHandlerProps, childProps } = reduced);
+      tmp3 = useRef(null);
+      closure_1 = tmp3;
+      tmp4 = useRef(null);
+      closure_2 = tmp4;
+      items = [, ];
+      items[0] = tmp3;
+      items[1] = tmp4;
+      tmp5 = useImperativeHandle(displayName.ref, () => { ... }, items);
+      obj1 = {};
+      merged1 = Object.assign(gestureHandlerProps);
+      obj1.ref = tmp4;
+      obj2 = {};
+      merged2 = Object.assign(childProps);
+      obj2.ref = tmp3;
+      obj1.children = jsx(closure_0, obj2);
+      return jsx(closure_0(closure_1[2]).NativeViewGestureHandler, obj1);
+    }
+  }
+  ComponentWrapper.displayName = str;
+  return ComponentWrapper;
+};

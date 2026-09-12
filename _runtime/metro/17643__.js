@@ -1,7 +1,7 @@
 // === Module 17643: ? ===
 
 // Module 17643
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 272, height: 130, scales: [2, 3], hash: "4987bef6ae5ad852bc999d6d3249ca80", name: "empty_server_settings_audit_log_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "a17cd266a5cb265705b13e07d0e2871a", name: "ic_money_emoji_24px", type: "png" });

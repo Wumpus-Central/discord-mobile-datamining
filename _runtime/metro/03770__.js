@@ -1,23 +1,23 @@
 // === Module 3770: ? ===
 
 // Module 3770
-import module_2036 from "module_2036" /* 2036 */;
 import module_2035 from "module_2035" /* 2035 */;
+import module_2036 from "module_2036" /* 2036 */;
 
-if (!module_2036) {
-  let obj = { default: module_2036 };
-} else {
-  obj = module_2036;
-}
 if (!module_2035) {
-  obj = { default: module_2035 };
+  let obj = { default: module_2035 };
+} else {
+  obj = module_2035;
+}
+if (!module_2036) {
+  obj = { default: module_2036 };
   let obj2 = obj;
 } else {
-  obj2 = module_2035;
+  obj2 = module_2036;
 }
 const date = {
-  ordinalNumber: obj.default({
-    matchPattern: /^第?\d+(年|四半期|月|週|日|時|分|秒)?/i,
+  ordinalNumber: obj2.default({
+    matchPattern: /^(\d+)(\.)/i,
     parsePattern: /\d+/i,
     valueCallback(match) {
       return parseInt(match, 10);
@@ -29,16 +29,14 @@ const date = {
   day: null,
   dayPeriod: null
 };
-obj2 = { matchPatterns: { narrow: /^(B\.?C\.?|A\.?D\.?)/i, abbreviated: /^(紀元[前後]|西暦)/i, wide: /^(紀元[前後]|西暦)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj3 = { narrow: null, any: null };
-const items = [/^B/i, /^A/i];
-obj3.narrow = items;
-const items1 = [/^(紀元前)/i, /^(西暦|紀元後)/i];
-obj3.any = items1;
+obj2 = { matchPatterns: { narrow: /^(e|j)/i, abbreviated: /^(eaa.|jaa.)/i, wide: /^(ennen ajanlaskun alkua|jälkeen ajanlaskun alun)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj3 = { any: null };
+const items = [/^e/i, /^j/i];
+obj3.any = items;
 obj2.parsePatterns = obj3;
-date.era = obj2.default(obj2);
+date.era = obj.default(obj2);
 const obj4 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^Q[1234]/i, wide: /^第[1234一二三四１２３４]四半期/i },
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234]\.? kvartaali/i },
   defaultMatchWidth: "wide",
   parsePatterns: null,
   defaultParseWidth: "any",
@@ -47,24 +45,28 @@ const obj4 = {
   }
 };
 const obj5 = { any: null };
-const items2 = [/(1|一|１)/i, /(2|二|２)/i, /(3|三|３)/i, /(4|四|４)/i];
-obj5.any = items2;
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj5.any = items1;
 obj4.parsePatterns = obj5;
-date.quarter = obj2.default(obj4);
-const obj6 = { matchPatterns: { narrow: /^([123456789]|1[012])/, abbreviated: /^([123456789]|1[012])月/i, wide: /^([123456789]|1[012])月/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items3 = [/^1\D/, /^2/, /^3/, /^4/, /^5/, /^6/, /^7/, /^8/, /^9/, /^10/, /^11/, /^12/];
+date.quarter = obj.default(obj4);
+const obj6 = { matchPatterns: { narrow: /^[thmkeslj]/i, abbreviated: /^(tammi|helmi|maalis|huhti|touko|kesä|heinä|elo|syys|loka|marras|joulu)/i, wide: /^(tammikuu|helmikuu|maaliskuu|huhtikuu|toukokuu|kesäkuu|heinäkuu|elokuu|syyskuu|lokakuu|marraskuu|joulukuu)(ta)?/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { narrow: null, any: null };
+const items2 = [/^t/i, /^h/i, /^m/i, /^h/i, /^t/i, /^k/i, /^h/i, /^e/i, /^s/i, /^l/i, /^m/i, /^j/i];
+obj7.narrow = items2;
+const items3 = [/^ta/i, /^hel/i, /^maa/i, /^hu/i, /^to/i, /^k/i, /^hei/i, /^e/i, /^s/i, /^l/i, /^mar/i, /^j/i];
 obj7.any = items3;
 obj6.parsePatterns = obj7;
-date.month = obj2.default(obj6);
-const obj8 = { matchPatterns: { narrow: /^[日月火水木金土]/, short: /^[日月火水木金土]/, abbreviated: /^[日月火水木金土]/, wide: /^[日月火水木金土]曜日/ }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj9 = { any: null };
-const items4 = [/^日/, /^月/, /^火/, /^水/, /^木/, /^金/, /^土/];
-obj9.any = items4;
+date.month = obj.default(obj6);
+const obj8 = { matchPatterns: { narrow: /^[smtkpl]/i, short: /^(su|ma|ti|ke|to|pe|la)/i, abbreviated: /^(sunn.|maan.|tiis.|kesk.|torst.|perj.|la)/i, wide: /^(sunnuntai|maanantai|tiistai|keskiviikko|torstai|perjantai|lauantai)(na)?/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj9 = { narrow: null, any: null };
+const items4 = [/^s/i, /^m/i, /^t/i, /^k/i, /^t/i, /^p/i, /^l/i];
+obj9.narrow = items4;
+const items5 = [/^s/i, /^m/i, /^ti/i, /^k/i, /^to/i, /^p/i, /^l/i];
+obj9.any = items5;
 obj8.parsePatterns = obj9;
-date.day = obj2.default(obj8);
-const obj10 = { matchPatterns: { any: /^(AM|PM|午前|午後|正午|深夜|真夜中|夜|朝)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^(A|午前)/i, pm: /^(P|午後)/i, midnight: /^深夜|真夜中/i, noon: /^正午/i, morning: /^朝/i, afternoon: /^午後/i, evening: /^夜/i, night: /^深夜/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj2.default(obj10);
+date.day = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^(ap|ip|keskiyö|keskipäivä|aamupäivällä|iltapäivällä|illalla|yöllä)/i, any: /^(ap|ip|keskiyöllä|keskipäivällä|aamupäivällä|iltapäivällä|illalla|yöllä)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^ap/i, pm: /^ip/i, midnight: /^keskiyö/i, noon: /^keskipäivä/i, morning: /aamupäivällä/i, afternoon: /iltapäivällä/i, evening: /illalla/i, night: /yöllä/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj10);
 
 export default date;
 export default exports.default;

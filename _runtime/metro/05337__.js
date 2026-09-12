@@ -1,7 +1,48 @@
 // === Module 5337: ? ===
 
 // Module 5337
-import registerAsset from "module_1122" /* 1122 */;
+import _mod5294 from "module_5294" /* 5294 */;
+import get0thIfdOffset from "get0thIfdOffset" /* 5314 */;
+import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5315 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "a5aa4e98136aaaae712a29ded608e4e5", name: "img_account_sync_twitch_light_and_dark", type: "svg" });
+export default {
+  read(byteLength, sum, arg2, byteOrder, arg4) {
+    let obj = get0thIfdOffset;
+    const ifd = obj.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
+    let tmp6 = ifd;
+    if (ifd.ShotInfo) {
+      value = ifd.ShotInfo.value;
+      obj = {};
+      if (undefined !== value[27]) {
+        obj = { value: value[27], description: null };
+        let str = "None";
+        if (0 !== value[27]) {
+          let str2 = "Rotate 90 CW";
+          if (1 !== tmp7) {
+            let str3 = "Rotate 180";
+            if (2 !== tmp7) {
+              let str4 = "Unknown";
+              if (3 === tmp7) {
+                str4 = "Rotate 270 CW";
+              }
+              str3 = str4;
+            }
+            str2 = str3;
+          }
+          str = str2;
+        }
+        obj.description = str;
+        obj.AutoRotate = obj;
+      }
+      const tmp3Result = _mod5294;
+      delete tmp[tmp2];
+      tmp6 = _mod5294.objectAssign({}, ifd, obj);
+      const objectAssignResult = _mod5294.objectAssign({}, ifd, obj);
+    }
+    return tmp6;
+  },
+  SHOT_INFO_AUTO_ROTATE: 27
+};

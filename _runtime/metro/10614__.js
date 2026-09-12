@@ -1,14 +1,14 @@
 // === Module 10614: ? ===
 
 // Module 10614
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10528 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10567 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const NLTimeUnitWithinFormatParser = require;
+const DETimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class NLTimeUnitWithinFormatParser {
+class DETimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, NLTimeUnitWithinFormatParser);
+    tmp = c2(this, DETimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitWithinFormatParser);
+    obj = closure_4(DETimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,11 +48,11 @@ class NLTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(DETimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    const regExp = new RegExp("(?:binnen|in|binnen de|voor)\\s*(" + NLTimeUnitWithinFormatParser(10615).TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+    const regExp = new RegExp("(?:in|f\u00FCr|w\u00E4hrend)\\s*(" + DETimeUnitWithinFormatParser(10606).TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
     return regExp;
   }
 };
@@ -61,10 +61,10 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const ParsingComponents = NLTimeUnitWithinFormatParser(10524).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, NLTimeUnitWithinFormatParser(10615).parseDuration(arg1[1]));
+      const ParsingComponents = DETimeUnitWithinFormatParser(10563).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, DETimeUnitWithinFormatParser(10606).parseDuration(arg1[1]));
     }
   }
 ];
 
-export default _createClass(NLTimeUnitWithinFormatParser, items);
+export default _createClass(DETimeUnitWithinFormatParser, items);

@@ -1,8 +1,8 @@
 // === Module 3990: ? ===
 
 // Module 3990
-import _typeof from "module_3695" /* 3695 */;
-import requiredArgs from "requiredArgs" /* 3696 */;
+import _typeof from "module_3725" /* 3725 */;
+import requiredArgs from "requiredArgs" /* 3726 */;
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -19,10 +19,14 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isBefore(arg0, arg1) {
-  requiredArgs.default(2, arguments);
+export default function getDaysInMonth(arg0) {
+  requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time < _typeof.default(arg1).getTime();
+  const fullYear = defaultResult1.getFullYear();
+  const month = defaultResult1.getMonth();
+  const date = new Date(0);
+  date.setFullYear(fullYear, month + 1, 0);
+  date.setHours(0, 0, 0, 0);
+  return date.getDate();
 };
 export default exports.default;

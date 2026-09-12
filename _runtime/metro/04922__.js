@@ -1,17 +1,20 @@
 // === Module 4922: ? ===
 
 // Module 4922
-import _mod4854 from "module_4854" /* 4854 */;
+import _mod1307 from "module_1307" /* 1307 */;
+import _mod1308 from "module_1308" /* 1308 */;
+import _mod1314 from "module_1314" /* 1314 */;
+import _mod4914 from "module_4914" /* 4914 */;
 
 
-export default function Type(arg0) {
-  let str = "Symbol";
-  if (typeof arg0 !== "symbol") {
-    let str2 = "BigInt";
-    if (typeof arg0 !== "bigint") {
-      str2 = _mod4854(arg0);
+export default function isInteger(num) {
+  if (typeof num === "number") {
+    if (!_mod1314(num)) {
+      if (_mod4914(num)) {
+        const tmp = _mod1307(num);
+        return _mod1308(tmp) === tmp;
+      }
     }
-    str = str2;
   }
-  return str;
+  return false;
 };

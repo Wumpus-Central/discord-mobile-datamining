@@ -1,7 +1,7 @@
 // === Module 5451: ? ===
 
 // Module 5451
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 256, height: 256, scales: [1], hash: "85e85e0480cc3ad94f292bfe35b1a958", name: "img_amazon_music", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 267, height: 267, scales: [1], hash: "898dc79e0285b8e9855531eeca36bf84", name: "img_roblox_dark", type: "svg" });

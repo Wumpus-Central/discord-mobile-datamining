@@ -1,7 +1,7 @@
 // === Module 5118: ? ===
 
 // Module 5118
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0f660b1a58b1b7d08f5a3d6e321f201a", name: "AnnouncementsLockIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "38e1b93a52067f9cce24c90cbb1af007", name: "StageIcon", type: "png" });

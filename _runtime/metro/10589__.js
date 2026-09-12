@@ -1,97 +1,97 @@
 // === Module 10589: ? ===
 
 // Module 10589
-import includeCommonConfiguration from "includeCommonConfiguration" /* 10557 */;
-import _mod10563 from "module_10563" /* 10563 */;
-import JPStandardParser2 from "JPStandardParser" /* 10590 */;
-import _mod10592 from "module_10592" /* 10592 */;
-import _mod10593 from "module_10593" /* 10593 */;
-import _mod10594 from "module_10594" /* 10594 */;
-import _mod10595 from "module_10595" /* 10595 */;
-import _mod10596 from "module_10596" /* 10596 */;
-import _mod10597 from "module_10597" /* 10597 */;
-import _mod10598 from "module_10598" /* 10598 */;
-import _mod10599 from "module_10599" /* 10599 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
-  }
-  const obj = { parsers: null, refiners: null };
-  const items = [new JPStandardParser.default(), , , , ];
-  const _default = new JPStandardParser.default();
-  items[1] = new regExp.default();
-  const _default1 = new regExp.default();
-  items[2] = new regExp.default();
-  const _default2 = new regExp.default();
-  items[3] = new regExp.default();
-  const _default3 = new regExp.default();
-  items[4] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default4 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default(), , ];
-  const _default5 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  const _default6 = new _isNativeReflectConstruct.default();
-  items1[2] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  const result = includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-  const refiners = result.refiners;
-  result.refiners = refiners.filter((item) => !(item instanceof _isNativeReflectConstruct.default));
-  return result;
-}
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
+const SlashDateFormatParser = require;
+const regExp = new RegExp("([^\\d]|^)([0-3]{0,1}[0-9]{1})[\\/\\.\\-]([0-3]{0,1}[0-9]{1})(?:[\\/\\.\\-]([0-9]{4}|[0-9]{2}))?(\\W|$)", "i");
+class SlashDateFormatParser {
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, SlashDateFormatParser);
+    num = 2;
+    if (global) {
+      num = 3;
     }
-    return tmp;
-  };
+    self.groupNumberMonth = num;
+    num2 = 3;
+    if (global) {
+      num2 = 2;
+    }
+    self.groupNumberDay = num2;
+    return;
+  }
 }
-function createCasualConfiguration() {
-  const tmp = createConfiguration(false);
-  const parsers = tmp.parsers;
-  parsers.unshift(new module_10593.default());
-  return tmp;
-}
-const JPStandardParser = fn(JPStandardParser2);
-fn(_mod10592);
-const module_10593 = fn(_mod10593);
-fn(_mod10594);
-fn(_mod10595);
-fn(_mod10596);
-fn(_mod10597);
-fn(_mod10598);
-const regExp = fn(_mod10599);
-const _isNativeReflectConstruct = fn(_mod10563);
-const configuration = createConfiguration(false);
-let parsers = configuration.parsers;
-parsers.unshift(new module_10593.default());
-const chrono = new require("module_10517").Chrono(configuration);
-const chrono1 = new require("module_10517").Chrono(createConfiguration(true));
+const entry = {
+  key: "pattern",
+  value: function pattern() {
+    return regExp;
+  }
+};
+let items = [
+  entry,
+  {
+    key: "extract",
+    value: function extract(text, index) {
+      const sum = index.index + index[1].length;
+      const diff = index.index + index[0].length - index[5].length;
+      if (sum > 0) {
+        text.text.substring(0, sum);
+      }
+      if (diff < text.text.length) {
+        text.text.substring(diff);
+      }
+      const str8 = text.text.substring(sum, diff);
+      if (!str8.match(/^\d\.\d$/)) {
+        if (!str8.match(/^\d\.\d{1,2}\.\d{1,2}\s*$/)) {
+          const self = this;
+          const parsingResult = text.createParsingResult(sum, str8);
+          const _parseInt = parseInt;
+          const parsed = parseInt(index[this.groupNumberMonth]);
+          const _parseInt2 = parseInt;
+          const parsed1 = parseInt(index[this.groupNumberDay]);
+          if (parsed < 1) {
+            tmp6 = parsed1;
+            tmp7 = parsed;
+            if (parsed > 12) {
+              if (parsed1 >= 1) {
+                if (parsed1 <= 12) {
+                  if (parsed <= 31) {
+                    const items = [parsed, parsed1];
+                    [tmp6, tmp7] = items;
+                  }
+                }
+              }
+              return null;
+            }
+          } else {
+            tmp6 = parsed1;
+            tmp7 = parsed;
+          }
+          if (tmp6 >= 1) {
+            if (tmp6 <= 31) {
+              const start3 = parsingResult.start;
+              start3.assign("day", tmp6);
+              const start4 = parsingResult.start;
+              start4.assign("month", tmp7);
+              if (index[4]) {
+                const _parseInt3 = parseInt;
+                const parsed2 = parseInt(index[4]);
+                const start2 = parsingResult.start;
+                start2.assign("year", SlashDateFormatParser(10561).findMostLikelyADYear(parsed2));
+              } else {
+                const start = parsingResult.start;
+                start.imply("year", SlashDateFormatParser(10561).findYearClosestToRef(text.refDate, tmp6, tmp7));
+              }
+              return parsingResult.addTag("parser/SlashDateFormatParser");
+            }
+          }
+          return null;
+        }
+      }
+    }
+  }
+];
 
-export const parse = function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-};
-export const parseDate = function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-};
-export { createCasualConfiguration };
-export { createConfiguration };
-export const Chrono = require("ReferenceWithTimezone").ParsingComponents;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingComponents;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export default _createClass(SlashDateFormatParser, items);

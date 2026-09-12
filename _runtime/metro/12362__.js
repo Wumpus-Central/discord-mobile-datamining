@@ -1,7 +1,7 @@
 // === Module 12362: ? ===
 
 // Module 12362
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "7a12457578ccd631e10642d2124014f3", name: "ArrowLargeDownIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/emoji", width: 24, height: 24, scales: [2, 3], hash: "79fe2790d902aba7709041b8b44a4ced", name: "ic_emoji_recent_color_24px", type: "png" });

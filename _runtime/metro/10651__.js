@@ -1,14 +1,15 @@
 // === Module 10651: ? ===
 
 // Module 10651
-import _mod10652 from "module_10652" /* 10652 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10567 */;
+import now from "now" /* 10584 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const RUMonthNameLittleEndianParser = require;
+let self = this;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,67 +29,126 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class RUMonthNameLittleEndianParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, RUMonthNameLittleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(RUMonthNameLittleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+_possibleConstructorReturn;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-_inherits(RUMonthNameLittleEndianParser, _mod10652.AbstractParserWithLeftRightBoundaryChecking);
-const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(?:\u0441)?\\s*(" + RUMonthNameLittleEndianParser(10650).ORDINAL_NUMBER_PATTERN + ")(?:\\s{0,3}(?:\u043F\u043E|-|\u2013|\u0434\u043E)?\\s{0,3}(" + RUMonthNameLittleEndianParser(10650).ORDINAL_NUMBER_PATTERN + "))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(" + RUMonthNameLittleEndianParser(10521).matchAnyPattern(RUMonthNameLittleEndianParser(10650).MONTH_DICTIONARY) + ")(?:(?:-|\\/|,?\\s{0,3})(" + RUMonthNameLittleEndianParser(10650).YEAR_PATTERN + "(?![^\\s]\\d)))?";
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
   }
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = RUMonthNameLittleEndianParser(10650).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const result = RUMonthNameLittleEndianParser(10650).parseOrdinalNumberPattern(index[1]);
-      if (result > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", result);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", RUMonthNameLittleEndianParser(10650).parseYear(index[4]));
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = function o(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_7 = fn(now);
+    class NLCasualDateParser {
+      constructor() {
+        self = this;
+        tmp = closure_0(this, NLCasualDateParser);
+        tmp2 = c2;
+        obj = c2(NLCasualDateParser);
+        tmp3 = closure_1;
+        if (closure_3()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
         } else {
-          const start = parsingResult.start;
-          start.imply("year", RUMonthNameLittleEndianParser(10522).findYearClosestToRef(createParsingResult.refDate, result, tmp4));
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
         }
-        if (index[2]) {
-          const start3 = parsingResult.start;
-          const result1 = RUMonthNameLittleEndianParser(10650).parseOrdinalNumberPattern(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-        }
-        return parsingResult;
+        return tmp3(self, constructResult);
       }
     }
+    _classCallCheck = NLCasualDateParser;
+    _inherits(NLCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    const entry = {
+      key: "innerPattern",
+      value: function innerPattern(arg0) {
+            return /(nu|vandaag|morgen|morgend|gisteren)(?=\W|$)/i;
+          }
+    };
+    let items = [entry, ];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(reference, arg1) {
+            const formatted = arg1[0].toLowerCase();
+            if ("nu" === formatted) {
+              return closure_7.now(reference.reference);
+            } else if ("vandaag" === formatted) {
+              return closure_7.today(reference.reference);
+            } else {
+              if ("morgen" !== formatted) {
+                if ("morgend" !== formatted) {
+                  if ("gisteren" === formatted) {
+                    return closure_7.yesterday(reference.reference);
+                  } else {
+                    return tmp2;
+                  }
+                }
+              }
+              return closure_7.tomorrow(reference.reference);
+            }
+          }
+    };
+    items[1] = entry1;
+    exports.default = _createClass(NLCasualDateParser, items);
+  } else {
+    const _Object2 = Object;
   }
-];
-
-export default _createClass(RUMonthNameLittleEndianParser, items);
+} else {
+  let _Object = Object;
+}

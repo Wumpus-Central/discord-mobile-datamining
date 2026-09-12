@@ -1,15 +1,14 @@
 // === Module 8621: ? ===
 
 // Module 8621
-import _modDef8566 from "module_8566" /* 8566 */;
+import _modDef8613 from "module_8613" /* 8613 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Marker = importDefault;
+const FeDisplacementMap = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const jsx = fn(21).jsx;
-class Marker {
+class FeDisplacementMap {
   constructor() {
     self = this;
-    tmp = c2(this, Marker);
+    tmp = c2(this, FeDisplacementMap);
     tmp2 = closure_4;
-    obj = closure_4(Marker);
+    obj = closure_4(FeDisplacementMap);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,32 +48,18 @@ class Marker {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Marker, _modDef8566);
+_inherits(FeDisplacementMap, _modDef8613);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    let obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
-    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
-    obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(Marker(8555)({ viewBox, preserveAspectRatio }));
-    obj.children = children;
-    return jsx(Marker(8622), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FeDisplacementMap(8590).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
+const importDefaultResultResult = _createClass(FeDisplacementMap, items);
+importDefaultResultResult.displayName = "FeDisplacementMap";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

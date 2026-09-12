@@ -1,7 +1,7 @@
 // === Module 5366: ? ===
 
 // Module 5366
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "b8491165af3ebfd07b4e58fba6104e2b", name: "img_account_sync_steam_white", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "e9fce92f06bbfad622591815c7f5f9ac", name: "img_account_sync_twitch_white", type: "png" });

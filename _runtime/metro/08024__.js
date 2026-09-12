@@ -1,7 +1,31 @@
 // === Module 8024: ? ===
 
 // Module 8024
-import registerAsset from "module_1122" /* 1122 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_channel/native/images", width: 49, height: 50, scales: [2, 3], hash: "83d9ad6473cb40e1d6825c7dbdb7f70f", name: "ic_media_post_share_prompt", type: "png" });
+export const useDismissedRouteError = function useDismissedRouteError(state) {
+  const setNextDismissedKey = _slicedToArray(noop.useState(null), 2);
+  const first = setNextDismissedKey[0];
+  let tmp3 = null;
+  if (first) {
+    const routes = state.routes;
+    const found = routes.find((key) => key.key === first);
+    let name;
+    if (found != null) {
+      name = found.name;
+    }
+    tmp3 = name;
+  }
+  name = tmp3;
+  const items = [tmp3];
+  const effect = noop.useEffect(() => {
+    if (name) {
+      const _HermesInternal = HermesInternal;
+      const _console = console;
+      console.error("The screen '" + tmp + "' was removed natively but didn't get removed from JS state. This can happen if the action was prevented in a 'beforeRemove' listener, which is not fully supported in native-stack.\n\nConsider using a 'usePreventRemove' hook with 'headerBackButtonMenuEnabled: false' to prevent users from natively going back multiple screens.");
+    }
+  }, items);
+  return { setNextDismissedKey: setNextDismissedKey[1] };
+};

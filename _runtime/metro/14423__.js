@@ -1,9 +1,21 @@
 // === Module 14423: ? ===
 
 // Module 14423
-import _mod14424 from "module_14424" /* 14424 */;
-import _mod14431 from "module_14431" /* 14431 */;
-
-
-export const URL = _mod14424;
-export const URLSearchParams = _mod14431;
+let propertyIsEnumerable = {}.propertyIsEnumerable;
+if (!getOwnPropertyDescriptor) {
+  if (getOwnPropertyDescriptor) {
+    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
+      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
+      return tmp && tmp.enumerable;
+    };
+  }
+  arg5.f = propertyIsEnumerable;
+} else {
+  const call = propertyIsEnumerable.call;
+  if (typeof call === "unknown") {
+    let propertyIsEnumerableResult = propertyIsEnumerable(1);
+  } else {
+    propertyIsEnumerableResult = call(obj, 1);
+  }
+  obj = { 1: 2 };
+}

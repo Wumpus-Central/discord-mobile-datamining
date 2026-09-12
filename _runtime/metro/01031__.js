@@ -19,7 +19,7 @@ export const reactNativeTracingIntegration = () => {
   let merged1;
   let fn2;
   let url;
-  state = { currentRoute: "Array" };
+  state = { currentRoute: "r" };
   let fn = state.beforeStartSpan;
   const merged = Object.assign(Object.assign({}, url), state);
   if (null === fn) {

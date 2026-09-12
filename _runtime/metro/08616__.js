@@ -1,14 +1,65 @@
 // === Module 8616: ? ===
 
 // Module 8616
-import _mod26 from "module_26" /* 26 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import _modDef8613 from "module_8613" /* 8613 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGLine", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-__INTERNAL_VIEW_CONFIG = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, x1: true, y1: true, x2: true, y2: true };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
+const FeComponentTransfer = arg1;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+class FeComponentTransfer {
+  constructor() {
+    self = this;
+    tmp = c2(this, FeComponentTransfer);
+    tmp2 = closure_4;
+    obj = closure_4(FeComponentTransfer);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(FeComponentTransfer, _modDef8613);
+const entry = {
+  key: "render",
+  value: function render() {
+    const result = FeComponentTransfer(8590).warnUnimplementedFilter();
+    return null;
+  }
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(FeComponentTransfer, items);
+importDefaultResultResult.displayName = "FeComponentTransfer";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
-export default module_65.get("RNSVGLine", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

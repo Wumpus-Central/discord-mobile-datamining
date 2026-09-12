@@ -17,7 +17,7 @@ if (!module_2036) {
 }
 const date = {
   ordinalNumber: obj2.default({
-    matchPattern: /^(\d+)e?/i,
+    matchPattern: /^(\d+)\.?/i,
     parsePattern: /\d+/i,
     valueCallback(match) {
       return parseInt(match, 10);
@@ -29,14 +29,18 @@ const date = {
   day: null,
   dayPeriod: null
 };
-obj2 = { matchPatterns: { narrow: /^([vn]\.? ?C\.?)/, abbreviated: /^([vn]\. ?Chr\.?)/, wide: /^((voor|na) Christus)/ }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj3 = { any: null };
-const items = [/^v/, /^n/];
-obj3.any = items;
+obj2 = { matchPatterns: { narrow: /^(ie\.|isz\.)/i, abbreviated: /^(i\.\s?e\.?|b?\s?c\s?e|i\.\s?sz\.?)/i, wide: /^(Krisztus előtt|időszámításunk előtt|időszámításunk szerint|i\. sz\.)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj3 = { narrow: null, abbreviated: null, any: null };
+const items = [/ie/i, /isz/i];
+obj3.narrow = items;
+const items1 = [/^(i\.?\s?e\.?|b\s?ce)/i, /^(i\.?\s?sz\.?|c\s?e)/i];
+obj3.abbreviated = items1;
+const items2 = [/előtt/i, /(szerint|i. sz.)/i];
+obj3.any = items2;
 obj2.parsePatterns = obj3;
 date.era = obj.default(obj2);
 const obj4 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^K[1234]/i, wide: /^[1234]e kwartaal/i },
+  matchPatterns: { narrow: /^[1234]\.?/i, abbreviated: /^[1234]?\.?\s?n\.év/i, wide: /^([1234]|I|II|III|IV)?\.?\s?negyedév/i },
   defaultMatchWidth: "wide",
   parsePatterns: null,
   defaultParseWidth: "any",
@@ -45,27 +49,27 @@ const obj4 = {
   }
 };
 const obj5 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj5.any = items1;
+const items3 = [/1|I$/i, /2|II$/i, /3|III/i, /4|IV/i];
+obj5.any = items3;
 obj4.parsePatterns = obj5;
 date.quarter = obj.default(obj4);
-const obj6 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(jan.|feb.|mrt.|apr.|mei|jun.|jul.|aug.|sep.|okt.|nov.|dec.)/i, wide: /^(januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj6 = { matchPatterns: { narrow: /^[jfmaásond]|sz/i, abbreviated: /^(jan\.?|febr\.?|márc\.?|ápr\.?|máj\.?|jún\.?|júl\.?|aug\.?|szept\.?|okt\.?|nov\.?|dec\.?)/i, wide: /^(január|február|március|április|május|június|július|augusztus|szeptember|október|november|december)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
 const obj7 = { narrow: null, any: null };
-const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-obj7.narrow = items2;
-const items3 = [/^jan/i, /^feb/i, /^m(r|a)/i, /^apr/i, /^mei/i, /^jun/i, /^jul/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i];
-obj7.any = items3;
+const items4 = [/^j/i, /^f/i, /^m/i, /^a|á/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s|sz/i, /^o/i, /^n/i, /^d/i];
+obj7.narrow = items4;
+const items5 = [/^ja/i, /^f/i, /^már/i, /^áp/i, /^máj/i, /^jún/i, /^júl/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj7.any = items5;
 obj6.parsePatterns = obj7;
 date.month = obj.default(obj6);
-const obj8 = { matchPatterns: { narrow: /^[zmdwv]/i, short: /^(zo|ma|di|wo|do|vr|za)/i, abbreviated: /^(zon|maa|din|woe|don|vri|zat)/i, wide: /^(zondag|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj8 = { matchPatterns: { narrow: /^([vhkpc]|sz|cs|sz)/i, short: /^([vhkp]|sze|cs|szo)/i, abbreviated: /^([vhkp]|sze|cs|szo)/i, wide: /^(vasárnap|hétfő|kedd|szerda|csütörtök|péntek|szombat)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
 const obj9 = { narrow: null, any: null };
-const items4 = [/^z/i, /^m/i, /^d/i, /^w/i, /^d/i, /^v/i, /^z/i];
-obj9.narrow = items4;
-const items5 = [/^zo/i, /^ma/i, /^di/i, /^wo/i, /^do/i, /^vr/i, /^za/i];
-obj9.any = items5;
+const items6 = [/^v/i, /^h/i, /^k/i, /^sz/i, /^c/i, /^p/i, /^sz/i];
+obj9.narrow = items6;
+const items7 = [/^v/i, /^h/i, /^k/i, /^sze/i, /^c/i, /^p/i, /^szo/i];
+obj9.any = items7;
 obj8.parsePatterns = obj9;
 date.day = obj.default(obj8);
-const obj10 = { matchPatterns: { any: /^(am|pm|middernacht|het middaguur|'s (ochtends|middags|avonds|nachts))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^am/i, pm: /^pm/i, midnight: /^middernacht/i, noon: /^het middaguur/i, morning: /ochtend/i, afternoon: /middag/i, evening: /avond/i, night: /nacht/i } }, defaultParseWidth: "any" };
+const obj10 = { matchPatterns: { any: /^((de|du)\.?|éjfél|délután|dél|reggel|este|éjjel)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^de\.?/i, pm: /^du\.?/i, midnight: /^éjf/i, noon: /^dé/i, morning: /reg/i, afternoon: /^délu\.?/i, evening: /es/i, night: /éjj/i } }, defaultParseWidth: "any" };
 date.dayPeriod = obj.default(obj10);
 
 export default date;

@@ -1,96 +1,117 @@
 // === Module 5266: ? ===
 
 // Module 5266
-import _mod5264 from "module_5264" /* 5264 */;
-import _modDef5267 from "module_5267" /* 5267 */;
-import _modDef5268 from "module_5268" /* 5268 */;
-import sumDefault from "sum" /* 5270 */;
-import PNG_CHUNK_TYPE_SIZEDefault from "PNG_CHUNK_TYPE_SIZE" /* 5271 */;
-import _modDef5272 from "module_5272" /* 5272 */;
-import _modDef5276 from "module_5276" /* 5276 */;
-import _modDef5277 from "module_5277" /* 5277 */;
-import _modDef5278 from "module_5278" /* 5278 */;
-import _modDef5279 from "module_5279" /* 5279 */;
-
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default {
-  parseAppMarkers(byteLength, flag2) {
-    if (_modDef5267.USE_TIFF) {
-      let tmpResult = _modDef5268;
-      if (tmpResult.isTiffFile(byteLength)) {
-        tmpResult = _modDef5268;
-        const findTiffOffsetsResult = tmpResult.findTiffOffsets();
-        let obj = { fileType: { value: "tiff", description: "TIFF" } };
-        return _mod5264.objectAssign({}, findTiffOffsetsResult, obj);
-      }
-    }
-    if (_modDef5267.USE_JPEG) {
-      if (tmpResult1.isJpegFile(byteLength)) {
-        const tmpResult2 = sumDefault;
-        const findJpegOffsetsResult = sumDefault.findJpegOffsets(byteLength);
-        obj = { fileType: { value: "jpeg", description: "JPEG" } };
-        return _mod5264.objectAssign({}, findJpegOffsetsResult, obj);
-      }
-      tmpResult1 = sumDefault;
-    }
-    if (_modDef5267.USE_PNG) {
-      if (tmpResult3.isPngFile(byteLength)) {
-        const tmpResult4 = PNG_CHUNK_TYPE_SIZEDefault;
-        const findPngOffsetsResult = PNG_CHUNK_TYPE_SIZEDefault.findPngOffsets(byteLength, flag2);
-        const obj1 = { fileType: { value: "png", description: "PNG" } };
-        return _mod5264.objectAssign({}, findPngOffsetsResult, obj1);
-      }
-      tmpResult3 = PNG_CHUNK_TYPE_SIZEDefault;
-    }
-    if (_modDef5267.USE_HEIC) {
-      if (tmpResult5.isHeicFile(byteLength)) {
-        const tmpResult6 = _modDef5272;
-        const findHeicOffsetsResult = _modDef5272.findHeicOffsets(byteLength);
-        const obj2 = { fileType: { value: "heic", description: "HEIC" } };
-        return _mod5264.objectAssign({}, findHeicOffsetsResult, obj2);
-      }
-      tmpResult5 = _modDef5272;
-    }
-    if (_modDef5267.USE_AVIF) {
-      if (tmpResult7.isAvifFile(byteLength)) {
-        const tmpResult8 = _modDef5276;
-        const findAvifOffsetsResult = _modDef5276.findAvifOffsets(byteLength);
-        const obj3 = { fileType: { value: "avif", description: "AVIF" } };
-        return _mod5264.objectAssign({}, findAvifOffsetsResult, obj3);
-      }
-      tmpResult7 = _modDef5276;
-    }
-    if (_modDef5267.USE_WEBP) {
-      if (tmpResult9.isWebpFile(byteLength)) {
-        const tmpResult10 = _modDef5277;
-        const findOffsetsResult = _modDef5277.findOffsets(byteLength);
-        const obj4 = { fileType: { value: "webp", description: "WebP" } };
-        return _mod5264.objectAssign({}, findOffsetsResult, obj4);
-      }
-      tmpResult9 = _modDef5277;
-    }
-    if (_modDef5267.USE_GIF) {
-      if (tmpResult11.isGifFile(byteLength)) {
-        const tmpResult12 = _modDef5278;
-        const findOffsetsResult1 = _modDef5278.findOffsets(byteLength);
-        const obj5 = { fileType: { value: "gif", description: "GIF" } };
-        return _mod5264.objectAssign({}, findOffsetsResult1, obj5);
-      }
-      tmpResult11 = _modDef5278;
-    }
-    if (_modDef5267.USE_XMP) {
-      if (tmpResult13.isXMLFile(byteLength)) {
-        const tmpResult14 = _modDef5279;
-        const findOffsetsResult2 = _modDef5279.findOffsets(byteLength);
-        const obj6 = { fileType: { value: "xml", description: "XML" } };
-        return _mod5264.objectAssign({}, findOffsetsResult2, obj6);
-      }
-      tmpResult13 = _modDef5279;
-    }
-    const error = new Error("Invalid image format");
-    throw error;
+function fetchFromObject(FileTypes, arr) {
+  const index = arr.indexOf(".");
+  if (index > -1) {
+    let tmp2 = fetchFromObject(FileTypes[arr.slice(arr, 0, index)], arr.slice(index + 1));
+  } else {
+    tmp2 = FileTypes[arr];
   }
+  return tmp2;
+}
+
+export const getFileChunk = function getFileChunk(fileChunk) {
+  let num = chunkSize;
+  if (chunkSize === undefined) {
+    num = 32;
+  }
+  let uint8Array = fileChunk;
+  if (fileChunk instanceof ArrayBuffer) {
+    const _Uint8Array = Uint8Array;
+    uint8Array = new Uint8Array(fileChunk);
+  }
+  if (!Array.isArray(fileChunk)) {
+    const _ArrayBuffer = ArrayBuffer;
+    if (!(fileChunk instanceof ArrayBuffer)) {
+      const _Uint8Array2 = Uint8Array;
+      if (!(fileChunk instanceof Uint8Array)) {
+        const _TypeError = TypeError;
+        const _HermesInternal = HermesInternal;
+        const typeError = new TypeError("Expected the `file` argument to be of type `Array<number>`, `Uint8Array`, or `ArrayBuffer`, got `" + typeof fileChunk + "`");
+        throw typeError;
+      }
+    }
+  }
+  const arr = Array.from(uint8Array.slice(0, num));
+  if (arr.every((item) => {
+    let tmp = typeof item === "number";
+    if (typeof item === "number") {
+      const _isNaN = isNaN;
+      tmp = !isNaN(item);
+    }
+    return tmp;
+  })) {
+    return arr;
+  } else {
+    const _TypeError2 = TypeError;
+    const typeError1 = new TypeError("File content contains illegal values");
+    throw typeError1;
+  }
+};
+export { fetchFromObject };
+export const findMatroskaDocTypeElements = function findMatroskaDocTypeElements(fileChunk) {
+  const mapped = fileChunk.map((item) => String.fromCharCode(item));
+  const joined = mapped.join("");
+  let str = "webm";
+  if (!joined.includes("webm")) {
+    let str3;
+    if (joined.includes("matroska")) {
+      str3 = "mkv";
+    }
+    str = str3;
+  }
+  return str;
+};
+export const isftypStringIncluded = function isftypStringIncluded(fileChunk) {
+  const items = [102, 116, 121, 112];
+  let num = 0;
+  if (0 < fileChunk.length - items.length) {
+    while (true) {
+      let num2 = 0;
+      let flag = true;
+      if (0 < items.length) {
+        flag = false;
+        while (fileChunk[num + num2] === items[num2]) {
+          let sum = num2 + 1;
+          num2 = sum;
+          flag = true;
+          if (sum >= items.length) {
+            break;
+          }
+        }
+      }
+      if (flag) {
+        break;
+      } else {
+        num = num + 1;
+      }
+    }
+    return true;
+  }
+  return false;
+};
+export const isFlvStringIncluded = function isFlvStringIncluded(fileChunk) {
+  const substr = fileChunk.slice(0, 3);
+  const decoder = new TextDecoder();
+  const uint8Array = new Uint8Array(substr);
+  return decoder.decode(uint8Array).includes("FLV");
+};
+export const isFileContaineJfiforExifHeader = function isFileContaineJfiforExifHeader(arg0) {
+  let tmp2 = 224 === tmp;
+  if (!tmp2) {
+    tmp2 = 225 === tmp;
+  }
+  return tmp2;
+};
+export const isAvifStringIncluded = function isAvifStringIncluded(fileChunk) {
+  const substr = fileChunk.slice(4, 12);
+  const mapped = substr.map((item) => String.fromCharCode(item));
+  return "ftypavif" === mapped.join("");
+};
+export const isHeicSignatureIncluded = function isHeicSignatureIncluded(fileChunk) {
+  const mapped = fileChunk.map((item) => String.fromCharCode(item));
+  closure_0 = mapped.join("");
+  const items = ["ftypheic", "ftyphevc", "ftypmif1", "ftypmsf1"];
+  return items.some((item) => closure_0.includes(item));
 };

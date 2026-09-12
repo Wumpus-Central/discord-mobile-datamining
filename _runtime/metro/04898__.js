@@ -1,13 +1,15 @@
 // === Module 4898: ? ===
 
 // Module 4898
-let setPrototypeOf = typeof Reflect !== "undefined";
-if (typeof Reflect !== "undefined") {
-  const _Reflect = Reflect;
-  setPrototypeOf = Reflect.setPrototypeOf;
-}
-if (!setPrototypeOf) {
-  setPrototypeOf = null;
-}
 
-export default setPrototypeOf;
+export default function isPrimitive(fn) {
+  let tmp = null === fn;
+  if (!tmp) {
+    let tmp2 = typeof fn !== "function";
+    if (typeof fn !== "function") {
+      tmp2 = typeof fn !== "object";
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+};

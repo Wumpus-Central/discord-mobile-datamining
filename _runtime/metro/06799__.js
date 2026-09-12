@@ -1,210 +1,55 @@
 // === Module 6799: ? ===
 
 // Module 6799
-import _modDef6741 from "module_6741" /* 6741 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import cancelAnimation from "cancelAnimation" /* 1636 */;
+import reactNativeWorkletsCompat from "reactNativeWorkletsCompat" /* 4372 */;
+import tagMessage from "tagMessage" /* 6761 */;
+import ghQueueMicrotask from "ghQueueMicrotask" /* 6788 */;
+import _mod6800 from "module_6800" /* 6800 */;
 
-let closure_2 = ["onGestureHandlerReanimatedStateChange", "onGestureHandlerReanimatedEvent", "onGestureHandlerReanimatedTouchEvent"];
-const noop = fn(19);
-({ useEffect: closure_4, useMemo: hasOwnProperty, useRef: metroRequire } = noop);
-const findNodeHandle = fn(17).findNodeHandle;
-const jsx = fn(21).jsx;
-const Reanimated = fn(6769).Reanimated;
-let NativeEventsManager;
-if (Reanimated != null) {
-  NativeEventsManager = Reanimated.NativeEventsManager;
-}
-let tmp4 = NativeEventsManager;
-if (!NativeEventsManager) {
+try {
+  const _module = cancelAnimation;
   try {
-    NativeEventsManager = fn(1743).NativeEventsManager;
-    tmp4 = NativeEventsManager;
+    const _module1 = reactNativeWorkletsCompat;
+    if (_module1 != null) {
+      const fn = function t() {
+
+      };
+      fn.__closure = {};
+      fn.__workletHash = 1792171573139;
+      fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
+      _module1.scheduleOnUI(fn);
+    }
+    const _module2 = ghQueueMicrotask;
+    _module2.ghQueueMicrotask(() => {
+      const NativeProxy = _mod6800.NativeProxy;
+      if (!NativeProxy.installUIRuntimeBindings()) {
+        const _console = console;
+        console.warn(tagMessage.tagMessage("Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues."));
+        const tmpResult = tagMessage;
+      }
+    });
+    let useSharedValue;
+    if (_module != null) {
+      useSharedValue = _module.useSharedValue;
+    }
+    let setGestureState = undefined === _module;
+    if (!setGestureState) {
+      setGestureState = _module.setGestureState;
+    }
+    if (!setGestureState) {
+      const fn2 = function o() {
+        console.warn(tagMessage.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
+      };
+      let obj = { tagMessage: null };
+      obj = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}", tagMessage: tagMessage.tagMessage };
+      fn2.__closure = obj;
+      fn2.__workletHash = 3596069664305;
+      fn2.__initData = obj;
+      _module.setGestureState = fn2;
+    }
+    exports.Reanimated = _module;
   } catch (err) {
   }
+} catch (err) {
 }
-if (tmp4) {
-  class LeanReanimatedNativeDetector {
-    constructor(arg0) {
-      closure_0 = closure_6(null);
-      closure_1 = closure_6(null);
-      tmp = closure_6(null);
-      closure_2 = tmp;
-      onGestureHandlerReanimatedStateChange = global.onGestureHandlerReanimatedStateChange;
-      closure_3 = onGestureHandlerReanimatedStateChange;
-      onGestureHandlerReanimatedEvent = global.onGestureHandlerReanimatedEvent;
-      closure_4 = onGestureHandlerReanimatedEvent;
-      onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
-      closure_5 = onGestureHandlerReanimatedTouchEvent;
-      tmp2 = closure_3(global, closure_2);
-      items = [, , ];
-      items[0] = onGestureHandlerReanimatedEvent;
-      items[1] = onGestureHandlerReanimatedStateChange;
-      items[2] = onGestureHandlerReanimatedTouchEvent;
-      tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
-      closure_6 = tmp3;
-      tmp4 = closure_4(() => {
-        let num = findNodeHandle(ref3.current);
-        if (num == null) {
-          num = -1;
-        }
-        ref3.__nativeTag = num;
-        ref2.current = new NativeEventsManager({
-          props,
-          _componentRef: ref3,
-          _componentViewTag: num,
-          getComponentViewTag() {
-            return num;
-          }
-        });
-        let current = ref2.current;
-        current.attachEvents();
-        return () => {
-          const current = ref.current;
-          if (current != null) {
-            current.detachEvents();
-          }
-        };
-      }, []);
-      items1 = [];
-      items1[0] = tmp3;
-      tmp5 = closure_4(() => {
-        if (ref.current) {
-          const current = ref2.current;
-          if (current != null) {
-            current.updateEvents(ref.current);
-          }
-        }
-        ref.current = current;
-      }, items1);
-      obj = { ref: tmp };
-      tmp6 = closure_0(closure_1[6]);
-      merged = Object.assign(tmp2);
-      return jsx(tmp6, obj);
-    }
-  }
-} else {
-  class LeanReanimatedNativeDetector {
-    constructor(arg0) {
-      closure_0 = closure_6(null);
-      closure_1 = closure_6(null);
-      tmp = closure_6(null);
-      closure_2 = tmp;
-      onGestureHandlerReanimatedStateChange = global.onGestureHandlerReanimatedStateChange;
-      closure_3 = onGestureHandlerReanimatedStateChange;
-      onGestureHandlerReanimatedEvent = global.onGestureHandlerReanimatedEvent;
-      closure_4 = onGestureHandlerReanimatedEvent;
-      onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
-      closure_5 = onGestureHandlerReanimatedTouchEvent;
-      tmp2 = closure_3(global, closure_2);
-      items = [, , ];
-      items[0] = onGestureHandlerReanimatedEvent;
-      items[1] = onGestureHandlerReanimatedStateChange;
-      items[2] = onGestureHandlerReanimatedTouchEvent;
-      tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
-      closure_6 = tmp3;
-      tmp4 = closure_4(() => {
-        let num = findNodeHandle(ref3.current);
-        if (num == null) {
-          num = -1;
-        }
-        ref3.__nativeTag = num;
-        ref2.current = new NativeEventsManager({
-          props,
-          _componentRef: ref3,
-          _componentViewTag: num,
-          getComponentViewTag() {
-            return num;
-          }
-        });
-        let current = ref2.current;
-        current.attachEvents();
-        return () => {
-          const current = ref.current;
-          if (current != null) {
-            current.detachEvents();
-          }
-        };
-      }, []);
-      items1 = [];
-      items1[0] = tmp3;
-      tmp5 = closure_4(() => {
-        if (ref.current) {
-          const current = ref2.current;
-          if (current != null) {
-            current.updateEvents(ref.current);
-          }
-        }
-        ref.current = current;
-      }, items1);
-      obj = { ref: tmp };
-      tmp6 = closure_0(closure_1[6]);
-      merged = Object.assign(tmp2);
-      return jsx(tmp6, obj);
-    }
-  }
-  let LeanReanimatedNativeDetector;
-  if (tmp5 != null) {
-    class LeanReanimatedNativeDetector {
-      constructor(arg0) {
-        closure_0 = closure_6(null);
-        closure_1 = closure_6(null);
-        tmp = closure_6(null);
-        closure_2 = tmp;
-        onGestureHandlerReanimatedStateChange = global.onGestureHandlerReanimatedStateChange;
-        closure_3 = onGestureHandlerReanimatedStateChange;
-        onGestureHandlerReanimatedEvent = global.onGestureHandlerReanimatedEvent;
-        closure_4 = onGestureHandlerReanimatedEvent;
-        onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
-        closure_5 = onGestureHandlerReanimatedTouchEvent;
-        tmp2 = closure_3(global, closure_2);
-        items = [, , ];
-        items[0] = onGestureHandlerReanimatedEvent;
-        items[1] = onGestureHandlerReanimatedStateChange;
-        items[2] = onGestureHandlerReanimatedTouchEvent;
-        tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
-        closure_6 = tmp3;
-        tmp4 = closure_4(() => {
-          let num = findNodeHandle(ref3.current);
-          if (num == null) {
-            num = -1;
-          }
-          ref3.__nativeTag = num;
-          ref2.current = new NativeEventsManager({
-            props,
-            _componentRef: ref3,
-            _componentViewTag: num,
-            getComponentViewTag() {
-              return num;
-            }
-          });
-          let current = ref2.current;
-          current.attachEvents();
-          return () => {
-            const current = ref.current;
-            if (current != null) {
-              current.detachEvents();
-            }
-          };
-        }, []);
-        items1 = [];
-        items1[0] = tmp3;
-        tmp5 = closure_4(() => {
-          if (ref.current) {
-            const current = ref2.current;
-            if (current != null) {
-              current.updateEvents(ref.current);
-            }
-          }
-          ref.current = current;
-        }, items1);
-        obj = { ref: tmp };
-        tmp6 = closure_0(closure_1[6]);
-        merged = Object.assign(tmp2);
-        return jsx(tmp6, obj);
-      }
-    }
-    LeanReanimatedNativeDetector = obj.createAnimatedComponent(_modDef6741);
-  }
-}
-
-export const ReanimatedNativeDetector = LeanReanimatedNativeDetector;

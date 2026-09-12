@@ -1,14 +1,80 @@
 // === Module 8643: ? ===
 
 // Module 8643
-import _mod26 from "module_26" /* 26 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8588 from "module_8588" /* 8588 */;
+import _modDef8644 from "module_8644" /* 8644 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGText", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-const point = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, dx: true, dy: true, x: true, y: true, rotate: true, inlineSize: true, textLength: true, baselineShift: true, lengthAdjust: true, alignmentBaseline: true, verticalAlign: true };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = point;
+const ForeignObject = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class ForeignObject {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, ForeignObject);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(ForeignObject);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ForeignObject, _modDef8588);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height };
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(ForeignObject(8589).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = props.children;
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
+  }
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(ForeignObject, items);
+importDefaultResultResult.displayName = "ForeignObject";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
-export default module_65.get("RNSVGText", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

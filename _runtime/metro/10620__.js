@@ -2,11 +2,10 @@
 
 // Module 10620
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10535 */;
+import _mod10578 from "module_10578" /* 10578 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -29,14 +28,29 @@ function _isNativeReflectConstruct() {
   }
 }
 _possibleConstructorReturn;
-class NLTimeExpressionParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class FRMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, NLTimeExpressionParser);
+    tmp = closure_0(this, FRMergeDateRangeRefiner);
     tmp2 = c2;
-    obj = c2(NLTimeExpressionParser);
+    obj = c2(FRMergeDateRangeRefiner);
     tmp3 = closure_1;
-    if (closure_4()) {
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,44 +63,14 @@ class NLTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = NLTimeExpressionParser;
-_inherits(NLTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_classCallCheck = FRMergeDateRangeRefiner;
+_inherits(FRMergeDateRangeRefiner, fn(_mod10578).default);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:om)\\s*)?";
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(à|a|au|-)\s*$/i;
   }
 };
-let items = [
-  entry,
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|om|\\?)\\s*";
-    }
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:uur))?(?!/)(?=\\W|$)";
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      let fnResult = null;
-      if (!str.match(/^\s*\d{4}\s*$/)) {
-        const self = this;
-        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
-        if (typeof fn === "function") {
-          fn = (items) => fn.apply(self, items);
-        }
-        const items = [arg0, arg1];
-        fnResult = fn(items);
-      }
-      return fnResult;
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(NLTimeExpressionParser, items);
+export default _createClass(FRMergeDateRangeRefiner, items);

@@ -1,79 +1,42 @@
 // === Module 3867: ? ===
 
 // Module 3867
-import _typeof from "module_3695" /* 3695 */;
-import requiredArgs from "requiredArgs" /* 3696 */;
+import module_3868 from "module_3868" /* 3868 */;
+import module_3869 from "module_3869" /* 3869 */;
+import module_3870 from "module_3870" /* 3870 */;
+import date from "module_4169" /* 4169 */;
+import date from "module_4170" /* 4170 */;
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!module_3868) {
+  let obj = { default: module_3868 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3868;
 }
-_typeof = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+if (!module_3869) {
+  obj = { default: module_3869 };
   let tmp5 = obj;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_3869;
 }
-requiredArgs = tmp5;
+if (!module_3870) {
+  obj = { default: module_3870 };
+  let tmp7 = obj;
+} else {
+  tmp7 = module_3870;
+}
+if (!date) {
+  const obj1 = { default: date };
+  let tmp9 = obj1;
+} else {
+  tmp9 = date;
+}
+if (!date) {
+  const obj2 = { default: date };
+  let tmp11 = obj2;
+} else {
+  tmp11 = date;
+}
 
-export default function max(arg0) {
-  requiredArgs.default(1, arguments);
-  if (!arg0) {
-    if ("object" === _typeof(arg0)) {
-      if (null !== arg0) {
-        const _Array = Array;
-        const call = slice.call;
-        let arr = typeof call === "unknown" ? slice() : call(arg0);
-      }
-    }
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
-  } else {
-    arr = arg0;
-  }
-  const item = arr.forEach((item) => {
-    defaultResult = _typeof.default(item);
-    let isNaNResult = undefined === defaultResult || defaultResult < defaultResult;
-    if (!isNaNResult) {
-      const _isNaN = isNaN;
-      const _Number = Number;
-      isNaNResult = isNaN(Number(defaultResult));
-    }
-  });
-  let date1 = _typeof;
-  if (!_typeof) {
-    const _Date2 = Date;
-    date1 = new Date(NaN);
-  }
-  return date1;
-};
+export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

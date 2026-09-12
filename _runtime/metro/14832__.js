@@ -1,7 +1,7 @@
 // === Module 14832: ? ===
 
 // Module 14832
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/user_settings/account/native/images", width: 121, height: 90, scales: [1, 2, 3], hash: "6fbfa0aa2194635b21a8ebd068b44d0c", name: "lock", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "ffc055b34b6e807591a112e31f976e46", name: "sv-SE.messages.ffc055b34b6e807591a112e31f976e46.compiled.messages", type: "jsona" });

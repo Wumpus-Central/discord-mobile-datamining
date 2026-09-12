@@ -1,309 +1,131 @@
 // === Module 12982: ? ===
 
 // Module 12982
-function resolve() {
-  let tmp17;
-  const items = [...arguments];
-  let diff = items.length - 1;
-  let flag = false;
-  let str = "";
-  let flag2 = false;
-  let str2 = "";
-  if (-1 <= diff) {
-    while (true) {
-      let tmp3 = flag;
-      let str3 = "/";
-      if (0 <= diff) {
-        str3 = items[diff];
-      }
-      let combined = str;
-      if (str3) {
-        let _HermesInternal = HermesInternal;
-        combined = "" + str3 + "/" + str;
-        tmp3 = "/" === str3.charAt(0);
-      }
-      let diff1 = diff - 1;
-      flag2 = tmp3;
-      str2 = combined;
-      if (-1 > diff1) {
-        break;
-      } else {
-        diff = diff1;
-        flag = tmp3;
-        str = combined;
-        str2 = combined;
-        flag2 = tmp3;
-        if (tmp3) {
-          break;
-        }
-      }
-    }
-  }
-  let str4 = "";
-  if (flag2) {
-    str4 = "/";
-  }
-  const parts = str2.split("/");
-  const found = parts.filter((item) => item);
-  let diff2 = found.length - 1;
-  let num = 0;
-  let num2 = 0;
-  if (0 <= diff2) {
-    do {
-      let tmp8 = found[diff2];
-      if ("." === tmp8) {
-        let spliceResult = found.splice(diff2, 1);
-        let sum = num;
-      } else if (".." === tmp8) {
-        let spliceResult1 = found.splice(diff2, 1);
-        sum = num + 1;
-      } else {
-        sum = num;
-        if (num) {
-          let spliceResult2 = found.splice(diff2, 1);
-          sum = num - 1;
-        }
-      }
-      diff2 = diff2 - 1;
-      num = sum;
-      num2 = sum;
-    } while (0 <= diff2);
-  }
-  if (!flag2) {
-    let diff3 = num2 - 1;
-    if (num2) {
-      do {
-        let arr = found.unshift("..");
-        tmp17 = diff3;
-        diff3 = diff3 - 1;
-      } while (tmp17);
-    }
-  }
-  return str4 + found.join("/") || ".";
-}
-function normalizePath(str) {
-  let tmp14;
-  const substr = str.slice(-1);
-  const parts = str.split("/");
-  const found = parts.filter((item) => item);
-  let diff = found.length - 1;
-  let num = 0;
-  let num2 = 0;
-  if (0 <= diff) {
-    do {
-      let tmp4 = found[diff];
-      if ("." === tmp4) {
-        let spliceResult = found.splice(diff, 1);
-        let sum = num;
-      } else if (".." === tmp4) {
-        let spliceResult1 = found.splice(diff, 1);
-        sum = num + 1;
-      } else {
-        sum = num;
-        if (num) {
-          let spliceResult2 = found.splice(diff, 1);
-          sum = num - 1;
-        }
-      }
-      diff = diff - 1;
-      num = sum;
-      num2 = sum;
-    } while (0 <= diff);
-  }
-  const tmp11 = "/" === str.charAt(0);
-  if (!tmp11) {
-    let diff1 = num2 - 1;
-    if (num2) {
-      do {
-        let arr = found.unshift("..");
-        tmp14 = diff1;
-        diff1 = diff1 - 1;
-      } while (tmp14);
-    }
-  }
-  str = found.join("/");
-  let tmp15 = str;
-  if (!str) {
-    tmp15 = tmp11;
-  }
-  if (!tmp15) {
-    str = ".";
-  }
-  let tmp16 = str;
-  if (str) {
-    tmp16 = "/" === substr;
-  }
-  let text = str;
-  if (tmp16) {
-    text = `${str}/`;
-  }
-  let str2 = "";
-  if (tmp11) {
-    str2 = "/";
-  }
-  return str2 + text;
-}
-const re0 = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
+import _mod12926 from "module_12926" /* 12926 */;
+import _mod12953 from "module_12953" /* 12953 */;
+import _mod12954 from "module_12954" /* 12954 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-export const basename = function basename(arr, arg1) {
-  let combined = arr;
-  if (arr.length > 1024) {
+function setupIntegration(on, name, arg2) {
+  closure_0 = on;
+  if (arg2[name.name]) {
+    if (_mod12954.DEBUG_BUILD) {
+      const logger2 = _mod12926.logger;
+      const _HermesInternal2 = HermesInternal;
+      logger2.log("Integration skipped because it was already installed: " + name.name);
+    }
+  } else {
+    arg2[name.name] = name;
+    let arr = items;
+    if (tmp) {
+      name.setupOnce();
+      arr = arr.push(name.name);
+    }
+    if (tmp4) {
+      name.setup(on);
+    }
+    if (typeof name.preprocessEvent === "function") {
+      const preprocessEvent = name.preprocessEvent;
+      closure_1 = preprocessEvent.bind(name);
+      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
+    }
+    if (typeof name.processEvent === "function") {
+      const processEvent = name.processEvent;
+      closure_2 = processEvent.bind(name);
+      const _Object = Object;
+      const obj = { id: name.name };
+      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
+    }
+    if (_mod12954.DEBUG_BUILD) {
+      const logger = _mod12926.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Integration installed: " + name.name);
+    }
+    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
+    tmp4 = name.setup && typeof name.setup === "function";
+  }
+}
+let items = [];
+
+export const addIntegration = function addIntegration(name) {
+  const client = _mod12953.getClient();
+  if (client) {
+    client.addIntegration(name);
+  } else if (_mod12954.DEBUG_BUILD) {
+    const logger = _mod12926.logger;
     const _HermesInternal = HermesInternal;
-    combined = "<truncated>" + arr.slice(-1024);
+    logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
   }
-  const match = re0.exec(combined);
-  if (match) {
-    let substr = match.slice(1);
-  } else {
-    substr = [];
-  }
-  let tmp3 = arg1;
-  if (arg1) {
-    tmp3 = arr3.slice(-1 * arg1.length) === arg1;
-  }
-  let substr1 = arr3;
-  if (tmp3) {
-    substr1 = arr3.slice(0, arr3.length - arg1.length);
-  }
-  return substr1;
 };
-export const dirname = function dirname(arr) {
-  let combined = arr;
-  if (arr.length > 1024) {
-    const _HermesInternal = HermesInternal;
-    combined = "<truncated>" + arr.slice(-1024);
-  }
-  const match = re0.exec(combined);
-  if (match) {
-    let substr = match.slice(1);
-  } else {
-    substr = [];
-  }
-  if (substr[0] || "") {
-    let substr1 = arr3;
-    if (arr3) {
-      substr1 = arr3.slice(0, arr3.length - 1);
+export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
+  const iter = arg1[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let obj = nextResult;
+    if (nextResult) {
+      let afterAllSetup = obj.afterAllSetup;
     }
-    let str2 = tmp3 + substr1;
-  } else {
-    str2 = ".";
+    if (nextResult) {
+      let afterAllSetupResult = obj.afterAllSetup(arg0);
+    }
+    continue;
   }
-  return str2;
 };
-export const isAbsolute = function isAbsolute(str) {
-  return "/" === str.charAt(0);
-};
-export const join = function join() {
-  const items = [...arguments];
-  return normalizePath(items.join("/"));
-};
-export { normalizePath };
-export const relative = function relative(root, replaced) {
-  let length;
-  let arr = resolve(root);
-  const str = arr.slice(1);
-  const arr2 = resolve(replaced);
-  const parts = str.split("/");
-  let num = 0;
-  if (0 < parts.length) {
-    let num2 = 0;
-    num = 0;
-    if ("" === parts[0]) {
-      const sum = num2 + 1;
-      num = sum;
-      while (sum < parts.length) {
-        num2 = sum;
-        num = sum;
-        if ("" !== parts[sum]) {
-          break;
-        }
-      }
-    }
-  }
-  const diff = parts.length - 1;
-  let tmp3 = diff;
-  if (0 <= diff) {
-    let tmp4 = diff;
-    tmp3 = diff;
-    if ("" === parts[diff]) {
-      const diff1 = tmp4 - 1;
-      tmp3 = diff1;
-      while (0 <= diff1) {
-        tmp4 = diff1;
-        tmp3 = diff1;
-        if ("" !== parts[diff1]) {
-          break;
-        }
-      }
-    }
-  }
-  if (tmp3 < num) {
-    let items = [];
+export function defineIntegration(arg0) {
+  return arg0;
+}
+export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
+  let arr = defaultIntegrations.defaultIntegrations || [];
+  const integrations = defaultIntegrations.integrations;
+  const item = arr.forEach((item) => {
+    item.isDefaultInstance = true;
+  });
+  if (Array.isArray(integrations)) {
+    items = [];
+    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
+    let arr2 = items;
   } else {
-    items = parts.slice(num, tmp3 - num + 1);
-  }
-  const parts1 = resolve(replaced).slice(1).split("/");
-  let num3 = 0;
-  if (0 < parts1.length) {
-    let num4 = 0;
-    num3 = 0;
-    if ("" === parts1[0]) {
-      const sum1 = num4 + 1;
-      num3 = sum1;
-      while (sum1 < parts1.length) {
-        num4 = sum1;
-        num3 = sum1;
-        if ("" !== parts1[sum1]) {
-          break;
-        }
+    arr2 = arr;
+    if (typeof integrations === "function") {
+      const integrationsResult = integrations(arr);
+      const _Array = Array;
+      let tmp2 = integrationsResult;
+      if (!Array.isArray(integrationsResult)) {
+        const items1 = [integrationsResult];
+        tmp2 = items1;
       }
+      arr2 = tmp2;
     }
   }
-  const diff2 = parts1.length - 1;
-  let tmp8 = diff2;
-  if (0 <= diff2) {
-    let tmp9 = diff2;
-    tmp8 = diff2;
-    if ("" === parts1[diff2]) {
-      const diff3 = tmp9 - 1;
-      tmp8 = diff3;
-      while (0 <= diff3) {
-        tmp9 = diff3;
-        tmp8 = diff3;
-        if ("" !== parts1[diff3]) {
-          break;
-        }
-      }
+  const item1 = arr2.forEach((name) => {
+    name = name.name;
+    let isDefaultInstance = tmp2;
+    if (obj[name]) {
+      isDefaultInstance = !tmp2.isDefaultInstance;
     }
-  }
-  if (tmp8 < num3) {
-    let items1 = [];
-  } else {
-    items1 = parts1.slice(num3, tmp8 - num3 + 1);
-  }
-  const bound = Math.min(items.length, items1.length);
-  let num5 = 0;
-  let tmp12 = bound;
-  if (0 < bound) {
-    tmp12 = num5;
-    while (items[num5] === items1[num5]) {
-      num5 = num5 + 1;
-      tmp12 = bound;
-      if (num5 >= bound) {
-        break;
-      }
+    if (isDefaultInstance) {
+      isDefaultInstance = name.isDefaultInstance;
     }
+    if (!isDefaultInstance) {
+      obj[name] = name;
+    }
+  });
+  const values = Object.values({});
+  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
+  if (findIndexResult > -1) {
+    arr = values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
   }
-  const items2 = [];
-  let sum2 = tmp12;
-  if (tmp12 < items.length) {
-    do {
-      arr = items2.push("..");
-      sum2 = sum2 + 1;
-      length = items.length;
-    } while (sum2 < length);
-  }
-  const combined = items2.concat(items1.slice(tmp12));
-  return combined.join("/");
+  return values;
 };
-export { resolve };
+export const installedIntegrations = items;
+export { setupIntegration };
+export const setupIntegrations = function setupIntegrations(arg0, arr) {
+  closure_0 = arg0;
+  const obj = {};
+  const item = arr.forEach((item) => {
+    if (item) {
+      setupIntegration(closure_0, item, obj);
+    }
+  });
+  return obj;
+};

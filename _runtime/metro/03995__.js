@@ -1,8 +1,8 @@
 // === Module 3995: ? ===
 
 // Module 3995
-import _typeof from "module_3695" /* 3695 */;
-import requiredArgs from "requiredArgs" /* 3696 */;
+import _typeof from "module_3725" /* 3725 */;
+import requiredArgs from "requiredArgs" /* 3726 */;
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -19,9 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFuture(arg0) {
+export default function getHours(arg0) {
   requiredArgs.default(1, arguments);
-  const time = _typeof.default(arg0).getTime();
-  return time > Date.now();
+  return _typeof.default(arg0).getHours();
 };
 export default exports.default;

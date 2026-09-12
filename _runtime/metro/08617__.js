@@ -1,15 +1,16 @@
 // === Module 8617: ? ===
 
 // Module 8617
-import _modDef8566 from "module_8566" /* 8566 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8613 from "module_8613" /* 8613 */;
+import _modDef8618 from "module_8618" /* 8618 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const LinearGradient = importDefault;
+const FeComposite = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class LinearGradient {
+class FeComposite {
   constructor() {
     self = this;
-    tmp = c2(this, LinearGradient);
-    tmp2 = closure_4;
-    obj = closure_4(LinearGradient);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, FeComposite);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeComposite);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,30 +52,33 @@ class LinearGradient {
     return tmp3(self, constructResult);
   }
 }
-_inherits(LinearGradient, _modDef8566);
+_inherits(FeComposite, _modDef8613);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    let obj = { x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 };
-    obj = {
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(LinearGradient(8619)(props, this));
-    return jsx(LinearGradient(8618), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const merged = Object.assign(FeComposite(8612).extractFilter(this.props));
+    const obj2 = FeComposite(8612);
+    const merged1 = Object.assign(FeComposite(8612).extractFeComposite(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(LinearGradient, items);
-importDefaultResultResult.displayName = "LinearGradient";
-importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
+const importDefaultResultResult = _createClass(FeComposite, items);
+importDefaultResultResult.displayName = "FeComposite";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.k1 = 0;
+obj.k2 = 0;
+obj.k3 = 0;
+obj.k4 = 0;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

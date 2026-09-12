@@ -1,7 +1,7 @@
 // === Module 13321: ? ===
 
 // Module 13321
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/images", width: 608, height: 608, scales: [2, 3], hash: "6936c050862daceed7175a327466cd4a", name: "quests_embed_mobile_missing", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting", width: 120, height: 125, scales: [1, 2, 3], hash: "c43124de927c4f7db7d60a63938625a8", name: "wumpus_cup_premium120", type: "png" });

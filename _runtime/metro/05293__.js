@@ -1,13 +1,20 @@
 // === Module 5293: ? ===
 
 // Module 5293
-let obj = { 4: null };
-obj = {
-  name: "ShotInfo",
-  description(arg0) {
-    return arg0;
+class MetadataMissingError {
+  constructor(arg0) {
+    obj = { name: "MetadataMissingError" };
+    str = arg0;
+    if (!arg0) {
+      str = "No Exif data";
+    }
+    obj.message = str;
+    error = new Error();
+    obj.stack = error.stack;
+    return;
   }
-};
-obj[4] = obj;
+}
+let error = new Error();
+MetadataMissingError.prototype = error;
 
-export default obj;
+export default { MetadataMissingError };

@@ -1,15 +1,7 @@
 // === Module 6932: ? ===
 
 // Module 6932
+import _modDef6933 from "module_6933" /* 6933 */;
 
-export default function _arrayLikeToArray(arg0, arg1) {
-  let length = arg1;
-  if (tmp) {
-    length = arg0.length;
-  }
-  const ArrayResult = Array(length);
-  for (let num = 0; num < length; num = num + 1) {
-    ArrayResult[num] = arg0[num];
-  }
-  return ArrayResult;
-};
+
+export default _modDef6933;

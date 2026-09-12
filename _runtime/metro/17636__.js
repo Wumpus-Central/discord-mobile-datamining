@@ -1,7 +1,7 @@
 // === Module 17636: ? ===
 
 // Module 17636
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/audit_logs", width: 24, height: 24, scales: [2, 3], hash: "6cae386612a05fa05fa9c172e944297a", name: "ic_audit_create_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b4bc35e77125dd7a659435efd876e4cc", name: "ChannelListIcon", type: "png" });

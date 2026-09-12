@@ -1,17 +1,7 @@
 // === Module 14620: ? ===
 
 // Module 14620
-import _modDef14618 from "module_14618" /* 14618 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default function useReanimatedTransitionProgress() {
-  const context = noop.useContext(_modDef14618);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for reanimated transition progress. Are you inside a screen in Native Stack?");
-    throw error;
-  } else {
-    return context;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [2, 3], hash: "d63daceced7ceb0d84c7aba817626689", name: "ic_call_status_yellow_24px", type: "png" });

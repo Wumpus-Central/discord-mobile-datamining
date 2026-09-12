@@ -1,7 +1,43 @@
 // === Module 15637: ? ===
 
 // Module 15637
-import registerAsset from "module_1122" /* 1122 */;
+function _extends() {
+  if (Object.assign) {
+    const _Object = Object;
+    exports = assign.bind();
+  } else {
+    exports = (arg0) => {
+      for (let num = 1; num < arguments.length; num = num + 1) {
+        let tmp = arguments[num];
+        for (const key10011 in tmp) {
+          hasOwnProperty = {}.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10011);
+          } else {
+            hasOwnPropertyResult = call(tmp, key10011);
+          }
+          if (!hasOwnPropertyResult) {
+            continue;
+          } else {
+            arg0[key10011] = tmp[key10011];
+            continue;
+          }
+          continue;
+        }
+      }
+      return arg0;
+    };
+  }
+  module.exports = exports;
+  const apply = exports.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(null);
+  } else {
+    applyArgumentsResult = apply(null, arguments);
+  }
+  return applyArgumentsResult;
+}
+let exports = _extends;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1c2e533ca379db7ea82903ea36d239f5", name: "FileWarningIcon", type: "png" });
+export default _extends;

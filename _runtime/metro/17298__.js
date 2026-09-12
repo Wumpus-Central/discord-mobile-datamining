@@ -1,7 +1,7 @@
 // === Module 17298: ? ===
 
 // Module 17298
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 24, height: 24, scales: [2, 3], hash: "2b649615a70a14244330a855517175bb", name: "report", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "e0e70b148b33d67bf7c7b1d0419e39c9", name: "ic_lock", type: "png" });

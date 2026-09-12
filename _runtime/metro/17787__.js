@@ -1,7 +1,7 @@
 // === Module 17787: ? ===
 
 // Module 17787
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 40, height: 40.5, scales: [2, 3], hash: "a3768a48fee4076951a25e660d265530", name: "role_subscription_benefit_wise_avatar", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 88, height: 80, scales: [2, 3], hash: "6d22576d9f7927048034966be0fe9d4c", name: "channel_setup_darker", type: "png" });

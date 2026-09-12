@@ -1,7 +1,7 @@
 // === Module 9513: ? ===
 
 // Module 9513
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "04e956cfab49d64a3f8a18b66aa5fc1e", name: "ChatSmileIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 163.5, height: 20, scales: [2, 3], hash: "cd3f012d84fd9fd0e06d08e5556058d7", name: "img_logo_nitro_tier_0_horizontal_dark", type: "png" });

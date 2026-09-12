@@ -1,7 +1,7 @@
 // === Module 13679: ? ===
 
 // Module 13679
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 213.5, height: 19, scales: [2, 3], hash: "5c483e491c3f377ab1cb686f9a6d4d3b", name: "img_subscription_activated_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b0762f0f9ef3f22f62e92b1be981b656", name: "ChevronLargeUpIcon", type: "png" });

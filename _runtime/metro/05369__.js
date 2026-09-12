@@ -1,7 +1,7 @@
 // === Module 5369: ? ===
 
 // Module 5369
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "6d22344f328170a77fc1da6d56f802d8", name: "img_account_sync_reddit_light_and_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "344ee148b183cbe058428a0b2e53672e", name: "img_account_sync_youtube_light_and_dark", type: "png" });

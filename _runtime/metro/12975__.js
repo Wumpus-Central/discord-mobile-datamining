@@ -1,76 +1,319 @@
 // === Module 12975: ? ===
 
 // Module 12975
-import _mod12917 from "module_12917" /* 12917 */;
-import _mod12977 from "module_12977" /* 12977 */;
-import setupIntegration from "module_12946" /* 12946 */;
+import _mod12935 from "module_12935" /* 12935 */;
+import _mod12963 from "module_12963" /* 12963 */;
+import _mod12971 from "module_12971" /* 12971 */;
+import _mod12978 from "module_12978" /* 12978 */;
 
-
-export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+require = arg1;
+const dependencyMap = arg6;
+function applyClientOptions(environment, environment2) {
+  ({ release, dist, maxValueLength } = environment2);
+  let num = 250;
+  if (undefined !== maxValueLength) {
+    num = maxValueLength;
   }
-  let handled;
-  let CONSOLE_LEVELS = obj.levels;
-  if (!CONSOLE_LEVELS) {
-    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
+  let DEFAULT_ENVIRONMENT = environment.environment || environment2.environment;
+  if (!DEFAULT_ENVIRONMENT) {
+    DEFAULT_ENVIRONMENT = _mod12963.DEFAULT_ENVIRONMENT;
   }
-  handled = obj.handled;
-  obj = {
-    name: "CaptureConsole",
-    setup(arg0) {
-      closure_0 = arg0;
-      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
-        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
-          ({ args, level } = arg0);
-          let extra = _mod12917;
-          let hasItem = extra.getClient() === args;
-          if (hasItem) {
-            hasItem = CONSOLE_LEVELS.includes(level);
+  environment.environment = DEFAULT_ENVIRONMENT;
+  const release2 = environment.release;
+  let tmp3 = !release2;
+  if (!release2) {
+    tmp3 = release;
+  }
+  if (tmp3) {
+    environment.release = release;
+  }
+  const dist2 = environment.dist;
+  let tmp4 = !dist2;
+  if (!dist2) {
+    tmp4 = dist;
+  }
+  if (tmp4) {
+    environment.dist = dist;
+  }
+  if (environment.message) {
+    environment.message = _mod12935.truncate(environment.message, num);
+  }
+  value = iter;
+  if (environment.exception && environment.exception.values && environment.exception.values[0]) {
+    value = iter.value;
+  }
+  if (value) {
+    iter.value = _mod12935.truncate(iter.value, num);
+  }
+  const request = environment.request;
+  let url = request;
+  if (request) {
+    url = request.url;
+  }
+  if (url) {
+    request.url = _mod12935.truncate(request.url, num);
+  }
+}
+function applyDebugIds(exception, arg1) {
+  const filenameToDebugIdMap = _mod12978.getFilenameToDebugIdMap(arg1);
+  try {
+    const values = exception.exception.values;
+    let item = values.forEach((stacktrace) => {
+      const frames = stacktrace.stacktrace.frames;
+      const item = frames.forEach((filename) => {
+        filename = closure_1_0;
+        if (closure_1_0) {
+          filename = filename.filename;
+        }
+        if (filename) {
+          filename.debug_id = closure_1_0[filename.filename];
+        }
+      });
+    });
+  } catch (err) {
+  }
+}
+function applyDebugMeta(exception) {
+  const obj = {};
+  try {
+    const values = exception.exception.values;
+    let item = values.forEach((stacktrace) => {
+      const frames = stacktrace.stacktrace.frames;
+      const item = frames.forEach((debug_id) => {
+        if (debug_id.debug_id) {
+          if (debug_id.abs_path) {
+            obj[debug_id.abs_path] = debug_id.debug_id;
+          } else if (debug_id.filename) {
+            obj[debug_id.filename] = debug_id.debug_id;
           }
-          if (hasItem) {
-            closure_2 = handled;
-            extra = { level: null, extra: null };
-            let tmpResult = _mod12977;
-            extra.level = tmpResult.severityLevelFromString(level);
-            extra = { arguments: args };
-            extra.extra = extra;
-            tmpResult = _mod12917;
-            tmpResult.withScope((addEventProcessor) => {
-              addEventProcessor.addEventProcessor((arg0) => {
-                arg0.logger = "console";
-                args(level[6]);
-                const obj = { handled, type: "console" };
-                const result = obj.addExceptionMechanism(arg0, obj);
-                return arg0;
-              });
-              if ("assert" !== level) {
-                const found = args.find((item) => item instanceof Error);
-                if (found) {
-                  let tmp14Result = args(12938);
-                  tmp14Result.captureException(found, obj);
-                } else {
-                  tmp14Result = args(12899);
-                  const safeJoinResult = tmp14Result.safeJoin(args, " ");
-                  args(12938).captureMessage(safeJoinResult, obj);
-                  const obj4 = args(12938);
-                }
-              } else if (!args[0]) {
-                obj = args(12899);
-                const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + obj.safeJoin(args.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", args.slice(1));
-                const tmp4 = obj.safeJoin(args.slice(1), " ") || "console.assert";
-                args(12938).captureMessage(combined, obj);
-                const obj2 = args(12938);
-              }
-            });
-          }
-        });
-        let tmpResult = CONSOLE_LEVELS(handled[2]);
+          delete tmp2[tmp];
+        }
+      });
+    });
+    const _Object = Object;
+    if (0 !== Object.keys(obj).length) {
+      let debug_meta = exception.debug_meta;
+      if (!debug_meta) {
+        debug_meta = {};
       }
+      exception.debug_meta = debug_meta;
+      let images = exception.debug_meta.images;
+      if (!images) {
+        images = [];
+      }
+      exception.debug_meta.images = images;
+      images = exception.debug_meta.images;
+      const _Object2 = Object;
+      const entries = Object.entries(obj);
+      const item1 = entries.forEach((item) => {
+        [tmp, tmp2] = item;
+        images.push({ type: "sourcemap", code_file: tmp, debug_id: tmp2 });
+      });
     }
-  };
-  return obj;
-});
+  } catch (err) {
+  }
+}
+let closure_5 = ["user", "level", "extra", "contexts", "tags", "fingerprint", "requestSession", "propagationContext"];
+
+export { applyClientOptions };
+export { applyDebugIds };
+export { applyDebugMeta };
+export const parseEventHintOrCaptureContext = function parseEventHintOrCaptureContext(captureContext) {
+  if (captureContext) {
+    if (tmp3) {
+      const obj = { captureContext };
+      let tmp5 = obj;
+    } else {
+      const _Object = Object;
+      const keys = Object.keys(captureContext);
+      tmp5 = captureContext;
+    }
+    return tmp5;
+  }
+};
+export const prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, getScopeData, emit, getScopeData2) {
+  normalizeDepth = normalizeDepth.normalizeDepth;
+  let num = 3;
+  if (undefined !== normalizeDepth) {
+    num = normalizeDepth;
+  }
+  const normalizeMaxBreadth = normalizeDepth.normalizeMaxBreadth;
+  let num2 = 1000;
+  if (undefined !== normalizeMaxBreadth) {
+    num2 = normalizeMaxBreadth;
+  }
+  let obj = {};
+  let merged = Object.assign(event_id);
+  let uuid4Result = event_id.event_id || event_id2.event_id;
+  if (!uuid4Result) {
+    uuid4Result = num(num2[0]).uuid4();
+    let obj2 = num(num2[0]);
+  }
+  obj.event_id = uuid4Result;
+  let timestamp = event_id.timestamp;
+  if (!timestamp) {
+    timestamp = num(num2[1]).dateTimestampInSeconds();
+    const obj3 = num(num2[1]);
+  }
+  obj.timestamp = timestamp;
+  let integrations = event_id2.integrations;
+  if (!integrations) {
+    const integrations1 = normalizeDepth.integrations;
+    integrations = integrations1.map((name) => name.name);
+  }
+  applyClientOptions(obj, normalizeDepth);
+  if (integrations.length > 0) {
+    obj.sdk = obj.sdk || {};
+    let integrations2 = obj.sdk.integrations;
+    if (!integrations2) {
+      integrations2 = [];
+    }
+    const items = [];
+    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(integrations2, 0));
+    obj.sdk.integrations = items;
+  }
+  if (emit) {
+    emit.emit("applyFrameMetadata", event_id);
+  }
+  if (undefined === event_id.type) {
+    applyDebugIds(obj, normalizeDepth.stackParser);
+  }
+  const captureContext = event_id2.captureContext;
+  if (!captureContext) {
+    if (event_id2.mechanism) {
+      const result = num(num2[0]).addExceptionMechanism(obj, event_id2.mechanism);
+      const obj5 = num(num2[0]);
+    }
+    if (emit) {
+      let eventProcessors = emit.getEventProcessors();
+    } else {
+      eventProcessors = [];
+    }
+    const globalScope = num(num2[2]).getGlobalScope();
+    const scopeData = globalScope.getScopeData();
+    if (getScopeData2) {
+      const scopeData1 = getScopeData2.getScopeData();
+      let tmp26Result = tmp26(tmp27[3]);
+      tmp26Result.mergeScopeData(scopeData, scopeData1);
+    }
+    if (getScopeData) {
+      const scopeData2 = getScopeData.getScopeData();
+      tmp26Result = tmp26(tmp27[3]);
+      tmp26Result.mergeScopeData(scopeData, scopeData2);
+    }
+    const tmp33 = event_id2.attachments || [];
+    const items1 = [];
+    HermesBuiltin.arraySpread(scopeData.attachments, HermesBuiltin.arraySpread(tmp33, 0));
+    if (items1.length) {
+      event_id2.attachments = items1;
+    }
+    const obj6 = num(num2[2]);
+    const result1 = num(num2[3]).applyScopeDataToEvent(obj, scopeData);
+    const items2 = [];
+    HermesBuiltin.arraySpread(scopeData.eventProcessors, HermesBuiltin.arraySpread(eventProcessors, 0));
+    const tmp26Result1 = num(num2[3]);
+    const result2 = num(num2[4]).notifyEventProcessors(items2, obj, event_id2);
+    return result2.then((breadcrumbs) => {
+      if (breadcrumbs) {
+        applyDebugMeta(breadcrumbs);
+      }
+      let tmp4 = breadcrumbs;
+      if (typeof num === "number") {
+        tmp4 = breadcrumbs;
+        if (tmp3 > 0) {
+          closure_0 = tmp3;
+          closure_1 = num2;
+          let tmp30 = null;
+          if (breadcrumbs) {
+            let obj = {};
+            let merged = Object.assign(breadcrumbs);
+            breadcrumbs = breadcrumbs.breadcrumbs;
+            if (breadcrumbs) {
+              obj = { breadcrumbs: null };
+              breadcrumbs = breadcrumbs.breadcrumbs;
+              obj.breadcrumbs = breadcrumbs.map((data) => {
+                let obj = {};
+                const merged = Object.assign(data);
+                data = data.data;
+                if (data) {
+                  obj = { data: null };
+                  const normalizer = num(num2[8]);
+                  obj.data = normalizer.normalize(data.data, closure_0, closure_1);
+                  data = obj;
+                }
+                const merged1 = Object.assign(data);
+                return obj;
+              });
+              breadcrumbs = obj;
+            }
+            let merged1 = Object.assign(breadcrumbs);
+            let user = breadcrumbs.user;
+            if (user) {
+              obj = { user: null };
+              let normalizer = _mod12971;
+              obj.user = normalizer.normalize(breadcrumbs.user, tmp3, tmp33);
+              user = obj;
+            }
+            const merged2 = Object.assign(user);
+            let contexts = breadcrumbs.contexts;
+            if (contexts) {
+              const obj1 = { contexts: null };
+              const normalizer2 = _mod12971;
+              obj1.contexts = normalizer2.normalize(breadcrumbs.contexts, tmp3, tmp33);
+              contexts = obj1;
+            }
+            const merged3 = Object.assign(contexts);
+            let extra = breadcrumbs.extra;
+            if (extra) {
+              const obj2 = { extra: null };
+              const normalizer3 = _mod12971;
+              obj2.extra = normalizer3.normalize(breadcrumbs.extra, tmp3, tmp33);
+              extra = obj2;
+            }
+            const merged4 = Object.assign(extra);
+            if (tmp26) {
+              obj.contexts.trace = breadcrumbs.contexts.trace;
+              if (breadcrumbs.contexts.trace.data) {
+                const normalizer4 = _mod12971;
+                obj.contexts.trace.data = normalizer4.normalize(breadcrumbs.contexts.trace.data, tmp3, tmp33);
+              }
+            }
+            if (breadcrumbs.spans) {
+              const spans = breadcrumbs.spans;
+              obj.spans = spans.map((data) => {
+                let obj = {};
+                const merged = Object.assign(data);
+                data = data.data;
+                if (data) {
+                  obj = { data: null };
+                  const normalizer = num(num2[8]);
+                  obj.data = normalizer.normalize(data.data, closure_0, closure_1);
+                  data = obj;
+                }
+                const merged1 = Object.assign(data);
+                return obj;
+              });
+            }
+            tmp30 = obj;
+            if (tmp29) {
+              const normalizer5 = _mod12971;
+              obj.contexts.flags = normalizer5.normalize(breadcrumbs.contexts.flags, 3, tmp33);
+              tmp30 = obj;
+            }
+            tmp26 = breadcrumbs.contexts && breadcrumbs.contexts.trace && obj.contexts;
+            tmp29 = breadcrumbs.contexts && breadcrumbs.contexts.flags && obj.contexts;
+          }
+          tmp4 = tmp30;
+        }
+      }
+      return tmp4;
+    });
+  } else {
+    if (getScopeData) {
+      let cloneResult = getScopeData.clone();
+    } else {
+      cloneResult = new num(num2[9]).Scope();
+    }
+    cloneResult.update(captureContext);
+  }
+};

@@ -1,65 +1,75 @@
 // === Module 17347: ? ===
 
 // Module 17347
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "uk",
-  pluralRuleFunction(arg0, arg1) {
-    const parts = String(arg0).split(".");
-    [arr, tmp2] = parts;
-    let substr1 = Number(parts[0]) == arg0;
-    let substr = substr1;
-    if (substr1) {
-      const first = parts[0];
-      substr = first.slice(-1);
-    }
-    if (substr1) {
-      const first1 = parts[0];
-      substr1 = first1.slice(-2);
-    }
-    const substr2 = arr.slice(-1);
-    const substr3 = arr.slice(-2);
-    if (arg1) {
-      let str8 = "other";
-      if (3 == substr) {
-        str8 = "other";
-        if (13 != substr1) {
-          str8 = "few";
-        }
-      }
-      let str2 = str8;
-    } else {
-      if (!tmp2) {
-        if (1 == substr2) {
-          str2 = "one";
-        }
-      }
-      if (!tmp2) {
-        if (substr2 >= 2) {
-          if (substr2 <= 4) {
-            let str4 = "few";
-            if (substr3 >= 12) {
-              str4 = "few";
-            }
-          }
-          str2 = str4;
-        }
-      }
-      if (tmp2) {
-        if (!tmp2) {
-          if (substr2 >= 5) {
-            str4 = str6;
-          }
-        }
-        str6 = "other";
-        if (!tmp2) {
-          str6 = "other";
-          if (substr3 >= 11) {
-            str6 = "other";
-          }
-        }
-      }
-      str6 = "many";
-    }
-    return str2;
+import extend from "extend" /* 17348 */;
+
+require = arg1;
+const dependencyMap = arg6;
+let tmp = (() => {
+  try {
+    const _Object = Object;
+    return Object.defineProperty({}, "a", {});
+  } catch (err) {
+    return false;
   }
+})();
+if (!tmp) {
+  let _Object = Object;
+}
+if (tmp) {
+  const _Object2 = Object;
+} else {
+  defineProperty = (__defineGetter__, arg1, get) => {
+    if ("get" in get) {
+      if (__defineGetter__.__defineGetter__) {
+        __defineGetter__.__defineGetter__(arg1, get.get);
+      }
+    }
+    const hop = extend.hop;
+    const call = hop.call;
+    let tmp = typeof call === "unknown" ? hop(arg1) : call(__defineGetter__, arg1);
+    if (tmp) {
+      tmp = !("value" in get);
+    }
+    if (!tmp) {
+      __defineGetter__[arg1] = get.value;
+    }
+  };
+}
+
+export { defineProperty };
+export const objCreate = Object.create || ((arg0, obj) => {
+  class F {
+    constructor() {
+      return;
+    }
+  }
+  F.prototype = arg0;
+  obj = Object.create(F.prototype);
+  for (const key10008 in arg1) {
+    class F {
+      constructor() {
+        return;
+      }
+    }
+    let hop = extend.hop;
+    let call = hop.call;
+    if (typeof call === "unknown") {
+      let hopResult = hop(key10008);
+    } else {
+      hopResult = call(arg1, key10008);
+    }
+    if (!hopResult) {
+      continue;
+    } else {
+      let tmp4 = fn(obj, key10008, arg1[key10008]);
+      class F {
+        constructor() {
+          return;
+        }
+      }
+    }
+    continue;
+  }
+  return obj;
 });

@@ -1,7 +1,7 @@
 // === Module 8395: ? ===
 
 // Module 8395
-import _modDef8396 from "module_8396" /* 8396 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default _modDef8396({ contain: null, cover: null, stretch: null });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "50acfdf084b8dccbfa3fd235ea0ab8ff", name: "PauseIcon", type: "png" });

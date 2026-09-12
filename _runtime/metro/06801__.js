@@ -1,33 +1,39 @@
 // === Module 6801: ? ===
 
 // Module 6801
-import traverseAndConfigureRelations from "traverseAndConfigureRelations" /* 6800 */;
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef6791 from "module_6791" /* 6791 */;
+import needsToReattach from "needsToReattach" /* 6802 */;
+import dropHandlers from "dropHandlers" /* 6803 */;
+import attachHandlers from "attachHandlers" /* 6804 */;
+import _mod6805 from "module_6805" /* 6805 */;
 
-({ useEffect: c2, useMemo: c3 } = noop);
+_mod19.useCallback;
 
-export const useGestureRelationsUpdater = function useGestureRelationsUpdater(gesture) {
-  closure_0 = gesture;
-  const items = [gesture];
-  const tmp = closure_3(() => {
-    let configureRelationsResult = null;
-    if (closure_0) {
-      configureRelationsResult = traverseAndConfigureRelations.configureRelations(tmp);
+export const useDetectorUpdater = function useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers) {
+  _require = current;
+  const preparedGesture = current2;
+  dependencyMap = gesturesToAttach;
+  const forceRender = require("convertToHandlerTag").useForceRender();
+  const items = [forceRender, gesture, gesturesToAttach, current2, current, webEventHandlers];
+  return gesture((arg0) => {
+    const tmp3 = _modDef6791(current.viewRef);
+    if (tmp3 === current.previousViewTag) {
+      let obj = needsToReattach;
+      if (!obj.needsToReattach(preparedGesture, gesturesToAttach)) {
+        if (!arg0) {
+          _mod6805.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
+          const tmp5Result = _mod6805;
+        }
+      }
     }
-    return configureRelationsResult;
+    dropHandlers.dropHandlers(preparedGesture);
+    obj = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
+    attachHandlers.attachHandlers(obj);
+    if (tmp3 !== current.previousViewTag) {
+      current.previousViewTag = tmp3;
+      current.forceRebuildReanimatedEvent = true;
+      forceRender();
+    }
   }, items);
-  closure_1 = tmp;
-  const items1 = [tmp];
-  closure_2(() => {
-    if (closure_1) {
-      const _requestAnimationFrame = requestAnimationFrame;
-      closure_0 = requestAnimationFrame(() => {
-        const item = closure_1_1.forEach((item, index) => {
-          const NativeProxy = closure_1_0(closure_1_1[2]).NativeProxy;
-          NativeProxy.configureRelations(index, item);
-        });
-      });
-      return () => cancelAnimationFrame(closure_0);
-    }
-  }, items1);
 };

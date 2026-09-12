@@ -6,8 +6,9 @@ import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeSpotLight = fn;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,14 +28,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeSpotLight {
+const jsx = fn(21).jsx;
+class Defs {
   constructor() {
     self = this;
-    tmp = c2(this, FeSpotLight);
+    tmp = c2(this, Defs);
     tmp2 = closure_4;
-    obj = closure_4(FeSpotLight);
+    obj = closure_4(Defs);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,17 +49,15 @@ class FeSpotLight {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeSpotLight, fn(19).Component);
+_inherits(Defs, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeSpotLight(8558).warnUnimplementedFilter();
-    return null;
+    return jsx(Defs(8607), { children: this.props.children });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeSpotLight, items);
-importDefaultResultResult.displayName = "FeSpotLight";
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

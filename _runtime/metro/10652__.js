@@ -1,14 +1,14 @@
 // === Module 10652: ? ===
 
 // Module 10652
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10528 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10567 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-let AbstractParserWithLeftRightBoundaryChecking = require;
+const NLCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class AbstractParserWithLeftBoundaryChecking {
+class NLCasualTimeParser {
   constructor() {
     self = this;
-    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
+    tmp = c2(this, NLCasualTimeParser);
     tmp2 = closure_4;
-    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
+    obj = closure_4(NLCasualTimeParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,61 +48,65 @@ class AbstractParserWithLeftBoundaryChecking {
     return tmp3(self, constructResult);
   }
 }
-AbstractParserWithLeftRightBoundaryChecking = AbstractParserWithLeftBoundaryChecking;
-_inherits(AbstractParserWithLeftBoundaryChecking, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternLeftBoundary",
-  value: function patternLeftBoundary() {
-    return AbstractParserWithLeftRightBoundaryChecking(10650).REGEX_PARTS.leftBoundary;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return /(deze)?\s*(namiddag|avond|middernacht|ochtend|middag|'s middags|'s avonds|'s ochtends)(?=\W|$)/i;
   }
 };
 const items = [
   entry,
   {
-    key: "innerPattern",
-    value: function innerPattern(arg0) {
-      const regExp = new RegExp(this.innerPatternString(arg0), AbstractParserWithLeftRightBoundaryChecking(10650).REGEX_PARTS.flags);
-      return regExp;
-    }
-  },
-  {
-    key: "innerPatternHasChange",
-    value: function innerPatternHasChange(arg0, arg1) {
-      return false;
+    key: "innerExtract",
+    value: function innerExtract(refDate, arg1) {
+      refDate = refDate.refDate;
+      const parsingComponents = refDate.createParsingComponents();
+      if ("deze" === arg1[1]) {
+        const refDate2 = refDate.refDate;
+        parsingComponents.assign("day", refDate2.getDate());
+        const refDate3 = refDate.refDate;
+        parsingComponents.assign("month", refDate3.getMonth() + 1);
+        const refDate4 = refDate.refDate;
+        parsingComponents.assign("year", refDate4.getFullYear());
+      }
+      const formatted = arg1[2].toLowerCase();
+      if ("namiddag" !== formatted) {
+        if ("'s namiddags" !== formatted) {
+          if ("avond" !== formatted) {
+            if ("'s avonds'" !== formatted) {
+              if ("middernacht" === formatted) {
+                const _Date = Date;
+                const date = new Date(refDate.getTime());
+                date.setDate(date.getDate() + 1);
+                NLCasualTimeParser(10566).assignSimilarDate(parsingComponents, date);
+                NLCasualTimeParser(10566).implySimilarTime(parsingComponents, date);
+                parsingComponents.imply("hour", 0);
+                parsingComponents.imply("minute", 0);
+                parsingComponents.imply("second", 0);
+              } else {
+                if ("ochtend" !== formatted) {
+                  if ("'s ochtends" !== formatted) {
+                    if ("middag" === formatted) {
+                      parsingComponents.imply("meridiem", NLCasualTimeParser(10565).Meridiem.AM);
+                      parsingComponents.imply("hour", 12);
+                    }
+                  }
+                }
+                parsingComponents.imply("meridiem", NLCasualTimeParser(10565).Meridiem.AM);
+                parsingComponents.imply("hour", 6);
+              }
+            }
+          }
+          parsingComponents.imply("meridiem", NLCasualTimeParser(10565).Meridiem.PM);
+          parsingComponents.imply("hour", 20);
+        }
+        return parsingComponents;
+      }
+      parsingComponents.imply("meridiem", NLCasualTimeParser(10565).Meridiem.PM);
+      parsingComponents.imply("hour", 15);
     }
   }
 ];
-const _moduleResult = _createClass(AbstractParserWithLeftBoundaryChecking, items);
-class AbstractParserWithLeftRightBoundaryChecking {
-  constructor() {
-    self = this;
-    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
-    tmp2 = closure_4;
-    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(AbstractParserWithLeftRightBoundaryChecking, _moduleResult);
-const entry1 = {
-  key: "innerPattern",
-  value: function innerPattern(arg0) {
-    const combined = "" + this.innerPatternString(arg0) + AbstractParserWithLeftRightBoundaryChecking(10650).REGEX_PARTS.rightBoundary;
-    const regExp = new RegExp(combined, AbstractParserWithLeftRightBoundaryChecking(10650).REGEX_PARTS.flags);
-    return regExp;
-  }
-};
-const items1 = [entry1];
 
-export const AbstractParserWithLeftBoundaryChecking = _moduleResult;
-export const AbstractParserWithLeftRightBoundaryChecking = _createClass(AbstractParserWithLeftRightBoundaryChecking, items1);
+export default _createClass(NLCasualTimeParser, items);

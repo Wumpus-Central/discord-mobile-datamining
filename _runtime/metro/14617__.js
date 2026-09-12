@@ -1,7 +1,7 @@
 // === Module 14617: ? ===
 
 // Module 14617
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default noop.createContext(undefined);
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [2, 3], hash: "f6cc137da3a192935ccaaac37e4eb9a2", name: "ic_call_status_green_24px", type: "png" });

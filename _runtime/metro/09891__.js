@@ -1,7 +1,7 @@
 // === Module 9891: ? ===
 
 // Module 9891
-import registerAsset from "module_1122" /* 1122 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "9f54567445c4adae5611d0c5070bb14f", name: "ic_more_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 160, height: 160, scales: [2, 3], hash: "9e9c2d9cc8f1fa482e39489caafdfd7e", name: "img_no_results_dark_theme", type: "png" });

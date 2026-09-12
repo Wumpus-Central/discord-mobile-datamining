@@ -1,15 +1,15 @@
 // === Module 10679: ? ===
 
 // Module 10679
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10535 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10567 */;
+import _mod10675 from "module_10675" /* 10675 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UKTimeExpressionParser = require;
+const ZHHantWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,109 +29,76 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UKTimeExpressionParser {
-  constructor(arg0) {
+const keys = Object.keys(_mod10675.WEEKDAY_OFFSET);
+const regExp = new RegExp("(?:\u661F\u671F|\u79AE\u62DC|\u9031)(?<weekday>" + keys.join("|") + ")");
+class ZHHantWeekdayParser {
+  constructor() {
     self = this;
-    tmp = c2(this, UKTimeExpressionParser);
-    items = [];
-    items[0] = global;
+    tmp = c2(this, ZHHantWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(UKTimeExpressionParser);
+    obj = closure_4(ZHHantWeekdayParser);
     tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(ZHHantWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternFlags",
-  value: function patternFlags() {
-    return UKTimeExpressionParser(10675).REGEX_PARTS.flags;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
-let items = [
+const items = [
   entry,
   {
-    key: "primaryPatternLeftBoundary",
-    value: function primaryPatternLeftBoundary() {
-      return "(^|\\s|T|(?:[^\\p{L}\\p{N}_]))";
-    }
-  },
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|\u0434\u043E|\u0456|\u043F\u043E|\\?)\\s*";
-    }
-  },
-  {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:\u0432|\u0443|\u043E|\u043E\u0431|\u0437|\u0456\u0437|\u0432\u0456\u0434)\\s*)??";
-    }
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:\u0440\u0430\u043D\u043A\u0443|\u0432\u0435\u0447\u043E\u0440\u0430|\u043F\u043E \u043E\u0431\u0456\u0434\u0456|\u043F\u0456\u0441\u043B\u044F \u043E\u0431\u0456\u0434\u0443))?(?!\\/)" + UKTimeExpressionParser(10675).REGEX_PARTS.rightBoundary;
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      const self = this;
-      const tmp = hasOwnProperty(_getPrototypeOf(UKTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
-      dependencyMap = tmp;
-      let fn = tmp;
-      if (typeof tmp === "function") {
-        fn = (items) => closure_1.apply(self, items);
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp2 = ZHHantWeekdayParser(10675).WEEKDAY_OFFSET[index.groups.weekday];
+      if (undefined === tmp2) {
+        return null;
+      } else {
+        const _Date = Date;
+        const refDate = createParsingResult.refDate;
+        const date = new Date(refDate.getTime());
+        const diff = tmp2 - date.getDay();
+        const _Math3 = Math;
+        const _Math4 = Math;
+        const absolute = Math.abs(diff - 7);
+        let diff1 = diff;
+        if (absolute < Math.abs(diff)) {
+          diff1 = diff - 7;
+        }
+        const _Math = Math;
+        const _Math2 = Math;
+        const absolute1 = Math.abs(diff1 + 7);
+        let sum = diff1;
+        if (absolute1 < Math.abs(diff1)) {
+          sum = diff1 + 7;
+        }
+        date.setDate(date.getDate() + sum);
+        const start = parsingResult.start;
+        start.assign("weekday", tmp2);
+        const start2 = parsingResult.start;
+        start2.imply("day", date.getDate());
+        const start3 = parsingResult.start;
+        start3.imply("month", date.getMonth() + 1);
+        const start4 = parsingResult.start;
+        start4.imply("year", date.getFullYear());
+        return parsingResult;
       }
-      const items = [arg0, arg1];
-      const fnResult = fn(items);
-      if (fnResult) {
-        const first = arg1[0];
-        if (first.endsWith("\u0432\u0435\u0447\u043E\u0440\u0430")) {
-          value = fnResult.get("hour");
-          if (value >= 6) {
-            if (value < 12) {
-              fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", UKTimeExpressionParser(10526).Meridiem.PM);
-            }
-          }
-          if (value < 6) {
-            fnResult.assign("meridiem", UKTimeExpressionParser(10526).Meridiem.AM);
-          }
-        }
-        const first1 = arg1[0];
-        if (first1.endsWith("\u043F\u043E \u043E\u0431\u0456\u0434\u0456")) {
-          fnResult.assign("meridiem", UKTimeExpressionParser(10526).Meridiem.PM);
-          value = fnResult.get("hour");
-          let tmp14 = value >= 0;
-          if (tmp14) {
-            tmp14 = value <= 6;
-          }
-          if (tmp14) {
-            fnResult.assign("hour", fnResult.get("hour") + 12);
-          }
-        } else {
-          const first2 = arg1[0];
-        }
-        const first3 = arg1[0];
-        if (first3.endsWith("\u0440\u0430\u043D\u043A\u0443")) {
-          fnResult.assign("meridiem", UKTimeExpressionParser(10526).Meridiem.AM);
-          if (fnResult.get("hour") < 12) {
-            fnResult.assign("hour", fnResult.get("hour"));
-          }
-        }
-      }
-      return fnResult;
     }
   }
 ];
 
-export default _createClass(UKTimeExpressionParser, items);
+export default _createClass(ZHHantWeekdayParser, items);

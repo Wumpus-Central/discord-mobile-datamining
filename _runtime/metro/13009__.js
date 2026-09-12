@@ -1,90 +1,56 @@
 // === Module 13009: ? ===
 
 // Module 13009
-import _readOnlyError from "_readOnlyError" /* 377 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+const items = ["X-Client-IP", "X-Forwarded-For", "Fly-Client-IP", "CF-Connecting-IP", "Fastly-Client-Ip", "True-Client-Ip", "X-Real-IP", "X-Cluster-Client-IP", "X-Forwarded", "Forwarded-For", "Forwarded", "X-Vercel-Forwarded-For"];
 
-class LRUMap {
-  constructor(arg0) {
-    tmp = closure_0(this, LRUMap);
-    this._maxSize = global;
-    map = new Map();
-    this._cache = map;
-    return;
-  }
-}
-_classCallCheck = LRUMap;
-let items = [
-  {
-    key: "size",
-    get() {
-      return this._cache.size;
+export const getClientIPAddress = function getClientIPAddress(headers) {
+  let mapped = items.map((item) => {
+    let str = obj;
+    if (Array.isArray(headers[item])) {
+      str = obj.join(";");
     }
-  },
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (undefined !== value) {
-        const _cache2 = self._cache;
-        _cache2.delete(arg0);
-        const _cache3 = self._cache;
-        const result = _cache3.set(arg0, value);
-        return value;
+    if ("Forwarded" === item) {
+      let mapped = (function parseForwardedHeader(str) {
+        if (str) {
+          const parts = str.split(";");
+          const iter = parts[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let arr = nextResult;
+            if (nextResult.startsWith("for=")) {
+              let substr = arr.slice(4);
+              iter.return();
+              return substr;
+            }
+          }
+          return null;
+        } else {
+          return null;
+        }
+      })(str);
+    } else {
+      mapped = str;
+      if (str) {
+        let parts = str.split(",");
+        mapped = parts.map((item) => item.trim());
       }
     }
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      const self = this;
-      if (this._cache.size >= this._maxSize) {
-        ({ _cache, _cache: _cache2 } = self);
-        _cache.delete(_cache2.keys().next().value);
-        const iter = _cache2.keys();
-      }
-      const _cache3 = self._cache;
-      const result = _cache3.set(arg0, arg1);
+    return mapped;
+  });
+  const reduced = mapped.reduce((arr, item) => {
+    let combined = arr;
+    if (item) {
+      combined = arr.concat(item);
     }
-  },
-  {
-    key: "remove",
-    value: function remove(arg0) {
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (value) {
-        const _cache2 = this._cache;
-        _cache2.delete(arg0);
-      }
-      return value;
+    return combined;
+  }, []);
+  return reduced.find((item) => {
+    let isMatch = null !== item;
+    if (isMatch) {
+      isMatch = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/.test(item);
+      const obj = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/;
     }
-  },
-  {
-    key: "clear",
-    value: function clear() {
-      const _cache = this._cache;
-      _cache.clear();
-    }
-  },
-  {
-    key: "keys",
-    value: function keys() {
-      const _cache = this._cache;
-      return Array.from(_cache.keys());
-    }
-  },
-  {
-    key: "values",
-    value: function values() {
-      const items = [];
-      const _cache = this._cache;
-      const item = _cache.forEach((item) => items.push(item));
-      return items;
-    }
-  }
-];
-
-export const LRUMap = _createClass(LRUMap, items);
+    return isMatch;
+  }) || null;
+};
+export const ipHeaderNames = items;

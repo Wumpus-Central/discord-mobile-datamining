@@ -1,7 +1,8 @@
 // === Module 7030: ? ===
 
 // Module 7030
-import registerAsset from "module_1122" /* 1122 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e37bbde49f12a4469b46214e14dfde4a", name: "KeyIcon", type: "png" });
+export const styles = StyleSheet.create({ container: {} });

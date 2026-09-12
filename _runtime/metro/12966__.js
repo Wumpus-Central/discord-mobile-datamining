@@ -1,24 +1,39 @@
 // === Module 12966: ? ===
 
 // Module 12966
-import eventFromMessage from "eventFromMessage" /* 12950 */;
-import _mod12967 from "module_12967" /* 12967 */;
-import setupIntegration from "module_12946" /* 12946 */;
+import _mod12926 from "module_12926" /* 12926 */;
+import _mod12954 from "module_12954" /* 12954 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  obj = {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod12967.applyAggregateErrorsToEvent(eventFromMessage.exceptionFromError, options.stackParser, options.maxValueLength, closure_1, closure_0, exception, originalException);
+export const parseSampleRate = function parseSampleRate(flag) {
+  if (typeof flag === "boolean") {
+    const _Number = Number;
+    return Number(flag);
+  } else {
+    let parsed = flag;
+    if (typeof flag === "string") {
+      const _parseFloat = parseFloat;
+      parsed = parseFloat(flag);
     }
-  };
-  return obj;
-});
+    if (typeof parsed === "number") {
+      const _isNaN = isNaN;
+      if (!isNaN(parsed)) {
+        if (parsed >= 0) {
+          if (parsed <= 1) {
+            return parsed;
+          }
+        }
+      }
+    }
+    if (_mod12954.DEBUG_BUILD) {
+      const logger = _mod12926.logger;
+      const _JSON = JSON;
+      const json = JSON.stringify(flag);
+      const _JSON2 = JSON;
+      const _HermesInternal = HermesInternal;
+      logger.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
+    }
+  }
+};
