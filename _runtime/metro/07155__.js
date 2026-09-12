@@ -1,5 +1,5 @@
 // _runtime/metro/07155__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "cb57655a680893ff0ad8eb9c16157cda",
-  name: "EnvelopeIcon",
+  hash: "45c8ad8f30ca8563a8afaab90a692e66",
+  name: "MagnifyingGlassIcon",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/metro/02716__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,

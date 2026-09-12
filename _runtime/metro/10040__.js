@@ -1,11 +1,13 @@
 // _runtime/metro/10040__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "a421bef75ae00154373ea36b10c7c903",
-  name: "Camera",
-  type: "lottie",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "44d2aa5379438547523c3d419e9ade52",
+  name: "MusicSlashIcon",
+  type: "png",
 });

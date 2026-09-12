@@ -1,13 +1,16 @@
 // _runtime/metro/14655__.js
-import registerAsset from "01122__.js";
+import _modDef14653 from "14653__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 8,
-  height: 13,
-  scales: [2, 3],
-  hash: "f22850e4ccd7b23bc996d7a6a44cbe21",
-  name: "ic_table_arrow_right",
-  type: "png",
-});
+export default function useReanimatedTransitionProgress() {
+  const context = noop.useContext(_modDef14653);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error(
+      "Couldn't find values for reanimated transition progress. Are you inside a screen in Native Stack?",
+    );
+    throw error;
+  } else {
+    return context;
+  }
+}

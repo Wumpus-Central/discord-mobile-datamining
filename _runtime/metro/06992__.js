@@ -1,22 +1,17 @@
 // _runtime/metro/06992__.js
+function _setPrototypeOf(arg0, arg1) {
+  if (Object.setPrototypeOf) {
+    const _Object = Object;
+    exports = setPrototypeOf.bind();
+  } else {
+    exports = (arg0, arg1) => {
+      arg0.__proto__ = arg1;
+      return arg0;
+    };
+  }
+  module.exports = exports;
+  return exports(arg0, arg1);
+}
+let exports = _setPrototypeOf;
 
-export const useDataMultiplier = function useDataMultiplier(arg0, arg1) {
-  const array = new Array(arg1);
-  let flag = false;
-  if (typeof arg0[0] === "object") {
-    flag = true;
-  }
-  for (let num = 0; num < arg1; num = num + 1) {
-    let tmp3 = arg0[num % tmp];
-    if (flag) {
-      let obj = {};
-      let merged = Object.assign(tmp3);
-      let tmp5 = obj;
-    } else {
-      tmp5 = tmp3;
-    }
-    array[num] = tmp5;
-  }
-  const items = [array];
-  return items;
-};
+export default _setPrototypeOf;

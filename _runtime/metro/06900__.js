@@ -1,16 +1,16 @@
 // _runtime/metro/06900__.js
-import _mod17 from "00017__.js";
-import GESTURE_SOURCE from "../06699_GESTURE_SOURCE.js";
-
-const StyleSheet = _mod17.StyleSheet;
-const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
-const size = {
-  alignSelf: "center",
-  width: (7.5 * GESTURE_SOURCE.WINDOW_WIDTH) / 100,
-  height: 4,
-  borderRadius: 4,
-  backgroundColor: "rgba(0, 0, 0, 0.75)",
+const fn = function t(arg0, velocityY, substr) {
+  closure_0 = arg0 + 0.2 * velocityY;
+  closure_1 = min.apply(
+    null,
+    substr.map((item) => Math.abs(closure_0 - item)),
+  );
+  return substr.filter((item) => Math.abs(closure_0 - item) === closure_1)[0];
 };
-obj.indicator = size;
+fn.__closure = {};
+fn.__workletHash = 8913698095371;
+fn.__initData = {
+  code: "function pnpm_snapPointTs1(value,velocity,points){const point=value+0.2*velocity;const deltas=points.map(function(p){return Math.abs(point-p);});const minDelta=Math.min.apply(null,deltas);return points.filter(function(p){return Math.abs(point-p)===minDelta;})[0];}",
+};
 
-export const styles = StyleSheet.create(obj);
+export const snapPoint = fn;

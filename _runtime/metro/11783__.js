@@ -1,5 +1,5 @@
 // _runtime/metro/11783__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d25dc6aac0ffe1d35c3be44e5c9ce017",
-  name: "ArrowAngleRightUpIcon",
+  hash: "d884288c334e9055542f154b2caf3b3e",
+  name: "TopicsIcon",
   type: "png",
 });

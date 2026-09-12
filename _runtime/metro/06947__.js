@@ -1,13 +1,6 @@
 // _runtime/metro/06947__.js
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
+const StyleSheet = _mod17.StyleSheet;
 
-export const RecyclerViewContextProvider = context.Provider;
-export const useRecyclerViewContext = function useRecyclerViewContext() {
-  return useContext(context);
-};
-export const useFlashListContext = function useFlashListContext() {
-  return useContext(context);
-};
+export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });

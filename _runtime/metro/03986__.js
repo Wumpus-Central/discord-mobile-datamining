@@ -1,0 +1,32 @@
+// _runtime/metro/03986__.js
+import _typeof from "03725__.js";
+import 03729__ from "03729__.js";
+import requiredArgs from "../03726_requiredArgs.js";
+
+if (!_typeof) {
+  let obj = { default: _typeof };
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+if (!module_3729) {
+  obj = { default: module_3729 };
+  let tmp5 = obj;
+} else {
+  tmp5 = module_3729;
+}
+module_3729 = tmp5;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
+  let tmp7 = obj;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+
+export default function fromUnixTime(arg0) {
+  requiredArgs.default(1, arguments);
+  return _typeof.default(1000 * module_3729.default(arg0));
+};
+export default exports.default;

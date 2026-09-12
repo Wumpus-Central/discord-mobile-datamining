@@ -1,13 +1,13 @@
 // _runtime/metro/13420__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 36,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "010602d585dcc3b10c042380413a7a26",
-  name: "img_boost_error_mobile",
+  hash: "ce5302624e28acc38af07d238a4e16fe",
+  name: "BellZIcon",
   type: "png",
 });

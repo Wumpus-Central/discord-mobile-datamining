@@ -1,13 +1,13 @@
 // _runtime/metro/12843__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/nuf/native/images",
-  width: 221,
-  height: 195,
+  httpServerLocation: "/assets/modules/create_guild/native/images",
+  width: 161,
+  height: 105,
   scales: [1, 2, 3],
-  hash: "3a31ec2d5aeb0eedce9411671227bdc1",
-  name: "discoverability-header",
+  hash: "15df55e98006c5e50dacb86d466b47d8",
+  name: "invite-wumpus-ticket",
   type: "png",
 });

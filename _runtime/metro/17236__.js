@@ -1,13 +1,13 @@
 // _runtime/metro/17236__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/voice_panel/native/images",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "e57414c7a7beaf43becfa6bd320e5461",
-  name: "vr",
+  scales: [1, 2, 3, 4],
+  hash: "2e77386663ba77387d021543bdafafef",
+  name: "airplay",
   type: "png",
 });

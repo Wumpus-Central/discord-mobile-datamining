@@ -1,55 +1,40 @@
 // _runtime/metro/03855__.js
-import 03699__ from "03699__.js";
-import _typeof from "03695__.js";
-import startOfISOWeekYear from "../03856_startOfISOWeekYear.js";
-import differenceInCalendarDays from "../03857_differenceInCalendarDays.js";
-import requiredArgs from "../03696_requiredArgs.js";
+import 03856__ from "03856__.js";
+import 03857__ from "03857__.js";
+import 03858__ from "03858__.js";
+import date from "03859__.js";
+import date from "03860__.js";
 
-if (!module_3699) {
-  let obj = { default: module_3699 };
+if (!module_3856) {
+  let obj = { default: module_3856 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3699;
+  tmp3 = module_3856;
 }
-module_3699 = tmp3;
-if (!_typeof) {
-  obj = { default: _typeof };
+if (!module_3857) {
+  obj = { default: module_3857 };
   let tmp5 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_3857;
 }
-_typeof = tmp5;
-if (!startOfISOWeekYear) {
-  obj = { default: startOfISOWeekYear };
+if (!module_3858) {
+  obj = { default: module_3858 };
   let tmp7 = obj;
 } else {
-  tmp7 = startOfISOWeekYear;
+  tmp7 = module_3858;
 }
-startOfISOWeekYear = tmp7;
-if (!differenceInCalendarDays) {
-  const obj1 = { default: differenceInCalendarDays };
+if (!date) {
+  const obj1 = { default: date };
   let tmp9 = obj1;
 } else {
-  tmp9 = differenceInCalendarDays;
+  tmp9 = date;
 }
-differenceInCalendarDays = tmp9;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+if (!date) {
+  const obj2 = { default: date };
   let tmp11 = obj2;
 } else {
-  tmp11 = requiredArgs;
+  tmp11 = date;
 }
-requiredArgs = tmp11;
 
-export default function setISOWeekYear(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = module_3699.default(arg1);
-  const date = new Date(0);
-  date.setFullYear(defaultResult2, 0, 4);
-  date.setHours(0, 0, 0, 0);
-  const defaultResult4 = startOfISOWeekYear.default(date);
-  defaultResult4.setDate(defaultResult4.getDate() + differenceInCalendarDays.default(defaultResult1, startOfISOWeekYear.default(defaultResult1)));
-  return defaultResult4;
-};
+export default { code: "th", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
 export default exports.default;

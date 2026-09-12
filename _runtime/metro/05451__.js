@@ -1,13 +1,13 @@
 // _runtime/metro/05451__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 267,
+  height: 267,
   scales: [1],
-  hash: "85e85e0480cc3ad94f292bfe35b1a958",
-  name: "img_amazon_music",
+  hash: "898dc79e0285b8e9855531eeca36bf84",
+  name: "img_roblox_dark",
   type: "svg",
 });

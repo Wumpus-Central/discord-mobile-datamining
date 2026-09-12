@@ -1,3 +1,4 @@
 // _runtime/metro/08398__.js
+import _mod8399 from "08399__.js";
 
-export default { WIDEVINE: "widevine", PLAYREADY: "playready", CLEARKEY: "clearkey", FAIRPLAY: "fairplay" };
+export default _mod8399.default;

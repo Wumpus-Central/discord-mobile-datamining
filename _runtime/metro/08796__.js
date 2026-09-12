@@ -1,5 +1,5 @@
 // _runtime/metro/08796__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "eaee56f86ca7905c61b8b9a3d1c990d4",
-  name: "MinecraftNeutralIcon-primary",
+  hash: "3badf2b48a53beb45ce4acb0a2b90dbd",
+  name: "MoreHorizontalIcon",
   type: "png",
 });

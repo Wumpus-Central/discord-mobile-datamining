@@ -1,5 +1,5 @@
 // _runtime/metro/15671__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c6597e29df99a6319981970d49c96987",
-  name: "MagicDoorIcon",
+  hash: "3ef7b97baaf789cd87cf8f96f96361db",
+  name: "BeakerIcon",
   type: "png",
 });

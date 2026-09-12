@@ -1,13 +1,13 @@
 // _runtime/metro/09463__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/custom_app_icons/MatteLightIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "67f86c057cc3cdebb258af63ee3c92db",
-  name: "UploadIcon",
+  hash: "766fd7e004517bb3fbea8bf5121a6049",
+  name: "MatteLightIcon",
   type: "png",
 });

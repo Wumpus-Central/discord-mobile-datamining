@@ -1,0 +1,63 @@
+// _runtime/06756_LegacyBaseButton.js
+import _mod6762 from "metro/06762__.js";
+import baseGestureHandlerProps from "06781_baseGestureHandlerProps.js";
+import tapGestureHandlerProps from "06782_tapGestureHandlerProps.js";
+import managePanProps from "06792_managePanProps.js";
+import longPressGestureHandlerProps from "06793_longPressGestureHandlerProps.js";
+import _mod6794 from "metro/06794__.js";
+import flingGestureHandlerProps from "06796_flingGestureHandlerProps.js";
+import _mod6797 from "metro/06797__.js";
+import nativeViewGestureHandlerProps from "06798_nativeViewGestureHandlerProps.js";
+import _mod6869 from "metro/06869__.js";
+import _modDef6870 from "metro/06870__.js";
+import LegacyScrollView from "06871_LegacyScrollView.js";
+import GestureHandlerRootViewDefault from "06872_GestureHandlerRootView.js";
+import _modDef6874 from "metro/06874__.js";
+import GestureObjects from "06876_GestureObjects.js";
+import LegacyText from "06886_LegacyText.js";
+import TouchableHighlight from "06887_TouchableHighlight.js";
+import Directions from "06893_Directions.js";
+import pinchHandlerName from "06894_pinchHandlerName.js";
+import rotationHandlerName from "06895_rotationHandlerName.js";
+import PointerType from "06896_PointerType.js";
+import 06757__ from "metro/06757__.js";
+import initialize from "metro/06758__.js";
+
+initialize = initialize.initialize();
+for (const key10019 in require("BaseButton")) {
+  arg5[key10019] = require("BaseButton")[key10019];
+  continue;
+}
+
+export const LegacyBaseButton = _mod6869.LegacyBaseButton;
+export const LegacyBorderlessButton = _mod6869.LegacyBorderlessButton;
+export const LegacyRawButton = _mod6869.LegacyRawButton;
+export const LegacyRectButton = _mod6869.LegacyRectButton;
+export const LegacyDrawerLayoutAndroid = LegacyScrollView.LegacyDrawerLayoutAndroid;
+export const LegacyFlatList = LegacyScrollView.LegacyFlatList;
+export const LegacyRefreshControl = LegacyScrollView.LegacyRefreshControl;
+export const LegacyScrollView = LegacyScrollView.LegacyScrollView;
+export const LegacySwitch = LegacyScrollView.LegacySwitch;
+export const LegacyTextInput = LegacyScrollView.LegacyTextInput;
+export const GestureHandlerRootView = GestureHandlerRootViewDefault;
+export const LegacyPressable = _modDef6874;
+export const LegacyText = LegacyText.LegacyText;
+export const TouchableHighlight = TouchableHighlight.TouchableHighlight;
+export const TouchableNativeFeedback = TouchableHighlight.TouchableNativeFeedback;
+export const TouchableOpacity = TouchableHighlight.TouchableOpacity;
+export const TouchableWithoutFeedback = TouchableHighlight.TouchableWithoutFeedback;
+export const Directions = Directions.Directions;
+export const legacy_createNativeWrapper = _modDef6870;
+export const FlingGestureHandler = flingGestureHandlerProps.FlingGestureHandler;
+export const ForceTouchGestureHandler = _mod6794.ForceTouchGestureHandler;
+export const MouseButton = baseGestureHandlerProps.MouseButton;
+export const Gesture = GestureObjects.GestureObjects;
+export const HoverEffect = _mod6797.HoverEffect;
+export const LongPressGestureHandler = longPressGestureHandlerProps.LongPressGestureHandler;
+export const NativeViewGestureHandler = nativeViewGestureHandlerProps.NativeViewGestureHandler;
+export const PanGestureHandler = managePanProps.PanGestureHandler;
+export const PinchGestureHandler = pinchHandlerName.PinchGestureHandler;
+export const RotationGestureHandler = rotationHandlerName.RotationGestureHandler;
+export const TapGestureHandler = tapGestureHandlerProps.TapGestureHandler;
+export const PointerType = PointerType.PointerType;
+export const State = _mod6762.State;

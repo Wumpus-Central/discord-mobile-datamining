@@ -1,13 +1,13 @@
 // _runtime/metro/16644__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_onboarding_home/images",
-  width: 223,
-  height: 145.5,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "fa8d8980f41bbcb7aeb9d5dc519482cb",
-  name: "mobile-empty-state",
+  hash: "e831387e9387034c87c9b5bc784cf6eb",
+  name: "partner_icon",
   type: "png",
 });

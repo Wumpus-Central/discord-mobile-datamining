@@ -1,13 +1,13 @@
 // _runtime/metro/09991__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  httpServerLocation: "/assets/images/native/icons/settings",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "640773adfa92ac6570f53272a991a094",
-  name: "ic_move_to_audience",
+  scales: [2, 3],
+  hash: "4a465b7b889dd2efb6716569375c3825",
+  name: "ic_qr_code_24px",
   type: "png",
 });

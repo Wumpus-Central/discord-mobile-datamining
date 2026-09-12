@@ -1,13 +1,13 @@
 // _runtime/metro/09469__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/custom_app_icons/Y2KIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "26d707b294c340a6d911d79614dfcf77",
-  name: "UserSquareIcon",
+  hash: "0e26d39cd35df5b70db021fff662c44e",
+  name: "Y2KIcon",
   type: "png",
 });

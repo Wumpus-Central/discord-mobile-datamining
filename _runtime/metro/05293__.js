@@ -1,11 +1,18 @@
 // _runtime/metro/05293__.js
-let obj = { 4: null };
-obj = {
-  name: "ShotInfo",
-  description(arg0) {
-    return arg0;
-  },
-};
-obj[4] = obj;
+class MetadataMissingError {
+  constructor(arg0) {
+    obj = { name: "MetadataMissingError" };
+    str = arg0;
+    if (!arg0) {
+      str = "No Exif data";
+    }
+    obj.message = str;
+    error = new Error();
+    obj.stack = error.stack;
+    return;
+  }
+}
+let error = new Error();
+MetadataMissingError.prototype = error;
 
-export default obj;
+export default { MetadataMissingError };

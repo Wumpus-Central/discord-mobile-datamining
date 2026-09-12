@@ -1,13 +1,13 @@
 // _runtime/metro/15507__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "fcdf14841cd468de3f43704be16fa303",
-  name: "no",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "26310276feb1290ca5d9d3ec8d0b1231",
+  name: "LanguageIcon",
   type: "png",
 });

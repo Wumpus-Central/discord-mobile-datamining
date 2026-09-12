@@ -1,32 +1,12 @@
 // _runtime/metro/03863__.js
-import 03699__ from "03699__.js";
-import 03843__ from "03843__.js";
-import requiredArgs from "../03696_requiredArgs.js";
+import 02030__ from "02030__.js";
 
-if (!module_3699) {
-  let obj = { default: module_3699 };
-  let tmp3 = obj;
+if (!module_2030) {
+  let obj = { default: module_2030 };
 } else {
-  tmp3 = module_3699;
+  obj = module_2030;
 }
-module_3699 = tmp3;
-if (!module_3843) {
-  obj = { default: module_3843 };
-  let tmp5 = obj;
-} else {
-  tmp5 = module_3843;
-}
-module_3843 = tmp5;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
+obj = { date: obj.default({ formats: { full: "d MMMM y EEEE", long: "d MMMM y", medium: "d MMM y", short: "dd.MM.yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'saat' {{time}}", long: "{{date}} 'saat' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 
-export default function addWeeks(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_3843.default(arg0, 7 * module_3699.default(arg1));
-};
+export default obj;
 export default exports.default;

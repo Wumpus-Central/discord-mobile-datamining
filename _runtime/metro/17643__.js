@@ -1,13 +1,13 @@
 // _runtime/metro/17643__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 272,
-  height: 130,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "4987bef6ae5ad852bc999d6d3249ca80",
-  name: "empty_server_settings_audit_log_light",
+  hash: "a17cd266a5cb265705b13e07d0e2871a",
+  name: "ic_money_emoji_24px",
   type: "png",
 });

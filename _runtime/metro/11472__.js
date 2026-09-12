@@ -1,13 +1,13 @@
 // _runtime/metro/11472__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/self_mod/stranger_danger/images",
-  width: 21,
-  height: 20,
-  scales: [1, 2, 3],
-  hash: "7db911e7818b41d5de85a6a030b07fc6",
-  name: "ic_thumbsup",
+  httpServerLocation: "/assets/images/channel_following/dark",
+  width: 280,
+  height: 120,
+  scales: [2, 3],
+  hash: "902d26debf9cf5ba93edffb3d1cb9422",
+  name: "channel_following_success_3",
   type: "png",
 });

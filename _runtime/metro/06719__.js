@@ -1,8 +1,13 @@
 // _runtime/metro/06719__.js
-function print() {}
-const frozen = Object.freeze(print);
+import registerAsset from "01120__.js";
 
-export { print };
-export const enableLogging = (arg0) => {
-  console.warn("[BottomSheet] could not enable logging on production!");
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "737159bf8222c1bab03c6bbf25897f2f",
+  name: "CircleXIcon-primary",
+  type: "png",
+});

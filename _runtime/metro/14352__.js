@@ -1,28 +1,44 @@
 // _runtime/metro/14352__.js
-import _mod14353 from "14353__.js";
-import _mod14355 from "14355__.js";
-import text from "../14362_text.js";
-import _mod14373 from "14373__.js";
-import _mod14383 from "14383__.js";
-import _mod14385 from "14385__.js";
-import _mod14387 from "14387__.js";
-import _mod14388 from "14388__.js";
+import emitUnicodeLanguageId from "../14353_emitUnicodeLanguageId.js";
+import compareKV from "../14354_compareKV.js";
+import likelySubtags from "../14357_likelySubtags.js";
+import _mod14358 from "14358__.js";
+import e from "../01162_e.js";
 
-if (!_mod14353) {
-  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
-    const tmp3 = _mod14355(arg0);
-    const tmp4 = text(arg1);
-    if (!_mod14385) {
-      if (_mod14373(tmp3, tmp4)) {
-        const tmpResult = _mod14383;
-        return tmpResult(!tmpResult(_mod14388.f, tmp3, tmp4), tmp3[tmp4]);
-      }
-    } else {
-      try {
-        return getOwnPropertyDescriptor(tmp3, tmp4);
-      } catch (err) {}
+e.__exportStar(emitUnicodeLanguageId, exports);
+e.__exportStar(_mod14358, exports);
+e.__exportStar(likelySubtags, exports);
+
+export const getCanonicalLocales = function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
+  } else {
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
     }
-  };
-}
-
-export const f = getOwnPropertyDescriptor;
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(
+          compareKV.CanonicalizeUnicodeLocaleId(require("14356__.js").parseUnicodeLocaleId(arr3[num3])),
+        );
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
+    }
+  }
+  return items;
+};
+export const isStructurallyValidLanguageTag = require("14356__.js").isUnicodeLanguageSubtag;
+export const isUnicodeLanguageSubtag = require("14356__.js").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("14356__.js").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("14356__.js").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("14356__.js").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("14356__.js").parseUnicodeLocaleId;

@@ -1,111 +1,93 @@
 // _runtime/metro/06797__.js
-import _mod19 from "00019__.js";
-import TouchEventType from "../06734_TouchEventType.js";
-import _mod6747 from "06747__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-const useMemo = _mod19.useMemo;
-function getHandler(arg0, onBegin) {
-  if (_mod6747.CALLBACK_TYPE.BEGAN === arg0) {
-    return onBegin.onBegin;
-  } else if (_mod6747.CALLBACK_TYPE.START === arg0) {
-    return onBegin.onActivate;
-  } else if (_mod6747.CALLBACK_TYPE.UPDATE === arg0) {
-    return onBegin.onUpdate;
-  } else if (_mod6747.CALLBACK_TYPE.END === arg0) {
-    return onBegin.onDeactivate;
-  } else if (_mod6747.CALLBACK_TYPE.FINALIZE === arg0) {
-    return onBegin.onFinalize;
-  } else if (_mod6747.CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
-    return onBegin.onTouchesDown;
-  } else if (_mod6747.CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
-    return onBegin.onTouchesMove;
-  } else if (_mod6747.CALLBACK_TYPE.TOUCHES_UP === arg0) {
-    return onBegin.onTouchesUp;
-  } else if (_mod6747.CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
-    return onBegin.onTouchesCancel;
-  }
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
-let obj = { CALLBACK_TYPE: _mod6747.CALLBACK_TYPE };
-getHandler.__closure = obj;
-getHandler.__workletHash = 8647314057396;
-getHandler.__initData = {
-  code: "function getHandler_Pnpm_eventHandlersUtilsTs1(type,callbacks){const{CALLBACK_TYPE}=this.__closure;switch(type){case CALLBACK_TYPE.BEGAN:return callbacks.onBegin;case CALLBACK_TYPE.START:return callbacks.onActivate;case CALLBACK_TYPE.UPDATE:return callbacks.onUpdate;case CALLBACK_TYPE.END:return callbacks.onDeactivate;case CALLBACK_TYPE.FINALIZE:return callbacks.onFinalize;case CALLBACK_TYPE.TOUCHES_DOWN:return callbacks.onTouchesDown;case CALLBACK_TYPE.TOUCHES_MOVE:return callbacks.onTouchesMove;case CALLBACK_TYPE.TOUCHES_UP:return callbacks.onTouchesUp;case CALLBACK_TYPE.TOUCHES_CANCEL:return callbacks.onTouchesCancel;}}",
-};
-function touchEventTypeToCallbackType(arg0) {
-  if (TouchEventType.TouchEventType.TOUCHES_DOWN === arg0) {
-    return _mod6747.CALLBACK_TYPE.TOUCHES_DOWN;
-  } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === arg0) {
-    return _mod6747.CALLBACK_TYPE.TOUCHES_MOVE;
-  } else if (TouchEventType.TouchEventType.TOUCHES_UP === arg0) {
-    return _mod6747.CALLBACK_TYPE.TOUCHES_UP;
-  } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === arg0) {
-    return _mod6747.CALLBACK_TYPE.TOUCHES_CANCEL;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(arg0, arg1) {
+  if (undefined === arg1) {
+    let obj = { changeX: null, changeY: null };
+    ({ x: obj2.changeX, y: obj2.changeY } = arg0);
   } else {
-    return _mod6747.CALLBACK_TYPE.UNDEFINED;
+    obj = { changeX: arg0.x - arg1.x, changeY: arg0.y - arg1.y };
+  }
+  obj = {};
+  const merged = Object.assign(arg0);
+  const merged1 = Object.assign(obj);
+  return obj;
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 2074844346342;
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}",
+};
+class HoverGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, HoverGesture);
+    tmp2 = c2;
+    obj = c2(HoverGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "HoverGestureHandler";
+    return tmp3Result;
   }
 }
-obj = { TouchEventType: TouchEventType.TouchEventType, CALLBACK_TYPE: _mod6747.CALLBACK_TYPE };
-touchEventTypeToCallbackType.__closure = obj;
-touchEventTypeToCallbackType.__workletHash = 2066229974382;
-touchEventTypeToCallbackType.__initData = {
-  code: "function touchEventTypeToCallbackType_Pnpm_eventHandlersUtilsTs2(eventType){const{TouchEventType,CALLBACK_TYPE}=this.__closure;switch(eventType){case TouchEventType.TOUCHES_DOWN:return CALLBACK_TYPE.TOUCHES_DOWN;case TouchEventType.TOUCHES_MOVE:return CALLBACK_TYPE.TOUCHES_MOVE;case TouchEventType.TOUCHES_UP:return CALLBACK_TYPE.TOUCHES_UP;case TouchEventType.TOUCHES_CANCEL:return CALLBACK_TYPE.TOUCHES_CANCEL;}return CALLBACK_TYPE.UNDEFINED;}",
+_classCallCheck = HoverGesture;
+_inherits(HoverGesture, fn(6777).ContinousBaseGesture);
+const entry = {
+  key: "effect",
+  value: function effect(hoverEffect) {
+    this.config.hoverEffect = hoverEffect;
+    return this;
+  },
 };
-function runCallback(arg0, arg1, arg2) {
-  const tmp = getHandler(arg0, arg1);
-  if (tmp) {
-    tmp(arg2);
-  }
-}
-runCallback.__closure = { getHandler };
-runCallback.__workletHash = 9892811129293;
-runCallback.__initData = {
-  code: "function runCallback_Pnpm_eventHandlersUtilsTs3(type,callbacks,event){const{getHandler}=this.__closure;const handler=getHandler(type,callbacks);if(!handler){return;}handler(event);}",
-};
+let items = [
+  entry,
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
+    },
+  },
+];
 
-export const useMemoizedGestureCallbacks = function useMemoizedGestureCallbacks(disableReanimated) {
-  const items = [, , , , , , , ,];
-  ({
-    onActivate: arr[0],
-    onBegin: arr[1],
-    onDeactivate: arr[2],
-    onFinalize: arr[3],
-    onTouchesCancel: arr[4],
-    onTouchesDown: arr[5],
-    onTouchesMove: arr[6],
-    onTouchesUp: arr[7],
-    onUpdate: arr[8],
-  } = disableReanimated);
-  return useMemo(() => {
-    const obj = {};
-    if (disableReanimated.onBegin) {
-      obj.onBegin = disableReanimated.onBegin;
-    }
-    if (disableReanimated.onActivate) {
-      obj.onActivate = disableReanimated.onActivate;
-    }
-    if (disableReanimated.onDeactivate) {
-      obj.onDeactivate = disableReanimated.onDeactivate;
-    }
-    if (disableReanimated.onFinalize) {
-      obj.onFinalize = disableReanimated.onFinalize;
-    }
-    if (disableReanimated.onUpdate) {
-      obj.onUpdate = disableReanimated.onUpdate;
-    }
-    if (disableReanimated.onTouchesDown) {
-      obj.onTouchesDown = disableReanimated.onTouchesDown;
-    }
-    if (disableReanimated.onTouchesMove) {
-      obj.onTouchesMove = disableReanimated.onTouchesMove;
-    }
-    if (disableReanimated.onTouchesUp) {
-      obj.onTouchesUp = disableReanimated.onTouchesUp;
-    }
-    if (disableReanimated.onTouchesCancel) {
-      obj.onTouchesCancel = disableReanimated.onTouchesCancel;
-    }
-    return obj;
-  }, items);
-};
-export { touchEventTypeToCallbackType };
-export { runCallback };
+export const HoverEffect = { NONE: 0, [0]: "NONE", LIFT: 1, [1]: "LIFT", HIGHLIGHT: 2, [2]: "HIGHLIGHT" };
+export const hoverGestureHandlerProps = ["hoverEffect"];
+export const HoverGesture = _createClass(HoverGesture, items);

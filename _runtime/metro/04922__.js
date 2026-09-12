@@ -1,14 +1,17 @@
 // _runtime/metro/04922__.js
-import _mod4854 from "04854__.js";
+import _mod1307 from "01307__.js";
+import _mod1308 from "01308__.js";
+import _mod1314 from "01314__.js";
+import _mod4914 from "04914__.js";
 
-export default function Type(arg0) {
-  let str = "Symbol";
-  if (typeof arg0 !== "symbol") {
-    let str2 = "BigInt";
-    if (typeof arg0 !== "bigint") {
-      str2 = _mod4854(arg0);
+export default function isInteger(num) {
+  if (typeof num === "number") {
+    if (!_mod1314(num)) {
+      if (_mod4914(num)) {
+        const tmp = _mod1307(num);
+        return _mod1308(tmp) === tmp;
+      }
     }
-    str = str2;
   }
-  return str;
+  return false;
 }

@@ -1,12 +1,13 @@
 // _runtime/metro/04582__.js
-import PATTERN_CHARS from "../04583_PATTERN_CHARS.js";
+import registerAsset from "01120__.js";
 
-const obj = { success: null, error: null, warning: null, heartbeat: null, tripleClick: null, notification: null };
-obj.success = PATTERN_CHARS.pattern("oO.O");
-obj.error = PATTERN_CHARS.pattern("OO.OO");
-obj.warning = PATTERN_CHARS.pattern("O.O");
-obj.heartbeat = PATTERN_CHARS.pattern("oO--oO");
-obj.tripleClick = PATTERN_CHARS.pattern("o.o.o");
-obj.notification = PATTERN_CHARS.pattern("o-O=o");
-
-export const Patterns = obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "4c483b0c9e54993ee793f71f5dfd0dd4",
+  name: "SendMessageIcon",
+  type: "png",
+});

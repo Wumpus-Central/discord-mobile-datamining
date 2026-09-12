@@ -1,13 +1,13 @@
 // _runtime/metro/13412__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 33,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "68d0a7491ea9de9245e6ac89adfb6384",
-  name: "img_tier_0_error_mobile",
+  hash: "6fb23e8fddb36af1d7c8748104537e96",
+  name: "VideoDenyIcon",
   type: "png",
 });

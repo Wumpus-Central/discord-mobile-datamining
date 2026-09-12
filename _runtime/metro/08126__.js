@@ -1,13 +1,13 @@
 // _runtime/metro/08126__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/auto_moderation",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "3eb74a78606f69449db155f70f2ac217",
-  name: "NitroWheelIcon",
+  hash: "9fc7a06bd709251a424bf9095d4f7ecf",
+  name: "ic_auto_moderation_shield",
   type: "png",
 });

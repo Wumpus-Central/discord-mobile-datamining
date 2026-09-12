@@ -1,5 +1,5 @@
 // _runtime/metro/15467__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ff4cda738b093bde991020eaaa4e76a1",
-  name: "EmojiSmilingFaceWithHeartsIcon",
+  hash: "ee3c21ba741f207ef04ca582a5f5f8ba",
+  name: "EmojiNerdFaceIcon",
   type: "png",
 });

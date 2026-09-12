@@ -50,7 +50,7 @@ let closure_7 = async function _queryCache(arg0) {
 const use = fn(19).use;
 const jsx = fn(21).jsx;
 let closure_6 = 1;
-let closure_8 = { uri: "Array", width: "call", height: "__packager_asset" };
+let closure_8 = { uri: "justifyContent", width: "call", height: "window" };
 function _BaseImage(arg0) {
   ({ alt, accessible, aria-labelledby: tmp, aria-busy: tmp2, aria-checked: tmp3, aria-disabled: tmp4, aria-expanded: tmp5, aria-label: tmp7, aria-selected: tmp8, accessibilityLabel, accessibilityLabelledBy, accessibilityState, defaultSource, loadingIndicatorSource, style, onLoadStart, onLoad, onLoadEnd, onError, width, height } = arg0);
   ({ ref, aria-hidden: tmp6, children, source, src, crossOrigin, referrerPolicy, srcSet, resizeMode } = arg0);

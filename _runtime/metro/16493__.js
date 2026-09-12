@@ -1,13 +1,13 @@
 // _runtime/metro/16493__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ca5ed05660659bd429f0c8e3c3fa0755",
-  name: "ic_trash_24px",
+  hash: "094f7a21d1b60a74d620c68e16db5be6",
+  name: "ConnectionUnknownIcon",
   type: "png",
 });

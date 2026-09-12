@@ -1,80 +1,17 @@
 // _runtime/metro/06850__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
-import _inherits from "../00098__inherits.js";
+import ComposedGestureName from "../06815_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../06824_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod6839 from "06839__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-_possibleConstructorReturnDefault;
-function changeEventCalculator(rotation, rotation2) {
-  if (undefined === rotation2) {
-    let obj = { rotationChange: rotation.rotation };
-  } else {
-    obj = { rotationChange: rotation.rotation - rotation2.rotation };
-  }
-  obj = {};
-  const merged = Object.assign(rotation);
-  const merged1 = Object.assign(obj);
-  return obj;
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 11988645380499;
-changeEventCalculator.__initData = {
-  code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}",
-};
-class RotationGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, RotationGesture);
-    tmp2 = c2;
-    obj = c2(RotationGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "RotationGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = RotationGesture;
-_inherits(RotationGesture, fn(6747).ContinousBaseGesture);
-const entry = {
-  key: "onChange",
-  value: function onChange(arg0) {
-    this.handlers.changeEventCalculator = hasOwnProperty;
-    const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-    if (typeof fn === "function") {
-      fn = (items) => fn.apply(self, items);
-    }
-    const items = [arg0];
-    return fn(items);
-  },
-};
-let items = [entry];
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export const RotationGesture = _createClass(RotationGesture, items);
+export const useNativeGesture = function useNativeGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod6839.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
+};

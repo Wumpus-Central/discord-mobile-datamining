@@ -1,13 +1,13 @@
 // _runtime/metro/10442__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/nitro_icons",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "26998a89da8a094ca27d79afeba3b61f",
-  name: "FoodIcon",
+  hash: "e31ee2ef368806b54cff2e8c81e8cd97",
+  name: "img_nitro_icon_filled",
   type: "png",
 });

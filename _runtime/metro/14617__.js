@@ -1,4 +1,13 @@
 // _runtime/metro/14617__.js
-import noop from "00019__.js";
+import registerAsset from "01120__.js";
 
-export default noop.createContext(undefined);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "f6cc137da3a192935ccaaac37e4eb9a2",
+  name: "ic_call_status_green_24px",
+  type: "png",
+});

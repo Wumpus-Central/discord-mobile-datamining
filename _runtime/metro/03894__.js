@@ -1,43 +1,32 @@
 // _runtime/metro/03894__.js
-import _typeof from "03695__.js";
-import endOfDay from "../03895_endOfDay.js";
-import endOfMonth from "../03896_endOfMonth.js";
-import requiredArgs from "../03696_requiredArgs.js";
+import 03729__ from "03729__.js";
+import 03874__ from "03874__.js";
+import requiredArgs from "../03726_requiredArgs.js";
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!module_3729) {
+  let obj = { default: module_3729 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3729;
 }
-_typeof = tmp3;
-if (!endOfDay) {
-  obj = { default: endOfDay };
+module_3729 = tmp3;
+if (!module_3874) {
+  obj = { default: module_3874 };
   let tmp5 = obj;
 } else {
-  tmp5 = endOfDay;
+  tmp5 = module_3874;
 }
-endOfDay = tmp5;
-if (!endOfMonth) {
-  obj = { default: endOfMonth };
+module_3874 = tmp5;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
-  tmp7 = endOfMonth;
+  tmp7 = requiredArgs;
 }
-endOfMonth = tmp7;
-if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
+requiredArgs = tmp7;
 
-export default function isLastDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = endOfDay.default(defaultResult1).getTime();
-  const defaultResult2 = endOfDay.default(defaultResult1);
-  return time === endOfMonth.default(defaultResult1).getTime();
+export default function addYears(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_3874.default(interval, 12 * module_3729.default(arg1));
 };
 export default exports.default;

@@ -1,13 +1,13 @@
 // _runtime/metro/09513__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 163.5,
+  height: 20,
   scales: [2, 3],
-  hash: "04e956cfab49d64a3f8a18b66aa5fc1e",
-  name: "ChatSmileIcon",
+  hash: "cd3f012d84fd9fd0e06d08e5556058d7",
+  name: "img_logo_nitro_tier_0_horizontal_dark",
   type: "png",
 });

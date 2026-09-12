@@ -1,172 +1,55 @@
 // _runtime/metro/04214__.js
-import _mod4198 from "04198__.js";
-
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      const _module = _mod4198;
-      let obj = {
-        months: null,
-        monthsShort: null,
-        monthsParseExact: true,
-        weekdays: null,
-        weekdaysShort: null,
-        weekdaysMin: null,
-        weekdaysParseExact: true,
-        longDateFormat: null,
-        calendar: null,
-        relativeTime: null,
-        dayOfMonthOrdinalParse: null,
-        ordinal: "%d.",
-        week: null,
-      };
-      const split = "januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember".split;
-      obj.months = "januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember".split("_");
-      const split2 = "jan._feb._mars_apr._mai_juni_juli_aug._sep._okt._nov._des.".split;
-      obj.monthsShort = "jan._feb._mars_apr._mai_juni_juli_aug._sep._okt._nov._des.".split("_");
-      const split3 = "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split;
-      obj.weekdays = "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split("_");
-      const split4 = "s\u00F8._ma._ti._on._to._fr._l\u00F8.".split;
-      obj.weekdaysShort = "s\u00F8._ma._ti._on._to._fr._l\u00F8.".split("_");
-      const split5 = "s\u00F8_ma_ti_on_to_fr_l\u00F8".split;
-      obj.weekdaysMin = "s\u00F8_ma_ti_on_to_fr_l\u00F8".split("_");
-      obj.longDateFormat = {
-        LT: "HH:mm",
-        LTS: "HH:mm:ss",
-        L: "DD.MM.YYYY",
-        LL: "D. MMMM YYYY",
-        LLL: "D. MMMM YYYY [kl.] HH:mm",
-        LLLL: "dddd D. MMMM YYYY [kl.] HH:mm",
-      };
-      obj.calendar = {
-        sameDay: "[i dag kl.] LT",
-        nextDay: "[i morgen kl.] LT",
-        nextWeek: "dddd [kl.] LT",
-        lastDay: "[i g\u00E5r kl.] LT",
-        lastWeek: "[forrige] dddd [kl.] LT",
-        sameElse: "L",
-      };
-      obj.relativeTime = {
-        future: "om %s",
-        past: "%s siden",
-        s: "noen sekunder",
-        ss: "%d sekunder",
-        m: "ett minutt",
-        mm: "%d minutter",
-        h: "\u00E9n time",
-        hh: "%d timer",
-        d: "\u00E9n dag",
-        dd: "%d dager",
-        w: "\u00E9n uke",
-        ww: "%d uker",
-        M: "\u00E9n m\u00E5ned",
-        MM: "%d m\u00E5neder",
-        y: "ett \u00E5r",
-        yy: "%d \u00E5r",
-      };
-      obj.dayOfMonthOrdinalParse = /\d{1,2}\./;
-      obj.week = { dow: 1, doy: 4 };
-      _module.defineLocale("nb", obj);
-    }
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    let obj = { data: null, locale: "pl" };
+    obj = { conjunction: null, disjunction: null, unit: null };
+    const obj1 = {
+      long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+      short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+    };
+    obj.conjunction = obj1;
+    const obj2 = {
+      long: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
+      short: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
+    };
+    obj.disjunction = obj2;
+    const obj3 = {
+      long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+      short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+    };
+    obj.unit = obj3;
+    obj.data = obj;
+    ListFormat.__addLocaleData(obj);
   }
 }
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], function n(defineLocale) {
-      return defineLocale.defineLocale("nb", {
-        months: "januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember".split("_"),
-        monthsShort: "jan._feb._mars_apr._mai_juni_juli_aug._sep._okt._nov._des.".split("_"),
-        monthsParseExact: true,
-        weekdays: "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split("_"),
-        weekdaysShort: "s\u00F8._ma._ti._on._to._fr._l\u00F8.".split("_"),
-        weekdaysMin: "s\u00F8_ma_ti_on_to_fr_l\u00F8".split("_"),
-        weekdaysParseExact: true,
-        longDateFormat: {
-          LT: "HH:mm",
-          LTS: "HH:mm:ss",
-          L: "DD.MM.YYYY",
-          LL: "D. MMMM YYYY",
-          LLL: "D. MMMM YYYY [kl.] HH:mm",
-          LLLL: "dddd D. MMMM YYYY [kl.] HH:mm",
-        },
-        calendar: {
-          sameDay: "[i dag kl.] LT",
-          nextDay: "[i morgen kl.] LT",
-          nextWeek: "dddd [kl.] LT",
-          lastDay: "[i g\u00E5r kl.] LT",
-          lastWeek: "[forrige] dddd [kl.] LT",
-          sameElse: "L",
-        },
-        relativeTime: {
-          future: "om %s",
-          past: "%s siden",
-          s: "noen sekunder",
-          ss: "%d sekunder",
-          m: "ett minutt",
-          mm: "%d minutter",
-          h: "\u00E9n time",
-          hh: "%d timer",
-          d: "\u00E9n dag",
-          dd: "%d dager",
-          w: "\u00E9n uke",
-          ww: "%d uker",
-          M: "\u00E9n m\u00E5ned",
-          MM: "%d m\u00E5neder",
-          y: "ett \u00E5r",
-          yy: "%d \u00E5r",
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}\./,
-        ordinal: "%d.",
-        week: { dow: 1, doy: 4 },
-      });
-    });
-  }
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
 }
-const moment = this.moment;
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
 obj = {
-  months: "januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember".split("_"),
-  monthsShort: "jan._feb._mars_apr._mai_juni_juli_aug._sep._okt._nov._des.".split("_"),
-  monthsParseExact: true,
-  weekdays: "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split("_"),
-  weekdaysShort: "s\u00F8._ma._ti._on._to._fr._l\u00F8.".split("_"),
-  weekdaysMin: "s\u00F8_ma_ti_on_to_fr_l\u00F8".split("_"),
-  weekdaysParseExact: true,
-  longDateFormat: {
-    LT: "HH:mm",
-    LTS: "HH:mm:ss",
-    L: "DD.MM.YYYY",
-    LL: "D. MMMM YYYY",
-    LLL: "D. MMMM YYYY [kl.] HH:mm",
-    LLLL: "dddd D. MMMM YYYY [kl.] HH:mm",
+  data: {
+    conjunction: {
+      long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+      short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+    },
+    disjunction: {
+      long: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
+      short: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
+    },
+    unit: {
+      long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+      short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
+    },
   },
-  calendar: {
-    sameDay: "[i dag kl.] LT",
-    nextDay: "[i morgen kl.] LT",
-    nextWeek: "dddd [kl.] LT",
-    lastDay: "[i g\u00E5r kl.] LT",
-    lastWeek: "[forrige] dddd [kl.] LT",
-    sameElse: "L",
-  },
-  relativeTime: {
-    future: "om %s",
-    past: "%s siden",
-    s: "noen sekunder",
-    ss: "%d sekunder",
-    m: "ett minutt",
-    mm: "%d minutter",
-    h: "\u00E9n time",
-    hh: "%d timer",
-    d: "\u00E9n dag",
-    dd: "%d dager",
-    w: "\u00E9n uke",
-    ww: "%d uker",
-    M: "\u00E9n m\u00E5ned",
-    MM: "%d m\u00E5neder",
-    y: "ett \u00E5r",
-    yy: "%d \u00E5r",
-  },
-  dayOfMonthOrdinalParse: /\d{1,2}\./,
-  ordinal: "%d.",
-  week: { dow: 1, doy: 4 },
+  locale: "pl",
 };
-moment.defineLocale("nb", obj);
+prop.push(obj);

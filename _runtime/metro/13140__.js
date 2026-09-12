@@ -1,5 +1,5 @@
 // _runtime/metro/13140__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ae439aad7c7ee77514ad4b1f3601a8e9",
-  name: "VideoSlashIcon",
+  hash: "5caaadc4fb41849c36d80e2425141f40",
+  name: "NewUserIcon",
   type: "png",
 });

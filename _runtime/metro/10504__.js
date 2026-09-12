@@ -1,13 +1,13 @@
 // _runtime/metro/10504__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stickers/native/images",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "494d75fe739ed4a36d195ab8193847fa",
-  name: "alert",
+  hash: "a31dcad33e17aebec69c2bc953578b8c",
+  name: "ChevronLargeLeftIcon",
   type: "png",
 });

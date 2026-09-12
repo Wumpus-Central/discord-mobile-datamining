@@ -1,7 +1,11 @@
 // _runtime/metro/06987__.js
-import _mod17 from "00017__.js";
-import FlashList from "../06926_FlashList.js";
 
-const Animated = _mod17.Animated;
-
-export default Animated.createAnimatedComponent(FlashList.FlashList);
+export default function _assertThisInitialized(arg0) {
+  if (undefined === arg0) {
+    const _ReferenceError = ReferenceError;
+    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw referenceError;
+  } else {
+    return arg0;
+  }
+}

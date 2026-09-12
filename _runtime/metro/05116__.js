@@ -1,5 +1,5 @@
 // _runtime/metro/05116__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d9312bb32f25ade901c17406f7f53267",
-  name: "ImageLockIcon",
+  hash: "3cca2566d6ada925d540d64d7940bca5",
+  name: "AtIcon",
   type: "png",
 });

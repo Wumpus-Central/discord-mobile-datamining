@@ -1,13 +1,13 @@
 // _runtime/metro/08240__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "7b7fda4b104811c7ab69187b97a7e04e",
-  name: "ic_shield_24px",
+  hash: "b5a936051680509c0100afebb2debea8",
+  name: "ShieldUserIcon",
   type: "png",
 });

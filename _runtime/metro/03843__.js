@@ -1,43 +1,40 @@
 // _runtime/metro/03843__.js
-import 03699__ from "03699__.js";
-import _typeof from "03695__.js";
-import requiredArgs from "../03696_requiredArgs.js";
+import 03844__ from "03844__.js";
+import 03845__ from "03845__.js";
+import 03846__ from "03846__.js";
+import date from "03847__.js";
+import date from "03848__.js";
 
-if (!module_3699) {
-  let obj = { default: module_3699 };
+if (!module_3844) {
+  let obj = { default: module_3844 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3699;
+  tmp3 = module_3844;
 }
-module_3699 = tmp3;
-if (!_typeof) {
-  obj = { default: _typeof };
+if (!module_3845) {
+  obj = { default: module_3845 };
   let tmp5 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_3845;
 }
-_typeof = tmp5;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+if (!module_3846) {
+  obj = { default: module_3846 };
   let tmp7 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_3846;
 }
-requiredArgs = tmp7;
+if (!date) {
+  const obj1 = { default: date };
+  let tmp9 = obj1;
+} else {
+  tmp9 = date;
+}
+if (!date) {
+  const obj2 = { default: date };
+  let tmp11 = obj2;
+} else {
+  tmp11 = date;
+}
 
-export default function addDays(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = module_3699.default(arg1);
-  if (isNaN(defaultResult2)) {
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
-  } else if (defaultResult2) {
-    defaultResult1.setDate(defaultResult1.getDate() + defaultResult2);
-    return defaultResult1;
-  } else {
-    return defaultResult1;
-  }
-};
+export default { code: "ru", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

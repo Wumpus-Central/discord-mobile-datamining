@@ -1,13 +1,13 @@
 // _runtime/metro/10097__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/voice_calls/light_theme",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "a9eb64c7670ac900f200e86de988df53",
-  name: "voice_bar_mute_on",
+  hash: "15492a52206e63f9d08f70b19c6b74cb",
+  name: "ic_nitro_basic_wheel_gradient",
   type: "png",
 });

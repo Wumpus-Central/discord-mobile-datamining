@@ -1,5 +1,5 @@
 // _runtime/metro/15683__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4aac4b9e524273cde97c71cf7da9357a",
-  name: "DoubleCheckmarkIcon",
+  hash: "30f38e9cc06345b39ea1b73343d04289",
+  name: "CarIcon",
   type: "png",
 });

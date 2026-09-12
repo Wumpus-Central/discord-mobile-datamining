@@ -1,13 +1,13 @@
 // _runtime/metro/10009__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "e535ea871b8155df08d1e92a6b532c6c",
-  name: "GroupArrowDownIcon",
+  httpServerLocation: "/assets/images/auth",
+  width: 100,
+  height: 100,
+  scales: [1],
+  hash: "2466a8cae3eebcc6d13072f6ff1957c4",
+  name: "img-auth-qrcode-overlay",
   type: "png",
 });

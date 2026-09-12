@@ -1,5 +1,5 @@
 // _runtime/metro/15084__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d4b8535e8fda48cfe70d5688d1051d12",
-  name: "ClosedCaptionsOutlineIcon",
+  hash: "1fa18e452308090b708bccf68d32d023",
+  name: "QuestsIcon",
   type: "png",
 });

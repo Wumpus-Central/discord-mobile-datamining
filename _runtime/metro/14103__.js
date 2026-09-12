@@ -1,15 +1,16 @@
 // _runtime/metro/14103__.js
-import _mod14096 from "14096__.js";
+let closure_0 = Object.freeze({ loose: true });
+let closure_1 = Object.freeze({});
 
-export default (arg0, arg1) => {
-  try {
-    const tmp8 = new _mod14096(arg0, arg1);
-    let str = tmp8.range;
-    if (!str) {
-      str = "*";
+export default (arg0) => {
+  let tmp = arg0;
+  if (arg0) {
+    if (typeof tmp !== "object") {
+      tmp = closure_0;
     }
-    return str;
-  } catch (err) {
-    return null;
+    let tmp2 = tmp;
+  } else {
+    tmp2 = closure_1;
   }
+  return tmp2;
 };

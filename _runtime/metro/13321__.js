@@ -1,13 +1,13 @@
 // _runtime/metro/13321__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/images",
-  width: 608,
-  height: 608,
-  scales: [2, 3],
-  hash: "6936c050862daceed7175a327466cd4a",
-  name: "quests_embed_mobile_missing",
+  httpServerLocation: "/assets/images/native/gifting",
+  width: 120,
+  height: 125,
+  scales: [1, 2, 3],
+  hash: "c43124de927c4f7db7d60a63938625a8",
+  name: "wumpus_cup_premium120",
   type: "png",
 });

@@ -1,4 +1,13 @@
 // _runtime/metro/08395__.js
-import _modDef8396 from "08396__.js";
+import registerAsset from "01120__.js";
 
-export default _modDef8396({ contain: null, cover: null, stretch: null });
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "50acfdf084b8dccbfa3fd235ea0ab8ff",
+  name: "PauseIcon",
+  type: "png",
+});

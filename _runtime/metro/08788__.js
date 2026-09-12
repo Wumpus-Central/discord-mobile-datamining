@@ -1,5 +1,5 @@
 // _runtime/metro/08788__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "8c94b907df8972f3dc35ed38a2375c9f",
-  name: "EpicGamesNeutralIcon",
+  hash: "88649cc905f8610641d77b5f0a1b135c",
+  name: "FlagIcon",
   type: "png",
 });

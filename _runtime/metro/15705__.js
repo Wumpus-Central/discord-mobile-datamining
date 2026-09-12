@@ -1,11 +1,13 @@
 // _runtime/metro/15705__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "e4ac8b113e95c131d649a62479390987",
-  name: "lt.messages.e4ac8b113e95c131d649a62479390987.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "4aac4b9e524273cde97c71cf7da9357a",
+  name: "DoubleCheckmarkIcon",
+  type: "png",
 });

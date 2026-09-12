@@ -2,8 +2,8 @@
 import 03838__ from "03838__.js";
 import 03839__ from "03839__.js";
 import 03840__ from "03840__.js";
-import date from "04139__.js";
-import date from "04140__.js";
+import date from "03841__.js";
+import date from "03842__.js";
 
 if (!module_3838) {
   let obj = { default: module_3838 };
@@ -36,5 +36,5 @@ if (!date) {
   tmp11 = date;
 }
 
-export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "ro", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

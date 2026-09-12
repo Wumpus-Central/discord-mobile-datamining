@@ -1,5 +1,5 @@
 // _runtime/metro/17681__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f8d71a087b50ca9ab07431463764cd8d",
-  name: "ic_sync_24px",
+  hash: "e34464fbaad016de0cccce358d754f22",
+  name: "ic_overflow_android",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/09408__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 120,
-  height: 80,
+  httpServerLocation: "/assets/images/user_settings",
+  width: 224,
+  height: 104,
   scales: [2, 3],
-  hash: "17353b23aadfbe0d3f7b9982ef6491bf",
-  name: "img_nitro_file_upload",
+  hash: "a2009aeba6d9e049dbc8c9ac25b7dc92",
+  name: "crunchyroll_link_success",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/05418__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "8fce658b14b12e381e1ecc554a57f171",
-  name: "img_roblox_dark",
+  hash: "e618f82890b6b33b5975b62fe527e027",
+  name: "img_account_sync_spotify_white",
   type: "png",
 });

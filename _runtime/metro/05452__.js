@@ -1,13 +1,13 @@
 // _runtime/metro/05452__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 128,
-  height: 128,
+  width: 267,
+  height: 267,
   scales: [1],
-  hash: "43cb25124fca194b4a6cf3676f39faf2",
-  name: "img_meta_quest_light",
-  type: "png",
+  hash: "898dc79e0285b8e9855531eeca36bf84",
+  name: "img_roblox_white",
+  type: "svg",
 });

@@ -1,72 +1,68 @@
 // _runtime/metro/12942__.js
-const require = arg1;
-const dependencyMap = arg6;
-function getFilenameToDebugIdMap(arg0) {
-  _require = arg0;
-  _sentryDebugIds = require("12891__.js").GLOBAL_OBJ._sentryDebugIds;
-  if (_sentryDebugIds) {
-    const _Object = Object;
-    const keys = Object.keys(_sentryDebugIds);
-    if (reduced) {
-      return reduced;
-    }
-    reduced = keys.reduce((acc, item) => {
-      let filename;
-      let tmp = obj;
-      if (!obj) {
-        obj = {};
-        tmp = obj;
-      }
-      if (tmp[item]) {
-        acc[tmp2[0]] = tmp2[1];
-      } else {
-        const arr = closure_0(item);
-        let diff = arr.length - 1;
-        if (0 <= diff) {
-          while (true) {
-            let tmp5 = arr[diff];
-            filename = tmp5;
-            if (tmp5) {
-              filename = tmp5.filename;
-            }
-            if (filename) {
-              if (_sentryDebugIds[item]) {
-                break;
-              }
-            }
-            diff = diff - 1;
-          }
-          acc[filename] = tmp8;
-          const items = [filename, tmp8];
-          obj[item] = items;
-        }
-      }
-      return acc;
-    }, {});
-  } else {
-    return {};
-  }
-}
+import _mod12932 from "12932__.js";
+import _slicedToArray from "00032__.js";
 
-export const getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1) {
-  const tmp = getFilenameToDebugIdMap(arg0);
-  const items = [];
-  if (tmp) {
-    const iter = arg1[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp7 = nextResult;
-      if (nextResult) {
-        obj = { type: "sourcemap", code_file: null, debug_id: null };
-        obj.code_file = tmp7;
-        obj.debug_id = tmp[tmp7];
-        let arr = items.push(obj);
+const _sentryMetrics = "_sentryMetrics";
+
+export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
+  if (self[_sentryMetrics]) {
+    const obj = {};
+    const tmp3 = tmp[Symbol.iterator]();
+    while (tmp3 !== undefined) {
+      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
+      [tmp9, tmp11] = tmp8;
+      let arr = obj[tmp9];
+      if (!arr) {
+        let items = [];
+        obj[tmp10] = items;
+        arr = items;
       }
+      let obj2 = _mod12932;
+      arr = arr.push(obj2.dropUndefinedKeys(tmp11));
       continue;
     }
-    return items;
-  } else {
-    return items;
+    return obj;
   }
 };
-export { getFilenameToDebugIdMap };
+export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(
+  activeSpan,
+  metricType,
+  sanitizeMetricKeyResult,
+  min,
+  sanitizeUnitResult,
+  tags,
+  bucketKey,
+) {
+  let obj = activeSpan[_sentryMetrics];
+  if (!obj) {
+    const _Map = Map;
+    const map = new Map();
+    activeSpan[tmp] = map;
+    obj = map;
+  }
+  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
+  value = obj.get(bucketKey);
+  if (value) {
+    _slicedToArray(value, 2)[1];
+    const items = [combined];
+    const range = { min: null, max: null, count: null, sum: null, tags: null };
+    const _Math = Math;
+    range.min = Math.min(range.min, min);
+    const _Math2 = Math;
+    range.max = Math.max(range.max, min);
+    const sum = range.count + 1;
+    range.count = sum;
+    range.count = sum;
+    const sum1 = range.sum + min;
+    range.sum = sum1;
+    range.sum = sum1;
+    range.tags = range.tags;
+    items[1] = range;
+    const result = obj.set(bucketKey, items);
+  } else {
+    const items1 = [combined];
+    const range1 = { min, max: min, count: 1, sum: min, tags };
+    items1[1] = range1;
+    const result1 = obj.set(bucketKey, items1);
+  }
+};

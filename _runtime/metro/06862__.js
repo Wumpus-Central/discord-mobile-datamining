@@ -1,19 +1,8 @@
 // _runtime/metro/06862__.js
-import _modDef6859 from "06859__.js";
-import noop from "00019__.js";
+import _mod6863 from "06863__.js";
+import _mod6865 from "06865__.js";
+import _mod6866 from "06866__.js";
 
-const jsx = fn(21).jsx;
-
-export default function _default(delayLongPress) {
-  let num = delayLongPress.delayLongPress;
-  if (num === undefined) {
-    num = 600;
-  }
-  let extraButtonProps = delayLongPress.extraButtonProps;
-  if (extraButtonProps === undefined) {
-    extraButtonProps = { rippleColor: "transparent", exclusive: true };
-  }
-  const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
-  const merged1 = Object.assign(merged);
-  return jsx(_modDef6859, { delayLongPress: num, extraButtonProps });
-}
+export const useCompetingGestures = _mod6863.useCompetingGestures;
+export const useExclusiveGestures = _mod6865.useExclusiveGestures;
+export const useSimultaneousGestures = _mod6866.useSimultaneousGestures;

@@ -1,13 +1,13 @@
 // _runtime/metro/16341__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/tabs/guilds/empty_states/images",
-  width: 193.5,
-  height: 205.5,
-  scales: [2, 3, 4],
-  hash: "c4e35cf59b65ee25c9dfc91c26e34f5e",
-  name: "guilds-empty-illustration",
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 375,
+  height: 120,
+  scales: [2, 3],
+  hash: "5ac140c0ecf6d86d0e8c0b66480112aa",
+  name: "IAP_feature_education",
   type: "png",
 });

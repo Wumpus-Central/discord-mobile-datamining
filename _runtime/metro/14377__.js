@@ -1,17 +1,23 @@
 // _runtime/metro/14377__.js
-import _mod14368 from "14368__.js";
-import _mod14376 from "14376__.js";
-import _mod14378 from "14378__.js";
-import _mod14379 from "14379__.js";
+const require = arg1;
+const dependencyMap = arg6;
 
-export default _mod14368
-  ? (arg0) => typeof arg0 === "symbol"
-  : (arg0) => {
-      const tmp3 = _mod14378("Symbol");
-      let tmpResultResult = _mod14376(tmp3);
-      if (tmpResultResult) {
-        tmpResultResult = _mod14379(tmp3.prototype, Object(arg0));
-        const tmpResult = _mod14379;
+export const getSupportedUnits = function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("14378__.js").units;
+  return units.filter((item) =>
+    (function isSupported(unit, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
       }
-      return tmpResultResult;
-    };
+      try {
+        const obj = { style: "unit", unit };
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+        return memoizedNumberFormat.resolvedOptions().unit === unit;
+      } catch (err) {
+        return false;
+      }
+    })(item, closure_0),
+  );
+};

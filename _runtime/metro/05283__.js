@@ -1,67 +1,49 @@
 // _runtime/metro/05283__.js
-import _mod5264 from "05264__.js";
-import _modDef5269 from "05269__.js";
-import get0thIfdOffset from "../05284_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../05285_IFD_TYPE_0TH.js";
+import _mod5284 from "05284__.js";
+import _mod5285 from "05285__.js";
+import _mod5286 from "05286__.js";
+import _mod5287 from "05287__.js";
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-let c3 = "Exif IFD Pointer";
-let c4 = "GPS Info IFD Pointer";
-let c5 = "Interoperability IFD Pointer";
-
-export default {
-  read(getUint16, c5, arg2) {
-    const byteOrder = _modDef5269.getByteOrder(getUint16, c5);
-    const obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(
-      getUint16,
-      IFD_TYPE_0TH.IFD_TYPE_0TH,
-      c5,
-      get0thIfdOffset.get0thIfdOffset(getUint16, c5, byteOrder),
-      byteOrder,
-      arg2,
-    );
-    let objectAssignResult = ifd;
-    if (undefined !== ifd[c3]) {
-      const tmp3Result = get0thIfdOffset;
-      objectAssignResult = tmp3Result.objectAssign(
-        ifd,
-        tmp3Result.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2),
-      );
-    }
-    if (undefined !== objectAssignResult[c4]) {
-      const tmp3Result2 = get0thIfdOffset;
-      objectAssignResult = _mod5264.objectAssign(
-        objectAssignResult,
-        tmp3Result2.readIfd(
-          getUint16,
-          IFD_TYPE_0TH.IFD_TYPE_GPS,
-          c5,
-          c5 + objectAssignResult[tmp12].value,
-          byteOrder,
-          arg2,
-        ),
-      );
-      const tmp3Result1 = _mod5264;
-    }
-    let objectAssignResult1 = objectAssignResult;
-    if (undefined !== objectAssignResult[c5]) {
-      const tmp3Result4 = get0thIfdOffset;
-      objectAssignResult1 = _mod5264.objectAssign(
-        objectAssignResult,
-        tmp3Result4.readIfd(
-          getUint16,
-          IFD_TYPE_0TH.IFD_TYPE_INTEROPERABILITY,
-          c5,
-          c5 + objectAssignResult[tmp19].value,
-          byteOrder,
-          arg2,
-        ),
-      );
-      const tmp3Result3 = _mod5264;
-    }
-    return { tags: objectAssignResult1, byteOrder };
-  },
-};
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
+  }
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
+          } else {
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
+          }
+          continue;
+        } else {
+          let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+        }
+      }
+    };
+  }
+  const _Object2 = Object;
+  fn(_mod5284, exports);
+  fn(_mod5285, exports);
+  fn(_mod5286, exports);
+  fn(_mod5287, exports);
+} else {
+  let _Object = Object;
+}

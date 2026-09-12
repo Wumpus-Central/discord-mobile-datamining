@@ -1,21 +1,5 @@
 // _runtime/metro/14390__.js
-import _mod14373 from "14373__.js";
 import _mod14391 from "14391__.js";
+import _mod14395 from "14395__.js";
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod14391(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp6 = _mod14373(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = _mod14373(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
-  }
-};
+export default (arg0) => _mod14391(_mod14395(arg0));

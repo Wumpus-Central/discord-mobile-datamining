@@ -1,13 +1,13 @@
 // _runtime/metro/16170__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "cb91fcb4a76fd3ba2eaf4df2140b56ac",
-  name: "ic_link_24px",
+  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
+  width: 64,
+  height: 64,
+  scales: [1],
+  hash: "99c427c3b3ea910fa2d3aeb72dd0f935",
+  name: "game-empty-state-controller",
   type: "png",
 });

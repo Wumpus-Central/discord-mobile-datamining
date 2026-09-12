@@ -1,40 +1,11 @@
 // _runtime/metro/06948__.js
-import RecyclerViewManager from "../06949_RecyclerViewManager.js";
-import _slicedToArray from "06928__.js";
+import cancelAnimation from "../01636_cancelAnimation.js";
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
+const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
+const module_6941 = fn(6941);
+const memoResult = fn(19).memo(
+  module_6941.createBottomSheetScrollableComponent(fn(6729).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent),
+);
+memoResult.displayName = "BottomSheetSectionList";
 
-export const useRecyclerViewManager = (data) => {
-  let recyclerViewManager = velocityTracker(
-    closure_5(() => {
-      recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
-      return recyclerViewManager;
-    }),
-    1,
-  )[0];
-  velocityTracker = velocityTracker(
-    closure_5(() => {
-      velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
-      return velocityTracker;
-    }),
-    1,
-  )[0];
-  const items = [data];
-  closure_4(() => {
-    recyclerViewManager.updateProps(closure_0);
-  }, items);
-  const items1 = [data.data];
-  closure_4(() => {
-    recyclerViewManager.processDataUpdate();
-  }, items1);
-  closure_3(() => {
-    recyclerViewManager.restoreIfNeeded();
-    return () => {
-      recyclerViewManager.dispose();
-      velocityTracker.cleanUp();
-    };
-  }, []);
-  return { recyclerViewManager, velocityTracker };
-};
+export default memoResult;

@@ -1,5 +1,5 @@
 // _runtime/metro/15659__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "83020ea8b4c0b0d88670e8fd546ddc69",
-  name: "CompassIcon",
+  hash: "1c2e533ca379db7ea82903ea36d239f5",
+  name: "FileWarningIcon",
   type: "png",
 });

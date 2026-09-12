@@ -1,13 +1,13 @@
 // _runtime/metro/10064__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/voice_calls",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "897ada03fe806525383ec1a77806ad61",
-  name: "screenshare_end",
+  hash: "9bcd40cb62b748b314b1aa933da9be99",
+  name: "HandRequestDenyIcon",
   type: "png",
 });

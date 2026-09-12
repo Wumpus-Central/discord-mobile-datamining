@@ -1,13 +1,13 @@
 // _runtime/metro/09465__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/custom_app_icons/PirateIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "45844ffe000e8da4174843bafa8614af",
-  name: "SuperReactionIcon",
+  hash: "02ec404298afd1c009d52e4ac428845a",
+  name: "PirateIcon",
   type: "png",
 });

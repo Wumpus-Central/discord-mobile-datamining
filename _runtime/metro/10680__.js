@@ -1,12 +1,11 @@
 // _runtime/metro/10680__.js
-import _mod10677 from "10677__.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod10578 from "10578__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +24,30 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKTimeUnitAgoFormatParser {
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class ZHHantMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, UKTimeUnitAgoFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitAgoFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, ZHHantMergeDateRangeRefiner);
+    tmp2 = c2;
+    obj = c2(ZHHantMergeDateRangeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,26 +60,14 @@ class UKTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitAgoFormatParser, _mod10677.AbstractParserWithLeftBoundaryChecking);
+_classCallCheck = ZHHantMergeDateRangeRefiner;
+_inherits(ZHHantMergeDateRangeRefiner, fn(_mod10578).default);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(" + UKTimeUnitAgoFormatParser(10675).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(至|到|\-|\~|～|－|ー)\s*$/i;
   },
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = UKTimeUnitAgoFormatParser(10675).parseDuration(arg1[1]);
-      const ParsingComponents = UKTimeUnitAgoFormatParser(10524).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        UKTimeUnitAgoFormatParser(10523).reverseDuration(UKTimeUnitAgoFormatParser(10675).parseDuration(arg1[1])),
-      );
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(UKTimeUnitAgoFormatParser, items);
+export default _createClass(ZHHantMergeDateRangeRefiner, items);

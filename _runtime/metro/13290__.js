@@ -1,13 +1,13 @@
 // _runtime/metro/13290__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting/standard",
-  width: 144,
-  height: 150,
+  httpServerLocation: "/assets/modules/quests/images",
+  width: 435,
+  height: 218,
   scales: [1],
-  hash: "e32285515cb51d557a374cd91c39dd3d",
-  name: "box_idle",
+  hash: "92f827adadc1f86811fd4e36c86fdf27",
+  name: "nitro_modal_header_background",
   type: "png",
 });

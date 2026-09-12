@@ -1,16 +1,13 @@
 // _runtime/metro/14620__.js
-import _modDef14618 from "14618__.js";
-import noop from "00019__.js";
+import registerAsset from "01120__.js";
 
-export default function useReanimatedTransitionProgress() {
-  const context = noop.useContext(_modDef14618);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error(
-      "Couldn't find values for reanimated transition progress. Are you inside a screen in Native Stack?",
-    );
-    throw error;
-  } else {
-    return context;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "d63daceced7ceb0d84c7aba817626689",
+  name: "ic_call_status_yellow_24px",
+  type: "png",
+});

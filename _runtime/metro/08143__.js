@@ -1,13 +1,13 @@
 // _runtime/metro/08143__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 300,
-  height: 122,
-  scales: [2, 3],
-  hash: "ced54d2b1068855a4a9d8181be71ee66",
-  name: "img_discord_nitro_logo_left",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "c9a4f850f67785dd3a5d71532b973724",
+  name: "ic_verified_icon_white_16px",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/15521__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "b191595a7f3df6e7807ea696cffe591c",
-  name: "ImageTextIcon",
+  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
+  width: 70,
+  height: 47,
+  scales: [1],
+  hash: "78cbfbf0381b8c7f5a192c4a46bd0b0e",
+  name: "hi",
   type: "png",
 });

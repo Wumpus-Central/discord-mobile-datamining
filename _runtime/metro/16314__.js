@@ -1,13 +1,13 @@
 // _runtime/metro/16314__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 311,
-  height: 205.5,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "020c495593a12ad5f00af9becbc3507d",
-  name: "premium_role_unavailable",
+  hash: "01ba5b6e261b3f78c312695fe4f7b0d7",
+  name: "BoostTier2Icon",
   type: "png",
 });

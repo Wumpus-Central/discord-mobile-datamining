@@ -1,13 +1,13 @@
 // _runtime/metro/17813__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
+  width: 92,
+  height: 53,
   scales: [2, 3],
-  hash: "ed13dc1c27325d7ffd6ba2403047329c",
-  name: "ic_full_server_gating_24px",
+  hash: "4932e4c7d6568b95e72c98ec5bd9e9c7",
+  name: "asset_role_subscription_earnings",
   type: "png",
 });

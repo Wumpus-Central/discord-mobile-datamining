@@ -1,7 +1,7 @@
 // _runtime/metro/08618__.js
 import 00065__ from "00065__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGLinearGradient", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, x1: true, y1: true, x2: true, y2: true, gradient: true, gradientUnits: true, gradientTransform: true } };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeComposite", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, in2: true, operator1: true, k1: true, k2: true, k3: true, k4: true } };
 
-export default module_65.get("RNSVGLinearGradient", () => obj);
+export default module_65.get("RNSVGFeComposite", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

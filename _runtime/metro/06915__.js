@@ -1,4 +1,8 @@
 // _runtime/metro/06915__.js
-import _modDef6916 from "06916__.js";
+import _mod17 from "00017__.js";
 
-export default _modDef6916;
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({
+  container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 },
+});

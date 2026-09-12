@@ -1,46 +1,105 @@
 // _runtime/metro/05307__.js
-import _mod5264 from "05264__.js";
-import get0thIfdOffset from "../05284_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../05285_IFD_TYPE_0TH.js";
+import _mod5294 from "05294__.js";
+import _modDef5297 from "05297__.js";
 
 require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
 
 export default {
-  read(byteLength, sum, arg2, byteOrder, arg4) {
-    let obj = get0thIfdOffset;
-    const ifd = obj.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
-    let tmp6 = ifd;
-    if (ifd.ShotInfo) {
-      value = ifd.ShotInfo.value;
-      obj = {};
-      if (undefined !== value[27]) {
-        obj = { value: value[27], description: null };
-        let str = "None";
-        if (0 !== value[27]) {
-          let str2 = "Rotate 90 CW";
-          if (1 !== tmp7) {
-            let str3 = "Rotate 180";
-            if (2 !== tmp7) {
-              let str4 = "Unknown";
-              if (3 === tmp7) {
-                str4 = "Rotate 270 CW";
-              }
-              str3 = str4;
-            }
-            str2 = str3;
-          }
-          str = str2;
-        }
-        obj.description = str;
-        obj.AutoRotate = obj;
-      }
-      const tmp3Result = _mod5264;
-      delete tmp[tmp2];
-      tmp6 = _mod5264.objectAssign({}, ifd, obj);
-      const objectAssignResult = _mod5264.objectAssign({}, ifd, obj);
+  isWebpFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod5294.getStringFromDataView(dataView, 0, 4) === "RIFF";
     }
-    return tmp6;
+    if (tmp) {
+      tmp = _mod5294.getStringFromDataView(dataView, 8, 4) === "WEBP";
+    }
+    return tmp;
   },
-  SHOT_INFO_AUTO_ROTATE: 27,
+  findOffsets(byteLength) {
+    let flag = false;
+    let num = 12;
+    let hasAppMarkers = false;
+    let vp8xChunkOffset;
+    let iccChunks;
+    let xmpChunks;
+    let tiffHeaderOffset;
+    if (20 < byteLength.byteLength) {
+      while (true) {
+        let obj = _mod5294;
+        let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
+        let uint32 = byteLength.getUint32(num + 4, true);
+        let flag3 = flag;
+        if (_modDef5297.USE_EXIF) {
+          if ("EXIF" === stringFromDataView) {
+            let tmp9Result = _mod5294;
+            let sum = num + 8;
+            let sum1 = sum;
+            if (tmp9Result.getStringFromDataView(byteLength, sum, 6) === "Exif\0\0") {
+              sum1 = sum + 6;
+            }
+            let tmp22 = sum1;
+            flag3 = true;
+            let sum4 = tmp;
+            let tmp20 = tmp2;
+            let tmp21 = tmp3;
+            let sum2 = uint32;
+            if (uint32 % 2 !== 0) {
+              sum2 = uint32 + 1;
+            }
+            let sum3 = num + (8 + sum2);
+            flag = flag3;
+            num = sum3;
+            tmp = sum4;
+            tmp2 = tmp20;
+            tmp3 = tmp21;
+            let tmp4 = tmp22;
+            hasAppMarkers = flag3;
+            vp8xChunkOffset = sum4;
+            iccChunks = tmp20;
+            xmpChunks = tmp21;
+            tiffHeaderOffset = tmp22;
+            if (sum3 + 8 >= byteLength.byteLength) {
+              break;
+            }
+          }
+        }
+        if (_modDef5297.USE_XMP) {
+          if ("XMP " === stringFromDataView) {
+            obj = { dataOffset: num + 8, length: uint32 };
+            let items = [obj];
+            flag3 = true;
+            sum4 = tmp;
+            tmp20 = tmp2;
+            tmp21 = items;
+            tmp22 = tmp4;
+          }
+        }
+        if (_modDef5297.USE_ICC) {
+          if ("ICCP" === stringFromDataView) {
+            obj = { offset: num + 8, length: uint32, chunkNumber: 1, chunksTotal: 1 };
+            let items1 = [obj];
+            flag3 = true;
+            sum4 = tmp;
+            tmp20 = items1;
+            tmp21 = tmp3;
+            tmp22 = tmp4;
+          }
+        }
+        sum4 = tmp;
+        tmp20 = tmp2;
+        tmp21 = tmp3;
+        tmp22 = tmp4;
+        if ("VP8X" === stringFromDataView) {
+          sum4 = num + 8;
+          flag3 = true;
+          tmp20 = tmp2;
+          tmp21 = tmp3;
+          tmp22 = tmp4;
+        }
+      }
+    }
+    return { hasAppMarkers, tiffHeaderOffset, xmpChunks, iccChunks, vp8xChunkOffset };
+  },
 };

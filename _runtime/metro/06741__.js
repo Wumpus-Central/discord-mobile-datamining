@@ -1,4 +1,7 @@
 // _runtime/metro/06741__.js
-import _modDef6742 from "06742__.js";
+import _mod19 from "00019__.js";
 
-export default _modDef6742;
+const context = _mod19.createContext(null);
+
+export const BottomSheetModalContext = context;
+export const BottomSheetModalProvider = context.Provider;

@@ -1,46 +1,22 @@
 // _runtime/metro/04906__.js
-import _mod1283 from "01283__.js";
-import _mod1315 from "01315__.js";
+import _mod4907 from "04907__.js";
 
-let closure_2 = Object.assign({
-  "[[Configurable]]": true,
-  "[[Enumerable]]": true,
-  "[[Get]]": true,
-  "[[Set]]": true,
-  "[[Value]]": true,
-  "[[Writable]]": true,
-});
-
-export default function isPropertyDescriptor(obj) {
-  if (obj) {
-    if (typeof obj === "object") {
-      for (const key10001 in arg0) {
-        if (!_mod1315(arg0, key10001)) {
-          continue;
-        } else if (closure_2[key10001]) {
-          continue;
-        } else {
-          let flag = false;
-          return false;
-        }
-        continue;
-      }
-      let tmp4 = _mod1315(obj, "[[Value]]");
-      if (!tmp4) {
-        tmp4 = _mod1315(obj, "[[Writable]]");
-      }
-      let tmp5 = _mod1315(obj, "[[Get]]");
-      if (!tmp5) {
-        tmp5 = _mod1315(obj, "[[Set]]");
-      }
-      if (tmp4) {
-        if (tmp5) {
-          const tmp8 = new _mod1283("Property Descriptors may not be both accessor and data descriptors");
-          throw tmp8;
+export default function getPolyfill() {
+  if (String.prototype.trim) {
+    const trim = "\u200B".trim;
+    if ("\u200B" === "\u200B".trim()) {
+      const trim2 = "\u180E".trim;
+      if ("\u180E" === "\u180E".trim()) {
+        const trim3 = "_\u180E".trim;
+        if ("_\u180E" === "_\u180E".trim()) {
+          const trim4 = "\u180E_".trim;
+          if ("\u180E_" === "\u180E_".trim()) {
+            const _String = String;
+          }
+          return trim5;
         }
       }
-      return true;
     }
   }
-  return false;
+  trim5 = _mod4907;
 }

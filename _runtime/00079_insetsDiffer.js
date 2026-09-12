@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "Array", left: "call", right: "items", bottom: "httpServerLocation" };
+let closure_0 = { top: "Array", left: "call", right: "borderRadius", bottom: "assign" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

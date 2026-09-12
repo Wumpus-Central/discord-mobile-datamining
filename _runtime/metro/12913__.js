@@ -1,166 +1,90 @@
 // _runtime/metro/12913__.js
-import _mod12896 from "12896__.js";
-import _mod12901 from "12901__.js";
-import _mod12904 from "12904__.js";
-import _mod12914 from "12914__.js";
-import __SENTRY_DEBUG__ from "12889__.js";
-import consoleSandbox from "12890__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-function updateSession(ipAddress) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  if (obj.user) {
-    ipAddress = ipAddress.ipAddress;
-    let ip_address = !ipAddress;
-    if (!ipAddress) {
-      ip_address = obj.user.ip_address;
-    }
-    if (ip_address) {
-      ipAddress.ipAddress = obj.user.ip_address;
-    }
-    if (!tmp) {
-      ipAddress.did = obj.user.id || obj.user.email || obj.user.username;
-    }
-    tmp = ipAddress.did || obj.did;
-  }
-  let timestamp = obj.timestamp;
-  if (!timestamp) {
-    timestamp = _mod12904.timestampInSeconds();
-  }
-  ipAddress.timestamp = timestamp;
-  if (obj.abnormal_mechanism) {
-    ipAddress.abnormal_mechanism = obj.abnormal_mechanism;
-  }
-  if (obj.ignoreDuration) {
-    ipAddress.ignoreDuration = obj.ignoreDuration;
-  }
-  if (!obj.sid) {
-    if (undefined !== obj.init) {
-      ipAddress.init = obj.init;
-    }
-    const did = ipAddress.did;
-    let did2 = !did;
-    if (!did) {
-      did2 = obj.did;
-    }
-    if (did2) {
-      const _HermesInternal = HermesInternal;
-      ipAddress.did = "" + obj.did;
-    }
-    if (typeof obj.started === "number") {
-      ipAddress.started = obj.started;
-    }
-    if (ipAddress.ignoreDuration) {
-      ipAddress.duration = undefined;
-    } else if (typeof obj.duration === "number") {
-      ipAddress.duration = obj.duration;
+const BackButton = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      const diff = ipAddress.timestamp - ipAddress.started;
-      let num2 = 0;
-      if (diff >= 0) {
-        num2 = diff;
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+fn(17).BackHandler;
+const jsx = fn(21).jsx;
+class BackButton {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, BackButton);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(BackButton);
+    tmp3 = closure_3;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handleBack = () => {
+      let flag = 0 !== closure_0.history.index;
+      if (flag) {
+        const history = closure_0.history;
+        history.goBack();
+        flag = true;
       }
-      ipAddress.duration = num2;
-    }
-    if (obj.release) {
-      ipAddress.release = obj.release;
-    }
-    if (obj.environment) {
-      ipAddress.environment = obj.environment;
-    }
-    const ipAddress2 = ipAddress.ipAddress;
-    let ipAddress3 = !ipAddress2;
-    if (!ipAddress2) {
-      ipAddress3 = obj.ipAddress;
-    }
-    if (ipAddress3) {
-      ipAddress.ipAddress = obj.ipAddress;
-    }
-    const userAgent = ipAddress.userAgent;
-    let userAgent2 = !userAgent;
-    if (!userAgent) {
-      userAgent2 = obj.userAgent;
-    }
-    if (userAgent2) {
-      ipAddress.userAgent = obj.userAgent;
-    }
-    if (typeof obj.errors === "number") {
-      ipAddress.errors = obj.errors;
-    }
-    if (obj.status) {
-      ipAddress.status = obj.status;
-    }
-  } else {
-    if (32 === obj.sid.length) {
-      let sid = obj.sid;
-    } else {
-      sid = _mod12901.uuid4();
-    }
-    ipAddress.sid = sid;
+      return flag;
+    };
+    return tmp3Result;
   }
 }
-_mod12914;
-
-export const closeSession = function closeSession(status, status2) {
-  if (status2) {
-    let obj = { status: status2 };
-  } else {
-    obj = {};
-    if ("ok" === status.status) {
-      obj = { status: "exited" };
-    }
-  }
-  updateSession(status, obj);
+_inherits(BackButton, noop.Component);
+const entry = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    const listener = BackHandler.addEventListener("hardwareBackPress", this.handleBack);
+  },
 };
-export const makeSession = function makeSession(arg0) {
-  obj = obj(12904);
-  const timestampInSecondsResult = obj.timestampInSeconds();
-  obj = {
-    sid: obj(12901).uuid4(),
-    init: true,
-    timestamp: timestampInSecondsResult,
-    started: timestampInSecondsResult,
-    duration: 0,
-    status: "ok",
-    errors: 0,
-    ignoreDuration: false,
-    toJSON() {
-      obj = _mod12896;
-      obj = {
-        sid: "" + obj.sid,
-        init: obj.init,
-        started: new Date(1000 * obj.started).toISOString(),
-        timestamp: null,
-        status: null,
-        errors: null,
-        did: null,
-        duration: null,
-        abnormal_mechanism: null,
-        attrs: null,
-      };
-      const date = new Date(1000 * obj.started);
-      obj.timestamp = new Date(1000 * obj.timestamp).toISOString();
-      ({ status: obj2.status, errors: obj2.errors } = obj);
-      if (typeof obj.did === "number") {
-        const _HermesInternal = HermesInternal;
-        const combined = "" + tmp.did;
-      }
-      obj.did = combined;
-      ({ duration: obj2.duration, abnormal_mechanism: obj2.abnormal_mechanism } = obj);
-      obj.attrs = {
-        release: obj.release,
-        environment: obj.environment,
-        ip_address: obj.ipAddress,
-        user_agent: obj.userAgent,
-      };
-      return obj.dropUndefinedKeys(obj);
+let items = [
+  entry,
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      const removed = BackHandler.removeEventListener("hardwareBackPress", this.handleBack);
     },
-  };
-  if (arg0) {
-    updateSession(obj, arg0);
-  }
-  return obj;
-};
-export { updateSession };
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      return jsx(BackButton(4469).__HistoryContext.Consumer, {
+        children(history) {
+          self.history = history;
+          return self.props.children || null;
+        },
+      });
+    },
+  },
+];
+
+export default _createClass(BackButton, items);

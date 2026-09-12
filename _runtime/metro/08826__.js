@@ -1,5 +1,5 @@
 // _runtime/metro/08826__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e8a96141e48bf46350215d4dadeaaebc",
-  name: "ExperimentalGameControllerLinkIcon",
+  hash: "119c03ecfe749b5d0f4e60c612bb714f",
+  name: "RiotGamesNeutralIcon",
   type: "png",
 });

@@ -71,7 +71,7 @@ let closure_5 = async function _flushIfServerless() {
           closure_129_2 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp5) {

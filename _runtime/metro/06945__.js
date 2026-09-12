@@ -1,10 +1,4 @@
 // _runtime/metro/06945__.js
-import PlatformConfig2 from "../06943_PlatformConfig.js";
+import _modDef6946 from "06946__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getInvertedTransformStyle = function getInvertedTransformStyle(horizontal) {
-  const PlatformConfig = PlatformConfig2.PlatformConfig;
-  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
-};
+export default _modDef6946;

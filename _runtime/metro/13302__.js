@@ -1,13 +1,13 @@
 // _runtime/metro/13302__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting",
-  width: 80,
-  height: 80,
-  scales: [1, 2, 3],
-  hash: "80a5ad242e4f3350ec4e12c04784e6bf",
-  name: "img_premium_icon_80px",
+  httpServerLocation: "/assets/modules/collectibles/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "ac29907d56ae7a9f27a9104ef7aade6e",
+  name: "img_none",
   type: "png",
 });

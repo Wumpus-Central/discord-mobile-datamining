@@ -1,24 +1,14 @@
 // _runtime/metro/05714__.js
-import noop from "00019__.js";
+import registerAsset from "01120__.js";
 
-const UIManager = fn(17).UIManager;
-const jsx = fn(21).jsx;
-try {
-  let closure_0 = fn(5715).default;
-  let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
-  exports.MaskedView = function MaskedView(children) {
-    children = children.children;
-    const merged = Object.assign(children, Object.assign({ children: 0 }));
-    let tmp2 = children;
-    if (closure_2) {
-      tmp2 = children;
-      if (closure_0) {
-        const obj = {};
-        const merged1 = Object.assign(merged);
-        obj.children = children;
-        tmp2 = <tmp3 />;
-      }
-    }
-    return tmp2;
-  };
-} catch (err) {}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation:
+    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_m3fwxdj57yeglodw7rxv3p74au/node_modules/@react-navigation/elements/lib/module/assets",
+  width: 50,
+  height: 85,
+  scales: [1],
+  hash: "0a328cd9c1afd0afe8e3b1ec5165b1b4",
+  name: "back-icon-mask",
+  type: "png",
+});

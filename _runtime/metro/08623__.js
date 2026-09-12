@@ -1,15 +1,13 @@
 // _runtime/metro/08623__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8566 from "08566__.js";
-import unitsDefault from "../08620_units.js";
-import _modDef8625 from "08625__.js";
+import _modDef8613 from "08613__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Mask = fn;
+const FeDropShadow = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,16 +26,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Mask {
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+class FeDropShadow {
   constructor() {
     self = this;
-    tmp = closure_3(this, Mask);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Mask);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeDropShadow);
+    tmp2 = closure_4;
+    obj = closure_4(FeDropShadow);
+    tmp3 = closure_3;
+    if (closure_8()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,67 +48,40 @@ class Mask {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Mask, _modDef8566);
+_inherits(FeDropShadow, _modDef8613);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ maskUnits, maskContentUnits, style } = props);
-    const size = {
-      x: props.x,
-      y: props.y,
-      width: props.width,
-      height: props.height,
-      maskUnits: null,
-      maskContentUnits: null,
-      maskType: null,
-    };
-    let num = 0;
-    if (undefined !== maskUnits) {
-      num = unitsDefault[maskUnits];
+    const _in = props.in;
+    let str = "SourceGraphic";
+    if (undefined !== _in) {
+      str = _in;
     }
-    size.maskUnits = num;
-    let num2 = 1;
-    if (undefined !== maskContentUnits) {
-      num2 = unitsDefault[maskContentUnits];
-    }
-    size.maskContentUnits = num2;
-    let str;
-    if (props != null) {
-      str = props.maskType;
-    }
-    if (!str) {
-      let maskType;
-      if (style != null) {
-        maskType = style.maskType;
-      }
-      str = maskType;
-    }
-    if (!str) {
-      str = "luminance";
-    }
-    size.maskType = Mask(8624).maskType[str];
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged = Object.assign(Mask(8557).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = props.children;
-    return (
-      <tmp8
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    let obj = { children: null };
+    ({ dx, dy, result } = props);
+    const items = [
+      timestampProducer(FeDropShadow(8624), { in: str, stdDeviation: props.stdDeviation }),
+      timestampProducer(FeDropShadow(8626), { dx, dy, result: "offsetblur" }),
+      ,
+      ,
+    ];
+    obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
+    items[2] = timestampProducer(FeDropShadow(8628), obj);
+    items[3] = timestampProducer(FeDropShadow(8617), { in2: "offsetblur", operator: "in" });
+    obj = { result, children: null };
+    const items1 = [timestampProducer(FeDropShadow(8632), {}), timestampProducer(FeDropShadow(8632), { in: str })];
+    obj.children = items1;
+    items[4] = React5(FeDropShadow(8630), obj);
+    obj.children = items;
+    return React5(noop.Fragment, obj);
   },
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(Mask, items);
-importDefaultResultResult.displayName = "Mask";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+let items = [entry];
+const importDefaultResultResult = _createClass(FeDropShadow, items);
+importDefaultResultResult.displayName = "FeDropShadow";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

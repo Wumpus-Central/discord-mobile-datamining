@@ -1,68 +1,39 @@
 // _runtime/metro/12961__.js
-import errorCallback from "../12886_errorCallback.js";
-import _mod12890 from "12890__.js";
-import spanTimeInputToSeconds from "../12895_spanTimeInputToSeconds.js";
-import _mod12902 from "12902__.js";
-import BAGGAGE_HEADER_NAME from "../12903_BAGGAGE_HEADER_NAME.js";
-import _mod12908 from "12908__.js";
-import _mod12909 from "12909__.js";
-import _mod12917 from "12917__.js";
-import _mod12926 from "12926__.js";
-import "module_12889";
-import __SENTRY_DEBUG__ from "12918__.js";
-import dateTimestampInSeconds from "12904__.js";
+import _mod12933 from "12933__.js";
 
-errorCallback;
+require = arg1;
+const dependencyMap = arg6;
 
-export const getTraceData = function getTraceData(arg0) {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
+  fn = arg2;
+  if (arg2 === undefined) {
+    fn = function t() {};
   }
-  const client = _mod12917.getClient();
-  if (obj3.isEnabled()) {
-    if (client) {
-      let tmpResult = _mod12908;
-      const mainCarrier = tmpResult.getMainCarrier();
-      tmpResult = _mod12909;
-      const asyncContextStrategy = tmpResult.getAsyncContextStrategy(mainCarrier);
-      if (asyncContextStrategy.getTraceData) {
-        return asyncContextStrategy.getTraceData(obj);
+  try {
+    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
+      closure_0 = arg1;
+      closure_1 = fn;
+      if (obj.isThenable(promise)) {
+        return promise.then(
+          (result) => {
+            closure_1();
+            return result;
+          },
+          (arg0) => {
+            closure_0(arg0);
+            closure_1();
+            throw arg0;
+          },
+        );
       } else {
-        const currentScope = _mod12917.getCurrentScope();
-        let span = obj.span;
-        if (!span) {
-          span = spanTimeInputToSeconds.getActiveSpan();
-          const tmpResult2 = spanTimeInputToSeconds;
-        }
-        if (span) {
-          let spanToTraceHeaderResult = spanTimeInputToSeconds.spanToTraceHeader(span);
-          const tmpResult3 = spanTimeInputToSeconds;
-        } else {
-          const propagationContext = currentScope.getPropagationContext();
-          ({ traceId, sampled, spanId } = propagationContext);
-          spanToTraceHeaderResult = _mod12902.generateSentryTraceHeader(traceId, spanId, sampled);
-          const tmpResult4 = _mod12902;
-        }
-        const tmpResult5 = _mod12926;
-        if (span) {
-          let dynamicSamplingContextFromSpan = tmpResult5.getDynamicSamplingContextFromSpan(span);
-        } else {
-          dynamicSamplingContextFromSpan = tmpResult5.getDynamicSamplingContextFromScope(client, currentScope);
-        }
-        const tmpResult1 = _mod12917;
-        const result = BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
-        const TRACEPARENT_REGEXP = _mod12902.TRACEPARENT_REGEXP;
-        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
-          obj = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
-        } else {
-          const logger = _mod12890.logger;
-          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
-          obj = {};
-        }
-        return obj;
+        fn();
+        return promise;
       }
-    }
+      obj = _mod12933;
+    })(fn(), arg1, fn);
+  } catch (tmp5) {
+    tmp3(tmp5);
+    tmp2();
+    throw tmp5;
   }
-  return {};
 };

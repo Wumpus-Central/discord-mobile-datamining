@@ -1,13 +1,13 @@
 // _runtime/metro/13558__.js
-import registerAsset from "01122__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 420,
-  height: 112,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 314,
+  height: 195,
   scales: [2, 3],
-  hash: "e2e6d0edbd6c916cde4ea4f22a6f794c",
-  name: "subscription_placeholder_pattern_darker",
+  hash: "f774e43fd38da2d8b6e5bdabed98e8b8",
+  name: "img_tier_0_marketing_emojis",
   type: "png",
 });
