@@ -2,7 +2,7 @@
 import ClientInfoUtils from "native/ClientInfoUtils.tsx";
 
 const ReleaseChannel = ClientInfoUtils.getConstants().ReleaseChannel;
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 PlatformUtils = PlatformUtils.isAndroid();
 if (PlatformUtils) {
   PlatformUtils = -1 === ReleaseChannel.indexOf("canary");

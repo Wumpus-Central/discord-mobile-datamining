@@ -9,8 +9,8 @@ import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import common_VideoDefault from "common/Video.tsx";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef10486 from "../../_runtime/metro/10486__.js";
-import _modDef15608 from "../../_runtime/metro/15608__.js";
+import _modDef10525 from "../../_runtime/metro/10525__.js";
+import _modDef15630 from "../../_runtime/metro/15630__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -135,7 +135,7 @@ const CHANGELOG_MODAL_KEY = fn(2010).CHANGELOG_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-fn(4606);
+fn(4636);
 let createStyles = {
   video: { alignSelf: "center" },
   videoWrapper: { marginBottom: 8 },
@@ -163,7 +163,7 @@ createStyles.playButton = size;
 createStyles.playIcon = { width: 21, height: 21 };
 createStyles.empty = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
 let closure_10 = createStyles.createLegacyClassComponentStyles(createStyles);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj1 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
 const size1 = {
   width: 7,
@@ -197,7 +197,7 @@ ListItem.prototype["render"] = function render() {
   obj.children = items;
   return React6(View, obj);
 };
-ListItem.contextType = fn(4317).ThemeContext;
+ListItem.contextType = fn(4347).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
@@ -310,7 +310,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      const items = [closure_7(_modDef15608, obj1)];
+      const items = [closure_7(_modDef15630, obj1)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: tmp.videoOverlay, source: null };
@@ -360,14 +360,14 @@ prototype["renderVideo"] = function renderVideo() {
     const obj7 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: _modDef10486,
+      source: _modDef10525,
       onPress: self.playVideo,
       style: tmp.playButton,
       iconSize: tmp18(1178).IconSizes.CUSTOM,
       iconStyle: tmp.playIcon,
     };
     obj6.children = closure_7(TouchableHitBoxDefault, obj7);
-    tmp12Result = closure_7(tmp18(5174).PressableOpacity, obj6);
+    tmp12Result = closure_7(tmp18(5204).PressableOpacity, obj6);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;
@@ -382,7 +382,7 @@ prototype["render"] = function render() {
   obj.onScroll = this.handleScroll;
   return React5(ChangeLogStandardTemplateDefault, obj);
 };
-ChangeLog.contextType = fn(4317).ThemeContext;
+ChangeLog.contextType = fn(4347).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
 

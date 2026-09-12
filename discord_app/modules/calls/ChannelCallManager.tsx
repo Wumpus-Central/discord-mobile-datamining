@@ -11,7 +11,7 @@ import ChannelRTCStore from "ChannelRTCStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-const SoundUtils = fn(9993);
+const SoundUtils = fn(10032);
 let closure_11 = SoundUtils.createSoundForPack("call_calling", SoundpackStore.getSoundpack());
 class ChannelCallManager extends tmp2 {
   constructor() {

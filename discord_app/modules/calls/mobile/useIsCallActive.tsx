@@ -3,7 +3,7 @@ import CallStore from "../../../stores/CallStore.tsx";
 import ChannelRTCStore from "../ChannelRTCStore.tsx";
 
 const require = fn;
-const ParticipantTypes = fn(4627).ParticipantTypes;
+const ParticipantTypes = fn(4657).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");
 

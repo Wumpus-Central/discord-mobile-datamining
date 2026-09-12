@@ -7,7 +7,7 @@ import spring from "../../../../../design/animation/reanimated/spring/spring.tsx
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import RowButton from "../../../../../design/components/TableRow/native/RowButton.native.tsx";
-import _mod8964 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod9003 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import ThreadPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx";
 import ThreadListTableRowDefault from "ThreadListTableRow.tsx";
 import ThreadListEmptyDefault from "ThreadListEmpty.tsx";
@@ -111,7 +111,7 @@ function getThreadListStateKey(arg0) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({
   container: { flex: 1, flexGrow: 1 },
   center: { justifyContent: "center", alignItems: "center" },
@@ -300,7 +300,7 @@ export default function ThreadList(onCreateThreadPress) {
       }
       obj2.ListFooterComponentStyle = footer;
       obj2.contentContainerStyle = contentContainerStyle;
-      obj.children = jsx(_mod8964.AnimatedFlashList, {
+      obj.children = jsx(_mod9003.AnimatedFlashList, {
         data: memo,
         ListHeaderComponent: memo2,
         ListHeaderComponentStyle: closure_3.header,

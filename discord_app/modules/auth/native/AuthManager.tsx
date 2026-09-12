@@ -10,10 +10,10 @@ import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(12502).PermissionStateType;
+const PermissionStateType = fn(12538).PermissionStateType;
 const ME = fn(1074).ME;
-let closure_8 = fn(4816).NotificationAuthorizationStatus;
-const NewUserTypes = fn(12798).NewUserTypes;
+let closure_8 = fn(4846).NotificationAuthorizationStatus;
+const NewUserTypes = fn(12834).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -76,7 +76,7 @@ class AuthManager extends tmp3 {
           } else if (value !== constants.UNDETERMINED) {
             closure_129_0();
           }
-          obj = applyArgumentsResult(16069);
+          obj = applyArgumentsResult(16093);
           const obj3 = { onComplete: closure_129_0 };
           const result = obj.showPushNotificationPromptModal(obj3);
         } catch (tmp19) {
@@ -105,17 +105,17 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        let tmpResult = applyArgumentsResult(12839);
+        let tmpResult = applyArgumentsResult(12875);
         tmpResult.setNewUser(constants.ORGANIC_REGISTERED);
       }
-      tmpResult = applyArgumentsResult(12797);
+      tmpResult = applyArgumentsResult(12833);
       tmpResult.startOnboarding();
-      obj = applyArgumentsResult(9911);
+      obj = applyArgumentsResult(9950);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {
-        closure_1_0(7415).transitionToGuild(closure_1_7);
-        const obj = closure_1_0(7415);
+        closure_1_0(7445).transitionToGuild(closure_1_7);
+        const obj = closure_1_0(7445);
         closure_1_1(573).dispatch({ type: "DEFERRED_INVITE_SHOW" });
       });
     };

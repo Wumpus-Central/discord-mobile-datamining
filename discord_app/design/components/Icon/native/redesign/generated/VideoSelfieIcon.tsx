@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/VideoSelfieIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod8530 from "../../../../../../../_runtime/metro/08530__.js";
+import _mod8562 from "../../../../../../../_runtime/metro/08562__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const VideoSelfieIcon = function VideoSelfieIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8530, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8562, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

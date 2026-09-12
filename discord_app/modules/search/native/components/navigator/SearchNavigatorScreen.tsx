@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { wrapper: null, tabs: null, back: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createStyles.wrapper = createStyles;
@@ -30,7 +30,7 @@ export default function SearchNavigatorScreen(navigation) {
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  let obj = navigation(16705);
+  let obj = navigation(16732);
   const searchSuggestionsGesture = obj.useSearchSuggestionsGesture(searchContext);
   ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
@@ -70,7 +70,7 @@ export default function SearchNavigatorScreen(navigation) {
   });
   obj1.children = items3;
   obj.children = closure_6(View, obj1);
-  items1[1] = closure_5(navigation(16433).NonCollapsableGestureDetector, obj);
+  items1[1] = closure_5(navigation(16457).NonCollapsableGestureDetector, obj);
   obj.children = items1;
   return closure_6(closure_7, obj);
 }

@@ -11,7 +11,7 @@ import ClientThemesBackgroundStore from "../../client_themes/ClientThemesBackgro
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let obj = { style: { flex: 1 }, textColor: null, placeholderColor: null };
 obj = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj.textColor = obj;
@@ -80,7 +80,7 @@ const forwardRefResult = noop.forwardRef((markAsSpoilerTitle, ref) => {
     keyboardAppearance: num2,
     keyboardType: str,
     markAsSpoilerTitle,
-    maxHeight: tmp9(12124)(onMaxHeightChanged),
+    maxHeight: tmp9(12160)(onMaxHeightChanged),
     onBeginFocus,
     onEndBlur,
     onChangeContentSize,
@@ -108,7 +108,7 @@ const forwardRefResult = noop.forwardRef((markAsSpoilerTitle, ref) => {
     keyboardAppearance: num2,
     keyboardType: str,
     markAsSpoilerTitle,
-    maxHeight: tmp9(12124)(onMaxHeightChanged),
+    maxHeight: tmp9(12160)(onMaxHeightChanged),
     onBeginFocus,
     onEndBlur,
     onChangeContentSize,

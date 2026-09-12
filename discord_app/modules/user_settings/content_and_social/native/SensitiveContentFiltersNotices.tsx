@@ -7,7 +7,7 @@ import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySet
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SafetySettingsNoticeType = fn(8485).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(8517).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -19,7 +19,7 @@ export const SensitiveContentFiltersTeenNotice = function SensitiveContentFilter
   const isTinyBroncoSettingsNoticeEnabled = obj.useIsTinyBroncoSettingsNoticeEnabled();
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isTinyBroncoSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(14871).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(14905).ContentFiltersTeenNotice, {});
   } else {
     obj = {
       label: tmp(1114).t.EUo0yj,

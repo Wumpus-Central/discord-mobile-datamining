@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4606);
+fn(4636);
 const createStyles = { nitroWheel: null, titleWrapper: null, titleContainer: null };
 let size = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginLeft: 4, width: 20, height: 20 };
 createStyles.nitroWheel = size;
@@ -26,7 +26,7 @@ export default function EditProfileThemeActionSheet(onResetTheme) {
   obj = { style: tmp.nitroWheel };
   obj.trailing = closure_3(onResetTheme(1178).NitroWheel, obj);
   ({ titleWrapper: obj2.titleWrapperStyle, titleContainer: obj2.titleContainerStyle } = tmp);
-  const items = [closure_3(onResetTheme(7222).BottomSheetTitleHeader, obj)];
+  const items = [closure_3(onResetTheme(7252).BottomSheetTitleHeader, obj)];
   const obj1 = { hasIcons: false, children: null };
   const obj2 = { label: null, subLabel: null, onPress: null };
   const intl2 = onResetTheme(1114).intl;
@@ -37,8 +37,8 @@ export default function EditProfileThemeActionSheet(onResetTheme) {
     onResetTheme();
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj1.children = closure_3(onResetTheme(5656).TableRow, obj2);
-  items[1] = closure_3(onResetTheme(5738).TableRowGroup, obj1);
+  obj1.children = closure_3(onResetTheme(5686).TableRow, obj2);
+  items[1] = closure_3(onResetTheme(5768).TableRowGroup, obj1);
   obj.children = items;
-  return closure_4(onResetTheme(7270).ActionSheet, obj);
+  return closure_4(onResetTheme(7300).ActionSheet, obj);
 }

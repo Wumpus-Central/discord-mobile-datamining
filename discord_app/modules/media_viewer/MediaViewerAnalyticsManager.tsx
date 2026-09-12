@@ -26,8 +26,8 @@ MediaViewerAnalytics = {
   channelType: "isArray",
   numMediaItems: "Array",
   hasMediaOptions: "call",
-  source: "user",
-  incrementableActions: "HermesInternal",
+  source: true,
+  incrementableActions: 553217,
 };
 const values = Object.values(MediaViewerAnalytics);
 MediaViewerAnalytics.incrementableActions = Object.fromEntries(

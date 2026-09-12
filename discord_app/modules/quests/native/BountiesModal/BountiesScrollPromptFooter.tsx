@@ -43,7 +43,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj.children = closure_7(zIndex(4317).BountiesScrollGradientRive, {
+  obj.children = closure_7(zIndex(4347).BountiesScrollGradientRive, {
     stateMachine: "State Machine 1",
     fit: "fill",
     alignment: "bottom-center",
@@ -58,10 +58,10 @@ function BountiesScrollPromptFooterContent(zIndex) {
   return closure_8(ReanimatedRexportDefault.View, obj);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5495).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5525).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_9 = createStyles.createStyles(() => {
   let obj = { root: { position: "absolute", bottom: 0, left: 0, right: 0 }, content: null, gradient: null };
   obj = {
@@ -81,7 +81,7 @@ const entering = function t(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-createStyles = { withTiming: fn(4607).withTiming, timingStandard: fn(4610).timingStandard };
+createStyles = { withTiming: fn(4637).withTiming, timingStandard: fn(4640).timingStandard };
 entering.__closure = createStyles;
 entering.__workletHash = 11416950434629;
 entering.__initData = {
@@ -91,7 +91,7 @@ const fn2 = function n(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
-createStyles = { withTiming: fn(4607).withTiming, timingStandard: fn(4610).timingStandard };
+createStyles = { withTiming: fn(4637).withTiming, timingStandard: fn(4640).timingStandard };
 fn2.__closure = createStyles;
 fn2.__workletHash = 9928471408966;
 fn2.__initData = {

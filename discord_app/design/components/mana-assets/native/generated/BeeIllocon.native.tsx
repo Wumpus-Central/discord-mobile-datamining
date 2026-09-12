@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/BeeIllocon.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef5865 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-2x.png.js";
+import _modDef5895 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -21,12 +21,12 @@ export const BeeIllocon = function BeeIllocon(size) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef5865 };
+  obj = { uri: _modDef5895 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5865 });
+  return jsx(FastImageDefault, { uri: _modDef5895 });
 };

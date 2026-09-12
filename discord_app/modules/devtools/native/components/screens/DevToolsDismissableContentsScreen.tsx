@@ -5,7 +5,7 @@ import UserSettingsProtoActionCreators from "../../../../user_settings/UserSetti
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05568_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/05598_fuzzysearch.js";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -13,7 +13,6 @@ import SearchField from "../../../../../design/components/TextField/native/Searc
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import DismissibleContentFrameworkActionCreators from "../../../../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
 import SearchEmpty from "../../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
-import useBountiesAutoScroll from "../../../../quests/native/BountiesModal/useBountiesAutoScroll.tsx";
 import toggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
 import DoubleCheckmarkIcon from "../../../../../design/components/Icon/native/redesign/generated/DoubleCheckmarkIcon.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -33,7 +32,7 @@ function DismissableContentsEmpty() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = {
   container: null,
   contentContainer: null,
@@ -63,14 +62,7 @@ let closure_11 = noop.memo((content) => {
   return React5(TableSwitchRow.TableSwitchRow, { start, end, onValueChange, value, label });
 });
 let closure_12 = noop.memo((arg0) => {
-  ({
-    dailyCapOverridden,
-    newUserMinAgeRequiredOverridden,
-    forceBountiesSwipeUpNux,
-    initialSearchQuery,
-    onForceBountiesSwipeUpNuxChange,
-    onSearchChange,
-  } = arg0);
+  ({ dailyCapOverridden, newUserMinAgeRequiredOverridden, initialSearchQuery, onSearchChange } = arg0);
   const tmp = closure_10();
   let obj = { children: null };
   obj = { style: tmp.headerSection, children: null };
@@ -82,7 +74,6 @@ let closure_12 = noop.memo((arg0) => {
       label: "Daily limit",
       subLabel: "When enabled, bypass the daily limit of dismissible content shown",
     }),
-    ,
   ];
   const obj1 = {
     onValueChange: DismissibleContentFrameworkActionCreators.overrideDismissibleContentFramework,
@@ -95,13 +86,6 @@ let closure_12 = noop.memo((arg0) => {
     value: newUserMinAgeRequiredOverridden,
     label: "New user account minimum age",
     subLabel: "When enabled, bypass the minimum age requirement for new user accounts",
-  });
-  items[2] = React5(TableSwitchRow.TableSwitchRow, {
-    onValueChange: onForceBountiesSwipeUpNuxChange,
-    value: forceBountiesSwipeUpNux,
-    label: "Force bounties swipe-up NUX",
-    subLabel:
-      "When enabled, treat bounties swipe-up NUX as shown so scroll affordances always appear. Reopen the bounties modal after toggling.",
   });
   obj.children = items;
   obj.children = React6(TableRowGroup.TableRowGroup, obj);
@@ -174,15 +158,15 @@ let closure_12 = noop.memo((arg0) => {
   return React6(React7, obj);
 });
 const size = fn(2);
-let result = size.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx",
 );
 
 export default function DevToolsDismissableContentsScreen() {
-  const tmp = closure_10();
+  const tmp = callback1();
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
-  let obj = ref(10022);
+  let obj = ref(10061);
   const tmp2 = useSafeAreaInsetsDefault();
   [dependencyMap, tmp5] = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
   _slicedToArray = tmp5;
@@ -238,18 +222,7 @@ export default function DevToolsDismissableContentsScreen() {
   }));
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
-  let tmp4 = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  const tmp9 = _slicedToArray(ref(15067).useForceBountiesSwipeUpNux(), 2);
-  const first2 = tmp9[0];
-  closure_10 = tmp11;
-  const items1 = [tmp9[1]];
-  const onForceBountiesSwipeUpNuxChange = initialSearchQuery.useCallback((arg0) => {
-    closure_10(arg0);
-    if (arg0) {
-      const result = useBountiesAutoScroll.clearDismissedScrollAffordanceBountyIds();
-    }
-  }, items1);
-  const callback1 = initialSearchQuery.useCallback(() => {
+  const callback = initialSearchQuery.useCallback(() => {
     let current = ref.current;
     const animationFrame = requestAnimationFrame(() => {
       current = ref.current;
@@ -259,8 +232,8 @@ export default function DevToolsDismissableContentsScreen() {
       }
     });
   }, []);
-  const items2 = [tmp5, callback1];
-  const callback2 = initialSearchQuery.useCallback((str) => {
+  const items1 = [tmp5, callback];
+  callback1 = initialSearchQuery.useCallback((str) => {
     dependencyMap(str);
     const items = [];
     for (const key10015 in dismissible_content.DismissibleContent) {
@@ -285,37 +258,28 @@ export default function DevToolsDismissableContentsScreen() {
     }
     const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     closure_6(items);
-    callback1();
-  }, items2);
-  const items3 = [
-    dailyCapOverridden,
-    newUserMinAgeRequiredOverridden,
-    first2,
-    initialSearchQuery,
-    onForceBountiesSwipeUpNuxChange,
-    callback2,
-  ];
-  const callback3 = initialSearchQuery.useCallback((nativeEvent) => {
+    callback();
+  }, items1);
+  const items2 = [dailyCapOverridden, newUserMinAgeRequiredOverridden, initialSearchQuery, callback1];
+  const callback2 = initialSearchQuery.useCallback((nativeEvent) => {
     closure_1.current = nativeEvent.nativeEvent.contentOffset.y;
   }, []);
-  const items4 = [first1.length];
+  const items3 = [first1.length];
   const memo = initialSearchQuery.useMemo(
     () =>
       React5(closure_12, {
         dailyCapOverridden,
         newUserMinAgeRequiredOverridden,
-        forceBountiesSwipeUpNux: true === first2,
         initialSearchQuery,
-        onForceBountiesSwipeUpNuxChange,
-        onSearchChange: callback2,
+        onSearchChange: callback1,
       }),
-    items3,
+    items2,
   );
   obj = { style: tmp.container, children: null };
-  const callback4 = initialSearchQuery.useCallback((content) => {
+  const callback3 = initialSearchQuery.useCallback((content) => {
     const index = content.index;
     return React5(closure_11, { content: content.item, start: 0 === index, end: index === first1.length - 1 });
-  }, items4);
+  }, items3);
   obj = {
     ref,
     data: first1,
@@ -330,17 +294,17 @@ export default function DevToolsDismissableContentsScreen() {
     onScroll: null,
     scrollEventThrottle: 16,
   };
-  const items5 = [tmp.contentContainer];
+  const items4 = [tmp.contentContainer];
   obj1 = { paddingBottom: tmp2.bottom + nativeDefault.space.PX_16 };
-  items5[1] = obj1;
-  obj.contentContainerStyle = items5;
+  items4[1] = obj1;
+  obj.contentContainerStyle = items4;
   obj.ListHeaderComponent = memo;
-  obj.ListEmptyComponent = callback2;
+  obj.ListEmptyComponent = DismissableContentsEmpty;
   obj.keyExtractor = function keyExtractor(arg0) {
     return arg0;
   };
-  obj.renderItem = callback4;
-  obj.onScroll = callback3;
-  obj.children = dailyCapOverridden(ref(8964).FlashList, obj);
+  obj.renderItem = callback3;
+  obj.onScroll = callback2;
+  obj.children = dailyCapOverridden(ref(9003).FlashList, obj);
   return dailyCapOverridden(first1, obj);
 }

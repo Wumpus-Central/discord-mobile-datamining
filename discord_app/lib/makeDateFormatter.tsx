@@ -1,5 +1,5 @@
 // discord_app/lib/makeDateFormatter.tsx
-import _modDef4198 from "../../_runtime/metro/04198__.js";
+import _modDef4228 from "../../_runtime/metro/04228__.js";
 import SystemDateFormatter from "../modules/system_date_format/SystemDateFormatter.native.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
@@ -19,7 +19,7 @@ function defaultMeridiem(arg0, arg1, arg2) {
   return str;
 }
 function getLocaleData() {
-  let obj = _modDef4198;
+  let obj = _modDef4228;
   const _config = obj.localeData()._config;
   ({ months, monthsShort, weekdays, weekdaysShort, weekdaysMin, meridiem } = _config);
   if (undefined === meridiem) {
@@ -32,7 +32,7 @@ function getLocaleData() {
   ordinal = "month";
   let format5 = months;
   if (typeof months === "function") {
-    let tmpResult = _modDef4198;
+    let tmpResult = _modDef4228;
     closure_2 = months.bind(tmpResult.localeData());
     let fn = (arg0, arg1) => {
       closure_0 = arg0;
@@ -62,7 +62,7 @@ function getLocaleData() {
   ordinal = "month";
   format5 = monthsShort;
   if (typeof monthsShort === "function") {
-    tmpResult = _modDef4198;
+    tmpResult = _modDef4228;
     closure_2 = monthsShort.bind(tmpResult.localeData());
     let fn2 = (arg0, arg1) => {
       closure_0 = arg0;
@@ -81,12 +81,12 @@ function getLocaleData() {
   ordinal = "day";
   format5 = weekdays;
   if (typeof weekdays === "function") {
-    closure_2 = weekdays.bind(_modDef4198.localeData());
+    closure_2 = weekdays.bind(_modDef4228.localeData());
     let fn3 = (arg0, arg1) => {
       closure_0 = arg0;
       return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
-    const tmpResult1 = _modDef4198;
+    const tmpResult1 = _modDef4228;
   } else {
     const _Array3 = Array;
     let format3 = weekdays;
@@ -100,12 +100,12 @@ function getLocaleData() {
   ordinal = "day";
   format5 = weekdaysShort;
   if (typeof weekdaysShort === "function") {
-    closure_2 = weekdaysShort.bind(_modDef4198.localeData());
+    closure_2 = weekdaysShort.bind(_modDef4228.localeData());
     let fn4 = (arg0, arg1) => {
       closure_0 = arg0;
       return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
-    const tmpResult2 = _modDef4198;
+    const tmpResult2 = _modDef4228;
   } else {
     const _Array4 = Array;
     let format4 = weekdaysShort;
@@ -119,12 +119,12 @@ function getLocaleData() {
   ordinal = "day";
   format5 = weekdaysMin;
   if (typeof weekdaysMin === "function") {
-    closure_2 = weekdaysMin.bind(_modDef4198.localeData());
+    closure_2 = weekdaysMin.bind(_modDef4228.localeData());
     let fn5 = (arg0, arg1) => {
       closure_0 = arg0;
       return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
-    const tmpResult3 = _modDef4198;
+    const tmpResult3 = _modDef4228;
   } else {
     const _Array5 = Array;
     format5 = weekdaysMin;

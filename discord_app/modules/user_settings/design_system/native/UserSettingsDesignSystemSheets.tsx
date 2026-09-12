@@ -5,7 +5,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef5885 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
+import _modDef5915 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -36,13 +36,13 @@ function DemoActionSheet() {
   let tmp14Result = first;
   if (first) {
     obj = { onPress: NOOP, label: tmp12 };
-    tmp14Result = React5(tmp15(9809).ActionSheetHeaderPressableText, obj);
+    tmp14Result = React5(tmp15(9848).ActionSheetHeaderPressableText, obj);
   }
   obj.leading = tmp14Result;
   tmp14Result = tmp2;
   if (tmp2) {
     obj = { onPress: NOOP };
-    tmp14Result = React5(tmp15(7271).ActionSheetCloseButton, obj);
+    tmp14Result = React5(tmp15(7301).ActionSheetCloseButton, obj);
   }
   const obj1 = { header: React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
   obj.trailing = tmp14Result;
@@ -106,7 +106,7 @@ function DemoPromoSheet() {
   };
   obj = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = React5(components_Button_Button.Button, obj);
-  obj.src = { uri: _modDef5885 };
+  obj.src = { uri: _modDef5915 };
   obj.graphic = obj;
   obj.actions = tmp;
   return React5(PromoSheet.PromoSheet, obj);
@@ -115,7 +115,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(

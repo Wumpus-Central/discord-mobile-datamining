@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(8378);
+const Constants = fn(8410);
 ({
   THUMBNAIL_MARGIN: hasOwnProperty,
   THUMBNAIL_HEIGHT: metroRequire,
@@ -13,7 +13,7 @@ const Constants = fn(8378);
   THUMBNAIL_MIN_WIDTH: closure_8,
   THUMBNAIL_WIDTH_MARGIN: closure_9,
 } = Constants);
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = {
   code: "function useMediaViewerSyncerTsx1(){const{thumbnailsScrolling,SCROLLING_DRAG,swipeSource}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');}",

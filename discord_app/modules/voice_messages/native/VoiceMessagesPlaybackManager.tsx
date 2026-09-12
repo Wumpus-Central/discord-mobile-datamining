@@ -31,7 +31,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
             const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
           }
         }
-        obj = applyArgumentsResult(1115);
+        obj = applyArgumentsResult(1150);
       }
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
@@ -43,7 +43,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
           DCDAudioPlayerManager.pauseCurrentPlayer(false);
         }
       }
-      obj = applyArgumentsResult(1115);
+      obj = applyArgumentsResult(1150);
     };
     applyArgumentsResult.handleAppStateChanged = function handleAppStateChanged(state) {
       state = state.state;

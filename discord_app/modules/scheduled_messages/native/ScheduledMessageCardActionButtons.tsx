@@ -6,7 +6,7 @@ import ClockIcon from "../../../design/components/Icon/native/redesign/generated
 import CircleXIcon from "../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
-import _modDef8764 from "../../../../_runtime/metro/08764__.js";
+import _modDef8796 from "../../../../_runtime/metro/08796__.js";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import ScheduledMessagesUtils from "ScheduledMessagesUtils.native.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -65,7 +65,7 @@ export default function ScheduledMessageCardActionButtons(arg0) {
       obj.accessibilityLabel = intl.string(util.t.sHmiIC);
       obj.size = "sm";
       obj.disabled = disabled;
-      obj.icon = _modDef8764;
+      obj.icon = _modDef8796;
       return jsx(IconButton.IconButton, { ref: ref.ref });
     },
   });

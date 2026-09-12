@@ -53,12 +53,12 @@ function OrbCheckoutModalScreen(startTime) {
   startTime = startTime.startTime;
   let onRedeemVirtualCurrency;
   let ref;
-  let obj = onRedeemVirtualCurrency(13252);
+  let obj = onRedeemVirtualCurrency(13285);
   const orbCheckoutModalContext = obj.useOrbCheckoutModalContext();
   onRedeemVirtualCurrency = orbCheckoutModalContext.onRedeemVirtualCurrency;
   const orbRedemptionError = orbCheckoutModalContext.orbRedemptionError;
   closure_129_0 = startTime;
-  let obj1 = onRedeemVirtualCurrency(13252);
+  let obj1 = onRedeemVirtualCurrency(13285);
   const orbCheckoutModalContext1 = obj1.useOrbCheckoutModalContext();
   const skuId = orbCheckoutModalContext1.skuId;
   closure_129_1 = skuId;
@@ -132,7 +132,7 @@ function OrbCheckoutModalScreen(startTime) {
     }
   }, items1);
   dependencyMap = tmp7;
-  const virtualCurrencyBalance = onRedeemVirtualCurrency(13254).useVirtualCurrencyBalance();
+  const virtualCurrencyBalance = onRedeemVirtualCurrency(13287).useVirtualCurrencyBalance();
   const tmp9 = ref(virtualCurrencyBalance);
   ref = tmp9;
   const items2 = [tmp7];
@@ -155,10 +155,10 @@ function OrbCheckoutModalScreen(startTime) {
     current = virtualCurrencyBalance;
   }
   const items4 = [tmp7, virtualCurrencyBalance, onRedeemVirtualCurrency];
-  let obj3 = onRedeemVirtualCurrency(13254);
+  let obj3 = onRedeemVirtualCurrency(13287);
   obj = { children: null };
   obj = { children: closure_11(OrbCheckoutModalContent, { orbBalance: current }) };
-  const items5 = [closure_11(onRedeemVirtualCurrency(8508).ModalContent, obj)];
+  const items5 = [closure_11(onRedeemVirtualCurrency(8540).ModalContent, obj)];
   obj1 = {
     children: closure_11(OrbCheckoutModalFooter, {
       onPress: closure_6(() => {
@@ -166,15 +166,15 @@ function OrbCheckoutModalScreen(startTime) {
         closure_4.current = virtualCurrencyBalance;
         onRedeemVirtualCurrency(() => {
           dependencyMap(constants.PAYMENT_FLOW_SUCCEEDED);
-          let arr = orbRedemptionError(4809);
+          let arr = orbRedemptionError(4839);
           arr = arr.pop();
         });
       }, items4),
     }),
   };
-  items5[1] = closure_11(onRedeemVirtualCurrency(12020).ModalFooter, obj1);
+  items5[1] = closure_11(onRedeemVirtualCurrency(12056).ModalFooter, obj1);
   obj.children = items5;
-  return closure_12(onRedeemVirtualCurrency(8507).ModalScreen, obj);
+  return closure_12(onRedeemVirtualCurrency(8539).ModalScreen, obj);
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/checkout/native/OrbCheckoutModal.tsx");

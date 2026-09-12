@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/group_dm/native/showChatGDMCu
 
 export default function showChatGDMCustomizeActionSheet(merged) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11012, dependencyMap.paths), merged, "customize-group-dm", {
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11051, dependencyMap.paths), merged, "customize-group-dm", {
     presentation: "modal",
   });
 }

@@ -12,7 +12,7 @@ let closure_3 = ["data"];
 const useMemo = fn(19).useMemo;
 const Constants = fn(1074);
 ({ ActivityFlags: closure_7, ActivityTypes: closure_8, MAX_CHANNEL_NAME_LENGTH: closure_9 } = Constants);
-const MAX_FORUM_POST_TAGS = fn(7346).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(7376).MAX_FORUM_POST_TAGS;
 let c11 = "No Mic";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/GameInvitesChannelUtils.tsx");
@@ -102,7 +102,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
     isGameInvitesChannelResult = stateFromStores.isGameInvitesChannel();
   }
   _modDef38(isGameInvitesChannelResult, "requires a game invites channel");
-  let tmpResult = tmp(7382);
+  let tmpResult = tmp(7412);
   let gameId;
   if (stateFromStores != null) {
     gameId = stateFromStores.gameId;
@@ -112,7 +112,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
   if (data != null) {
     officialApplicationId = data.getOfficialApplicationId();
   }
-  tmpResult = tmp(7236);
+  tmpResult = tmp(7266);
   const application = tmpResult.useApplication(officialApplicationId);
   closure_129_0 = application;
   const items1 = [application];

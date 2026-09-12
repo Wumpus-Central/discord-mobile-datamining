@@ -10,7 +10,7 @@ import LurkingStore from "../../../lurker_mode/LurkingStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const TextAreaCta = fn(12055).TextAreaCta;
+const TextAreaCta = fn(12091).TextAreaCta;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, JoinGuildSources: closure_9 } = Constants);
 const jsx = fn(21).jsx;
@@ -93,7 +93,7 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
     const intl8 = tmp2(1114).intl;
     obj.buttonPrimaryText = intl8.string(tmp2(1114).t.RLch70);
     obj.buttonPrimaryOnPress = callback2;
-    let tmp15Result = jsx(guildId(12541), {
+    let tmp15Result = jsx(guildId(12577), {
       type: "button-action",
       message: null,
       buttonSecondaryText: null,
@@ -101,7 +101,7 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
       buttonPrimaryText: null,
       buttonPrimaryOnPress: null,
     });
-    const tmp14 = guildId(12541);
+    const tmp14 = guildId(12577);
   } else {
     if (channel.isReadonlyAnnouncementsChannel) {
       obj = {
@@ -137,8 +137,8 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
       obj1.buttonPrimaryText = intl2.string(tmp2(1114).t.RLch70);
       obj1.buttonPrimaryOnPress = callback2;
     }
-    tmp15Result = jsx(guildId(12541), obj1);
-    const tmp17 = guildId(12541);
+    tmp15Result = jsx(guildId(12577), obj1);
+    const tmp17 = guildId(12577);
   }
   return tmp15Result;
 });

@@ -7,7 +7,7 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4788).UnreadSetting;
+const UnreadSetting = fn(4818).UnreadSetting;
 let closure_6 = fn(1084).GuildNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -49,5 +49,5 @@ export default function NotificationSettingsMessageNotificationGuildActionSheet(
       NotificationLabel.notifications(message_notifications),
     );
   };
-  return jsx(unread(10250), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(10289), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
 }

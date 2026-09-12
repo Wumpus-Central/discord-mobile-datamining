@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, FlatList: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   informationContainer: null,
   headerContainer: null,

@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles((height) => {
   let obj = { row: null, rowInner: null, rowHeaderWrapper: null, placeholderAvatar: null, placeholderText: null };
   obj = { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height };
@@ -53,7 +53,7 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   let sharedValue;
   flag = undefined;
   const tmp3 = closure_8(height);
-  let obj = sharedValue(4343);
+  let obj = sharedValue(4373);
   sharedValue = obj.useSharedValue(1);
   let obj1 = sharedValue(504);
   const items = [AccessibilityStore];
@@ -78,7 +78,7 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 10137317865125;
   fn.__initData = __initData;
-  const animatedStyle = sharedValue(4343).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4373).useAnimatedStyle(fn);
   obj = { style: null, collapsable: false, children: null };
   const items2 = [tmp3.row, animatedStyle];
   obj.style = items2;
@@ -97,5 +97,5 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   obj1.children = closure_6(View, obj2);
   items3[1] = closure_6(View, obj1);
   obj.children = items3;
-  return closure_7(flag(4343).View, obj);
+  return closure_7(flag(4373).View, obj);
 });

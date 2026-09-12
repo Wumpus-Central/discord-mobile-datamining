@@ -226,7 +226,7 @@ export default {
       const request1 = {
         url: upload_url,
         body: closure_129_0,
-        headers: { "Content-Type": closure_0(7701).WIDGET_CLIP_CONTENT_TYPE },
+        headers: { "Content-Type": closure_0(7731).WIDGET_CLIP_CONTENT_TYPE },
         onRequestProgress(direction) {
           let tmp = "upload" === direction.direction;
           if (tmp) {

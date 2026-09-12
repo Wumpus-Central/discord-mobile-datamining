@@ -58,9 +58,9 @@ function FocusedControlsExpanded(availableHeight) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_18();
-  let obj = positionY(9783);
+  let obj = positionY(9822);
   const canShowTooltip = obj.useCanShowTooltip(positionY(1093).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-  positionY(4343);
+  positionY(4373);
   const fn = function o() {
     return { opacity: 1 - Math.min((-1 * positionY.get()) / c15, 1) };
   };
@@ -95,7 +95,7 @@ function FocusedControlsAboveActionBarView(positionY) {
   const aboveActionBar = positionY.aboveActionBar;
   ({ onPressHeader, isExpanded } = positionY);
   const tmp = closure_18();
-  positionY(4343);
+  positionY(4373);
   const fn = function _() {
     return { opacity: 2 - Math.max(Math.abs(positionY.get()) / (offsetY / 3 - c15), 0) };
   };
@@ -116,7 +116,7 @@ function FocusedControlsAboveActionBarView(positionY) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   const items = [
     closure_13(FocusedControlsBottomDrawerTooltip, { positionY }),
-    closure_13(positionY(7227).ActionSheetHeaderBar, {}),
+    closure_13(positionY(7257).ActionSheetHeaderBar, {}),
   ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
@@ -124,7 +124,7 @@ function FocusedControlsAboveActionBarView(positionY) {
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj2.style = items1;
     obj2.children = aboveActionBar;
-    tmp4Result = closure_13(offsetY(4343).View, obj2);
+    tmp4Result = closure_13(offsetY(4373).View, obj2);
   }
   items[2] = tmp4Result;
   obj1.children = items;
@@ -707,9 +707,9 @@ get_ActivityIndicator = fn(17);
   ScrollView: closure_7,
   StyleSheet,
 } = get_ActivityIndicator);
-const ChannelCallStore = fn(9558);
+const ChannelCallStore = fn(9597);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(9559);
+const ChannelCallConstants = fn(9598);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_12, Fonts } = Constants);
@@ -718,7 +718,7 @@ const jsxProd = fn(21);
 let c15 = 20;
 function EXTENDED_CONTROLS_OFFSET_Y(arg0) {}
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {}
-fn(4606);
+fn(4636);
 let createStyles = {
   bottomDrawerContainer: null,
   visualEffectView: null,

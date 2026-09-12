@@ -117,8 +117,8 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1074);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(12507).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(6667);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(12543).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(6697);
 ({
   BUNDLE_ID: closure_11,
   DEVICE_PUSH_VOIP_PROVIDER: closure_12,
@@ -224,7 +224,7 @@ export default {
                 bypass_server_throttling_supported: null,
                 bundle_id: null,
               };
-              obj2 = tmp2(1115);
+              obj2 = tmp2(1150);
               let isAndroidResult = obj2.isAndroid();
               if (isAndroidResult) {
                 isAndroidResult = !closure_1_14;
@@ -245,8 +245,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12510).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12510);
+          const result = v2(12546).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12546);
         }
       }
       return value;

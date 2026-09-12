@@ -8,13 +8,13 @@ function useHighlightNotifications() {
   const items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
   },
-  parent: fn(8049).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8079).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = util.intl;
     return intl.string(util.t["Vw/Xn8"]);

@@ -47,7 +47,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

@@ -14,7 +14,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, body: null, divider: null, linkButton: null };
 createStyles = {
   marginTop: nativeDefault.space.PX_32,

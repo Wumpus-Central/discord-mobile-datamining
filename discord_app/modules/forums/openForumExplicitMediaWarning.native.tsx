@@ -12,7 +12,7 @@ export default function openForumExplicitMediaWarning(arg0, arg1) {
   importDefault = arg1;
   let obj = {
     importer() {
-      return asyncRequireImpl(9486, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(9525, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};

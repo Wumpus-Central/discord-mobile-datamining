@@ -7,11 +7,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(11457);
+const Constants = fn(11496);
 ({ CRISIS_TEXT_LINE_SMS_URI: closure_4, CRISIS_TEXT_LINE_URL: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, description: null };
 createStyles = {
   display: "flex",
@@ -48,7 +48,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
   obj = { variant: "text-md/medium", color: "text-default", style: tmp.description, children: null };
   const intl2 = trackAnalyticsEvent(1114).intl;
   obj.children = intl2.string(trackAnalyticsEvent(1114).t.uicS5l);
-  const items = [closure_6(trackAnalyticsEvent(4602).Text, obj), ,];
+  const items = [closure_6(trackAnalyticsEvent(4632).Text, obj), ,];
   const obj1 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl3 = trackAnalyticsEvent(1114).intl;
   obj1.text = intl3.string(trackAnalyticsEvent(1114).t.lkUb4S);
@@ -56,7 +56,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
     LinkingDefault.openURL(React4);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_SMS);
   };
-  items[1] = closure_6(trackAnalyticsEvent(5026).Button, obj1);
+  items[1] = closure_6(trackAnalyticsEvent(5056).Button, obj1);
   const obj2 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1114).intl;
   obj2.text = intl4.string(trackAnalyticsEvent(1114).t.ogLlvy);
@@ -64,7 +64,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
     LinkingDefault.openURL(hasOwnProperty);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_WEB);
   };
-  items[2] = closure_6(trackAnalyticsEvent(5026).Button, obj2);
+  items[2] = closure_6(trackAnalyticsEvent(5056).Button, obj2);
   obj.children = items;
   obj.children = closure_7(View, obj);
   return closure_6(SafetyToolsActionSheetWrapperDefault, obj);

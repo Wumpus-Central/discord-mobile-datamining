@@ -5,13 +5,13 @@ import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsA
 import SelectivelySyncedUserSettingsStore from "../../SelectivelySyncedUserSettingsStore.tsx";
 
 require = fn;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(8049).MobileUserSettings.CHAT,
+  parent: fn(8079).MobileUserSettings.CHAT,
   useValue: function useTextAndMediaSyncSettingValue() {
     const items = [SelectivelySyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => SelectivelySyncedUserSettingsStore.shouldSync("text"));

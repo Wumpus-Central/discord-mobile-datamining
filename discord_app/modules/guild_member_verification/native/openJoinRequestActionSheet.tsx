@@ -7,5 +7,5 @@ const result = size.fileFinishedImporting("modules/guild_member_verification/nat
 
 export default function openJoinRequestActionSheet(joinRequest) {
   const obj = { joinRequest };
-  obj.openLazy(asyncRequireImpl(16656, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
+  obj.openLazy(asyncRequireImpl(16680, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
 }

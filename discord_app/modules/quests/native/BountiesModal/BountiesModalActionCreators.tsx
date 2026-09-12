@@ -8,10 +8,10 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/B
 
 export default {
   showModal(arg0) {
-    ({ bountyId, sourceQuestContent, variant } = arg0);
+    ({ bountyId, sourceQuestContent, variant, bounty } = arg0);
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(15058, dependencyMap.paths),
-      { bountyId, sourceQuestContent, variant },
+      asyncRequireImpl(15092, dependencyMap.paths),
+      { bountyId, sourceQuestContent, variant, bounty },
       BOUNTIES_MODAL,
     );
   },

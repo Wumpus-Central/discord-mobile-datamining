@@ -27,7 +27,7 @@ const Constants = fn(1074);
   ChannelTypesSets: c10,
   RelationshipTypes: closure_11,
 } = Constants);
-const RestrictionConfirmationConstants = fn(11476);
+const RestrictionConfirmationConstants = fn(11515);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_12, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: map1 } =
   RestrictionConfirmationConstants);
 const jsx = fn(21).jsx;
@@ -149,8 +149,8 @@ export default function BotUserProfileOverflowMenu(application) {
           showUserProfile();
         };
         obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-        obj2.openLazy(asyncRequireImpl(11477, dependencyMap.paths), closure_2_12, obj, "stack");
-        const tmp4 = asyncRequireImpl(11477, dependencyMap.paths);
+        obj2.openLazy(asyncRequireImpl(11516, dependencyMap.paths), closure_2_12, obj, "stack");
+        const tmp4 = asyncRequireImpl(11516, dependencyMap.paths);
       };
       items3.push(obj1);
       if (result) {
@@ -174,12 +174,12 @@ export default function BotUserProfileOverflowMenu(application) {
           }
           obj.contextualChannelId = id;
           obj2.openLazy(
-            asyncRequireImpl(13084, dependencyMap.paths),
+            asyncRequireImpl(13121, dependencyMap.paths),
             BotReportChooser.BOT_REPORT_CHOOSER_KEY,
             obj,
             "replaceAll",
           );
-          const tmp5 = asyncRequireImpl(13084, dependencyMap.paths);
+          const tmp5 = asyncRequireImpl(13121, dependencyMap.paths);
         };
         items3.push(obj2);
       } else {
@@ -319,7 +319,7 @@ export default function BotUserProfileOverflowMenu(application) {
         },
         impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION,
       };
-      obj2.openLazy(asyncRequireImpl(11478, dependencyMap.paths), map1, obj, "stack");
+      obj2.openLazy(asyncRequireImpl(11517, dependencyMap.paths), map1, obj, "stack");
     };
     items3.push(obj11);
   }

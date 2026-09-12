@@ -6,13 +6,13 @@ import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifS
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(8049).MobileUserSettings;
+const MobileUserSettings = fn(8079).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
 
 export default function SettingsOverviewScreen() {
-  hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(4264).useHasPremiumSubscriptionToDisplay();
+  hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(4294).useHasPremiumSubscriptionToDisplay();
   let items = [hasPremiumSubscriptionToDisplay];
   const node = noop.useMemo(() => {
     let obj = { label: null, settings: null };
@@ -132,5 +132,5 @@ export default function SettingsOverviewScreen() {
     obj1.sections = items1;
     return obj.createList(obj1);
   }, items);
-  return jsx(hasPremiumSubscriptionToDisplay(14742).SearchableSettingsList, { node });
+  return jsx(hasPremiumSubscriptionToDisplay(14776).SearchableSettingsList, { node });
 }

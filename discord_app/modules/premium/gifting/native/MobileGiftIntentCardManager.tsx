@@ -29,10 +29,10 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
           if (
             self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, found, constants.SEND_MESSAGE)
           ) {
-            let tmpResult = tmp(10833);
+            let tmpResult = tmp(10872);
             const result = tmpResult.logMessageGiftIntentShown(found);
             const userAffinity = self.getUserAffinity(found);
-            tmpResult = tmp(8859);
+            tmpResult = tmp(8894);
             let obj = {
               name: tmp(1250).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION,
               type: tmp(1250).ImpressionTypes.VIEW,

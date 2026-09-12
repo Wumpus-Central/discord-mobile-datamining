@@ -3,7 +3,7 @@ import isForwardMessageDefault from "../../../forwarding/isForwardMessage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRecord from "../../../../records/MessageRecord.tsx";
 
-const MessageSnapshotRecord = fn(4256).MessageSnapshotRecord;
+const MessageSnapshotRecord = fn(4286).MessageSnapshotRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx");
 

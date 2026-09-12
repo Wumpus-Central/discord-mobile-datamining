@@ -119,7 +119,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1350).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   tag: null,
   verifiedTagLeftPadding: null,

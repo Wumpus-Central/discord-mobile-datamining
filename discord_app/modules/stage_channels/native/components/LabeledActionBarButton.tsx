@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   buttonContainer: null,
   container: null,
@@ -25,7 +25,7 @@ createStyles = {
   alignItems: "center",
   justifyContent: "center",
   borderRadius: 28,
-  backgroundColor: fn(5492).ACTION_BAR_BUTTON_BACKGROUND,
+  backgroundColor: fn(5522).ACTION_BAR_BUTTON_BACKGROUND,
 };
 createStyles.buttonContainer = createStyles;
 createStyles.container = { marginHorizontal: 12 };

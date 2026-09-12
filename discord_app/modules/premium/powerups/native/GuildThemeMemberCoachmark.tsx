@@ -9,10 +9,10 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
 require = fn;
-let closure_6 = fn(4496).GUILD_THEME_POWERUP_BOOST_PRICE;
+let closure_6 = fn(4526).GUILD_THEME_POWERUP_BOOST_PRICE;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 const createStyles = { coachmarkImage: null };
 let size = { height: 120, width: 260 - 2 * nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md };
 createStyles.coachmarkImage = size;
@@ -48,11 +48,11 @@ export default function GuildThemeMemberCoachmark(guildId) {
   const items2 = [guildPowerupBannerImage];
   const stateFromStores1 = guildId(504).useStateFromStores(items2, () => guildPowerupBannerImage.useReducedMotion);
   const obj2 = guildId(504);
-  guildPowerupBannerImage = guildId(12613).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  guildPowerupBannerImage = guildId(12649).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(16241);
+    guildPowerupBannerImage = markAsDismissed(16265);
   }
-  const diff = onDismiss - markAsDismissed(4515)(guildId).available;
+  const diff = onDismiss - markAsDismissed(4545)(guildId).available;
   c5 = diff;
   const items3 = [markAsDismissed];
   onDismiss = stateFromStores1.useCallback(() => {
@@ -96,7 +96,7 @@ export default function GuildThemeMemberCoachmark(guildId) {
     obj.onButtonPress = callback1;
     return obj;
   }, items5);
-  const obj3 = guildId(12613);
-  const coachmark = tmp2(11222).useCoachmark(guildId.targetRef, memo);
+  const obj3 = guildId(12649);
+  const coachmark = tmp2(11261).useCoachmark(guildId.targetRef, memo);
   return null;
 }

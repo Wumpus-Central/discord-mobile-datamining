@@ -42,7 +42,7 @@ function RestrictedUser(guildId) {
     const obj2 = { style: null, children: null };
     const items3 = [tmp.iconContainer];
     obj2.style = items3;
-    const obj3 = { style: tmp.icon, source: user(8710), color: user(576).unsafe_rawColors.WHITE };
+    const obj3 = { style: tmp.icon, source: user(8742), color: user(576).unsafe_rawColors.WHITE };
     obj2.children = closure_9(native.Icon, obj3);
     speaker = closure_9(View, obj2);
   }
@@ -159,10 +159,10 @@ function StageBlockedUsersActionSheetHeader(arg0) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(5465).STAGE_BLOCKED_USERS_SHEET_KEY;
+let closure_8 = fn(5495).STAGE_BLOCKED_USERS_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { paddingHorizontal: 16 },
   header: { padding: 16 },
@@ -225,9 +225,9 @@ export default function StageBlockedUsersActionSheet(channel) {
   const tmp = closure_11();
   const tmp2 = items1(noop.useState(0), 2);
   dependencyMap = tmp2[1];
-  let obj = channel(8711);
+  let obj = channel(8743);
   const stageBlockedUsers = obj.useStageBlockedUsers(channel.id);
-  let obj1 = channel(8711);
+  let obj1 = channel(8743);
   const stageIgnoredUsers = obj1.useStageIgnoredUsers(channel.id);
   const callback = noop.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.height);
@@ -240,14 +240,14 @@ export default function StageBlockedUsersActionSheet(channel) {
     onAccept(channel);
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_8);
   };
-  const items = [closure_9(channel(5026).Button, obj)];
+  const items = [closure_9(channel(5056).Button, obj)];
   obj1 = { variant: "secondary", text: null, onPress: null };
   const intl2 = channel(1114).intl;
   obj1.text = intl2.string(channel(1114).t.CZGqeT);
   obj1.onPress = function handleDismiss() {
-    onAccept(4573).hideActionSheet(closure_1_8);
+    onAccept(4603).hideActionSheet(closure_1_8);
   };
-  items[1] = closure_9(channel(5026).Button, obj1);
+  items[1] = closure_9(channel(5056).Button, obj1);
   obj.children = items;
   items1 = [];
   HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
@@ -257,7 +257,7 @@ export default function StageBlockedUsersActionSheet(channel) {
       blockedUserCount: stageBlockedUsers.length,
       ignoredUserCount: stageIgnoredUsers.length,
     }),
-    footer: closure_10(channel(7196).SafeAreaPaddingView, obj),
+    footer: closure_10(channel(7226).SafeAreaPaddingView, obj),
     children: null,
   };
   const obj3 = {
@@ -268,7 +268,7 @@ export default function StageBlockedUsersActionSheet(channel) {
     renderItem: null,
     itemSize: null,
   };
-  const tmp4 = closure_10(channel(7196).SafeAreaPaddingView, obj);
+  const tmp4 = closure_10(channel(7226).SafeAreaPaddingView, obj);
   const intl3 = channel(1114).intl;
   obj3.accessibilityLabel = intl3.string(channel(1114).t["3VoRLH"]);
   const items2 = [items1.length];
@@ -279,7 +279,7 @@ export default function StageBlockedUsersActionSheet(channel) {
   obj3.itemSize = function itemSize() {
     return 48;
   };
-  const items3 = [closure_9(onAccept(7145), obj3), closure_9(View, { style: { height: tmp2[0] } })];
+  const items3 = [closure_9(onAccept(7175), obj3), closure_9(View, { style: { height: tmp2[0] } })];
   obj2.children = items3;
-  return closure_10(channel(7223).BottomSheet, obj2);
+  return closure_10(channel(7253).BottomSheet, obj2);
 }

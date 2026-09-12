@@ -77,7 +77,7 @@ const View = fn(17).View;
 const AnalyticsLocations = fn(1074).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles(() => {
   let obj = {
     container: { flex: 1, alignItems: "center" },
@@ -115,7 +115,7 @@ let result = size.fileFinishedImporting("modules/user_settings/connections/nativ
 
 export default function ConnectionsEmptyStateUpsell() {
   const tmp = closure_8();
-  let obj = emptyStatePlatforms(7576);
+  let obj = emptyStatePlatforms(7606);
   emptyStatePlatforms = obj.useEmptyStatePlatforms();
   const items = [emptyStatePlatforms];
   const memo = noop.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
@@ -129,7 +129,7 @@ export default function ConnectionsEmptyStateUpsell() {
   const obj1 = { style: tmp.content, children: null };
   const obj2 = { spacing: 16, direction: "vertical", align: "center", style: tmp.textContainer, children: null };
   const items3 = [
-    closure_6(emptyStatePlatforms(5024).Stack, {
+    closure_6(emptyStatePlatforms(5054).Stack, {
       spacing: 16,
       justify: "center",
       direction: "horizontal",
@@ -142,20 +142,20 @@ export default function ConnectionsEmptyStateUpsell() {
     closure_6(OtherConnectionsCard, { count: emptyStatePlatforms.length - 5 }),
   ];
   obj4.children = items4;
-  items3[1] = closure_7(emptyStatePlatforms(5024).Stack, obj4);
+  items3[1] = closure_7(emptyStatePlatforms(5054).Stack, obj4);
   obj2.children = items3;
-  const items5 = [closure_7(emptyStatePlatforms(5024).Stack, obj2)];
+  const items5 = [closure_7(emptyStatePlatforms(5054).Stack, obj2)];
   const obj6 = { spacing: 8, align: "center", style: tmp.textContainer, children: null };
   const obj7 = { variant: "text-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = emptyStatePlatforms(1114).intl;
   obj7.children = intl.string(emptyStatePlatforms(1114).t.JlrHXb);
-  const items6 = [closure_6(emptyStatePlatforms(4602).Text, obj7)];
+  const items6 = [closure_6(emptyStatePlatforms(4632).Text, obj7)];
   const obj8 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = emptyStatePlatforms(1114).intl;
   obj8.children = intl2.string(emptyStatePlatforms(1114).t.XijaQP);
-  items6[1] = closure_6(emptyStatePlatforms(4602).Text, obj8);
+  items6[1] = closure_6(emptyStatePlatforms(4632).Text, obj8);
   obj6.children = items6;
-  items5[1] = closure_7(emptyStatePlatforms(5024).Stack, obj6);
+  items5[1] = closure_7(emptyStatePlatforms(5054).Stack, obj6);
   obj1.children = items5;
   obj.children = closure_7(View, obj1);
   return closure_6(View, obj);

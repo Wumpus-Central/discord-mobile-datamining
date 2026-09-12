@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   fill: { flex: 1 },
   scrollView: null,

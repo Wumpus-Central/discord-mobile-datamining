@@ -32,7 +32,7 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   CollectiblesActionCreators.productDetailsOpened(skuId);
   const tmpResult = CollectiblesActionCreators;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8262, dependencyMap.paths), c3, obj, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8294, dependencyMap.paths), c3, obj, stack);
 };
 export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
   skuId = skuId.skuId;
@@ -40,5 +40,5 @@ export const openProductDetailsActionSheetForSku = function openProductDetailsAc
   let obj = CollectiblesActionCreators;
   obj.productDetailsOpened(skuId);
   obj = { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile };
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8262, dependencyMap.paths), c3, obj, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8294, dependencyMap.paths), c3, obj, stack);
 };

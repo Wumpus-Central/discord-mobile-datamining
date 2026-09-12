@@ -1,7 +1,7 @@
 // discord_app/stores/GiftCodeStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef4198 from "../../_runtime/metro/04198__.js";
+import _modDef4228 from "../../_runtime/metro/04228__.js";
 import GiftCodeUtils from "../utils/GiftCodeUtils.tsx";
 import GiftCodeActionCreatorsDefault from "../actions/GiftCodeActionCreators.tsx";
 import GiftCodeRecord from "../records/GiftCodeRecord.tsx";
@@ -23,7 +23,7 @@ function updateGiftCode(giftCode) {
         if (null != value.expiresAt) {
           const expiresAt = value.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - _modDef4198().valueOf();
+          const diff = valueOfResult - _modDef4228().valueOf();
           if (diff <= 0) {
             map.delete(code);
             delete tmp2[tmp];
@@ -108,7 +108,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = _modDef4198();
+          const obj4 = _modDef4228();
         }
       }
     }

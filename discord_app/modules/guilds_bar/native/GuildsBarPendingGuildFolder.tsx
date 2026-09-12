@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(16365);
+  let obj = id(16389);
   importDefault = usePendingFolderGuildIdsDefault();
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
@@ -50,13 +50,13 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   ({ accessibilityActions, onAccessibilityAction } = memo);
   const obj2 = id(504);
   const items2 = [id];
-  const sharedValue = id(4343).useSharedValue("" + id);
+  const sharedValue = id(4373).useSharedValue("" + id);
   const memo1 = noop.useMemo(
     () => ({
       onPress() {
-        const result = id(4574).triggerHapticFeedback(id(4574).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj = id(4574);
-        const result1 = closure_1(5571).toggleGuildFolderExpand(closure_1_0);
+        const result = id(4604).triggerHapticFeedback(id(4604).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = id(4604);
+        const result1 = closure_1(5601).toggleGuildFolderExpand(closure_1_0);
       },
     }),
     items2,
@@ -72,12 +72,12 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "ip",
-    config: true,
-    externalChildren: true,
-    children: true,
+    overState: "call",
+    config: -93817562537236770000000000000000000000000000000000000000000000,
+    externalChildren: 20156808993417830000000000000000000000000000000000000000000000000000000000000000000,
+    children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004177203082862628,
   };
-  const obj3 = id(4343);
+  const obj3 = id(4373);
   obj.id = "" + id;
   obj.accessibilityActions = accessibilityActions;
   obj.onAccessibilityAction = onAccessibilityAction;
@@ -90,10 +90,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     obj = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(16364).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(16388).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj.externalChildren = tmp8Result;
-  obj.children = jsx(id(9120).HourglassIcon, {});
+  obj.children = jsx(id(9159).HourglassIcon, {});
   return jsx(GuildsBarAnimatedItemWrapperDefault, {
     id: null,
     accessibilityActions: null,
@@ -105,9 +105,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "ip",
-    config: true,
-    externalChildren: true,
-    children: true,
+    overState: "call",
+    config: -93817562537236770000000000000000000000000000000000000000000000,
+    externalChildren: 20156808993417830000000000000000000000000000000000000000000000000000000000000000000,
+    children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004177203082862628,
   });
 });

@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/SecurityKeySpotIllustration.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6479 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SecurityKeySpotIllustration-2x.png.js";
+import _modDef6509 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SecurityKeySpotIllustration-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const SecurityKeySpotIllustration = function SecurityKeySpotIllustration(
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef6479 };
+  obj = { uri: _modDef6509 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -39,5 +39,5 @@ export const SecurityKeySpotIllustration = function SecurityKeySpotIllustration(
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6479 });
+  return jsx(FastImageDefault, { uri: _modDef6509 });
 };

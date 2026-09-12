@@ -9,10 +9,10 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const LOCATION_CONTEXT_MOBILE = fn(11457).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11496).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { header: null, text: null, buttonsContainer: null };
 createStyles = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
 createStyles.header = createStyles;

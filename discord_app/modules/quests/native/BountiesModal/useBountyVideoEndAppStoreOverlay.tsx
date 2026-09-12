@@ -8,7 +8,7 @@ import QuestCustomAppStoreOverlayUtils from "../../utils/QuestCustomAppStoreOver
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestsExperimentLocations = fn(5495).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5525).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const redux = noop.createContext(null);
 const size = fn(2);
@@ -20,22 +20,16 @@ export const BountyVideoEndAppStoreProvider = function BountyVideoEndAppStorePro
 export const useBountyVideoEndAppStoreContext = function useBountyVideoEndAppStoreContext() {
   return noop.useContext(closure_5);
 };
-export const canUseBountyVideoEndAppStoreOverlay = function canUseBountyVideoEndAppStoreOverlay(
-  bounty,
-  scrollAffordanceVariant,
-) {
-  if ("auto" !== scrollAffordanceVariant) {
-    if (obj2.canOpenCustomAppStoreOverlayFromCta(bounty.cta)) {
-      const CustomAppStoreSqueezeBackExperiment = apexExperiment.CustomAppStoreSqueezeBackExperiment;
-      const obj = { location: QuestsExperimentLocations.VIDEO_MODAL_MOBILE };
-      const config = CustomAppStoreSqueezeBackExperiment.getConfig(obj);
-      return (
-        config.enabled && tmp4 === apexExperiment.BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY
-      );
-    }
-    obj2 = QuestCustomAppStoreOverlayUtils;
+export const canUseBountyVideoEndAppStoreOverlay = function canUseBountyVideoEndAppStoreOverlay(bounty) {
+  let obj = QuestCustomAppStoreOverlayUtils;
+  if (obj.canOpenCustomAppStoreOverlayFromCta(bounty.cta)) {
+    const CustomAppStoreSqueezeBackExperiment = apexExperiment.CustomAppStoreSqueezeBackExperiment;
+    obj = { location: QuestsExperimentLocations.VIDEO_MODAL_MOBILE };
+    const config = CustomAppStoreSqueezeBackExperiment.getConfig(obj);
+    return config.enabled && tmp6 === apexExperiment.BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
+  } else {
+    return false;
   }
-  return false;
 };
 export const useBountyVideoEndAppStoreOverlay = function useBountyVideoEndAppStoreOverlay(bounty) {
   bounty = bounty.bounty;

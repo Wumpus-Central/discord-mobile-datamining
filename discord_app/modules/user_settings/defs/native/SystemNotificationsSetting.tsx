@@ -82,16 +82,16 @@ let closure_9 = async function _handleEnableSystemNotification() {
 };
 const NativeModules = fn(17).NativeModules;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-let closure_6 = fn(4816).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(12503);
+let closure_6 = fn(4846).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(12539);
 ({ EventActionType: closure_7, EventActionLocation: closure_8 } = NotificationPermissionConstants);
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
   },
-  parent: fn(8049).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8079).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
     const apply = closure_9.apply;

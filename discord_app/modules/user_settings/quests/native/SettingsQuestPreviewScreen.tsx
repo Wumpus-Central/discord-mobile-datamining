@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-fn(4606);
+fn(4636);
 let createStyles = {
   container: null,
   controlBarContainer: null,

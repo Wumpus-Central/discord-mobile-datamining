@@ -159,7 +159,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
     const obj = { emoji };
-    obj.openLazy(asyncRequireImpl(12474, dependencyMap.paths), "DoubleTapToReactActionSheet", obj);
+    obj.openLazy(asyncRequireImpl(12510, dependencyMap.paths), "DoubleTapToReactActionSheet", obj);
     markAsDismissed(ContentDismissActionType.TAKE_ACTION);
   }, items2);
   const callback2 = noop.useCallback(() => {
@@ -211,7 +211,7 @@ const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-fn(4606);
+fn(4636);
 let createStyles = {
   animatedContainer: null,
   measurement: null,
@@ -248,13 +248,13 @@ createStyles.emojiContainer = {
   padding: 12,
 };
 createStyles.emoji = { width: 28, height: 28 };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 22;
 if (PlatformUtils.isIOS()) {
   num = 28;
 }
 let obj3 = { fontSize: num, textAlign: "center", lineHeight: null, color: null };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;

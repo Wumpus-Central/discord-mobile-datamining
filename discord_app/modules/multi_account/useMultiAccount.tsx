@@ -6,7 +6,7 @@ import UserStore from "../../stores/UserStore.tsx";
 import MultiAccountStore from "MultiAccountStore.tsx";
 
 require = fn;
-const MultiAccountTokenStatus = fn(12506).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12542).MultiAccountTokenStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");
 

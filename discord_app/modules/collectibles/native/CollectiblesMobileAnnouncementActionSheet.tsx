@@ -4,11 +4,11 @@ import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import BottomSheetModal from "../../../../_runtime/06698_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06728_BottomSheetModal.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
-import _modDef17031 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
-import _modDef17032 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
+import _modDef17058 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
+import _modDef17059 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -44,7 +44,7 @@ function CatEarsBackdrop() {
   items1[1] = rect;
   obj.style = items1;
   obj1 = {
-    source: { uri: _modDef17031 },
+    source: { uri: _modDef17058 },
     style: tmp.mascotImage,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
@@ -66,11 +66,11 @@ function FeatureRow(arg0) {
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 let closure_6 = fn(1076).CollectiblesMobileShopScreen;
-const ACTION_SHEET_MAX_WIDTH = fn(7224).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   mascotContainer: null,
   mascotLayer: null,
@@ -150,7 +150,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   let obj = { onDismiss: callback1, backdropChildren: memo, children: null };
   obj = { style: tmp.container, children: null };
   obj = {
-    source: { uri: _modDef17032 },
+    source: { uri: _modDef17059 },
     style: tmp.framePreviewImage,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
@@ -165,17 +165,17 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   };
   const intl = markAsDismissed(1114).intl;
   obj2.children = intl.string(markAsDismissed(1114).t.vRCvqo);
-  items3[1] = closure_9(markAsDismissed(4602).Text, obj2);
+  items3[1] = closure_9(markAsDismissed(4632).Text, obj2);
   const obj3 = { style: tmp.featureRows, children: null };
-  const obj4 = { icon: closure_9(markAsDismissed(5743).PaintIllocon, { size: 32 }), text: null };
+  const obj4 = { icon: closure_9(markAsDismissed(5773).PaintIllocon, { size: 32 }), text: null };
   const intl2 = markAsDismissed(1114).intl;
   obj4.text = intl2.string(markAsDismissed(1114).t["6ZWB0C"]);
   const items4 = [closure_9(FeatureRow, obj4), ,];
-  const obj5 = { icon: closure_9(markAsDismissed(5743).HeartIllocon, { size: 32 }), text: null };
+  const obj5 = { icon: closure_9(markAsDismissed(5773).HeartIllocon, { size: 32 }), text: null };
   const intl3 = markAsDismissed(1114).intl;
   obj5.text = intl3.string(markAsDismissed(1114).t.MkVbBY);
   items4[1] = closure_9(FeatureRow, obj5);
-  const obj6 = { icon: closure_9(markAsDismissed(5743).ShopIllocon, { size: 32 }), text: null };
+  const obj6 = { icon: closure_9(markAsDismissed(5773).ShopIllocon, { size: 32 }), text: null };
   const intl4 = markAsDismissed(1114).intl;
   obj6.text = intl4.string(markAsDismissed(1114).t["/4bQuG"]);
   items4[2] = closure_9(FeatureRow, obj6);
@@ -185,8 +185,8 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const intl5 = markAsDismissed(1114).intl;
   obj7.text = intl5.string(markAsDismissed(1114).t.S9hXPI);
   obj7.onPress = callback;
-  items3[3] = closure_9(markAsDismissed(5026).Button, obj7);
+  items3[3] = closure_9(markAsDismissed(5056).Button, obj7);
   obj.children = items3;
   obj.children = closure_10(closure_5, obj);
-  return closure_9(markAsDismissed(7223).BottomSheet, obj);
+  return closure_9(markAsDismissed(7253).BottomSheet, obj);
 }

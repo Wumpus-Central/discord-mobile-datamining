@@ -8,10 +8,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(4788).UnreadSetting;
+const UnreadSetting = fn(4818).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { card: null, channel: null, channelName: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,

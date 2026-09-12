@@ -4,7 +4,7 @@ import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objec
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 let closure_3 = ["uiDensity"];
-const Constants = fn(4511);
+const Constants = fn(4541);
 const RPC_AUTHENTICATED_SCOPE = Constants.RPC_AUTHENTICATED_SCOPE;
 const RPC_EMBEDDED_APP_SCOPE = Constants.RPC_EMBEDDED_APP_SCOPE;
 const RPC_SCOPE_CONFIG = Constants.RPC_SCOPE_CONFIG;

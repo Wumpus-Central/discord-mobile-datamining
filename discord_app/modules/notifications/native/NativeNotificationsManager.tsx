@@ -192,7 +192,7 @@ let prototype = function NativeNotificationsManager() {
         const result1 = DCDNotificationManager.clearNotificationsForChannel(channelId);
       }
     }
-    obj = applyArgumentsResult(1115);
+    obj = applyArgumentsResult(1150);
   };
   require = applyArgumentsResult;
   applyArgumentsResult.handlePostConnectionOpen = asyncGeneratorStep(async () => {
@@ -305,7 +305,7 @@ let prototype = function NativeNotificationsManager() {
                 return rounded;
               }
             };
-            obj14 = applyArgumentsResult(1115);
+            obj14 = applyArgumentsResult(1150);
             let str2 = "cache";
             if (obj8.isIOS()) {
               str2 = "shared";
@@ -356,7 +356,7 @@ let prototype = function NativeNotificationsManager() {
                     applyArgumentsResult = closure_131_6[Symbol.iterator]();
                     const str = closure_131_3.trim();
                   }
-                  obj13 = applyArgumentsResult(1115);
+                  obj13 = applyArgumentsResult(1150);
                 }
               }
             } else if (3 === tmp9) {
@@ -389,7 +389,7 @@ let prototype = function NativeNotificationsManager() {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  applyArgumentsResult(1115);
+                  applyArgumentsResult(1150);
                 }
               } else if (arg0 === 1) {
                 logger = 3;
@@ -407,7 +407,7 @@ let prototype = function NativeNotificationsManager() {
             let obj5 = { value, done: true };
             return obj5;
           }
-          obj1 = applyArgumentsResult(8290);
+          obj1 = applyArgumentsResult(8322);
           c7 = 6;
           logger = 1;
           const obj6 = { value: obj1.removeFile(closure_131_0, closure_131_2), done: false };
@@ -439,7 +439,7 @@ let prototype = function NativeNotificationsManager() {
         const result1 = setShowFullscreenCallUI(true);
       }
     }
-    obj = applyArgumentsResult(1115);
+    obj = applyArgumentsResult(1150);
   };
   applyArgumentsResult.updateAndClearStaleNotifications = function updateAndClearStaleNotifications() {
     updateAndClearStaleNotifications();

@@ -54,7 +54,7 @@ function Row(guildId) {
     obj.onValueChange = callback;
     obj.start = isStart;
     obj.end = isEnd;
-    return jsx(tmp2(7273).TableSwitchRow, {
+    return jsx(tmp2(7303).TableSwitchRow, {
       label: guild.name,
       icon: null,
       value: null,
@@ -80,7 +80,7 @@ export default function UserSettingsHighlightNotifications() {
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     obj = { children: tmp3 };
-    tmp4 = jsx(stateFromStoresArray(8684).Form, { children: tmp3 });
+    tmp4 = jsx(stateFromStoresArray(8716).Form, { children: tmp3 });
   }
   return tmp4;
 }

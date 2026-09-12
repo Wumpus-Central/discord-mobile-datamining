@@ -121,7 +121,7 @@ function useMediaShareActions(source) {
             message: stateFromStores,
             source: "media-viewer",
             initialSelectedDestinations: "Array",
-            forwardOptions: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE",
+            forwardOptions: "USER_PAYMENT_SOURCES_UPDATE",
           };
           obj = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -134,7 +134,7 @@ function useMediaShareActions(source) {
           message: stateFromStores,
           source: "media-viewer",
           initialSelectedDestinations: "Array",
-          forwardOptions: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE",
+          forwardOptions: "USER_PAYMENT_SOURCES_UPDATE",
         };
         const obj2 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
@@ -167,7 +167,7 @@ function useMediaShareActions(source) {
       obj = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11770, dependencyMap.paths), closure_11, obj);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11806, dependencyMap.paths), closure_11, obj);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;
@@ -254,7 +254,7 @@ function useMediaShareActions(source) {
 }
 const Constants = fn(1074);
 ({ AnalyticsSections: closure_8, GIF_RE_IOS: closure_9, MediaType: c10 } = Constants);
-let closure_11 = fn(7673).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_11 = fn(7703).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");

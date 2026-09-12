@@ -4,13 +4,13 @@ import util from "../../../../intl/index.native.tsx";
 import GuildIncidentsStore from "../../../guild_antiraid/GuildIncidentsStore.tsx";
 
 require = fn;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.D9yVAH);
   },
-  parent: fn(8049).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8079).MobileUserSettings.NOTIFICATIONS,
   useDescription: function useCommunityActivityAlertsSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["0PhAOH"]);

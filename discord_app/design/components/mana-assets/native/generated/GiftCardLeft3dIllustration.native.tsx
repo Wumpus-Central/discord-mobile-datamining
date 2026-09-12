@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/GiftCardLeft3dIllustration.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6209 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftCardLeft3dIllustration-2x.png.js";
+import _modDef6239 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftCardLeft3dIllustration-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const GiftCardLeft3dIllustration = function GiftCardLeft3dIllustration(wi
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef6209 };
+  obj = { uri: _modDef6239 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -39,5 +39,5 @@ export const GiftCardLeft3dIllustration = function GiftCardLeft3dIllustration(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6209 });
+  return jsx(FastImageDefault, { uri: _modDef6239 });
 };

@@ -4,7 +4,7 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import GameConsoleStore from "GameConsoleStore.tsx";
 
 const require = fn;
-const CONSOLE_VOICE_PLATFORMS = fn(9323).CONSOLE_VOICE_PLATFORMS;
+const CONSOLE_VOICE_PLATFORMS = fn(9362).CONSOLE_VOICE_PLATFORMS;
 const ActivityTypes = fn(1074).ActivityTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx");

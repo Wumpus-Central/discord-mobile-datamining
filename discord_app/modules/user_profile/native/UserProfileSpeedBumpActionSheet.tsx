@@ -6,7 +6,7 @@ import UserSettings from "../../user_settings/UserSettings.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import _modDef8270 from "../../../../_runtime/metro/08270__.js";
+import _modDef8302 from "../../../../_runtime/metro/08302__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -16,11 +16,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function InformationTable(speedBumpType) {
   let items;
-  let obj = { icon: _modDef8270, text: null };
+  let obj = { icon: _modDef8302, text: null };
   const intl = items(1114).intl;
   obj.text = intl.string(items(1114).t.kcuWva);
   items = [obj];
-  obj = { icon: _modDef8270, text: null };
+  obj = { icon: _modDef8302, text: null };
   if ("block" === speedBumpType.speedBumpType) {
     const intl3 = tmp2(1114).intl;
     let stringResult = intl3.string(tmp2(1114).t.QxrDY1);
@@ -40,15 +40,15 @@ function InformationTable(speedBumpType) {
       return closure_2_12(TableRow.TableRow, obj, index);
     }),
   };
-  return closure_12(items(5738).TableRowGroup, obj);
+  return closure_12(items(5768).TableRowGroup, obj);
 }
 const View = fn(17).View;
-const UserProfileAnalyticsTypes = fn(8268).UserProfileAnalyticsTypes;
+const UserProfileAnalyticsTypes = fn(8300).UserProfileAnalyticsTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = {
   button: null,
   tableContainer: null,

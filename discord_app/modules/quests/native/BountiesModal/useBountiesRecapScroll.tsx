@@ -1,10 +1,10 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesRecapScroll.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-function getRevealProgress(scrollY, lastBountyScrollOffset, height3) {
+function getRevealProgress(scrollY, c26, height3) {
   let num = 0;
   if (height3 > 0) {
-    num = (scrollY - lastBountyScrollOffset) / height3;
+    num = (scrollY - c26) / height3;
   }
   return num;
 }

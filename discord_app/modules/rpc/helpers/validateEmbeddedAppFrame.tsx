@@ -56,10 +56,10 @@ function validateEmbeddedAppFrame(transport) {
   }
   validateApplicationResult = obj1.validateApplication(transport.application);
 }
-const TransportTypes = fn(4511).TransportTypes;
+const TransportTypes = fn(4541).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const FramesConstants = fn(9602);
+const FramesConstants = fn(9641);
 ({ asLaunched: closure_8, EmbeddedSurfaceType: closure_9 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");

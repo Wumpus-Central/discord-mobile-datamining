@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { list: null };
 createStyles = { marginHorizontal: nativeDefault.space.PX_16 };
 createStyles.list = createStyles;

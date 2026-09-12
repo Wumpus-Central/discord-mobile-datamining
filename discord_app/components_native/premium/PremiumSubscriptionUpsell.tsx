@@ -8,10 +8,10 @@ import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import CheckmarkLargeIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../_runtime/05038_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/05068_LinearGradient.js";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import _modDef13593 from "../../../_runtime/metro/13593__.js";
-import _modDef13594 from "../../../_runtime/metro/13594__.js";
+import _modDef13626 from "../../../_runtime/metro/13626__.js";
+import _modDef13627 from "../../../_runtime/metro/13627__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -19,13 +19,13 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7505).Gradients;
+const Gradients = fn(7535).Gradients;
 const PremiumConstants = fn(1373);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_9 } =
   PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   title: { textAlign: "center" },
   subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" },
@@ -134,9 +134,9 @@ export default function PremiumSubscriptionUpsell(arg0) {
     }
     const items3 = [tmp6Result, ,];
     const obj6 = { style: tmp.upsellFeatures, children: null };
-    const obj7 = { style: tmp.upsellFeatureSubLogo, source: _modDef13593 };
+    const obj7 = { style: tmp.upsellFeatureSubLogo, source: _modDef13626 };
     const items4 = [closure_1_10(React4, obj7), ,];
-    const obj8 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13594 };
+    const obj8 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13627 };
     items4[1] = closure_1_10(React4, obj8);
     const obj9 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj10 = { IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon, label: null, color: null };

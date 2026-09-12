@@ -8,7 +8,7 @@ import NotificationActionCreatorsDefault from "../../../../actions/NotificationA
 import NotificationSettingsStore from "../../../../stores/NotificationSettingsStore.tsx";
 
 require = fn;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -18,7 +18,7 @@ let SettingBuilders = {
     const intl = util.intl;
     return intl.string(util.t.TummoQ);
   },
-  parent: fn(8049).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8079).MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const items = [NotificationSettingsStore];
     return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);

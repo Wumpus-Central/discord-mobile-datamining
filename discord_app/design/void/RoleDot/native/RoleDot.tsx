@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05068_LinearGradient.js";
 import useHasEnhancedRoleColorsDefault from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { flexShrink: 0 },
   background: { position: "relative" },

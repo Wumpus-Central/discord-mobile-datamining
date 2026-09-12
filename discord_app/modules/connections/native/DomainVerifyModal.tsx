@@ -346,7 +346,7 @@ const Constants = fn(1074);
 ({ Endpoints: metroRequire, PlatformTypes: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { padding: 16 },
   description: { textAlign: "center" },
@@ -382,7 +382,7 @@ export default function DomainVerifyModal(arg0) {
     obj = { headerTitle: null, headerLeft: null, render: null };
     const intl = onClose(1114).intl;
     obj.headerTitle = intl.string(onClose(1114).t["7lo8+e"]);
-    let obj2 = onClose(5675);
+    let obj2 = onClose(5705);
     obj.headerLeft = obj2.getHeaderBackButton(onClose);
     obj.render = function render() {
       return React6(DomainScreen, { onClose });
@@ -391,7 +391,7 @@ export default function DomainVerifyModal(arg0) {
     obj = { headerTitle: null, headerLeft: null, render: null };
     const intl2 = onClose(1114).intl;
     obj.headerTitle = intl2.string(onClose(1114).t["7lo8+e"]);
-    obj.headerLeft = onClose(5675).getHeaderBackButton(onClose);
+    obj.headerLeft = onClose(5705).getHeaderBackButton(onClose);
     obj.render = function render(domain) {
       return React6(DNSProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -399,8 +399,8 @@ export default function DomainVerifyModal(arg0) {
     const obj1 = { headerTitle: null, headerLeft: null, render: null };
     const intl3 = onClose(1114).intl;
     obj1.headerTitle = intl3.string(onClose(1114).t["7lo8+e"]);
-    const obj5 = onClose(5675);
-    obj1.headerLeft = onClose(5675).getHeaderBackButton(onClose);
+    const obj5 = onClose(5705);
+    obj1.headerLeft = onClose(5705).getHeaderBackButton(onClose);
     obj1.render = function render(domain) {
       return React6(HTTPProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -408,6 +408,6 @@ export default function DomainVerifyModal(arg0) {
     obj2 = { screens: obj, initialRouteName: constants2.DOMAIN, headerBackTitle: null };
     const intl4 = onClose(1114).intl;
     obj2.headerBackTitle = intl4.string(onClose(1114).t["13/7kX"]);
-    return closure_8(onClose(7073).Navigator, obj2);
+    return closure_8(onClose(7103).Navigator, obj2);
   }
 }

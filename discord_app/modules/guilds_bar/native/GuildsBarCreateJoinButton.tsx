@@ -103,15 +103,15 @@ const Constants = fn(1074);
 } = Constants);
 const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
 
 export default noop.memo(function GuildsBarCreateJoinButton() {
-  let obj = enabled(16365);
+  let obj = enabled(16389);
   const tmp = closure_13();
-  const GameCommunityAddServerEntryExperiment = enabled(13769).GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = enabled(13803).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
   let obj1 = enabled(504);
   const items = [SelectedGuildStore];
@@ -151,17 +151,17 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: obj.useGuildsBarAnimatedWrapperStyles(),
     overState: "y",
     config: memo,
-    label: "interactive-text-default",
-    expandedChildren: null,
-    children: "Array",
+    label: null,
+    expandedChildren: "guilds-bar-drag-preview",
+    children: null,
   };
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const intl = tmp2(1114).intl;
   obj.label = intl.string(enabled(1114).t.l5WIbf);
-  obj.expandedChildren = jsx(enabled(16425).HomeDrawerAddServerRowExpandedChildren, {});
+  obj.expandedChildren = jsx(enabled(16449).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = nativeDefault.colors;
   obj1 = { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj.children = jsx(enabled(11298).CirclePlusIcon, {
+  obj.children = jsx(enabled(11337).CirclePlusIcon, {
     size: "md",
     color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
   });
@@ -172,9 +172,9 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: obj.useGuildsBarAnimatedWrapperStyles(),
     overState: "y",
     config: memo,
-    label: "interactive-text-default",
-    expandedChildren: null,
-    children: "Array",
+    label: null,
+    expandedChildren: "guilds-bar-drag-preview",
+    children: null,
   });
   return (
     <View
@@ -184,10 +184,10 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
       styles={obj.useGuildsBarAnimatedWrapperStyles()}
       overState="y"
       config={memo}
-      label="interactive-text-default"
-      expandedChildren={null}
+      label={null}
+      expandedChildren="guilds-bar-drag-preview"
     >
-      {"Array"}
+      {null}
     </View>
   );
 });

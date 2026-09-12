@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(11558);
+const LaunchPadConstants = fn(11597);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
 ({
@@ -18,9 +18,9 @@ const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT
   LAUNCH_PAD_PULL_TAB_WIDTH,
   LAUNCH_PAD_SPRING_CONFIG: closure_11,
 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(12055).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12091).CHAT_INPUT_HEIGHT;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };
 let size = {
   position: "absolute",

@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import _modDef3592 from "../intl/CustomTypingIndicator.messages.js";
 import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset.tsx";
-import _modDef12067 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
-import _modDef12068 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
+import _modDef12103 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
+import _modDef12104 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -23,7 +23,7 @@ function CoachmarkPreview() {
     textStyle: tmp.typingText,
     emojiSource: null,
   };
-  const items = [_modDef12067, _modDef12068, _modDef12067];
+  const items = [_modDef12103, _modDef12104, _modDef12103];
   obj.emojiSource = items;
   obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, {
     name: "Locke",
@@ -54,7 +54,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { coachmarkImageContainer: null, typingText: null };
 createStyles = { alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_10 };
 createStyles.coachmarkImageContainer = createStyles;

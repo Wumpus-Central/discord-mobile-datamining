@@ -150,9 +150,9 @@ let prototype = function CustomStatusManager() {
             true,
           );
         } else {
-          applyArgumentsResult(10180).setFocusMode(false);
+          applyArgumentsResult(10219).setFocusMode(false);
           timeout1.stop();
-          const tmpResult = applyArgumentsResult(10180);
+          const tmpResult = applyArgumentsResult(10219);
         }
       }
     }

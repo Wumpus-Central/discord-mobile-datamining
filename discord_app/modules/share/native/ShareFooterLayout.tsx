@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { footer: null, footerSeparator: null, warningWrapper: null, chatRow: null };
 createStyles = {
   display: "flex",

@@ -12,7 +12,7 @@ require = fn;
 const ComponentActions = fn(1074).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   badgeContainer: { position: "absolute", top: -2, right: -2 },
   badge: null,

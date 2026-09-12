@@ -139,7 +139,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(8864).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(8899).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = noop.useMemo(() => closure_5(sku), items);
@@ -193,10 +193,10 @@ class PremiumSKUPreview {
   }
 }
 const View = fn(17).View;
-let closure_5 = fn(7619).transformSKUToCollectiblesItem;
+let closure_5 = fn(7649).transformSKUToCollectiblesItem;
 const SKUProductLines = fn(1074).SKUProductLines;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 const React6 = createStyles.createStyles((width, height) => {
   let obj = {
     container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" },
@@ -225,7 +225,7 @@ const React6 = createStyles.createStyles((width, height) => {
   obj.premiumRiveContainer = { width, height };
   return obj;
 });
-let size = { width: fn(8864).DEFAULT_ITEM_SIZE, height: fn(8864).DEFAULT_ITEM_SIZE };
+let size = { width: fn(8899).DEFAULT_ITEM_SIZE, height: fn(8899).DEFAULT_ITEM_SIZE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
 

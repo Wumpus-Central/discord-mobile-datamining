@@ -1,6 +1,6 @@
 // discord_app/modules/calls/native/VideoBackground.tsx
 import native from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05038_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05068_LinearGradient.js";
 import VideoBackgroundManagerDefault from "VideoBackgroundManager.tsx";
 import useProfileTileGradientDefault from "useProfileTileGradient.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -16,11 +16,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(8333)();
+  const tmp5 = first(8365)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8334).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8366).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(576).unsafe_rawColors.PRIMARY_800);
@@ -49,7 +49,7 @@ function useDominantRGBFromImage(arg0, arg1) {
               const obj = { r: null, g: null, b: null };
               [obj.r, obj.g, obj.b] = closure_3(result[0], 3);
               closure_1_3(obj);
-              first(8334).cachedDominantColors[closure_1_0] = obj;
+              first(8366).cachedDominantColors[closure_1_0] = obj;
               const tmp3 = closure_3(result[0], 3);
             }
           })
@@ -59,7 +59,7 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = closure_3(result[0], 3);
             closure_1_3(obj);
-            first(8334).cachedDominantColors[closure_1_0] = obj;
+            first(8366).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = closure_3(result[0], 3);
           }
         });
@@ -174,7 +174,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles({
   videoBackground: { alignItems: "center" },
   videoDetailsSpacer: { paddingTop: 12 },

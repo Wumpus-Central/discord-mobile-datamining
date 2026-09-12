@@ -36,7 +36,7 @@ export default function ChannelHeader(channelId) {
   let obj = channelId(563);
   const items = [ChannelStore];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  const isChannelContentGated = channelId(4817).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(4847).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;

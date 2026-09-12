@@ -119,14 +119,14 @@ function CacheActionsActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle: function useCacheActionsTitle() {
     const intl = util.intl;
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(15636).FileWarningIcon,
+  IconComponent: fn(15658).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     const obj = { default: CacheActionsActionSheet };
     obj.openLazy(Promise.resolve(obj), CacheActionsActionSheet);

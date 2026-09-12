@@ -15,9 +15,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useOverlayLayoutDriver.tsx");
 
 export const useOverlayLayoutDriver = function useOverlayLayoutDriver() {
-  sharedValue = sharedValue(4343).useSharedValue(0);
-  let obj = sharedValue(4343);
-  const mediaViewerDimensions = sharedValue(8379).useMediaViewerDimensions();
+  sharedValue = sharedValue(4373).useSharedValue(0);
+  let obj = sharedValue(4373);
+  const mediaViewerDimensions = sharedValue(8411).useMediaViewerDimensions();
   const items = [sharedValue, ,];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = noop.useEffect(() => {

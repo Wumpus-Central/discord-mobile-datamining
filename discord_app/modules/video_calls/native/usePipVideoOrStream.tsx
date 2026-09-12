@@ -11,7 +11,7 @@ import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
 require = fn;
-const CallConstants = fn(4627);
+const CallConstants = fn(4657);
 ({ isStreamParticipant: closure_11, isUserParticipant: closure_12, ParticipantTypes: map1 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/usePipVideoOrStream.tsx");

@@ -5,11 +5,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 const require = fn;
-const VerificationMethod = fn(8498).VerificationMethod;
-let closure_8 = fn(8500).buildIncodeParamsInjection;
+const VerificationMethod = fn(8530).VerificationMethod;
+let closure_8 = fn(8532).buildIncodeParamsInjection;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles({
   container: { alignSelf: "stretch" },
   header: { textAlign: "center" },
@@ -141,15 +141,15 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
       justify: "center",
       spacing: 16,
       style: tmp5.loadingContainer,
-      children: closure_9(tmp7(5628).ActivityIndicator, { size: "large" }),
+      children: closure_9(tmp7(5658).ActivityIndicator, { size: "large" }),
     };
-    obj.children = closure_9(tmp7(5024).Stack, obj);
+    obj.children = closure_9(tmp7(5054).Stack, obj);
     obj.children = closure_9(ModalContent, obj);
     let tmp11 = obj;
   } else {
     let obj1 = { align: "stretch", spacing: 24, style: tmp5.container, children: null };
     let obj2 = { align: "center", justify: "center", spacing: 16, children: null };
-    const items1 = [closure_9(tmp7(5743).ShieldSpotIllustration, { height: 100, width: 177 })];
+    const items1 = [closure_9(tmp7(5773).ShieldSpotIllustration, { height: 100, width: 177 })];
     let obj3 = { align: "center", justify: "center", spacing: 8, children: null };
     const obj4 = {
       accessibilityRole: "header",
@@ -160,20 +160,20 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     };
     const intl = tmp7(1114).intl;
     obj4.children = intl.string(trustedOrigin(2946).eZvwAe);
-    const items2 = [closure_9(tmp7(4602).Text, obj4)];
+    const items2 = [closure_9(tmp7(4632).Text, obj4)];
     const obj5 = { variant: "text-md/medium", color: "text-strong", style: tmp5.header, children: null };
     const intl2 = tmp7(1114).intl;
     obj5.children = intl2.string(trustedOrigin(2946)["5yWXmT"]);
-    items2[1] = closure_9(tmp7(4602).Text, obj5);
+    items2[1] = closure_9(tmp7(4632).Text, obj5);
     obj3.children = items2;
-    items1[1] = closure_10(tmp7(5024).Stack, obj3);
+    items1[1] = closure_10(tmp7(5054).Stack, obj3);
     obj2.children = items1;
-    const items3 = [closure_10(tmp7(5024).Stack, obj2), ,];
+    const items3 = [closure_10(tmp7(5054).Stack, obj2), ,];
     if (tmp6Result) {
       const obj6 = { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp5.header, children: null };
       const intl3 = tmp7(1114).intl;
       obj6.children = intl3.string(tmp7(1114).t.c6kn6F);
-      tmp6Result = closure_9(tmp7(4602).Text, obj6);
+      tmp6Result = closure_9(tmp7(4632).Text, obj6);
     }
     items3[1] = tmp6Result;
     const obj7 = { hasIcons: false, children: null };
@@ -185,7 +185,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj8.onPress = function onPress() {
       closure_4(VerificationMethod.FACIAL_AGE_ESTIMATION);
     };
-    const items4 = [closure_9(tmp7(5656).TableRow, obj8)];
+    const items4 = [closure_9(tmp7(5686).TableRow, obj8)];
     const obj9 = { arrow: true, label: null, subLabel: null, onPress: null };
     const intl6 = tmp7(1114).intl;
     obj9.label = intl6.string(trustedOrigin(2946)["NeVlw/"]);
@@ -194,11 +194,11 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj9.onPress = function onPress() {
       closure_4(VerificationMethod.ID_VERIFICATION);
     };
-    items4[1] = closure_9(tmp7(5656).TableRow, obj9);
+    items4[1] = closure_9(tmp7(5686).TableRow, obj9);
     obj7.children = items4;
-    items3[2] = closure_10(tmp7(5738).TableRowGroup, obj7);
+    items3[2] = closure_10(tmp7(5768).TableRowGroup, obj7);
     obj1.children = items3;
-    obj.children = closure_10(tmp7(5024).Stack, obj1);
+    obj.children = closure_10(tmp7(5054).Stack, obj1);
     obj.children = closure_9(ModalContent, obj);
     tmp11 = obj;
   }

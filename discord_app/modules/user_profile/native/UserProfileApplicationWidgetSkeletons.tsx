@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { skeleton: null };
 createStyles = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 createStyles.skeleton = createStyles;

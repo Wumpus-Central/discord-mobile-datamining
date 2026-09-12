@@ -30,7 +30,7 @@ class ForumOriginalPoster {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
   opIcon: null,
@@ -38,7 +38,7 @@ let createStyles = {
 };
 createStyles = { borderRadius: nativeDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 };
 createStyles.opIcon = createStyles;
-createStyles.opIconBackground = { backgroundColor: fn(5492).DARK_BRAND_260_LIGHT_BRAND_200 };
+createStyles.opIconBackground = { backgroundColor: fn(5522).DARK_BRAND_260_LIGHT_BRAND_200 };
 const hasOwnProperty = createStyles.createStyles(createStyles);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumOriginalPoster.tsx");

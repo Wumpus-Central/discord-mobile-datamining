@@ -16,7 +16,7 @@ const Constants = fn(1074);
 ({ ChannelTypes: c10, NotificationSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { container: null, searchContainer: null };
 obj = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
 obj.container = obj;

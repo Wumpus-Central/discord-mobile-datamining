@@ -50,9 +50,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9576).updateShouldShowJumpToPresentButton;
+let closure_6 = fn(9615).updateShouldShowJumpToPresentButton;
 let closure_7 = fn(2021).getUserCommunicationDisabledVersion;
-const Changeset = fn(8007).Changeset;
+const Changeset = fn(8037).Changeset;
 const Constants = fn(1074);
 ({
   ActivityActionTypes: closure_12,
@@ -348,7 +348,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     shouldJumpToOriginalPost: callback3,
   };
   let tmp2 = first1(noop.useState(false), 2);
-  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11633)(obj));
+  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11669)(obj));
   obj = {
     chatRef: ref5,
     chatManager: first,
@@ -402,7 +402,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     isStaff: messages.isStaff,
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
   };
-  const tmp16 = first(11633)(obj);
+  const tmp16 = first(11669)(obj);
   ({
     hasHandledScrollRef: closure_18,
     isAtBottomRef: closure_19,
@@ -418,7 +418,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToTopMessage,
     updateNativeRows,
     handleScrollPosition,
-  } = first(11635)(obj));
+  } = first(11671)(obj));
   const ref6 = noop.useRef(null);
   ref6.current = {
     getMessage: callback2,
@@ -440,7 +440,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToNewMessages,
     getChatRef,
   }));
-  let tmp17 = first(11635)(obj);
+  let tmp17 = first(11671)(obj);
   let obj1 = {
     chatManager: first,
     rowGenerator: first1(
@@ -487,7 +487,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToTopMessage,
     useReducedMotion: messages.useReducedMotion,
   };
-  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(12043)({
+  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(12079)({
     chatManager: first,
     rowGenerator: first1(
       noop.useState(() => new first(hasJumpedToOriginalPost[16])()),
@@ -1369,7 +1369,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
   });
   let obj3 = { children: null };
   const items4 = [
-    findMessageIndex(first(11988), {
+    findMessageIndex(first(12024), {
       ref: ref5,
       style: messages.style,
       inverted: true,

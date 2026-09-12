@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
-import _modDef7940 from "../../../../_runtime/metro/07940__.js";
+import _modDef7970 from "../../../../_runtime/metro/07970__.js";
 import useYouBarSettingsSafeArea from "../../main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({
   headerContainer: {
     flexDirection: "row",
@@ -40,7 +40,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj.paddingTop = youBarSettingsCustomHeaderPaddingTop;
   obj.style = obj;
   obj1 = { style: tmp.backButton, children: null };
-  const obj2 = { source: _modDef7940, color: buttonColor, accessibilityLabel: null, onPress: null };
+  const obj2 = { source: _modDef7970, color: buttonColor, accessibilityLabel: null, onPress: null };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
   obj2.onPress = function onPress() {

@@ -1,30 +1,30 @@
 // discord_app/modules/game_profile/hooks/useGameProfileShopCollection.tsx
-import _mod19 from "../../../../_runtime/metro/00019__.js";
 import GameProfileHttpUtils from "../GameProfileHttpUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 import GameProfileStore from "../GameProfileStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const useEffect = _mod19.useEffect;
-let closure_4 = [];
+({ useEffect: c2, useMemo: c3 } = noop);
+let closure_5 = [];
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileShopCollection.tsx");
 
 export const useGameProfileShopCollectionState = function useGameProfileShopCollectionState(arg0) {
   _require = arg0;
   const items = [GameProfileStore];
   const isFetching = require("initialize").useStateFromStoresObject(items, () => {
-    let result = null != closure_0;
+    let result = null != skuIds;
     if (result) {
-      result = GameProfileStore.hasShopCollectionBeenFetched(closure_0);
+      result = GameProfileStore.hasShopCollectionBeenFetched(skuIds);
     }
     const obj = { hasFetched: result, isFetching: null, skuIds: null };
-    let result1 = null != closure_0;
+    let result1 = null != skuIds;
     if (result1) {
-      result1 = GameProfileStore.isShopCollectionFetching(closure_0);
+      result1 = GameProfileStore.isShopCollectionFetching(skuIds);
     }
     obj.isFetching = result1;
     let shopCollectionSkuIds;
-    if (null != closure_0) {
-      shopCollectionSkuIds = GameProfileStore.getShopCollectionSkuIds(closure_0);
+    if (null != skuIds) {
+      shopCollectionSkuIds = GameProfileStore.getShopCollectionSkuIds(skuIds);
     }
     obj.skuIds = shopCollectionSkuIds;
     return obj;
@@ -32,55 +32,126 @@ export const useGameProfileShopCollectionState = function useGameProfileShopColl
   hasFetched = isFetching.hasFetched;
   let skuIds = isFetching.skuIds;
   const items1 = [arg0, hasFetched];
-  useEffect(() => {
-    let result = null == closure_0 || hasFetched;
+  closure_2(() => {
+    let result = null == skuIds || collectiblesShopProducts;
     if (!result) {
-      result = GameProfileStore.isShopCollectionFetching(closure_0);
+      result = GameProfileStore.isShopCollectionFetching(skuIds);
     }
     if (!result) {
-      const shopCollection = GameProfileHttpUtils.getShopCollection(closure_0);
+      const shopCollection = GameProfileHttpUtils.getShopCollection(skuIds);
     }
   }, items1);
   if (skuIds == null) {
-    skuIds = closure_4;
+    skuIds = closure_5;
   }
   return { skuIds, hasFetched, isFetching: isFetching.isFetching };
 };
-export const useGameProfileShopCollection = function useGameProfileShopCollection(collectionId) {
-  _require = collectionId;
+export const useGameProfileShopCollection = function useGameProfileShopCollection(arg0) {
+  _require = arg0;
   const items = [GameProfileStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
-    let result = null != closure_0;
+    let result = null != skuIds;
     if (result) {
-      result = GameProfileStore.hasShopCollectionBeenFetched(closure_0);
+      result = GameProfileStore.hasShopCollectionBeenFetched(skuIds);
     }
     const obj = { hasFetched: result, isFetching: null, skuIds: null };
-    let result1 = null != closure_0;
+    let result1 = null != skuIds;
     if (result1) {
-      result1 = GameProfileStore.isShopCollectionFetching(closure_0);
+      result1 = GameProfileStore.isShopCollectionFetching(skuIds);
     }
     obj.isFetching = result1;
     let shopCollectionSkuIds;
-    if (null != closure_0) {
-      shopCollectionSkuIds = GameProfileStore.getShopCollectionSkuIds(closure_0);
+    if (null != skuIds) {
+      shopCollectionSkuIds = GameProfileStore.getShopCollectionSkuIds(skuIds);
     }
     obj.skuIds = shopCollectionSkuIds;
     return obj;
   });
   hasFetched = stateFromStoresObject.hasFetched;
   ({ isFetching, skuIds } = stateFromStoresObject);
-  const items1 = [collectionId, hasFetched];
-  useEffect(() => {
-    let result = null == closure_0 || hasFetched;
+  const items1 = [arg0, hasFetched];
+  closure_2(() => {
+    let result = null == skuIds || collectiblesShopProducts;
     if (!result) {
-      result = GameProfileStore.isShopCollectionFetching(closure_0);
+      result = GameProfileStore.isShopCollectionFetching(skuIds);
     }
     if (!result) {
-      const shopCollection = GameProfileHttpUtils.getShopCollection(closure_0);
+      const shopCollection = GameProfileHttpUtils.getShopCollection(skuIds);
     }
   }, items1);
   if (skuIds == null) {
-    skuIds = closure_4;
+    skuIds = closure_5;
   }
   return skuIds;
+};
+export const useGameProfileShopCollectionProducts = function useGameProfileShopCollectionProducts(collectionId) {
+  let skuIds = collectionId;
+  let obj = skuIds(collectiblesShopProducts[2]);
+  const items = [GameProfileStore];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+    let result = null != skuIds;
+    if (result) {
+      result = GameProfileStore.hasShopCollectionBeenFetched(skuIds);
+    }
+    const obj = { hasFetched: result, isFetching: null, skuIds: null };
+    let result1 = null != skuIds;
+    if (result1) {
+      result1 = GameProfileStore.isShopCollectionFetching(skuIds);
+    }
+    obj.isFetching = result1;
+    let shopCollectionSkuIds;
+    if (null != skuIds) {
+      shopCollectionSkuIds = GameProfileStore.getShopCollectionSkuIds(skuIds);
+    }
+    obj.skuIds = shopCollectionSkuIds;
+    return obj;
+  });
+  const hasFetched = stateFromStoresObject.hasFetched;
+  collectiblesShopProducts = hasFetched;
+  skuIds = stateFromStoresObject.skuIds;
+  const items1 = [collectionId, hasFetched];
+  closure_2(() => {
+    let result = null == skuIds || collectiblesShopProducts;
+    if (!result) {
+      result = GameProfileStore.isShopCollectionFetching(skuIds);
+    }
+    if (!result) {
+      const shopCollection = GameProfileHttpUtils.getShopCollection(skuIds);
+    }
+  }, items1);
+  if (skuIds == null) {
+    skuIds = closure_5;
+  }
+  collectiblesShopProducts = skuIds(collectiblesShopProducts[4]).useCollectiblesShopProducts(skuIds, {
+    flattenVariants: true,
+  });
+  const items2 = [skuIds, collectiblesShopProducts];
+  const tmpResult = skuIds(collectiblesShopProducts[4]);
+  obj = {
+    products: closure_3(() => {
+      const mapped = skuIds.map((item) => {
+        let product;
+        if (collectiblesShopProducts[item] != null) {
+          product = tmp.product;
+        }
+        return product;
+      });
+      return mapped.filter((item) => null != item);
+    }, items2),
+    isLoading: null,
+  };
+  let tmp8 = null != collectionId;
+  if (tmp8) {
+    let isFetching = !hasFetched;
+    if (hasFetched) {
+      isFetching = stateFromStoresObject.isFetching;
+    }
+    if (!isFetching) {
+      isFetching = skuIds.length > 0 && tmp7;
+      const tmp9 = skuIds.length > 0 && tmp7;
+    }
+    tmp8 = isFetching;
+  }
+  obj.isLoading = tmp8;
+  return obj;
 };

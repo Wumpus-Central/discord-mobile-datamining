@@ -108,7 +108,6 @@ const items = [
   dismissible_content.DismissibleContent.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT,
   dismissible_content.DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE,
   dismissible_content.DismissibleContent.GUILD_THEME_NUX,
-  dismissible_content.DismissibleContent.BOUNTIES_SWIPE_UP_NUX,
   dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX,
   dismissible_content.DismissibleContent.IN_APP_NOTIFICATION_EXPAND_NUX,
   dismissible_content.DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION,

@@ -44,71 +44,11 @@ class MFAModal {
     closure_5 = memo;
     closure_0 = undefined;
     closure_0 = handleOnClose(function* (arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_2 = tmp5;
-              closure_129_0 = undefined;
-              closure_129_1 = undefined;
-              ({ mfaType: closure_129_0, data: closure_129_1 } = closure_0);
-              c3 = 1;
-              c4 = 1;
-              return { value: "PX_16", done: null };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj1 = { value, done: true };
-              return obj1;
-            } else {
-              const obj2 = { mfaType: closure_129_0, data: closure_129_1, ticket: ticket.ticket };
-              c3 = 2;
-              c4 = 1;
-              const obj3 = { value: tmp2(obj2), done: false };
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            obj = finish(cancel[5]);
-            obj.popWithKey(callback1);
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp18) {
-          c4 = tmp;
-          throw tmp18;
-        }
-      }
+      yield tmp2({ mfaType: closure_129_0, data: closure_129_1, ticket: ticket.ticket });
+      finish(cancel[5]).popWithKey(callback1);
+      yield "HermesInternal";
+      ({ mfaType: closure_129_0, data: closure_129_1 } = closure_0);
+      return "PX_16";
     });
     items1 = [,];
     items1[0] = finish;
@@ -184,7 +124,7 @@ class MFAModal {
       obj.headerRight = headerRight;
       obj.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15735), {});
+        return closure_1_6(closure_1_1(15757), {});
       };
       obj[MfaStepsTypes.MfaScreens.SELECT] = obj;
       const obj1 = {};
@@ -214,7 +154,7 @@ class MFAModal {
       obj1.headerRight = tmp12;
       obj1.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15736), {});
+        return closure_1_6(closure_1_1(15758), {});
       };
       obj[MfaStepsTypes.MfaScreens.WEBAUTHN] = obj1;
       const obj2 = {};
@@ -244,7 +184,7 @@ class MFAModal {
       obj2.headerRight = tmp20;
       obj2.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15741), {});
+        return closure_1_6(closure_1_1(15763), {});
       };
       obj[MfaStepsTypes.MfaScreens.TOTP] = obj2;
       obj3 = {};
@@ -274,7 +214,7 @@ class MFAModal {
       obj3.headerRight = tmp28;
       obj3.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15744), {});
+        return closure_1_6(closure_1_1(15766), {});
       };
       obj[MfaStepsTypes.MfaScreens.BACKUP] = obj3;
       const obj4 = {};
@@ -304,7 +244,7 @@ class MFAModal {
       obj4.headerRight = tmp36;
       obj4.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15745), {});
+        return closure_1_6(closure_1_1(15767), {});
       };
       obj[MfaStepsTypes.MfaScreens.SMS] = obj4;
       const obj5 = {};
@@ -334,7 +274,7 @@ class MFAModal {
       obj5.headerRight = tmp44;
       obj5.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15746), {});
+        return closure_1_6(closure_1_1(15768), {});
       };
       obj[MfaStepsTypes.MfaScreens.PASSWORD] = obj5;
       return obj;

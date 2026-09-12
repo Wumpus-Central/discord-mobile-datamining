@@ -5,7 +5,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import ContactSyncModalActionCreators from "../../../../contact_sync/native/ContactSyncModalActionCreators.tsx";
 import ContactSyncUtils from "../../../../contact_sync/native/ContactSyncUtils.tsx";
-import _modDef12786 from "../../../../../../_runtime/metro/12786__.js";
+import _modDef12822 from "../../../../../../_runtime/metro/12822__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   content: null,
   headerImage: null,
@@ -62,7 +62,7 @@ const result = size.fileFinishedImporting(
 export default function AddFriendsContactSyncEmptyState() {
   const tmp = closure_7();
   let obj = { style: tmp.content, children: null };
-  obj = { resizeMode: "contain", style: tmp.headerImage, source: _modDef12786 };
+  obj = { resizeMode: "contain", style: tmp.headerImage, source: _modDef12822 };
   const items = [hasOwnProperty(React4, obj), , ,];
   obj = { style: tmp.title, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

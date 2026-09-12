@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/GiftTrollIllocon.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6223 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftTrollIllocon-2x.png.js";
+import _modDef6253 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftTrollIllocon-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -21,12 +21,12 @@ export const GiftTrollIllocon = function GiftTrollIllocon(size) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef6223 };
+  obj = { uri: _modDef6253 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6223 });
+  return jsx(FastImageDefault, { uri: _modDef6253 });
 };

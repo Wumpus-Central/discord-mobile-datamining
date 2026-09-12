@@ -1,7 +1,7 @@
 // discord_app/modules/premium/PremiumBogoPromotionUtilsCommon.tsx
 import useStateFromStores from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import _modDef4198 from "../../../_runtime/metro/04198__.js";
+import _modDef4228 from "../../../_runtime/metro/04228__.js";
 import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import shared_PlatformUtils from "../../../discord_common/js/shared/lib/PlatformUtils.tsx";
 import BlockedPaymentsCountryExperiment from "../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
@@ -27,11 +27,11 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
         const endedAt = mostRecentSubscription.endedAt;
         if (null != endedAt) {
           if (mostRecentSubscription.hasPremiumAtLeast(closure_1_10.TIER_2)) {
-            const obj = _modDef4198();
+            const obj = _modDef4228();
             if (subtractResult.isBefore(endedAt)) {
               return false;
             }
-            subtractResult = _modDef4198().subtract(10, "days");
+            subtractResult = _modDef4228().subtract(10, "days");
           }
         }
       }
@@ -41,11 +41,11 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
         const endedAt2 = previousPremiumSubscription.endedAt;
         if (null != endedAt2) {
           if (previousPremiumSubscription.hasPremiumAtLeast(closure_1_10.TIER_2)) {
-            const obj3 = _modDef4198();
+            const obj3 = _modDef4228();
             if (subtractResult1.isBefore(endedAt2)) {
               return false;
             }
-            subtractResult1 = _modDef4198().subtract(10, "days");
+            subtractResult1 = _modDef4228().subtract(10, "days");
           }
         }
       }
@@ -129,7 +129,7 @@ let closure_15 = async function _isEligibleForBOGOPromotion() {
           let mostRecentPremiumTypeSubscription;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp5) {

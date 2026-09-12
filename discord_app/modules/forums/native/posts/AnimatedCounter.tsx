@@ -206,7 +206,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles({
   container: {
     flex: 0,

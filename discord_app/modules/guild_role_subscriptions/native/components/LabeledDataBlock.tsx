@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, title: null, data: null, titleSection: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,

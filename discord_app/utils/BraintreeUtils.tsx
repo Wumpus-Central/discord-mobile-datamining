@@ -12,7 +12,7 @@ export const getBraintreeSDK = function getBraintreeSDK() {
     createPromise() {
       return client(paths[4])(paths[3], paths.paths);
     },
-    webpackId: 4285,
+    webpackId: 4315,
   };
   return obj.importWithRetry(obj).then((result) => result.default);
 };
@@ -23,7 +23,7 @@ export const collectDeviceData = function collectDeviceData() {
       createPromise() {
         return client(paths[4])(paths[3], paths.paths);
       },
-      webpackId: 4285,
+      webpackId: 4315,
     };
     let importWithRetryResult = core_CodeSplittingUtils.importWithRetry(obj);
     let nextPromise1 = core_CodeSplittingUtils
@@ -36,12 +36,12 @@ export const collectDeviceData = function collectDeviceData() {
         return obj
           .then((result) => {
             client = result;
-            client(4282);
+            client(4312);
             let obj = {
               createPromise() {
                 return client(paths[4])(paths[3], paths.paths);
               },
-              webpackId: 4285,
+              webpackId: 4315,
             };
             const importWithRetryResult = obj.importWithRetry(obj);
             return obj
@@ -62,7 +62,7 @@ export const collectDeviceData = function collectDeviceData() {
       createPromise() {
         return client(paths[4])(paths[3], paths.paths);
       },
-      webpackId: 4285,
+      webpackId: 4315,
     };
     const importWithRetryResult1 = obj.importWithRetry(obj);
     nextPromise1 = obj

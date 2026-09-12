@@ -12,13 +12,13 @@ export default {
   addFiles(draftType) {
     ({ files, channelId } = draftType);
     draftType = draftType.draftType;
-    if (files.some(channelId(9398).itemNeedsImagePreConversion)) {
+    if (files.some(channelId(9437).itemNeedsImagePreConversion)) {
       function dispatch(files) {
         const obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType };
         obj.dispatch(obj);
       }
-      Promise.all(files.map(channelId(9398).maybePreConvertImageItem)).then(dispatch);
-      const allPromises = Promise.all(files.map(channelId(9398).maybePreConvertImageItem));
+      Promise.all(files.map(channelId(9437).maybePreConvertImageItem)).then(dispatch);
+      const allPromises = Promise.all(files.map(channelId(9437).maybePreConvertImageItem));
     } else {
       draftType(573);
       let obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType };

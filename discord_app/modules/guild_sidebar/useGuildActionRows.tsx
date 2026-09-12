@@ -7,7 +7,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import GuildOnboardingHomeSettingsStore from "../guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx";
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7607).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7637).ChannelListGuildActionRow;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");

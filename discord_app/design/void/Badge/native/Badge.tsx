@@ -145,7 +145,7 @@ const BadgeConstants = fn(1180);
 ({ BADGE_MASK_SIZE: metroRequire, BADGE_MASK_UNREAD_SIZE: closure_7, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
 const BADGE_SIZE_UNREAD = BadgeConstants.BADGE_SIZE_UNREAD;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = {
   badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 },
   badge: null,
@@ -175,37 +175,32 @@ let obj1 = {
   textAlign: "center",
   textAlignVertical: null,
 };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 obj1.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
 obj1.fontFamily = fn(1074).Fonts.PRIMARY_BOLD;
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";
 }
 obj1.textAlignVertical = str;
 createStyles.badgeText = obj1;
-let obj2 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE };
-PlatformUtils = fn(1115);
-if (PlatformUtils.isAndroid()) {
-  const obj3 = { lineHeight: nativeDefault.space.PX_12, textAlignVertical: "center" };
-  PlatformUtils = obj3;
-} else {
-  PlatformUtils = {};
-}
-Object.assign(PlatformUtils);
-obj2.textAlign = "center";
-createStyles.experimentalBadgeText = obj2;
+createStyles.experimentalBadgeText = {
+  minWidth: BADGE_SIZE - 2 * BADGE_PADDING,
+  color: nativeDefault.colors.WHITE,
+  textAlign: "center",
+};
 let size = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: nativeDefault.colors.WHITE };
 createStyles.noCount = size;
-PlatformUtils = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
-createStyles.unread = PlatformUtils;
-createStyles.mention = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+let obj2 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, textAlign: "center" };
+createStyles.unread = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+PlatformUtils = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+createStyles.mention = PlatformUtils;
 PlatformUtils = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 createStyles.lowImportanceMention = PlatformUtils;
-const obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+const obj3 = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
 createStyles.eventsMentionBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 let closure_11 = createStyles.createStyles(createStyles);
 size = fn(2);

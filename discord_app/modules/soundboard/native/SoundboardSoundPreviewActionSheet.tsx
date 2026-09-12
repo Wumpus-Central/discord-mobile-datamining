@@ -17,7 +17,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: c10, AnalyticsObjects: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   soundPresentation: null,
   soundPresentationPlaying: null,
@@ -40,7 +40,7 @@ createStyles.soundPresentationPlaying = { borderColor: nativeDefault.colors.STAT
 let size = { marginTop: nativeDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 createStyles.emoji = size;
 createStyles.emojiFastImage = { width: 128, height: 128 };
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 60;

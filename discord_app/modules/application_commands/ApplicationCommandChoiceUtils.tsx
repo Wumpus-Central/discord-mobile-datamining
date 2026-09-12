@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandChoiceUtils.tsx
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore.tsx";
 
-const ApplicationCommandConstants = fn(5050);
+const ApplicationCommandConstants = fn(5080);
 ({ FALSE_OPTION_NAME: closure_1, TRUE_OPTION_NAME: c2 } = ApplicationCommandConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandChoiceUtils.tsx");

@@ -32,7 +32,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(8669).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(8701).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -66,9 +66,9 @@ function AddAppButton(application) {
     obj.onAccessibilityAction = callback1;
     obj = { size: "sm", color: guildId(576).colors.WHITE };
     obj.icon = <PlusSmallIcon size="sm" color={guildId(576).colors.WHITE} />;
-    return jsx(tmp6(5026).Button, { size: "sm", color: guildId(576).colors.WHITE });
+    return jsx(tmp6(5056).Button, { size: "sm", color: guildId(576).colors.WHITE });
   }
-  PlusSmallIcon = application(8957).PlusSmallIcon;
+  PlusSmallIcon = application(8992).PlusSmallIcon;
   tmp6 = application;
 }
 function OpenAppButton(profileApplication) {
@@ -127,15 +127,15 @@ function OpenAppButton(profileApplication) {
               if (application1 == null) {
                 c3 = 1;
                 c4 = 1;
-                const obj2 = { value: tmp2(7236).fetchApplication(profileApplication.id), done: false };
+                const obj2 = { value: tmp2(7266).fetchApplication(profileApplication.id), done: false };
                 return obj2;
               } else {
                 closure_129_1 = closure_0;
                 closure_130_3(false);
                 if (null != closure_129_0) {
-                  let obj4 = tmp2(4573);
+                  let obj4 = tmp2(4603);
                   obj4.hideAllActionSheets();
-                  let obj5 = tmp2(4619);
+                  let obj5 = tmp2(4649);
                   const obj3 = { recipientIds: closure_130_1 };
                   c3 = 2;
                   c4 = 1;
@@ -205,7 +205,7 @@ function OpenAppButton(profileApplication) {
   obj.onPress = callback;
   return jsx(profileApplication(channel[17]).Button, { text: null, loading: null, onPress: null });
 }
-const getSection = fn(9380).getSection;
+const getSection = fn(9419).getSection;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
 const jsx = fn(21).jsx;

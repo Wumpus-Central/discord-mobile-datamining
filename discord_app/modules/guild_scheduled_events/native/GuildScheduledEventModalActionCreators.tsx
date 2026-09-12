@@ -9,7 +9,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import ReportModals from "../../in_app_reports/ReportModals.tsx";
-import _modDef9716 from "../../../../_runtime/metro/09716__.js";
+import _modDef9755 from "../../../../_runtime/metro/09755__.js";
 import GuildScheduledEventsActionCreatorsDefault from "../GuildScheduledEventsActionCreators.tsx";
 import GuildEventRsvpUtils from "../utils/GuildEventRsvpUtils.tsx";
 import useCanInviteForGuildEvent from "../useCanInviteForGuildEvent.tsx";
@@ -35,12 +35,12 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
   if (null != recurrenceId) {
     _modDef38(null != guildEvent, "recurrence editing requires a guild event");
     let obj = { guildEvent, recurrenceId, onCloseModal: handleClose };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9791, dependencyMap.paths), obj, closure_13);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9830, dependencyMap.paths), obj, closure_13);
   } else {
     obj = ActionSheetActionCreatorsDefault;
     obj.hideAllActionSheets();
     obj = { guild, targetChannel: tmp, initialGuildEvent: guildEvent, onCloseModal: handleClose };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9816, dependencyMap.paths), obj, closure_13);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9855, dependencyMap.paths), obj, closure_13);
   }
 }
 let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
@@ -104,10 +104,10 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
     }
   }
 };
-let GuildScheduledEventStore = fn(7599);
+let GuildScheduledEventStore = fn(7629);
 ({ isGuildEventEnded: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
 let closure_12 = fn(1963).GuildScheduledEventUserResponses;
-const GuildEventModalConstants = fn(9790);
+const GuildEventModalConstants = fn(9829);
 ({
   CREATE_GUILD_EVENT_MODAL_KEY: map1,
   GUILD_EVENTS_LIST_ACTION_SHEET_KEY: closure_14,
@@ -124,7 +124,7 @@ let result = size.fileFinishedImporting(
 export { openCreateOrEditGuildEventModal };
 export const openGuildEventListActionSheet = function openGuildEventListActionSheet(guild) {
   const obj = { guild };
-  obj.openLazy(asyncRequireImpl(9879, dependencyMap.paths), closure_1_14, obj);
+  obj.openLazy(asyncRequireImpl(9918, dependencyMap.paths), closure_1_14, obj);
 };
 export const closeGuildEventListActionSheet = function closeGuildEventListActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(closure_1_14);
@@ -133,7 +133,7 @@ export const openStartGuildEventModal = function openStartGuildEventModal(event,
   let obj = ActionSheetActionCreatorsDefault;
   obj.hideAllActionSheets();
   obj = { event, recurrenceId, onCloseActionSheet };
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9900, dependencyMap.paths), obj, __initData);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9939, dependencyMap.paths), obj, __initData);
 };
 export const openDeleteGuildEventActionSheet = function openDeleteGuildEventActionSheet(
   eventId,
@@ -275,7 +275,7 @@ export const openShareEvent = function openShareEvent(event, id) {
     const obj1 = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
     const intl = util.intl;
     obj1.content = intl.string(util.t.fEptJP);
-    obj1.icon = _modDef9716;
+    obj1.icon = _modDef9755;
     obj.open(obj1);
   }
 };
@@ -371,7 +371,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
                 "stack",
               );
             },
-            onRsvp: "accessible",
+            onRsvp: "WireType",
           };
           obj.handleRsvp(obj);
         },
@@ -398,7 +398,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
               let obj = ActionSheetActionCreatorsDefault;
               obj.hideAllActionSheets();
               obj = { event, recurrenceId, onCloseActionSheet: "Array" };
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9900, dependencyMap.paths), obj, __initData);
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9939, dependencyMap.paths), obj, __initData);
             };
             items.push(obj);
           }

@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx
 import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod8964 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod9003 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import MessagesItemChannelBase from "channel/MessagesItemChannelBase.tsx";
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder.tsx";
-import _mod16112 from "../../../../../../../_runtime/metro/16112__.js";
+import _mod16136 from "../../../../../../../_runtime/metro/16136__.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
@@ -47,7 +47,7 @@ const memoResult = noop.memo((arg0) => {
   return <closure_7 />;
 });
 const memoResult1 = noop.memo((channelId) => {
-  let obj = _mod8964;
+  let obj = _mod9003;
   const items = [channelId.channelId];
   const tmp = _slicedToArray(obj.useRecyclingState(false, items), 2);
   closure_0 = tmp2;

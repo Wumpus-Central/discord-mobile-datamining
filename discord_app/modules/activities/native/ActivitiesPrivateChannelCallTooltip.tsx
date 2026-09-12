@@ -11,7 +11,7 @@ const View = fn(17).View;
 const helpdeskUrl = fn(1920).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
 const jsx = fn(21).jsx;
 const TIMING_CONFIG = { duration: 500 };
-fn(4606);
+fn(4636);
 let createStyles = {
   arrow: null,
   tooltip: { padding: 16 },
@@ -70,9 +70,9 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
     }
   }
   obj = {
-    withRepeat: tmp2(4343).withRepeat,
-    withSequence: tmp2(4343).withSequence,
-    withTiming: tmp2(4607).withTiming,
+    withRepeat: tmp2(4373).withRepeat,
+    withSequence: tmp2(4373).withSequence,
+    withTiming: tmp2(4637).withTiming,
     OFFSET: 40,
     translateBounceOffset: num,
     TIMING_CONFIG,
@@ -80,7 +80,7 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   T.__closure = obj;
   T.__workletHash = 4621705591670;
   T.__initData = __initData;
-  const animatedStyle = num(4343).useAnimatedStyle(T);
+  const animatedStyle = num(4373).useAnimatedStyle(T);
   obj = { style: null, children: null };
   const items1 = [tmp.tooltipContainer, animatedStyle];
   obj.style = items1;
@@ -103,7 +103,7 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   const intl3 = tmp2(1114).intl;
   obj4.text = intl3.string(num(1114).t["NX+WJN"]);
   obj4.onPress = onClosePress.onClosePress;
-  obj3.children = jsx(num(5026).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
+  obj3.children = jsx(num(5056).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj1.children = <View style={tmp.closeButtonWrapper}>{null}</View>;
   obj.children = jsx(num(1178).Tooltip, {
     containerStyle: tmp.tooltip,

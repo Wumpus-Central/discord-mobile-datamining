@@ -37,11 +37,11 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8007);
+const RowGeneratorConstants = fn(8037);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: null,
@@ -274,8 +274,8 @@ class ChatPreviewBase extends PureComponent {
             jumpType: "flex",
             shouldInitialScroll: "Array",
             animated: 0,
-            scrollPosition: 45,
-            focusTargetId: 10,
+            scrollPosition: 1,
+            focusTargetId: 4,
           };
           tmp23 = computeScrollDataDefault(obj);
         }
@@ -303,7 +303,7 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          applyArgumentsResult(4617).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          applyArgumentsResult(4647).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -335,15 +335,15 @@ class ChatPreviewBase extends PureComponent {
           }
           channel = channel.getChannel(arg1);
           if (null != channel) {
-            applyArgumentsResult(4617);
+            applyArgumentsResult(4647);
             const obj = { source, navigationReplace: true };
             obj.transitionToThread(channel, obj);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "asc",
-        selectedChannelId: "asc",
-        tapLinkData: "isInRestrictedHours",
+        messageChannel: 0,
+        selectedChannelId: 9,
+        tapLinkData: 4,
       };
       channel = applyArgumentsResult.props.channel;
       obj.messageChannel = channel;
@@ -614,7 +614,7 @@ prototype["render"] = function render() {
   };
   tmp9Result = PlatformUtils;
 };
-ChatPreviewBase.contextType = fn(4317).ThemeContext;
+ChatPreviewBase.contextType = fn(4347).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -633,10 +633,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(7402).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(7402);
-  const isChannelContentGated = channelId(4817).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4817);
+  const isChannelSpoilerGated = channelId(7432).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(7432);
+  const isChannelContentGated = channelId(4847).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4847);
   const items2 = [ActionSheetStore];
   obj = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

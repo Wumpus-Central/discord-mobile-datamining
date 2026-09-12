@@ -115,8 +115,8 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
   let obj = channel(1483);
   importDefault = obj.useNavigation();
   const isMessageRequestRestrictedViewer =
-    channel(12533).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
-  let obj2 = channel(12533);
+    channel(12569).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
+  let obj2 = channel(12569);
   const items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   const obj3 = channel(504);
@@ -134,7 +134,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
       closure_1.pop();
     },
   };
-  const messageRequestActions = channel(12535).useMessageRequestActions(obj);
+  const messageRequestActions = channel(12571).useMessageRequestActions(obj);
   ({
     acceptMessageRequest: c2,
     rejectMessageRequest: c3,
@@ -170,7 +170,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     buttonSecondaryDisabled: null,
     buttonSecondaryLoading: null,
   };
-  const obj4 = channel(12535);
+  const obj4 = channel(12571);
   const tmp7 = closure_5;
   let intl = tmp(1114).intl;
   obj.message = intl.string(channel(1114).t["e/eQVB"]);

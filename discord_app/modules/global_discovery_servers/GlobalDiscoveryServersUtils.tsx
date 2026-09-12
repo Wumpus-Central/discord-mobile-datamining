@@ -8,99 +8,34 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
 require = fn;
-let closure_15 = async function _navigateToGuild(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          ({
-            loadId: closure_129_0,
-            guildId: closure_129_1,
-            index: closure_129_2,
-            categoryId: closure_129_3,
-            analyticsLocation: closure_129_4,
-            options: closure_129_5,
-          } = closure_0);
-          closure_129_6 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "PX_16", done: null };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          const obj2 = {};
-          const merged = Object.assign(closure_129_5);
-          obj2.loadId = closure_129_0;
-          closure_129_6 = obj2;
-          let obj4 = closure_130_2(closure_130_3[7]);
-          c3 = 2;
-          c4 = 1;
-          const obj3 = { value: obj4.startLurking(closure_129_1, closure_129_4, closure_129_6), done: false };
-          return obj3;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        obj4 = { value, done: true };
-        return obj4;
-      } else {
-        obj = closure_130_1(closure_130_3[8]);
-        const obj5 = {
-          guild_id: closure_129_1,
-          load_id: closure_129_0,
-          card_index: closure_129_2,
-          category_id: closure_129_3,
-          location: closure_129_4,
-        };
-        obj.track(closure_130_14.GUILD_DISCOVERY_GUILD_SELECTED, obj5);
-        c4 = 3;
-        return { value: "HermesInternal", done: null };
-      }
-    } catch (tmp28) {
-      c4 = tmp;
-      throw tmp28;
-    }
-  }
+let closure_15 = async function _navigateToGuild() {
+  const obj2 = {};
+  const merged = Object.assign(closure_129_5);
+  obj2.loadId = closure_129_0;
+  closure_129_6 = obj2;
+  await closure_130_2(closure_130_3[7]).startLurking(closure_129_1, closure_129_4, closure_129_6);
+  closure_130_2(closure_130_3[7]);
+  closure_130_1(closure_130_3[8]).track(closure_130_14.GUILD_DISCOVERY_GUILD_SELECTED, {
+    guild_id: closure_129_1,
+    load_id: closure_129_0,
+    card_index: closure_129_2,
+    category_id: closure_129_3,
+    location: closure_129_4,
+  });
+  await "HermesInternal";
+  closure_1 = tmp2;
+  ({
+    loadId: closure_129_0,
+    guildId: closure_129_1,
+    index: closure_129_2,
+    categoryId: closure_129_3,
+    analyticsLocation: closure_129_4,
+    options: closure_129_5,
+  } = closure_0);
+  return "PX_16";
 };
 GlobalDiscoveryServersSearchResultsStoreDefault;
-const GlobalDiscoveryServersConstants = fn(9156);
+const GlobalDiscoveryServersConstants = fn(9195);
 ({
   GlobalDiscoveryServerTab: closure_7,
   FEATURED_GUILDS_CACHE_DURATION: closure_8,
@@ -286,9 +221,9 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "channel",
-    discoverySplash: "items",
-    emojis: "httpServerLocation",
+    preferredLocale: "ip",
+    discoverySplash: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001952597032753436,
+    emojis: 13336028937370364000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
   };
   ({
     approximate_presence_count: obj.presenceCount,

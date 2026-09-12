@@ -1,6 +1,6 @@
 // discord_app/modules/rtc/hooks/useReadableSecureFramesFingerprint.tsx
 import byteLengthDefault from "../../../../_runtime/00206_byteLength.js";
-import _mod9225 from "../../../../discord_common/js/packages/libdave/index.tsx";
+import _mod9264 from "../../../../discord_common/js/packages/libdave/index.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ export const useReadableSecureFramesFingerprint = function useReadableSecureFram
     if (null != fingerprintBase64) {
       if ("" !== fingerprintBase64) {
         const toByteArrayResult = byteLengthDefault.toByteArray(fingerprintBase64);
-        const str5 = _mod9225.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
+        const str5 = _mod9264.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
         if (null == str5) {
           return null;
         } else {

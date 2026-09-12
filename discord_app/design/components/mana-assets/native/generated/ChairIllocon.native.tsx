@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/ChairIllocon.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef5905 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ChairIllocon-2x.png.js";
+import _modDef5935 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ChairIllocon-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -21,12 +21,12 @@ export const ChairIllocon = function ChairIllocon(size) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef5905 };
+  obj = { uri: _modDef5935 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5905 });
+  return jsx(FastImageDefault, { uri: _modDef5935 });
 };

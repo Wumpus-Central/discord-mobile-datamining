@@ -173,9 +173,9 @@ export const getChatInputRef = function getChatInputRef(id, screenIndex) {
     return current;
   }
 };
-export const getBestActiveInputForChannelId = function getBestActiveInputForChannelId(channelId) {
-  if (null != channelId) {
-    value = map.get(channelId);
+export const getBestActiveInputForChannelId = function getBestActiveInputForChannelId(id) {
+  if (null != id) {
+    value = map.get(id);
     if (null != value) {
       let obj2 = value;
       if (value === undefined) {

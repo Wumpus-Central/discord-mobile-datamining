@@ -7,10 +7,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { header: null };
 obj = {
-  height: fn(5733).NAV_BAR_HEIGHT,
+  height: fn(5763).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 8,

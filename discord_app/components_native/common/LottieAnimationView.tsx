@@ -1,5 +1,5 @@
 // discord_app/components_native/common/LottieAnimationView.tsx
-import _modDef5581 from "../../../_runtime/metro/05581__.js";
+import _modDef5611 from "../../../_runtime/metro/05611__.js";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -66,7 +66,7 @@ prototype["render"] = function render() {
   obj.style = items1;
   const tmp = _objectWithoutProperties(props, closure_2);
   const merged = Object.assign(tmp);
-  obj.children = jsx(_modDef5581, { ref: this.setRef, source, style: null });
+  obj.children = jsx(_modDef5611, { ref: this.setRef, source, style: null });
   return <View ref={this.setRef} source={source} style={null} />;
 };
 LottieAnimationView.defaultProps = { autoPlay: true, loop: true, collapsable: false };

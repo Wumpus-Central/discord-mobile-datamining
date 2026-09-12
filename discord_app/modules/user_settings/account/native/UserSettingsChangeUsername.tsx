@@ -10,23 +10,23 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(4791).match(showHint.usernameStatus);
-  let obj = { type: showHint(14758).NameValidationState.ERROR, message: null };
-  const P = showHint(4791).P;
+  const match = showHint(4821).match(showHint.usernameStatus);
+  let obj = { type: showHint(14792).NameValidationState.ERROR, message: null };
+  const P = showHint(4821).P;
   obj.message = P.select();
-  const str = showHint(4791);
-  obj = { type: showHint(14758).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(4791).P;
+  const str = showHint(4821);
+  obj = { type: showHint(14792).NameValidationState.AVAILABLE, message: null };
+  const P2 = showHint(4821).P;
   obj.message = P2.select();
   const withResult = match.with(obj, (children) =>
-    closure_1_11(showHint(4602).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
+    closure_1_11(showHint(4632).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
   );
   return match
     .with(obj, (children) =>
-      closure_1_11(showHint(4602).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
+      closure_1_11(showHint(4632).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
     )
     .with(obj, (children) =>
-      closure_1_11(showHint(4602).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children }),
+      closure_1_11(showHint(4632).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children }),
     )
     .otherwise(() => {
       let tmp = null;
@@ -44,7 +44,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   background: null,
   container: null,
@@ -164,7 +164,7 @@ export default function UserSettingsChangeUsername() {
           const tmp34 = first1;
         }
         user.discriminator = tmp34;
-        yield closure_2_2(7057).saveAccountChanges(user, { close: false });
+        yield closure_2_2(7087).saveAccountChanges(user, { close: false });
         closure_129_0 = value;
         if (!closure_129_0.ok) {
           const v6OrEarlierAPIError = new closure_0(1272).V6OrEarlierAPIError(closure_129_0);

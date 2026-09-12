@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackAppLauncherItemImpressionOnFirstView() {
-  let obj = entrypoint(11309);
+  let obj = entrypoint(11348);
   entrypoint = obj.useAppLauncherContext().entrypoint;
   dependencyMap = noop.useRef(new Set());
   const set = new Set();

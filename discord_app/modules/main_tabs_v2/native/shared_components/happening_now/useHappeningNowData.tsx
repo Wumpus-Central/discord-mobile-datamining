@@ -26,11 +26,11 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 
 require = fn;
-let GuildScheduledEventStore = fn(7599);
+let GuildScheduledEventStore = fn(7629);
 ({ eventScheduledToStartWithin: closure_8, isEventUpcoming: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
-const MemberListRowTypes = fn(7352).MemberListRowTypes;
+const MemberListRowTypes = fn(7382).MemberListRowTypes;
 let closure_20 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(15357).HappeningNowItem;
+const HappeningNowItem = fn(15379).HappeningNowItem;
 const Constants = fn(1074);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: items, StatusTypes: closure_32 } = Constants);
 items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];

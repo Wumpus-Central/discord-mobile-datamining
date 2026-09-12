@@ -1,39 +1,25 @@
 // discord_app/utils/native/DeviceUtils.tsx
-import _mod17 from "../../../_runtime/metro/00017__.js";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import NativeDeviceModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
-import PlatformUtils from "../PlatformUtils.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import NativeDeviceModule from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
 
-if (PlatformUtils.isAndroid()) {
-  const importDefaultResult = NativeDeviceModuleDefault;
-  let constants;
-  if (importDefaultResult != null) {
-    constants = importDefaultResult.getConstants();
-  }
-  let DCDDeviceManager = constants;
-} else {
-  DCDDeviceManager = _mod17.NativeModules.DCDDeviceManager;
-}
+require = fn;
+const constants = NativeDeviceModule.getConstants();
 let closure_4 = null;
 const mediaPerformanceClass = "mediaPerformanceClass";
-function getSystemVersion() {
-  return DCDDeviceManager.systemVersion;
-}
-function getDevice() {
-  return DCDDeviceManager.device;
-}
+const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/DeviceUtils.tsx");
 
 export const isIpadOS = function isIpadOS() {
-  return "iPad" === DCDDeviceManager.deviceModel;
+  return "iPad" === closure_3.deviceModel;
 };
 export const isGestureNavigationEnabled = function isGestureNavigationEnabled() {
-  return DCDDeviceManager.isGestureNavigationEnabled;
+  return closure_3.isGestureNavigationEnabled;
 };
-export { getSystemVersion };
+export const getSystemVersion = function getSystemVersion() {
+  return closure_3.systemVersion;
+};
 export const getSystemVersionMajor = function getSystemVersionMajor() {
-  const match = DCDDeviceManager.systemVersion.match(/\d+/);
+  const match = closure_3.systemVersion.match(/\d+/);
   if (null == match) {
     return 0;
   } else {
@@ -48,7 +34,7 @@ export const getSystemVersionMajor = function getSystemVersionMajor() {
   }
 };
 export const getSystemVersionMinor = function getSystemVersionMinor() {
-  const match = DCDDeviceManager.systemVersion.match(/\d+/g);
+  const match = closure_3.systemVersion.match(/\d+/g);
   if (null != match) {
     if (match.length >= 2) {
       const _Number = Number;
@@ -63,9 +49,11 @@ export const getSystemVersionMinor = function getSystemVersionMinor() {
   }
   return 0;
 };
-export { getDevice };
+export const getDevice = function getDevice() {
+  return closure_3.device;
+};
 export const getDeviceInfo = function getDeviceInfo() {
-  const device = DCDDeviceManager.device;
+  const device = closure_3.device;
   if (obj.isAndroid()) {
     let text = `${device + " (" + tmp.deviceModel})`;
   } else {
@@ -84,7 +72,7 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
       tmp5 = null == value;
     }
     if (tmp5) {
-      mediaPerformanceClass2 = NativeDeviceModuleDefault.getMediaPerformanceClass();
+      mediaPerformanceClass2 = NativeDeviceModule.getMediaPerformanceClass();
       const Storage2 = Storage3.Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
     }
@@ -93,32 +81,32 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
   return tmp3;
 };
 export const getDeviceModel = function getDeviceModel() {
-  return DCDDeviceManager.deviceModel;
+  return closure_3.deviceModel;
 };
 export const getDeviceBrand = function getDeviceBrand() {
-  return DCDDeviceManager.deviceBrand;
+  return closure_3.deviceBrand;
 };
 export const getDeviceProduct = function getDeviceProduct() {
-  return DCDDeviceManager.deviceProduct;
+  return closure_3.deviceProduct;
 };
 export const getDeviceManufacturer = function getDeviceManufacturer() {
-  return DCDDeviceManager.deviceManufacturer;
+  return closure_3.deviceManufacturer;
 };
 export const getSmallestScreenWidthDp = function getSmallestScreenWidthDp() {
-  return DCDDeviceManager.smallestScreenWidth;
+  return closure_3.smallestScreenWidth;
 };
 export const isOrientationLockSupported = function isOrientationLockSupported() {
-  let flag = DCDDeviceManager.isOrientationLockSupported;
+  let flag = closure_3.isOrientationLockSupported;
   if (flag == null) {
     flag = true;
   }
   return flag;
 };
 export const getSocName = function getSocName() {
-  return DCDDeviceManager.socName;
+  return closure_3.socName;
 };
 export const getRamSize = function getRamSize() {
-  const ramSize = DCDDeviceManager.ramSize;
+  const ramSize = closure_3.ramSize;
   let parsed;
   if ("" !== ramSize) {
     const _parseFloat = parseFloat;
@@ -127,7 +115,7 @@ export const getRamSize = function getRamSize() {
   return parsed;
 };
 export const getMaxCpuFreq = function getMaxCpuFreq() {
-  const maxCpuFreq = DCDDeviceManager.maxCpuFreq;
+  const maxCpuFreq = closure_3.maxCpuFreq;
   let parsed;
   if ("" !== maxCpuFreq) {
     const _parseFloat = parseFloat;
@@ -136,8 +124,8 @@ export const getMaxCpuFreq = function getMaxCpuFreq() {
   return parsed;
 };
 export const getTimeZone = function getTimeZone() {
-  return DCDDeviceManager.timeZone;
+  return closure_3.timeZone;
 };
 export const getIsRunningOnSimulator = function getIsRunningOnSimulator() {
-  return DCDDeviceManager.isRunningOnSimulator;
+  return closure_3.isRunningOnSimulator;
 };

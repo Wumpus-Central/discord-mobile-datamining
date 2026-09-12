@@ -35,9 +35,9 @@ export default function UserProfileEditNoteModal(arg0) {
     items,
   );
   _slicedToArray = tmp4[0];
-  let obj1 = navigation(1116);
+  let obj1 = navigation(1151);
   obj = { initialRouteName: "root", headerStatusBarHeight: num, headerStyle: null, screens: null };
-  let tmpResult = tmp(1116);
+  let tmpResult = tmp(1151);
   obj = undefined;
   if (!tmpResult.isAndroid()) {
     obj = { height: 56 };
@@ -51,18 +51,18 @@ export default function UserProfileEditNoteModal(arg0) {
     const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
     const intl = navigation(1114).intl;
     obj.children = intl.string(navigation(1114).t.sHHsOM);
-    return jsx(navigation(4602).Text, {
+    return jsx(navigation(4632).Text, {
       variant: "redesign/heading-18/bold",
       accessibilityRole: "header",
       children: null,
     });
   };
-  tmpResult = tmp(5675);
+  tmpResult = tmp(5705);
   obj2.headerLeft = tmpResult.getHeaderCloseButton(handleClose);
   obj2.render = function render() {
     return jsx(UserProfileEditNote.default, { userId: navigation, onSave, onClose: handleClose, shouldFocusInput });
   };
   obj1.root = obj2;
   obj.screens = obj1;
-  return jsx(navigation(7073).Navigator, obj);
+  return jsx(navigation(7103).Navigator, obj);
 }

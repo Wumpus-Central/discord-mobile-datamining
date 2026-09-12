@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { modal: null, headerLeftContainer: null, headerRightContainer: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -50,16 +50,16 @@ export default function ForLaterModal(type) {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null,
   };
-  let tmp4Result = tmp4(1115);
+  let tmp4Result = tmp4(1150);
   let num = 0;
   if (!tmp4Result.isIOS()) {
     num = useSafeAreaInsetsDefault().top;
   }
   obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  tmp4Result = tmp4(5675);
+  tmp4Result = tmp4(5705);
   obj.headerLeft = tmp4Result.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
   ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp);
-  const items = [closure_4(require("../../../../_runtime/metro/05682__.js").Header, obj)];
+  const items = [closure_4(require("../../../../_runtime/metro/05712__.js").Header, obj)];
   obj = { type, onClose: ModalActionCreatorsDefault.pop };
   items[1] = closure_4(ForLaterScreenDefault, obj, type);
   obj.children = items;

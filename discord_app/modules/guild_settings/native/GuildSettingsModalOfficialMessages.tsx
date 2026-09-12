@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildOfficialMessageUtils from "../../messages/GuildOfficialMessageUtils.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef15345 from "../../../../_runtime/metro/15345__.js";
+import _modDef15367 from "../../../../_runtime/metro/15367__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -45,7 +45,7 @@ function MessagePreview(theme) {
   const items1 = [tmp.chatContainerInner, { backgroundColor: obj2.alpha(closure_1_10).hex() }];
   obj.style = items1;
   const hexResult1 = obj2.alpha(closure_1_10).hex();
-  const items2 = [closure_1_12(native.Avatar, { source: _modDef15345 })];
+  const items2 = [closure_1_12(native.Avatar, { source: _modDef15367 })];
   obj2 = { style: tmp.chatContent, children: null };
   const obj3 = { style: tmp.chatHeader, children: null };
   const obj4 = {
@@ -76,12 +76,12 @@ function MessagePreview(theme) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const MessageConstants = fn(4599);
+const MessageConstants = fn(4629);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_9, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: c10 } = MessageConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: null,
   segmentedControlContainer: null,
@@ -117,8 +117,8 @@ let obj1 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   marginBottom: nativeDefault.space.PX_16,
 };
-createStyles.chatSection = { paddingHorizontal: fn(5654).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
-let obj2 = { paddingHorizontal: fn(5654).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+createStyles.chatSection = { paddingHorizontal: fn(5684).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+let obj2 = { paddingHorizontal: fn(5684).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
 createStyles.chatContainer = {
   paddingVertical: nativeDefault.space.PX_24,
   borderRadius: nativeDefault.radii.xl,
@@ -138,20 +138,20 @@ createStyles.chatContent = { flex: 1 };
 createStyles.chatHeader = { flexDirection: "row", alignItems: "baseline", gap: 6 };
 createStyles.chatTimestamp = { marginTop: -8 };
 let closure_14 = createStyles.createStyles(createStyles);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj4 = {
   flexDirection: "row",
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   gap: nativeDefault.space.PX_8,
 };
 let closure_15 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW });
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_16 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_STRONG });
-fn(4606);
+fn(4636);
 createStyles = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_17 = createStyles.createAnimatedThemedStyles(createStyles);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj6 = { borderColor: nativeDefault.colors.BORDER_STRONG };
 let closure_18 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_MUTED });
 const __initData = {
@@ -251,7 +251,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
       const obj = { officialMessageColor };
       obj.updateGuild(obj);
     };
-    obj.openLazy(asyncRequireImpl(16362, dependencyMap.paths), "RoleColorPicker", obj);
+    obj.openLazy(asyncRequireImpl(16386, dependencyMap.paths), "RoleColorPicker", obj);
   }, items5);
   const tmp8 = hasChanges(officialMessageColor.useState(0), 2);
   [tmp15, c7] = hasChanges(officialMessageColor.useState(0), 2);

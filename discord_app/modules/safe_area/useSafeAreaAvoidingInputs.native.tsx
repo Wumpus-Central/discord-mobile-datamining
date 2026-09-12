@@ -157,7 +157,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
                 if (null != current2) {
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj1 = { value: tmp2(11242).measureViewRefInWindow(found.ref), done: false };
+                  const obj1 = { value: tmp2(11281).measureViewRefInWindow(found.ref), done: false };
                   return obj1;
                 }
               }
@@ -172,7 +172,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
               return obj2;
             } else {
               closure_128_2 = value;
-              let obj6 = tmp2(11242);
+              let obj6 = tmp2(11281);
               dependencyMap = 2;
               c3 = 1;
               const obj3 = { value: obj6.measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
@@ -193,7 +193,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
                   if (null != closure_128_3) {
                     dependencyMap = 3;
                     c3 = 1;
-                    const obj5 = { value: tmp2(11242).measureViewInWindow(closure_128_0), done: false };
+                    const obj5 = { value: tmp2(11281).measureViewInWindow(closure_128_0), done: false };
                     return obj5;
                   }
                 }

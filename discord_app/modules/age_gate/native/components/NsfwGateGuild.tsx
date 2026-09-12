@@ -9,12 +9,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const NsfwGateSource = fn(10385).NsfwGateSource;
+const NsfwGateSource = fn(10424).NsfwGateSource;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, header: null, description: null, image: null };
 createStyles = {
   flex: 1,
@@ -75,8 +75,8 @@ export default function NsfwGateGuild(guildId) {
     obj.track(constants.GUILD_NSFW_GATE_VIEWED, obj);
   }, items);
   obj = { style: tmp.container, children: null };
-  const items1 = [closure_11(currentUser(7046), {}), , , , ,];
-  obj = { source: currentUser(10386), style: tmp.image };
+  const items1 = [closure_11(currentUser(7076), {}), , , , ,];
+  obj = { source: currentUser(10425), style: tmp.image };
   items1[1] = closure_11(closure_5, obj);
   obj1 = {
     style: tmp.header,
@@ -84,8 +84,8 @@ export default function NsfwGateGuild(guildId) {
     color: "mobile-text-heading-primary",
     children: stringResult,
   };
-  items1[2] = closure_11(guildId(4602).Text, obj1);
-  items1[3] = closure_11(guildId(4602).Text, {
+  items1[2] = closure_11(guildId(4632).Text, obj1);
+  items1[3] = closure_11(guildId(4632).Text, {
     style: tmp.description,
     variant: "text-md/normal",
     color: "text-default",
@@ -93,7 +93,7 @@ export default function NsfwGateGuild(guildId) {
   });
   const formatResult = intl3.format(guildId(1114).t.Z12LNW, obj);
   const obj2 = { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 };
-  items1[4] = closure_11(guildId(4602).Text, {
+  items1[4] = closure_11(guildId(4632).Text, {
     style: tmp.description,
     variant: "text-md/normal",
     color: "text-default",
@@ -102,7 +102,7 @@ export default function NsfwGateGuild(guildId) {
   const obj4 = { onPress: guildId.onClose, size: "md", text: null };
   const intl4 = guildId(1114).intl;
   obj4.text = intl4.string(guildId(1114).t.gRqiWV);
-  items1[5] = closure_11(guildId(5026).Button, obj4);
+  items1[5] = closure_11(guildId(5056).Button, obj4);
   obj.children = items1;
   return closure_12(closure_4, obj);
 }

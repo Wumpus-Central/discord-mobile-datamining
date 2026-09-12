@@ -29,7 +29,7 @@ function GridAvatar(user) {
   obj.size = size;
   if (undefined !== pendingAvatarSrc) {
     obj = { source: null };
-    const tmp2Result = tmp2(8331);
+    const tmp2Result = tmp2(8363);
     obj.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
     const merged = Object.assign(obj);
     obj1 = obj;
@@ -42,7 +42,7 @@ function GridAvatar(user) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" },
   avatarStatusStyle: null,

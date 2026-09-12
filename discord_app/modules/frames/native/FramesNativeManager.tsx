@@ -40,13 +40,13 @@ let closure_12 = async function _postMessageToWebView(arg0) {
   }
   return value;
 };
-const isLaunched = fn(9602).isLaunched;
+const isLaunched = fn(9641).isLaunched;
 const ComponentActions = fn(1074).ComponentActions;
 let closure_7 = fn(1920).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(4511).TransportTypes;
-const WebView = fn(8384);
+const TransportTypes = fn(4541).TransportTypes;
+const WebView = fn(8416);
 const React7 = WebView.getWebViewProxy("FRAME_WEB_VIEW_KEY");
-const PlatformUtils = fn(1116);
+const PlatformUtils = fn(1151);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);

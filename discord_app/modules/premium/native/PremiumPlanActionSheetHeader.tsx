@@ -1,17 +1,17 @@
 // discord_app/modules/premium/native/PremiumPlanActionSheetHeader.tsx
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05038_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05068_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef7506 from "../../../../_runtime/metro/07506__.js";
-import _modDef7507 from "../../../../_runtime/metro/07507__.js";
-import _modDef7508 from "../../../../_runtime/metro/07508__.js";
-import _modDef7509 from "../../../../_runtime/metro/07509__.js";
-import _modDef7510 from "../../../../_runtime/metro/07510__.js";
+import _modDef7536 from "../../../../_runtime/metro/07536__.js";
+import _modDef7537 from "../../../../_runtime/metro/07537__.js";
+import _modDef7538 from "../../../../_runtime/metro/07538__.js";
+import _modDef7539 from "../../../../_runtime/metro/07539__.js";
+import _modDef7540 from "../../../../_runtime/metro/07540__.js";
 import PremiumPill from "../../user_settings/premium/native/PremiumPill.tsx";
-import _modDef9476 from "../../../../_runtime/metro/09476__.js";
-import _modDef9481 from "../../../../_runtime/metro/09481__.js";
-import _modDef10804 from "../../../../_runtime/metro/10804__.js";
+import _modDef9515 from "../../../../_runtime/metro/09515__.js";
+import _modDef9520 from "../../../../_runtime/metro/09520__.js";
+import _modDef10843 from "../../../../_runtime/metro/10843__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -20,10 +20,10 @@ require = fn;
 const View = fn(17).View;
 const PremiumConstants = fn(1373);
 ({ PremiumTypes: closure_4, SubscriptionIntervalTypes: hasOwnProperty } = PremiumConstants);
-const getPremiumGradientColor = fn(7505).getPremiumGradientColor;
+const getPremiumGradientColor = fn(7535).getPremiumGradientColor;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   header: { height: 112, justifyContent: "center", alignItems: "center" },
   logoContainer: { position: "absolute", top: 16, left: 16 },
@@ -77,12 +77,12 @@ export default function PremiumPlanActionSheetHeader(arg0) {
   const tmp14 = LinearGradientDefault;
   obj.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
   if (TIER_0.TIER_0 === premiumType) {
-    let tmp13Result = _modDef7506;
+    let tmp13Result = _modDef7536;
   } else {
     tmp13Result = null;
     if (TIER_0.TIER_1 !== premiumType) {
       if (TIER_0.TIER_2 === premiumType) {
-        tmp13Result = _modDef7507;
+        tmp13Result = _modDef7537;
       }
     }
   }
@@ -91,11 +91,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     obj = { style: tmp.logoContainer, children: null };
     tmp13Result = FastImageDefault;
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result1 = _modDef7508;
+      let tmp13Result1 = _modDef7538;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result1 = _modDef7509;
+      tmp13Result1 = _modDef7539;
     } else if (TIER_0.TIER_2 === premiumType) {
-      tmp13Result1 = _modDef7510;
+      tmp13Result1 = _modDef7540;
     }
     const obj1 = { source: tmp13Result1, resizeMode: "contain" };
     const items1 = [React5(tmp13Result, obj1), ,];
@@ -126,11 +126,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     obj.children = items1;
     items[1] = React6(View, obj);
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result3 = _modDef9476;
+      let tmp13Result3 = _modDef9515;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result3 = _modDef10804;
+      tmp13Result3 = _modDef10843;
     } else if (TIER_0.TIER_2 === premiumType) {
-      tmp13Result3 = _modDef9481;
+      tmp13Result3 = _modDef9520;
     }
     const obj4 = { source: tmp13Result3, style: null, resizeMode: "contain" };
     const items2 = [tmp.imgWumpus];
@@ -150,12 +150,12 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     tmp13Result2 = FastImageDefault;
   } else {
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result5 = _modDef7506;
+      let tmp13Result5 = _modDef7536;
     } else {
       tmp13Result5 = null;
       if (TIER_0.TIER_1 !== premiumType) {
         if (TIER_0.TIER_2 === premiumType) {
-          tmp13Result5 = _modDef7507;
+          tmp13Result5 = _modDef7537;
         }
       }
     }

@@ -37,7 +37,7 @@ function GuildProfileGameRow(activityLevel) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 48 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileGamesActionSheet.tsx");
@@ -46,16 +46,16 @@ export default function GuildProfileGamesActionSheet(profile) {
   profile = profile.profile;
   const id = profile.id;
   const gameActivity = profile.gameActivity;
-  let obj = id(9290);
+  let obj = id(9329);
   const allGuildProfileGames = obj.useAllGuildProfileGames(profile);
-  let obj1 = id(8255);
+  let obj1 = id(8287);
   const intl = id(1114).intl;
   let str = intl.format(id(1114).t.vuAVo7, { serverName: profile.name });
   const items = [id];
   str = str.toString();
   const callback = noop.useCallback(() => {
     const obj = { guildId: id };
-    obj.openLazy(asyncRequireImpl(9275, dependencyMap.paths), "GuildProfileActionSheet:" + id, obj);
+    obj.openLazy(asyncRequireImpl(9314, dependencyMap.paths), "GuildProfileActionSheet:" + id, obj);
   }, items);
   obj = {
     ref: obj1.useBottomSheetRef().bottomSheetRef,
@@ -67,7 +67,7 @@ export default function GuildProfileGamesActionSheet(profile) {
   obj = { children: null };
   obj1 = { style: closure_7().container, children: null };
   const tmp = closure_7();
-  obj1.children = jsx(id(5738).TableRowGroup, {
+  obj1.children = jsx(id(5768).TableRowGroup, {
     title: str,
     hasIcons: true,
     children: allGuildProfileGames.map((game) => (
@@ -75,6 +75,6 @@ export default function GuildProfileGamesActionSheet(profile) {
     )),
   });
   obj.children = <View style={closure_7().container}>{null}</View>;
-  obj.children = jsx(id(6698).BottomSheetScrollView, { children: null });
-  return jsx(id(7223).BottomSheet, { children: null });
+  obj.children = jsx(id(6728).BottomSheetScrollView, { children: null });
+  return jsx(id(7253).BottomSheet, { children: null });
 }

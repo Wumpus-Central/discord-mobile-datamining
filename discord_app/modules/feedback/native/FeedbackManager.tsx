@@ -8,7 +8,7 @@ import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.t
 import FeedbackManager from "../FeedbackManager.tsx";
 
 require = fn;
-const FeedbackType = fn(11719).FeedbackType;
+const FeedbackType = fn(11755).FeedbackType;
 let prototype = function FeedbackManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;

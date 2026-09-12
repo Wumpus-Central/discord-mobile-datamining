@@ -31,11 +31,11 @@ function ChangeBannerColorRow(user) {
   let obj1 = require("RecentAvatarUtils");
   obj = { userId: user.id, image: pendingAvatar };
   let pendingAvatarSrc = obj1.getPendingAvatarSrc(obj);
-  const tmp7 = pendingAccentColor(8271)(user.id);
+  const tmp7 = pendingAccentColor(8303)(user.id);
   if (pendingAvatarSrc == null) {
     pendingAvatarSrc = user.getAvatarURL(undefined, 80);
   }
-  tmp2(8332);
+  tmp2(8364);
   const tmp2Result = tmp2(1091);
   const memoizedImageSourceResult = tmp2Result.memoizedImageSource(pendingAvatarSrc);
   const rgb2intResult = tmp2Result.rgb2int(
@@ -69,7 +69,7 @@ function ChangeBannerColorRow(user) {
   obj1.text = intl.string(require("util").t.xzNfPz);
   obj.label = closure_9(require("Form").FormLabel, obj1);
   const obj2 = { style: tmp.selectedColor, children: null };
-  const items2 = [closure_9(pendingAccentColor(14650), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
+  const items2 = [closure_9(pendingAccentColor(14684), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
   const obj4 = {
     style: tmp.selectedColorHex,
     variant: "text-md/medium",
@@ -84,7 +84,7 @@ function ChangeBannerColorRow(user) {
   items2[2] = closure_9(require("native").Icon, {
     style: tmp.rowArrow,
     size: require("native").Icon.Sizes.CUSTOM,
-    source: pendingAccentColor(14655),
+    source: pendingAccentColor(14689),
   });
   obj2.children = items2;
   obj.trailing = closure_10(View, obj2);
@@ -98,7 +98,7 @@ const Constants = fn(1074);
 ({ AnalyticsObjects: closure_7, UPLOAD_BANNER_SIZE: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   label: null,
   sublabel: null,
@@ -181,11 +181,11 @@ export default function ChangeBannerActionSheet(isTryItOut) {
             closure_128_0 = undefined;
             let base64;
             let originalMd5;
-            let obj3 = tmp5(4573);
+            let obj3 = tmp5(4603);
             obj3.hideActionSheet();
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = { value: tmp5(5189).openImagePicker(closure_1_8), done: false };
+            const obj1 = { value: tmp5(5219).openImagePicker(closure_1_8), done: false };
             return obj1;
           }
         } else if (dependencyMap === 1) {
@@ -200,9 +200,9 @@ export default function ChangeBannerActionSheet(isTryItOut) {
           base64 = closure_128_0.base64;
           originalMd5 = closure_128_0.originalMd5;
           if (null != base64) {
-            obj = tmp2(14646);
+            obj = tmp2(14680);
             obj3 = {
-              assetOrigin: tmp2(7062).AssetOriginTypes.NEW_ASSET,
+              assetOrigin: tmp2(7092).AssetOriginTypes.NEW_ASSET,
               imageUri: base64,
               description: "",
               originalAsset: "Array",
@@ -221,8 +221,8 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   };
   const tmp = closure_12();
   if (!flag) {
-    flag = tmp2(4264).canUsePremiumProfileCustomization(user);
-    const tmp2Result = tmp2(4264);
+    flag = tmp2(4294).canUsePremiumProfileCustomization(user);
+    const tmp2Result = tmp2(4294);
   }
   let obj = { value: useAnalyticsLocationsDefault(isTryItOut.analyticsLocations).analyticsLocations, children: null };
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
@@ -274,7 +274,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     const obj6 = { style: tmp.upsellButton, children: null };
     const obj7 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-    obj6.children = closure_9(tmp2(14647), obj7);
+    obj6.children = closure_9(tmp2(14681), obj7);
     tmp4Result2 = closure_9(View, obj6);
   }
   items3[1] = tmp4Result2;

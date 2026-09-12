@@ -173,7 +173,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, init
               closure_130_8 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -500,78 +500,24 @@ export const createFetchStore = function createFetchStore(ApplicationStore, init
     closure_0 = [...arguments];
     c3 = 0;
     c4 = 0;
-    const iter = (async (arg0) => {
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_2 = tmp5;
-              closure_1 = tmp2;
-              closure_129_0 = closure_0;
-              closure_129_1 = undefined;
-              closure_129_2 = undefined;
-              c3 = 1;
-              c4 = 1;
-              return { value: "PX_16", done: null };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj1 = { value, done: true };
-              return obj1;
-            } else {
-              const items = [];
-              HermesBuiltin.arraySpread(closure_129_0, 0);
-              closure_129_1 = HermesBuiltin.apply(items, undefined);
-              closure_129_2 = closure_130_12(closure_129_1);
-              backoff = closure_129_2.getState().backoff;
-              backoff.succeed();
-              closure_129_2.setState({ failureLockedUntil: null });
-              const obj2 = { queryId: closure_129_1, args: closure_129_0, useStoreState: closure_129_2, refetch: true };
-              c3 = 2;
-              c4 = 1;
-              const obj3 = { value: closure_130_13(obj2), done: false };
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp7) {
-          c4 = tmp;
-          throw tmp7;
-        }
-      }
+    const iter = (async () => {
+      const items = [];
+      HermesBuiltin.arraySpread(closure_129_0, 0);
+      closure_129_1 = HermesBuiltin.apply(items, undefined);
+      closure_129_2 = closure_130_12(closure_129_1);
+      backoff = closure_129_2.getState().backoff;
+      backoff.succeed();
+      closure_129_2.setState({ failureLockedUntil: null });
+      await closure_130_13({
+        queryId: closure_129_1,
+        args: closure_129_0,
+        useStoreState: closure_129_2,
+        refetch: true,
+      });
+      await "HermesInternal";
+      closure_1 = tmp2;
+      closure_129_0 = closure_0;
+      return "PX_16";
     })();
     iter.next();
     return iter;
@@ -580,94 +526,36 @@ export const createFetchStore = function createFetchStore(ApplicationStore, init
     closure_0 = [...arguments];
     c2 = 0;
     c3 = 0;
-    const iter = (async (arg0) => {
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_1 = tmp2;
-              closure_129_0 = closure_0;
-              c2 = 1;
-              c3 = 1;
-              return { value: "PX_16", done: null };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj1 = { value, done: true };
-              return obj1;
-            } else {
-              c2 = 2;
-              c3 = 1;
-              const obj2 = {
-                value: Promise.all(
-                  closure_129_0.map((args) => {
-                    const tmp = closure_1_1(...args);
-                    let obj = { queryId: tmp, args, useStoreState: null };
-                    if (null == tmp) {
-                      value = loader;
-                    } else {
-                      value = closure_1_11.get(tmp);
-                      if (null == value) {
-                        obj = closure_0(dependencyMap[5]).create(() => ({
-                          isLoading: false,
-                          error: null,
-                          backoff: closure_1_7(),
-                          lastSuccessAt: null,
-                          failureLockedUntil: null,
-                        }));
-                        const result = closure_1_11.set(tmp, obj);
-                        value = obj;
-                        const obj3 = closure_0(dependencyMap[5]);
-                      }
-                    }
-                    obj.useStoreState = value;
-                    return closure_1_13(obj);
-                  }),
-                ),
-                done: false,
-              };
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value, done: true };
-            return obj;
+    const iter = (async () => {
+      await Promise.all(
+        closure_129_0.map((args) => {
+          const tmp = closure_1_1(...args);
+          let obj = { queryId: tmp, args, useStoreState: null };
+          if (null == tmp) {
+            value = loader;
           } else {
-            c3 = 3;
-            return { value: "HermesInternal", done: null };
+            value = closure_1_11.get(tmp);
+            if (null == value) {
+              obj = closure_0(dependencyMap[5]).create(() => ({
+                isLoading: false,
+                error: null,
+                backoff: closure_1_7(),
+                lastSuccessAt: null,
+                failureLockedUntil: null,
+              }));
+              const result = closure_1_11.set(tmp, obj);
+              value = obj;
+              const obj3 = closure_0(dependencyMap[5]);
+            }
           }
-        } catch (tmp10) {
-          c3 = tmp;
-          throw tmp10;
-        }
-      }
+          obj.useStoreState = value;
+          return closure_1_13(obj);
+        }),
+      );
+      await "HermesInternal";
+      closure_1 = tmp2;
+      closure_129_0 = closure_0;
+      return "PX_16";
     })();
     iter.next();
     return iter;
@@ -676,97 +564,39 @@ export const createFetchStore = function createFetchStore(ApplicationStore, init
     closure_0 = [...arguments];
     c2 = 0;
     c3 = 0;
-    const iter = (async (arg0) => {
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_1 = tmp2;
-              closure_129_0 = closure_0;
-              c2 = 1;
-              c3 = 1;
-              return { value: "PX_16", done: null };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj1 = { value, done: true };
-              return obj1;
-            } else {
-              c2 = 2;
-              c3 = 1;
-              const obj2 = {
-                value: Promise.all(
-                  closure_129_0.map((args) => {
-                    const tmp = closure_1_1(...args);
-                    if (null == tmp) {
-                      value = loader;
-                    } else {
-                      let obj = closure_1_11;
-                      value = closure_1_11.get(tmp);
-                      if (null == value) {
-                        obj = closure_0(dependencyMap[5]).create(() => ({
-                          isLoading: false,
-                          error: null,
-                          backoff: closure_1_7(),
-                          lastSuccessAt: null,
-                          failureLockedUntil: null,
-                        }));
-                        const result = obj.set(tmp, obj);
-                        value = obj;
-                        const obj3 = closure_0(dependencyMap[5]);
-                      }
-                    }
-                    backoff = value.getState().backoff;
-                    backoff.succeed();
-                    value.setState({ failureLockedUntil: null });
-                    obj = { queryId: tmp, args, useStoreState: value, refetch: true };
-                    return closure_1_13(obj);
-                  }),
-                ),
-                done: false,
-              };
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value, done: true };
-            return obj;
+    const iter = (async () => {
+      await Promise.all(
+        closure_129_0.map((args) => {
+          const tmp = closure_1_1(...args);
+          if (null == tmp) {
+            value = loader;
           } else {
-            c3 = 3;
-            return { value: "HermesInternal", done: null };
+            let obj = closure_1_11;
+            value = closure_1_11.get(tmp);
+            if (null == value) {
+              obj = closure_0(dependencyMap[5]).create(() => ({
+                isLoading: false,
+                error: null,
+                backoff: closure_1_7(),
+                lastSuccessAt: null,
+                failureLockedUntil: null,
+              }));
+              const result = obj.set(tmp, obj);
+              value = obj;
+              const obj3 = closure_0(dependencyMap[5]);
+            }
           }
-        } catch (tmp10) {
-          c3 = tmp;
-          throw tmp10;
-        }
-      }
+          backoff = value.getState().backoff;
+          backoff.succeed();
+          value.setState({ failureLockedUntil: null });
+          obj = { queryId: tmp, args, useStoreState: value, refetch: true };
+          return closure_1_13(obj);
+        }),
+      );
+      await "HermesInternal";
+      closure_1 = tmp2;
+      closure_129_0 = closure_0;
+      return "PX_16";
     })();
     iter.next();
     return iter;

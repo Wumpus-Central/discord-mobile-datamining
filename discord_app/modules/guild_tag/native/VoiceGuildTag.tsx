@@ -5,15 +5,15 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8018).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8048).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 10;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 PlatformUtils = { gapContainer: { height: num }, tagContainer: null, tag: null };
 PlatformUtils = {
   alignItems: "center",
@@ -28,7 +28,7 @@ PlatformUtils = {
 };
 let num2 = 16;
 PlatformUtils.tagContainer = PlatformUtils;
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 if (PlatformUtils.isAndroid()) {
   num2 = 13;
 }
@@ -44,7 +44,7 @@ export default function VoiceGuildTagChiplet(userId) {
   const items = [UserStore];
   const items1 = [userId];
   const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(userId), items1);
-  let obj1 = userId(8250);
+  let obj1 = userId(8282);
   let primaryGuild;
   if (stateFromStores != null) {
     primaryGuild = stateFromStores.primaryGuild;
@@ -55,14 +55,14 @@ export default function VoiceGuildTagChiplet(userId) {
     if (null != tag) {
       obj = { style: tmp.gapContainer, children: null };
       obj = { style: tmp.tagContainer, children: null };
-      const guildTagBadgeUrl = tmp2(8250).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
+      const guildTagBadgeUrl = tmp2(8282).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
       obj1 = { source: null, size: null };
       const obj2 = { uri: guildTagBadgeUrl };
       obj1.source = obj2;
       obj1.size = GuildTagBadgeSize.SIZE_12;
-      const items2 = [closure_5(tmp2(9274).GuildTagBadge, obj1)];
+      const items2 = [closure_5(tmp2(9313).GuildTagBadge, obj1)];
       const obj3 = { variant: "text-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
-      items2[1] = closure_5(tmp2(4602).Text, obj3);
+      items2[1] = closure_5(tmp2(4632).Text, obj3);
       obj.children = items2;
       obj.children = closure_6(View, obj);
       return closure_5(View, obj);

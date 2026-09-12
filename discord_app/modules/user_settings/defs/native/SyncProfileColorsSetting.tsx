@@ -4,18 +4,18 @@ import util from "../../../../intl/index.native.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["sSY+mD"]);
   },
-  parent: fn(8049).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8079).MobileUserSettings.ACCESSIBILITY,
   useValue: function useProfileColorsSettingValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   },
-  onValueChange: fn(14490).toggleSyncProfileThemeWithUserTheme,
+  onValueChange: fn(14525).toggleSyncProfileThemeWithUserTheme,
 };
 SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
 const size = fn(2);

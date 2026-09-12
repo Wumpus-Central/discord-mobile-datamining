@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06726_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06756_LegacyBaseButton.js";
 import getEmbeddedActivityLaunchability from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
 import UserSettingsVoiceProcessing from "../../../user_settings/voice/native/UserSettingsVoiceProcessing.tsx";
@@ -21,10 +21,10 @@ const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment
 
 require = fn;
 function NOOP() {}
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(12364).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(12400).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { scrollView: null, scrollViewScreenReader: null, blurRegion: null };
 obj = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.scrollView = obj;
@@ -147,7 +147,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   let sharedValue;
   let gestureRef;
   let scrollerRef;
-  let tmp = closure_8();
+  const tmp = closure_8();
   channelId = gestureRef.useContext(channelId(sharedValue[8])).channelId;
   let obj = isVisible(sharedValue[20]);
   const items = [scrollerRef];
@@ -162,21 +162,16 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   fn.__initData = __initData;
   const items1 = [sharedValue];
   const callback = gestureRef.useCallback(fn, items1);
-  const tmp8 = gestureRef.useContext(isVisible(sharedValue[21]).ControlsGestureScrollLock)({
-    onScrollHandlerWorkletized: callback,
-  });
-  gestureRef = tmp8.gestureRef;
-  scrollerRef = tmp8.scrollerRef;
-  ({ onScroll, animatedProps } = tmp8);
-  let obj2 = isVisible(sharedValue[22]);
-  const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
+  let obj2 = isVisible(sharedValue[21]);
+  const animatedScrollLock = obj2.useAnimatedScrollLock({ onScrollHandlerWorkletized: callback });
+  gestureRef = animatedScrollLock.gestureRef;
+  scrollerRef = animatedScrollLock.scrollerRef;
+  ({ onScroll, animatedProps } = animatedScrollLock);
+  let obj3 = isVisible(sharedValue[22]);
+  const isScreenReaderEnabled = obj3.useIsScreenReaderEnabled();
   const items2 = [isVisible, scrollerRef];
   const effect = gestureRef.useEffect(() => {
-    let tmp = isVisible;
     if (isVisible) {
-      tmp = null != scrollerRef;
-    }
-    if (tmp) {
       const current = scrollerRef.current;
       if (current != null) {
         current.scrollTo({ x: 0, y: 0, animated: false });
@@ -187,12 +182,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   const memo = gestureRef.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const NativeResult = Gesture.Native();
-    const enabledResult = NativeResult.enabled(!MetaQuestUtils.isMetaQuest());
-    let result = enabledResult;
-    if (null != gestureRef) {
-      result = enabledResult.simultaneousWithExternalGesture(tmp);
-    }
-    return result;
+    return NativeResult.enabled(!MetaQuestUtils.isMetaQuest()).simultaneousWithExternalGesture(gestureRef);
   }, items3);
   obj = { gesture: memo, children: null };
   obj = {
@@ -223,7 +213,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   const children = [closure_5(isVisible(sharedValue[23]).GestureDetector, obj)];
   let tmp14Result1 = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
-    const obj3 = { shown: sharedValue, style: tmp.blurRegion };
+    obj3 = { shown: sharedValue, style: tmp.blurRegion };
     tmp14Result1 = closure_5(tmp2(tmp3[27]), obj3);
   }
   children[1] = tmp14Result1;

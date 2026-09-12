@@ -4,7 +4,7 @@ import embeddedActivityLocationUtils from "../../../activities/utils/embeddedAct
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06726_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06756_LegacyBaseButton.js";
 import EmbeddedActivitiesActionCreatorsAll from "../../../activities/EmbeddedActivitiesActionCreators.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
@@ -593,15 +593,15 @@ function renderPIPWrapper(arg0, pipMode, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12366);
+const VoicePanelConstants = fn(12402);
 ({ DRAWER_SPRING_PHYSICS: c10, VoicePanelModes: closure_11, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12364).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17170).VoicePanelPIPModes;
-const ActivityPanelModes = fn(9596).ActivityPanelModes;
-const isLaunched = fn(9602).isLaunched;
+const VoicePanelControlsModes = fn(12400).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17197).VoicePanelPIPModes;
+const ActivityPanelModes = fn(9635).ActivityPanelModes;
+const isLaunched = fn(9641).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = {
   container: { position: "absolute", zIndex: 10 },
   pipContentWrapper: { backgroundColor: "black" },
@@ -692,7 +692,7 @@ let closure_35 = noop.memo((transitionState) => {
   let obj = panelCardStillInPIP;
   let tmp = transitionState.pipMode === VoicePanelPIPModes.IN_PANEL;
   if (!tmp) {
-    tmp = transitionState === transitionState(4317).TransitionStates.MOUNTED;
+    tmp = transitionState === transitionState(4347).TransitionStates.MOUNTED;
   }
   [tmp5, c2] = fireCleanup(panelCardStillInPIP.useState(tmp), 2);
   const effect = obj.useEffect(() => {
@@ -725,7 +725,7 @@ let closure_35 = noop.memo((transitionState) => {
       };
     }
   }, items1);
-  panelCardStillInPIP = obj.useContext(transitionCleanUp(12365)).panelCardStillInPIP;
+  panelCardStillInPIP = obj.useContext(transitionCleanUp(12401)).panelCardStillInPIP;
   const tmp4 = fireCleanup(panelCardStillInPIP.useState(tmp), 2);
   class I {
     constructor() {
@@ -737,7 +737,7 @@ let closure_35 = noop.memo((transitionState) => {
       return tmp;
     }
   }
-  obj = { transitionState, TransitionStates: transitionState(4317).TransitionStates, panelCardStillInPIP };
+  obj = { transitionState, TransitionStates: transitionState(4347).TransitionStates, panelCardStillInPIP };
   I.__closure = obj;
   I.__workletHash = 3025452431419;
   I.__initData = __initData4;
@@ -758,11 +758,11 @@ let closure_35 = noop.memo((transitionState) => {
       return;
     }
   }
-  obj = { runOnJS: transitionState(4343).runOnJS, fireCleanup };
+  obj = { runOnJS: transitionState(4373).runOnJS, fireCleanup };
   S.__closure = obj;
   S.__workletHash = 5494714290933;
   S.__initData = __initData5;
-  const animatedReaction = transitionState(4343).useAnimatedReaction(I, S);
+  const animatedReaction = transitionState(4373).useAnimatedReaction(I, S);
   let tmp10 = null;
   if (tmp5) {
     tmp10 = closure_16(VoicePanelPIP, {});

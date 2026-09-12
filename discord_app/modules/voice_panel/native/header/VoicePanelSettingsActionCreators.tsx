@@ -12,5 +12,5 @@ export const closeVoicePanelSettingsActionSheet = function closeVoicePanelSettin
 };
 export const openVoicePanelSettingsActionSheet = function openVoicePanelSettingsActionSheet(guildId, channelId) {
   const obj = { guildId, channelId };
-  obj.openLazy(asyncRequireImpl(17192, dependencyMap.paths), VoicePanelSettingsActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(17219, dependencyMap.paths), VoicePanelSettingsActionSheet, obj);
 };

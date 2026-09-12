@@ -11,7 +11,7 @@ require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = {
   titleWrapper: {
     position: "absolute",
@@ -21,7 +21,7 @@ let obj = {
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
-    height: fn(12364).CONTROLS_DRAWER_HEADER_SIZE,
+    height: fn(12400).CONTROLS_DRAWER_HEADER_SIZE,
   },
   titlePill: null,
   titlePillBG: null,

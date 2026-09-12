@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles({
   emoji: { flexShrink: 0, width: "100%", height: "100%" },
   text: { textAlign: "center", fontFamily: "System" },
@@ -62,7 +62,7 @@ export default function ActivityEmoji(emoji) {
     }
   }
   if (null == emoji) {
-    ReactionIcon = ReactionIcon(8848).ReactionIcon;
+    ReactionIcon = ReactionIcon(8883).ReactionIcon;
     obj = { style, size: "sm" };
     <ReactionIcon style={style} size="sm" />;
   } else {

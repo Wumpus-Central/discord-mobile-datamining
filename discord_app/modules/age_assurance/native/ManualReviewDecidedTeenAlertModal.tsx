@@ -23,7 +23,7 @@ export default function ManualReviewDecidedTeenAlertModal() {
           variant: "text-md/normal",
           color: "text-link",
           onPress() {
-            const obj = closure_1_1(8497);
+            const obj = closure_1_1(8529);
             const intl = closure_1_0(1114).intl;
             return obj.openUrl(closure_1_1(2024).getArticleURL(intl.string(closure_1_1(2978).agiNYw)));
           },

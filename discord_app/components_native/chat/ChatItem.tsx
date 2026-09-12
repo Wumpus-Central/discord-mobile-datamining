@@ -39,12 +39,12 @@ function DCDChatItem(message) {
 }
 const View = fn(17).View;
 const MessageTypes = fn(1074).MessageTypes;
-const RowGeneratorConstants = fn(8007);
+const RowGeneratorConstants = fn(8037);
 ({ RowType: closure_8, Changeset: closure_9 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_14 = createStyles.createStyles((marginLeft, marginTop, paddingTop) => {
   let obj = {
     container: null,
@@ -211,6 +211,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 }
-export const DCDMessageView = fn(8745).default;
-export const DCDSystemMessageView = fn(8746).default;
-export const DCDAutoModerationSystemMessageView = fn(8744).default;
+export const DCDMessageView = fn(8777).default;
+export const DCDSystemMessageView = fn(8778).default;
+export const DCDAutoModerationSystemMessageView = fn(8776).default;

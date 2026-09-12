@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let str = "";
 if (PlatformUtils.isIOS()) {
   str =
@@ -34,7 +34,7 @@ const PlayerState = {
   VIDEO_CUED: 8,
   [8]: "VIDEO_CUED",
 };
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_10 = createStyles.createStyles({
   loading: {
     top: 0,

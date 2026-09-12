@@ -11,7 +11,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 const util = v0wJXSh(1114);
-const VoiceActivityStatus = v0wJXSh(10982);
+const VoiceActivityStatus = v0wJXSh(11021);
 require = fn;
 const ActivityTypes = fn(1074).ActivityTypes;
 const size = fn(2);

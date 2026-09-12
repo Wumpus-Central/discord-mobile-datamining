@@ -6,7 +6,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 
 require = fn;
-const GuildPowerupsConstants = fn(4496);
+const GuildPowerupsConstants = fn(4526);
 ({
   GuildPowerupNewPerkMarketingVersion: hasOwnProperty,
   NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: metroRequire,

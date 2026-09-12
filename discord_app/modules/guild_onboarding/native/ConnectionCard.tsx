@@ -3,7 +3,7 @@ import ApplicationConnectionCardDefault from "ApplicationConnectionCard.tsx";
 import ProviderConnectionCardDefault from "ProviderConnectionCard.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const OnboardingConnectionType = fn(7174).OnboardingConnectionType;
+const OnboardingConnectionType = fn(7204).OnboardingConnectionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/ConnectionCard.tsx");

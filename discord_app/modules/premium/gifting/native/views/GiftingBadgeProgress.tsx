@@ -19,10 +19,10 @@ function GiftingBadgeProgressBar(percent) {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(8277).getSingleRequirementThreshold;
+let closure_4 = fn(8309).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, content: null, progressBarTrack: null, progressBarFill: null, labels: null };
 createStyles = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;

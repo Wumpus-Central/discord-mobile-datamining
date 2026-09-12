@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef10248 from "../../../../../_runtime/metro/10248__.js";
-import _modDef14012 from "../../../../../_runtime/metro/14012__.js";
-import _modDef15341 from "../../../../../_runtime/metro/15341__.js";
-import _modDef15342 from "../../../../../_runtime/metro/15342__.js";
-import _modDef15343 from "../../../../../_runtime/metro/15343__.js";
-import _modDef15344 from "../../../../../_runtime/metro/15344__.js";
-import _modDef15345 from "../../../../../_runtime/metro/15345__.js";
-import _modDef15346 from "../../../../../_runtime/metro/15346__.js";
-import _modDef15347 from "../../../../../_runtime/metro/15347__.js";
-import _modDef15348 from "../../../../../_runtime/metro/15348__.js";
-import _modDef15349 from "../../../../../_runtime/metro/15349__.js";
-import _modDef15350 from "../../../../../_runtime/metro/15350__.js";
-import _modDef15351 from "../../../../../_runtime/metro/15351__.js";
+import _modDef10287 from "../../../../../_runtime/metro/10287__.js";
+import _modDef14046 from "../../../../../_runtime/metro/14046__.js";
+import _modDef15363 from "../../../../../_runtime/metro/15363__.js";
+import _modDef15364 from "../../../../../_runtime/metro/15364__.js";
+import _modDef15365 from "../../../../../_runtime/metro/15365__.js";
+import _modDef15366 from "../../../../../_runtime/metro/15366__.js";
+import _modDef15367 from "../../../../../_runtime/metro/15367__.js";
+import _modDef15368 from "../../../../../_runtime/metro/15368__.js";
+import _modDef15369 from "../../../../../_runtime/metro/15369__.js";
+import _modDef15370 from "../../../../../_runtime/metro/15370__.js";
+import _modDef15371 from "../../../../../_runtime/metro/15371__.js";
+import _modDef15372 from "../../../../../_runtime/metro/15372__.js";
+import _modDef15373 from "../../../../../_runtime/metro/15373__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const StatusTypes = Constants.StatusTypes;
@@ -27,8 +27,8 @@ export default function _default() {
   obj.title = intl.string(util.t.B6GPzA);
   const intl2 = util.intl;
   obj.subtitle = intl2.string(util.t["Tnrh/k"]);
-  obj.image = _modDef15341;
-  const items1 = [_modDef15342, _modDef15343, _modDef15344, _modDef15345, _modDef15346];
+  obj.image = _modDef15363;
+  const items1 = [_modDef15364, _modDef15365, _modDef15366, _modDef15367, _modDef15368];
   obj.avatars = items1;
   const items2 = [obj];
   obj = { title: null, subtitle: null, kind: "voice-chat", image: null };
@@ -36,7 +36,7 @@ export default function _default() {
   obj.title = intl3.string(util.t.YAgqmE);
   const intl4 = util.intl;
   obj.subtitle = intl4.string(util.t["9YJgal"]);
-  obj.image = _modDef15347;
+  obj.image = _modDef15369;
   items2[1] = obj;
   obj.cards = items2;
   items[1] = obj;
@@ -55,7 +55,7 @@ export default function _default() {
   obj1.title = intl6.string(util.t["mK5Zd+"]);
   const intl7 = util.intl;
   obj1.preview = intl7.string(util.t.cvvVUV);
-  obj1.avatar1 = _modDef15348;
+  obj1.avatar1 = _modDef15370;
   items[2] = obj1;
   const obj2 = {
     id: "4",
@@ -73,8 +73,8 @@ export default function _default() {
   obj2.title = intl9.string(util.t.FpJH9k);
   const intl10 = util.intl;
   obj2.preview = intl10.string(util.t.F1WIrQ);
-  obj2.avatar1 = _modDef15349;
-  obj2.avatar2 = _modDef15350;
+  obj2.avatar1 = _modDef15371;
+  obj2.avatar2 = _modDef15372;
   items[3] = obj2;
   const obj3 = {
     id: "5",
@@ -91,7 +91,7 @@ export default function _default() {
   obj3.title = intl12.string(util.t.PHbyD7);
   const intl13 = util.intl;
   obj3.preview = intl13.string(util.t.GSuP1s);
-  obj3.avatar1 = _modDef14012;
+  obj3.avatar1 = _modDef14046;
   obj3.status = StatusTypes.IDLE;
   items[4] = obj3;
   const obj4 = {
@@ -109,8 +109,8 @@ export default function _default() {
   obj4.title = intl15.string(util.t["0HGnUV"]);
   const intl16 = util.intl;
   obj4.preview = intl16.string(util.t["VYL+vm"]);
-  obj4.avatar1 = _modDef10248;
-  obj4.avatar2 = _modDef15344;
+  obj4.avatar1 = _modDef10287;
+  obj4.avatar2 = _modDef15366;
   items[5] = obj4;
   const obj5 = { id: "10", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
   const intl17 = util.intl;
@@ -119,7 +119,7 @@ export default function _default() {
   obj5.title = intl18.string(util.t["z+f+zN"]);
   const intl19 = util.intl;
   obj5.preview = intl19.string(util.t.Wy2xnv);
-  obj5.avatar1 = _modDef15350;
+  obj5.avatar1 = _modDef15372;
   items[6] = obj5;
   const obj6 = {
     id: "11",
@@ -136,8 +136,8 @@ export default function _default() {
   obj6.title = intl21.string(util.t["AYOqO/"]);
   const intl22 = util.intl;
   obj6.preview = intl22.string(util.t.OrbvPP);
-  obj6.avatar1 = _modDef15345;
-  obj6.avatar2 = _modDef10248;
+  obj6.avatar1 = _modDef15367;
+  obj6.avatar2 = _modDef10287;
   items[7] = obj6;
   const obj7 = {
     id: "12",
@@ -154,7 +154,7 @@ export default function _default() {
   obj7.title = intl24.string(util.t["86rWJp"]);
   const intl25 = util.intl;
   obj7.preview = intl25.string(util.t.dFT4dX);
-  obj7.avatar1 = _modDef15351;
+  obj7.avatar1 = _modDef15373;
   obj7.status = StatusTypes.DND;
   items[8] = obj7;
   const obj8 = { id: "13", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
@@ -164,7 +164,7 @@ export default function _default() {
   obj8.title = intl27.string(util.t["z3+vGV"]);
   const intl28 = util.intl;
   obj8.preview = intl28.string(util.t.Zj8Sl1);
-  obj8.avatar1 = _modDef15345;
+  obj8.avatar1 = _modDef15367;
   items[9] = obj8;
   const obj9 = {
     id: "15",
@@ -181,7 +181,7 @@ export default function _default() {
   obj9.title = intl30.string(util.t["8SENG2"]);
   const intl31 = util.intl;
   obj9.preview = intl31.string(util.t["2ziAWp"]);
-  obj9.avatar1 = _modDef15343;
+  obj9.avatar1 = _modDef15365;
   obj9.status = StatusTypes.DND;
   items[10] = obj9;
   return items;

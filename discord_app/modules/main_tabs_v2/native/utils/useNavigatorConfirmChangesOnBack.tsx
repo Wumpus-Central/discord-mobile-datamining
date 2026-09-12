@@ -38,6 +38,6 @@ export default function useNavigatorConfirmChangesOnBack() {
       }
     },
   };
-  obj.onGoBack = ref(11014)(obj).onGoBack;
+  obj.onGoBack = ref(11053)(obj).onGoBack;
   return obj;
 }

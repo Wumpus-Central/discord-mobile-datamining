@@ -28,7 +28,7 @@ function startBackgroundTask(arg0) {
   }
 }
 const NativeModules = fn(17).NativeModules;
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let num = -1;
 if (!PlatformUtils.isAndroid()) {
   num = NativeModules.DCDBackgroundTaskManager.backgroundTaskIdentifierInvalid;

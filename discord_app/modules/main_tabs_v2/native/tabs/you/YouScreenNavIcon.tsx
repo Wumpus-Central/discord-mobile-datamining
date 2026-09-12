@@ -10,12 +10,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const md = fn(16476).ICON_SIZE.md;
+const md = fn(16500).ICON_SIZE.md;
 const result = (nativeDefault.space.PX_32 - md) / 2;
 const TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
-const point = { shape: fn(8905).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
+const point = { shape: fn(8940).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
 let items = [point];
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { container: null, label: null, dot: null };
 obj = {
   borderRadius: nativeDefault.modules.button.BORDER_RADIUS,

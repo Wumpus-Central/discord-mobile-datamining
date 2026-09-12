@@ -10,7 +10,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = "more-options";
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { anchor: null };
 let size = {
   position: "absolute",
@@ -25,21 +25,21 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFavorites.tsx");
 
 export default noop.memo(function GuildsBarFavorites() {
-  let obj = shouldShowPopover(16365);
-  let obj1 = shouldShowPopover(10313);
+  let obj = shouldShowPopover(16389);
+  let obj1 = shouldShowPopover(10352);
   const isFavoritesGuildSelected = obj1.useIsFavoritesGuildSelected();
   let obj2 = shouldShowPopover(504);
   let items = [FavoriteStore];
   const stateFromStores = obj2.useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const tmp5 = markPopoverAsDismissed;
-  ({ badge, unread } = markPopoverAsDismissed(16383)(stateFromStores));
-  const tmp6 = markPopoverAsDismissed(16383)(stateFromStores);
-  ({ badge: badge2, cutouts } = markPopoverAsDismissed(16368)({ mentionCount: badge }));
+  ({ badge, unread } = markPopoverAsDismissed(16407)(stateFromStores));
+  const tmp6 = markPopoverAsDismissed(16407)(stateFromStores);
+  ({ badge: badge2, cutouts } = markPopoverAsDismissed(16392)({ mentionCount: badge }));
   const ref = noop.useRef(null);
-  const tmp7 = markPopoverAsDismissed(16368)({ mentionCount: badge });
+  const tmp7 = markPopoverAsDismissed(16392)({ mentionCount: badge });
   const tmp9 = closure_11();
-  const favoritesIntroPopover = shouldShowPopover(10327).useFavoritesIntroPopover();
+  const favoritesIntroPopover = shouldShowPopover(10366).useFavoritesIntroPopover();
   shouldShowPopover = favoritesIntroPopover.shouldShowPopover;
   markPopoverAsDismissed = favoritesIntroPopover.markPopoverAsDismissed;
   const items1 = [shouldShowPopover, markPopoverAsDismissed];
@@ -49,7 +49,7 @@ export default noop.memo(function GuildsBarFavorites() {
         if (shouldShowPopover) {
           closure_1_1(constants.TAKE_ACTION);
         }
-        markPopoverAsDismissed(16380)(FAVORITES);
+        markPopoverAsDismissed(16404)(FAVORITES);
       },
       onLongPress() {
         markPopoverAsDismissed(dependencyMap[15])();
@@ -82,25 +82,25 @@ export default noop.memo(function GuildsBarFavorites() {
     config: memo,
     accessibilityActions,
     onAccessibilityAction,
-    label: null,
+    label: "MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER",
     externalChildren: null,
-    expandedChildren: null,
-    children: null,
+    expandedChildren: "heading-lg/semibold",
+    children: "mobile-text-heading-primary",
   };
-  const obj4 = shouldShowPopover(10327);
+  const obj4 = shouldShowPopover(10366);
   let intl = shouldShowPopover(1114).intl;
   obj.label = intl.string(shouldShowPopover(1114).t.wMWyci);
   obj.externalChildren = badge2;
-  obj.expandedChildren = closure_8(shouldShowPopover(16384).HomeDrawerFavoritesRowExpandedChildren, {});
+  obj.expandedChildren = closure_8(shouldShowPopover(16408).HomeDrawerFavoritesRowExpandedChildren, {});
   const colors = markPopoverAsDismissed(576).colors;
   obj = { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj.children = closure_8(shouldShowPopover(10324).StarIcon, obj);
-  const children = [closure_8(markPopoverAsDismissed(16365), obj), ,];
+  obj.children = closure_8(shouldShowPopover(10363).StarIcon, obj);
+  const children = [closure_8(markPopoverAsDismissed(16389), obj), ,];
   obj1 = { ref, style: tmp9.anchor, pointerEvents: "none", collapsable: false };
   children[1] = closure_8(View, obj1);
   if (shouldShowPopover) {
     obj2 = { targetRef: ref, markAsDismissed: markPopoverAsDismissed };
-    shouldShowPopover = closure_8(tmp5(16385), obj2);
+    shouldShowPopover = closure_8(tmp5(16409), obj2);
   }
   children[2] = shouldShowPopover;
   return closure_9(View, { children });

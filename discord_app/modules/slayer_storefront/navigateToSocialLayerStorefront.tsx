@@ -18,89 +18,144 @@ function navigateToSocialLayerStorefrontWithGuildPreview() {
   return applyArgumentsResult;
 }
 let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(arg0) {
-  closure_1 = tmp2;
-  ({
-    guildId: closure_129_0,
-    invite: closure_129_1,
-    pageIndex: closure_129_2,
-    skuId: closure_129_3,
-    slug: closure_129_4,
-  } = closure_0);
-  await "PX_16";
-  if (1 === tmp5) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
+      let obj = { value, done: true };
+      return obj;
     } else {
-      closure_129_5 = null;
-      if (null != closure_129_1) {
-        const guild = closure_129_1.guild;
-        let id;
-        if (guild != null) {
-          id = guild.id;
-        }
-        closure_129_0 = id;
-        const guild2 = closure_129_1.guild;
-        let features;
-        if (guild2 != null) {
-          features = guild2.features;
-        }
-        closure_129_5 = new Set(features);
-        new Set(features);
-      }
-      if (null != closure_129_0) {
-        const guild3 = closure_130_4.getGuild(closure_129_0);
-        let joinedAt;
-        if (guild3 != null) {
-          joinedAt = guild3.joinedAt;
-        }
-        if (null == joinedAt) {
-          if (null != closure_129_5) {
-            if (!closure_129_5.has(closure_130_6.PREVIEW_ENABLED)) {
-              if (null != closure_129_1) {
-                let obj4 = closure_130_1(closure_130_2[8]);
-                let obj2 = { inviteKey: closure_129_1.code, context: { location: "game_shop" }, skipOnboarding: true };
-                c3 = 3;
-                c4 = 1;
-                return { value: obj4.acceptInvite(obj2), done: false };
-              }
-            }
-          }
-          c3 = 2;
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          ({
+            guildId: closure_129_0,
+            invite: closure_129_1,
+            pageIndex: closure_129_2,
+            skuId: closure_129_3,
+            slug: closure_129_4,
+          } = closure_0);
+          closure_129_5 = undefined;
+          let guild3;
+          c3 = 1;
           c4 = 1;
-          obj4 = {
-            value: closure_130_0(closure_130_2[7]).startLurking(closure_129_0, {}, { shouldNavigate: false }),
-            done: false,
-          };
-          return obj4;
+          return { value: "PX_16", done: true };
         }
       } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            closure_129_5 = null;
+            if (null != closure_129_1) {
+              const guild = closure_129_1.guild;
+              let id;
+              if (guild != null) {
+                id = guild.id;
+              }
+              closure_129_0 = id;
+              const guild2 = closure_129_1.guild;
+              let features;
+              if (guild2 != null) {
+                features = guild2.features;
+              }
+              const set = new Set(features);
+              closure_129_5 = set;
+            }
+            if (null != closure_129_0) {
+              guild3 = closure_130_4.getGuild(closure_129_0);
+              let joinedAt;
+              if (guild3 != null) {
+                joinedAt = guild3.joinedAt;
+              }
+              if (null == joinedAt) {
+                if (null != closure_129_5) {
+                  if (!closure_129_5.has(closure_130_6.PREVIEW_ENABLED)) {
+                    if (null != closure_129_1) {
+                      let obj4 = closure_130_1(closure_130_2[8]);
+                      let obj2 = {
+                        inviteKey: closure_129_1.code,
+                        context: { location: "game_shop" },
+                        skipOnboarding: true,
+                      };
+                      c3 = 3;
+                      c4 = 1;
+                      const obj3 = { value: obj4.acceptInvite(obj2), done: false };
+                      return obj3;
+                    }
+                  }
+                }
+                c3 = 2;
+                c4 = 1;
+                obj4 = {
+                  value: closure_130_0(closure_130_2[7]).startLurking(closure_129_0, {}, { shouldNavigate: false }),
+                  done: false,
+                };
+                return obj4;
+              }
+            } else {
+              c4 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+        obj2 = closure_130_0(closure_130_2[6]);
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        const obj6 = {
+          value: obj2.transitionTo(
+            closure_130_7.CHANNELS_GAME_SHOP(closure_129_0, closure_129_2, closure_129_3, closure_129_4),
+          ),
+          done: true,
+        };
+        return obj6;
       }
+    } catch (tmp50) {
+      c4 = tmp;
+      throw tmp50;
     }
-  } else if (2 === tmp5) {
-    if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
-    }
-  } else if (arg0 === 1) {
-    c4 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c4 = 3;
-    return { value, done: true };
   }
-  obj2 = closure_130_0(closure_130_2[6]);
-  return obj2.transitionTo(
-    closure_130_7.CHANNELS_GAME_SHOP(closure_129_0, closure_129_2, closure_129_3, closure_129_4),
-  );
 };
 const Constants = fn(1074);
 ({ GuildFeatures: metroRequire, Routes: closure_7 } = Constants);

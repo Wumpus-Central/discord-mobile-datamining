@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/EmojiCryingFaceIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod15431 from "../../../../../../../_runtime/metro/15431__.js";
+import _mod15453 from "../../../../../../../_runtime/metro/15453__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const EmojiCryingFaceIcon = function EmojiCryingFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15431, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15453, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

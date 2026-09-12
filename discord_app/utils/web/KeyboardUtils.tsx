@@ -1,7 +1,7 @@
 // discord_app/utils/web/KeyboardUtils.tsx
 import PlatformUtils2 from "../PlatformUtils.tsx";
 import GlobalUtils from "../GlobalUtils.tsx";
-import keyCodeDefault from "../../../_runtime/14117_keyCode.js";
+import keyCodeDefault from "../../../_runtime/14152_keyCode.js";
 import KeyboardLayoutMapUtils from "KeyboardLayoutMapUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import apply from "../../../_runtime/metro/00012__.js";
@@ -191,12 +191,12 @@ function toPrettyKey(str) {
   }
   return str;
 }
-const KeyboardConstants = fn(7577);
+const KeyboardConstants = fn(7607);
 ({ KeyboardDeviceTypes: hasOwnProperty, LinuxKeyToCode } = KeyboardConstants);
 const MacosKeyToCode = KeyboardConstants.MacosKeyToCode;
 const WindowsKeyToCode = KeyboardConstants.WindowsKeyToCode;
 const KeyboardEnvs = KeyboardConstants.KeyboardEnvs;
-fn(1115);
+fn(1150);
 let PlatformUtils = LinuxKeyToCode;
 if (!PlatformUtils.isLinux()) {
   let tmp3 = MacosKeyToCode;
@@ -206,10 +206,10 @@ if (!PlatformUtils.isLinux()) {
       PlatformUtils = {};
     }
     tmp3 = PlatformUtils;
-    obj4 = fn(1115);
+    obj4 = fn(1150);
   }
   PlatformUtils = tmp3;
-  obj3 = fn(1115);
+  obj3 = fn(1150);
 }
 const invertResult = apply.invert(LinuxKeyToCode);
 invertResult[223] = "`";
@@ -222,7 +222,7 @@ if (PlatformUtils == null) {
   PlatformUtils = {};
 }
 apply.invert(PlatformUtils);
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 if (!PlatformUtils.isMac()) {
   PlatformUtils[223] = "`";
 }
@@ -522,7 +522,7 @@ export const toCombo = function toCombo(shortcut) {
     const parts = shortcut
       .replace(/numpad plus/i, "")
       .replace(/NUMPAD \+/i, "numpad plus")
-      .replace(/mod/i, KEYBOARD_KEY(14119).modKey)
+      .replace(/mod/i, KEYBOARD_KEY(14154).modKey)
       .split("+");
     const mapped = parts.map((item) => item.trim().replace("plus", "+"));
     return mapped.reduce((arr, item) => {
@@ -553,15 +553,15 @@ export const toCombo = function toCombo(shortcut) {
     if (obj.isLinux()) {
       let MACOS = KeyboardEnvs.LINUX;
     } else {
-      let tmpResult = tmp(1115);
+      let tmpResult = tmp(1150);
       if (tmpResult.isMac()) {
         MACOS = KeyboardEnvs.MACOS;
       } else {
-        tmpResult = tmp(1115);
+        tmpResult = tmp(1150);
         MACOS = tmpResult.isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
       }
     }
-    obj = KEYBOARD_KEY(1115);
+    obj = KEYBOARD_KEY(1150);
   }
 };
 export { toKeyNames };

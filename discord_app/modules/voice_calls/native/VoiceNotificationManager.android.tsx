@@ -27,10 +27,10 @@ class VoiceNotificationManager {
       channelId: "flexDirection",
       connectionState: "content",
       selfMute: false,
-      deafened: 3612,
-      isPushToTalk: 3613,
-      embeddedActivity: 3614,
-      isStreaming: 3615,
+      deafened: null,
+      isPushToTalk: "US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS",
+      embeddedActivity: "bal\u00F3n",
+      isStreaming: "hra",
     };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
@@ -151,8 +151,8 @@ class VoiceNotificationManager {
               name = application.name;
             }
             const _HermesInternal = HermesInternal;
-            str2 = " - " + tmp16(10979)(name);
-            const tmp16Result = tmp16(10979);
+            str2 = " - " + tmp16(11018)(name);
+            const tmp16Result = tmp16(11018);
           }
           const obj3 = RTCConnectionUtilsDefault;
           obj = {
@@ -166,13 +166,13 @@ class VoiceNotificationManager {
             icon: null,
             color: null,
           };
-          const channelName = size(4759).computeChannelName(channel, UserStore, RelationshipStore);
+          const channelName = size(4789).computeChannelName(channel, UserStore, RelationshipStore);
           const intl = size(1114).intl;
           obj = { callState: obj3.getStatus(connectionState).connectionStatusText };
           obj.title = intl.formatToPlainString(size(1114).t["aUT3+M"], obj);
           const _HermesInternal2 = HermesInternal;
           obj.content = "" + channelName + str2;
-          obj.priority = size(7830).ServiceNotificationPriority.HIGH;
+          obj.priority = size(7860).ServiceNotificationPriority.HIGH;
           obj.contentAction = updateServiceHandlerResult.createAction(channel, "SelectVoiceChannel", undefined);
           const intl2 = size(1114).intl;
           const items = [
@@ -198,14 +198,14 @@ class VoiceNotificationManager {
           }
           items[2] = updateServiceHandlerResult.createAction(channel, "ToggleDeafen", string2Result);
           obj.auxiliaryActions = items;
-          const ServiceNotificationType = size(7830).ServiceNotificationType;
+          const ServiceNotificationType = size(7860).ServiceNotificationType;
           obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
           obj.icon = tmp7;
           obj.color = tmp8;
-          tmp16 = tmp16(7828);
+          tmp16 = tmp16(7858);
           updateServiceHandler = tmp16.updateServiceHandler;
           updateServiceHandlerResult = updateServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId, obj);
-          const obj4 = size(4759);
+          const obj4 = size(4789);
         } else {
           ForegroundServiceManagerDefault.removeServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId);
         }
@@ -239,10 +239,10 @@ size.state = {
   channelId: "flexDirection",
   connectionState: "content",
   selfMute: false,
-  deafened: 3612,
-  isPushToTalk: 3613,
-  embeddedActivity: 3614,
-  isStreaming: 3615,
+  deafened: null,
+  isPushToTalk: "US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS",
+  embeddedActivity: "bal\u00F3n",
+  isStreaming: "hra",
 };
 size.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
@@ -363,8 +363,8 @@ size.handleUpdate = function handleUpdate(connectionState) {
           name = application.name;
         }
         const _HermesInternal = HermesInternal;
-        str2 = " - " + tmp16(10979)(name);
-        const tmp16Result = tmp16(10979);
+        str2 = " - " + tmp16(11018)(name);
+        const tmp16Result = tmp16(11018);
       }
       const obj3 = RTCConnectionUtilsDefault;
       obj = {
@@ -378,13 +378,13 @@ size.handleUpdate = function handleUpdate(connectionState) {
         icon: null,
         color: null,
       };
-      const channelName = size(4759).computeChannelName(channel, UserStore, RelationshipStore);
+      const channelName = size(4789).computeChannelName(channel, UserStore, RelationshipStore);
       const intl = size(1114).intl;
       obj = { callState: obj3.getStatus(connectionState).connectionStatusText };
       obj.title = intl.formatToPlainString(size(1114).t["aUT3+M"], obj);
       const _HermesInternal2 = HermesInternal;
       obj.content = "" + channelName + str2;
-      obj.priority = size(7830).ServiceNotificationPriority.HIGH;
+      obj.priority = size(7860).ServiceNotificationPriority.HIGH;
       obj.contentAction = updateServiceHandlerResult.createAction(channel, "SelectVoiceChannel", undefined);
       const intl2 = size(1114).intl;
       const items = [
@@ -410,14 +410,14 @@ size.handleUpdate = function handleUpdate(connectionState) {
       }
       items[2] = updateServiceHandlerResult.createAction(channel, "ToggleDeafen", string2Result);
       obj.auxiliaryActions = items;
-      const ServiceNotificationType = size(7830).ServiceNotificationType;
+      const ServiceNotificationType = size(7860).ServiceNotificationType;
       obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
       obj.icon = tmp7;
       obj.color = tmp8;
-      tmp16 = tmp16(7828);
+      tmp16 = tmp16(7858);
       updateServiceHandler = tmp16.updateServiceHandler;
       updateServiceHandlerResult = updateServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId, obj);
-      const obj4 = size(4759);
+      const obj4 = size(4789);
     } else {
       ForegroundServiceManagerDefault.removeServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId);
     }

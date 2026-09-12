@@ -3,7 +3,7 @@ import _mod12 from "../../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06726_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06756_LegacyBaseButton.js";
 import updateSharedValueIfChanged from "../../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import HappeningNowAnalytics from "HappeningNowAnalytics.tsx";
 import happeningNowRankingUtils from "happeningNowRankingUtils.tsx";
@@ -164,7 +164,7 @@ function getItemType(kind) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15357);
+const HappeningNowConstants = fn(15379);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_7,
   HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8,
@@ -173,9 +173,9 @@ const HappeningNowConstants = fn(15357);
 } = HappeningNowConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
-const ReanimatedHelperTypes = fn(7147);
+const ReanimatedHelperTypes = fn(7177);
 const context = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue([]));
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = {
   containerInner: {
     paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING,
@@ -186,7 +186,7 @@ let obj = {
 obj = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
 obj.loading = obj;
 let closure_13 = createStyles.createStyles(obj);
-const Gesture = fn(6726).Gesture;
+const Gesture = fn(6756).Gesture;
 const gesture = Gesture.Native().disallowInterruption(true);
 const forwardRefResult = noop.forwardRef((arg0, ref) => {
   let obj = { gesture, children: null };
@@ -213,7 +213,7 @@ export default noop.memo((listRef) => {
   obj = {
     withoutUserCards: "HermesInternal",
     guildId: "Array",
-    showMultipleActivitiesPerChannel: "HermesInternal",
+    showMultipleActivitiesPerChannel: "<string:1111818241>",
     isFocused,
   };
   const tmp7 = _slicedToArray(isFocused(children[15])(listRef.cards, obj), 2);

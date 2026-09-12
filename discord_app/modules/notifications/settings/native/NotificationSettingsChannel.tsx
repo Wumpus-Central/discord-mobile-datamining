@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { screenContainer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16 };
 createStyles.screenContainer = createStyles;
@@ -68,10 +68,10 @@ export default function NotificationSettingsChannel(channel) {
     obj = { style: { marginBottom: 16 }, title: null, subtitle: null, onPressUnmute: null };
     const intl2 = tmp(1114).intl;
     obj.title = intl2.string(tmp(1114).t["6MCxAy"]);
-    obj.subtitle = tmp(10240).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
+    obj.subtitle = tmp(10279).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
     obj.onPressUnmute = callback1;
-    muted = closure_6(tmp(10240).NotificationSettingsMuteBanner, obj);
-    const tmpResult = tmp(10240);
+    muted = closure_6(tmp(10279).NotificationSettingsMuteBanner, obj);
+    const tmpResult = tmp(10279);
   }
   const items3 = [muted, , , , ,];
   obj1 = { channel: channel.channel };
@@ -89,7 +89,7 @@ export default function NotificationSettingsChannel(channel) {
   let isForumLikeChannelResult = channel.isForumLikeChannel();
   if (isForumLikeChannelResult) {
     let obj4 = { style: { marginTop: 24 }, channel: channel.channel };
-    isForumLikeChannelResult = closure_6(tmp(10258).NotificationSettingsChannelPost, obj4);
+    isForumLikeChannelResult = closure_6(tmp(10297).NotificationSettingsChannelPost, obj4);
   }
   items3[4] = isForumLikeChannelResult;
   const inherited = channelPresetInheritance.inherited;
@@ -99,7 +99,7 @@ export default function NotificationSettingsChannel(channel) {
     const obj6 = { variant: "secondary", onPress: callback, text: null };
     const intl3 = tmp(1114).intl;
     obj6.text = intl3.string(tmp(1114).t["3PBFN6"]);
-    obj5.children = closure_6(tmp(5026).Button, obj6);
+    obj5.children = closure_6(tmp(5056).Button, obj6);
     tmp11Result = closure_6(View, obj5);
   }
   items3[5] = tmp11Result;

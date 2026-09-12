@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { container: null, iconLabelBlock: null, iconStyles: null, redText: null, blurb: null, errorText: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.container = obj;
@@ -76,7 +76,7 @@ export default noop.memo(function KickConfirm(arg0) {
       obj = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj.contentContainerStyle = obj;
       obj1 = { style: tmp.iconLabelBlock, children: null };
-      obj2 = { style: tmp.iconStyles, source: require("../../../../_runtime/metro/11944__.js"), resizeMode: "contain" };
+      obj2 = { style: tmp.iconStyles, source: require("../../../../_runtime/metro/11980__.js"), resizeMode: "contain" };
       const items4 = [closure_10(ref, obj2), ,];
       const obj3 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = require("util").intl;

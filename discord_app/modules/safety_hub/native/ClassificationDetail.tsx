@@ -72,7 +72,7 @@ function ClassificationHeader(classificationTypeText) {
     }
   }, items);
   obj = { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo };
-  obj.children = closure_13(classificationTypeText(4602).Text, obj);
+  obj.children = closure_13(classificationTypeText(4632).Text, obj);
   return closure_13(closure_4, obj);
 }
 function ClassificationActionsTaken(arg0) {
@@ -208,7 +208,7 @@ function ClassificationPolicyCard(classificationDescription) {
   obj.style = items;
   obj = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj.children = closure_13(policyExplainerLink(9493).ShieldIcon, {
+  obj.children = closure_13(policyExplainerLink(9532).ShieldIcon, {
     size: "sm",
     color: nativeDefault.colors.TEXT_LINK,
   });
@@ -219,7 +219,7 @@ function ClassificationPolicyCard(classificationDescription) {
   obj3.children = intl.format(policyExplainerLink(1114).t.zxUdpj, {
     classificationDescription: classificationDescription.classificationTypeText,
   });
-  obj2.children = closure_13(policyExplainerLink(4602).Text, obj3);
+  obj2.children = closure_13(policyExplainerLink(4632).Text, obj3);
   items1[1] = closure_13(closure_4, obj2);
   obj.children = items1;
   obj.children = closure_14(tmp2, obj);
@@ -306,7 +306,7 @@ function ClassificationDetailFooter(onClose) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8505);
+const SafetyHubConstants = fn(8537);
 ({
   SafetyHubAnalyticsActionSource: closure_9,
   SafetyHubAnalyticsActions: c10,
@@ -315,7 +315,7 @@ const SafetyHubConstants = fn(8505);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   root: null,
   container: null,

@@ -72,8 +72,8 @@ prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByP
   }
   return value;
 };
-prototype["getBountyVideoProgress"] = function getBountyVideoProgress(id) {
-  value = map.get(id);
+prototype["getBountyVideoProgress"] = function getBountyVideoProgress(bountyId) {
+  value = map.get(bountyId);
   if (value == null) {
     value = null;
   }

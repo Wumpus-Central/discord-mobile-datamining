@@ -8,5 +8,5 @@ const result = size.fileFinishedImporting("modules/guild_moderation/native/showK
 
 export default function showKickConfirmModal(merged) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11950, dependencyMap.paths), merged);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11986, dependencyMap.paths), merged);
 }

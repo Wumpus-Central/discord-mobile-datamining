@@ -145,7 +145,7 @@ const DismissibleContentConstants = fn(1954);
 ({ ContentDismissActionType: closure_14, DismissibleContentGroupName: closure_15 } = DismissibleContentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = {
   navbarTitleContainer: { height: "100%", flex: 1, flexDirection: "row", alignItems: "center" },
   navbarTitlePrimaryText: null,
@@ -520,7 +520,7 @@ export const ChannelButtons = function ChannelButtons(buttons) {
       obj.disabled = disabled;
       obj.style = style;
       obj.children = children;
-      children = [closure_16(closure_1(9140), obj)];
+      children = [closure_16(closure_1(9179), obj)];
       let tmp3Result = null;
       if (hasActivitiesPrivateChannelTooltip) {
         obj = { contentTypes: null, groupName: null, children: null };
@@ -543,8 +543,8 @@ export const ChannelButtons = function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(10714), obj);
-        const tmp4Result = closure_1(10714);
+        tmp3Result = closure_16(closure_1(10753), obj);
+        const tmp4Result = closure_1(10753);
       }
       children[1] = tmp3Result;
       return closure_17(closure_4, { children }, index);

@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 export default function openGuildPowerupsMultiPerkBottomSheet(arg0) {
   const obj = ActionSheetActionCreatorsDefault;
   obj.openLazy(
-    asyncRequireImpl(12640, dependencyMap.paths),
+    asyncRequireImpl(12676, dependencyMap.paths),
     openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY,
     arg0,
   );

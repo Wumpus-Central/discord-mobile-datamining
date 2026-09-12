@@ -33,12 +33,12 @@ function parseServerGuildStickers(stickers) {
 }
 function deriveStickerMetadata(arg0, tags) {
   const items = [];
-  let obj = { type: items(5319).StickerMetadataTypes.STICKER_NAME, value: null };
+  let obj = { type: items(5349).StickerMetadataTypes.STICKER_NAME, value: null };
   const trimmed = tags.name.trim();
   obj.value = trimmed.toLocaleLowerCase();
   items.push(obj);
   if (null != tags.tags) {
-    obj = { type: tmp(5319).StickerMetadataTypes.TAG, value: null };
+    obj = { type: tmp(5349).StickerMetadataTypes.TAG, value: null };
     const trimmed1 = str.trim();
     obj.value = trimmed1.toLocaleLowerCase();
     items.push(obj);
@@ -51,13 +51,13 @@ function deriveStickerMetadata(arg0, tags) {
         tmp5 = "" !== toLocaleLowerCaseResult;
       }
       if (tmp5) {
-        obj = { type: tmp(5319).StickerMetadataTypes.GUILD_NAME, value: toLocaleLowerCaseResult };
+        obj = { type: tmp(5349).StickerMetadataTypes.GUILD_NAME, value: toLocaleLowerCaseResult };
         items.push(obj);
       }
     }
     const byName = UnicodeEmojisDefault.getByName(str);
     if (null != byName) {
-      const obj1 = { type: tmp(5319).StickerMetadataTypes.CORRELATED_EMOJI, value: byName.surrogates };
+      const obj1 = { type: tmp(5349).StickerMetadataTypes.CORRELATED_EMOJI, value: byName.surrogates };
       items.push(obj1);
       byName.forEachDiversity((surrogates) =>
         items.push({ type: StickersTypes.StickerMetadataTypes.CORRELATED_EMOJI, value: surrogates.surrogates }),

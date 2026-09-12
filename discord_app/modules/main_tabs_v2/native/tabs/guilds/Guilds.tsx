@@ -10,7 +10,7 @@ import YouBarDefault from "../../you_bar/YouBar.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const YouBarNavigatorScreens = fn(11179).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11218).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const size = fn(2);

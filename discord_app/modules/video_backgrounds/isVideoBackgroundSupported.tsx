@@ -3,7 +3,7 @@ import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperim
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
 const require = fn;
-const Features = fn(4631).Features;
+const Features = fn(4661).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 

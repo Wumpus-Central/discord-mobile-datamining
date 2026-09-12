@@ -10,7 +10,7 @@ require = fn;
 const ANDROID_FOREGROUND_RIPPLE = fn(1182).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = {
   button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" },
   text: null,

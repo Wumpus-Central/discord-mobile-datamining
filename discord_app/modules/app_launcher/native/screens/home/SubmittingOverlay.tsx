@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 
 export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   submitting = submitting.submitting;
-  let obj = submitting(4343);
+  let obj = submitting(4373);
   class S {
     constructor() {
       tmp = closure_0;
@@ -33,7 +33,7 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
       return obj;
     }
   }
-  obj = { withSpring: submitting(5025).withSpring, submitting, SUBTLE_SPRING: submitting(5029).SUBTLE_SPRING };
+  obj = { withSpring: submitting(5055).withSpring, submitting, SUBTLE_SPRING: submitting(5059).SUBTLE_SPRING };
   S.__closure = obj;
   S.__workletHash = 492443733468;
   S.__initData = __initData;
@@ -42,7 +42,7 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   const items = [submitting.style, closure_4().ellipsis, animatedStyle];
   obj.style = items;
   if (submitting) {
-    submitting = jsx(submitting(5042).Ellipsis, { variant: "active", size: "md" });
+    submitting = jsx(submitting(5072).Ellipsis, { variant: "active", size: "md" });
   }
   obj.children = submitting;
   return jsx(ReanimatedRexportDefault.View, { style: null, children: null });

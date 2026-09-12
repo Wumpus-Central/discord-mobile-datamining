@@ -11,7 +11,7 @@ export default function useAutocompleter(searchOptions) {
   dependencyMap = undefined;
   _slicedToArray = undefined;
   [tmp2, c1] = _slicedToArray(noop.useState({ results: [], query: "" }), 2);
-  const tmp3 = searchOptions(5649)(() => {
+  const tmp3 = searchOptions(5679)(() => {
     const obj = new sortByMatchScoreDefault((results, query) => {
       closure_1_1({ results, query });
     });

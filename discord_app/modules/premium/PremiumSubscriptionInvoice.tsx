@@ -73,7 +73,7 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
           closure_129_11 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -241,7 +241,7 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
           closure_129_12 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -397,7 +397,7 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
           closure_129_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -479,21 +479,82 @@ function getSubscriptionInvoice() {
   }
   return applyArgumentsResult;
 }
-let closure_20 = async function _getSubscriptionInvoice() {
-  closure_1 = tmp2;
-  ({ subscriptionId: closure_129_0, preventFetch: closure_129_1 } = closure_0);
-  await "PX_16";
-  if (closure_129_1) {
-    return null;
+let closure_20 = async function _getSubscriptionInvoice(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          ({ subscriptionId: closure_129_0, preventFetch: closure_129_1 } = closure_0);
+          closure_129_2 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else if (closure_129_1) {
+          c4 = 3;
+          return { value: null, done: true };
+        } else {
+          const HTTP = closure_130_0(closure_130_2[7]).HTTP;
+          const obj2 = {
+            url: closure_130_12.BILLING_SUBSCRIPTION_INVOICE(closure_129_0),
+            oldFormErrors: true,
+            rejectWithError: false,
+          };
+          c3 = 2;
+          c4 = 1;
+          const obj3 = { value: HTTP.get(obj2), done: false };
+          return obj3;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        closure_129_2 = value;
+        c4 = 3;
+        obj = { value: closure_130_11.createInvoiceFromServer(closure_129_2.body), done: true };
+        return obj;
+      }
+    } catch (tmp16) {
+      c4 = tmp;
+      throw tmp16;
+    }
   }
-  const HTTP = closure_130_0(closure_130_2[7]).HTTP;
-  await HTTP.get({
-    url: closure_130_12.BILLING_SUBSCRIPTION_INVOICE(closure_129_0),
-    oldFormErrors: true,
-    rejectWithError: false,
-  });
-  closure_129_2 = value;
-  return closure_130_11.createInvoiceFromServer(closure_129_2.body);
 };
 let closure_3 = ["subscriptionId"];
 const noop = fn(19);

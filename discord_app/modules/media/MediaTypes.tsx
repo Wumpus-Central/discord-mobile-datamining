@@ -52,7 +52,16 @@ obj = { IS_ANIMATED: 1, [1]: "IS_ANIMATED" };
 const result = size.fileFinishedImporting("modules/media/MediaTypes.tsx");
 
 export const ContentScanFlags = obj;
-export const ImageEncoder = { NATIVE: "native", JPEGLI: "jpegli", JPEG_IOS: "jpeg_ios", PASSTHROUGH: "passthrough" };
+export const ImageEncoder = {
+  NATIVE: "native",
+  JPEGLI: "jpegli",
+  JPEG_IOS: "jpeg_ios",
+  PASSTHROUGH: "passthrough",
+  WIC: "wic",
+  IMAGEIO: "imageio",
+  SYSIMG_STUB: "sysimg_stub",
+  SYSIMG_UNKNOWN: "sysimg_unknown",
+};
 export const toContentScanMetadata = function toContentScanMetadata(version) {
   return { version: version.version, flags: version.flags };
 };

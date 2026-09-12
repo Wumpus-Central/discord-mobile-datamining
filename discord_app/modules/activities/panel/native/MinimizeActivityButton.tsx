@@ -1,12 +1,12 @@
 // discord_app/modules/activities/panel/native/MinimizeActivityButton.tsx
-import _modDef11249 from "../../../../../_runtime/metro/11249__.js";
+import _modDef11288 from "../../../../../_runtime/metro/11288__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ActivityPanelModes = fn(9596).ActivityPanelModes;
+const ActivityPanelModes = fn(9635).ActivityPanelModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({ buttonParent: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/MinimizeActivityButton.tsx");
@@ -21,7 +21,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
     if ("" !== activityName) {
       let obj = { style: tmp2.buttonParent, children: null };
       obj = {
-        icon: _modDef11249,
+        icon: _modDef11288,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -34,8 +34,8 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
       obj.accessibilityLabel = intl2.string(setMode(1114).t.brPQ5U);
       obj.onPress = callback;
       obj.text = activityName;
-      obj.children = jsx(setMode(5026).Button, {
-        icon: _modDef11249,
+      obj.children = jsx(setMode(5056).Button, {
+        icon: _modDef11288,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -46,7 +46,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
       });
       let tmp3 = (
         <View
-          icon={_modDef11249}
+          icon={_modDef11288}
           accessibilityLabel={null}
           onPress={null}
           text={null}
@@ -60,7 +60,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
     return tmp3;
   }
   obj = {
-    icon: _modDef11249,
+    icon: _modDef11288,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",
@@ -70,8 +70,8 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
   const intl = setMode(1114).intl;
   obj.accessibilityLabel = intl.string(setMode(1114).t.brPQ5U);
   obj.onPress = callback;
-  tmp3 = jsx(setMode(8172).IconButton, {
-    icon: _modDef11249,
+  tmp3 = jsx(setMode(8202).IconButton, {
+    icon: _modDef11288,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",

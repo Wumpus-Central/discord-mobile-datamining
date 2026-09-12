@@ -12,7 +12,7 @@ import NativeAppLifecycleModuleDefault from "../../../../discord_common/js/packa
 import getPostMessageJavaScriptDefault from "getPostMessageJavaScript.tsx";
 import ThermalUtilsDefault from "../../device/ThermalUtils.native.tsx";
 import WebViewPostMessageTransportDefault from "../../rpc/native/server/transports/WebViewPostMessageTransport.tsx";
-import _modDef9657 from "../../../../_runtime/metro/09657__.js";
+import _modDef9696 from "../../../../_runtime/metro/09696__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
@@ -50,10 +50,10 @@ let closure_14 = async function _postMessageToWebView(arg0) {
 let closure_7 = fn(1920).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, ComponentActions: closure_9 } = Constants);
-const TransportTypes = fn(4511).TransportTypes;
-const WebView = fn(8384);
+const TransportTypes = fn(4541).TransportTypes;
+const WebView = fn(8416);
 const webViewProxy = WebView.getWebViewProxy("EMBEDDED_ACTIVITY_WEB_VIEW_KEY");
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
@@ -265,7 +265,7 @@ prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled(
   };
   const intl = util.intl;
   obj.content = intl.string(util.t.JfA7IK);
-  obj.icon = _modDef9657;
+  obj.icon = _modDef9696;
   obj.open(obj);
 };
 prototype["releaseWebView"] = function releaseWebView() {

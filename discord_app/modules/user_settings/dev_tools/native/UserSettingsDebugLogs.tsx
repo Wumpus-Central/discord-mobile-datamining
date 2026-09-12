@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   wrap: null,
   searchWrap: null,
@@ -31,8 +31,8 @@ let size = {
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   marginLeft: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
-  height: fn(6693).InputHeights.MD,
-  width: fn(6693).InputHeights.MD,
+  height: fn(6723).InputHeights.MD,
+  width: fn(6723).InputHeights.MD,
   justifyContent: "center",
   alignItems: "center",
 };

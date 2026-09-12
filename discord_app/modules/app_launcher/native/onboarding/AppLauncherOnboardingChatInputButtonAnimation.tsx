@@ -8,8 +8,8 @@ import ButtonConstants from "../../../../design/components/Button/native/ButtonC
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import ClientThemesOverrides from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import useAppLauncherOnboardingContentDefault from "hooks/useAppLauncherOnboardingContent.tsx";
-import _mod12155 from "../../../../../_runtime/metro/12155__.js";
-import _mod12336 from "../../../../../_runtime/metro/12336__.js";
+import _mod12191 from "../../../../../_runtime/metro/12191__.js";
+import _mod12372 from "../../../../../_runtime/metro/12372__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_9 = createStyles.createStyles(() => {
   const sum = ButtonConstants.SMALL_BUTTON_HEIGHT + ButtonConstants.SMALL_BUTTON_PADDING + 2;
   const obj = { fakeButton: null, glowMask: null, glowLottie: null, trinketsLottie: null, glowAnimation: null };
@@ -77,7 +77,7 @@ class EnteringAnimation {
     return obj;
   }
 }
-createStyles = { withTiming: fn(4607).withTiming, timingStandard: fn(4610).timingStandard };
+createStyles = { withTiming: fn(4637).withTiming, timingStandard: fn(4640).timingStandard };
 EnteringAnimation.__closure = createStyles;
 EnteringAnimation.__workletHash = 2327377243473;
 EnteringAnimation.__initData = {
@@ -93,7 +93,7 @@ class ExitingAnimation {
     return obj;
   }
 }
-createStyles = { withTiming: fn(4607).withTiming, timingStandard: fn(4610).timingStandard };
+createStyles = { withTiming: fn(4637).withTiming, timingStandard: fn(4640).timingStandard };
 ExitingAnimation.__closure = createStyles;
 ExitingAnimation.__workletHash = 1065249287738;
 ExitingAnimation.__initData = {
@@ -119,7 +119,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   obj = { entering: EnteringAnimation, exiting: ExitingAnimation, style: null, collapsable: false, children: null };
   const items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
   obj.style = items1;
-  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod12336, autoPlay: !stateFromStores };
+  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod12372, autoPlay: !stateFromStores };
   const items2 = [timestampProducer(LottieAnimationViewDefault, obj1), ,];
   const obj2 = { collapsable: false, style: null };
   const items3 = [tmp.glowMask, gradientBottom];
@@ -130,7 +130,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   const items4 = [React5(ReanimatedRexportDefault.View, obj)];
   const obj4 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj3 = { collapsable: false, style: tmp.fakeButton };
-  obj4.source = _mod12155;
+  obj4.source = _mod12191;
   obj4.autoPlay = !stateFromStores;
   items4[1] = timestampProducer(LottieAnimationViewDefault, obj4);
   obj.children = items4;

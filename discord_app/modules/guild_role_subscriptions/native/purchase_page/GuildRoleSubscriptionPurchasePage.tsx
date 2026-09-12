@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef10030 from "../../../../../_runtime/metro/10030__.js";
+import _modDef10069 from "../../../../../_runtime/metro/10069__.js";
 import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
@@ -41,7 +41,7 @@ function SocialBadge(onPress) {
     closure_1_14(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }),
   ];
   if (tmp5Result) {
-    obj = { source: _modDef10030, style: tmp.socialBadgeArrow };
+    obj = { source: _modDef10069, style: tmp.socialBadgeArrow };
     tmp5Result = closure_1_14(native.Icon, obj);
   }
   items[2] = tmp5Result;
@@ -59,7 +59,7 @@ const Constants = fn(1074);
 ({ AnalyticsLocations: closure_11, GuildFeatures: closure_12, MarketingURLs: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: null,
   heroImage: null,

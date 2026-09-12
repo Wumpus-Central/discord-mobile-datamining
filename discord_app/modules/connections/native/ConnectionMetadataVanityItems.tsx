@@ -6,8 +6,8 @@ import native from "../../../design/void/native.tsx";
 import NumberUtils from "../../../utils/NumberUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ConnectionsUtils from "../ConnectionsUtils.tsx";
-import _modDef11669 from "../../../../_runtime/metro/11669__.js";
-import _modDef11670 from "../../../../_runtime/metro/11670__.js";
+import _modDef11705 from "../../../../_runtime/metro/11705__.js";
+import _modDef11706 from "../../../../_runtime/metro/11706__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -98,11 +98,11 @@ function VanityDate(arg0) {
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-const Constants = fn(5459);
+const Constants = fn(5489);
 ({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 },
   connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" },
@@ -221,7 +221,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl = util.intl;
     obj = { count: NumberResult1 };
     obj.label = intl.format(util.t.Y88M5x, obj);
-    obj.imageSrc = _modDef11669;
+    obj.imageSrc = _modDef11705;
     const intl2 = util.intl;
     obj.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(VanityItem, obj, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -231,7 +231,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl3 = util.intl;
     const obj2 = { count: NumberResult2 };
     obj1.label = intl3.format(util.t.Y88M5x, obj2);
-    obj1.imageSrc = _modDef11670;
+    obj1.imageSrc = _modDef11706;
     const intl4 = util.intl;
     obj1.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(VanityItem, obj1, constants.STEAM_ITEM_COUNT_TF2));

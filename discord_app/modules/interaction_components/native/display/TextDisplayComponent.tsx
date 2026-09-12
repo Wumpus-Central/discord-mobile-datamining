@@ -9,7 +9,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
-let closure_8 = fn(8196).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+let closure_8 = fn(8228).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/display/TextDisplayComponent.tsx");

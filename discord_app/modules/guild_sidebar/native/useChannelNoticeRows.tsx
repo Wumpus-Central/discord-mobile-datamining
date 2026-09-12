@@ -9,7 +9,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_9 = fn(7607).ChannelListChannelNoticeRow;
+let closure_9 = fn(7637).ChannelListChannelNoticeRow;
 const MFALevels = fn(1074).MFALevels;
 const DismissibleContentConstants = fn(1954);
 ({ ContentDismissActionType: closure_11, DismissibleContentGroupName: closure_12 } = DismissibleContentConstants);

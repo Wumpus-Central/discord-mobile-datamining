@@ -3,7 +3,7 @@ import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactB
 import 00560__ from "../../../../_runtime/metro/00560__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "accessible" }));
+const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "call" }));
 const result = size.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export { useRegistrationUIStore };

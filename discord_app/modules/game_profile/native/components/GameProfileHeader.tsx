@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05068_LinearGradient.js";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: null,
   artHero: null,
@@ -41,7 +41,7 @@ createStyles.headerContent = {
   gap: nativeDefault.space.PX_12,
   flexDirection: "row",
   alignItems: "flex-end",
-  maxWidth: 520,
+  maxWidth: fn(8837).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -51,7 +51,7 @@ let obj1 = {
   gap: nativeDefault.space.PX_12,
   flexDirection: "row",
   alignItems: "flex-end",
-  maxWidth: 520,
+  maxWidth: fn(8837).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -102,7 +102,7 @@ export default function GameProfileHeader(game) {
   if (scrollY == null) {
     scrollY = obj1.useSharedValue(0);
   }
-  const fn = function _() {
+  const fn = function x() {
     return { top: -Math.max(0, -scrollY.get()) };
   };
   fn.__closure = { effectiveScrollY: scrollY };

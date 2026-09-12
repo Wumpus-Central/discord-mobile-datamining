@@ -9,7 +9,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../actions/SelectedChannelActionCreators.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
-import MemoryRouter from "../../../../_runtime/12876_MemoryRouter.js";
+import MemoryRouter from "../../../../_runtime/12912_MemoryRouter.js";
 import DefaultRouteActionCreators from "../../../actions/DefaultRouteActionCreators.tsx";
 import RouteManagerDefault from "../RouteManager.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -111,7 +111,7 @@ function saveLastNonVoiceRouteListener(pathname) {
   }
 }
 function updateSelectedChannelListener(location) {
-  channel2(12876);
+  channel2(12912);
   let obj = { path: items, strict: false, exact: false };
   const matchPathResult = obj.matchPath(location.pathname, obj);
   let params;
@@ -169,7 +169,7 @@ function updateSelectedChannelListener(location) {
         isGuildVoiceResult = isGuildStageVoiceResult;
       }
       if (isGuildVoiceResult) {
-        let tmpResult = tmp(4813);
+        let tmpResult = tmp(4843);
         ModalActionCreatorsDefault.popWithKey(tmpResult.getVoiceChannelKey(channel.id));
       }
       const guild = GuildActionCreatorsDefault.selectGuild(guildId);
@@ -242,23 +242,23 @@ function updateSelectedChannelListener(location) {
     const _HermesInternal2 = HermesInternal;
     logger.verbose("UpdateSelectedChannelListener -> voice route present! " + json2 + " " + JSON.stringify(obj5) + " ");
   }
-  tmpResult = tmp(9772);
+  tmpResult = tmp(9811);
   if (!tmpResult.isVoicePanelEnabled(channel2)) {
     const guild1 = GuildActionCreatorsDefault.selectGuild(voiceGuildId2);
     const obj6 = { guildId: voiceGuildId2, channelId: voiceChannelId2, messageId: voiceMessageId2, jumpType };
     const channel3 = SelectedChannelActionCreatorsDefault.selectChannel(obj6);
   }
   const obj1 = { match: matchPathResult, location };
-  const tmpResult1 = channel2(4464);
+  const tmpResult1 = channel2(4494);
   if (!tmpResult1.isModalOpen(tmpResult2.getVoiceChannelKey(channel2.id))) {
     const obj15 = ModalActionCreatorsDefault;
-    obj15.popAboveKey(tmp(4813).getVoiceChannelKey(channel2.id));
-    const tmpResult3 = tmp(4813);
+    obj15.popAboveKey(tmp(4843).getVoiceChannelKey(channel2.id));
+    const tmpResult3 = tmp(4843);
     DispatcherDefault.wait(() => {
       PrivateChannelCallUtils.openGuildVoiceModal(channel2);
     });
   }
-  tmpResult2 = channel2(4813);
+  tmpResult2 = channel2(4843);
   if (tmp21) {
     setVoiceChatDrawerState(channel2.id, VoiceChatDrawerState.OPEN);
     if (tmp25) {
@@ -305,21 +305,21 @@ function logRouteChange(pathname) {
   logger.log("Navigated to: " + pathname.pathname);
 }
 let closure_3 = ["channelId", "guildId"];
-const setVoiceChatDrawerState = fn(9558).setVoiceChatDrawerState;
+const setVoiceChatDrawerState = fn(9597).setVoiceChatDrawerState;
 let closure_6 = fn(1961).isGuildSelectableChannelType;
 const Constants = fn(1074);
 ({ ME: closure_11, Routes } = Constants);
 const ChannelTypes = Constants.ChannelTypes;
-const VoiceChatDrawerState = fn(9559).VoiceChatDrawerState;
+const VoiceChatDrawerState = fn(9598).VoiceChatDrawerState;
 const logger = new LoggerDefault("RouteUtils");
 let c16 = false;
-const RouteParam = fn(4446).RouteParam;
+const RouteParam = fn(4476).RouteParam;
 const tmp3 = new LoggerDefault("RouteUtils");
-const RouteParam2 = fn(4446).RouteParam;
+const RouteParam2 = fn(4476).RouteParam;
 const CHANNELResult = Routes.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
-const RouteParam3 = fn(4446).RouteParam;
+const RouteParam3 = fn(4476).RouteParam;
 const guildIdResult = RouteParam.guildId();
-const RouteParam4 = fn(4446).RouteParam;
+const RouteParam4 = fn(4476).RouteParam;
 const items = [
   "" +
     CHANNELResult +

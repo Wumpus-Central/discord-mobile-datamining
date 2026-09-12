@@ -172,27 +172,27 @@ let closure_30 = async function _addPushNotificationMessageIfNotCached(arg0, arg
     }
   })();
 };
-function receiveMediaMentionMessage(item10037) {
-  const media_mention = item10037.media_mention;
+function receiveMediaMentionMessage(item10038) {
+  const media_mention = item10038.media_mention;
   let message_id;
   if (media_mention != null) {
     message_id = media_mention.message_id;
   }
   if (null != message_id) {
-    const attachment_id = item10037.media_mention.attachment_id;
+    const attachment_id = item10038.media_mention.attachment_id;
     const orCreate = ChannelMessagesDefault.getOrCreate(attachment_id);
     let obj = {};
-    const merged = Object.assign(item10037);
+    const merged = Object.assign(item10038);
     obj.channel_id = attachment_id;
     obj.type = constants6.MEDIA_MENTION_MESSAGE;
-    obj.id = item10037.media_mention.message_id;
+    obj.id = item10038.media_mention.message_id;
     obj = {
-      channel_id: item10037.channel_id,
-      message_id: item10037.media_mention.message_id,
+      channel_id: item10038.channel_id,
+      message_id: item10038.media_mention.message_id,
       type: constants4.DEFAULT,
       guild_id: null,
     };
-    const channel = ChannelStore.getChannel(item10037.channel_id);
+    const channel = ChannelStore.getChannel(item10038.channel_id);
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -618,7 +618,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   },
   LOAD_MESSAGES_SUCCESS: function handleLoadMessagesSuccess(arg0) {
     ({ channelId, isBefore, isAfter, messages } = arg0);
-    ({ jump, hasMoreBefore, hasMoreAfter, isStale, truncate, avoidInitialScroll } = arg0);
+    ({ jump, hasMoreBefore, hasMoreAfter, isStale, truncate, avoidInitialScroll, requestStartTime } = arg0);
     const orCreate = ChannelMessagesDefault.getOrCreate(channelId);
     const complete = orCreate.loadComplete({
       newMessages: messages,
@@ -630,6 +630,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
       cached: isStale,
       hasFetched: true,
       avoidInitialScroll,
+      requestStartTime,
     });
     let tmp3 = null == truncate;
     if (!tmp3) {
@@ -652,8 +653,8 @@ const messageStore = new MessageStore(DispatcherDefault, {
     }
     const tmp7 = reinjectEphemerals(channelId, truncateResult);
     ChannelMessagesDefault.commit(tmp7);
-    for (const item10037 of messages) {
-      let tmp10 = receiveMediaMentionMessage(item10037);
+    for (const item10038 of messages) {
+      let tmp10 = receiveMediaMentionMessage(item10038);
       continue;
     }
     const tmpResult = ChannelMessagesDefault;
@@ -1009,7 +1010,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    let obj = mutation(5323);
+    let obj = mutation(5353);
     const orCreate = obj.getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
@@ -1059,7 +1060,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
             mutation = removeManyResult.mutate(obj);
           }
         }
-        tmpResult = tmp(5323);
+        tmpResult = tmp(5353);
         tmpResult.commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);

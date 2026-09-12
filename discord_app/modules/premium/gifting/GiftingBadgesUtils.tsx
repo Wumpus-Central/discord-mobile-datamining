@@ -5,6 +5,7 @@ import DismissibleContentUnsafeUtils from "../../dismissible_content/Dismissible
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import GiftingBadgeExperiment2 from "experiments/GiftingBadgeExperiment.tsx";
 import GiftingBadgeDesktopExperiment2 from "experiments/GiftingBadgeDesktopExperiment.tsx";
+import GiftingBadgeComplexArtExperiment2 from "experiments/GiftingBadgeComplexArtExperiment.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -55,6 +56,29 @@ export const getIsGiftingBadgesDesktopEnabled = function getIsGiftingBadgesDeskt
     enabled = GiftingBadgeDesktopExperiment.getConfig(obj).enabled;
   }
   return enabled;
+};
+export const useIsGiftingBadgeComplexArtEnabled = function useIsGiftingBadgeComplexArtEnabled(location) {
+  const GiftingBadgeComplexArtExperiment = GiftingBadgeComplexArtExperiment2.GiftingBadgeComplexArtExperiment;
+  return GiftingBadgeComplexArtExperiment.useConfig({ location }).enabled;
+};
+export const getGiftingBadgeTierIconUrl = function getGiftingBadgeTierIconUrl(complex_icon_static_url, arg1) {
+  if (arg1) {
+    let prop;
+    if (!tmp) {
+      prop = complex_icon_static_url.complex_icon_static_url;
+    }
+    if (prop == null) {
+      let simple_icon_url;
+      if (complex_icon_static_url != null) {
+        simple_icon_url = complex_icon_static_url.simple_icon_url;
+      }
+      prop = simple_icon_url;
+    }
+    simple_icon_url = prop;
+  } else if (!tmp) {
+    simple_icon_url = complex_icon_static_url.simple_icon_url;
+  }
+  return simple_icon_url;
 };
 export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleToShowGiftingBadgeCoachmark(location) {
   const _location = location.location;

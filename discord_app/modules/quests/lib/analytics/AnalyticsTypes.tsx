@@ -59,7 +59,7 @@ export const getContentProperties = function getContentProperties(
   obj.row_index = questContentRowIndex;
   return obj;
 };
-export const BountyScrollingType = { AUTO: "AUTO", MANUAL: "MANUAL" };
+export const BountyScrollingType = { MANUAL: "MANUAL" };
 export const HorizontalScrollingDirection = { LEFT: "LEFT", RIGHT: "RIGHT" };
 export const VerticalScrollingDirection = { UP: "UP", DOWN: "DOWN" };
 export const QuestHomeScrollingType = { ARROW: "ARROW", AUTO: "AUTO", MANUAL: "MANUAL" };

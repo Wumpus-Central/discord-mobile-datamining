@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 
 export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
-  let obj = channelId(12533);
+  let obj = channelId(12569);
   const items = [channelId];
   const isMessageRequestRestrictedViewer = obj.useIsMessageRequestRestrictedViewer("MessageRequestsPreviewScreen");
   const effect = noop.useEffect(() => {
@@ -43,5 +43,5 @@ export default function MessageRequestsScreen(route) {
     });
   }
   obj.children = tmp5Result;
-  return jsx(channelId(10167).ChannelContainer, { guildId: ME, channelId, children: null });
+  return jsx(channelId(10206).ChannelContainer, { guildId: ME, channelId, children: null });
 }

@@ -79,19 +79,19 @@ class StrangerDangerWarningBanner {
           },
           onIgnore() {
             closure_1_4();
-            channelId(11464);
+            channelId(11503);
             const obj = {
               channelId,
               warningId,
               senderId,
               warningType: constants.STRANGER_DANGER,
-              cta: channelId(11464).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM,
+              cta: channelId(11503).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM,
             };
             obj.trackCtaEvent(obj);
           },
           impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION,
         };
-        obj.openLazy(asyncRequireImpl(11477, dependencyMap.paths), closure_9, obj);
+        obj.openLazy(asyncRequireImpl(11516, dependencyMap.paths), closure_9, obj);
       };
     }, items5);
     closure_6 = callback2;
@@ -128,7 +128,7 @@ class StrangerDangerWarningBanner {
       };
       const intl = util.intl;
       obj.description = intl.string(util.t.DJMZX6);
-      const tmp = asyncRequireImpl(11469, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11508, dependencyMap.paths);
       obj.safetyTips = React5().map((children, index) =>
         closure_1_10(channelId(senderId[20]).Text, { variant: "text-sm/medium", children }, index),
       );
@@ -168,13 +168,13 @@ class StrangerDangerWarningBanner {
     return tmp8(tmp9, obj);
   }
 }
-const SafetyWarningTypes = fn(11007).SafetyWarningTypes;
-const Constants = fn(11457);
+const SafetyWarningTypes = fn(11046).SafetyWarningTypes;
+const Constants = fn(11496);
 ({ STRANGER_DANGER_MORE_TIPS_MODAL_KEY: metroRequire, getStrangerDangerSafetyTips: closure_7 } = Constants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-let closure_9 = fn(11476).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_9 = fn(11515).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { moreTipsHeader: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
 createStyles.moreTipsHeader = createStyles;

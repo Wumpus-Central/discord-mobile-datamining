@@ -7,14 +7,14 @@ import PhoneActionCreators from "../../../phone/PhoneActionCreators.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_4 = fn(7116).PHONE_VERIFICATION_MODAL_KEY;
-fn(11562);
+let closure_4 = fn(7146).PHONE_VERIFICATION_MODAL_KEY;
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dEYpSt);
   },
-  parent: fn(8049).MobileUserSettings.ACCOUNT,
+  parent: fn(8079).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountPhoneSettingTrailing() {
     const items = [UserStore];
     return initialize.useStateFromStores(items, () => {
@@ -28,7 +28,7 @@ let SettingBuilders = {
   },
   onPress: function onAccountPhoneSettingPress() {
     const obj = { allowDeletePhone: true, reason: PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE };
-    obj.pushLazy(asyncRequireImpl(7115, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(7145, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true,
 };

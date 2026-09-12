@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4606);
+fn(4636);
 const createStyles = {
   perkInfoContainer: { flexDirection: "row", alignItems: "center", gap: 16 },
   perkInfoTextContainer: { flexDirection: "column", gap: 4, maxWidth: 279 },

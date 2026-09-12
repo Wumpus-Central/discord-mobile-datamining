@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { container: null, textHeader: null };
 createStyles = {
   marginTop: nativeDefault.space.PX_8,

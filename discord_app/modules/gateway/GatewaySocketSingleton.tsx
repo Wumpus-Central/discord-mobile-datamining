@@ -50,7 +50,7 @@ socket.handleIdentify = () => {
     return obj;
   }
 };
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 if (PlatformUtils.isDesktop()) {
   const powerMonitor = DiscordNativeDefault.powerMonitor;
   powerMonitor.on("resume", () => {

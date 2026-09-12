@@ -43,18 +43,18 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  let obj = user(8275);
+  let obj = user(8307);
   const trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7235)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7265)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(13156);
+  let tmp3Result = tmp3(13193);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(504);
   const items = [userDisplayName];
   stateFromStores = tmp3Result.useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
-  userDisplayName = trackUserProfileAction(4451).useName(user);
+  userDisplayName = trackUserProfileAction(4481).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -63,9 +63,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13225).UserClockIcon;
+          let UserPlusIcon = tmp3(13258).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4543).UserPlusIcon;
+          UserPlusIcon = tmp3(4573).UserPlusIcon;
         }
         const intl = tmp3(1114).intl;
         const string = intl.string;
@@ -116,7 +116,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { threeButtonLayout: null, flexGrow: null, iconButtonGroup: null };
 createStyles = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 createStyles.threeButtonLayout = createStyles;

@@ -5,7 +5,7 @@ import ProfileCustomizationUtils from "../../profile_customization/ProfileCustom
 import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef14643 from "../../../../_runtime/metro/14643__.js";
+import _modDef14677 from "../../../../_runtime/metro/14677__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import ProfileCustomizationNavigationStore from "../../profile_customization/ProfileCustomizationNavigationStore.tsx";
@@ -60,7 +60,7 @@ function EditUserProfileBanner(user) {
       };
     }
     obj.onBannerChange = fn;
-    const tmp3 = asyncRequireImpl(14645, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(14679, dependencyMap.paths);
     let banner;
     if (displayProfile != null) {
       banner = displayProfile.banner;
@@ -78,19 +78,19 @@ function EditUserProfileBanner(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7281).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7311).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1074);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: c10 } = Constants);
 let closure_11 = fn(1084).ProfileCustomizationScrollPositions;
-const constants = fn(14642).UserProfileEditAutoFocusElement;
+const constants = fn(14676).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let obj = {
-  assetOrigin: fn(7062).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef14643,
-  staticImageUri: _modDef14643,
+  assetOrigin: fn(7092).AssetOriginTypes.NEW_ASSET,
+  imageUri: _modDef14677,
+  staticImageUri: _modDef14677,
   description: "",
-  originalAsset: "apply",
+  originalAsset: "add",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");

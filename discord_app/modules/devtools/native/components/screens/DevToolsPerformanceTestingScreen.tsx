@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { container: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
 obj.container = obj;
@@ -28,10 +28,10 @@ export default noop.memo(function DevToolsPerformanceTestingScreen() {
   obj1.children = entries.map((item) => {
     [tmp] = item;
     return jsx(
-      screenKey(5656).TableRow,
+      screenKey(5686).TableRow,
       {
         label: tmp2,
-        icon: jsx(screenKey(5656).TableRow.Icon, { IconComponent: tmp3 }),
+        icon: jsx(screenKey(5686).TableRow.Icon, { IconComponent: tmp3 }),
         arrow: true,
         onPress() {
           let arr = screenKey;

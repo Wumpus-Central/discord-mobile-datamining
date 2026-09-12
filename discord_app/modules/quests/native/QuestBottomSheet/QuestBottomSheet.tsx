@@ -84,17 +84,17 @@ function QuestBottomSheet(initialStep) {
 function useEnrolledQuestContentProps(quest) {
   quest = quest.quest;
   ({ location: _location, sourceQuestContent: importDefault } = quest);
-  let obj = quest(11867);
+  let obj = quest(11903);
   dependencyMap = obj.useTrackQuestContentClickedWithImpression();
-  let obj1 = quest(11580);
+  let obj1 = quest(11619);
   _slicedToArray = obj1.useQuestImpressionId();
-  let obj2 = quest(11577);
+  let obj2 = quest(11616);
   const questTaskDetails = obj2.useQuestTaskDetails(quest);
-  const isQuestProgressing = quest(11577).useIsQuestProgressing(quest);
-  const obj4 = quest(11577);
-  let tmp6 = _slicedToArray(quest(11577).useTaskPlatformScreen(quest, questTaskDetails), 3);
+  const isQuestProgressing = quest(11616).useIsQuestProgressing(quest);
+  const obj4 = quest(11616);
+  let tmp6 = _slicedToArray(quest(11616).useTaskPlatformScreen(quest, questTaskDetails), 3);
   noop = tmp6[2];
-  const obj5 = quest(11577);
+  const obj5 = quest(11616);
   closure_129_0 = quest;
   closure_129_1 = undefined;
   closure_129_2 = undefined;
@@ -117,11 +117,11 @@ function useEnrolledQuestContentProps(quest) {
   };
   const userStatus = quest.userStatus;
   let completedAt;
-  const hasWatchVideoOnMobileTasks = quest(15149).useHasWatchVideoOnMobileTasks(quest.config);
+  const hasWatchVideoOnMobileTasks = quest(15171).useHasWatchVideoOnMobileTasks(quest.config);
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
-  let tmpResult = tmp(11577);
+  let tmpResult = tmp(11616);
   const xboxAndPlaystationAccounts = tmpResult.useConnectedAccounts().xboxAndPlaystationAccounts;
   closure_129_1 = xboxAndPlaystationAccounts;
   let items = [quest, xboxAndPlaystationAccounts];
@@ -133,12 +133,12 @@ function useEnrolledQuestContentProps(quest) {
       }),
     items,
   );
-  tmpResult = tmp(11577);
+  tmpResult = tmp(11616);
   const questTaskDetails1 = tmpResult.useQuestTaskDetails(quest);
-  const obj6 = quest(15149);
-  let isQuestProgressing1 = quest(11577).useIsQuestProgressing(quest);
-  const tmpResult1 = quest(11577);
-  let tmp5Result = tmp5(quest(11577).useTaskPlatformScreen(quest, questTaskDetails1), 3);
+  const obj6 = quest(15171);
+  let isQuestProgressing1 = quest(11616).useIsQuestProgressing(quest);
+  const tmpResult1 = quest(11616);
+  let tmp5Result = tmp5(quest(11616).useTaskPlatformScreen(quest, questTaskDetails1), 3);
   const first = tmp5Result[0];
   closure_129_2 = first;
   closure_129_3 = tmp14;
@@ -148,7 +148,7 @@ function useEnrolledQuestContentProps(quest) {
     tmp16 = !tmp9;
   }
   if (tmp16) {
-    tmp16 = first === tmp(5498).TaskPlatformScreen.CONSOLE;
+    tmp16 = first === tmp(5528).TaskPlatformScreen.CONSOLE;
   }
   if (!tmp16) {
     tmp16 = quest.initialStep === obj.CONSOLE_CONNECT;
@@ -161,7 +161,7 @@ function useEnrolledQuestContentProps(quest) {
     isQuestProgressing1 = questTaskDetails1.progressSeconds > 0;
   }
   closure_129_7 = isQuestProgressing1;
-  const tmpResult2 = quest(11577);
+  const tmpResult2 = quest(11616);
   if (!tmp21) {
     tmp20(true);
   }
@@ -215,11 +215,11 @@ function useEnrolledQuestContentProps(quest) {
     return items;
   }, items3);
   closure_129_13 = memo3;
-  tmp21 = 0 !== memo.length || null != completedAt || first !== quest(5498).TaskPlatformScreen.CONSOLE || first1;
-  const hasWatchVideoOnMobileTasks1 = quest(15149).useHasWatchVideoOnMobileTasks(quest.config);
+  tmp21 = 0 !== memo.length || null != completedAt || first !== quest(5528).TaskPlatformScreen.CONSOLE || first1;
+  const hasWatchVideoOnMobileTasks1 = quest(15171).useHasWatchVideoOnMobileTasks(quest.config);
   closure_129_14 = hasWatchVideoOnMobileTasks1;
-  const tmpResult3 = quest(15149);
-  const isMobileActivityQuest = quest(15149).useMobileActivityQuest(quest).isMobileActivityQuest;
+  const tmpResult3 = quest(15171);
+  const isMobileActivityQuest = quest(15171).useMobileActivityQuest(quest).isMobileActivityQuest;
   closure_129_15 = isMobileActivityQuest;
   const items4 = [tmp5Result[1], memo3, memo1, memo2, hasWatchVideoOnMobileTasks1, isMobileActivityQuest];
   const memo4 = obj8.useMemo(() => {
@@ -260,12 +260,12 @@ function useEnrolledQuestContentProps(quest) {
   }
   obj.onNext = onNext;
   items5[1] = obj;
-  const tmpResult4 = quest(15149);
+  const tmpResult4 = quest(15171);
   closure_130_0 = quest;
   [tmp32, tmp33] = _slicedToArray(items5, 2);
   const tmp5Result1 = _slicedToArray(items5, 2);
   obj = { quest, location: constants.QUEST_HOME_MOBILE };
-  const questLogger = quest(7781).getQuestLogger(obj);
+  const questLogger = quest(7811).getQuestLogger(obj);
   closure_130_1 = questLogger;
   const tmp5Result2 = _slicedToArray(useState([]), 2);
   closure_130_2 = tmp36;
@@ -284,11 +284,11 @@ function useEnrolledQuestContentProps(quest) {
         .catch((error) => {
           dependencyMap([]);
           logger.error("Failed to start console quest", error);
-          sourceQuestContent(4305);
+          sourceQuestContent(4335);
           const obj = { key: "START_DEFIBRILLATOR_ERROR", content: null, icon: null };
           const intl = quest(1114).intl;
           obj.content = intl.string(quest(1114).t.CKsXk3);
-          obj.icon = sourceQuestContent(5648);
+          obj.icon = sourceQuestContent(5678);
           obj.open(obj);
         })
         .finally(() => impressionId(false));
@@ -299,7 +299,7 @@ function useEnrolledQuestContentProps(quest) {
   if (userStatus2 != null) {
     completedAt1 = userStatus2.completedAt;
   }
-  const tmpResult5 = quest(7781);
+  const tmpResult5 = quest(7811);
   obj2 = {
     quest,
     defibrillator: obj1,
@@ -308,7 +308,7 @@ function useEnrolledQuestContentProps(quest) {
     showMicrophone:
       null == completedAt1 &&
       !isQuestProgressing &&
-      tmp6[0] === quest(5498).TaskPlatformScreen.CONSOLE &&
+      tmp6[0] === quest(5528).TaskPlatformScreen.CONSOLE &&
       !hasWatchVideoOnMobileTasks,
     handleTaskSelect(arg0) {
       if (arg0 === constants2.CONSOLE) {
@@ -321,20 +321,20 @@ function useEnrolledQuestContentProps(quest) {
         DESELECT_PLATFORM = AnalyticsTypes.QuestContentCTA.DESELECT_PLATFORM;
         tmp4 = require;
       }
-      let tmp4Result = tmp4(11286);
+      let tmp4Result = tmp4(11325);
       if (
         tmp4Result.shouldMigrateToAdAnalyticsInterface(
-          tmp4(11286).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+          tmp4(11325).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
           "quest_bottom_sheet",
         )
       ) {
-        tmp4Result = tmp4(11287);
+        tmp4Result = tmp4(11326);
         let obj = {
-          type: tmp4(11291).AdUserActionType.CLICK_INTERNAL,
-          adCreativeType: tmp4(5502).AdCreativeType.QUEST,
+          type: tmp4(11330).AdUserActionType.CLICK_INTERNAL,
+          adCreativeType: tmp4(5532).AdCreativeType.QUEST,
           adCreativeId: quest.id,
           questContentCTA: DESELECT_PLATFORM,
-          surfaceId: tmp4(5498).QuestContent.QUEST_BOTTOM_SHEET,
+          surfaceId: tmp4(5528).QuestContent.QUEST_BOTTOM_SHEET,
           sourceQuestContent,
           impressionId,
         };
@@ -342,7 +342,7 @@ function useEnrolledQuestContentProps(quest) {
       } else {
         obj = {
           questId: quest.id,
-          questContent: tmp4(5498).QuestContent.QUEST_BOTTOM_SHEET,
+          questContent: tmp4(5528).QuestContent.QUEST_BOTTOM_SHEET,
           questContentCTA: DESELECT_PLATFORM,
           sourceQuestContent,
         };
@@ -507,7 +507,7 @@ function MicrophoneUnit(arg0) {
 }
 const useState = fn(19).useState;
 const View = fn(17).View;
-const QuestConstants = fn(5495);
+const QuestConstants = fn(5525);
 ({ QuestsExperimentLocations: closure_8, QuestTaskPlatform: closure_9 } = QuestConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -516,7 +516,7 @@ let QuestBottomSheetStep = {
   CONSOLE_CONNECT: "CONSOLE_CONNECT",
   TASK_STATUS: "TASK_STATUS",
 };
-fn(4606);
+fn(4636);
 QuestBottomSheetStep = {
   contentContainer: { display: "flex", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 },
   microphoneUnit: null,

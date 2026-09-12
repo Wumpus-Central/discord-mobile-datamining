@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
 const context = noop.createContext({ isForm: false });
 const size = fn(2);

@@ -111,10 +111,10 @@ function PressableBase(androidRippleConfig) {
   );
 }
 const Pressable = fn(17).Pressable;
-const IOS_POINTER_STYLE = fn(5035).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5065).IOS_POINTER_STYLE;
 const getThemedRippleConfig = fn(1182).getThemedRippleConfig;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { pressedHighlight: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj.pressedHighlight = obj;

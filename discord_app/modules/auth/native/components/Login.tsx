@@ -57,7 +57,7 @@ const View = fn(17).View;
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     password: { marginTop: 24 },
@@ -239,39 +239,92 @@ export default function Login(isMultiAccount) {
     items1,
   );
   _require = asyncGeneratorStep(async (isMultiAccount, arg1) => {
-    closure_131_0 = isMultiAccount;
-    closure_131_1 = closure_1;
-    let flag = closure_2;
-    if (closure_2 === undefined) {
-      flag = false;
-    }
-    closure_131_2 = flag;
-    await "PX_16";
-    tmp3(true);
-    tmp22({});
-    await navigation(ref[19]).login({
-      login: closure_131_0,
-      password: closure_131_1,
-      undelete: closure_131_2,
-      isMultiAccount,
-    });
-    if (2 === tmp7) {
-      c6 = 0;
-      closure_131_4 = tmp22;
-      tmp3(false);
-      const authenticationErrorsFromV6OrEarlierAPIError = isMultiAccount(
-        ref[23],
-      ).getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
-      callback(authenticationErrorsFromV6OrEarlierAPIError);
+    if (c8 === 2) {
       c8 = 3;
-      isMultiAccount(ref[23]);
-    } else if (isMultiAccount === 1) {
-      c8 = 3;
-      throw value;
-    } else if (isMultiAccount !== 2) {
-      c6 = 0;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (isMultiAccount === 1) {
+        throw value;
+      } else if (isMultiAccount === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount === 2) {
+            c8 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp7;
+            closure_131_2 = undefined;
+            closure_131_0 = isMultiAccount;
+            closure_131_1 = closure_1;
+            let flag = closure_2;
+            if (closure_2 === undefined) {
+              flag = false;
+            }
+            closure_131_2 = flag;
+            let authenticationErrorsFromV6OrEarlierAPIError;
+            c7 = 1;
+            c8 = 1;
+            return { value: "PX_16", done: true };
+          }
+        } else if (1 === tmp7) {
+          if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount === 2) {
+            c8 = 3;
+            let obj1 = { value, done: true };
+            return obj1;
+          } else {
+            tmp3(true);
+            tmp22({});
+            c6 = 1;
+            const obj2 = { login: closure_131_0, password: closure_131_1, undelete: closure_131_2, isMultiAccount };
+            c7 = 3;
+            c8 = 1;
+            const obj3 = { value: navigation(ref[19]).login(obj2), done: false };
+            return obj3;
+          }
+        } else {
+          if (2 === tmp7) {
+            c6 = 0;
+            closure_131_4 = tmp22;
+            tmp3(false);
+            obj1 = isMultiAccount(ref[23]);
+            authenticationErrorsFromV6OrEarlierAPIError =
+              obj1.getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
+            callback(authenticationErrorsFromV6OrEarlierAPIError);
+            c8 = 3;
+          } else if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount !== 2) {
+            c6 = 0;
+          }
+          c6 = 0;
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp22) {
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp22;
+        } else {
+          c7 = tmp;
+        }
+      }
     }
-    return value;
   });
   const items2 = [callback, flag];
   const callback1 = noop.useCallback(function () {

@@ -75,7 +75,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_13 = undefined;
           c12 = 1;
           c13 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -419,7 +419,7 @@ export const triggerUserOffer = function triggerUserOffer(triggerType, trigger_l
       if (postResultResult.isIOS()) {
         GOOGLE = constants2.APPLE;
       }
-      postResultResult = postResult(1115);
+      postResultResult = postResult(1150);
     }
     obj = {
       payment_gateway: GOOGLE,

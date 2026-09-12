@@ -30,21 +30,21 @@ const ChannelRecord = fn(1961);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11776).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10949).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11812).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10988).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, headerLeftContainer: null, headerRightContainer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.container = createStyles;
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 0;
 if (PlatformUtils.isIOS()) {
   num = nativeDefault.space.PX_16;
 }
 createStyles.headerLeftContainer = { paddingLeft: num };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let num2 = 0;
 if (PlatformUtils.isIOS()) {
   num2 = nativeDefault.space.PX_16;

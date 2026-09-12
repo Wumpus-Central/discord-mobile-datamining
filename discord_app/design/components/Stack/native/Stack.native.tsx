@@ -3,7 +3,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_2 = createStyles.createStyles((gap, arg1, alignItems, justifyContent) => {
   const stack = { width: "100%", gap, alignItems, justifyContent, flexDirection: null };
   let str = "column";

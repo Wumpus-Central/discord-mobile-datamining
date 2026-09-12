@@ -14,8 +14,8 @@ function handleChannelDelete(channel) {
     enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
   }
   if (enabled) {
-    enabled = channel(1116).isDesktop();
-    const obj2 = channel(1116);
+    enabled = channel(1151).isDesktop();
+    const obj2 = channel(1151);
   }
   if (enabled) {
     if (
@@ -49,8 +49,8 @@ function handleChannelDelete(channel) {
         enabled2 = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
       }
       if (enabled2) {
-        enabled2 = channel(1116).isDesktop();
-        const obj4 = channel(1116);
+        enabled2 = channel(1151).isDesktop();
+        const obj4 = channel(1151);
       }
       let tmp10 = !enabled2;
       if (!enabled2) {
@@ -459,8 +459,8 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       enabled = obj.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      enabled = obj(1116).isDesktop();
-      const obj2 = obj(1116);
+      enabled = obj(1151).isDesktop();
+      const obj2 = obj(1151);
     }
     if (enabled) {
       if (0 !== tabs.length) {
@@ -519,7 +519,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       enabled = obj.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      let obj1 = obj(1116);
+      let obj1 = obj(1151);
       enabled = obj1.isDesktop();
     }
     if (enabled) {

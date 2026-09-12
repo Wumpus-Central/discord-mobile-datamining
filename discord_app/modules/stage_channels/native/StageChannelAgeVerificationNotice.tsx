@@ -5,14 +5,14 @@ import useStageSpeakingForCurrentUser from "../useStageSpeakingForCurrentUser.ts
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const native = Text(1178);
-const CircleInformationIcon = Text(4561);
-const Text_Text = Text(4602);
-const WarningIcon2 = Text(8679);
+const CircleInformationIcon = Text(4591);
+const Text_Text = Text(4632);
+const WarningIcon2 = Text(8711);
 require = fn;
 function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
   closure_1 = closure_8();
-  let obj = onConfirmPress(4819);
+  let obj = onConfirmPress(4849);
   const isVerifiedTeen = obj.useIsVerifiedTeen();
   const intl = onConfirmPress(1114).intl;
   const format = intl.format;
@@ -25,7 +25,7 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
           color: "text-default",
           style: closure_1.linkText,
           onPress() {
-            const tmp = closure_1(4295);
+            const tmp = closure_1(4325);
             tmp(closure_1(2024).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
             if (onConfirmPress != null) {
               onConfirmPress();
@@ -44,8 +44,8 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
           color: "text-default",
           style: closure_1.linkText,
           onPress() {
-            closure_1(8497);
-            const obj = { entryPoint: onConfirmPress(8499).AgeVerificationModalEntryPoint.START_STAGE_PROMPT };
+            closure_1(8529);
+            const obj = { entryPoint: onConfirmPress(8531).AgeVerificationModalEntryPoint.START_STAGE_PROMPT };
             const result = obj.showAgeVerificationGetStartedModal(obj);
             if (closure_1_0 != null) {
               closure_1_0();
@@ -96,7 +96,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: null,
   containerWithDivider: null,

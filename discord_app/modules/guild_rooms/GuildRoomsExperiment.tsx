@@ -2,7 +2,7 @@
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 
 const require = fn;
-fn(4520);
+fn(4550);
 const createExperiment = {
   kind: "guild",
   id: "2026-06_guild_rooms",

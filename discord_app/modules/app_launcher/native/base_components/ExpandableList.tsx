@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles({
   animatedListContainer: { overflow: "hidden" },
   expandCTALabelContainer: { alignItems: "center" },
@@ -70,11 +70,11 @@ export default function ExpandableList(onExpand) {
   if (null == showsExpandCTAOverride) {
     showsExpandCTAOverride = items.length > bound;
   }
-  let obj2 = memo1(4343);
+  let obj2 = memo1(4373);
   sharedValue = obj2.useSharedValue(0);
-  let obj3 = memo1(4343);
+  let obj3 = memo1(4373);
   sharedValue1 = obj3.useSharedValue(0);
-  let obj4 = memo1(4343);
+  let obj4 = memo1(4373);
   class C {
     constructor() {
       if (closure_5) {
@@ -101,7 +101,7 @@ export default function ExpandableList(onExpand) {
   const memo = obj.useMemo(() => memo1.slice(0, bound), items3);
   const items4 = [items, bound];
   memo1 = obj.useMemo(() => memo1.slice(bound, memo1.length), items4);
-  let obj5 = memo1(4343);
+  let obj5 = memo1(4373);
   class A {
     constructor() {
       if (0 !== closure_9.get()) {
@@ -120,9 +120,9 @@ export default function ExpandableList(onExpand) {
   }
   obj = {
     collapsedListHeight: sharedValue,
-    withTiming: memo1(4607).withTiming,
+    withTiming: memo1(4637).withTiming,
     containerHeight: derivedValue,
-    timingStandard: memo1(4610).timingStandard,
+    timingStandard: memo1(4640).timingStandard,
   };
   A.__closure = obj;
   A.__workletHash = 2086836441465;
@@ -198,7 +198,7 @@ export default function ExpandableList(onExpand) {
     }
     obj7 = { children: null };
     const obj8 = { color: "text-brand", variant: "text-md/semibold", children: stringResult1 };
-    obj6.children = tmp16(tmp9(4602).Text, obj8);
+    obj6.children = tmp16(tmp9(4632).Text, obj8);
     obj6 = tmp16(tmp17, obj6);
     obj5.label = obj6;
     obj5.onPress = function onPress() {
@@ -212,7 +212,7 @@ export default function ExpandableList(onExpand) {
         tmp4(obj);
       }
     };
-    obj5 = tmp16(tmp9(5656).TableRow, obj5);
+    obj5 = tmp16(tmp9(5686).TableRow, obj5);
     obj7.children = obj5;
     tmp16Result = tmp16(tmp17, obj7);
   }

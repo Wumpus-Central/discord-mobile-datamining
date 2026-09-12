@@ -1,5 +1,5 @@
 // discord_app/modules/panels/morphable/native/AppFreezer.tsx
-import Suspender from "../../../../../_runtime/04981_Suspender.js";
+import Suspender from "../../../../../_runtime/05011_Suspender.js";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AppFreezeStore from "../AppFreezeStore.tsx";

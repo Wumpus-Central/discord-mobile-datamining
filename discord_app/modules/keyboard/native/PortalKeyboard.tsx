@@ -1,6 +1,6 @@
 // discord_app/modules/keyboard/native/PortalKeyboard.tsx
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import Portal from "../../../../_runtime/04479_Portal.js";
+import Portal from "../../../../_runtime/04509_Portal.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

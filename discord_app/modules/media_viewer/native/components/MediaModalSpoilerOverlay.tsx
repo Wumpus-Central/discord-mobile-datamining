@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = {
   spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 },
   obscureContentContainer: null,
@@ -34,7 +34,7 @@ const createStyles = {
   alignItems: "center",
   alignSelf: "center",
 };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 PlatformUtils = PlatformUtils.isAndroid();
 const unsafe_rawColors = nativeDefault.unsafe_rawColors;
 createStyles.backgroundColor = PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;

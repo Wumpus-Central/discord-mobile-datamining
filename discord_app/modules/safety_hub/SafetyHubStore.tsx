@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import SafetyHubModels from "SafetyHubModels.tsx";
-import _modDef8517 from "../../../_runtime/metro/08517__.js";
+import _modDef8549 from "../../../_runtime/metro/08549__.js";
 import SafetyHubConstants from "SafetyHubConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -162,7 +162,7 @@ obj = {
       manualReviewFallbackEnabled,
       manualReviewDecidedUnderage,
     } = arg0);
-    closure_6 = _modDef8517(classifications, "id");
+    closure_6 = _modDef8549(classifications, "id");
     c9 = false;
     c10 = true;
     error = null;

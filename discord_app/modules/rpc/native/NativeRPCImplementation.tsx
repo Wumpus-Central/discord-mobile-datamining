@@ -11,16 +11,16 @@ import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 
 let obj = {};
-const merged = Object.assign(fn(14519).crossPlatformCommands);
+const merged = Object.assign(fn(14554).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const auth = Object.assign(authDefault);
 const voiceSettings = Object.assign(voiceSettingsDefault);
 const unsupported = Object.assign(unsupportedDefault);
 obj = {};
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(14575);
+const discordEnvironmentEvents = fn(14610);
 const merged6 = Object.assign(discordEnvironmentEvents.createDiscordEnvironmentEvents(true));
-const merged7 = Object.assign(fn(14576).voiceSettingsEventHandlers);
+const merged7 = Object.assign(fn(14611).voiceSettingsEventHandlers);
 obj = {
   server: NativeRPCServerDefault,
   commands: obj,

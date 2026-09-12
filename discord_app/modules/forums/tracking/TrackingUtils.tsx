@@ -84,7 +84,7 @@ function collectForumAnalyticsMetadata(sessionId) {
   }
   return tmp;
 }
-const DraftType = fn(4947).DraftType;
+const DraftType = fn(4977).DraftType;
 const Permissions = fn(1074).Permissions;
 const ChannelFlags = fn(1964).ChannelFlags;
 const constants = fn(1113).ThreadSortOrderReadableForAnalytics;

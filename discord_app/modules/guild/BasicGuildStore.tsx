@@ -24,8 +24,8 @@ prototype["isGuildFetching"] = function isGuildFetching(arg0) {
   }
   return tmp2;
 };
-prototype["getGuildOrStatus"] = function getGuildOrStatus(guildId) {
-  return dependencyMap[guildId];
+prototype["getGuildOrStatus"] = function getGuildOrStatus(guild_id) {
+  return dependencyMap[guild_id];
 };
 prototype["getVersion"] = function getVersion() {
   return closure_0;

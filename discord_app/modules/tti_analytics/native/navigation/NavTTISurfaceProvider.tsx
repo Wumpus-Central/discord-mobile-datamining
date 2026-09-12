@@ -13,7 +13,7 @@ export const NavTTISurfaceProvider = function NavTTISurfaceProvider(navigationKe
   const definition = navigationKey.definition;
   const merged = Object.assign(navigationKey, Object.assign({ navigationKey: 0, definition: 0, children: 0 }));
   let syncExternalStore;
-  let obj = navigationKey(16609);
+  let obj = navigationKey(16633);
   const result = obj.isNavigationTTIEnabled();
   dependencyMap = result;
   const items = [definition, result, navigationKey];
@@ -44,5 +44,5 @@ export const NavTTISurfaceProvider = function NavTTISurfaceProvider(navigationKe
   const merged1 = Object.assign(merged);
   obj.children = navigationKey.children;
   obj.children = <View />;
-  return jsx(navigationKey(16608).NavTTISurfaceContext.Provider, {});
+  return jsx(navigationKey(16632).NavTTISurfaceContext.Provider, {});
 };

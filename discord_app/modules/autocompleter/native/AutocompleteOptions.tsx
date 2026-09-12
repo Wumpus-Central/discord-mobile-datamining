@@ -15,18 +15,18 @@ import apply from "../../../../_runtime/metro/00012__.js";
 require = fn;
 const Constants = fn(1074);
 ({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: closure_11 } = Constants);
-const ChannelAutocompleteConstants = fn(5051);
+const ChannelAutocompleteConstants = fn(5081);
 ({
   MENTION_SENTINEL: closure_12,
   EMOJI_SENTINEL: map1,
   CHANNEL_SENTINEL: closure_14,
   COMMAND_SENTINEL: closure_15,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10513).AutocompleteTypes;
+const AutocompleteTypes = fn(10552).AutocompleteTypes;
 const EmojiConstants = fn(1374);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;
-const executeCommand = apply.debounce(executeCommandDefault, fn(5050).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+const executeCommand = apply.debounce(executeCommandDefault, fn(5080).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
   leading: true,
   trailing: true,
 });
@@ -305,7 +305,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const stickerPacks = StickersActionCreators.fetchStickerPacks();
               }
               const items2 = [query];
-              const items3 = [channel, (arg0, arg1) => arg1 === channel(7410).StickerSendability.SENDABLE];
+              const items3 = [channel, (arg0, arg1) => arg1 === channel(7440).StickerSendability.SENDABLE];
               items1 = AutocompleteUtilsDefault.queryStickers(items2, true, items3);
               const tmp2Result = AutocompleteUtilsDefault;
             }

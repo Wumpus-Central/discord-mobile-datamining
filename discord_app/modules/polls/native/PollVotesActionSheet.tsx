@@ -11,8 +11,8 @@ import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef11817 from "../../../../_runtime/metro/11817__.js";
-import _modDef11818 from "../../../../_runtime/metro/11818__.js";
+import _modDef11853 from "../../../../_runtime/metro/11853__.js";
+import _modDef11854 from "../../../../_runtime/metro/11854__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -374,9 +374,9 @@ function NoResults() {
   obj = { style: tmp.noResultsImage, source: null };
   const tmp4 = useThemeDefault();
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef11817;
+    let tmp2Result = _modDef11853;
   } else {
-    tmp2Result = _modDef11818;
+    tmp2Result = _modDef11854;
   }
   obj.source = tmp2Result;
   const items = [closure_1_14(timestampProducer, obj), ,];
@@ -395,7 +395,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = {
   headerText: { textAlign: "center", paddingHorizontal: 16 },
   subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 },

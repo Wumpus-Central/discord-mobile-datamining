@@ -6,7 +6,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = fn;
 const Constants = fn(1074);
 ({ ME: metroRequire, Routes: closure_7 } = Constants);
-const MessageSendLocation = fn(4599).MessageSendLocation;
+const MessageSendLocation = fn(4629).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWave.native.tsx");
 

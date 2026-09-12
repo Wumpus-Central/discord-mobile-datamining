@@ -21,7 +21,7 @@ export default function ConnectedMFA() {
   ({ inContainer, isMultiAccount } = obj);
   const navigation = isMultiAccount(1483).useNavigation();
   if (inContainer) {
-    inContainer = navigation(7015)();
+    inContainer = navigation(7045)();
   }
   let tmpResult = isMultiAccount(504);
   const items = [AuthenticationStore];
@@ -69,9 +69,9 @@ export default function ConnectedMFA() {
       tmp13 = obj;
     }
     obj.headerRightContainerStyle = tmp13;
-    return jsx(isMultiAccount(15733).MFAModal, obj);
+    return jsx(isMultiAccount(15755).MFAModal, obj);
   } else {
-    tmpResult = isMultiAccount(1116);
+    tmpResult = isMultiAccount(1151);
     tmp4(576).space;
     const isAndroidResult = tmpResult.isAndroid();
     const space = { paddingLeft: null, paddingTop: null };

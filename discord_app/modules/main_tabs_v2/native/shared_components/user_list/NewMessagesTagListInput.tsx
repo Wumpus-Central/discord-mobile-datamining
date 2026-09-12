@@ -10,7 +10,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let obj = { searchBarContainer: null, header: null, showSearchButton: null };
 obj = {
   paddingHorizontal: nativeDefault.space.PX_16,
@@ -19,7 +19,7 @@ obj = {
 };
 obj.searchBarContainer = obj;
 const createStyles = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;

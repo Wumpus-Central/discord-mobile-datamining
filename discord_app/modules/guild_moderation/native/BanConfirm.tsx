@@ -92,7 +92,7 @@ items[6] = {
     return intl.string(util.t.FA7IUk);
   },
 };
-fn(4606);
+fn(4636);
 let obj6 = { container: null, iconLabelBlock: null, iconStyles: null, blurb: null, redText: null, errorText: null };
 let obj5 = {
   value: 7 * DurationsDefault.Seconds.DAY,
@@ -165,7 +165,7 @@ export default noop.memo(function BanConfirm(arg0) {
       obj = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj.contentContainerStyle = obj;
       obj1 = { style: tmp.iconLabelBlock, children: null };
-      obj2 = { style: tmp.iconStyles, source: require("../../../../_runtime/metro/11946__.js"), resizeMode: "contain" };
+      obj2 = { style: tmp.iconStyles, source: require("../../../../_runtime/metro/11982__.js"), resizeMode: "contain" };
       const items4 = [closure_10(ref, obj2), ,];
       const obj3 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = require("util").intl;

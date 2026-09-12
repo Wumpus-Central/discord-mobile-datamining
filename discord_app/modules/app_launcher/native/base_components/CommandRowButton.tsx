@@ -93,13 +93,13 @@ export const useCommandRowSend = function useCommandRowSend(command) {
                 beforeExecuteCommand();
               }
               c3 = 1;
-              let obj1 = tmp3(9379);
+              let obj1 = tmp3(9418);
               obj1 = {
                 command,
-                optionValues: tmp3(12086).parseOptionValuesForSend(commandContext.channel, command, {}),
+                optionValues: tmp3(12122).parseOptionValuesForSend(commandContext.channel, command, {}),
                 context: commandContext,
                 sectionName,
-                commandOrigin: tmp3(7596).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW,
+                commandOrigin: tmp3(7626).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW,
               };
               dependencyMap = 2;
               c4 = 1;

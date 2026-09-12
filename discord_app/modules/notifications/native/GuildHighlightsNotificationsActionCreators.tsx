@@ -72,5 +72,5 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
     obj.track(AnalyticEvents.FEEDBACK_FORM_SUBMITTED, obj);
   };
   obj.feedbackSettings = obj;
-  obj.openLazy(require("asyncRequireImpl")(11718, dependencyMap.paths), "GuildHighlightsNotifications", obj);
+  obj.openLazy(require("asyncRequireImpl")(11754, dependencyMap.paths), "GuildHighlightsNotifications", obj);
 };

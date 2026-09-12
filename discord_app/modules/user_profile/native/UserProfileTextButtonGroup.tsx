@@ -3,10 +3,10 @@ import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7281).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7311).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles({
   container: { flexDirection: "row", flexWrap: "wrap", gap: 12 },
   buttonArea: { flexGrow: 1 },

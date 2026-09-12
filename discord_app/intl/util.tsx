@@ -64,9 +64,9 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
   }
   const arr = require("../../_runtime/metro/01177__.js");
 };
-export const useSyncMessages = function useSyncMessages(arg0, PlatformUtils) {
+export const useSyncMessages = function useSyncMessages(arg0, util) {
   closure_0 = arg0;
-  const currentLocale = PlatformUtils;
+  const currentLocale = util;
   const syncExternalStore = noop.useSyncExternalStore(
     (arg0) => closure_0.onChange(arg0),
     () => closure_0.isLocaleLoaded(currentLocale.currentLocale),

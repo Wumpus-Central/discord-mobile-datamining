@@ -38,7 +38,7 @@ export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
           obj = { destinationPane: closure_1_1.route, source: null };
           obj = { page: constants.USER_SETTINGS };
           obj.source = obj;
-          const result = navigation(7068).trackUserSettingsPaneViewed(obj);
+          const result = navigation(7098).trackUserSettingsPaneViewed(obj);
           navigation.navigate(closure_1_1.route);
         }, 100);
       }
@@ -65,7 +65,7 @@ export const getSettingTitle = function getSettingTitle(id) {
   return cachedSettingTitle;
 };
 export const getSettingSearchableTitles = function getSettingSearchableTitles() {
-  const entries = Object.entries(items(14637).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14671).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
@@ -86,7 +86,7 @@ export const getSettingSearchableTitles = function getSettingSearchableTitles() 
 export const getSettingScreens = function getSettingScreens() {
   let items = [];
   set = new Set();
-  const entries = Object.entries(items(14637).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14671).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     if (tmp2.type === constants2.ROUTE) {
@@ -101,7 +101,7 @@ export const getSettingScreens = function getSettingScreens() {
 };
 export const getDesignSystemScreens = function getDesignSystemScreens() {
   let items = [];
-  const entries = Object.entries(items(14637).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14671).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     let tmp3 = tmp2.type === constants2.ROUTE;

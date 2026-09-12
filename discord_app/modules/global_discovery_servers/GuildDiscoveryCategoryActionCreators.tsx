@@ -154,7 +154,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
           let about;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

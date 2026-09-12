@@ -3,14 +3,14 @@ import Text_Text from "../../../components/Text/native/Text.tsx";
 import Card from "../../../components/Card/native/Card.native.tsx";
 import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import FormRowDefault from "FormRow.tsx";
-import _modDef8364 from "../../../../../_runtime/metro/08364__.js";
+import _modDef8396 from "../../../../../_runtime/metro/08396__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles({
   labels: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   slider: { marginStart: -4, marginTop: 8 },
@@ -33,7 +33,7 @@ export default function FormSliderRow(arg0) {
     const obj2 = {};
     const merged1 = Object.assign(merged);
     obj2.style = tmp5.slider;
-    items1[1] = hasOwnProperty(_modDef8364, obj2);
+    items1[1] = hasOwnProperty(_modDef8396, obj2);
     obj.children = items1;
     let tmp6Result = timestampProducer(Card.Card, obj);
   } else {
@@ -42,7 +42,7 @@ export default function FormSliderRow(arg0) {
     const items2 = [hasOwnProperty(FormRowDefault, obj3)];
     const obj4 = {};
     const merged2 = Object.assign(merged);
-    items2[1] = hasOwnProperty(_modDef8364, obj4);
+    items2[1] = hasOwnProperty(_modDef8396, obj4);
     obj.children = items2;
     tmp6Result = timestampProducer(React5, obj);
   }

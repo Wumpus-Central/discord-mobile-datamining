@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemHaptics.tsx
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
-import Patterns from "../../../../../_runtime/04576_Patterns.js";
+import Patterns from "../../../../../_runtime/04606_Patterns.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function HapticButton(text) {
   const type = text.type;
-  return closure_3(type(5026).Button, {
+  return closure_3(type(5056).Button, {
     variant: "secondary",
     onPress() {
       return HapticUtils.triggerHapticFeedback(type);
@@ -21,7 +21,7 @@ function HapticButton(text) {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_5 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 createStyles = { type: haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT, label: "IMPACT_LIGHT" };
 let items = [createStyles, , , , , , , ,];
@@ -185,7 +185,7 @@ export default function UserSettingsDesignSystemHaptics() {
     items4.map((description) => {
       ({ label, pattern: closure_0 } = description);
       return closure_3(
-        closure_0(5026).Button,
+        closure_0(5056).Button,
         {
           variant: "secondary",
           onPress() {

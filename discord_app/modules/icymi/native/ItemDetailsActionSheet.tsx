@@ -22,7 +22,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { divider: null };
 createStyles = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 createStyles.divider = createStyles;

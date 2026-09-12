@@ -5,14 +5,14 @@ import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const Features = fn(4631).Features;
-fn(11562);
+const Features = fn(4661).Features;
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/jwMtn"]);
   },
-  parent: fn(8049).MobileUserSettings.VOICE,
+  parent: fn(8079).MobileUserSettings.VOICE,
   usePredicate() {
     return MediaEngineStore.supports(Features.SIDECHAIN_COMPRESSION);
   },

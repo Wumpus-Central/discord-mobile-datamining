@@ -48,7 +48,7 @@ function useCanManageGuildOfficialMessages(guild_id, channel, location) {
   }
   return enabled;
 }
-let closure_5 = fn(4599).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+let closure_5 = fn(4629).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1074);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, MessageFlags: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);

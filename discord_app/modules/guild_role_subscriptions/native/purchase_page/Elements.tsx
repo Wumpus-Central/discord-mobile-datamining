@@ -7,7 +7,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef16619 from "../../../../../_runtime/metro/16619__.js";
+import _modDef16643 from "../../../../../_runtime/metro/16643__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SubscriptionPlanStore from "../../../../stores/billing/SubscriptionPlanStore.tsx";
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { toggleTruncateButton: null, arrowButton: null, arrowButtonText: null, arrowButtonIcon: null };
 createStyles = {
   alignSelf: "flex-start",
@@ -120,7 +120,7 @@ export const ArrowButton = function ArrowButton(arg0) {
   let obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
   obj = { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text };
   const items = [React7(Text_Text.Text, obj)];
-  obj = { size: native.Icon.Sizes.SMALL, source: _modDef16619, style: tmp.arrowButtonIcon };
+  obj = { size: native.Icon.Sizes.SMALL, source: _modDef16643, style: tmp.arrowButtonIcon };
   items[1] = React7(native.Icon, obj);
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);
@@ -137,8 +137,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(7307).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(7307);
+    str = "" + tmp3(7337).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(7337);
   }
   return str;
 };

@@ -21,13 +21,13 @@ import StageInstanceStore from "../../StageInstanceStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(4630).NO_VOICE_STATES;
+const NO_VOICE_STATES = fn(4660).NO_VOICE_STATES;
 const Constants = fn(1074);
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: null };
-obj = { marginVertical: fn(10207).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+obj = { marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 obj.container = obj;
 let closure_16 = createStyles.createStyles(obj);
 const size = fn(2);
@@ -69,10 +69,10 @@ export default noop.memo((channel) => {
   if (arr3 == null) {
     arr3 = NO_VOICE_STATES;
   }
-  let tmp2Result = tmp2(5482);
+  let tmp2Result = tmp2(5512);
   const stageParticipantsCount = tmp2Result.useStageParticipantsCount(
     channel.id,
-    tmp2(5476).StageChannelParticipantNamedIndex.AUDIENCE,
+    tmp2(5506).StageChannelParticipantNamedIndex.AUDIENCE,
   );
   const sum = stageParticipantsCount + arr3.length;
   const items2 = [channel];
@@ -92,7 +92,7 @@ export default noop.memo((channel) => {
     const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items3);
   const tmp10 = useChannelNameDefault(channel, false);
-  tmp2Result = tmp2(9562);
+  tmp2Result = tmp2(9601);
   const isConnectedToVoiceChannel = tmp2Result.useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;

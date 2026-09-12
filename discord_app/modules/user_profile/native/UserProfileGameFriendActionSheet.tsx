@@ -54,7 +54,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 const createStyles = {
   applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 },
   gameIcon: null,

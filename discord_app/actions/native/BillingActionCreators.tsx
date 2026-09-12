@@ -17,7 +17,7 @@ import BlockedPaymentsCountryExperiment from "../../modules/billing/experiments/
 import ACOMExperiments from "../../modules/billing/native/ACOMExperiments.tsx";
 import showSpendingLimitReachedAlert from "../../modules/parent_tools/native/showSpendingLimitReachedAlert.tsx";
 import IAPUtils from "../../utils/native/IAPUtils.tsx";
-import _mod11143 from "../../../_runtime/metro/11143__.js";
+import _mod11182 from "../../../_runtime/metro/11182__.js";
 import openBlockedPaymentsCountryActionSheetDefault from "../../modules/billing/native/openBlockedPaymentsCountryActionSheet.tsx";
 import ErrorUtilsAll from "../../utils/ErrorUtils.tsx";
 import APBRequestOperations from "../../../discord_common/js/shared/shared-constants/APBRequestOperations.tsx";
@@ -232,7 +232,7 @@ let closure_30 = async function _clearAndMakeIAPRequest() {
   closure_132_1 = closure_1;
   closure_132_2 = closure_2;
   closure_132_3 = closure_3;
-  await _mod11143.clearTransactionIOS();
+  await _mod11182.clearTransactionIOS();
   return closure_133_31(closure_132_0, closure_132_1, closure_132_2, closure_132_3);
 };
 function makeTrackedIAPRequest(arg0, arg1, arg2, arg3) {
@@ -721,7 +721,7 @@ let closure_41 = async function _createGenericSubscription(arg0) {
           let originalPurchase;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -916,7 +916,7 @@ let closure_42 = async function _modifyGenericSubscription(arg0) {
             let originalPurchase;
             c5 = 1;
             c6 = 1;
-            return { value: "PX_16", done: null };
+            return { value: "PX_16", done: true };
           }
         break;
         case 1:
@@ -1175,7 +1175,7 @@ let closure_43 = async function _resubscribeGenericSubscription(arg0) {
           let originalPurchase;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -1579,7 +1579,7 @@ let closure_45 = async function _mobilePurchaseSKU(arg0, arg1) {
               closure_132_22 = undefined;
               c8 = 1;
               c9 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           break;
           case 1:
@@ -1950,7 +1950,7 @@ let closure_46 = async function _migrateToACOM() {
 let closure_4 = ["items", "country_code"];
 let closure_5 = ["subscription_items"];
 let closure_6 = ["sku_id", "country_code", "is_gift", "gift_info_options"];
-const PremiumPlanPurchasedStore = fn(7494);
+const PremiumPlanPurchasedStore = fn(7524);
 ({ setPaymentSuccess: c10, showOldPaymentFlowSuccess: closure_11 } = PremiumPlanPurchasedStore);
 const Constants = fn(1074);
 ({ SubscriptionTypes: closure_15, AnalyticEvents: closure_16, CurrencyCodes: closure_17, Endpoints: closure_18, StoreKitErrors } = Constants);
@@ -1961,8 +1961,8 @@ const BILLING = "BILLING";
 new LoggerDefault("BillingActionCreators.tsx");
 let SubscriptionPurchaseFailureReason = {
   applyAppleReceipt,
-  fetchMostRecentSubscription: fn(4930).fetchMostRecentSubscription,
-  fetchIpCountryCode: fn(4930).fetchIpCountryCode,
+  fetchMostRecentSubscription: fn(4960).fetchMostRecentSubscription,
+  fetchIpCountryCode: fn(4960).fetchIpCountryCode,
   init() {
     const self = this;
     return (async () => {
@@ -2112,7 +2112,7 @@ let SubscriptionPurchaseFailureReason = {
               c3 = 1;
               c4 = 2;
               c5 = 1;
-              const obj1 = { value: _mod11143.initConnection(), done: false };
+              const obj1 = { value: _mod11182.initConnection(), done: false };
               return obj1;
             }
           } else if (1 === tmp7) {
@@ -2806,7 +2806,7 @@ let SubscriptionPurchaseFailureReason = {
                       return obj8;
                     } else if (closure_134_3.length > 0) {
                       const item = closure_134_3.forEach((item) => {
-                        const result = closure_1_0(4279).captureBillingException(item);
+                        const result = closure_1_0(4309).captureBillingException(item);
                       });
                       const _Error = Error;
                       const error = new Error("There were some errors while trying to restore");
@@ -2944,7 +2944,7 @@ let SubscriptionPurchaseFailureReason = {
     })();
   }
 };
-let items = [fn(11143).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
+let items = [fn(11182).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
 const set = new Set(items);
 SubscriptionPurchaseFailureReason = { NONE: "none", CANNOT_MAKE_REQUEST: "cannot_make_request", INVALID_CURRENCY: "invalid_currency", PURCHASE_INCOMPLETE: "purchase_incomplete", USER_CANCELLED: "user_cancelled", POST_PURCHASE_FAILED: "post_purchase_failed" };
 const size = fn(2);

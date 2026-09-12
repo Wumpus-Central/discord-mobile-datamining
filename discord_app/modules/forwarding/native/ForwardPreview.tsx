@@ -32,7 +32,7 @@ function MessagePreview(content) {
   } else {
     TEXT_SUBTLE = tmp(576).colors.TEXT_SUBTLE;
   }
-  let obj = attachmentCount(4606);
+  let obj = attachmentCount(4636);
   const tmp4 = obj.createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(useThemeDefault());
   importDefault = tmp4;
   const items = [tmp4.seeMoreLabelColor, attachmentCount];
@@ -92,7 +92,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-fn(4606);
+fn(4636);
 let createStyles = {
   forwardPreview: null,
   quote: null,

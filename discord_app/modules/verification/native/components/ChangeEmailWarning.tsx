@@ -8,11 +8,11 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const hcArticle = fn(5735).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
+const hcArticle = fn(5765).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, title: null, body: null, buttonContainer: null };
 createStyles = { flex: 1, padding: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 createStyles.container = createStyles;
@@ -42,7 +42,7 @@ export default function ChangeEmailWarning(changeEmailReason) {
   if (null != stateFromStores) {
     obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     obj = { style: tmp.container, children: null };
-    const items2 = [closure_9(tmp2(5743).TrafficConeSpotIllustration, {}), , ,];
+    const items2 = [closure_9(tmp2(5773).TrafficConeSpotIllustration, {}), , ,];
     obj1 = {
       style: tmp.title,
       accessibilityRole: "header",
@@ -52,7 +52,7 @@ export default function ChangeEmailWarning(changeEmailReason) {
     };
     const intl = tmp2(1114).intl;
     obj1.children = intl.string(tmp2(1114).t.hhR7gX);
-    items2[1] = closure_9(tmp2(4602).Text, obj1);
+    items2[1] = closure_9(tmp2(4632).Text, obj1);
     const obj2 = {
       style: tmp.body,
       accessibilityRole: "header",
@@ -66,20 +66,20 @@ export default function ChangeEmailWarning(changeEmailReason) {
     const intl3 = tmp2(1114).intl;
     items3[2] = intl3.string(tmp2(1114).t["3LW10C"]);
     obj2.children = items3;
-    items2[2] = closure_10(tmp2(4602).Text, obj2);
+    items2[2] = closure_10(tmp2(4632).Text, obj2);
     const obj4 = { style: tmp.buttonContainer, children: null };
     const obj5 = { size: "md", variant: "tertiary", text: null, onPress: null, shrink: true };
     const intl4 = tmp2(1114).intl;
     obj5.text = intl4.string(tmp2(1114).t.rwTBFs);
     obj5.onPress = tmp6;
-    const items4 = [closure_9(tmp2(5026).Button, obj5)];
+    const items4 = [closure_9(tmp2(5056).Button, obj5)];
     const obj6 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
     const intl5 = tmp2(1114).intl;
     obj6.text = intl5.string(tmp2(1114).t["ETE/oC"]);
     obj6.onPress = function onPress() {
       return navigation(dependencyMap[16]).close();
     };
-    items4[1] = closure_9(tmp2(5026).Button, obj6);
+    items4[1] = closure_9(tmp2(5056).Button, obj6);
     obj4.children = items4;
     items2[3] = closure_10(closure_4, obj4);
     obj.children = items2;

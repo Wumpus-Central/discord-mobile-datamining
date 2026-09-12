@@ -45,15 +45,9 @@ function FrameViewInner(frame) {
     setOrientationLockState: callback1,
   });
   setIsResetting = baseActivityView.setIsResetting;
-  obj = {
-    instance_id: "example-cl-instance",
-    platform: ActivityPlatform.MOBILE,
-    discord_proxy_ticket: frame.data.proxyTicket,
-  };
   ({ isResetting, isLandscape } = baseActivityView);
-  const merged = Object.assign(layoutMode(tmp2[11])(frame.data));
   obj = { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null };
-  const obj1 = {
+  obj = {
     onActivityCrash() {
       setIsResetting(true);
       const timerId = setTimeout(() => setIsResetting(false), 0);
@@ -61,7 +55,7 @@ function FrameViewInner(frame) {
     applicationId: frame.applicationId,
     frameId: frame.id,
     activityUrl: frame.data.url,
-    queryParams: obj,
+    queryParams: layoutMode(setIsResetting[12])(frame, ActivityPlatform.MOBILE),
     onLoadError: callback,
     allowPopups: null,
     referrerPolicy: "origin",
@@ -70,14 +64,14 @@ function FrameViewInner(frame) {
     safeAreasConfig: null,
   };
   tmpResult = tmp(tmp2[13]);
-  obj1.allowPopups = tmpResult.allowPopups(data);
-  obj1.isPipOrGridMode = layoutMode === constants.PIP;
-  obj1.webViewKey = frame(setIsResetting[8]).FRAME_WEB_VIEW_KEY;
+  obj.allowPopups = tmpResult.allowPopups(data);
+  obj.isPipOrGridMode = layoutMode === constants.PIP;
+  obj.webViewKey = frame(setIsResetting[8]).FRAME_WEB_VIEW_KEY;
   if (isLandscape) {
     landscapeSafeAreasConfig = frame.landscapeSafeAreasConfig;
   }
-  obj1.safeAreasConfig = landscapeSafeAreasConfig;
-  obj.children = jsx(layoutMode(setIsResetting[12]), {
+  obj.safeAreasConfig = landscapeSafeAreasConfig;
+  obj.children = jsx(layoutMode(setIsResetting[11]), {
     onActivityCrash() {
       setIsResetting(true);
       const timerId = setTimeout(() => setIsResetting(false), 0);
@@ -85,7 +79,7 @@ function FrameViewInner(frame) {
     applicationId: frame.applicationId,
     frameId: frame.id,
     activityUrl: frame.data.url,
-    queryParams: obj,
+    queryParams: layoutMode(setIsResetting[12])(frame, ActivityPlatform.MOBILE),
     onLoadError: callback,
     allowPopups: null,
     referrerPolicy: "origin",
@@ -94,13 +88,23 @@ function FrameViewInner(frame) {
     safeAreasConfig: null,
   });
   return jsx(frame(setIsResetting[10]).BaseActivityView, {
-    wakeLockKey: "FrameActivities",
-    showLoadingIndicator: first,
-    isResetting,
-    children: null,
+    onActivityCrash() {
+      setIsResetting(true);
+      const timerId = setTimeout(() => setIsResetting(false), 0);
+    },
+    applicationId: frame.applicationId,
+    frameId: frame.id,
+    activityUrl: frame.data.url,
+    queryParams: layoutMode(setIsResetting[12])(frame, ActivityPlatform.MOBILE),
+    onLoadError: callback,
+    allowPopups: null,
+    referrerPolicy: "origin",
+    isPipOrGridMode: null,
+    webViewKey: null,
+    safeAreasConfig: null,
   });
 }
-const FramesConstants = fn(9602);
+const FramesConstants = fn(9641);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
 const ActivityPlatform = fn(1920).ActivityPlatform;
 const jsx = fn(21).jsx;

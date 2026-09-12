@@ -5,7 +5,7 @@ import WebViewWindowProxySocketFactoryDefault from "WebViewWindowProxySocketFact
 import PostMessageTransport from "../../../transports/PostMessageTransport.tsx";
 
 PostMessageTransport = new PostMessageTransport(
-  fn(9649).validateSocketClient,
+  fn(9688).validateSocketClient,
   new LoggerDefault("RPCServer:PostMessage"),
   WebViewWindowProxySocketFactoryDefault,
   (arg0, info, id) => {

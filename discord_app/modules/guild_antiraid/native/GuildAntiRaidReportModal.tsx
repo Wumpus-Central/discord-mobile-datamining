@@ -90,7 +90,7 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(14018);
+const GuildReportRaidModalConstants = fn(14052);
 ({
   getReportRaidHelpArticleURL: closure_7,
   getReportRaidTypeLabel: closure_8,
@@ -99,7 +99,7 @@ const GuildReportRaidModalConstants = fn(14018);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-fn(4606);
+fn(4636);
 let createStyles = {
   container: null,
   headerSubtitle: null,
@@ -173,9 +173,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
               dependencyMap = 3;
             } else {
               tmp21.current = true;
-              let obj1 = tmp2(11925);
+              let obj1 = tmp2(11961);
               const result = obj1.trackReportRaidViewed(guildId, first);
-              tmp2(11925).handleReportRaid(guildId);
+              tmp2(11961).handleReportRaid(guildId);
               const intl = tmp2(1114).intl;
               c1 = 1;
               dependencyMap = 1;

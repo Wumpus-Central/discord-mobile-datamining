@@ -11,16 +11,16 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { tintColor: nativeDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
 }
 createStyles = { iconRead: createStyles, iconUnread: null, messageUnreadCount: null, container: null, marginTop: num };
 let obj1 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

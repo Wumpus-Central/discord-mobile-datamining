@@ -63,13 +63,13 @@ function ChannelPermissionSettingsBasicView(channel) {
             closure_1 = tmp5;
             closure_128_0 = undefined;
             accessPermissions = accessPermissions.accessPermissions;
-            const result = v2(9829).isPrivateGuildChannel(accessPermissions);
-            const obj9 = v2(9829);
+            const result = v2(9868).isPrivateGuildChannel(accessPermissions);
+            const obj9 = v2(9868);
             const tmp21 = v2;
-            closure_128_0 = v2(9829).flipEveryonePermission(accessPermissions, accessPermissions, result);
+            closure_128_0 = v2(9868).flipEveryonePermission(accessPermissions, accessPermissions, result);
             currentUser = currentUser.getCurrentUser();
             let tmp7 = ChannelSettingsPermissionsStore;
-            const obj10 = v2(9829);
+            const obj10 = v2(9868);
             if (!ChannelSettingsPermissionsStore) {
               tmp7 = null == currentUser;
             }
@@ -80,7 +80,7 @@ function ChannelPermissionSettingsBasicView(channel) {
               v2 = 1;
               dependencyMap = 1;
               const obj1 = {
-                value: tmp21(9829).grantUserChannelAccess(accessPermissions, accessPermissions),
+                value: tmp21(9868).grantUserChannelAccess(accessPermissions, accessPermissions),
                 done: false,
               };
               return obj1;
@@ -110,7 +110,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         const items = [closure_128_0];
         v2 = 2;
         dependencyMap = 1;
-        const obj3 = { value: tmp2(9830).savePermissionUpdates(closure_129_0.id, items), done: false };
+        const obj3 = { value: tmp2(9869).savePermissionUpdates(closure_129_0.id, items), done: false };
         return obj3;
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -148,7 +148,7 @@ function ChannelPermissionSettingsBasicView(channel) {
             closure_128_2 = undefined;
             if (null != guild_id.guild_id) {
               if (!privateToggleState) {
-                let obj1 = tmp5(9831);
+                let obj1 = tmp5(9870);
                 c2 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
@@ -180,7 +180,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           stringResult = string(t["47gQYL"]);
         }
         closure_128_0 = stringResult;
-        let obj3 = tmp5(4759);
+        let obj3 = tmp5(4789);
         closure_128_1 = obj3.computeChannelName(closure_129_0, UserStore, RelationshipStore);
         let intl2 = tmp5(1114).intl;
         let onCancel = intl2.format;
@@ -194,7 +194,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         }
         closure_128_2 = onCancelResult;
         closure_129_2(!closure_129_1);
-        show = tmp2(4950).show;
+        show = tmp2(4980).show;
         const obj4 = {
           title: closure_128_0,
           body: closure_128_2,
@@ -216,7 +216,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         obj4.onCancel = onCancel;
         show(obj4);
         dependencyMap = 3;
-        const tmp42 = tmp2(4950);
+        const tmp42 = tmp2(4980);
       } catch (tmp54) {
         dependencyMap = tmp;
         throw tmp54;
@@ -244,7 +244,7 @@ function ChannelPermissionSettingsBasicView(channel) {
   const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
   const items1 = [navigation];
   const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-    navigation.setOptions({ headerRight: "Array" });
+    navigation.setOptions({ headerRight: "r" });
   }, items1);
   const items2 = [guild, sortedGuildRoles, channel];
   const memo = togglePrivateChannel.useMemo(() => {
@@ -391,7 +391,7 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(8487).SettingMode;
+const SettingMode = fn(8519).SettingMode;
 const Constants = fn(1074);
 ({
   ChannelTypes: closure_18,
@@ -403,7 +403,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 let closure_25 = { BASIC: 0, [0]: "BASIC", ADVANCED: 1, [1]: "ADVANCED", MODERATORS: 2, [2]: "MODERATORS" };
-fn(4606);
+fn(4636);
 let createStyles = { container: null, content: null, adminWarning: null };
 createStyles = { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.container = createStyles;

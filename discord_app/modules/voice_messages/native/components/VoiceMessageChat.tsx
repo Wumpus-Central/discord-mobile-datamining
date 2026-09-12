@@ -186,8 +186,8 @@ function Duration(animationValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-let useVoiceMessagesUIStore = fn(12053).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(12054);
+let useVoiceMessagesUIStore = fn(12089).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(12090);
 ({
   VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8,
   VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9,
@@ -198,7 +198,7 @@ const VoiceMessageConstants = fn(12054);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = ReanimatedRexport.createAnimatedComponent(ActivityIndicator);
-fn(4606);
+fn(4636);
 let obj = {
   container: null,
   loading: null,
@@ -250,7 +250,7 @@ const createStyles = {
   marginLeft: nativeDefault.modules.mobile.VOICE_MESSAGE_DURATION_MARGIN_LEFT,
 };
 obj.durationContainer = createStyles;
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 PlatformUtils = PlatformUtils.isAndroid();
 const mobile = nativeDefault.modules.mobile;
 let obj3 = {
@@ -259,7 +259,7 @@ let obj3 = {
     : mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS,
   textAlignVertical: null,
 };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";

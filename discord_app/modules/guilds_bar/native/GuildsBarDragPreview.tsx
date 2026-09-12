@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
-import _mod4229 from "../../../../_runtime/metro/04229__.js";
+import _mod4259 from "../../../../_runtime/metro/04259__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -147,9 +147,9 @@ function PreviewItem(dragRegion) {
           id: -1,
           parentId: "PX_16",
           name: "Array",
-          color: "channel",
-          expanded: true,
-          children: true,
+          color: "call",
+          expanded: "SET_SAME_AS_DEVICE_THEME_ENABLED",
+          children: "ContentInventoryFeature",
         };
         const items = [tmp2];
         element.children = items;
@@ -337,16 +337,16 @@ function AnimatedItemPreview(cleanUp) {
   obj.children = tmp12Result;
   return <tmp4Result style={items}>{null}</tmp4Result>;
 }
-const GuildsNodeType = fn(5489).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16353).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(5519).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(16377).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_8 = createStyles.createStyles({
   dragPreview: { position: "absolute", left: 0 },
   animatedPreviewStyle: { position: "absolute" },
   dragPreviewHome: { right: 0 },
 });
-createStyles = fn(4606);
+createStyles = fn(4636);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -430,12 +430,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "pop out",
-            scrollPosition: "#00000000",
-            dragRegion: "#000000",
-            windowSize: "M4 11H3v1h1v-1ZM5 13H4v1h1v-1ZM3 10H2v1h1v-1ZM7 7H4v3h3V7Z",
-            dropComplete: null,
-            listInsets: "text-overlay-light",
+            gestureState: "getScrollableNode",
+            scrollPosition: null,
+            dragRegion: "\u{1F444}",
+            windowSize: 6,
+            dropComplete: 133,
+            listInsets: "_checkProps",
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
@@ -455,7 +455,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod4229.shallow);
+  }, _mod4259.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

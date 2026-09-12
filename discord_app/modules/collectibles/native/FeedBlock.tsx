@@ -13,7 +13,7 @@ const constants = fn(1076).CollectiblesMobileShopScreen;
 const Consents = fn(1074).Consents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   feedContainer: null,
   feedHeader: null,
@@ -82,7 +82,7 @@ export default function _default(feedBlock) {
   let obj1 = feedBlock(504);
   let items1 = [ConsentStore];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => ConsentStore.hasConsented(constants2.PERSONALIZATION));
-  let tmp6 = stateFromStores1(15130)();
+  let tmp6 = stateFromStores1(15153)();
   dependencyMap = tmp6;
   const items2 = [feedBlock.sortedSkuIds, tmp6, stateFromStores1];
   const memo = noop.useMemo(() => {
@@ -112,7 +112,7 @@ export default function _default(feedBlock) {
     return { feedProducts: paths(items1), isPersonalized: tmp6 };
   }, items2);
   ({ isPersonalized, feedProducts } = memo);
-  let obj2 = feedBlock(15132);
+  let obj2 = feedBlock(15155);
   const filteredAndSortedProducts = obj2.useFilteredAndSortedProducts({
     products: feedProducts,
     maxProducts: 36,
@@ -130,13 +130,13 @@ export default function _default(feedBlock) {
     stringResult = string(t.ivaAA7);
   }
   obj = {
-    value: stateFromStores1(7235)(stateFromStores1(7255).COLLECTIBLES_SHOP_POPULAR_PICKS).analyticsLocations,
+    value: stateFromStores1(7265)(stateFromStores1(7285).COLLECTIBLES_SHOP_POPULAR_PICKS).analyticsLocations,
     children: null,
   };
   obj = { style: feedFooterOrbImage.feedContainer, children: null };
   obj1 = { style: feedFooterOrbImage.feedHeader, children: null };
   obj2 = { style: feedFooterOrbImage.feedTitle, children: null };
-  const items4 = [closure_11(feedBlock(4602).Heading, { variant: "heading-lg/semibold", children: stringResult })];
+  const items4 = [closure_11(feedBlock(4632).Heading, { variant: "heading-lg/semibold", children: stringResult })];
   if (isPersonalized) {
     obj3 = {
       onPress() {
@@ -152,8 +152,8 @@ export default function _default(feedBlock) {
     };
     const intl2 = tmp(1114).intl;
     obj3["aria-label"] = intl2.string(tmp(1114).t.hvVgAZ);
-    obj3.children = closure_11(tmp(4561).CircleInformationIcon, { size: "xs" });
-    isPersonalized = closure_11(tmp(5174).PressableOpacity, obj3);
+    obj3.children = closure_11(tmp(4591).CircleInformationIcon, { size: "xs" });
+    isPersonalized = closure_11(tmp(5204).PressableOpacity, obj3);
   }
   function goToShopAll() {
     feedBlock(paths[15]);
@@ -172,13 +172,13 @@ export default function _default(feedBlock) {
     const obj4 = { onPress: goToShopAll, text: null, variant: "primary", size: "sm" };
     const intl3 = tmp(1114).intl;
     obj4.text = intl3.string(tmp(1114).t.xFcotU);
-    tmp12Result = closure_11(tmp(5026).Button, obj4);
+    tmp12Result = closure_11(tmp(5056).Button, obj4);
   }
   items5[1] = tmp12Result;
   obj1.children = items5;
   const items6 = [
     closure_12(closure_5, obj1),
-    closure_11(stateFromStores1(15891), {
+    closure_11(stateFromStores1(15915), {
       products: filteredAndSortedProducts,
       loadingCardsNum: 36,
       preferVCPrice,
@@ -190,11 +190,11 @@ export default function _default(feedBlock) {
   const obj6 = { variant: "heading-lg/bold", accessibilityRole: "header", children: null };
   const intl4 = tmp(1114).intl;
   obj6.children = intl4.string(feedBlock(1114).t.Yr70c4);
-  const items7 = [closure_11(feedBlock(4602).Text, obj6), ,];
+  const items7 = [closure_11(feedBlock(4632).Text, obj6), ,];
   const obj7 = { onPress: goToShopAll, text: null, variant: "primary", size: "md" };
   const intl5 = tmp(1114).intl;
   obj7.text = intl5.string(feedBlock(1114).t.AfrvRD);
-  items7[1] = closure_11(feedBlock(5026).Button, obj7);
+  items7[1] = closure_11(feedBlock(5056).Button, obj7);
   if (screen === constants.ORBS) {
     if (stateFromStores2) {
       const obj8 = {
@@ -204,7 +204,7 @@ export default function _default(feedBlock) {
         importantForAccessibility: "no-hide-descendants",
       };
       const obj9 = { uri: null };
-      tmp5Result = tmp5(15899);
+      tmp5Result = tmp5(15923);
       obj9.uri = tmp5Result;
       obj8.source = obj9;
       feedFooterOrbImage = feedFooterOrbImage.feedFooterOrbImage;
@@ -219,8 +219,8 @@ export default function _default(feedBlock) {
           accessibilityElementsHidden: true,
           importantForAccessibility: "no-hide-descendants",
         };
-        tmp5Result = tmp5(8901);
-        obj10.url = tmp5(15900);
+        tmp5Result = tmp5(8936);
+        obj10.url = tmp5(15924);
         obj10.style = feedFooterOrbImage.feedFooterOrbImage;
         tmp12Result = closure_11(tmp5Result, obj10);
       } else {
@@ -232,13 +232,13 @@ export default function _default(feedBlock) {
           accessibilityElementsHidden: true,
           importantForAccessibility: "no-hide-descendants",
         };
-        const obj12 = { uri: tmp5(15900) };
+        const obj12 = { uri: tmp5(15924) };
         obj11.source = obj12;
         obj11.style = feedFooterOrbImage.feedFooterOrbImage;
-        tmp12Result = closure_11(tmp5(5638), obj11);
-        const tmp5Result1 = tmp5(5638);
+        tmp12Result = closure_11(tmp5(5668), obj11);
+        const tmp5Result1 = tmp5(5668);
       }
-      tmpResult = tmp(1115);
+      tmpResult = tmp(1150);
     }
   } else {
     const obj13 = {
@@ -248,11 +248,11 @@ export default function _default(feedBlock) {
       importantForAccessibility: "no-hide-descendants",
     };
     if (stateFromStores) {
-      obj13.source = tmp(15901);
+      obj13.source = tmp(15925);
       obj13.style = feedFooterOrbImage.feedFooterImage;
       let tmp18 = obj13;
     } else {
-      obj13.source = tmp(15902);
+      obj13.source = tmp(15926);
       obj13.style = feedFooterOrbImage.feedFooterImage;
       tmp18 = obj13;
     }
@@ -261,7 +261,7 @@ export default function _default(feedBlock) {
     items6[2] = closure_12(closure_5, obj5);
     obj.children = items6;
     obj.children = closure_12(closure_5, obj);
-    return closure_11(tmp(7235).AnalyticsLocationProvider, obj);
+    return closure_11(tmp(7265).AnalyticsLocationProvider, obj);
   }
-  const tmp10 = stateFromStores1(7235);
+  const tmp10 = stateFromStores1(7265);
 }

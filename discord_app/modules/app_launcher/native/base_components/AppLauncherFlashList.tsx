@@ -1,18 +1,16 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherFlashList.tsx
-import createUseAnimatedScrollLock from "../../../voice_panel/native/controls/utils/createUseAnimatedScrollLock.tsx";
+import useAnimatedScrollLock from "../../../voice_panel/native/controls/utils/useAnimatedScrollLock.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-let forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
-  let obj = simultaneousHandlers(11309);
+const forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
+  let obj = simultaneousHandlers(11348);
   const items = [simultaneousHandlers.simultaneousHandlers];
-  let memo = noop.useMemo(() => {
-    if (null == simultaneousHandlers) {
-      let forwardRefResult = ScrollView;
-    } else {
-      forwardRefResult = noop.forwardRef((arg0, ref) => {
+  let memo = noop.useMemo(
+    () =>
+      noop.forwardRef((arg0, ref) => {
         const memo = React.useMemo(() => {
           const Gesture = simultaneousHandlers(closure_2_1[3]).Gesture;
           return Gesture.Native().simultaneousWithExternalGesture(closure_1_0);
@@ -22,13 +20,12 @@ let forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
         const merged = Object.assign(arg0);
         obj.children = <ScrollView ref={ref} />;
         return jsx(simultaneousHandlers(dependencyMap[3]).GestureDetector, { ref });
-      });
-    }
-    return forwardRefResult;
-  }, items);
+      }),
+    items,
+  );
   if (
     obj.useAppLauncherContext().entrypoint ===
-    simultaneousHandlers.simultaneousHandlers(9500).AppLauncherEntrypoint.VOICE
+    simultaneousHandlers.simultaneousHandlers(9539).AppLauncherEntrypoint.VOICE
   ) {
     obj = {
       renderScrollComponent: memo,
@@ -66,7 +63,7 @@ let forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
       animatedProps: obj2.animatedProps,
     } = simultaneousHandlers);
     obj.ref = ref;
-    let tmp5 = jsx(tmp(8964).AnimatedFlashList, {
+    let tmp5 = jsx(tmp(9003).AnimatedFlashList, {
       renderScrollComponent: memo,
       ListHeaderComponent: null,
       onScroll: null,
@@ -124,7 +121,7 @@ let forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
       viewabilityConfigCallbackPairs: obj3.viewabilityConfigCallbackPairs,
     } = simultaneousHandlers);
     obj.ref = ref;
-    tmp5 = jsx(tmp(8964).BottomSheetFlashList, {
+    tmp5 = jsx(tmp(9003).BottomSheetFlashList, {
       ListHeaderComponent: null,
       onScroll: null,
       contentContainerStyle: null,
@@ -151,6 +148,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherFlashList.tsx");
 
 export default forwardRefResult;
-export const useAppLauncherFlashListProps = function useAppLauncherFlashListProps(arg0) {
-  return noop.useContext(createUseAnimatedScrollLock.ControlsGestureScrollLock)(arg0);
+export const useAppLauncherFlashListProps = function useAppLauncherFlashListProps(fn) {
+  return useAnimatedScrollLock.useAnimatedScrollLock(fn);
 };

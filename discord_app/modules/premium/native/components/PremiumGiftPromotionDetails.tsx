@@ -102,7 +102,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_10 = createStyles.createStyles(() => {
   let obj = { container: null, image: null, textContainer: null };
   obj = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -112,7 +112,7 @@ let closure_10 = createStyles.createStyles(() => {
   obj.textContainer = { flex: 1 };
   return obj;
 });
-fn(4606);
+fn(4636);
 createStyles = { preview: null };
 let size = {
   width: PX_40,

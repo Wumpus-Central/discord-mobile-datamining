@@ -5,7 +5,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import GuildRoomStore from "GuildRoomStore.tsx";
 
 require = fn;
-const GuildRoomConstants = fn(4768);
+const GuildRoomConstants = fn(4798);
 ({ GUILD_ROOM_BACKGROUND_CONFIG: closure_4, GUILD_ROOM_SPATIAL_AUDIO_MODE } = GuildRoomConstants);
 let c5 = false;
 let closure_6 = { x: 50, y: 50 };

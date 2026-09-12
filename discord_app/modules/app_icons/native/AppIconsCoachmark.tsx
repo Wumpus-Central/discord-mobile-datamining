@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef10054 from "../../../../_runtime/metro/10054__.js";
+import _modDef10093 from "../../../../_runtime/metro/10093__.js";
 import AppIconUtils from "AppIconUtils.tsx";
-import _modDef17012 from "../../../../_runtime/metro/17012__.js";
+import _modDef17039 from "../../../../_runtime/metro/17039__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: null,
   info: null,
@@ -57,13 +57,13 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
     children: null,
   };
   obj = { style: tmp.info, children: null };
-  const obj1 = { source: _modDef17012, style: tmp.image };
+  const obj1 = { source: _modDef17039, style: tmp.image };
   const items2 = [closure_8(closure_4, obj1), ,];
   let obj2 = { style: tmp.titleContainer, children: null };
   const isPremiumResult = obj1.isPremium(stateFromStores);
   const items3 = [
     closure_8(markAsDismissed(1178).Icon, {
-      source: _modDef10054,
+      source: _modDef10093,
       size: markAsDismissed(1178).IconSizes.MEDIUM,
       style: tmp.nitroWheel,
       disableColor: true,
@@ -72,7 +72,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   const obj4 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1114).intl;
   obj4.children = intl.string(markAsDismissed(1114).t.EfA4Cq);
-  items3[1] = closure_8(markAsDismissed(4602).Text, obj4);
+  items3[1] = closure_8(markAsDismissed(4632).Text, obj4);
   obj2.children = items3;
   items2[1] = closure_9(closure_5, obj2);
   const obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
@@ -85,7 +85,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
     stringResult = string(t.D0XzaS);
   }
   obj5.children = stringResult;
-  items2[2] = closure_8(markAsDismissed(4602).Text, obj5);
+  items2[2] = closure_8(markAsDismissed(4632).Text, obj5);
   obj.children = items2;
   const items4 = [closure_9(closure_5, obj)];
   const obj6 = { style: tmp.footer, children: null };
@@ -99,14 +99,14 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
     }
     const result = AppIconUtils.navigateToAppIconSettings();
   };
-  const items5 = [closure_8(markAsDismissed(5026).Button, obj7)];
+  const items5 = [closure_8(markAsDismissed(5056).Button, obj7)];
   const obj8 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1114).intl;
   obj8.text = intl4.string(markAsDismissed(1114).t.iSrIIZ);
   obj8.onPress = callback;
-  items5[1] = closure_8(markAsDismissed(5026).Button, obj8);
+  items5[1] = closure_8(markAsDismissed(5056).Button, obj8);
   obj6.children = items5;
   items4[1] = closure_9(closure_5, obj6);
   obj.children = items4;
-  return closure_9(markAsDismissed(7223).BottomSheet, obj);
+  return closure_9(markAsDismissed(7253).BottomSheet, obj);
 }

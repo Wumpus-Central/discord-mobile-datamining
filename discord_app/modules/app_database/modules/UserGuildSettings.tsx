@@ -4,7 +4,7 @@ import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import DatabaseDaosDefault from "../DatabaseDaos.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const UserGuildSettingsStore = fn(4787);
+const UserGuildSettingsStore = fn(4817);
 ({ convertChannelOverridesToMap: c3, getGuildDefaults: closure_4 } = UserGuildSettingsStore);
 let closure_5 = new LoggerDefault("ReadStates");
 class UserGuildSettings {

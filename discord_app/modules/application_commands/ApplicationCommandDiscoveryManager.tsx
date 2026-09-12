@@ -2,7 +2,7 @@
 import 00560__ from "../../../_runtime/metro/00560__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-const useCommandDiscoveryManager = module_560.create(() => ({ initialSectionId: "Array" }));
+const useCommandDiscoveryManager = module_560.create(() => ({ initialSectionId: "r" }));
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");
 
 export { useCommandDiscoveryManager };

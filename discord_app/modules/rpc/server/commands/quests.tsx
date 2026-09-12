@@ -12,7 +12,7 @@ const Constants = fn(1074);
 ({ RPCCommands, RPCErrors: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 let obj = {};
 obj = {
-  scope: fn(8425).OAuth2Scopes.IDENTIFY,
+  scope: fn(8457).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -52,7 +52,7 @@ obj = {
 };
 obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = obj;
 obj = {
-  scope: fn(8425).OAuth2Scopes.IDENTIFY,
+  scope: fn(8457).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -97,7 +97,7 @@ obj = {
 };
 obj[RPCCommands.QUEST_START_TIMER] = obj;
 obj[RPCCommands.GET_QUEST] = {
-  scope: fn(8425).OAuth2Scopes.IDENTIFY,
+  scope: fn(8457).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     let obj = RPCHelpers;

@@ -56,7 +56,7 @@ function NotificationSettingsMessageUnread(onPress) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { card: null, cta: null, label: null, header: null, headerTitle: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -83,7 +83,7 @@ export const NotificationSettingsGuildMessageUnread = function NotificationSetti
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).unread,
     onCustomize() {
       const obj = { guildId: style.guildId };
-      obj.openLazy(asyncRequireImpl(10255, dependencyMap.paths), "MessageUnreadActionSheet", obj);
+      obj.openLazy(asyncRequireImpl(10294, dependencyMap.paths), "MessageUnreadActionSheet", obj);
     },
   };
   return closure_4(NotificationSettingsMessageUnread, obj);
@@ -95,7 +95,7 @@ export const NotificationSettingsChannelMessageUnread = function NotificationSet
     setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).unread,
     onCustomize() {
       const obj = { channel: style.channel };
-      obj.openLazy(asyncRequireImpl(10257, dependencyMap.paths), "MessageUnreadActionSheet", obj);
+      obj.openLazy(asyncRequireImpl(10296, dependencyMap.paths), "MessageUnreadActionSheet", obj);
     },
   };
   return closure_4(NotificationSettingsMessageUnread, obj);

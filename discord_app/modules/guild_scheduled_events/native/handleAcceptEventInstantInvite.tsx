@@ -8,7 +8,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx");
 
 export default function handleAcceptEventInstantInvite(code) {
-  let obj = guildScheduledEvent(10383);
+  let obj = guildScheduledEvent(10422);
   if (!obj.handleNSFWGuildInvite(code)) {
     if (tmpResult.isGuildScheduledEventInviteEmbed(code)) {
       if (null != code.code) {
@@ -31,7 +31,7 @@ export default function handleAcceptEventInstantInvite(code) {
         }
       }
     }
-    tmpResult = tmp(7807);
+    tmpResult = tmp(7837);
   }
   tmp = guildScheduledEvent;
 }

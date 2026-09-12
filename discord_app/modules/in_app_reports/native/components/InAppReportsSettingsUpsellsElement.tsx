@@ -38,7 +38,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, settingsContainer: null, goToSettingsText: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;

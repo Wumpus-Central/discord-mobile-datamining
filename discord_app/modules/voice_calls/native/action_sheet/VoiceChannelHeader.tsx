@@ -8,7 +8,7 @@ import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
-import _modDef10121 from "../../../../../_runtime/metro/10121__.js";
+import _modDef10160 from "../../../../../_runtime/metro/10160__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import CallStateHooks from "../CallStateHooks.tsx";
 import OngoingCallStatusLabelDefault from "../components/OngoingCallStatusLabel.tsx";
@@ -165,7 +165,7 @@ class VoiceChannelHeader {
 function AddMemberButton(onPress) {
   const obj = {
     onPress: onPress.onPress,
-    iconSource: _modDef10121,
+    iconSource: _modDef10160,
     iconStyle: closure_12().icons,
     accessibilityLabel: null,
   };
@@ -191,7 +191,7 @@ const Constants = fn(1074);
 ({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: {
     alignSelf: "stretch",

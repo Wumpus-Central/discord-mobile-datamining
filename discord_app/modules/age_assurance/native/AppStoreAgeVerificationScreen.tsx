@@ -27,7 +27,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
   let obj = modalSessionId(1483);
   let navigation = obj.useNavigation();
   [tmp5, c2] = callback1(noop.useState({ type: "loading" }), 2);
-  let obj1 = modalSessionId(4819);
+  let obj1 = modalSessionId(4849);
   const watchAgeVerificationStatusChange = obj1.useWatchAgeVerificationStatusChange(modalSessionId.onClose);
   let items = [navigation];
   const callback = noop.useCallback(() => {
@@ -214,7 +214,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
     obj = { variant: "text-md/medium", color: "text-strong", children: null };
     const intl = tmp(1114).intl;
     obj.children = intl.string(navigation(2946).MN6I4Y);
-    items3[1] = closure_7(tmp(4602).Text, obj);
+    items3[1] = closure_7(tmp(4632).Text, obj);
     obj.children = items3;
     let tmp15 = closure_9(closure_8, obj);
   } else {
@@ -222,7 +222,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
     let obj2 = { variant: "text-md/medium", color: "text-strong", accessibilityRole: "alert", children: null };
     const intl2 = tmp(1114).intl;
     obj2.children = intl2.string(navigation(2946).tBwanH);
-    const items4 = [closure_7(tmp(4602).Text, obj2)];
+    const items4 = [closure_7(tmp(4632).Text, obj2)];
     let obj3 = { children: null };
     let obj4 = { variant: "primary", size: "lg", text: null, onPress: null };
     const intl3 = tmp(1114).intl;
@@ -235,20 +235,20 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
       );
       callback();
     };
-    obj3.children = closure_7(tmp(5026).Button, obj4);
-    items4[1] = closure_7(tmp(5484).ButtonGroup, obj3);
+    obj3.children = closure_7(tmp(5056).Button, obj4);
+    items4[1] = closure_7(tmp(5514).ButtonGroup, obj3);
     obj1.children = items4;
     tmp15 = closure_9(closure_8, obj1);
   }
   let obj5 = { children: null };
   const tmp4 = callback1(noop.useState({ type: "loading" }), 2);
-  obj5.children = closure_7(modalSessionId(8508).ModalContent, {
-    children: closure_7(modalSessionId(5024).Stack, {
+  obj5.children = closure_7(modalSessionId(8540).ModalContent, {
+    children: closure_7(modalSessionId(5054).Stack, {
       align: "center",
       justify: "center",
       spacing: 16,
       children: tmp15,
     }),
   });
-  return closure_7(modalSessionId(8507).ModalScreen, obj5);
+  return closure_7(modalSessionId(8539).ModalScreen, obj5);
 }

@@ -35,10 +35,6 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   if (flag === undefined) {
     flag = false;
   }
-  let str = bountyId.startupPath;
-  if (str === undefined) {
-    str = "carousel";
-  }
   let prop = bountyId.verticalScrollingPosition;
   if (prop === undefined) {
     prop = null;
@@ -47,9 +43,9 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   if (flag2 === undefined) {
     flag2 = true;
   }
-  closure_11 = undefined;
-  closure_16 = undefined;
-  closure_22 = undefined;
+  closure_10 = undefined;
+  closure_15 = undefined;
+  closure_21 = undefined;
   let callback;
   let memo1;
   let callback1;
@@ -72,18 +68,18 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   if (1000 * num2 >= rewardDurationMs) {
     set.add("threshold");
   }
-  closure_11 = num2.useRef(set);
+  closure_10 = num2.useRef(set);
   num2.useRef(false);
   num2.useRef(num);
   num2.useRef(num3);
   num2.useRef(null);
-  closure_16 = obj2.useRef(null);
+  closure_15 = obj2.useRef(null);
   num2.useRef(false);
   num2.useRef(false);
   num2.useRef(null);
   num2.useRef(null);
   num2.useRef(-1);
-  closure_22 = obj2.useRef({ bitrateBps: null, width: null, height: null, levelIndex: null });
+  closure_21 = obj2.useRef({ bitrateBps: null, width: null, height: null, levelIndex: null });
   callback = obj2.useCallback(() => {
     if (null != ref7.current) {
       const _clearTimeout = clearTimeout;
@@ -91,18 +87,18 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
       ref7.current = null;
     }
   }, []);
-  const items = [flag, str, prop, rewardDurationMs];
+  const items = [flag, prop, rewardDurationMs];
   memo1 = obj2.useMemo(
     () => ({
       was_preloaded: flag,
-      startup_path: str,
+      startup_path: "active_only",
       vertical_scrolling_position: prop,
       reward_timer_seconds: rewardDurationMs / 1000,
     }),
     items,
   );
   callback1 = obj2.useCallback(() => {
-    const current = closure_22.current;
+    const current = closure_21.current;
     return {
       hls_level_index: current.levelIndex,
       hls_segment_res_width: current.width,
@@ -119,11 +115,11 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
       }
       if (tmp2 > 0) {
         const result = VideoQuestUtils.formatVideoProgressRatio(num2, tmp2);
-        const iter = str[Symbol.iterator]();
+        const iter = prop[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
           if (result >= nextResult / 100) {
-            current = closure_11.current;
+            current = closure_10.current;
             let _HermesInternal = HermesInternal;
             let addResult = current.add("p" + tmp6);
           }
@@ -155,18 +151,18 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   }, items2);
   const items3 = [callback3];
   callback4 = obj2.useCallback(() => {
-    const current = closure_11.current;
+    const current = closure_10.current;
     if (!current.has("start")) {
-      const current2 = closure_11.current;
+      const current2 = closure_10.current;
       current2.add("start");
       callback3({ videoTimestampSeconds: 0, progress: 0, thresholdMet: false });
     }
   }, items3);
   const items4 = [callback3, rewardDurationMs];
   callback5 = obj2.useCallback((arg0, current) => {
-    current = closure_11.current;
+    current = closure_10.current;
     if (!current.has("threshold")) {
-      const current2 = closure_11.current;
+      const current2 = closure_10.current;
       current2.add("threshold");
       const _Math = Math;
       const bound = Math.max(rewardDurationMs / 1000, arg0);
@@ -177,9 +173,9 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   }, items4);
   const items5 = [callback3];
   callback6 = obj2.useCallback((arg0, arg1) => {
-    const current = closure_11.current;
+    const current = closure_10.current;
     if (!current.has("end")) {
-      const current2 = closure_11.current;
+      const current2 = closure_10.current;
       current2.add("end");
       const _Math = Math;
       const obj = { videoTimestampSeconds: Math.max(arg0, arg1), progress: 1, thresholdMet: true };
@@ -190,17 +186,17 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   callback7 = obj2.useCallback((videoTimestampSeconds, current) => {
     if (current > 0) {
       const result = VideoQuestUtils.formatVideoProgressRatio(videoTimestampSeconds, current);
-      const iter = str[Symbol.iterator]();
+      const iter = prop[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let _HermesInternal = HermesInternal;
         let tmp4 = nextResult;
         let combined = "p" + nextResult;
-        current = closure_11.current;
+        current = closure_10.current;
         let tmp6 = combined;
         if (!current.has(combined)) {
           if (result >= tmp4 / 100) {
-            let current2 = closure_11.current;
+            let current2 = closure_10.current;
             let addResult = current2.add(tmp6);
             let obj = {
               videoTimestampSeconds,
@@ -217,8 +213,8 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   const items7 = [callback2, callback4, callback5, callback7, rewardDurationMs];
   const items8 = [callback2, callback4, callback5, callback7, callback6];
   const callback8 = obj2.useCallback((arg0, current, current2) => {
-    closure_13.current = current2;
-    closure_14.current = current;
+    closure_12.current = current2;
+    closure_13.current = current;
     callback2(current);
     if (0 === arg0) {
       callback4();
@@ -230,8 +226,8 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   }, items7);
   const items9 = [bountyId, memo, questImpressionId, sourceQuestContent, rewardDurationMs];
   const callback9 = obj2.useCallback((arg0, current, current2) => {
-    closure_13.current = current2;
-    closure_14.current = current;
+    closure_12.current = current2;
+    closure_13.current = current;
     callback2(current);
     if (0 === arg0) {
       callback4();
@@ -242,7 +238,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   }, items8);
   const items10 = [bountyId, memo, questImpressionId, sourceQuestContent, rewardDurationMs];
   const callback10 = obj2.useCallback((loop_count) => {
-    closure_13.current = 0;
+    closure_12.current = 0;
     let obj = {
       adContentId: bountyId,
       adCreativeType: AdCreativeType.AdCreativeType.BOUNTY,
@@ -369,7 +365,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
         duration: diff,
         network_connection_speed: NetworkStore.getEffectiveConnectionSpeed(),
         buffer_index: ref9.current,
-        video_bitrate_bps: closure_22.current.bitrateBps,
+        video_bitrate_bps: closure_21.current.bitrateBps,
       };
       const merged = Object.assign(callback1());
       const merged1 = Object.assign(memo1);
@@ -385,7 +381,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
       current = null == ref4.current;
     }
     if (!current) {
-      current = null == closure_16.current;
+      current = null == closure_15.current;
     }
     if (!current) {
       ref5.current = true;
@@ -400,9 +396,9 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
       obj = {
         video_session_id: memo,
         impression_id: questImpressionId,
-        duration_ms: closure_16.current - ref4.current,
+        duration_ms: closure_15.current - ref4.current,
         network_connection_speed: NetworkStore.getEffectiveConnectionSpeed(),
-        startup_bitrate_bps: closure_22.current.bitrateBps,
+        startup_bitrate_bps: closure_21.current.bitrateBps,
       };
       const merged = Object.assign(callback1());
       const merged1 = Object.assign(memo1);
@@ -418,10 +414,10 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
       current = null == ref4.current;
     }
     if (!current) {
-      current = null == closure_16.current;
+      current = null == closure_15.current;
     }
     if (!current) {
-      if (null == closure_22.current.bitrateBps) {
+      if (null == closure_21.current.bitrateBps) {
         if (null == ref7.current) {
           const _setTimeout = setTimeout;
           tmp9.current = setTimeout(() => {
@@ -473,11 +469,11 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   obj.handleLoadStartAnalytics = num2.useCallback(() => {
     callback14();
     callback();
-    closure_15.current = Date.now();
-    closure_16.current = null;
+    closure_14.current = Date.now();
+    closure_15.current = null;
+    closure_16.current = false;
     closure_17.current = false;
-    closure_18.current = false;
-    closure_22.current = { bitrateBps: null, width: null, height: null, levelIndex: null };
+    closure_21.current = { bitrateBps: null, width: null, height: null, levelIndex: null };
   }, items18);
   const items19 = [callback15, flag2];
   obj.handleVideoTracksAnalytics = num2.useCallback((arg0) => {
@@ -514,13 +510,13 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
       }
       size.levelIndex = tmp5;
     }
-    closure_22.current = size;
+    closure_21.current = size;
     let tmp6 = flag2;
     if (flag2) {
-      tmp6 = null != closure_16.current;
+      tmp6 = null != closure_15.current;
     }
     if (tmp6) {
-      tmp6 = null != closure_22.current.bitrateBps;
+      tmp6 = null != closure_21.current.bitrateBps;
     }
     if (tmp6) {
       callback15();
@@ -528,8 +524,8 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   }, items19);
   const items20 = [flag2, callback16];
   obj.handleReadyForDisplayAnalytics = num2.useCallback(() => {
-    closure_18.current = true;
-    if (null == closure_16.current) {
+    closure_17.current = true;
+    if (null == closure_15.current) {
       const _Date = Date;
       tmp.current = Date.now();
     }
@@ -543,7 +539,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
       if (flag2) {
         if (arg0) {
           const _Date = Date;
-          closure_20.current = Date.now();
+          closure_19.current = Date.now();
           ref9.current = ref9.current + 1;
           let obj = {
             adContentId: bountyId,
@@ -557,7 +553,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
             impression_id: questImpressionId,
             network_connection_speed: NetworkStore.getEffectiveConnectionSpeed(),
             buffer_index: ref9.current,
-            video_bitrate_bps: closure_22.current.bitrateBps,
+            video_bitrate_bps: closure_21.current.bitrateBps,
           };
           const merged = Object.assign(callback1());
           const merged1 = Object.assign(memo1);

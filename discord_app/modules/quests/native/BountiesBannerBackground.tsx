@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/BountiesBannerBackground.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import LinearGradientDefault from "../../../../_runtime/05038_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05068_LinearGradient.js";
 import common_Video from "../../../components_native/common/Video.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";

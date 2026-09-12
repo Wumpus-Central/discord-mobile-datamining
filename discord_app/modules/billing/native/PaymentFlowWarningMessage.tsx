@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, icon: null, text: null };
 createStyles = {
   padding: 10,
@@ -17,7 +17,7 @@ createStyles = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  backgroundColor: fn(5492).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+  backgroundColor: fn(5522).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
 };
 createStyles.container = createStyles;
 createStyles.icon = { marginRight: 10 };

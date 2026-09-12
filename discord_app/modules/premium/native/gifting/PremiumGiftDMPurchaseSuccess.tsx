@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { title: null, description: null };
 createStyles = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
 createStyles.title = createStyles;

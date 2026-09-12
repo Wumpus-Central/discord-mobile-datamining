@@ -86,7 +86,7 @@ let closure_26 = async function _joinGuild(arg0) {
           closure_131_12 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -827,7 +827,7 @@ export default {
                 obj2 = { primary_color, secondary_color: null, tertiary_color: null };
               }
               obj1.colors = obj2;
-              obj1.permissions = primary_color(4250).NONE;
+              obj1.permissions = primary_color(4280).NONE;
               c6 = 1;
               const HTTP = color(1272).HTTP;
               const request = {
@@ -844,7 +844,7 @@ export default {
           } else if (1 === tmp7) {
             c6 = 0;
             closure_131_2 = closure_5;
-            const tmp30 = new obj2(4287)(closure_131_2);
+            const tmp30 = new obj2(4317)(closure_131_2);
             throw tmp30;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -864,7 +864,7 @@ export default {
               const obj5 = { type: "GUILD_SETTINGS_ROLE_SELECT", roleId: closure_131_0.body.id, role: body };
               obj.dispatch(obj5);
             }
-            obj2 = obj2(7396);
+            obj2 = obj2(7426);
             const result = obj2.checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
@@ -910,7 +910,7 @@ export default {
       await HTTP.patch(request);
       closure_128_0 = value;
       _objectWithoutProperties(closure_2, closure_1_4);
-      const result = tmp2(7396).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(7426).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -946,7 +946,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7396).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7426).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -964,7 +964,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7396).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7426).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },

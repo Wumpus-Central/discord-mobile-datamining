@@ -1,7 +1,7 @@
 // discord_app/i18n/native/updateRules.tsx
 import native from "../../design/void/native.tsx";
 import LinkingDefault from "../../lib/native/Linking.tsx";
-import _modDef4303 from "../../../_runtime/metro/04303__.js";
+import _modDef4333 from "../../../_runtime/metro/04333__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -44,7 +44,7 @@ class I18nLink {
     if (null == obj.onClick) {
       obj.onClick = () => {
         obj = LinkingDefault;
-        return obj.openURL(_modDef4303.sanitizeUrl(node.target));
+        return obj.openURL(_modDef4333.sanitizeUrl(node.target));
       };
     }
     obj = {

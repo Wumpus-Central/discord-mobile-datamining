@@ -3,13 +3,13 @@ import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import getDevicePixelRatioDefault from "../../../utils/getDevicePixelRatio.native.tsx";
 import FirstPartyQuestTaskTypes2 from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
-import _modDef11380 from "../../../../discord_assets/assets/orbs/tier1_rewardTile_animated.webm.js";
-import _modDef11381 from "../../../../discord_assets/assets/orbs/tier2_rewardTile_animated.webm.js";
-import _modDef11382 from "../../../../discord_assets/assets/orbs/tier3_rewardTile_animated.webm.js";
-import _modDef11383 from "../../../../discord_assets/assets/orbs/tier4_rewardTile_animated.webm.js";
+import _modDef11419 from "../../../../discord_assets/assets/orbs/tier1_rewardTile_animated.webm.js";
+import _modDef11420 from "../../../../discord_assets/assets/orbs/tier2_rewardTile_animated.webm.js";
+import _modDef11421 from "../../../../discord_assets/assets/orbs/tier3_rewardTile_animated.webm.js";
+import _modDef11422 from "../../../../discord_assets/assets/orbs/tier4_rewardTile_animated.webm.js";
 import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
-import _modDef11391 from "../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
-import _modDef11392 from "../../../../discord_assets/assets/orbs/reward_tile_v3.webm.js";
+import _modDef11430 from "../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
+import _modDef11431 from "../../../../discord_assets/assets/orbs/reward_tile_v3.webm.js";
 import QuestConstants from "../QuestConstants.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -219,7 +219,7 @@ let closure_11 = {
   [QuestAssetType.VIDEO_PLAYER_CAPTION]: { variant: QuestAssetType.VIDEO, property: QuestAssetType.CAPTION },
   [QuestAssetType.VIDEO_PLAYER_TRANSCRIPT]: { variant: QuestAssetType.VIDEO, property: QuestAssetType.TRANSCRIPT },
 };
-const obj8 = { [TIER_1]: _modDef11380, [TIER_2]: _modDef11381, [TIER_3]: _modDef11382, [TIER_4]: _modDef11383 };
+const obj8 = { [TIER_1]: _modDef11419, [TIER_2]: _modDef11420, [TIER_3]: _modDef11421, [TIER_4]: _modDef11422 };
 ({ TIER_1, TIER_2, TIER_3, TIER_4 } = obj1);
 let result = size.fileFinishedImporting("modules/quests/lib/AssetUtils.tsx");
 
@@ -275,10 +275,10 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
         obj = { url: tmp29, mimetype: "video/webm", isAnimated: true };
         obj1 = obj;
       } else if (arg3) {
-        obj = { url: _modDef11391, mimetype: "video/mp4", isAnimated: true };
+        obj = { url: _modDef11430, mimetype: "video/mp4", isAnimated: true };
         obj1 = obj;
       } else {
-        obj1 = { url: _modDef11392, mimetype: "video/webm", isAnimated: true };
+        obj1 = { url: _modDef11431, mimetype: "video/webm", isAnimated: true };
       }
       return obj1;
     } else {

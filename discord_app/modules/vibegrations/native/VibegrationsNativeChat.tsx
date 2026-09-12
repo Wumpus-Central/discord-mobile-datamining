@@ -169,15 +169,15 @@ function AttachmentPills(projectId) {
         obj = { name: id.name };
         obj.accessibilityLabel = intl.formatToPlainString(closure_1(3590).QUFLUq, obj);
         obj = { variant: "text-xs/medium", color: "text-default", children: id.name };
-        obj.children = closure_1_14(projectId(4602).Text, obj);
-        let tmp12 = closure_1_14(projectId(5658).Card, obj, id.id);
+        obj.children = closure_1_14(projectId(4632).Text, obj);
+        let tmp12 = closure_1_14(projectId(5688).Card, obj, id.id);
       } else {
         const obj1 = { style: closure_1.attachmentPill, children: null };
         const obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };
         const intl2 = projectId(1114).intl;
         const obj3 = { name: id.name };
         obj2.children = intl2.formatToPlainString(closure_1(3590).OBr7WW, obj3);
-        obj1.children = closure_1_14(projectId(4602).Text, obj2);
+        obj1.children = closure_1_14(projectId(4632).Text, obj2);
         const _HermesInternal = HermesInternal;
         tmp12 = closure_1_14(closure_1_5, obj1, "" + id.name + "-" + index);
       }
@@ -277,8 +277,8 @@ function TodoList(todos) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const turnSettled = fn(16663).turnSettled;
-let VibegrationsConnectionStore = fn(16666);
+const turnSettled = fn(16687).turnSettled;
+let VibegrationsConnectionStore = fn(16690);
 ({
   ensureConnection: closure_9,
   getAttachmentUrl: c10,
@@ -288,7 +288,7 @@ let VibegrationsConnectionStore = fn(16666);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = { allowList: true, allowHeading: true, allowLinks: true };
-fn(4606);
+fn(4636);
 let obj = {
   container: { flex: 1 },
   transcript: { flex: 1 },
@@ -444,7 +444,7 @@ let closure_25 = noop.memo((isNewest) => {
       let tmp51Result = null;
       if ("" !== trimmed) {
         const obj1 = { variant: "text-md/normal", color: "text-default", children: trimmed };
-        tmp51Result = closure_14(message(4602).Text, obj1);
+        tmp51Result = closure_14(message(4632).Text, obj1);
       }
       items5[1] = tmp51Result;
       tmp51Result = null;
@@ -585,7 +585,7 @@ let closure_25 = noop.memo((isNewest) => {
           const obj5 = { variant: "text-md/normal", color: "text-default", children: null };
           obj4 = MarkupUtilsDefault;
           obj5.children = obj4.parse(trimmed, true, closure_16);
-          obj4.children = closure_14(message(4602).Text, obj5);
+          obj4.children = closure_14(message(4632).Text, obj5);
           tmp19Result = closure_14(closure_5, obj4);
         }
       }
@@ -646,7 +646,7 @@ let closure_25 = noop.memo((isNewest) => {
       tmp19Result8 = null;
       if ("message" in found) {
         const obj15 = { variant: "text-sm/normal", color: "text-feedback-critical", children: found.message };
-        tmp19Result8 = closure_14(message(4602).Text, obj15);
+        tmp19Result8 = closure_14(message(4632).Text, obj15);
       }
     }
     items7[12] = tmp19Result8;

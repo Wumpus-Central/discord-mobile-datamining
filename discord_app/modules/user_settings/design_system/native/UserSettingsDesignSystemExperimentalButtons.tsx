@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import _modDef4554 from "../../../../../_runtime/metro/04554__.js";
+import _modDef4584 from "../../../../../_runtime/metro/04584__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
-import _modDef5664 from "../../../../../_runtime/metro/05664__.js";
+import LinearGradientDefault from "../../../../../_runtime/05068_LinearGradient.js";
+import _modDef5694 from "../../../../../_runtime/metro/05694__.js";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef7125 from "../../../../../_runtime/metro/07125__.js";
-import _modDef7454 from "../../../../../_runtime/metro/07454__.js";
+import _modDef7155 from "../../../../../_runtime/metro/07155__.js";
+import _modDef7484 from "../../../../../_runtime/metro/07484__.js";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import native2 from "../../../../design/components/experimental/native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -61,7 +61,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   obj3.children = timestampProducer(native2.HeaderButton, {
     onPress() {},
     text: "Channel Name",
-    icon: _modDef5664,
+    icon: _modDef5694,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6,
@@ -78,7 +78,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   const obj5 = {
     onPress() {},
     text: "Channel Name",
-    icon: _modDef5664,
+    icon: _modDef5694,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6,
@@ -88,7 +88,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
       onPress() {},
       size: "lg",
       text: "Search",
-      icon: _modDef7125,
+      icon: _modDef7155,
       isRound: true,
     }),
   ];
@@ -96,14 +96,14 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     onPress() {},
     size: "lg",
     text: "Search",
-    icon: _modDef7125,
+    icon: _modDef7155,
     isRound: true,
   };
   items1[1] = timestampProducer(native2.InputButton, {
     onPress() {},
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef4554,
+    icon: _modDef4584,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   });
@@ -155,7 +155,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     onPress() {},
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef4554,
+    icon: _modDef4584,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   };
@@ -194,7 +194,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   };
   const tmp3 = LinearGradientDefault;
   obj20.children = timestampProducer(RowButton.RowButton, {
-    icon: _modDef7454,
+    icon: _modDef7484,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -203,7 +203,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   obj19.children = timestampProducer(tmp3, obj20);
   items[5] = timestampProducer(native.ThemeContextProvider, obj19);
   const obj21 = {
-    icon: _modDef7454,
+    icon: _modDef7484,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -227,7 +227,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     children: timestampProducer(React3, { style: { padding: 48 } }),
   };
   items3[1] = timestampProducer(native2.CollapsibleFloatingActionButton, {
-    icon: _modDef7454,
+    icon: _modDef7484,
     onPress() {},
     positionBottom: 32,
     text: "Floating Action Button",

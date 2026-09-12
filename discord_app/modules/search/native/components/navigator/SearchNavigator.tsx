@@ -7,24 +7,24 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7951).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(16723).SearchNavigatorScreens;
+let closure_5 = fn(7981).SearchEntrypointAnalyticsLocations;
+const SearchNavigatorScreens = fn(16750).SearchNavigatorScreens;
 const SearchTypes = fn(1074).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { container: null };
 obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj.container = obj;
 let closure_10 = createStyles.createStyles(obj);
-const NativeStackNavigator = fn(7987);
+const NativeStackNavigator = fn(8017);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigator.tsx");
 
 export default noop.memo((route) => {
   const searchContext = route.route.params.searchContext;
-  let obj = searchContext(7073);
+  let obj = searchContext(7103);
   const accessibilityNativeStackOptions = obj.useAccessibilityNativeStackOptions();
   const items = [searchContext];
   const effect = noop.useEffect(() => {
@@ -52,7 +52,7 @@ export default noop.memo((route) => {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(16951).default;
+        return searchContext(16978).default;
       },
     }),
     closure_8(closure_11.Screen, {
@@ -61,8 +61,8 @@ export default noop.memo((route) => {
         route = route.route;
         const obj = {
           headerShown: true,
-          header: route(7936).renderHeader,
-          headerLeft: route(7936).getRenderBackImage(route.navigation),
+          header: route(7966).renderHeader,
+          headerLeft: route(7966).getRenderBackImage(route.navigation),
           headerTitle() {
             return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
           },
@@ -71,7 +71,7 @@ export default noop.memo((route) => {
         return obj;
       },
       getComponent() {
-        return searchContext(16947).default;
+        return searchContext(16974).default;
       },
     }),
   ];

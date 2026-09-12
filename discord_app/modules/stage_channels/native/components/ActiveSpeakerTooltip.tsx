@@ -7,11 +7,11 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(10135);
+const StageChannelListStore = fn(10174);
 ({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = {
   container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" },
   participantItemContainer: null,
@@ -67,7 +67,7 @@ export default noop.memo((channel) => {
         return items;
       },
       items1,
-      channel(5483).isVersionEqual,
+      channel(5513).isVersionEqual,
     ),
     1,
   )[0];
@@ -97,11 +97,11 @@ export default noop.memo((channel) => {
       const intl = tmp2(1114).intl;
       const obj5 = { count: first.length };
       obj4.children = intl.format(tmp2(1114).t["+dia6l"], obj5);
-      obj3.children = closure_8(tmp2(4602).Text, obj4);
+      obj3.children = closure_8(tmp2(4632).Text, obj4);
       items2[1] = closure_8(View, obj3);
       obj.children = items2;
       obj.children = closure_9(View, obj);
-      tmp5 = closure_8(tmp2(5174).PressableOpacity, obj);
+      tmp5 = closure_8(tmp2(5204).PressableOpacity, obj);
     }
   }
   return tmp5;

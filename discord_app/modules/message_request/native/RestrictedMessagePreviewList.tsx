@@ -70,7 +70,7 @@ let closure_9 = {
   useAlternateEmbedColors: false,
   restrictedPreview: true,
 };
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { flexDirection: "column" },
   hiddenMedia: null,
@@ -81,15 +81,15 @@ let createStyles = {
   mediaPlaceholderCard: null,
   mediaHiddenRow: null,
 };
-createStyles = { marginLeft: fn(16985).RESTRICTED_CONTENT_INSET };
+createStyles = { marginLeft: fn(17012).RESTRICTED_CONTENT_INSET };
 createStyles.hiddenMedia = createStyles;
 createStyles.messageRow = { position: "relative" };
 let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(16985).RESTRICTED_CONTENT_INSET,
-  height: fn(16985).RESTRICTED_AVATAR_SIZE,
+  width: fn(17012).RESTRICTED_CONTENT_INSET,
+  height: fn(17012).RESTRICTED_AVATAR_SIZE,
 };
 createStyles.avatarHitbox = size;
 createStyles.dateDivider = {

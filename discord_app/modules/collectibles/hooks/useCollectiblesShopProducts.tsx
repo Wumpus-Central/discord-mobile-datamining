@@ -378,8 +378,8 @@ export const useCollectiblesShopProduct = function useCollectiblesShopProduct(sk
     }, items10),
   };
 };
-export const useCollectiblesShopProducts = function useCollectiblesShopProducts(arg0) {
-  _require = arg0;
+export const useCollectiblesShopProducts = function useCollectiblesShopProducts(skuIds, arg1) {
+  _require = skuIds;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -394,8 +394,8 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
   }
   let memo;
   let stateFromStoresObject1;
-  let items = [arg0];
-  memo = memo.useMemo(() => closure_0.filter((item) => "" !== item), items);
+  let items = [skuIds];
+  memo = memo.useMemo(() => skuIds.filter((item) => "" !== item), items);
   const items1 = [memo.join(",")];
   const effect = memo.useEffect(() => {
     if (memo.length > 0) {

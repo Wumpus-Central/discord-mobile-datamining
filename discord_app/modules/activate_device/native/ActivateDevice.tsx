@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ConsoleOAuthApplications from "../../../../discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx";
-import _modDef13932 from "../../../../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js";
-import _modDef13933 from "../../../../discord_assets/assets/images/consoles/social_layer_link_success_illustration-2x.png.js";
+import _modDef13966 from "../../../../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js";
+import _modDef13967 from "../../../../discord_assets/assets/images/consoles/social_layer_link_success_illustration-2x.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
   ScrollView: closure_8,
 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = {
   background: { flex: 1 },
   imageStyle: null,
@@ -105,11 +105,11 @@ export const ActivateDevice = (onClose) => {
         ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID,
       ];
       if (items.includes(userCodeData.clientId)) {
-        closure_3(_modDef13932);
+        closure_3(_modDef13966);
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((item) => first(first1[11]).isSocialLayerUmbrellaScope(item))) {
-          closure_3(_modDef13933);
+          closure_3(_modDef13967);
         }
       }
     }

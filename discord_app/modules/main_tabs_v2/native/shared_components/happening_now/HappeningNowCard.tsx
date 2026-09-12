@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(15357);
+const HappeningNowConstants = fn(15379);
 const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD_MARGIN_RIGHT;
 ({
   HAPPENING_NOW_CARD_PADDING: hasOwnProperty,
@@ -29,7 +29,7 @@ const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 let closure_20 = HAPPENING_NOW_PANELS_CONTAINER_PADDING + HAPPENING_NOW_CARD_MARGIN_RIGHT;
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_21 = createStyles.createStyles((arg0, arg1, arg2) => {
   if ("small" === arg0) {
     let obj = { minWidth, maxWidth };
@@ -83,7 +83,7 @@ let closure_21 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj3.cardBadge = size;
   return obj3;
 });
-fn(4606);
+fn(4636);
 createStyles = { cardHeaderMargin: null };
 createStyles = { marginRight: HAPPENING_NOW_BADGE_SIZE + 4 };
 createStyles.cardHeaderMargin = createStyles;

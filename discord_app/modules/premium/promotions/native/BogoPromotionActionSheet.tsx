@@ -17,7 +17,7 @@ const Constants = fn(1074);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, buttonContainer: null, header: null, subheader: null, image: null };
 createStyles = {
   dipslay: "flex",
@@ -50,7 +50,7 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   let analyticsLocations;
   const tmp = closure_14();
-  analyticsLocations = analyticsLocations(7235)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7265)().analyticsLocations;
   const items = [analyticsLocations, markAsDismissed];
   const items1 = [markAsDismissed];
   const callback = noop.useCallback(() => {
@@ -78,20 +78,20 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
     },
     style: tmp.image,
   };
-  const items3 = [closure_12(analyticsLocations(5638), obj), , ,];
+  const items3 = [closure_12(analyticsLocations(5668), obj), , ,];
   const obj1 = { style: null, color: "mobile-text-heading-primary", variant: "heading-xl/bold", children: null };
   const items4 = [tmp.header];
   obj1.style = items4;
   const intl = markAsDismissed(1114).intl;
   obj1.children = intl.string(markAsDismissed(1114).t["6Jjfk8"]);
-  items3[1] = closure_12(markAsDismissed(4602).Text, obj1);
+  items3[1] = closure_12(markAsDismissed(4632).Text, obj1);
   const obj2 = { style: null, color: "text-subtle", variant: "text-md/medium", children: null };
   const items5 = [tmp.subheader];
   obj2.style = items5;
   const intl2 = markAsDismissed(1114).intl;
   const obj3 = { helpCenterLink: analyticsLocations(2024).getArticleURL(SUMMER_BOGO_2025.SUMMER_BOGO_2025) };
   obj2.children = intl2.format(markAsDismissed(1114).t.y7lJK6, obj3);
-  items3[2] = closure_12(markAsDismissed(4602).Text, obj2);
+  items3[2] = closure_12(markAsDismissed(4632).Text, obj2);
   const obj4 = { style: null, children: null };
   const items6 = [tmp.buttonContainer];
   obj4.style = items6;
@@ -100,9 +100,9 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1114).intl;
   obj5.text = intl3.string(markAsDismissed(1114).t.J61px0);
   obj5.onPress = callback;
-  obj4.children = closure_12(analyticsLocations(10060), obj5);
+  obj4.children = closure_12(analyticsLocations(10099), obj5);
   items3[3] = closure_12(View, obj4);
   obj.children = items3;
   obj.children = closure_13(View, obj);
-  return closure_12(markAsDismissed(7223).BottomSheet, obj);
+  return closure_12(markAsDismissed(7253).BottomSheet, obj);
 }

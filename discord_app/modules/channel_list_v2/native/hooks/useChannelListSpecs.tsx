@@ -3,19 +3,19 @@ import roundToNearestPixelDefault from "../../../voice_panel/native/utils/roundT
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const RedesignChannelListConstants = fn(10207);
+const RedesignChannelListConstants = fn(10246);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_4, BANNER_MAX_HEIGHT_PERCENTAGE: hasOwnProperty } =
   RedesignChannelListConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
 
 export default function useChannelListSpecs(banner) {
-  redesignGuildHeaderHeight = redesignGuildHeaderHeight(16204).useRedesignGuildHeaderHeight(banner);
+  redesignGuildHeaderHeight = redesignGuildHeaderHeight(16228).useRedesignGuildHeaderHeight(banner);
   height = height(1477)().height;
-  const tmp2 = height(16088)();
+  const tmp2 = height(16112)();
   dependencyMap = tmp2;
-  const obj = redesignGuildHeaderHeight(16204);
-  const fontScale = redesignGuildHeaderHeight(5033).useFontScale();
+  const obj = redesignGuildHeaderHeight(16228);
+  const fontScale = redesignGuildHeaderHeight(5063).useFontScale();
   closure_4 = tmp4;
   const top = height(1611)().top;
   const items = [null != banner.banner, tmp2, height, redesignGuildHeaderHeight, top, fontScale];

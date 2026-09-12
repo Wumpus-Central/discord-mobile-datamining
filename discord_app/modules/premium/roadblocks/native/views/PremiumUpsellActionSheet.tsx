@@ -8,7 +8,7 @@ import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05038_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05068_LinearGradient.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import openPremiumUpsellActionSheet from "../utils/openPremiumUpsellActionSheet.tsx";
@@ -116,13 +116,13 @@ const Constants = fn(1074);
   HelpdeskArticles: closure_16,
   ThemeTypes: closure_17,
 } = Constants);
-const ApplicationStreamFPS = fn(4653).ApplicationStreamFPS;
-const SavedMessagesConstants = fn(7924);
+const ApplicationStreamFPS = fn(4683).ApplicationStreamFPS;
+const SavedMessagesConstants = fn(7954);
 ({ SAVED_BOOKMARKS_MAX: closure_19, SAVED_REMINDERS_MAX: closure_20 } = SavedMessagesConstants);
-const premiumMax = fn(7918).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(7948).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_22, Fragment: closure_23, jsxs: closure_24 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   hero: null,
   image: null,

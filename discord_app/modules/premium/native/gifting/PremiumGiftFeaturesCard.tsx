@@ -6,7 +6,7 @@ import StringUtils from "../../../../utils/StringUtils.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05068_LinearGradient.js";
 import TextStylesDefault from "../../../rebrand/native/TextStyles.tsx";
 import PremiumFeaturesBackgroundDefault from "../../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
 import usePremiumFeaturesDefault from "../../../user_settings/premium/native/utils/usePremiumFeatures.tsx";
@@ -103,7 +103,7 @@ const obj11 = { marginTop: nativeDefault.space.PX_24 };
 obj10.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj12 = { marginTop: nativeDefault.space.PX_12 };
 obj10.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_15 = createStyles.createStyles(() => {
   let logo = {
     card: null,

@@ -10,7 +10,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { view: null };
 createStyles = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -41,7 +41,7 @@ export const PostponeRender = function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(7112).SceneLoadingIndicator, {});
+    children = jsx(first(7142).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;

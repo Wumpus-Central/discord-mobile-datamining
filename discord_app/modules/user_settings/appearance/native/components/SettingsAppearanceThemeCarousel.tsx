@@ -15,7 +15,7 @@ const ThemeTypes = fn(1074).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
-fn(4606);
+fn(4636);
 let obj = {
   container: null,
   textCentered: null,

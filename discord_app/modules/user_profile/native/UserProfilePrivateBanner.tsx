@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { banner: null };
 createStyles = {
   flexDirection: "row",
@@ -22,7 +22,7 @@ createStyles = {
   paddingHorizontal: nativeDefault.space.PX_8,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   position: "relative",
-  zIndex: fn(7281).PROFILE_TOP_LAYER_Z_INDEX,
+  zIndex: fn(7311).PROFILE_TOP_LAYER_Z_INDEX,
 };
 createStyles.banner = createStyles;
 let closure_6 = createStyles.createStyles(createStyles);

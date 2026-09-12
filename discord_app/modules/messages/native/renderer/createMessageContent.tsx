@@ -10,7 +10,7 @@ import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import GuildTagConstants from "../../../guild_tag/GuildTagConstants.tsx";
 import getEmbedThemeColorsDefault from "row_data/embeds/getEmbedThemeColors.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
-import _modDef8021 from "../../../../../_runtime/metro/08021__.js";
+import _modDef8051 from "../../../../../_runtime/metro/08051__.js";
 import transformMessageComponentsDefault from "transformMessageComponents.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -86,7 +86,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 const intl4 = util.intl;
                 obj.messagePreviewString = intl4.string(util.t.ZTo4HS);
                 tmp15Result = renderer_EmbedUtils;
-                obj.archivedIconUrl = tmp15Result.getAssetUriForEmbed(_modDef8021);
+                obj.archivedIconUrl = tmp15Result.getAssetUriForEmbed(_modDef8051);
                 obj.backgroundColor = backgroundColor;
                 obj1 = obj;
               } else {
@@ -1404,7 +1404,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result8 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "151", hasBailedAst: "BG" };
+    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "Content Location Name", hasBailedAst: true };
     const tmp13Result2 = tmp13(tmp3[42]);
   }
 }

@@ -13,19 +13,19 @@ import ShieldUserIcon from "../../design/components/Icon/native/redesign/generat
 import StickerIcon from "../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
 import StarIcon from "../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import HeadphonesIcon from "../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
-import _modDef13419 from "../../../_runtime/metro/13419__.js";
-import _modDef13428 from "../../../_runtime/metro/13428__.js";
-import _modDef13429 from "../../../_runtime/metro/13429__.js";
+import _modDef13452 from "../../../_runtime/metro/13452__.js";
+import _modDef13461 from "../../../_runtime/metro/13461__.js";
+import _modDef13462 from "../../../_runtime/metro/13462__.js";
 import useSubscriptionPlansLoaded from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
-import _modDef13555 from "../../../_runtime/metro/13555__.js";
-import _modDef13577 from "../../../_runtime/metro/13577__.js";
+import _modDef13588 from "../../../_runtime/metro/13588__.js";
+import _modDef13610 from "../../../_runtime/metro/13610__.js";
 import BoostTier3Icon from "../../design/components/Icon/native/redesign/generated/BoostTier3Icon.tsx";
-import _modDef13580 from "../../../_runtime/metro/13580__.js";
-import _modDef13581 from "../../../_runtime/metro/13581__.js";
-import _modDef13582 from "../../../_runtime/metro/13582__.js";
-import _modDef13583 from "../../../_runtime/metro/13583__.js";
-import _modDef13584 from "../../../_runtime/metro/13584__.js";
-import _modDef13585 from "../../../_runtime/metro/13585__.js";
+import _modDef13613 from "../../../_runtime/metro/13613__.js";
+import _modDef13614 from "../../../_runtime/metro/13614__.js";
+import _modDef13615 from "../../../_runtime/metro/13615__.js";
+import _modDef13616 from "../../../_runtime/metro/13616__.js";
+import _modDef13617 from "../../../_runtime/metro/13617__.js";
+import _modDef13618 from "../../../_runtime/metro/13618__.js";
 import GuildSubscriptionNoGuilds from "../../design/components/Illustration/native/redesign/generated/GuildSubscriptionNoGuilds.tsx";
 import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell.tsx";
 import GuildBoostingGuildListDefault from "GuildBoostingGuildList.tsx";
@@ -39,7 +39,7 @@ get_ActivityIndicator = fn(17);
 const FractionalPremiumStates = fn(1373).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   root: { paddingHorizontal: 16, paddingVertical: 32 },
   title: { marginTop: 16 },
@@ -112,14 +112,14 @@ export default function GuildBoostingUpsell(arg0) {
   }
   obj = { style: tmp.root, children: null };
   obj = { style: tmp.header, children: null };
-  obj1 = { style: tmp.imgPremiumGuild, source: _modDef13419 };
+  obj1 = { style: tmp.imgPremiumGuild, source: _modDef13452 };
   const items1 = [React5(React4, obj1), , ,];
   obj2 = { style: tmp.logoPremiumGuild, source: null };
   const tmp8 = useThemeDefault();
   if (tmp2Result.isThemeDark(tmp8)) {
-    let tmp7Result = _modDef13428;
+    let tmp7Result = _modDef13461;
   } else {
-    tmp7Result = _modDef13429;
+    tmp7Result = _modDef13462;
   }
   obj2.source = tmp7Result;
   items1[1] = React5(React4, obj2);
@@ -166,30 +166,30 @@ export default function GuildBoostingUpsell(arg0) {
   const obj8 = { style: tmp.features, features: null };
   const obj9 = { icon: null, label: null, IconComponent: null, color: null };
   tmp2Result = shared;
-  obj9.icon = _modDef13581;
+  obj9.icon = _modDef13614;
   const intl5 = util.intl;
   obj9.label = intl5.string(util.t.Ts7BVI);
   obj9.IconComponent = ReactionIcon.ReactionIcon;
   obj9.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_YELLOW;
   const items3 = [obj9, , , ,];
-  const obj10 = { icon: _modDef13582, label: null, IconComponent: null, color: null };
+  const obj10 = { icon: _modDef13615, label: null, IconComponent: null, color: null };
   const intl6 = util.intl;
   obj10.label = intl6.string(util.t.QcJbt6);
   obj10.IconComponent = StickerIcon.StickerIcon;
   obj10.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE;
   items3[1] = obj10;
-  const obj11 = { icon: _modDef13583, label: null, color: "#4173da", IconComponent: null };
+  const obj11 = { icon: _modDef13616, label: null, color: "#4173da", IconComponent: null };
   const intl7 = util.intl;
   obj11.label = intl7.string(util.t.rFNkf5);
   obj11.IconComponent = HeadphonesIcon.HeadphonesIcon;
   items3[2] = obj11;
-  const obj12 = { icon: _modDef13584, label: null, IconComponent: null, color: null };
+  const obj12 = { icon: _modDef13617, label: null, IconComponent: null, color: null };
   const intl8 = util.intl;
   obj12.label = intl8.string(util.t["BpjjS/"]);
   obj12.IconComponent = UploadIcon.UploadIcon;
   obj12.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
   items3[3] = obj12;
-  const obj13 = { icon: _modDef13585, label: null, IconComponent: null, color: null };
+  const obj13 = { icon: _modDef13618, label: null, IconComponent: null, color: null };
   const intl9 = util.intl;
   obj13.label = intl9.string(util.t["9g5Lgb"]);
   obj13.IconComponent = StarIcon.StarIcon;

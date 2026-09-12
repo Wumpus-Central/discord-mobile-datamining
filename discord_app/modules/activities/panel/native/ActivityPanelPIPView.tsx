@@ -307,7 +307,7 @@ class BaseActivityPanelPIPView {
 }
 const View = fn(17).View;
 const ActivityLayoutMode = fn(1920).ActivityLayoutMode;
-const ActivityPanelConstants = fn(9596);
+const ActivityPanelConstants = fn(9635);
 let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({
   ActivityPanelModes: closure_11,
@@ -315,14 +315,14 @@ let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14,
 } = ActivityPanelConstants);
-let closure_15 = fn(17100).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_15 = fn(17127).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1074).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(12367).PIP_WINDOW_OFFSET;
+const PIP_WINDOW_OFFSET = fn(12403).PIP_WINDOW_OFFSET;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
 let native = fn(1178);
 const boxShadowStyle = native.generateBoxShadowStyle(fn(1178).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { wrapper: null, mask: null };
 obj = { borderRadius: nativeDefault.radii.lg };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);

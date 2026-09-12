@@ -8,9 +8,9 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef8364 from "../../../../../_runtime/metro/08364__.js";
-import PaginationDefault from "../../../../../_runtime/10846_Pagination.js";
-import _modDef11657 from "../../../../../_runtime/metro/11657__.js";
+import _modDef8396 from "../../../../../_runtime/metro/08396__.js";
+import PaginationDefault from "../../../../../_runtime/10885_Pagination.js";
+import _modDef11693 from "../../../../../_runtime/metro/11693__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -19,7 +19,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(17693);
+const GuildSettingsRoleConstants = fn(17723);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: c10,
@@ -30,7 +30,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
-fn(4606);
+fn(4636);
 let createStyles = {
   container: null,
   carousel: null,
@@ -189,7 +189,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_14(_modDef8364, {
+    children: closure_14(_modDef8396, {
       maximumValue: values.length - 1,
       minimumTrackTintColor: values[value].color,
       minimumValue: constants.COSMETIC,
@@ -297,7 +297,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
         obj5.children = item.contents().map((children, index) => {
           let obj = { style: closure_3.templateContent, children: null };
           obj = {
-            source: _modDef11657,
+            source: _modDef11693,
             size: native.IconSizes.MEDIUM,
             color: nativeDefault.unsafe_rawColors.GREEN_360,
           };

@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/DownloadBarIllocon.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6009 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DownloadBarIllocon-2x.png.js";
+import _modDef6039 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DownloadBarIllocon-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -23,12 +23,12 @@ export const DownloadBarIllocon = function DownloadBarIllocon(size) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef6009 };
+  obj = { uri: _modDef6039 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6009 });
+  return jsx(FastImageDefault, { uri: _modDef6039 });
 };

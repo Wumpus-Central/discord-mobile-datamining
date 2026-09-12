@@ -8,20 +8,20 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7620).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7650).isAvatarDecorationRecord;
 const AVATAR_DECORATION_SIZE = fn(1397).AVATAR_DECORATION_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { row: null, rowSpacer: null };
 obj = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(13267).GUTTER_SIZE,
+  paddingHorizontal: fn(13300).GUTTER_SIZE,
 };
 obj.row = obj;
-const createStyles = { height: fn(13267).GUTTER_SIZE };
+const createStyles = { height: fn(13300).GUTTER_SIZE };
 obj.rowSpacer = createStyles;
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo((size) => {

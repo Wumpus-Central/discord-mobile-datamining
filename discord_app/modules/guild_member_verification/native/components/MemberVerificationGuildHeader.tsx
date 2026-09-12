@@ -5,13 +5,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(5624);
+const MemberVerificationFormConstants = fn(5654);
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = MemberVerificationFormConstants);
 const useBannerHeight = MemberVerificationFormConstants.useBannerHeight;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 1.20225424859375;
-fn(4606);
+fn(4636);
 const createStyles = {
   header: { flex: 1, flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: 12 },
   headerContent: { alignItems: "center", marginTop: -48, paddingTop: 20, paddingBottom: 0, paddingHorizontal: 16 },
@@ -76,7 +76,7 @@ export default function MemberVerificationGuildHeader(hasManualFormFields) {
     let tmp5 = importDefault;
   } else {
     tmp3 = top;
-    guildBannerSource = require("../../../../../_runtime/metro/05634__.js");
+    guildBannerSource = require("../../../../../_runtime/metro/05664__.js");
     tmp5 = importDefault;
   }
   const tmp8 = useBannerHeight();

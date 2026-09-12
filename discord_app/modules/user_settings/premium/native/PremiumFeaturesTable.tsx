@@ -5,9 +5,9 @@ import native from "../../../../design/void/native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
-import _modDef13530 from "../../../../../_runtime/metro/13530__.js";
-import _modDef13531 from "../../../../../_runtime/metro/13531__.js";
+import LinearGradientDefault from "../../../../../_runtime/05068_LinearGradient.js";
+import _modDef13563 from "../../../../../_runtime/metro/13563__.js";
+import _modDef13564 from "../../../../../_runtime/metro/13564__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,7 +18,7 @@ function CheckIcon() {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
   obj = {
-    source: _modDef13530,
+    source: _modDef13563,
     color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860,
     size: native.IconSizes.SMALL,
   };
@@ -26,7 +26,7 @@ function CheckIcon() {
 }
 function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef13531, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef13564, style: closure_16().icon, size: native.IconSizes.SMALL });
 }
 function CellText(children) {
   return closure_1_11(Text_Text.Text, {
@@ -240,7 +240,7 @@ const PremiumConstants = fn(1373);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = "rgba(184, 69, 193, 0.5)";
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { display: "flex", flex: 1, width: "100%" },
   headerText: { textAlign: "center" },
@@ -268,7 +268,7 @@ createStyles.cell = { paddingVertical: 12 };
 createStyles.labelCell = { flex: 1, justifyContent: "flex-start" };
 createStyles.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
 let obj1 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-createStyles.themedHighlightedCell = { backgroundColor: fn(5492).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+createStyles.themedHighlightedCell = { backgroundColor: fn(5522).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 createStyles.nitroHomeHightlightedBorderLeftRight = {
   borderLeftColor: "rgba(184, 69, 193, 0.5)",
   borderLeftWidth: 2,
@@ -278,9 +278,9 @@ createStyles.nitroHomeHightlightedBorderLeftRight = {
 createStyles.premiumGroupCard = { marginTop: 16 };
 createStyles.priceContainer = { alignItems: "center" };
 let closure_14 = createStyles.createStyles(createStyles);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj3 = { icon: null };
-let obj2 = { backgroundColor: fn(5492).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+let obj2 = { backgroundColor: fn(5522).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj3.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
 let closure_16 = createStyles.createStyles(obj3);
 let size = fn(2);

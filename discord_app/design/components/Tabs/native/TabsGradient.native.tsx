@@ -1,6 +1,6 @@
 // discord_app/design/components/Tabs/native/TabsGradient.native.tsx
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05068_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
@@ -10,7 +10,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
 const SPRING_CONFIG = { mass: 1, damping: 30, stiffness: 250 };
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles({
   gradient: { width: 50, position: "absolute", top: 0, bottom: 0, zIndex: 100 },
   left: { left: 0 },

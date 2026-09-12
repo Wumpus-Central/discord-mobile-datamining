@@ -7,7 +7,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(4511).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(4541).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, ComponentActions: closure_8, RPCCloseCodes: closure_9, RPCErrors: c10 } = Constants);
 let closure_11 = 10 * DurationsDefault.Millis.SECOND;
@@ -60,12 +60,12 @@ class PostMessageTransport extends EventEmitter {
           closure_1_1(1242);
           const obj = {
             application_id: tmp,
-            channel_id: closure_1_0(4235).getEmbeddedActivityLocationChannelId(tmp2.location),
+            channel_id: closure_1_0(4265).getEmbeddedActivityLocationChannelId(tmp2.location),
             guild_id: null,
             timeout_ms: null,
           };
-          const obj3 = closure_1_0(4235);
-          obj.guild_id = closure_1_0(4235).getEmbeddedActivityLocationGuildId(tmp2.location);
+          const obj3 = closure_1_0(4265);
+          obj.guild_id = closure_1_0(4265).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj.timeout_ms = timeout_ms;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj);
         });

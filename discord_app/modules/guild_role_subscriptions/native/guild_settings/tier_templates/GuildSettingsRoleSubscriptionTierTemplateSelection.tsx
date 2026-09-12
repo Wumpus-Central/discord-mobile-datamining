@@ -22,7 +22,7 @@ function TierTemplatesRenderer(groupListingId) {
     obj = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const items = ["Error: ", error.message];
     obj.children = items;
-    tmp3 = closure_15(guildId(4602).Text, obj);
+    tmp3 = closure_15(guildId(4632).Text, obj);
   } else {
     tmp3 = null;
     if (null != templates) {
@@ -49,7 +49,7 @@ function TierTemplatesRenderer(groupListingId) {
           obj.style = size;
           return closure_1_14(closure_1_8, obj);
         };
-        obj.snapToInterval = guildId(17869).CARD_WIDTH + v16;
+        obj.snapToInterval = guildId(17899).CARD_WIDTH + v16;
         obj.renderItem = function renderItem(template) {
           return closure_2_14(GuildRoleSubscriptionTierTemplatePreviewCardDefault, {
             template: template.item,
@@ -206,13 +206,13 @@ get_ActivityIndicator = fn(17);
   View: closure_8,
   FlatList: closure_9,
 } = get_ActivityIndicator);
-const usePriceTiers = fn(17815).usePriceTiers;
+const usePriceTiers = fn(17845).usePriceTiers;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, GuildSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let c16 = 16;
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { marginTop: 16 },
   title: null,

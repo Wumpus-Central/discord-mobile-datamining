@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({
   container: { marginTop: 8 },
   label: { marginBottom: 4 },
@@ -37,7 +37,7 @@ export default function InviteRolesDisplay(roleIds) {
     obj = { variant: "text-xs/semibold", color: "text-muted", style: tmp.label, children: null };
     const intl = tmp2(1114).intl;
     obj.children = intl.string(tmp2(1114).t.stcSfI);
-    const items2 = [closure_5(tmp2(4602).Text, obj)];
+    const items2 = [closure_5(tmp2(4632).Text, obj)];
     const obj1 = {
       style: tmp.rolesRow,
       children: stateFromStoresArray.map((role) => hasOwnProperty(RolePillDefault, { role, guildId }, role.id)),

@@ -6,13 +6,13 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import useColorThemeBackgroundDefault from "../../../client_themes/native/useColorThemeBackground.tsx";
 import HeaderShared from "../shared_components/HeaderShared.tsx";
 import PressableNavigatorButtonWrapperDefault from "../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
-import _modDef12689 from "../../../../../_runtime/metro/12689__.js";
+import _modDef12725 from "../../../../../_runtime/metro/12725__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function RequestsSettingsModalButton(onPress) {
   let obj = { isModal: true, children: null };
-  obj = { source: _modDef12689, onPress: onPress.onPress, accessibilityLabel: null };
+  obj = { source: _modDef12725, onPress: onPress.onPress, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["3D5yo/"]);
   obj.children = hasOwnProperty(HeaderShared.HeaderIconButton, obj);
@@ -20,7 +20,7 @@ function RequestsSettingsModalButton(onPress) {
 }
 function FriendsNavigator() {
   _require = closure_8();
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7548).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7578).trackAppUIViewed(), []);
   let obj = require("Navigator");
   closure_1 = obj.useAccessibilityNativeStackOptions();
   obj = {
@@ -80,12 +80,12 @@ function FriendsNavigator() {
         obj.onPress = function onPress() {
           return navigation.navigate("add-friends", { sourcePage: "Friends Screen Header" });
         };
-        return closure_2_5(navigation(7936).HeaderTextButton, obj);
+        return closure_2_5(navigation(7966).HeaderTextButton, obj);
       };
       return obj;
     },
     getComponent() {
-      return closure_0(16832).default;
+      return closure_0(16859).default;
     },
   };
   const items = [closure_5(closure_7.Screen, obj), , , , , , , , , ,];
@@ -95,7 +95,7 @@ function FriendsNavigator() {
   obj2.title = intl.string(require("util").t.jD1qzM);
   obj1.options = obj2;
   obj1.getComponent = function getComponent() {
-    return closure_0(16838).default;
+    return closure_0(16865).default;
   };
   items[1] = closure_5(closure_7.Screen, obj1);
   let obj3 = { name: "gdm", options: null, getComponent: null };
@@ -104,7 +104,7 @@ function FriendsNavigator() {
   obj4.title = intl2.string(require("util").t["3hF1W4"]);
   obj3.options = obj4;
   obj3.getComponent = function getComponent() {
-    return closure_0(16850).default;
+    return closure_0(16877).default;
   };
   items[2] = closure_5(closure_7.Screen, obj3);
   const obj5 = { name: "add-friend", options: null, getComponent: null };
@@ -113,7 +113,7 @@ function FriendsNavigator() {
   obj6.title = intl3.string(require("util").t.w5uwoI);
   obj5.options = obj6;
   obj5.getComponent = function getComponent() {
-    return closure_0(16851).default;
+    return closure_0(16878).default;
   };
   items[3] = closure_5(closure_7.Screen, obj5);
   const obj7 = { name: "add-friends", options: null, getComponent: null };
@@ -122,7 +122,7 @@ function FriendsNavigator() {
   obj8.title = intl4.string(require("util").t.zIJnA6);
   obj7.options = obj8;
   obj7.getComponent = function getComponent() {
-    return closure_0(16852).default;
+    return closure_0(16879).default;
   };
   items[4] = closure_5(closure_7.Screen, obj7);
   const obj9 = { name: "username-search", options: null, getComponent: null };
@@ -131,7 +131,7 @@ function FriendsNavigator() {
   obj10.title = intl5.string(require("util").t.QzVsOs);
   obj9.options = obj10;
   obj9.getComponent = function getComponent() {
-    return closure_0(16858).default;
+    return closure_0(16885).default;
   };
   items[5] = closure_5(closure_7.Screen, obj9);
   const obj11 = { name: "suggested-friends", options: null, getComponent: null };
@@ -140,7 +140,7 @@ function FriendsNavigator() {
   obj12.title = intl6.string(require("util").t["1uAmCw"]);
   obj11.options = obj12;
   obj11.getComponent = function getComponent() {
-    return closure_0(16859).default;
+    return closure_0(16886).default;
   };
   items[6] = closure_5(closure_7.Screen, obj11);
   const obj13 = { name: "requests-settings", options: null, getComponent: null };
@@ -149,7 +149,7 @@ function FriendsNavigator() {
   obj14.title = intl7.string(require("util").t.XT4hVl);
   obj13.options = obj14;
   obj13.getComponent = function getComponent() {
-    return closure_0(16860).default;
+    return closure_0(16887).default;
   };
   items[7] = closure_5(closure_7.Screen, obj13);
   items[8] = closure_5(closure_7.Screen, {
@@ -169,7 +169,7 @@ function FriendsNavigator() {
       return obj;
     },
     getComponent() {
-      return closure_0(16862).default;
+      return closure_0(16889).default;
     },
   });
   const obj16 = { name: "spam-requests", options: null, getComponent: null };
@@ -178,7 +178,7 @@ function FriendsNavigator() {
   obj17.title = intl8.string(require("util").t.oHVeHc);
   obj16.options = obj17;
   obj16.getComponent = function getComponent() {
-    return closure_0(16865).default;
+    return closure_0(16892).default;
   };
   items[9] = closure_5(closure_7.Screen, obj16);
   const obj18 = { name: "ignored-user-requests", options: null, getComponent: null };
@@ -187,7 +187,7 @@ function FriendsNavigator() {
   obj19.title = intl9.string(require("util").t.tFY5Zb);
   obj18.options = obj19;
   obj18.getComponent = function getComponent() {
-    return closure_0(16866).default;
+    return closure_0(16893).default;
   };
   items[10] = closure_5(closure_7.Screen, obj18);
   obj.children = items;
@@ -196,9 +196,9 @@ function FriendsNavigator() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let NativeStackNavigator = fn(7987);
+let NativeStackNavigator = fn(8017);
 let closure_7 = NativeStackNavigator.createNativeStackNavigator();
-fn(4606);
+fn(4636);
 NativeStackNavigator = { container: null, header: null };
 NativeStackNavigator = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 NativeStackNavigator.container = NativeStackNavigator;

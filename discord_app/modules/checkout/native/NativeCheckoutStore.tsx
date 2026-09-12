@@ -1,6 +1,6 @@
 // discord_app/modules/checkout/native/NativeCheckoutStore.tsx
 import _mod1244 from "../../../../_runtime/metro/01244__.js";
-import _mod4229 from "../../../../_runtime/metro/04229__.js";
+import _mod4259 from "../../../../_runtime/metro/04259__.js";
 import ContextUtilsDefault from "../../../utils/ContextUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -16,23 +16,22 @@ let result = size.fileFinishedImporting("modules/checkout/native/NativeCheckoutS
 
 export const NativeCheckoutStoreContextOrNull = context;
 export const useNativeCheckoutStore = function useNativeCheckoutStore(arg0) {
-  let shallow = arg1;
-  if (arg1 === undefined) {
-    shallow = _mod4229.shallow;
+  if (shallow === undefined) {
+    shallow = _mod4259.shallow;
   }
-  return closure_6()(arg0, shallow);
+  const tmp3 = closure_6();
+  return _mod1244.useStoreWithEqualityFn(tmp3, arg0, shallow);
 };
 export const useNativeCheckoutStoreOrNull = function useNativeCheckoutStoreOrNull(arg0) {
-  let shallow = arg1;
-  if (arg1 === undefined) {
-    shallow = _mod4229.shallow;
+  if (shallow === undefined) {
+    shallow = _mod4259.shallow;
   }
   context = noop.useContext(context);
-  let contextResult = null;
+  let storeWithEqualityFn = null;
   if ("unset_context" !== context) {
-    contextResult = context(arg0, shallow);
+    storeWithEqualityFn = _mod1244.useStoreWithEqualityFn(context, arg0, shallow);
   }
-  return contextResult;
+  return storeWithEqualityFn;
 };
 export const createNativeStore = function createNativeStore(arg0) {
   ({
@@ -473,6 +472,6 @@ export const createNativeStore = function createNativeStore(arg0) {
     };
     obj.onOrderRetryCancellation = onOrderRetryCancellation;
     return obj;
-  }, _mod4229.shallow);
+  }, _mod4259.shallow);
 };
 export const NativeCheckoutStoreContext = importDefaultResultResult[0];

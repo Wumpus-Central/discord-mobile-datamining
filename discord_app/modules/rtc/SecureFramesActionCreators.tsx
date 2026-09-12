@@ -215,9 +215,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj1 = {
                         value: closure_1_9(closure_0, () => {
-                          c1(5462).disconnect();
-                          const obj = c1(5462);
-                          const voiceChannel = c1(5462).selectVoiceChannel(dependencyMap);
+                          c1(5492).disconnect();
+                          const obj = c1(5492);
+                          const voiceChannel = c1(5492).selectVoiceChannel(dependencyMap);
                         }),
                         done: false,
                       };
@@ -275,7 +275,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(9242).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_7 = fn(9281).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesActionCreators.tsx");

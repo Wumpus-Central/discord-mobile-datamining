@@ -253,7 +253,7 @@ const Constants = fn(1920);
   ACTIVITY_PORTRAIT_ASPECT_RATIO: closure_12,
   ACTIVITY_LANDSCAPE_ASPECT_RATIO: map1,
 } = Constants);
-const ActivityPanelModes = fn(9596).ActivityPanelModes;
+const ActivityPanelModes = fn(9635).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let closure_16 = { x: 0, y: 0, gestureActive: false };
 const FunctionUtils = fn(1933);
@@ -369,7 +369,7 @@ export default function ActivityPanelController(children) {
     }
   }, items1);
   obj = {
-    context: connectedActivityInTextChannelId(17097),
+    context: connectedActivityInTextChannelId(17124),
     orientationLockStateForApp,
     mode,
     hasConnectedActivity,
@@ -380,7 +380,7 @@ export default function ActivityPanelController(children) {
   };
   return (
     <BaseActivityPanelController
-      context={connectedActivityInTextChannelId(17097)}
+      context={connectedActivityInTextChannelId(17124)}
       orientationLockStateForApp={orientationLockStateForApp}
       mode={mode}
       hasConnectedActivity={hasConnectedActivity}

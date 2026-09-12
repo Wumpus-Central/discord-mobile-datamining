@@ -15,7 +15,7 @@ const Constants = fn(1074);
   AnalyticEvents: closure_7,
   LoggingInviteTypes: closure_8,
 } = Constants);
-const MessageSendLocation = fn(4599).MessageSendLocation;
+const MessageSendLocation = fn(4629).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 

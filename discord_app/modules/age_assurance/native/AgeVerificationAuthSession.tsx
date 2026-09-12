@@ -58,7 +58,7 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
             c4 = 1;
             c5 = 2;
             c6 = 1;
-            const obj1 = { value: BrowserManager.openAuthSessionURL(closure_0), done: false };
+            const obj1 = { value: BrowserManager.openAuthSessionURL(closure_0, true), done: false };
             return obj1;
           } else {
             c6 = 3;

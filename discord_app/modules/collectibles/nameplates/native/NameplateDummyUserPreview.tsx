@@ -29,7 +29,7 @@ NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = {
   placeholderBarHeight: 14,
 };
 NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1178).AvatarSizes.NORMAL] = NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles((arg0, arg1) => {
   let avatarContainer = { container: null, avatarContainer: null, avatar: null, placeholderBar: null, nameplate: null };
   avatarContainer = {
@@ -99,7 +99,7 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   const obj1 = {
     style: tmp3.avatarContainer,
     children: hasOwnProperty(native.Avatar, {
-      source: importDefault(stateFromStores ? 8912 : 8913),
+      source: importDefault(stateFromStores ? 8947 : 8948),
       size: NORMAL,
       "aria-hidden": true,
       style: tmp3.avatar,

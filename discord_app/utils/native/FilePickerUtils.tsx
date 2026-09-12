@@ -45,7 +45,7 @@ let closure_5 = async function _handleDocumentSelection() {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

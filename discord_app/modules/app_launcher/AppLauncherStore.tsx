@@ -28,12 +28,12 @@ function handleSetActiveCommand() {
 }
 let obj = {
   show: false,
-  entrypoint: fn(9500).AppLauncherEntrypoint.NONE,
-  lastShownEntrypoint: fn(9500).AppLauncherEntrypoint.NONE,
+  entrypoint: fn(9539).AppLauncherEntrypoint.NONE,
+  lastShownEntrypoint: fn(9539).AppLauncherEntrypoint.NONE,
   activeViewType: null,
   activeChannelId: null,
-  closeReason: fn(9500).AppLauncherCloseReason.DISMISSED,
-  initialState: "accessible",
+  closeReason: fn(9539).AppLauncherCloseReason.DISMISSED,
+  initialState: "WireType",
 };
 const Store = initializeDefault.Store;
 class AppLauncherStore extends Store {}

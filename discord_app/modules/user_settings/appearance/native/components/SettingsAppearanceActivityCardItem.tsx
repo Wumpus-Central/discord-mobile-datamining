@@ -11,7 +11,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15357);
+const HappeningNowConstants = fn(15379);
 ({
   HAPPENING_NOW_BADGE_SIZE,
   HAPPENING_NOW_CONTENT_HEIGHT,
@@ -23,7 +23,7 @@ const HappeningNowConstants = fn(15357);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
-fn(4606);
+fn(4636);
 let obj = {
   card: null,
   cardBadgeWrapper: null,

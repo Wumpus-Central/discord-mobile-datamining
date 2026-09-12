@@ -11,7 +11,7 @@ import apply from "../../../../../../_runtime/metro/00012__.js";
 require = fn;
 function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(17810);
+  let obj = guildId(17840);
   const roleSubscriptionSettingsDisabled = obj.useRoleSubscriptionSettingsDisabled();
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
@@ -19,7 +19,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
     return null;
   } else {
     const intl = tmp(1114).intl;
-    obj = { maxSlots: stateFromStores(17866)(stateFromStores) };
+    obj = { maxSlots: stateFromStores(17896)(stateFromStores) };
     obj = {
       guild: stateFromStores,
       headerDescription: null,
@@ -42,17 +42,17 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             guildId: stateFromStores.id,
             emoji,
             onSave(arg0) {
-              stateFromStores(4573).hideActionSheet();
+              stateFromStores(4603).hideActionSheet();
               closure_0(arg0);
             },
             onCancel() {
-              stateFromStores(4573).hideActionSheet();
+              stateFromStores(4603).hideActionSheet();
               const error = new Error("User cancelled");
               closure_1(error);
             },
           };
           obj.openLazy(
-            asyncRequireImpl(17867, dependencyMap.paths),
+            asyncRequireImpl(17897, dependencyMap.paths),
             "role-subscription-emoji-" + stateFromStores.id,
             obj,
           );
@@ -61,7 +61,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
       return rejectResult;
     };
     obj.disabled = roleSubscriptionSettingsDisabled;
-    return jsx(tmp(17645).ManageEmojisModal, {
+    return jsx(tmp(17675).ManageEmojisModal, {
       guild: stateFromStores,
       headerDescription: null,
       computeEmojiItems: null,

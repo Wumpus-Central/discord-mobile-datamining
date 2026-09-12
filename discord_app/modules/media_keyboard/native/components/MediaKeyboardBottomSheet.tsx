@@ -33,9 +33,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const MetaQuestUtils = fn(1608);
 let closure_11 = MetaQuestUtils.isMetaQuest();
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { background: null };
 obj = {
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,

@@ -13,7 +13,7 @@ const GuildScheduledEventsConstants = fn(1963);
 ({ EventDetailSections: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: closure_9 } = GuildScheduledEventsConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { segmentedControl: null, header: null };
 createStyles = { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12 };
 createStyles.segmentedControl = createStyles;

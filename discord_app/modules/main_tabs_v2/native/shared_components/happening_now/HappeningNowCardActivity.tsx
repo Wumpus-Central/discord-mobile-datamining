@@ -1,22 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
-import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import ApplicationAssetUtils from "../../../../../utils/ApplicationAssetUtils.tsx";
-import VideoBackground from "../../../../calls/native/VideoBackground.tsx";
-import StreamPreviewDefault from "../../../../../components_native/StreamPreview.tsx";
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
-import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
-import isOnXboxDefault from "../../../../activities/utils/isOnXbox.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef16145 from "../../../../../../_runtime/metro/16145__.js";
-import _modDef16146 from "../../../../../../_runtime/metro/16146__.js";
+import _modDef16169 from "../../../../../../_runtime/metro/16169__.js";
+import _modDef16170 from "../../../../../../_runtime/metro/16170__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
-import _modDef16155 from "../../../../../../_runtime/metro/16155__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -24,10 +17,10 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 function IconOrPreview(arg0) {
   ({ userId, activity, stream, game } = arg0);
-  c1 = undefined;
-  c2 = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
   const tmp = closure_16();
-  closure_0 = tmp;
+  _require = tmp;
   let guildId;
   if (stream != null) {
     guildId = stream.guildId;
@@ -57,7 +50,7 @@ function IconOrPreview(arg0) {
     tmp9 = null != large_image;
   }
   if (tmp9) {
-    let obj = ApplicationAssetUtils;
+    let obj = require("ApplicationAssetUtils");
     let application_id;
     if (activity != null) {
       application_id = activity.application_id;
@@ -88,7 +81,7 @@ function IconOrPreview(arg0) {
     tmp17 = null != small_image;
   }
   if (tmp17) {
-    let obj1 = ApplicationAssetUtils;
+    let obj1 = require("ApplicationAssetUtils");
     let application_id1;
     if (activity != null) {
       application_id1 = activity.application_id;
@@ -97,70 +90,84 @@ function IconOrPreview(arg0) {
     if (activity != null) {
       small_image1 = activity.assets.small_image;
     }
-    const items1 = [closure_14, closure_14];
+    let items1 = [closure_14, closure_14];
     assetImage = obj1.getAssetImage(application_id1, small_image1, items1);
   }
   if (null != assetImage) {
-    let obj3 = VideoBackground;
+    let obj3 = require("VideoBackground");
     const memoizedImageSourceResult = obj3.memoizedImageSource(assetImage);
-    let obj4 = VideoBackground;
+    let obj4 = require("VideoBackground");
     const dominantRGBFromImage = obj4.useDominantRGBFromImage(assetImage, memoizedImageSourceResult);
     ({ r, g, b } = dominantRGBFromImage);
-    const rgbToHexResult = ColorUtils.rgbToHex(r, g, b);
-    c1 = rgbToHexResult;
-    const hexWithOpacityResult = ColorUtils.hexWithOpacity(rgbToHexResult, 0.2);
-    c2 = hexWithOpacityResult;
+    const rgbToHexResult = require("ColorUtils").rgbToHex(r, g, b);
+    importDefault = rgbToHexResult;
+    const obj6 = require("ColorUtils");
+    const hexWithOpacityResult = require("ColorUtils").hexWithOpacity(rgbToHexResult, 0.2);
+    dependencyMap = hexWithOpacityResult;
     const items2 = [rgbToHexResult, tmp.cardImageAssetContainer];
     const memo = noop.useMemo(() => {
-      items = [closure_0.cardImageAssetContainer, { shadowColor }];
+      items = [closure_0.cardImageAssetContainer];
+      let obj = PlatformUtils;
+      if (obj.isAndroid()) {
+        obj = { boxShadow: null };
+        obj = { offsetX: 0, offsetY: 0, blurRadius: 5, color: ColorUtils.hexWithOpacity(shadowColor, 0.32) };
+        const items1 = [obj];
+        obj.boxShadow = items1;
+        let obj1 = obj;
+        const tmpResult = ColorUtils;
+      } else {
+        obj1 = { shadowColor };
+      }
+      items[1] = obj1;
       return items;
     }, items2);
     const items3 = [hexWithOpacityResult, tmp.cardImageAssetBackground];
     if (null != stream) {
       obj = { style: memo, children: null };
       obj = { stream, children: null, style: null, ctaText: null, disabled: true };
-      let tmp2Result = StreamPreviewDefault;
+      let tmp2Result = tmp2(10188);
       obj1 = { style: null, textStyle: null, allowFontScaling: false };
       ({ cardImageStreamLive: obj13.style, stageStreamLiveText: obj13.textStyle } = tmp);
-      obj.children = closure_1_11(native.LiveTag, obj1);
+      obj.children = closure_11(tmp28(1178).LiveTag, obj1);
       obj.style = tmp.cardImageStreamPreview;
-      const intl5 = util.intl;
-      obj.ctaText = intl5.string(util.t["7Xq/nV"]);
-      obj.children = closure_1_11(tmp2Result, obj);
-      return closure_1_11(React4, obj);
+      const intl5 = tmp28(1114).intl;
+      obj.ctaText = intl5.string(tmp28(1114).t["7Xq/nV"]);
+      obj.children = closure_11(tmp2Result, obj);
+      return closure_11(closure_4, obj);
     } else {
-      if (isListeningOnSpotifyDefault(activity)) {
-        const intl4 = util.intl;
-        let stringResult = intl4.string(util.t.rmnkz4);
+      if (tmp2(11019)(activity)) {
+        const intl4 = tmp28(1114).intl;
+        let stringResult = intl4.string(tmp28(1114).t.rmnkz4);
       } else {
         let type;
         if (activity != null) {
           type = activity.type;
         }
         if (type === constants2.LISTENING) {
-          const intl3 = util.intl;
-          stringResult = intl3.string(util.t.kUEnxN);
-        } else if (isOnXboxDefault(activity)) {
-          const intl2 = util.intl;
-          stringResult = intl2.string(util.t.T0uYK9);
+          const intl3 = tmp28(1114).intl;
+          stringResult = intl3.string(tmp28(1114).t.kUEnxN);
+        } else if (tmp2(13132)(activity)) {
+          const intl2 = tmp28(1114).intl;
+          stringResult = intl2.string(tmp28(1114).t.T0uYK9);
         } else {
           let type1;
           if (activity != null) {
             type1 = activity.type;
           }
           if (type1 !== tmp37.CUSTOM_STATUS) {
-            const intl = util.intl;
-            stringResult = intl.string(util.t["2TbM/G"]);
+            const intl = tmp28(1114).intl;
+            stringResult = intl.string(tmp28(1114).t["2TbM/G"]);
           }
         }
       }
       const obj2 = { style: memo, accessibilityLabel: stringResult, children: null };
       obj3 = { style: tmp35, children: null };
       obj4 = { style: tmp.cardImageAsset, source: memoizedImageSourceResult };
-      obj3.children = closure_1_11(FastImageDefault, obj4);
-      obj2.children = closure_1_11(React4, obj3);
-      return closure_1_11(React4, obj2);
+      obj3.children = closure_11(tmp2(5668), obj4);
+      obj2.children = closure_11(closure_4, obj3);
+      return closure_11(closure_4, obj2);
     }
+    const obj7 = require("ColorUtils");
   } else {
     let type2;
     if (activity != null) {
@@ -171,7 +178,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       tmp2Result = items[userId % items.length];
     } else {
-      tmp2Result = _modDef16155;
+      tmp2Result = tmp2(16179);
     }
   }
 }
@@ -193,7 +200,7 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15357);
+const HappeningNowConstants = fn(15379);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: closure_7,
@@ -205,8 +212,8 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef16145, _modDef16146];
-fn(4606);
+let items = [_modDef16169, _modDef16170];
+fn(4636);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
   avatarStackContainer: null,
@@ -251,7 +258,6 @@ obj.cardImageAssetContainer = {
   shadowOffset: { width: 0, height: 0 },
   shadowRadius: 5,
   shadowOpacity: 0.32,
-  elevation: 10,
 };
 let size = {
   width: HAPPENING_NOW_CONTENT_HEIGHT,
@@ -268,7 +274,6 @@ let obj2 = {
   shadowOffset: { width: 0, height: 0 },
   shadowRadius: 5,
   shadowOpacity: 0.32,
-  elevation: 10,
 };
 obj.cardImageStreamPreview = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.cardImageStreamLive = { top: 4, left: 4, position: "absolute" };
@@ -365,13 +370,13 @@ export default noop.memo((userId) => {
     obj.destination_channel_id = channelId;
     obj.track(constants3.ACTIVITY_CARD_CLICKED, obj);
     if (null != stream) {
-      asyncRequireImpl(9627, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(9627, dependencyMap.paths);
+      asyncRequireImpl(9666, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(9666, dependencyMap.paths);
     } else {
-      asyncRequireImpl(8264, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8296, dependencyMap.paths).then((result) =>
         result.default({ userId, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8264, dependencyMap.paths);
+      const promise = asyncRequireImpl(8296, dependencyMap.paths);
     }
   }, items2);
   if (null == stateFromStores) {

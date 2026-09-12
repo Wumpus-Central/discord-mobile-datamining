@@ -8,7 +8,7 @@ import MobileGameCommunitiesStore from "MobileGameCommunitiesStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-let closure_5 = fn(16336).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_5 = fn(16360).MAX_DISPLAYED_UPSELL_GUILDS;
 class MobileGameCommunitiesManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

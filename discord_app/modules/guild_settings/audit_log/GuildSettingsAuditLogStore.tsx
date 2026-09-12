@@ -7,7 +7,7 @@ import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import BigFlagUtils from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
-const AuditLogChange = fn(17621).AuditLogChange;
+const AuditLogChange = fn(17651).AuditLogChange;
 let closure_4 = fn(1961).isGuildSelectableChannelType;
 const hasAnyPermission = fn(2016).hasAnyPermission;
 const Constants = fn(1074);

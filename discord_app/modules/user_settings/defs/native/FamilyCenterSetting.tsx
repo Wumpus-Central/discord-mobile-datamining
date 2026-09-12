@@ -9,14 +9,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(_modDef2396.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(5140).GroupIcon,
+  IconComponent: fn(5170).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
     let obj = useIsParentalConsentBannerActive;
     const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();

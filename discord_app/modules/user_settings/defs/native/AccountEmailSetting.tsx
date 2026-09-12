@@ -5,13 +5,13 @@ import EmailVerificationModalActionCreatorsDefault from "../../../../actions/nat
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w/qqKK"]);
   },
-  parent: fn(8049).MobileUserSettings.ACCOUNT,
+  parent: fn(8079).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountEmailSettingTrailing() {
     const items = [UserStore];
     return initialize.useStateFromStores(items, () => {

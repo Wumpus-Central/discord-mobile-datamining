@@ -67,6 +67,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
                 };
               });
             },
+            isDismissable: true,
           };
           obj.openLazy(obj4);
           c4 = 3;

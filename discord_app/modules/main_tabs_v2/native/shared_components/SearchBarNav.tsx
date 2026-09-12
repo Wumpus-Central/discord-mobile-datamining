@@ -13,12 +13,12 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { container: null, cancelText: null, cancelIcon: null, flex: null };
 obj = {
   flexDirection: "row",
   alignItems: "center",
-  height: fn(5733).NAV_BAR_HEIGHT,
+  height: fn(5763).NAV_BAR_HEIGHT,
   paddingHorizontal: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderBottomWidth: StyleSheet.hairlineWidth,

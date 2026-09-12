@@ -27,7 +27,7 @@ export const tooltipEnterExitAnimation = function tooltipEnterExitAnimation(posi
     obj.opacity = spring.withSpring(value, closure_2, "respect-motion-settings", fn);
     return obj;
   };
-  fn.__closure = { withSpring: num(5025).withSpring, translateY: num, TOOLTIP_SPRING };
+  fn.__closure = { withSpring: num(5055).withSpring, translateY: num, TOOLTIP_SPRING };
   fn.__workletHash = 7727487832145;
   fn.__initData = __initData;
   return fn;

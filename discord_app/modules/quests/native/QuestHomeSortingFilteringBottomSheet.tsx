@@ -43,10 +43,10 @@ function FilterFooter(inline) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(5495).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(5525).QuestHomeSortMethods;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { content: null, bodyContainer: null, footerInline: null, footer: null, footerButtonGroup: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.content = createStyles;
@@ -147,13 +147,13 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
       const options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(11389).getFilterTypeText(item.filter),
+          label: onSortMethodChange(11428).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },
           checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter),
         };
-        return ref(onSortMethodChange(5655).TableCheckboxRow, obj, index);
+        return ref(onSortMethodChange(5685).TableCheckboxRow, obj, index);
       });
       return React5(TableRowGroup.TableRowGroup, obj, index);
     }),

@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05068_LinearGradient.js";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import GuildProfileView from "GuildProfileView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";

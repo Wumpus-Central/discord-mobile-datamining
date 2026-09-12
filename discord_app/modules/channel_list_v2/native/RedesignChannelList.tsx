@@ -74,9 +74,9 @@ function ChannelsWrapper(selectedGuildId) {
           obj.guild = stateFromStores;
           obj.selectedChannelId = selectedChannelId;
           obj.selectedVoiceChannelId = stateFromStores1;
-          return closure_14(tmp2(16342).default, obj);
+          return closure_14(tmp2(16366).default, obj);
         } else {
-          tmp2Result = tmp2(10383);
+          tmp2Result = tmp2(10422);
           if (tmp2Result.shouldNSFWGateGuild(selectedGuildId)) {
             obj1 = { style: merged.style, guildId: selectedGuildId };
             let tmp6Result = closure_14(NsfwGateGuildSidebarDefault, obj1);

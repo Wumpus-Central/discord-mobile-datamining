@@ -10,7 +10,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import InviteErrorUtils from "../../../utils/InviteErrorUtils.tsx";
-import _modDef12818 from "../../../../_runtime/metro/12818__.js";
+import _modDef12854 from "../../../../_runtime/metro/12854__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const GuildIconDefault = GuildIcon;
@@ -20,7 +20,7 @@ function InviteErrorBase(invite) {
   ({ onPressClose: require, inviteError } = invite);
   const tmp = closure_11();
   let obj = shared;
-  const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12815 : 12816);
+  const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12851 : 12852);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -90,7 +90,7 @@ function InviteDisabledError(onPressClose) {
     obj = { children: null };
     const obj1 = { style: tmp.disabledView, children: null };
     const guildIconURL = obj.getGuildIconURL(obj);
-    const obj2 = { style: tmp.disabledPauseIcon, source: _modDef12818 };
+    const obj2 = { style: tmp.disabledPauseIcon, source: _modDef12854 };
     const items = [React6(native.Icon, obj2)];
     const obj3 = { style: tmp.guildIcon, icon: guildIconURL, size: GuildIcon.GuildIconSizes.XLARGE };
     items[1] = React6(GuildIconDefault, obj3);
@@ -126,7 +126,7 @@ const Constants = fn(1074);
 ({ AbortCodes: hasOwnProperty, HelpdeskArticles: metroRequire, InviteStates: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   expiredImage: { marginTop: 32, marginBottom: 32 },
   expiredTitle: { marginBottom: 8, backgroundColor: "transparent", textAlign: "center" },

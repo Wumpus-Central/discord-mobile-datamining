@@ -2,9 +2,9 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import router_utils from "../routing/router_utils.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef4198 from "../../../_runtime/metro/04198__.js";
+import _modDef4228 from "../../../_runtime/metro/04228__.js";
 import useChannelName from "../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../_runtime/05568_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/05598_fuzzysearch.js";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import ChannelListState from "../guild_sidebar/ChannelListState.tsx";
 import RecentChannelsActionCreators from "../recent_channels/RecentChannelsActionCreators.tsx";
@@ -23,8 +23,8 @@ const Constants = fn(1074);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
 const ChannelConstants = fn(1964);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7607).ChannelListGuildActionRow;
-const ReadStateTypes = fn(4788).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7637).ChannelListGuildActionRow;
+const ReadStateTypes = fn(4818).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 
@@ -242,6 +242,6 @@ export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
     lastMessageIdResult = id;
   }
   obj = { timeAgo: null };
-  obj.timeAgo = _modDef4198(obj.extractTimestamp(lastMessageIdResult)).fromNow();
+  obj.timeAgo = _modDef4228(obj.extractTimestamp(lastMessageIdResult)).fromNow();
   return intl.formatToPlainString(util.t["8N0BHR"], obj);
 };

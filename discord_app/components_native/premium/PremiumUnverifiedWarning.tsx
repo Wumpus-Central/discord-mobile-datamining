@@ -8,7 +8,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { warning: null };
 createStyles = { color: nativeDefault.unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 };
 createStyles.warning = createStyles;
@@ -27,7 +27,7 @@ PremiumUnverifiedWarning.prototype["render"] = function render() {
   }
   return tmp3;
 };
-PremiumUnverifiedWarning.contextType = fn(4317).ThemeContext;
+PremiumUnverifiedWarning.contextType = fn(4347).ThemeContext;
 let items = [UserStore];
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumUnverifiedWarning.tsx");

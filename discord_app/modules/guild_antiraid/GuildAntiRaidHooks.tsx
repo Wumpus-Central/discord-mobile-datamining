@@ -48,7 +48,7 @@ function getFirstGuildIncidentId(guildId) {
   }
   return null;
 }
-let closure_10 = fn(8090).IncidentAlertModeratorPermissions;
+let closure_10 = fn(8120).IncidentAlertModeratorPermissions;
 const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_11, GuildFeatures: closure_12 } = Constants);
 const size = fn(2);
@@ -75,7 +75,7 @@ export const useFirstGuildIncidentId = function useFirstGuildIncidentId() {
       let tmp16 = tmp15;
       if (null != tmp15) {
         let tmp18 = stateFromStores1;
-        let obj8 = stateFromStores1(8089);
+        let obj8 = stateFromStores1(8119);
         if (obj8.hasDetectedActivity(tmp16)) {
           let obj5 = BigFlagUtilsAll;
           let obj6 = PermissionUtilsAll;
@@ -86,7 +86,7 @@ export const useFirstGuildIncidentId = function useFirstGuildIncidentId() {
             return nextResult.id;
           }
         } else {
-          let tmp18Result = tmp18(8089);
+          let tmp18Result = tmp18(8119);
         }
       }
     }

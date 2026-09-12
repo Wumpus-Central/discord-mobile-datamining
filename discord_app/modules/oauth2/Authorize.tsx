@@ -1,7 +1,7 @@
 // discord_app/modules/oauth2/Authorize.tsx
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
-import keysSorter from "../../../_runtime/05507_keysSorter.js";
+import keysSorter from "../../../_runtime/05537_keysSorter.js";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import scopes from "scopes.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";

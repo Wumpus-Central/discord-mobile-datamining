@@ -528,7 +528,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(8426);
+const SpotifyConstants = fn(8458);
 ({
   getSpotifyResourceType: map1,
   isSpotifyParty: closure_14,
@@ -646,7 +646,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11844).SpotifyAPI;
+    const SpotifyAPI = self(11880).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1335,7 +1335,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(9569);
+        obj9 = device(9608);
       }
       if (null != tmp10) {
         if (!tmp22) {

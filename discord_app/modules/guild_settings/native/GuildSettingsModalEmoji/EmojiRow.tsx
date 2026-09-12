@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   flex: { flex: 1 },
   flexCenterRow: { flexDirection: "row", alignItems: "center" },
@@ -28,7 +28,7 @@ let createStyles = {
 };
 createStyles = { paddingVertical: 4, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 createStyles.nameContainer = createStyles;
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 4;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -40,7 +40,7 @@ createStyles.activeNameContainer = {
   flexDirection: "row",
 };
 createStyles.usernameContainer = { marginRight: 8, maxWidth: 150, flexShrink: 1 };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let num2;
 if (PlatformUtils.isAndroid()) {
   num2 = 0;

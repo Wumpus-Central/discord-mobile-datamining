@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/RedditNeutralIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod8983 from "../../../../../../../_runtime/metro/08983__.js";
+import _mod9022 from "../../../../../../../_runtime/metro/09022__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const RedditNeutralIcon = function RedditNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8983, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9022, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

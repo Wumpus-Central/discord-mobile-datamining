@@ -59,7 +59,7 @@ let closure_16 = async function _upload2(arg0) {
           closure_132_10 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -76,15 +76,15 @@ let closure_16 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            let obj = closure_0(5230);
+            let obj = closure_0(5260);
             const kestrelConfig = obj.getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
-            const maxFileSizeResult = closure_0(5185).maxFileSize(id.id);
-            const obj2 = closure_0(5185);
-            const effectiveKestrelLimit = closure_0(5230).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
+            const maxFileSizeResult = closure_0(5215).maxFileSize(id.id);
+            const obj2 = closure_0(5215);
+            const effectiveKestrelLimit = closure_0(5260).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
             if (currentSize.currentSize > effectiveKestrelLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
-              closure_1(4573).hideActionSheet();
+              closure_1(4603).hideActionSheet();
               obj = {
                 file: currentSize,
                 maxSize: effectiveKestrelLimit,
@@ -92,20 +92,20 @@ let closure_16 = async function _upload2(arg0) {
                 guildId: id.id,
                 analyticsLocations,
               };
-              closure_1(9401)(obj);
-              const obj4 = closure_1(4573);
+              closure_1(9440)(obj);
+              const obj4 = closure_1(4603);
             }
-            const obj3 = closure_0(5230);
+            const obj3 = closure_0(5260);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
-            closure_1(4573).hideActionSheet();
+            closure_1(4603).hideActionSheet();
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(9397).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(9397);
-            closure_1(4573).hideActionSheet();
+            closure_1(9436).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(9436);
+            closure_1(4603).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
           closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));
@@ -160,7 +160,7 @@ let closure_16 = async function _upload2(arg0) {
           closure_1 = 0;
           const items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(5180).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(5210).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];
@@ -259,12 +259,12 @@ let closure_16 = async function _upload2(arg0) {
   }
 };
 const View = fn(17).View;
-const DraftType = fn(4947).DraftType;
+const DraftType = fn(4977).DraftType;
 const Constants = fn(1074);
 ({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { paddingHorizontal: 16, paddingTop: 24 },
   post: null,

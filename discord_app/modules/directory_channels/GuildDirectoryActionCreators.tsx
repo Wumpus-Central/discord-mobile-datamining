@@ -6,187 +6,60 @@ import GuildDirectorySearchStore from "GuildDirectorySearchStore.tsx";
 import "debounce";
 import debounce from "../../../_runtime/00551_debounce.js";
 
-let closure_7 = async function _addDirectoryGuildEntry(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_5 = tmp3;
-          closure_4 = tmp2;
-          closure_132_3 = undefined;
-          closure_132_0 = closure_0;
-          closure_132_1 = closure_1;
-          closure_132_2 = closure_2;
-          let UNCATEGORIZED = closure_3;
-          if (closure_3 === undefined) {
-            UNCATEGORIZED = constants.UNCATEGORIZED;
-          }
-          closure_132_3 = UNCATEGORIZED;
-          closure_132_4 = undefined;
-          c6 = 1;
-          c7 = 1;
-          return { value: "PX_16", done: null };
-        }
-      } else if (1 === tmp6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          let obj7 = closure_133_1(closure_133_2[7]);
-          const request = {
-            url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
-            body: null,
-            trackedActionData: null,
-            rejectWithError: null,
-          };
-          const obj2 = { description: closure_132_2, primary_category_id: closure_132_3 };
-          request.body = obj2;
-          const obj3 = {
-            event: closure_133_0(closure_133_2[8]).NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE,
-            properties: null,
-          };
-          const obj4 = {
-            directory_channel_id: closure_132_0,
-            guild_id: closure_132_1,
-            primary_category_id: closure_132_3,
-          };
-          obj3.properties = obj4;
-          request.trackedActionData = obj3;
-          request.rejectWithError = closure_133_0(closure_133_2[6]).rejectWithMigratedError();
-          c6 = 2;
-          c7 = 1;
-          const obj5 = { value: obj7.post(request), done: false };
-          return obj5;
-        }
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
-      } else {
-        closure_132_4 = value;
-        obj = closure_133_1(closure_133_2[5]);
-        obj7 = { type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: closure_132_0, entry: closure_132_4.body };
-        obj.dispatch(obj7);
-        c7 = 3;
-        return { value: "HermesInternal", done: null };
-      }
-    } catch (tmp18) {
-      c7 = tmp;
-      throw tmp18;
-    }
+let closure_7 = async function _addDirectoryGuildEntry() {
+  let obj7 = closure_133_1(closure_133_2[7]);
+  const request = {
+    url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
+    body: { description: closure_132_2, primary_category_id: closure_132_3 },
+    trackedActionData: {
+      event: closure_133_0(closure_133_2[8]).NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE,
+      properties: { directory_channel_id: closure_132_0, guild_id: closure_132_1, primary_category_id: closure_132_3 },
+    },
+    rejectWithError: closure_133_0(closure_133_2[6]).rejectWithMigratedError(),
+  };
+  await obj7.post(request);
+  closure_132_4 = value;
+  obj7 = { type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: closure_132_0, entry: closure_132_4.body };
+  closure_133_1(closure_133_2[5]).dispatch(obj7);
+  await "HermesInternal";
+  closure_5 = tmp3;
+  closure_4 = tmp2;
+  closure_132_0 = closure_0;
+  closure_132_1 = closure_1;
+  closure_132_2 = closure_2;
+  let UNCATEGORIZED = closure_3;
+  if (closure_3 === undefined) {
+    UNCATEGORIZED = constants.UNCATEGORIZED;
   }
+  closure_132_3 = UNCATEGORIZED;
+  return "PX_16";
 };
-let closure_8 = async function _updateDirectoryEntry(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_5 = tmp3;
-          closure_4 = tmp2;
-          closure_132_3 = undefined;
-          closure_132_0 = closure_0;
-          closure_132_1 = closure_1;
-          closure_132_2 = closure_2;
-          let UNCATEGORIZED = closure_3;
-          if (closure_3 === undefined) {
-            UNCATEGORIZED = constants.UNCATEGORIZED;
-          }
-          closure_132_3 = UNCATEGORIZED;
-          closure_132_4 = undefined;
-          c6 = 1;
-          c7 = 1;
-          return { value: "PX_16", done: null };
-        }
-      } else if (1 === tmp6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          const HTTP = closure_133_0(closure_133_2[6]).HTTP;
-          const request = {
-            url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
-            body: null,
-            rejectWithError: null,
-          };
-          const obj2 = { description: closure_132_2, primary_category_id: closure_132_3 };
-          request.body = obj2;
-          request.rejectWithError = closure_133_0(closure_133_2[6]).rejectWithMigratedError();
-          c6 = 2;
-          c7 = 1;
-          const obj3 = { value: HTTP.patch(request), done: false };
-          return obj3;
-        }
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
-      } else {
-        closure_132_4 = value;
-        obj = closure_133_1(closure_133_2[5]);
-        const obj5 = { type: "GUILD_DIRECTORY_ENTRY_UPDATE", channelId: closure_132_0, entry: closure_132_4.body };
-        obj.dispatch(obj5);
-        c7 = 3;
-        return { value: "HermesInternal", done: null };
-      }
-    } catch (tmp18) {
-      c7 = tmp;
-      throw tmp18;
-    }
+let closure_8 = async function _updateDirectoryEntry() {
+  const HTTP = closure_133_0(closure_133_2[6]).HTTP;
+  const request = {
+    url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
+    body: { description: closure_132_2, primary_category_id: closure_132_3 },
+    rejectWithError: closure_133_0(closure_133_2[6]).rejectWithMigratedError(),
+  };
+  await HTTP.patch(request);
+  closure_132_4 = value;
+  closure_133_1(closure_133_2[5]).dispatch({
+    type: "GUILD_DIRECTORY_ENTRY_UPDATE",
+    channelId: closure_132_0,
+    entry: closure_132_4.body,
+  });
+  await "HermesInternal";
+  closure_5 = tmp3;
+  closure_4 = tmp2;
+  closure_132_0 = closure_0;
+  closure_132_1 = closure_1;
+  closure_132_2 = closure_2;
+  let UNCATEGORIZED = closure_3;
+  if (closure_3 === undefined) {
+    UNCATEGORIZED = constants.UNCATEGORIZED;
   }
+  closure_132_3 = UNCATEGORIZED;
+  return "PX_16";
 };
 let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
   closure_0 = arg0;
@@ -222,7 +95,7 @@ let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
     return value;
   })();
 };
-const DirectoryEntryCategories = fn(12398).DirectoryEntryCategories;
+const DirectoryEntryCategories = fn(12434).DirectoryEntryCategories;
 let Endpoints = fn(1074).Endpoints;
 asyncGeneratorStep(async (arg0, category_id) => {
   closure_0 = arg0;

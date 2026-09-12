@@ -37,7 +37,7 @@ function BenefitRow(description) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", justifyContent: "flex-start" },
   textContainer: { flex: 1, justifyContent: "center" },
@@ -60,20 +60,20 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = benefit(1114).intl;
   obj.children = "[" + intl.string(benefit(1114).t.bz1PZX) + "]";
-  let tmp8 = closure_5(benefit(4602).Text, obj);
+  let tmp8 = closure_5(benefit(4632).Text, obj);
   if (null != stateFromStores) {
     obj = { style: tmp.channelTitle, children: null };
     const obj1 = {
       style: tmp.channelIcon,
       size: tmp2(1178).Icon.Sizes.CUSTOM,
-      source: tmp2(5079).getChannelIcon(stateFromStores),
+      source: tmp2(5109).getChannelIcon(stateFromStores),
     };
     const items2 = [closure_5(tmp2(1178).Icon, obj1)];
     const obj2 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
-    items2[1] = closure_5(tmp2(4602).Text, obj2);
+    items2[1] = closure_5(tmp2(4632).Text, obj2);
     obj.children = items2;
     tmp8 = closure_6(View, obj);
-    const tmp2Result = tmp2(5079);
+    const tmp2Result = tmp2(5109);
   }
   if (null != benefit.emoji_id) {
     let str = benefit.emoji_id;

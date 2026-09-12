@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 const createStyles = { container: { alignSelf: "stretch" }, margins: { marginTop: 16 }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 createStyles.separator = size;

@@ -1,7 +1,7 @@
 // discord_app/modules/lurker_mode/native/ServerPreviewBannerControls.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef5680 from "../../../../_runtime/metro/05680__.js";
+import _modDef5710 from "../../../../_runtime/metro/05710__.js";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import ServerPreviewPillDefault from "ServerPreviewPill.tsx";
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const MOBILE_GUILD_UPSELL_LIST = fn(1074).MOBILE_GUILD_UPSELL_LIST;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 const createStyles = { row: null };
 const rect = {
   position: "absolute",
@@ -35,7 +35,7 @@ export default function ServerPreviewBannerControls() {
   obj = {
     size: "md",
     variant: "secondary-overlay",
-    icon: _modDef5680,
+    icon: _modDef5710,
     onPress: callback,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1.5,

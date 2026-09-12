@@ -2,7 +2,7 @@
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import _modDef8903 from "../../../../_runtime/metro/08903__.js";
+import _modDef8938 from "../../../../_runtime/metro/08938__.js";
 import CutoutableAvatarDecorationDefault from "components/CutoutableAvatarDecoration.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 0.8333333333333334;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
   const size = {
@@ -50,7 +50,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   let obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = _modDef8903;
+    avatarSource = _modDef8938;
   }
   obj = { children: null, source: avatarSource };
   const items1 = [hasOwnProperty(React3, obj)];

@@ -79,10 +79,10 @@ function EnrolledBodyWatchTask(quest) {
                 tmp12 = tmp16;
               }
               if (tmp12) {
-                const obj1 = { questId: tmp2.id, sourceQuestContent: quest(5498).QuestContent.QUEST_BAR_MOBILE };
+                const obj1 = { questId: tmp2.id, sourceQuestContent: quest(5528).QuestContent.QUEST_BAR_MOBILE };
                 v1 = 1;
                 c2 = 1;
-                const obj2 = { value: setRestingQuestDockMode(15182)(obj1), done: false };
+                const obj2 = { value: setRestingQuestDockMode(15204)(obj1), done: false };
                 return obj2;
               } else {
                 c2 = 3;
@@ -209,14 +209,14 @@ function EnrolledBodyPlayStreamTask(quest) {
   return closure_1_14(map1, obj);
 }
 const View = fn(17).View;
-const QuestConstants = fn(5495);
+const QuestConstants = fn(5525);
 ({ QuestDockMode: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const QuestDockConstants = fn(15153);
+const QuestDockConstants = fn(15175);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT: c10, QUEST_DOCK_EXPANDED_PADDING_BOTTOM } = QuestDockConstants);
 ({ QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = {
   wrapper: {
     flexGrow: 0,
@@ -249,10 +249,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledBody.tsx");
 
 export default noop.memo(function QuestDockEnrolledBody() {
-  let obj = minExpandedContentHeight(15160);
+  let obj = minExpandedContentHeight(15182);
   const questDockQuest = obj.useQuestDockQuest();
   minExpandedContentHeight = noop.useContext(
-    minExpandedContentHeight(15154).QuestDockGestureContext,
+    minExpandedContentHeight(15176).QuestDockGestureContext,
   ).minExpandedContentHeight;
   const items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];

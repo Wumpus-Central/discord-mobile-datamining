@@ -12,12 +12,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const QuestDockConstants = fn(15153);
+const QuestDockConstants = fn(15175);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const PX_80 = nativeDefault.space.PX_80;
-fn(4606);
+fn(4636);
 let obj = {
   rewardTile: null,
   wrapper: null,

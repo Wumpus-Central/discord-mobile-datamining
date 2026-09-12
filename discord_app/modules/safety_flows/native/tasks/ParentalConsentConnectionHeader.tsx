@@ -13,10 +13,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { row: null, logOut: null };
 createStyles = {
-  height: fn(5733).NAV_BAR_HEIGHT,
+  height: fn(5763).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",

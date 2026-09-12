@@ -15,13 +15,13 @@ export default function UserProfileTypingIndicatorEditButton(isTryItOut) {
   isTryItOut = isTryItOut.isTryItOut;
   let obj = isTryItOut(1483);
   const nativeStackNavigation = obj.useNativeStackNavigation();
-  const currentCustomTypingIndicatorConfig = isTryItOut(12064).useCurrentCustomTypingIndicatorConfig(isTryItOut);
-  const obj2 = isTryItOut(12064);
+  const currentCustomTypingIndicatorConfig = isTryItOut(12100).useCurrentCustomTypingIndicatorConfig(isTryItOut);
+  const obj2 = isTryItOut(12100);
   const items = [isTryItOut(1943).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE];
-  const tmp3 = _slicedToArray(isTryItOut(7461).useSelectedDismissibleContent(items, undefined, true), 2);
+  const tmp3 = _slicedToArray(isTryItOut(7491).useSelectedDismissibleContent(items, undefined, true), 2);
   dependencyMap = tmp4;
   const items1 = [nativeStackNavigation, isTryItOut, tmp3[1]];
-  const obj3 = isTryItOut(7461);
+  const obj3 = isTryItOut(7491);
   const intl = isTryItOut(1114).intl;
   const tmp5 = useCallback(() => {
     let str = "profile_pending";
@@ -38,7 +38,7 @@ export default function UserProfileTypingIndicatorEditButton(isTryItOut) {
     closure_2(ContentDismissActionType.TAKE_ACTION);
   }, items1);
   const stringResult = intl.string(
-    isTryItOut(12064).getCustomTypingIndicatorSuggestionMessage(currentCustomTypingIndicatorConfig.typingSuggestion),
+    isTryItOut(12100).getCustomTypingIndicatorSuggestionMessage(currentCustomTypingIndicatorConfig.typingSuggestion),
   );
   obj = { label: null, labelTrailing: null, leading: null, buttonText: null, accessibilityValue: null, onPress: null };
   const intl2 = isTryItOut(1114).intl;
@@ -47,15 +47,15 @@ export default function UserProfileTypingIndicatorEditButton(isTryItOut) {
     showPremiumIcon: true,
     showNewBadge: tmp3[0] === isTryItOut(1943).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
   };
-  obj.labelTrailing = jsx(isTryItOut(14671).UserProfileEditFormLabelBadges, {
+  obj.labelTrailing = jsx(isTryItOut(14705).UserProfileEditFormLabelBadges, {
     showPremiumIcon: true,
     showNewBadge: tmp3[0] === isTryItOut(1943).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
   });
-  obj.leading = jsx(nativeStackNavigation(12074), { config: currentCustomTypingIndicatorConfig, size: 24 });
+  obj.leading = jsx(nativeStackNavigation(12110), { config: currentCustomTypingIndicatorConfig, size: 24 });
   obj.buttonText = stringResult;
   obj.accessibilityValue = { text: stringResult };
   obj.onPress = tmp5;
-  return jsx(isTryItOut(14671).UserProfileEditFormButton, {
+  return jsx(isTryItOut(14705).UserProfileEditFormButton, {
     showPremiumIcon: true,
     showNewBadge: tmp3[0] === isTryItOut(1943).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
   });

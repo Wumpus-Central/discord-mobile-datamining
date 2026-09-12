@@ -23,11 +23,11 @@ import MessagePreviewStore from "../../../stores/native/MessagePreviewStore.tsx"
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(11776).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10949).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11812).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10988).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null };
 createStyles = { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createStyles.container = createStyles;
@@ -247,7 +247,7 @@ export default function ForwardModal(message) {
                 if (forwardOptions(source[24])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(4952);
+                    closure_1_0(4982);
                     const obj = {
                       onConfirm() {
                         return closure_0(true);
@@ -256,7 +256,7 @@ export default function ForwardModal(message) {
                         return closure_0(false);
                       },
                     };
-                    obj.openAlert("staff-to-non-staff-forward", ref2(forwardOptions(11779), obj));
+                    obj.openAlert("staff-to-non-staff-forward", ref2(forwardOptions(11815), obj));
                   });
                   c3 = 3;
                   c4 = 1;

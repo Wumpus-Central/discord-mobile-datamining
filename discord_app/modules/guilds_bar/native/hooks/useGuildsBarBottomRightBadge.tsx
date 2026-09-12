@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles({
   bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" },
 });
@@ -108,7 +108,7 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
       obj5.cutouts = items2;
       return obj5;
     } else {
-      return { badge: null, cutout: "Array", cutouts: "isArray" };
+      return { badge: null, cutout: "Array", cutouts: "accessible" };
     }
   }, items1);
 }

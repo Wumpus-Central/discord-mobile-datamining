@@ -35,7 +35,7 @@ function TermsFieldListItem(rowNumber) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   termsContainer: null,
   firstItem: null,
@@ -84,7 +84,7 @@ export default function TermsFieldList(rules) {
   };
   const intl = rules(1114).intl;
   obj.children = intl.string(rules(1114).t.prJqwT);
-  let items = [closure_5(rules(4602).Text, obj)];
+  let items = [closure_5(rules(4632).Text, obj)];
   obj = {
     accessibilityRole: "list",
     children: rules.map((rule, index) => {

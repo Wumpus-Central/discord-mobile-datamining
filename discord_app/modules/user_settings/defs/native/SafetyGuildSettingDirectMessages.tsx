@@ -9,11 +9,11 @@ import useAllowFriendsFromMutualGuildsOnly from "../../content_and_social/useAll
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15936);
+const UserSettingsSafetySelectedGuildStore = fn(15960);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11563).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-fn(11562);
+let closure_6 = fn(11602).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
@@ -51,7 +51,7 @@ let SettingBuilders = {
       return stringResult;
     }
   },
-  parent: fn(8049).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8079).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const RestrictedGuildIds = UserSettings.RestrictedGuildIds;

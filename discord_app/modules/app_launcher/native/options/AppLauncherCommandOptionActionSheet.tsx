@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const DEFAULT_CONTENT_PADDING = fn(1482).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = {
   actionSheetBackground: null,
   titleContainer: null,
@@ -62,7 +62,7 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   };
   obj = {
     style: { alignSelf: "flex-start" },
-    children: jsx(merged(7271).ActionSheetCloseButton, {
+    children: jsx(merged(7301).ActionSheetCloseButton, {
       onPress() {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         const onDismiss = merged.onDismiss;
@@ -74,7 +74,7 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   };
   obj.leading = (
     <View style={{ alignSelf: "flex-start" }}>
-      {jsx(merged(7271).ActionSheetCloseButton, {
+      {jsx(merged(7301).ActionSheetCloseButton, {
         onPress() {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           const onDismiss = merged.onDismiss;
@@ -87,9 +87,9 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   );
   ({ displayName: obj2.title, displayDescription: obj2.subtitle } = option);
   obj.trailing = jsx(merged(1178).Spacer, { size: 24 });
-  obj.header = jsx(merged(7222).BottomSheetTitleHeader, {
+  obj.header = jsx(merged(7252).BottomSheetTitleHeader, {
     style: { alignSelf: "flex-start" },
-    children: jsx(merged(7271).ActionSheetCloseButton, {
+    children: jsx(merged(7301).ActionSheetCloseButton, {
       onPress() {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         const onDismiss = merged.onDismiss;
@@ -104,10 +104,10 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   obj2.style = items;
   obj.children = <View style={null}>{children}</View>;
   return jsx(
-    merged(7223).BottomSheet,
+    merged(7253).BottomSheet,
     {
       style: { alignSelf: "flex-start" },
-      children: jsx(merged(7271).ActionSheetCloseButton, {
+      children: jsx(merged(7301).ActionSheetCloseButton, {
         onPress() {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           const onDismiss = merged.onDismiss;

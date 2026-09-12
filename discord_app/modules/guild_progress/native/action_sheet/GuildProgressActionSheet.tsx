@@ -39,7 +39,7 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(12562);
+const GuildProgressConstants = fn(12598);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1074);
 ({
@@ -50,7 +50,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
@@ -96,14 +96,14 @@ export default function GuildProgressActionSheet(guild) {
             return obj;
           } else {
             let base64;
-            tmp5(9153).init(View);
-            const obj6 = tmp5(9153);
-            tmp2(12567).hideActionSheet(id.id);
-            const obj7 = tmp2(12567);
+            tmp5(9192).init(View);
+            const obj6 = tmp5(9192);
+            tmp2(12603).hideActionSheet(id.id);
+            const obj7 = tmp2(12603);
             const obj1 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj2 = { value: tmp5(5189).openImagePicker(obj1), done: false };
+            const obj2 = { value: tmp5(5219).openImagePicker(obj1), done: false };
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -116,7 +116,7 @@ export default function GuildProgressActionSheet(guild) {
         } else {
           base64 = value.base64;
           if (null != base64) {
-            obj = tmp5(9153);
+            obj = tmp5(9192);
             obj.updateIcon(closure_129_5, base64);
           }
           c3 = 3;

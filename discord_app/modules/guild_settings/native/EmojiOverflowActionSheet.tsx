@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles({
   header: { paddingHorizontal: 8, flexDirection: "row", alignItems: "center", gap: 16 },
   emojiImage: { width: 30, height: 30, resizeMode: "contain" },

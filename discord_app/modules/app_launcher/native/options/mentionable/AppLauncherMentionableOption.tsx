@@ -54,7 +54,7 @@ function MentionableIcon(mentionable) {
 }
 const StatusTypes = fn(1085).StatusTypes;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { iconWrapper: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 createStyles.iconWrapper = createStyles;
@@ -159,7 +159,7 @@ export default function AppLauncherMentionableOption(option) {
       onActionSheetDismiss,
     };
     obj.openLazy(
-      asyncRequireImpl(12273, dependencyMap.paths),
+      asyncRequireImpl(12309, dependencyMap.paths),
       AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY,
       obj,
     );

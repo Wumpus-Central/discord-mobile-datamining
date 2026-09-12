@@ -16,7 +16,7 @@ export const openCreateForumPostModal = function openCreateForumPostModal(guildI
     const result1 = tracking_Tracking.trackForumCreateNewPostStarted(obj);
     const tmpResult = tracking_Tracking;
   }
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10341, dependencyMap.paths), guildId, c3);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10380, dependencyMap.paths), guildId, c3);
   tmp4 = null != guildId.isEdit && guildId.isEdit;
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {

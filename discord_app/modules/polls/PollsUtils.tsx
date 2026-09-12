@@ -20,7 +20,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     message.id,
     { id, name: "", animated: false },
     closure_9,
-    channel(7835).ReactionTypes.VOTE,
+    channel(7865).ReactionTypes.VOTE,
   );
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
@@ -102,7 +102,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(7901);
+const PollsConstants = fn(7931);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1074);
 ({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);

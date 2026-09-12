@@ -19,7 +19,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   const isSubmitting = _slicedToArray(enabled(false), 2);
   _slicedToArray = isSubmitting[1];
   const tmp5 = _slicedToArray(enabled(null), 2);
-  enabled = entitlements(8949).useConfig({ location: "orb_checkout_modal" }).enabled;
+  enabled = entitlements(8984).useConfig({ location: "orb_checkout_modal" }).enabled;
   order = undefined;
   if (order != null) {
     order = order.order;
@@ -31,7 +31,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   if (order != null) {
     onSignFailure = order.onSignFailure;
   }
-  let obj = entitlements(8949);
+  let obj = entitlements(8984);
   const orderSigning = require("useOrderSigning").useOrderSigning({
     order,
     errorSource: "orb_redeem_orders_api",
@@ -100,7 +100,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
                 closure_131_3 = value;
                 if ("signed" === closure_131_3.type) {
                   v0 = 2;
-                  obj2 = skuId(7316);
+                  obj2 = skuId(7346);
                   v4 = 4;
                   c8 = 1;
                   const obj5 = { value: obj2.fetchOrderEntitlementsWithRetry(closure_131_3.order.id), done: false };
@@ -127,7 +127,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
               } else {
                 closure_131_4 = value;
                 if (0 === closure_131_4.length) {
-                  const orderProcessingPendingError = new skuId(7316).OrderProcessingPendingError();
+                  const orderProcessingPendingError = new skuId(7346).OrderProcessingPendingError();
                   throw orderProcessingPendingError;
                 } else {
                   dependencyMap(closure_131_4);

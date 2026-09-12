@@ -6,7 +6,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import ConsentStore from "../../../stores/ConsentStore.tsx";
 
 require = fn;
-const resetRegistration = fn(16017).resetRegistration;
+const resetRegistration = fn(16041).resetRegistration;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
 

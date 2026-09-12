@@ -11,7 +11,7 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5465).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5495).STAGE_BOOSTING_SHEET_KEY;
 let c8 = false;
 class StageBoostUpsellManager extends tmp2 {
   constructor() {
@@ -50,7 +50,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
               if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 obj = { channel };
                 ActionSheetActionCreatorsDefault.openLazy(
-                  asyncRequireImpl(5481, dependencyMap.paths),
+                  asyncRequireImpl(5511, dependencyMap.paths),
                   STAGE_BOOSTING_SHEET_KEY,
                   obj,
                 );

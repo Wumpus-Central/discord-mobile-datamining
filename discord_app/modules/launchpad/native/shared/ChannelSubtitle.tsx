@@ -48,7 +48,7 @@ function ChannelSubtitle(arg0) {
     });
   }
 }
-const SUBTITLE_OPACITY_NORMAL = fn(10207).SUBTITLE_OPACITY_NORMAL;
+const SUBTITLE_OPACITY_NORMAL = fn(10246).SUBTITLE_OPACITY_NORMAL;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/ChannelSubtitle.tsx");

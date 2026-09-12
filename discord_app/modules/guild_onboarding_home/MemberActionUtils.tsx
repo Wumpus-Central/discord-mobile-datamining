@@ -5,7 +5,7 @@ import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore.t
 import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore.tsx";
 
 const require = fn;
-const GuildMemberFlags = fn(4232).GuildMemberFlags;
+const GuildMemberFlags = fn(4262).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
 

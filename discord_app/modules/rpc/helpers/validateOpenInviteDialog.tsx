@@ -8,9 +8,9 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-const TransportTypes = fn(4511).TransportTypes;
+const TransportTypes = fn(4541).TransportTypes;
 const RPCErrors = fn(1074).RPCErrors;
-const FramesConstants = fn(9602);
+const FramesConstants = fn(9641);
 ({ asLaunched: closure_9, EmbeddedSurfaceType: c10 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
@@ -28,7 +28,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp46.surface;
       const type = surface.type;
       if (constants.MAIN === type) {
-        obj = { frame: tmp46, channel: "Array", guild: "isArray" };
+        obj = { frame: tmp46, channel: "Array", guild: "accessible" };
         return obj;
       } else {
         if (constants.APP_CHANNEL !== type) {

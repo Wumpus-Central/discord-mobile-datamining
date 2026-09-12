@@ -145,121 +145,72 @@ function optimisticallySetAnswers() {
   return applyArgumentsResult;
 }
 let closure_23 = async function _optimisticallySetAnswers(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  if (1 === tmp5) {
     if (arg0 === 1) {
+      c5 = 3;
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      c5 = 3;
+      return { value, done: true };
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          dependencyMap = tmp5;
-          closure_2 = tmp2;
-          closure_130_0 = undefined;
-          closure_130_1 = undefined;
-          closure_130_2 = undefined;
-          ({ channelId: closure_130_0, messageId: closure_130_1, answerIds: closure_130_2 } = channelId);
-          closure_130_3 = undefined;
-          closure_130_4 = undefined;
-          closure_130_5 = undefined;
-          let id;
-          closure_130_7 = undefined;
-          closure_130_8 = undefined;
-          c4 = 1;
-          c5 = 1;
-          return { value: "PX_16", done: null };
+      closure_130_3 = closure_131_21({ channelId: closure_130_0, messageId: closure_130_1 });
+      closure_130_4 = closure_131_1(closure_131_3[18]).difference(closure_130_3, closure_130_2);
+      closure_131_1(closure_131_3[18]);
+      closure_130_5 = closure_131_1(closure_131_3[18]).difference(closure_130_2, closure_130_3);
+      let id = closure_131_7.getId();
+      let messageId = 0;
+      const items = [];
+      messageId = HermesBuiltin.arraySpread(
+        closure_130_4.map((id) => ({ type: "MESSAGE_REACTION_REMOVE", id })),
+        messageId,
+      );
+      messageId = HermesBuiltin.arraySpread(
+        closure_130_5.map((id) => ({ type: "MESSAGE_REACTION_ADD", id })),
+        messageId,
+      );
+      closure_130_7 = items;
+      const Emitter = closure_131_1(closure_131_3[19]).Emitter;
+      closure_130_8 = Emitter.batched(() => {
+        let dispatchResult;
+        for (const item10006 of closure_1_7) {
+          let id = item10006.id;
+          let obj = messageId(573);
+          obj = {
+            type: item10006.type,
+            channelId,
+            messageId,
+            emoji: null,
+            userId: null,
+            optimistic: true,
+            reactionType: null,
+          };
+          obj = { id, name: id };
+          obj.emoji = obj;
+          obj.userId = userId;
+          obj.reactionType = channelId(7865).ReactionTypes.VOTE;
+          dispatchResult = obj.dispatch(obj);
+          continue;
         }
-      } else {
-        if (1 === tmp5) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
-          } else {
-            const obj2 = { channelId: closure_130_0, messageId: closure_130_1 };
-            closure_130_3 = closure_131_21(obj2);
-            closure_130_4 = closure_131_1(closure_131_3[18]).difference(closure_130_3, closure_130_2);
-            const obj7 = closure_131_1(closure_131_3[18]);
-            closure_130_5 = closure_131_1(closure_131_3[18]).difference(closure_130_2, closure_130_3);
-            id = closure_131_7.getId();
-            let messageId = 0;
-            const items = [];
-            messageId = HermesBuiltin.arraySpread(
-              closure_130_4.map((id) => ({ type: "MESSAGE_REACTION_REMOVE", id })),
-              messageId,
-            );
-            messageId = HermesBuiltin.arraySpread(
-              closure_130_5.map((id) => ({ type: "MESSAGE_REACTION_ADD", id })),
-              messageId,
-            );
-            closure_130_7 = items;
-            const Emitter = closure_131_1(closure_131_3[19]).Emitter;
-            closure_130_8 = Emitter.batched(() => {
-              let dispatchResult;
-              for (const item10006 of closure_1_7) {
-                let id = item10006.id;
-                let obj = messageId(573);
-                obj = {
-                  type: item10006.type,
-                  channelId,
-                  messageId,
-                  emoji: null,
-                  userId: null,
-                  optimistic: true,
-                  reactionType: null,
-                };
-                obj = { id, name: id };
-                obj.emoji = obj;
-                obj.userId = userId;
-                obj.reactionType = channelId(7835).ReactionTypes.VOTE;
-                dispatchResult = obj.dispatch(obj);
-                continue;
-              }
-              return dispatchResult;
-            });
-            if (null != closure_130_8) {
-              c4 = 2;
-              c5 = 1;
-              const obj3 = { value: closure_130_8, done: false };
-              return obj3;
-            }
-            const obj8 = closure_131_1(closure_131_3[18]);
-          }
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          obj = { value, done: true };
-          return obj;
-        }
-        c5 = 3;
-        return { value: "HermesInternal", done: null };
+        return dispatchResult;
+      });
+      if (null != closure_130_8) {
+        c4 = 2;
+        c5 = 1;
+        return { value: closure_130_8, done: false };
       }
-    } catch (tmp8) {
-      c5 = tmp;
-      throw tmp8;
+      closure_131_1(closure_131_3[18]);
     }
+  } else if (arg0 === 1) {
+    c5 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c5 = 3;
+    return { value, done: true };
   }
+  await "HermesInternal";
+  closure_2 = tmp2;
+  ({ channelId: closure_130_0, messageId: closure_130_1, answerIds: closure_130_2 } = channelId);
+  return "PX_16";
 };
 function handlePollSubmitVote() {
   const self = this;
@@ -272,178 +223,296 @@ function handlePollSubmitVote() {
   return applyArgumentsResult;
 }
 let closure_25 = async function _handlePollSubmitVote(arg0) {
-  closure_5 = tmp3;
-  ({ channelId: closure_132_0, messageId: closure_132_1 } = closure_0);
-  await "PX_16";
-  if (1 === tmp7) {
-    if (arg0 === 1) {
-      c9 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c9 = 3;
-      return { value, done: true };
-    } else {
-      const channel = closure_133_8.getChannel(closure_132_0);
-      if (null != channel) {
-        if (closure_133_5.isLurking(channel.guild_id)) {
-          let obj2 = { guildId: channel.guild_id, title: null, body: null };
-          const intl7 = closure_133_0(closure_133_3[13]).intl;
-          obj2.title = intl7.string(closure_133_0(closure_133_3[13]).t.Qic1FD);
-          const intl8 = closure_133_0(closure_133_3[13]).intl;
-          obj2.body = intl8.string(closure_133_0(closure_133_3[13]).t["5sHHoy"]);
-          closure_133_18(obj2);
-        } else if (closure_133_10.canChatInGuild(channel.guild_id)) {
-          closure_132_3 = closure_133_13(closure_132_0, closure_132_1);
-          closure_133_1(closure_133_3[11])(null != closure_132_3, "Must not be able to vote without existing state!");
-          closure_132_4 = closure_133_21({ channelId: closure_132_0, messageId: closure_132_1 });
-          c7 = 1;
-          closure_3 = 0;
-          const selectedAnswerIds = closure_132_3.selectedAnswerIds;
-          const items = [];
-          closure_3 = HermesBuiltin.arraySpread(selectedAnswerIds.values(), closure_3);
-          closure_132_5 = items;
-          closure_133_14(closure_132_0, closure_132_1, (arg0) => {
-            body(closure_1_3[11])(null != arg0, "Must not be able to vote without existing state!");
-            const obj = {};
-            const merged = Object.assign(arg0);
-            obj.submitting = true;
-            obj.editing = false;
-            return obj;
-          });
-          c8 = 3;
-          c9 = 1;
-          return {
-            value: closure_133_22({ channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_5 }),
-            done: false,
-          };
-        } else {
-          let obj10 = closure_133_1(closure_133_3[12]);
-          let obj6 = { title: null, body: null };
-          const intl5 = closure_133_0(closure_133_3[13]).intl;
-          obj6.title = intl5.string(closure_133_0(closure_133_3[13]).t.p245wu);
-          const intl6 = closure_133_0(closure_133_3[13]).intl;
-          obj6.body = intl6.string(closure_133_0(closure_133_3[13]).t["U/uodt"]);
-          obj10.show(obj6);
-        }
-      }
-      c9 = 3;
-    }
-  } else if (2 === tmp7) {
-    c7 = 0;
-    closure_132_6 = closure_6;
-    obj6 = closure_133_1(closure_133_3[12]);
-    const obj7 = { title: null, body: null };
-    const intl3 = closure_133_0(closure_133_3[13]).intl;
-    obj7.title = intl3.string(closure_133_0(closure_133_3[13]).t.iufib1);
-    const getAnyErrorMessage = closure_132_6.getAnyErrorMessage;
-    let anyErrorMessage;
-    if (getAnyErrorMessage != null) {
-      anyErrorMessage = getAnyErrorMessage();
-    }
-    let message = anyErrorMessage;
-    if (anyErrorMessage == null) {
-      message = closure_132_6.message;
-    }
-    let body = message;
-    if (message == null) {
-      const intl4 = closure_133_0(closure_133_3[13]).intl;
-      body = intl4.string(closure_133_0(closure_133_3[13]).t.eAn6z2);
-    }
-    obj7.body = body;
-    obj6.show(obj7);
-    c8 = 5;
-    c9 = 1;
-    return {
-      value: closure_133_22({ channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_4 }),
-      done: false,
-    };
-  } else if (3 === tmp7) {
-    if (arg0 === 1) {
-      c9 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c7 = 0;
-      c9 = 3;
-      obj10 = { value, done: true };
-      return obj10;
-    } else {
-      obj2 = closure_133_2(closure_133_3[22]);
-      c8 = 4;
-      c9 = 1;
-      return {
-        value: obj2.submitPollVote({ channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_5 }),
-        done: false,
-      };
-    }
-  } else if (4 === tmp7) {
-    if (arg0 === 1) {
-      c9 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c7 = 0;
-      c9 = 3;
-      return { value, done: true };
-    } else {
-      closure_133_14(closure_132_0, closure_132_1, () => {});
-      const AccessibilityAnnouncer = closure_133_0(closure_133_3[23]).AccessibilityAnnouncer;
-      if (0 === closure_132_5.length) {
-        const intl2 = closure_133_0(closure_133_3[13]).intl;
-        let stringResult = intl2.string(closure_133_0(closure_133_3[13]).t["xcvy+3"]);
-      } else {
-        const intl = closure_133_0(closure_133_3[13]).intl;
-        stringResult = intl.string(closure_133_0(closure_133_3[13]).t.o20GSo);
-      }
-      AccessibilityAnnouncer.announce(stringResult);
-      c7 = 0;
-    }
-  } else if (arg0 === 1) {
+  if (c9 === 2) {
     c9 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    closure_133_14(closure_132_0, closure_132_1, (arg0) => {
-      if (null != arg0) {
-        const obj = {};
-        const merged = Object.assign(arg0);
-        obj.submitting = false;
-        obj.editing = false;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c9 = 2;
+      if (0 === c8) {
+        if (arg0 === 1) {
+          c9 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c9 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_5 = tmp3;
+          closure_4 = tmp7;
+          closure_132_0 = undefined;
+          closure_132_1 = undefined;
+          ({ channelId: closure_132_0, messageId: closure_132_1 } = closure_0);
+          let channel;
+          closure_132_3 = undefined;
+          closure_132_4 = undefined;
+          closure_132_5 = undefined;
+          c8 = 1;
+          c9 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else {
+        if (1 === tmp7) {
+          if (arg0 === 1) {
+            c9 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c9 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            channel = closure_133_8.getChannel(closure_132_0);
+            if (null != channel) {
+              if (closure_133_5.isLurking(channel.guild_id)) {
+                let obj2 = { guildId: channel.guild_id, title: null, body: null };
+                const intl7 = closure_133_0(closure_133_3[13]).intl;
+                obj2.title = intl7.string(closure_133_0(closure_133_3[13]).t.Qic1FD);
+                const intl8 = closure_133_0(closure_133_3[13]).intl;
+                obj2.body = intl8.string(closure_133_0(closure_133_3[13]).t["5sHHoy"]);
+                closure_133_18(obj2);
+              } else if (closure_133_10.canChatInGuild(channel.guild_id)) {
+                closure_132_3 = closure_133_13(closure_132_0, closure_132_1);
+                closure_133_1(closure_133_3[11])(
+                  null != closure_132_3,
+                  "Must not be able to vote without existing state!",
+                );
+                const obj3 = { channelId: closure_132_0, messageId: closure_132_1 };
+                closure_132_4 = closure_133_21(obj3);
+                c7 = 1;
+                closure_3 = 0;
+                const selectedAnswerIds = closure_132_3.selectedAnswerIds;
+                const items = [];
+                closure_3 = HermesBuiltin.arraySpread(selectedAnswerIds.values(), closure_3);
+                closure_132_5 = items;
+                closure_133_14(closure_132_0, closure_132_1, (arg0) => {
+                  body(closure_1_3[11])(null != arg0, "Must not be able to vote without existing state!");
+                  const obj = {};
+                  const merged = Object.assign(arg0);
+                  obj.submitting = true;
+                  obj.editing = false;
+                  return obj;
+                });
+                const obj4 = { channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_5 };
+                c8 = 3;
+                c9 = 1;
+                const obj5 = { value: closure_133_22(obj4), done: false };
+                return obj5;
+              } else {
+                let obj10 = closure_133_1(closure_133_3[12]);
+                let obj6 = { title: null, body: null };
+                const intl5 = closure_133_0(closure_133_3[13]).intl;
+                obj6.title = intl5.string(closure_133_0(closure_133_3[13]).t.p245wu);
+                const intl6 = closure_133_0(closure_133_3[13]).intl;
+                obj6.body = intl6.string(closure_133_0(closure_133_3[13]).t["U/uodt"]);
+                obj10.show(obj6);
+              }
+            }
+            c9 = 3;
+          }
+        } else if (2 === tmp7) {
+          c7 = 0;
+          closure_132_6 = closure_6;
+          obj6 = closure_133_1(closure_133_3[12]);
+          const obj7 = { title: null, body: null };
+          const intl3 = closure_133_0(closure_133_3[13]).intl;
+          obj7.title = intl3.string(closure_133_0(closure_133_3[13]).t.iufib1);
+          const getAnyErrorMessage = closure_132_6.getAnyErrorMessage;
+          let anyErrorMessage;
+          if (getAnyErrorMessage != null) {
+            anyErrorMessage = getAnyErrorMessage();
+          }
+          let message = anyErrorMessage;
+          if (anyErrorMessage == null) {
+            message = closure_132_6.message;
+          }
+          let body = message;
+          if (message == null) {
+            const intl4 = closure_133_0(closure_133_3[13]).intl;
+            body = intl4.string(closure_133_0(closure_133_3[13]).t.eAn6z2);
+          }
+          obj7.body = body;
+          obj6.show(obj7);
+          const obj8 = { channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_4 };
+          c8 = 5;
+          c9 = 1;
+          const obj9 = { value: closure_133_22(obj8), done: false };
+          return obj9;
+        } else if (3 === tmp7) {
+          if (arg0 === 1) {
+            c9 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 0;
+            c9 = 3;
+            obj10 = { value, done: true };
+            return obj10;
+          } else {
+            obj2 = closure_133_2(closure_133_3[22]);
+            const obj11 = { channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_5 };
+            c8 = 4;
+            c9 = 1;
+            const obj12 = { value: obj2.submitPollVote(obj11), done: false };
+            return obj12;
+          }
+        } else if (4 === tmp7) {
+          if (arg0 === 1) {
+            c9 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 0;
+            c9 = 3;
+            const obj13 = { value, done: true };
+            return obj13;
+          } else {
+            closure_133_14(closure_132_0, closure_132_1, () => {});
+            const AccessibilityAnnouncer = closure_133_0(closure_133_3[23]).AccessibilityAnnouncer;
+            if (0 === closure_132_5.length) {
+              const intl2 = closure_133_0(closure_133_3[13]).intl;
+              let stringResult = intl2.string(closure_133_0(closure_133_3[13]).t["xcvy+3"]);
+            } else {
+              const intl = closure_133_0(closure_133_3[13]).intl;
+              stringResult = intl.string(closure_133_0(closure_133_3[13]).t.o20GSo);
+            }
+            AccessibilityAnnouncer.announce(stringResult);
+            c7 = 0;
+          }
+        } else if (arg0 === 1) {
+          c9 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_133_14(closure_132_0, closure_132_1, (arg0) => {
+            if (null != arg0) {
+              const obj = {};
+              const merged = Object.assign(arg0);
+              obj.submitting = false;
+              obj.editing = false;
+              return obj;
+            }
+          });
+        }
+        c9 = 3;
+        obj = { value, done: true };
         return obj;
       }
-    });
-  }
-  return value;
-};
-let closure_26 = async function _handleClearPollVote() {
-  ({ channelId: closure_129_0, messageId: closure_129_1 } = channelId);
-  await "PX_16";
-  const channel = closure_130_8.getChannel(closure_129_0);
-  if (null != channel) {
-    if (closure_130_5.isLurking(channel.guild_id)) {
-      const obj2 = { guildId: channel.guild_id, title: null, body: null };
-      const intl = closure_130_0(closure_130_3[13]).intl;
-      obj2.title = intl.string(closure_130_0(closure_130_3[13]).t.B9QnBp);
-      const intl2 = closure_130_0(closure_130_3[13]).intl;
-      obj2.body = intl2.string(closure_130_0(closure_130_3[13]).t.BVZCTn);
-      closure_130_18(obj2);
-    } else {
-      closure_130_14(closure_129_0, closure_129_1, (showResults) => {
-        const obj = { channelId, selectedAnswerIds: new Set(), submitting: false, editing: false, showResults: null };
-        let flag;
-        if (showResults != null) {
-          flag = showResults.showResults;
-        }
-        if (flag == null) {
-          flag = false;
-        }
-        obj.showResults = flag;
-        return obj;
-      });
-      c3 = 2;
-      c4 = 1;
-      return { value: closure_130_24({ channelId: closure_129_0, messageId: closure_129_1 }), done: false };
+    } catch (tmp111) {
+      closure_6 = tmp111;
+      if (tmp4 === c7) {
+        c9 = tmp2;
+        throw tmp111;
+      } else {
+        c8 = tmp;
+      }
     }
   }
-  await "HermesInternal";
-  return value;
+};
+let closure_26 = async function _handleClearPollVote(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp4;
+          c1 = 0;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          ({ channelId: closure_129_0, messageId: closure_129_1 } = channelId);
+          let channel;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp4) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          channel = closure_130_8.getChannel(closure_129_0);
+          if (null != channel) {
+            if (closure_130_5.isLurking(channel.guild_id)) {
+              const obj2 = { guildId: channel.guild_id, title: null, body: null };
+              const intl = closure_130_0(closure_130_3[13]).intl;
+              obj2.title = intl.string(closure_130_0(closure_130_3[13]).t.B9QnBp);
+              const intl2 = closure_130_0(closure_130_3[13]).intl;
+              obj2.body = intl2.string(closure_130_0(closure_130_3[13]).t.BVZCTn);
+              closure_130_18(obj2);
+            } else {
+              closure_130_14(closure_129_0, closure_129_1, (showResults) => {
+                const obj = {
+                  channelId,
+                  selectedAnswerIds: new Set(),
+                  submitting: false,
+                  editing: false,
+                  showResults: null,
+                };
+                let flag;
+                if (showResults != null) {
+                  flag = showResults.showResults;
+                }
+                if (flag == null) {
+                  flag = false;
+                }
+                obj.showResults = flag;
+                return obj;
+              });
+              const obj3 = { channelId: closure_129_0, messageId: closure_129_1 };
+              c3 = 2;
+              c4 = 1;
+              const obj4 = { value: closure_130_24(obj3), done: false };
+              return obj4;
+            }
+          }
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        c4 = 3;
+        obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp18) {
+      c4 = tmp;
+      throw tmp18;
+    }
+  }
 };
 let closure_27 = async function _handlePollActionTapped(arg0) {
   if (c4 === 2) {
@@ -478,7 +547,7 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
           ({ channelId: closure_129_0, messageId: closure_129_1, type: closure_129_2 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -601,110 +670,10 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
   }
 };
 let closure_28 = async function _createPoll(arg0) {
-  closure_2 = tmp3;
-  ({
-    channel: closure_129_0,
-    question: closure_129_1,
-    answers: closure_129_2,
-    allowMultiSelect: closure_129_3,
-    duration: closure_129_4,
-    layout: closure_129_5,
-    onClose: closure_129_6,
-    scheduledTimestamp: closure_129_7,
-  } = guildId);
-  await "PX_16";
-  const uploads = closure_130_12.getUploads(closure_129_0.id, closure_130_9.Poll);
-  closure_129_9 = closure_129_2.map((text) => {
-    guildId = text;
-    let poll_media = closure_1_8;
-    let findIndexResult;
-    if (closure_1_8 != null) {
-      findIndexResult = poll_media.findIndex((id) => id.id === text.localCreationAnswerId);
-    }
-    let tmp2;
-    if (-1 !== findIndexResult) {
-      const _HermesInternal = HermesInternal;
-      const items = ["" + findIndexResult];
-      tmp2 = items;
-    }
-    poll_media = { attachment_ids: tmp2 };
-    if (closure_1_5 === guildId(11813).PollLayoutTypes.DEFAULT) {
-      let trimmed;
-      if (text.text != null) {
-        trimmed = str2.trim();
-      }
-      poll_media.text = trimmed;
-    }
-    const image = text.image;
-    let emoji;
-    if (image != null) {
-      emoji = image.emoji;
-    }
-    if (null != emoji) {
-      if (null != emoji.id) {
-        const obj = { id: emoji.id, name: "" };
-        poll_media.emoji = obj;
-      } else if (null != emoji.optionallyDiverseSequence) {
-        const obj1 = { name: emoji.optionallyDiverseSequence };
-        poll_media.emoji = obj1;
-      }
-    }
-    return { poll_media };
-  });
-  closure_129_10 = {
-    question: { text: closure_129_1.trim() },
-    answers: closure_129_9,
-    allow_multiselect: closure_129_3,
-    duration: closure_129_4,
-    layout_type: closure_129_5,
-  };
-  await closure_130_1(closure_130_3[25]).sendPollMessage(closure_129_0.id, closure_129_10, {
-    attachmentsToUpload: uploads,
-    scheduledTimestamp: closure_129_7,
-    onAttachmentUploadError(file, code, reason) {
-      guildId(9400);
-      const obj = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
-      const result = obj.handleUploadMessageAttachmentsErrors(obj);
-    },
-  });
-  if (2 === tmp7) {
-    c4 = 0;
-    closure_129_11 = dependencyMap;
-    if (closure_129_11 instanceof closure_130_0(closure_130_3[27]).APIError) {
-      let aPIError = closure_129_11;
-    } else {
-      aPIError = new closure_130_0(closure_130_3[27]).APIError(closure_129_11);
-    }
-    if ("poll" === aPIError.getAnyErrorMessage()) {
-      if (null != closure_129_11.text) {
-        const obj6 = {};
-        const merged = Object.assign(closure_129_11);
-        const _JSON = JSON;
-        obj6.body = JSON.parse(closure_129_11.text);
-        throw obj6;
-      }
-    }
-    if (null == closure_129_7) {
-      throw closure_129_11;
-    } else {
-      c6 = 3;
-    }
-  } else if (arg0 === 1) {
+  if (c6 === 2) {
     c6 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    if (closure_129_6 != null) {
-      tmp9(closure_129_7);
-    }
-    c4 = 0;
-  }
-  return value;
-};
-let closure_29 = async function _endPollEarly(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  } else if (tmp6 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -715,80 +684,201 @@ let closure_29 = async function _endPollEarly(arg0) {
     }
   } else {
     try {
-      c4 = 2;
-      if (0 === c3) {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          c4 = 3;
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c4 = 3;
+          c6 = 3;
           obj = { value, done: true };
           return obj;
         } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
+          closure_2 = tmp3;
+          closure_1 = tmp7;
           closure_129_0 = undefined;
           closure_129_1 = undefined;
-          ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
-          c3 = 1;
-          c4 = 1;
-          return { value: "PX_16", done: null };
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          closure_129_6 = undefined;
+          closure_129_7 = undefined;
+          ({
+            channel: closure_129_0,
+            question: closure_129_1,
+            answers: closure_129_2,
+            allowMultiSelect: closure_129_3,
+            duration: closure_129_4,
+            layout: closure_129_5,
+            onClose: closure_129_6,
+            scheduledTimestamp: closure_129_7,
+          } = guildId);
+          let uploads;
+          closure_129_9 = undefined;
+          closure_129_10 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
-      } else if (1 === tmp5) {
+      } else if (1 === tmp7) {
         if (arg0 === 1) {
-          c4 = 3;
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c4 = 3;
+          c6 = 3;
           let obj1 = { value, done: true };
           return obj1;
         } else {
-          const obj2 = { title: null, body: null };
-          const intl = closure_130_0(closure_130_3[13]).intl;
-          obj2.title = intl.string(closure_130_0(closure_130_3[13]).t["+rfkTK"]);
-          const intl2 = closure_130_0(closure_130_3[13]).intl;
-          obj2.body = intl2.string(closure_130_0(closure_130_3[13]).t.H2I1gL);
-          c3 = 2;
+          uploads = closure_130_12.getUploads(closure_129_0.id, closure_130_9.Poll);
+          closure_129_9 = closure_129_2.map((text) => {
+            guildId = text;
+            let poll_media = closure_1_8;
+            let findIndexResult;
+            if (closure_1_8 != null) {
+              findIndexResult = poll_media.findIndex((id) => id.id === text.localCreationAnswerId);
+            }
+            let tmp2;
+            if (-1 !== findIndexResult) {
+              const _HermesInternal = HermesInternal;
+              const items = ["" + findIndexResult];
+              tmp2 = items;
+            }
+            poll_media = { attachment_ids: tmp2 };
+            if (closure_1_5 === guildId(11849).PollLayoutTypes.DEFAULT) {
+              let trimmed;
+              if (text.text != null) {
+                trimmed = str2.trim();
+              }
+              poll_media.text = trimmed;
+            }
+            const image = text.image;
+            let emoji;
+            if (image != null) {
+              emoji = image.emoji;
+            }
+            if (null != emoji) {
+              if (null != emoji.id) {
+                const obj = { id: emoji.id, name: "" };
+                poll_media.emoji = obj;
+              } else if (null != emoji.optionallyDiverseSequence) {
+                const obj1 = { name: emoji.optionallyDiverseSequence };
+                poll_media.emoji = obj1;
+              }
+            }
+            return { poll_media };
+          });
+          const obj2 = { question: null, answers: null, allow_multiselect: null, duration: null, layout_type: null };
+          const obj3 = { text: closure_129_1.trim() };
+          obj2.question = obj3;
+          obj2.answers = closure_129_9;
+          obj2.allow_multiselect = closure_129_3;
+          obj2.duration = closure_129_4;
+          obj2.layout_type = closure_129_5;
+          closure_129_10 = obj2;
           c4 = 1;
-          const obj3 = { value: closure_130_1(closure_130_3[12]).confirm(obj2), done: false };
-          return obj3;
+          const obj4 = {
+            attachmentsToUpload: uploads,
+            scheduledTimestamp: closure_129_7,
+            onAttachmentUploadError(file, code, reason) {
+              guildId(9439);
+              const obj = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
+              const result = obj.handleUploadMessageAttachmentsErrors(obj);
+            },
+          };
+          c5 = 3;
+          c6 = 1;
+          const obj5 = {
+            value: closure_130_1(closure_130_3[25]).sendPollMessage(closure_129_0.id, closure_129_10, obj4),
+            done: false,
+          };
+          return obj5;
         }
       } else {
-        if (2 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else if (value) {
-            obj1 = closure_130_2(closure_130_3[22]);
-            const obj5 = { channelId: closure_129_0, messageId: closure_129_1 };
-            c3 = 3;
-            c4 = 1;
-            const obj6 = { value: obj1.endPollEarly(obj5), done: false };
-            return obj6;
+        if (2 === tmp7) {
+          c4 = 0;
+          closure_129_11 = dependencyMap;
+          if (closure_129_11 instanceof closure_130_0(closure_130_3[27]).APIError) {
+            let aPIError = closure_129_11;
+          } else {
+            aPIError = new closure_130_0(closure_130_3[27]).APIError(closure_129_11);
+          }
+          if ("poll" === aPIError.getAnyErrorMessage()) {
+            if (null != closure_129_11.text) {
+              const obj6 = {};
+              const merged = Object.assign(closure_129_11);
+              const _JSON = JSON;
+              obj6.body = JSON.parse(closure_129_11.text);
+              throw obj6;
+            }
+          }
+          if (null == closure_129_7) {
+            throw closure_129_11;
+          } else {
+            c6 = 3;
           }
         } else if (arg0 === 1) {
-          c4 = 3;
+          c6 = 3;
           throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          obj = { value, done: true };
-          return obj;
+        } else if (arg0 !== 2) {
+          if (closure_129_6 != null) {
+            tmp9(closure_129_7);
+          }
+          c4 = 0;
         }
-        c4 = 3;
-        return { value: "HermesInternal", done: null };
+        c4 = 0;
+        c6 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    } catch (tmp13) {
-      c4 = tmp;
-      throw tmp13;
+    } catch (tmp38) {
+      dependencyMap = tmp38;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp38;
+      } else {
+        c5 = tmp;
+      }
     }
   }
 };
-const DraftType = fn(4947).DraftType;
-const PollsInteractionStore = fn(11521);
+let closure_29 = async function _endPollEarly(arg0) {
+  const obj2 = { title: null, body: null };
+  const intl = closure_130_0(closure_130_3[13]).intl;
+  obj2.title = intl.string(closure_130_0(closure_130_3[13]).t["+rfkTK"]);
+  const intl2 = closure_130_0(closure_130_3[13]).intl;
+  obj2.body = intl2.string(closure_130_0(closure_130_3[13]).t.H2I1gL);
+  await closure_130_1(closure_130_3[12]).confirm(obj2);
+  if (2 === tmp5) {
+    if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c4 = 3;
+      return { value, done: true };
+    } else if (value) {
+      c3 = 3;
+      c4 = 1;
+      closure_130_2(closure_130_3[22]);
+      return {
+        value: closure_130_2(closure_130_3[22]).endPollEarly({ channelId: closure_129_0, messageId: closure_129_1 }),
+        done: false,
+      };
+    }
+  } else if (arg0 === 1) {
+    c4 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c4 = 3;
+    return { value, done: true };
+  }
+  await "HermesInternal";
+  closure_1 = tmp2;
+  ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
+  return "PX_16";
+};
+const DraftType = fn(4977).DraftType;
+const PollsInteractionStore = fn(11560);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);

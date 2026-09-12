@@ -4,14 +4,14 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
-import _modDef12331 from "../../../../../../_runtime/metro/12331__.js";
+import _modDef12367 from "../../../../../../_runtime/metro/12367__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = {
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
   iconWrapper: null,
@@ -35,7 +35,7 @@ export default noop.memo((onCreateThreadPress) => {
   const tmp = closure_6();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconWrapper, children: null };
-  obj = { source: _modDef12331, size: native.Icon.Sizes.MEDIUM };
+  obj = { source: _modDef12367, size: native.Icon.Sizes.MEDIUM };
   obj.children = React4(native.Icon, obj);
   const items = [React4(View, obj), , ,];
   const obj1 = {

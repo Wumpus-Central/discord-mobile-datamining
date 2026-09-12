@@ -11,33 +11,30 @@ const SKUProductLines = fn(1074).SKUProductLines;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProducts.tsx");
 
-export const useFetchCollectiblesProducts = function useFetchCollectiblesProducts(
-  gameProfileShopCollection,
-  includeBundles,
-) {
-  _require = gameProfileShopCollection;
+export const useFetchCollectiblesProducts = function useFetchCollectiblesProducts(skuIds, includeBundles) {
+  _require = skuIds;
   dependencyMap = includeBundles;
   const items = [stateFromStoresArray2];
   const stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () =>
-    gameProfileShopCollection.map((item) => stateFromStoresArray2.get(item)),
+    skuIds.map((item) => stateFromStoresArray2.get(item)),
   );
   let obj = require("useStateFromStores");
   const items1 = [stateFromStoresArray3];
   const stateFromStoresArray1 = require("useStateFromStores").useStateFromStoresArray(items1, () =>
-    gameProfileShopCollection.map((item) => product.getProduct(item)),
+    skuIds.map((item) => product.getProduct(item)),
   );
   const obj2 = require("useStateFromStores");
   const items2 = [stateFromStoresArray3];
   stateFromStoresArray2 = require("useStateFromStores").useStateFromStoresArray(items2, () =>
-    gameProfileShopCollection.map((item) => productFetch.getProductFetch(item)),
+    skuIds.map((item) => productFetch.getProductFetch(item)),
   );
   const obj4 = require("useStateFromStores");
   const items3 = [stateFromStoresArray3];
   stateFromStoresArray3 = require("useStateFromStores").useStateFromStoresArray(items3, () =>
-    gameProfileShopCollection.map((item) => productFetchBackedOff.isProductFetchBackedOff(item)),
+    skuIds.map((item) => productFetchBackedOff.isProductFetchBackedOff(item)),
   );
   const items4 = [
-    gameProfileShopCollection,
+    skuIds,
     stateFromStoresArray,
     stateFromStoresArray2,
     stateFromStoresArray1,
@@ -45,7 +42,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
     stateFromStoresArray3,
   ];
   stateFromStoresArray1(() => {
-    const entries = gameProfileShopCollection.entries();
+    const entries = skuIds.entries();
     while (tmp2 !== undefined) {
       let tmp5 = _slicedToArray(tmp3, 2);
       [tmp6, tmp8] = tmp5;

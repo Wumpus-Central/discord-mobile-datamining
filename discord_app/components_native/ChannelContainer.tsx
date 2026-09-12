@@ -24,7 +24,7 @@ const ChannelTypes = fn(1074).ChannelTypes;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_12 = createStyles.createStyles({
   container: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8 },
 });
@@ -52,7 +52,7 @@ export const ChannelContainer = function ChannelContainer(children) {
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(9674)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(9713)(stateFromStoresObject.voiceChannelId);
   }
   let tmpResult = initialize;
   const items1 = [LurkingStore];
@@ -68,9 +68,9 @@ export const ChannelContainer = function ChannelContainer(children) {
     isPrivateResult = channel.isPrivate();
   }
   dependencyMap = isPrivateResult;
-  const tmp8 = channelId(8358)(isPrivateResult);
+  const tmp8 = channelId(8390)(isPrivateResult);
   noop = tmp8;
-  const tmp9 = channelId(8358)(channelId);
+  const tmp9 = channelId(8390)(channelId);
   closure_4 = tmp9;
   const items2 = [channelId, tmp9, isPrivateResult, tmp8];
   const effect = noop.useEffect(() => {
@@ -109,13 +109,13 @@ export const ChannelContainer = function ChannelContainer(children) {
     tmp15 = null;
     if (stateFromStores) {
       const obj1 = { channel };
-      tmp15 = closure_10(channelId(11418), obj1);
+      tmp15 = closure_10(channelId(11457), obj1);
     }
   }
   const items3 = [tmp15, children.children];
   if (tmp5) {
     const obj2 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(channelId(9786), obj2);
+    tmp5 = closure_10(channelId(9825), obj2);
   }
   items3[2] = tmp5;
   obj.children = items3;

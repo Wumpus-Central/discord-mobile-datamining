@@ -4,7 +4,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
 
 require = fn;
-const DraftType = fn(4947).DraftType;
+const DraftType = fn(4977).DraftType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/useFileUploadComponentState.tsx");
 

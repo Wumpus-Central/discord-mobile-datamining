@@ -28,7 +28,7 @@ const ThemeConstants = fn(1186);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   flex: 1,
   paddingHorizontal: nativeDefault.space.PX_16,
@@ -36,7 +36,7 @@ let createStyles = {
   gap: nativeDefault.space.PX_24,
   marginBottom: null,
 };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 0;
 if (!PlatformUtils.isIOS()) {
   num = nativeDefault.space.PX_16;
@@ -67,73 +67,73 @@ let closure_19 = items.map((item) => {
   return internal.resolveSemanticColor(item, nativeDefault.colors.CARD_SECONDARY_BG);
 });
 let closure_20 = items.map((item, index) => index);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj1 = { flexDirection: "row", gap: nativeDefault.space.PX_16 };
 let closure_21 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   items,
 );
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_22 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE },
   items,
 );
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 let closure_23 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG },
   items,
 );
-fn(4606);
+fn(4636);
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 let closure_24 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 let closure_25 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   items,
 );
-fn(4606);
+fn(4636);
 createStyles = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_26 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_27 = createStyles.createAnimatedThemedStyles(
   { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
   items,
 );
-fn(4606);
+fn(4636);
 createStyles = { color: nativeDefault.colors.TEXT_SUBTLE };
 let closure_28 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj9 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let closure_29 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_MUTED }, items);
-fn(4606);
+fn(4636);
 createStyles = { borderColor: nativeDefault.colors.BORDER_MUTED };
 let closure_30 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj11 = { color: nativeDefault.colors.TEXT_MUTED };
 let closure_31 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_STRONG }, items);
-fn(4606);
+fn(4636);
 createStyles = { borderColor: nativeDefault.colors.BORDER_NORMAL };
 let closure_32 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj13 = { borderColor: nativeDefault.colors.BORDER_STRONG };
 let closure_33 = createStyles.createAnimatedThemedStyles(
   { tintColor: nativeDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON },
   items,
 );
-fn(4606);
+fn(4636);
 createStyles = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 let closure_34 = createStyles.createAnimatedThemedStyles(createStyles, items);
-createStyles = fn(4606);
+createStyles = fn(4636);
 const obj15 = { tintColor: nativeDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON };
 let closure_35 = createStyles.createAnimatedThemedStyles(
   { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
   items,
 );
-fn(4606);
+fn(4636);
 createStyles = { color: nativeDefault.colors.TEXT_BRAND };
 let closure_36 = createStyles.createAnimatedThemedStyles(createStyles, items);
 function getSegmentedControlItems() {

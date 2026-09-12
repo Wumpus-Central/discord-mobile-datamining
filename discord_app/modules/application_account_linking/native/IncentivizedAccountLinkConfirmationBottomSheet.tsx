@@ -10,8 +10,8 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import APNGDecorationNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
 import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import WindowLaunchIcon from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
-import _modDef15899 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
-import _modDef15900 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js";
+import _modDef15923 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
+import _modDef15924 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -30,18 +30,18 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     obj = { source: null, style: null };
-    obj = { uri: _modDef15899 };
+    obj = { uri: _modDef15923 };
     obj.source = obj;
     const size = { width: v150, height: v150 };
     obj.style = size;
-    let tmp3Result = <Image uri={_modDef15899} />;
+    let tmp3Result = <Image uri={_modDef15923} />;
     let tmp8 = importDefault;
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
       const obj1 = { url: null, style: null };
       let tmp4Result = APNGDecorationNativeComponentDefault;
-      obj1.url = _modDef15900;
+      obj1.url = _modDef15924;
       const size1 = { width: v150, height: v150 };
       obj1.style = size1;
       tmp3Result = <tmp4Result url={null} style={null} />;
@@ -51,7 +51,7 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
       let obj2 = { source: null, resizeMode: "contain", style: null };
       const obj3 = { uri: null };
       tmp4Result = FastImageDefault;
-      obj3.uri = _modDef15900;
+      obj3.uri = _modDef15924;
       obj2.source = obj3;
       const size2 = { width: v150, height: v150 };
       obj2.style = size2;

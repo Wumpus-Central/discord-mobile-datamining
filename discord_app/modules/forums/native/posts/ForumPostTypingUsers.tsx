@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 },
   lastTypingUser: { marginEnd: 0 },

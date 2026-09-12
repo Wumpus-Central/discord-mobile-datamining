@@ -7,7 +7,7 @@ import UserStore from "../../stores/UserStore.tsx";
 
 const require = fn;
 const isGuildOwner = fn(1975).isGuildOwner;
-let closure_8 = fn(4249).MemberSafetyPagePermissions;
+let closure_8 = fn(4279).MemberSafetyPagePermissions;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_9, Permissions: c10 } = Constants);
 const size = fn(2);

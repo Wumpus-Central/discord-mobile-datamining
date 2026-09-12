@@ -4,11 +4,11 @@ import byteLengthDefault from "../../../_runtime/00206_byteLength.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
-import _modDef4198 from "../../../_runtime/metro/04198__.js";
+import _modDef4228 from "../../../_runtime/metro/04228__.js";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
-import _mod9225 from "../../../discord_common/js/packages/libdave/index.tsx";
+import _mod9264 from "../../../discord_common/js/packages/libdave/index.tsx";
 import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators.tsx";
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils.native.tsx";
 import SecureFramesTracking from "SecureFramesTracking.tsx";
@@ -422,7 +422,7 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
   }
   const tmp = _slicedToArray(items, 2);
 }
-const SecureFramesConstants = fn(9242);
+const SecureFramesConstants = fn(9281);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } =
   SecureFramesConstants);
 const Constants = fn(1074);
@@ -459,7 +459,7 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const serializeKeyResult = _mod9225.serializeKey(uint8Array);
+    const serializeKeyResult = _mod9264.serializeKey(uint8Array);
     const result = SecureFramesActionCreatorsDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
   } else {
     const result1 = SecureFramesActionCreatorsDefault.deleteSecureFramesTransientKey(userId);
@@ -496,8 +496,8 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
   let result = SecureFramesPlatformUtilsDefault.openSecureFramesUpdateConfirmation(obj);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
-  let obj = _modDef4198();
-  const diffResult = obj.diff(_modDef4198(timestamp), "s");
+  let obj = _modDef4228();
+  const diffResult = obj.diff(_modDef4228(timestamp), "s");
   if (diffResult > 12 * DurationsDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * DurationsDefault.Seconds.DAYS_30));
@@ -539,7 +539,7 @@ export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUser
     const obj5 = { count: diffResult };
     return intl.formatToPlainString(util.t["/w0Qpw"], obj5);
   }
-  const tmp3 = _modDef4198(timestamp);
+  const tmp3 = _modDef4228(timestamp);
 };
 export const getUserVerificationDeeplink = function getUserVerificationDeeplink(userId, arg1) {
   return (

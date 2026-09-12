@@ -11,9 +11,9 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, header: null };
-createStyles = { marginBottom: fn(12222).BETWEEN_SECTIONS_MARGIN };
+createStyles = { marginBottom: fn(12258).BETWEEN_SECTIONS_MARGIN };
 createStyles.container = createStyles;
 createStyles.header = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 };
 let closure_8 = createStyles.createStyles(createStyles);
@@ -51,7 +51,7 @@ export default function FrecencyCommandsSection(commands) {
     obj = { variant: "text-md/medium", color: "text-default", children: null };
     const intl = context(1114).intl;
     obj.children = intl.string(context(1114).t.acSE0h);
-    obj.children = arr(context(4602).Heading, obj);
+    obj.children = arr(context(4632).Heading, obj);
     const items1 = [
       arr(View, obj),
       arr.map((command, index) =>

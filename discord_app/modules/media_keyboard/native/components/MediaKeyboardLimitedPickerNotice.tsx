@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles({
   container: { flexDirection: "row", paddingHorizontal: 16, paddingVertical: 16, alignItems: "center" },
   absoluteContainer: { position: "absolute" },

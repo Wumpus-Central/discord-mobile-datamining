@@ -5,7 +5,7 @@ import SecureFramesActionCreatorsDefault from "../../../rtc/SecureFramesActionCr
 import SecureFramesPersistedStore from "../../../rtc/SecureFramesPersistedStore.tsx";
 
 require = fn;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -15,7 +15,7 @@ let SettingBuilders = {
     const intl = util.intl;
     return intl.string(util.t.opw5ls);
   },
-  parent: fn(8049).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8079).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useSecureFramesPersistentCodesValue() {
     const items = [SecureFramesPersistedStore];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());

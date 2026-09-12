@@ -230,11 +230,11 @@ function ScreenRecordingPip(surveyConfig) {
   tmp5 = useScreenRecordingStore((isRecording) => isRecording.isRecording);
 }
 const View = fn(17).View;
-const useScreenRecordingStore = fn(16003).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16027).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 100;
-fn(4606);
+fn(4636);
 let createStyles = {
   widgetContainer: { position: "absolute" },
   widget: null,

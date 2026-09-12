@@ -13,17 +13,17 @@ const PhoneActionCreatorsDefault = PhoneActionCreators;
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12770).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12806).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, redesignContainer: null, header: null, title: null, subtitle: null };
-createStyles = { paddingTop: fn(5733).NAV_BAR_HEIGHT + 32 };
+createStyles = { paddingTop: fn(5763).NAV_BAR_HEIGHT + 32 };
 createStyles.container = createStyles;
 createStyles.redesignContainer = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  paddingTop: fn(5733).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5763).NAV_BAR_HEIGHT + 32,
 };
 createStyles.header = { alignItems: "center" };
 createStyles.title = { textAlign: "center" };

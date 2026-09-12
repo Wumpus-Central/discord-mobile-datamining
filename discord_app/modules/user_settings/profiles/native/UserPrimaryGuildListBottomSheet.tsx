@@ -8,10 +8,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8018).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8048).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = {
   titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" },
   guildIcon: { marginLeft: 4 },
@@ -20,7 +20,7 @@ let obj = {
   divider: null,
   itemTrailingStyle: null,
 };
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let num = 18;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -40,14 +40,14 @@ let closure_9 = noop.memo((item) => {
   }
   let guildTagBadgeUrl = null != item;
   if (guildTagBadgeUrl) {
-    let obj = item(8250);
+    let obj = item(8282);
     let badge;
     if (profile != null) {
       badge = profile.badge;
     }
     guildTagBadgeUrl = obj.getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
   }
-  let obj1 = item(4325);
+  let obj1 = item(4355);
   const radioA11yNative = obj1.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   obj = {
@@ -79,7 +79,7 @@ let closure_9 = noop.memo((item) => {
   obj.label = name;
   let tmp10Result = null;
   if (null != item) {
-    obj = { style: tmp.guildIcon, guild: item, size: tmp7(5635).GuildIconSizes.SMALL_32 };
+    obj = { style: tmp.guildIcon, guild: item, size: tmp7(5665).GuildIconSizes.SMALL_32 };
     tmp10Result = closure_6(GuildIconDefault, obj);
   }
   obj.icon = tmp10Result;
@@ -105,12 +105,12 @@ let closure_9 = noop.memo((item) => {
     obj2.guildTag = tag;
     obj2.guildBadge = guildTagBadgeUrl;
     obj2.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp10Result = closure_6(tmp7(9274).BaseGuildTagChiplet, obj2);
+    tmp10Result = closure_6(tmp7(9313).BaseGuildTagChiplet, obj2);
   }
-  const items = [tmp10Result, closure_6(item(5740).FormRadio, { selected })];
+  const items = [tmp10Result, closure_6(item(5770).FormRadio, { selected })];
   obj1.children = items;
   obj.trailing = closure_7(View, obj1);
-  return closure_6(item(5656).TableRow, obj);
+  return closure_6(item(5686).TableRow, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
@@ -139,9 +139,9 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   };
   const intl = availableGuilds(1114).intl;
   obj.children = intl.string(availableGuilds(1114).t.Fo0g9x);
-  obj.children = closure_6(availableGuilds(4602).Text, obj);
+  obj.children = closure_6(availableGuilds(4632).Text, obj);
   obj.header = closure_6(memo, obj);
-  obj.children = closure_6(availableGuilds(8964).BottomSheetFlashList, {
+  obj.children = closure_6(availableGuilds(9003).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
     },
@@ -173,5 +173,5 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
       return timestampProducer(closure_9, obj);
     },
   });
-  return closure_6(availableGuilds(7223).BottomSheet, obj);
+  return closure_6(availableGuilds(7253).BottomSheet, obj);
 }

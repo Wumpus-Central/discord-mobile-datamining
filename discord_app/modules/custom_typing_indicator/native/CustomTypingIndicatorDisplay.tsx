@@ -5,13 +5,13 @@ import CustomTypingIndicatorUtils from "../CustomTypingIndicatorUtils.tsx";
 import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = tmp3(4602);
-const Stack_Stack = tmp3(5024);
-const Pressables = tmp3(5174);
+const Text_Text = tmp3(4632);
+const Stack_Stack = tmp3(5054);
+const Pressables = tmp3(5204);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles(() => ({ text: { flexShrink: 1 }, pressable: { flex: 1 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDisplay.tsx");

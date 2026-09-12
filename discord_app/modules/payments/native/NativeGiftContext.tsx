@@ -21,7 +21,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-fn(7311).GPlayBillingResult;
+fn(7341).GPlayBillingResult;
 const PremiumConstants = fn(1373);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 const PaymentGateways = fn(1085).PaymentGateways;
@@ -278,7 +278,12 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    obj = { orderId: "a", planId: "a", planSelection: "MENTION_HERE", giftInfo: "r" };
+    obj = {
+      orderId: "a",
+      planId: "c\u0103ldur\u0103",
+      planSelection: "cu limba scoas\u0103",
+      giftInfo: "fa\u021B\u0103",
+    };
     obj = { premiumType, planInterval: first1 };
     obj.planSelection = obj;
     closure_130_13 = obj.useRef(obj);

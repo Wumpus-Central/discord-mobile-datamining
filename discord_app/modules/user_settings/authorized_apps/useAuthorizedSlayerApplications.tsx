@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 
 const require = fn;
-const FetchState = fn(7180).FetchState;
+const FetchState = fn(7210).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");
 

@@ -6,7 +6,7 @@ import TextStyles from "../../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { header: null };
 createStyles = {};
 const merged = Object.assign(

@@ -28,7 +28,7 @@ export default function VoicePanelMaxCapacityAlert(channelId) {
     },
     items1,
   );
-  const obj2 = channelId(4956);
+  const obj2 = channelId(4986);
   obj = { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null };
   const intl = channelId(1114).intl;
   obj.title = intl.string(channelId(1114).t.hHbsQj);
@@ -37,8 +37,8 @@ export default function VoicePanelMaxCapacityAlert(channelId) {
   obj = { variant: "secondary", text: null, onPress: null };
   const intl3 = channelId(1114).intl;
   obj.text = intl3.string(channelId(1114).t["NX+WJN"]);
-  obj.onPress = channelId(4956).useDismissModalCallback();
-  obj.actions = jsx(channelId(4956).AlertActionButton, { variant: "secondary", text: null, onPress: null });
-  return jsx(channelId(4956).AlertModal, { variant: "secondary", text: null, onPress: null });
+  obj.onPress = channelId(4986).useDismissModalCallback();
+  obj.actions = jsx(channelId(4986).AlertActionButton, { variant: "secondary", text: null, onPress: null });
+  return jsx(channelId(4986).AlertModal, { variant: "secondary", text: null, onPress: null });
 }
 export const VOICE_PANEL_MAX_CAPACITY_KEY = "voice-panel-max-capacity";

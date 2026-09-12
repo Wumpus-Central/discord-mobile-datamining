@@ -58,9 +58,9 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   const callback = noop.useCallback((arg0) => {
-    const result = allowPhone(12797).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(12797);
-    const result1 = allowPhone(12797).closeDiscoverabilityModal(false);
+    const result = allowPhone(12833).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(12833);
+    const result1 = allowPhone(12833).closeDiscoverabilityModal(false);
   }, []);
   obj = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();
@@ -114,16 +114,16 @@ class DiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12770).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12806).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { container: null };
 createStyles = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   justifyContent: "center",
   paddingBottom: 44,
-  paddingTop: fn(5733).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5763).NAV_BAR_HEIGHT + 32,
 };
 createStyles.container = createStyles;
 let closure_8 = createStyles.createStyles(createStyles);

@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   headerContainer: null,
   headerRow: null,
@@ -57,7 +57,7 @@ export default function GameProfileNavigationHeader(game) {
   let sharedValue;
   const tmp = closure_9();
   dependencyMap = tmp2;
-  let obj = game(4343);
+  let obj = game(4373);
   let num = 0;
   if (null != headerRight) {
     num = 1;
@@ -71,7 +71,7 @@ export default function GameProfileNavigationHeader(game) {
     }
     const result = sharedValue.set(timing.withTiming(num, { duration: 200 }));
   }, items);
-  let tmp3Result = tmp3(4343);
+  let tmp3Result = tmp3(4373);
   const fn = function x() {
     return { opacity: sharedValue.get() };
   };
@@ -79,7 +79,7 @@ export default function GameProfileNavigationHeader(game) {
   fn.__workletHash = 16001524280109;
   fn.__initData = __initData;
   const animatedStyle = tmp3Result.useAnimatedStyle(fn);
-  tmp3Result = tmp3(4343);
+  tmp3Result = tmp3(4373);
   const fn2 = function b() {
     return { opacity: 1 - sharedValue.get() };
   };
@@ -127,7 +127,7 @@ export default function GameProfileNavigationHeader(game) {
   let tmp13Result = null;
   if (null != name) {
     obj = { style: tmp.headerContainer, children: null };
-    const items2 = [closure_7(tmp3(8992).BackgroundBlurFill, {})];
+    const items2 = [closure_7(tmp3(9031).BackgroundBlurFill, {})];
     obj = { style: tmp.headerRow, children: null };
     let tmp15Result = null != memo;
     if (tmp15Result) {
@@ -145,7 +145,7 @@ export default function GameProfileNavigationHeader(game) {
       lineClamp: 1,
       children: name,
     };
-    const items4 = [closure_7(tmp3(4602).Heading, obj4)];
+    const items4 = [closure_7(tmp3(4632).Heading, obj4)];
     let l30Rank;
     if (game != null) {
       l30Rank = game.l30Rank;
@@ -154,13 +154,13 @@ export default function GameProfileNavigationHeader(game) {
     if (tmp13Result) {
       const obj5 = { style: tmp.rankPillContainer, children: null };
       const obj6 = { rank: game.l30Rank, compact: true };
-      const items5 = [closure_7(application(8807), obj6)];
+      const items5 = [closure_7(application(8841), obj6)];
       const obj7 = { style: null, children: null };
       const items6 = [StyleSheet.absoluteFill, animatedStyle1];
       obj7.style = items6;
       const obj8 = { rank: game.l30Rank };
-      obj7.children = closure_7(application(8807), obj8);
-      items5[1] = closure_7(application(4343).View, obj7);
+      obj7.children = closure_7(application(8841), obj8);
+      items5[1] = closure_7(application(4373).View, obj7);
       obj5.children = items5;
       tmp13Result = closure_8(closure_5, obj5);
     }
@@ -173,7 +173,7 @@ export default function GameProfileNavigationHeader(game) {
       const items7 = [tmp.headerRight, animatedStyle];
       obj9.style = items7;
       obj9.children = headerRight();
-      tmp15Result = closure_7(application(4343).View, obj9);
+      tmp15Result = closure_7(application(4373).View, obj9);
     }
     items3[2] = tmp15Result;
     obj.children = items3;

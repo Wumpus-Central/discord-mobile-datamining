@@ -11,10 +11,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, orbsLottieContainer: null, balanceCounterContainer: null, balanceText: null };
 createStyles = {
-  minHeight: fn(5031).SMALL_BUTTON_HEIGHT,
+  minHeight: fn(5061).SMALL_BUTTON_HEIGHT,
   borderRadius: nativeDefault.radii.round,
   justifyContent: "center",
   alignItems: "center",
@@ -34,7 +34,7 @@ createStyles.orbsLottieContainer = {
 };
 createStyles.balanceCounterContainer = { justifyContent: "center", alignItems: "flex-end" };
 let obj1 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, textAlign: "right", lineHeight: null };
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05568_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/05598_fuzzysearch.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -93,11 +93,11 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10949).UserRowModes;
+const UserRowModes = fn(10988).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-fn(4606);
+fn(4636);
 let createStyles = { searchBarRowContainer: null, noResults: null };
 createStyles = { paddingTop: nativeDefault.space.PX_8 };
 createStyles.searchBarRowContainer = createStyles;

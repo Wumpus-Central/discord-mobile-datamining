@@ -11,10 +11,10 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import DeprecatedLayoutAnimation from "../../../animations/native/DeprecatedLayoutAnimation.tsx";
-import _modDef13916 from "../../../../../_runtime/metro/13916__.js";
-import _modDef13918 from "../../../../../_runtime/metro/13918__.js";
-import _modDef13919 from "../../../../../_runtime/metro/13919__.js";
-import _modDef13920 from "../../../../../_runtime/metro/13920__.js";
+import _modDef13950 from "../../../../../_runtime/metro/13950__.js";
+import _modDef13952 from "../../../../../_runtime/metro/13952__.js";
+import _modDef13953 from "../../../../../_runtime/metro/13953__.js";
+import _modDef13954 from "../../../../../_runtime/metro/13954__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -39,11 +39,11 @@ function RemoteAuthBody(remoteAuthFingerprint) {
       .then((body) => {
         dependencyMap(body.body.handshake_token);
         closure_1_1(constants.LOADED);
-        const result = remoteAuthFingerprint(5632).DeprecatedLayoutAnimation();
+        const result = remoteAuthFingerprint(5662).DeprecatedLayoutAnimation();
       })
       .catch(() => {
         closure_1_1(constants.NOT_FOUND);
-        const result = remoteAuthFingerprint(5632).DeprecatedLayoutAnimation();
+        const result = remoteAuthFingerprint(5662).DeprecatedLayoutAnimation();
       });
   }, items);
   if (constants.LOADING === tmp3) {
@@ -91,7 +91,7 @@ function RemoteAuthLogin(arg0) {
     tmp10 = !tmp5;
   }
   obj = { children: null };
-  obj = { source: _modDef13919, style: tmp.mainImage };
+  obj = { source: _modDef13953, style: tmp.mainImage };
   const items = [closure_9(closure_6, obj), , ,];
   const obj1 = { variant: "heading-md/extrabold", children: null };
   const intl = util.intl;
@@ -154,7 +154,7 @@ function RemoteAuthLogin(arg0) {
 function RemoteAuthLoginSucceeded() {
   const tmp = closure_12();
   let obj = { children: null };
-  obj = { source: _modDef13920, style: tmp.mainImage };
+  obj = { source: _modDef13954, style: tmp.mainImage };
   const items = [React7(timestampProducer, obj), , ,];
   obj = { variant: "heading-xl/extrabold", children: null };
   const intl = util.intl;
@@ -206,7 +206,7 @@ get_ActivityIndicator = fn(17);
 const Endpoints = fn(1074).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   background: { width: "100%", height: "100%" },
   container: { flex: 1, alignItems: "stretch", alignContent: "center" },
@@ -263,9 +263,9 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 
 export default function RemoteAuth(arg0) {
   const tmp = closure_12();
-  let obj = { source: _modDef13918, imageStyle: null, style: null, children: null };
+  let obj = { source: _modDef13952, imageStyle: null, style: null, children: null };
   ({ imageStyle: obj.imageStyle, background: obj.style } = tmp);
-  obj = { style: null, source: _modDef13916 };
+  obj = { style: null, source: _modDef13950 };
   const items = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj.style = items;
   const items1 = [React7(timestampProducer, obj)];

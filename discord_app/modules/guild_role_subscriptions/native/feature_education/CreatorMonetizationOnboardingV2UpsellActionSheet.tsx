@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef16319 from "../../../../../_runtime/metro/16319__.js";
+import _modDef16343 from "../../../../../_runtime/metro/16343__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,7 +14,7 @@ const GuildSettingsSections = fn(1074).GuildSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles({
   container: { paddingLeft: 24, paddingRight: 24, paddingTop: 24 },
   title: { marginBottom: 6 },
@@ -58,7 +58,7 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   const intl2 = util.intl;
   obj1.children = intl2.string(util.t.kUUFbG);
   items[1] = closure_6(Text_Text.Text, obj1);
-  const obj2 = { style: tmp.image, resizeMode: "contain", source: _modDef16319 };
+  const obj2 = { style: tmp.image, resizeMode: "contain", source: _modDef16343 };
   items[2] = closure_6(FastImageDefault, obj2);
   const obj3 = {
     onPress() {

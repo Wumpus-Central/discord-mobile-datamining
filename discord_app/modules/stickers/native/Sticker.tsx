@@ -3,8 +3,8 @@ import util from "../../../intl/index.native.tsx";
 import StickersUtils from "../StickersUtils.tsx";
 import StickersTypes from "../StickersTypes.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef7204 from "../../../../_runtime/metro/07204__.js";
-import _modDef7205 from "../../../../_runtime/metro/07205__.js";
+import _modDef7234 from "../../../../_runtime/metro/07234__.js";
+import _modDef7235 from "../../../../_runtime/metro/07235__.js";
 import NativeLottieView from "NativeLottieView.tsx";
 import NativeAPNGViewDefault from "../../../components_native/common/NativeAPNGView.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -106,9 +106,9 @@ export default function Sticker(opaque) {
     const size2 = { height: size, width: size, opacity: num };
     obj4.style = size2;
     if (tmpResult4.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef7204;
+      let tmp13Result = _modDef7234;
     } else {
-      tmp13Result = _modDef7205;
+      tmp13Result = _modDef7235;
     }
     obj4.placeholder = tmp13Result;
     const obj5 = { uri: str };

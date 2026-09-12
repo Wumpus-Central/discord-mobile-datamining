@@ -8,17 +8,17 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 58;
 if (PlatformUtils.isAndroid()) {
   num = 48;
 }
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 PlatformUtils = {
   titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 },
   horizontalPadding: { paddingHorizontal: 16 },

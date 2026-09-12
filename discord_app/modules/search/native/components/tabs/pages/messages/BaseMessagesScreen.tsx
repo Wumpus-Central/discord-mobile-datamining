@@ -8,7 +8,7 @@ import SearchMessageStore from "../../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const constants = fn(7951).SearchResultContentEntityTypes;
+const constants = fn(7981).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");

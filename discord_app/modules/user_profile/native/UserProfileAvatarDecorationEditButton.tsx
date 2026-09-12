@@ -7,10 +7,10 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const COLLECTIBLES_PREVIEW_SIZE = fn(7281).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7311).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { previewContainer: null, noneIcon: null };
 let size = {
   position: "relative",

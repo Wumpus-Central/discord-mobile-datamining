@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import _modDef8126 from "../../../../../../_runtime/metro/08126__.js";
+import _modDef8156 from "../../../../../../_runtime/metro/08156__.js";
 import ReferralTrialEmbedRedesign from "../row_data/embeds/ReferralTrialEmbedRedesign.tsx";
 import ReferralTrialEmbed from "../row_data/embeds/ReferralTrialEmbed.tsx";
 import ReferralTrialStore from "../../../../premium/ReferralTrialStore.tsx";
 import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-fn(4606);
+fn(4636);
 const createStyles = {
   iconTintColor: nativeDefault.colors.ICON_STRONG,
   iconDividerColor: nativeDefault.colors.ICON_STRONG,
@@ -45,7 +45,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = closure_5(theme);
-        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8126);
+        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8156);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
         return obj;
       }
@@ -64,7 +64,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged1 = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = closure_5(theme);
-        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8126);
+        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8156);
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
         obj.timestamp = undefined;
         return obj;

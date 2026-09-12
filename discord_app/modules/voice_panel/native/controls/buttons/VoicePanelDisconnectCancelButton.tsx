@@ -13,10 +13,10 @@ import ApplicationStreamingStore from "../../../../../stores/ApplicationStreamin
 import VoicePanelStore from "../../../VoicePanelStore.tsx";
 
 require = fn;
-const VoicePanelModes = fn(12366).VoicePanelModes;
+const VoicePanelModes = fn(12402).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-fn(4606);
+fn(4636);
 let createStyles = { disconnectCancelBG: null, icon: null };
 createStyles = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
 createStyles.disconnectCancelBG = createStyles;

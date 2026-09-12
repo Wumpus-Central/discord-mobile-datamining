@@ -7,12 +7,12 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-const PlatformUtils = APNGPlayer(1115);
-const APNGPlayer2 = APNGPlayer(8900);
+const PlatformUtils = APNGPlayer(1150);
+const APNGPlayer2 = APNGPlayer(8935);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles((width) => ({
   containerRefresh: {
     position: "absolute",

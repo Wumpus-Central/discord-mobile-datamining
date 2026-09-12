@@ -7,11 +7,11 @@ import useWideAuthViewDefault from "../useWideAuthView.tsx";
 import WideAuthScrollContext from "WideAuthScrollContext.tsx";
 import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import StackNavigator from "../../../../../_runtime/07075_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/07105_StackNavigator.js";
 import RegistrationHandoff from "../RegistrationHandoff.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
-import _mod16067 from "../../../../../_runtime/metro/16067__.js";
+import _mod16091 from "../../../../../_runtime/metro/16091__.js";
 import AuthManagerDefault from "../AuthManager.tsx";
 import useOrientationLockDefault from "../useOrientationLock.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -62,7 +62,7 @@ function NavigatorWithCaptchaHook() {
   }, []);
   obj = { backgroundImageSource: null, backgroundImageCover: true };
   const tmp7 = _slicedToArray(noop.useState(first[first.length - 1].name), 2);
-  obj.backgroundImageSource = _mod16067;
+  obj.backgroundImageSource = _mod16091;
   const children = [closure_9(BackgroundImageDefault, obj)];
   if (tmp5) {
     obj = { value: tmp11, children: null };
@@ -159,7 +159,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(16016);
+let RegistrationStepsUtils = fn(16040);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(
@@ -215,13 +215,13 @@ const screens = Object.fromEntries(
   }),
 );
 let num = 540;
-if (fn(7022).hasWebAuthn) {
+if (fn(7052).hasWebAuthn) {
   num = 600;
 }
 let obj = {};
 obj[AuthStates.LOGIN] = num;
 obj[AuthStates.MFA] = 600;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 obj = {
   transparent: { backgroundColor: "transparent" },
   cardContainer: { flex: 1, position: "relative", backgroundColor: "transparent" },
@@ -263,7 +263,7 @@ export default noop.memo(function Auth() {
     AuthManagerDefault.initialize();
     return () => closure_1_1(dependencyMap[23]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7548).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7578).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, {

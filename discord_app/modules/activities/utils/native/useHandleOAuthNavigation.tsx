@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ComponentActions = fn(1074).ComponentActions;
-let closure_5 = fn(9665).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_5 = fn(9704).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/native/useHandleOAuthNavigation.tsx");
 

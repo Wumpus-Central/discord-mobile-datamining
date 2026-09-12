@@ -3,7 +3,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const jsx = fn(21).jsx;
 let closure_1 = fn(17).requireNativeComponent("PortalToNativeView");
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_2 = createStyles.createStyles({
   portal: { position: "absolute", opacity: 0, height: 0, right: 0, left: 0, top: 0 },
 });

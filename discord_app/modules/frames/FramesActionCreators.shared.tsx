@@ -55,7 +55,7 @@ let closure_11 = async function _launchFrame(arg0) {
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -400,7 +400,7 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(9602);
+const FramesConstants = fn(9641);
 ({
   FrameIntent: hasOwnProperty,
   FrameLayoutModes: metroRequire,
@@ -408,7 +408,7 @@ const FramesConstants = fn(9602);
   getFrameIntentForSurface: closure_8,
   makeFrameId: closure_9,
 } = FramesConstants);
-const ActivityPanelModes = fn(9596).ActivityPanelModes;
+const ActivityPanelModes = fn(9635).ActivityPanelModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 

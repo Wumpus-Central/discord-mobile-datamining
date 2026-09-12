@@ -24,12 +24,12 @@ require = fn;
 function EmptyCustomizeCommunity(setTab) {
   setTab = setTab.setTab;
   const tmp = closure_19();
-  setTab(4315);
+  setTab(4345);
   let obj1 = setTab(504);
   const items = [SelectedGuildStore];
   importDefault = obj1.useStateFromStores(items, () => guildId.getGuildId());
   let obj = { style: tmp.emptyContainer, children: null };
-  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useThemeDefault()) ? 11644 : 11645) };
+  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useThemeDefault()) ? 11680 : 11681) };
   const items1 = [closure_16(closure_5, obj), ,];
   obj1 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1114).intl;
@@ -44,7 +44,7 @@ function EmptyCustomizeCommunity(setTab) {
       }
     },
   });
-  items1[2] = closure_16(setTab(4602).Text, obj2);
+  items1[2] = closure_16(setTab(4632).Text, obj2);
   obj.children = items1;
   return closure_17(closure_4, obj);
 }
@@ -140,11 +140,11 @@ function ConnectionsPrompt(guildId) {
     };
     const intl = tmp2(1114).intl;
     obj.children = intl.string(tmp2(1114).t.eDVMrA);
-    const items1 = [closure_16(tmp2(4602).Text, obj), ,];
+    const items1 = [closure_16(tmp2(4632).Text, obj), ,];
     const obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl2 = tmp2(1114).intl;
     obj1.children = intl2.string(tmp2(1114).t.BozOXu);
-    items1[1] = closure_16(tmp2(4602).Text, obj1);
+    items1[1] = closure_16(tmp2(4632).Text, obj1);
     const obj2 = {
       style: tmp.connectionsContainer,
       children: stateFromStores.map((connection, index) => {
@@ -220,7 +220,7 @@ function DropdownOption(option) {
     obj.children = closure_16(EmojiDefault, obj1);
     tmp10Result = closure_16(closure_4, obj);
   }
-  const items1 = [tmp10Result, closure_16(option(4602).Text, { variant: "text-md/semibold", children: option.title })];
+  const items1 = [tmp10Result, closure_16(option(4632).Text, { variant: "text-md/semibold", children: option.title })];
   obj.children = items1;
   return closure_17(closure_4, obj);
 }
@@ -302,7 +302,7 @@ function DropdownPrompt(guildId) {
       canBeNew: !_prompt.isNew,
       returnToCustomize: true,
     };
-    obj.openLazy(asyncRequireImpl(7208, dependencyMap.paths), "DropdownOptions", obj);
+    obj.openLazy(asyncRequireImpl(7238, dependencyMap.paths), "DropdownOptions", obj);
   }, items1);
   obj = { style: null, children: null };
   const items2 = [tmp.promptContainer, animatedStyle];
@@ -429,13 +429,13 @@ function MultipleChoicePrompt(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildOnboardingPromptsConstants = fn(7174);
+const GuildOnboardingPromptsConstants = fn(7204);
 ({ GuildOnboardingTab: closure_12, OnboardingPromptType: map1 } = GuildOnboardingPromptsConstants);
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
-const ReadStateTypes = fn(4788).ReadStateTypes;
+const ReadStateTypes = fn(4818).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: null,
   sheetTitle: null,
@@ -598,7 +598,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11646)(guildId);
+  const tmp7 = stateFromStores(11682)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);
@@ -617,13 +617,13 @@ export default function CustomizeCommunity(guildId) {
     () =>
       null != guildId
         ? () => {
-            guildId(7183).ackGuildFeature(
+            guildId(7213).ackGuildFeature(
               closure_1_0,
               constants.GUILD_ONBOARDING_QUESTION,
               GuildOnboardingPromptsStore.ackIdForGuild(closure_1_0),
             );
-            const obj = guildId(7183);
-            const result = stateFromStores(7178).updateOnboardingResponses(closure_1_0);
+            const obj = guildId(7213);
+            const result = stateFromStores(7208).updateOnboardingResponses(closure_1_0);
           }
         : undefined,
     items3,
@@ -663,7 +663,7 @@ export default function CustomizeCommunity(guildId) {
       const obj6 = { count: newOnboardingPrompts.length + newAnswersCount };
       obj5.children = intl.format(tmp4(1114).t.iB5Gqe, obj6);
       const items5 = [
-        closure_16(tmp4(4602).Text, obj5),
+        closure_16(tmp4(4632).Text, obj5),
         newOnboardingPrompts.map(callback),
         onboardingPromptsWithNewAnswers.map(callback),
       ];
@@ -684,11 +684,11 @@ export default function CustomizeCommunity(guildId) {
       };
       const intl2 = tmp4(1114).intl;
       obj9.children = intl2.string(tmp4(1114).t.BGkaer);
-      const items7 = [closure_16(tmp4(4602).Text, obj9), ,];
+      const items7 = [closure_16(tmp4(4632).Text, obj9), ,];
       const obj10 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl3 = tmp4(1114).intl;
       obj10.children = intl3.string(tmp4(1114).t.r6Vm8T);
-      items7[1] = closure_16(tmp4(4602).Text, obj10);
+      items7[1] = closure_16(tmp4(4632).Text, obj10);
       items7[2] = onboardingPrompts.map(callback);
       obj8.children = items7;
       tmp24Result = closure_17(closure_18, obj8);

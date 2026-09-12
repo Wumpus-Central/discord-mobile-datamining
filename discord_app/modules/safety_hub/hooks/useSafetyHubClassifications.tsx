@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
-const ViolationType = fn(8505).ViolationType;
+const ViolationType = fn(8537).ViolationType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
 
@@ -41,7 +41,7 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
     if (guild_metadata != null) {
       member_type = guild_metadata.member_type;
     }
-    if (member_type === tmp(8506).MemberType.OWNER) {
+    if (member_type === tmp(8538).MemberType.OWNER) {
       let GUILD_MEMBER = ViolationType.GUILD_OWNER;
     } else {
       GUILD_MEMBER = ViolationType.GUILD_MEMBER;

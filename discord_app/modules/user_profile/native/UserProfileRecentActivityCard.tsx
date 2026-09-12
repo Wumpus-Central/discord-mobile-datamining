@@ -57,7 +57,7 @@ let obj = {
   },
 };
 let items = [obj, , , , ,];
-obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8220).isEntryNew };
+obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8252).isEntryNew };
 items[1] = obj;
 items[2] = {
   Badge: BadgesAll.StreakBadge,
@@ -116,7 +116,7 @@ items[5] = {
     return tmp3;
   },
 };
-fn(4606);
+fn(4636);
 let obj5 = {
   body: null,
   content: null,
@@ -336,7 +336,7 @@ export default function UserProfileRecentActivityCard(style) {
           const obj4 = { title: entry.extra.activity_name };
           obj5 = obj4;
         } else {
-          obj5 = { title: "Array" };
+          obj5 = { title: "r" };
         }
         tmpResult2 = ContentInventoryTypes;
       }

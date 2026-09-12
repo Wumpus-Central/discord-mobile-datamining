@@ -8,8 +8,8 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("hooks/useLocalStorageState.tsx");
 
-export const useLocalStorageState = function useLocalStorageState(c2, arg1) {
-  closure_0 = c2;
+export const useLocalStorageState = function useLocalStorageState(arg0, arg1) {
+  closure_0 = arg0;
   importDefault = arg1;
   const tmp = _slicedToArray(
     noop.useState(() => {
@@ -31,7 +31,7 @@ export const useLocalStorageState = function useLocalStorageState(c2, arg1) {
     }
   });
   const items = [tmp[0]];
-  const items1 = [c2];
+  const items1 = [arg0];
   items[1] = noop.useCallback((arg0) => {
     closure_2(arg0);
     const Storage = Storage3.Storage;

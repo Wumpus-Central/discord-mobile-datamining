@@ -5,7 +5,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef5648 from "../../../../../_runtime/metro/05648__.js";
+import _modDef5678 from "../../../../../_runtime/metro/05678__.js";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ import GuildRoleMemberCountStore from "../../GuildRoleMemberCountStore.tsx";
 
 require = fn;
 function onMembersLoadFail() {
-  const obj = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: _modDef5648, content: null };
+  const obj = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: _modDef5678, content: null };
   const intl = util.intl;
   obj.content = intl.string(util.t.fEptJP);
   obj.open(obj);
@@ -22,7 +22,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, containerSearchBar: null, missingMembers: null, missingMembersText: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 createStyles.container = createStyles;
@@ -106,11 +106,11 @@ export default function GuildSettingsRoleMembers(guild) {
       obj.onConfirm = function onConfirm() {
         const items = [role.id];
         GuildSettingsActionCreatorsDefault.updateMemberRoles(guild.id, name.id, found, [], items).catch(() => {
-          found(4305);
+          found(4335);
           const obj = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
           const intl = name(1114).intl;
           obj.content = intl.string(name(1114).t.fEptJP);
-          obj.icon = found(5648);
+          obj.icon = found(5678);
           obj.open(obj);
         });
       };
@@ -129,7 +129,7 @@ export default function GuildSettingsRoleMembers(guild) {
     });
     const obj2 = ActionSheetActionCreatorsDefault;
     obj = { guild, role };
-    obj2.openLazy(asyncRequireImpl(17699, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, obj);
+    obj2.openLazy(asyncRequireImpl(17729, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, obj);
   }, items3);
   closure_6 = found.useCallback((item) => {
     item = item.item;

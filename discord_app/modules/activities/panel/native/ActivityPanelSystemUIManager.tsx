@@ -41,7 +41,7 @@ class BaseActivityPanelSystemUIManager {
     return tmp4(tmp5, obj1);
   }
 }
-const ActivityPanelModes = fn(9596).ActivityPanelModes;
+const ActivityPanelModes = fn(9635).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);

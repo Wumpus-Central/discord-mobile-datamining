@@ -6,18 +6,18 @@ import utils_AvatarUtils from "../../../../utils/native/AvatarUtils.tsx";
 import Constants from "../../../activities/Constants.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
-import _modDef5084 from "../../../../../_runtime/metro/05084__.js";
+import _modDef5114 from "../../../../../_runtime/metro/05114__.js";
 import ContentInventoryEntryType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
-import _modDef8216 from "../../../../../_runtime/metro/08216__.js";
+import _modDef8248 from "../../../../../_runtime/metro/08248__.js";
 import useAvatarColor from "../../../avatar/useAvatarColor.tsx";
 import useHeroColors from "../../../content_inventory/memberlist/useHeroColors.tsx";
 import utils from "../../../content_inventory/utils.tsx";
 import ContentInventoryTraitType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryTraitType.tsx";
-import _modDef8222 from "../../../../../_runtime/metro/08222__.js";
-import _modDef8223 from "../../../../../_runtime/metro/08223__.js";
+import _modDef8254 from "../../../../../_runtime/metro/08254__.js";
+import _modDef8255 from "../../../../../_runtime/metro/08255__.js";
 import ApplicationAssetUtils from "../../../../utils/ApplicationAssetUtils.tsx";
-import _modDef8226 from "../../../../../_runtime/metro/08226__.js";
-import _modDef8227 from "../../../../../_runtime/metro/08227__.js";
+import _modDef8258 from "../../../../../_runtime/metro/08258__.js";
+import _modDef8259 from "../../../../../_runtime/metro/08259__.js";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -55,13 +55,13 @@ export const transformToRowGeneratedContentInventoryEntryComponent =
             iconURL = application.getIconURL(ImageSizes.LARGE);
           }
           if (iconURL == null) {
-            iconURL = Image.resolveAssetSource(_modDef8216).uri;
+            iconURL = Image.resolveAssetSource(_modDef8248).uri;
           }
           let tmp45 = assetImage;
           if (assetImage == null) {
             tmp45 = iconURL;
           }
-          if (tmp45 === Image.resolveAssetSource(_modDef8216).uri) {
+          if (tmp45 === Image.resolveAssetSource(_modDef8248).uri) {
             let tmp47 = items;
           } else {
             tmpResult = useAvatarColor;
@@ -101,7 +101,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent =
               title: contentInventoryEntry.extra.media_title,
               subtitles: items2,
               gradientColors: tmp47,
-              platformIconUrl: Image.resolveAssetSource(_modDef8226).uri,
+              platformIconUrl: Image.resolveAssetSource(_modDef8258).uri,
             };
             tmp49 = obj1;
             const obj33 = /\w+ (\d+), \w+ (\d+)/;
@@ -132,7 +132,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent =
                 const intl = util.intl;
                 const obj2 = { count };
                 const obj3 = {
-                  badgeUrl: Image.resolveAssetSource(_modDef8222).uri,
+                  badgeUrl: Image.resolveAssetSource(_modDef8254).uri,
                   text: intl.formatToPlainString(util.t.HtifnG, obj2),
                 };
                 items4.push(obj3);
@@ -141,7 +141,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent =
                   title: contentInventoryEntry.extra.artist.name,
                   subtitles: items4,
                   gradientColors: items3,
-                  platformIconUrl: Image.resolveAssetSource(_modDef8227).uri,
+                  platformIconUrl: Image.resolveAssetSource(_modDef8259).uri,
                 };
                 tmp30 = obj4;
                 const formatToPlainStringResult1 = intl.formatToPlainString(util.t.HtifnG, obj2);
@@ -182,7 +182,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent =
               const items6 = [obj6];
               obj5.subtitles = items6;
               obj5.gradientColors = items5;
-              obj5.platformIconUrl = Image.resolveAssetSource(_modDef8227).uri;
+              obj5.platformIconUrl = Image.resolveAssetSource(_modDef8259).uri;
               tmp25 = obj5;
               const tmpResult12 = ColorUtils;
             }
@@ -195,10 +195,10 @@ export const transformToRowGeneratedContentInventoryEntryComponent =
           if (null != application1) {
             let uri = application1.getIconURL(ImageSizes.LARGE);
             if (uri == null) {
-              uri = Image.resolveAssetSource(_modDef8216).uri;
+              uri = Image.resolveAssetSource(_modDef8248).uri;
             }
             obj = Image;
-            if (uri === Image.resolveAssetSource(_modDef8216).uri) {
+            if (uri === Image.resolveAssetSource(_modDef8248).uri) {
               let tmp7 = items;
             } else {
               if (tmpResult13.hasFetchedColors(uri)) {
@@ -215,7 +215,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent =
             }
             if (null != tmp7) {
               const items8 = [];
-              const obj7 = { badgeUrl: obj.resolveAssetSource(_modDef5084).uri };
+              const obj7 = { badgeUrl: obj.resolveAssetSource(_modDef5114).uri };
               const timestamp = message.timestamp;
               const time = timestamp.getTime();
               const obj8 = {};
@@ -279,9 +279,9 @@ export const transformToRowGeneratedContentInventoryEntryComponent =
     if (null != application2) {
       let game_name = application2.getIconURL(ImageSizes.LARGE);
       if (game_name == tmp54) {
-        game_name = Image.resolveAssetSource(_modDef8216).uri;
+        game_name = Image.resolveAssetSource(_modDef8248).uri;
       }
-      if (game_name === Image.resolveAssetSource(_modDef8216).uri) {
+      if (game_name === Image.resolveAssetSource(_modDef8248).uri) {
         let tmp60 = items;
       } else {
         if (tmpResult20.hasFetchedColors(game_name)) {
@@ -311,14 +311,14 @@ export const transformToRowGeneratedContentInventoryEntryComponent =
             const obj15 = { badgeUrl: null, text: null };
             const combined =
               "" + intl2.string(util.t["/50eHi"]) + " - " + intl3.formatToPlainString(util.t.C0AxoR, obj14);
-            obj15.badgeUrl = Image.resolveAssetSource(_modDef8222).uri;
+            obj15.badgeUrl = Image.resolveAssetSource(_modDef8254).uri;
             obj15.text = combined;
             items10.push(obj15);
             const stringResult = intl2.string(util.t["/50eHi"]);
           }
           const tmpResult25 = utils;
         } else {
-          const obj16 = { badgeUrl: Image.resolveAssetSource(_modDef8223).uri };
+          const obj16 = { badgeUrl: Image.resolveAssetSource(_modDef8255).uri };
           const timestamp2 = message.timestamp;
           const time1 = timestamp2.getTime();
           const obj17 = {};

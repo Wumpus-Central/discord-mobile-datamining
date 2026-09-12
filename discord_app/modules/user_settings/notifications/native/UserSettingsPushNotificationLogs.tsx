@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { wrap: null, list: null, searchWrap: null, shareButton: null, log: null, code: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createStyles.wrap = createStyles;
@@ -20,8 +20,8 @@ let size = {
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   marginLeft: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
-  height: fn(6693).InputHeights.MD,
-  width: fn(6693).InputHeights.MD,
+  height: fn(6723).InputHeights.MD,
+  width: fn(6723).InputHeights.MD,
   justifyContent: "center",
   alignItems: "center",
 };
@@ -156,7 +156,7 @@ export default function UserSettingsPushNotificationLogs() {
   let obj = { style: tmp9.wrap, children: null };
   obj = { style: tmp9.searchWrap, children: null };
   let items1 = [
-    closure_7(defaultValue(7123).SearchField, {
+    closure_7(defaultValue(7153).SearchField, {
       size: "md",
       placeholder: "Filter (regex)",
       onChange: tmp[1],
@@ -194,7 +194,7 @@ export default function UserSettingsPushNotificationLogs() {
             closure_128_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = { value: tmp5(10280)(), done: false };
+            const obj1 = { value: tmp5(10319)(), done: false };
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -206,8 +206,8 @@ export default function UserSettingsPushNotificationLogs() {
           return obj2;
         } else {
           closure_128_0 = value;
-          obj = tmp2(8447);
-          const obj3 = { message: tmp5(10281)(closure_128_0, false) };
+          obj = tmp2(8479);
+          const obj3 = { message: tmp5(10320)(closure_128_0, false) };
           obj.showShareActionSheet(obj3, "push-notification-logs");
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -218,8 +218,8 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj.children = closure_7(defaultValue(9143).ShareIcon, {});
-  items1[1] = closure_7(defaultValue(5174).PressableOpacity, obj);
+  obj.children = closure_7(defaultValue(9182).ShareIcon, {});
+  items1[1] = closure_7(defaultValue(5204).PressableOpacity, obj);
   obj.children = items1;
   let items2 = [closure_8(View, obj)];
   let obj1 = { contentContainerStyle: null, data: null, renderItem: null };
@@ -251,7 +251,7 @@ export default function UserSettingsPushNotificationLogs() {
     obj.children = items;
     return React6(View, obj, item.index);
   };
-  items2[1] = closure_7(defaultValue(8964).FlashList, obj1);
+  items2[1] = closure_7(defaultValue(9003).FlashList, obj1);
   obj.children = items2;
   return closure_8(View, obj);
 }

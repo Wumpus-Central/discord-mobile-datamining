@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { flexDirection: "column", gap: 16, width: "100%" },
   header: { flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 8 },
@@ -94,7 +94,7 @@ export default function ConnectAccountStep(clientId) {
     }
     return currentUser;
   });
-  let obj2 = platformType(5334);
+  let obj2 = platformType(5364);
   value = obj2.get(platformType);
   if (null == value) {
     let applicationIconSource;
@@ -126,7 +126,7 @@ export default function ConnectAccountStep(clientId) {
     const obj3 = { source: applicationIconSource, size: tmp5(1178).AvatarSizes.XLARGE };
     const items4 = [closure_8(tmp5(1178).Avatar, obj3), ,];
     const obj4 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-    items4[1] = closure_8(tmp5(8763).MoreHorizontalIcon, obj4);
+    items4[1] = closure_8(tmp5(8795).MoreHorizontalIcon, obj4);
     const obj5 = { source: userAvatarSource, size: tmp5(1178).AvatarSizes.XLARGE };
     items4[2] = closure_8(tmp5(1178).Avatar, obj5);
     obj2.children = items4;
@@ -134,16 +134,16 @@ export default function ConnectAccountStep(clientId) {
     const obj6 = { variant: "text-lg/normal", color: "text-default", children: null };
     const intl = tmp5(1114).intl;
     obj6.children = intl.string(tmp5(1114).t.uT1CPa);
-    items5[1] = closure_8(tmp5(4602).Text, obj6);
+    items5[1] = closure_8(tmp5(4632).Text, obj6);
     const obj7 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: str };
-    items5[2] = closure_8(tmp5(4602).Text, obj7);
+    items5[2] = closure_8(tmp5(4632).Text, obj7);
     obj1.children = items5;
     const items6 = [closure_9(View, obj1), , ,];
     const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl2 = tmp5(1114).intl;
     const obj9 = { applicationName: str, platformName };
     obj8.children = intl2.format(tmp5(1114).t["aJRE/Q"], obj9);
-    items6[1] = closure_8(tmp5(4602).Text, obj8);
+    items6[1] = closure_8(tmp5(4632).Text, obj8);
     const obj10 = { style: tmp.card, children: null };
     let tmp16Result = null;
     if (null != null) {
@@ -152,7 +152,7 @@ export default function ConnectAccountStep(clientId) {
     }
     const items7 = [tmp16Result, ,];
     const obj12 = { variant: "text-md/medium", style: tmp.cardName, color: "text-default", children: platformName };
-    items7[1] = closure_8(tmp5(4602).Text, obj12);
+    items7[1] = closure_8(tmp5(4632).Text, obj12);
     const obj13 = {
       variant: "primary",
       size: "sm",
@@ -163,28 +163,28 @@ export default function ConnectAccountStep(clientId) {
     };
     const intl3 = tmp5(1114).intl;
     obj13.text = intl3.string(tmp5(1114).t.S0W8Z5);
-    items7[2] = closure_8(tmp5(5026).Button, obj13);
+    items7[2] = closure_8(tmp5(5056).Button, obj13);
     obj10.children = items7;
     items6[2] = closure_9(View, obj10);
     const obj14 = { style: tmp.infoNotice, children: null };
     const obj15 = { color: tmp2(576).colors.ICON_FEEDBACK_INFO, size: "sm" };
-    const items8 = [closure_8(tmp5(4561).CircleInformationIcon, obj15)];
+    const items8 = [closure_8(tmp5(4591).CircleInformationIcon, obj15)];
     const obj16 = { variant: "text-sm/normal", color: "text-default", style: tmp.infoText, children: null };
     const intl4 = tmp5(1114).intl;
     const obj17 = { platformName, applicationName: str };
     obj16.children = intl4.format(tmp5(1114).t["8psEFX"], obj17);
-    items8[1] = closure_8(tmp5(4602).Text, obj16);
+    items8[1] = closure_8(tmp5(4632).Text, obj16);
     obj14.children = items8;
     items6[3] = closure_9(View, obj14);
     obj.children = items6;
     return closure_9(View, obj);
   } else {
     tmp5(1396);
-    const tmp5Result = tmp5(4458);
+    const tmp5Result = tmp5(4488);
     const icon = value.icon;
     const source = tmp5Result.makeSource(tmp5Result.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
   }
-  tmp4 = platformType(4541)();
+  tmp4 = platformType(4571)();
 }
 export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
   ({ platformName, connectedAccount } = arg0);

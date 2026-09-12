@@ -5,7 +5,7 @@ import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ProcessArgs2 from "../../utils/ProcessArgs.tsx";
 import GatewayZstdUtils from "GatewayZstdUtils.native.tsx";
 import NativeCompressionModule from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
-import _mod13705 from "../../../_runtime/metro/13705__.js";
+import _mod13739 from "../../../_runtime/metro/13739__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const NativeModules = _mod17.NativeModules;
@@ -82,7 +82,7 @@ prototype2["close"] = function close() {};
 items.push(fn);
 const fn2 = (arg0) => {
   tmp = new tmp(arg0, new.target, tmp, new.target);
-  tmp._pako = _mod13705;
+  tmp._pako = _mod13739;
   tmp._usesZstd = false;
   tmp._zstdDecoder = null;
   tmp._zstdStream = null;
@@ -209,7 +209,7 @@ prototype3["handleFlushEnd"] = function handleFlushEnd(arg0) {
 items.push(fn2);
 const fn3 = () => {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult._pako = _mod13705;
+  applyArgumentsResult._pako = _mod13739;
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;

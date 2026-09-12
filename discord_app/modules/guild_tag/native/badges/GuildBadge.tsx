@@ -43,7 +43,7 @@ import GuildBadgeBee from "GuildBadgeBee.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const GuildTagBadgeKind = fn(8018).GuildTagBadgeKind;
+const GuildTagBadgeKind = fn(8048).GuildTagBadgeKind;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadge.tsx");

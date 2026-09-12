@@ -34,13 +34,13 @@ function useOfficialMessageStyleSettingOptions() {
     return items;
   }, []);
 }
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nC2XBl);
   },
-  parent: fn(8049).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8079).MobileUserSettings.ACCESSIBILITY,
   useValue: useOfficialMessageStyleSettingValue,
   onValueChange: onOfficialMessageStyleSettingValueChange,
   useOptions: useOfficialMessageStyleSettingOptions,

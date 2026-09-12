@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ContactSyncModalActionCreators from "../ContactSyncModalActionCreators.tsx";
-import _modDef13912 from "../../../../../_runtime/metro/13912__.js";
+import _modDef13946 from "../../../../../_runtime/metro/13946__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const dismissUpsellCTA = fn(12772).dismissUpsellCTA;
+const dismissUpsellCTA = fn(12808).dismissUpsellCTA;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { container: null };
 obj = {
   padding: 12,
@@ -40,7 +40,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
     },
     onLongPress() {
-      location(7267);
+      location(7297);
       let obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
       obj = { label: null, onPress: null };
       const intl = location(1114).intl;
@@ -53,7 +53,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       const result = obj.showSimpleActionSheet(obj);
     },
     style: null,
-    iconSource: _modDef13912,
+    iconSource: _modDef13946,
     title: null,
     subtitle: null,
   };
@@ -63,7 +63,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
   obj.title = intl.string(location(1114).t.T6Rfd9);
   const intl2 = location(1114).intl;
   obj.subtitle = intl2.string(location(1114).t.c6KIpg);
-  return jsx(location(8684).FormCTA, {
+  return jsx(location(8716).FormCTA, {
     onPress() {
       const obj = { type: constants2.CONTACT_SYNC_MODAL, location: null };
       let str = location;
@@ -79,7 +79,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
     },
     onLongPress() {
-      location(7267);
+      location(7297);
       let obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
       obj = { label: null, onPress: null };
       const intl = location(1114).intl;
@@ -92,7 +92,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       const result = obj.showSimpleActionSheet(obj);
     },
     style: null,
-    iconSource: _modDef13912,
+    iconSource: _modDef13946,
     title: null,
     subtitle: null,
   });

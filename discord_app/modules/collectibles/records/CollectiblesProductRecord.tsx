@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7619);
+const CollectiblesItemRecord = fn(7649);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } =
   CollectiblesItemRecord);
 let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -255,17 +255,17 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "Button",
                 type: "Array",
-                premiumType: "accessible",
-                items: "<string:16778466>",
-                categorySkuId: "<string:301451089>",
-                isCategoryReward: "<string:815361>",
-                prices: "<string:508690432>",
-                previewAssets: "<string:1373239002>",
-                googleSkuIds: "<string:1359071782>",
-                eligibleOffers: "<string:17954351>",
-                variants: "<string:858993457>",
-                bundledProducts: "<string:674444083>",
-                isFirstParty: "men_holding_hands_tone1_tone2",
+                premiumType: "channelId",
+                items: 1275620616,
+                categorySkuId: 241727,
+                isCategoryReward: 237699,
+                prices: 238824,
+                previewAssets: 240024,
+                googleSkuIds: "safetyTips",
+                eligibleOffers: "ferris_wheel",
+                variants: "dismiss_type",
+                bundledProducts: "displayType",
+                isFirstParty: "MEMBER_LIST_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES",
               };
               let str;
               if (first != null) {

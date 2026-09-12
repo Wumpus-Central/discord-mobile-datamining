@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_4 = createStyles.createStyles({ title: { justifyContent: "space-between" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileNote.tsx");

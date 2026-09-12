@@ -44,7 +44,7 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let closure_7 = PlatformUtils.isDesktop();
 const Store = initializeDefault.Store;
 class ApplicationCommandAutocompleteStore extends Store {}
@@ -68,7 +68,7 @@ prototype["getLastErrored"] = function getLastErrored(id) {
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "call",
+      lastResponseNonce: "accessible",
     };
     const _Map = Map;
     map = new Map();
@@ -102,7 +102,7 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "call",
+      lastResponseNonce: "accessible",
     };
     const _Map = Map;
     map = new Map();
@@ -142,7 +142,7 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "call",
+      lastResponseNonce: "accessible",
     };
     const _Map = Map;
     map = new Map();
@@ -176,7 +176,7 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "call",
+      lastResponseNonce: "accessible",
     };
     const _Map = Map;
     map = new Map();
@@ -216,7 +216,7 @@ PlatformUtils = {
         optionNameToNonce: null,
         optionNameToLastQuery: null,
         lastErrored: false,
-        lastResponseNonce: "call",
+        lastResponseNonce: "accessible",
       };
       const _Map = Map;
       map = new Map();
@@ -295,7 +295,7 @@ PlatformUtils = {
           optionNameToNonce: null,
           optionNameToLastQuery: null,
           lastErrored: false,
-          lastResponseNonce: "call",
+          lastResponseNonce: "accessible",
         };
         const _Map = Map;
         map = new Map();
@@ -417,7 +417,7 @@ PlatformUtils = {
             optionNameToNonce: null,
             optionNameToLastQuery: null,
             lastErrored: false,
-            lastResponseNonce: "call",
+            lastResponseNonce: "accessible",
           };
           const _Map = Map;
           map = new Map();

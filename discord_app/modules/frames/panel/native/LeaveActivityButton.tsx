@@ -4,7 +4,7 @@ import LeaveActivityButton from "../../../activities/panel/native/LeaveActivityB
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ActivityPanelModes = fn(9596).ActivityPanelModes;
+const ActivityPanelModes = fn(9635).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/LeaveActivityButton.tsx");

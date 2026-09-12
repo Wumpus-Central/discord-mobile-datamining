@@ -60,8 +60,8 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   );
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    hasDetectedActivityResult = tmp(8089).hasDetectedActivity(stateFromStores1);
-    const tmpResult = tmp(8089);
+    hasDetectedActivityResult = tmp(8119).hasDetectedActivity(stateFromStores1);
+    const tmpResult = tmp(8119);
   }
   let tmp6 = !hasDetectedActivityResult;
   if (!hasDetectedActivityResult) {

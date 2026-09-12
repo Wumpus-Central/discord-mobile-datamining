@@ -88,7 +88,7 @@ export default function StringSelectActionComponent(type) {
       allowEmpty: null,
     };
     const combined = "StringSelectComponentActionSheet:" + customId;
-    const tmp = asyncRequireImpl(11915, dependencyMap.paths);
+    const tmp = asyncRequireImpl(11951, dependencyMap.paths);
     obj.allowEmpty = InteractionComponentUtils.canSelectBeEmpty(selectionActionComponent, "modal");
     obj.openLazy(tmp, combined, obj);
   };

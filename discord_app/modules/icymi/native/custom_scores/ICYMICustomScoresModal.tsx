@@ -5,9 +5,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let NativeStackNavigator = fn(7987);
+let NativeStackNavigator = fn(8017);
 let closure_5 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 NativeStackNavigator = { header: null };
 NativeStackNavigator = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 NativeStackNavigator.header = NativeStackNavigator;
@@ -41,12 +41,12 @@ export default function ICYMICustomScoresModal() {
       const obj = { title: null, headerLeft: null };
       const intl = closure_0(1114).intl;
       obj.title = intl.string(closure_0(1114).t.jVshKt);
-      obj.headerLeft = closure_0(7936).getRenderModalCloseImage(navigation.navigation);
-      const merged = Object.assign(closure_1(11017)());
+      obj.headerLeft = closure_0(7966).getRenderModalCloseImage(navigation.navigation);
+      const merged = Object.assign(closure_1(11056)());
       return obj;
     },
     getComponent() {
-      return closure_0(16527).default;
+      return closure_0(16551).default;
     },
   };
   const items = [
@@ -54,11 +54,11 @@ export default function ICYMICustomScoresModal() {
     closure_3(closure_5.Screen, {
       name: "guild",
       options(navigation) {
-        const obj = { headerLeft: closure_0(7936).getRenderModalBackImage(navigation.navigation) };
+        const obj = { headerLeft: closure_0(7966).getRenderModalBackImage(navigation.navigation) };
         return obj;
       },
       getComponent() {
-        return closure_0(16528).default;
+        return closure_0(16552).default;
       },
     }),
   ];

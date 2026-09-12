@@ -10,7 +10,7 @@ import UserGuildSettingsStore from "../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
 const Endpoints = fn(1074).Endpoints;
-fn(4258).NotificationSettingsUpdateType;
+fn(4288).NotificationSettingsUpdateType;
 const constants = fn(1084).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");

@@ -1,13 +1,11 @@
 // discord_app/components_native/MainShared.tsx
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import util from "../intl/index.native.tsx";
-import PlatformUtils from "../utils/PlatformUtils.tsx";
 import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import usePipVideoOrStream from "../modules/video_calls/native/usePipVideoOrStream.tsx";
 import VoicePanelUtils from "../modules/voice_panel/VoicePanelUtils.native.tsx";
 import AccessibilityManagerDefault from "../modules/a11y/native/AccessibilityManager.tsx";
-import KeyCommandsView from "../modules/keyboard/native/KeyCommandsView.tsx";
-import NativeKeyCommandsModuleDefault from "../../discord_common/js/packages/rtn-codegen/js/NativeKeyCommandsModule.tsx";
+import KeyCommands from "../modules/keyboard/native/KeyCommands.tsx";
 import PictureInPictureGlobalDefault from "../modules/video_calls/native/components/PictureInPictureGlobal.tsx";
 import BurstReactionAnimationContainerDefault from "../modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx";
 import NativeMenuPresenterDefault from "../modules/native_menu/native/NativeMenuPresenter.tsx";
@@ -21,7 +19,6 @@ import ChannelStore from "../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../stores/RTCConnectionStore.tsx";
 
 require = fn;
-const NativeModules = fn(17).NativeModules;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/MainShared.tsx");
@@ -58,15 +55,9 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
 };
 export const useAppKeyCommands = function useAppKeyCommands() {
   const memo = noop.useMemo(() => {
-    let obj = PlatformUtils;
-    if (obj.isAndroid()) {
-      let keyModifierCommand = NativeKeyCommandsModuleDefault.getConstants().keyModifierCommand;
-    } else {
-      keyModifierCommand = KeyCommandsView.KeyCommandsView.keyModifierCommand;
-    }
-    obj = {
+    const obj = {
       input: "k",
-      modifierFlags: keyModifierCommand,
+      modifierFlags: KeyCommands.KeyModifierFlags.keyModifierCommand,
       eventName: "keyCommandShowQuickSwitcher",
       discoverabilityTitle: null,
       onKeyCommand: null,
@@ -74,12 +65,12 @@ export const useAppKeyCommands = function useAppKeyCommands() {
     const intl = util.intl;
     obj.discoverabilityTitle = intl.string(util.t.yYsRlD);
     obj.onKeyCommand = function onKeyCommand() {
-      closure_1_1(closure_1_2[13])();
+      closure_1_1(dependencyMap[11])();
     };
     const items = [obj];
     return items;
   }, []);
-  const keyCommands = KeyCommandsView.useKeyCommands(memo);
+  const keyCommands = KeyCommands.useKeyCommands(memo);
 };
 export const useScreenReaderEnabled = function useScreenReaderEnabled() {
   const effect = noop.useEffect(() => {

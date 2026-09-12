@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/o
 export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(appId, arg1) {
   _require = arg1;
   appId = appId.appId;
-  appId(4573);
+  appId(4603);
   const obj = {
     metadata: appId,
     onOpen() {
@@ -37,5 +37,5 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
       });
     },
   };
-  obj.openLazy(require("asyncRequireImpl")(11595, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
+  obj.openLazy(require("asyncRequireImpl")(11634, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
 };

@@ -300,7 +300,7 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
         return acc + num;
       }, 0);
     } else {
-      tmp(1115);
+      tmp(1150);
     }
     DEFAULT = constants3.DEFAULT;
     obj = require("PlatformUtils");
@@ -414,7 +414,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
           return acc + num;
         }, 0);
       } else {
-        tmp(1115);
+        tmp(1150);
       }
       DEFAULT = constants3.DEFAULT;
       tmp = _require;

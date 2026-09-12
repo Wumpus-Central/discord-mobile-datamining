@@ -4,19 +4,24 @@ import util from "../../../../intl/index.native.tsx";
 import DateUtils from "../../../../utils/DateUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CustomMarkupAll from "../../../markup/CustomMarkup.native.tsx";
+import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import GameProfileActionCreatorsDefault from "../../GameProfileActionCreators.native.tsx";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
+import GameProfileSkeleton from "GameProfileSkeleton.tsx";
+import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow.tsx";
 import AnnouncementMessageUtils from "../../AnnouncementMessageUtils.tsx";
 import ImageWithPlaceholder from "../../../../components_native/common/ImageWithPlaceholder.tsx";
 import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import navigateToGameAnnouncementDefault from "../../navigateToGameAnnouncement.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const GameProfileSkeletonDefault = GameProfileSkeleton;
+
 require = fn;
 function EmbedAnnouncementCard(message) {
   message = message.message;
   ({ onPress: importDefault, guildId, channelId } = message);
-  const tmp = closure_15();
+  const tmp = closure_13();
   if (null == parser) {
     let obj = CustomMarkupAll;
     parser = obj.getParser();
@@ -37,7 +42,7 @@ function EmbedAnnouncementCard(message) {
   let posterUrl = null;
   if (null != proxyUrl) {
     let obj1 = AnnouncementMessageUtils;
-    posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
+    posterUrl = obj1.getPosterUrl(proxyUrl, 160, 120);
   }
   if (posterUrl == null) {
     posterUrl = proxyUrl;
@@ -46,10 +51,10 @@ function EmbedAnnouncementCard(message) {
   if (null == embedSource) {
     return null;
   } else {
-    let tmp11;
+    let tmp10;
     if (null != embedSource.color) {
       obj = { borderLeftColor: embedSource.color };
-      tmp11 = obj;
+      tmp10 = obj;
     }
     obj = {
       style: tmp.card,
@@ -61,40 +66,40 @@ function EmbedAnnouncementCard(message) {
       children: null,
     };
     obj1 = { style: tmp.cardBody, children: null };
-    let tmp12Result = null != embedSource.url;
-    if (tmp12Result) {
+    let tmp11Result = null != embedSource.url;
+    if (tmp11Result) {
       const obj2 = { variant: "text-xs/medium", color: "text-link", lineClamp: 1, children: embedSource.url };
-      tmp12Result = closure_1_10(Text_Text.Text, obj2);
+      tmp11Result = React7(Text_Text.Text, obj2);
     }
-    const items = [tmp12Result];
+    const items = [tmp11Result];
     const obj3 = { style: null, children: null };
-    const items1 = [tmp.embedContentArea, tmp11];
+    const items1 = [tmp.embedContentArea, tmp10];
     obj3.style = items1;
-    let tmp14Result = null != embedSource.authorName;
-    if (tmp14Result) {
+    let tmp13Result = null != embedSource.authorName;
+    if (tmp13Result) {
       const obj4 = { style: tmp.embedAuthorRow, children: null };
-      tmp12Result = null != embedSource.authorIconUrl;
-      if (tmp12Result) {
+      tmp11Result = null != embedSource.authorIconUrl;
+      if (tmp11Result) {
         const obj5 = { source: null, style: null };
         const obj6 = { uri: embedSource.authorIconUrl };
         obj5.source = obj6;
         obj5.style = tmp.embedAuthorIcon;
-        tmp12Result = closure_1_10(hasOwnProperty, obj5);
+        tmp11Result = React7(hasOwnProperty, obj5);
       }
-      const items2 = [tmp12Result];
+      const items2 = [tmp11Result];
       const obj7 = {
         variant: "text-xs/semibold",
         color: "text-strong",
         lineClamp: 1,
         children: embedSource.authorName,
       };
-      items2[1] = closure_1_10(Text_Text.Text, obj7);
+      items2[1] = React7(Text_Text.Text, obj7);
       obj4.children = items2;
-      tmp14Result = closure_1_11(timestampProducer, obj4);
+      tmp13Result = closure_1_10(timestampProducer, obj4);
     }
-    const items3 = [tmp14Result, , , ,];
-    let tmp12Result1 = null != message.media && null != posterUrl;
-    if (tmp12Result1) {
+    const items3 = [tmp13Result, , , ,];
+    let tmp11Result1 = null != message.media && null != posterUrl;
+    if (tmp11Result1) {
       const obj8 = { style: tmp.embedMedia, children: null };
       const obj9 = {
         uri: posterUrl,
@@ -102,36 +107,36 @@ function EmbedAnnouncementCard(message) {
         placeholderVersion: message.media.placeholderVersion,
         style: tmp.mediaImage,
       };
-      obj8.children = closure_1_10(ImageWithPlaceholder.ImageWithPlaceholder, obj9);
-      tmp12Result1 = closure_1_10(timestampProducer, obj8);
+      obj8.children = React7(ImageWithPlaceholder.ImageWithPlaceholder, obj9);
+      tmp11Result1 = React7(timestampProducer, obj8);
     }
-    items3[1] = tmp12Result1;
-    let tmp12Result2 = null != message.title;
-    if (tmp12Result2) {
+    items3[1] = tmp11Result1;
+    let tmp11Result2 = null != message.title;
+    if (tmp11Result2) {
       const obj10 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 2, children: null };
       obj11 = { guildId, channelId };
       obj10.children = tmp4(message.title, true, obj11);
-      tmp12Result2 = closure_1_10(Text_Text.Text, obj10);
+      tmp11Result2 = React7(Text_Text.Text, obj10);
     }
-    items3[2] = tmp12Result2;
-    let tmp12Result3 = message.body.length > 0;
-    if (tmp12Result3) {
+    items3[2] = tmp11Result2;
+    let tmp11Result3 = message.body.length > 0;
+    if (tmp11Result3) {
       const obj12 = { variant: "text-sm/medium", color: "text-default", lineClamp: 3, children: null };
       const obj13 = { guildId, channelId };
       obj12.children = tmp4(message.body, true, obj13);
-      tmp12Result3 = closure_1_10(Text_Text.Text, obj12);
+      tmp11Result3 = React7(Text_Text.Text, obj12);
     }
-    items3[3] = tmp12Result3;
+    items3[3] = tmp11Result3;
     const obj14 = { style: tmp.metadataRow, children: null };
-    let tmp12Result4 = null != embedSource.providerIconUrl;
-    if (tmp12Result4) {
+    let tmp11Result4 = null != embedSource.providerIconUrl;
+    if (tmp11Result4) {
       const obj15 = { source: null, style: null };
       const obj16 = { uri: embedSource.providerIconUrl };
       obj15.source = obj16;
       obj15.style = tmp.embedProviderIcon;
-      tmp12Result4 = closure_1_10(hasOwnProperty, obj15);
+      tmp11Result4 = React7(hasOwnProperty, obj15);
     }
-    const items4 = [tmp12Result4, ,];
+    const items4 = [tmp11Result4, ,];
     let str2 = "";
     if (null != embedSource.providerName) {
       const _HermesInternal = HermesInternal;
@@ -143,17 +148,17 @@ function EmbedAnnouncementCard(message) {
     const date = new Date(message.timestamp);
     items5[1] = DateUtils.dateFormat(date, "LL");
     obj17.children = items5;
-    items4[1] = closure_1_11(Text_Text.Text, obj17);
-    tmp14Result = message.reactionCount > 0;
-    if (tmp14Result) {
+    items4[1] = closure_1_10(Text_Text.Text, obj17);
+    tmp13Result = message.reactionCount > 0;
+    if (tmp13Result) {
       const obj18 = { style: tmp.reactionInfo, children: null };
       const obj19 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-      const items6 = [closure_1_10(ReactionIcon.ReactionIcon, obj19)];
-      let tmp46 = null != obj11;
-      if (tmp46) {
-        tmp46 = obj11.locale === util.intl.currentLocale;
+      const items6 = [React7(ReactionIcon.ReactionIcon, obj19)];
+      let tmp45 = null != obj11;
+      if (tmp45) {
+        tmp45 = obj11.locale === util.intl.currentLocale;
       }
-      if (!tmp46) {
+      if (!tmp45) {
         const obj20 = { locale: util.intl.currentLocale, format: null };
         const _Intl = Intl;
         const numberFormat = new Intl.NumberFormat(util.intl.currentLocale);
@@ -163,24 +168,24 @@ function EmbedAnnouncementCard(message) {
       const obj21 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const format = obj11.format;
       obj21.children = format.format(message.reactionCount);
-      items6[1] = closure_1_10(Text_Text.Text, obj21);
+      items6[1] = React7(Text_Text.Text, obj21);
       obj18.children = items6;
-      tmp14Result = closure_1_11(timestampProducer, obj18);
+      tmp13Result = closure_1_10(timestampProducer, obj18);
     }
-    items4[2] = tmp14Result;
+    items4[2] = tmp13Result;
     obj14.children = items4;
-    items3[4] = closure_1_11(timestampProducer, obj14);
+    items3[4] = closure_1_10(timestampProducer, obj14);
     obj3.children = items3;
-    items[1] = closure_1_11(timestampProducer, obj3);
+    items[1] = closure_1_10(timestampProducer, obj3);
     obj1.children = items;
-    obj.children = closure_1_11(timestampProducer, obj1);
-    return closure_1_10(React5, obj);
+    obj.children = closure_1_10(timestampProducer, obj1);
+    return React7(React5, obj);
   }
 }
 function MessageAnnouncementCard(message) {
   message = message.message;
   ({ onPress: importDefault, guildId, channelId } = message);
-  const tmp = closure_15();
+  const tmp = closure_13();
   if (null == parser) {
     let obj = CustomMarkupAll;
     parser = obj.getParser();
@@ -201,7 +206,7 @@ function MessageAnnouncementCard(message) {
   let posterUrl = null;
   if (null != proxyUrl) {
     let obj1 = AnnouncementMessageUtils;
-    posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
+    posterUrl = obj1.getPosterUrl(proxyUrl, 160, 120);
   }
   if (posterUrl == null) {
     posterUrl = proxyUrl;
@@ -215,11 +220,11 @@ function MessageAnnouncementCard(message) {
     accessibilityLabel: message.title,
     children: null,
   };
-  let tmp13 = null != message.media;
-  if (tmp13) {
-    tmp13 = null != posterUrl;
+  let tmp12 = null != message.media;
+  if (tmp12) {
+    tmp12 = null != posterUrl;
   }
-  if (tmp13) {
+  if (tmp12) {
     obj = { style: tmp.smallCardMedia, children: null };
     obj1 = {
       uri: posterUrl,
@@ -227,42 +232,42 @@ function MessageAnnouncementCard(message) {
       placeholderVersion: message.media.placeholderVersion,
       style: tmp.mediaImage,
     };
-    obj.children = closure_1_10(ImageWithPlaceholder.ImageWithPlaceholder, obj1);
-    tmp13 = closure_1_10(timestampProducer, obj);
+    obj.children = React7(ImageWithPlaceholder.ImageWithPlaceholder, obj1);
+    tmp12 = React7(timestampProducer, obj);
   }
-  const items = [tmp13];
+  const items = [tmp12];
   const obj2 = { style: tmp.cardBody, children: null };
-  let tmp19 = null != message.title;
-  if (tmp19) {
+  let tmp18 = null != message.title;
+  if (tmp18) {
     const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 2, children: null };
     const obj4 = { guildId, channelId };
     obj3.children = tmp4(message.title, true, obj4);
-    tmp19 = closure_1_10(Text_Text.Text, obj3);
+    tmp18 = React7(Text_Text.Text, obj3);
   }
-  const items1 = [tmp19, ,];
-  let tmp23 = message.body.length > 0;
-  if (tmp23) {
+  const items1 = [tmp18, ,];
+  let tmp22 = message.body.length > 0;
+  if (tmp22) {
     const obj5 = { variant: "text-sm/medium", color: "text-default", lineClamp: 3, children: null };
     const obj6 = { guildId, channelId };
     obj5.children = tmp4(message.body, true, obj6);
-    tmp23 = closure_1_10(Text_Text.Text, obj5);
+    tmp22 = React7(Text_Text.Text, obj5);
   }
-  items1[1] = tmp23;
+  items1[1] = tmp22;
   const obj7 = { style: tmp.metadataRow, children: null };
   const obj8 = { variant: "text-xs/medium", color: "text-muted", children: null };
   let obj12 = DateUtils;
   obj8.children = obj12.dateFormat(new Date(message.timestamp), "LL");
-  const items2 = [closure_1_10(Text_Text.Text, obj8)];
-  let tmp11Result = message.reactionCount > 0;
-  if (tmp11Result) {
+  const items2 = [React7(Text_Text.Text, obj8)];
+  let tmp10Result = message.reactionCount > 0;
+  if (tmp10Result) {
     const obj9 = { style: tmp.reactionInfo, children: null };
     const obj10 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-    const items3 = [closure_1_10(ReactionIcon.ReactionIcon, obj10)];
-    let tmp34 = null != obj11;
-    if (tmp34) {
-      tmp34 = obj11.locale === util.intl.currentLocale;
+    const items3 = [React7(ReactionIcon.ReactionIcon, obj10)];
+    let tmp33 = null != obj11;
+    if (tmp33) {
+      tmp33 = obj11.locale === util.intl.currentLocale;
     }
-    if (!tmp34) {
+    if (!tmp33) {
       obj11 = { locale: util.intl.currentLocale, format: null };
       const _Intl = Intl;
       const numberFormat = new Intl.NumberFormat(util.intl.currentLocale);
@@ -271,22 +276,22 @@ function MessageAnnouncementCard(message) {
     obj12 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const format = obj11.format;
     obj12.children = format.format(message.reactionCount);
-    items3[1] = closure_1_10(Text_Text.Text, obj12);
+    items3[1] = React7(Text_Text.Text, obj12);
     obj9.children = items3;
-    tmp11Result = closure_1_11(timestampProducer, obj9);
+    tmp10Result = closure_1_10(timestampProducer, obj9);
   }
-  items2[1] = tmp11Result;
+  items2[1] = tmp10Result;
   obj7.children = items2;
-  items1[2] = closure_1_11(timestampProducer, obj7);
+  items1[2] = closure_1_10(timestampProducer, obj7);
   obj2.children = items1;
-  items[1] = closure_1_11(timestampProducer, obj2);
+  items[1] = closure_1_10(timestampProducer, obj2);
   obj.children = items;
-  return closure_1_11(React5, obj);
+  return closure_1_10(React5, obj);
 }
 function PollAnnouncementCard(message) {
   message = message.message;
   const onPress = message.onPress;
-  const tmp = closure_15();
+  const tmp = closure_13();
   const pollAnswerOption = tmp;
   const poll = message.poll;
   if (null == poll) {
@@ -306,7 +311,7 @@ function PollAnnouncementCard(message) {
     };
     obj = { style: tmp.cardBody, children: null };
     const obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: poll.question.text };
-    const items = [closure_10(message(4602).Text, obj1), ,];
+    const items = [closure_9(message(4632).Text, obj1), ,];
     const obj2 = { style: tmp.pollAnswers, children: null };
     const items1 = [
       substr.map((poll_media) => {
@@ -315,13 +320,13 @@ function PollAnnouncementCard(message) {
         if (str == null) {
           str = "";
         }
-        obj.children = closure_2_10(Text_Text.Text, {
+        obj.children = React7(Text_Text.Text, {
           variant: "text-sm/medium",
           color: "text-default",
           lineClamp: 1,
           children: str,
         });
-        return closure_2_10(timestampProducer, obj, poll_media.answer_id);
+        return React7(timestampProducer, obj, poll_media.answer_id);
       }),
     ];
     let tmp9Result = diff > 0;
@@ -330,11 +335,11 @@ function PollAnnouncementCard(message) {
       const intl = tmp13(1114).intl;
       const obj3 = { count: diff };
       obj.children = intl.format(tmp13(1114).t["mv/nIa"], obj3);
-      tmp9Result = closure_10(tmp13(4602).Text, obj);
+      tmp9Result = closure_9(tmp13(4632).Text, obj);
     }
     items1[1] = tmp9Result;
     obj2.children = items1;
-    items[1] = closure_11(closure_6, obj2);
+    items[1] = closure_10(closure_6, obj2);
     const obj4 = { style: tmp.metadataRow, children: null };
     const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl2 = tmp13(1114).intl;
@@ -342,34 +347,27 @@ function PollAnnouncementCard(message) {
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj6.createdAt = date;
-    obj6.expiryLabel = message(8843).getPollExpiryLabel(poll);
+    obj6.expiryLabel = message(8878).getPollExpiryLabel(poll);
     obj5.children = intl2.format(message(1114).t.t0FTsH, obj6);
-    obj4.children = closure_10(message(4602).Text, obj5);
-    items[2] = closure_10(closure_6, obj4);
+    obj4.children = closure_9(message(4632).Text, obj5);
+    items[2] = closure_9(closure_6, obj4);
     obj.children = items;
-    obj.children = closure_11(closure_6, obj);
-    return closure_10(closure_7, obj);
+    obj.children = closure_10(closure_6, obj);
+    return closure_9(closure_7, obj);
   }
 }
 get_ActivityIndicator = fn(17);
-({
-  Image: hasOwnProperty,
-  View: metroRequire,
-  Pressable: closure_7,
-  ActivityIndicator: closure_8,
-} = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(8842).MAX_VISIBLE_ANNOUNCEMENTS;
+({ Image: hasOwnProperty, View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(8837).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let c12 = 120;
-let closure_13 = null;
-fn(4606);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+let closure_11 = null;
+fn(4636);
 let obj = {
-  container: null,
   smallCardsScroller: null,
+  skeletonCardsScroller: null,
   smallCardsContainer: null,
-  sectionHeader: null,
-  loadingContainer: null,
+  skeletonCardsContainer: null,
   card: null,
   cardBody: null,
   smallCardMedia: null,
@@ -384,30 +382,26 @@ let obj = {
   pollAnswers: null,
   pollAnswerOption: null,
   pollMoreOptions: null,
+  skeletonCard: null,
+  skeletonCardLarge: null,
+  skeletonAnimationRoot: null,
+  skeletonCardImage: null,
+  skeletonCardBody: null,
+  skeletonCardContent: null,
+  skeletonCardMetadata: null,
 };
-obj = { gap: nativeDefault.space.PX_8 };
-obj.container = obj;
-const createStyles = { marginHorizontal: -nativeDefault.space.PX_16, overflow: "visible" };
-obj.smallCardsScroller = createStyles;
+obj = { marginHorizontal: -nativeDefault.space.PX_16, overflow: "visible" };
+obj.smallCardsScroller = obj;
+const createStyles = { marginHorizontal: -nativeDefault.space.PX_16 };
+obj.skeletonCardsScroller = createStyles;
 obj.smallCardsContainer = {
   flexDirection: "row",
   gap: nativeDefault.space.PX_12,
   paddingHorizontal: nativeDefault.space.PX_16,
 };
 let obj2 = { flexDirection: "row", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
-obj.sectionHeader = {
-  flexDirection: "row",
-  justifyContent: "space-between",
-  alignItems: "center",
-  paddingHorizontal: nativeDefault.space.PX_8,
-};
-obj.loadingContainer = { height: 120, alignItems: "center", justifyContent: "center" };
-let obj3 = {
-  flexDirection: "row",
-  justifyContent: "space-between",
-  alignItems: "center",
-  paddingHorizontal: nativeDefault.space.PX_8,
-};
+obj.skeletonCardsContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj.card = {
   flexDirection: "column",
   borderRadius: nativeDefault.radii.lg,
@@ -486,20 +480,77 @@ let obj12 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
 obj.pollMoreOptions = { paddingHorizontal: nativeDefault.space.PX_12 };
-let closure_15 = createStyles.createStyles(obj);
+obj.skeletonCard = { height: 282 };
+obj.skeletonCardLarge = { height: 264 };
+obj.skeletonAnimationRoot = { flex: 1 };
+obj.skeletonCardImage = { width: "100%" };
+let obj13 = { paddingHorizontal: nativeDefault.space.PX_12 };
+obj.skeletonCardBody = { gap: nativeDefault.space.PX_8 };
+const size1 = { height: nativeDefault.space.PX_48, borderRadius: nativeDefault.radii.xs, width: "88%" };
+obj.skeletonCardContent = size1;
+const size2 = {
+  width: "60%",
+  height: nativeDefault.space.PX_12,
+  borderRadius: nativeDefault.radii.xs,
+  marginTop: "auto",
+};
+obj.skeletonCardMetadata = size2;
+let closure_13 = createStyles.createStyles(obj);
+let closure_14 = noop.memo((arg0) => {
+  ({ index, isWindowLarge } = arg0);
+  const tmp = closure_13();
+  const items = [tmp.card];
+  let obj = { style: items, children: null };
+  items[1] = isWindowLarge ? tmp.skeletonCardLarge : tmp.skeletonCard;
+  obj = {
+    animationDelayMs: index * GameProfileSkeleton.SKELETON_CARD_ANIMATION_DELAY_MS,
+    style: tmp.skeletonAnimationRoot,
+    children: null,
+  };
+  obj = { style: null };
+  const items1 = [,];
+  ({ smallCardMedia: arr2[0], skeletonCardImage: arr2[1] } = tmp);
+  obj.style = items1;
+  const items2 = [React7(GameProfileSkeletonDefault, obj)];
+  const obj1 = { style: null, children: null };
+  const items3 = [,];
+  ({ cardBody: arr4[0], skeletonCardBody: arr4[1] } = tmp);
+  obj1.style = items3;
+  const items4 = [
+    React7(GameProfileSkeletonDefault, { style: tmp.skeletonCardContent }),
+    React7(GameProfileSkeletonDefault, { style: tmp.skeletonCardMetadata }),
+  ];
+  obj1.children = items4;
+  items2[1] = closure_1_10(timestampProducer, obj1);
+  obj.children = items2;
+  obj.children = closure_1_10(GameProfileSkeleton.GameProfileSkeletonContainer, obj);
+  return React7(timestampProducer, obj);
+});
+let closure_15 = noop.memo(() => {
+  const tmp = closure_13();
+  _require = useIsWindowLargeDefault();
+  let obj = { showViewAllSkeleton: true, skeletonTitleWidth: 200, children: null };
+  obj = {
+    style: tmp.skeletonCardsScroller,
+    contentContainerStyle: tmp.skeletonCardsContainer,
+    children: Array.from({ length: 3 }, (arg0, index) => React7(closure_14, { index, isWindowLarge }, index)),
+  };
+  obj.children = closure_9(GameProfileSkeletonCardRowDefault, obj);
+  return closure_9(require("GameProfileSection").GameProfileSectionSkeleton, obj);
+});
 let closure_19 = noop.memo((message) => {
   if (null != message.message.poll) {
     let obj = {};
     const merged = Object.assign(message);
-    let tmp6 = closure_1_10(PollAnnouncementCard, obj);
+    let tmp6 = React7(PollAnnouncementCard, obj);
   } else if (null != message.message.embedSource) {
     obj = {};
     const merged1 = Object.assign(message);
-    tmp6 = closure_1_10(EmbedAnnouncementCard, obj);
+    tmp6 = React7(EmbedAnnouncementCard, obj);
   } else {
     obj = {};
     const merged2 = Object.assign(message);
-    tmp6 = closure_1_10(MessageAnnouncementCard, obj);
+    tmp6 = React7(MessageAnnouncementCard, obj);
   }
   return tmp6;
 });
@@ -511,16 +562,17 @@ export default function GameProfileAnnouncements(gameId) {
   const invite = gameId.invite;
   const closeModal = gameId.closeModal;
   const trackAction = gameId.trackAction;
-  const scrollOffsetRef = gameId.scrollOffsetRef;
+  const scrollY = gameId.scrollY;
   channelId = undefined;
-  const tmp = closure_15();
-  const analyticsLocations = invite(trackAction[13])().analyticsLocations;
-  const tmp4 = invite(trackAction[14])(gameId, MAX_VISIBLE_ANNOUNCEMENTS);
+  let onPress;
+  const analyticsLocations = invite(trackAction[17])().analyticsLocations;
+  const tmp4 = invite(trackAction[18])(gameId, onPress);
   ({ messages, channelId } = tmp4);
   const guildId = tmp4.guildId;
-  const items = [trackAction, closeModal, invite, guildId, channelId, analyticsLocations, gameId, scrollOffsetRef];
-  const items1 = [trackAction, closeModal, invite, guildId, channelId, analyticsLocations, gameId, scrollOffsetRef];
-  const callback = scrollOffsetRef.useCallback(() => {
+  const items = [trackAction, scrollY, closeModal, invite, guildId, channelId, analyticsLocations, gameId];
+  ({ loading, hasFetched } = tmp4);
+  const items1 = [trackAction, scrollY, closeModal, invite, guildId, channelId, analyticsLocations, gameId];
+  const callback = scrollY.useCallback(() => {
     let id;
     if (invite != null) {
       const guild = invite.guild;
@@ -537,14 +589,14 @@ export default function GameProfileAnnouncements(gameId) {
     }
     if (tmp3) {
       trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.Announcements);
-      let obj = { gameId, channelId, initialScrollOffset: scrollOffsetRef.current };
+      let obj = { gameId, channelId, initialScrollOffset: scrollY.get() };
       const result = obj.setGameProfilePendingReturn(obj);
       closeModal();
       obj = { invite, guildId: id, channelId, analyticsLocationStack: analyticsLocations };
       navigateToGameAnnouncementDefault(obj);
     }
   }, items);
-  const onPress = scrollOffsetRef.useCallback((messageId) => {
+  onPress = scrollY.useCallback((messageId) => {
     let id;
     if (invite != null) {
       const guild = invite.guild;
@@ -561,64 +613,46 @@ export default function GameProfileAnnouncements(gameId) {
     }
     if (tmp3) {
       trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.AnnouncementsItem);
-      let obj = { gameId, channelId, initialScrollOffset: scrollOffsetRef.current };
+      let obj = { gameId, channelId, initialScrollOffset: scrollY.get() };
       const result = obj.setGameProfilePendingReturn(obj);
       closeModal();
       obj = { invite, guildId: id, channelId, messageId, analyticsLocationStack: analyticsLocations };
       navigateToGameAnnouncementDefault(obj);
     }
   }, items1);
-  if (tmp4.loading) {
-    let obj = { style: tmp.container, children: null };
-    obj = { style: tmp.sectionHeader, children: null };
-    obj = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = gameId(tmp3[5]).intl;
-    obj.children = intl.string(gameId(tmp3[5]).t.B0BV3Y);
-    obj.children = closure_10(gameId(tmp3[9]).Text, obj);
-    const items2 = [closure_10(channelId, obj)];
-    const obj1 = { style: tmp.loadingContainer, children: closure_10(onPress, {}) };
-    items2[1] = closure_10(channelId, obj1);
-    obj.children = items2;
-    let tmp7 = closure_11(channelId, obj);
-  } else {
-    tmp7 = null;
-    if (null != channelId) {
-      tmp7 = null;
-      if (0 !== messages.length) {
-        const obj2 = { style: tmp.container, children: null };
-        const obj3 = { style: tmp.sectionHeader, children: null };
-        const obj4 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
-        const intl2 = gameId(tmp3[5]).intl;
-        obj4.children = intl2.string(gameId(tmp3[5]).t.B0BV3Y);
-        const items3 = [closure_10(gameId(tmp3[9]).Text, obj4)];
-        const obj5 = { text: null, variant: "tertiary", size: "sm", icon: null, iconPosition: "end", onPress: null };
-        const intl3 = gameId(tmp3[5]).intl;
-        obj5.text = intl3.string(gameId(tmp3[5]).t.budhsM);
-        obj5.icon = closure_10(gameId(tmp3[19]).ChevronSmallRightIcon, { size: "sm" });
-        obj5.onPress = callback;
-        items3[1] = closure_10(gameId(tmp3[18]).Button, obj5);
-        obj3.children = items3;
-        const items4 = [closure_11(channelId, obj3)];
-        const obj6 = {
-          showsHorizontalScrollIndicator: false,
-          style: null,
-          contentContainerStyle: null,
-          decelerationRate: "fast",
-          snapToInterval: 172,
-          snapToStart: false,
-          snapToEnd: false,
-          children: null,
-        };
-        ({ smallCardsScroller: obj9.style, smallCardsContainer: obj9.contentContainerStyle } = tmp);
-        obj6.children = messages.map((message) =>
-          closure_2_10(closure_19, { message, onPress, guildId, channelId }, message.id),
-        );
-        items4[1] = closure_10(invite(tmp3[20]), obj6);
-        obj2.children = items4;
-        tmp7 = closure_11(channelId, obj2);
-        const tmp2Result = invite(tmp3[20]);
-      }
+  if (!hasFetched) {
+    if (gameId.hasDiscordWebsite) {
+      let tmp6 = closure_9(closure_15, {});
+    }
+    return tmp6;
+  }
+  tmp6 = null;
+  if (null != channelId) {
+    tmp6 = null;
+    if (0 !== messages.length) {
+      let obj = { title: null, onPressViewAll: null, children: null };
+      tmp2(tmp3[10]);
+      const intl = gameId(tmp3[5]).intl;
+      obj.title = intl.string(gameId(tmp3[5]).t.B0BV3Y);
+      obj.onPressViewAll = callback;
+      obj = {
+        showsHorizontalScrollIndicator: false,
+        style: null,
+        contentContainerStyle: null,
+        decelerationRate: "fast",
+        snapToInterval: 172,
+        snapToStart: false,
+        snapToEnd: false,
+        children: null,
+      };
+      ({ smallCardsScroller: obj2.style, smallCardsContainer: obj2.contentContainerStyle } = tmp);
+      const tmp2Result = tmp2(tmp3[22]);
+      obj.children = messages.map((message) =>
+        React7(closure_19, { message, onPress, guildId, channelId }, message.id),
+      );
+      obj.children = closure_9(tmp2Result, obj);
+      tmp6 = closure_9(tmp2Result, obj);
     }
   }
-  return tmp7;
+  tmp = closure_13();
 }

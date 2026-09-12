@@ -83,14 +83,14 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const UserProfileWidgetConstants = fn(7698);
+const UserProfileWidgetConstants = fn(7728);
 ({
   WIDGET_TITLES_BY_TYPE: closure_7,
   WIDGETS_SUPPORTING_COMMENT: closure_8,
   WIDGETS_SUPPORTING_TAGS: closure_9,
 } = UserProfileWidgetConstants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-let closure_11 = fn(7699).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_11 = fn(7729).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

@@ -14,144 +14,103 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   ({ bounty, isActive } = isScrollingInBoundsSharedValue);
   isScrollingInBoundsSharedValue = isScrollingInBoundsSharedValue.isScrollingInBoundsSharedValue;
   const sourceQuestContent = isScrollingInBoundsSharedValue.sourceQuestContent;
-  ({ visible, onReplay, opacityStyle } = isScrollingInBoundsSharedValue);
-  const tmp = closure_11();
-  let obj = isActive(11615);
-  const isBountiesVerticalScrollExperimentEnabled =
-    obj.useIsBountiesVerticalScrollExperimentEnabled("BountiesScrollEndCard");
-  let obj1 = isActive(15096);
-  const bountyCtaInfo = obj1.getBountyCtaInfo(bounty);
-  const intl = isActive(1114).intl;
-  const stringResult = intl.string(isActive(1114).t["9UtZAY"]);
-  let obj2 = isActive(4343);
-  const fn = function y() {
-    let obj = isScrollingInBoundsSharedValue;
-    if (isScrollingInBoundsSharedValue != null) {
-      value = obj.get();
-    }
-    let num = 0;
-    if (isActive) {
-      num = 0;
-      if (true !== value) {
-        num = 1;
+  ({ visible, opacityStyle } = isScrollingInBoundsSharedValue);
+  const tmp = closure_10();
+  let obj = isActive(4373);
+  class S {
+    constructor() {
+      obj = closure_1;
+      if (closure_1 != null) {
+        value = obj.get();
       }
+      tmp2 = closure_0;
+      tmp3 = closure_2;
+      obj2 = closure_0(closure_2[7]);
+      num = 0;
+      if (isActive) {
+        flag = true;
+        num = 0;
+        if (true !== value) {
+          num = 1;
+        }
+      }
+      obj = { opacity: obj2.withTiming(num, tmp2(tmp3[8]).timingStandard) };
+      return obj;
     }
-    obj = { opacity: timing.withTiming(num, timingPresets.timingStandard) };
-    return obj;
-  };
+  }
   obj = {
     isScrollingInBoundsSharedValue,
-    withTiming: isActive(4607).withTiming,
+    withTiming: isActive(4637).withTiming,
     isActive,
-    timingStandard: isActive(4610).timingStandard,
+    timingStandard: isActive(4640).timingStandard,
   };
-  fn.__closure = obj;
-  fn.__workletHash = 4903386092677;
-  fn.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(fn);
+  S.__closure = obj;
+  S.__workletHash = 4903386092677;
+  S.__initData = __initData;
+  const animatedStyle = obj.useAnimatedStyle(S);
   obj = { style: null, pointerEvents: "box-none", children: null };
   const items = [tmp.container, opacityStyle];
   obj.style = items;
-  obj1 = { style: tmp.backdropTint, pointerEvents: "none" };
-  const items1 = [closure_9(closure_6, obj1), ,];
-  obj2 = { colors: ["rgba(0, 0, 0, 0.48)", "rgba(0, 0, 0, 0.8)"], style: tmp.backdropGradient, pointerEvents: "none" };
-  items1[1] = closure_9(isScrollingInBoundsSharedValue(5038), obj2);
-  if (isBountiesVerticalScrollExperimentEnabled) {
-    const obj3 = { style: null, pointerEvents: "box-none", children: null };
-    const items2 = [tmp.overlayContent, animatedStyle];
-    obj3.style = items2;
-    const obj4 = { bounty, sourceQuestContent, disabled: !isActive };
-    const items3 = [closure_9(tmp9(15099), obj4)];
-    const obj5 = { style: tmp.endedCtaButtonsContainer, pointerEvents: "box-none", children: null };
-    const obj6 = {
+  const items1 = [
+    closure_8(closure_5, { style: tmp.backdropTint, pointerEvents: "none" }),
+    closure_8(isScrollingInBoundsSharedValue(5068), {
+      colors: ["rgba(0, 0, 0, 0.48)", "rgba(0, 0, 0, 0.8)"],
+      style: tmp.backdropGradient,
+      pointerEvents: "none",
+    }),
+  ];
+  const obj3 = { style: null, pointerEvents: "box-none", children: null };
+  const items2 = [tmp.overlayContent, animatedStyle];
+  obj3.style = items2;
+  const items3 = [
+    closure_8(isScrollingInBoundsSharedValue(15131), { bounty, sourceQuestContent, disabled: !isActive }),
+  ];
+  const obj5 = {
+    style: tmp.endedCtaButtonsContainer,
+    pointerEvents: "box-none",
+    children: closure_8(isScrollingInBoundsSharedValue(15133), {
       bounty,
       visible,
       sourceQuestContent,
       onClose() {},
       showCloseButton: false,
       disabled: !isActive,
-    };
-    obj5.children = closure_9(tmp9(15101), obj6);
-    items3[1] = closure_9(closure_6, obj5);
-    obj3.children = items3;
-    let tmp10Result = closure_10(tmp9(4343).View, obj3);
-  } else {
-    let tmp13;
-    if (isActive) {
-      tmp13 = onReplay;
-    }
-    const obj7 = {
-      onPress: tmp13,
-      disabled: !isActive,
-      accessibilityRole: "button",
-      accessibilityLabel: stringResult,
-      style: tmp.pressable,
-      children: null,
-    };
-    const obj8 = { style: null, children: null };
-    const items4 = [tmp.overlayContent, animatedStyle];
-    obj8.style = items4;
-    const obj9 = { style: tmp.textBlock, children: null };
-    const obj10 = { variant: "heading-md/semibold", color: "text-strong", children: bountyCtaInfo.label };
-    const items5 = [closure_9(isActive(4602).Text, obj10)];
-    const obj11 = { variant: "heading-sm/medium", color: "text-default", children: stringResult };
-    items5[1] = closure_9(isActive(4602).Text, obj11);
-    obj9.children = items5;
-    const items6 = [closure_10(closure_6, obj9)];
-    const obj12 = {
-      accessible: false,
-      color: tmp9(576).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
-      style: tmp.replayIcon,
-    };
-    items6[1] = closure_9(isActive(10269).RetryIcon, obj12);
-    obj8.children = items6;
-    obj7.children = closure_10(tmp9(4343).View, obj8);
-    tmp10Result = closure_9(closure_4, obj7);
-  }
-  items1[2] = tmp10Result;
+    }),
+  };
+  items3[1] = closure_8(closure_5, obj5);
+  obj3.children = items3;
+  items1[2] = closure_9(isScrollingInBoundsSharedValue(4373).View, obj3);
   obj.children = items1;
-  return closure_10(isScrollingInBoundsSharedValue(4343).View, obj);
+  return closure_9(isScrollingInBoundsSharedValue(4373).View, obj);
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5495).QuestsExperimentLocations;
+({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const QuestsExperimentLocations = fn(5525).QuestsExperimentLocations;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-let createStyles = fn(4606);
-let closure_11 = createStyles.createStyles(() => {
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let createStyles = fn(4636);
+let closure_10 = createStyles.createStyles(() => {
   let obj = {
     container: null,
     backdropTint: null,
     backdropGradient: null,
     overlayContent: null,
-    pressable: null,
-    textBlock: null,
-    replayIcon: null,
     endedCtaButtonsContainer: null,
   };
   obj = {};
-  const merged = Object.assign(hasOwnProperty.absoluteFillObject);
+  const merged = Object.assign(React4.absoluteFillObject);
   obj.container = obj;
   obj = {};
-  const merged1 = Object.assign(hasOwnProperty.absoluteFillObject);
+  const merged1 = Object.assign(React4.absoluteFillObject);
   obj.backgroundColor = "rgba(0, 0, 0, 0.6)";
   obj.backdropTint = obj;
-  const merged2 = Object.assign(hasOwnProperty.absoluteFillObject);
+  const merged2 = Object.assign(React4.absoluteFillObject);
   obj.backdropGradient = {};
   const obj2 = {};
-  const merged3 = Object.assign(hasOwnProperty.absoluteFillObject);
+  const merged3 = Object.assign(React4.absoluteFillObject);
   obj2.justifyContent = "center";
   obj2.alignItems = "center";
   obj.overlayContent = obj2;
-  const obj3 = {};
-  const merged4 = Object.assign(hasOwnProperty.absoluteFillObject);
-  obj3.justifyContent = "center";
-  obj3.alignItems = "center";
-  obj.pressable = obj3;
-  obj.textBlock = { alignItems: "center", gap: nativeDefault.space.PX_4 };
-  const obj1 = {};
-  const obj4 = { alignItems: "center", gap: nativeDefault.space.PX_4 };
-  obj.replayIcon = { margin: nativeDefault.space.PX_12 };
   const rect = {
     position: "absolute",
     left: nativeDefault.space.PX_16,
@@ -165,7 +124,7 @@ const entering = function t(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-createStyles = { withTiming: fn(4607).withTiming, timingStandard: fn(4610).timingStandard };
+createStyles = { withTiming: fn(4637).withTiming, timingStandard: fn(4640).timingStandard };
 entering.__closure = createStyles;
 entering.__workletHash = 12127714049951;
 entering.__initData = {
@@ -175,7 +134,7 @@ const fn2 = function n(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
-createStyles = { withTiming: fn(4607).withTiming, timingStandard: fn(4610).timingStandard };
+createStyles = { withTiming: fn(4637).withTiming, timingStandard: fn(4640).timingStandard };
 fn2.__closure = createStyles;
 fn2.__workletHash = 7470211880124;
 fn2.__initData = {
@@ -200,7 +159,7 @@ export default function BountiesScrollEndCard(visible) {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.opacityStyle = opacityStyle;
-    return closure_1_9(BountiesScrollEndCardContent, obj);
+    return closure_1_8(BountiesScrollEndCardContent, obj);
   }, []);
   obj = { visible, entranceTiming: timingPresets.timingStandard, exitTiming: timingPresets.timingStandard };
   const visibilityTransition = useVisibilityTransition.useVisibilityTransition(obj);
@@ -215,12 +174,12 @@ export default function BountiesScrollEndCard(visible) {
     obj.entering = entering;
     obj.exiting = fn2;
     obj.renderItem = callback;
-    shouldRender = React7(AnimatedEnterExitItemDefault, obj);
+    shouldRender = React6(AnimatedEnterExitItemDefault, obj);
   } else if (shouldRender) {
     obj1 = {};
     let merged = Object.assign(visible);
     obj1.opacityStyle = tmp6;
-    shouldRender = React7(BountiesScrollEndCardContent, obj1);
+    shouldRender = React6(BountiesScrollEndCardContent, obj1);
   }
   return shouldRender;
 }

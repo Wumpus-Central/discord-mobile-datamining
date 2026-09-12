@@ -41,7 +41,7 @@ function MotionOptionButton(isSelected) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { content: null, previewRow: null, optionCard: null, optionCardSelected: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.content = createStyles;
@@ -88,7 +88,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   const obj4 = { config: null, size: 54 };
   const obj5 = { emojis, animation, typingSuggestion: onChange(1379).TypingSuggestion.UNSPECIFIED };
   obj4.config = obj5;
-  obj3.children = closure_6(animation(12074), obj4);
+  obj3.children = closure_6(animation(12110), obj4);
   const items1 = [closure_6(View, obj3)];
   const obj6 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];
@@ -117,7 +117,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
       index,
     ),
   );
-  items1[1] = closure_6(onChange(5024).Stack, obj6);
+  items1[1] = closure_6(onChange(5054).Stack, obj6);
   obj2.children = items1;
-  return closure_7(onChange(7270).ActionSheet, obj2);
+  return closure_7(onChange(7300).ActionSheet, obj2);
 }

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef16738 from "../../../../../_runtime/metro/16738__.js";
+import _modDef16765 from "../../../../../_runtime/metro/16765__.js";
 import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles((height) => {
   let obj = {
     container: { flexDirection: "row", alignItems: "center", marginLeft: -2 },
@@ -116,10 +116,10 @@ export default noop.memo(function VoiceOrStageSummaryRow(arg0) {
     const items3 = [,];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj1.style = items3;
-    let obj2 = { size: max(1178).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16738 };
+    let obj2 = { size: max(1178).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16765 };
     const items4 = [closure_4(max(1178).Icon, obj2)];
     let obj3 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
-    items4[1] = closure_4(max(4602).Text, obj3);
+    items4[1] = closure_4(max(4632).Text, obj3);
     obj1.children = items4;
     obj.children = closure_5(tmp6, obj1);
     tmp8Result = tmp8(tmp6, obj);

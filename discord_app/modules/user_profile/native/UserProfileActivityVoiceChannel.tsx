@@ -147,7 +147,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
         return channel(onAction[25])(obj);
       },
     };
-    obj.openLazy(asyncRequireImpl(13119, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", obj, "stack");
+    obj.openLazy(asyncRequireImpl(13156, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", obj, "stack");
   };
   const obj12 = {
     size: guild(onAction[27]).AvatarSizes.SIZE_16,

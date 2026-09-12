@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: null,
   chatInput: null,
@@ -40,7 +40,7 @@ const obj2 = {
   paddingTop: null,
   paddingBottom: null,
 };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 2;
 if (PlatformUtils.isAndroid()) {
   num = 0;

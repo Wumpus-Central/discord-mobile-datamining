@@ -10,7 +10,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
-const IGNORE_GUILD_IDS = fn(8245).IGNORE_GUILD_IDS;
+const IGNORE_GUILD_IDS = fn(8277).IGNORE_GUILD_IDS;
 const FormStates = fn(1074).FormStates;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useGuildProfileEditForm.tsx");
@@ -65,7 +65,7 @@ export default function useGuildProfileEditForm() {
   const merged1 = Object.assign(stateFromStoresObject.errors);
   const memo = pendingThemeColors.useMemo(() => {
     const delayedCall = new stateFromStores(pendingNickname[11]).DelayedCall(200, () => {
-      pendingAvatar(573).wait(stateFromStores(9300).resetAllPending);
+      pendingAvatar(573).wait(stateFromStores(9339).resetAllPending);
     });
     return delayedCall;
   }, []);

@@ -6,9 +6,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
-const GuildTagBadgeSize = fn(8018).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8048).GuildTagBadgeSize;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { tag: null };
 createStyles = { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: nativeDefault.radii.sm };
 createStyles.tag = createStyles;
@@ -126,7 +126,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
         selectedGuildId: pendingPrimaryGuildId,
         onSelectGuild: handleSelectPrimaryGuild,
       };
-      obj.openLazy(asyncRequireImpl(14695, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", obj);
+      obj.openLazy(asyncRequireImpl(14729, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", obj);
     };
     let tmp23Result = null;
     if (null != stateFromStores) {

@@ -9,7 +9,7 @@ import UserSettingSearchStore from "../../../user_settings/UserSettingSearchStor
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { container: null };
 createStyles = { marginTop: nativeDefault.modules.mobile.SETTINGS_PADDING_TOP };
 createStyles.container = createStyles;

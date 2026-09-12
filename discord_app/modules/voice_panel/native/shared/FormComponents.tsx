@@ -40,7 +40,7 @@ function VoiceBadges(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { marginHorizontal: 16 },
   voiceBadgesContainer: { flexDirection: "row" },

@@ -84,7 +84,7 @@ export default function AppLauncherRoleOption(option) {
       onActionSheetDismiss,
     };
     obj.openLazy(
-      asyncRequireImpl(12274, dependencyMap.paths),
+      asyncRequireImpl(12310, dependencyMap.paths),
       AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY,
       obj,
     );

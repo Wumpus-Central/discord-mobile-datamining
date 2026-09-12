@@ -18,10 +18,10 @@ function DevToolsPersistedStoresActionSheet(store) {
   const close = store.close;
   let obj = { header: null, children: null };
   obj = { title: store.getName() };
-  obj.header = jsx(store(7222).BottomSheetTitleHeader, { title: store.getName() });
+  obj.header = jsx(store(7252).BottomSheetTitleHeader, { title: store.getName() });
   obj = {
     hasIcons: false,
-    children: jsx(store(7272).ActionSheetRow, {
+    children: jsx(store(7302).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -35,9 +35,9 @@ function DevToolsPersistedStoresActionSheet(store) {
       },
     }),
   };
-  obj.children = jsx(store(7272).ActionSheetRow.Group, {
+  obj.children = jsx(store(7302).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(7272).ActionSheetRow, {
+    children: jsx(store(7302).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -51,9 +51,9 @@ function DevToolsPersistedStoresActionSheet(store) {
       },
     }),
   });
-  return jsx(store(7270).ActionSheet, {
+  return jsx(store(7300).ActionSheet, {
     hasIcons: false,
-    children: jsx(store(7272).ActionSheetRow, {
+    children: jsx(store(7302).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -71,7 +71,7 @@ function DevToolsPersistedStoresActionSheet(store) {
 const View = fn(17).View;
 let PersistedStore = fn(505).PersistedStore;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let obj = { container: null, sectionHeader: null };
 obj = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,

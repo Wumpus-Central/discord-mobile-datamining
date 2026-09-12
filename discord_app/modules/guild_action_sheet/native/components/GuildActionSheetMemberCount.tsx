@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = {
   wrapper: { flexDirection: "row", alignItems: "center" },
   dot: null,
@@ -24,7 +24,7 @@ obj = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 obj.onlineDot = obj;
 const createStyles = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
 obj.offlineDot = createStyles;
-const PlatformUtils = fn(1116);
+const PlatformUtils = fn(1151);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

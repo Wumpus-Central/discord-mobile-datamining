@@ -169,29 +169,29 @@ let closure_16 = function UploadAnalytics() {
 let CloudUpload;
 class CloudUpload extends tmp5 {
   constructor(arg0, arg1, arg2, arg3) {
-    tmp5 = new CloudUpload(global, tmp4, tmp3, new.target, global, new.target, tmp2, CloudUpload, tmp);
-    closure_0 = tmp5;
-    tmp5.status = closure_15.NOT_STARTED;
-    tmp5.loaded = 0;
-    tmp5.reactNativeFilePrepped = false;
+    obj = new CloudUpload(global, tmp4, tmp3, new.target, global, new.target, tmp2, CloudUpload, tmp);
+    closure_0 = obj;
+    obj.status = closure_15.NOT_STARTED;
+    obj.loaded = 0;
+    obj.reactNativeFilePrepped = false;
     if (typeof closure_16 === "function") {
-      tmp7 = fn;
+      tmp6 = fn;
       merged = Object.assign({ timing: null, uploadResumptionCount: 0, uploadResumptionPosition: 0 });
       merged[0] = {};
-      tmp5.uploadAnalytics = merged;
-      tmp5.uploadAttempts = 0;
-      tmp5._aborted = false;
-      tmp9 = null;
-      tmp5._originalMd5 = null;
-      tmp5.createResumeAwareProgressFn = function createResumeAwareProgressFn(arg0) {
+      obj.uploadAnalytics = merged;
+      obj.uploadAttempts = 0;
+      obj._aborted = false;
+      tmp8 = null;
+      obj._originalMd5 = null;
+      obj.createResumeAwareProgressFn = function createResumeAwareProgressFn(arg0) {
         closure_0 = arg0;
         return (loaded) => {
           const sum = loaded.loaded + closure_0;
-          closure_0.emit("progress", sum, loaded.total + closure_0, sum - closure_0.loaded);
-          closure_0.loaded = sum;
+          obj.emit("progress", sum, loaded.total + closure_0, sum - obj.loaded);
+          obj.loaded = sum;
         };
       };
-      tmp5.channelId = fn;
+      obj.channelId = fn;
       file = global.file;
       num = undefined;
       if (file != null) {
@@ -200,7 +200,7 @@ class CloudUpload extends tmp5 {
       if (num == null) {
         num = 0;
       }
-      tmp5.preCompressionSize = num;
+      obj.preCompressionSize = num;
       file2 = global.file;
       num2 = undefined;
       if (file2 != null) {
@@ -209,58 +209,47 @@ class CloudUpload extends tmp5 {
       if (num2 == null) {
         num2 = 0;
       }
-      tmp10 = importDefault;
-      tmp11 = importAll;
-      tmp5.currentSize = num2;
-      tmp5.reactNativeFileIndex = importDefault;
+      tmp9 = importDefault;
+      tmp10 = importAll;
+      obj.currentSize = num2;
+      obj.reactNativeFileIndex = importDefault;
       if (null != importAll) {
-        tmp5.allowOptimization = importAll;
+        obj.allowOptimization = importAll;
       }
-      tmp12 = closure_0;
-      tmp13 = closure_2;
-      tmp14 = global.platform === closure_0(closure_2[9]).UploadPlatform.WEB && null != global.compressionMetadata;
+      tmp11 = closure_0;
+      tmp12 = closure_2;
+      tmp13 = global.platform === closure_0(closure_2[9]).UploadPlatform.WEB && null != global.compressionMetadata;
+      if (tmp13) {
+        obj.mimeType = global.compressionMetadata.originalContentType;
+        obj.preCompressionSize = global.compressionMetadata.preCompressionSize;
+      }
+      tmp14 = global.platform === tmp11(tmp12[9]).UploadPlatform.WEB && null != global.originalMd5;
       if (tmp14) {
-        tmp5.mimeType = global.compressionMetadata.originalContentType;
-        tmp5.preCompressionSize = global.compressionMetadata.preCompressionSize;
+        obj._originalMd5 = global.originalMd5;
       }
-      tmp15 = global.platform === tmp12(tmp13[9]).UploadPlatform.WEB && null != global.originalMd5;
-      if (tmp15) {
-        tmp5._originalMd5 = global.originalMd5;
-      }
-      if (global.platform === tmp12(tmp13[9]).UploadPlatform.WEB) {
-        if (null != global.imageConversionAnalytics) {
-          ({ convertedMimeType, conversionFailureReason, compressTimeMs } = global.imageConversionAnalytics);
-          if (null != convertedMimeType) {
-            tmp5.uploadAnalytics.convertedMimeType = convertedMimeType;
-          }
-          if (null != conversionFailureReason) {
-            tmp5.uploadAnalytics.conversionFailureReason = conversionFailureReason;
-          }
-          tmp5.uploadAnalytics.timing.compressTimeMs = compressTimeMs;
-        }
-      }
+      result = obj.applyItemConversionAnalytics();
       tmp16 = globalThis;
       _AbortController = AbortController;
       tmp17 = new.target;
       tmp18 = new.target;
       abortController = new AbortController();
       tmp20 = abortController;
-      tmp5._abortController = abortController;
-      if (null == tmp5.origin) {
+      obj._abortController = abortController;
+      if (null == obj.origin) {
         tmp21 = new.target;
         tmp22 = new.target;
-        defaultHttpClient = new tmp12(tmp13[10]).DefaultHttpClient();
+        defaultHttpClient = new tmp11(tmp12[10]).DefaultHttpClient();
         tmp24 = defaultHttpClient;
-        tmp5._uploadHttpClient = defaultHttpClient;
-        tmp5._libdiscoreEnabled = false;
-        return tmp5;
+        obj._uploadHttpClient = defaultHttpClient;
+        obj._libdiscoreEnabled = false;
+        return obj;
       } else {
-        if (typeof tmp5.origin === "string") {
-          origin = tmp5.origin;
+        if (typeof obj.origin === "string") {
+          origin = obj.origin;
         } else {
-          origin = tmp12(tmp13[9]).UploadOrigin[tmp5.origin];
+          origin = tmp11(tmp12[9]).UploadOrigin[obj.origin];
         }
-        tmp5.uploadAnalytics.origin = origin;
+        obj.uploadAnalytics.origin = origin;
       }
     } else {
       str = "Trying to call a non-function";
@@ -280,18 +269,19 @@ class CloudUpload extends tmp5 {
       merged = Object.assign({ timing: null, uploadResumptionCount: 0, uploadResumptionPosition: 0 });
       merged[0] = {};
       self.uploadAnalytics = merged;
+      result = self.applyItemConversionAnalytics();
       num = 0;
       self.uploadAttempts = 0;
       flag = false;
       self._aborted = false;
-      tmp2 = globalThis;
+      tmp3 = globalThis;
       _AbortController = AbortController;
-      tmp3 = new.target;
       tmp4 = new.target;
+      tmp5 = new.target;
       abortController = new AbortController();
-      tmp6 = abortController;
+      tmp7 = abortController;
       self._abortController = abortController;
-      tmp7 = closure_20;
+      tmp8 = closure_20;
       return super.resetState();
     } else {
       str = "Trying to call a non-function";
@@ -1024,20 +1014,14 @@ prototype["upload"] = function upload() {
                     }
                     if (tmp130) {
                       closure_3 = closure_133_0;
-                      let obj13 = status(5208);
+                      let obj13 = status(5238);
                       c8 = 3;
                       c9 = 1;
                       const obj4 = { value: obj13.fromBlob(file).catch(() => null), done: false };
                       return obj4;
                     }
                   }
-                  if (null != closure_132_3.convertedMimeType) {
-                    closure_133_0.uploadAnalytics.convertedMimeType = closure_132_3.convertedMimeType;
-                  }
-                  if (null != closure_132_3.conversionFailureReason) {
-                    closure_133_0.uploadAnalytics.conversionFailureReason = closure_132_3.conversionFailureReason;
-                  }
-                  closure_133_0.uploadAnalytics.timing.compressTimeMs = closure_132_3.compressTimeMs;
+                  const result = closure_133_0.applyConversionAnalytics(closure_132_3.analytics);
                 }
               }
             } else {
@@ -1074,10 +1058,10 @@ prototype["upload"] = function upload() {
                     }
                     closure_133_0.uploadAnalytics.timing.compressTimeMs = closure_132_4.compressTimeMs;
                   }
-                  const uploadPayload = v0(5224).default.getUploadPayload(closure_133_0);
+                  const uploadPayload = v0(5254).default.getUploadPayload(closure_133_0);
                   c8 = 5;
                   c9 = 1;
-                  const _default = v0(5224).default;
+                  const _default = v0(5254).default;
                 }
               } else if (5 === tmp9) {
                 if (arg0 === 1) {
@@ -1089,14 +1073,14 @@ prototype["upload"] = function upload() {
                   return obj6;
                 } else {
                   closure_132_5 = value;
-                  uploadTarget = v0(5225).getUploadTarget(closure_133_0.item.target);
+                  uploadTarget = v0(5255).getUploadTarget(closure_133_0.item.target);
                   if (null != closure_132_5.filename) {
                     if ("" !== closure_132_5.filename) {
                       const currentSize2 = closure_133_0.currentSize;
                       if (0 !== closure_133_0.currentSize) {
-                        obj5 = v0(5230);
+                        obj5 = v0(5260);
                         kestrelConfig = obj5.getKestrelConfig({ location: "CloudUpload.upload.postCompressionCheck" });
-                        obj6 = v0(5230);
+                        obj6 = v0(5260);
                         effectiveKestrelLimit = obj6.getEffectiveKestrelLimit(kestrelConfig, uploadTarget.getMaxFileSize(closure_133_0.channelId));
                         const currentSize = closure_133_0.currentSize;
                         v0 = currentSize;
@@ -1106,7 +1090,7 @@ prototype["upload"] = function upload() {
                         if (v0 > effectiveKestrelLimit) {
                           closure_133_0.handleError(constants.ENTITY_TOO_LARGE);
                         } else {
-                          if (tmp224.get("upload_fail_50")) {
+                          if (tmp213.get("upload_fail_50")) {
                             const _Math = Math;
                             if (Math.random() < 0.5) {
                               const _setTimeout = setTimeout;
@@ -1152,7 +1136,7 @@ prototype["upload"] = function upload() {
                 }
               } else if (6 === tmp9) {
                 c6 = 0;
-                closure_132_11 = tmp224;
+                closure_132_11 = tmp213;
                 let code;
                 if (closure_132_11 != null) {
                   const body = closure_132_11.body;
@@ -1182,7 +1166,7 @@ prototype["upload"] = function upload() {
                 return obj9;
               } else if (7 === tmp9) {
                 c6 = 0;
-                closure_132_12 = tmp224;
+                closure_132_12 = tmp213;
                 if (closure_133_0.isCancelled()) {
                   closure_133_0.handleComplete(closure_132_12);
                 } else {
@@ -1239,14 +1223,14 @@ prototype["upload"] = function upload() {
               tmp141 = tmp144;
             }
             if (!tmp141) {
-              obj12 = v0(5222);
+              obj12 = v0(5252);
               closure_133_0.mimeType = obj12.heicMimeType(file);
             }
           }
           if (closure_133_0.isCancelled()) {
             closure_133_0.handleComplete(closure_133_0.id);
           } else if (closure_133_0.allowOptimization) {
-            if (closure_133_0.item.platform === v0(5179).UploadPlatform.WEB) {
+            if (closure_133_0.item.platform === v0(5209).UploadPlatform.WEB) {
               if (!closure_132_0) {
                 if (true !== closure_133_0.item.imageConversionEvaluated) {
                   c8 = 4;
@@ -1263,11 +1247,11 @@ prototype["upload"] = function upload() {
         } else {
           closure_132_0 = false;
           if (closure_133_0.allowOptimization) {
-            if (closure_133_0.item.platform === v0(5179).UploadPlatform.WEB) {
+            if (closure_133_0.item.platform === v0(5209).UploadPlatform.WEB) {
               if (true !== closure_133_0.item.imageConversionEvaluated) {
                 if (null != closure_133_0.item.file) {
                   if (obj25.isHeicFile(closure_133_0.item.file)) {
-                    const HeicUploadConversionExperiment = v0(5223).HeicUploadConversionExperiment;
+                    const HeicUploadConversionExperiment = v0(5253).HeicUploadConversionExperiment;
                     config = HeicUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertHeicToJpeg" });
                     if (config.enabled) {
                       file = closure_133_0.item.file;
@@ -1277,17 +1261,17 @@ prototype["upload"] = function upload() {
                       return obj14;
                     }
                   }
-                  obj25 = v0(5222);
+                  obj25 = v0(5252);
                 }
               }
             }
           }
         }
-      } catch (tmp224) {
+      } catch (tmp213) {
         if (tmp4 === c6) {
           c9 = tmp2;
-          throw tmp224;
-        } else if (tmp === tmp226) {
+          throw tmp213;
+        } else if (tmp === tmp215) {
           c8 = tmp6;
         } else {
           c8 = tmp5;
@@ -1365,7 +1349,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const obj3 = { value: self, done: true };
               return obj3;
             }
-            obj17 = size(5225);
+            obj17 = size(5255);
           }
         } else {
           if (1 === tmp5) {
@@ -1440,7 +1424,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         const fileSize = closure_129_0.fileSize;
                         size = fileSize;
                         if (fileSize == null) {
-                          obj2 = size(5180);
+                          obj2 = size(5210);
                           c3 = 2;
                           c4 = 1;
                           const obj5 = { value: obj2.getFileData(uri), done: false };
@@ -1695,8 +1679,8 @@ CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, 
   closure_3 = quality;
   closure_4 = maxFileSizeBytes;
   return (async () => {
-    if (c6 === 2) {
-      c6 = 3;
+    if (c5 === 2) {
+      c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
@@ -1709,108 +1693,81 @@ CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, 
       }
     } else {
       try {
-        c6 = 2;
-        if (0 === c5) {
+        c5 = 2;
+        if (0 === c4) {
           if (arg0 === 1) {
-            c6 = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
+            c5 = 3;
             obj = { value, done: true };
             return obj;
           } else {
-            closure_1 = tmp7;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            closure_129_3 = undefined;
+            closure_0 = tmp7;
+            let convertFileToJpeg;
+            closure_128_1 = undefined;
             if (null != closure_0) {
-              if (!closure_1()) {
-                c4 = 1;
-                c5 = 2;
-                c6 = 1;
-                const obj1 = { value: UNKNOWN_ERROR(tmp3[29])(tmp3[30], tmp3.paths), done: false };
+              if (!tmp3()) {
+                c3 = 1;
+                c4 = 2;
+                c5 = 1;
+                const obj1 = { value: closure_0(tmp30[29])(tmp30[30], tmp30.paths), done: false };
                 return obj1;
               }
             }
-            c6 = 3;
+            c5 = 3;
             return { value: null, done: true };
           }
         } else if (1 === tmp7) {
-          c4 = 0;
-          closure_129_4 = closure_3;
-          const _HermesInternal3 = HermesInternal;
-          logger.warn("heic conversion threw for " + closure_130_2 + ":", closure_129_4);
-          c6 = 3;
-          let obj2 = { value: { convertedFile: null, convertedMimeType: null, conversionFailureReason: "unknown_error", compressTimeMs: 0 }, done: true };
-          return obj2;
+          c3 = 0;
+          closure_128_2 = tmp30;
+          const _HermesInternal = HermesInternal;
+          logger.warn("heic conversion threw for " + closure_129_2 + ":", closure_128_2);
+          const obj2 = { convertedFile: null, analytics: { convertedMimeType: null, conversionFailureReason: "unknown_error", compressTimeMs: 0 } };
+          c5 = 3;
+          const obj3 = { value: obj2, done: true };
+          return obj3;
         } else if (2 === tmp7) {
           if (arg0 === 1) {
-            c6 = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_129_0 = value;
-            closure_129_1 = closure_129_0.maybeConvertHeicToJpeg;
-            closure_129_2 = closure_129_0.ImageConversionFailureReason;
+            c3 = 0;
             c5 = 3;
-            c6 = 1;
-            const obj4 = { value: closure_129_1(closure_130_0, closure_130_3, closure_130_4), done: false };
+            const obj4 = { value, done: true };
             return obj4;
+          } else {
+            convertFileToJpeg = value.convertFileToJpeg;
+            c4 = 3;
+            c5 = 1;
+            const obj5 = { value: convertFileToJpeg(closure_129_0, "heic", closure_129_3, closure_129_4), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
-          c6 = 3;
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          c3 = 0;
+          c5 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          closure_129_3 = value;
-          let tmp10 = null;
-          if (!closure_130_1()) {
-            tmp10 = null;
-            if (null != closure_129_3) {
-              if (!closure_129_3.success) {
-                const _HermesInternal = HermesInternal;
-                logger.log("heic conversion skipped for " + closure_130_2 + ": " + closure_129_3.reason);
-                const reason = closure_129_3.reason;
-                UNKNOWN_ERROR = reason;
-                if (reason == null) {
-                  UNKNOWN_ERROR = closure_129_2.UNKNOWN_ERROR;
-                }
-                obj = { convertedFile: null, convertedMimeType: null, conversionFailureReason: UNKNOWN_ERROR, compressTimeMs: closure_129_3.compressTimeMs };
-              }
-              const _HermesInternal2 = HermesInternal;
-              logger.log("heic conversion worked for " + closure_130_2 + ": " + closure_129_3.sizeBefore + " -> " + closure_129_3.sizeAfter + " bytes");
-              const obj6 = { convertedFile: null, convertedMimeType: "image/jpeg", conversionFailureReason: null, compressTimeMs: null };
-              const _File = File;
-              const items = [closure_129_3.convertedBlob];
-              obj2 = UNKNOWN_ERROR(tmp3[17]);
-              const obj7 = { type: "image/jpeg", lastModified: closure_130_0.lastModified };
-              file = new File(items, obj2.renameToJpegExtension(closure_130_0.name), obj7);
-              obj6.convertedFile = file;
-              obj6.compressTimeMs = closure_129_3.compressTimeMs;
-              obj = obj6;
-            }
+          closure_128_1 = value;
+          let tmp11 = null;
+          if (!closure_129_1()) {
+            tmp11 = closure_128_1;
           }
-          c4 = 0;
-          c6 = 3;
-          const obj8 = { value: tmp10, done: true };
-          return obj8;
+          c3 = 0;
+          c5 = 3;
+          obj = { value: tmp11, done: true };
+          return obj;
         }
-      } catch (tmp68) {
-        closure_3 = tmp68;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp68;
+      } catch (tmp30) {
+        if (tmp4 === c3) {
+          c5 = tmp2;
+          throw tmp30;
         } else {
-          c5 = tmp;
+          c4 = tmp;
         }
       }
     }
@@ -1856,6 +1813,34 @@ prototype["removeFromMsgDraft"] = function removeFromMsgDraft() {
 prototype["isCancelled"] = function isCancelled() {
   return this.status === obj.CANCELED || this.status === tmp.REMOVED_FROM_MSG_DRAFT;
 };
+prototype["applyConversionAnalytics"] = function applyConversionAnalytics(analytics) {
+  const self = this;
+  ({ convertedMimeType, conversionFailureReason, imageCompressionQuality, imageEncoderType } = analytics);
+  if (null != convertedMimeType) {
+    self.uploadAnalytics.convertedMimeType = convertedMimeType;
+  }
+  if (null != conversionFailureReason) {
+    self.uploadAnalytics.conversionFailureReason = conversionFailureReason;
+  }
+  self.uploadAnalytics.timing.compressTimeMs = analytics.compressTimeMs;
+  if (null != imageCompressionQuality) {
+    self.uploadAnalytics.imageCompressionQuality = imageCompressionQuality;
+  }
+  if (null != imageEncoderType) {
+    self.uploadAnalytics.imageEncoderType = imageEncoderType;
+  }
+};
+prototype["applyItemConversionAnalytics"] = function applyItemConversionAnalytics() {
+  const self = this;
+  const item = this.item;
+  let tmp = item.platform === Upload2.UploadPlatform.WEB;
+  if (tmp) {
+    tmp = null != item.imageConversionAnalytics;
+  }
+  if (tmp) {
+    const result = self.applyConversionAnalytics(item.imageConversionAnalytics);
+  }
+};
 prototype["delete"] = function delete() {
   const self = this;
   return (async () => {
@@ -1883,7 +1868,7 @@ prototype["delete"] = function delete() {
             obj = { value, done: true };
             return obj;
           } else if (null != self.uploadedFilename) {
-            let obj1 = v3(5225);
+            let obj1 = v3(5255);
             const uploadTarget = obj1.getUploadTarget(self.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);

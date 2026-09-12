@@ -9,10 +9,10 @@ const VisualEffectViewAndroidDefault = VisualEffectViewAndroid;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(5017).useVisualEffectViewOverrides;
+let closure_4 = fn(5047).useVisualEffectViewOverrides;
 const ThemeTypes = fn(1074).ThemeTypes;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let closure_7 = PlatformUtils.isAndroid();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectView.tsx");

@@ -94,7 +94,7 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(13789);
+const SharedSpacesWarningStore = fn(13823);
 ({
   getChannelDismissTimestamp: hasOwnProperty,
   getUserDismissTimestamp: metroRequire,

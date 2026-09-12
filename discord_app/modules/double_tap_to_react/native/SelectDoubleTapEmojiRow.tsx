@@ -9,12 +9,12 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7224).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const EmojiConstants = fn(1374);
 ({ EMOJI_URL_BASE_SIZE: closure_7, EmojiIntention: closure_8 } = EmojiConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let obj = {
   emoji: { width: 24, height: 24 },
   customEmoji: { width: 24, height: 24 },
@@ -28,13 +28,13 @@ let obj = {
   customReactionOverlay: null,
   selectedCustomReactionIcon: null,
 };
-let PlatformUtils = fn(1115);
+let PlatformUtils = fn(1150);
 let num = 20;
 if (PlatformUtils.isIOS()) {
   num = 24;
 }
 obj = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1115);
+PlatformUtils = fn(1150);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 28;
@@ -129,7 +129,7 @@ let closure_13 = noop.memo((emoji) => {
   obj1.src = url;
   obj.children = closure_9(EmojiDefault, obj1);
   obj.children = closure_9(View, obj);
-  return closure_9(emoji(5174).PressableOpacity, obj);
+  return closure_9(emoji(5204).PressableOpacity, obj);
 });
 let obj6 = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 size = fn(2);

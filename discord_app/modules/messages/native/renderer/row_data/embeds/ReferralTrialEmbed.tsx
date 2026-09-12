@@ -9,10 +9,10 @@ import createStyles from "../../../../../../design/components/Styles/native/crea
 import ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import useTrialOffer from "../../../../../premium/useTrialOffer.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef8126 from "../../../../../../../_runtime/metro/08126__.js";
+import _modDef8156 from "../../../../../../../_runtime/metro/08156__.js";
 import ReferralProgramUtils from "../../../../../premium/referral_program/ReferralProgramUtils.tsx";
-import _modDef8143 from "../../../../../../../_runtime/metro/08143__.js";
-import _modDef8144 from "../../../../../../../_runtime/metro/08144__.js";
+import _modDef8173 from "../../../../../../../_runtime/metro/08173__.js";
+import _modDef8174 from "../../../../../../../_runtime/metro/08174__.js";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../../../stores/billing/SubscriptionStore.tsx";
@@ -59,12 +59,12 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
           thumbnailUrl: null,
         };
         let tmp44Result = renderer_EmbedUtils;
-        obj.headerLogoUrl = tmp44Result.getAssetUriForEmbed(_modDef8143);
+        obj.headerLogoUrl = tmp44Result.getAssetUriForEmbed(_modDef8173);
         const intl = util.intl;
         obj.headerText = intl.string(util.t.gtNqJQ).toLocaleLowerCase();
         obj.headerColor = headerTextColor;
         tmp44Result = renderer_EmbedUtils;
-        obj.thumbnailUrl = tmp44Result.getAssetUriForEmbed(_modDef8144);
+        obj.thumbnailUrl = tmp44Result.getAssetUriForEmbed(_modDef8174);
         let obj4 = UserStore;
         let userId;
         if (relevantUserTrialOffer != null) {
@@ -185,7 +185,7 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
                     const intl8 = util.intl;
                     obj7.acceptLabelText = intl8.string(util.t.bXTClc);
                     obj7.acceptLabelColor = acceptLabelColor;
-                    obj7.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8126);
+                    obj7.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8156);
                     tmp33 = obj7;
                     const tmp44Result4 = renderer_EmbedUtils;
                   }

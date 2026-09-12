@@ -58,7 +58,7 @@ function RecentActivityIntroText() {
           style: learnMore.learnMore,
           accessibilityRole: "link",
           onPress() {
-            learnMore(8456);
+            learnMore(8488);
             const obj = { href: closure_1_1(2024).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS) };
             return obj.handleClick(obj);
           },
@@ -73,7 +73,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   section: null,
   sectionHeading: null,
@@ -122,13 +122,13 @@ export default function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
   let obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(13159)(obj));
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(13196)(obj));
   if (!hasCurrentActivity) {
     if (!hasRecentActivity) {
       if (tmp4) {
         let tmp10Result = closure_5(UserProfileActivityTabSkeleton, {});
       } else {
-        const tmp7 = user(13162);
+        const tmp7 = user(13199);
         if (isCurrentUser) {
           tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -144,7 +144,7 @@ export default function UserProfileActivityTab(user) {
     const intl = user(1114).intl;
     obj.heading = intl.string(user(1114).t.J6STd9);
     const obj1 = { user, currentUser, guildId, style: cardStyle };
-    obj.children = closure_5(cardStyle(13091), obj1);
+    obj.children = closure_5(cardStyle(13128), obj1);
     hasCurrentActivity = closure_5(Section, obj);
   }
   const items = [hasCurrentActivity];
@@ -164,5 +164,5 @@ export default function UserProfileActivityTab(user) {
   }
   items[1] = hasRecentActivity;
   tmp10Result = closure_6(closure_7, { children: items });
-  const tmp3 = cardStyle(13159)(obj);
+  const tmp3 = cardStyle(13196)(obj);
 }

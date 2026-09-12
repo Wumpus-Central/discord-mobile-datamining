@@ -14,10 +14,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7224).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({
   emojiRowContainer: { flexDirection: "column", justifyContent: "center", alignItems: "center" },
   emojiRow: {
@@ -95,7 +95,7 @@ export default function EmojiRow(arg0) {
   items[1] = token(EmojiReactionRowButton.EmojiPickerRowButton, obj1);
   obj.children = items;
   const items1 = [closure_6(emojiFontSize, obj)];
-  obj2 = { location: channel(7255).MESSAGE_LONG_PRESS_MENU };
+  obj2 = { location: channel(7285).MESSAGE_LONG_PRESS_MENU };
   items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, obj2);
   obj.children = items1;
   return closure_6(emojiFontSize, obj);

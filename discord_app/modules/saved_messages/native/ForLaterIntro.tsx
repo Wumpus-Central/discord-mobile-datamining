@@ -7,7 +7,7 @@ import ActionSheetConstants from "../../action_sheet/native/ActionSheetConstants
 import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import SavedMessagesTypes from "../SavedMessagesTypes.tsx";
 import BookmarkIcon from "../../../design/components/Icon/native/redesign/generated/BookmarkIcon.tsx";
-import _modDef13392 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef13425 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -23,7 +23,7 @@ function IntroDemo(isReminder) {
     children: null,
   };
   obj = { style: tmp.messages, children: null };
-  obj = { source: { uri: _modDef13392 }, style: tmp.avatar };
+  obj = { source: { uri: _modDef13425 }, style: tmp.avatar };
   const items = [timestampProducer(React3, obj)];
   const obj2 = { style: tmp.messageLines, children: null };
   const obj3 = { variant: "text-sm/semibold", color: "text-default", children: null };
@@ -201,7 +201,7 @@ export default function ForLaterIntro(type) {
   const tmp4 = type.type === SavedMessagesTypes.SavedMessageSortTypes.REMINDER;
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: importDefault(tmp4 ? 13390 : 13391), style: tmp.upsellImage };
+  obj = { source: importDefault(tmp4 ? 13423 : 13424), style: tmp.upsellImage };
   const items = [timestampProducer(React3, obj), ,];
   const obj1 = { style: tmp.textContainer, children: null };
   const obj2 = {

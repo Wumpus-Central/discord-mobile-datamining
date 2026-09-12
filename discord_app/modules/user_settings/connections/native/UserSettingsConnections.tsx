@@ -14,14 +14,14 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import ConnectedAccountsStore from "../../../../stores/ConnectedAccountsStore.tsx";
 import LocaleStore from "../../LocaleStore.tsx";
 
-const ConnectionsEmptyStateUpsellDefault = tmp2(15014);
+const ConnectionsEmptyStateUpsellDefault = tmp2(15048);
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const FetchState = fn(7180).FetchState;
+const FetchState = fn(7210).FetchState;
 const AnalyticsLocations = fn(1074).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { flex: { flex: 1 }, form: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
 createStyles.form = createStyles;
@@ -67,7 +67,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
   const effect2 = authorizedAppsFetchState.useEffect(() => {
     if (null != selectedPlatformType) {
       if (-1 === selectedPlatformType) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15012, dependencyMap.paths), "AddConnection");
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15046, dependencyMap.paths), "AddConnection");
       } else {
         const obj = { platformType: selectedPlatformType, location: AnalyticsLocations.USER_SETTINGS };
         authorizeConnectionDefault(obj);
@@ -98,8 +98,8 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
         accounts.map((account) => closure_2_11(ConnectedAccountDefault, { theme, locale, account }, account.id)),
       ];
       obj.children = items5;
-      obj.children = closure_12(tmp4(5024).Stack, obj);
-      tmp14 = closure_11(tmp4(8684).Form, obj);
+      obj.children = closure_12(tmp4(5054).Stack, obj);
+      tmp14 = closure_11(tmp4(8716).Form, obj);
     }
     return tmp14;
   }

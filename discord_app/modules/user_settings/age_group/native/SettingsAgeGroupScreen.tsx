@@ -29,11 +29,11 @@ function SettingsAgeGroupHeader() {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8049).MobileUserSettings;
+const MobileUserSettings = fn(8079).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { headerContainer: null };
 createStyles = {
   gap: nativeDefault.space.PX_4,
@@ -46,7 +46,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14734).useIsTinyBroncoSettingsEnabled();
+  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14768).useIsTinyBroncoSettingsEnabled();
   let items = [isTinyBroncoSettingsEnabled];
   const node = noop.useMemo(() => {
     let obj = { sections: null, ListHeaderComponent: null };

@@ -6,8 +6,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef11548 from "../../../../../_runtime/metro/11548__.js";
-import _modDef11549 from "../../../../../_runtime/metro/11549__.js";
+import _modDef11587 from "../../../../../_runtime/metro/11587__.js";
+import _modDef11588 from "../../../../../_runtime/metro/11588__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, body: null, header: null, message: null, footer: null };
 createStyles = { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -41,9 +41,9 @@ export default function GiftCodeRedeemError(children) {
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = _modDef11548;
+    let tmp9Result = _modDef11587;
   } else {
-    tmp9Result = _modDef11549;
+    tmp9Result = _modDef11588;
   }
   const items = [timestampProducer(React3, { source: tmp9Result }), ,];
   const obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };

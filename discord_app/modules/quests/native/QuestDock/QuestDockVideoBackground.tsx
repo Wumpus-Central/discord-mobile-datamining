@@ -11,8 +11,8 @@ require = fn;
 function QuestDockBackgroundMediaFade(arg0) {
   let activeQuestDockMode;
   ({ children, style } = arg0);
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(15154).QuestDockGestureContext).activeQuestDockMode;
-  activeQuestDockMode(4343);
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(15176).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode(4373);
   const fn = function n() {
     obj = spring;
     let num = 0;
@@ -23,7 +23,7 @@ function QuestDockBackgroundMediaFade(arg0) {
     return obj;
   };
   let __closure = {
-    withSpring: activeQuestDockMode(5025).withSpring,
+    withSpring: activeQuestDockMode(5055).withSpring,
     activeQuestDockMode,
     QuestDockMode,
     QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -39,8 +39,8 @@ function QuestDockBackgroundMediaFade(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const QuestDockMode = fn(5495).QuestDockMode;
-const QuestDockConstants = fn(15153);
+const QuestDockMode = fn(5525).QuestDockMode;
+const QuestDockConstants = fn(15175);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_8, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_9 } =
   QuestDockConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
@@ -49,7 +49,7 @@ const jsxProd = fn(21);
 let closure_13 = [0, 0.1, 0.8, 1];
 const locations = [0, 0.33, 0.76, 1];
 let QuestDockBackgroundCollapsedMediaMode = { PAUSED: "paused", HIDDEN: "hidden" };
-fn(4606);
+fn(4636);
 QuestDockBackgroundCollapsedMediaMode = {
   backgroundWrapper: null,
   backgroundImage: null,
@@ -103,13 +103,13 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
   closure_11 = undefined;
   dependencyMap = tmp2;
   let tmp3 = closure_16();
-  const context = windowDimensions.useContext(gradientBaseColor(15154).QuestDockGestureContext);
+  const context = windowDimensions.useContext(gradientBaseColor(15176).QuestDockGestureContext);
   const activeQuestDockMode = context.activeQuestDockMode;
   windowDimensions = context.windowDimensions;
   const setRestingQuestDockMode = windowDimensions.useContext(
-    gradientBaseColor(15157).QuestDockExternalCoordinationContext,
+    gradientBaseColor(15179).QuestDockExternalCoordinationContext,
   ).setRestingQuestDockMode;
-  const tmp8 = expandedHeight(8353)(activeQuestDockMode);
+  const tmp8 = expandedHeight(8385)(activeQuestDockMode);
   const height = expandedHeight(1477)().height;
   const top = expandedHeight(1611)().top;
   let obj1 = gradientBaseColor(504);
@@ -125,7 +125,7 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
     closure_0 = _modDef672(gradientBaseColor);
     return closure_13.map((item) => closure_0.alpha(item).hex());
   }, items2);
-  let obj2 = gradientBaseColor(4343);
+  let obj2 = gradientBaseColor(4373);
   const fn = function v() {
     obj = spring;
     let obj1 = activeQuestDockMode;
@@ -147,7 +147,7 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
     return obj;
   };
   __closure = {
-    withSpring: gradientBaseColor(5025).withSpring,
+    withSpring: gradientBaseColor(5055).withSpring,
     activeQuestDockMode,
     QuestDockMode: top,
     QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: isRendered,
@@ -188,7 +188,7 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
   }, items3);
   isRendered = !tmp22;
   if (!tmp22) {
-    isRendered = windowDimensions.useContext(expandedHeight(15240)).isRendered;
+    isRendered = windowDimensions.useContext(expandedHeight(15262)).isRendered;
   }
   if (isRendered) {
     isRendered = !stateFromStores;
@@ -197,11 +197,11 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
     isRendered = null != videoUrl;
   }
   if (isRendered) {
-    let tmp4Result = tmp4(1115);
+    let tmp4Result = tmp4(1150);
     isRendered = !tmp4Result.isAndroid();
   }
   if (isRendered) {
-    tmp4Result = tmp4(11860);
+    tmp4Result = tmp4(11896);
     isRendered = tmp4Result.isHeroVideoSupported(gradientBaseColor.videoMimetype);
   }
   if (isRendered) {
@@ -234,7 +234,7 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
     return obj;
   };
   __closure = {
-    withSpring: tmp4(5025).withSpring,
+    withSpring: tmp4(5055).withSpring,
     shouldShowVideo: isRendered,
     videoLoaded: first1,
     isMediaHiddenWhenCollapsed: tmp2,
@@ -246,7 +246,7 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
   fn2.__workletHash = 10281907446713;
   fn2.__initData = __initData3;
   let tmp31 = null;
-  const animatedStyle1 = gradientBaseColor(4343).useAnimatedStyle(fn2);
+  const animatedStyle1 = gradientBaseColor(4373).useAnimatedStyle(fn2);
   if (isRendered) {
     obj1 = {
       style: tmp3.backgroundVideo,
@@ -261,7 +261,7 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
     obj2 = { uri: videoUrl };
     obj1.source = obj2;
     obj1.paused = tmp8 !== tmp12.EXPANDED;
-    tmp31 = closure_11(tmp4(8393).VideoComponent, obj1);
+    tmp31 = closure_11(tmp4(8425).VideoComponent, obj1);
   }
   const items4 = [tmp31];
   let tmp33 = null;
@@ -269,13 +269,13 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
     const obj3 = { style: null, children: null };
     const items5 = [tmp3.backgroundImageWrapper, memo, animatedStyle1];
     obj3.style = items5;
-    let tmp7Result = tmp7(7146);
+    let tmp7Result = tmp7(7176);
     const obj4 = { style: null, source: null };
     const items6 = [tmp3.backgroundImage, memo];
     obj4.style = items6;
     const obj5 = { uri: imageUrl };
     obj4.source = obj5;
-    obj3.children = closure_11(tmp7(5638), obj4);
+    obj3.children = closure_11(tmp7(5668), obj4);
     tmp33 = closure_11(tmp7Result, obj3);
   }
   items4[1] = tmp33;
@@ -290,7 +290,7 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
   const items7 = [tmp3.backgroundWrapper, memo, animatedStyle];
   obj6.style = items7;
   let tmp38 = tmp30Result;
-  tmp7Result = tmp7(7146);
+  tmp7Result = tmp7(7176);
   if (collapsedMediaMode === __closure.HIDDEN) {
     const obj7 = { style: memo, children: tmp30Result };
     tmp38 = closure_11(QuestDockBackgroundMediaFade, obj7);
@@ -299,7 +299,7 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
   const obj8 = { locations, style: null, start: first1.START, end: first1.END, colors: memo1 };
   const items9 = [tmp3.backgroundGradient, memo];
   obj8.style = items9;
-  items8[1] = closure_11(expandedHeight(5038), obj8);
+  items8[1] = closure_11(expandedHeight(5068), obj8);
   obj6.children = items8;
   return closure_12(tmp7Result, obj6);
 });

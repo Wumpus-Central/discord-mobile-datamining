@@ -7,11 +7,11 @@ import MemberVerificationFormStore from "../../MemberVerificationFormStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(5623).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(5653).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1074).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_12 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 },
   submitButton: { marginTop: 12, marginBottom: 12 },
@@ -62,11 +62,11 @@ export default function MemberVerificationForm(guild) {
             if (null != first) {
               if (memo1) {
                 (function showIncompleteToast() {
-                  closure_1_1(4305);
+                  closure_1_1(4335);
                   const obj = { key: "MEMBER_VERIFICATION_FORM_INCOMPLETE", content: null, icon: null };
                   const intl = closure_1_0(1114).intl;
                   obj.content = intl.string(closure_1_0(1114).t.StC497);
-                  obj.icon = closure_1_1(5648);
+                  obj.icon = closure_1_1(5678);
                   obj.open(obj);
                 })();
                 c6 = 3;

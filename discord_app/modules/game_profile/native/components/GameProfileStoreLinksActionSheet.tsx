@@ -6,7 +6,7 @@ import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06698_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06728_BottomSheetModal.js";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import useOpenExternalUrlFromGameProfileDefault from "../../hooks/useOpenExternalUrlFromGameProfile.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { header: null, headerText: null, buttons: null };
 createStyles = {
   gap: nativeDefault.space.PX_8,

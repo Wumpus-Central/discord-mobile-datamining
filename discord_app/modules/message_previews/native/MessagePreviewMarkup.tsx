@@ -1,6 +1,6 @@
 // discord_app/modules/message_previews/native/MessagePreviewMarkup.tsx
 import privDefault from "../../../../_runtime/01437_priv.js";
-import _modDef4303 from "../../../../_runtime/metro/04303__.js";
+import _modDef4333 from "../../../../_runtime/metro/04333__.js";
 import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import combineMarkupRulesDefault from "../../markup/combineMarkupRules.tsx";
 import MarkupRulesDefault from "../../markup/MarkupRules.tsx";
@@ -51,8 +51,8 @@ export const renderASTToReact = function renderASTToReact(layout) {
     MarkupMessagePreviewReactRulesDefault(layout.layout, color, fontScale, maxFontSizeMultiplier),
   ];
   const tmpResult = combineMarkupRulesDefault(items);
-  const obj = _modDef4303;
-  return obj.reactFor(_modDef4303.ruleOutput(tmpResult, "react"))(tree, initialParserState);
+  const obj = _modDef4333;
+  return obj.reactFor(_modDef4333.ruleOutput(tmpResult, "react"))(tree, initialParserState);
 };
 export const getMessagePreviewASTParser = function getMessagePreviewASTParser(layout) {
   ({ color, fontScale, maxFontSizeMultiplier } = layout);
@@ -123,8 +123,8 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
       MarkupMessagePreviewReactRulesDefault(layout, color, num, maxFontSizeMultiplier),
     ];
     const tmp7Result = combineMarkupRulesDefault(items);
-    const obj2 = _modDef4303;
-    return obj2.reactFor(_modDef4303.ruleOutput(tmp7Result, "react"))(tmp4, obj);
+    const obj2 = _modDef4333;
+    return obj2.reactFor(_modDef4333.ruleOutput(tmp7Result, "react"))(tmp4, obj);
   }
 };
 export const messagePreviewASTCache = tmp2;

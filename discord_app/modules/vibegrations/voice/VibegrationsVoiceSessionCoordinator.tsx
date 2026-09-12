@@ -13,7 +13,7 @@ import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 let size = fn;
 const RPCErrors = fn(1074).RPCErrors;
-const Constants = fn(4631);
+const Constants = fn(4661);
 ({ Features: closure_11, MediaEngineContextTypes: closure_12 } = Constants);
 let closure_13 = { x: 0, y: 0, z: -1 };
 class VibegrationsVoiceSessionCoordinator {
@@ -331,7 +331,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             let obj = set;
             if (!set.has(user_id)) {
               obj.add(user_id);
-              obj = { userId: user_id, position: size(14514).toListenerRelativePosition(closure_0, user_id.position) };
+              obj = { userId: user_id, position: size(14549).toListenerRelativePosition(closure_0, user_id.position) };
               return obj;
             }
           }

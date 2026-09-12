@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, avatar: null };
 createStyles = { flexDirection: "row", alignItems: "center", marginLeft: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;

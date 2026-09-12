@@ -80,11 +80,11 @@ function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
     const map = new Map();
     for (const item10027 of found) {
       let tmp12 = set;
-      let obj = set(8278);
+      let obj = set(8310);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let tmp12Result = tmp12(11293);
+        let tmp12Result = tmp12(11332);
         if (!tmp12Result.isPinnedBadge(tmp15)) {
           if (!map.has(tmp15)) {
             let result = map.set(tmp15, item10027);
@@ -219,7 +219,7 @@ export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
   DispatcherDefault.dispatch({
     type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
     pendingBadgeDisplayOrder: "call",
-    pendingBadgeHiddenBadges: "Symbol",
+    pendingBadgeHiddenBadges: "accessibilityLabel",
   });
 };
 export const hasPendingBadgeSettings = function hasPendingBadgeSettings(pendingBadgeDisplayOrder) {
@@ -259,7 +259,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
     const _Map = Map;
     const map = new Map();
     for (const item10026 of mapped) {
-      let obj = set(11293);
+      let obj = set(11332);
       if (obj.isPinnedBadge(item10026.badge_id)) {
         let arr = items1.push(item10026);
       } else {

@@ -3,7 +3,7 @@ import LoggerDefault from "../../debug/Logger.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const NativeModules = fn(17).NativeModules;
-const MessageSendLocation = fn(4599).MessageSendLocation;
+const MessageSendLocation = fn(4629).MessageSendLocation;
 let closure_5 = new LoggerDefault("DirectReply");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/headless_tasks/android/DirectReply.tsx");

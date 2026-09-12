@@ -78,7 +78,7 @@ function updateStats(arr, arg1) {
   }
   return obj;
 }
-const Constants = fn(4631);
+const Constants = fn(4661);
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 ({ Features: closure_8, SimulcastOverrideQuality: closure_9 } = Constants);
 let combined = "" + MediaEngineContextTypes.DEFAULT + ":" + fn(1074).RTCDebugSections.TRANSPORT + ":" + 0;
@@ -202,7 +202,13 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: true };
+  obj = {
+    codec: name,
+    resolution: null,
+    bitrateEstimate: "Array",
+    fps:
+      -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009417941561190702,
+  };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -337,7 +343,7 @@ graphs = {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(4661).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
+          replayConnection.on(replayConnection(4691).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
             let num = arg3;
             obj = {
               type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",

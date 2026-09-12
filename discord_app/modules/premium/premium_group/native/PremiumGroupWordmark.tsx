@@ -1,7 +1,7 @@
 // discord_app/modules/premium/premium_group/native/PremiumGroupWordmark.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../../_runtime/08542_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08574_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;

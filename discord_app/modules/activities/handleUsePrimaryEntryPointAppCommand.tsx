@@ -168,7 +168,7 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
           let currentUser;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp5) {

@@ -37,14 +37,14 @@ function useAppearanceSettingTrailing() {
   }
 }
 const ActiveThemeType = fn(1186).ActiveThemeType;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(15323).PaintPaletteIcon,
+  IconComponent: fn(15345).PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
   screen: {
     route: fn(1074).UserSettingsSections.APPEARANCE,

@@ -8,7 +8,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles((arg0) => {
   let obj = { ellipsisWrapper: null, ellipsis: null, ellipsisDot: null };
   obj = { zIndex: 10, borderRadius: 17, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

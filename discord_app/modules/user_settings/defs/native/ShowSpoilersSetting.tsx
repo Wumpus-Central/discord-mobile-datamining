@@ -5,13 +5,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const SpoilerRenderSetting = fn(1074).SpoilerRenderSetting;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.QgwmVz);
   },
-  parent: fn(8049).MobileUserSettings.CHAT,
+  parent: fn(8079).MobileUserSettings.CHAT,
   useValue: fn(1935).RenderSpoilers.useSetting,
   onValueChange: function onShowSpoilersChange(arg0) {
     const RenderSpoilers = UserSettings.RenderSpoilers;

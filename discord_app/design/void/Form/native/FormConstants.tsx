@@ -5,7 +5,7 @@ import shared from "../../../shared.tsx";
 import ThemeStore from "../../../../modules/user_settings/ThemeStore.tsx";
 
 require = fn;
-const PlatformUtils = fn(1115);
+const PlatformUtils = fn(1150);
 let num = 24;
 if (PlatformUtils.isAndroid()) {
   num = 32;
@@ -20,7 +20,7 @@ const semanticColor1 = internal2.resolveSemanticColor(
   nativeDefault.themes.LIGHT,
   nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE,
 );
-const DeviceUtils = fn(4585);
+const DeviceUtils = fn(4615);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 let frozen = Object.freeze({ foreground: true });
 let closure_6 = Object.freeze({});

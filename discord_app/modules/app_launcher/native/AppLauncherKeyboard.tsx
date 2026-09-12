@@ -8,7 +8,7 @@ import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
-import BottomSheetModal from "../../../../_runtime/06698_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06728_BottomSheetModal.js";
 import completeAppLauncherOnboardingDefault from "onboarding/utils/completeAppLauncherOnboarding.tsx";
 import AppLauncherOnboardingLayerDefault from "onboarding/banner/AppLauncherOnboardingLayer.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -17,10 +17,10 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12129).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12165).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { onboardingRoundingView: null, onboardingHeader: null, onboardingNavigatorContent: null };
 obj = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
 obj.onboardingRoundingView = obj;
@@ -162,20 +162,20 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(11309).AppLauncherBottomSheetExpandReason.KEYBOARD;
-        } else if (arg2 === trackWithMetadata(6698).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(11309).AppLauncherBottomSheetExpandReason.GESTURE;
-        } else if (arg2 !== trackWithMetadata(6698).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(11309).AppLauncherBottomSheetExpandReason.OTHER;
+          let current = trackWithMetadata(11348).AppLauncherBottomSheetExpandReason.KEYBOARD;
+        } else if (arg2 === trackWithMetadata(6728).ANIMATION_SOURCE.GESTURE) {
+          current = trackWithMetadata(11348).AppLauncherBottomSheetExpandReason.GESTURE;
+        } else if (arg2 !== trackWithMetadata(6728).ANIMATION_SOURCE.USER) {
+          current = trackWithMetadata(11348).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
-        trackWithMetadata = trackWithMetadata(4786).trackWithMetadata;
+        trackWithMetadata = trackWithMetadata(4816).trackWithMetadata;
         APP_LAUNCHER_EXPANDED = AnalyticEvents.APP_LAUNCHER_EXPANDED;
         const obj = { reason: current };
         trackWithMetadata(APP_LAUNCHER_EXPANDED, obj);
         ref1.current = undefined;
-        const trackWithMetadataResult = trackWithMetadata(4786);
+        const trackWithMetadataResult = trackWithMetadata(4816);
       }
     }
   }, items4);

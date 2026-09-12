@@ -10,8 +10,8 @@ let result = size.fileFinishedImporting("modules/game_profile/native/hooks/useIn
 
 export default function useInAppBrowserReturn(gameId) {
   gameId = gameId.gameId;
-  const scrollOffsetRef = gameId.scrollOffsetRef;
-  const items = [gameId, scrollOffsetRef];
+  const scrollY = gameId.scrollY;
+  const items = [gameId, scrollY];
   const effect = noop.useEffect(() => {
     if (null != c0) {
       if (obj.isIOS()) {
@@ -20,7 +20,7 @@ export default function useInAppBrowserReturn(gameId) {
           if (!arg1) {
             if (arg0) {
               c0 = true;
-              let obj = { gameId, initialScrollOffset: scrollOffsetRef.current };
+              let obj = { gameId, initialScrollOffset: scrollY.get() };
               const result = obj.setGameProfilePendingReturn(obj);
             }
           }

@@ -3,14 +3,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef16757 from "../../../../_runtime/metro/16757__.js";
+import _modDef16784 from "../../../../_runtime/metro/16784__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, text: null };
 createStyles = {
   borderRadius: nativeDefault.radii.round,
@@ -31,7 +31,7 @@ export default function PollBadge(style) {
   let obj = { style: null, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  obj = { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16757 };
+  obj = { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16784 };
   const items1 = [React4(native.Icon, obj)];
   obj = { style: tmp.text, variant: "text-xs/semibold", children: null };
   const intl = util.intl;

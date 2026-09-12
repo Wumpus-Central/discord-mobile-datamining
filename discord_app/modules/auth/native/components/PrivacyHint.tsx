@@ -55,12 +55,12 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const usePromoEmailConsentStore = fn(6665).usePromoEmailConsentStore;
-const useRegistrationUIStore = fn(16017).useRegistrationUIStore;
+const usePromoEmailConsentStore = fn(6695).usePromoEmailConsentStore;
+const useRegistrationUIStore = fn(16041).useRegistrationUIStore;
 const MarketingURLs = fn(1074).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_10 = createStyles.createStyles({
   multiItem: { flexDirection: "column", gap: 16 },
   checkbox: { flexDirection: "row", alignItems: "flex-start", gap: 8 },

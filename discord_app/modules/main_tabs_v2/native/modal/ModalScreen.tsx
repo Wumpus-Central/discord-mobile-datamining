@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { containerWithPadding: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.containerWithPadding = createStyles;
@@ -31,7 +31,7 @@ export default function Modal(route) {
   const tmp = closure_11();
   let obj1 = noop;
   const callback = noop.useCallback(() => {
-    let arr = closure_1(4809);
+    let arr = closure_1(4839);
     arr = arr.pop();
   }, []);
   let obj = { type: null, name: null, properties: null };
@@ -65,9 +65,9 @@ export default function Modal(route) {
     },
     [],
   );
-  const layoutEffect = obj1.useLayoutEffect(() => modal(7548).trackAppUIViewed("ModalScreen"), []);
+  const layoutEffect = obj1.useLayoutEffect(() => modal(7578).trackAppUIViewed("ModalScreen"), []);
   ({ left, right } = useSafeAreaInsetsDefault());
-  let tmp7Result = tmp7(16958);
+  let tmp7Result = tmp7(16985);
   const items = [absoluteFillObject.absoluteFillObject];
   let tmp16;
   if (!tmp7Result.shouldExcludeSafeAreaForModalKey(modal.key)) {
@@ -79,7 +79,7 @@ export default function Modal(route) {
   obj1 = { style: items, onAccessibilityEscape: null, children: null };
   items[1] = tmp16;
   if (modal.closable) {
-    let pop = tmp4(4809).pop;
+    let pop = tmp4(4839).pop;
   } else {
     pop = NOOP;
   }
@@ -90,10 +90,10 @@ export default function Modal(route) {
   obj2.transitionState = null;
   obj2.onClose = callback;
   const items2 = [<modal.modal />];
-  tmp7Result = tmp7(1115);
+  tmp7Result = tmp7(1150);
   let isIOSResult = tmp7Result.isIOS();
   if (isIOSResult) {
-    isIOSResult = closure_9(tmp7(16841).PortalKeyboardRenderer, { portal: false });
+    isIOSResult = closure_9(tmp7(16868).PortalKeyboardRenderer, { portal: false });
   }
   items2[1] = isIOSResult;
   obj1.children = items2;

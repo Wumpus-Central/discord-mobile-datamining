@@ -7,7 +7,7 @@ import FastestListPropsPlaceholder from "../../fastest_list/props/FastestListPro
 import PremiumUpsellSectionDividerDefault from "../../premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx";
 import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 import StickerPickerListRowDefault from "StickerPickerListRow.tsx";
-import _modDef10504 from "../../../../_runtime/metro/10504__.js";
+import _modDef10543 from "../../../../_runtime/metro/10543__.js";
 import useStickerPickerListData from "useStickerPickerListData.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -15,8 +15,8 @@ import StickersStore from "../StickersStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10479).useStickerPickerStore;
-const StickerPickerConstants = fn(10362);
+const useStickerPickerStore = fn(10518).useStickerPickerStore;
+const StickerPickerConstants = fn(10401);
 ({
   STICKER_SCROLL_LOAD_DELAY_MS: closure_8,
   STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9,
@@ -24,7 +24,7 @@ const StickerPickerConstants = fn(10362);
 } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = { listPlaceholder: null, section: null, sectionSticker: null, nsfwContainer: null, nsfwText: null };
 obj = { color: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj.listPlaceholder = obj;
@@ -52,7 +52,7 @@ let closure_15 = noop.memo((height) => {
   let obj = { style: null, children: null };
   const items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  obj = { source: _modDef10504, size: native.Icon.Sizes.SMALL };
+  obj = { source: _modDef10543, size: native.Icon.Sizes.SMALL };
   const items1 = [closure_1_11(native.Icon, obj)];
   obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;

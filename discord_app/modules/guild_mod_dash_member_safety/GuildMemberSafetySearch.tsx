@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import CommunicationDisabledUtils from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import AutomodPermissionUtils from "../guild_automod/AutomodPermissionUtils.tsx";
-import _modDef4725 from "../../../_runtime/metro/04725__.js";
+import _modDef4755 from "../../../_runtime/metro/04755__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -24,8 +24,8 @@ let obj = {
   selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedJoinSourceType: "call",
-  selectedSourceInviteCode: "colors",
-  selectedSort: "k",
+  selectedSourceInviteCode: "user",
+  selectedSort: "isArray",
 };
 let closure_4 = Object.freeze(obj);
 const size = fn(2);
@@ -44,8 +44,8 @@ class GuildMemberSafetySearch {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "call",
-      selectedSourceInviteCode: "colors",
-      selectedSort: "k",
+      selectedSourceInviteCode: "user",
+      selectedSort: "isArray",
     };
     set = new Set();
     obj.selectedRoleIds = set;
@@ -74,8 +74,8 @@ prototype["reset"] = function reset() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "call",
-    selectedSourceInviteCode: "colors",
-    selectedSort: "k",
+    selectedSourceInviteCode: "user",
+    selectedSort: "isArray",
   };
   this._searchState = obj;
   this.hasDefaultQuery = true;
@@ -84,7 +84,7 @@ prototype["updateSearchState"] = function updateSearchState(arg0) {
   const merged = Object.assign(this._searchState);
   const merged1 = Object.assign(arg0);
   this._searchState = {};
-  this.hasDefaultQuery = _modDef4725(this._searchState, closure_4);
+  this.hasDefaultQuery = _modDef4755(this._searchState, closure_4);
   return true;
 };
 prototype["resetSearchState"] = function resetSearchState() {
@@ -102,8 +102,8 @@ prototype["resetSearchState"] = function resetSearchState() {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "call",
-      selectedSourceInviteCode: "colors",
-      selectedSort: "k",
+      selectedSourceInviteCode: "user",
+      selectedSort: "isArray",
     };
     const _Set = Set;
     const set = new Set();
@@ -300,8 +300,8 @@ export const getDefaultSearchState = function getDefaultSearchState() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "call",
-    selectedSourceInviteCode: "colors",
-    selectedSort: "k",
+    selectedSourceInviteCode: "user",
+    selectedSort: "isArray",
   };
   return obj;
 };

@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import _modDef4198 from "../../../../../_runtime/metro/04198__.js";
+import _modDef4228 from "../../../../../_runtime/metro/04228__.js";
 import DownloadIcon from "../../../../design/components/Icon/native/redesign/generated/DownloadIcon.tsx";
 import MobileNativeUpdateUtilsAll from "../../../mobile_native_updater/MobileNativeUpdateUtils.tsx";
 import useIsStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
@@ -9,7 +9,7 @@ import MobileNativeUpdateStore from "../../../mobile_native_updater/MobileNative
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11562);
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     return "Internal Build Update";
@@ -46,8 +46,8 @@ let SettingBuilders = {
       str = "Never refreshed";
       if (null != stateFromStores1) {
         const _HermesInternal = HermesInternal;
-        str = "Last refreshed " + _modDef4198(stateFromStores1).fromNow();
-        const obj3 = _modDef4198(stateFromStores1);
+        str = "Last refreshed " + _modDef4228(stateFromStores1).fromNow();
+        const obj3 = _modDef4228(stateFromStores1);
       }
     }
     return str;

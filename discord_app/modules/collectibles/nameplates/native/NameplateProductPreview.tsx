@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import utils from "../utils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05038_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05068_LinearGradient.js";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import useShopProductItems from "../../hooks/useShopProductItems.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -54,8 +54,8 @@ function NameplateUser(arg0) {
       size: native.AvatarSizes.NORMAL,
       avatarDecoration,
       animate: !stateFromStores,
-      autoStatusCutout: "flex-start",
-      "aria-hidden": "center",
+      autoStatusCutout: "carburante",
+      "aria-hidden": "fare il pieno",
     };
     return timestampProducer(native.Avatar, obj);
   }, items1);
@@ -81,7 +81,7 @@ function PlaceholderUser(end) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" },
   memberListContainer: null,

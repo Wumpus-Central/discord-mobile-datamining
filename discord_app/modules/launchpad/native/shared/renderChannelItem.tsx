@@ -30,16 +30,16 @@ function LaunchpadChannelIcon(channel) {
   });
   const items1 = [
     closure_8(View, obj),
-    closure_8(channel(12284).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
+    closure_8(channel(12320).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
   ];
   obj.children = items1;
   return closure_10(closure_9, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(4788).UnreadSetting;
+const UnreadSetting = fn(4818).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { guildBadgeIcon: null };
   const rect = {

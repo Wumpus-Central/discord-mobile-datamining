@@ -8,11 +8,11 @@ import GuildDirectoryStore from "../../GuildDirectoryStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const GuildDirectoryConstants = fn(12398);
+const GuildDirectoryConstants = fn(12434);
 ({ DirectoryEntryCategories: closure_8, getHubCategories: closure_9 } = GuildDirectoryConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { categoriesListWrapper: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 12 };
 createStyles.categoriesListWrapper = createStyles;

@@ -35,39 +35,79 @@ let closure_5 = asyncGeneratorStep(async (arg0) => {
   c3 = 0;
   c4 = 0;
   const iter = (async (arg0) => {
-    closure_1 = tmp2;
-    const attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
-    await "PX_16";
-    if (1 === tmp5) {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c4 = 3;
-        let obj1 = { value, done: true };
-        return obj1;
+        let obj = { value, done: true };
+        return obj;
       } else {
-        if (null != attachmentUrl) {
-          if ("" !== attachmentUrl) {
-            c3 = 2;
-            c4 = 1;
-            closure_130_2(closure_130_3[2]);
-            return { value: closure_130_2(closure_130_3[2]).maybeRefreshAttachmentUrl(attachmentUrl), done: false };
-          }
-        }
-        c4 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    } else if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      closure_129_1 = value;
-      closure_130_1(closure_130_3[3]).trackLinkClicked(closure_129_1);
-      obj1 = closure_130_1(closure_130_3[4]);
-      obj1.openURL(closure_129_1);
-      closure_130_1(closure_130_3[3]);
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp5;
+            closure_1 = tmp2;
+            let attachmentUrl;
+            attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
+            closure_129_1 = undefined;
+            c3 = 1;
+            c4 = 1;
+            return { value: "PX_16", done: true };
+          }
+        } else {
+          if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              let obj1 = { value, done: true };
+              return obj1;
+            } else {
+              if (null != attachmentUrl) {
+                if ("" !== attachmentUrl) {
+                  let obj3 = closure_130_2(closure_130_3[2]);
+                  c3 = 2;
+                  c4 = 1;
+                  const obj2 = { value: obj3.maybeRefreshAttachmentUrl(attachmentUrl), done: false };
+                  return obj2;
+                }
+              }
+              c4 = 3;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_1 = value;
+            obj = closure_130_1(closure_130_3[3]);
+            obj.trackLinkClicked(closure_129_1);
+            obj1 = closure_130_1(closure_130_3[4]);
+            obj1.openURL(closure_129_1);
+          }
+          c4 = 3;
+          obj3 = { value, done: true };
+          return obj3;
+        }
+      } catch (tmp25) {
+        c4 = tmp;
+        throw tmp25;
+      }
     }
-    return value;
   })();
   iter.next();
   return iter;
@@ -87,37 +127,78 @@ let closure_4 = asyncGeneratorStep(async (arg0) => {
   c3 = 0;
   c4 = 0;
   const iter = (async (arg0) => {
-    closure_1 = tmp2;
-    const attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
-    await "PX_16";
-    if (1 === tmp5) {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c4 = 3;
-        return { value, done: true };
+        let obj = { value, done: true };
+        return obj;
       } else {
-        if (null != attachmentUrl) {
-          if ("" !== attachmentUrl) {
-            closure_130_2(closure_130_3[2]);
-            c3 = 2;
-            c4 = 1;
-            const obj2 = { value: null, done: false };
-            obj2.value = obj2.maybeRefreshAttachmentUrl(attachmentUrl);
-            return obj2;
-          }
-        }
-        c4 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    } else if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      closure_129_1 = value;
-      closure_130_1(closure_130_3[1])({ urlString: closure_129_1 });
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp5;
+            closure_1 = tmp2;
+            let attachmentUrl;
+            attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
+            closure_129_1 = undefined;
+            c3 = 1;
+            c4 = 1;
+            return { value: "PX_16", done: true };
+          }
+        } else {
+          if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj1 = { value, done: true };
+              return obj1;
+            } else {
+              if (null != attachmentUrl) {
+                if ("" !== attachmentUrl) {
+                  let obj2 = closure_130_2(closure_130_3[2]);
+                  c3 = 2;
+                  c4 = 1;
+                  obj2 = { value: null, done: false };
+                  obj2.value = obj2.maybeRefreshAttachmentUrl(attachmentUrl);
+                  return obj2;
+                }
+              }
+              c4 = 3;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_1 = value;
+            obj = { urlString: closure_129_1 };
+            closure_130_1(closure_130_3[1])(obj);
+          }
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        }
+      } catch (tmp22) {
+        c4 = tmp;
+        throw tmp22;
+      }
     }
-    return value;
   })();
   iter.next();
   return iter;
@@ -133,7 +214,7 @@ obj.onLongPressAttachmentLink = function () {
   return applyArgumentsResult;
 };
 obj.onTapMention = function onTapMention(nativeEvent) {
-  let obj = parsedUserId(11640);
+  let obj = parsedUserId(11676);
   const nativeSyntheticEventData = obj.getNativeSyntheticEventData(nativeEvent);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
@@ -147,7 +228,7 @@ obj.onTapMention = function onTapMention(nativeEvent) {
       if (null != guildId) {
         obj = { guildId, roleId, channelId };
         ActionSheetActionCreatorsDefault.openLazy(
-          parsedUserId(1896)(11680, dependencyMap.paths),
+          parsedUserId(1896)(11716, dependencyMap.paths),
           "RoleMembersActionSheet",
           obj,
         );
@@ -157,7 +238,7 @@ obj.onTapMention = function onTapMention(nativeEvent) {
       if (null != guildId) {
         const obj1 = { guildId, roleId: null, channelId: null };
         const obj6 = ActionSheetActionCreatorsDefault;
-        const tmp10 = parsedUserId(1896)(11680, dependencyMap.paths);
+        const tmp10 = parsedUserId(1896)(11716, dependencyMap.paths);
         obj1.roleId = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1.channelId = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
@@ -202,7 +283,7 @@ obj.onTapInlineCode = function onTapInlineCode(nativeEvent) {
   tmp = null != node.content && typeof node.content === "string";
 };
 obj.onTapEmoji = function onTapEmoji(emojiNode) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10418, dependencyMap.paths), "MessageEmojiActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10457, dependencyMap.paths), "MessageEmojiActionSheet", {
     emojiNode: emojiNode.nativeEvent.node,
   });
 };

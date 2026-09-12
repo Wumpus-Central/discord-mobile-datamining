@@ -17,12 +17,12 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ChatInputConstants = fn(12055);
+const ChatInputConstants = fn(12091);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let obj = {
   actions: { flexDirection: "row", alignItems: "center" },
   themedChatInput: null,
@@ -31,7 +31,7 @@ let obj = {
 };
 obj = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
 obj.themedChatInput = obj;
-const createStyles = { maxHeight: fn(5031).SMALL_BUTTON_HEIGHT + fn(5031).SMALL_BUTTON_PADDING };
+const createStyles = { maxHeight: fn(5061).SMALL_BUTTON_HEIGHT + fn(5061).SMALL_BUTTON_PADDING };
 obj.buttonWrapper = createStyles;
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);

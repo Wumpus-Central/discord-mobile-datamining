@@ -11,9 +11,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7281);
+const Constants = fn(7311);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(7224).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const size = fn(2);
@@ -24,7 +24,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
   let trackUserProfileAction;
   importDefault = undefined;
   const tmp3 = UserProfileSharedStylesDefault();
-  let obj = trackUserProfileAction(8275);
+  let obj = trackUserProfileAction(8307);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   let obj1 = NicknameUtilsDefault;
   let guild_id;
@@ -36,7 +36,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
     id = channel.id;
   }
   const name = obj1.useName(guild_id, id, user);
-  let tmpResult = tmp(4451);
+  let tmpResult = tmp(4481);
   importDefault = tmpResult.useUserTag(user);
   const tmp9 = useUserProfileBannerHeightDefault(ACTION_SHEET_MAX_WIDTH);
   const tmp8 = useBadgesDefault(displayProfile);
@@ -48,7 +48,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
   });
   ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({ user, displayProfile }));
   const tmp11 = useProfileThemeDefault({ user, displayProfile });
-  const userProfileColors = trackUserProfileAction(8322).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const userProfileColors = trackUserProfileAction(8354).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   if (null == user) {
     return null;
@@ -62,7 +62,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
       blurAnimatedProps,
       showBlur,
     };
-    const items = [closure_7(tmp(8328), obj)];
+    const items = [closure_7(tmp(8360), obj)];
     obj = { style: contentAnimatedStyle, children: null };
     obj1 = { user, guildId: null, backgroundColor: null, disableStatus: true };
     let guildId;
@@ -71,7 +71,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
     }
     obj1.guildId = guildId;
     obj1.backgroundColor = tmp13;
-    const items1 = [closure_7(tmp4(8340).OpenableUserProfileAvatar, obj1)];
+    const items1 = [closure_7(tmp4(8372).OpenableUserProfileAvatar, obj1)];
     const obj2 = { style: null, children: null };
     const items2 = [, ,];
     ({ profileContentWrapper: arr2[0], profileContent: arr2[1] } = tmp3);
@@ -93,7 +93,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
       showBadgeToastOnPress: true,
     };
     let guild_id1;
-    tmpResult = tmp(11247);
+    tmpResult = tmp(11286);
     if (channel != null) {
       guild_id1 = channel.guild_id;
     }
@@ -128,14 +128,14 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
     const obj9 = { backgroundColor: containerBackground };
     items4[1] = obj9;
     obj8.style = items4;
-    obj7.children = closure_7(tmp(11301), obj8);
+    obj7.children = closure_7(tmp(11340), obj8);
     items3[1] = closure_7(View, obj7);
     obj2.children = items3;
     items1[1] = closure_8(View, obj2);
     obj.children = items1;
-    items[1] = closure_8(tmp(4343).View, obj);
+    items[1] = closure_8(tmp(4373).View, obj);
     obj6.children = items;
     return closure_8(closure_9, obj6);
   }
-  const tmp4Result = trackUserProfileAction(8322);
+  const tmp4Result = trackUserProfileAction(8354);
 });

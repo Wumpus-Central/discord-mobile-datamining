@@ -10,7 +10,7 @@ const TextInput = fn(17).TextInput;
 const Constants = fn(1074);
 ({ KeyboardThemes: closure_4, Fonts } = Constants);
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let obj = { input: null, placeholderTextColor: null };
 obj = { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT };
 obj.input = obj;

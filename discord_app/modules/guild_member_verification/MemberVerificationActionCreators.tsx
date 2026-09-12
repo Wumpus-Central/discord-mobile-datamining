@@ -310,7 +310,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           let body;
           c8 = 1;
           c9 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

@@ -6,7 +6,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { timestamp: null };
 createStyles = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 createStyles.timestamp = createStyles;

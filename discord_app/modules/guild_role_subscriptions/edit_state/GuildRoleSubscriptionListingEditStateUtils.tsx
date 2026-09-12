@@ -88,7 +88,7 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
           closure_129_16 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -175,7 +175,7 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
               closure_129_15 = closure_129_13.map((item) => {
                 const customEmojiById = closure_2_7.getCustomEmojiById(item);
                 if (null != customEmojiById) {
-                  guildId(10425);
+                  guildId(10464);
                   const obj = { guildId, emojiId: customEmojiById.id, roles: null };
                   const items = [];
                   items[HermesBuiltin.arraySpread(customEmojiById.roles, 0)] = dependencyMap;
@@ -190,10 +190,10 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const found = roles.filter((item) => item !== dependencyMap);
                   if (found.length > 0) {
                     let obj = { guildId, emojiId: customEmojiById.id, roles: found };
-                    let updateEmojiResult = guildId(10425).updateEmoji(obj);
-                    const obj2 = guildId(10425);
+                    let updateEmojiResult = guildId(10464).updateEmoji(obj);
+                    const obj2 = guildId(10464);
                   } else {
-                    obj = guildId(10425);
+                    obj = guildId(10464);
                     updateEmojiResult = obj.deleteEmoji(guildId, customEmojiById.id);
                   }
                   return updateEmojiResult;
@@ -244,110 +244,177 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
   }
 };
 let closure_21 = async function _createListingFromEditState(arg0) {
-  ({
-    guildId: closure_132_0,
-    editStateId: closure_132_1,
-    groupListingId: closure_132_2,
-    onBeforeDispatchNewListing: closure_132_3,
-  } = closure_0);
-  await "PX_16";
-  if (1 === tmp4) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
     if (arg0 === 1) {
-      c7 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c7 = 3;
-      return { value, done: true };
+      let obj = { value, done: true };
+      return obj;
     } else {
-      closure_132_4 = closure_133_10.getState().listings[closure_132_1];
-      closure_133_1(closure_133_3[20])(null != closure_132_4, "edit state does not exist");
-      const name = closure_132_4.name;
-      const description = closure_132_4.description;
-      const channelBenefits = closure_132_4.channelBenefits;
-      const intangibleBenefits = closure_132_4.intangibleBenefits;
-      const priceTier = closure_132_4.priceTier;
-      const image = closure_132_4.image;
-      const channelAccessFormat = closure_132_4.channelAccessFormat;
-      closure_133_1(closure_133_3[20])(null != name, "no name provided");
-      closure_133_1(closure_133_3[20])(null != description, "no description provided");
-      closure_133_1(closure_133_3[20])(null != priceTier, "no priceTier provided");
-      closure_133_1(closure_133_3[20])(null != image, "no image provided");
-      closure_132_12 = channelAccessFormat === closure_133_9.ALL_CHANNELS_ACCESS;
-      let id = closure_132_2;
-      if (null == id) {
-        c6 = 2;
-        c7 = 1;
-        let obj2 = {
-          value: closure_133_2(closure_133_3[22]).createSubscriptionGroupListing(closure_132_0, {}),
-          done: false,
-        };
-        return obj2;
-      } else {
-        let tmp9 = null != channelBenefits;
-        if (tmp9) {
-          tmp9 = channelBenefits.length > 0;
-        }
-        if (tmp9) {
-          c6 = 3;
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_5 = tmp4;
+          c4 = 0;
+          closure_132_0 = undefined;
+          closure_132_1 = undefined;
+          closure_132_2 = undefined;
+          closure_132_3 = undefined;
+          ({
+            guildId: closure_132_0,
+            editStateId: closure_132_1,
+            groupListingId: closure_132_2,
+            onBeforeDispatchNewListing: closure_132_3,
+          } = closure_0);
+          closure_132_4 = undefined;
+          let name;
+          let description;
+          let channelBenefits;
+          let intangibleBenefits;
+          let priceTier;
+          let image;
+          let channelAccessFormat;
+          closure_132_12 = undefined;
+          let id;
+          closure_132_14 = undefined;
+          let templateTierCreationAnalyticsContext;
+          c6 = 1;
           c7 = 1;
-          let obj3 = {
-            value: closure_133_0(closure_133_3[25]).createChannelsFromTemplateTierBenefits(
-              closure_132_0,
-              channelBenefits,
-            ),
-            done: false,
-          };
-          return obj3;
+          return { value: "PX_16", done: true };
         }
+      } else {
+        if (1 === tmp4) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            closure_132_4 = closure_133_10.getState().listings[closure_132_1];
+            closure_133_1(closure_133_3[20])(null != closure_132_4, "edit state does not exist");
+            name = closure_132_4.name;
+            description = closure_132_4.description;
+            channelBenefits = closure_132_4.channelBenefits;
+            intangibleBenefits = closure_132_4.intangibleBenefits;
+            priceTier = closure_132_4.priceTier;
+            image = closure_132_4.image;
+            channelAccessFormat = closure_132_4.channelAccessFormat;
+            closure_133_1(closure_133_3[20])(null != name, "no name provided");
+            closure_133_1(closure_133_3[20])(null != description, "no description provided");
+            closure_133_1(closure_133_3[20])(null != priceTier, "no priceTier provided");
+            closure_133_1(closure_133_3[20])(null != image, "no image provided");
+            closure_132_12 = channelAccessFormat === closure_133_9.ALL_CHANNELS_ACCESS;
+            id = closure_132_2;
+            if (null == id) {
+              c6 = 2;
+              c7 = 1;
+              let obj2 = {
+                value: closure_133_2(closure_133_3[22]).createSubscriptionGroupListing(closure_132_0, {}),
+                done: false,
+              };
+              return obj2;
+            } else {
+              let tmp9 = null != channelBenefits;
+              if (tmp9) {
+                tmp9 = channelBenefits.length > 0;
+              }
+              if (tmp9) {
+                let obj7 = closure_133_0(closure_133_3[25]);
+                c6 = 3;
+                c7 = 1;
+                let obj3 = {
+                  value: obj7.createChannelsFromTemplateTierBenefits(closure_132_0, channelBenefits),
+                  done: false,
+                };
+                return obj3;
+              }
+            }
+          }
+        } else if (2 === tmp4) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            id = value.id;
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+        closure_1 = 0;
+        closure_2 = channelBenefits;
+        if (channelBenefits == null) {
+          closure_2 = [];
+        }
+        const items = [];
+        closure_1 = HermesBuiltin.arraySpread(closure_2, closure_1);
+        closure_3 = intangibleBenefits;
+        if (intangibleBenefits == null) {
+          closure_3 = [];
+        }
+        closure_1 = HermesBuiltin.arraySpread(closure_3, closure_1);
+        closure_132_14 = items;
+        obj2 = closure_133_0(closure_133_3[25]);
+        templateTierCreationAnalyticsContext = obj2.getTemplateTierCreationAnalyticsContext(
+          closure_132_1,
+          closure_132_0,
+        );
+        obj3 = closure_133_2(closure_133_3[22]);
+        const obj5 = {
+          guildId: closure_132_0,
+          groupListingId: id,
+          data: null,
+          analyticsContext: null,
+          onBeforeDispatchNewListing: null,
+        };
+        const obj6 = {
+          can_access_all_channels: closure_132_12,
+          image,
+          name,
+          description,
+          benefits: closure_132_14,
+          priceTier,
+        };
+        obj5.data = obj6;
+        obj5.analyticsContext = templateTierCreationAnalyticsContext;
+        obj5.onBeforeDispatchNewListing = closure_132_3;
+        c7 = 3;
+        obj7 = { value: obj3.createSubscriptionListing(obj5), done: true };
+        return obj7;
       }
+    } catch (tmp52) {
+      c7 = tmp;
+      throw tmp52;
     }
-  } else if (2 === tmp4) {
-    if (arg0 === 1) {
-      c7 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c7 = 3;
-      return { value, done: true };
-    } else {
-      id = value.id;
-    }
-  } else if (arg0 === 1) {
-    c7 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c7 = 3;
-    return { value, done: true };
   }
-  closure_1 = 0;
-  closure_2 = channelBenefits;
-  if (channelBenefits == null) {
-    closure_2 = [];
-  }
-  const items = [];
-  closure_1 = HermesBuiltin.arraySpread(closure_2, closure_1);
-  closure_3 = intangibleBenefits;
-  if (intangibleBenefits == null) {
-    closure_3 = [];
-  }
-  closure_1 = HermesBuiltin.arraySpread(closure_3, closure_1);
-  closure_132_14 = items;
-  obj2 = closure_133_0(closure_133_3[25]);
-  const templateTierCreationAnalyticsContext = obj2.getTemplateTierCreationAnalyticsContext(
-    closure_132_1,
-    closure_132_0,
-  );
-  obj3 = closure_133_2(closure_133_3[22]);
-  return obj3.createSubscriptionListing({
-    guildId: closure_132_0,
-    groupListingId: id,
-    data: { can_access_all_channels: closure_132_12, image, name, description, benefits: closure_132_14, priceTier },
-    analyticsContext: templateTierCreationAnalyticsContext,
-    onBeforeDispatchNewListing: closure_132_3,
-  });
 };
-const GuildRoleSubscriptionEditStore = fn(15289);
+const GuildRoleSubscriptionEditStore = fn(15311);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(15266).GuildRoleSubscriptionBenefitTypes;
+let closure_11 = fn(15288).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1074);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
 const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
@@ -435,7 +502,7 @@ export const useName = function useName(listingId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0),
   );
-  const tmp2 = name(5649)(() => first);
+  const tmp2 = name(5679)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
   _require = listingId;
@@ -491,7 +558,7 @@ export const usePriceTier = function usePriceTier(editStateId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0),
   );
-  const tmp2 = priceTier(5649)(() => first);
+  const tmp2 = priceTier(5679)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
   _require = editStateId;
@@ -547,7 +614,7 @@ export const useDescription = function useDescription(editStateId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0),
   );
-  const tmp2 = description(5649)(() => first);
+  const tmp2 = description(5679)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
   _require = editStateId;
@@ -604,7 +671,7 @@ export const useImage = function useImage(editStateId, arg1) {
     GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0),
   );
   closure_129_2 = stateFromStores;
-  const tmp2 = image(5649)(() => first);
+  const tmp2 = image(5679)(() => first);
   closure_129_3 = tmp2;
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
@@ -647,7 +714,7 @@ export const useImage = function useImage(editStateId, arg1) {
 };
 export const useApplicationId = function useApplicationId(listingId) {
   _require = listingId;
-  const f99699 = (application_id) => {
+  const f99745 = (application_id) => {
     application_id = undefined;
     if (application_id != null) {
       application_id = application_id.application_id;
@@ -658,7 +725,7 @@ export const useApplicationId = function useApplicationId(listingId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0),
   );
-  const tmp2 = f99699(5649)(() => first);
+  const tmp2 = f99745(5679)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => closure_3(c2), items1);
@@ -764,7 +831,7 @@ export const useRole = function useRole(listingId, guildId) {
   }, items);
 };
 export const useRoleColor = function useRoleColor(editStateId, guildId) {
-  const tmp = roleColor(15290)(guildId, editStateId);
+  const tmp = roleColor(15312)(guildId, editStateId);
   editStateId = tmp;
   const items = [tmp];
   let memo = noop.useMemo(() => {
@@ -814,7 +881,7 @@ export const useRoleColor = function useRoleColor(editStateId, guildId) {
   return items2;
 };
 export const useChannelAccessFormat = function useChannelAccessFormat(editStateId, guildId) {
-  const tmp = channelAccessFormat(15290)(guildId, editStateId);
+  const tmp = channelAccessFormat(15312)(guildId, editStateId);
   const items = [tmp];
   let memo = noop.useMemo(() => {
     if (null == closure_0) {
@@ -878,7 +945,7 @@ export const useChannelBenefits = function useChannelBenefits(listingId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0),
   );
-  const tmp2 = channelBenefits(5649)(() => first);
+  const tmp2 = channelBenefits(5679)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
   _require = listingId;
@@ -933,7 +1000,7 @@ export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0),
   );
-  const tmp2 = intangibleBenefits(5649)(() => first);
+  const tmp2 = intangibleBenefits(5679)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
   _require = listingId;
@@ -975,7 +1042,7 @@ export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
 };
 export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
   _require = guildId;
-  const tmp = tierEmojiIds(15290)(guildId, listingId);
+  const tmp = tierEmojiIds(15312)(guildId, listingId);
   const items = [EmojiStore];
   const items1 = [guildId];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
@@ -1162,7 +1229,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
     GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0),
   );
   closure_129_2 = stateFromStores;
-  let tmp2 = first(5649)(() => first);
+  let tmp2 = first(5679)(() => first);
   closure_129_3 = tmp2;
   const items1 = [stateFromStores, tmp2];
   const memo = noop.useMemo(() => closure_3(c2), items1);
@@ -1305,7 +1372,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
             closure_129_7 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "PX_16", done: null };
+            return { value: "PX_16", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1360,8 +1427,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   if (null != channelBenefits) {
                     const benefits = subscriptionListing.role_benefits.benefits;
                     const benefits1 = subscriptionListing.role_benefits.benefits;
-                    const found = benefits.filter(closure_1_0(15292).isChannelBenefit);
-                    const found1 = benefits1.filter(closure_1_0(15292).isIntangibleBenefit);
+                    const found = benefits.filter(closure_1_0(15314).isChannelBenefit);
+                    const found1 = benefits1.filter(closure_1_0(15314).isIntangibleBenefit);
                     if (channelBenefits == null) {
                       channelBenefits = found;
                     }
@@ -1376,8 +1443,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   if (!obj2.isEmpty(obj)) {
                     obj = { guildId, groupListingId, listingId: editStateId, data: null };
                     obj.data = obj;
-                    subscriptionListing = closure_1_2(7328).updateSubscriptionListing(obj);
-                    const obj3 = closure_1_2(7328);
+                    subscriptionListing = closure_1_2(7358).updateSubscriptionListing(obj);
+                    const obj3 = closure_1_2(7358);
                   }
                   return subscriptionListing;
                 })(obj2),

@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { preview: null, rightAccessoryContainer: null };
 let size = { height: 64, width: 32, borderRadius: nativeDefault.radii.sm };
 createStyles.preview = size;
@@ -31,7 +31,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
   obj.children = <closure_4 source={{ uri: notification.imageUri }} style={tmp.preview} />;
   obj = {
     header: memo,
-    children: jsx(notification(10196).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
+    children: jsx(notification(10235).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
     rightAccessory: <closure_5 source={{ uri: notification.imageUri }} style={tmp.preview} />,
     onPress() {
       let obj = BugReportStore;
@@ -44,7 +44,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
         obj.setState({ isReportOpen: true });
         obj = { screenshotUri: null, screenshot: null };
         ({ imageUri: obj7.screenshotUri, image: obj7.screenshot } = notification);
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10274, dependencyMap.paths), obj);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10313, dependencyMap.paths), obj);
       }
     },
     onSettingsPress() {
@@ -54,9 +54,9 @@ export const BugReporterNotification = function BugReporterNotification(notifica
     },
     notification,
   };
-  return jsx(notification(10259).NotificationPressable, {
+  return jsx(notification(10298).NotificationPressable, {
     header: memo,
-    children: jsx(notification(10196).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
+    children: jsx(notification(10235).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
     rightAccessory: <closure_5 source={{ uri: notification.imageUri }} style={tmp.preview} />,
     onPress() {
       let obj = BugReportStore;
@@ -69,7 +69,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
         obj.setState({ isReportOpen: true });
         obj = { screenshotUri: null, screenshot: null };
         ({ imageUri: obj7.screenshotUri, image: obj7.screenshot } = notification);
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10274, dependencyMap.paths), obj);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10313, dependencyMap.paths), obj);
       }
     },
     onSettingsPress() {

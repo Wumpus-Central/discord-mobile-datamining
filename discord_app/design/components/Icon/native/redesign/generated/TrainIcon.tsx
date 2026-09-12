@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/TrainIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod15663 from "../../../../../../../_runtime/metro/15663__.js";
+import _mod15685 from "../../../../../../../_runtime/metro/15685__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const TrainIcon = function TrainIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15663, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15685, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

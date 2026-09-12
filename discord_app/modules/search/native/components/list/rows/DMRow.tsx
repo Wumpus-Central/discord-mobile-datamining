@@ -4,9 +4,9 @@ import native from "../../../../../../design/void/native.tsx";
 import UserUtils from "../../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
-import _modDef9844 from "../../../../../../../_runtime/metro/09844__.js";
+import _modDef9883 from "../../../../../../../_runtime/metro/09883__.js";
 import ActivityStatusDefault from "../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef13555 from "../../../../../../../_runtime/metro/13555__.js";
+import _modDef13588 from "../../../../../../../_runtime/metro/13588__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -37,7 +37,7 @@ const Constants = fn(1074);
 ({ StatusTypes: closure_11, RelationshipTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { activityStatusIcon: { width: 14, height: 14 }, activityStatusText: null, tag: null, title: null };
 obj = { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" };
 obj.activityStatusText = obj;
@@ -174,7 +174,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         obj = { style: title.tag, children: null };
-        const obj1 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9844, disableColor: true };
+        const obj1 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9883, disableColor: true };
         obj.children = map1(native.Icon, obj1);
         tmp4Result = map1(timestampProducer, obj);
       }
@@ -182,7 +182,7 @@ export default noop.memo(function DMRow(user) {
       tmp4Result = null != premiumSince;
       if (tmp4Result) {
         obj2 = { style: title.tag, children: null };
-        const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13555, disableColor: true };
+        const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13588, disableColor: true };
         obj2.children = map1(native.Icon, obj3);
         tmp4Result = map1(timestampProducer, obj2);
       }

@@ -53,7 +53,7 @@ const View = fn(17).View;
 const AppStates = fn(1074).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = {
   height: 8,
@@ -242,7 +242,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return isStaffResult;
   });
-  let obj2 = stateFromStores(4343);
+  let obj2 = stateFromStores(4373);
   const fn = function t() {
     let obj = { transform: null };
     if (stateFromStores) {
@@ -272,10 +272,10 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   };
   obj = {
     useReducedMotion: stateFromStores,
-    withRepeat: stateFromStores(4343).withRepeat,
-    withSequence: stateFromStores(4343).withSequence,
-    withTiming: stateFromStores(4607).withTiming,
-    Easing: stateFromStores(4343).Easing,
+    withRepeat: stateFromStores(4373).withRepeat,
+    withSequence: stateFromStores(4373).withSequence,
+    withTiming: stateFromStores(4637).withTiming,
+    Easing: stateFromStores(4373).Easing,
   };
   fn.__closure = obj;
   fn.__workletHash = 17454673879926;
@@ -289,13 +289,13 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1114).intl;
   obj2.children = intl.string(stateFromStores(1114).t.JwIJMV);
-  items3[1] = closure_13(stateFromStores(4602).Text, obj2);
+  items3[1] = closure_13(stateFromStores(4632).Text, obj2);
   obj.children = items3;
   const tmp8 = closure_14(View, obj);
   let tmp7Result = tmp8;
   if (stateFromStores1) {
     let obj3 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(stateFromStores(5174).PressableOpacity, obj3);
+    tmp7Result = closure_13(stateFromStores(5204).PressableOpacity, obj3);
   }
   return tmp7Result;
 };

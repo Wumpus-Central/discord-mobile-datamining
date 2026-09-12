@@ -21,7 +21,7 @@ const Constants = fn(1074);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { name: null, discriminator: null, roleCountContainer: null, roleCountText: null };
 createStyles = {
   color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,

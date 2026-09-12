@@ -66,7 +66,7 @@ export default function useConsoleConnectingInfo(arg0) {
   obj.isConnectingOrConnectedToConsole = channelId2 === arg0 || channelId === arg0;
   obj.icon = getConsoleIconDefault(str);
   const tmp9 = useShouldDisplayCancelConsoleTransferDefault(stateFromStores);
-  obj.text = tmp5(17257).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
+  obj.text = tmp5(17284).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
   obj.color = getConsoleColorDefault(str);
   obj.displayCancel = tmp9;
   return obj;

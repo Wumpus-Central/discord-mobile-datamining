@@ -8,7 +8,7 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4606);
+fn(4636);
 let createStyles = { skeletonContainer: null };
 createStyles = {
   height: 16,
@@ -26,7 +26,7 @@ let result = size.fileFinishedImporting("modules/collectibles/native/Collectible
 
 export const CollectiblesShopPricePlaceholder = function CollectiblesShopPricePlaceholder(style) {
   let sharedValue;
-  let obj = sharedValue(4343);
+  let obj = sharedValue(4373);
   sharedValue = obj.useSharedValue(0.3);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
@@ -40,7 +40,7 @@ export const CollectiblesShopPricePlaceholder = function CollectiblesShopPricePl
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 10107093534072;
   fn.__initData = __initData;
-  const animatedStyle = sharedValue(4343).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4373).useAnimatedStyle(fn);
   obj = { style: null };
   const items1 = [tmp.skeletonContainer, style.style, animatedStyle];
   obj.style = items1;

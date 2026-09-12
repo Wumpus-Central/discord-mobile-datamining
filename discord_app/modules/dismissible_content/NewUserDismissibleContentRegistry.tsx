@@ -32,7 +32,6 @@ const dependencyMap = {
   [fn(1943).DismissibleContent.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0,
   [fn(1943).DismissibleContent.BOGO_2025_ANNOUNCEMENT_MODAL]: 0,
   [fn(1943).DismissibleContent.NITRO_DROP_REWARD]: 0,
-  [fn(1943).DismissibleContent.BOUNTIES_SWIPE_UP_NUX]: 0,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/NewUserDismissibleContentRegistry.tsx");

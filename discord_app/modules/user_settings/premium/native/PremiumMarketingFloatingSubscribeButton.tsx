@@ -10,7 +10,7 @@ const View = fn(17).View;
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1 },
   gradient: { position: "absolute", left: 0, right: 0, bottom: 0, top: -64 },

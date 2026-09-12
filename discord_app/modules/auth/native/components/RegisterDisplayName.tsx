@@ -7,13 +7,13 @@ import UniqueUsernamesStore from "../../../unique_usernames/UniqueUsernamesStore
 
 const require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(16017);
+const RegistrationUIStore = fn(16041);
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(16018);
+const RegistrationConstants = fn(16042);
 ({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { globalName: null, button: null, page: null };
 createStyles = { marginTop: nativeDefault.space.PX_24 };
 createStyles.globalName = createStyles;

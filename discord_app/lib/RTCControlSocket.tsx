@@ -11,7 +11,7 @@ import TypedEventEmitter from "../../discord_common/js/shared/utils/TypedEventEm
 
 require = fn;
 function noop() {}
-const Constants = fn(4631);
+const Constants = fn(4661);
 ({
   Features: hasOwnProperty,
   MediaEngineContextTypes: metroRequire,
@@ -203,7 +203,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     logger2.error("Connect called with already existing websocket");
     self.cleanupWebSocket((close) => close.close(4000));
   }
-  obj = self(4635);
+  obj = self(4665);
   self.connectionStartTime = obj.now();
   self.helloTimeout = setTimeout(() => {
     self.handleClose(
@@ -216,7 +216,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     );
   }, closure_13);
   obj = { location: "RTCControlSocket", supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE) };
-  const webSocket = new WebSocket("" + self.url + "?v=" + self(14130).getVoiceGatewayProtocolVersion(obj));
+  const webSocket = new WebSocket("" + self.url + "?v=" + self(14165).getVoiceGatewayProtocolVersion(obj));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";
   webSocket.onopen = () => {
@@ -523,7 +523,7 @@ prototype["handleHello"] = function handleHello(d) {
       tmp4 = require;
     }
   }
-  const diff = tmp4(4635).now() - self.connectionStartTime;
+  const diff = tmp4(4665).now() - self.connectionStartTime;
   ({ logger, heartbeatInterval } = self);
   if (heartbeatInterval == null) {
     heartbeatInterval = "??";
@@ -532,7 +532,7 @@ prototype["handleHello"] = function handleHello(d) {
     "[HELLO] heartbeat interval: " + heartbeatInterval + ", version: " + self.serverVersion + ", took " + diff + " ms",
   );
   self.startHeartbeater();
-  const tmp4Result = tmp4(4635);
+  const tmp4Result = tmp4(4665);
 };
 prototype["handleReady"] = function handleReady(experiments) {
   const self = this;

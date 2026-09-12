@@ -11,7 +11,7 @@ import PresenceStore from "../../stores/PresenceStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
-const GuildVoiceRingingExperimentDefault = tmp4(9265);
+const GuildVoiceRingingExperimentDefault = tmp4(9304);
 const require = fn;
 function useCanRingToGuildVoiceChannel(user) {
   _require = user;

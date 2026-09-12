@@ -76,7 +76,7 @@ function ReactionNotificationBodyWrapper(arg0) {
   noop = tmp4;
   const AnimateEmoji = message(1935).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = message(10220);
+  let obj = message(10259);
   const previewableMedia = obj.usePreviewableMedia(message);
   const items = [setting, reaction, , ,];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
@@ -218,9 +218,9 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  let obj1 = message(10184);
+  let obj1 = message(10223);
   const hasPreviewableMedia = obj1.useHasPreviewableMedia(message);
-  let obj2 = message(10229);
+  let obj2 = message(10268);
   if (hasPreviewableMedia) {
     message = obj2.useGetInitialMessagePreview({ message });
   }
@@ -273,7 +273,7 @@ function ReactorNotificationIcon(notification) {
   tmp = closure_13();
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10185);
+const InAppNotificationConstants = fn(10224);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Constants = fn(1074);
@@ -281,7 +281,7 @@ const Constants = fn(1074);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   newContainerRoleDot: { paddingRight: 4, paddingTop: 0 },
   container: { flexDirection: "column" },
@@ -290,14 +290,14 @@ let createStyles = {
   italic: null,
   guildIcon: null,
 };
-let PlatformUtils = fn(1116);
+let PlatformUtils = fn(1151);
 let tmp5;
 if (!PlatformUtils.isIOS()) {
   let items = [{ translateY: 2 }];
   tmp5 = items;
 }
 createStyles.imageEmoji = { height: 16, width: 16, transform: tmp5 };
-PlatformUtils = fn(1116);
+PlatformUtils = fn(1151);
 createStyles = {
   fontStyle: "italic",
   fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC,
@@ -418,7 +418,7 @@ export default function ReactionNotification(notification) {
   }, items3);
   const callback1 = obj1.useCallback(() => {
     const obj = { channelId: id };
-    return obj.pushLazy(asyncRequireImpl(10231, dependencyMap.paths), obj);
+    return obj.pushLazy(asyncRequireImpl(10270, dependencyMap.paths), obj);
   }, items4);
   obj = {
     icon: closure_10(ReactorNotificationIcon, { notification, isMilestone: result }),

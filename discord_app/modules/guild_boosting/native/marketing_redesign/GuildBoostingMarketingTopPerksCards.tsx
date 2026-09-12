@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
-import _modDef13656 from "../../../../../_runtime/metro/13656__.js";
-import _mod13657 from "../../../../../_runtime/metro/13657__.js";
-import _modDef13658 from "../../../../../_runtime/metro/13658__.js";
+import _modDef13690 from "../../../../../_runtime/metro/13690__.js";
+import _mod13691 from "../../../../../_runtime/metro/13691__.js";
+import _modDef13692 from "../../../../../_runtime/metro/13692__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   wrapper: { marginTop: 50 },
   heading: { marginBottom: 20, textAlign: "center" },
@@ -62,7 +62,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13656 });
+      return timestampProducer(React3, { style, source: _modDef13690 });
     },
   },
   {
@@ -75,7 +75,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod13657, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod13691, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return timestampProducer(LottieAnimationViewDefault, obj);
     },
   },
@@ -89,7 +89,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13658 });
+      return timestampProducer(React3, { style, source: _modDef13692 });
     },
   },
 ];

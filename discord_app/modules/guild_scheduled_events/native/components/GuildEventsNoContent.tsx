@@ -12,7 +12,7 @@ const Constants = fn(1085);
 ({ Permissions: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = {
   container: {
     display: "flex",
@@ -45,8 +45,8 @@ export default function GuildEventsNoContent(guild) {
   const items1 = [guild];
   let stateFromStores = obj.useStateFromStores(items, () => PermissionStore.can(constants.MANAGE_ROLES, guild), items1);
   obj = { style: tmp.container, children: null };
-  obj = { icon: onClose(9874), IconComponent: guild(9876).CalendarIcon };
-  const items2 = [closure_7(onClose(8493), obj), , ,];
+  obj = { icon: onClose(9913), IconComponent: guild(9915).CalendarIcon };
+  const items2 = [closure_7(onClose(8525), obj), , ,];
   const obj1 = {
     style: tmp.title,
     accessibilityRole: "header",
@@ -56,11 +56,11 @@ export default function GuildEventsNoContent(guild) {
   };
   const intl = guild(1114).intl;
   obj1.children = intl.string(guild(1114).t["WgZ+3D"]);
-  items2[1] = closure_7(guild(4602).Text, obj1);
+  items2[1] = closure_7(guild(4632).Text, obj1);
   const obj2 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = guild(1114).intl;
   obj2.children = intl2.string(guild(1114).t["v/S/PG"]);
-  items2[2] = closure_7(guild(4602).Text, obj2);
+  items2[2] = closure_7(guild(4632).Text, obj2);
   if (stateFromStores) {
     const obj3 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
     const intl3 = tmp2(1114).intl;
@@ -71,7 +71,7 @@ export default function GuildEventsNoContent(guild) {
       },
     };
     obj3.children = intl3.format(tmp2(1114).t["K+DH2o"], obj4);
-    stateFromStores = closure_7(tmp2(4602).Text, obj3);
+    stateFromStores = closure_7(tmp2(4632).Text, obj3);
   }
   items2[3] = stateFromStores;
   obj.children = items2;

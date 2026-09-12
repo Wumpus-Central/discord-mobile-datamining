@@ -102,7 +102,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   },
 ];
-fn(4606);
+fn(4636);
 let obj = { container: null, text: null, centeredText: null, buttons: null };
 obj = { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 };
 obj.container = obj;
@@ -116,7 +116,7 @@ const memoResult = noop.memo((user) => {
   user = user.user;
   let name;
   ({ guildId, channelId } = user);
-  let obj = name(4758);
+  let obj = name(4788);
   name = obj.getName(guildId, channelId, user);
   const intl = user(1114).intl;
   const tmp = closure_10();
@@ -145,7 +145,7 @@ const memoResult = noop.memo((user) => {
   const intl2 = user(1114).intl;
   obj1.text = intl2.string(user(1114).t["g33r/P"]);
   obj1.onPress = callback;
-  obj.children = closure_7(user(5026).Button, obj1);
+  obj.children = closure_7(user(5056).Button, obj1);
   obj.children = closure_7(View, obj);
   return closure_7(EmptyState, obj);
 });

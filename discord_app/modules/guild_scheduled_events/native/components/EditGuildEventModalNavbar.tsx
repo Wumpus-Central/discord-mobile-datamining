@@ -3,7 +3,7 @@ import util from "../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
-import _modDef7065 from "../../../../../_runtime/metro/07065__.js";
+import _modDef7095 from "../../../../../_runtime/metro/07095__.js";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import EditGuildEventUtils from "../../utils/EditGuildEventUtils.tsx";
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({
   header: {
     flexDirection: "row",
@@ -62,7 +62,7 @@ export default function EditGuildEventModalNavbar(screen) {
   const intl2 = util.intl;
   obj3.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj3.onPress = screen.onClose;
-  obj3.source = _modDef7065;
+  obj3.source = _modDef7095;
   obj3.style = tmp.rightButton;
   obj2.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj3);
   items1[2] = hasOwnProperty(View, obj2);

@@ -61,7 +61,7 @@ const View = fn(17).View;
 let closure_5 = fn(1961).createChannelRecordFromInvite;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { flex: { flex: 1 }, channel: { flex: 0 }, time: null };
 createStyles = { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
 createStyles.time = createStyles;
@@ -76,11 +76,11 @@ export default function InstantInviteCode(invite) {
   const memo = noop.useMemo(() => closure_5(invite.channel), items);
   obj = { children: null };
   obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
-  const items1 = [closure_8(invite(4602).Text, obj)];
+  const items1 = [closure_8(invite(4632).Text, obj)];
   const tmp = closure_10();
   items1[1] = closure_8(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj.children = items1;
-  obj.children = closure_9(invite(5024).Stack, obj);
+  obj.children = closure_9(invite(5054).Stack, obj);
   return closure_8(View, obj);
 }
 export { InstantInviteDetails };

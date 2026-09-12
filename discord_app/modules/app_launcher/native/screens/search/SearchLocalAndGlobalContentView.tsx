@@ -35,20 +35,20 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  let obj = hasOptions(12144);
+  let obj = hasOptions(12180);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     obj = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(12149), obj);
+    tmp4 = closure_10(onPressSend(12185), obj);
   }
-  let tmpResult = tmp(12198);
+  let tmpResult = tmp(12234);
   obj = {
     command,
     context,
     beforeExecuteCommand,
     onExecuteCommand,
-    sectionName: tmp(9500).AppLauncherSectionName.SEARCH,
+    sectionName: tmp(9539).AppLauncherSectionName.SEARCH,
   };
   const commandRowSend = tmpResult.useCommandRowSend(obj);
   hasOptions = commandRowSend.hasOptions;
@@ -83,15 +83,15 @@ function CommandRow(arg0) {
     onAccessibilityAction: null,
     trailing: null,
   };
-  tmpResult = tmp(9379);
+  tmpResult = tmp(9418);
   obj1.subLabel = tmpResult.getSectionName(application);
   obj1.start = isFirstRow;
   obj1.end = isLastRow;
   obj1.onPress = onPress;
   obj1.accessibilityActions = memo;
   obj1.onAccessibilityAction = callback;
-  obj1.trailing = closure_10(onPressSend(12198), { hasOptions, sending: commandRowSend.sending, onPressSend });
-  return closure_10(hasOptions(5656).TableRow, obj1);
+  obj1.trailing = closure_10(onPressSend(12234), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return closure_10(hasOptions(5686).TableRow, obj1);
 }
 function PlaceholderCommandRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
@@ -175,8 +175,8 @@ function CommandsExpandableList(expandedOverride) {
   });
 }
 const View = fn(17).View;
-const getSection = fn(9380).getSection;
-const FetchState = fn(12161).FetchState;
+const getSection = fn(9419).getSection;
+const FetchState = fn(12197).FetchState;
 const AppLauncherNativeConstants = fn(1482);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
@@ -196,7 +196,7 @@ let closure_17 = array.fill("placeholder");
 array = new Array(3);
 style = { type: style.PLACERHOLDER };
 let closure_18 = array.fill(style);
-fn(4606);
+fn(4636);
 let obj1 = {
   sectionHeader: { marginBottom: 8 },
   list: {

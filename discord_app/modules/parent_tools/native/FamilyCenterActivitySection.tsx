@@ -54,17 +54,17 @@ function FamilyCenterActivitySectionHeader(displayType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7611);
+const FamilyCenterConstants = fn(7641);
 ({ FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS: closure_7, TeenActionDisplayType: closure_8 } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { header: null, description: null };
 createStyles = { marginBottom: nativeDefault.space.PX_4 };
 createStyles.header = createStyles;
 createStyles.description = { marginBottom: nativeDefault.space.PX_8 };
 let closure_11 = createStyles.createStyles(createStyles);
-createStyles = fn(4606);
+createStyles = fn(4636);
 let obj2 = {
   container: { display: "flex" },
   loadMoreContainer: {
@@ -97,11 +97,11 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
   let loadMoreButton = closure_13();
-  let obj = displayType(14949);
+  let obj = displayType(14983);
   const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
-  let obj1 = displayType(14949);
+  let obj1 = displayType(14983);
   const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
-  let obj2 = displayType(12010);
+  let obj2 = displayType(12046);
   const familyCenterActions = obj2.useFamilyCenterActions({});
   const loadMore = familyCenterActions.loadMore;
   const tmp6 = _slicedToArray(noop.useState(closure_7), 2);
@@ -120,7 +120,7 @@ export default function FamilyCenterActivitySection(displayType) {
     obj1 = { displayType };
     const items1 = [
       closure_9(FamilyCenterActivitySectionHeader, obj1),
-      substr.map((action) => closure_1_9(loadMore(14955), { action }, action.event_id)),
+      substr.map((action) => closure_1_9(loadMore(14989), { action }, action.event_id)),
     ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
@@ -149,8 +149,8 @@ export default function FamilyCenterActivitySection(displayType) {
           color: "text-overlay-light",
           children: formatToPlainStringResult,
         };
-        obj5.children = closure_9(tmp(4602).Text, obj6);
-        tmp17Result = closure_9(tmp(5174).PressableOpacity, obj5);
+        obj5.children = closure_9(tmp(4632).Text, obj6);
+        tmp17Result = closure_9(tmp(5204).PressableOpacity, obj5);
       }
       obj2.children = tmp17Result;
       tmp17Result = closure_9(closure_6, obj2);

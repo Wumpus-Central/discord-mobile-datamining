@@ -1,12 +1,12 @@
 // discord_app/modules/freeze/native/NativeFreezeScreens.tsx
-import enableScreens from "../../../../_runtime/04958_enableScreens.js";
+import enableScreens from "../../../../_runtime/04988_enableScreens.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({ screens: { flex: 1, overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/freeze/native/NativeFreezeScreens.tsx");

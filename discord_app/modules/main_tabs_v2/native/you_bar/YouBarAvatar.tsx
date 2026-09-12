@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06726_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06756_LegacyBaseButton.js";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -201,7 +201,7 @@ function YouBarAvatarLarge(transitionState) {
       status: null,
       statusSizeOverride: null,
       cutout: null,
-      statusStyle: 0,
+      statusStyle: "status",
     };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
@@ -356,7 +356,7 @@ function YouBarAvatar(transitionState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(15156);
+const YouBarConstants = fn(15178);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_11,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12,
@@ -372,7 +372,7 @@ const YouBarConstants = fn(15156);
 const StatusTypes = fn(1074).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = { avatarShadow: null };
 obj = {};
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);

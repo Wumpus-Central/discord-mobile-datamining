@@ -128,7 +128,7 @@ function contentClassificationToAgeRestrictionConclusion(data) {
                 EVERYONE = AgeRestrictionStatus7.EVERYONE;
                 tmp21 = require;
               }
-              const obj2 = { source: tmp21(5165).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
+              const obj2 = { source: tmp21(5195).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
               AgeRestrictionStatus7 = items.push(obj2);
               someResult = themes.some((item) => {
                 const ADULT_THEMES = ContentRatingIGDBTheme.ContentRatingIGDBThemeSets.ADULT_THEMES;

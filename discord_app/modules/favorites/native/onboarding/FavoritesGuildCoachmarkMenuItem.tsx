@@ -40,8 +40,8 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       description: null,
       onDismiss: null,
       renderImgComponent: "r",
-      buttonLabel: "M0 8v4h1V8H0ZM15 9v3h1V9h-1ZM14 6v3h1V6h-1ZM13 4v2h1V4h-1Z",
-      onButtonPress: "#000",
+      buttonLabel: "M15 2V1H9v1H3v5H1v5h12V7h2V2Z",
+      onButtonPress: null,
     };
     const intl = util.intl;
     const tmp4 = _modDef3236;

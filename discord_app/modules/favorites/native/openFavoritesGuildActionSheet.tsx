@@ -12,5 +12,5 @@ export default function openFavoritesGuildActionSheet() {
       ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildActionSheet);
     },
   };
-  obj.openLazy(asyncRequireImpl(16208, dependencyMap.paths), FavoritesGuildActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(16232, dependencyMap.paths), FavoritesGuildActionSheet, obj);
 }

@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/media_uploads/native/showUplo
 
 export default function showUploadPreviewActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(10723, dependencyMap.paths),
+    asyncRequireImpl(10762, dependencyMap.paths),
     "UploadPreviewActionSheet",
     arg0,
   );

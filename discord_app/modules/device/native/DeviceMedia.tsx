@@ -24,7 +24,7 @@ export default {
             const image = node.image;
           }
         }
-        let obj = assets(1115);
+        let obj = assets(1150);
         if (!obj.isIOS()) {
           dependencyMap = tmp2 + 1;
           obj = {
@@ -91,7 +91,7 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj);
                   }
           };
-          lastAssetIndex(10734)(obj);
+          lastAssetIndex(10773)(obj);
         }
       }
     }

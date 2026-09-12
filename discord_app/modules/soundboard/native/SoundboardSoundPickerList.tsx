@@ -12,10 +12,10 @@ import TrophyIcon from "../../../design/components/Icon/native/redesign/generate
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
 import PremiumUpsellSectionDivider from "../../premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx";
 import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
-import chunkDefault from "../../../../_runtime/10433_chunk.js";
-import _modDef10480 from "../../../../_runtime/metro/10480__.js";
+import chunkDefault from "../../../../_runtime/10472_chunk.js";
+import _modDef10519 from "../../../../_runtime/metro/10519__.js";
 import SoundButton from "SoundButton.tsx";
-import _modDef17159 from "../../../../_runtime/metro/17159__.js";
+import _modDef17186 from "../../../../_runtime/metro/17186__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -100,7 +100,7 @@ function SoundPickerButtonRow(row) {
   }
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(17144);
+const SoundboardStyleConstants = fn(17171);
 ({
   SOUND_ROW_HORIZONTAL_PADDING,
   SOUNDS_PER_ROW: metroRequire,
@@ -110,7 +110,7 @@ const SoundboardStyleConstants = fn(17144);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let sum = SOUND_BUTTON_HEIGHT + 8;
-const createStyles = fn(4606);
+const createStyles = fn(4636);
 let obj = {
   row: { height: sum, display: "flex", flexDirection: "row", paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING },
   sectionHeader: null,
@@ -200,7 +200,7 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
     START = END;
   }
   const currentUser = closure_10();
-  let obj = channel(5033);
+  let obj = channel(5063);
   const fontScale = obj.useFontScale();
   const tmp3 = (function getFastListSectionsFromCategories(categories, arg1, fontScale) {
     const items = [];
@@ -359,10 +359,10 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
         };
         let tmp8Result = React5(GuildIconDefault, obj);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-        const obj1 = { source: _modDef17159, style: currentUser.sectionIcon };
+        const obj1 = { source: _modDef17186, style: currentUser.sectionIcon };
         tmp8Result = React5(native.Icon, obj1);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
-        const obj2 = { source: _modDef10480, style: currentUser.sectionIcon };
+        const obj2 = { source: _modDef10519, style: currentUser.sectionIcon };
         tmp8Result = React5(native.Icon, obj2);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
         const obj3 = { style: currentUser.sectionIcon };

@@ -49,11 +49,11 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   obj.show(obj);
 }
-const UserSettingsSafetySelectedGuildStore = fn(15936);
+const UserSettingsSafetySelectedGuildStore = fn(15960);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11563).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-fn(11562);
+let closure_6 = fn(11602).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+fn(11601);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -63,7 +63,7 @@ let SettingBuilders = {
     const intl = util.intl;
     return intl.string(util.t.o5fjz6);
   },
-  parent: fn(8049).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8079).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const defaultGuildsRestricted = DefultGuildsRestrictedSetting.useDefaultGuildsRestricted();

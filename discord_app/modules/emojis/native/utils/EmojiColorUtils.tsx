@@ -45,7 +45,7 @@ let closure_4 = async function _getFromCacheOrFallback2(arg0) {
           closure_129_5 = undefined;
           c2 = 1;
           c4 = 1;
-          return { value: "PX_16", done: null };
+          return { value: "PX_16", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -101,29 +101,92 @@ let closure_4 = async function _getFromCacheOrFallback2(arg0) {
     }
   }
 };
-let closure_5 = async function _getEmojiDominantColors() {
-  closure_2 = tmp2;
-  ({ emoji: closure_130_0, emojiSource: closure_130_1 } = closure_0);
-  await "PX_16";
-  await (function _getFromCacheOrFallback() {
-    const self = this;
-    const apply = closure_1_4.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+let closure_5 = async function _getEmojiDominantColors(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      applyArgumentsResult = apply(self, arguments);
+      return { value: "HermesInternal", done: null };
     }
-    return applyArgumentsResult;
-  })({
-    cache: closure_131_2,
-    cacheKey: closure_131_3(closure_130_0),
-    fallbackParam: closure_130_1,
-    fallbackFunc: closure_131_1.ImageManager.getDominantColors,
-  });
-  if (value == null) {
-    value = [];
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          ({ emoji: closure_130_0, emojiSource: closure_130_1 } = closure_0);
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          const obj2 = {
+            cache: closure_131_2,
+            cacheKey: closure_131_3(closure_130_0),
+            fallbackParam: closure_130_1,
+            fallbackFunc: closure_131_1.ImageManager.getDominantColors,
+          };
+          c4 = 2;
+          c5 = 1;
+          const obj3 = {
+            value: (function _getFromCacheOrFallback() {
+              const self = this;
+              const apply = closure_1_4.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            })(obj2),
+            done: false,
+          };
+          return obj3;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        if (value == null) {
+          value = [];
+        }
+        c5 = 3;
+        obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp15) {
+      c5 = tmp;
+      throw tmp15;
+    }
   }
-  return value;
 };
 const NativeModules = fn(17).NativeModules;
 let closure_2 = new privDefault(100);

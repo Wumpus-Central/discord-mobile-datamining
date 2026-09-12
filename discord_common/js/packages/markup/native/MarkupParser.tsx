@@ -1,5 +1,5 @@
 // discord_common/js/packages/markup/native/MarkupParser.tsx
-import _modDef4303 from "../../../../../_runtime/metro/04303__.js";
+import _modDef4333 from "../../../../../_runtime/metro/04333__.js";
 import MarkupASTUtils from "../MarkupASTUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -35,7 +35,7 @@ let result = size.fileFinishedImporting("../discord_common/js/packages/markup/na
 
 export default {
   astParserFor(importDefaultResultResult) {
-    closure_0 = _modDef4303.parserFor(importDefaultResultResult);
+    closure_0 = _modDef4333.parserFor(importDefaultResultResult);
     return () => {
       let str = value;
       if (value === undefined) {
@@ -64,9 +64,9 @@ export default {
     };
   },
   reactParserFor(importDefaultResultResult) {
-    closure_0 = _modDef4303.parserFor(importDefaultResultResult);
-    const obj2 = _modDef4303;
-    importDefault = obj2.reactFor(_modDef4303.ruleOutput(importDefaultResultResult, "react"));
+    closure_0 = _modDef4333.parserFor(importDefaultResultResult);
+    const obj2 = _modDef4333;
+    importDefault = obj2.reactFor(_modDef4333.ruleOutput(importDefaultResultResult, "react"));
     return () => {
       let str = value;
       if (value === undefined) {

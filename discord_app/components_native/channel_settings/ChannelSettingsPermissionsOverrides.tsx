@@ -25,7 +25,7 @@ const Constants = fn(1074);
 ({ PermissionOverrideType: closure_16, HelpdeskArticles: closure_17, Permissions: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-fn(4606);
+fn(4636);
 let createStyles = { container: null, containerContent: null, section: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.container = createStyles;
@@ -185,7 +185,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             const intl4 = closure_0(tmp5[27]).intl;
             obj4.confirmText = intl4.string(closure_0(tmp5[27]).t.psXQHP);
             obj4.onConfirm = function onConfirm() {
-              const obj = closure_1_1(4301);
+              const obj = closure_1_1(4331);
               obj.openURL(closure_1_1(2024).getArticleURL(constants.PERMISSIONS_LOCKOUT));
             };
             id(tmp5[26]).show(obj4);
@@ -310,7 +310,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           };
           const intl = closure_0(1114).intl;
           obj.label = intl.string(closure_0(1114).t.i4jeWR);
-          return closure_2_19(closure_0(7936).HeaderTextButton, obj);
+          return closure_2_19(closure_0(7966).HeaderTextButton, obj);
         },
       };
       navigation.setOptions(obj);
@@ -331,7 +331,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   const tmp13 = closure_19(require("Text/Text").Text, obj);
   if (fromCreate.type === constants.MEMBER) {
     obj = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp13 };
-    let tmp12Result = closure_19(id(11034), obj);
+    let tmp12Result = closure_19(id(11073), obj);
   } else {
     const role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
@@ -342,7 +342,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
       str = "";
     }
     obj1 = { end: true, label: str, start: true, trailing: tmp13 };
-    tmp12Result = closure_19(tmp2(5656).TableRow, obj1);
+    tmp12Result = closure_19(tmp2(5686).TableRow, obj1);
   }
   obj2 = { style: tmp.container, contentContainerStyle: null, children: null };
   const items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1611)().bottom }];
@@ -374,36 +374,36 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         ({ title, flag } = description);
         const tmp = closure_8(flag);
         let obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
-        let obj1 = closure_1_0(16920);
+        let obj1 = closure_1_0(16947);
         obj.children = obj1.renderDescription(description.description);
-        const items = [closure_1_19(closure_1_0(4602).Text, obj)];
+        const items = [closure_1_19(closure_1_0(4632).Text, obj)];
         let tmp5Result = null;
         if (false !== tmp) {
           tmp5Result = null;
           if ("" !== tmp) {
             obj = { variant: "text-xs/medium", color: "text-feedback-critical", children: tmp };
-            tmp5Result = closure_1_19(closure_1_0(4602).Text, obj);
+            tmp5Result = closure_1_19(closure_1_0(4632).Text, obj);
           }
         }
         items[1] = tmp5Result;
         const tmp3Result = closure_1_21(closure_1_20, { children: items });
-        const tmp6Result = closure_1_0(1115);
+        const tmp6Result = closure_1_0(1150);
         obj = {
-          accessible: closure_1_0(1115).isAndroid() || undefined,
+          accessible: closure_1_0(1150).isAndroid() || undefined,
           disabled: tmp2,
           label: title,
           subLabel: tmp3Result,
           trailing: null,
         };
         obj1 = { permissionTitle: title, value: null, disabled: null, onValueChange: null };
-        const tmp10 = closure_1_0(1115).isAndroid() || undefined;
+        const tmp10 = closure_1_0(1150).isAndroid() || undefined;
         obj1.value = closure_9(flag);
         obj1.disabled = false !== tmp;
         obj1.onValueChange = function onValueChange(arg0) {
           closure_2_7(flag, arg0);
         };
-        obj.trailing = closure_1_19(id(16921), obj1);
-        return closure_1_19(closure_1_0(5656).TableRow, obj, "row-" + index);
+        obj.trailing = closure_1_19(id(16948), obj1);
+        return closure_1_19(closure_1_0(5686).TableRow, obj, "row-" + index);
       }),
     };
     obj.children = closure_2_19(TableRowGroup.TableRowGroup, obj);

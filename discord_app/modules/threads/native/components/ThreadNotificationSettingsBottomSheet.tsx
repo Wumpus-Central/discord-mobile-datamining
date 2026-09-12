@@ -12,13 +12,13 @@ const result = size.fileFinishedImporting(
 
 export default function ThreadNotificationsBottomSheet(channel) {
   channel = channel.channel;
-  let obj = channel(10178);
+  let obj = channel(10217);
   const threadNotificationSetting = obj.useThreadNotificationSetting(channel);
   obj = { header: null, children: null };
   obj = { title: null };
   const intl = channel(1114).intl;
   obj.title = intl.string(channel(1114).t.h850Ss);
-  obj.header = jsx(channel(7222).BottomSheetTitleHeader, { title: null });
+  obj.header = jsx(channel(7252).BottomSheetTitleHeader, { title: null });
   const obj1 = {
     hasIcons: false,
     value: threadNotificationSetting,
@@ -35,7 +35,7 @@ export default function ThreadNotificationsBottomSheet(channel) {
     const setting = label.setting;
     return jsx(channel(dependencyMap[8]).TableRadioRow, { value: setting, label: label.label }, "" + setting);
   });
-  obj.children = jsx(channel(5736).TableRadioGroup, {
+  obj.children = jsx(channel(5766).TableRadioGroup, {
     hasIcons: false,
     value: threadNotificationSetting,
     onChange(flags) {
@@ -45,5 +45,5 @@ export default function ThreadNotificationsBottomSheet(channel) {
     accessibilityLabel: null,
     children: null,
   });
-  return jsx(channel(7270).ActionSheet, { title: null });
+  return jsx(channel(7300).ActionSheet, { title: null });
 }

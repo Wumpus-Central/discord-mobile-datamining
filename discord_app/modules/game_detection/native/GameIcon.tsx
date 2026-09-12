@@ -1,9 +1,9 @@
 // discord_app/modules/game_detection/native/GameIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef7246 from "../../../../_runtime/metro/07246__.js";
-import _modDef7247 from "../../../../_runtime/metro/07247__.js";
-import _modDef7248 from "../../../../_runtime/metro/07248__.js";
-import _modDef7249 from "../../../../_runtime/metro/07249__.js";
+import _modDef7276 from "../../../../_runtime/metro/07276__.js";
+import _modDef7277 from "../../../../_runtime/metro/07277__.js";
+import _modDef7278 from "../../../../_runtime/metro/07278__.js";
+import _modDef7279 from "../../../../_runtime/metro/07279__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 class GameIcon {
@@ -85,7 +85,7 @@ const PremiumSubscriptionSKUs = fn(1373).PremiumSubscriptionSKUs;
 const jsx = fn(21).jsx;
 let obj = { SIZE_24: "size_24", SMALL: "small", NORMAL: "normal", LARGE: "large" };
 obj = { [obj.SIZE_24]: 24, [obj.SMALL]: 32, [obj.NORMAL]: 48, [obj.LARGE]: 80 };
-fn(4606);
+fn(4636);
 obj = {
   gameIcon: { justifyContent: "center", alignItems: "center" },
   size24: null,

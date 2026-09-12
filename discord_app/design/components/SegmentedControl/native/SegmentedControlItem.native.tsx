@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-let createStyles = fn(4606);
+let createStyles = fn(4636);
 let closure_8 = createStyles.createStyles((arg0) => {
   const item = {
     borderRadius: nativeDefault.radii.lg,
@@ -24,7 +24,7 @@ let closure_8 = createStyles.createStyles((arg0) => {
   item.paddingVertical = num;
   return { item, label: { flexDirection: "column", alignItems: "center", gap: 8 } };
 });
-fn(4606);
+fn(4636);
 createStyles = {
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,

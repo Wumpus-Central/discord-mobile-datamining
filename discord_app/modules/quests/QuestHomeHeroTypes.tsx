@@ -19,6 +19,7 @@ export const questHomeHeroFromServer = function questHomeHeroFromServer(creative
     questHomeEntrypoint: null,
     shelfImage: null,
     shelfVideo: null,
+    features: null,
     startsAt: null,
     endsAt: null,
   };
@@ -54,6 +55,11 @@ export const questHomeHeroFromServer = function questHomeHeroFromServer(creative
   obj.shelfImage = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.shelf_image);
   const tmpResult1 = AssetUtils;
   obj.shelfVideo = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.shelf_video);
+  let features = creative_content.features;
+  if (features == null) {
+    features = [];
+  }
+  obj.features = features;
   ({ starts_at: obj.startsAt, ends_at: obj.endsAt } = creative_content);
   return obj;
 };
