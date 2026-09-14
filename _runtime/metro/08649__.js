@@ -56,13 +56,7 @@ const entry = {
   value: function render() {
     const self = this;
     const props = this.props;
-    let obj = { x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 };
-    obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(obj);
+    const merged = Object.assign({ x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 });
     const merged1 = Object.assign(LinearGradient(8651)(props, this));
     return jsx(LinearGradient(8650), {
       ref(arg0) {

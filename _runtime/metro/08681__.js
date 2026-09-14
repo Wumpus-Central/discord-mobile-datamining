@@ -187,20 +187,19 @@ function _parse($ZodRealError, fn) {
     return "<" === ZodRealError[sum1] ? openingTag : neutral;
   }
   function openingTag() {
-    let arr = ZodRealError;
     if ("?" === ZodRealError[sum1]) {
       return neutral;
     } else {
       if ("!" === tmp) {
         const sum = sum1 + 1;
-        if ("--" === arr.slice(sum, sum1 + 3)) {
+        if ("--" === ZodRealError.slice(sum, sum1 + 3)) {
           return comment;
         } else {
           sum1 = sum1 + 8;
-          if ("[CDATA[" === arr.slice(sum, sum1)) {
+          if ("[CDATA[" === ZodRealError.slice(sum, sum1)) {
             return cdata;
           } else {
-            if (obj4.test(arr.slice(sum, sum1))) {
+            if (obj4.test(ZodRealError.slice(sum, sum1))) {
               return neutral;
             }
             obj4 = /doctype/i;
@@ -211,7 +210,7 @@ function _parse($ZodRealError, fn) {
         let tmp5 = length;
         let str3 = "";
         if (sum1 < length) {
-          let tmp4 = arr[sum1];
+          let tmp4 = ZodRealError[sum1];
           tmp5 = tmp125;
           str3 = "";
           if (re20.test(tmp4)) {
@@ -231,11 +230,11 @@ function _parse($ZodRealError, fn) {
             }
           }
         }
-        let obj = {};
+        const obj = {};
         element = { tag: str3, props: obj, children: [], parent, Tag: null };
         element.Tag = SvgFromUri(element[9]).tags[str3] || missingTag;
         if (parent) {
-          arr = children.push(element);
+          children.push(element);
         }
         if (sum1 < tmp5) {
           while (re22.test(ZodRealError[sum1])) {
@@ -395,7 +394,7 @@ function _parse($ZodRealError, fn) {
         }
         if (typeof obj.style === "string") {
           element.styles = str15;
-          obj = {};
+          const obj2 = {};
           const parts = str15.split(";");
           const found = parts.filter((item) => item.trim());
           let num3 = 0;
@@ -410,27 +409,27 @@ function _parse($ZodRealError, fn) {
                   break;
                 } else {
                   let replaced = str18.replace(/[:-]([a-z])/g, upperCase);
-                  obj[replaced] = str17.trim();
+                  obj2[replaced] = str17.trim();
                 }
               }
               num3 = num3 + 1;
             }
             throw new TypeError("Trying to call a non-function");
           }
-          obj.style = obj;
+          obj.style = obj2;
         }
         let flag3 = false;
-        if ("/" === arr[sum1]) {
+        if ("/" === ZodRealError[sum1]) {
           sum1 = sum1 + 1;
           flag3 = true;
         }
-        if (">" !== arr[sum1]) {
+        if (">" !== ZodRealError[sum1]) {
           error("Expected >");
         } else {
           if (!flag3) {
             parent = element;
             children = element.children;
-            arr = closure_5.push(element);
+            closure_5.push(element);
           }
           return neutral;
         }
@@ -448,12 +447,11 @@ function _parse($ZodRealError, fn) {
     return neutral;
   }
   function cdata() {
-    let arr = ZodRealError;
     const index = ZodRealError.indexOf("]]>", sum1);
     if (!~index) {
       error("expected ]]>");
     }
-    arr = children.push(arr.slice(sum1 + 7, index));
+    children.push(ZodRealError.slice(sum1 + 7, index));
     sum1 = index + 2;
     return neutral;
   }
@@ -521,16 +519,15 @@ function _parse($ZodRealError, fn) {
         sum1 = sum;
         tmp2 = length;
         while (sum + 1 < length) {
-          let arr = ZodRealError;
           if ("<" !== ZodRealError[sum1]) {
             continue;
           } else {
             tmp2 = length;
-            if (re20.test(arr[sum1 + 1])) {
+            if (re20.test(ZodRealError[sum1 + 1])) {
               break;
             } else {
               tmp2 = length;
-              if (re21.test(arr.slice(sum1, sum1 + 4))) {
+              if (re21.test(ZodRealError.slice(sum1, sum1 + 4))) {
                 break;
               }
             }
@@ -560,7 +557,7 @@ function _parse($ZodRealError, fn) {
       }
     }
     if (obj.test(str)) {
-      arr = children.push(str);
+      children.push(str);
     }
     return "<" === ZodRealError[sum1] ? openingTag : neutral;
   }
@@ -651,14 +648,14 @@ let items = [
         if ($ZodRealError) {
           tmp5 = _parse($ZodRealError);
         }
-        let obj = { ast: tmp5 };
+        const obj = { ast: tmp5 };
         self.setState(obj);
       } catch (tmp8) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(tmp8);
         const _HermesInternal = HermesInternal;
-        obj.message = "[RNSVG] Couldn't parse SVG, reason: " + tmp8.message;
-        tmp2(obj);
+        obj2.message = "[RNSVG] Couldn't parse SVG, reason: " + tmp8.message;
+        tmp2(obj2);
       }
     }
   },
@@ -736,8 +733,8 @@ closure_1 = asyncGeneratorStep(async function(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -750,8 +747,8 @@ closure_1 = asyncGeneratorStep(async function(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_5 = self;
             closure_4 = tmp11;
@@ -760,12 +757,10 @@ closure_1 = asyncGeneratorStep(async function(arg0) {
             closure_2 = {};
             let tmp7 = null;
             if (closure_1) {
-              let obj1 = self(closure_1[10]);
               c8 = 2;
               c9 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.fetchText(tmp28);
-              return obj1;
+              const obj5 = { value: self(closure_1[10]).fetchText(tmp28), done: false };
+              return obj5;
             } else {
               closure_2.xml = tmp7;
               setState(closure_2);
@@ -786,7 +781,7 @@ closure_1 = asyncGeneratorStep(async function(arg0) {
           if (arg0 === 2) {
             c6 = 0;
             c9 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         }
@@ -859,9 +854,7 @@ export const SvgUri = function SvgUri(onError) {
   let fallback = onError.fallback;
   const tmp2 = _slicedToArray(closure_8(null), 2);
   closure_3 = tmp2[1];
-  const tmp3 = _slicedToArray(closure_8(false), 2);
-  const first = tmp3[0];
-  _slicedToArray = tmp3[1];
+  [first, _slicedToArray] = closure_8(false);
   const items = [onError, uri, onLoad];
   closure_6(() => {
     if (uri) {

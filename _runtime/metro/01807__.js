@@ -35,8 +35,7 @@ function convertRgbToOklab(arg0) {
   }
   return tmp;
 }
-let obj = { lrgb: fn(1808), convertLrgbToOklab };
-convertRgbToOklab.__closure = obj;
+convertRgbToOklab.__closure = { lrgb: fn(1808), convertLrgbToOklab };
 convertRgbToOklab.__workletHash = 16743889557677;
 convertRgbToOklab.__initData = { code: "function convertRgbToOklab_Pnpm_oklabTs2(rgb){const{lrgb,convertLrgbToOklab}=this.__closure;const lrgbColor=lrgb.convert.fromRgb(rgb);const result=convertLrgbToOklab(lrgbColor);if(rgb.r===rgb.b&&rgb.b===rgb.g){result.a=result.b=0;}return result;}" };
 function convertOklabToLrgb(alpha) {
@@ -60,8 +59,8 @@ function convertOklabToLrgb(alpha) {
 convertOklabToLrgb.__closure = {};
 convertOklabToLrgb.__workletHash = 14870197803884;
 convertOklabToLrgb.__initData = { code: "function convertOklabToLrgb_Pnpm_oklabTs3({l=0,a=0,b=0,alpha:alpha}){const L=Math.pow(l*0.99999999845051981432+0.39633779217376785678*a+0.21580375806075880339*b,3);const M=Math.pow(l*1.0000000088817607767-0.1055613423236563494*a-0.063854174771705903402*b,3);const S=Math.pow(l*1.0000000546724109177-0.089484182094965759684*a-1.2914855378640917399*b,3);return{r:+4.076741661347994*L-3.307711590408193*M+0.230969928729428*S,g:-1.2684380040921763*L+2.6097574006633715*M-0.3413193963102197*S,b:-0.004196086541837188*L-0.7034186144594493*M+1.7076147009309444*S,alpha:alpha};}" };
-obj = { convert: null };
-obj = { fromRgb: convertRgbToOklab, toRgb: null };
+const obj2 = { convert: null };
+const obj3 = { fromRgb: convertRgbToOklab, toRgb: null };
 function convertOklabToRgb(alpha) {
   const convert = _modDef1808.convert;
   const toRgbResult = convert.toRgb(convertOklabToLrgb(alpha));
@@ -70,10 +69,11 @@ function convertOklabToRgb(alpha) {
   toRgbResult.b = Math.ceil(100000 * toRgbResult.b) / 100000;
   return toRgbResult;
 }
+const obj = { lrgb: fn(1808), convertLrgbToOklab };
 convertOklabToRgb.__closure = { convertOklabToLrgb, lrgb: fn(1808) };
 convertOklabToRgb.__workletHash = 14795767520122;
 convertOklabToRgb.__initData = { code: "function convertOklabToRgb_Pnpm_oklabTs4(labColor){const{convertOklabToLrgb,lrgb}=this.__closure;const roundChannel=function(channel){return Math.ceil(channel*100_000)/100_000;};const lrgbColor=convertOklabToLrgb(labColor);const rgbColor=lrgb.convert.toRgb(lrgbColor);rgbColor.r=roundChannel(rgbColor.r);rgbColor.g=roundChannel(rgbColor.g);rgbColor.b=roundChannel(rgbColor.b);return rgbColor;}" };
-obj.toRgb = convertOklabToRgb;
-obj.convert = obj;
+obj3.toRgb = convertOklabToRgb;
+obj2.convert = obj3;
 
-export default obj;
+export default obj2;

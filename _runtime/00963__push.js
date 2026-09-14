@@ -4,6 +4,8 @@
 import ignoreNextOnError from "ignoreNextOnError" /* 893 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
+const require = globalThis.__r;
+
 function _push(fn, arg1, arg2) {
   closure_0 = arg1;
   closure_1 = arg2;
@@ -126,7 +128,7 @@ function _shift(fn) {
 function createIndexedDbStore(arg0) {
   let dbName = arg0;
   function getStore() {
-    if (null == f72205) {
+    if (null == f72208) {
       let str = dbName.dbName;
       if (!str) {
         str = "sentry-offline";
@@ -148,19 +150,18 @@ function createIndexedDbStore(arg0) {
         closure_0.onerror = fn2;
         closure_0.onabort = fn2;
       });
-      f72205 = (arg0) => {
+      f72208 = (arg0) => {
         closure_0 = arg0;
         return promise.then((transaction) => closure_0(transaction.transaction(openResult, "readwrite").objectStore(openResult)));
       };
     }
-    return f72205;
+    return f72208;
   }
   const obj = { push: null, unshift: null, shift: null };
   closure_4 = asyncGeneratorStep(async (arg0) => {
     closure_2 = tmp3;
     c3 = 1;
-    let obj3 = dbName(dependencyMap[1]);
-    await obj3.serializeEnvelope(closure_0);
+    await closure_0(closure_1[1]).serializeEnvelope(closure_0);
     if (1 === tmp7) {
       c3 = 0;
       c5 = 3;
@@ -180,8 +181,7 @@ function createIndexedDbStore(arg0) {
         }
         c4 = 3;
         c5 = 1;
-        obj3 = { value: c3(closure_130_5(), closure_129_0, num4), done: false };
-        return obj3;
+        return { value: c3(closure_130_5(), closure_129_0, num4), done: false };
       }
     } else if (arg0 === 1) {
       c5 = 3;
@@ -204,8 +204,7 @@ function createIndexedDbStore(arg0) {
   };
   closure_3 = asyncGeneratorStep(async (arg0) => {
     closure_2 = tmp3;
-    let obj3 = dbName(dependencyMap[1]);
-    await obj3.serializeEnvelope(closure_0);
+    await closure_0(closure_1[1]).serializeEnvelope(closure_0);
     if (1 === tmp7) {
       c3 = 0;
       c5 = 3;
@@ -225,8 +224,7 @@ function createIndexedDbStore(arg0) {
         }
         c4 = 3;
         c5 = 1;
-        obj3 = { value: c4(closure_130_5(), closure_129_0, num4), done: false };
-        return obj3;
+        return { value: c4(closure_130_5(), closure_129_0, num4), done: false };
       }
     } else if (arg0 === 1) {
       c5 = 3;
@@ -324,8 +322,8 @@ export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport(
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -338,20 +336,20 @@ export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport(
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               c1 = 1;
               c0 = 1;
-              const obj1 = { value: c0.flush(), done: false };
-              return obj1;
+              const obj4 = { value: c0.flush(), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
             c0 = 3;
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             c0 = 3;

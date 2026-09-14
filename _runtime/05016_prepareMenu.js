@@ -46,29 +46,29 @@ export const prepareHeaderBarButtonItems = (headerLeftBarButtonItems, left) => {
         }
         let tmp13;
         if (type.badge) {
-          obj = {};
+          let obj2 = {};
           let merged1 = Object.assign(type.badge);
-          obj = {};
+          let obj3 = {};
           let merged2 = Object.assign(type.badge.style);
           const style = type.badge.style;
           let color;
           if (style != null) {
             color = style.color;
           }
-          obj.color = framebus(color);
+          obj3.color = framebus(color);
           const style2 = type.badge.style;
           let backgroundColor;
           if (style2 != null) {
             backgroundColor = style2.backgroundColor;
           }
-          obj.backgroundColor = framebus(backgroundColor);
-          obj.style = obj;
-          tmp13 = obj;
+          obj3.backgroundColor = framebus(backgroundColor);
+          obj2.style = obj3;
+          tmp13 = obj2;
         }
-        const obj1 = {};
+        const obj4 = {};
         let merged3 = Object.assign(type);
-        obj1.imageSource = assetSource;
-        obj1.templateSource = assetSource1;
+        obj4.imageSource = assetSource;
+        obj4.templateSource = assetSource1;
         let icon2 = type.icon;
         let type2;
         if (icon2 != null) {
@@ -78,7 +78,7 @@ export const prepareHeaderBarButtonItems = (headerLeftBarButtonItems, left) => {
         if ("sfSymbol" === type2) {
           name = type.icon.name;
         }
-        obj1.sfSymbolName = name;
+        obj4.sfSymbolName = name;
         let icon3 = type.icon;
         let type3;
         if (icon3 != null) {
@@ -88,29 +88,29 @@ export const prepareHeaderBarButtonItems = (headerLeftBarButtonItems, left) => {
         if ("xcasset" === type3) {
           name1 = type.icon.name;
         }
-        obj1.xcassetName = name1;
-        obj1.titleStyle = tmp7;
-        obj1.tintColor = tmp11;
-        obj1.badge = tmp13;
+        obj4.xcassetName = name1;
+        obj4.titleStyle = tmp7;
+        obj4.tintColor = tmp11;
+        obj4.badge = tmp13;
         if ("button" === type.type) {
-          const obj2 = {};
-          const merged4 = Object.assign(obj1);
+          const obj5 = {};
+          const merged4 = Object.assign(obj4);
           let _HermesInternal = HermesInternal;
-          obj2.buttonId = "" + index + "-" + index;
-          let tmp38 = obj2;
+          obj5.buttonId = "" + index + "-" + index;
+          let tmp38 = obj5;
         } else {
           tmp38 = null;
           if ("menu" === type.type) {
-            const obj3 = {};
-            const merged5 = Object.assign(obj1);
+            const obj6 = {};
+            const merged5 = Object.assign(obj4);
             const menu = type.menu;
             if (typeof prepareMenu === "function") {
               closure_1 = tmp34;
               c2 = "";
-              const obj4 = {};
+              const obj7 = {};
               const merged6 = Object.assign(menu);
               let items = menu.items;
-              obj4.items = items.map((icon, index) => {
+              obj7.items = items.map((icon, index) => {
                 if (c2) {
                   let str = concat(tmp, ".", index);
                 } else {
@@ -153,21 +153,21 @@ export const prepareHeaderBarButtonItems = (headerLeftBarButtonItems, left) => {
                   }
                 }
                 if ("submenu" === icon.type) {
-                  let obj = {};
+                  const obj2 = {};
                   const merged = Object.assign(icon);
-                  obj.sfSymbolName = tmp3;
-                  obj.xcassetName = tmp5;
-                  obj.imageSource = assetSource;
-                  obj.templateSource = assetSource1;
+                  obj2.sfSymbolName = tmp3;
+                  obj2.xcassetName = tmp5;
+                  obj2.imageSource = assetSource;
+                  obj2.templateSource = assetSource1;
                   if (typeof prepareMenu === "function") {
                     closure_1 = tmp23;
                     if (str === undefined) {
                       str = "";
                     }
-                    obj = {};
+                    const obj3 = {};
                     const merged1 = Object.assign(icon);
                     const items = icon.items;
-                    obj.items = items.map((icon, index) => {
+                    obj3.items = items.map((icon, index) => {
                       if (c2) {
                         let str = concat(tmp, ".", index);
                       } else {
@@ -210,21 +210,21 @@ export const prepareHeaderBarButtonItems = (headerLeftBarButtonItems, left) => {
                         }
                       }
                       if ("submenu" === icon.type) {
-                        let obj = {};
+                        const obj2 = {};
                         const merged = Object.assign(icon);
-                        obj.sfSymbolName = tmp3;
-                        obj.xcassetName = tmp5;
-                        obj.imageSource = assetSource;
-                        obj.templateSource = assetSource1;
+                        obj2.sfSymbolName = tmp3;
+                        obj2.xcassetName = tmp5;
+                        obj2.imageSource = assetSource;
+                        obj2.templateSource = assetSource1;
                         if (typeof prepareMenu === "function") {
                           closure_1 = tmp23;
                           if (str === undefined) {
                             str = "";
                           }
-                          obj = {};
+                          const obj3 = {};
                           const merged1 = Object.assign(icon);
                           const items = icon.items;
-                          obj.items = items.map((icon, index) => {
+                          obj3.items = items.map((icon, index) => {
                             if (c2) {
                               let str = concat(tmp, ".", index);
                             } else {
@@ -267,22 +267,23 @@ export const prepareHeaderBarButtonItems = (headerLeftBarButtonItems, left) => {
                               }
                             }
                             if ("submenu" === icon.type) {
-                              let obj = {};
+                              const obj2 = {};
                               const merged = Object.assign(icon);
-                              obj.sfSymbolName = tmp3;
-                              obj.xcassetName = tmp5;
-                              obj.imageSource = assetSource;
-                              obj.templateSource = assetSource1;
+                              obj2.sfSymbolName = tmp3;
+                              obj2.xcassetName = tmp5;
+                              obj2.imageSource = assetSource;
+                              obj2.templateSource = assetSource1;
                               if (typeof prepareMenu === "function") {
                                 closure_1 = tmp23;
                                 if (str === undefined) {
                                   str = "";
                                 }
-                                obj = {};
+                                const obj3 = {};
                                 const merged1 = Object.assign(icon);
                                 const items = icon.items;
-                                obj.items = items.map(() => { ... });
-                                const merged2 = Object.assign(obj);
+                                obj3.items = items.map(() => { ... });
+                                const merged2 = Object.assign(obj3);
+                                let obj = obj2;
                               } else {
                                 throw new TypeError("Trying to call a non-function");
                               }
@@ -298,7 +299,8 @@ export const prepareHeaderBarButtonItems = (headerLeftBarButtonItems, left) => {
                             }
                             return obj;
                           });
-                          const merged2 = Object.assign(obj);
+                          const merged2 = Object.assign(obj3);
+                          let obj = obj2;
                         } else {
                           throw new TypeError("Trying to call a non-function");
                         }
@@ -314,7 +316,8 @@ export const prepareHeaderBarButtonItems = (headerLeftBarButtonItems, left) => {
                       }
                       return obj;
                     });
-                    const merged2 = Object.assign(obj);
+                    const merged2 = Object.assign(obj3);
+                    let obj = obj2;
                   } else {
                     throw new TypeError("Trying to call a non-function");
                   }
@@ -330,8 +333,8 @@ export const prepareHeaderBarButtonItems = (headerLeftBarButtonItems, left) => {
                 }
                 return obj;
               });
-              obj3.menu = obj4;
-              tmp38 = obj3;
+              obj6.menu = obj7;
+              tmp38 = obj6;
             } else {
               throw new TypeError("Trying to call a non-function");
             }

@@ -3,6 +3,8 @@
 // Module 5233 (launchCamera)
 import _mod17 from "module_17" /* 17 */;
 
+const require = globalThis.__r;
+
 const NativeModules = _mod17.NativeModules;
 let closure_1 = { mediaType: "photo", videoQuality: "high", quality: 1, maxWidth: 0, maxHeight: 0, includeBase64: false, cameraType: "back", selectionLimit: 1, saveToPhotos: false, durationLimit: 0, includeExtra: false };
 for (const key10017 in require("module_5234")) {

@@ -25,21 +25,19 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
   let headerTitle;
   let href;
   closure_15 = undefined;
-  let obj = noop;
   ({ interpolationIndex, index, opening, closing, gesture, modal, getFocusedRoute, hasAbsoluteFloatHeader, onHeaderHeightChange, isNextScreenTransparent, detachCurrentScreen, preloaded, renderHeader, safeAreaInsetBottom, safeAreaInsetLeft, safeAreaInsetRight, safeAreaInsetTop } = active);
   const ref = noop.useRef(null);
-  let obj1 = Link;
   let num = noop.useContext(_mod5712.HeaderHeightContext);
   let tmp4 = focused;
   if (focused) {
     tmp4 = false !== scene.descriptor.options.keyboardHandlingEnabled;
   }
-  let tmp2Result = _mod7126;
-  const keyboardManager = tmp2Result.useKeyboardManager({ enabled: tmp4, focused });
+  let obj2 = Link;
+  const keyboardManager = _mod7126.useKeyboardManager({ enabled: tmp4, focused });
   ({ onPageChangeStart: c10, onPageChangeCancel: c11, onPageChangeConfirm: c12 } = keyboardManager);
-  tmp2Result = Link;
+  const tmp2Result = _mod7126;
   const items = [scene.progress.next];
-  const effect = obj.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let next = scene.progress.next;
     let addListenerResult;
     if (next != null) {
@@ -67,34 +65,34 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
     };
   }, items);
   ({ presentation, headerMode, headerShown, animation, cardOverlay, cardOverlayEnabled, cardShadowEnabled, cardStyle, cardStyleInterpolator, gestureDirection, gestureEnabled, gestureResponseDistance, gestureVelocityImpact, transitionSpec } = scene.descriptor.options);
-  obj = { route: scene.descriptor.route };
-  const previousScene = getPreviousScene(obj);
+  const tmp2Result4 = Link;
+  const previousScene = getPreviousScene({ route: scene.descriptor.route });
   let tmp8;
   let tmp9;
   if (previousScene) {
     ({ route, options } = previousScene.descriptor);
     headerTitle = _mod5712.getHeaderTitle(options, route.name);
-    href = tmp2Result1.useLinkBuilder().buildHref(route.name, route.params);
+    href = tmp2Result5.useLinkBuilder().buildHref(route.name, route.params);
     tmp8 = href;
     tmp9 = headerTitle;
-    const tmp2Result2 = _mod5712;
+    const tmp2Result6 = _mod5712;
   }
   closure_15 = tmp12;
   const items1 = [null != previousScene, tmp9, tmp8];
-  const memo = obj.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (closure_15) {
       const obj = { href, title: headerTitle };
       return obj;
     }
   }, items1);
-  obj = { ref, focused, active, animated: tmp14, isNextScreenTransparent, detachCurrentScreen, children: null };
-  obj1 = {
-    animated: tmp14,
+  const obj4 = { ref, focused, active, animated: "none" !== animation, isNextScreenTransparent, detachCurrentScreen, children: null };
+  const obj5 = {
+    animated: "none" !== animation,
     interpolationIndex,
     gestureDirection,
     layout,
     insets: { top: safeAreaInsetTop, right: safeAreaInsetRight, bottom: safeAreaInsetBottom, left: safeAreaInsetLeft },
-    direction: obj1.useLocale().direction,
+    direction: obj2.useLocale().direction,
     gesture,
     current: scene.progress.current,
     next: scene.progress.next,
@@ -120,12 +118,12 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
         current.setInert(closing);
       }
       if (c12 != null) {
-        let obj = { gesture: closing.gesture, active, closing };
+        const obj = { gesture: closing.gesture, active, closing };
         tmp2(obj);
       }
       if (closure_1_7 != null) {
-        obj = { route: scene.descriptor.route };
-        tmp5(obj, closing);
+        const obj2 = { route: scene.descriptor.route };
+        tmp5(obj2, closing);
       }
     },
     onGestureBegin() {
@@ -154,69 +152,69 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
   if (tmp16) {
     tmp16 = gestureEnabled;
   }
-  obj1.gestureEnabled = tmp16;
-  obj1.gestureResponseDistance = gestureResponseDistance;
-  obj1.gestureVelocityImpact = gestureVelocityImpact;
-  obj1.transitionSpec = transitionSpec;
-  obj1.styleInterpolator = cardStyleInterpolator;
+  obj5.gestureEnabled = tmp16;
+  obj5.gestureResponseDistance = gestureResponseDistance;
+  obj5.gestureVelocityImpact = gestureVelocityImpact;
+  obj5.transitionSpec = transitionSpec;
+  obj5.styleInterpolator = cardStyleInterpolator;
   let tmp18 = tmp17;
   if ("float" !== headerMode) {
     tmp18 = "modal" !== presentation;
   }
-  obj1.pageOverflowEnabled = tmp18;
-  obj1.preloaded = preloaded;
+  obj5.pageOverflowEnabled = tmp18;
+  obj5.preloaded = preloaded;
   let tmp19 = null;
   if (hasAbsoluteFloatHeader) {
     tmp19 = null;
     if ("screen" !== headerMode) {
-      const obj2 = { marginTop: headerHeight };
-      tmp19 = obj2;
+      const obj6 = { marginTop: headerHeight };
+      tmp19 = obj6;
     }
   }
-  obj1.containerStyle = tmp19;
+  obj5.containerStyle = tmp19;
   let str3 = "transparent";
   if ("transparentModal" !== presentation) {
-    str3 = tmp2Result.useTheme().colors.background;
+    str3 = tmp2Result4.useTheme().colors.background;
   }
   const items2 = [{ backgroundColor: str3 }, cardStyle];
-  obj1.contentStyle = items2;
-  const obj3 = { style: container.container, children: null };
-  const obj4 = { value: modal, children: null };
+  obj5.contentStyle = items2;
+  const obj7 = { style: container.container, children: null };
+  const obj8 = { value: modal, children: null };
   let renderHeaderResult = null;
   if ("float" !== headerMode) {
-    const obj5 = { mode: "screen", layout, scenes: null, getPreviousScene: null, getFocusedRoute: null, contentHeight: null, onContentHeightChange: null, style: null };
+    const obj9 = { mode: "screen", layout, scenes: null, getPreviousScene: null, getFocusedRoute: null, contentHeight: null, onContentHeightChange: null, style: null };
     const items3 = [previousScene, scene];
-    obj5.scenes = items3;
-    obj5.getPreviousScene = getPreviousScene;
-    obj5.getFocusedRoute = getFocusedRoute;
-    obj5.contentHeight = headerHeight;
-    obj5.onContentHeightChange = onHeaderHeightChange;
-    obj5.style = container.header;
-    renderHeaderResult = renderHeader(obj5);
+    obj9.scenes = items3;
+    obj9.getPreviousScene = getPreviousScene;
+    obj9.getFocusedRoute = getFocusedRoute;
+    obj9.contentHeight = headerHeight;
+    obj9.onContentHeightChange = onHeaderHeightChange;
+    obj9.style = container.header;
+    renderHeaderResult = renderHeader(obj9);
   }
   const items4 = [renderHeaderResult, ];
-  const obj6 = { style: container.scene, children: null };
-  const obj7 = { value: memo, children: null };
+  const obj10 = { style: container.scene, children: null };
+  const obj11 = { value: memo, children: null };
   if (!isParentHeaderShown) {
     isParentHeaderShown = false !== headerShown;
   }
-  const obj8 = { value: isParentHeaderShown, children: null };
+  const obj12 = { value: isParentHeaderShown, children: null };
   if (false === headerShown) {
     if (num == null) {
       num = 0;
     }
     headerHeight = num;
   }
-  const obj9 = { value: headerHeight, children: null };
+  const obj13 = { value: headerHeight, children: null };
   const descriptor = scene.descriptor;
-  obj9.children = descriptor.render();
-  obj8.children = React4(_mod5712.HeaderHeightContext.Provider, obj9);
-  obj7.children = React4(_mod5712.HeaderShownContext.Provider, obj8);
-  obj6.children = React4(_mod5712.HeaderBackContext.Provider, obj7);
-  items4[1] = React4(React3, obj6);
-  obj4.children = items4;
-  obj3.children = hasOwnProperty(ModalPresentationContext.ModalPresentationContext.Provider, obj4);
-  obj1.children = React4(React3, obj3);
-  obj.children = React4(_mod7128.Card, obj1);
-  return React4(CardA11yWrapper.CardA11yWrapper, obj);
+  obj13.children = descriptor.render();
+  obj12.children = React4(_mod5712.HeaderHeightContext.Provider, obj13);
+  obj11.children = React4(_mod5712.HeaderShownContext.Provider, obj12);
+  obj10.children = React4(_mod5712.HeaderBackContext.Provider, obj11);
+  items4[1] = React4(React3, obj10);
+  obj8.children = items4;
+  obj7.children = hasOwnProperty(ModalPresentationContext.ModalPresentationContext.Provider, obj8);
+  obj5.children = React4(React3, obj7);
+  obj4.children = React4(_mod7128.Card, obj5);
+  return React4(CardA11yWrapper.CardA11yWrapper, obj4);
 });

@@ -95,8 +95,7 @@ function dispatch(self, bubbles) {
 }
 function invoke(_null, type, arg2) {
   const tmp3 = arg2 === EventDefault.CAPTURING_PHASE;
-  let obj = COMPOSED_PATH_KEY;
-  obj.setCurrentTarget(type, _null);
+  COMPOSED_PATH_KEY.setCurrentTarget(type, _null);
   if (obj2.enableNativeEventTargetEventDispatching()) {
     const tmp14 = _null[EVENT_TARGET_GET_THE_PARENT_KEY.EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY](type.type, tmp3);
     const obj4 = getListenersForPhase(_null, tmp3);
@@ -106,28 +105,28 @@ function invoke(_null, type, arg2) {
     }
     const items = [];
     if (null != tmp14) {
-      obj = { callback: tmp14, passive: false, once: false, removed: false };
-      items.push(obj);
+      const obj5 = { callback: tmp14, passive: false, once: false, removed: false };
+      items.push(obj5);
     }
-    let arr1 = items;
+    let arr5 = items;
     if (null != value) {
       const values = value.values();
-      arr1 = items;
+      arr5 = items;
       for (const item10064 of values) {
-        let arr = items.push(item10064);
+        let arr4 = items.push(item10064);
         continue;
       }
     }
-    arr1[Symbol.iterator]();
+    arr5[Symbol.iterator]();
   } else {
     const obj3 = getListenersForPhase(_null, tmp3);
-    value = undefined;
+    value2 = undefined;
     if (obj3 != null) {
-      value = obj3.get(type.type);
+      value2 = obj3.get(type.type);
     }
-    if (null != value) {
+    if (null != value2) {
       const _Array = Array;
-      arr1 = Array.from(value.values());
+      arr5 = Array.from(value2.values());
     }
   }
   obj2 = _modAll27;
@@ -156,7 +155,7 @@ const entry = {
     if (arg2 === undefined) {
       obj = {};
     }
-    obj = undefined;
+    let obj4;
     c2 = undefined;
     if (arguments.length < 2) {
       const _TypeError3 = TypeError;
@@ -209,13 +208,13 @@ const entry = {
               self[closure_8] = result;
               obj3 = result;
             } else if (!value.has(callback)) {
-              obj = { callback, passive: flag2, once: flag, removed: false };
-              const result1 = value.set(callback, obj);
+              obj4 = { callback, passive: flag2, once: flag, removed: false };
+              const result1 = value.set(callback, obj4);
               c2 = value;
               if (null != tmp7) {
                 const listener = tmp7.addEventListener("abort", () => {
-                  _undefined.removed = true;
-                  if (_undefined.get(closure_0) === _undefined) {
+                  obj4.removed = true;
+                  if (_undefined.get(closure_0) === obj4) {
                     _undefined.delete(closure_0);
                   }
                 }, { once: true });
@@ -298,9 +297,9 @@ let items = [
           value = obj2.get(StringResult);
         }
         if (null != value) {
-          value = value.get(fn);
-          if (null != value) {
-            value.removed = true;
+          value2 = value.get(fn);
+          if (null != value2) {
+            value2.removed = true;
             value.delete(fn);
           }
         }

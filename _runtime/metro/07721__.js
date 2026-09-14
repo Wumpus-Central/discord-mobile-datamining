@@ -3,7 +3,7 @@
 // Module 7721
 import _mod637 from "module_637" /* 637 */;
 import _mod654 from "module_654" /* 654 */;
-import noop from "module_7722" /* 7722 */;
+import noop_mod from "module_7722" /* 7722 */;
 
 if (_mod637) {
   const _module = _mod654;
@@ -14,3 +14,4 @@ if (_mod637) {
   }
   module.exports = noop;
 }
+let noop = noop_mod;

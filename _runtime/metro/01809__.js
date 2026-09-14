@@ -4,6 +4,8 @@
 import _mod1647 from "module_1647" /* 1647 */;
 import module_1639 from "module_1639" /* 1639 */;
 
+const require = globalThis.__r;
+
 let obj = { fps: 60 };
 function getStylesFromObject(jestInlineStyle) {
   if (undefined === jestInlineStyle) {
@@ -45,16 +47,18 @@ function getCurrentStyle(props) {
     while (iter2 !== undefined) {
       if (!("jestAnimatedValues" in nextResult)) {
         let tmp18 = getStylesFromObject(tmp15);
-        obj = {};
+        let obj2 = {};
         let merged = Object.assign(obj);
         let merged1 = Object.assign(tmp18);
+        obj = obj2;
       }
       continue;
     }
-    obj = {};
+    const obj3 = {};
     const merged2 = Object.assign(obj);
     const merged3 = Object.assign(value);
-    return obj;
+    obj = obj3;
+    return obj3;
   } else {
     const tmp3 = getStylesFromObject(jestInlineStyle);
     obj = {};
@@ -325,8 +329,8 @@ function compareAndFormatDifferences(currentStyle, arg1) {
           if (undefined !== arg1[first]) {
             continue;
           } else {
-            obj = { property: first, current: currentStyle[first], expect: arg1[first] };
-            arr = items.push(obj);
+            let obj2 = { property: first, current: currentStyle[first], expect: arg1[first] };
+            let arr9 = items.push(obj2);
             continue;
           }
           continue;
@@ -335,13 +339,13 @@ function compareAndFormatDifferences(currentStyle, arg1) {
     }
   }
   if (flag7) {
-    obj = {
+    const obj3 = {
       message() {
           return "ok";
         },
       pass: true
     };
-    return obj;
+    return obj3;
   } else {
     const _JSON = JSON;
     closure_0 = JSON.stringify(currentStyle);
@@ -352,13 +356,13 @@ function compareAndFormatDifferences(currentStyle, arg1) {
       return "- '" + expect.property + "' should be " + json + ", but is " + JSON.stringify(expect.current);
     });
     closure_2 = mapped.join("\n");
-    const obj1 = {
+    const obj4 = {
       message() {
           return "Expected: " + closure_1 + "\nReceived: " + closure_0 + "\n\nDifferences:\n" + closure_2;
         },
       pass: false
     };
-    return obj1;
+    return obj4;
   }
 }
 let closure_8 = Math.round(1000 / obj.fps);
@@ -404,22 +408,70 @@ export const setUpTests = () => {
     }
     tmp3 = undefined !== tmp2 && undefined !== tmp2.extend;
   }
-  obj = {};
   let merged = Object.assign(obj);
   const merged1 = Object.assign(obj);
-  closure_8 = Math.round(1000 / obj.fps);
-  obj = {
+  closure_8 = Math.round(1000 / {}.fps);
+  _default.extend({
     toHaveAnimatedProps(props, arg1) {
       if (props.props.jestAnimatedProps) {
         const _Object = Object;
         if (0 === Object.keys(props.props.jestAnimatedProps.value).length) {
-          obj = {
+          const obj2 = {
             message() {
                   return "Component doesn't have props.";
                 },
             pass: false
           };
-          let tmp7 = obj;
+          let tmp7 = obj2;
+        }
+        return tmp7;
+      }
+      value = undefined;
+      if (props.props.jestAnimatedProps != null) {
+        value = iter.value;
+      }
+      obj = {};
+      if (value) {
+        const merged = Object.assign(value);
+        let tmp3 = obj;
+      } else {
+        tmp3 = obj;
+      }
+      tmp7 = compareAndFormatDifferences(tmp3, arg1);
+    }
+  });
+  _default.extend({
+    toHaveAnimatedStyle(props, arg1) {
+      obj = arg2;
+      if (arg2 === undefined) {
+        obj = {};
+      }
+      if (props.props.style) {
+        let obj2 = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
+      } else {
+        obj2 = {
+          message() {
+              return "Component doesn't have a style.";
+            },
+          pass: false
+        };
+      }
+      return obj2;
+    }
+  });
+  let obj2 = {};
+  const obj3 = {
+    toHaveAnimatedProps(props, arg1) {
+      if (props.props.jestAnimatedProps) {
+        const _Object = Object;
+        if (0 === Object.keys(props.props.jestAnimatedProps.value).length) {
+          const obj2 = {
+            message() {
+                  return "Component doesn't have props.";
+                },
+            pass: false
+          };
+          let tmp7 = obj2;
         }
         return tmp7;
       }
@@ -437,43 +489,23 @@ export const setUpTests = () => {
       tmp7 = compareAndFormatDifferences(tmp3, arg1);
     }
   };
-  _default.extend(obj);
-  _default.extend({
+  const obj4 = {
     toHaveAnimatedStyle(props, arg1) {
       obj = arg2;
       if (arg2 === undefined) {
         obj = {};
       }
       if (props.props.style) {
-        obj = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
+        let obj2 = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
       } else {
-        obj = {
+        obj2 = {
           message() {
               return "Component doesn't have a style.";
             },
           pass: false
         };
       }
-      return obj;
-    }
-  });
-  const obj1 = {
-    toHaveAnimatedStyle(props, arg1) {
-      obj = arg2;
-      if (arg2 === undefined) {
-        obj = {};
-      }
-      if (props.props.style) {
-        obj = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
-      } else {
-        obj = {
-          message() {
-              return "Component doesn't have a style.";
-            },
-          pass: false
-        };
-      }
-      return obj;
+      return obj2;
     }
   };
 };

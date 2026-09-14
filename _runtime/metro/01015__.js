@@ -1,7 +1,6 @@
 // === Module 1015: ? ===
 
 // Module 1015
-import _mod682 from "module_682" /* 682 */;
 import pickSplat from "pickSplat" /* 1014 */;
 
 require = arg1;
@@ -12,32 +11,31 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, processResolvedRout
   const proxy = new Proxy(arg0, {
     apply(apply, arg1, arg2) {
       const tmp = (function captureCurrentLocation() {
-        let obj = closure_0(1014);
-        const navigationContext = obj.getNavigationContext();
+        const navigationContext = closure_0(1014).getNavigationContext();
         let targetPath;
         if (navigationContext != null) {
           targetPath = navigationContext.targetPath;
         }
         if (targetPath) {
-          obj = { pathname: navigationContext.targetPath, search: "", hash: "", state: null, key: "default" };
-          return obj;
+          const obj3 = { pathname: navigationContext.targetPath, search: "", hash: "", state: null, key: "default" };
+          return obj3;
         } else {
           if (undefined !== closure_0(889).WINDOW) {
             try {
               const _location = closure_0(889).WINDOW.location;
               if (_location) {
-                obj = { pathname: null, search: null, hash: null, state: null, key: "default" };
+                const obj5 = { pathname: null, search: null, hash: null, state: null, key: "default" };
                 ({ pathname: obj2.pathname, search } = tmp8);
                 if (!search) {
                   search = "";
                 }
-                obj.search = search;
+                obj5.search = search;
                 let str = _location.hash;
                 if (!str) {
                   str = "";
                 }
-                obj.hash = str;
-                return obj;
+                obj5.hash = str;
+                return obj5;
               }
               tmp8 = _location;
             } catch (err) {
@@ -49,18 +47,18 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, processResolvedRout
           }
           return null;
         }
+        const obj = closure_0(1014);
       })();
       let navigationContext = pickSplat.getNavigationContext();
       if (navigationContext) {
         let span = navigationContext.span;
       } else {
-        let tmp2Result = pickSplat;
-        span = tmp2Result.getActiveRootSpan();
+        span = pickSplat.getActiveRootSpan();
+        const tmp2Result = pickSplat;
       }
       const applyResult = apply.apply(arg1, arg2);
       closure_3 = tmp;
-      tmp2Result = _mod682;
-      if (tmp2Result.isThenable(applyResult)) {
+      if (tmp2Result2.isThenable(applyResult)) {
         applyResult.then((result) => {
           if (Array.isArray(result)) {
             closure_2(result, closure_0, closure_3, span);

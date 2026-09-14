@@ -37,21 +37,20 @@ const entry = {
             if (viewDescriptors.viewDescriptors) {
               if (iter._isFirstRender) {
                 const _initialPropsMap = animatedProps._initialPropsMap;
-                obj = {};
+                const obj3 = {};
                 const merged = Object.assign(viewDescriptors.initial.value);
                 const merged1 = Object.assign(PropsFilter(1708).initialUpdaterRun(viewDescriptors.initial.updater));
-                const result = _initialPropsMap.set(viewDescriptors, obj);
+                const result = _initialPropsMap.set(viewDescriptors, obj3);
                 const obj4 = PropsFilter(1708);
               }
               const _initialPropsMap2 = animatedProps._initialPropsMap;
-              obj = _initialPropsMap2.get(viewDescriptors);
-              if (obj == null) {
-                obj = {};
+              let obj5 = _initialPropsMap2.get(viewDescriptors);
+              if (obj5 == null) {
+                obj5 = {};
               }
-              return obj;
+              return obj5;
             }
           }
-          obj = PropsFilter(1732);
           let inlineStyle = viewDescriptors;
           if (obj.hasInlineStyles(viewDescriptors)) {
             inlineStyle = PropsFilter(1732).getInlineStyle(viewDescriptors, iter._isFirstRender);
@@ -115,8 +114,8 @@ const entry = {
           } else {
             let isChromeDebuggerResult = "onGestureHandlerStateChange" === key10014;
             if (isChromeDebuggerResult) {
-              tmp7Result = tmp7(tmp8[7]);
-              isChromeDebuggerResult = tmp7Result.isChromeDebugger();
+              let tmp7Result2 = tmp7(tmp8[7]);
+              isChromeDebuggerResult = tmp7Result2.isChromeDebugger();
             }
             if (isChromeDebuggerResult) {
               continue;

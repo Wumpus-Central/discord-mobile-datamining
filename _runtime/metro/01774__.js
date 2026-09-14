@@ -6,7 +6,7 @@ import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
 const LayoutAnimationConfig = fn;
 function _isNativeReflectConstruct() {
@@ -43,6 +43,7 @@ function SkipEntering(children) {
 }
 let noop = fn(19);
 ({ Children: hasOwnProperty, useEffect: metroRequire, useRef: closure_7, Component, createContext } = noop);
+let noop = noop_mod;
 const jsx = fn(21).jsx;
 const module_1639 = fn(1639);
 let closure_10 = module_1639.isReact19();

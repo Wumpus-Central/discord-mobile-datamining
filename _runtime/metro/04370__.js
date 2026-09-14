@@ -1,8 +1,11 @@
 // === Module 4370: ? ===
 
 // Module 4370
-import installWorkletsSupport from "installWorkletsSupport" /* 4371 */;
+import installWorkletsSupport_mod from "installWorkletsSupport" /* 4371 */;
 
+const require = globalThis.__r;
+
+let installWorkletsSupport = installWorkletsSupport_mod;
 installWorkletsSupport = installWorkletsSupport.installWorkletsSupport();
 for (const key10017 in require("module_4380")) {
   arg5[key10017] = require("module_4380")[key10017];

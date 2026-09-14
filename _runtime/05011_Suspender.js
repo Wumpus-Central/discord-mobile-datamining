@@ -2,7 +2,7 @@
 
 // Module 5011 (Suspender)
 import jsxProd from "jsxProd" /* 21 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
 function Suspender(children) {
   const freeze = children.freeze;
@@ -30,7 +30,9 @@ function Suspender(children) {
   }
   return <framebus>{children.children}</framebus>;
 }
+let noop = noop_mod;
 ({ Suspense: closure_0, Fragment: closure_1, use: c2 } = noop);
+let noop = noop_mod;
 const jsx = jsxProd.jsx;
 
 export const Freeze = function Freeze(placeholder) {

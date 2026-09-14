@@ -1,8 +1,8 @@
 // === Module 6899: ? ===
 
 // Module 6899
-const fn = function n(sum1, initialPosition, value) {
-  return Math.min(Math.max(initialPosition, sum1), value);
+const fn = function n(sum1, initialPosition, value3) {
+  return Math.min(Math.max(initialPosition, sum1), value3);
 };
 fn.__closure = {};
 fn.__workletHash = 4405247003092;

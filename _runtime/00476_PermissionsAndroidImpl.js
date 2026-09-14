@@ -2,9 +2,10 @@
 
 // Module 476 (PermissionsAndroidImpl)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
+let _classCallCheck = _classCallCheck_mod;
 const React3 = Object.freeze({ GRANTED: "granted", DENIED: "denied", NEVER_ASK_AGAIN: "never_ask_again" });
 const React4 = Object.freeze({ READ_CALENDAR: "android.permission.READ_CALENDAR", WRITE_CALENDAR: "android.permission.WRITE_CALENDAR", CAMERA: "android.permission.CAMERA", READ_CONTACTS: "android.permission.READ_CONTACTS", WRITE_CONTACTS: "android.permission.WRITE_CONTACTS", GET_ACCOUNTS: "android.permission.GET_ACCOUNTS", ACCESS_FINE_LOCATION: "android.permission.ACCESS_FINE_LOCATION", ACCESS_COARSE_LOCATION: "android.permission.ACCESS_COARSE_LOCATION", ACCESS_BACKGROUND_LOCATION: "android.permission.ACCESS_BACKGROUND_LOCATION", RECORD_AUDIO: "android.permission.RECORD_AUDIO", READ_PHONE_STATE: "android.permission.READ_PHONE_STATE", CALL_PHONE: "android.permission.CALL_PHONE", READ_CALL_LOG: "android.permission.READ_CALL_LOG", WRITE_CALL_LOG: "android.permission.WRITE_CALL_LOG", ADD_VOICEMAIL: "com.android.voicemail.permission.ADD_VOICEMAIL", READ_VOICEMAIL: "com.android.voicemail.permission.READ_VOICEMAIL", WRITE_VOICEMAIL: "com.android.voicemail.permission.WRITE_VOICEMAIL", USE_SIP: "android.permission.USE_SIP", PROCESS_OUTGOING_CALLS: "android.permission.PROCESS_OUTGOING_CALLS", BODY_SENSORS: "android.permission.BODY_SENSORS", BODY_SENSORS_BACKGROUND: "android.permission.BODY_SENSORS_BACKGROUND", SEND_SMS: "android.permission.SEND_SMS", RECEIVE_SMS: "android.permission.RECEIVE_SMS", READ_SMS: "android.permission.READ_SMS", RECEIVE_WAP_PUSH: "android.permission.RECEIVE_WAP_PUSH", RECEIVE_MMS: "android.permission.RECEIVE_MMS", READ_EXTERNAL_STORAGE: "android.permission.READ_EXTERNAL_STORAGE", READ_MEDIA_IMAGES: "android.permission.READ_MEDIA_IMAGES", READ_MEDIA_VIDEO: "android.permission.READ_MEDIA_VIDEO", READ_MEDIA_AUDIO: "android.permission.READ_MEDIA_AUDIO", READ_MEDIA_VISUAL_USER_SELECTED: "android.permission.READ_MEDIA_VISUAL_USER_SELECTED", WRITE_EXTERNAL_STORAGE: "android.permission.WRITE_EXTERNAL_STORAGE", BLUETOOTH_CONNECT: "android.permission.BLUETOOTH_CONNECT", BLUETOOTH_SCAN: "android.permission.BLUETOOTH_SCAN", BLUETOOTH_ADVERTISE: "android.permission.BLUETOOTH_ADVERTISE", ACCESS_MEDIA_LOCATION: "android.permission.ACCESS_MEDIA_LOCATION", ACCEPT_HANDOVER: "android.permission.ACCEPT_HANDOVER", ACTIVITY_RECOGNITION: "android.permission.ACTIVITY_RECOGNITION", ANSWER_PHONE_CALLS: "android.permission.ANSWER_PHONE_CALLS", READ_PHONE_NUMBERS: "android.permission.READ_PHONE_NUMBERS", UWB_RANGING: "android.permission.UWB_RANGING", POST_NOTIFICATIONS: "android.permission.POST_NOTIFICATIONS", NEARBY_WIFI_DEVICES: "android.permission.NEARBY_WIFI_DEVICES" });
 let closure_0;
@@ -81,8 +82,8 @@ closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -95,8 +96,8 @@ closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_3 = tmp5;
             closure_2 = tmp2;
@@ -106,12 +107,12 @@ closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
             if (dependencyMap) {
               c4 = 1;
               c5 = 1;
-              let obj1 = { value: closure_0(477).shouldShowRequestPermissionRationale(closure_0), done: false };
-              return obj1;
+              const obj6 = { value: closure_0(477).shouldShowRequestPermissionRationale(closure_0), done: false };
+              return obj6;
             } else {
-              obj1 = closure_0(477);
-              const permission = obj1.requestPermission(closure_130_0);
+              const permission = closure_0(477).requestPermission(closure_130_0);
               c5 = 3;
+              const obj2 = closure_0(477);
             }
             const tmp31 = closure_0(38);
           }
@@ -134,7 +135,7 @@ closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
           }
         }
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp22) {
         c5 = tmp;

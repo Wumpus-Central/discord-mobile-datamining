@@ -2,8 +2,9 @@
 
 // Module 482 (ReactNativeVersion)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 
+let _classCallCheck = _classCallCheck_mod;
 class ReactNativeVersion {
   constructor() {
     tmp = closure_0(this, ReactNativeVersion);

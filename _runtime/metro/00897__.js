@@ -3,6 +3,8 @@
 // Module 897
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
+const require = globalThis.__r;
+
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const makeFetchTransport = function makeFetchTransport(bufferSize) {
@@ -20,8 +22,8 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -34,8 +36,8 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp4;
             closure_129_0 = undefined;
@@ -53,8 +55,8 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
             c4 = 2;
             c5 = 3;
             c6 = 1;
-            const obj1 = { value: nativeImplementation(headers.url, request), done: false };
-            return obj1;
+            const obj5 = { value: nativeImplementation(headers.url, request), done: false };
+            return obj5;
           }
         } else if (1 === tmp9) {
           c4 = 0;
@@ -64,8 +66,7 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
         } else if (2 === tmp9) {
           c4 = 1;
           closure_129_2 = closure_3;
-          let obj2 = bufferSize(tmp6[1]);
-          const result = obj2.clearCachedImplementation("fetch");
+          const result = bufferSize(tmp6[1]).clearCachedImplementation("fetch");
           throw closure_129_2;
         } else if (arg0 === 1) {
           c6 = 3;
@@ -75,22 +76,22 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
           closure_130_2 = closure_130_2 - closure_129_0;
           closure_130_3 = closure_130_3 - 1;
           c6 = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_129_1 = value;
           const response = { statusCode: closure_129_1.status, headers: null };
-          const obj3 = { "x-sentry-rate-limits": null, "retry-after": null };
+          const obj7 = { "x-sentry-rate-limits": null, "retry-after": null };
           headers = closure_129_1.headers;
-          obj3["x-sentry-rate-limits"] = headers.get("X-Sentry-Rate-Limits");
+          obj7["x-sentry-rate-limits"] = headers.get("X-Sentry-Rate-Limits");
           const headers2 = closure_129_1.headers;
-          obj3["retry-after"] = headers2.get("Retry-After");
-          response.headers = obj3;
+          obj7["retry-after"] = headers2.get("Retry-After");
+          response.headers = obj7;
           c4 = 0;
           closure_130_2 = closure_130_2 - closure_129_0;
           closure_130_3 = closure_130_3 - 1;
           c6 = 3;
-          obj = { value: response, done: true };
+          const obj = { value: response, done: true };
           return obj;
         }
       } catch (tmp35) {

@@ -55,14 +55,14 @@ function attributeValueToTypedAttributeValue(value, flag) {
   })(value);
   if (unit) {
     if (typeof unit === "string") {
-      obj = { unit };
-      let obj2 = obj;
+      const obj2 = { unit };
+      let obj5 = obj2;
     }
     if (tmp2) {
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(tmp2);
-      const merged1 = Object.assign(obj2);
-      return obj;
+      const merged1 = Object.assign(obj5);
+      return obj3;
     } else if (flag) {
       try {
         const _JSON = JSON;
@@ -70,14 +70,14 @@ function attributeValueToTypedAttributeValue(value, flag) {
         if (str4 == null) {
           str4 = "";
         }
-        const obj1 = { value: str4, type: "string" };
-        const merged2 = Object.assign(obj2);
-        return obj1;
+        const obj4 = { value: str4, type: "string" };
+        const merged2 = Object.assign(obj5);
+        return obj4;
       } catch (err) {
       }
     }
   }
-  obj2 = {};
+  obj5 = {};
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -87,7 +87,8 @@ export const serializeAttributes = function serializeAttributes(attributes) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = {};
+  let obj = attributes;
+  const obj2 = {};
   if (attributes == null) {
     obj = {};
   }
@@ -97,9 +98,9 @@ export const serializeAttributes = function serializeAttributes(attributes) {
     let first = tmp5[0];
     let tmp8 = attributeValueToTypedAttributeValue(tmp5[1], flag);
     if (tmp8) {
-      obj[first] = tmp9;
+      obj2[first] = tmp9;
     }
     continue;
   }
-  return obj;
+  return obj2;
 };

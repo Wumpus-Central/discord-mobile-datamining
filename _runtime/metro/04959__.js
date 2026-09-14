@@ -142,12 +142,12 @@ const fn = function() {
     if (tmp7) {
       let isMatch = tmp11.likeChrome;
     } else {
-      let obj1 = /\bChrome\b/;
-      isMatch = obj1.test(tmp9);
+      isMatch = /\bChrome\b/.test(tmp9);
       if (isMatch) {
-        let obj2 = /internal|\n/i;
-        isMatch = !obj2.test(toString.toString());
+        isMatch = !/internal|\n/i.test(toString.toString());
+        let obj3 = /internal|\n/i;
       }
+      let obj2 = /\bChrome\b/;
     }
     let str2 = "ScriptBridgingProxyObject";
     if (tmp7) {
@@ -323,11 +323,11 @@ const fn = function() {
         });
       })(items1);
       const items2 = [{ label: "BlackBerry", pattern: "BB10" }, "BlackBerry", { label: "Galaxy S", pattern: "GT-I9000" }, { label: "Galaxy S2", pattern: "GT-I9100" }, { label: "Galaxy S3", pattern: "GT-I9300" }, { label: "Galaxy S4", pattern: "GT-I9500" }, { label: "Galaxy S5", pattern: "SM-G900" }, { label: "Galaxy S6", pattern: "SM-G920" }, { label: "Galaxy S6 Edge", pattern: "SM-G925" }, { label: "Galaxy S7", pattern: "SM-G930" }, { label: "Galaxy S7 Edge", pattern: "SM-G935" }, "Google TV", "Lumia", "iPad", "iPod", "iPhone", "Kindle", { label: "Kindle Fire", pattern: "(?:Cloud9|Silk-Accelerated)" }, "Nexus", "Nook", "PlayBook", "PlayStation Vita", "PlayStation", "TouchPad", "Transformer", { label: "Wii U", pattern: "WiiU" }, "Wii", "Xbox One", { label: "Xbox 360", pattern: "Xbox" }, "Xoom"];
-      product = getProduct(items2);
-      closure_2 = product;
-      obj = { Apple: { iPad: 1, iPhone: 1, iPod: 1 }, Archos: {}, Amazon: { Kindle: 1, "Kindle Fire": 1 }, Asus: { Transformer: 1 }, "Barnes & Noble": { Nook: 1 }, BlackBerry: { PlayBook: 1 }, Google: { "Google TV": 1, Nexus: 1 }, HP: { TouchPad: 1 }, HTC: {}, LG: {}, Microsoft: { Xbox: 1, "Xbox One": 1 }, Motorola: { Xoom: 1 }, Nintendo: { "Wii U": 1, Wii: 1 }, Nokia: { Lumia: 1 }, Samsung: { "Galaxy S": 1, "Galaxy S2": 1, "Galaxy S3": 1, "Galaxy S4": 1 }, Sony: { PlayStation: 1, "PlayStation Vita": 1 } };
-      const tmp32 = (function getManufacturer(global) {
-        return reduce(global, (arg0, arg1, arg2) => {
+      let product1 = getProduct(items2);
+      closure_2 = product1;
+      let obj6 = { Apple: { iPad: 1, iPhone: 1, iPod: 1 }, Archos: {}, Amazon: { Kindle: 1, "Kindle Fire": 1 }, Asus: { Transformer: 1 }, "Barnes & Noble": { Nook: 1 }, BlackBerry: { PlayBook: 1 }, Google: { "Google TV": 1, Nexus: 1 }, HP: { TouchPad: 1 }, HTC: {}, LG: {}, Microsoft: { Xbox: 1, "Xbox One": 1 }, Motorola: { Xoom: 1 }, Nintendo: { "Wii U": 1, Wii: 1 }, Nokia: { Lumia: 1 }, Samsung: { "Galaxy S": 1, "Galaxy S2": 1, "Galaxy S3": 1, "Galaxy S4": 1 }, Sony: { PlayStation: 1, "PlayStation Vita": 1 } };
+      const tmp32 = (function getManufacturer(arg0) {
+        return reduce(arg0, (arg0, arg1, arg2) => {
           let tmp = arg0;
           if (!arg0) {
             let match = arg1[closure_1_2];
@@ -349,7 +349,7 @@ const fn = function() {
           }
           return tmp;
         });
-      })(obj);
+      })(obj6);
       const items3 = ["Windows Phone", "Android", "CentOS", { label: "Chrome OS", pattern: "CrOS" }, "Debian", "Fedora", "FreeBSD", "Gentoo", "Haiku"];
       let str55 = "Kubuntu";
       items3[9] = "Kubuntu";
@@ -458,16 +458,16 @@ const fn = function() {
       }
       let tmp35 = tmp32;
       if (tmp32) {
-        tmp35 = !product;
+        tmp35 = !product1;
       }
       if (tmp35) {
         const items5 = [tmp32];
-        const product1 = getProduct(items5);
-        closure_2 = product1;
-        product = product1;
+        const product2 = getProduct(items5);
+        closure_2 = product2;
+        product1 = product2;
       }
-      let match = /\bGoogle TV\b/.exec(product);
-      let tmp38 = product;
+      let match = /\bGoogle TV\b/.exec(product1);
+      let tmp38 = product1;
       if (match) {
         const first = match[0];
         closure_2 = first;
@@ -490,7 +490,7 @@ const fn = function() {
       }
       const items6 = [];
       if (isMatch1) {
-        let arr = items6.push("running in Turbo/Uncompressed mode");
+        items6.push("running in Turbo/Uncompressed mode");
       }
       if ("IE" == text1) {
         if (obj10.test(tmp9)) {
@@ -586,7 +586,7 @@ const fn = function() {
               text2 = `${tmp87}.x`;
             }
             let str108 = `Windows Phone ${tmp102}`;
-            arr = items6.unshift("desktop mode");
+            items6.unshift("desktop mode");
             let tmp91 = tmp87;
             obj41 = /\+$/;
           }
@@ -830,18 +830,16 @@ const fn = function() {
           if ("Fennec" != text1) {
             if ("Firefox" == text1) {
               const str164 = /\bAppleWebKit\/([\d.]+\+?)/i.exec(tmp9) || 0[1];
-              let arr15 = items12;
+              let arr16 = items12;
               let tmp210 = tmp154;
               let tmp211 = str164;
               if (str164) {
                 const _parseFloat2 = parseFloat;
                 const items11 = [parseFloat(str164.replace(/\.(\d)$/, ".0$1")), str164];
                 if ("Safari" == text1) {
-                  let arr17 = items11[1];
-                  if ("+" == arr17.slice(-1)) {
+                  if ("+" == arr18.slice(-1)) {
                     text1 = "WebKit Nightly";
-                    let arr18 = items11[1];
-                    joined = arr18.slice(0, -1);
+                    joined = items11[1].slice(0, -1);
                     let str167 = "alpha";
                   }
                   items11[1] = /\bChrome\/([\d.]+)/i.exec(tmp9) || 0[1];
@@ -882,12 +880,12 @@ const fn = function() {
                         }
                         tmp228 = tmp230;
                       }
-                      arr15 = items12;
+                      arr16 = items12;
                       tmp210 = str167;
                       tmp211 = tmp224;
                       if (tmp228) {
                         joined = tmp224;
-                        arr15 = items12;
+                        arr16 = items12;
                         tmp210 = str167;
                         tmp211 = tmp224;
                       }
@@ -1042,6 +1040,7 @@ const fn = function() {
                     }
                     num20 = num22;
                   }
+                  arr18 = items11[1];
                   const obj68 = /\bChrome\/([\d.]+)/i;
                   const tmp219 = /\bChrome\/([\d.]+)/i.exec(tmp9) || 0;
                 }
@@ -1077,9 +1076,9 @@ const fn = function() {
               }
               let match5 = "Safari" == text1;
               if (match5) {
-                let tmp236 = arr15;
-                if (arr15) {
-                  tmp236 = arr15[1];
+                let tmp236 = arr16;
+                if (arr16) {
+                  tmp236 = arr16[1];
                 }
                 match5 = /\bChrome\b/.exec(tmp236);
                 const obj70 = /\bChrome\b/;
@@ -1116,8 +1115,8 @@ const fn = function() {
               if (tmp250) {
                 str193 = trim(str179.replace(tmp238, ""));
               }
-              let tmp254 = arr15;
-              if (arr15) {
+              let tmp254 = arr16;
+              if (arr16) {
                 tmp254 = !/\b(?:Avant|Nook)\b/.test(text1);
                 const obj73 = /\b(?:Avant|Nook)\b/;
               }
@@ -1130,46 +1129,46 @@ const fn = function() {
                     const obj75 = /^iOS/;
                   }
                   if (isMatch6) {
-                    isMatch6 = /\bSafari\b/.test(arr15[1]);
+                    isMatch6 = /\bSafari\b/.test(arr16[1]);
                     const obj76 = /\bSafari\b/;
                   }
                   isMatch5 = isMatch6;
                 }
                 if (!isMatch5) {
-                  isMatch5 = /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/.test(text1) && arr15[1];
+                  isMatch5 = /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/.test(text1) && arr16[1];
                   const obj77 = /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/;
-                  const tmp261 = /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/.test(text1) && arr15[1];
+                  const tmp261 = /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/.test(text1) && arr16[1];
                 }
                 tmp254 = isMatch5;
                 const obj74 = /Browser|Lunascape|Maxthon/;
               }
               if (tmp254) {
-                tmp238 = arr15[arr15.length - 1];
+                tmp238 = arr16[arr16.length - 1];
               }
               if (tmp254) {
                 items6.push(tmp238);
               }
-              let arr19 = items6;
+              let arr20 = items6;
               if (items6.length) {
                 const items13 = [`(${arr8.join("; ")})`];
-                arr19 = items13;
+                arr20 = items13;
               }
               let tmp263 = tmp237;
               if (tmp237) {
-                tmp263 = arr12;
+                tmp263 = arr13;
               }
               if (tmp263) {
-                tmp263 = arr12.indexOf(tmp237) < 0;
+                tmp263 = arr13.indexOf(tmp237) < 0;
               }
               if (tmp263) {
-                arr8 = arr19.push(`on ${tmp237}`);
+                arr20.push(`on ${tmp237}`);
               }
-              if (arr12) {
+              if (arr13) {
                 let str199 = "on ";
-                if (obj78.test(arr19[arr19.length - 1])) {
+                if (obj78.test(arr20[arr20.length - 1])) {
                   str199 = "";
                 }
-                arr19.push(str199 + arr12);
+                arr20.push(str199 + arr13);
                 obj78 = /^on /;
               }
               let text8 = str193;
@@ -1187,13 +1186,13 @@ const fn = function() {
                     replaced2 = str193.replace(match7[0], "");
                   }
                 }
-                obj = { architecture: 32, family: replaced2, version: null, toString: null };
+                const obj55 = { architecture: 32, family: replaced2, version: null, toString: null };
                 let tmp270 = null;
                 if (match7) {
                   tmp270 = match7[1];
                 }
-                obj.version = tmp270;
-                obj.toString = function toString() {
+                obj55.version = tmp270;
+                obj55.toString = function toString() {
                   const version = this.version;
                   let str = "";
                   let str2 = "";
@@ -1209,7 +1208,7 @@ const fn = function() {
                   }
                   return sum + str;
                 };
-                text8 = obj;
+                text8 = obj55;
                 const obj79 = / ([\d.+]+)$/;
               }
               const match8 = /\b(?:AMD|IA|Win|WOW|x86_|x)64\b/i.exec(tmp106);
@@ -1242,32 +1241,32 @@ const fn = function() {
                     const obj83 = /\bWOW64\b/i;
                   }
                   if (tmp273) {
-                    arr19.unshift("32-bit");
+                    arr20.unshift("32-bit");
                   }
                 }
                 if (!tmp9) {
                   c0 = null;
                   tmp9 = null;
                 }
-                obj1 = { description: tmp9 };
-                let first4 = arr15;
-                if (arr15) {
-                  first4 = arr15[0];
+                const obj80 = { description: tmp9 };
+                let first4 = arr16;
+                if (arr16) {
+                  first4 = arr16[0];
                 }
-                obj1.layout = first4;
-                obj1.manufacturer = tmp237;
+                obj80.layout = first4;
+                obj80.manufacturer = tmp237;
                 let tmp281 = text1;
-                obj1.name = text1;
-                obj1.prerelease = tmp210;
-                obj1.product = arr12;
-                obj1.ua = tmp9;
+                obj80.name = text1;
+                obj80.prerelease = tmp210;
+                obj80.product = arr13;
+                obj80.ua = tmp9;
                 if (text1) {
                   tmp281 = joined;
                 }
-                obj1.version = tmp281;
+                obj80.version = tmp281;
                 let tmp282 = text8;
                 if (!text8) {
-                  obj2 = {
+                  const obj87 = {
                     architecture: null,
                     family: null,
                     version: null,
@@ -1275,18 +1274,18 @@ const fn = function() {
                                     return "null";
                                   }
                   };
-                  tmp282 = obj2;
+                  tmp282 = obj87;
                 }
-                obj1.os = tmp282;
-                obj1.parse = parse;
-                obj1.toString = function toStringPlatform() {
+                obj80.os = tmp282;
+                obj80.parse = parse;
+                obj80.toString = function toStringPlatform() {
                   return this.description || "";
                 };
-                if (obj1.version) {
-                  arr19.unshift(joined);
+                if (obj80.version) {
+                  arr20.unshift(joined);
                 }
-                if (obj1.name) {
-                  arr12 = arr19.unshift(text1);
+                if (obj80.name) {
+                  arr20.unshift(text1);
                 }
                 let tmp287 = text8;
                 if (text8) {
@@ -1296,25 +1295,25 @@ const fn = function() {
                   let _String2 = String;
                   let tmp289 = text8 != String(text8).split(" ")[0];
                   if (!tmp289) {
-                    tmp289 = text8 != text1.split(" ")[0] && !arr12;
-                    const tmp291 = text8 != text1.split(" ")[0] && !arr12;
+                    tmp289 = text8 != text1.split(" ")[0] && !arr13;
+                    const tmp291 = text8 != text1.split(" ")[0] && !arr13;
                   }
                   tmp287 = tmp289;
                   const str206 = String(text8);
                 }
                 if (!tmp287) {
-                  if (arr19.length) {
-                    obj1.description = arr19.join(" ");
+                  if (arr20.length) {
+                    obj80.description = arr20.join(" ");
                   }
-                  return obj1;
+                  return obj80;
                 } else {
-                  if (arr12) {
+                  if (arr13) {
                     text8 = `(${tmp266}`;
                     let text9 = `(${tmp266})`;
                   } else {
                     text9 = `on ${`(${tmp266}`}`;
                   }
-                  arr19.push(text9);
+                  arr20.push(text9);
                 }
                 obj82 = /\bi686\b/i;
               }
@@ -1342,7 +1341,7 @@ const fn = function() {
                 joined = joined.replace(/\.[\d.]+/, ".x");
                 str146 = tmp104;
                 tmp189 = manufacturer;
-                arr12 = str81;
+                arr13 = str81;
                 items12 = tmp105;
               }
             }
@@ -1358,13 +1357,13 @@ const fn = function() {
               }
               str146 = tmp205;
               tmp189 = manufacturer;
-              arr12 = str81;
+              arr13 = str81;
               items12 = tmp105;
               if (isMatch10) {
                 items6.unshift("mobile mode");
                 str146 = tmp205;
                 tmp189 = manufacturer;
-                arr12 = str81;
+                arr13 = str81;
                 items12 = tmp105;
               }
             } else {
@@ -1372,24 +1371,24 @@ const fn = function() {
                 text1 = `${tmp30} Mobile`;
                 str146 = tmp104;
                 tmp189 = manufacturer;
-                arr12 = str81;
+                arr13 = str81;
                 items12 = tmp105;
               }
               if ("IE" == text1) {
                 if (isMatch8) {
                   try {
                     if (null === obj.external) {
-                      arr15 = items6.unshift("platform preview");
+                      items6.unshift("platform preview");
                     }
                     str146 = tmp104;
                     tmp189 = manufacturer;
-                    arr12 = str81;
+                    arr13 = str81;
                     items12 = tmp105;
                   } catch (err) {
                     arr.unshift("embedded");
                     str146 = tmp4;
                     tmp189 = tmp3;
-                    arr12 = tmp2;
+                    arr13 = tmp2;
                     items12 = tmp;
                   }
                 }
@@ -1413,7 +1412,7 @@ const fn = function() {
                   str146 = `${str155} ${arr15[0]}`;
                   joined = null;
                   tmp189 = str156;
-                  arr12 = tmp201;
+                  arr13 = tmp201;
                   items12 = tmp105;
                   const obj64 = /BB10/;
                 }
@@ -1482,7 +1481,7 @@ const fn = function() {
                 }
                 str146 = tmp104;
                 tmp189 = manufacturer;
-                arr12 = str81;
+                arr13 = str81;
                 items12 = tmp105;
                 if (name) {
                   const version2 = tmp107.version;
@@ -1525,10 +1524,10 @@ const fn = function() {
                     obj62 = /\bIE\b/;
                   }
                   items12 = ["Presto"];
-                  arr17 = items6.push(text11);
+                  items6.push(text11);
                   str146 = tmp196;
                   tmp189 = manufacturer;
-                  arr12 = str81;
+                  arr13 = str81;
                 }
               } else {
                 let test = obj5.test;
@@ -1545,14 +1544,14 @@ const fn = function() {
           text1 = "Firefox Mobile";
           str146 = tmp104;
           tmp189 = manufacturer;
-          arr12 = str81;
+          arr13 = str81;
           items12 = tmp105;
           const obj37 = /; *(?:XBLWP|ZuneWP)(\d+)/i;
           const tmp86 = /; *(?:XBLWP|ZuneWP)(\d+)/i.exec(tmp9) || 0;
         }
         if (obj38.test(tmp9)) {
           text1 = "IE Mobile";
-          arr18 = items6.unshift("desktop mode");
+          items6.unshift("desktop mode");
           str108 = "Windows Phone 8.x";
           tmp91 = str102;
           if (!joined) {
@@ -1579,7 +1578,7 @@ const fn = function() {
               if (joined) {
                 str110 = ` ${tmp28}`;
               }
-              arr19 = items6.push(text14 + str110);
+              items6.push(text14 + str110);
             }
             text1 = "IE";
             joined = tmp90[1];

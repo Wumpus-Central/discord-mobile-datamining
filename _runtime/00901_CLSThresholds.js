@@ -9,6 +9,8 @@ import bindReporter from "bindReporter" /* 912 */;
 import _mod914 from "module_914" /* 914 */;
 import LayoutShiftManager from "LayoutShiftManager" /* 915 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

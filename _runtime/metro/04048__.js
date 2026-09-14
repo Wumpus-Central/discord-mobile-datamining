@@ -150,8 +150,7 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-obj = { constructor: { value: DayParser, writable: true, configurable: true } };
-DayParser.prototype = Object.create(prototype, obj);
+DayParser.prototype = Object.create(prototype, { constructor: { value: DayParser, writable: true, configurable: true } });
 if (Parser) {
   _setPrototypeOf(DayParser, Parser);
 }

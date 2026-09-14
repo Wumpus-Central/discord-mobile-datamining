@@ -4,31 +4,36 @@
 import runWorkletOnJS from "runWorkletOnJS" /* 1643 */;
 import _mod1647 from "module_1647" /* 1647 */;
 import mockedRequestAnimationFrame from "mockedRequestAnimationFrame" /* 1651 */;
-import module_1639 from "module_1639" /* 1639 */;
-import get_ActivityIndicator from "module_1640" /* 1640 */;
+import module_1639_mod from "module_1639" /* 1639 */;
+import get_ActivityIndicator_mod from "module_1640" /* 1640 */;
 
+let module_1639 = module_1639_mod;
 let closure_3 = module_1639.isJest();
+let module_1639 = module_1639_mod;
 module_1639.shouldBeUseWeb();
+let module_1639 = module_1639_mod;
 module_1639 = module_1639.isChromeDebugger();
 let __initData = { code: "function pnpm_initializersTs2(data){const{runOnJS,logToLogBoxAndConsole}=this.__closure;runOnJS(logToLogBoxAndConsole)(data);}" };
 function overrideLogFunctionImplementation() {
+  __initData = get_ActivityIndicator;
   const fn = function e(arg0) {
     runWorkletOnJS.runOnJS(get_ActivityIndicator.logToLogBoxAndConsole)(arg0);
   };
-  __initData = { runOnJS: runWorkletOnJS.runOnJS, logToLogBoxAndConsole: get_ActivityIndicator.logToLogBoxAndConsole };
-  fn.__closure = __initData;
+  fn.__closure = { runOnJS: runWorkletOnJS.runOnJS, logToLogBoxAndConsole: get_ActivityIndicator.logToLogBoxAndConsole };
   fn.__workletHash = 10834450741065;
   fn.__initData = __initData;
   const result = __initData.replaceLoggerImplementation(fn);
 }
-__initData = { replaceLoggerImplementation: get_ActivityIndicator.replaceLoggerImplementation, runOnJS: runWorkletOnJS.runOnJS, logToLogBoxAndConsole: get_ActivityIndicator.logToLogBoxAndConsole };
-overrideLogFunctionImplementation.__closure = __initData;
+overrideLogFunctionImplementation.__closure = { replaceLoggerImplementation: get_ActivityIndicator.replaceLoggerImplementation, runOnJS: runWorkletOnJS.runOnJS, logToLogBoxAndConsole: get_ActivityIndicator.logToLogBoxAndConsole };
 overrideLogFunctionImplementation.__workletHash = 17079079828449;
 overrideLogFunctionImplementation.__initData = { code: "function overrideLogFunctionImplementation_Pnpm_initializersTs1(){const{replaceLoggerImplementation,runOnJS,logToLogBoxAndConsole}=this.__closure;replaceLoggerImplementation(function(data){'worklet';runOnJS(logToLogBoxAndConsole)(data);});}" };
+let get_ActivityIndicator = get_ActivityIndicator_mod;
 get_ActivityIndicator.registerLoggerConfig(get_ActivityIndicator.DEFAULT_LOGGER_CONFIG);
+let get_ActivityIndicator = get_ActivityIndicator_mod;
 let fn = function e(arg0) {
   runWorkletOnJS.runOnJS(get_ActivityIndicator.logToLogBoxAndConsole)(arg0);
 };
+let obj2 = { replaceLoggerImplementation: get_ActivityIndicator.replaceLoggerImplementation, runOnJS: runWorkletOnJS.runOnJS, logToLogBoxAndConsole: get_ActivityIndicator.logToLogBoxAndConsole };
 fn.__closure = { runOnJS: runWorkletOnJS.runOnJS, logToLogBoxAndConsole: get_ActivityIndicator.logToLogBoxAndConsole };
 fn.__workletHash = 10834450741065;
 fn.__initData = __initData;
@@ -74,7 +79,7 @@ function setupCallGuard() {
     }
   };
 }
-const obj1 = { runOnJS: runWorkletOnJS.runOnJS, logToLogBoxAndConsole: get_ActivityIndicator.logToLogBoxAndConsole };
+let obj3 = { runOnJS: runWorkletOnJS.runOnJS, logToLogBoxAndConsole: get_ActivityIndicator.logToLogBoxAndConsole };
 setupCallGuard.__closure = { callGuardDEV, runOnJS: runWorkletOnJS.runOnJS, reportFatalErrorOnJS: _mod1647.reportFatalErrorOnJS };
 setupCallGuard.__workletHash = 14948004486848;
 setupCallGuard.__initData = { code: "function setupCallGuard_Pnpm_initializersTs4(){const{callGuardDEV,runOnJS,reportFatalErrorOnJS}=this.__closure;global.__callGuardDEV=callGuardDEV;global.__ErrorUtils={reportFatalError:function(error){runOnJS(reportFatalErrorOnJS)({message:error.message,stack:error.stack});}};}" };
@@ -103,7 +108,7 @@ function setupConsole() {
     global.console = console;
   }
 }
-let obj2 = { callGuardDEV, runOnJS: runWorkletOnJS.runOnJS, reportFatalErrorOnJS: _mod1647.reportFatalErrorOnJS };
+let obj4 = { callGuardDEV, runOnJS: runWorkletOnJS.runOnJS, reportFatalErrorOnJS: _mod1647.reportFatalErrorOnJS };
 setupConsole.__closure = { IS_CHROME_DEBUGGER: module_1639, runOnJS: runWorkletOnJS.runOnJS, capturableConsole: fromEntriesResult };
 setupConsole.__workletHash = 1380126086828;
 setupConsole.__initData = { code: "function setupConsole_Pnpm_initializersTs5(){const{IS_CHROME_DEBUGGER,runOnJS,capturableConsole}=this.__closure;if(!IS_CHROME_DEBUGGER){global.console={assert:runOnJS(capturableConsole.assert),debug:runOnJS(capturableConsole.debug),log:runOnJS(capturableConsole.log),warn:runOnJS(capturableConsole.warn),error:runOnJS(capturableConsole.error),info:runOnJS(capturableConsole.info)};}}" };
@@ -131,7 +136,7 @@ function setupRequestAnimationFrame() {
     return -1;
   };
 }
-let obj3 = { IS_CHROME_DEBUGGER: module_1639, runOnJS: runWorkletOnJS.runOnJS, capturableConsole: fromEntriesResult };
+let obj5 = { IS_CHROME_DEBUGGER: module_1639, runOnJS: runWorkletOnJS.runOnJS, capturableConsole: fromEntriesResult };
 setupRequestAnimationFrame.__closure = { callMicrotasks: runWorkletOnJS.callMicrotasks };
 setupRequestAnimationFrame.__workletHash = 14722266205784;
 setupRequestAnimationFrame.__initData = { code: "function setupRequestAnimationFrame_Pnpm_initializersTs6(){const{callMicrotasks}=this.__closure;const nativeRequestAnimationFrame=global.requestAnimationFrame;let animationFrameCallbacks=[];let flushRequested=false;global.__flushAnimationFrame=function(frameTimestamp){const currentCallbacks=animationFrameCallbacks;animationFrameCallbacks=[];currentCallbacks.forEach(function(f){return f(frameTimestamp);});callMicrotasks();};global.requestAnimationFrame=function(callback){animationFrameCallbacks.push(callback);if(!flushRequested){flushRequested=true;nativeRequestAnimationFrame(function(timestamp){flushRequested=false;global.__frameTimestamp=timestamp;global.__flushAnimationFrame(timestamp);global.__frameTimestamp=undefined;});}return-1;};}" };
@@ -141,8 +146,7 @@ export { callGuardDEV };
 export { setupCallGuard };
 export { setupConsole };
 export const initializeUIRuntime = function initializeUIRuntime(ReanimatedModule) {
-  let __closure = module_1639;
-  if (!__closure.isWeb()) {
+  if (!obj.isWeb()) {
     if (ReanimatedModule) {
       if (closure_3) {
         const _globalThis = globalThis;
@@ -195,8 +199,8 @@ export const initializeUIRuntime = function initializeUIRuntime(ReanimatedModule
           throw new TypeError("Trying to call a non-function");
         }
       };
-      __closure = { setupCallGuard, setupConsole, SHOULD_BE_USE_WEB: module_1639, setupMicrotasks: runWorkletOnJS.setupMicrotasks, setupRequestAnimationFrame };
-      fn.__closure = __closure;
+      let obj2 = { setupCallGuard, setupConsole, SHOULD_BE_USE_WEB: module_1639, setupMicrotasks: runWorkletOnJS.setupMicrotasks, setupRequestAnimationFrame };
+      fn.__closure = obj2;
       fn.__workletHash = 2162023783290;
       fn.__initData = __initData;
       runWorkletOnJS.runOnUIImmediately(fn)();
@@ -207,4 +211,5 @@ export const initializeUIRuntime = function initializeUIRuntime(ReanimatedModule
       throw error;
     }
   }
+  obj = module_1639;
 };

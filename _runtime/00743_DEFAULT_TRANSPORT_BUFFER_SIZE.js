@@ -7,6 +7,8 @@ import forEachEnvelopeItem from "forEachEnvelopeItem" /* 729 */;
 import SENTRY_BUFFER_FULL_ERROR from "SENTRY_BUFFER_FULL_ERROR" /* 742 */;
 import disabledUntil from "disabledUntil" /* 744 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -17,15 +19,15 @@ export const createTransport = function createTransport(bufferSize, arg1) {
   dependencyMap = arg1;
   let promiseBuffer = arg2;
   if (arg2 === undefined) {
-    let obj = require("SENTRY_BUFFER_FULL_ERROR");
     let num = bufferSize.bufferSize;
     if (!num) {
       num = 64;
     }
-    promiseBuffer = obj.makePromiseBuffer(num);
+    promiseBuffer = require("SENTRY_BUFFER_FULL_ERROR").makePromiseBuffer(num);
+    let obj = require("SENTRY_BUFFER_FULL_ERROR");
   }
   closure_3 = {};
-  obj = {
+  return {
     send(arg0) {
       const items = [];
       bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
@@ -98,7 +100,6 @@ export const createTransport = function createTransport(bufferSize, arg1) {
             }
             if (typeof recordEnvelopeLoss === "function") {
               const queue_overflow = "queue_overflow";
-              let tmpResult = forEachEnvelopeItem;
               if (tmpResult.envelopeContainsItemType(closure_1, ["client_report"])) {
                 if (_mod688.DEBUG_BUILD) {
                   const debug2 = consoleSandbox.debug;
@@ -106,10 +107,10 @@ export const createTransport = function createTransport(bufferSize, arg1) {
                   debug2.warn("Dropping client report. Will not send outcomes (reason: " + "queue_overflow" + ").");
                 }
               } else {
-                tmpResult = forEachEnvelopeItem;
-                tmpResult.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
+                forEachEnvelopeItem.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
                   closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1));
                 });
+                const tmpResult2 = forEachEnvelopeItem;
               }
               return Promise.resolve({});
             } else {
@@ -127,5 +128,4 @@ export const createTransport = function createTransport(bufferSize, arg1) {
       return promiseBuffer.drain(arg0);
     }
   };
-  return obj;
 };

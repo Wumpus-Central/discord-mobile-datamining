@@ -32,14 +32,14 @@ export const pattern = function pattern(arg0) {
   const nextResult1 = iter2.next();
   while (iter2 !== undefined) {
     if ("o" === nextResult1) {
-      let obj = { time: null, type: "transient", intensity: 0.4, sharpness: 0.4 };
-      obj.time = num2;
-      let arr = items.push(obj);
+      let obj2 = { time: null, type: "transient", intensity: 0.4, sharpness: 0.4 };
+      obj2.time = num2;
+      let arr = items.push(obj2);
       num2 = num2 + 100;
     } else if ("O" === nextResult1) {
-      obj = { time: null, type: "transient", intensity: 1, sharpness: 0.8 };
+      let obj = { time: null, type: "transient", intensity: 1, sharpness: 0.8 };
       obj.time = num2;
-      arr = items.push(obj);
+      let arr3 = items.push(obj);
       num2 = num2 + 100;
     } else if ("." === nextResult1) {
       num2 = num2 + 150;

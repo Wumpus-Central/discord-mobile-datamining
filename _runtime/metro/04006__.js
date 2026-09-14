@@ -1,35 +1,39 @@
 // === Module 4006: ? ===
 
 // Module 4006
-import startOfWeek from "startOfWeek" /* 3884 */;
-import startOfWeekYear from "startOfWeekYear" /* 4007 */;
-import _typeof from "module_3725" /* 3725 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import startOfWeek_mod from "startOfWeek" /* 3884 */;
+import startOfWeekYear_mod from "startOfWeekYear" /* 4007 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let startOfWeek = startOfWeek_mod;
 if (!startOfWeek) {
-  let obj = { default: startOfWeek };
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = startOfWeek;
 }
 startOfWeek = tmp3;
+let startOfWeekYear = startOfWeekYear_mod;
 if (!startOfWeekYear) {
-  obj = { default: startOfWeekYear };
-  let tmp5 = obj;
+  const obj2 = { default: startOfWeekYear };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfWeekYear;
 }
 startOfWeekYear = tmp5;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp7 = obj;
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }

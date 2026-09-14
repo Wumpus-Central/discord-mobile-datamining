@@ -1,19 +1,21 @@
 // === Module 4077: ? ===
 
 // Module 4077
-import startOfQuarter from "startOfQuarter" /* 3937 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import startOfQuarter_mod from "startOfQuarter" /* 3937 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let startOfQuarter = startOfQuarter_mod;
 if (!startOfQuarter) {
-  let obj = { default: startOfQuarter };
+  const obj = { default: startOfQuarter };
   let tmp3 = obj;
 } else {
   tmp3 = startOfQuarter;
 }
 startOfQuarter = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

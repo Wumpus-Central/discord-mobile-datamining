@@ -2,9 +2,10 @@
 
 // Module 226 (URL)
 import BlobModuleDefault from "BlobModule" /* 201 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
+let _classCallCheck = _classCallCheck_mod;
 let closure_1 = null;
 if (BlobModuleDefault) {
   if (typeof importDefaultResult1.getConstants().BLOB_URI_SCHEME === "string") {
@@ -28,7 +29,7 @@ class URL {
       if (!obj.test(global)) {
         if (typeof fn === "string") {
           obj2 = /^(?:(?:(?:https?|ftp):)?\/\/)(?:(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z0-9\u00a1-\uffff][a-z0-9\u00a1-\uffff_-]{0,62})?[a-z0-9\u00a1-\uffff]\.)*(?:[a-z\u00a1-\uffff]{2,}\.?))(?::\d{2,5})?(?:[/?#]\S*)?$/;
-          str = fn;
+          str1 = fn;
           if (!obj2.test(fn)) {
             tmp2 = globalThis;
             _TypeError = TypeError;
@@ -41,14 +42,14 @@ class URL {
             throw typeError;
           }
         } else {
-          str = fn.toString();
+          str1 = fn.toString();
         }
         str2 = "/";
-        substr = str;
-        if (str.endsWith("/")) {
+        substr = str1;
+        if (str1.endsWith("/")) {
           num = 1;
           num2 = 0;
-          substr = str.slice(0, str.length - 1);
+          substr = str1.slice(0, str1.length - 1);
         }
         combined = global;
         if (!global.startsWith("/")) {
@@ -263,11 +264,10 @@ const items = [
       if (null === this._searchParamsInstance) {
         return self._url;
       } else {
-        let str = self._url;
-        const first = str.split("?")[0].split("#")[0];
+        const first = self._url.split("?")[0].split("#")[0];
         ({ hash, _searchParamsInstance } = self);
-        str = _searchParamsInstance.toString();
-        if (str) {
+        const str3 = self._url.split("?")[0];
+        if (str1) {
           let text = `${tmp}?${tmp2}${hash}`;
         } else {
           text = first + hash;

@@ -2,7 +2,7 @@
 
 // Module 6797
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
@@ -27,18 +27,19 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 function changeEventCalculator(arg0, arg1) {
   if (undefined === arg1) {
-    let obj = { changeX: null, changeY: null };
     ({ x: obj2.changeX, y: obj2.changeY } = arg0);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
   } else {
     obj = { changeX: arg0.x - arg1.x, changeY: arg0.y - arg1.y };
   }
-  obj = {};
   const merged = Object.assign(arg0);
   const merged1 = Object.assign(obj);
-  return obj;
+  return {};
 }
 changeEventCalculator.__closure = {};
 changeEventCalculator.__workletHash = 2074844346342;

@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 
 export default function SearchBar(ref) {
-  ref = noop.useRef(null);
+  const ref1 = noop.useRef(null);
   const imperativeHandle = noop.useImperativeHandle(ref.ref, () => ({
     blur() {
       closure_1_1((arg0) => {
@@ -28,7 +28,7 @@ export default function SearchBar(ref) {
     toggleCancelButton(arg0) {
       closure_0 = arg0;
       closure_1_1((arg0) => {
-        const Commands = ref(5020).Commands;
+        const Commands = ref1(5020).Commands;
         return Commands.toggleCancelButton(arg0, closure_0);
       });
     },
@@ -41,7 +41,7 @@ export default function SearchBar(ref) {
     setText(arg0) {
       closure_0 = arg0;
       closure_1_1((arg0) => {
-        const Commands = ref(5020).Commands;
+        const Commands = ref1(5020).Commands;
         return Commands.setText(arg0, closure_0);
       });
     },
@@ -52,9 +52,9 @@ export default function SearchBar(ref) {
       });
     }
   }));
-  const items = [ref];
+  const items = [ref1];
   importDefault = noop.useCallback((fn) => {
-    const current = ref.current;
+    const current = ref1.current;
     if (current) {
       fn(current);
     } else {
@@ -62,22 +62,20 @@ export default function SearchBar(ref) {
       console.warn("Reference to native search bar component has not been updated yet");
     }
   }, items);
-  if (ref(5012).isSearchBarAvailableForCurrentPlatform) {
-    ref = ref.ref;
-    ({ obscureBackground, hideNavigationBar, onFocus, onBlur, onSearchButtonPress, onCancelButtonPress, onChangeText } = ref);
-    const obj = { ref };
-    const tmp10 = _objectWithoutProperties(ref, closure_3);
+  if (ref1(5012).isSearchBarAvailableForCurrentPlatform) {
+    ({ obscureBackground, hideNavigationBar, onFocus, onBlur, onSearchButtonPress, onCancelButtonPress, onChangeText } = ref.ref);
+    const obj = { ref: ref1 };
+    const tmp10 = _objectWithoutProperties(ref.ref, closure_3);
     const merged = Object.assign(tmp10);
-    let tmp3Result = tmp3(5012);
-    obj.obscureBackground = tmp3Result.parseBooleanToOptionalBooleanNativeProp(obscureBackground);
-    tmp3Result = tmp3(5012);
-    obj.hideNavigationBar = tmp3Result.parseBooleanToOptionalBooleanNativeProp(hideNavigationBar);
+    obj.obscureBackground = tmp3(5012).parseBooleanToOptionalBooleanNativeProp(obscureBackground);
+    const tmp3Result = tmp3(5012);
+    obj.hideNavigationBar = tmp3(5012).parseBooleanToOptionalBooleanNativeProp(hideNavigationBar);
     obj.onSearchFocus = onFocus;
     obj.onSearchBlur = onBlur;
     obj.onSearchButtonPress = onSearchButtonPress;
     obj.onCancelButtonPress = onCancelButtonPress;
     obj.onChangeText = onChangeText;
-    return jsx(_modDef5020, { ref });
+    return <tmp13 ref={ref1} />;
   } else {
     let _console = console;
     console.warn("Importing SearchBar is only valid on iOS and Android devices.");

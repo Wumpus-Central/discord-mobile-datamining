@@ -10,7 +10,7 @@ function StackNavigator(arg0) {
   let merged = Object.assign(arg0, Object.assign({ id: 0, initialRouteName: 0, UNSTABLE_routeNamesChangeBehavior: 0, children: 0, layout: 0, screenListeners: 0, screenOptions: 0, screenLayout: 0, UNSTABLE_router: 0 }));
   let state;
   let navigation;
-  state(navigation[2]);
+  let obj = state(navigation[2]);
   const navigationBuilder = state(navigation[2]).useNavigationBuilder(state(navigation[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
   state = navigationBuilder.state;
   navigation = navigationBuilder.navigation;
@@ -44,16 +44,16 @@ function StackNavigator(arg0) {
     }
     return addListenerResult;
   }, items);
-  let obj = { children: null };
-  obj = {};
+  const obj3 = { children: null };
+  const obj4 = {};
   const merged1 = Object.assign(merged);
-  obj.direction = obj.useLocale().direction;
-  obj.state = state;
-  obj.describe = describe;
-  obj.descriptors = descriptors;
-  obj.navigation = navigation;
-  obj.children = jsx(state(navigation[3]).StackView, {});
-  return <NavigationContent />;
+  obj4.direction = obj.useLocale().direction;
+  obj4.state = state;
+  obj4.describe = describe;
+  obj4.descriptors = descriptors;
+  obj4.navigation = navigation;
+  obj3.children = jsx(state(navigation[3]).StackView, {});
+  return <NavigationContent>{null}</NavigationContent>;
 }
 const jsx = fn(21).jsx;
 const Link = fn(1484);

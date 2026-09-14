@@ -87,7 +87,7 @@ function initializeContext(target) {
 function process(_zod, seen) {
   let tmp4 = arg2;
   if (arg2 === undefined) {
-    let obj = { path: [], schemaPath: [] };
+    const obj = { path: [], schemaPath: [] };
     tmp4 = obj;
   }
   const def = _zod._zod.def;
@@ -101,9 +101,9 @@ function process(_zod, seen) {
     }
     return value.schema;
   } else {
-    obj = { schema: {}, count: 1, cycle: "Array", path: tmp4.path };
+    const obj2 = { schema: {}, count: 1, cycle: "Array", path: tmp4.path };
     const seen2 = seen.seen;
-    const result = seen2.set(_zod, obj);
+    const result = seen2.set(_zod, obj2);
     _zod = _zod._zod;
     const toJSONSchema = _zod.toJSONSchema;
     let toJSONSchemaResult;
@@ -111,21 +111,21 @@ function process(_zod, seen) {
       toJSONSchemaResult = toJSONSchema();
     }
     if (toJSONSchemaResult) {
-      obj.schema = toJSONSchemaResult;
+      obj2.schema = toJSONSchemaResult;
     } else {
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(tmp4);
       const items = [];
       items[HermesBuiltin.arraySpread(tmp4.schemaPath, 0)] = _zod;
-      obj.schemaPath = items;
-      obj.path = tmp4.path;
+      obj3.schemaPath = items;
+      obj3.path = tmp4.path;
       if (_zod._zod.processJSONSchema) {
         const _zod2 = _zod._zod;
-        _zod2.processJSONSchema(seen, obj.schema, obj);
+        _zod2.processJSONSchema(seen, obj2.schema, obj3);
       } else {
-        const schema = obj.schema;
+        const schema = obj2.schema;
         if (seen.processors[def.type]) {
-          tmp13(_zod, seen, schema, obj);
+          tmp13(_zod, seen, schema, obj3);
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
@@ -135,37 +135,37 @@ function process(_zod, seen) {
       }
       const parent = _zod._zod.parent;
       if (parent) {
-        if (!obj.ref) {
-          obj.ref = parent;
+        if (!obj2.ref) {
+          obj2.ref = parent;
         }
-        process(parent, seen, obj);
+        process(parent, seen, obj3);
         const seen3 = seen.seen;
         seen3.get(parent).isParent = true;
       }
     }
     const metadataRegistry = seen.metadataRegistry;
-    value = metadataRegistry.get(_zod);
-    if (value) {
+    value2 = metadataRegistry.get(_zod);
+    if (value2) {
       const _Object = Object;
-      const merged1 = Object.assign(obj.schema, value);
+      const merged1 = Object.assign(obj2.schema, value2);
     }
     let tmp30 = "input" === seen.io;
     if (tmp30) {
       tmp30 = isTransforming(_zod);
     }
     if (tmp30) {
-      const schema2 = obj.schema;
+      const schema2 = obj2.schema;
       delete tmp3[tmp2];
-      const schema3 = obj.schema;
+      const schema3 = obj2.schema;
       delete tmp3[tmp2];
     }
     if (tmp32) {
-      const schema4 = obj.schema;
+      const schema4 = obj2.schema;
       if (schema4.default == null) {
-        schema4.default = obj.schema._prefault;
+        schema4.default = obj2.schema._prefault;
       }
     }
-    const schema5 = obj.schema;
+    const schema5 = obj2.schema;
     delete tmp2[tmp];
     const seen4 = seen.seen;
     return seen4.get(_zod).schema;
@@ -185,15 +185,15 @@ function extractDefs(initializeContextResult, _idmap) {
     while (iter !== undefined) {
       let tmp15 = nextResult;
       let metadataRegistry = initializeContextResult.metadataRegistry;
-      value = metadataRegistry.get(nextResult[0]);
-      let id;
-      if (value != null) {
-        id = value.id;
+      let value5 = metadataRegistry.get(nextResult[0]);
+      let id1;
+      if (value5 != null) {
+        id1 = value5.id;
       }
-      let tmp18 = id;
-      if (id) {
-        let value1 = map.get(tmp18);
-        if (value1) {
+      let tmp18 = id1;
+      if (id1) {
+        let value6 = map.get(tmp18);
+        if (value6) {
           if (tmp21 !== tmp15[0]) {
             let _Error2 = Error;
             let _HermesInternal = HermesInternal;
@@ -218,16 +218,17 @@ function extractDefs(initializeContextResult, _idmap) {
         if (initializeContextResult.external) {
           const registry = initializeContextResult.external.registry;
           value = registry.get(arg0[0]);
-          let id;
+          let id1;
           if (value != null) {
-            id = value.id;
+            id1 = value.id;
           }
           let fn = initializeContextResult.external.uri;
           if (fn == null) {
             fn = (__shared) => __shared;
           }
-          if (id) {
-            let obj = { ref: fn(id) };
+          if (id1) {
+            const obj2 = { ref: fn(id1) };
+            let obj = obj2;
           } else {
             let id2 = arg0[1].defId;
             if (id2 == null) {
@@ -238,15 +239,16 @@ function extractDefs(initializeContextResult, _idmap) {
               id2 = `schema${tmp13}`;
             }
             arg0[1].defId = id2;
-            obj = { defId: id2, ref: null };
+            const obj3 = { defId: id2, ref: null };
             const _HermesInternal2 = HermesInternal;
-            obj.ref = "" + fn("__shared") + "#/" + str + "/" + id2;
+            obj3.ref = "" + fn("__shared") + "#/" + str + "/" + id2;
+            obj = obj3;
           }
         } else if (arg0[1] === value) {
           obj = { ref: "#" };
         } else {
           const _HermesInternal = HermesInternal;
-          id = arg0[1].schema.id;
+          let id = arg0[1].schema.id;
           const combined = "#/" + str + "/";
           if (id == null) {
             initializeContextResult.counter = +initializeContextResult.counter + 1;
@@ -255,9 +257,9 @@ function extractDefs(initializeContextResult, _idmap) {
           obj = { defId: id, ref: combined + id };
         }
         const defId = obj.defId;
-        const obj1 = {};
+        const obj4 = {};
         const merged = Object.assign(tmp3.schema);
-        arg0[1].def = obj1;
+        arg0[1].def = obj4;
         if (defId) {
           tmp3.defId = defId;
         }
@@ -301,9 +303,9 @@ function extractDefs(initializeContextResult, _idmap) {
       if (_idmap !== nextResult1[0]) {
         if (initializeContextResult.external) {
           let registry = initializeContextResult.external.registry;
-          value2 = registry.get(tmp45[0]);
-          if (value2 != null) {
-            id = value2.id;
+          let value7 = registry.get(tmp45[0]);
+          if (value7 != null) {
+            let id = value7.id;
           }
           if (_idmap !== tmp45[0]) {
             if (tmp51) {
@@ -313,19 +315,19 @@ function extractDefs(initializeContextResult, _idmap) {
           }
         }
         let metadataRegistry2 = initializeContextResult.metadataRegistry;
-        let value3 = metadataRegistry2.get(tmp45[0]);
-        let id1;
-        if (value3 != null) {
-          id1 = value3.id;
+        let value8 = metadataRegistry2.get(tmp45[0]);
+        let id2;
+        if (value8 != null) {
+          id2 = value8.id;
         }
-        if (!id1) {
-          id1 = tmp46.cycle;
+        if (!id2) {
+          id2 = tmp46.cycle;
         }
-        if (!id1) {
+        if (!id2) {
           let tmp59 = tmp46.count > 1 && "ref" === initializeContextResult.reused;
-          id1 = tmp59;
+          id2 = tmp59;
         }
-        if (id1) {
+        if (id2) {
           let extractToDefResult1 = extractToDef(tmp45);
         }
       } else {
@@ -352,14 +354,14 @@ function finalize(seen, _standard) {
         if (schema == null) {
           schema = value.schema;
         }
-        let obj = {};
+        const obj = {};
         const merged = Object.assign(schema);
         value.ref = null;
         if (value.ref) {
           flattenRef(ref);
           const seen2 = tmp5.seen;
-          value = seen2.get(ref);
-          const schema2 = value.schema;
+          const value3 = seen2.get(ref);
+          const schema2 = value3.schema;
           if (!schema2.$ref) {
             const _Object = Object;
             const merged1 = Object.assign(schema, schema2);
@@ -395,20 +397,20 @@ function finalize(seen, _standard) {
             }
           }
           if (schema2.$ref) {
-            if (value.def) {
+            if (value3.def) {
               for (const key10055 in tmp10) {
                 let tmp22 = "$ref" !== key10055;
                 if (tmp22) {
                   tmp22 = "allOf" !== key10055;
                 }
                 if (tmp22) {
-                  tmp22 = key10055 in value.def;
+                  tmp22 = key10055 in value3.def;
                 }
                 if (tmp22) {
                   let _JSON = JSON;
                   let _JSON2 = JSON;
                   let json = JSON.stringify(schema[key10055]);
-                  tmp22 = json === JSON.stringify(value.def[key10055]);
+                  tmp22 = json === JSON.stringify(value3.def[key10055]);
                 }
                 if (!tmp22) {
                   continue;
@@ -426,27 +428,27 @@ function finalize(seen, _standard) {
           if (parent !== ref) {
             flattenRef(parent);
             const seen3 = seen.seen;
-            const value1 = seen3.get(parent);
+            const value4 = seen3.get(parent);
             let prop;
-            if (value1 != null) {
-              prop = value1.schema.$ref;
+            if (value4 != null) {
+              prop = value4.schema.$ref;
             }
             if (prop) {
-              schema.$ref = value1.schema.$ref;
-              if (value1.def) {
+              schema.$ref = value4.schema.$ref;
+              if (value4.def) {
                 for (const key10079 in tmp10) {
                   let tmp27 = "$ref" !== key10079;
                   if (tmp27) {
                     tmp27 = "allOf" !== key10079;
                   }
                   if (tmp27) {
-                    tmp27 = key10079 in value1.def;
+                    tmp27 = key10079 in value4.def;
                   }
                   if (tmp27) {
                     let _JSON3 = JSON;
                     let _JSON4 = JSON;
                     let json1 = JSON.stringify(schema[key10079]);
-                    tmp27 = json1 === JSON.stringify(value1.def[key10079]);
+                    tmp27 = json1 === JSON.stringify(value4.def[key10079]);
                   }
                   if (!tmp27) {
                     continue;
@@ -460,13 +462,13 @@ function finalize(seen, _standard) {
             }
           }
         }
-        obj = { zodSchema: item10028, jsonSchema: schema, path: null };
+        const obj2 = { zodSchema: item10028, jsonSchema: schema, path: null };
         let path = value.path;
         if (path == null) {
           path = [];
         }
-        obj.path = path;
-        seen.override(obj);
+        obj2.path = path;
+        seen.override(obj2);
       }
     }
     let seen2 = standardJSONSchemaMethod.seen;
@@ -494,10 +496,10 @@ function finalize(seen, _standard) {
     }
     if (uri) {
       const registry = standardJSONSchemaMethod.external.registry;
-      value = registry.get(_standard);
+      value2 = registry.get(_standard);
       let id;
-      if (value != null) {
-        id = value.id;
+      if (value2 != null) {
+        id = value2.id;
       }
       if (id) {
         const external2 = standardJSONSchemaMethod.external;
@@ -548,15 +550,15 @@ function finalize(seen, _standard) {
       let _JSON = JSON;
       let _JSON2 = JSON;
       defs = JSON.parse(JSON.stringify(Object));
-      obj = { value: null, enumerable: false, writable: false };
-      obj = {};
+      let obj2 = { value: null, enumerable: false, writable: false };
+      const obj3 = {};
       let merged1 = Object.assign(_standard["~standard"]);
-      const obj1 = { input: exports.createStandardJSONSchemaMethod(_standard, "input", standardJSONSchemaMethod.processors), output: null };
+      const obj4 = { input: exports.createStandardJSONSchemaMethod(_standard, "input", standardJSONSchemaMethod.processors), output: null };
       standardJSONSchemaMethod = exports.createStandardJSONSchemaMethod(_standard, "output", standardJSONSchemaMethod.processors);
-      obj1.output = standardJSONSchemaMethod;
-      obj.jsonSchema = obj1;
-      obj.value = obj;
-      Object.defineProperty(defs, "~standard", obj);
+      obj4.output = standardJSONSchemaMethod;
+      obj3.jsonSchema = obj4;
+      obj2.value = obj3;
+      Object.defineProperty(defs, "~standard", obj2);
     } catch (err) {
       const error1 = new tmp.Error("Error converting schema to JSON.");
       throw error1;
@@ -697,20 +699,21 @@ export (_standard, input) => {
   if (processors === undefined) {
     processors = {};
   }
-  return (processors) => {
-    if (processors == null) {
+  return (arg0) => {
+    processors = arg0;
+    if (arg0 == null) {
       processors = {};
     }
     let libraryOptions = processors.libraryOptions;
     if (libraryOptions == null) {
       libraryOptions = {};
     }
-    processors = {};
+    const obj2 = {};
     const merged = Object.assign(libraryOptions);
-    processors.target = processors.target;
-    processors.io = io;
-    processors.processors = processors;
-    const tmpResult = initializeContext(processors);
+    obj2.target = processors.target;
+    obj2.io = io;
+    obj2.processors = processors;
+    const tmpResult = initializeContext(obj2);
     process(closure_0, tmpResult);
     extractDefs(tmpResult, closure_0);
     return finalize(tmpResult, closure_0);

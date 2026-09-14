@@ -1,7 +1,7 @@
 // === Module 3982: ? ===
 
 // Module 3982
-import requiredArgs from "requiredArgs" /* 3726 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -28,6 +28,7 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj = { default: requiredArgs };
   let tmp3 = obj;

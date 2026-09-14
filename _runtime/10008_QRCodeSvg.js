@@ -3,7 +3,7 @@
 // Module 10008 (QRCodeSvg)
 import inlineStyles from "inlineStyles" /* 8574 */;
 import emptyFunction from "module_10005" /* 10005 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
 let fn = Object.assign;
 if (!fn) {
@@ -37,18 +37,19 @@ if (!emptyFunction) {
 } else {
   tmp3 = emptyFunction;
 }
+let noop = noop_mod;
 if (!noop) {
-  obj = { default: noop };
-  let tmp4 = obj;
+  const obj2 = { default: noop };
+  let tmp4 = obj2;
 } else {
   tmp4 = noop;
 }
 noop = tmp4;
-obj = { bgColor: null, bgD: tmp3.default.string.isRequired, fgColor: null, fgD: tmp3.default.string.isRequired, size: tmp3.default.number.isRequired, viewBoxSize: tmp3.default.number.isRequired };
+const obj3 = { bgColor: null, bgD: tmp3.default.string.isRequired, fgColor: null, fgD: tmp3.default.string.isRequired, size: tmp3.default.number.isRequired, viewBoxSize: tmp3.default.number.isRequired };
 let items = [tmp3.default.object, tmp3.default.string];
-obj.bgColor = tmp3.default.oneOfType(items).isRequired;
+obj3.bgColor = tmp3.default.oneOfType(items).isRequired;
 const items1 = [tmp3.default.object, tmp3.default.string];
-obj.fgColor = tmp3.default.oneOfType(items1).isRequired;
+obj3.fgColor = tmp3.default.oneOfType(items1).isRequired;
 const forwardRefResult = noop.forwardRef((obj, ref) => {
   ({ size, viewBoxSize } = obj);
   const items = ["bgColor", "bgD", "fgD", "fgColor", "size", "viewBoxSize"];
@@ -76,12 +77,12 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
     }
     continue;
   }
-  size = { height: size, ref, style: { height: size, width: size }, viewBox: `0 0 ${viewBoxSize} ${viewBoxSize}`, width: size };
+  const size1 = { height: size, ref, style: { height: size, width: size }, viewBox: `0 0 ${viewBoxSize} ${viewBoxSize}`, width: size };
   const element = noop.default.createElement(inlineStyles.Path, { d: bgD, fill: bgColor });
-  return noop.default.createElement(inlineStyles.Svg, fn({}, obj, size), element, noop.default.createElement(inlineStyles.Path, { d, fill }));
+  return noop.default.createElement(inlineStyles.Svg, fn({}, obj, size1), element, noop.default.createElement(inlineStyles.Path, { d, fill }));
 });
 forwardRefResult.displayName = "QRCodeSvg";
-forwardRefResult.propTypes = obj;
+forwardRefResult.propTypes = obj3;
 forwardRefResult.defaultProps = {};
 
 export default forwardRefResult;

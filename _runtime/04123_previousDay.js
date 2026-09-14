@@ -1,27 +1,30 @@
 // === Module 4123: previousDay ===
 
 // Module 4123 (previousDay)
-import requiredArgs from "requiredArgs" /* 3726 */;
-import module_3988 from "module_3988" /* 3988 */;
-import subDays from "subDays" /* 4096 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import module_3988_mod from "module_3988" /* 3988 */;
+import subDays_mod from "subDays" /* 4096 */;
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  let obj = { default: requiredArgs };
+  const obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;
 }
 requiredArgs = tmp3;
+let module_3988 = module_3988_mod;
 if (!module_3988) {
-  obj = { default: module_3988 };
-  let tmp5 = obj;
+  const obj2 = { default: module_3988 };
+  let tmp5 = obj2;
 } else {
   tmp5 = module_3988;
 }
 module_3988 = tmp5;
+let subDays = subDays_mod;
 if (!subDays) {
-  obj = { default: subDays };
-  let tmp7 = obj;
+  const obj3 = { default: subDays };
+  let tmp7 = obj3;
 } else {
   tmp7 = subDays;
 }

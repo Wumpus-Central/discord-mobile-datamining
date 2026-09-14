@@ -4,6 +4,8 @@
 import _mod682 from "module_682" /* 682 */;
 import _mod900 from "module_900" /* 900 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 let dependencyMap = arg6;
 function triggerHandlers(arg0, arg1) {
@@ -43,16 +45,16 @@ export const addClsInstrumentationHandler = function addClsInstrumentationHandle
   let cls = closure_6.cls;
   cls.push(fn);
   if (!closure_7.cls) {
-    let obj = cls(901);
+    const obj = cls(901);
     tmp5.cls = true;
-    const onCLSResult = obj.onCLS((metric) => {
+    const onCLSResult = cls(901).onCLS((metric) => {
       triggerHandlers("cls", { metric });
       closure_2 = metric;
     }, { reportAllChanges: true });
   }
   if (closure_2) {
-    obj = { metric: tmp };
-    fn(obj);
+    const obj2 = { metric: tmp };
+    fn(obj2);
   }
   let tmp10;
   if (flag) {
@@ -78,16 +80,16 @@ export const addInpInstrumentationHandler = function addInpInstrumentationHandle
   let inp = closure_6.inp;
   inp.push(_onInp);
   if (!closure_7.inp) {
-    let obj = inp(920);
-    obj.onINP((metric) => {
+    inp(920).onINP((metric) => {
       triggerHandlers("inp", { metric });
       closure_5 = metric;
     });
     tmp5.inp = true;
+    const obj = inp(920);
   }
   if (metric3) {
-    obj = { metric: metric3 };
-    _onInp(obj);
+    const obj2 = { metric: metric3 };
+    _onInp(obj2);
   }
   inp = "inp";
   dependencyMap = _onInp;
@@ -115,16 +117,16 @@ export const addLcpInstrumentationHandler = function addLcpInstrumentationHandle
   let lcp = closure_6.lcp;
   lcp.push(fn);
   if (!closure_7.lcp) {
-    let obj = lcp(916);
+    const obj = lcp(916);
     tmp5.lcp = true;
-    const onLCPResult = obj.onLCP((metric) => {
+    const onLCPResult = lcp(916).onLCP((metric) => {
       triggerHandlers("lcp", { metric });
       closure_3 = metric;
     }, { reportAllChanges: true });
   }
   if (metric) {
-    obj = { metric };
-    fn(obj);
+    const obj2 = { metric };
+    fn(obj2);
   }
   let tmp10;
   if (flag) {
@@ -147,8 +149,7 @@ export const addLcpInstrumentationHandler = function addLcpInstrumentationHandle
 };
 export const addPerformanceInstrumentationHandler = function addPerformanceInstrumentationHandler(event, handleEntries) {
   closure_6[event] = closure_6[event] || [];
-  let arr = closure_6[event];
-  arr = arr.push(handleEntries);
+  closure_6[event].push(handleEntries);
   if (!closure_7[event]) {
     _require = event;
     const obj = {};
@@ -180,16 +181,16 @@ export const addTtfbInstrumentationHandler = function addTtfbInstrumentationHand
   let ttfb = closure_6.ttfb;
   ttfb.push(fn);
   if (!closure_7.ttfb) {
-    let obj = ttfb(919);
-    obj.onTTFB((metric) => {
+    ttfb(919).onTTFB((metric) => {
       triggerHandlers("ttfb", { metric });
       closure_4 = metric;
     });
     tmp5.ttfb = true;
+    const obj = ttfb(919);
   }
   if (metric2) {
-    obj = { metric: metric2 };
-    fn(obj);
+    const obj2 = { metric: metric2 };
+    fn(obj2);
   }
   ttfb = "ttfb";
   dependencyMap = fn;

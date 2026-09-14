@@ -12,8 +12,8 @@ let closure_3 = async function _playHaptic(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -25,18 +25,18 @@ let closure_3 = async function _playHaptic(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c2 = 3;
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        obj = _modDef4607;
         if (obj.isEnabled()) {
           c2 = 3;
-          const obj1 = { value: _modDef4607.triggerPattern(closure_0, closure_1), done: true };
-          return obj1;
+          const obj4 = { value: _modDef4607.triggerPattern(closure_0, closure_1), done: true };
+          return obj4;
         } else {
           c2 = 3;
           return { value: "HermesInternal", done: null };
         }
+        obj = _modDef4607;
       }
     } catch (tmp8) {
       c2 = tmp;

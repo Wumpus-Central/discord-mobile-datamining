@@ -5,6 +5,8 @@ import _mod6799 from "module_6799" /* 6799 */;
 import eventHandler from "eventHandler" /* 6842 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 ({ useEffect: c2, useMemo: c3, useRef: closure_4 } = noop);
 let closure_5 = ["onGestureHandlerReanimatedEvent", "onGestureHandlerReanimatedStateChange", "onGestureHandlerReanimatedTouchEvent"];
 const onUpdate = function n() {

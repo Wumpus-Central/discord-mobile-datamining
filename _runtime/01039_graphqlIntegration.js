@@ -7,6 +7,5 @@ require = arg1;
 const dependencyMap = arg6;
 
 export const graphqlIntegration = function graphqlIntegration(endpoints) {
-  const obj = { endpoints: endpoints.endpoints };
-  return obj.graphqlClientIntegration(obj);
+  return feedbackAsyncIntegration.graphqlClientIntegration({ endpoints: endpoints.endpoints });
 };

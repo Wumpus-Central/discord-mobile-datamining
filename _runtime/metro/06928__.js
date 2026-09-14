@@ -2,11 +2,13 @@
 
 // Module 6928
 import _mod6930 from "module_6930" /* 6930 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
+let noop = noop_mod;
 const useMemo = noop.useMemo;
+let noop = noop_mod;
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const memoResult = noop.memo(function BottomSheetHandleComponent(style) {

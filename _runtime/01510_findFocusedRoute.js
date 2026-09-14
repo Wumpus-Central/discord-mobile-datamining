@@ -44,14 +44,14 @@ export const findFocusedRoute = function findFocusedRoute(stateForPath) {
   }
   let tmp10;
   if (tmp4 != null) {
-    index = undefined;
+    let index1;
     if (tmp4 != null) {
-      index = tmp4.index;
+      index1 = tmp4.index;
     }
-    if (index == null) {
-      index = tmp4.routes.length - 1;
+    if (index1 == null) {
+      index1 = tmp4.routes.length - 1;
     }
-    tmp10 = tmp4.routes[index];
+    tmp10 = tmp4.routes[index1];
   }
   return tmp10;
 };

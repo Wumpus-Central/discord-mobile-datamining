@@ -24,8 +24,7 @@ function processEvent(tags, originalException) {
   obj.expo = _mod867.isExpo();
   if (obj6.isHermesEnabled()) {
     obj.js_engine = "hermes";
-    let tmp4Result = _mod867;
-    const hermesVersion = tmp4Result.getHermesVersion();
+    const hermesVersion = _mod867.getHermesVersion();
     if (hermesVersion) {
       obj.hermes_version = hermesVersion;
     }
@@ -39,13 +38,13 @@ function processEvent(tags, originalException) {
       }
       if (!items) {
         const threads = exception.threads;
-        let values;
+        let values2;
         if (null !== threads) {
           if (undefined !== threads) {
-            values = threads.values;
+            values2 = threads.values;
           }
         }
-        items = values;
+        items = values2;
       }
       if (!items) {
         items = [];
@@ -78,6 +77,7 @@ function processEvent(tags, originalException) {
       }
       return false;
     })(tags);
+    const tmp4Result = _mod867;
   } else {
     let jsEngine;
     if (null != tmp2) {
@@ -98,12 +98,12 @@ function processEvent(tags, originalException) {
   if (componentStack) {
     obj.component_stack = tmp2.componentStack;
   }
-  tmp4Result = _mod867;
-  const expoGoVersion = tmp4Result.getExpoGoVersion();
+  obj6 = _mod867;
+  const expoGoVersion = _mod867.getExpoGoVersion();
   if (expoGoVersion) {
     obj.expo_go_version = expoGoVersion;
   }
-  obj6 = _mod867;
+  const tmp4Result3 = _mod867;
   const expoSdkVersion = _mod867.getExpoSdkVersion();
   if (expoSdkVersion) {
     obj.expo_sdk_version = expoSdkVersion;

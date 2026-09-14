@@ -47,7 +47,7 @@ function decodeImage(data, width, height, depth) {
       }
     }
   } else if (2 == ctype) {
-    let tRNS = depth.tabs.tRNS;
+    const tRNS = depth.tabs.tRNS;
     if (null == tRNS) {
       if (8 == depth) {
         let num46 = 0;
@@ -118,10 +118,10 @@ function decodeImage(data, width, height, depth) {
     }
   } else if (3 == ctype) {
     const PLTE = depth.tabs.PLTE;
-    tRNS = depth.tabs.tRNS;
+    const tRNS1 = depth.tabs.tRNS;
     let num26 = 0;
-    if (tRNS) {
-      num26 = tRNS.length;
+    if (tRNS1) {
+      num26 = tRNS1.length;
     }
     if (1 == depth) {
       for (let num30 = 0; num30 < height; num30 = num30 + 1) {
@@ -134,7 +134,7 @@ function decodeImage(data, width, height, depth) {
           uint8Array[tmp29 + 2] = PLTE[result5 + 2];
           let num29 = 255;
           if (tmp30 < num26) {
-            num29 = tRNS[tmp30];
+            num29 = tRNS1[tmp30];
           }
           uint8Array[tmp29 + 3] = num29;
         }
@@ -151,7 +151,7 @@ function decodeImage(data, width, height, depth) {
           uint8Array[tmp36 + 2] = PLTE[result6 + 2];
           let num32 = 255;
           if (tmp37 < num26) {
-            num32 = tRNS[tmp37];
+            num32 = tRNS1[tmp37];
           }
           uint8Array[tmp36 + 3] = num32;
         }
@@ -168,7 +168,7 @@ function decodeImage(data, width, height, depth) {
           uint8Array[tmp43 + 2] = PLTE[result7 + 2];
           let num35 = 255;
           if (tmp44 < num26) {
-            num35 = tRNS[tmp44];
+            num35 = tRNS1[tmp44];
           }
           uint8Array[tmp43 + 3] = num35;
         }
@@ -186,7 +186,7 @@ function decodeImage(data, width, height, depth) {
           uint8Array[tmp47 + 2] = PLTE[result8 + 2];
           let num37 = 255;
           if (tmp48 < num26) {
-            num37 = tRNS[tmp48];
+            num37 = tRNS1[tmp48];
           }
           uint8Array[tmp47 + 3] = num37;
           num38 = num38 + 1;
@@ -597,7 +597,7 @@ function _copyTile(uint8Array1, width2, height2, uint8Array, width, height, arg6
   }
   return true;
 }
-let _bin = {
+const _bin = {
   nextZero(uint8Array, sum1) {
     let tmp4;
     let tmp = sum1;
@@ -687,96 +687,96 @@ let _bin = {
     }
   }
 };
-_bin = { m: null, v: null, d: null, o: null, z: null, B: null, p: null, w: null, h: null, g: null, s: null, A: null, t: null, k: null, c: null, a: null, n: null, e: null, C: null, b: null, i: null, r: null, f: null, l: null, u: null, q: null, j: null };
+let obj2 = { m: null, v: null, d: null, o: null, z: null, B: null, p: null, w: null, h: null, g: null, s: null, A: null, t: null, k: null, c: null, a: null, n: null, e: null, C: null, b: null, i: null, r: null, f: null, l: null, u: null, q: null, j: null };
 const uint16Array = new Uint16Array(16);
-_bin.m = uint16Array;
+obj2.m = uint16Array;
 const uint16Array1 = new Uint16Array(16);
-_bin.v = uint16Array1;
-_bin.d = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
-_bin.o = [3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 23, 27, 31, 35, 43, 51, 59, 67, 83, 99, 115, 131, 163, 195, 227, 258, 999, 999, 999];
-_bin.z = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0];
+obj2.v = uint16Array1;
+obj2.d = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
+obj2.o = [3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 23, 27, 31, 35, 43, 51, 59, 67, 83, 99, 115, 131, 163, 195, 227, 258, 999, 999, 999];
+obj2.z = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0];
 const uint16Array2 = new Uint16Array(32);
-_bin.B = uint16Array2;
-_bin.p = [1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193, 257, 385, 513, 769, 1025, 1537, 2049, 3073, 4097, 6145, 8193, 12289, 16385, 24577, 65535, 65535];
-_bin.w = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0];
+obj2.B = uint16Array2;
+obj2.p = [1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193, 257, 385, 513, 769, 1025, 1537, 2049, 3073, 4097, 6145, 8193, 12289, 16385, 24577, 65535, 65535];
+obj2.w = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0];
 let uint32Array = new Uint32Array(32);
-_bin.h = uint32Array;
+obj2.h = uint32Array;
 const uint16Array3 = new Uint16Array(512);
-_bin.g = uint16Array3;
-_bin.s = [];
+obj2.g = uint16Array3;
+obj2.s = [];
 const uint16Array4 = new Uint16Array(32);
-_bin.A = uint16Array4;
-_bin.t = [];
+obj2.A = uint16Array4;
+obj2.t = [];
 const uint16Array5 = new Uint16Array(32768);
-_bin.k = uint16Array5;
-_bin.c = [];
-_bin.a = [];
+obj2.k = uint16Array5;
+obj2.c = [];
+obj2.a = [];
 const uint16Array6 = new Uint16Array(32768);
-_bin.n = uint16Array6;
-_bin.e = [];
+obj2.n = uint16Array6;
+obj2.e = [];
 const uint16Array7 = new Uint16Array(512);
-_bin.C = uint16Array7;
-_bin.b = [];
+obj2.C = uint16Array7;
+obj2.b = [];
 const uint16Array8 = new Uint16Array(32768);
-_bin.i = uint16Array8;
+obj2.i = uint16Array8;
 let uint32Array1 = new Uint32Array(286);
-_bin.r = uint32Array1;
+obj2.r = uint32Array1;
 let uint32Array2 = new Uint32Array(30);
-_bin.f = uint32Array2;
+obj2.f = uint32Array2;
 let uint32Array3 = new Uint32Array(19);
-_bin.l = uint32Array3;
+obj2.l = uint32Array3;
 const uint32Array4 = new Uint32Array(15000);
-_bin.u = uint32Array4;
+obj2.u = uint32Array4;
 const uint16Array9 = new Uint16Array(65536);
-_bin.q = uint16Array9;
+obj2.q = uint16Array9;
 const uint16Array10 = new Uint16Array(32768);
-_bin.j = uint16Array10;
-let closure_129_0 = _bin;
+obj2.j = uint16Array10;
+let closure_129_0 = obj2;
 let num = 0;
 do {
   let tmp17 = (2863311530 & num) >>> 1 | (1431655765 & num) << 1;
   let tmp18 = (3435973836 & tmp17) >>> 2 | (858993459 & tmp17) << 2;
   let tmp19 = (4042322160 & tmp18) >>> 4 | (252645135 & tmp18) << 4;
   let tmp20 = (4278255360 & tmp19) >>> 8 | (16711935 & tmp19) << 8;
-  _bin.i[num] = (tmp20 >>> 16 | tmp20 << 16) >>> 17;
+  obj2.i[num] = (tmp20 >>> 16 | tmp20 << 16) >>> 17;
   num = num + 1;
   num2 = 0;
 } while (num < 32768);
 do {
-  _bin.B[num2] = _bin.o[num2] << 3 | _bin.z[num2];
-  _bin.h[num2] = _bin.p[num2] << 4 | _bin.w[num2];
+  obj2.B[num2] = obj2.o[num2] << 3 | obj2.z[num2];
+  obj2.h[num2] = obj2.p[num2] << 4 | obj2.w[num2];
   num2 = num2 + 1;
 } while (num2 < 32);
-const s = _bin.s;
+const s = obj2.s;
 let num3 = 143;
 do {
   let arr = s.push(0, 8);
   tmp22 = num3;
   num3 = num3 - 1;
 } while (0 !== tmp22);
-const s1 = _bin.s;
+const s1 = obj2.s;
 let num4 = 111;
 do {
-  arr = s1.push(0, 9);
+  let arr2 = s1.push(0, 9);
   tmp24 = num4;
   num4 = num4 - 1;
 } while (0 !== tmp24);
-const s2 = _bin.s;
+const s2 = obj2.s;
 let num5 = 23;
 do {
-  let arr1 = s2.push(0, 7);
+  let arr3 = s2.push(0, 7);
   tmp26 = num5;
   num5 = num5 - 1;
 } while (0 !== tmp26);
-const s3 = _bin.s;
+const s3 = obj2.s;
 let num6 = 7;
 do {
-  let arr2 = s3.push(0, 8);
+  let arr4 = s3.push(0, 8);
   tmp28 = num6;
   num6 = num6 - 1;
 } while (0 !== tmp28);
-const s4 = _bin.s;
-let v = _bin.v;
+const s4 = obj2.s;
+let v = obj2.v;
 let num7 = 0;
 do {
   v[num7] = 0;
@@ -786,7 +786,7 @@ for (let num8 = 1; num8 < length; num8 = num8 + 2) {
   let tmp29 = s4[num8];
   v[tmp29] = v[tmp29] + 1;
 }
-let m = _bin.m;
+let m = obj2.m;
 v[0] = 0;
 let num9 = 1;
 let num10 = 0;
@@ -803,7 +803,7 @@ for (let num11 = 0; num11 < length; num11 = num11 + 2) {
     m[tmp31] = m[tmp31] + 1;
   }
 }
-const s5 = _bin.s;
+const s5 = obj2.s;
 for (let num12 = 0; num12 < length2; num12 = num12 + 2) {
   let sum = num12 + 1;
   if (0 != s5[sum]) {
@@ -818,7 +818,7 @@ for (let num12 = 0; num12 < length2; num12 = num12 + 2) {
     }
   }
 }
-const s6 = _bin.s;
+const s6 = obj2.s;
 let num13 = 0;
 if (0 < s6.length) {
   do {
@@ -827,15 +827,15 @@ if (0 < s6.length) {
     length3 = s6.length;
   } while (num13 < length3);
 }
-const t = _bin.t;
+const t = obj2.t;
 let num14 = 31;
 do {
-  let arr3 = t.push(0, 5);
+  let arr5 = t.push(0, 5);
   tmp43 = num14;
   num14 = num14 - 1;
 } while (0 !== tmp43);
-const t1 = _bin.t;
-let v2 = _bin.v;
+const t1 = obj2.t;
+let v2 = obj2.v;
 let num15 = 0;
 do {
   v2[num15] = 0;
@@ -845,7 +845,7 @@ for (let num16 = 1; num16 < length4; num16 = num16 + 2) {
   let tmp44 = t1[num16];
   v2[tmp44] = v2[tmp44] + 1;
 }
-let m2 = _bin.m;
+let m2 = obj2.m;
 v2[0] = 0;
 let num17 = 1;
 let num18 = 0;
@@ -862,7 +862,7 @@ for (let num19 = 0; num19 < length4; num19 = num19 + 2) {
     m2[tmp46] = m2[tmp46] + 1;
   }
 }
-const t2 = _bin.t;
+const t2 = obj2.t;
 for (let num20 = 0; num20 < length5; num20 = num20 + 2) {
   let sum3 = num20 + 1;
   if (0 != t2[sum3]) {
@@ -877,7 +877,7 @@ for (let num20 = 0; num20 < length5; num20 = num20 + 2) {
     }
   }
 }
-const t3 = _bin.t;
+const t3 = obj2.t;
 let num21 = 0;
 if (0 < t3.length) {
   do {
@@ -886,31 +886,31 @@ if (0 < t3.length) {
     length6 = t3.length;
   } while (num21 < length6);
 }
-let b = _bin.b;
+let b = obj2.b;
 let num22 = 18;
 do {
-  let arr4 = b.push(0, 0);
+  let arr6 = b.push(0, 0);
   tmp58 = num22;
   num22 = num22 - 1;
 } while (0 !== tmp58);
-let c = _bin.c;
+let c = obj2.c;
 let num23 = 285;
 do {
-  let arr5 = c.push(0, 0);
+  let arr7 = c.push(0, 0);
   tmp60 = num23;
   num23 = num23 - 1;
 } while (0 !== tmp60);
-let event = _bin.e;
+let event = obj2.e;
 let num24 = 29;
 do {
-  let arr6 = event.push(0, 0);
+  let arr8 = event.push(0, 0);
   tmp62 = num24;
   num24 = num24 - 1;
 } while (0 !== tmp62);
-let a = _bin.a;
+let a = obj2.a;
 let num25 = 319;
 do {
-  let arr7 = a.push(0, 0);
+  let arr9 = a.push(0, 0);
   tmp64 = num25;
   num25 = num25 - 1;
 } while (0 !== tmp64);
@@ -918,18 +918,19 @@ v = function v(buffer, arg1) {
   let arr2;
   let sum40;
   let tmp173;
-  let _Uint8Array = Uint8Array;
+  let _Uint8Array1 = arg1;
+  const _Uint8Array = Uint8Array;
   if (3 == buffer[0]) {
     if (0 == buffer[1]) {
-      if (!_Uint8Array) {
-        _Uint8Array = new _Uint8Array(0);
+      if (!_Uint8Array1) {
+        _Uint8Array1 = new _Uint8Array(0);
       }
-      return _Uint8Array;
+      return _Uint8Array1;
     }
   }
-  let _Uint8Array1 = _Uint8Array;
-  if (null == _Uint8Array) {
-    _Uint8Array1 = new _Uint8Array(buffer.length >>> 2 << 3);
+  let _Uint8Array5 = _Uint8Array1;
+  if (null == _Uint8Array1) {
+    _Uint8Array5 = new _Uint8Array(buffer.length >>> 2 << 3);
   }
   let num3 = 0;
   let num4 = 0;
@@ -948,18 +949,18 @@ v = function v(buffer, arg1) {
     let tmp8 = buffer[tmp7] | buffer[1 + tmp7] << 8;
     let tmp9 = buffer[2 + tmp7] << 16;
     if (0 !== tmp12) {
-      let tmp38 = _Uint8Array1;
+      let tmp38 = _Uint8Array5;
       if (tmp2) {
         let sum2 = num4 + 131072;
-        let length2 = _Uint8Array1.length;
-        let tmp40 = _Uint8Array1;
+        let length2 = _Uint8Array5.length;
+        let tmp40 = _Uint8Array5;
         if (sum2 > length2) {
           let _Uint8Array3 = Uint8Array;
           let _Math2 = Math;
           let tmp41 = new.target;
           let tmp42 = new.target;
           let uint8Array = new Uint8Array(Math.max(length2 << 1, sum2));
-          let result = uint8Array.set(_Uint8Array1, 0);
+          let result = uint8Array.set(_Uint8Array5, 0);
           tmp40 = uint8Array;
         }
         tmp38 = tmp40;
@@ -1387,26 +1388,26 @@ v = function v(buffer, arg1) {
       }
       let sum38 = 4 + (sum37 >>> 3);
       let tmp19 = buffer[sum38 - 4] | buffer[sum38 - 3] << 8;
-      obj = _Uint8Array1;
+      obj = _Uint8Array5;
       if (tmp2) {
         let sum39 = num4 + tmp19;
-        length = _Uint8Array1.length;
-        let tmp21 = _Uint8Array1;
+        length = _Uint8Array5.length;
+        let tmp21 = _Uint8Array5;
         if (sum39 > length) {
           let _Uint8Array2 = Uint8Array;
           let _Math = Math;
           let tmp22 = new.target;
           let tmp23 = new.target;
           let uint8Array2 = new Uint8Array(Math.max(length << 1, sum39));
-          let result2 = uint8Array2.set(_Uint8Array1, 0);
+          let result2 = uint8Array2.set(_Uint8Array5, 0);
           tmp21 = uint8Array2;
         }
         obj = tmp21;
       }
       let tmp26 = new.target;
       let tmp27 = new.target;
-      _Uint8Array2 = new _Uint8Array(buffer.buffer, buffer.byteOffset + sum38, tmp19);
-      let result3 = obj.set(_Uint8Array2, num4);
+      let _Uint8Array6 = new _Uint8Array(buffer.buffer, buffer.byteOffset + sum38, tmp19);
+      let result3 = obj.set(_Uint8Array6, num4);
       tmp32 = sum38 + tmp19 << 3;
       sum40 = num4 + tmp19;
       arr2 = obj;
@@ -1422,390 +1423,13 @@ v = function v(buffer, arg1) {
     tmp5 = tmp36;
     tmp6 = tmp37;
     num4 = sum40;
-    _Uint8Array1 = arr2;
+    _Uint8Array5 = arr2;
   } while (0 === tmp173);
   let substr = arr2;
   if (arr2.length != sum40) {
     substr = arr2.slice(0, sum40);
   }
   return substr;
-};
-_bin = {
-  decode(arg0) {
-    const uint8Array = new Uint8Array(arg0);
-    ({ readUshort, readUint } = obj);
-    let size = { tabs: {}, frames: [] };
-    const uint8Array1 = new Uint8Array(uint8Array.length);
-    let num = 0;
-    while (uint8Array[num] == [137, 80, 78, 71, 13, 10, 26, 10][num]) {
-      num = num + 1;
-      if (num < 8) {
-        continue;
-      } else {
-        let str = "tEXt";
-        let str2 = "IEND";
-        let str3 = "bKGD";
-        let str4 = "sRGB";
-        let str5 = "gAMA";
-        let str6 = "tRNS";
-        let str7 = "hIST";
-        let str8 = "PLTE";
-        let str9 = "iTXt";
-        let str10 = "zTXt";
-        let str11 = "cHRM";
-        let str12 = "pHYs";
-        let str13 = "fdAT";
-        let str14 = "fcTL";
-        let str15 = "acTL";
-        let str16 = "IDAT";
-        let str17 = "CgBI";
-        let str18 = "iCCP";
-        let str19 = "IHDR";
-        let num15 = 0;
-        let num16 = 0;
-        let num17 = 8;
-        let num18 = 0;
-        let tmp6 = uint8Array1;
-        if (8 < uint8Array.length) {
-          let uint = obj.readUint(uint8Array, num17);
-          let sum = num17 + 4;
-          let aSCII = obj.readASCII(uint8Array, sum, 4);
-          let sum1 = sum + 4;
-          if ("IHDR" == aSCII) {
-            let tmp62 = _IHDR(uint8Array, sum1, size);
-            let sum4 = num15;
-            let sum3 = num16;
-            let uint8Array2 = arr1;
-          } else if ("iCCP" == aSCII) {
-            let tmp49 = sum1;
-            let tmp50 = sum1;
-            if (0 != uint8Array[sum1]) {
-              do {
-                let sum2 = tmp49 + 1;
-                tmp49 = sum2;
-                tmp50 = sum2;
-                tmp52 = uint8Array[sum2];
-              } while (0 != tmp52);
-            }
-            let aSCII1 = obj.readASCII(uint8Array, sum1, tmp50 - sum1);
-            try {
-              let tmp58 = _inflate(tmp55);
-              size.tabs[aSCII] = tmp58;
-              sum4 = num15;
-              sum3 = num16;
-              uint8Array2 = arr1;
-            } catch (err) {
-              tmp58 = v(tmp4);
-            }
-          } else if ("CgBI" == aSCII) {
-            size.tabs[aSCII] = uint8Array.slice(sum1, sum1 + 4);
-            sum4 = num15;
-            sum3 = num16;
-            uint8Array2 = arr1;
-          } else if ("IDAT" == aSCII) {
-            for (let num24 = 0; num24 < uint; num24 = num24 + 1) {
-              uint8Array1[num16 + num24] = uint8Array[sum1 + num24];
-            }
-            sum3 = num16 + uint;
-            sum4 = num15;
-            uint8Array2 = arr1;
-          } else if ("acTL" == aSCII) {
-            obj = { num_frames: readUint(uint8Array, sum1), num_plays: readUint(uint8Array, sum1 + 4) };
-            size.tabs[aSCII] = obj;
-            let _Uint8Array = Uint8Array;
-            let tmp47 = new.target;
-            let tmp48 = new.target;
-            uint8Array2 = new Uint8Array(uint8Array.length);
-            sum4 = num15;
-            sum3 = num16;
-          } else if ("fcTL" == aSCII) {
-            let num22 = num15;
-            if (0 !== num15) {
-              let tmp41 = size.frames[size.frames.length - 1];
-              tmp41.data = _decompress(size, arr1.slice(0, num15), tmp41.rect.width, tmp41.rect.height);
-              num22 = 0;
-            }
-            size = { x: readUint(uint8Array, sum1 + 12), y: readUint(uint8Array, sum1 + 16), width: readUint(uint8Array, sum1 + 4), height: readUint(uint8Array, sum1 + 8) };
-            let ushort = readUshort(uint8Array, sum1 + 22);
-            obj = { rect: size, delay: null, dispose: null, blend: null };
-            let num23 = 100;
-            let ushort1 = readUshort(uint8Array, sum1 + 20);
-            if (0 != ushort) {
-              num23 = ushort;
-            }
-            obj.delay = 1000 * (ushort1 / num23);
-            obj.dispose = uint8Array[sum1 + 24];
-            obj.blend = uint8Array[sum1 + 25];
-            let frames = size.frames;
-            let arr = frames.push(obj);
-            sum4 = num22;
-            sum3 = num16;
-            uint8Array2 = arr1;
-          } else if ("fdAT" == aSCII) {
-            let num21 = 0;
-            if (0 < uint - 4) {
-              do {
-                arr1[num15 + num21] = uint8Array[sum1 + num21 + 4];
-                num21 = num21 + 1;
-                diff = uint - 4;
-              } while (num21 < diff);
-            }
-            sum4 = num15 + (uint - 4);
-            sum3 = num16;
-            uint8Array2 = arr1;
-          } else if ("pHYs" == aSCII) {
-            let items = [obj.readUint(uint8Array, sum1), obj.readUint(uint8Array, sum1 + 4), uint8Array[sum1 + 8]];
-            size.tabs[aSCII] = items;
-            sum4 = num15;
-            sum3 = num16;
-            uint8Array2 = arr1;
-          } else if ("cHRM" == aSCII) {
-            size.tabs[aSCII] = [];
-            let num20 = 0;
-            do {
-              let arr9 = size.tabs[aSCII];
-              arr = arr9.push(obj.readUint(uint8Array, sum1 + 4 * num20));
-              num20 = num20 + 1;
-              sum4 = num15;
-              sum3 = num16;
-              uint8Array2 = arr1;
-            } while (num20 < 8);
-          } else {
-            if ("tEXt" != aSCII) {
-              if ("zTXt" != aSCII) {
-                if ("iTXt" == aSCII) {
-                  if (null == size.tabs[aSCII]) {
-                    size.tabs[aSCII] = {};
-                  }
-                  let nextZeroResult = obj.nextZero(uint8Array, sum1);
-                  let sum5 = nextZeroResult + 1;
-                  let sum6 = sum5 + 2;
-                  let aSCII2 = obj.readASCII(uint8Array, sum1, nextZeroResult - sum1);
-                  let nextZeroResult1 = obj.nextZero(uint8Array, sum6);
-                  let aSCII3 = obj.readASCII(uint8Array, sum6, nextZeroResult1 - sum6);
-                  let sum7 = nextZeroResult1 + 1;
-                  let nextZeroResult2 = obj.nextZero(uint8Array, sum7);
-                  let uTF8 = obj.readUTF8(uint8Array, sum7, nextZeroResult2 - sum7);
-                  let sum8 = nextZeroResult2 + 1;
-                  let diff1 = uint - (sum8 - sum1);
-                  if (0 == uint8Array[sum5]) {
-                    let uTF81 = obj.readUTF8(uint8Array, sum8, diff1);
-                  } else {
-                    let arr7 = _inflate(uint8Array.slice(sum8, sum8 + diff1));
-                    uTF81 = obj.readUTF8(arr7, 0, arr7.length);
-                  }
-                  size.tabs[aSCII][aSCII2] = uTF81;
-                  sum4 = num15;
-                  sum3 = num16;
-                  uint8Array2 = arr1;
-                } else if ("PLTE" == aSCII) {
-                  size.tabs[aSCII] = obj.readBytes(uint8Array, sum1, uint);
-                  sum4 = num15;
-                  sum3 = num16;
-                  uint8Array2 = arr1;
-                } else if ("hIST" == aSCII) {
-                  let result = size.tabs.PLTE.length / 3;
-                  size.tabs[aSCII] = [];
-                  let num19 = 0;
-                  sum4 = num15;
-                  sum3 = num16;
-                  uint8Array2 = arr1;
-                  if (0 < result) {
-                    do {
-                      let arr6 = size.tabs[aSCII];
-                      arr1 = arr6.push(readUshort(uint8Array, sum1 + 2 * num19));
-                      num19 = num19 + 1;
-                      sum4 = num15;
-                      sum3 = num16;
-                      uint8Array2 = arr1;
-                    } while (num19 < result);
-                  }
-                } else if ("tRNS" == aSCII) {
-                  if (3 == size.ctype) {
-                    size.tabs[aSCII] = obj.readBytes(uint8Array, sum1, uint);
-                    sum4 = num15;
-                    sum3 = num16;
-                    uint8Array2 = arr1;
-                  } else if (0 == size.ctype) {
-                    size.tabs[aSCII] = readUshort(uint8Array, sum1);
-                    sum4 = num15;
-                    sum3 = num16;
-                    uint8Array2 = arr1;
-                  } else {
-                    sum4 = num15;
-                    sum3 = num16;
-                    uint8Array2 = arr1;
-                    if (2 == size.ctype) {
-                      let items1 = [readUshort(uint8Array, sum1), readUshort(uint8Array, sum1 + 2), readUshort(uint8Array, sum1 + 4)];
-                      size.tabs[aSCII] = items1;
-                      sum4 = num15;
-                      sum3 = num16;
-                      uint8Array2 = arr1;
-                    }
-                  }
-                } else if ("gAMA" == aSCII) {
-                  size.tabs[aSCII] = obj.readUint(uint8Array, sum1) / 100000;
-                  sum4 = num15;
-                  sum3 = num16;
-                  uint8Array2 = arr1;
-                } else if ("sRGB" == aSCII) {
-                  size.tabs[aSCII] = uint8Array[sum1];
-                  sum4 = num15;
-                  sum3 = num16;
-                  uint8Array2 = arr1;
-                } else if ("bKGD" == aSCII) {
-                  if (0 != size.ctype) {
-                    if (4 != size.ctype) {
-                      if (2 != size.ctype) {
-                        if (6 != size.ctype) {
-                          sum4 = num15;
-                          sum3 = num16;
-                          uint8Array2 = arr1;
-                          if (3 == size.ctype) {
-                            size.tabs[aSCII] = uint8Array[sum1];
-                            sum4 = num15;
-                            sum3 = num16;
-                            uint8Array2 = arr1;
-                          }
-                        }
-                      }
-                      let items2 = [readUshort(uint8Array, sum1), readUshort(uint8Array, sum1 + 2), readUshort(uint8Array, sum1 + 4)];
-                      size.tabs[aSCII] = items2;
-                      sum4 = num15;
-                      sum3 = num16;
-                      uint8Array2 = arr1;
-                    }
-                  }
-                  let items3 = [readUshort(uint8Array, sum1)];
-                  size.tabs[aSCII] = items3;
-                  sum4 = num15;
-                  sum3 = num16;
-                  uint8Array2 = arr1;
-                } else {
-                  sum4 = num15;
-                  sum3 = num16;
-                  uint8Array2 = arr1;
-                  num18 = num15;
-                  let arr3 = arr1;
-                }
-              }
-            }
-            if (null == size.tabs[aSCII]) {
-              size.tabs[aSCII] = {};
-            }
-            let nextZeroResult3 = obj.nextZero(uint8Array, sum1);
-            let diff2 = sum1 + uint - nextZeroResult3 - 1;
-            let aSCII4 = obj.readASCII(uint8Array, sum1, nextZeroResult3 - sum1);
-            if ("tEXt" == aSCII) {
-              let aSCII5 = obj.readASCII(uint8Array, nextZeroResult3 + 1, diff2);
-            } else {
-              let arr8 = _inflate(uint8Array.slice(nextZeroResult3 + 2, nextZeroResult3 + 2 + diff2));
-              aSCII5 = obj.readUTF8(arr8, 0, arr8.length);
-            }
-            size.tabs[aSCII][aSCII4] = aSCII5;
-            sum4 = num15;
-            sum3 = num16;
-            uint8Array2 = arr1;
-          }
-          let sum9 = sum1 + uint;
-          let uint1 = obj.readUint(uint8Array, sum9);
-          num17 = sum9 + 4;
-          num15 = sum4;
-          num16 = sum3;
-          arr1 = uint8Array2;
-          num18 = sum4;
-          arr3 = uint8Array2;
-        }
-        if (0 !== num18) {
-          let tmp65 = size.frames[size.frames.length - 1];
-          tmp65.data = _decompress(size, arr3.slice(0, num18), tmp65.rect.width, tmp65.rect.height);
-        }
-        size.data = _decompress(size, tmp6, size.width, size.height);
-        let str20 = "compress";
-        delete tmp[tmp2];
-        let str21 = "interlace";
-        delete tmp[tmp2];
-        let str22 = "filter";
-        delete tmp[tmp2];
-        return size;
-      }
-    }
-    throw "The input is not a PNG file!";
-  },
-  toRGBA8(img) {
-    ({ width, height } = img);
-    if (null == img.tabs.acTL) {
-      const items = [decodeImage(img.data, width, height, img).buffer];
-      return items;
-    } else {
-      if (null == img.frames[0].data) {
-        img.frames[0].data = img.data;
-      }
-      const items1 = [];
-      const result = width * height * 4;
-      const _Uint8Array = Uint8Array;
-      const uint8Array = new Uint8Array(result);
-      const _Uint8Array2 = Uint8Array;
-      const uint8Array1 = new Uint8Array(result);
-      const _Uint8Array3 = Uint8Array;
-      const uint8Array2 = new Uint8Array(result);
-      for (let num5 = 0; num5 < img.frames.length; num5 = num5 + 1) {
-        let tmp18 = img.frames[num5];
-        let x = tmp18.rect.x;
-        let y = tmp18.rect.y;
-        let width2 = tmp18.rect.width;
-        let height2 = tmp18.rect.height;
-        let tmp23 = decodeImage(tmp18.data, width2, height2, img);
-        if (0 !== num5) {
-          let num6 = 0;
-          if (0 < result) {
-            do {
-              uint8Array2[num6] = uint8Array[num6];
-              num6 = num6 + 1;
-            } while (num6 < result);
-          }
-        }
-        if (0 == tmp18.blend) {
-          let tmp44 = _copyTile(tmp23, width2, height2, tmp7, width, height, x, y, 0);
-        } else if (1 == tmp18.blend) {
-          let tmp34 = _copyTile(tmp23, width2, height2, tmp7, width, height, x, y, 1);
-        }
-        let buffer = uint8Array.buffer;
-        let arr = items1.push(buffer.slice(0));
-        if (0 != tmp18.dispose) {
-          if (1 == tmp18.dispose) {
-            let tmp55 = _copyTile(uint8Array1, width2, height2, tmp7, width, height, x, y, 0);
-          } else if (2 == tmp18.dispose) {
-            let num9 = 0;
-            if (0 < result) {
-              do {
-                uint8Array[num9] = uint8Array2[num9];
-                num9 = num9 + 1;
-              } while (num9 < result);
-            }
-          }
-        }
-      }
-      return items1;
-    }
-  },
-  _paeth(arg0, arg1, arg2) {
-    let tmp = arg0;
-    let tmp2 = arg2;
-    const diff = arg0 + arg1 - arg2;
-    const diff1 = diff - arg0;
-    const diff2 = diff - arg1;
-    const diff3 = diff - arg2;
-    if (diff1 * diff1 > diff2 * diff2) {
-      if (diff2 * diff2 <= diff3 * diff3) {
-        tmp2 = arg1;
-      }
-      tmp = tmp2;
-    }
-    return tmp;
-  },
-  _copyTile,
-  _bin
 };
 closure_130_0 = undefined;
 closure_130_1 = undefined;
@@ -2600,7 +2224,7 @@ let closure_130_7 = function compress(arg0, arg1, arg2, arg3, arg4) {
             let num8 = num17;
             let substr = uint8Array4;
           } else {
-            tmp81Result = tmp81(tmp15, arg1, arg2, tmp80, tmp28, tmp27, -num17, -num16, 0);
+            let tmp81Result2 = tmp81(tmp15, arg1, arg2, tmp80, tmp28, tmp27, -num17, -num16, 0);
             num6 = num28;
             tmp22 = tmp27;
             tmp23 = tmp28;
@@ -2660,7 +2284,7 @@ let closure_130_7 = function compress(arg0, arg1, arg2, arg3, arg4) {
       } while (num32 < length2);
     }
   }
-  obj = {};
+  const obj2 = {};
   const plte = [];
   const items2 = [];
   if (0 != arg3) {
@@ -2668,7 +2292,7 @@ let closure_130_7 = function compress(arg0, arg1, arg2, arg3, arg4) {
     let num35 = 0;
     if (0 < frames.length) {
       do {
-        arr = items3.push(frames[num35].img.buffer);
+        let arr2 = items3.push(frames[num35].img.buffer);
         num35 = num35 + 1;
         length5 = frames.length;
       } while (num35 < length5);
@@ -2715,7 +2339,7 @@ let closure_130_7 = function compress(arg0, arg1, arg2, arg3, arg4) {
     let num45 = 0;
     if (0 < tmp163.plte.length) {
       do {
-        let arr1 = plte.push(tmp163.plte[num45].est.rgba);
+        let arr3 = plte.push(tmp163.plte[num45].est.rgba);
         num45 = num45 + 1;
         length8 = tmp163.plte.length;
       } while (num45 < length8);
@@ -2729,7 +2353,7 @@ let closure_130_7 = function compress(arg0, arg1, arg2, arg3, arg4) {
       let tmp167 = new.target;
       let uint8Array7 = new Uint8Array(tmp163.inds.buffer, num46 >> 2, length9 >> 2);
       let tmp169 = uint8Array7;
-      let arr2 = items2.push(uint8Array7);
+      let arr4 = items2.push(uint8Array7);
       let _Uint8Array10 = Uint8Array;
       let tmp171 = new.target;
       let tmp172 = new.target;
@@ -2754,7 +2378,7 @@ let closure_130_7 = function compress(arg0, arg1, arg2, arg3, arg4) {
       let tmp136 = new.target;
       let tmp137 = new.target;
       let uint8Array9 = new Uint8Array(length3);
-      let arr3 = items2.push(uint8Array9);
+      let arr5 = items2.push(uint8Array9);
       let num33 = 0;
       if (0 < length3) {
         while (true) {
@@ -2774,13 +2398,13 @@ let closure_130_7 = function compress(arg0, arg1, arg2, arg3, arg4) {
               uint8Array9[num33] = uint8Array9[num33 - width];
             }
           }
-          let tmp146 = obj[tmp143];
+          let tmp146 = obj2[tmp143];
           if (null != tmp146) {
             uint8Array9[num33] = tmp146;
           } else {
             let length4 = plte.length;
-            obj[tmp143] = length4;
-            let arr4 = plte.push(tmp143);
+            obj2[tmp143] = length4;
+            let arr6 = plte.push(tmp143);
             tmp146 = length4;
             if (plte.length >= 300) {
               break;
@@ -2917,15 +2541,15 @@ let closure_130_7 = function compress(arg0, arg1, arg2, arg3, arg4) {
   return { ctype, depth, plte, frames };
 };
 let closure_130_8 = function _updateFrame(arg0, arg1, arg2, arg3, arg4, height, arg6) {
-  let _Uint8Array = Uint8Array;
+  const _Uint8Array = Uint8Array;
   const uint8Array = new Uint8Array(arg0[arg4 - 1]);
   const uint32Array = new Uint32Array(arg0[arg4 - 1]);
-  _Uint8Array = null;
+  let _Uint8Array1 = null;
   if (arg4 + 1 < arg0.length) {
-    _Uint8Array = new _Uint8Array(arg0[arg4 + 1]);
+    _Uint8Array1 = new _Uint8Array(arg0[arg4 + 1]);
   }
-  const _Uint8Array1 = new _Uint8Array(arg0[arg4]);
-  const uint32Array1 = new Uint32Array(_Uint8Array1.buffer);
+  const _Uint8Array2 = new _Uint8Array(arg0[arg4]);
+  const uint32Array1 = new Uint32Array(_Uint8Array2.buffer);
   let num = 0;
   let num2 = -1;
   let num3 = -1;
@@ -2956,7 +2580,7 @@ let closure_130_8 = function _updateFrame(arg0, arg1, arg2, arg3, arg4, height, 
           if (!tmp24) {
             let tmp30 = 0 == arg3[arg4 - 1].dispose && uint32Array[sum2] == tmp23;
             if (tmp30) {
-              let tmp31 = null == _Uint8Array || 0 != _Uint8Array[4 * sum2 + 3];
+              let tmp31 = null == _Uint8Array1 || 0 != _Uint8Array1[4 * sum2 + 3];
               tmp30 = tmp31;
             }
             tmp24 = tmp30;
@@ -3469,25 +3093,24 @@ let closure_130_15 = function estats(arg0) {
     num = 1 / N;
   }
   const items = [R[0] - tmp * tmp * num, R[1] - tmp * tmp2 * num, R[2] - tmp * tmp3 * num, R[3] - tmp * tmp4 * num, R[4] - tmp2 * tmp * num, R[5] - tmp2 * tmp2 * num, R[6] - tmp2 * tmp3 * num, R[7] - tmp2 * tmp4 * num, R[8] - tmp3 * tmp * num, R[9] - tmp3 * tmp2 * num, R[10] - tmp3 * tmp3 * num, R[11] - tmp3 * tmp4 * num, R[12] - tmp4 * tmp * num, R[13] - tmp4 * tmp2 * num, R[14] - tmp4 * tmp3 * num, R[15] - tmp4 * tmp4 * num];
-  obj = value2;
   const items1 = [Math.random(), Math.random(), Math.random(), Math.random()];
   let num3 = 0;
   let tmp5 = items1;
   if (0 != N) {
-    const multVecResult = obj.multVec(items, items1);
+    const multVecResult = value2.multVec(items, items1);
     const _Math = Math;
-    const sqrtResult = Math.sqrt(obj.dot(multVecResult, multVecResult));
+    const sqrtResult = Math.sqrt(value2.dot(multVecResult, multVecResult));
     let num7 = 0;
     let tmp8 = sqrtResult;
-    let smlResult = obj.sml(1 / sqrtResult, multVecResult);
+    let smlResult = value2.sml(1 / sqrtResult, multVecResult);
     const sum = num7 + 1;
     num3 = tmp8;
     tmp5 = smlResult;
     while (sum < 16) {
-      let multVecResult1 = obj.multVec(items, smlResult);
+      let multVecResult1 = value2.multVec(items, smlResult);
       let _Math2 = Math;
-      let sqrtResult1 = Math.sqrt(obj.dot(multVecResult1, multVecResult1));
-      let smlResult1 = obj.sml(1 / sqrtResult1, multVecResult1);
+      let sqrtResult1 = Math.sqrt(value2.dot(multVecResult1, multVecResult1));
+      let smlResult1 = value2.sml(1 / sqrtResult1, multVecResult1);
       num7 = sum;
       tmp8 = sqrtResult1;
       smlResult = smlResult1;
@@ -3508,13 +3131,389 @@ let closure_130_15 = function estats(arg0) {
     }
   }
   const items2 = [tmp * num, tmp2 * num, tmp3 * num, tmp4 * num];
-  obj = { Cov: items, q: items2, e: tmp5, L: num3, eMq255: obj.dot(obj.sml(255, items2), tmp5), eMq: obj.dot(tmp5, items2), rgba: null };
+  const obj2 = { Cov: items, q: items2, e: tmp5, L: num3, eMq255: value2.dot(value2.sml(255, items2), tmp5), eMq: value2.dot(tmp5, items2), rgba: null };
   const tmp16 = Math.round(255 * items2[3]) << 24;
   const tmp17 = Math.round(255 * items2[2]) << 16;
-  obj.rgba = (tmp16 | tmp17 | Math.round(255 * items2[1]) << 8 | Math.round(255 * items2[0])) >>> 0;
-  return obj;
+  obj2.rgba = (tmp16 | tmp17 | Math.round(255 * items2[1]) << 8 | Math.round(255 * items2[0])) >>> 0;
+  return obj2;
 };
-({ _copyTile: closure_130_0, _bin: closure_130_1, _paeth: closure_130_2 } = _bin);
+({ _copyTile: closure_130_0, _bin: closure_130_1, _paeth: closure_130_2 } = {
+  decode(arg0) {
+    const uint8Array = new Uint8Array(arg0);
+    ({ readUshort, readUint } = obj);
+    const size = { tabs: {}, frames: [] };
+    const uint8Array1 = new Uint8Array(uint8Array.length);
+    let num = 0;
+    while (uint8Array[num] == [137, 80, 78, 71, 13, 10, 26, 10][num]) {
+      num = num + 1;
+      if (num < 8) {
+        continue;
+      } else {
+        let str = "tEXt";
+        let str2 = "IEND";
+        let str3 = "bKGD";
+        let str4 = "sRGB";
+        let str5 = "gAMA";
+        let str6 = "tRNS";
+        let str7 = "hIST";
+        let str8 = "PLTE";
+        let str9 = "iTXt";
+        let str10 = "zTXt";
+        let str11 = "cHRM";
+        let str12 = "pHYs";
+        let str13 = "fdAT";
+        let str14 = "fcTL";
+        let str15 = "acTL";
+        let str16 = "IDAT";
+        let str17 = "CgBI";
+        let str18 = "iCCP";
+        let str19 = "IHDR";
+        let num15 = 0;
+        let num16 = 0;
+        let num17 = 8;
+        let num18 = 0;
+        let tmp6 = uint8Array1;
+        if (8 < uint8Array.length) {
+          let uint = obj.readUint(uint8Array, num17);
+          let sum = num17 + 4;
+          let aSCII = obj.readASCII(uint8Array, sum, 4);
+          let sum1 = sum + 4;
+          if ("IHDR" == aSCII) {
+            let tmp62 = _IHDR(uint8Array, sum1, size);
+            let sum4 = num15;
+            let sum3 = num16;
+            let uint8Array2 = arr2;
+          } else if ("iCCP" == aSCII) {
+            let tmp49 = sum1;
+            let tmp50 = sum1;
+            if (0 != uint8Array[sum1]) {
+              do {
+                let sum2 = tmp49 + 1;
+                tmp49 = sum2;
+                tmp50 = sum2;
+                tmp52 = uint8Array[sum2];
+              } while (0 != tmp52);
+            }
+            let aSCII1 = obj.readASCII(uint8Array, sum1, tmp50 - sum1);
+            try {
+              let tmp58 = _inflate(tmp55);
+              size.tabs[aSCII] = tmp58;
+              sum4 = num15;
+              sum3 = num16;
+              uint8Array2 = arr2;
+            } catch (err) {
+              tmp58 = v(tmp4);
+            }
+          } else if ("CgBI" == aSCII) {
+            size.tabs[aSCII] = uint8Array.slice(sum1, sum1 + 4);
+            sum4 = num15;
+            sum3 = num16;
+            uint8Array2 = arr2;
+          } else if ("IDAT" == aSCII) {
+            for (let num24 = 0; num24 < uint; num24 = num24 + 1) {
+              uint8Array1[num16 + num24] = uint8Array[sum1 + num24];
+            }
+            sum3 = num16 + uint;
+            sum4 = num15;
+            uint8Array2 = arr2;
+          } else if ("acTL" == aSCII) {
+            let obj2 = { num_frames: readUint(uint8Array, sum1), num_plays: readUint(uint8Array, sum1 + 4) };
+            size.tabs[aSCII] = obj2;
+            let _Uint8Array = Uint8Array;
+            let tmp47 = new.target;
+            let tmp48 = new.target;
+            uint8Array2 = new Uint8Array(uint8Array.length);
+            sum4 = num15;
+            sum3 = num16;
+          } else if ("fcTL" == aSCII) {
+            let num22 = num15;
+            if (0 !== num15) {
+              let tmp41 = size.frames[size.frames.length - 1];
+              tmp41.data = _decompress(size, arr2.slice(0, num15), tmp41.rect.width, tmp41.rect.height);
+              num22 = 0;
+            }
+            let size1 = { x: readUint(uint8Array, sum1 + 12), y: readUint(uint8Array, sum1 + 16), width: readUint(uint8Array, sum1 + 4), height: readUint(uint8Array, sum1 + 8) };
+            let ushort = readUshort(uint8Array, sum1 + 22);
+            let obj3 = { rect: size1, delay: null, dispose: null, blend: null };
+            let num23 = 100;
+            let ushort1 = readUshort(uint8Array, sum1 + 20);
+            if (0 != ushort) {
+              num23 = ushort;
+            }
+            obj3.delay = 1000 * (ushort1 / num23);
+            obj3.dispose = uint8Array[sum1 + 24];
+            obj3.blend = uint8Array[sum1 + 25];
+            let frames = size.frames;
+            let arr = frames.push(obj3);
+            sum4 = num22;
+            sum3 = num16;
+            uint8Array2 = arr2;
+          } else if ("fdAT" == aSCII) {
+            let num21 = 0;
+            if (0 < uint - 4) {
+              do {
+                arr2[num15 + num21] = uint8Array[sum1 + num21 + 4];
+                num21 = num21 + 1;
+                diff = uint - 4;
+              } while (num21 < diff);
+            }
+            sum4 = num15 + (uint - 4);
+            sum3 = num16;
+            uint8Array2 = arr2;
+          } else if ("pHYs" == aSCII) {
+            let items = [obj.readUint(uint8Array, sum1), obj.readUint(uint8Array, sum1 + 4), uint8Array[sum1 + 8]];
+            size.tabs[aSCII] = items;
+            sum4 = num15;
+            sum3 = num16;
+            uint8Array2 = arr2;
+          } else if ("cHRM" == aSCII) {
+            size.tabs[aSCII] = [];
+            let num20 = 0;
+            do {
+              let arr9 = size.tabs[aSCII];
+              let arr4 = arr9.push(obj.readUint(uint8Array, sum1 + 4 * num20));
+              num20 = num20 + 1;
+              sum4 = num15;
+              sum3 = num16;
+              uint8Array2 = arr2;
+            } while (num20 < 8);
+          } else {
+            if ("tEXt" != aSCII) {
+              if ("zTXt" != aSCII) {
+                if ("iTXt" == aSCII) {
+                  if (null == size.tabs[aSCII]) {
+                    size.tabs[aSCII] = {};
+                  }
+                  let nextZeroResult = obj.nextZero(uint8Array, sum1);
+                  let sum5 = nextZeroResult + 1;
+                  let sum6 = sum5 + 2;
+                  let aSCII2 = obj.readASCII(uint8Array, sum1, nextZeroResult - sum1);
+                  let nextZeroResult1 = obj.nextZero(uint8Array, sum6);
+                  let aSCII3 = obj.readASCII(uint8Array, sum6, nextZeroResult1 - sum6);
+                  let sum7 = nextZeroResult1 + 1;
+                  let nextZeroResult2 = obj.nextZero(uint8Array, sum7);
+                  let uTF8 = obj.readUTF8(uint8Array, sum7, nextZeroResult2 - sum7);
+                  let sum8 = nextZeroResult2 + 1;
+                  let diff1 = uint - (sum8 - sum1);
+                  if (0 == uint8Array[sum5]) {
+                    let uTF81 = obj.readUTF8(uint8Array, sum8, diff1);
+                  } else {
+                    let arr7 = _inflate(uint8Array.slice(sum8, sum8 + diff1));
+                    uTF81 = obj.readUTF8(arr7, 0, arr7.length);
+                  }
+                  size.tabs[aSCII][aSCII2] = uTF81;
+                  sum4 = num15;
+                  sum3 = num16;
+                  uint8Array2 = arr2;
+                } else if ("PLTE" == aSCII) {
+                  size.tabs[aSCII] = obj.readBytes(uint8Array, sum1, uint);
+                  sum4 = num15;
+                  sum3 = num16;
+                  uint8Array2 = arr2;
+                } else if ("hIST" == aSCII) {
+                  let result = size.tabs.PLTE.length / 3;
+                  size.tabs[aSCII] = [];
+                  let num19 = 0;
+                  sum4 = num15;
+                  sum3 = num16;
+                  uint8Array2 = arr2;
+                  if (0 < result) {
+                    do {
+                      let arr6 = size.tabs[aSCII];
+                      let arr5 = arr6.push(readUshort(uint8Array, sum1 + 2 * num19));
+                      num19 = num19 + 1;
+                      sum4 = num15;
+                      sum3 = num16;
+                      uint8Array2 = arr2;
+                    } while (num19 < result);
+                  }
+                } else if ("tRNS" == aSCII) {
+                  if (3 == size.ctype) {
+                    size.tabs[aSCII] = obj.readBytes(uint8Array, sum1, uint);
+                    sum4 = num15;
+                    sum3 = num16;
+                    uint8Array2 = arr2;
+                  } else if (0 == size.ctype) {
+                    size.tabs[aSCII] = readUshort(uint8Array, sum1);
+                    sum4 = num15;
+                    sum3 = num16;
+                    uint8Array2 = arr2;
+                  } else {
+                    sum4 = num15;
+                    sum3 = num16;
+                    uint8Array2 = arr2;
+                    if (2 == size.ctype) {
+                      let items1 = [readUshort(uint8Array, sum1), readUshort(uint8Array, sum1 + 2), readUshort(uint8Array, sum1 + 4)];
+                      size.tabs[aSCII] = items1;
+                      sum4 = num15;
+                      sum3 = num16;
+                      uint8Array2 = arr2;
+                    }
+                  }
+                } else if ("gAMA" == aSCII) {
+                  size.tabs[aSCII] = obj.readUint(uint8Array, sum1) / 100000;
+                  sum4 = num15;
+                  sum3 = num16;
+                  uint8Array2 = arr2;
+                } else if ("sRGB" == aSCII) {
+                  size.tabs[aSCII] = uint8Array[sum1];
+                  sum4 = num15;
+                  sum3 = num16;
+                  uint8Array2 = arr2;
+                } else if ("bKGD" == aSCII) {
+                  if (0 != size.ctype) {
+                    if (4 != size.ctype) {
+                      if (2 != size.ctype) {
+                        if (6 != size.ctype) {
+                          sum4 = num15;
+                          sum3 = num16;
+                          uint8Array2 = arr2;
+                          if (3 == size.ctype) {
+                            size.tabs[aSCII] = uint8Array[sum1];
+                            sum4 = num15;
+                            sum3 = num16;
+                            uint8Array2 = arr2;
+                          }
+                        }
+                      }
+                      let items2 = [readUshort(uint8Array, sum1), readUshort(uint8Array, sum1 + 2), readUshort(uint8Array, sum1 + 4)];
+                      size.tabs[aSCII] = items2;
+                      sum4 = num15;
+                      sum3 = num16;
+                      uint8Array2 = arr2;
+                    }
+                  }
+                  let items3 = [readUshort(uint8Array, sum1)];
+                  size.tabs[aSCII] = items3;
+                  sum4 = num15;
+                  sum3 = num16;
+                  uint8Array2 = arr2;
+                } else {
+                  sum4 = num15;
+                  sum3 = num16;
+                  uint8Array2 = arr2;
+                  num18 = num15;
+                  let arr3 = arr2;
+                }
+              }
+            }
+            if (null == size.tabs[aSCII]) {
+              size.tabs[aSCII] = {};
+            }
+            let nextZeroResult3 = obj.nextZero(uint8Array, sum1);
+            let diff2 = sum1 + uint - nextZeroResult3 - 1;
+            let aSCII4 = obj.readASCII(uint8Array, sum1, nextZeroResult3 - sum1);
+            if ("tEXt" == aSCII) {
+              let aSCII5 = obj.readASCII(uint8Array, nextZeroResult3 + 1, diff2);
+            } else {
+              let arr8 = _inflate(uint8Array.slice(nextZeroResult3 + 2, nextZeroResult3 + 2 + diff2));
+              aSCII5 = obj.readUTF8(arr8, 0, arr8.length);
+            }
+            size.tabs[aSCII][aSCII4] = aSCII5;
+            sum4 = num15;
+            sum3 = num16;
+            uint8Array2 = arr2;
+          }
+          let sum9 = sum1 + uint;
+          let uint1 = obj.readUint(uint8Array, sum9);
+          num17 = sum9 + 4;
+          num15 = sum4;
+          num16 = sum3;
+          arr2 = uint8Array2;
+          num18 = sum4;
+          arr3 = uint8Array2;
+        }
+        if (0 !== num18) {
+          let tmp65 = size.frames[size.frames.length - 1];
+          tmp65.data = _decompress(size, arr3.slice(0, num18), tmp65.rect.width, tmp65.rect.height);
+        }
+        size.data = _decompress(size, tmp6, size.width, size.height);
+        let str20 = "compress";
+        delete tmp[tmp2];
+        let str21 = "interlace";
+        delete tmp[tmp2];
+        let str22 = "filter";
+        delete tmp[tmp2];
+        return size;
+      }
+    }
+    throw "The input is not a PNG file!";
+  },
+  toRGBA8(img) {
+    ({ width, height } = img);
+    if (null == img.tabs.acTL) {
+      const items = [decodeImage(img.data, width, height, img).buffer];
+      return items;
+    } else {
+      if (null == img.frames[0].data) {
+        img.frames[0].data = img.data;
+      }
+      const items1 = [];
+      const result = width * height * 4;
+      const _Uint8Array = Uint8Array;
+      const uint8Array = new Uint8Array(result);
+      const _Uint8Array2 = Uint8Array;
+      const uint8Array1 = new Uint8Array(result);
+      const _Uint8Array3 = Uint8Array;
+      const uint8Array2 = new Uint8Array(result);
+      for (let num5 = 0; num5 < img.frames.length; num5 = num5 + 1) {
+        let tmp18 = img.frames[num5];
+        let x = tmp18.rect.x;
+        let y = tmp18.rect.y;
+        let width2 = tmp18.rect.width;
+        let height2 = tmp18.rect.height;
+        let tmp23 = decodeImage(tmp18.data, width2, height2, img);
+        if (0 !== num5) {
+          let num6 = 0;
+          if (0 < result) {
+            do {
+              uint8Array2[num6] = uint8Array[num6];
+              num6 = num6 + 1;
+            } while (num6 < result);
+          }
+        }
+        if (0 == tmp18.blend) {
+          let tmp44 = _copyTile(tmp23, width2, height2, tmp7, width, height, x, y, 0);
+        } else if (1 == tmp18.blend) {
+          let tmp34 = _copyTile(tmp23, width2, height2, tmp7, width, height, x, y, 1);
+        }
+        let buffer = uint8Array.buffer;
+        let arr = items1.push(buffer.slice(0));
+        if (0 != tmp18.dispose) {
+          if (1 == tmp18.dispose) {
+            let tmp55 = _copyTile(uint8Array1, width2, height2, tmp7, width, height, x, y, 0);
+          } else if (2 == tmp18.dispose) {
+            let num9 = 0;
+            if (0 < result) {
+              do {
+                uint8Array[num9] = uint8Array2[num9];
+                num9 = num9 + 1;
+              } while (num9 < result);
+            }
+          }
+        }
+      }
+      return items1;
+    }
+  },
+  _paeth(arg0, arg1, arg2) {
+    let tmp = arg0;
+    let tmp2 = arg2;
+    const diff = arg0 + arg1 - arg2;
+    const diff1 = diff - arg0;
+    const diff2 = diff - arg1;
+    const diff3 = diff - arg2;
+    if (diff1 * diff1 > diff2 * diff2) {
+      if (diff2 * diff2 <= diff3 * diff3) {
+        tmp2 = arg1;
+      }
+      tmp = tmp2;
+    }
+    return tmp;
+  },
+  _copyTile,
+  _bin
+});
 const uint32Array5 = new Uint32Array(256);
 let num26 = 0;
 let num27 = 0;

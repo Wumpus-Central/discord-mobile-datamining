@@ -124,8 +124,8 @@ export default {
           length2 = Exif.length;
           let tmp40 = byteLength.getUint16(tmp) === c26;
           if (tmp40) {
-            let obj1 = _mod5294;
-            tmp40 = obj1.getStringFromDataView(byteLength, tmp + c6, length2) === Exif;
+            let obj2 = _mod5294;
+            tmp40 = obj2.getStringFromDataView(byteLength, tmp + c6, length2) === Exif;
           }
           if (tmp40) {
             tmp40 = 0 === byteLength.getUint8(tmp + c6 + length2);
@@ -142,8 +142,8 @@ export default {
         if (_modDef5297.USE_XMP) {
           let tmp45 = byteLength.getUint16(tmp) === c26;
           if (tmp45) {
-            let obj2 = _mod5294;
-            tmp45 = obj2.getStringFromDataView(byteLength, tmp + c6, length3.length) === length3;
+            let obj3 = _mod5294;
+            tmp45 = obj3.getStringFromDataView(byteLength, tmp + c6, length3.length) === length3;
           }
           if (tmp45) {
             let items = tmp4;
@@ -151,8 +151,8 @@ export default {
               items = [];
             }
             let uint161 = byteLength.getUint16(tmp + c7);
-            obj = { dataOffset: tmp + c11, length: uint161 - 31 };
-            let arr = items.push(obj);
+            let obj8 = { dataOffset: tmp + c11, length: uint161 - 31 };
+            let arr = items.push(obj8);
             sum2 = tmp2;
             sum5 = tmp5;
             sum4 = tmp6;
@@ -173,8 +173,8 @@ export default {
               items1 = [];
             }
             let uint162 = byteLength.getUint16(tmp + c7);
-            obj = { dataOffset: tmp + c12, length: uint162 - 77 };
-            arr = items1.push(obj);
+            let obj9 = { dataOffset: tmp + c12, length: uint162 - 77 };
+            let arr2 = items1.push(obj9);
             sum2 = tmp2;
             sum5 = tmp5;
             sum4 = tmp6;
@@ -218,8 +218,8 @@ export default {
             if (!tmp3) {
               items2 = [];
             }
-            obj1 = { offset: tmp + c13, length: diff, chunkNumber: uint8, chunksTotal: uint81 };
-            let arr1 = items2.push(obj1);
+            let obj10 = { offset: tmp + c13, length: diff, chunkNumber: uint8, chunksTotal: uint81 };
+            let arr3 = items2.push(obj10);
             sum2 = tmp2;
             sum5 = tmp5;
             sum4 = tmp6;
@@ -312,17 +312,17 @@ export default {
       sum3 = tmp7;
       tmp82 = c7;
     }
-    obj2 = { hasAppMarkers: tmp10 > c5, fileDataOffset: null, jfifDataOffset: null, tiffHeaderOffset: null, iptcDataOffset: null, xmpChunks: null, iccChunks: null, mpfDataOffset: null };
+    const obj11 = { hasAppMarkers: tmp10 > c5, fileDataOffset: null, jfifDataOffset: null, tiffHeaderOffset: null, iptcDataOffset: null, xmpChunks: null, iccChunks: null, mpfDataOffset: null };
     if (!tmp18) {
       tmp18 = tmp17;
     }
-    obj2.fileDataOffset = tmp18;
-    obj2.jfifDataOffset = tmp16;
-    obj2.tiffHeaderOffset = tmp15;
-    obj2.iptcDataOffset = tmp14;
-    obj2.xmpChunks = tmp13;
-    obj2.iccChunks = tmp12;
-    obj2.mpfDataOffset = tmp11;
-    return obj2;
+    obj11.fileDataOffset = tmp18;
+    obj11.jfifDataOffset = tmp16;
+    obj11.tiffHeaderOffset = tmp15;
+    obj11.iptcDataOffset = tmp14;
+    obj11.xmpChunks = tmp13;
+    obj11.iccChunks = tmp12;
+    obj11.mpfDataOffset = tmp11;
+    return obj11;
   }
 };

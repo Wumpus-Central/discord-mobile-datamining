@@ -18,6 +18,8 @@ import _mod1603 from "module_1603" /* 1603 */;
 import _mod1604 from "module_1604" /* 1604 */;
 import _mod1605 from "module_1605" /* 1605 */;
 
+const require = globalThis.__r;
+
 for (const key10013 in require("module_1485")) {
   arg5[key10013] = require("module_1485")[key10013];
   continue;

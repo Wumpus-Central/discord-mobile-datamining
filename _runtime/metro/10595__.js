@@ -1,88 +1,49 @@
 // === Module 10595: ? ===
 
 // Module 10595
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import Filter from "Filter" /* 10579 */;
+import _mod10560 from "module_10560" /* 10560 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturn;
-class ENUnlikelyFormatFilter {
+const ENExtractYearSuffixRefiner = require;
+const regExp = new RegExp("^\\s*(" + _mod10560.YEAR_PATTERN + ")", "i");
+class ENExtractYearSuffixRefiner {
   constructor() {
-    self = this;
-    tmp = closure_0(this, ENUnlikelyFormatFilter);
-    tmp2 = c2;
-    obj = c2(ENUnlikelyFormatFilter);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    return tmp3(self, constructResult);
+    tmp = c2(this, ENExtractYearSuffixRefiner);
+    return;
   }
 }
-_classCallCheck = ENUnlikelyFormatFilter;
-_inherits(ENUnlikelyFormatFilter, Filter.Filter);
 const entry = {
-  key: "isValid",
-  value: function isValid(text, text2) {
-    closure_0 = text2;
-    const str2 = text2.text.trim();
-    if (str2 === str3.trim()) {
-      return true;
-    } else {
-      if ("may" === str2.toLowerCase()) {
-        const str5 = text.text.substring(0, text2.index);
-        if (!str6.match(/\b(in)$/i)) {
-          text.debug(() => {
-            console.log("Removing unlikely result: " + closure_0);
-          });
-          return false;
+  key: "refine",
+  value: function refine(arg0, arr) {
+    let text = arg0;
+    const item = arr.forEach((start) => {
+      text = start;
+      start = start.start;
+      if (start.isDateWithUnknownYear()) {
+        const match = regExp.exec(text.text.substring(start.index + start.text.length));
+        if (match) {
+          if (str2.trim().length > 3) {
+            obj.debug(() => {
+              console.log("Extracting year: '" + match[0] + "' into : " + closure_0);
+            });
+            const parseYearResult = ENExtractYearSuffixRefiner(10560).parseYear(match[1]);
+            if (null != start.end) {
+              const end = start.end;
+              end.assign("year", parseYearResult);
+            }
+            const start2 = start.start;
+            start2.assign("year", parseYearResult);
+            start.text = start.text + match[0];
+          }
+          str2 = match[0];
         }
-        str6 = text.text.substring(0, text2.index).trim();
+        obj = text;
       }
-      const formatted = str2.toLowerCase();
-      const endsWithResult = formatted.endsWith("the second");
-      let flag2 = !endsWithResult;
-      if (endsWithResult) {
-        flag2 = false;
-        if (str9.trim().length > 0) {
-          text.debug(() => {
-            console.log("Removing unlikely result: " + closure_0);
-          });
-          flag2 = false;
-        }
-        str9 = text.text.substring(text2.index + text2.text.length);
-      }
-      return flag2;
-    }
-    str3 = text.text;
+    });
+    return arr;
   }
 };
 const items = [entry];
 
-export default _createClass(ENUnlikelyFormatFilter, items);
+export default _createClass(ENExtractYearSuffixRefiner, items);

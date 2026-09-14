@@ -22,10 +22,11 @@ const javaScriptFlagGetter = fn(27);
 let tmp4 = tmp2;
 if (javaScriptFlagGetter.enablePreparedTextLayout()) {
   tmp4 = _modDef300("RCTSelectableText", () => {
-    obj = {};
+    obj = _mod103;
+    const obj2 = {};
     const merged = Object.assign(obj);
-    obj.uiViewClassName = "RCTSelectableText";
-    return obj.createViewConfig(obj);
+    obj2.uiViewClassName = "RCTSelectableText";
+    return obj.createViewConfig(obj2);
   });
 }
 

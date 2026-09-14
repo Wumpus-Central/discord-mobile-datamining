@@ -1,7 +1,7 @@
 // === Module 4929: ? ===
 
 // Module 4929
-import _mod1291 from "module_1291" /* 1291 */;
+import _mod1289 from "module_1289" /* 1289 */;
 
 
-export default _mod1291.setPrototypeOf || null;
+export default _mod1289.setPrototypeOf || null;

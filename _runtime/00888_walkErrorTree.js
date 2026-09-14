@@ -29,9 +29,9 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
           tmp8 = nativePackageName;
         }
         nativePackageName = tmp8;
-        obj = { type: null, value: null, stacktrace: null };
+        const obj2 = { type: null, value: null, stacktrace: null };
         ({ name: obj8.type, message: obj8.value } = tmp);
-        const obj1 = { frames: null };
+        const obj3 = { frames: null };
         const stackElements = tmp.stackElements;
         const mapped = stackElements.map((className) => {
           const obj = { platform: "java", module: className.className, filename: className.fileName, lineno: null, function: null, in_app: null };
@@ -49,13 +49,13 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
           obj.in_app = !tmp3;
           return obj;
         });
-        obj1.frames = mapped.reverse();
-        obj.stacktrace = obj1;
-        exceptionFromErrorResult = obj;
+        obj3.frames = mapped.reverse();
+        obj2.stacktrace = obj3;
+        exceptionFromErrorResult = obj2;
       } else if ("stackReturnAddresses" in tmp) {
         const NATIVE = NativeModules.NATIVE;
         const nativeStackFramesBy = NATIVE.fetchNativeStackFramesBy(tmp.stackReturnAddresses);
-        const obj2 = { type: null, value: null, stacktrace: null };
+        const obj4 = { type: null, value: null, stacktrace: null };
         ({ name: obj6.type, message: obj6.value } = tmp);
         let reversed;
         if (null != nativeStackFramesBy) {
@@ -65,8 +65,8 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
         if (!reversed) {
           reversed = [];
         }
-        const obj3 = { frames: reversed };
-        obj2.stacktrace = obj3;
+        const obj5 = { frames: reversed };
+        obj4.stacktrace = obj5;
         let debugMetaImages;
         if (null != nativeStackFramesBy) {
           debugMetaImages = nativeStackFramesBy.debugMetaImages;
@@ -75,15 +75,14 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
           debugMetaImages = [];
         }
         let items4 = debugMetaImages;
-        exceptionFromErrorResult = obj2;
+        exceptionFromErrorResult = obj4;
       } else {
-        let tmp28Result = _mod682;
         const _Error = Error;
         if (tmp28Result.isInstanceOf(tmp, Error)) {
-          tmp28Result = feedbackAsyncIntegration;
-          exceptionFromErrorResult = tmp28Result.exceptionFromError(stackParser, originalException[arg3]);
+          exceptionFromErrorResult = feedbackAsyncIntegration.exceptionFromError(stackParser, originalException[arg3]);
+          const tmp28Result3 = feedbackAsyncIntegration;
         } else {
-          if (tmp28Result1.isPlainObject(tmp)) {
+          if (tmp28Result4.isPlainObject(tmp)) {
             let name;
             if (typeof tmp.name === "string") {
               name = tmp.name;
@@ -95,20 +94,21 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
             }
             exceptionFromErrorResult.value = message;
           } else {
-            const obj4 = { exceptions, debugImages };
-            return obj4;
+            const obj7 = { exceptions, debugImages };
+            return obj7;
           }
-          tmp28Result1 = _mod682;
+          tmp28Result4 = _mod682;
         }
+        tmp28Result = _mod682;
       }
       items2 = [];
       items2[HermesBuiltin.arraySpread(exceptions, 0)] = exceptionFromErrorResult;
       items3 = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(debugImages, 0);
+      const arraySpreadResult = HermesBuiltin.arraySpread(debugImages, 0);
       if (!items4) {
         items4 = [];
       }
-      arraySpreadResult = HermesBuiltin.arraySpread(items4, arraySpreadResult);
+      HermesBuiltin.arraySpread(items4, arraySpreadResult);
       return walkErrorTree(stackParser, arg1, tmp, arg3, items2, items3);
     }
   }
@@ -123,7 +123,7 @@ export const nativeLinkedErrorsIntegration = () => {
   }
   closure_0 = obj.key || "cause";
   closure_1 = obj.limit || 5;
-  obj = {
+  return {
     name: "NativeLinkedErrors",
     setupOnce() {
 
@@ -165,5 +165,4 @@ export const nativeLinkedErrorsIntegration = () => {
       }
     }
   };
-  return obj;
 };

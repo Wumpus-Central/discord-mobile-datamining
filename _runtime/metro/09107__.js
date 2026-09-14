@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" }, file: { unit: "\u0628\u0627\u06CC\u067C\u0633", verb: "\u0648\u0644\u0631\u064A" }, array: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" }, set: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" }, file: { unit: "\u0628\u0627\u06CC\u067C\u0633", verb: "\u0648\u0644\u0631\u064A" }, array: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" }, set: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" } };
         closure_1 = { regex: "\u0648\u0631\u0648\u062F\u064A", email: "\u0628\u0631\u06CC\u069A\u0646\u0627\u0644\u06CC\u06A9", url: "\u06CC\u0648 \u0622\u0631 \u0627\u0644", emoji: "\u0627\u06CC\u0645\u0648\u062C\u064A", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "\u0646\u06CC\u067C\u0647 \u0627\u0648 \u0648\u062E\u062A", date: "\u0646\u06D0\u067C\u0647", time: "\u0648\u062E\u062A", duration: "\u0645\u0648\u062F\u0647", ipv4: "\u062F IPv4 \u067E\u062A\u0647", ipv6: "\u062F IPv6 \u067E\u062A\u0647", cidrv4: "\u062F IPv4 \u0633\u0627\u062D\u0647", cidrv6: "\u062F IPv6 \u0633\u0627\u062D\u0647", base64: "base64-encoded \u0645\u062A\u0646", base64url: "base64url-encoded \u0645\u062A\u0646", json_string: "JSON \u0645\u062A\u0646", e164: "\u062F E.164 \u0634\u0645\u06D0\u0631\u0647", jwt: "JWT", template_literal: "\u0648\u0631\u0648\u062F\u064A" };
         closure_2 = { nan: "NaN", number: "\u0639\u062F\u062F", array: "\u0627\u0631\u06D0" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "\u0646\u0627\u0633\u0645 \u0648\u0631\u0648\u062F\u064A: \u0628\u0627\u06CC\u062F instanceof " + code.expected + " \u0648\u0627\u06CC, \u0645\u06AB\u0631 " + tmp48 + " \u062A\u0631\u0644\u0627\u0633\u0647 \u0634\u0648";
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str31 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -104,13 +103,13 @@ if (self2) {
                 if (str32 == null) {
                   str32 = "\u0627\u0631\u0632\u069A\u062A";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str39 = tmp27.unit;
                 if (str39 == null) {
                   str39 = "\u0639\u0646\u0635\u0631\u0648\u0646\u0647";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "\u0689\u06CC\u0631 \u0644\u0648\u06CC: " + str32 + " \u0628\u0627\u06CC\u062F " + str31 + str + " " + str39 + " \u0648\u0644\u0631\u064A";
+                let combined2 = "\u0689\u06CC\u0631 \u0644\u0648\u06CC: " + str32 + " \u0628\u0627\u06CC\u062F " + str31 + str1 + " " + str39 + " \u0648\u0644\u0631\u064A";
               } else {
                 let str33 = str32;
                 if (str32 == null) {
@@ -125,18 +124,18 @@ if (self2) {
               if (code.inclusive) {
                 str23 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str58 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "\u0689\u06CC\u0631 \u06A9\u0648\u0686\u0646\u06CC: " + origin + " \u0628\u0627\u06CC\u062F " + str23 + str1 + " " + tmp15.unit + " \u0648\u0644\u0631\u064A";
+                let combined3 = "\u0689\u06CC\u0631 \u06A9\u0648\u0686\u0646\u06CC: " + origin + " \u0628\u0627\u06CC\u062F " + str23 + str58 + " " + tmp15.unit + " \u0648\u0644\u0631\u064A";
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "\u0689\u06CC\u0631 \u06A9\u0648\u0686\u0646\u06CC: " + origin + " \u0628\u0627\u06CC\u062F " + str23 + str1 + " \u0648\u064A";
+                combined3 = "\u0689\u06CC\u0631 \u06A9\u0648\u0686\u0646\u06CC: " + origin + " \u0628\u0627\u06CC\u062F " + str23 + str58 + " \u0648\u064A";
               }
               return combined3;
             case "invalid_format":
@@ -178,7 +177,6 @@ if (self2) {
               return "\u0646\u0627\u0633\u0645\u0647 \u0648\u0631\u0648\u062F\u064A";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = " \u06A9\u06D0";
               return "\u0646\u0627\u0633\u0645 \u0639\u0646\u0635\u0631 \u067E\u0647 " + code.origin + " \u06A9\u06D0";
             default:
               return "\u0646\u0627\u0633\u0645\u0647 \u0648\u0631\u0648\u062F\u064A";

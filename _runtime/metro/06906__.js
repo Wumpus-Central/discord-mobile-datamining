@@ -3,6 +3,8 @@
 // Module 6906
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 ({ useEffect: c2, useRef: c3 } = noop);
 
 export const useReactiveSharedValue = (INITIAL_CONTAINER_HEIGHT) => {
@@ -20,10 +22,10 @@ export const useReactiveSharedValue = (INITIAL_CONTAINER_HEIGHT) => {
     if (null === tmp2.current) {
       tmp.current = INITIAL_CONTAINER_HEIGHT;
       if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
-        require("cancelAnimation");
-        let obj = {};
+        const obj2 = {};
         const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
-        let mutable = obj.makeMutable(obj);
+        let mutable = require("cancelAnimation").makeMutable(obj2);
+        let obj = require("cancelAnimation");
       } else {
         mutable = require("cancelAnimation").makeMutable(INITIAL_CONTAINER_HEIGHT);
         const obj3 = require("cancelAnimation");

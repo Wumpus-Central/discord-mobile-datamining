@@ -41,13 +41,13 @@ function valueUnpacker(__workletHash, arg1, arg2) {
       __initData = __workletsCache.set(__workletHash, evalWithSourceMapResult);
     }
   } else if (undefined !== __workletHash.__init) {
-    value = __handleCache.get(__workletHash);
-    if (undefined === value) {
+    value2 = __handleCache.get(__workletHash);
+    if (undefined === value2) {
       const __initResult = __workletHash.__init();
       const result = __handleCache.set(__workletHash, __initResult);
-      value = __initResult;
+      value2 = __initResult;
     }
-    return value;
+    return value2;
   } else if ("RemoteFunction" === arg1) {
     function fun() {
       let str = "anonymous function";

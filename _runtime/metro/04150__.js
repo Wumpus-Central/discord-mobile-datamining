@@ -1,35 +1,39 @@
 // === Module 4150: ? ===
 
 // Module 4150
-import module_4006 from "module_4006" /* 4006 */;
-import _typeof from "module_3725" /* 3725 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
-import module_3729 from "module_3729" /* 3729 */;
+import module_4006_mod from "module_4006" /* 4006 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import module_3729_mod from "module_3729" /* 3729 */;
 
+let module_4006 = module_4006_mod;
 if (!module_4006) {
-  let obj = { default: module_4006 };
+  const obj = { default: module_4006 };
   let tmp3 = obj;
 } else {
   tmp3 = module_4006;
 }
 module_4006 = tmp3;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp5 = obj;
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
 } else {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
 requiredArgs = tmp7;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  const obj1 = { default: module_3729 };
-  let tmp9 = obj1;
+  const obj4 = { default: module_3729 };
+  let tmp9 = obj4;
 } else {
   tmp9 = module_3729;
 }

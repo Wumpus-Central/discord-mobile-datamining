@@ -1,19 +1,21 @@
 // === Module 4125: previousMonday ===
 
 // Module 4125 (previousMonday)
-import requiredArgs from "requiredArgs" /* 3726 */;
-import previousDay from "previousDay" /* 4123 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import previousDay_mod from "previousDay" /* 4123 */;
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  let obj = { default: requiredArgs };
+  const obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;
 }
 requiredArgs = tmp3;
+let previousDay = previousDay_mod;
 if (!previousDay) {
-  obj = { default: previousDay };
-  let tmp5 = obj;
+  const obj2 = { default: previousDay };
+  let tmp5 = obj2;
 } else {
   tmp5 = previousDay;
 }

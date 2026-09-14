@@ -16,22 +16,22 @@ function getMatchRanking(rankedValue, arg1, keepDiacritics) {
     defaultResult1 = _module1.default(`${arg1}`);
   }
   if (defaultResult1.length > defaultResult.length) {
-    let NO_MATCH = obj.NO_MATCH;
+    let NO_MATCH = obj2.NO_MATCH;
   } else if (defaultResult === defaultResult1) {
-    NO_MATCH = obj.CASE_SENSITIVE_EQUAL;
+    NO_MATCH = obj2.CASE_SENSITIVE_EQUAL;
   } else {
     const str2 = defaultResult.toLowerCase();
     const formatted = defaultResult1.toLowerCase();
     if (str2 === formatted) {
-      NO_MATCH = obj.EQUAL;
+      NO_MATCH = obj2.EQUAL;
     } else if (str2.startsWith(formatted)) {
-      NO_MATCH = obj.STARTS_WITH;
+      NO_MATCH = obj2.STARTS_WITH;
     } else if (str2.includes(` ${arr3}`)) {
-      NO_MATCH = obj.WORD_STARTS_WITH;
+      NO_MATCH = obj2.WORD_STARTS_WITH;
     } else if (str2.includes(formatted)) {
-      NO_MATCH = obj.CONTAINS;
+      NO_MATCH = obj2.CONTAINS;
     } else if (1 === formatted.length) {
-      NO_MATCH = obj.NO_MATCH;
+      NO_MATCH = obj2.NO_MATCH;
     } else {
       c0 = "";
       let parts = str2.split(" ");
@@ -42,7 +42,7 @@ function getMatchRanking(rankedValue, arg1, keepDiacritics) {
         });
       });
       if (c0.includes(formatted)) {
-        NO_MATCH = obj.ACRONYM;
+        NO_MATCH = obj2.ACRONYM;
       } else {
         let num4 = 0;
         let num5 = 0;
@@ -58,7 +58,7 @@ function getMatchRanking(rankedValue, arg1, keepDiacritics) {
           num5 = 1;
         }
         if (num6 < 0) {
-          NO_MATCH = obj.NO_MATCH;
+          NO_MATCH = obj2.NO_MATCH;
         } else {
           let tmp16 = num5;
           let num8 = 1;
@@ -91,9 +91,9 @@ function getMatchRanking(rankedValue, arg1, keepDiacritics) {
                 tmp19 = num7;
               }
             }
-            NO_MATCH = obj.NO_MATCH;
+            NO_MATCH = obj2.NO_MATCH;
           }
-          NO_MATCH = obj.MATCHES + tmp18 / formatted.length * (1 / (tmp19 - num6));
+          NO_MATCH = obj2.MATCHES + tmp18 / formatted.length * (1 / (tmp19 - num6));
           length3 = formatted.length;
         }
         length = str2.length;
@@ -103,9 +103,6 @@ function getMatchRanking(rankedValue, arg1, keepDiacritics) {
   return NO_MATCH;
 }
 if (_extends) {
-  if (typeof _extends === "object") {
-    let obj = _extends;
-  }
   let _module1 = _mod7436;
   if (_module1) {
     if (typeof _module1 === "object") {
@@ -119,9 +116,9 @@ if (_extends) {
         obj = {};
         tmp = obj;
       }
-      ({ keys: obj, threshold } = tmp);
+      ({ keys: obj2, threshold } = tmp);
       if (undefined === threshold) {
-        threshold = obj.MATCHES;
+        threshold = obj2.MATCHES;
       }
       let baseSort = tmp.baseSort;
       if (undefined === baseSort) {
@@ -147,14 +144,13 @@ if (_extends) {
       }
       return fn(valueResult.reduce(function reduceItemsToRanked(arr, rankedValue, index) {
         let str3;
-        arr = constants;
         closure_1 = obj;
         if (constants) {
           const items = [];
           let num4 = 0;
           if (0 < length) {
             while (true) {
-              let tmp6 = arr[num4];
+              let tmp6 = constants[num4];
               if (typeof tmp6 === "string") {
                 let defaultResult = closure_5;
               } else {
@@ -201,7 +197,7 @@ if (_extends) {
                                   let tmp19 = tmp15[tmp11];
                                   combined = items2;
                                   if (null != tmp19) {
-                                    arr = items2.push(tmp19);
+                                    let arr2 = items2.push(tmp19);
                                     combined = items2;
                                   }
                                 } else {
@@ -231,7 +227,7 @@ if (_extends) {
                       let length4 = applyResult.length;
                       for (let num7 = 0; num7 < length4; num7 = num7 + 1) {
                         obj = { itemValue: applyResult[num7], attributes: defaultResult };
-                        arr = items.push(obj);
+                        let arr3 = items.push(obj);
                       }
                       num4 = num4 + 1;
                     }
@@ -252,9 +248,9 @@ if (_extends) {
             }
             str3Result = str3(rankedValue);
           }
-          obj = { rankedValue, rank: null, keyIndex: -1, keyThreshold: null };
-          obj.rank = obj.NO_MATCH;
-          obj.keyThreshold = tmp2.threshold;
+          obj2 = { rankedValue, rank: null, keyIndex: -1, keyThreshold: null };
+          obj2.rank = obj2.NO_MATCH;
+          obj2.keyThreshold = tmp2.threshold;
           let reduced = items.reduce((acc, item, index) => {
             ({ rank, rankedValue, keyIndex, keyThreshold } = acc);
             ({ itemValue, attributes } = item);
@@ -273,8 +269,8 @@ if (_extends) {
               rank = minRanking;
             }
             return { rankedValue, rank, keyIndex, keyThreshold };
-          }, obj);
-          length = arr.length;
+          }, obj2);
+          length = constants.length;
         } else {
           reduced = { rankedValue, rank: getMatchRanking(rankedValue, tmp, tmp2), keyIndex: -1, keyThreshold: tmp2.threshold };
         }
@@ -283,24 +279,24 @@ if (_extends) {
           keyThreshold = threshold;
         }
         if (reduced.rank >= keyThreshold) {
-          const obj1 = { item: rankedValue, index };
-          arr.push(obj.default({}, reduced, obj1));
+          const obj3 = { item: rankedValue, index };
+          arr.push(obj.default({}, reduced, obj3));
         }
         return arr;
       }, [])).map((item) => item.item);
     }
     _module1 = tmp4;
-    obj = { CASE_SENSITIVE_EQUAL: 7, EQUAL: 6, STARTS_WITH: 5, WORD_STARTS_WITH: 4, CONTAINS: 3, ACRONYM: 2, MATCHES: 1, NO_MATCH: 0 };
-    matchSorter.rankings = obj;
+    let obj2 = { CASE_SENSITIVE_EQUAL: 7, EQUAL: 6, STARTS_WITH: 5, WORD_STARTS_WITH: 4, CONTAINS: 3, ACRONYM: 2, MATCHES: 1, NO_MATCH: 0 };
+    matchSorter.rankings = obj2;
     function defaultBaseSortFn(rankedValue, rankedValue2) {
       return String(rankedValue.rankedValue).localeCompare(String(rankedValue2.rankedValue));
     }
     let closure_5 = { maxRanking: Infinity, minRanking: -Infinity };
     exports.defaultBaseSortFn = defaultBaseSortFn;
     exports.matchSorter = matchSorter;
-    exports.rankings = obj;
+    exports.rankings = obj2;
   }
-  obj = { default: _module1 };
-  tmp4 = obj;
+  let obj3 = { default: _module1 };
+  tmp4 = obj3;
 }
-obj = { default: _extends };
+let obj = { default: _extends };

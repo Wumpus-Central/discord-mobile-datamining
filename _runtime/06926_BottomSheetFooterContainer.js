@@ -2,48 +2,48 @@
 
 // Module 6926 (BottomSheetFooterContainer)
 import _mod19 from "module_19" /* 19 */;
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6729 */;
+import value2 from "value2" /* 6729 */;
 import DEFAULT_HANDLE_HEIGHT from "DEFAULT_HANDLE_HEIGHT" /* 6732 */;
 
 let closure_2 = { code: "function pnpm_BottomSheetFooterContainerTsx1(){const{animatedHandleHeight,INITIAL_HANDLE_HEIGHT,animatedKeyboardHeightInContainer,animatedContainerHeight,animatedPosition,animatedKeyboardState,animatedFooterHeight,KEYBOARD_STATE}=this.__closure;const handleHeight=animatedHandleHeight.get();if(handleHeight===INITIAL_HANDLE_HEIGHT){return 0;}const keyboardHeight=animatedKeyboardHeightInContainer.get();const containerHeight=animatedContainerHeight.get();const position=animatedPosition.get();const keyboardState=animatedKeyboardState.get();const footerHeight=animatedFooterHeight.get();let footerTranslateY=Math.max(0,containerHeight-position);if(keyboardState===KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-keyboardHeight;}footerTranslateY=footerTranslateY-footerHeight-handleHeight;return footerTranslateY;}" };
 const memoResult = _mod19.memo((renderFooter) => {
   let animatedContainerHeight;
   let animatedHandleHeight;
-  let obj = animatedContainerHeight(animatedHandleHeight[1]);
-  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const bottomSheetInternal = animatedContainerHeight(animatedHandleHeight[1]).useBottomSheetInternal();
   animatedContainerHeight = bottomSheetInternal.animatedContainerHeight;
   animatedHandleHeight = bottomSheetInternal.animatedHandleHeight;
   const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
   const animatedPosition = bottomSheetInternal.animatedPosition;
   const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
   const animatedKeyboardHeightInContainer = bottomSheetInternal.animatedKeyboardHeightInContainer;
-  obj = { animatedFooterPosition: null };
+  const obj2 = { animatedFooterPosition: null };
+  const obj = animatedContainerHeight(animatedHandleHeight[1]);
   const fn = function o() {
     value = animatedHandleHeight.get();
     if (value === DEFAULT_HANDLE_HEIGHT.INITIAL_HANDLE_HEIGHT) {
       return 0;
     } else {
-      value = animatedKeyboardHeightInContainer.get();
-      const value1 = animatedContainerHeight.get();
-      value2 = animatedPosition.get();
-      const value3 = animatedKeyboardState.get();
+      const value6 = animatedKeyboardHeightInContainer.get();
+      const value7 = animatedContainerHeight.get();
+      const value8 = animatedPosition.get();
+      const value9 = animatedKeyboardState.get();
       const _Math = Math;
-      const value4 = animatedFooterHeight.get();
-      const bound = Math.max(0, value1 - value2);
+      const value10 = animatedFooterHeight.get();
+      const bound = Math.max(0, value7 - value8);
       let diff = bound;
-      if (value3 === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
-        diff = bound - value;
+      if (value9 === value2.KEYBOARD_STATE.SHOWN) {
+        diff = bound - value6;
       }
-      return diff - value4 - value;
+      return diff - value10 - value;
     }
   };
-  obj = { animatedHandleHeight, INITIAL_HANDLE_HEIGHT: animatedContainerHeight(animatedHandleHeight[3]).INITIAL_HANDLE_HEIGHT, animatedKeyboardHeightInContainer, animatedContainerHeight, animatedPosition, animatedKeyboardState, animatedFooterHeight, KEYBOARD_STATE: animatedContainerHeight(animatedHandleHeight[4]).KEYBOARD_STATE };
-  fn.__closure = obj;
+  const obj3 = animatedContainerHeight(animatedHandleHeight[2]);
+  fn.__closure = { animatedHandleHeight, INITIAL_HANDLE_HEIGHT: animatedContainerHeight(animatedHandleHeight[3]).INITIAL_HANDLE_HEIGHT, animatedKeyboardHeightInContainer, animatedContainerHeight, animatedPosition, animatedKeyboardState, animatedFooterHeight, KEYBOARD_STATE: animatedContainerHeight(animatedHandleHeight[4]).KEYBOARD_STATE };
   fn.__workletHash = 8297656659240;
   fn.__initData = animatedFooterHeight;
   const items = [animatedKeyboardHeightInContainer, animatedContainerHeight, animatedPosition, animatedKeyboardState, animatedFooterHeight, animatedHandleHeight];
-  obj.animatedFooterPosition = animatedContainerHeight(animatedHandleHeight[2]).useDerivedValue(fn, items);
-  return renderFooter.renderFooter(obj);
+  obj2.animatedFooterPosition = obj3.useDerivedValue(fn, items);
+  return renderFooter.renderFooter(obj2);
 });
 memoResult.displayName = "BottomSheetFooterContainer";
 

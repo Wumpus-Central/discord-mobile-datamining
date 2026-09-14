@@ -1,35 +1,39 @@
 // === Module 3933: eachMinuteOfInterval ===
 
 // Module 3933 (eachMinuteOfInterval)
-import module_3890 from "module_3890" /* 3890 */;
-import _typeof from "module_3725" /* 3725 */;
-import startOfMinute from "startOfMinute" /* 3934 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import module_3890_mod from "module_3890" /* 3890 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import startOfMinute_mod from "startOfMinute" /* 3934 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let module_3890 = module_3890_mod;
 if (!module_3890) {
-  let obj = { default: module_3890 };
+  const obj = { default: module_3890 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3890;
 }
 module_3890 = tmp3;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp5 = obj;
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
 } else {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
+let startOfMinute = startOfMinute_mod;
 if (!startOfMinute) {
-  obj = { default: startOfMinute };
-  let tmp7 = obj;
+  const obj3 = { default: startOfMinute };
+  let tmp7 = obj3;
 } else {
   tmp7 = startOfMinute;
 }
 startOfMinute = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }

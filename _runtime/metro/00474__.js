@@ -41,7 +41,7 @@ let obj = {
   create(arg0) {
     closure_0 = arg0;
     obj = { stateID: Math.random(), moveX: 0, moveY: 0, x0: 0, y0: 0, dx: 0, dy: 0, vx: 0, vy: 0, numberActiveTouches: 0, _accountsForMovesUpTo: 0 };
-    obj = {
+    return {
       panHandlers: {
         onStartShouldSetResponder(arg0) {
           let result = null != closure_0.onStartShouldSetPanResponder;
@@ -158,7 +158,6 @@ let obj = {
         return null;
       }
     };
-    return obj;
   }
 };
 

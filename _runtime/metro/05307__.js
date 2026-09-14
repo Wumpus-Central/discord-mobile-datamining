@@ -69,8 +69,8 @@ export default {
         }
         if (_modDef5297.USE_XMP) {
           if ("XMP " === stringFromDataView) {
-            obj = { dataOffset: num + 8, length: uint32 };
-            let items = [obj];
+            let obj2 = { dataOffset: num + 8, length: uint32 };
+            let items = [obj2];
             flag3 = true;
             sum4 = tmp;
             tmp20 = tmp2;
@@ -80,8 +80,8 @@ export default {
         }
         if (_modDef5297.USE_ICC) {
           if ("ICCP" === stringFromDataView) {
-            obj = { offset: num + 8, length: uint32, chunkNumber: 1, chunksTotal: 1 };
-            let items1 = [obj];
+            let obj3 = { offset: num + 8, length: uint32, chunkNumber: 1, chunksTotal: 1 };
+            let items1 = [obj3];
             flag3 = true;
             sum4 = tmp;
             tmp20 = items1;

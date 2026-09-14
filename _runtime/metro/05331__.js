@@ -39,7 +39,7 @@ export const addMissingNamespaces = function addMissingNamespaces(str) {
         let tmp9 = "xmlns" !== tmp8 && "xml" !== tmp8;
         if (tmp9) {
           if (-1 === items1.indexOf(tmp8)) {
-            arr = items1.push(tmp8);
+            let arr2 = items1.push(tmp8);
           }
         }
         match2 = obj2.exec(str);
@@ -55,7 +55,7 @@ export const addMissingNamespaces = function addMissingNamespaces(str) {
         if (!text) {
           text = `http://fallback.namespace/${tmp12}`;
         }
-        let arr1 = items2.push(` xmlns:${tmp12}="${tmp14}"`);
+        let arr3 = items2.push(` xmlns:${tmp12}="${tmp14}"`);
       }
       const _RegExp = RegExp;
       const joined = items2.join("");

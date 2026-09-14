@@ -63,27 +63,24 @@ class CurvedTransition {
       if (num == null) {
         num = 300;
       }
-      let __closure = { easingX: tmp.easingXV, easingY: tmp.easingYV, easingWidth: tmp.easingWidthV, easingHeight: tmp.easingHeightV };
+      const easing = { easingX: tmp.easingXV, easingY: tmp.easingYV, easingWidth: tmp.easingWidthV, easingHeight: tmp.easingHeightV };
       const fn = function n(originX) {
-        obj = { initialValues: { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight }, animations: null, callback: null };
-        const size = { originX: null, originY: null, width: null, height: null };
-        let obj2 = delayFunction(1708);
-        obj = { duration: num, easing: obj.easingX };
-        size.originX = delayFunction(delay, obj2.withTiming(originX.targetOriginX, obj));
-        obj = { duration: num, easing: obj.easingY };
-        size.originY = delayFunction(delay, delayFunction(1708).withTiming(originX.targetOriginY, obj));
+        const obj = { initialValues: { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight }, animations: null, callback: null };
+        const size = { originX: delayFunction(delay, delayFunction(1708).withTiming(originX.targetOriginX, { duration: num, easing: obj.easingX })), originY: null, width: null, height: null };
+        const obj2 = { duration: num, easing: obj.easingX };
+        const obj3 = delayFunction(1708);
+        size.originY = delayFunction(delay, delayFunction(1708).withTiming(originX.targetOriginY, { duration: num, easing: obj.easingY }));
+        const obj4 = { duration: num, easing: obj.easingY };
         const obj5 = delayFunction(1708);
         size.width = delayFunction(delay, delayFunction(1708).withTiming(originX.targetWidth, { duration: num, easing: obj.easingWidth }));
-        const obj1 = { duration: num, easing: obj.easingWidth };
+        const obj6 = { duration: num, easing: obj.easingWidth };
         const obj7 = delayFunction(1708);
-        obj2 = { duration: num, easing: obj.easingHeight };
-        size.height = delayFunction(delay, delayFunction(1708).withTiming(originX.targetHeight, obj2));
+        size.height = delayFunction(delay, delayFunction(1708).withTiming(originX.targetHeight, { duration: num, easing: obj.easingHeight }));
         obj.animations = size;
         obj.callback = callbackV;
         return obj;
       };
-      __closure = { delayFunction, delay, withTiming: CurvedTransition(1708).withTiming, duration: num, easing: __closure, callback: callbackV };
-      fn.__closure = __closure;
+      fn.__closure = { delayFunction, delay, withTiming: CurvedTransition(1708).withTiming, duration: num, easing, callback: callbackV };
       fn.__workletHash = 8113645568730;
       fn.__initData = __initData;
       return fn;

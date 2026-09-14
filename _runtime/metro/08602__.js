@@ -58,18 +58,18 @@ const entry = {
   value: function render() {
     const self = this;
     const props = this.props;
-    let obj = {};
+    const obj = {};
     ({ cx, cy, r } = props);
     const merged = Object.assign(Circle(8589).extract(this, props));
     obj.cx = cx;
     obj.cy = cy;
     obj.r = r;
-    obj = {
+    const obj2 = Circle(8589);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const obj2 = Circle(8589);
     const merged1 = Object.assign(obj);
     return jsx(_modDef8603, {
       ref(arg0) {

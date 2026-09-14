@@ -17,23 +17,22 @@ export const breadcrumbsIntegration = () => {
   if (null === _fetch) {
     _fetch = _mod867.isWeb();
   }
-  obj = { fetch: _fetch, dom: null, history: null };
+  const obj3 = { fetch: _fetch, dom: null, history: null };
   let isWebResult = _mod867.isWeb();
   if (isWebResult) {
     const dom = obj.dom;
     isWebResult = null === dom || undefined === dom || dom;
     const tmp7 = null === dom || undefined === dom || dom;
   }
-  obj.dom = isWebResult;
-  let tmp4Result = _mod867;
-  let isWebResult1 = tmp4Result.isWeb();
+  obj3.dom = isWebResult;
+  let isWebResult1 = _mod867.isWeb();
   if (isWebResult1) {
     const history = obj.history;
     isWebResult1 = null === history || undefined === history || history;
     const tmp9 = null === history || undefined === history || history;
   }
-  obj.history = isWebResult1;
-  merged1 = Object.assign(merged, obj);
-  tmp4Result = feedbackAsyncIntegration;
-  return tmp4Result.breadcrumbsIntegration(merged1);
+  obj3.history = isWebResult1;
+  merged1 = Object.assign(merged, obj3);
+  const tmp4Result = _mod867;
+  return feedbackAsyncIntegration.breadcrumbsIntegration(merged1);
 };

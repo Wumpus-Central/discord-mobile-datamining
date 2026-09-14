@@ -3,6 +3,8 @@
 // Module 174
 import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
 
+const require = globalThis.__r;
+
 let hasPromiseResult;
 if (global != null) {
   const _HermesInternal = global.HermesInternal;

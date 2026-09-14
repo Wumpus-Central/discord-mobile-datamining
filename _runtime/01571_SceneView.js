@@ -14,9 +14,7 @@ export const SceneView = function SceneView(getState) {
   const clearOptions = getState.clearOptions;
   getState.useRef(undefined);
   const getKey = getState.useCallback(() => ref.current, []);
-  route(routeState[2]);
-  let obj = { key: route.key, options: getState.options, navigation };
-  const addOptionsGetter = obj.useOptionsGetters(obj).addOptionsGetter;
+  const addOptionsGetter = route(routeState[2]).useOptionsGetters({ key: route.key, options: getState.options, navigation }).addOptionsGetter;
   const callback1 = getState.useCallback((current) => {
     closure_5.current = current;
   }, []);
@@ -48,13 +46,13 @@ export const SceneView = function SceneView(getState) {
       }
       return tmp;
     });
-    let obj = route(routeState[3]);
     if (!obj.isArrayEqual(tmp.routes, mapped)) {
-      obj = {};
+      const obj2 = {};
       let merged = Object.assign(tmp);
-      obj.routes = mapped;
-      setState(obj);
+      obj2.routes = mapped;
+      setState(obj2);
     }
+    obj = route(routeState[3]);
   }, items1);
   getState.useRef(true);
   const effect = getState.useEffect(() => {
@@ -68,8 +66,7 @@ export const SceneView = function SceneView(getState) {
   const items3 = [routeState, callback2, callback3, getKey, callback1, callback4, addOptionsGetter];
   const memo = getState.useMemo(() => {
     let state = { routes: null };
-    state = { key: route.key, name: route.name, params: route.params, path: route.path };
-    let items = [state];
+    let items = [{ key: route.key, name: route.name, params: route.params, path: route.path }];
     state.routes = items;
     function addState(state) {
       let first;
@@ -77,11 +74,11 @@ export const SceneView = function SceneView(getState) {
         first = state.routes[0];
       }
       if (first) {
-        let obj = { routes: null };
-        obj = {};
+        const obj = { routes: null };
+        const obj2 = {};
         const merged = Object.assign(first);
-        obj.state = addState(first.state);
-        const items = [obj];
+        obj2.state = addState(first.state);
+        const items = [obj2];
         obj.routes = items;
         let tmp2 = obj;
       } else {
@@ -95,7 +92,7 @@ export const SceneView = function SceneView(getState) {
     }
     let tmp2 = state;
     if (first) {
-      state = {};
+      const obj3 = {};
       let merged = Object.assign(first);
       state = first.state;
       let first1;
@@ -103,19 +100,19 @@ export const SceneView = function SceneView(getState) {
         first1 = state.routes[0];
       }
       if (first1) {
-        const obj1 = { routes: null };
-        const obj2 = {};
+        const obj4 = { routes: null };
+        const obj5 = {};
         const merged1 = Object.assign(first1);
-        obj2.state = addState(first1.state);
-        const items1 = [obj2];
-        obj1.routes = items1;
-        state = obj1;
+        obj5.state = addState(first1.state);
+        const items1 = [obj5];
+        obj4.routes = items1;
+        state = obj4;
       }
-      const obj3 = { routes: null };
-      state.state = state;
-      const items2 = [state];
-      obj3.routes = items2;
-      tmp2 = obj3;
+      const obj6 = { routes: null };
+      obj3.state = state;
+      const items2 = [obj3];
+      obj6.routes = items2;
+      tmp2 = obj6;
     }
     return tmp2;
   }, items2);
@@ -125,28 +122,30 @@ export const SceneView = function SceneView(getState) {
   } else {
     component = screen.component;
   }
-  obj = { value: memo1, children: null };
-  let obj1 = { value: memo, children: null };
-  let obj2 = { name: screen.name, render: null, navigation: null, route: null, children: null };
+  let obj3 = { value: memo1, children: null };
+  let obj4 = { value: memo, children: null };
+  let obj5 = { name: screen.name, render: null, navigation: null, route: null, children: null };
   let children = component;
   if (!component) {
     children = screen.children;
   }
-  obj2.render = children;
-  obj2.navigation = navigation;
-  obj2.route = route;
+  obj5.render = children;
+  obj5.navigation = navigation;
+  obj5.route = route;
   if (undefined !== component) {
-    let obj3 = { navigation, route };
-    let childrenResult = tmp13(component, obj3);
+    let obj6 = { navigation, route };
+    let childrenResult = tmp13(component, obj6);
   } else {
     childrenResult = null;
     if (undefined !== screen.children) {
-      const obj4 = { navigation, route };
-      childrenResult = screen.children(obj4);
+      const obj7 = { navigation, route };
+      childrenResult = screen.children(obj7);
     }
   }
-  obj2.children = childrenResult;
-  obj1.children = setState(route(routeState[6]).EnsureSingleNavigator, { children: setState(route(routeState[7]).StaticContainer, obj2) });
-  obj.children = setState(route(routeState[4]).NavigationFocusedRouteStateContext.Provider, obj1);
-  return setState(route(routeState[5]).NavigationStateContext.Provider, obj);
+  let obj = route(routeState[2]);
+  let obj2 = { key: route.key, options: getState.options, navigation };
+  obj5.children = childrenResult;
+  obj4.children = setState(route(routeState[6]).EnsureSingleNavigator, { children: setState(route(routeState[7]).StaticContainer, obj5) });
+  obj3.children = setState(route(routeState[4]).NavigationFocusedRouteStateContext.Provider, obj4);
+  return setState(route(routeState[5]).NavigationStateContext.Provider, obj3);
 };

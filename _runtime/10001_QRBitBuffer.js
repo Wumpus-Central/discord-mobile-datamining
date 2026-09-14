@@ -27,11 +27,11 @@ QRBitBuffer.prototype = {
     const self = this;
     const rounded = Math.floor(this.length / 8);
     if (this.buffer.length <= rounded) {
-      let buffer = self.buffer;
-      buffer.push(0);
+      const buffer1 = self.buffer;
+      buffer1.push(0);
     }
     if (arg0) {
-      buffer = self.buffer;
+      const buffer = self.buffer;
       buffer[rounded] = buffer[rounded] | 128 >>> self.length % 8;
     }
     self.length = self.length + 1;

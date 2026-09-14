@@ -3,6 +3,8 @@
 // Module 259 (HeadlessJsTaskSupport)
 import _modDef260 from "module_260" /* 260 */;
 
+const require = globalThis.__r;
+
 for (const key10016 in require("module_260")) {
   arg5[key10016] = require("module_260")[key10016];
   continue;

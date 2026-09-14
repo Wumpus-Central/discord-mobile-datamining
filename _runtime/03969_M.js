@@ -1,8 +1,9 @@
 // === Module 3969: M ===
 
 // Module 3969 (M)
-import module_3968 from "module_3968" /* 3968 */;
+import module_3968_mod from "module_3968" /* 3968 */;
 
+let module_3968 = module_3968_mod;
 if (!module_3968) {
   const obj = { default: module_3968 };
   let tmp3 = obj;

@@ -52,12 +52,11 @@ export () => {
       obj = _mod867;
     },
     onRunApplication(onRunApplicationHook) {
-      let arr = closure_0;
       if (closure_0.includes(onRunApplicationHook)) {
         const debug = _mod682.debug;
         debug.log("[AppRegistryIntegration] Callback already registered.");
       } else {
-        arr = arr.push(onRunApplicationHook);
+        closure_0.push(onRunApplicationHook);
       }
     }
   };

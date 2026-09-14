@@ -4,6 +4,8 @@
 import normalizeSnapPoint from "normalizeSnapPoint" /* 6745 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 ({ useCallback: c2, useEffect: c3 } = noop);
 
 export const useScrollableSetter = (scrollableRef, value, scrollableContentOffsetY, value2) => {
@@ -26,11 +28,10 @@ export const useScrollableSetter = (scrollableRef, value, scrollableContentOffse
     animatedScrollableType.value = value;
     isScrollableRefreshable.value = value2;
     isContentHeightFixed.value = false;
-    let obj = normalizeSnapPoint;
-    const findNodeHandleResult = obj.findNodeHandle(scrollableRef.current);
+    const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(scrollableRef.current);
     if (findNodeHandleResult) {
-      obj = { id: findNodeHandleResult, node: scrollableRef };
-      setScrollableRef(obj);
+      const obj2 = { id: findNodeHandleResult, node: scrollableRef };
+      setScrollableRef(obj2);
     } else {
       const _console = console;
       console.warn("Couldn't find the scrollable node handle id!");

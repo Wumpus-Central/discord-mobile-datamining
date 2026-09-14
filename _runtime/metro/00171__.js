@@ -1,7 +1,7 @@
 // === Module 171: ? ===
 
 // Module 171
-import _get from "_get" /* 96 */;
+import _get_mod from "_get" /* 96 */;
 import _createClass from "_createClass" /* 42 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import c2 from "_possibleConstructorReturn" /* 93 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _get = _get_mod;
 class TaskAttributionTiming {
   constructor() {
     self = this;

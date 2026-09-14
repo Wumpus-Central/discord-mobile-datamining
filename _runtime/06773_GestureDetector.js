@@ -11,17 +11,16 @@ import NativeDetector from "NativeDetector" /* 6811 */;
 const jsx = jsxProd.jsx;
 
 export const GestureDetector = function GestureDetector(gesture) {
-  let obj = _mod6774;
-  obj.useEnsureGestureHandlerRootView();
+  _mod6774.useEnsureGestureHandlerRootView();
   if (!(gesture.gesture instanceof _mod6776.ComposedGesture)) {
     if (!(gesture.gesture instanceof _mod6777.BaseGesture)) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(gesture);
       let tmp8 = jsx(NativeDetector.NativeDetector, {});
     }
     return tmp8;
   }
-  obj = {};
   const merged1 = Object.assign(gesture);
   tmp8 = jsx(_mod6779.GestureDetector, {});
+  const obj3 = {};
 };

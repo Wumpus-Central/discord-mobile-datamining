@@ -410,9 +410,9 @@ let tmp2 = obj;
 if (!TimingDefault) {
   let _console = console;
   console.warn("Timing native module is not available, can't set timers.");
-  obj = { callReactNativeMicrotasks: null, queueReactNativeMicrotask: null };
   ({ callReactNativeMicrotasks: obj2.callReactNativeMicrotasks, queueReactNativeMicrotask: obj2.queueReactNativeMicrotask } = obj);
-  tmp2 = obj;
+  tmp2 = { callReactNativeMicrotasks: null, queueReactNativeMicrotask: null };
+  const obj3 = { callReactNativeMicrotasks: null, queueReactNativeMicrotask: null };
 }
 const result = fn(39).default.setReactNativeMicrotasksCallback(obj.callReactNativeMicrotasks);
 global._flushReactNativeMicrotasks = () => obj.callReactNativeMicrotasks();

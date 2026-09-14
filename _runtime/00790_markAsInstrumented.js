@@ -23,7 +23,7 @@ function isInstrumented(__SENTRY_INSTRUMENTED__) {
   }
 }
 function extractOperation(arg0) {
-  obj = arg1;
+  let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
@@ -121,20 +121,19 @@ function instrumentAuthOperation(arg0) {
       name = arg0;
       closure_1 = arg1;
       const args = arg2;
-      let attributes = _mod731;
       let str = "";
       let str2 = "";
       if (flag) {
         str2 = "(admin) ";
       }
-      attributes = { name: "auth " + str2 + name.name, attributes: null };
-      attributes = { [SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
+      let obj2 = { name: "auth " + str2 + name.name, attributes: null };
+      let obj3 = { [SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
       if (flag) {
         str = "admin.";
       }
-      attributes["db.operation"] = "auth." + str + name.name;
-      attributes.attributes = attributes;
-      return attributes.startSpan(attributes, (arg0) => {
+      obj3["db.operation"] = "auth." + str + name.name;
+      obj2.attributes = obj3;
+      return _mod731.startSpan(obj2, (arg0) => {
         closure_0 = arg0;
         const applyResult = Reflect.apply(closure_0, dependencyMap, args);
         const nextPromise = Reflect.apply(closure_0, dependencyMap, args).then((error) => {
@@ -142,11 +141,11 @@ function instrumentAuthOperation(arg0) {
             if (typeof error === "object") {
               if ("error" in error) {
                 if (error.error) {
-                  obj = { code: closure_0(705).SPAN_STATUS_ERROR };
-                  closure_0.setStatus(obj);
-                  obj = { mechanism: { handled: false, type: "auto.db.supabase.auth" } };
-                  closure_0(734).captureException(error.error, obj);
-                  obj = closure_0;
+                  const obj2 = { code: closure_0(705).SPAN_STATUS_ERROR };
+                  closure_0.setStatus(obj2);
+                  const obj3 = { mechanism: { handled: false, type: "auto.db.supabase.auth" } };
+                  closure_0(734).captureException(error.error, obj3);
+                  let obj = closure_0;
                   const obj4 = closure_0(734);
                 }
                 obj.end();
@@ -156,7 +155,7 @@ function instrumentAuthOperation(arg0) {
           }
           obj = closure_0;
           closure_0.setStatus({ code: closure_0(705).SPAN_STATUS_OK });
-          const obj1 = { code: closure_0(705).SPAN_STATUS_OK };
+          const obj5 = { code: closure_0(705).SPAN_STATUS_OK };
         });
         items = [...closure_2];
         return Reflect.apply(closure_0, dependencyMap, args).then((error) => {
@@ -164,11 +163,11 @@ function instrumentAuthOperation(arg0) {
             if (typeof error === "object") {
               if ("error" in error) {
                 if (error.error) {
-                  obj = { code: closure_0(705).SPAN_STATUS_ERROR };
-                  closure_0.setStatus(obj);
-                  obj = { mechanism: { handled: false, type: "auto.db.supabase.auth" } };
-                  closure_0(734).captureException(error.error, obj);
-                  obj = closure_0;
+                  const obj2 = { code: closure_0(705).SPAN_STATUS_ERROR };
+                  closure_0.setStatus(obj2);
+                  const obj3 = { mechanism: { handled: false, type: "auto.db.supabase.auth" } };
+                  closure_0(734).captureException(error.error, obj3);
+                  let obj = closure_0;
                   const obj4 = closure_0(734);
                 }
                 obj.end();
@@ -178,11 +177,11 @@ function instrumentAuthOperation(arg0) {
           }
           obj = closure_0;
           closure_0.setStatus({ code: closure_0(705).SPAN_STATUS_OK });
-          const obj1 = { code: closure_0(705).SPAN_STATUS_OK };
+          const obj5 = { code: closure_0(705).SPAN_STATUS_OK };
         }).catch((error) => {
           closure_0.setStatus({ code: closure_0(705).SPAN_STATUS_ERROR });
           closure_0.end();
-          obj = { code: closure_0(705).SPAN_STATUS_ERROR };
+          const obj = { code: closure_0(705).SPAN_STATUS_ERROR };
           closure_0(734).captureException(error, { mechanism: { handled: false, type: "auto.db.supabase.auth" } });
           throw error;
         }).then.apply(items);
@@ -205,7 +204,7 @@ function instrumentSupabaseClient(supabaseClient) {
     }
     if (!isInstrumented(constructor.prototype.from)) {
       const _Proxy = Proxy;
-      obj = {
+      const obj = {
         apply(arg0, arg1, arg2) {
               let applyResult = Reflect.apply(arg0, arg1, arg2);
               (function instrumentPostgRESTQueryBuilder(constructor) {
@@ -216,7 +215,7 @@ function instrumentSupabaseClient(supabaseClient) {
                       return 1;
                     } else {
                       let _Proxy = Proxy;
-                      obj = {
+                      let obj = {
                         apply(arg0, arg1, arg2) {
                             let applyResult = Reflect.apply(arg0, arg1, arg2);
                             constructor = applyResult.constructor;
@@ -227,7 +226,7 @@ function instrumentSupabaseClient(supabaseClient) {
                             }
                             if (!closure_2_9(constructor.prototype.then)) {
                               const _Proxy = Proxy;
-                              obj = { apply() { ... } };
+                              let obj = { apply() { ... } };
                               const proxy = new Proxy(constructor.prototype.then, obj);
                               constructor.prototype.then = proxy;
                               closure_2_8(constructor.prototype.then);
@@ -306,7 +305,7 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
           }
           if (!isInstrumented(constructor.prototype.from)) {
             let _Proxy = Proxy;
-            obj = {
+            let obj = {
               apply(arg0, arg1, arg2) {
                       let applyResult = Reflect.apply(arg0, arg1, arg2);
                       (function instrumentPostgRESTQueryBuilder(constructor) {
@@ -317,7 +316,7 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
                               return 1;
                             } else {
                               let _Proxy = Proxy;
-                              obj = { apply() { ... } };
+                              let obj = { apply() { ... } };
                               let proxy = new Proxy(tmp.prototype[item10007], obj);
                               tmp.prototype[item10007] = proxy;
                               closure_2_8(tmp.prototype[item10007]);

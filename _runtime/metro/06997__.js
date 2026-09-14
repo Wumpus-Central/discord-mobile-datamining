@@ -2,7 +2,7 @@
 
 // Module 6997
 import _modDef6986 from "module_6986" /* 6986 */;
-import _classCallCheck from "module_6967" /* 6967 */;
+import _classCallCheck_mod from "module_6967" /* 6967 */;
 import _createClass from "module_6968" /* 6968 */;
 import _getPrototypeOf from "module_6988" /* 6988 */;
 import _get from "module_6989" /* 6989 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
 _modDef6986;
 class RVLinearLayoutManagerImpl {
   constructor(arg0, arg1) {
@@ -126,13 +127,13 @@ let items = [
       if (0 === this.layouts.length) {
         return { width: 0, height: 0 };
       } else {
-        let size = self.layouts[self.layouts.length - 1];
+        const size = self.layouts[self.layouts.length - 1];
         if (self.horizontal) {
           let boundedSize = size.x + size.width;
         } else {
           boundedSize = self.boundedSize;
         }
-        size = { width: boundedSize, height: null };
+        const size1 = { width: boundedSize, height: null };
         if (self.horizontal) {
           const tallestItem = self.tallestItem;
           let height;
@@ -146,8 +147,8 @@ let items = [
         } else {
           sum = size.y + size.height;
         }
-        size.height = sum;
-        return size;
+        size1.height = sum;
+        return size1;
       }
     }
   },

@@ -43,7 +43,7 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn, arg1) => {
+    return new _Promise((fn, arg1) => {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -65,14 +65,14 @@ if (!fn) {
         if (done.done) {
           closure_0(done.value);
         } else {
-          let tmp = done.value;
-          closure_0 = tmp;
-          if (!(tmp instanceof Promise)) {
-            tmp = new tmp((fn) => {
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
               fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -86,16 +86,15 @@ if (!fn) {
         fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
+          tmp32 = new tmp3((fn) => {
             fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
 function takeScreenshot() {
@@ -107,8 +106,8 @@ function takeScreenshot() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -120,11 +119,10 @@ function takeScreenshot() {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
-          obj = ScreenshotButton(dependencyMap[7]);
-          obj.hideScreenshotButton();
+          ScreenshotButton(dependencyMap[7]).hideScreenshotButton();
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => closure_1_12(undefined, undefined, undefined, function*() {
             if (c3 === 2) {
@@ -134,8 +132,8 @@ function takeScreenshot() {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -148,8 +146,8 @@ function takeScreenshot() {
                     throw value;
                   } else if (arg0 === 2) {
                     c3 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     closure_1 = tmp2;
                     closure_0 = tmp3;
@@ -157,16 +155,16 @@ function takeScreenshot() {
                     const NATIVE = closure_2_0(closure_2_1[8]).NATIVE;
                     c2 = 1;
                     c3 = 1;
-                    const obj1 = { value: NATIVE.captureScreenshot(), done: false };
-                    return obj1;
+                    const obj4 = { value: NATIVE.captureScreenshot(), done: false };
+                    return obj4;
                   }
                 } else if (arg0 === 1) {
                   c3 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c3 = 3;
-                  const obj2 = { value, done: true };
-                  return obj2;
+                  const obj5 = { value, done: true };
+                  return obj5;
                 } else {
                   closure_128_0 = value;
                   let str2 = "ErrorCapturingScreenshot";
@@ -177,8 +175,7 @@ function takeScreenshot() {
                     }
                   }
                   closure_129_11 = str2;
-                  obj = closure_129_0(closure_129_1[7]);
-                  obj.showFeedbackWidget();
+                  closure_129_0(closure_129_1[7]).showFeedbackWidget();
                   c3 = 3;
                   return { value: "HermesInternal", done: null };
                 }
@@ -245,48 +242,46 @@ let items = [
     key: "render",
     value: function render() {
       const self = this;
-      let obj = ScreenshotButton(1064);
-      const theme = obj.getTheme();
+      const theme = ScreenshotButton(1064).getTheme();
       const merged = Object.assign(Object.assign({}, ScreenshotButton(1066).defaultScreenshotButtonConfiguration), this.props);
-      let obj1 = ScreenshotButton(1067);
+      const obj = ScreenshotButton(1064);
       const styles = this.props.styles;
       let triggerButton;
-      const merged1 = Object.assign({}, obj1.defaultScreenshotButtonStyles(theme).triggerButton);
+      const merged1 = Object.assign({}, ScreenshotButton(1067).defaultScreenshotButtonStyles(theme).triggerButton);
       if (null !== styles) {
         if (undefined !== styles) {
           triggerButton = styles.triggerButton;
         }
       }
       const merged2 = Object.assign(merged1, triggerButton);
-      let tmpResult = ScreenshotButton(1067);
+      const obj2 = ScreenshotButton(1067);
       const styles2 = self.props.styles;
       let triggerText;
-      const merged3 = Object.assign({}, tmpResult.defaultScreenshotButtonStyles(theme).triggerText);
+      const merged3 = Object.assign({}, ScreenshotButton(1067).defaultScreenshotButtonStyles(theme).triggerText);
       if (null !== styles2) {
         if (undefined !== styles2) {
           triggerText = styles2.triggerText;
         }
       }
       const style = Object.assign(merged3, triggerText);
-      tmpResult = ScreenshotButton(1067);
+      const tmpResult = ScreenshotButton(1067);
       const styles3 = self.props.styles;
       let triggerIcon;
-      const merged5 = Object.assign({}, tmpResult.defaultScreenshotButtonStyles(theme).triggerIcon);
+      const merged5 = Object.assign({}, ScreenshotButton(1067).defaultScreenshotButtonStyles(theme).triggerIcon);
       if (null !== styles3) {
         if (undefined !== styles3) {
           triggerIcon = styles3.triggerIcon;
         }
       }
-      obj = { style: merged2, onPress: takeScreenshot, accessibilityLabel: merged.triggerAriaLabel };
-      obj = { source: null, style: null };
-      obj1 = { uri: null };
+      const obj4 = { source: null, style: null };
+      const obj5 = { uri: null };
       const merged6 = Object.assign(merged5, triggerIcon);
       ({ createElement, createElement: createElement2 } = noop);
-      obj1.uri = ScreenshotButton(1068).screenshotIcon;
-      obj.source = obj1;
-      obj.style = merged6;
-      const element2 = createElement2(React5, obj);
-      return <React7 source={null} style={null}>{element2}<React6 style={style} testID="sentry-feedback-screenshot-button">{merged.triggerLabel}</React6></React7>;
+      obj5.uri = ScreenshotButton(1068).screenshotIcon;
+      obj4.source = obj5;
+      obj4.style = merged6;
+      const element2 = createElement2(React5, obj4);
+      return <React7 style={merged2} onPress={takeScreenshot} accessibilityLabel={merged.triggerAriaLabel}>{element2}<React6 style={style} testID="sentry-feedback-screenshot-button">{merged.triggerLabel}</React6></React7>;
     }
   }
 ];

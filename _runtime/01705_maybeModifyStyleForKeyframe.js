@@ -59,21 +59,21 @@ function setElementAnimation(cloneNodeResult, dummyAnimationConfig, arg2) {
       const boundingClientRect = cloneNodeResult.getBoundingClientRect();
       const size = { top: null, left: null, width: null, height: null, scrollOffsets: null };
       ({ top: obj.top, left: obj.left, width: obj.width, height: obj.height } = boundingClientRect);
-      const obj = { scrollTopOffset: 0, scrollLeftOffset: 0 };
+      const obj2 = { scrollTopOffset: 0, scrollLeftOffset: 0 };
       for (let parentElement = cloneNodeResult; parentElement; parentElement = parentElement.parentElement) {
         let tmp3 = 0 !== parentElement.scrollTop;
         if (tmp3) {
-          tmp3 = 0 === obj.scrollTopOffset;
+          tmp3 = 0 === obj2.scrollTopOffset;
         }
         if (tmp3) {
-          obj.scrollTopOffset = parentElement.scrollTop;
+          obj2.scrollTopOffset = parentElement.scrollTop;
         }
-        let tmp5 = 0 !== parentElement.scrollLeft && 0 === obj.scrollLeftOffset;
+        let tmp5 = 0 !== parentElement.scrollLeft && 0 === obj2.scrollLeftOffset;
         if (tmp5) {
-          obj.scrollLeftOffset = parentElement.scrollLeft;
+          obj2.scrollLeftOffset = parentElement.scrollLeft;
         }
       }
-      size.scrollOffsets = obj;
+      size.scrollOffsets = obj2;
       const snapshots = _mod1722.snapshots;
       const result = snapshots.set(cloneNodeResult, size);
     }
@@ -219,7 +219,7 @@ export const getProcessedConfig = function getProcessedConfig(animationWithIniti
     obj.delay = num3;
     if (entering.easingV) {
       const tmp8 = entering.easingV[linear.EasingNameSymbol];
-      let tmpResult = WebEasings;
+      const tmpResult = WebEasings;
       if (tmp9) {
         let easingByName = tmpResult.getEasingByName(tmp8);
       } else {
@@ -227,15 +227,15 @@ export const getProcessedConfig = function getProcessedConfig(animationWithIniti
         if (!maybeGetBezierEasingResult) {
           const logger = _mod1640.logger;
           logger.warn("Selected easing is not currently supported on web. Using linear easing instead.");
-          tmpResult = WebEasings;
-          maybeGetBezierEasingResult = tmpResult.getEasingByName("linear");
+          maybeGetBezierEasingResult = WebEasings.getEasingByName("linear");
+          const tmpResult3 = WebEasings;
         }
         easingByName = maybeGetBezierEasingResult;
       }
       tmp9 = tmp8 in WebEasings.WebEasings;
     } else {
       easingByName = WebEasings.getEasingByName("linear");
-      const tmpResult1 = WebEasings;
+      const tmpResult4 = WebEasings;
     }
     obj.easing = easingByName;
     let callbackV = null;
@@ -275,8 +275,8 @@ export const maybeModifyStyleForKeyframe = function maybeModifyStyleForKeyframe(
   }
 };
 export const saveSnapshot = function saveSnapshot(_componentDOMRef) {
-  let size = _componentDOMRef.getBoundingClientRect();
-  size = { top: size.top, left: size.left, width: size.width, height: size.height, scrollOffsets: null };
+  const size = _componentDOMRef.getBoundingClientRect();
+  const size1 = { top: size.top, left: size.left, width: size.width, height: size.height, scrollOffsets: null };
   const obj = { scrollTopOffset: 0, scrollLeftOffset: 0 };
   for (let parentElement = _componentDOMRef; parentElement; parentElement = parentElement.parentElement) {
     let tmp = 0 !== parentElement.scrollTop;
@@ -291,9 +291,9 @@ export const saveSnapshot = function saveSnapshot(_componentDOMRef) {
       obj.scrollLeftOffset = parentElement.scrollLeft;
     }
   }
-  size.scrollOffsets = obj;
+  size1.scrollOffsets = obj;
   const snapshots = _mod1722.snapshots;
-  const result = snapshots.set(_componentDOMRef, size);
+  const result = snapshots.set(_componentDOMRef, size1);
 };
 export { setElementAnimation };
 export const handleLayoutTransition = function handleLayoutTransition(_componentDOMRef, processedConfig, easingY) {
@@ -317,15 +317,15 @@ export const handleLayoutTransition = function handleLayoutTransition(_component
     ENTRY_EXIT = TransitionType.TransitionType.ENTRY_EXIT;
     tmp4 = require;
   }
-  let tmp4Result = tmp4(1724);
-  ({ dummyTransitionKeyframeName, transitionKeyframeName: processedConfig.animationName } = tmp4Result.TransitionGenerator(ENTRY_EXIT, easingY));
+  const tmp4Result = tmp4(1724);
+  ({ dummyTransitionKeyframeName, transitionKeyframeName: processedConfig.animationName } = tmp4(1724).TransitionGenerator(ENTRY_EXIT, easingY));
   if (ENTRY_EXIT === tmp4(1692).TransitionType.CURVED) {
-    tmp4Result = tmp4(1729);
-    const result = tmp4Result.prepareCurvedTransition(_componentDOMRef, processedConfig, easingY, dummyTransitionKeyframeName);
+    const tmp4Result2 = tmp4(1729);
+    const result = tmp4Result2.prepareCurvedTransition(_componentDOMRef, processedConfig, easingY, dummyTransitionKeyframeName);
     setElementAnimation(result.dummy, result.dummyAnimationConfig);
   }
   setElementAnimation(_componentDOMRef, processedConfig);
-  const TransitionGeneratorResult = tmp4Result.TransitionGenerator(ENTRY_EXIT, easingY);
+  const TransitionGeneratorResult = tmp4(1724).TransitionGenerator(ENTRY_EXIT, easingY);
 };
 export const handleExitingAnimation = function handleExitingAnimation(offsetParent, processedConfig) {
   let firstChild;

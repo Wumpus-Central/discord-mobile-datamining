@@ -10,13 +10,11 @@ const jsx = jsxProd.jsx;
 
 export const Text = function Text(style) {
   const merged = Object.assign(style, Object.assign({ style: 0 }));
-  let obj = Link;
-  const theme = obj.useTheme();
-  obj = {};
+  const theme = Link.useTheme();
+  const obj2 = {};
   ({ colors, fonts } = theme);
   const merged1 = Object.assign(merged);
-  obj = { color: colors.text };
-  const items = [obj, fonts.regular, style.style];
-  obj.style = items;
-  return <Text color={colors.text} />;
+  const items = [{ color: colors.text }, fonts.regular, style.style];
+  obj2.style = items;
+  return <Text />;
 };

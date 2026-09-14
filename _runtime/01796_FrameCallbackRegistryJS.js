@@ -25,15 +25,14 @@ const entry = {
     if (callback) {
       const self = this;
       this.nextCallbackId = this.nextCallbackId + 1;
-      nextCallbackId(1680);
       const fn = function c() {
         const result = FrameCallbackRegistryJS._frameCallbackRegistry.registerFrameCallback(closure_0, nextCallbackId);
       };
-      const obj = { callback, callbackId: this.nextCallbackId };
-      fn.__closure = obj;
+      const obj2 = { callback, callbackId: this.nextCallbackId };
+      fn.__closure = obj2;
       fn.__workletHash = 11361563554462;
       fn.__initData = __initData;
-      obj.runOnUI(fn)();
+      this.nextCallbackId(1680).runOnUI(fn)();
       return this.nextCallbackId;
     } else {
       return -1;

@@ -15,17 +15,16 @@ export const ServerContainer = noop.forwardRef(function ServerContainer(arg0, fn
   }, []);
   value = {};
   if (fn) {
-    value = {
+    const obj2 = {
       getCurrentOptions() {
           return obj.options;
         }
     };
     if (typeof fn === "function") {
-      fn(value);
+      fn(obj2);
     } else {
-      fn.current = value;
+      fn.current = obj2;
     }
   }
-  value = { value: { location: _location }, children: jsx(BaseNavigationContainer.CurrentRenderContext.Provider, { value, children }) };
   return jsx(ServerContext.ServerContext.Provider, { value: { location: _location }, children: jsx(BaseNavigationContainer.CurrentRenderContext.Provider, { value, children }) });
 });

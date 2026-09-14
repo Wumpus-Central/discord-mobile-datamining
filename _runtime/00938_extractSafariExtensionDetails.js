@@ -14,24 +14,24 @@ let items = [
   (str) => {
     const match = str.match(re6);
     if (match) {
-      let obj = { filename: null, function: null };
+      const obj2 = { filename: null, function: null };
       const _HermesInternal2 = HermesInternal;
-      obj.filename = "<data:" + match[2] + ">";
-      obj.function = match[1];
-      return obj;
+      obj2.filename = "<data:" + match[2] + ">";
+      obj2.function = match[1];
+      return obj2;
     } else {
       const match1 = re3.exec(str);
       if (match1) {
         const tmp25 = _slicedToArray(match1, 4);
         let UNKNOWN_FUNCTION3 = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
-        obj = { filename: tmp25[1], function: null, in_app: true };
+        const obj3 = { filename: tmp25[1], function: null, in_app: true };
         if ("<anonymous>" === UNKNOWN_FUNCTION3) {
           UNKNOWN_FUNCTION3 = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
         }
-        obj.function = UNKNOWN_FUNCTION3;
-        obj.lineno = +tmp25[2];
-        obj.colno = +tmp25[3];
-        return obj;
+        obj3.function = UNKNOWN_FUNCTION3;
+        obj3.lineno = +tmp25[2];
+        obj3.colno = +tmp25[3];
+        return obj3;
       } else {
         const match2 = re4.exec(str);
         if (match2) {
@@ -46,15 +46,15 @@ let items = [
             }
             arr = match2[2];
           }
-          let UNKNOWN_FUNCTION = match2[1];
-          if (!UNKNOWN_FUNCTION) {
-            UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
+          let UNKNOWN_FUNCTION1 = match2[1];
+          if (!UNKNOWN_FUNCTION1) {
+            UNKNOWN_FUNCTION1 = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
           }
           if (typeof extractSafariExtensionDetails === "function") {
-            const tmp12 = -1 !== UNKNOWN_FUNCTION.indexOf("safari-extension");
+            const tmp12 = -1 !== UNKNOWN_FUNCTION1.indexOf("safari-extension");
             if (!tmp12) {
-              if (-1 === UNKNOWN_FUNCTION.indexOf("safari-web-extension")) {
-                const items = [UNKNOWN_FUNCTION, tmp11];
+              if (-1 === UNKNOWN_FUNCTION1.indexOf("safari-web-extension")) {
+                const items = [UNKNOWN_FUNCTION1, tmp11];
                 const tmp19 = _slicedToArray(items, 2);
                 let UNKNOWN_FUNCTION2 = tmp19[0];
                 let tmp20;
@@ -65,7 +65,7 @@ let items = [
                 if (match2[4]) {
                   tmp21 = +match2[4];
                 }
-                obj = { filename: tmp19[1], function: null, in_app: true };
+                const obj = { filename: tmp19[1], function: null, in_app: true };
                 if ("<anonymous>" === UNKNOWN_FUNCTION2) {
                   UNKNOWN_FUNCTION2 = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
                 }
@@ -79,8 +79,8 @@ let items = [
                 return obj;
               }
             }
-            if (-1 !== UNKNOWN_FUNCTION.indexOf("@")) {
-              UNKNOWN_FUNCTION = UNKNOWN_FUNCTION.split("@")[0];
+            if (-1 !== UNKNOWN_FUNCTION1.indexOf("@")) {
+              let UNKNOWN_FUNCTION = UNKNOWN_FUNCTION1.split("@")[0];
             } else {
               UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
             }
@@ -120,15 +120,15 @@ let items1 = [
         }
         arr = match[3];
       }
-      let UNKNOWN_FUNCTION = match[1];
-      if (!UNKNOWN_FUNCTION) {
-        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
+      let UNKNOWN_FUNCTION1 = match[1];
+      if (!UNKNOWN_FUNCTION1) {
+        UNKNOWN_FUNCTION1 = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
       }
       if (typeof extractSafariExtensionDetails === "function") {
-        const tmp9 = -1 !== UNKNOWN_FUNCTION.indexOf("safari-extension");
+        const tmp9 = -1 !== UNKNOWN_FUNCTION1.indexOf("safari-extension");
         if (!tmp9) {
-          if (-1 === UNKNOWN_FUNCTION.indexOf("safari-web-extension")) {
-            const items = [UNKNOWN_FUNCTION, tmp5];
+          if (-1 === UNKNOWN_FUNCTION1.indexOf("safari-web-extension")) {
+            const items = [UNKNOWN_FUNCTION1, tmp5];
             const tmp16 = _slicedToArray(items, 2);
             let UNKNOWN_FUNCTION2 = tmp16[0];
             let tmp17;
@@ -153,8 +153,8 @@ let items1 = [
             return obj;
           }
         }
-        if (-1 !== UNKNOWN_FUNCTION.indexOf("@")) {
-          UNKNOWN_FUNCTION = UNKNOWN_FUNCTION.split("@")[0];
+        if (-1 !== UNKNOWN_FUNCTION1.indexOf("@")) {
+          let UNKNOWN_FUNCTION = UNKNOWN_FUNCTION1.split("@")[0];
         } else {
           UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
         }

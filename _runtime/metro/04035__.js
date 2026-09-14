@@ -2,8 +2,8 @@
 
 // Module 4035
 import Parser2 from "Parser" /* 4031 */;
-import module_3967 from "module_3967" /* 3967 */;
-import startOfUTCWeek from "startOfUTCWeek" /* 3728 */;
+import module_3967_mod from "module_3967" /* 3967 */;
+import startOfUTCWeek_mod from "startOfUTCWeek" /* 3728 */;
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -57,6 +57,7 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+let module_3967 = module_3967_mod;
 if (!module_3967) {
   let obj = { default: module_3967 };
   let tmp3 = obj;
@@ -64,9 +65,10 @@ if (!module_3967) {
   tmp3 = module_3967;
 }
 module_3967 = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
 if (!startOfUTCWeek) {
-  obj = { default: startOfUTCWeek };
-  let tmp5 = obj;
+  const obj2 = { default: startOfUTCWeek };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfUTCWeek;
 }
@@ -159,8 +161,7 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-obj = { constructor: { value: LocalWeekYearParser, writable: true, configurable: true } };
-LocalWeekYearParser.prototype = Object.create(prototype, obj);
+LocalWeekYearParser.prototype = Object.create(prototype, { constructor: { value: LocalWeekYearParser, writable: true, configurable: true } });
 if (Parser) {
   _setPrototypeOf(LocalWeekYearParser, Parser);
 }

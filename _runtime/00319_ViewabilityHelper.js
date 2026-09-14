@@ -52,14 +52,14 @@ let items = [
       } else {
         let tmp7 = renderRange;
         if (!renderRange) {
-          let obj = { first: 0, last: itemCount - 1 };
+          const obj = { first: 0, last: itemCount - 1 };
           tmp7 = obj;
         }
         ({ first, last } = tmp7);
         if (last >= itemCount) {
           const _console = console;
           const _JSON = JSON;
-          obj = { renderRange, itemCount };
+          const obj3 = { renderRange, itemCount };
           console.warn(`Invalid render range computing viewability ${JSON.stringify(obj2)}`);
           return [];
         } else {
@@ -203,18 +203,18 @@ let items = [
           let obj = {};
           let merged = Object.assign(tmp12);
           obj.isViewable = false;
-          arr = items.push(obj);
+          let arr2 = items.push(obj);
         }
         continue;
       }
       if (items.length > 0) {
         self._viewableItems = map;
-        obj = { viewableItems: null, changed: null, viewabilityConfig: null };
+        const obj2 = { viewableItems: null, changed: null, viewabilityConfig: null };
         const _Array = Array;
-        obj.viewableItems = Array.from(map.values());
-        obj.changed = items;
-        obj.viewabilityConfig = self._config;
-        fn(obj);
+        obj2.viewableItems = Array.from(map.values());
+        obj2.changed = items;
+        obj2.viewabilityConfig = self._config;
+        fn(obj2);
       }
       tmp8 = _viewableItems[Symbol.iterator]();
     }

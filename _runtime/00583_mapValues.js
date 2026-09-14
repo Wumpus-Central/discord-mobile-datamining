@@ -3,6 +3,8 @@
 // Module 583 (mapValues)
 import baseAssignValue from "baseAssignValue" /* 668 */;
 
+const require = globalThis.__r;
+
 
 export default function mapValues(arg0, arg1) {
   _require = arg1;

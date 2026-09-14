@@ -2,7 +2,7 @@
 
 // Module 4036
 import Parser2 from "Parser" /* 4031 */;
-import startOfUTCISOWeek from "startOfUTCISOWeek" /* 3962 */;
+import startOfUTCISOWeek_mod from "startOfUTCISOWeek" /* 3962 */;
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -56,6 +56,7 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+let startOfUTCISOWeek = startOfUTCISOWeek_mod;
 if (!startOfUTCISOWeek) {
   let obj = { default: startOfUTCISOWeek };
   let tmp3 = obj;
@@ -151,8 +152,7 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-obj = { constructor: { value: ISOWeekYearParser, writable: true, configurable: true } };
-ISOWeekYearParser.prototype = Object.create(prototype, obj);
+ISOWeekYearParser.prototype = Object.create(prototype, { constructor: { value: ISOWeekYearParser, writable: true, configurable: true } });
 if (Parser) {
   _setPrototypeOf(ISOWeekYearParser, Parser);
 }

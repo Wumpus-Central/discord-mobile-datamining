@@ -405,27 +405,27 @@ class Digest {
     if (!global) {
       obj = {};
     }
-    obj = this;
+    obj1 = this;
     this.config = obj;
-    obj.mode = this.config.mode || "auto";
+    obj1.mode = this.config.mode || "auto";
     call = TDigest.call;
-    num = "cont" === obj.mode;
+    num = "cont" === obj1.mode;
     tmp = TDigest;
     if (num) {
       num = global.delta;
     }
     if (typeof call === "unknown") {
-      obj = {};
+      obj1 = {};
       flag = false;
-      obj.discrete = false === num;
+      obj1.discrete = false === num;
       if (!num) {
         num = 0.01;
       }
-      obj.delta = num;
+      obj1.delta = num;
       num2 = 25;
-      obj.K = 25;
+      obj1.K = 25;
       num3 = 1.1;
-      obj.CX = 1.1;
+      obj1.CX = 1.1;
       tmp2 = closure_0;
       tmp3 = closure_1;
       tmp4 = compare_centroid_means;
@@ -433,16 +433,16 @@ class Digest {
       tmp6 = new.target;
       rBTree = new closure_0(closure_1[0]).RBTree(compare_centroid_means);
       tmp8 = rBTree;
-      obj.centroids = rBTree;
+      obj1.centroids = rBTree;
       num4 = 0;
-      obj.nreset = 0;
-      resetResult = obj.reset();
+      obj1.nreset = 0;
+      resetResult = obj1.reset();
     } else {
-      callResult = call(obj, num);
+      callResult = call(obj1, num);
     }
-    obj.digest_ratio = obj.config.ratio || 0.9;
-    obj.digest_thresh = obj.config.thresh || 1000;
-    obj.n_unique = 0;
+    obj1.digest_ratio = obj1.config.ratio || 0.9;
+    obj1.digest_thresh = obj1.config.thresh || 1000;
+    obj1.n_unique = 0;
     return;
   }
   push(arg0) {

@@ -50,12 +50,13 @@ isNativeAnimatedEvent.__initData = { code: "function isNativeAnimatedEvent_Pnpm_
 const __initData = { code: "function pnpm_eventUtilsTs7(current,previous){const{diffCalculator}=this.__closure;const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;}" };
 function getChangeEventCalculator(diffCalculator) {
   const fn = function t(handlerData, handlerData2) {
-    handlerData = null;
+    handlerData = handlerData.handlerData;
+    let handlerData1 = null;
     if (handlerData2) {
-      handlerData = handlerData2.handlerData;
+      handlerData1 = handlerData2.handlerData;
     }
     const merged = Object.assign(handlerData);
-    const merged1 = Object.assign(diffCalculator(handlerData, handlerData));
+    const merged1 = Object.assign(diffCalculator(handlerData, handlerData1));
     handlerData.handlerData = {};
     return handlerData;
   };

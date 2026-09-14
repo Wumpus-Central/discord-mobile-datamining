@@ -1,6 +1,8 @@
 // === Module 6861: ? ===
 
 // Module 6861
+const require = globalThis.__r;
+
 for (const key10013 in require("module_6862")) {
   arg5[key10013] = require("module_6862")[key10013];
   continue;

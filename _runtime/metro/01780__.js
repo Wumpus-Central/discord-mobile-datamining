@@ -1,6 +1,8 @@
 // === Module 1780: ? ===
 
 // Module 1780
+const require = globalThis.__r;
+
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };
@@ -8,8 +10,7 @@ const __initData = { code: "function pnpm_useAnimatedGestureHandlerTs1(e){const{
 
 export const useAnimatedGestureHandler = function useAnimatedGestureHandler(handlers, items10) {
   _require = handlers;
-  let obj = require("module_1781");
-  const handler = obj.useHandler(handlers, items10);
+  const handler = require("module_1781").useHandler(handlers, items10);
   context = handler.context;
   const useWeb = handler.useWeb;
   const fn = function s(nativeEvent) {
@@ -63,8 +64,7 @@ export const useAnimatedGestureHandler = function useAnimatedGestureHandler(hand
       handlers.onFinish(nativeEvent, context, tmp26);
     }
   };
-  obj = { useWeb, EVENT_TYPE: useWeb, handlers, context };
-  fn.__closure = obj;
+  fn.__closure = { useWeb, EVENT_TYPE: useWeb, handlers, context };
   fn.__workletHash = 2401621621985;
   fn.__initData = __initData;
   let event = fn;

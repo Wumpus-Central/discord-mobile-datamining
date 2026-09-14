@@ -11,8 +11,7 @@ function NativeStackNavigator(arg0) {
   let state;
   let navigation;
   let context;
-  let obj = state(navigation[2]);
-  const navigationBuilder = obj.useNavigationBuilder(state(navigation[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
+  const navigationBuilder = state(navigation[2]).useNavigationBuilder(state(navigation[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
   state = navigationBuilder.state;
   navigation = navigationBuilder.navigation;
   ({ describe, descriptors, NavigationContent } = navigationBuilder);
@@ -48,15 +47,15 @@ function NativeStackNavigator(arg0) {
     }
     return addListenerResult;
   }, items);
-  obj = { children: null };
-  obj = {};
+  const obj2 = { children: null };
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.state = state;
-  obj.navigation = navigation;
-  obj.descriptors = descriptors;
-  obj.describe = describe;
-  obj.children = jsx(state(navigation[3]).NativeStackView, {});
-  return <NavigationContent />;
+  obj3.state = state;
+  obj3.navigation = navigation;
+  obj3.descriptors = descriptors;
+  obj3.describe = describe;
+  obj2.children = jsx(state(navigation[3]).NativeStackView, {});
+  return <NavigationContent>{null}</NavigationContent>;
 }
 const jsx = fn(21).jsx;
 const Link = fn(1484);

@@ -56,7 +56,7 @@ export default function baseUniq(arg0, fn, arg2) {
             if (fn) {
               let arr = items1.push(tmp9);
             }
-            arr = items.push(num3);
+            let arr2 = items.push(num3);
           } else {
             while (items1[diff] !== tmp9) {
               let tmp15 = +diff;
@@ -71,9 +71,9 @@ export default function baseUniq(arg0, fn, arg2) {
       }
       if (!tmpResult(items1, tmp9, arg2)) {
         if (items1 !== items) {
-          let arr1 = items1.push(tmp9);
+          let arr6 = items1.push(tmp9);
         }
-        let arr2 = items.push(num3);
+        let arr7 = items.push(num3);
       }
     }
   }

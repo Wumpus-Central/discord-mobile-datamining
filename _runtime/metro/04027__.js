@@ -3,14 +3,16 @@
 // Module 4027
 import throwProtectedError from "throwProtectedError" /* 3972 */;
 import parsers from "parsers" /* 4029 */;
-import code from "module_3971" /* 3971 */;
-import subMilliseconds from "subMilliseconds" /* 3958 */;
-import _typeof from "module_3725" /* 3725 */;
-import assign from "assign" /* 3975 */;
-import dateLongFormatter from "dateLongFormatter" /* 3970 */;
-import module_3888 from "module_3888" /* 3888 */;
-import module_3729 from "module_3729" /* 3729 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import code_mod from "module_3971" /* 3971 */;
+import subMilliseconds_mod from "subMilliseconds" /* 3958 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import assign_mod from "assign" /* 3975 */;
+import dateLongFormatter_mod from "dateLongFormatter" /* 3970 */;
+import module_3888_mod from "module_3888" /* 3888 */;
+import module_3729_mod from "module_3729" /* 3729 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+
+const require = globalThis.__r;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -82,25 +84,24 @@ function _createForOfIteratorHelper(str, arg1) {
     }
   }
   if (!Array.isArray(str)) {
-    let arr;
+    let arr2;
     if (str) {
       if (typeof str === "string") {
         const _Array3 = Array;
-        let array = new Array(length2);
+        const array = new Array(length2);
         let num5 = 0;
-        arr = array;
+        arr2 = array;
         if (0 < str.length) {
           do {
             array[num5] = str[num5];
             num5 = num5 + 1;
-            arr = array;
+            arr2 = array;
           } while (num5 < length2);
         }
       } else {
         const _Object = Object;
         const call = toString.call;
-        arr = typeof call === "unknown" ? toString() : call(str);
-        const substr = arr.slice(8, -1);
+        const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
         let name = substr;
         if (tmp3) {
           name = str.constructor.name;
@@ -114,14 +115,14 @@ function _createForOfIteratorHelper(str, arg1) {
           if ("Set" !== name) {
             if ("Arguments" === name) {
               const _Array = Array;
-              array = new Array(length);
+              const array2 = new Array(length);
               let num3 = 0;
-              arr = array;
+              arr2 = array2;
               if (0 < str.length) {
                 do {
-                  array[num3] = str[num3];
+                  array2[num3] = str[num3];
                   num3 = num3 + 1;
-                  arr = array;
+                  arr2 = array2;
                 } while (num3 < length);
               }
             } else {
@@ -130,12 +131,13 @@ function _createForOfIteratorHelper(str, arg1) {
           }
         }
         const _Array2 = Array;
-        arr = Array.from(str);
+        arr2 = Array.from(str);
+        const arr = typeof call === "unknown" ? toString() : call(str);
         tmp3 = "Object" === substr && "Object".constructor;
       }
     }
-    closure_1 = arr;
-    if (!arr) {
+    closure_1 = arr2;
+    if (!arr2) {
       const _TypeError = TypeError;
       const typeError = new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
       throw typeError;
@@ -150,7 +152,7 @@ function _createForOfIteratorHelper(str, arg1) {
       return;
     }
   }
-  obj = {
+  return {
     s: F,
     n() {
       if (closure_2 >= closure_0.length) {
@@ -167,8 +169,8 @@ function _createForOfIteratorHelper(str, arg1) {
     },
     f: F
   };
-  return obj;
 }
+let code = code_mod;
 if (!code) {
   let obj = { default: code };
   let tmp3 = obj;
@@ -176,51 +178,58 @@ if (!code) {
   tmp3 = code;
 }
 code = tmp3;
+let subMilliseconds = subMilliseconds_mod;
 if (!subMilliseconds) {
-  obj = { default: subMilliseconds };
-  let tmp5 = obj;
+  let obj2 = { default: subMilliseconds };
+  let tmp5 = obj2;
 } else {
   tmp5 = subMilliseconds;
 }
 subMilliseconds = tmp5;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp7 = obj;
+  let obj3 = { default: _typeof };
+  let tmp7 = obj3;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
+let assign = assign_mod;
 if (!assign) {
-  let obj1 = { default: assign };
-  let tmp9 = obj1;
+  let obj4 = { default: assign };
+  let tmp9 = obj4;
 } else {
   tmp9 = assign;
 }
 assign = tmp9;
+let dateLongFormatter = dateLongFormatter_mod;
 if (!dateLongFormatter) {
-  let obj2 = { default: dateLongFormatter };
-  let tmp11 = obj2;
+  let obj5 = { default: dateLongFormatter };
+  let tmp11 = obj5;
 } else {
   tmp11 = dateLongFormatter;
 }
 dateLongFormatter = tmp11;
+let module_3888 = module_3888_mod;
 if (!module_3888) {
-  const obj3 = { default: module_3888 };
-  let tmp13 = obj3;
+  const obj6 = { default: module_3888 };
+  let tmp13 = obj6;
 } else {
   tmp13 = module_3888;
 }
 module_3888 = tmp13;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  const obj4 = { default: module_3729 };
-  let tmp15 = obj4;
+  let obj7 = { default: module_3729 };
+  let tmp15 = obj7;
 } else {
   tmp15 = module_3729;
 }
 module_3729 = tmp15;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj5 = { default: requiredArgs };
-  let tmp17 = obj5;
+  const obj8 = { default: requiredArgs };
+  let tmp17 = obj8;
 } else {
   tmp17 = requiredArgs;
 }
@@ -239,17 +248,17 @@ export default function parse(arg0, arg1, arg2, locale) {
   closure_2 = String(arg0);
   const str = String(arg1);
   const defaultOptions = require("module_3730").getDefaultOptions();
-  locale = undefined;
+  let locale1;
   if (null != locale) {
-    locale = locale.locale;
+    locale1 = locale.locale;
   }
-  if (null === locale) {
-    locale = defaultOptions.locale;
+  if (null === locale1) {
+    locale1 = defaultOptions.locale;
   }
-  if (null === locale) {
-    locale = closure_2.default;
+  if (null === locale1) {
+    locale1 = closure_2.default;
   }
-  if (locale.match) {
+  if (locale1.match) {
     let prop;
     if (null != locale) {
       prop = locale.firstWeekContainsDate;
@@ -350,14 +359,14 @@ export default function parse(arg0, arg1, arg2, locale) {
           if (defaultResult2 <= 6) {
             if ("" === str) {
               if ("" === closure_2) {
-                let defaultResult3 = locale.default(arg2);
+                let defaultResult3 = locale1.default(arg2);
               } else {
                 const _Date4 = Date;
                 defaultResult3 = new Date(NaN);
               }
               return defaultResult3;
             } else {
-              let obj = { firstWeekContainsDate: defaultResult1, weekStartsOn: defaultResult2, locale };
+              let obj4 = { firstWeekContainsDate: defaultResult1, weekStartsOn: defaultResult2, locale: locale1 };
               const dateToSystemTimezoneSetter = new tmp2(4028).DateToSystemTimezoneSetter();
               const items = [dateToSystemTimezoneSetter];
               const match = str.match(closure_13);
@@ -365,7 +374,7 @@ export default function parse(arg0, arg1, arg2, locale) {
                 const first = item[0];
                 let tmp2 = item;
                 if (first in dateLongFormatter.default) {
-                  tmp2 = dateLongFormatter.default[first](item, locale.formatLong);
+                  tmp2 = dateLongFormatter.default[first](item, locale1.formatLong);
                 }
                 return tmp2;
               });
@@ -387,7 +396,7 @@ export default function parse(arg0, arg1, arg2, locale) {
                   if (!tmp10) {
                     throwProtectedError.throwProtectedError(str, str, closure_0);
                   }
-                  obj = parsers.parsers[str2];
+                  const obj = parsers.parsers[iter2.value[0]];
                   if (obj) {
                     const incompatibleTokens = obj.incompatibleTokens;
                     const _Array = Array;
@@ -414,18 +423,18 @@ export default function parse(arg0, arg1, arg2, locale) {
                         throw rangeError1;
                       }
                     }
-                    obj = { token: str2, fullToken: str };
-                    closure_8.push(obj);
-                    const runResult = obj.run(rest, str, locale.match, obj);
+                    const obj2 = { token: str2, fullToken: str };
+                    closure_8.push(obj2);
+                    const runResult = obj.run(rest, str, locale1.match, obj4);
                     if (runResult) {
                       items.push(runResult.setter);
                       rest = runResult.rest;
                     } else {
-                      obj = { v: null };
+                      const obj3 = { v: null };
                       const _Date2 = Date;
                       const date = new Date(NaN);
-                      obj.v = date;
-                      return obj;
+                      obj3.v = date;
+                      return obj3;
                     }
                   } else if (str2.match(re17)) {
                     const _RangeError = RangeError;
@@ -441,11 +450,11 @@ export default function parse(arg0, arg1, arg2, locale) {
                       }
                     }
                     if (0 !== rest.indexOf(str5)) {
-                      const obj1 = { v: null };
+                      obj4 = { v: null };
                       const _Date = Date;
                       const date1 = new Date(NaN);
-                      obj1.v = date1;
-                      return obj1;
+                      obj4.v = date1;
+                      return obj4;
                     } else {
                       rest = rest.slice(str5.length);
                     }
@@ -479,7 +488,7 @@ export default function parse(arg0, arg1, arg2, locale) {
                   return found.sort((subPriority, subPriority2) => subPriority2.subPriority - subPriority.subPriority);
                 });
                 const mapped3 = mapped2.map((item) => item[0]);
-                const defaultResult4 = locale.default(arg2);
+                const defaultResult4 = locale1.default(arg2);
                 const _isNaN = isNaN;
                 if (isNaN(defaultResult4.getTime())) {
                   let _Date2 = Date;
@@ -487,7 +496,7 @@ export default function parse(arg0, arg1, arg2, locale) {
                   return date1;
                 } else {
                   let defaultResult5 = str.default(defaultResult4, items.default(defaultResult4));
-                  obj = {};
+                  const obj5 = {};
                   const obj7 = _createForOfIteratorHelper(mapped3);
                   try {
                     obj7.s();
@@ -495,13 +504,13 @@ export default function parse(arg0, arg1, arg2, locale) {
                     let iter4 = iter3;
                     if (!iter3.done) {
                       value = iter4.value;
-                      while (value.validate(defaultResult5, obj)) {
-                        let result = value.set(defaultResult5, obj, obj);
+                      while (value.validate(defaultResult5, obj4)) {
+                        let result = value.set(defaultResult5, obj5, obj4);
                         let tmp55 = result;
                         let _Array = Array;
                         if (Array.isArray(result)) {
                           defaultResult5 = tmp55[0];
-                          let defaultResult6 = iter2.default(obj, tmp55[1]);
+                          let defaultResult6 = iter2.default(obj5, tmp55[1]);
                         } else {
                           defaultResult5 = tmp55;
                         }

@@ -33,58 +33,59 @@ const entry = {
   key: "clone",
   value: function clone() {
     const self = this;
-    let obj = Object.create(Scope.prototype);
-    _classCallCheck(obj, Scope);
-    obj._notifyingListeners = false;
-    obj._scopeListeners = [];
-    obj._eventProcessors = [];
-    obj._breadcrumbs = [];
-    obj._attachments = [];
-    obj._user = {};
-    obj._tags = {};
-    obj._attributes = {};
-    obj._extra = {};
-    obj._contexts = {};
-    obj._sdkProcessingMetadata = {};
-    obj = { traceId: null, sampleRand: null };
-    let obj1 = Scope(694);
-    obj.traceId = obj1.generateTraceId();
-    let obj2 = Scope(696);
-    obj.sampleRand = obj2.safeMathRandom();
-    obj._propagationContext = obj;
+    const obj4 = Object.create(Scope.prototype);
+    _classCallCheck(obj4, Scope);
+    obj4._notifyingListeners = false;
+    obj4._scopeListeners = [];
+    obj4._eventProcessors = [];
+    obj4._breadcrumbs = [];
+    obj4._attachments = [];
+    obj4._user = {};
+    obj4._tags = {};
+    obj4._attributes = {};
+    obj4._extra = {};
+    obj4._contexts = {};
+    obj4._sdkProcessingMetadata = {};
+    const obj = { traceId: Scope(694).generateTraceId(), sampleRand: null };
+    const obj2 = Scope(694);
+    obj.sampleRand = Scope(696).safeMathRandom();
+    obj4._propagationContext = obj;
     const items = [...this._breadcrumbs];
-    obj._breadcrumbs = items;
-    obj = {};
+    obj4._breadcrumbs = items;
     const merged = Object.assign(this._tags);
-    obj._tags = obj;
-    obj1 = {};
+    obj4._tags = {};
     const merged1 = Object.assign(this._attributes);
-    obj._attributes = obj1;
-    obj2 = {};
+    obj4._attributes = {};
     const merged2 = Object.assign(this._extra);
-    obj._extra = obj2;
+    obj4._extra = {};
     const merged3 = Object.assign(this._contexts);
-    obj._contexts = {};
+    obj4._contexts = {};
     if (this._contexts.flags) {
-      const obj4 = { values: null };
+      const obj9 = { values: null };
       const items1 = [];
       HermesBuiltin.arraySpread(self._contexts.flags.values, 0);
-      obj4.values = items1;
-      obj._contexts.flags = obj4;
+      obj9.values = items1;
+      obj4._contexts.flags = obj9;
     }
     ({ _user: tmp._user, _level: tmp._level, _session: tmp._session, _transactionName: tmp._transactionName, _fingerprint: tmp._fingerprint } = self);
     const items2 = [...self._eventProcessors];
-    obj._eventProcessors = items2;
-    obj._attachments = [...self._attachments];
+    obj4._eventProcessors = items2;
+    obj4._attachments = [...self._attachments];
     const merged4 = Object.assign(self._sdkProcessingMetadata);
-    obj._sdkProcessingMetadata = {};
+    obj4._sdkProcessingMetadata = {};
     const merged5 = Object.assign(self._propagationContext);
-    obj._propagationContext = {};
+    obj4._propagationContext = {};
     ({ _client: tmp._client, _lastEventId: tmp._lastEventId } = self);
-    Scope(709);
+    const obj10 = {};
+    const obj11 = {};
+    const obj3 = Scope(696);
+    const obj5 = {};
+    const obj6 = {};
+    const obj7 = {};
+    const obj8 = {};
     const tmp3Result = Scope(709);
-    tmp3Result._setSpanForScope(obj, tmp3Result._getSpanForScope(self));
-    return obj;
+    tmp3Result._setSpanForScope(obj4, Scope(709)._getSpanForScope(self));
+    return obj4;
   }
 };
 let items = [
@@ -132,7 +133,7 @@ let items = [
     key: "setUser",
     value: function setUser(user) {
       if (!user) {
-        user = { email: "Array", id: "call", ip_address: "borderRadius", username: "assign" };
+        user = { email: "r", id: "accessible", ip_address: "to", username: "variant" };
       }
       const self = this;
       this._user = user;
@@ -285,10 +286,10 @@ let items = [
         if (obj instanceof Scope) {
           let scopeData = obj.getScopeData();
         } else {
-          let obj1 = Scope(692);
-          if (obj1.isPlainObject(obj)) {
+          if (obj2.isPlainObject(obj)) {
             scopeData = fn;
           }
+          obj2 = Scope(692);
         }
         if (!scopeData) {
           scopeData = {};
@@ -298,22 +299,22 @@ let items = [
           fingerprint = [];
         }
         const propagationContext = scopeData.propagationContext;
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(self._tags);
         const merged1 = Object.assign(tags);
-        self._tags = obj;
-        obj = {};
+        self._tags = obj3;
+        const obj4 = {};
         const merged2 = Object.assign(self._attributes);
         const merged3 = Object.assign(attributes);
-        self._attributes = obj;
-        obj1 = {};
+        self._attributes = obj4;
+        const obj5 = {};
         const merged4 = Object.assign(self._extra);
         const merged5 = Object.assign(extra);
-        self._extra = obj1;
-        const obj2 = {};
+        self._extra = obj5;
+        const obj6 = {};
         const merged6 = Object.assign(self._contexts);
         const merged7 = Object.assign(contexts);
-        self._contexts = obj2;
+        self._contexts = obj6;
         let length = user;
         if (user) {
           const _Object = Object;
@@ -340,15 +341,15 @@ let items = [
   {
     key: "clear",
     value: function clear() {
-      let obj = { _breadcrumbs: [], _tags: {}, _attributes: {}, _extra: {}, _user: {}, _contexts: {}, _level: undefined, _transactionName: undefined, _fingerprint: undefined, _session: undefined };
+      const obj = { _breadcrumbs: [], _tags: {}, _attributes: {}, _extra: {}, _user: {}, _contexts: {}, _level: undefined, _transactionName: undefined, _fingerprint: undefined, _session: undefined };
       Scope(709)._setSpanForScope(obj, undefined);
       obj._attachments = [];
-      obj = { traceId: null, sampleRand: null };
+      const obj3 = { traceId: null, sampleRand: null };
       const obj2 = Scope(709);
-      obj.traceId = Scope(694).generateTraceId();
+      obj3.traceId = Scope(694).generateTraceId();
       const obj4 = Scope(694);
-      obj.sampleRand = Scope(696).safeMathRandom();
-      const result = obj.setPropagationContext(obj);
+      obj3.sampleRand = Scope(696).safeMathRandom();
+      const result = obj.setPropagationContext(obj3);
       const result1 = obj._notifyScopeListeners();
       return obj;
     }
@@ -450,18 +451,18 @@ let items = [
         event_id = event_id.event_id;
       }
       if (!event_id) {
-        let obj = Scope(695);
-        event_id = obj.uuid4();
+        event_id = Scope(695).uuid4();
+        const obj = Scope(695);
       }
       const self = this;
       if (this._client) {
         const _Error = Error;
         const error = new Error("Sentry syntheticException");
         const _client = self._client;
-        obj = { originalException, syntheticException: error };
+        const obj2 = { originalException, syntheticException: error };
         const merged = Object.assign(event_id);
-        obj.event_id = event_id;
-        _client.captureException(originalException, obj, self);
+        obj2.event_id = event_id;
+        _client.captureException(originalException, obj2, self);
         return event_id;
       } else {
         if (Scope(688).DEBUG_BUILD) {
@@ -480,8 +481,8 @@ let items = [
         event_id = event_id.event_id;
       }
       if (!event_id) {
-        let obj = Scope(695);
-        event_id = obj.uuid4();
+        event_id = Scope(695).uuid4();
+        const obj = Scope(695);
       }
       const self = this;
       if (this._client) {
@@ -494,10 +495,10 @@ let items = [
           syntheticException = new Error(originalException);
         }
         const _client = self._client;
-        obj = { originalException, syntheticException };
+        const obj2 = { originalException, syntheticException };
         const merged = Object.assign(event_id);
-        obj.event_id = event_id;
-        _client.captureMessage(originalException, arg1, obj, self);
+        obj2.event_id = event_id;
+        _client.captureMessage(originalException, arg1, obj2, self);
         return event_id;
       } else {
         if (Scope(688).DEBUG_BUILD) {
@@ -516,16 +517,16 @@ let items = [
         event_id = event_id.event_id;
       }
       if (!event_id) {
-        let obj = Scope(695);
-        event_id = obj.uuid4();
+        event_id = Scope(695).uuid4();
+        const obj = Scope(695);
       }
       const self = this;
       if (this._client) {
         const _client = self._client;
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(event_id);
-        obj.event_id = event_id;
-        _client.captureEvent(arg0, obj, self);
+        obj2.event_id = event_id;
+        _client.captureEvent(arg0, obj2, self);
       } else if (Scope(688).DEBUG_BUILD) {
         const debug = Scope(689).debug;
         debug.warn("No client configured on scope - will not capture event!");

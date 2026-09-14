@@ -70,12 +70,12 @@ export default function processTransform(str) {
               let _HermesInternal = HermesInternal;
               let arr = items1.push("" + NumberResult1 + "%");
             } else {
-              arr = items1.push(NumberResult1);
+              let arr2 = items1.push(NumberResult1);
             }
             match3 = regExp1.exec(str);
           }
           if (1 === items1.length) {
-            let arr1 = items1.push(0);
+            let arr3 = items1.push(0);
           }
           let entry4 = { key: "translate", value: items1 };
           entry1 = entry4;
@@ -84,7 +84,7 @@ export default function processTransform(str) {
         if (undefined !== value) {
           let obj = {};
           obj[tmp15] = value;
-          let arr2 = items.push(obj);
+          let arr4 = items.push(obj);
         }
         match = regExp.exec(str);
         tmp = items;

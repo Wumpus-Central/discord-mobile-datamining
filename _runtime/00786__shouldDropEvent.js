@@ -83,14 +83,14 @@ function _shouldDropEvent(message, message2) {
       const exception = message2.exception;
       let first;
       if (exception != null) {
-        let values = exception.values;
+        const values = exception.values;
         if (values != null) {
           first = values[0];
         }
       }
       const exception2 = message.exception;
       if (exception2 != null) {
-        values = exception2.values;
+        const values2 = exception2.values;
       }
       let flag3 = false;
       if (first) {

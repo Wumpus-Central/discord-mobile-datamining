@@ -1,27 +1,30 @@
 // === Module 3914: differenceInCalendarWeeks ===
 
 // Module 3914 (differenceInCalendarWeeks)
-import startOfWeek from "startOfWeek" /* 3884 */;
-import module_3888 from "module_3888" /* 3888 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import startOfWeek_mod from "startOfWeek" /* 3884 */;
+import module_3888_mod from "module_3888" /* 3888 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let startOfWeek = startOfWeek_mod;
 if (!startOfWeek) {
-  let obj = { default: startOfWeek };
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = startOfWeek;
 }
 startOfWeek = tmp3;
+let module_3888 = module_3888_mod;
 if (!module_3888) {
-  obj = { default: module_3888 };
-  let tmp5 = obj;
+  const obj2 = { default: module_3888 };
+  let tmp5 = obj2;
 } else {
   tmp5 = module_3888;
 }
 module_3888 = tmp5;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }

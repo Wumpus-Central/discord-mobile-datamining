@@ -92,7 +92,7 @@ function advanceTimers(arg0) {
         let tmp13 = pop(closure_7);
         first.sortIndex = first.expirationTime;
         let length = closure_6.length;
-        closure_6.push(first);
+        let arr2 = closure_6.push(first);
         arr = closure_7;
         if (0 < length) {
           while (true) {
@@ -145,7 +145,7 @@ function handleTimeout(arg0) {
       }
       if (null !== first1) {
         closure_0 = handleTimeout;
-        closure_22 = _setTimeout(() => {
+        closure_22 = _setTimeout1(() => {
           closure_0(fn());
         }, first1.startTime - arg0);
       }
@@ -170,7 +170,7 @@ function performWorkUntilDeadline() {
       c12 = false;
       if (c13) {
         c13 = false;
-        _clearTimeout(c22);
+        _clearTimeout1(c22);
         c22 = -1;
       }
       c11 = true;
@@ -248,7 +248,7 @@ function performWorkUntilDeadline() {
 }
 function requestHostTimeout(handleTimeout, arg1) {
   closure_0 = handleTimeout;
-  closure_22 = _setTimeout(() => {
+  closure_22 = _setTimeout1(() => {
     closure_0(fn());
   }, arg1);
 }
@@ -272,27 +272,27 @@ if (typeof performance === "object") {
   let c12 = false;
   let c13 = false;
   let c14 = false;
-  let _setTimeout = setTimeout;
-  _setTimeout = null;
+  const _setTimeout = setTimeout;
+  let _setTimeout1 = null;
   if (typeof setTimeout === "function") {
-    _setTimeout = setTimeout;
+    _setTimeout1 = setTimeout;
   }
-  let _clearTimeout = clearTimeout;
-  _clearTimeout = null;
+  const _clearTimeout = clearTimeout;
+  let _clearTimeout1 = null;
   if (typeof clearTimeout === "function") {
-    _clearTimeout = clearTimeout;
+    _clearTimeout1 = clearTimeout;
   }
-  let _setImmediate = setImmediate;
-  _setImmediate = null;
+  const _setImmediate = setImmediate;
+  let _setImmediate1 = null;
   if (typeof setImmediate !== "undefined") {
-    _setImmediate = setImmediate;
+    _setImmediate1 = setImmediate;
   }
   let c21 = false;
   let c22 = -1;
   let closure_23 = -1;
-  if (typeof _setImmediate === "function") {
+  if (typeof _setImmediate1 === "function") {
     function T() {
-      _setImmediate(performWorkUntilDeadline);
+      _setImmediate1(performWorkUntilDeadline);
     }
   } else {
     if (typeof globalThis.MessageChannel !== "undefined") {
@@ -304,7 +304,7 @@ if (typeof performance === "object") {
       };
     } else {
       T = function T() {
-        _setTimeout(performWorkUntilDeadline, 0);
+        _setTimeout1(performWorkUntilDeadline, 0);
       };
     }
   }
@@ -360,11 +360,11 @@ if (typeof performance === "object") {
       if (tmp2 > diff1) {
         obj.sortIndex = tmp2;
         let length2 = closure_7.length;
-        let arr = closure_7.push(obj);
+        closure_7.push(obj);
         if (0 < length2) {
           while (true) {
             let tmp15 = length2 - 1 >>> 1;
-            let tmp16 = arr[tmp15];
+            let tmp16 = closure_7[tmp15];
             let diff = tmp16.sortIndex - obj.sortIndex;
             if (0 === diff) {
               diff = tmp16.id - obj.id;
@@ -372,8 +372,8 @@ if (typeof performance === "object") {
             if (0 >= diff) {
               break;
             } else {
-              arr[tmp15] = obj;
-              arr[length2] = tmp16;
+              closure_7[tmp15] = obj;
+              closure_7[length2] = tmp16;
               length2 = tmp15;
               if (0 >= tmp15) {
                 break;
@@ -388,21 +388,21 @@ if (typeof performance === "object") {
         let tmp21 = null === first;
         if (tmp21) {
           let first1 = null;
-          if (0 !== arr.length) {
-            first1 = arr[0];
+          if (0 !== closure_7.length) {
+            first1 = closure_7[0];
           }
           tmp21 = obj === first1;
         }
         if (tmp21) {
           if (c13) {
-            _clearTimeout(closure_22);
+            _clearTimeout1(closure_22);
             closure_22 = -1;
           } else {
             c13 = true;
           }
           diff1 = tmp2 - diff1;
           closure_0 = handleTimeout;
-          tmp2 = _setTimeout(() => {
+          tmp2 = _setTimeout1(() => {
             closure_0(fn());
           }, diff1);
           closure_22 = tmp2;
@@ -410,7 +410,7 @@ if (typeof performance === "object") {
       } else {
         obj.sortIndex = sum1;
         let length = closure_6.length;
-        arr = closure_6.push(obj);
+        closure_6.push(obj);
         if (0 < length) {
           while (true) {
             let tmp6 = length - 1 >>> 1;

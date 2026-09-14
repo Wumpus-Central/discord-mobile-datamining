@@ -1,25 +1,61 @@
 // === Module 12984: ? ===
 
 // Module 12984
-import _mod12940 from "module_12940" /* 12940 */;
-import _mod12970 from "module_12970" /* 12970 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _createClass from "_createClass" /* 42 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 
-require = arg1;
-const dependencyMap = arg6;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class SentryError {
+  constructor(arg0) {
+    str = require;
+    if (require === undefined) {
+      str = "warn";
+    }
+    self = this;
+    tmp = closure_0(this, SentryError);
+    items = [];
+    items[0] = global;
+    tmp2 = c2;
+    obj = c2(SentryError);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.message = global;
+    tmp3Result.logLevel = str;
+    return tmp3Result;
+  }
+}
+_classCallCheck = SentryError;
+_inherits(SentryError, _wrapNativeSuper(Error));
 
-export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
-  let result = arg2;
-  const items = [{ type: "client_report" }, ];
-  if (!arg2) {
-    let obj = _mod12940;
-    result = obj.dateTimestampInSeconds();
-  }
-  items[1] = { timestamp: result, discarded_events };
-  if (dsn) {
-    obj = { dsn };
-  } else {
-    obj = {};
-  }
-  const items1 = [items];
-  return _mod12970.createEnvelope(obj, items1);
-};
+export const SentryError = _createClass(SentryError);

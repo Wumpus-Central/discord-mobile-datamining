@@ -253,7 +253,7 @@ const items = [
     value: function updateLayoutParams(windowSize, firstItemOffset) {
       const self = this;
       this.firstItemOffset = firstItemOffset;
-      let layoutManagerClass = this.getLayoutManagerClass();
+      const layoutManagerClass = this.getLayoutManagerClass();
       if (this.layoutManager) {
         const layoutManager = self.layoutManager;
         let isHorizontalResult;
@@ -282,8 +282,8 @@ const items = [
       if (self.layoutManager instanceof layoutManagerClass) {
         layoutManager2.updateLayoutParams(obj);
       } else {
-        layoutManagerClass = new layoutManagerClass(obj, layoutManager2);
-        self.layoutManager = layoutManagerClass;
+        const layoutManagerClass1 = new layoutManagerClass(obj, layoutManager2);
+        self.layoutManager = layoutManagerClass1;
       }
     }
   },

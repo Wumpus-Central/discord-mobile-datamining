@@ -64,7 +64,7 @@ class EntryExitTransition {
         delayFunction = tmp;
         let tmp2 = buildResult1(targetOriginX);
         callback = tmp2;
-        let initialValues = { transform: [] };
+        let obj = { transform: [] };
         let keys = Object.keys(tmp2.animations);
         const iter = keys[Symbol.iterator]();
         const nextResult = iter.next();
@@ -78,15 +78,15 @@ class EntryExitTransition {
                 const keys = Object.keys(item);
                 for (const item10011 of keys) {
                   let transform = obj.transform;
-                  let obj = closure_0(1708);
+                  obj = closure_0(1708);
                   let obj2 = closure_0(1708);
                   let num = 0;
                   if (closure_1.initialValues.transform) {
                     num = closure_1.initialValues.transform[arg1][item10011];
                   }
-                  obj = {};
-                  obj[item10011] = delayFunction(delay, obj.withSequence(arg0[item10011], obj2.withTiming(num, { duration: 0 })));
-                  let arr = transform.push(obj);
+                  let obj3 = {};
+                  obj3[item10011] = delayFunction(delay, obj.withSequence(arg0[item10011], obj2.withTiming(num, { duration: 0 })));
+                  let arr = transform.push(obj3);
                   continue;
                 }
               });
@@ -95,13 +95,13 @@ class EntryExitTransition {
           } else {
             if (undefined !== tmp.animations[tmp5]) {
               let items = [tmp2.animations[tmp5], , ];
-              let obj3 = delayFunction(callbackV[6]);
-              items[1] = obj3.withTiming(tmp.initialValues[tmp5], { duration: 0 });
+              let obj4 = delayFunction(callbackV[6]);
+              items[1] = obj4.withTiming(tmp.initialValues[tmp5], { duration: 0 });
               items[2] = tmp.animations[tmp5];
               let items1 = items;
             } else {
               items1 = [tmp2.animations[tmp5], ];
-              let obj1 = delayFunction(callbackV[6]);
+              let obj2 = delayFunction(callbackV[6]);
               let _Object = Object;
               let keys1 = Object.keys(targetOriginX);
               if (keys1.includes(tmp5)) {
@@ -109,13 +109,13 @@ class EntryExitTransition {
               } else {
                 tmp10 = tmp2.initialValues[tmp5];
               }
-              items1[1] = obj1.withTiming(tmp10, { duration: 0 });
+              items1[1] = obj2.withTiming(tmp10, { duration: 0 });
             }
             let tmp20 = delayFunction(callbackV[6]);
             let withSequence = tmp20.withSequence;
             let items2 = [];
             let arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
-            initialValues[tmp5] = delayFunction(initialValues, HermesBuiltin.apply(items2, tmp20));
+            obj[tmp5] = delayFunction(obj, HermesBuiltin.apply(items2, tmp20));
           }
           continue;
         }
@@ -130,28 +130,28 @@ class EntryExitTransition {
                 for (const item10011 of keys) {
                   let transform = obj.transform;
                   let sum = delay + duration;
-                  let obj = closure_0(1708);
+                  obj = closure_0(1708);
                   let obj2 = closure_0(1708);
                   let num = 0;
                   if (closure_0.initialValues.transform) {
                     num = closure_0.initialValues.transform[arg1][item10011];
                   }
-                  obj = {};
-                  obj = { duration };
-                  obj[item10011] = delayFunction(sum, obj.withSequence(obj2.withTiming(num, obj), arg0[item10011]));
-                  let arr = transform.push(obj);
+                  let obj3 = {};
+                  let obj4 = { duration };
+                  obj3[item10011] = delayFunction(sum, obj.withSequence(obj2.withTiming(num, obj4), arg0[item10011]));
+                  let arr = transform.push(obj3);
                   continue;
                 }
               });
               continue;
             }
             continue;
-          } else if (undefined !== initialValues[item10093]) {
+          } else if (undefined !== obj[item10093]) {
             continue;
           } else {
-            let obj4 = delayFunction(callbackV[6]);
+            let obj5 = delayFunction(callbackV[6]);
             let obj6 = delayFunction(callbackV[6]);
-            initialValues[item10093] = delayFunction(initialValues, obj4.withSequence(obj6.withTiming(tmp.initialValues[item10093], { duration: 0 }), tmp.animations[item10093]));
+            obj[item10093] = delayFunction(obj, obj5.withSequence(obj6.withTiming(tmp.initialValues[item10093], { duration: 0 }), tmp.animations[item10093]));
           }
           continue;
         }
@@ -165,8 +165,8 @@ class EntryExitTransition {
         } else {
           transform3 = [];
         }
-        initialValues = { initialValues: null, animations: null, callback: null };
-        initialValues = {};
+        let obj3 = { initialValues: null, animations: null, callback: null };
+        const obj7 = {};
         const combined = transform2.concat(transform3.map((item) => {
           const keys = Object.keys(item);
           let length;
@@ -181,20 +181,20 @@ class EntryExitTransition {
             const first = keys[0];
             const current = item[first].current;
             if (typeof current === "string") {
-              let obj = {};
+              obj = {};
               if (current.includes("deg")) {
                 obj[first] = "0deg";
               } else {
                 obj[first] = "0";
               }
             } else {
-              obj = {};
+              const obj2 = {};
               if (first.includes("translate")) {
-                obj[first] = 0;
-                let tmp2 = obj;
+                obj2[first] = 0;
+                let tmp2 = obj2;
               } else {
-                obj[first] = 1;
-                tmp2 = obj;
+                obj2[first] = 1;
+                tmp2 = obj2;
               }
               return tmp2;
             }
@@ -202,28 +202,27 @@ class EntryExitTransition {
         }));
         const merged = Object.assign(tmp2.initialValues);
         ({ currentOriginX: obj8.originX, currentOriginY: obj8.originY, currentWidth: obj8.width, currentHeight: obj8.height } = targetOriginX);
-        initialValues.transform = combined;
-        initialValues.initialValues = initialValues;
+        obj7.transform = combined;
+        obj3.initialValues = obj7;
         const size = { originX: null, originY: null, width: null, height: null };
-        let sum = initialValues + duration;
-        obj1 = { duration };
-        size.originX = delayFunction(sum, delayFunction(callbackV[6]).withTiming(targetOriginX.targetOriginX, obj1));
-        const sum1 = initialValues + duration;
+        let sum = obj + duration;
+        size.originX = delayFunction(sum, delayFunction(callbackV[6]).withTiming(targetOriginX.targetOriginX, { duration }));
+        const sum1 = obj + duration;
         const obj10 = delayFunction(callbackV[6]);
+        const obj9 = { duration };
         size.originY = delayFunction(sum1, delayFunction(callbackV[6]).withTiming(targetOriginX.targetOriginY, { duration }));
-        const sum2 = initialValues + duration;
+        const sum2 = obj + duration;
+        const obj11 = { duration };
         const obj12 = delayFunction(callbackV[6]);
-        let obj2 = { duration };
-        obj3 = { duration };
-        size.width = delayFunction(sum2, delayFunction(callbackV[6]).withTiming(targetOriginX.targetWidth, obj3));
-        const sum3 = initialValues + duration;
+        size.width = delayFunction(sum2, delayFunction(callbackV[6]).withTiming(targetOriginX.targetWidth, { duration }));
+        const sum3 = obj + duration;
+        const obj13 = { duration };
         const obj14 = delayFunction(callbackV[6]);
-        obj4 = { duration };
-        size.height = delayFunction(sum3, delayFunction(callbackV[6]).withTiming(targetOriginX.targetHeight, obj4));
-        const merged1 = Object.assign(initialValues);
-        initialValues.animations = size;
-        initialValues.callback = callback;
-        return initialValues;
+        size.height = delayFunction(sum3, delayFunction(callbackV[6]).withTiming(targetOriginX.targetHeight, { duration }));
+        const merged1 = Object.assign(obj);
+        obj3.animations = size;
+        obj3.callback = callback;
+        return obj3;
       };
       fn.__closure = { enteringAnimation: buildResult, exitingAnimation: buildResult1, delayFunction, delay, withSequence: EntryExitTransition(1708).withSequence, withTiming: EntryExitTransition(1708).withTiming, exitingDuration: duration, logger: EntryExitTransition(1640).logger, callback: callbackV };
       fn.__workletHash = 15677837188414;

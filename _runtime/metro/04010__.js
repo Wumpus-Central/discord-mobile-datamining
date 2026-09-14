@@ -1,35 +1,39 @@
 // === Module 4010: ? ===
 
 // Module 4010
-import differenceInCalendarWeeks from "differenceInCalendarWeeks" /* 3914 */;
-import lastDayOfMonth from "lastDayOfMonth" /* 4011 */;
-import startOfMonth from "startOfMonth" /* 3941 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import differenceInCalendarWeeks_mod from "differenceInCalendarWeeks" /* 3914 */;
+import lastDayOfMonth_mod from "lastDayOfMonth" /* 4011 */;
+import startOfMonth_mod from "startOfMonth" /* 3941 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
 if (!differenceInCalendarWeeks) {
-  let obj = { default: differenceInCalendarWeeks };
+  const obj = { default: differenceInCalendarWeeks };
   let tmp3 = obj;
 } else {
   tmp3 = differenceInCalendarWeeks;
 }
 differenceInCalendarWeeks = tmp3;
+let lastDayOfMonth = lastDayOfMonth_mod;
 if (!lastDayOfMonth) {
-  obj = { default: lastDayOfMonth };
-  let tmp5 = obj;
+  const obj2 = { default: lastDayOfMonth };
+  let tmp5 = obj2;
 } else {
   tmp5 = lastDayOfMonth;
 }
 lastDayOfMonth = tmp5;
+let startOfMonth = startOfMonth_mod;
 if (!startOfMonth) {
-  obj = { default: startOfMonth };
-  let tmp7 = obj;
+  const obj3 = { default: startOfMonth };
+  let tmp7 = obj3;
 } else {
   tmp7 = startOfMonth;
 }
 startOfMonth = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }

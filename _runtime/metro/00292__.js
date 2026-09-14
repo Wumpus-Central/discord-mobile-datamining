@@ -111,7 +111,7 @@ const items = [
           }
         }
       };
-      obj = {
+      let obj2 = {
         onStartShouldSetResponder() {
           return !self._config.disabled;
         },
@@ -234,14 +234,13 @@ const items = [
           }
         }
       };
-      let obj2 = self(27);
-      if (obj2.shouldPressibilityUseW3CPointerEventsForHover()) {
-        obj = { onPointerEnter: "Array", onPointerLeave: "PX_16" };
+      if (obj3.shouldPressibilityUseW3CPointerEventsForHover()) {
+        const obj4 = { onPointerEnter: "Array", onPointerLeave: "PX_16" };
         const _config = this._config;
         const onHoverIn = _config.onHoverIn;
         const onHoverOut = _config.onHoverOut;
         if (null != onHoverIn) {
-          obj.onPointerEnter = (persist) => {
+          obj4.onPointerEnter = (persist) => {
             self._isHovered = true;
             const result = self._cancelHoverOutDelayTimeout();
             if (null != onHoverIn) {
@@ -264,21 +263,20 @@ const items = [
                 ({ clientX, clientY } = persist.nativeEvent);
                 let obj = {};
                 let merged = Object.assign(persist);
-                obj = { clientX, clientY, pageX: clientX, pageY: clientY, timestamp: persist.timeStamp };
-                obj.nativeEvent = obj;
+                const obj2 = { clientX, clientY, pageX: clientX, pageY: clientY, timestamp: persist.timeStamp };
+                obj.nativeEvent = obj2;
                 tmp3(obj);
               }
             }
           };
         }
         if (null != onHoverOut) {
-          obj.onPointerLeave = (persist) => {
-            let obj = self;
+          obj4.onPointerLeave = (persist) => {
             if (self._isHovered) {
-              obj._isHovered = false;
-              const result = obj._cancelHoverInDelayTimeout();
+              self._isHovered = false;
+              const result = self._cancelHoverInDelayTimeout();
               if (null != persist) {
-                let num = obj._config.delayHoverOut;
+                let num = self._config.delayHoverOut;
                 if (num == null) {
                   num = 0;
                 }
@@ -286,7 +284,7 @@ const items = [
                 if (bound > 0) {
                   persist.persist();
                   const _setTimeout = setTimeout;
-                  obj._hoverOutDelayTimeout = setTimeout(() => {
+                  self._hoverOutDelayTimeout = setTimeout(() => {
                     ({ clientX, clientY } = persist.nativeEvent);
                     const obj = {};
                     const merged = Object.assign(persist);
@@ -295,27 +293,28 @@ const items = [
                   }, bound);
                 } else {
                   ({ clientX, clientY } = persist.nativeEvent);
-                  obj = {};
+                  const obj2 = {};
                   let merged = Object.assign(persist);
-                  obj = { clientX, clientY, pageX: clientX, pageY: clientY, timestamp: persist.timeStamp };
-                  obj.nativeEvent = obj;
-                  tmp2(obj);
+                  const obj3 = { clientX, clientY, pageX: clientX, pageY: clientY, timestamp: persist.timeStamp };
+                  obj2.nativeEvent = obj3;
+                  tmp2(obj2);
                 }
               }
             }
           };
         }
-        const obj1 = {};
+        const obj5 = {};
         let merged = Object.assign(obj);
-        const merged1 = Object.assign(obj);
-        const merged2 = Object.assign(obj);
-        return obj1;
+        const merged1 = Object.assign(obj2);
+        const merged2 = Object.assign(obj4);
+        return obj5;
       } else {
-        obj2 = {};
+        const obj6 = {};
         const merged3 = Object.assign(obj);
-        const merged4 = Object.assign(obj);
-        return obj2;
+        const merged4 = Object.assign(obj2);
+        return obj6;
       }
+      obj3 = self(27);
     }
   },
   {
@@ -590,39 +589,39 @@ const items = [
         tmp3 = diff;
         tmp4 = sum;
       }
-      bottom = undefined;
+      let bottom1;
       if (rect2 != null) {
-        bottom = rect2.bottom;
+        bottom1 = rect2.bottom;
       }
-      if (bottom == null) {
-        bottom = c9;
+      if (bottom1 == null) {
+        bottom1 = c9;
       }
-      left = undefined;
-      const sum2 = tmp4 + bottom;
+      let left1;
+      const sum2 = tmp4 + bottom1;
       if (rect2 != null) {
-        left = rect2.left;
+        left1 = rect2.left;
       }
-      if (left == null) {
-        left = c10;
+      if (left1 == null) {
+        left1 = c10;
       }
-      right = undefined;
-      const diff2 = tmp3 - left;
+      let right1;
+      const diff2 = tmp3 - left1;
       if (rect2 != null) {
-        right = rect2.right;
+        right1 = rect2.right;
       }
-      if (right == null) {
-        right = c11;
+      if (right1 == null) {
+        right1 = c11;
       }
-      top = undefined;
-      const sum3 = tmp2 + right;
+      let top1;
+      const sum3 = tmp2 + right1;
       if (rect2 != null) {
-        top = rect2.top;
+        top1 = rect2.top;
       }
-      if (top == null) {
-        top = c12;
+      if (top1 == null) {
+        top1 = c12;
       }
       let tmp17 = nativeEvent.pageX > diff2;
-      const diff3 = tmp - top;
+      const diff3 = tmp - top1;
       if (tmp17) {
         tmp17 = nativeEvent.pageX < sum3;
       }

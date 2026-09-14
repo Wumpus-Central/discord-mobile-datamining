@@ -1,51 +1,56 @@
 // === Module 4103: lightFormat ===
 
 // Module 4103 (lightFormat)
-import _typeof from "module_3725" /* 3725 */;
+import _typeof_mod from "module_3725" /* 3725 */;
 import M from "M" /* 3969 */;
-import module_3888 from "module_3888" /* 3888 */;
-import module_3907 from "module_3907" /* 3907 */;
-import subMilliseconds from "subMilliseconds" /* 3958 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import module_3888_mod from "module_3888" /* 3888 */;
+import module_3907_mod from "module_3907" /* 3907 */;
+import subMilliseconds_mod from "subMilliseconds" /* 3958 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  let obj = { default: _typeof };
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!M) {
-  obj = { default: M };
-  let tmp5 = obj;
+  const obj2 = { default: M };
+  let tmp5 = obj2;
 } else {
   tmp5 = M;
 }
 let closure_1 = tmp5;
+let module_3888 = module_3888_mod;
 if (!module_3888) {
-  obj = { default: module_3888 };
-  let tmp7 = obj;
+  const obj3 = { default: module_3888 };
+  let tmp7 = obj3;
 } else {
   tmp7 = module_3888;
 }
 module_3888 = tmp7;
+let module_3907 = module_3907_mod;
 if (!module_3907) {
-  const obj1 = { default: module_3907 };
-  let tmp9 = obj1;
+  const obj4 = { default: module_3907 };
+  let tmp9 = obj4;
 } else {
   tmp9 = module_3907;
 }
 module_3907 = tmp9;
+let subMilliseconds = subMilliseconds_mod;
 if (!subMilliseconds) {
-  const obj2 = { default: subMilliseconds };
-  let tmp11 = obj2;
+  const obj5 = { default: subMilliseconds };
+  let tmp11 = obj5;
 } else {
   tmp11 = subMilliseconds;
 }
 subMilliseconds = tmp11;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp13 = obj3;
+  const obj6 = { default: requiredArgs };
+  let tmp13 = obj6;
 } else {
   tmp13 = requiredArgs;
 }

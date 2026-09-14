@@ -5,10 +5,12 @@ import _mod9068 from "module_9068" /* 9068 */;
 import initializeContext from "initializeContext" /* 9126 */;
 import _slicedToArray from "module_32" /* 32 */;
 
+const require = globalThis.__r;
+
 let closure_4 = { guid: "uuid", url: "uri", datetime: "date-time", json_string: "json-string", regex: "" };
 
 export const toJSONSchema = function toJSONSchema(_idmap, uri) {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(uri);
   obj.processors = exports.allProcessors;
   const initializeContextResult = initializeContext.initializeContext(obj);
@@ -22,37 +24,37 @@ export const toJSONSchema = function toJSONSchema(_idmap, uri) {
       let processResult = initializeContext.process(tmp15[1], initializeContextResult);
       continue;
     }
-    obj = {};
-    obj = { registry: _idmap, uri: null, defs: null };
+    const obj2 = {};
+    const obj3 = { registry: _idmap, uri: null, defs: null };
     uri = undefined;
     if (uri != null) {
       uri = uri.uri;
     }
-    const obj1 = {};
-    obj.uri = uri;
-    obj.defs = obj1;
-    initializeContextResult.external = obj;
+    const obj4 = {};
+    obj3.uri = uri;
+    obj3.defs = obj4;
+    initializeContextResult.external = obj3;
     const _idmap2 = _idmap._idmap;
     const entries1 = _idmap2.entries();
     for (const item10061 of entries1) {
       let tmp26 = _slicedToArray(item10061, 2);
       let tmp27 = tmp26[1];
       let extractDefsResult = initializeContext.extractDefs(initializeContextResult, tmp27);
-      obj[tmp26[0]] = initializeContext.finalize(initializeContextResult, tmp27);
+      obj2[tmp26[0]] = initializeContext.finalize(initializeContextResult, tmp27);
       continue;
     }
     const _Object = Object;
-    if (Object.keys(obj1).length > 0) {
+    if (Object.keys(obj4).length > 0) {
       let str = "definitions";
       if ("draft-2020-12" === initializeContextResult.target) {
         str = "$defs";
       }
-      const obj2 = {};
-      obj2[str] = obj1;
-      obj.__shared = obj2;
+      const obj5 = {};
+      obj5[str] = obj4;
+      obj2.__shared = obj5;
     }
-    const obj3 = { schemas: obj };
-    return obj3;
+    const obj6 = { schemas: obj2 };
+    return obj6;
   } else {
     initializeContext.process(_idmap, initializeContextResult);
     initializeContext.extractDefs(initializeContextResult, _idmap);
@@ -100,10 +102,10 @@ export const stringProcessor = (_zod, arg1, format, arg3) => {
               if ("openapi-3.0" !== target.target) {
                 let obj = {};
               }
-              obj = {};
+              const obj2 = {};
               const merged = Object.assign(obj);
-              obj.pattern = source.source;
-              return obj;
+              obj2.pattern = source.source;
+              return obj2;
             }
           }
           obj = { type: "string" };
@@ -262,7 +264,7 @@ export const literalProcessor = (arg0, unrepresentable, arg2, arg3) => {
         let arr = items.push(Number(tmp2));
       }
     } else {
-      arr = items.push(tmp2);
+      let arr2 = items.push(tmp2);
     }
     continue;
   }
@@ -400,14 +402,14 @@ export const objectProcessor = (_zod, io, properties, path) => {
   properties.properties = {};
   const shape = def.shape;
   for (const key10015 in shape) {
-    let obj = {};
+    let obj2 = {};
     let merged = Object.assign(arg3);
     let items = [, ];
     let arraySpreadResult = HermesBuiltin.arraySpread(arg3.path, 0);
     items[arraySpreadResult] = "properties";
     items[arraySpreadResult + 1] = key10015;
-    obj.path = items;
-    arg2.properties[key10015] = initializeContext.process(shape[key10015], arg1, obj);
+    obj2.path = items;
+    arg2.properties[key10015] = initializeContext.process(shape[key10015], arg1, obj2);
     continue;
   }
   const items1 = [...new Set(Object.keys(shape))];
@@ -433,7 +435,7 @@ export const objectProcessor = (_zod, io, properties, path) => {
     properties.additionalProperties = false;
   } else if (def.catchall) {
     if (def.catchall) {
-      obj = {};
+      const obj = {};
       const merged1 = Object.assign(path);
       const items2 = [];
       items2[HermesBuiltin.arraySpread(path.path, 0)] = "additionalProperties";
@@ -472,16 +474,16 @@ export const unionProcessor = (_zod, arg1, arg2, arg3) => {
 };
 export const intersectionProcessor = (_zod, arg1, arg2, path) => {
   const def = _zod._zod.def;
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(path);
   const items = [...path.path, "allOf", 0];
   obj.path = items;
   const processResult = initializeContext.process(def.left, arg1, obj);
-  obj = {};
+  const obj2 = {};
   const merged1 = Object.assign(path);
   const items1 = [...path.path, "allOf", 1];
-  obj.path = items1;
-  const processResult1 = initializeContext.process(def.right, arg1, obj);
+  obj2.path = items1;
+  const processResult1 = initializeContext.process(def.right, arg1, obj2);
   let tmp5 = "allOf" in processResult;
   if (tmp5) {
     const _Object = Object;
@@ -534,8 +536,8 @@ export const tupleProcessor = (_zod, target, items, path) => {
         items.items = null;
       }
     } else if ("openapi-3.0" === target.target) {
-      let obj = { anyOf: mapped };
-      items.items = obj;
+      const obj2 = { anyOf: mapped };
+      items.items = obj2;
       if (null) {
         const anyOf = items.items.anyOf;
         anyOf.push(null);
@@ -558,10 +560,10 @@ export const tupleProcessor = (_zod, target, items, path) => {
       items.maxItems = maximum;
     }
   } else {
-    obj = {};
+    let obj = {};
     let merged = Object.assign(path);
     const items1 = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(path.path, 0);
+    const arraySpreadResult = HermesBuiltin.arraySpread(path.path, 0);
     items1[arraySpreadResult] = str2;
     if ("openapi-3.0" === target.target) {
       def = [];
@@ -570,7 +572,7 @@ export const tupleProcessor = (_zod, target, items, path) => {
     } else {
       items2 = [];
     }
-    arraySpreadResult = HermesBuiltin.arraySpread(items2, arraySpreadResult + 1);
+    HermesBuiltin.arraySpread(items2, arraySpreadResult + 1);
     obj.path = items1;
     require("initializeContext").process(def.rest, target, obj);
   }
@@ -586,15 +588,15 @@ export const recordProcessor = (_zod, target, patternProperties, path) => {
   if ("loose" === def.mode) {
     if (patterns) {
       if (patterns.size > 0) {
-        let obj = {};
+        const obj2 = {};
         const _process = initializeContext.process;
         const valueType = def.valueType;
         const merged = Object.assign(path);
         const items = [, ];
-        let arraySpreadResult = HermesBuiltin.arraySpread(path.path, 0);
+        const arraySpreadResult = HermesBuiltin.arraySpread(path.path, 0);
         items[arraySpreadResult] = "patternProperties";
         items[arraySpreadResult + 1] = "*";
-        obj.path = items;
+        obj2.path = items;
         patternProperties.patternProperties = {};
         for (const item10081 of patterns) {
           arg2.patternProperties[item10081.source] = tmp16;
@@ -604,7 +606,7 @@ export const recordProcessor = (_zod, target, patternProperties, path) => {
       const values = keyType._zod.values;
       if (values) {
         const items1 = [];
-        arraySpreadResult = HermesBuiltin.arraySpread(values, 0);
+        HermesBuiltin.arraySpread(values, 0);
         const found = items1.filter((item) => {
           let tmp = typeof item === "string";
           if (typeof item !== "string") {
@@ -623,19 +625,19 @@ export const recordProcessor = (_zod, target, patternProperties, path) => {
     tmp = "draft-2020-12" !== target.target;
   }
   if (!tmp) {
-    obj = {};
+    const obj = {};
     const merged1 = Object.assign(path);
     const items2 = [];
     items2[HermesBuiltin.arraySpread(path.path, 0)] = "propertyNames";
     obj.path = items2;
     patternProperties.propertyNames = initializeContext.process(def.keyType, target, obj);
   }
-  obj = {};
+  const obj3 = {};
   const merged2 = Object.assign(path);
   const items3 = [];
   items3[HermesBuiltin.arraySpread(path.path, 0)] = "additionalProperties";
-  obj.path = items3;
-  patternProperties.additionalProperties = initializeContext.process(def.valueType, target, obj);
+  obj3.path = items3;
+  patternProperties.additionalProperties = initializeContext.process(def.valueType, target, obj3);
 };
 export const nullableProcessor = (_zod, target, arg2, arg3) => {
   const def = _zod._zod.def;

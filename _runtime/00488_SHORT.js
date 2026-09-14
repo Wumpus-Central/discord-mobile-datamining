@@ -1,8 +1,9 @@
 // === Module 488: SHORT ===
 
 // Module 488 (SHORT)
-import ToastAndroid from "ToastAndroid" /* 489 */;
+import ToastAndroid_mod from "ToastAndroid" /* 489 */;
 
+let ToastAndroid = ToastAndroid_mod;
 ToastAndroid = ToastAndroid.getConstants();
 
 export default {

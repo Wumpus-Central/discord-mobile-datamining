@@ -13,7 +13,7 @@ if ((function shouldUseNative() {
       if ("5" === Object.getOwnPropertyNames(string)[0]) {
         return false;
       } else {
-        let obj = {};
+        const obj = {};
         let num2 = 0;
         do {
           let _String2 = String;
@@ -27,15 +27,15 @@ if ((function shouldUseNative() {
         if ("0123456789" !== mapped.join("")) {
           return false;
         } else {
-          obj = {};
+          const obj2 = {};
           const split = "abcdefghijklmnopqrst".split;
           const parts = "abcdefghijklmnopqrst".split("");
           const item = parts.forEach((item) => {
-            obj[item] = item;
+            obj2[item] = item;
           });
           const _Object4 = Object;
           const _Object5 = Object;
-          const keys = Object.keys(Object.assign({}, obj));
+          const keys = Object.keys(Object.assign({}, obj2));
           return "abcdefghijklmnopqrst" === keys.join("");
         }
       }

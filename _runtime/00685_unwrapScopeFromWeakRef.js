@@ -32,10 +32,10 @@ export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySp
   if (sentrySpan) {
     const result = _mod687.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, (function wrapScopeWithWeakRef(isolationScope) {
       try {
-        let _WeakRef = _mod686.GLOBAL_OBJ.WeakRef;
+        const _WeakRef = _mod686.GLOBAL_OBJ.WeakRef;
         if (typeof _WeakRef === "function") {
-          _WeakRef = new _WeakRef(isolationScope);
-          return _WeakRef;
+          const _WeakRef1 = new _WeakRef(isolationScope);
+          return _WeakRef1;
         } else {
           return isolationScope;
         }

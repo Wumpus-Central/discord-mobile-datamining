@@ -1,17 +1,17 @@
 // === Module 4930: ? ===
 
 // Module 4930
-import _mod1283 from "module_1283" /* 1283 */;
-import _mod1284 from "module_1284" /* 1284 */;
-import callBindBasic from "callBindBasic" /* 1293 */;
+import _mod1281 from "module_1281" /* 1281 */;
+import _mod1282 from "module_1282" /* 1282 */;
+import callBindBasic from "callBindBasic" /* 1291 */;
 
 const obj = {};
 try {
   obj.__proto__ = null;
-  let _module = _mod1284;
+  let _module = _mod1282;
   if (_module) {
     const _Object = Object;
-    _module = _mod1284(Object.prototype, "__proto__");
+    _module = _mod1282(Object.prototype, "__proto__");
   }
   let tmp6 = !("toString" in obj);
   if (tmp6) {
@@ -26,7 +26,7 @@ try {
     if (!setDunder) {
       setDunder = function setDunder(arg0, arg1) {
         if (null == arg0) {
-          const tmp6 = new _mod1283("set Object.prototype.__proto__ called on null or undefined");
+          const tmp6 = new _mod1281("set Object.prototype.__proto__ called on null or undefined");
           throw tmp6;
         } else {
           arg0.__proto__ = arg1;

@@ -89,7 +89,34 @@ class ViewabilityManager {
             changed: null
           };
           const items = [];
-          let arraySpreadResult = HermesBuiltin.arraySpread(arr2.map((item) => {
+          HermesBuiltin.arraySpread(arr3.map((item) => {
+            if (undefined !== closure_1_1.rvManager.props.data[item]) {
+              if (undefined !== closure_1_1.rvManager.props.keyExtractor) {
+                const props = closure_1_1.rvManager.props;
+                let keyExtractorResult = props.keyExtractor(tmp2, item);
+              }
+              const obj = { index: item, isViewable: false, item: tmp2, key: keyExtractorResult, timestamp: null };
+              const _Date = Date;
+              obj.timestamp = Date.now();
+              return obj;
+            }
+            keyExtractorResult = item.toString();
+          }), HermesBuiltin.arraySpread(arr2.map((item) => {
+            if (undefined !== closure_1_1.rvManager.props.data[item]) {
+              if (undefined !== closure_1_1.rvManager.props.keyExtractor) {
+                const props = closure_1_1.rvManager.props;
+                let keyExtractorResult = props.keyExtractor(tmp2, item);
+              }
+              const obj = { index: item, isViewable: true, item: tmp2, key: keyExtractorResult, timestamp: null };
+              const _Date = Date;
+              obj.timestamp = Date.now();
+              return obj;
+            }
+            keyExtractorResult = item.toString();
+          }), 0));
+          obj.changed = items;
+          tmp(obj);
+          const arraySpreadResult = HermesBuiltin.arraySpread(arr2.map((item) => {
             if (undefined !== closure_1_1.rvManager.props.data[item]) {
               if (undefined !== closure_1_1.rvManager.props.keyExtractor) {
                 const props = closure_1_1.rvManager.props;
@@ -102,21 +129,6 @@ class ViewabilityManager {
             }
             keyExtractorResult = item.toString();
           }), 0);
-          arraySpreadResult = HermesBuiltin.arraySpread(arr3.map((item) => {
-            if (undefined !== closure_1_1.rvManager.props.data[item]) {
-              if (undefined !== closure_1_1.rvManager.props.keyExtractor) {
-                const props = closure_1_1.rvManager.props;
-                let keyExtractorResult = props.keyExtractor(tmp2, item);
-              }
-              const obj = { index: item, isViewable: false, item: tmp2, key: keyExtractorResult, timestamp: null };
-              const _Date = Date;
-              obj.timestamp = Date.now();
-              return obj;
-            }
-            keyExtractorResult = item.toString();
-          }), arraySpreadResult);
-          obj.changed = items;
-          tmp(obj);
         }
       });
     };
@@ -124,7 +136,7 @@ class ViewabilityManager {
     tmp2 = null !== global.props.onViewableItemsChanged && undefined !== global.props.onViewableItemsChanged;
     if (tmp2) {
       viewabilityHelpers = self.viewabilityHelpers;
-      arr = viewabilityHelpers.push(self.createViewabilityHelper(global.props.viewabilityConfig, (arg0) => {
+      arr1 = viewabilityHelpers.push(self.createViewabilityHelper(global.props.viewabilityConfig, (arg0) => {
         const props = closure_0.props;
         const onViewableItemsChanged = props.onViewableItemsChanged;
         if (onViewableItemsChanged != null) {

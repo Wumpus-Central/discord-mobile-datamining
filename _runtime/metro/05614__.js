@@ -8,7 +8,8 @@ const Image = _mod17.Image;
 export const parsePossibleSources = function parsePossibleSources(source) {
   const uri = source.uri;
   if (typeof source === "string") {
-    let obj = { sourceName: source };
+    const obj2 = { sourceName: source };
+    let obj = obj2;
   } else {
     if (typeof source === "object") {
       if (!uri) {
@@ -19,13 +20,13 @@ export const parsePossibleSources = function parsePossibleSources(source) {
     }
     if (typeof source !== "object") {
       if (typeof source === "number") {
-        obj = { sourceDotLottieURI: Image.resolveAssetSource(source).uri };
+        const obj3 = { sourceDotLottieURI: Image.resolveAssetSource(source).uri };
       }
     }
     if (uri.includes(".lottie")) {
-      const obj1 = { sourceDotLottieURI: uri };
+      const obj4 = { sourceDotLottieURI: uri };
     } else {
-      const obj2 = { sourceURL: uri };
+      const obj5 = { sourceURL: uri };
     }
   }
   return obj;

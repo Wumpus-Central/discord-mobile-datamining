@@ -64,11 +64,12 @@ export default function buildMatchFn(arg0) {
         if (closure_0.valueCallback) {
           valueCallbackResult = closure_0.valueCallback(tmp12);
         }
+        let valueCallbackResult2 = valueCallbackResult;
         if (obj.valueCallback) {
-          valueCallbackResult = obj.valueCallback(valueCallbackResult);
+          valueCallbackResult2 = obj.valueCallback(valueCallbackResult);
         }
-        obj = { value: valueCallbackResult, rest: str.slice(first.length) };
-        return obj;
+        const obj5 = { value: valueCallbackResult2, rest: str.slice(first.length) };
+        return obj5;
       } else {
         return null;
       }

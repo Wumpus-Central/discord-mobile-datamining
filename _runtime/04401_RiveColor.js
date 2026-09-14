@@ -2,8 +2,9 @@
 
 // Module 4401 (RiveColor)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 
+let _classCallCheck = _classCallCheck_mod;
 class RiveColor {
   constructor(arg0, arg1, arg2, arg3) {
     tmp = closure_0(this, RiveColor);
@@ -40,7 +41,6 @@ const entry1 = {
   key: "fromHexString",
   value: function fromHexString(str) {
     const replaced = str.replace(/^#/, "");
-    let obj = /^[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/;
     if (obj.test(replaced)) {
       const _parseInt = parseInt;
       const _parseInt2 = parseInt;
@@ -53,25 +53,26 @@ const entry1 = {
         const _parseInt4 = parseInt;
         num8 = parseInt(replaced.slice(6, 8), 16);
       }
-      obj = Object.create(_classCallCheck.prototype);
-      _classCallCheck(obj, _classCallCheck);
-      obj.r = parsed;
-      obj.g = parsed1;
-      obj.b = parsed2;
-      obj.a = num8;
-      return obj;
+      const obj3 = Object.create(_classCallCheck.prototype);
+      _classCallCheck(obj3, _classCallCheck);
+      obj3.r = parsed;
+      obj3.g = parsed1;
+      obj3.b = parsed2;
+      obj3.a = num8;
+      return obj3;
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.warn("Rive invalid hex color: " + "Rive invalid hex color: ");
-      obj = Object.create(_classCallCheck.prototype);
-      _classCallCheck(obj, _classCallCheck);
-      obj.r = 0;
-      obj.g = 0;
-      obj.b = 0;
-      obj.a = 255;
-      return obj;
+      const obj4 = Object.create(_classCallCheck.prototype);
+      _classCallCheck(obj4, _classCallCheck);
+      obj4.r = 0;
+      obj4.g = 0;
+      obj4.b = 0;
+      obj4.a = 255;
+      return obj4;
     }
+    obj = /^[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/;
   }
 };
 const items1 = [

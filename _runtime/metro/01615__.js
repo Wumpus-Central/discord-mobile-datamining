@@ -22,7 +22,6 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
   const merged = Object.assign(initialMetrics, Object.assign({ children: 0, initialMetrics: 0, initialSafeAreaInsets: 0, style: 0 }));
   c0 = undefined;
   c1 = undefined;
-  let obj = noop;
   context = noop.useContext(context);
   let insets;
   context1 = noop.useContext(context1);
@@ -38,7 +37,7 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
   if (insets == null) {
     insets = null;
   }
-  [tmp9, c0] = _slicedToArray(noop.useState(insets), 2);
+  [tmp9, c0] = noop.useState(insets);
   let frame;
   if (initialMetrics != null) {
     frame = initialMetrics.frame;
@@ -51,8 +50,8 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
     frame = size;
   }
   const tmp8 = _slicedToArray(noop.useState(insets), 2);
-  [tmp13, c1] = _slicedToArray(obj.useState(frame), 2);
-  const callback = obj.useCallback((nativeEvent) => {
+  [tmp13, c1] = noop.useState(frame);
+  const callback = noop.useCallback((nativeEvent) => {
     ({ frame: c0, insets: c1 } = nativeEvent.nativeEvent);
     _undefined2((height) => {
       const size = _undefined;
@@ -85,18 +84,18 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
       rect = bottom;
     });
   }, []);
-  obj = { style: null, onInsetsChange: callback };
+  const obj2 = { style: null, onInsetsChange: callback };
   const items = [closure_8.fill, style];
-  obj.style = items;
+  obj2.style = items;
   const merged1 = Object.assign(merged);
   let tmp15Result = null;
   if (null != tmp9) {
-    obj = { value: tmp13, children: null };
-    const obj1 = { value: tmp9, children };
-    obj.children = <tmp2.Provider value={tmp9}>{children}</tmp2.Provider>;
+    const obj3 = { value: tmp13, children: null };
+    const obj4 = { value: tmp9, children };
+    obj3.children = <tmp2.Provider value={tmp9}>{children}</tmp2.Provider>;
     tmp15Result = <tmp4.Provider value={tmp13}>{null}</tmp4.Provider>;
   }
-  obj.children = tmp15Result;
+  obj2.children = tmp15Result;
   return jsx(NativeSafeAreaProvider.NativeSafeAreaProvider, { style: null, onInsetsChange: callback });
 };
 export const SafeAreaListener = function SafeAreaListener(onChange) {

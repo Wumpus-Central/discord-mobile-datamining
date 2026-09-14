@@ -57,10 +57,10 @@ const entry = {
   value: function prepareSingleGesture(item10006, simultaneousGestures, requireGesturesToFail) {
     if (item10006 instanceof ExclusiveGesture(6777).BaseGesture) {
       if (item10006.relationsSnapshot == null) {
-        let obj = { simultaneousWith: item10006.config.simultaneousWith, requireToFail: item10006.config.requireToFail };
+        const obj = { simultaneousWith: item10006.config.simultaneousWith, requireToFail: item10006.config.requireToFail };
         item10006.relationsSnapshot = obj;
       }
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(item10006.config);
       const simultaneousWith = item10006.relationsSnapshot.simultaneousWith;
       if (undefined === simultaneousWith) {
@@ -71,7 +71,7 @@ const entry = {
         items1 = [];
         HermesBuiltin.arraySpread(simultaneousGestures, HermesBuiltin.arraySpread(simultaneousWith, 0));
       }
-      obj.simultaneousWith = items1;
+      obj2.simultaneousWith = items1;
       const requireToFail = item10006.relationsSnapshot.requireToFail;
       if (undefined === requireToFail) {
         const items2 = [];
@@ -81,8 +81,8 @@ const entry = {
         items3 = [];
         HermesBuiltin.arraySpread(requireGesturesToFail, HermesBuiltin.arraySpread(requireToFail, 0));
       }
-      obj.requireToFail = items3;
-      item10006.config = obj;
+      obj2.requireToFail = items3;
+      item10006.config = obj2;
     } else if (item10006 instanceof ExclusiveGesture) {
       item10006.simultaneousGestures = simultaneousGestures;
       item10006.requireGesturesToFail = requireGesturesToFail;

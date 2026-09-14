@@ -263,7 +263,7 @@ const exports = arg5;
         if (0 < length2 - 1) {
           do {
             _parseInt = parseInt;
-            arr = items1.push(parseInt(joined.substr(num5, 2), 16));
+            arr1 = items1.push(parseInt(joined.substr(num5, 2), 16));
             num5 = num5 + 2;
             diff = length2 - 1;
           } while (num5 < diff);
@@ -365,7 +365,7 @@ const exports = arg5;
         if (0 < length - 1) {
           do {
             _parseInt = parseInt;
-            arr = items.push(parseInt(joined.substr(num5, 2), 16));
+            arr1 = items.push(parseInt(joined.substr(num5, 2), 16));
             num5 = num5 + 2;
             diff = length - 1;
           } while (num5 < diff);
@@ -427,9 +427,10 @@ const exports = arg5;
         } else {
           const diff = byteLength - bound;
           const _ArrayBuffer = ArrayBuffer;
-          arrayBuffer = new ArrayBuffer(diff);
+          const arrayBuffer2 = new ArrayBuffer(diff);
+          arrayBuffer = arrayBuffer2;
           const _Uint8Array = Uint8Array;
-          const uint8Array = new Uint8Array(arrayBuffer);
+          const uint8Array = new Uint8Array(arrayBuffer2);
           const _Uint8Array2 = Uint8Array;
           const uint8Array1 = new Uint8Array(self, bound, diff);
           const result = uint8Array.set(uint8Array1);
@@ -447,7 +448,7 @@ const exports = arg5;
   }
   SparkMD5.ArrayBuffer.prototype.append = function(byteLength) {
     const self = this;
-    let buffer = this._buff.buffer;
+    const buffer = this._buff.buffer;
     const uint8Array = new Uint8Array(buffer.byteLength + byteLength.byteLength);
     const uint8Array1 = new Uint8Array(buffer);
     const result = uint8Array.set(uint8Array1);
@@ -473,8 +474,8 @@ const exports = arg5;
     const diff = num2 - 64;
     if (diff < uint8Array.length) {
       const _Uint8Array2 = Uint8Array;
-      buffer = uint8Array.buffer;
-      let uint8Array3 = new Uint8Array(buffer.slice(diff));
+      const buffer1 = uint8Array.buffer;
+      let uint8Array3 = new Uint8Array(buffer1.slice(diff));
     } else {
       const _Uint8Array = Uint8Array;
       uint8Array3 = new Uint8Array(0);

@@ -7,25 +7,25 @@ require = fn;
 const dependencyMap = arg6;
 fn = function n(keyboard, value) {
   if ("easeIn" === keyboard) {
-    let obj = { easing: null, duration: null };
+    const obj2 = { easing: null, duration: null };
     const Easing3 = cancelAnimation.Easing;
-    obj.easing = Easing3.in(cancelAnimation.Easing.ease);
-    obj.duration = value;
-    return obj;
+    obj2.easing = Easing3.in(cancelAnimation.Easing.ease);
+    obj2.duration = value;
+    return obj2;
   } else if ("easeOut" === keyboard) {
-    obj = { easing: null, duration: null };
+    const obj3 = { easing: null, duration: null };
     const Easing2 = cancelAnimation.Easing;
-    obj.easing = Easing2.out(cancelAnimation.Easing.ease);
-    obj.duration = value;
-    return obj;
+    obj3.easing = Easing2.out(cancelAnimation.Easing.ease);
+    obj3.duration = value;
+    return obj3;
   } else if ("easeInEaseOut" === keyboard) {
-    const obj1 = { easing: null, duration: null };
+    const obj4 = { easing: null, duration: null };
     const Easing = cancelAnimation.Easing;
-    obj1.easing = Easing.inOut(cancelAnimation.Easing.ease);
-    obj1.duration = value;
-    return obj1;
+    obj4.easing = Easing.inOut(cancelAnimation.Easing.ease);
+    obj4.duration = value;
+    return obj4;
   } else if ("linear" === keyboard) {
-    obj = { easing: cancelAnimation.Easing.linear, duration: value };
+    const obj = { easing: cancelAnimation.Easing.linear, duration: value };
     return obj;
   } else if ("keyboard" === keyboard) {
     return { damping: 500, stiffness: 1000, mass: 3, overshootClamping: true, restDisplacementThreshold: 10, restSpeedThreshold: 10 };

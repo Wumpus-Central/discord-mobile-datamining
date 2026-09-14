@@ -70,8 +70,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     scope = scope.scope;
   }
   if (scope == null) {
-    let obj = _mod713;
-    scope = obj.getCurrentScope();
+    scope = _mod713.getCurrentScope();
   }
   let prop;
   if (scope != null) {
@@ -85,19 +84,18 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     client = scope.getClient();
   }
   if (client == null) {
-    let obj1 = _mod713;
-    client = obj1.getClient();
+    client = _mod713.getClient();
   }
   if (client) {
     const options = client.getOptions();
     ({ _experiments, enableMetrics, beforeSendMetric } = options);
     if (enableMetrics == null) {
-      enableMetrics = undefined;
+      let enableMetrics1;
       if (_experiments != null) {
-        enableMetrics = _experiments.enableMetrics;
+        enableMetrics1 = _experiments.enableMetrics;
       }
-      if (enableMetrics != null) {
-        if (!enableMetrics) {
+      if (enableMetrics1 != null) {
+        if (!enableMetrics1) {
           if (_mod688.DEBUG_BUILD) {
             const debug2 = consoleSandbox.debug;
             debug2.warn("metrics option not enabled, metric will not be captured.");
@@ -105,50 +103,50 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
         }
       }
     }
-    let obj2 = mergeScopeData;
-    const combinedScopeData = obj2.getCombinedScopeData(_mod713.getIsolationScope(), scope);
+    const obj3 = mergeScopeData;
+    const combinedScopeData = obj3.getCombinedScopeData(_mod713.getIsolationScope(), scope);
     ({ user, attributes } = combinedScopeData);
     const options1 = client.getOptions();
     ({ release, environment } = options1);
-    obj = {};
+    const obj5 = {};
     const merged = Object.assign(attributes.attributes);
     const id = user.id;
     let tmp23 = !id;
     if (id) {
-      tmp23 = "user.id" in obj;
+      tmp23 = "user.id" in obj5;
     }
     if (!tmp23) {
-      obj["user.id"] = id;
+      obj5["user.id"] = id;
     }
     const email = user.email;
     let tmp24 = !email;
     if (email) {
-      tmp24 = "user.email" in obj;
+      tmp24 = "user.email" in obj5;
     }
     if (!tmp24) {
-      obj["user.email"] = email;
+      obj5["user.email"] = email;
     }
     const username = user.username;
     let tmp25 = !username;
     if (username) {
-      tmp25 = "user.name" in obj;
+      tmp25 = "user.name" in obj5;
     }
     if (!tmp25) {
-      obj["user.name"] = username;
+      obj5["user.name"] = username;
     }
     let flag = !release;
     if (release) {
       flag = false;
     }
     if (!flag) {
-      obj["sentry.release"] = release;
+      obj5["sentry.release"] = release;
     }
     let flag2 = !environment;
     if (environment) {
       flag2 = false;
     }
     if (!flag2) {
-      obj["sentry.environment"] = environment;
+      obj5["sentry.environment"] = environment;
     }
     const sdkMetadata = client.getSdkMetadata();
     let sdk;
@@ -164,14 +162,14 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       flag3 = false;
     }
     if (!flag3) {
-      obj["sentry.sdk.name"] = name;
+      obj5["sentry.sdk.name"] = name;
     }
     let flag4 = !version;
     if (version) {
       flag4 = false;
     }
     if (!flag4) {
-      obj["sentry.sdk.version"] = version;
+      obj5["sentry.sdk.version"] = version;
     }
     const integrationByName = client.getIntegrationByName("Replay");
     let replayId;
@@ -183,7 +181,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       flag6 = false;
     }
     if (!flag6) {
-      obj["sentry.replay_id"] = replayId;
+      obj5["sentry.replay_id"] = replayId;
     }
     if (replayId) {
       let recordingMode;
@@ -194,28 +192,28 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     }
     if (replayId) {
       {
-        obj["sentry._internal.replay_is_buffering"] = true;
+        obj5["sentry._internal.replay_is_buffering"] = true;
       }
     }
-    obj = {};
+    const obj6 = {};
     const merged1 = Object.assign(attributes);
-    obj.attributes = obj;
-    client.emit("processMetric", obj);
+    obj6.attributes = obj5;
+    client.emit("processMetric", obj6);
     if (!beforeSendMetric) {
-      beforeSendMetric = undefined;
+      let beforeSendMetric1;
       if (_experiments != null) {
-        beforeSendMetric = _experiments.beforeSendMetric;
+        beforeSendMetric1 = _experiments.beforeSendMetric;
       }
+      beforeSendMetric = beforeSendMetric1;
     }
-    let beforeSendMetricResult = obj;
+    let beforeSendMetricResult = obj6;
     if (beforeSendMetric) {
-      beforeSendMetricResult = beforeSendMetric(obj);
+      beforeSendMetricResult = beforeSendMetric(obj6);
     }
     if (beforeSendMetricResult) {
-      let tmp17Result = _getTraceInfoFromScope;
-      const tmp37 = _slicedToArray(tmp17Result._getTraceInfoFromScope(client, scope), 2)[1];
-      tmp17Result = _getSpanForScope;
-      const _getSpanForScopeResult = tmp17Result._getSpanForScope(scope);
+      const tmp37 = _slicedToArray(_getTraceInfoFromScope._getTraceInfoFromScope(client, scope), 2)[1];
+      const tmp17Result = _getTraceInfoFromScope;
+      const _getSpanForScopeResult = _getSpanForScope._getSpanForScope(scope);
       if (_getSpanForScopeResult) {
         let str10 = _getSpanForScopeResult.spanContext().traceId;
       } else if (tmp37 != null) {
@@ -225,26 +223,28 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       if (_getSpanForScopeResult) {
         spanId = _getSpanForScopeResult.spanContext().spanId;
       }
-      obj1 = { timestamp: dateTimestampInSeconds.timestampInSeconds(), trace_id: null, span_id: null, name: null, type: null, unit: null, value: null, attributes: null };
+      const obj7 = { timestamp: null, trace_id: null, span_id: null, name: null, type: null, unit: null, value: null, attributes: null };
+      const tmp17Result5 = _getSpanForScope;
+      obj7.timestamp = dateTimestampInSeconds.timestampInSeconds();
       if (str10 == null) {
         str10 = "";
       }
-      obj1.trace_id = str10;
-      obj1.span_id = spanId;
+      obj7.trace_id = str10;
+      obj7.span_id = spanId;
       ({ name: obj12.name, type: obj12.type, unit: obj12.unit, value: obj12.value } = beforeSendMetricResult);
-      obj2 = {};
-      const tmp17Result1 = dateTimestampInSeconds;
+      const obj8 = {};
+      const tmp17Result6 = dateTimestampInSeconds;
       const merged2 = Object.assign(_mod748.serializeAttributes(attributes));
-      const tmp17Result2 = _mod748;
+      const tmp17Result7 = _mod748;
       const merged3 = Object.assign(_mod748.serializeAttributes(beforeSendMetricResult.attributes, "skip-undefined"));
-      obj1.attributes = obj2;
+      obj7.attributes = obj8;
       if (_mod688.DEBUG_BUILD) {
         const debug4 = consoleSandbox.debug;
-        debug4.log("[Metric]", obj1);
+        debug4.log("[Metric]", obj7);
       }
-      prop(client, obj1);
+      prop(client, obj7);
       client.emit("afterCaptureMetric", beforeSendMetricResult);
-      const tmp17Result3 = _mod748;
+      const tmp17Result8 = _mod748;
     } else if (_mod688.DEBUG_BUILD) {
       const debug3 = consoleSandbox.debug;
       debug3.log("`beforeSendMetric` returned `null`, will not send metric.");

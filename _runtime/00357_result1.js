@@ -2,10 +2,11 @@
 
 // Module 357 (result1)
 import _modDef361 from "module_361" /* 361 */;
-import javaScriptFlagGetter from "module_358" /* 358 */;
-import javaScriptFlagGetter from "module_27" /* 27 */;
+import javaScriptFlagGetter_mod from "module_358" /* 358 */;
+import javaScriptFlagGetter_mod from "module_27" /* 27 */;
 
 let closure_0 = importDefault;
+let javaScriptFlagGetter = javaScriptFlagGetter_mod;
 if (javaScriptFlagGetter == null) {
   javaScriptFlagGetter = _modDef361;
 }
@@ -29,7 +30,9 @@ let closure_12 = {};
 let closure_13 = {};
 let closure_14 = null;
 let closure_15 = null;
+let javaScriptFlagGetter = javaScriptFlagGetter_mod;
 javaScriptFlagGetter.cxxNativeAnimatedEnabled();
+let javaScriptFlagGetter = javaScriptFlagGetter_mod;
 javaScriptFlagGetter = javaScriptFlagGetter.cxxNativeAnimatedEnabled();
 if (javaScriptFlagGetter) {
   javaScriptFlagGetter = javaScriptFlagGetter.useSharedAnimatedBackend();
@@ -93,7 +96,7 @@ if (result) {
     } while (num < length);
   }
 }
-obj = {
+const obj2 = {
   addAnimatedEventToView(c4, arg1, item) {
     const result = obj.addAnimatedEventToView(c4, arg1, item);
   },
@@ -120,15 +123,15 @@ obj = {
   },
   disableQueue() {
     closure_0(38)(javaScriptFlagGetter, "Native animated module is not available");
-    obj = javaScriptFlagGetter;
     if (obj.animatedShouldDebounceQueueFlush()) {
       const _clearImmediate = clearImmediate;
       clearImmediate(immediate);
       const _setImmediate = setImmediate;
-      immediate = setImmediate(obj.flushQueue);
+      immediate = setImmediate(obj2.flushQueue);
     } else {
-      obj.flushQueue();
+      obj2.flushQueue();
     }
+    obj = javaScriptFlagGetter;
   },
   disconnectAnimatedNodeFromView(self, connectedViewTag) {
     const result = obj.disconnectAnimatedNodeFromView(self, connectedViewTag);
@@ -150,15 +153,14 @@ obj = {
     c11 = null;
     if (0 !== closure_10.length) {
       if (!closure_14) {
-        let tmpResult = closure_0(92);
-        closure_14 = tmpResult.addListener("onNativeAnimatedModuleGetValue", (value) => {
+        closure_14 = closure_0(92).addListener("onNativeAnimatedModuleGetValue", (value) => {
           if (closure_1_12[value.tag]) {
             tmp3(value.value);
             delete tmp[tmp2];
           }
         });
-        tmpResult = closure_0(92);
-        closure_15 = tmpResult.addListener("onNativeAnimatedModuleAnimationFinished", (arg0) => {
+        const tmpResult = closure_0(92);
+        closure_15 = closure_0(92).addListener("onNativeAnimatedModuleAnimationFinished", (arg0) => {
           let tmp3 = arg0;
           if (!Array.isArray(arg0)) {
             const items = [arg0];
@@ -174,6 +176,7 @@ obj = {
             continue;
           }
         });
+        const tmpResult2 = closure_0(92);
       }
       if (javaScriptFlagGetter != null) {
         const queueAndExecuteBatchedOperations = javaScriptFlagGetter.queueAndExecuteBatchedOperations;
@@ -267,7 +270,7 @@ obj = {
       set.delete(combined);
       if (0 === set.size) {
         c8 = false;
-        obj.disableQueue();
+        obj2.disableQueue();
       }
     }
   },
@@ -279,8 +282,8 @@ obj = {
   }
 };
 let c19 = false;
-const obj1 = {
-  API: obj,
+const obj3 = {
+  API: obj2,
   assertNativeAnimatedModule() {
     closure_0(38)(javaScriptFlagGetter, "Native animated module is not available");
   },
@@ -293,7 +296,7 @@ const obj1 = {
     return +closure_5;
   }
 };
-Object.defineProperty(obj1, "nativeEventEmitter", {
+Object.defineProperty(obj3, "nativeEventEmitter", {
   get: () => {
     let tmp = closure_3;
     if (!closure_3) {
@@ -305,8 +308,8 @@ Object.defineProperty(obj1, "nativeEventEmitter", {
   },
   set: undefined
 });
-obj1.shouldSignalBatch = javaScriptFlagGetter;
-obj1.shouldUseNativeDriver = function shouldUseNativeDriver(useNativeDriver) {
+obj3.shouldSignalBatch = javaScriptFlagGetter;
+obj3.shouldUseNativeDriver = function shouldUseNativeDriver(useNativeDriver) {
   if (null == useNativeDriver.useNativeDriver) {
     const _console = console;
     console.warn("Animated: `useNativeDriver` was not specified. This is a required option and must be explicitly set to `true` or `false`");
@@ -326,7 +329,7 @@ obj1.shouldUseNativeDriver = function shouldUseNativeDriver(useNativeDriver) {
   flag = useNativeDriver.useNativeDriver || false;
   const tmp7 = useNativeDriver.useNativeDriver || false;
 };
-obj1.transformDataType = function transformDataType(item) {
+obj3.transformDataType = function transformDataType(item) {
   if (typeof item !== "string") {
     return item;
   } else if (item.endsWith("deg")) {
@@ -344,4 +347,4 @@ obj1.transformDataType = function transformDataType(item) {
   }
 };
 
-export default obj1;
+export default obj3;

@@ -36,7 +36,7 @@ function notifyIntersectionObservers() {
           let tmp13 = getTargetFromInstanceHandle(tmp7.targetInstanceHandle);
           if (null != tmp13) {
             let obj = IntersectionObserverEntry;
-            arr = arr.push(obj.createIntersectionObserverEntry(tmp7, tmp14));
+            let arr2 = arr.push(obj.createIntersectionObserverEntry(tmp7, tmp14));
           } else {
             let _console = console;
             let warnResult = console.warn("Could not find target to create IntersectionObserverEntry");
@@ -47,9 +47,9 @@ function notifyIntersectionObservers() {
         while (obj2 !== undefined) {
           let tmp28 = _slicedToArray(tmp25, 2);
           let tmp29 = tmp28[1];
-          value = closure_1_7.get(tmp28[0]);
-          let tmp32 = value;
-          if (value) {
+          value2 = closure_1_7.get(tmp28[0]);
+          let tmp32 = value2;
+          if (value2) {
             ({ observer, callback } = tmp32);
             let call = callback.call;
             if (typeof call === "unknown") {
@@ -118,8 +118,7 @@ export const observe = function observe(arg0) {
       if (null == nativeNodeReference) {
         return false;
       } else {
-        let tmp25Result = _mod136;
-        const instanceHandle = tmp25Result.getInstanceHandle(target);
+        const instanceHandle = _mod136.getInstanceHandle(target);
         if (null == instanceHandle) {
           const _console2 = console;
           console.error("IntersectionObserverManager: could not find reference to instance handle from target");
@@ -127,8 +126,8 @@ export const observe = function observe(arg0) {
         } else {
           let nativeNodeReference1 = null;
           if (null != root) {
-            tmp25Result = _mod136;
-            nativeNodeReference1 = tmp25Result.getNativeNodeReference(root);
+            nativeNodeReference1 = _mod136.getNativeNodeReference(root);
+            const tmp25Result2 = _mod136;
           }
           if (null != root) {
             if (null == nativeNodeReference1) {
@@ -139,15 +138,15 @@ export const observe = function observe(arg0) {
           }
           const result = weakMap.set(instanceHandle, target);
           if (!c6) {
-            let tmpResult = NativeIntersectionObserverCxxDefault;
-            tmpResult.connect(notifyIntersectionObservers);
+            NativeIntersectionObserverCxxDefault.connect(notifyIntersectionObservers);
             c6 = true;
+            const tmpResult = NativeIntersectionObserverCxxDefault;
           }
-          tmpResult = nullthrowsDefault;
           const obj = { intersectionObserverId, rootShadowNode: nativeNodeReference1, targetShadowNode: nativeNodeReference, thresholds: value.observer.thresholds, rootThresholds: value.observer.rnRootThresholds, rootMargin: value.observer.rootMargin };
-          const result1 = weakMap1.set(target, tmpResult(NativeIntersectionObserverCxxDefault.observeV2)(obj));
+          const result1 = weakMap1.set(target, nullthrowsDefault(NativeIntersectionObserverCxxDefault.observeV2)(obj));
           return true;
         }
+        const tmp25Result = _mod136;
       }
     }
   }

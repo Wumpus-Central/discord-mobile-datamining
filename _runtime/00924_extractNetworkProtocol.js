@@ -6,6 +6,8 @@ import _mod904 from "module_904" /* 904 */;
 import _mod925 from "module_925" /* 925 */;
 import _slicedToArray from "module_32" /* 32 */;
 
+const require = globalThis.__r;
+
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const extractNetworkProtocol = function extractNetworkProtocol(nextHopProtocol) {
@@ -97,13 +99,13 @@ export const listenForWebVitalReportEvents = function listenForWebVitalReportEve
 export const msToSec = function msToSec(duration) {
   return duration / 1000;
 };
-export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, attributes) {
+export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, arg3) {
   _require = sum;
   dependencyMap = sum1;
-  if (attributes == null) {
+  if (arg3 == null) {
     throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
-    closure_2 = Object.assign(attributes, undefined);
+    closure_2 = Object.assign(arg3, undefined);
     const start_timestamp = require("module_682").spanToJSON(activeSpan).start_timestamp;
     let tmp = start_timestamp;
     if (start_timestamp) {
@@ -117,9 +119,8 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
     }
     const obj2 = require("module_682");
     return require("module_682").withActiveSpan(activeSpan, () => {
-      const obj = { startTime };
       const merged = Object.assign(closure_2);
-      const startInactiveSpanResult = obj.startInactiveSpan(obj);
+      const startInactiveSpanResult = _mod682.startInactiveSpan({ startTime });
       if (startInactiveSpanResult) {
         startInactiveSpanResult.end(closure_1);
       }
@@ -128,8 +129,7 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
   }
 };
 export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(arg0) {
-  let obj = _mod682;
-  const client = obj.getClient();
+  const client = _mod682.getClient();
   if (client) {
     ({ attributes, name, transaction, startTime } = arg0);
     const options = client.getOptions();
@@ -138,8 +138,7 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
     if (integrationByName != null) {
       const replayId = integrationByName.getReplayId();
     }
-    let tmpResult = _mod682;
-    const currentScope = tmpResult.getCurrentScope();
+    const currentScope = _mod682.getCurrentScope();
     const user = currentScope.getUser();
     if (undefined !== user) {
       const tmp8 = user.email || user.id || user.ip_address;
@@ -147,27 +146,24 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
     }
     try {
       const profile_id = currentScope.getScopeData().contexts.profile.profile_id;
-      obj = { release, environment, user: tmp8, profile_id, replay_id: replayId, transaction, "user_agent.original": null, "client.address": null };
+      const obj2 = { release, environment, user: tmp8, profile_id, replay_id: replayId, transaction, "user_agent.original": null, "client.address": null };
       const _navigator = _mod904.WINDOW.navigator;
       let userAgent;
       if (_navigator != null) {
         userAgent = _navigator.userAgent;
       }
-      obj["user_agent.original"] = userAgent;
+      obj2["user_agent.original"] = userAgent;
       let str2;
       if (sendDefaultPii) {
         str2 = "{{auto}}";
       }
-      obj["client.address"] = str2;
+      obj2["client.address"] = str2;
       const merged = Object.assign(attributes);
-      tmpResult = _mod682;
-      obj = { name, attributes: null, startTime: null, experimental: null };
-      obj.attributes = obj;
-      obj.startTime = startTime;
-      obj.experimental = { standalone: true };
-      return tmpResult.startInactiveSpan(obj);
+      const obj3 = { name, attributes: obj2, startTime, experimental: { standalone: true } };
+      return _mod682.startInactiveSpan(obj3);
     } catch (err) {
     }
+    const tmpResult = _mod682;
   }
 };
 export const supportsWebVital = function supportsWebVital(arg0) {

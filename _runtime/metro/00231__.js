@@ -40,14 +40,14 @@ const entry = {
       } else {
         substr = [{ text: "OK" }];
       }
-      substr.pop();
       const arr = substr.pop();
-      const arr1 = substr.pop();
-      if (arr1) {
-        obj.buttonNeutral = arr1.text || "";
+      const arr4 = substr.pop();
+      const arr5 = substr.pop();
+      if (arr5) {
+        obj.buttonNeutral = arr5.text || "";
       }
-      if (arr) {
-        obj.buttonNegative = arr.text || "";
+      if (arr4) {
+        obj.buttonNegative = arr4.text || "";
       }
       if (arr) {
         obj.buttonPositive = arr.text || "OK";
@@ -55,12 +55,12 @@ const entry = {
       _default.showAlert(obj, (arg0) => console.warn(arg0), (arg0, arg1) => {
         if (arg0 === buttonClicked.buttonClicked) {
           if (arg1 === buttonClicked.buttonNeutral) {
-            if (arr1.onPress) {
-              arr1.onPress();
+            if (arr5.onPress) {
+              arr5.onPress();
             }
           } else if (arg1 === buttonClicked.buttonNegative) {
-            if (arr.onPress) {
-              arr.onPress();
+            if (arr4.onPress) {
+              arr4.onPress();
             }
           } else {
             let onPress = arg1 === buttonClicked.buttonPositive;

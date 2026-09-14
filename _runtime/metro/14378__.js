@@ -1,5 +1,25 @@
 // === Module 14378: ? ===
 
 // Module 14378
+const require = globalThis.__r;
 
-export const units = ["degree", "acre", "hectare", "percent", "bit", "byte", "gigabit", "gigabyte", "kilobit", "kilobyte", "megabit", "megabyte", "petabyte", "terabit", "terabyte", "day", "hour", "millisecond", "minute", "month", "second", "week", "year", "centimeter", "foot", "inch", "kilometer", "meter", "mile-scandinavian", "mile", "millimeter", "yard", "gram", "kilogram", "ounce", "pound", "stone", "celsius", "fahrenheit", "fluid-ounce", "gallon", "liter", "milliliter"];
+const require = arg1;
+const dependencyMap = arg6;
+
+export const getSupportedUnits = function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("module_14379").units;
+  return units.filter((item) => (function isSupported(unit, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const obj = { style: "unit", unit };
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+      return memoizedNumberFormat.resolvedOptions().unit === unit;
+    } catch (err) {
+      return false;
+    }
+  })(item, closure_0));
+};

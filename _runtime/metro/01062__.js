@@ -37,15 +37,14 @@ class FeedbackManager {
   }
 }
 ScreenshotButtonManager = FeedbackManager;
-let obj = {
-  key: "_feedbackComponentName",
-  get() {
-    const error = new Error("Subclasses must override feedbackComponentName");
-    throw error;
-  }
-};
 const items = [
-  obj,
+  {
+    key: "_feedbackComponentName",
+    get() {
+      const error = new Error("Subclasses must override feedbackComponentName");
+      throw error;
+    }
+  },
   {
     key: "initialize",
     value: function initialize(_setVisibility) {
@@ -117,13 +116,14 @@ class FeedbackWidgetManager {
 }
 ScreenshotButtonManager = FeedbackWidgetManager;
 _inherits(FeedbackWidgetManager, importDefaultResult1Result);
-obj = {
-  key: "_feedbackComponentName",
-  get() {
-    return "FeedbackWidget";
+const items1 = [
+  {
+    key: "_feedbackComponentName",
+    get() {
+      return "FeedbackWidget";
+    }
   }
-};
-const items1 = [obj];
+];
 const importDefaultResult1Result1 = _createClass(FeedbackWidgetManager, null, items1);
 class FeedbackButtonManager {
   constructor() {
@@ -147,13 +147,14 @@ class FeedbackButtonManager {
 }
 ScreenshotButtonManager = FeedbackButtonManager;
 _inherits(FeedbackButtonManager, importDefaultResult1Result);
-obj = {
-  key: "_feedbackComponentName",
-  get() {
-    return "FeedbackButton";
+const items2 = [
+  {
+    key: "_feedbackComponentName",
+    get() {
+      return "FeedbackButton";
+    }
   }
-};
-const items2 = [obj];
+];
 const importDefaultResult1Result2 = _createClass(FeedbackButtonManager, null, items2);
 class ScreenshotButtonManager {
   constructor() {

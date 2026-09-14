@@ -8,6 +8,8 @@ import _mod8681 from "module_8681" /* 8681 */;
 import _fetchText from "_fetchText" /* 8683 */;
 import RNSVGCircle from "RNSVGCircle" /* 8684 */;
 
+const require = globalThis.__r;
+
 for (const key10013 in require("module_8576")) {
   arg5[key10013] = require("module_8576")[key10013];
   continue;

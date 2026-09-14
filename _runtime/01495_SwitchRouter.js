@@ -5,13 +5,15 @@ import BaseRouter3 from "BaseRouter" /* 1491 */;
 import nanoid from "nanoid" /* 1492 */;
 import _mod1496 from "module_1496" /* 1496 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 const route = "route";
 function getRouteHistory(mapped, bound, backBehavior, require) {
   let diff = bound;
   closure_0 = require;
-  let obj = { type: route, key: mapped[bound].key, params: null };
+  const obj = { type: route, key: mapped[bound].key, params: null };
   let params;
   if ("fullHistory" === backBehavior) {
     params = mapped[diff].params;
@@ -21,15 +23,15 @@ function getRouteHistory(mapped, bound, backBehavior, require) {
   if ("order" === backBehavior) {
     if (diff > 0) {
       do {
-        obj = { type: route, key: mapped[diff - 1].key };
-        let arr = items.unshift(obj);
+        let obj2 = { type: route, key: mapped[diff - 1].key };
+        let arr = items.unshift(obj2);
         diff = diff - 1;
       } while (diff > 0);
     }
   } else if ("firstRoute" === backBehavior) {
     if (0 !== diff) {
-      obj = { type: route, key: mapped[0].key };
-      items.unshift(obj);
+      const obj3 = { type: route, key: mapped[0].key };
+      items.unshift(obj3);
     }
   } else if ("initialRoute" === backBehavior) {
     const findIndexResult = mapped.findIndex((name) => name.name === closure_0);
@@ -38,8 +40,8 @@ function getRouteHistory(mapped, bound, backBehavior, require) {
       num = findIndexResult;
     }
     if (diff !== num) {
-      const obj1 = { type: route, key: mapped[num].key };
-      items.unshift(obj1);
+      const obj4 = { type: route, key: mapped[num].key };
+      items.unshift(obj4);
     }
   }
   return items;
@@ -50,11 +52,11 @@ function changeIndex(history, bound, backBehavior, require) {
     if ("fullHistory" !== backBehavior) {
       const history1 = history.history;
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(history1.filter((type) => "route" !== type.type), 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(getRouteHistory(history.routes, bound, backBehavior, require), arraySpreadResult);
+      const arraySpreadResult = HermesBuiltin.arraySpread(history1.filter((type) => "route" !== type.type), 0);
+      HermesBuiltin.arraySpread(getRouteHistory(history.routes, bound, backBehavior, require), arraySpreadResult);
       let combined = items;
     }
-    let obj = { index: bound, history: combined };
+    const obj = { index: bound, history: combined };
     return obj;
   }
   if ("history" === backBehavior) {
@@ -78,18 +80,18 @@ function changeIndex(history, bound, backBehavior, require) {
         const items1 = [];
         HermesBuiltin.arraySpread(history.slice(findLastIndexResult + 1), HermesBuiltin.arraySpread(history.slice(0, findLastIndexResult), 0));
         found = items1;
-        const arraySpreadResult1 = HermesBuiltin.arraySpread(history.slice(0, findLastIndexResult), 0);
+        const arraySpreadResult5 = HermesBuiltin.arraySpread(history.slice(0, findLastIndexResult), 0);
       }
       tmp14 = "route" === type && tmp12.key === history[findLastIndexResult].key;
     }
   }
-  obj = { type: route, key: tmp12.key, params: null };
+  const obj2 = { type: route, key: history.routes[bound].key, params: null };
   let params;
   if ("fullHistory" === backBehavior) {
     params = tmp12.params;
   }
-  obj.params = params;
-  combined = found.concat(obj);
+  obj2.params = params;
+  combined = found.concat(obj2);
 }
 
 export const SwitchRouter = function SwitchRouter(merged) {
@@ -122,7 +124,7 @@ export const SwitchRouter = function SwitchRouter(merged) {
       index = name;
       const routes = index.routes;
       const found = routes.find((name) => name.name === closure_0);
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(found);
       obj.name = name;
       if (found) {
@@ -132,14 +134,14 @@ export const SwitchRouter = function SwitchRouter(merged) {
           }
           obj.key = key;
           if (undefined !== closure_1_1[name]) {
-            obj = {};
+            const obj3 = {};
             const merged1 = Object.assign(tmp3[name]);
-            let params;
+            let params1;
             if (found) {
-              params = found.params;
+              params1 = found.params;
             }
-            const merged2 = Object.assign(params);
-            params = obj;
+            const merged2 = Object.assign(params1);
+            let params = obj3;
           } else if (found) {
             params = found.params;
           }
@@ -187,10 +189,9 @@ export const SwitchRouter = function SwitchRouter(merged) {
       found = [];
     }
     obj.preloadedRouteKeys = found;
-    obj = {};
     let merged = Object.assign(obj);
     let merged1 = Object.assign(changeIndex(obj, bound, backBehavior, closure_1_0));
-    return obj;
+    return {};
   };
   obj.getStateForRouteNamesChange = function getStateForRouteNamesChange(index, arg1) {
     ({ routeNames, routeParamList: backBehavior, routeKeyChanges: closure_2 } = arg1);
@@ -245,8 +246,8 @@ export const SwitchRouter = function SwitchRouter(merged) {
       const merged = Object.assign(index);
       obj.routeNames = routeNames;
       obj.routes = mapped;
-      obj = { routes: mapped, history: found };
-      const merged1 = Object.assign(changeIndex(obj, index, backBehavior, require));
+      let obj2 = { routes: mapped, history: found };
+      const merged1 = Object.assign(changeIndex(obj2, index, backBehavior, require));
       const preloadedRouteKeys = index.preloadedRouteKeys;
       obj.preloadedRouteKeys = preloadedRouteKeys.filter((item) => set.has(item));
       return obj;
@@ -277,7 +278,7 @@ export const SwitchRouter = function SwitchRouter(merged) {
     c7 = undefined;
     c8 = undefined;
     closure_9 = undefined;
-    let obj3;
+    let obj8;
     type = type.type;
     if ("JUMP_TO" !== type) {
       if ("NAVIGATE" !== type) {
@@ -288,11 +289,11 @@ export const SwitchRouter = function SwitchRouter(merged) {
                 if (1 === history.history.length) {
                   return null;
                 } else {
-                  type = undefined;
+                  let type1;
                   if (history.history[history.history.length - 2] != null) {
-                    type = tmp91.type;
+                    type1 = tmp91.type;
                   }
-                  if ("route" !== type) {
+                  if ("route" !== type1) {
                     return null;
                   } else {
                     key = tmp91.key;
@@ -306,26 +307,26 @@ export const SwitchRouter = function SwitchRouter(merged) {
                       if (tmp26) {
                         const items = [];
                         HermesBuiltin.arraySpread(history.routes, 0);
-                        let obj = {};
+                        const obj2 = {};
                         const merged = Object.assign(items[findLastIndexResult]);
-                        obj.params = tmp91.params;
-                        items[findLastIndexResult] = obj;
+                        obj2.params = tmp91.params;
+                        items[findLastIndexResult] = obj2;
                         routes2 = items;
                       }
-                      obj = {};
+                      const obj5 = {};
                       const merged1 = Object.assign(history);
-                      obj.routes = routes2;
+                      obj5.routes = routes2;
                       const preloadedRouteKeys = history.preloadedRouteKeys;
-                      obj.preloadedRouteKeys = preloadedRouteKeys.filter((item) => item !== history.routes[c7].key);
-                      history = history.history;
-                      obj.history = history.slice(0, -1);
-                      obj.index = findLastIndexResult;
-                      return obj;
+                      obj5.preloadedRouteKeys = preloadedRouteKeys.filter((item) => item !== history.routes[c7].key);
+                      const history1 = history.history;
+                      obj5.history = history1.slice(0, -1);
+                      obj5.index = findLastIndexResult;
+                      return obj5;
                     }
                   }
                 }
               } else if ("PRELOAD" === type) {
-                let routes = history.routes;
+                const routes = history.routes;
                 const findIndexResult = routes.findIndex((name) => name.name === type.payload.name);
                 c8 = findIndexResult;
                 if (-1 === findIndexResult) {
@@ -334,37 +335,35 @@ export const SwitchRouter = function SwitchRouter(merged) {
                   closure_9 = tmp88;
                   let tmp89Result;
                   if (routeGetIdList[history.routes[findIndexResult].name] != null) {
-                    obj = { params: tmp88.params };
+                    const obj = { params: tmp88.params };
                     tmp89Result = tmp89(obj);
                   }
-                  tmp89Result = undefined;
+                  let tmp89Result2;
                   if (routeGetIdList[history.routes[findIndexResult].name] != null) {
-                    const obj1 = { params: type.payload.params };
-                    tmp89Result = tmp89(obj1);
+                    const obj6 = { params: type.payload.params };
+                    tmp89Result2 = tmp89(obj6);
                   }
-                  if (tmp89Result === tmp89Result) {
+                  if (tmp89Result === tmp89Result2) {
                     key = tmp88.key;
                   } else {
-                    let obj2 = nanoid;
                     const _HermesInternal = HermesInternal;
-                    key = "" + tmp88.name + "-" + obj2.nanoid();
+                    key = "" + tmp88.name + "-" + nanoid.nanoid();
                   }
-                  obj3 = _mod1496;
-                  obj2 = { action: type, routeParamList };
-                  const paramsFromAction = obj3.createParamsFromAction(obj2);
+                  const obj7 = { action: type, routeParamList };
+                  const paramsFromAction = _mod1496.createParamsFromAction(obj7);
                   let tmp12 = tmp88;
                   if (paramsFromAction !== history.routes[findIndexResult].params) {
-                    obj3 = {};
+                    obj8 = {};
                     const merged2 = Object.assign(tmp88);
-                    obj3.key = key;
-                    obj3.params = paramsFromAction;
-                    tmp12 = obj3;
+                    obj8.key = key;
+                    obj8.params = paramsFromAction;
+                    tmp12 = obj8;
                   }
-                  obj3 = tmp12;
-                  const history1 = history.history;
-                  let tmp16 = history1;
+                  obj8 = tmp12;
+                  const history4 = history.history;
+                  let tmp16 = history4;
                   if (key !== history.routes[findIndexResult].key) {
-                    const found = history1.filter((type) => {
+                    const found = history4.filter((type) => {
                       let tmp = "route" !== type.type;
                       if (!tmp) {
                         tmp = type.key !== closure_9.key;
@@ -373,31 +372,31 @@ export const SwitchRouter = function SwitchRouter(merged) {
                     });
                     let combined = found;
                     if (findIndexResult === history.index) {
-                      const obj4 = { type: route, key: tmp12.key, params: null };
-                      let params;
+                      const obj9 = { type: route, key: tmp12.key, params: null };
+                      let params1;
                       if ("fullHistory" === backBehavior) {
-                        params = tmp12.params;
+                        params1 = tmp12.params;
                       }
-                      obj4.params = params;
-                      combined = found.concat(obj4);
+                      obj9.params = params1;
+                      combined = found.concat(obj9);
                     }
                     tmp16 = combined;
                   }
-                  const obj5 = {};
+                  const obj10 = {};
                   const merged3 = Object.assign(history);
                   const preloadedRouteKeys1 = history.preloadedRouteKeys;
                   const found1 = preloadedRouteKeys1.filter((item) => item !== closure_9.key);
-                  obj5.preloadedRouteKeys = found1.concat(tmp12.key);
-                  routes = history.routes;
-                  obj5.routes = routes.map((item, index) => {
+                  obj10.preloadedRouteKeys = found1.concat(tmp12.key);
+                  const routes1 = history.routes;
+                  obj10.routes = routes1.map((item, index) => {
                     let tmp = item;
                     if (index === c8) {
-                      tmp = obj3;
+                      tmp = obj8;
                     }
                     return tmp;
                   });
-                  obj5.history = tmp16;
-                  return obj5;
+                  obj10.history = tmp16;
+                  return obj10;
                 }
               } else {
                 const BaseRouter = BaseRouter3.BaseRouter;
@@ -425,17 +424,17 @@ export const SwitchRouter = function SwitchRouter(merged) {
                 HermesBuiltin.arraySpread(history.history, 0);
                 history2 = items1;
                 if ("route" === items1[findLastIndexResult1].type) {
-                  const obj6 = {};
+                  const obj11 = {};
                   const merged4 = Object.assign(tmp43);
-                  obj6.params = tmp39.params;
-                  items1[findLastIndexResult1] = obj6;
+                  obj11.params = tmp39.params;
+                  items1[findLastIndexResult1] = obj11;
                   history2 = items1;
                 }
               }
-              const obj7 = {};
+              const obj12 = {};
               const merged5 = Object.assign(stateForAction);
-              obj7.history = history2;
-              return obj7;
+              obj12.history = history2;
+              return obj12;
             }
           }
           return stateForAction;
@@ -456,15 +455,15 @@ export const SwitchRouter = function SwitchRouter(merged) {
       } else {
         let tmp97Result;
         if (routeGetIdList[tmp95.name] != null) {
-          const obj8 = { params: tmp95.params };
-          tmp97Result = tmp97(obj8);
+          const obj13 = { params: tmp95.params };
+          tmp97Result = tmp97(obj13);
         }
-        tmp97Result = undefined;
+        let tmp97Result2;
         if (routeGetIdList[tmp95.name] != null) {
-          const obj9 = { params: type.payload.params };
-          tmp97Result = tmp97(obj9);
+          const obj14 = { params: type.payload.params };
+          tmp97Result2 = tmp97(obj14);
         }
-        if (tmp97Result === tmp97Result) {
+        if (tmp97Result === tmp97Result2) {
           key2 = tmp95.key;
         } else {
           const _HermesInternal2 = HermesInternal;
@@ -472,17 +471,17 @@ export const SwitchRouter = function SwitchRouter(merged) {
         }
         if ("NAVIGATE" === type.type) {
           if (type.payload.merge) {
-            if (tmp97Result === tmp97Result) {
+            if (tmp97Result === tmp97Result2) {
               if (undefined === type.payload.params) {
                 if (undefined === routeParamList[tmp95.name]) {
-                  params = tmp95.params;
+                  let params = tmp95.params;
                 }
               }
-              const obj10 = {};
+              const obj15 = {};
               const merged6 = Object.assign(routeParamList[tmp95.name]);
               const merged7 = Object.assign(tmp95.params);
               const merged8 = Object.assign(type.payload.params);
-              params = obj10;
+              params = obj15;
             }
             if ("NAVIGATE" === type.type) {
               if (null != type.payload.path) {
@@ -493,9 +492,9 @@ export const SwitchRouter = function SwitchRouter(merged) {
                   let tmp64 = tmp95;
                 }
                 key = tmp64;
-                const routes1 = history.routes;
-                const obj11 = {};
-                const mapped = routes1.map((item, index) => {
+                const routes5 = history.routes;
+                const obj16 = {};
+                const mapped = routes5.map((item, index) => {
                   let tmp = item;
                   if (index === findIndexResult1) {
                     tmp = closure_4;
@@ -503,12 +502,12 @@ export const SwitchRouter = function SwitchRouter(merged) {
                   return tmp;
                 });
                 const merged9 = Object.assign(history);
-                obj11.routes = mapped;
+                obj16.routes = mapped;
                 if (key2 === tmp95.key) {
                   let history3 = history.history;
                 } else {
-                  history2 = history.history;
-                  history3 = history2.filter((type) => {
+                  const history5 = history.history;
+                  history3 = history5.filter((type) => {
                     let tmp = "route" !== type.type;
                     if (!tmp) {
                       tmp = type.key !== closure_3.key;
@@ -516,32 +515,32 @@ export const SwitchRouter = function SwitchRouter(merged) {
                     return tmp;
                   });
                 }
-                obj11.history = history3;
-                const obj12 = {};
-                const merged10 = Object.assign(obj11);
-                const merged11 = Object.assign(changeIndex(obj11, findIndexResult1, backBehavior, closure_1_0));
-                const preloadedRouteKeys2 = obj11.preloadedRouteKeys;
-                obj12.preloadedRouteKeys = preloadedRouteKeys2.filter((item) => {
+                obj16.history = history3;
+                const obj18 = {};
+                const merged10 = Object.assign(obj16);
+                const merged11 = Object.assign(changeIndex(obj16, findIndexResult1, backBehavior, closure_1_0));
+                const preloadedRouteKeys2 = obj16.preloadedRouteKeys;
+                obj18.preloadedRouteKeys = preloadedRouteKeys2.filter((item) => {
                   let tmp = item !== closure_3.key;
                   if (tmp) {
                     tmp = item !== key.key;
                   }
                   return tmp;
                 });
-                return obj12;
+                return obj18;
               }
-              const obj13 = {};
+              const obj20 = {};
               const merged12 = Object.assign(tmp95);
-              obj13.key = key2;
-              obj13.path = path;
-              obj13.params = params;
-              tmp64 = obj13;
+              obj20.key = key2;
+              obj20.path = path;
+              obj20.params = params;
+              tmp64 = obj20;
             }
             path = tmp95.path;
           }
         }
-        const obj14 = { action: type, routeParamList };
-        params = _mod1496.createParamsFromAction(obj14);
+        const obj21 = { action: type, routeParamList };
+        params = _mod1496.createParamsFromAction(obj21);
       }
     }
   };

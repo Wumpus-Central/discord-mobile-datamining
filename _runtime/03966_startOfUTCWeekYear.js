@@ -2,35 +2,39 @@
 
 // Module 3966 (startOfUTCWeekYear)
 import _mod3730 from "module_3730" /* 3730 */;
-import module_3967 from "module_3967" /* 3967 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
-import startOfUTCWeek from "startOfUTCWeek" /* 3728 */;
-import module_3729 from "module_3729" /* 3729 */;
+import module_3967_mod from "module_3967" /* 3967 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import startOfUTCWeek_mod from "startOfUTCWeek" /* 3728 */;
+import module_3729_mod from "module_3729" /* 3729 */;
 
+let module_3967 = module_3967_mod;
 if (!module_3967) {
-  let obj = { default: module_3967 };
+  const obj = { default: module_3967 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3967;
 }
 module_3967 = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+let startOfUTCWeek = startOfUTCWeek_mod;
 if (!startOfUTCWeek) {
-  obj = { default: startOfUTCWeek };
-  let tmp7 = obj;
+  const obj3 = { default: startOfUTCWeek };
+  let tmp7 = obj3;
 } else {
   tmp7 = startOfUTCWeek;
 }
 startOfUTCWeek = tmp7;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  const obj1 = { default: module_3729 };
-  let tmp9 = obj1;
+  const obj4 = { default: module_3729 };
+  let tmp9 = obj4;
 } else {
   tmp9 = module_3729;
 }

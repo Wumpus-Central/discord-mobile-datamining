@@ -3,6 +3,8 @@
 // Module 267
 import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 let c2 = false;

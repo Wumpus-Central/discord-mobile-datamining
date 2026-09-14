@@ -2,43 +2,48 @@
 
 // Module 4009
 import _mod3730 from "module_3730" /* 3730 */;
-import module_3987 from "module_3987" /* 3987 */;
-import module_3988 from "module_3988" /* 3988 */;
-import startOfMonth from "startOfMonth" /* 3941 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
-import module_3729 from "module_3729" /* 3729 */;
+import module_3987_mod from "module_3987" /* 3987 */;
+import module_3988_mod from "module_3988" /* 3988 */;
+import startOfMonth_mod from "startOfMonth" /* 3941 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import module_3729_mod from "module_3729" /* 3729 */;
 
+let module_3987 = module_3987_mod;
 if (!module_3987) {
-  let obj = { default: module_3987 };
+  const obj = { default: module_3987 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3987;
 }
 module_3987 = tmp3;
+let module_3988 = module_3988_mod;
 if (!module_3988) {
-  obj = { default: module_3988 };
-  let tmp5 = obj;
+  const obj2 = { default: module_3988 };
+  let tmp5 = obj2;
 } else {
   tmp5 = module_3988;
 }
 module_3988 = tmp5;
+let startOfMonth = startOfMonth_mod;
 if (!startOfMonth) {
-  obj = { default: startOfMonth };
-  let tmp7 = obj;
+  const obj3 = { default: startOfMonth };
+  let tmp7 = obj3;
 } else {
   tmp7 = startOfMonth;
 }
 startOfMonth = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  const obj2 = { default: module_3729 };
-  let tmp11 = obj2;
+  const obj5 = { default: module_3729 };
+  let tmp11 = obj5;
 } else {
   tmp11 = module_3729;
 }

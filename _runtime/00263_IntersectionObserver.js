@@ -383,11 +383,12 @@ let items = [
         const self = this;
         const _observationTargets = this._observationTargets;
         if (!_observationTargets.has(target)) {
-          const obj = { intersectionObserverId: self._getOrCreateIntersectionObserverId(), root: self._root, target };
-          if (obj.observe(obj)) {
+          const obj2 = { intersectionObserverId: self._getOrCreateIntersectionObserverId(), root: self._root, target };
+          if (obj.observe(obj2)) {
             const _observationTargets2 = self._observationTargets;
             _observationTargets2.add(target);
           }
+          obj = _modAll264;
         }
       } else {
         const _TypeError = TypeError;

@@ -2,8 +2,9 @@
 
 // Module 3979
 import _mod3730 from "module_3730" /* 3730 */;
-import code from "module_3971" /* 3971 */;
+import code_mod from "module_3971" /* 3971 */;
 
+let code = code_mod;
 if (!code) {
   const obj = { default: code };
   let tmp3 = obj;

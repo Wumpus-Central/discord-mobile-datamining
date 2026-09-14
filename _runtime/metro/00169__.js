@@ -70,13 +70,14 @@ class PerformanceMarkTemplate {
 }
 PerformanceMeasureTemplate = PerformanceMarkTemplate;
 _inherits(PerformanceMarkTemplate, fn(163).PerformanceEntry);
-let obj = {
-  key: "detail",
-  get() {
-    return this.__detail;
+let items = [
+  {
+    key: "detail",
+    get() {
+      return this.__detail;
+    }
   }
-};
-let items = [obj];
+];
 class PerformanceMark {
   constructor(arg0, arg1) {
     obj = { __entryType: "mark", __name: global };
@@ -133,13 +134,14 @@ class PerformanceMeasureTemplate {
   }
 }
 _inherits(PerformanceMeasureTemplate, fn(163).PerformanceEntry);
-obj = {
-  key: "detail",
-  get() {
-    return this.__detail;
+const items1 = [
+  {
+    key: "detail",
+    get() {
+      return this.__detail;
+    }
   }
-};
-const items1 = [obj];
+];
 class PerformanceMeasure {
   constructor(arg0) {
     obj = { __entryType: "measure", __name: global.name, __startTime: global.startTime, __duration: global.duration };

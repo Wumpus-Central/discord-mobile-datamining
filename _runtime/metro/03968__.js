@@ -8,10 +8,10 @@ export default function addLeadingZeros(arg0, arg1) {
   if (arg0 < 0) {
     str = "-";
   }
-  str = Math.abs(arg0).toString();
-  let tmp = str;
-  let tmp2 = str;
-  if (str.length < arg1) {
+  const str1 = Math.abs(arg0).toString();
+  let tmp = str1;
+  let tmp2 = str1;
+  if (str1.length < arg1) {
     do {
       let text = `0${tmp}`;
       tmp = text;

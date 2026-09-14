@@ -9,18 +9,18 @@ import _mod4731 from "module_4731" /* 4731 */;
 
 
 export default function initCloneByTag(arg0, arg1, arg2) {
-  let constructor = arg0.constructor;
+  const constructor = arg0.constructor;
   switch (arg1) {
     case "[object ArrayBuffer]":
       return cloneArrayBuffer(arg0);
     case "[object Boolean]":
       let tmp20 = +arg0;
-      constructor = new constructor(tmp20);
-      return constructor;
+      let constructor1 = new constructor(tmp20);
+      return constructor1;
     case "[object Date]":
       tmp20 = +arg0;
-      constructor = new constructor(tmp20);
-      return constructor;
+      constructor1 = new constructor(tmp20);
+      return constructor1;
     case "[object DataView]":
       return cloneDataView(arg0, arg2);
     case "[object Float32Array]":
@@ -60,17 +60,17 @@ export default function initCloneByTag(arg0, arg1, arg2) {
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "[object Map]":
-      let constructor1 = new constructor();
-      return constructor1;
+      let constructor2 = new constructor();
+      return constructor2;
     case "[object Set]":
-      constructor1 = new constructor();
-      return constructor1;
+      constructor2 = new constructor();
+      return constructor2;
     case "[object Number]":
-      let constructor2 = new constructor(arg0);
-      return constructor2;
+      let constructor3 = new constructor(arg0);
+      return constructor3;
     case "[object String]":
-      constructor2 = new constructor(arg0);
-      return constructor2;
+      constructor3 = new constructor(arg0);
+      return constructor3;
     case "[object RegExp]":
       return cloneRegExp(arg0);
     case "[object Symbol]":

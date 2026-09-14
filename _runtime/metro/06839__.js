@@ -7,6 +7,8 @@ import _mod6800 from "module_6800" /* 6800 */;
 import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6824 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 ({ useEffect: c2, useMemo: c3 } = noop);
 
 export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
@@ -32,19 +34,14 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
     }
     const items = [tmp2, , , ];
     ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
-    let tmpResult = tmp(() => {
-      const obj = { simultaneousWith: config.simultaneousWith, requireToFail: config.requireToFail, block: config.block };
-      return obj.prepareRelations(obj, closure_2);
-    }, items);
+    const tmpResult = tmp(() => DEFAULT_PROPS_TRANSFORMER.prepareRelations({ simultaneousWith: config.simultaneousWith, requireToFail: config.requireToFail, block: config.block }, closure_2), items);
     const gestureRelations = tmpResult;
     const items1 = [tmp2, Fling, clonedAndRemappedConfig, jsEventHandler, reanimatedEventHandler, animatedEventHandler, tmpResult];
-    tmpResult = tmp(() => {
-      let obj = { handlerTag, type, config, detectorCallbacks: null, gestureRelations };
-      obj = { jsEventHandler, animatedEventHandler, reanimatedEventHandler };
-      obj.detectorCallbacks = obj;
+    const tmpResult2 = tmp(() => {
+      const obj = { handlerTag, type, config, detectorCallbacks: { jsEventHandler, animatedEventHandler, reanimatedEventHandler }, gestureRelations };
       return obj;
     }, items1);
-    closure_7 = tmpResult;
+    closure_7 = tmpResult2;
     const items2 = [Fling, tmp2];
     handlerTag(() => {
       let NativeProxy = _mod6800.NativeProxy;
@@ -56,7 +53,7 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
         const result = closure_0(6787).scheduleFlushOperations();
       };
     }, items2);
-    const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult];
+    const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult2];
     handlerTag(() => {
       const result = DEFAULT_PROPS_TRANSFORMER.prepareConfigForNativeSide(closure_0, dependencyMap);
       const NativeProxy = _mod6800.NativeProxy;
@@ -70,6 +67,6 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
         closure_0(6760).unregisterGesture(handlerTag);
       };
     }, items3);
-    return tmpResult;
+    return tmpResult2;
   }
 };

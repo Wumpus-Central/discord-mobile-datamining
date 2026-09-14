@@ -1,7 +1,7 @@
 // === Module 10003: QRPolynomial ===
 
 // Module 10003 (QRPolynomial)
-import _mod10004 from "module_10004" /* 10004 */;
+import array2 from "array2" /* 10004 */;
 
 class QRPolynomial {
   constructor(arg0, arg1) {
@@ -72,10 +72,10 @@ QRPolynomial.prototype = {
         if (0 < getLength.getLength()) {
           do {
             let sum = num + num2;
-            let obj = _mod10004;
-            let obj2 = _mod10004;
+            let obj = array2;
+            let obj2 = array2;
             let glogResult = obj2.glog(self.get(num));
-            let obj3 = _mod10004;
+            let obj3 = array2;
             arr[sum] = arr[sum] ^ obj.gexp(glogResult + obj3.glog(getLength.get(num2)));
             num2 = num2 + 1;
             length1 = getLength.getLength();
@@ -105,19 +105,19 @@ QRPolynomial.prototype = {
           }
         }
       }
-      obj = Object.create(tmp8);
+      const obj4 = Object.create(tmp8);
       const _Array = Array;
       const array = new Array(arr.length - num4);
-      obj.num = array;
+      obj4.num = array;
       let num5 = 0;
       if (0 < arr.length - num4) {
         do {
-          obj.num[num5] = arr[num5 + num4];
+          obj4.num[num5] = arr[num5 + num4];
           num5 = num5 + 1;
           diff = arr.length - num4;
         } while (num5 < diff);
       }
-      return obj;
+      return obj4;
     }
     const length = this.getLength();
   },
@@ -129,9 +129,9 @@ QRPolynomial.prototype = {
     if (length - getLength.getLength() < 0) {
       return self;
     } else {
-      const glogResult = _mod10004.glog(self.get(0));
+      const glogResult = array2.glog(self.get(0));
       const _Array2 = Array;
-      const diff = glogResult - _mod10004.glog(getLength.get(0));
+      const diff = glogResult - array2.glog(getLength.get(0));
       const arr = new Array(self.getLength());
       let num = 0;
       if (0 < self.getLength()) {
@@ -144,8 +144,8 @@ QRPolynomial.prototype = {
       let num2 = 0;
       if (0 < getLength.getLength()) {
         do {
-          let obj = _mod10004;
-          let obj2 = _mod10004;
+          let obj = array2;
+          let obj2 = array2;
           arr[num2] = arr[num2] ^ obj.gexp(obj2.glog(getLength.get(num2)) + diff);
           num2 = num2 + 1;
           length2 = getLength.getLength();
@@ -172,19 +172,19 @@ QRPolynomial.prototype = {
             }
           }
         }
-        obj = Object.create(tmp7);
+        const obj3 = Object.create(tmp7);
         const _Array = Array;
         const array = new Array(arr.length - num4);
-        obj.num = array;
+        obj3.num = array;
         let num5 = 0;
         if (0 < arr.length - num4) {
           do {
-            obj.num[num5] = arr[num5 + num4];
+            obj3.num[num5] = arr[num5 + num4];
             num5 = num5 + 1;
             diff1 = arr.length - num4;
           } while (num5 < diff1);
         }
-        return obj.mod(getLength);
+        return obj3.mod(getLength);
       }
     }
     length = this.getLength();

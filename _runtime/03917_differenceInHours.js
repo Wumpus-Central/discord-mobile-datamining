@@ -3,19 +3,21 @@
 // Module 3917 (differenceInHours)
 import daysInWeek from "daysInWeek" /* 3904 */;
 import _mod3919 from "module_3919" /* 3919 */;
-import differenceInMilliseconds from "differenceInMilliseconds" /* 3918 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import differenceInMilliseconds_mod from "differenceInMilliseconds" /* 3918 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let differenceInMilliseconds = differenceInMilliseconds_mod;
 if (!differenceInMilliseconds) {
-  let obj = { default: differenceInMilliseconds };
+  const obj = { default: differenceInMilliseconds };
   let tmp3 = obj;
 } else {
   tmp3 = differenceInMilliseconds;
 }
 differenceInMilliseconds = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

@@ -5,6 +5,8 @@ import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_3 = ["height", "maxHeight", "minHeight", "backfaceVisibility", "backgroundColor", "borderBlockColor", "borderBlockEndColor", "borderBlockStartColor", "borderBottomColor", "borderBottomEndRadius", "borderBottomLeftRadius", "borderBottomRightRadius", "borderBottomStartRadius", "borderBottomWidth", "borderColor", "borderCurve", "borderEndColor", "borderEndEndRadius", "borderEndStartRadius", "borderEndWidth", "borderLeftColor", "borderLeftWidth", "borderRadius", "borderRightColor", "borderRightWidth", "borderStartColor", "borderStartEndRadius", "borderStartStartRadius", "borderStartWidth", "borderStyle", "borderTopColor", "borderTopEndRadius", "borderTopLeftRadius", "borderTopRightRadius", "borderTopStartRadius", "borderTopWidth", "borderWidth", "boxShadow", "elevation", "filter", "mixBlendMode", "opacity", "shadowColor", "shadowOffset", "shadowOpacity", "shadowRadius", "transform", "transformOrigin"];
 get_ActivityIndicator = fn(17);
@@ -15,15 +17,16 @@ const jsxProd = fn(21);
 const styles = StyleSheet.create({ content: { flex: 1, flexDirection: "row", alignItems: "stretch" }, large: { marginHorizontal: 5 }, title: { justifyContent: "center" }, start: { flexDirection: "row", alignItems: "center", justifyContent: "flex-start" }, end: { flexDirection: "row", alignItems: "center", justifyContent: "flex-end" }, expand: { flexGrow: 1, flexBasis: 0 } });
 
 export const Header = function Header(layout) {
-  let obj = require("module_1614");
-  const rect = obj.useSafeAreaInsets();
-  let obj1 = require("FrameSizeProvider");
-  const frameSize = obj1.useFrameSize((arg0) => arg0, true);
-  let obj2 = require("Link");
-  let obj3 = require("Link");
-  const navigation = obj3.useNavigation();
+  const rect = require("module_1614").useSafeAreaInsets();
+  const obj = require("module_1614");
+  const tmp2 = headerSearchBarOptions;
+  const frameSize = require("FrameSizeProvider").useFrameSize((arg0) => arg0, true);
+  const obj2 = require("FrameSizeProvider");
+  const obj3 = require("Link");
+  const navigation = require("Link").useNavigation();
   const context = noop.useContext(require("HeaderShownContext").HeaderShownContext);
-  [tmp7, require] = _slicedToArray(noop.useState(false), 2);
+  const obj4 = require("Link");
+  [tmp7, require] = noop.useState(false);
   const tmp8 = _slicedToArray(noop.useState(undefined), 2);
   importDefault = tmp8[1];
   layout = layout.layout;
@@ -76,65 +79,65 @@ export const Header = function Header(layout) {
   ({ opacity, transform } = flattenResult);
   ({ maxHeight, minHeight, backfaceVisibility, backgroundColor, borderBlockColor, borderBlockEndColor, borderBlockStartColor, borderBottomColor, borderBottomEndRadius, borderBottomLeftRadius, borderBottomRightRadius, borderBottomStartRadius, borderBottomWidth, borderColor, borderCurve, borderEndColor, borderEndEndRadius, borderEndStartRadius, borderEndWidth, borderLeftColor, borderLeftWidth, borderRadius, borderRightColor, borderRightWidth, borderStartColor, borderStartEndRadius, borderStartStartRadius, borderStartWidth, borderStyle, borderTopColor, borderTopEndRadius, borderTopLeftRadius, borderTopRightRadius, borderTopStartRadius, borderTopWidth, borderWidth, boxShadow, elevation, filter, mixBlendMode, shadowColor, shadowOffset, shadowOpacity, shadowRadius, transformOrigin } = flattenResult);
   _objectWithoutProperties(flattenResult, closure_3);
-  obj = { backfaceVisibility, backgroundColor, borderBlockColor, borderBlockEndColor, borderBlockStartColor, borderBottomColor, borderBottomEndRadius, borderBottomLeftRadius, borderBottomRightRadius, borderBottomStartRadius, borderBottomWidth, borderColor, borderCurve, borderEndColor, borderEndEndRadius, borderEndStartRadius, borderEndWidth, borderLeftColor, borderLeftWidth, borderRadius, borderRightColor, borderRightWidth, borderStartColor, borderStartEndRadius, borderStartStartRadius, borderStartWidth, borderStyle, borderTopColor, borderTopEndRadius, borderTopLeftRadius, borderTopRightRadius, borderTopStartRadius, borderTopWidth, borderWidth, boxShadow, elevation, filter, mixBlendMode, opacity, shadowColor, shadowOffset, shadowOpacity, shadowRadius, transform, transformOrigin };
-  const entries = Object.entries(obj);
+  const obj5 = { backfaceVisibility, backgroundColor, borderBlockColor, borderBlockEndColor, borderBlockStartColor, borderBottomColor, borderBottomEndRadius, borderBottomLeftRadius, borderBottomRightRadius, borderBottomStartRadius, borderBottomWidth, borderColor, borderCurve, borderEndColor, borderEndEndRadius, borderEndStartRadius, borderEndWidth, borderLeftColor, borderLeftWidth, borderRadius, borderRightColor, borderRightWidth, borderStartColor, borderStartEndRadius, borderStartStartRadius, borderStartWidth, borderStyle, borderTopColor, borderTopEndRadius, borderTopLeftRadius, borderTopRightRadius, borderTopStartRadius, borderTopWidth, borderWidth, boxShadow, elevation, filter, mixBlendMode, opacity, shadowColor, shadowOffset, shadowOpacity, shadowRadius, transform, transformOrigin };
+  const entries = Object.entries(obj5);
   for (const item10141 of entries) {
     let tmp16 = _slicedToArray(item10141, 2);
     let first = tmp16[0];
     if (undefined === tmp16[1]) {
       let _Reflect = Reflect;
-      let deletePropertyResult = Reflect.deleteProperty(obj, first);
+      let deletePropertyResult = Reflect.deleteProperty(obj5, first);
     }
     continue;
   }
-  obj = headerTransparent;
+  let obj6 = headerTransparent;
   if (headerTransparent) {
-    obj = { backgroundColor: "transparent" };
+    obj6 = { backgroundColor: "transparent" };
   }
-  obj1 = {};
-  let merged = Object.assign(obj);
-  obj2 = headerTransparent;
+  const obj7 = {};
+  let merged = Object.assign(obj6);
+  let obj8 = headerTransparent;
   if (!headerTransparent) {
-    obj2 = false === headerShadowVisible;
+    obj8 = false === headerShadowVisible;
   }
-  if (obj2) {
-    obj2 = { borderBottomWidth: 0, elevation: 0 };
+  if (obj8) {
+    obj8 = { borderBottomWidth: 0, elevation: 0 };
   }
-  const merged1 = Object.assign(obj2);
-  const merged2 = Object.assign(obj);
+  const merged1 = Object.assign(obj8);
+  const merged2 = Object.assign(obj5);
   let text = headerTintColor;
   if (headerTintColor == null) {
-    text = obj2.useTheme().colors.text;
+    text = obj3.useTheme().colors.text;
   }
   let headerLeftResult = null;
   if (headerLeft) {
-    obj3 = { tintColor: text, pressColor: headerPressColor, pressOpacity: headerPressOpacity, displayMode: str2, titleLayout: tmp8[0], screenLayout: layout, canGoBack: null, onPress: null, label: null, labelStyle: null, href: null };
+    const obj9 = { tintColor: text, pressColor: headerPressColor, pressOpacity: headerPressOpacity, displayMode: str2, titleLayout: tmp8[0], screenLayout: layout, canGoBack: null, onPress: null, label: null, labelStyle: null, href: null };
     const _Boolean = Boolean;
-    obj3.canGoBack = Boolean(back);
+    obj9.canGoBack = Boolean(back);
     let goBack;
     if (back) {
       goBack = navigation.goBack;
     }
-    obj3.onPress = goBack;
+    obj9.onPress = goBack;
     let title;
     if (back != null) {
       title = back.title;
     }
-    obj3.label = title;
-    obj3.labelStyle = headerBackTitleStyle;
+    obj9.label = title;
+    obj9.labelStyle = headerBackTitleStyle;
     let href;
     if (back != null) {
       href = back.href;
     }
-    obj3.href = href;
-    headerLeftResult = headerLeft(obj3);
+    obj9.href = href;
+    headerLeftResult = headerLeft(obj9);
   }
   let headerRightResult = null;
   if (headerRight) {
-    const obj4 = { tintColor: text, pressColor: headerPressColor, pressOpacity: headerPressOpacity, canGoBack: null };
+    const obj10 = { tintColor: text, pressColor: headerPressColor, pressOpacity: headerPressOpacity, canGoBack: null };
     const _Boolean2 = Boolean;
-    obj4.canGoBack = Boolean(back);
-    headerRightResult = headerRight(obj4);
+    obj10.canGoBack = Boolean(back);
+    headerRightResult = headerRight(obj10);
   }
   if (typeof headerTitle !== "function") {
     headerTitle = (arg0) => {
@@ -142,35 +145,35 @@ export const Header = function Header(layout) {
       return closure_1_10(require("HeaderTitle").HeaderTitle, {});
     };
   }
-  const obj5 = { pointerEvents: "box-none", style: null, children: null };
+  const obj11 = { pointerEvents: "box-none", style: null, children: null };
   const items = [{ height, minHeight, maxHeight, opacity, transform }];
-  obj5.style = items;
-  const obj6 = { pointerEvents: "box-none", style: null, children: null };
+  obj11.style = items;
+  const obj12 = { pointerEvents: "box-none", style: null, children: null };
   const items1 = [StyleSheet.absoluteFill, headerBackgroundContainerStyle];
-  obj6.style = items1;
+  obj12.style = items1;
   ({ View, View: View2 } = RN);
   if (headerBackground) {
-    const obj7 = { style: obj1 };
-    let headerBackgroundResult = headerBackground(obj7);
+    const obj13 = { style: obj7 };
+    let headerBackgroundResult = headerBackground(obj13);
   } else {
     if (!headerTransparent) {
       let str5 = "auto";
     } else {
       str5 = "none";
-      if ("transparent" !== obj1.backgroundColor) {
-        let obj13 = require("Color")(obj1.backgroundColor);
+      if ("transparent" !== obj7.backgroundColor) {
+        require("Color")(obj7.backgroundColor);
         str5 = "none";
       }
     }
-    const obj8 = { pointerEvents: str5, style: obj1 };
-    headerBackgroundResult = closure_10(require("HeaderBackground").HeaderBackground, obj8);
+    const obj15 = { pointerEvents: str5, style: obj7 };
+    headerBackgroundResult = closure_10(require("HeaderBackground").HeaderBackground, obj15);
     tmp32 = headerSearchBarOptions;
   }
-  obj6.children = headerBackgroundResult;
-  const items2 = [closure_10(View2, obj6), closure_10(View, { pointerEvents: "none", style: { height: headerStatusBarHeight } }), ];
-  const obj10 = { pointerEvents: "box-none", style: null, children: null };
+  obj12.children = headerBackgroundResult;
+  const items2 = [closure_10(View2, obj12), closure_10(View, { pointerEvents: "none", style: { height: headerStatusBarHeight } }), ];
+  const obj17 = { pointerEvents: "box-none", style: null, children: null };
   const items3 = [closure_13.content, null];
-  obj10.style = items3;
+  obj17.style = items3;
   const items4 = [closure_13.start, , , ];
   let expand = !tmp7;
   if (!tmp7) {
@@ -213,17 +216,17 @@ export const Header = function Header(layout) {
       }
       diff = layout.width - (num4 + num3 + rect.left - rect.right);
     }
-    const obj11 = { maxWidth: diff };
-    items6[1] = obj11;
+    const obj18 = { maxWidth: diff };
+    items6[1] = obj18;
     if ("left" === str) {
       if (headerLeftResult) {
-        let obj12 = { marginStart: 4 };
+        let obj19 = { marginStart: 4 };
       }
-      obj13 = { pointerEvents: "box-none", style: null, children: null };
-      items6[2] = obj12;
+      const obj20 = { pointerEvents: "box-none", style: null, children: null };
+      items6[2] = obj19;
       items6[3] = headerTitleContainerStyle;
-      obj13.style = items6;
-      const obj14 = {
+      obj20.style = items6;
+      const obj21 = {
         children: layout.title,
         allowFontScaling: headerTitleAllowFontScaling,
         tintColor: headerTintColor,
@@ -234,24 +237,25 @@ export const Header = function Header(layout) {
                 if (arg0) {
                   return size;
                 }
-                size = { height, width };
+                const size1 = { height, width };
+                size = size1;
               });
             },
         style: headerTitleStyle
       };
-      obj13.children = headerTitle(obj14);
-      const items7 = [closure_10(RN.View, obj13), ];
-      const obj15 = { pointerEvents: "box-none", style: null, children: null };
+      obj20.children = headerTitle(obj21);
+      const items7 = [closure_10(RN.View, obj20), ];
+      const obj22 = { pointerEvents: "box-none", style: null, children: null };
       const items8 = [, , , ];
       ({ end: arr9[0], expand: arr9[1] } = closure_13);
-      const obj16 = { marginEnd: rect.right };
-      items8[2] = obj16;
+      const obj23 = { marginEnd: rect.right };
+      items8[2] = obj23;
       items8[3] = headerRightContainerStyle;
-      obj15.style = items8;
+      obj22.style = items8;
       const items9 = [headerRightResult, ];
       let tmp30Result = null;
       if (headerSearchBarOptions) {
-        const obj17 = {
+        const obj24 = {
           tintColor: text,
           pressColor: headerPressColor,
           pressOpacity: headerPressOpacity,
@@ -266,26 +270,26 @@ export const Header = function Header(layout) {
                 },
           children: null
         };
-        const obj18 = { source: require("module_5715"), tintColor: text };
-        obj17.children = closure_10(require("HeaderIcon").HeaderIcon, obj18);
-        tmp30Result = closure_10(require("HeaderButton").HeaderButton, obj17);
+        const obj25 = { source: require("module_5715"), tintColor: text };
+        obj24.children = closure_10(require("HeaderIcon").HeaderIcon, obj25);
+        tmp30Result = closure_10(require("HeaderButton").HeaderButton, obj24);
       }
-      const obj19 = { children: null };
+      const obj26 = { children: null };
       items9[1] = tmp30Result;
-      obj15.children = items9;
-      items7[1] = closure_11(RN.View, obj15);
-      obj19.children = items7;
-      tmp28Result = closure_11(closure_12, obj19);
+      obj22.children = items9;
+      items7[1] = closure_11(RN.View, obj22);
+      obj26.children = items7;
+      tmp28Result = closure_11(closure_12, obj26);
     }
-    obj12 = { marginHorizontal: 16 };
+    obj19 = { marginHorizontal: 16 };
   }
   items5[1] = tmp28Result;
-  tmp30Result = null;
+  let tmp30Result2 = null;
   if (tmp7) {
-    const obj20 = {};
+    const obj27 = {};
     const merged3 = Object.assign(headerSearchBarOptions);
-    obj20.visible = tmp7;
-    obj20.onClose = function onClose() {
+    obj27.visible = tmp7;
+    obj27.onClose = function onClose() {
       require(false);
       if (headerSearchBarOptions != null) {
         const onClose = headerSearchBarOptions.onClose;
@@ -294,18 +298,18 @@ export const Header = function Header(layout) {
         }
       }
     };
-    obj20.tintColor = headerTintColor;
-    let obj21 = !headerLeftResult;
+    obj27.tintColor = headerTintColor;
+    let obj28 = !headerLeftResult;
     if (!headerLeftResult) {
-      obj21 = { marginStart: 8 };
+      obj28 = { marginStart: 8 };
     }
-    const items10 = [obj21];
-    obj20.style = items10;
-    tmp30Result = closure_10(require("HeaderSearchBar").HeaderSearchBar, obj20);
+    const items10 = [obj28];
+    obj27.style = items10;
+    tmp30Result2 = closure_10(require("HeaderSearchBar").HeaderSearchBar, obj27);
   }
-  items5[2] = tmp30Result;
-  obj10.children = items5;
-  items2[2] = closure_11(View, obj10);
-  obj5.children = items2;
-  return closure_11(View, obj5);
+  items5[2] = tmp30Result2;
+  obj17.children = items5;
+  items2[2] = closure_11(View, obj17);
+  obj11.children = items2;
+  return closure_11(View, obj11);
 };

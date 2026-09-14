@@ -2,7 +2,7 @@
 
 // Module 1811 (dispatchCommandFabric)
 import _mod1640 from "module_1640" /* 1640 */;
-import module_1639 from "module_1639" /* 1639 */;
+import module_1639_mod from "module_1639" /* 1639 */;
 
 function dispatchCommandFabric(fn, arg1) {
   let items = arg2;
@@ -20,8 +20,7 @@ function dispatchCommandFabric(fn, arg1) {
     }
   }
 }
-let obj = { logger: _mod1640.logger };
-dispatchCommandFabric.__closure = obj;
+dispatchCommandFabric.__closure = { logger: _mod1640.logger };
 dispatchCommandFabric.__workletHash = 9994297174981;
 dispatchCommandFabric.__initData = { code: "function dispatchCommandFabric_Pnpm_dispatchCommandTs1(animatedRef,commandName,args=[]){const{logger}=this.__closure;if(!_WORKLET){return;}const shadowNodeWrapper=animatedRef();if(!shadowNodeWrapper){logger.warn(\"Tried to dispatch command \\\"\"+commandName+\"\\\" with an uninitialized ref. Make sure to pass the animated ref to the component before using it.\");return;}global._dispatchCommandFabric(shadowNodeWrapper,commandName,args);}" };
 function dispatchCommandPaper(fn, arg1) {
@@ -40,11 +39,13 @@ function dispatchCommandPaper(fn, arg1) {
     }
   }
 }
-obj = { logger: _mod1640.logger };
-dispatchCommandPaper.__closure = obj;
+const obj = { logger: _mod1640.logger };
+dispatchCommandPaper.__closure = { logger: _mod1640.logger };
 dispatchCommandPaper.__workletHash = 16962176072769;
 dispatchCommandPaper.__initData = { code: "function dispatchCommandPaper_Pnpm_dispatchCommandTs2(animatedRef,commandName,args=[]){const{logger}=this.__closure;if(!_WORKLET){return;}const viewTag=animatedRef();if(viewTag<0){logger.warn(\"Tried to dispatch command \\\"\"+commandName+\"\\\" with an uninitialized ref. Make sure to pass the animated ref to the component before using it.\");return;}global._dispatchCommandPaper(viewTag,commandName,args);}" };
+let module_1639 = module_1639_mod;
 module_1639.shouldBeUseWeb();
+let module_1639 = module_1639_mod;
 if (module_1639) {
   if (module_1639.isJest()) {
     function dispatchCommandJest() {

@@ -25,7 +25,6 @@ export const useEndVisible = (scroll) => {
     return __workletHash;
   }, items);
   __initData = tmp;
-  scroll(layout[1]);
   const fn = function v() {
     let isScrollAtEndResult = null;
     if (0 !== layout.value.height) {
@@ -37,11 +36,12 @@ export const useEndVisible = (scroll) => {
     }
     return isScrollAtEndResult;
   };
-  let obj = { layout, size, isScrollAtEnd: scroll(layout[2]).isScrollAtEnd, scroll, inverted };
-  fn.__closure = obj;
+  let obj = scroll(layout[1]);
+  fn.__closure = { layout, size, isScrollAtEnd: scroll(layout[2]).isScrollAtEnd, scroll, inverted };
   fn.__workletHash = 9190864194226;
   fn.__initData = inverted;
   const derivedValue = obj.useDerivedValue(fn);
+  const obj2 = { layout, size, isScrollAtEnd: scroll(layout[2]).isScrollAtEnd, scroll, inverted };
   const fn2 = function f() {
     return derivedValue.value;
   };
@@ -74,10 +74,10 @@ export const useEndVisible = (scroll) => {
       return;
     }
   }
-  obj = { onEndVisible, isWorklet: tmp, runOnJS: scroll(layout[1]).runOnJS };
-  E.__closure = obj;
+  const obj3 = scroll(layout[1]);
+  E.__closure = { onEndVisible, isWorklet: tmp, runOnJS: scroll(layout[1]).runOnJS };
   E.__workletHash = 2507987378306;
   E.__initData = __initData;
   const items1 = [onEndVisible, tmp, inverted];
-  const animatedReaction = scroll(layout[1]).useAnimatedReaction(fn2, E, items1);
+  const animatedReaction = obj3.useAnimatedReaction(fn2, E, items1);
 };

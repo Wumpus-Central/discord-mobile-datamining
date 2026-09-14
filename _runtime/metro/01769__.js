@@ -1,7 +1,7 @@
 // === Module 1769: ? ===
 
 // Module 1769
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray_mod from "module_32" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c2 from "_possibleConstructorReturn" /* 93 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _slicedToArray = _slicedToArray_mod;
 let closure_5 = { code: "function pnpm_LinearTransitionTs1(values){const{delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,animation(values.targetOriginX,config)),originY:delayFunction(delay,animation(values.targetOriginY,config)),width:delayFunction(delay,animation(values.targetWidth,config)),height:delayFunction(delay,animation(values.targetHeight,config))},callback:callback};}" };
 class LinearTransition {
   constructor() {

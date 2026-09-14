@@ -3,6 +3,8 @@
 // Module 4748 (basePick)
 import _mod629 from "module_629" /* 629 */;
 
+const require = globalThis.__r;
+
 
 export default function basePick(arg0, arg1) {
   _require = arg0;

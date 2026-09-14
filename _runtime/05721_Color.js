@@ -5,6 +5,8 @@ import _mod5722 from "module_5722" /* 5722 */;
 import _mod5726 from "module_5726" /* 5726 */;
 import _slicedToArray from "module_32" /* 32 */;
 
+const require = globalThis.__r;
+
 class Color {
   constructor(arg0, arg1) {
     self = this;
@@ -141,7 +143,7 @@ class Color {
             num2 = 0;
             if (0 < labels.length) {
               do {
-                arr = items2.push(global[labels[num2]]);
+                arr1 = items2.push(global[labels[num2]]);
                 num2 = num2 + 1;
                 length = labels.length;
               } while (num2 < length);
@@ -351,7 +353,7 @@ while (iter !== undefined) {
               num2 = 0;
               if (0 < labels.length) {
                 do {
-                  arr = items2.push(global[labels[num2]]);
+                  arr1 = items2.push(global[labels[num2]]);
                   num2 = num2 + 1;
                   length = labels.length;
                 } while (num2 < length);

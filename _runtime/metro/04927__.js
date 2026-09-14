@@ -1,7 +1,7 @@
 // === Module 4927: ? ===
 
 // Module 4927
-import _mod1283 from "module_1283" /* 1283 */;
+import _mod1281 from "module_1281" /* 1281 */;
 import _mod4928 from "module_4928" /* 4928 */;
 import _mod4929 from "module_4929" /* 4929 */;
 import _mod4930 from "module_4930" /* 4930 */;
@@ -11,7 +11,7 @@ if (_mod4928) {
     if (_mod4928(arg0, arg1)) {
       return arg0;
     } else {
-      const tmp5 = new _mod1283("Reflect.setPrototypeOf: failed to set [[Prototype]]");
+      const tmp5 = new _mod1281("Reflect.setPrototypeOf: failed to set [[Prototype]]");
       throw tmp5;
     }
   }

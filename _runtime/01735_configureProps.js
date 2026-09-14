@@ -57,26 +57,25 @@ export const configureReanimatedLogger = function configureReanimatedLogger(leve
 };
 export const adaptViewConfig = function adaptViewConfig(viewConfig) {
   const uiViewClassName = viewConfig.uiViewClassName;
-  let UI_THREAD_PROPS_WHITELIST = set;
   if (!set.has(uiViewClassName)) {
-    UI_THREAD_PROPS_WHITELIST = {};
+    const obj2 = {};
     const _Object = Object;
     const keys = Object.keys(viewConfig.validAttributes);
     const item = keys.forEach((item) => {
       if (!tmp3) {
-        obj[item] = true;
+        obj2[item] = true;
       }
       tmp3 = item in _mod1649.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST || item in _mod1649.PropsAllowlists.UI_THREAD_PROPS_WHITELIST;
     });
     const _Object2 = Object;
-    UI_THREAD_PROPS_WHITELIST = {};
-    const merged = Object.assign(UI_THREAD_PROPS_WHITELIST(1649).PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
-    const merged1 = Object.assign(UI_THREAD_PROPS_WHITELIST);
-    UI_THREAD_PROPS_WHITELIST(1649).PropsAllowlists.UI_THREAD_PROPS_WHITELIST = UI_THREAD_PROPS_WHITELIST;
+    const obj3 = {};
+    const merged = Object.assign(obj2(1649).PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
+    const merged1 = Object.assign(obj2);
+    obj2(1649).PropsAllowlists.UI_THREAD_PROPS_WHITELIST = obj3;
     const _Object3 = Object;
-    if (Object.keys(UI_THREAD_PROPS_WHITELIST(1649).PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length !== Object.keys(UI_THREAD_PROPS_WHITELIST(1649).PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length) {
+    if (Object.keys(obj2(1649).PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length !== Object.keys(obj2(1649).PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length) {
       configureProps();
     }
-    UI_THREAD_PROPS_WHITELIST.add(uiViewClassName);
+    set.add(uiViewClassName);
   }
 };

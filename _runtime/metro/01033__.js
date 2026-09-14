@@ -56,7 +56,7 @@ export const reactNavigationIntegration = () => {
   let pushRecentRouteKey;
   let _discardLatestTransaction;
   let clearStateChangeTimeout;
-  obj = num(flag[0]).defaultIdleOptions;
+  let obj2 = num(flag[0]).defaultIdleOptions;
   c12 = false;
   closure_13 = [];
   if (flag) {
@@ -106,12 +106,12 @@ export const reactNavigationIntegration = () => {
       debug.log("" + flag2 + " A transaction was detected that turned out to be a noop, discarding.");
       if (typeof _discardLatestTransaction === "function") {
         if (_undefined) {
-          obj = num(flag[10]);
           if (obj.isSentrySpan(_undefined)) {
             _undefined._sampled = false;
           }
           _undefined.end();
           _undefined = undefined;
+          obj = num(flag[10]);
         }
         if (c9) {
           c9 = undefined;
@@ -129,6 +129,7 @@ export const reactNavigationIntegration = () => {
         throw new TypeError("Trying to call a non-function");
       }
     }
+    obj2 = num(flag[0]);
     let beforeStartSpan;
     if (null != reactNativeTracingIntegration) {
       beforeStartSpan = reactNativeTracingIntegration.options.beforeStartSpan;
@@ -141,7 +142,7 @@ export const reactNavigationIntegration = () => {
       beforeStartSpanResult = num(flag[0]).getDefaultIdleNavigationSpanOptions();
       const obj3 = num(flag[0]);
     }
-    const result = num(flag[0]).startIdleNavigationSpan(beforeStartSpanResult, Object.assign(Object.assign({}, obj), { isAppRestart: flag }));
+    const result = obj2.startIdleNavigationSpan(beforeStartSpanResult, Object.assign(Object.assign({}, obj2), { isAppRestart: flag }));
     _undefined = result;
     if (null != result) {
       const attr = _undefined.setAttribute(num(flag[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, num(flag[6]).SPAN_ORIGIN_AUTO_NAVIGATION_REACT_NAVIGATION);
@@ -155,7 +156,6 @@ export const reactNavigationIntegration = () => {
       const obj6 = num(flag[2]);
     }
     closure_0 = _undefined;
-    const obj2 = num(flag[0]);
     const obj7 = num(flag[8]);
     const client = num(flag[2]).getClient();
     const result2 = obj7.ignoreEmptyRouteChangeTransactions(client, _undefined, num(flag[0]).DEFAULT_NAVIGATION_SPAN_NAME, () => c8 === closure_0);
@@ -166,10 +166,10 @@ export const reactNavigationIntegration = () => {
     if (tmp52) {
       const NATIVE = num(flag[1]).NATIVE;
       NATIVE.setActiveSpanId(_undefined.spanContext().spanId);
-      obj = { op: "navigation.processing", name: "Navigation dispatch to navigation cancelled or screen mounted", startTime: null };
+      const obj10 = { op: "navigation.processing", name: "Navigation dispatch to navigation cancelled or screen mounted", startTime: null };
       const obj9 = num(flag[2]);
-      obj.startTime = num(flag[2]).spanToJSON(_undefined).start_timestamp;
-      const startInactiveSpanResult = obj9.startInactiveSpan(obj);
+      obj10.startTime = num(flag[2]).spanToJSON(_undefined).start_timestamp;
+      const startInactiveSpanResult = obj9.startInactiveSpan(obj10);
       c9 = startInactiveSpanResult;
       const attr2 = startInactiveSpanResult.setAttribute(num(flag[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, num(flag[6]).SPAN_ORIGIN_AUTO_NAVIGATION_REACT_NAVIGATION);
       const obj11 = num(flag[2]);
@@ -180,9 +180,8 @@ export const reactNavigationIntegration = () => {
   updateLatestNavigationSpanWithCurrentRoute = function updateLatestNavigationSpanWithCurrentRoute() {
     let state1;
     _mod682;
-    obj = current;
     if (current) {
-      const currentRoute = obj.getCurrentRoute();
+      const currentRoute = current.getCurrentRoute();
       if (currentRoute) {
         if (_undefined) {
           const NATIVE = NativeModules.NATIVE;
@@ -208,7 +207,7 @@ export const reactNavigationIntegration = () => {
           const hasItem = closure_13.includes(currentRoute.key);
           if (flag5) {
             let state = current.getState();
-            let name1;
+            let name2;
             if (state) {
               const items = [];
               if (state) {
@@ -222,12 +221,12 @@ export const reactNavigationIntegration = () => {
                     }
                   }
                   let tmp27 = state.routes[num2];
-                  name = undefined;
+                  let name1;
                   if (null != tmp27) {
-                    name = tmp27.name;
+                    name1 = tmp27.name;
                   }
-                  if (name) {
-                    let arr = items.push(tmp27.name);
+                  if (name1) {
+                    let arr4 = items.push(tmp27.name);
                   }
                   state1 = undefined;
                   if (null != tmp27) {
@@ -240,59 +239,59 @@ export const reactNavigationIntegration = () => {
               if (items.length > 0) {
                 joined = items.join("/");
               }
-              name1 = joined;
+              name2 = joined;
             }
-            if (!name1) {
-              name1 = currentRoute.name;
+            if (!name2) {
+              name2 = currentRoute.name;
             }
-            name = name1;
+            name = name2;
           }
           if (null != _undefined2) {
             const _HermesInternal4 = HermesInternal;
             _undefined2.updateName("Navigation dispatch to screen " + name + " mounted");
           }
           if (null != _undefined2) {
-            obj = { code: _mod682.SPAN_STATUS_OK };
-            _undefined2.setStatus(obj);
+            obj2 = { code: _mod682.SPAN_STATUS_OK };
+            _undefined2.setStatus(obj2);
           }
           if (null != _undefined2) {
             _undefined2.end(tmp4);
           }
           _undefined2 = undefined;
-          let obj3 = _mod682;
-          if (obj3.spanToJSON(_undefined).description === startIdleSpan.DEFAULT_NAVIGATION_SPAN_NAME) {
+          const tmpResult = asyncExpiringMap;
+          if (obj4.spanToJSON(_undefined).description === startIdleSpan.DEFAULT_NAVIGATION_SPAN_NAME) {
             _undefined.updateName(name);
           }
-          obj = { "route.name": name, "route.key": currentRoute.key, "route.has_been_seen": hasItem, "previous_route.name": null, "previous_route.key": null };
-          let name2;
+          const obj3 = { "route.name": name, "route.key": currentRoute.key, "route.has_been_seen": hasItem, "previous_route.name": null, "previous_route.key": null };
+          let name3;
           if (null != tmp5) {
-            name2 = tmp5.name;
+            name3 = tmp5.name;
           }
-          obj["previous_route.name"] = name2;
+          obj3["previous_route.name"] = name3;
           let key;
           if (null != tmp5) {
             key = tmp5.key;
           }
-          obj["previous_route.key"] = key;
-          obj[SEMANTIC_ATTRIBUTE_SENTRY_SOURCE.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "component";
-          obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
-          _undefined.setAttributes(obj);
+          obj3["previous_route.key"] = key;
+          obj3[SEMANTIC_ATTRIBUTE_SENTRY_SOURCE.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "component";
+          obj3[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
+          _undefined.setAttributes(obj3);
           if (typeof clearStateChangeTimeout === "function") {
             if (undefined !== c10) {
               const _clearTimeout = clearTimeout;
               clearTimeout(c10);
               c10 = undefined;
             }
-            const obj1 = { category: "navigation", type: "navigation", message: null, data: null };
+            const obj5 = { category: "navigation", type: "navigation", message: null, data: null };
             const _HermesInternal5 = HermesInternal;
-            obj1.message = "Navigation to " + name;
-            let name3;
+            obj5.message = "Navigation to " + name;
+            let name4;
             if (null != tmp5) {
-              name3 = tmp5.name;
+              name4 = tmp5.name;
             }
-            const obj2 = { from: name3, to: name };
-            obj1.data = obj2;
-            _mod682.addBreadcrumb(obj1);
+            const obj6 = { from: name4, to: name };
+            obj5.data = obj6;
+            _mod682.addBreadcrumb(obj5);
             if (null != reactNativeTracingIntegration) {
               reactNativeTracingIntegration.setCurrentRoute(name);
             }
@@ -305,8 +304,8 @@ export const reactNavigationIntegration = () => {
               if (flag5) {
                 const _Object = Object;
                 const _Object2 = Object;
-                obj3 = { name };
-                merged = Object.assign(Object.assign({}, currentRoute), obj3);
+                const obj7 = { name };
+                merged = Object.assign(Object.assign({}, currentRoute), obj7);
               }
               _undefined = undefined;
             } else {
@@ -316,7 +315,7 @@ export const reactNavigationIntegration = () => {
           } else {
             throw new TypeError("Trying to call a non-function");
           }
-          const tmpResult = asyncExpiringMap;
+          obj4 = _mod682;
         } else {
           const debug3 = _mod682.debug;
           const _HermesInternal3 = HermesInternal;
@@ -352,13 +351,12 @@ export const reactNavigationIntegration = () => {
   clearStateChangeTimeout = function clearStateChangeTimeout() {
 
   };
-  obj = {
+  obj2 = {
     name: flag2,
     afterAllSetup(client) {
-      obj = _mod1031;
-      reactNativeTracingIntegration = obj.getReactNativeTracingIntegration(client);
+      reactNativeTracingIntegration = _mod1031.getReactNativeTracingIntegration(client);
       if (reactNativeTracingIntegration) {
-        obj = { finalTimeout: reactNativeTracingIntegration.options.finalTimeoutMs, idleTimeout: reactNativeTracingIntegration.options.idleTimeoutMs };
+        obj2 = { finalTimeout: reactNativeTracingIntegration.options.finalTimeoutMs, idleTimeout: reactNativeTracingIntegration.options.idleTimeoutMs };
       }
       if (!c12) {
         const appRegistryIntegration = patchAppRegistryRunApplication.getAppRegistryIntegration(client);
@@ -422,7 +420,7 @@ export const reactNavigationIntegration = () => {
     },
     options: { routeChangeTimeoutMs: num, enableTimeToInitialDisplay: flag, ignoreEmptyBackNavigationTransactions: flag2, enableTimeToInitialDisplayForPreloadedRoutes: flag3, useDispatchedActionData: flag4, useFullPathsForNavigationRoutes: flag5 }
   };
-  return obj;
+  return obj2;
 };
 export const getReactNavigationIntegration = function getReactNavigationIntegration(getIntegrationByName) {
   return getIntegrationByName.getIntegrationByName(ReactNavigation);

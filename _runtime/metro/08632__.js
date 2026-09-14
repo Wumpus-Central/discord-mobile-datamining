@@ -3,7 +3,7 @@
 // Module 8632
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _modDef8613 from "module_8613" /* 8613 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 class FeMergeNode {
   constructor() {

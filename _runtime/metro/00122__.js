@@ -4,6 +4,8 @@
 import _mod27 from "module_27" /* 27 */;
 import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
 
+const require = globalThis.__r;
+
 const global = arg0;
 require = arg1;
 const dependencyMap = arg6;

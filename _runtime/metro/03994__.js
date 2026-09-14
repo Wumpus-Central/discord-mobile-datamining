@@ -2,8 +2,9 @@
 
 // Module 3994
 import _mod3730 from "module_3730" /* 3730 */;
-import assign from "assign" /* 3975 */;
+import assign_mod from "assign" /* 3975 */;
 
+let assign = assign_mod;
 if (!assign) {
   const obj = { default: assign };
   let tmp3 = obj;

@@ -44,8 +44,8 @@ let closure_5 = async function _flushIfServerless() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -58,17 +58,17 @@ let closure_5 = async function _flushIfServerless() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
           closure_129_0 = undefined;
-          let obj1 = closure_0;
+          let obj5 = closure_0;
           if (closure_0 === undefined) {
-            obj1 = {};
+            obj5 = {};
           }
-          closure_129_0 = obj1;
+          closure_129_0 = obj5;
           let timeout;
           closure_129_2 = undefined;
           c3 = 1;
@@ -82,8 +82,8 @@ let closure_5 = async function _flushIfServerless() {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             timeout = closure_129_0.timeout;
             let num4 = 2000;
@@ -103,8 +103,8 @@ let closure_5 = async function _flushIfServerless() {
             if (!("cloudflareCtx" in closure_129_0)) {
               const _Symbol = Symbol;
               if (closure_130_0(closure_130_1[3]).GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")]) {
-                obj2 = closure_130_0(closure_130_1[4]);
-                obj2.vercelWaitUntil(closure_130_3(closure_129_2));
+                closure_130_0(closure_130_1[4]).vercelWaitUntil(closure_130_3(closure_129_2));
+                const obj3 = closure_130_0(closure_130_1[4]);
               } else {
                 const _process = process;
                 let tmp22 = typeof process !== "undefined";
@@ -136,8 +136,8 @@ let closure_5 = async function _flushIfServerless() {
                 if (tmp22) {
                   c3 = 2;
                   c4 = 1;
-                  const obj3 = { value: closure_130_3(closure_129_2), done: false };
-                  return obj3;
+                  const obj7 = { value: closure_130_3(closure_129_2), done: false };
+                  return obj7;
                 }
               }
             } else {
@@ -155,7 +155,7 @@ let closure_5 = async function _flushIfServerless() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c4 = 3;

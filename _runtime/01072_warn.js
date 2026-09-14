@@ -42,7 +42,7 @@ if (!module_867.isExpoGo()) {
     }
   }
   if (undefined) {
-    let value = fn(65).get("RNSentryReplayMask", () => ({ uiViewClassName: RNSentryReplayMask }));
+    const value = fn(65).get("RNSentryReplayMask", () => ({ uiViewClassName: RNSentryReplayMask }));
     const obj2 = fn(65);
   }
   class UnmaskFallback {
@@ -76,7 +76,7 @@ if (!module_867.isExpoGo()) {
       }
     }
     if (undefined) {
-      value = fn(65).get("RNSentryReplayUnmask", () => ({ uiViewClassName: RNSentryReplayUnmask }));
+      let value2 = fn(65).get("RNSentryReplayUnmask", () => ({ uiViewClassName: RNSentryReplayUnmask }));
       const obj4 = fn(65);
     }
     class UnmaskFallback {
@@ -101,14 +101,14 @@ if (!module_867.isExpoGo()) {
         }
       }
     }
-    exports.Unmask = value;
+    exports.Unmask = value2;
     exports.MaskFallback = MaskFallback;
     exports.UnmaskFallback = UnmaskFallback;
   }
   const debug2 = fn(682).debug;
   const _HermesInternal = HermesInternal;
   debug2.warn("[SentrySessionReplay] Can't load " + "RNSentryReplayUnmask" + ".");
-  value = UnmaskFallback;
+  value2 = UnmaskFallback;
   obj3 = fn(867);
 }
 const debug = fn(682).debug;

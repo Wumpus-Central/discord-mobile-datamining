@@ -4,6 +4,8 @@
 import _mod4994 from "module_4994" /* 4994 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
 

@@ -46,21 +46,21 @@ export const addInsets = (left, left2) => {
 };
 export const gestureToPressableEvent = (handlerTag) => {
   const timestamp = Date.now();
-  let obj = { identifier: handlerTag.handlerTag, locationX: handlerTag.x, locationY: handlerTag.y, pageX: handlerTag.absoluteX, pageY: handlerTag.absoluteY, target: 0, timestamp, touches: [], changedTouches: [] };
-  obj = { nativeEvent: null };
-  obj = { touches: null, changedTouches: null, identifier: obj.identifier, locationX: handlerTag.x, locationY: handlerTag.y, pageX: handlerTag.absoluteX, pageY: handlerTag.absoluteY, target: 0, timestamp, force: "HermesInternal" };
+  const obj = { identifier: handlerTag.handlerTag, locationX: handlerTag.x, locationY: handlerTag.y, pageX: handlerTag.absoluteX, pageY: handlerTag.absoluteY, target: 0, timestamp, touches: [], changedTouches: [] };
+  const obj2 = { nativeEvent: null };
+  const obj3 = { touches: null, changedTouches: null, identifier: obj.identifier, locationX: handlerTag.x, locationY: handlerTag.y, pageX: handlerTag.absoluteX, pageY: handlerTag.absoluteY, target: 0, timestamp, force: "HermesInternal" };
   const items = [obj];
-  obj.touches = items;
+  obj3.touches = items;
   const items1 = [obj];
-  obj.changedTouches = items1;
-  obj.nativeEvent = obj;
-  return obj;
+  obj3.changedTouches = items1;
+  obj2.nativeEvent = obj3;
+  return obj2;
 };
 export const gestureTouchToPressableEvent = (handlerTag) => {
   const timestamp = Date.now();
   const nativeEvent = { touches: null, changedTouches: null, identifier: handlerTag.handlerTag, locationX: null, locationY: null, pageX: null, pageY: null, target: 0, timestamp: null, force: "HermesInternal" };
-  let allTouches = handlerTag.allTouches;
-  nativeEvent.touches = allTouches.map((item) => {
+  const allTouches1 = handlerTag.allTouches;
+  nativeEvent.touches = allTouches1.map((item) => {
     if (typeof touchDataToPressEvent === "function") {
       const obj = { identifier: null, locationX: null, locationY: null, pageX: null, pageY: null, target: 0, timestamp: null, touches: null, changedTouches: null };
       ({ id: obj.identifier, x: obj.locationX, y: obj.locationY, absoluteX: obj.pageX, absoluteY: obj.pageY } = item);
@@ -85,7 +85,7 @@ export const gestureTouchToPressableEvent = (handlerTag) => {
       throw new TypeError("Trying to call a non-function");
     }
   });
-  allTouches = handlerTag.allTouches;
+  const allTouches = handlerTag.allTouches;
   const atResult = allTouches.at(0);
   let num;
   if (atResult != null) {
@@ -193,13 +193,13 @@ export const viewCenterToPressableEvent = (current) => {
   const timestamp = Date.now();
   const result = current.width / 2;
   const result1 = current.height / 2;
-  let obj = { identifier: 0, locationX: result, locationY: result1, pageX: -1, pageY: -1, target: 0, timestamp, touches: [], changedTouches: [] };
-  obj = { nativeEvent: null };
-  obj = { touches: null, changedTouches: null, identifier: 0, locationX: result, locationY: result1, pageX: -1, pageY: -1, target: 0, timestamp, force: "Boolean" };
+  const obj = { identifier: 0, locationX: result, locationY: result1, pageX: -1, pageY: -1, target: 0, timestamp, touches: [], changedTouches: [] };
+  const obj2 = { nativeEvent: null };
+  const obj3 = { touches: null, changedTouches: null, identifier: 0, locationX: result, locationY: result1, pageX: -1, pageY: -1, target: 0, timestamp, force: "Boolean" };
   const items = [obj];
-  obj.touches = items;
+  obj3.touches = items;
   const items1 = [obj];
-  obj.changedTouches = items1;
-  obj.nativeEvent = obj;
-  return obj;
+  obj3.changedTouches = items1;
+  obj2.nativeEvent = obj3;
+  return obj2;
 };

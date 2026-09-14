@@ -1,56 +1,60 @@
 // === Module 886: ? ===
 
 // Module 886
-import noop from "module_884" /* 884 */;
+import noop_mod from "module_884" /* 884 */;
 
 function valuePromise(_55) {
-  let tmp = noop;
-  tmp = new tmp(noop._61);
-  tmp._65 = 1;
-  tmp._55 = _55;
-  return tmp;
+  const tmp2 = new noop(noop._61);
+  tmp2._65 = 1;
+  tmp2._55 = _55;
+  return tmp2;
 }
-noop = new noop(noop._61);
-noop._65 = 1;
-noop._55 = true;
-noop = new noop(noop._61);
-noop._65 = 1;
-noop._55 = false;
-noop = new noop(noop._61);
-noop._65 = 1;
-noop._55 = null;
-noop = new noop(noop._61);
-noop._65 = 1;
-noop._55 = undefined;
-noop = new noop(noop._61);
-noop._65 = 1;
-noop._55 = 0;
-noop = new noop(noop._61);
-noop._65 = 1;
-noop._55 = "";
+let noop = noop_mod;
+const _module6 = new noop(noop._61);
+_module6._65 = 1;
+_module6._55 = true;
+let noop = noop_mod;
+const _module11 = new noop(noop._61);
+_module11._65 = 1;
+_module11._55 = false;
+let noop = noop_mod;
+const _module21 = new noop(noop._61);
+_module21._65 = 1;
+_module21._55 = null;
+let noop = noop_mod;
+const _module31 = new noop(noop._61);
+_module31._65 = 1;
+_module31._55 = undefined;
+let noop = noop_mod;
+const _module41 = new noop(noop._61);
+_module41._65 = 1;
+_module41._55 = 0;
+let noop = noop_mod;
+const _module51 = new noop(noop._61);
+_module51._65 = 1;
+_module51._55 = "";
 noop.resolve = (self) => {
   if (self instanceof noop) {
     return self;
   } else if (null === self) {
-    return noop;
+    return _module21;
   } else if (undefined === self) {
-    return noop;
+    return _module31;
   } else if (true === self) {
-    return noop;
+    return _module6;
   } else if (false === self) {
-    return noop;
+    return _module11;
   } else if (0 === self) {
-    return noop;
+    return _module41;
   } else if ("" === self) {
-    return noop;
+    return _module51;
   } else {
     if (typeof self === "object") {
       try {
         const then = self.then;
         if (typeof then === "function") {
-          let tmp4Result = noop;
-          tmp4Result = new tmp4Result(obj.bind(self));
-          return tmp4Result;
+          const tmp4Result1 = new noop(obj.bind(self));
+          return tmp4Result1;
         }
         obj = then;
       } catch (tmp14) {
@@ -101,11 +105,11 @@ noop.all = (arg0) => {
           }
           const then = _65.then;
           if (typeof then === "function") {
-            let tmpResult = tmp(dependencyMap[0]);
-            tmpResult = new tmpResult(then.bind(_65));
-            tmpResult.then((result) => {
+            const tmpResult1 = new tmp(dependencyMap[0])(then.bind(_65));
+            tmpResult1.then((result) => {
               res(closure_0, result);
             }, closure_1);
+            const tmpResult = tmp(dependencyMap[0]);
           }
         }
       }

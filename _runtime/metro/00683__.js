@@ -16,8 +16,7 @@ let c2 = false;
 export const registerSpanErrorInstrumentation = function registerSpanErrorInstrumentation() {
   if (!c2) {
     function errorCallback() {
-      let obj = spanToJSON;
-      const activeSpan = obj.getActiveSpan();
+      const activeSpan = spanToJSON.getActiveSpan();
       let rootSpan = activeSpan;
       if (activeSpan) {
         rootSpan = spanToJSON.getRootSpan(activeSpan);
@@ -29,8 +28,8 @@ export const registerSpanErrorInstrumentation = function registerSpanErrorInstru
           const _HermesInternal = HermesInternal;
           debug.log("[Tracing] Root span: " + "internal_error" + " -> Global error occurred");
         }
-        obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
-        rootSpan.setStatus(obj);
+        const obj2 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
+        rootSpan.setStatus(obj2);
       }
     }
     errorCallback.tag = "sentry_tracingErrorCallback";

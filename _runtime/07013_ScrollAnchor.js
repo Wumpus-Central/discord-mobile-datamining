@@ -3,19 +3,19 @@
 // Module 7013 (ScrollAnchor)
 import CompatView from "CompatView" /* 7008 */;
 import _slicedToArray from "module_6958" /* 6958 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
 require = fn;
 let noop = fn(19);
 ({ useImperativeHandle: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
+let noop = noop_mod;
 const jsx = fn(21).jsx;
 
 export const ScrollAnchor = function ScrollAnchor(horizontal) {
   horizontal = horizontal.horizontal;
+  first = undefined;
   _slicedToArray = undefined;
-  const tmp = _slicedToArray(closure_5(1000000), 2);
-  const first = tmp[0];
-  _slicedToArray = tmp[1];
+  [first, _slicedToArray] = closure_5(1000000);
   closure_3(horizontal.scrollAnchorRef, () => ({
     scrollBy(diff) {
       closure_0 = diff;

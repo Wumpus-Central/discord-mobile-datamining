@@ -11,13 +11,13 @@ const dependencyMap = arg6;
 
 export default {
   read(byteLength, arg1) {
-    let obj = {};
+    const obj = {};
     for (let num = 0; num < arg1.length; num = num + 1) {
-      let obj1 = _modDef5311;
-      let longAt = obj1.getLongAt(byteLength, arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_LENGTH_OFFSET);
-      let obj2 = _mod5294;
+      let obj2 = _modDef5311;
+      let longAt = obj2.getLongAt(byteLength, arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_LENGTH_OFFSET);
+      let obj3 = _mod5294;
       let sum = arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_OFFSET;
-      let stringFromDataView = obj2.getStringFromDataView(byteLength, sum, PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_SIZE);
+      let stringFromDataView = obj3.getStringFromDataView(byteLength, sum, PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_SIZE);
       if (stringFromDataView === PNG_CHUNK_TYPE_SIZE.TYPE_PHYS) {
         let tmp22 = arg1[num];
         let tmp23 = 4 <= longAt && tmp22 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4 <= byteLength.byteLength;
@@ -25,33 +25,33 @@ export default {
         if (tmp23) {
           let tmpResult = _modDef5311;
           let longAt1 = tmpResult.getLongAt(byteLength, tmp22 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET);
-          obj = { value: longAt1, description: "" + longAt1 };
-          tmp24 = obj;
+          let obj4 = { value: longAt1, description: "" + longAt1 };
+          tmp24 = obj4;
         }
         obj["Pixels Per Unit X"] = tmp24;
         let tmp26 = arg1[num];
         let tmp27 = 8 <= longAt && tmp26 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4 + 4 <= byteLength.byteLength;
         let tmp28;
         if (tmp27) {
-          tmpResult = _modDef5311;
-          let longAt2 = tmpResult.getLongAt(byteLength, tmp26 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
-          obj = { value: longAt2, description: "" + longAt2 };
-          tmp28 = obj;
+          let tmpResult9 = _modDef5311;
+          let longAt2 = tmpResult9.getLongAt(byteLength, tmp26 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
+          let obj5 = { value: longAt2, description: "" + longAt2 };
+          tmp28 = obj5;
         }
         obj["Pixels Per Unit Y"] = tmp28;
         let tmp30 = arg1[num];
         let tmp31 = 9 <= longAt && tmp30 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 8 + 1 <= byteLength.byteLength;
         let tmp32;
         if (tmp31) {
-          let tmpResult1 = _modDef5311;
-          let byteAt = tmpResult1.getByteAt(byteLength, tmp30 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 8);
-          obj1 = { value: byteAt, description: null };
+          let tmpResult10 = _modDef5311;
+          let byteAt = tmpResult10.getByteAt(byteLength, tmp30 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 8);
+          let obj6 = { value: byteAt, description: null };
           let str7 = "Unknown";
           if (1 === byteAt) {
             str7 = "meters";
           }
-          obj1.description = str7;
-          tmp32 = obj1;
+          obj6.description = str7;
+          tmp32 = obj6;
         }
         obj["Pixel Units"] = tmp32;
       } else if (stringFromDataView === PNG_CHUNK_TYPE_SIZE.TYPE_TIME) {
@@ -59,21 +59,21 @@ export default {
         let tmp8 = 7 <= longAt && tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 7 <= byteLength.byteLength;
         let tmp9;
         if (tmp8) {
-          let tmpResult2 = _modDef5311;
-          let shortAt = tmpResult2.getShortAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET);
-          let tmpResult3 = _modDef5311;
-          let byteAt1 = tmpResult3.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 2);
-          let tmpResult4 = _modDef5311;
-          let byteAt2 = tmpResult4.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 3);
-          let tmpResult5 = _modDef5311;
-          let byteAt3 = tmpResult5.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
-          let tmpResult6 = _modDef5311;
-          let byteAt4 = tmpResult6.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 5);
-          let tmpResult7 = _modDef5311;
-          let byteAt5 = tmpResult7.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 6);
-          obj2 = { value: null, description: null };
+          let tmpResult11 = _modDef5311;
+          let shortAt = tmpResult11.getShortAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET);
+          let tmpResult12 = _modDef5311;
+          let byteAt1 = tmpResult12.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 2);
+          let tmpResult13 = _modDef5311;
+          let byteAt2 = tmpResult13.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 3);
+          let tmpResult14 = _modDef5311;
+          let byteAt3 = tmpResult14.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
+          let tmpResult15 = _modDef5311;
+          let byteAt4 = tmpResult15.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 5);
+          let tmpResult16 = _modDef5311;
+          let byteAt5 = tmpResult16.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 6);
+          let obj7 = { value: null, description: null };
           let items = [shortAt, byteAt1, byteAt2, byteAt3, byteAt4, byteAt5];
-          obj2.value = items;
+          obj7.value = items;
           let repeat = "0".repeat;
           let _HermesInternal = HermesInternal;
           let combined = "" + "0".repeat(4 - "" + shortAt.length) + shortAt;
@@ -98,8 +98,8 @@ export default {
           let str4 = " ";
           let str5 = ":";
           let str6 = ":";
-          obj2.description = "" + combined + "-" + combined1 + "-" + combined2 + " " + combined3 + ":" + combined4 + ":" + "" + "0".repeat(2 - "" + byteAt5.length) + byteAt5;
-          tmp9 = obj2;
+          obj7.description = "" + combined + "-" + combined1 + "-" + combined2 + " " + combined3 + ":" + combined4 + ":" + "" + "0".repeat(2 - "" + byteAt5.length) + byteAt5;
+          tmp9 = obj7;
         }
         obj["Modify Date"] = tmp9;
       }

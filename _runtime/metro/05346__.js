@@ -1,6 +1,8 @@
 // === Module 5346: ? ===
 
 // Module 5346
+const require = globalThis.__r;
+
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = [6, 7, 99];

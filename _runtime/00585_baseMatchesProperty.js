@@ -5,6 +5,8 @@ import _mod590 from "module_590" /* 590 */;
 import _mod629 from "module_629" /* 629 */;
 import baseIsEqual from "baseIsEqual" /* 632 */;
 
+const require = globalThis.__r;
+
 
 export default function baseMatchesProperty(arg0, arg1) {
   _require = arg0;

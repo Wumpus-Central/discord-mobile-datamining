@@ -9,7 +9,7 @@ require = fn;
 const jsx = fn(21).jsx;
 
 export default function DelayedFreeze(children) {
-  let freeze = children.freeze;
+  const freeze = children.freeze;
   const tmp = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp[1];
   const items = [freeze];
@@ -21,8 +21,9 @@ export default function DelayedFreeze(children) {
       clearTimeout(closure_0);
     };
   }, items);
-  if (freeze) {
-    freeze = tmp[0];
+  let freeze1 = freeze;
+  if (freeze1) {
+    freeze1 = tmp[0];
   }
-  return jsx(Suspender.Freeze, { freeze, children: children.children });
+  return jsx(Suspender.Freeze, { freeze: freeze1, children: children.children });
 };

@@ -40,13 +40,12 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
     },
     processEvent(tags) {
       closure_0 = closure_0.ignoreSentryInternalFrames;
-      let obj = _mod698;
-      const framesFromEvent = obj.getFramesFromEvent(tags);
+      const framesFromEvent = _mod698.getFramesFromEvent(tags);
       let mapped;
       if (framesFromEvent) {
         let found = framesFromEvent.filter((filename, index) => {
-          filename = filename.filename;
-          if (filename) {
+          let filename1 = filename.filename;
+          if (filename1) {
             let tmp3 = null != filename.lineno || null != filename.colno || null != filename.instruction_addr;
             if (tmp3) {
               let tmp5 = !closure_0;
@@ -101,9 +100,9 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
               }
               tmp3 = tmp5;
             }
-            filename = tmp3;
+            filename1 = tmp3;
           }
-          return filename;
+          return filename1;
         });
         mapped = found.map((module_metadata) => {
           if (module_metadata.module_metadata) {
@@ -129,10 +128,10 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
         }))) {
           if ("drop-error-if-contains-third-party-frames" !== tmp.behaviour) {
             if ("drop-error-if-exclusively-contains-third-party-frames" !== tmp.behaviour) {
-              obj = {};
+              const obj2 = {};
               const merged = Object.assign(tags.tags);
-              obj.third_party_code = true;
-              tags.tags = obj;
+              obj2.third_party_code = true;
+              tags.tags = obj2;
             }
           }
           return null;

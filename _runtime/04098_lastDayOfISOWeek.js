@@ -1,19 +1,21 @@
 // === Module 4098: lastDayOfISOWeek ===
 
 // Module 4098 (lastDayOfISOWeek)
-import lastDayOfWeek from "lastDayOfWeek" /* 4099 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import lastDayOfWeek_mod from "lastDayOfWeek" /* 4099 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let lastDayOfWeek = lastDayOfWeek_mod;
 if (!lastDayOfWeek) {
-  let obj = { default: lastDayOfWeek };
+  const obj = { default: lastDayOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = lastDayOfWeek;
 }
 lastDayOfWeek = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

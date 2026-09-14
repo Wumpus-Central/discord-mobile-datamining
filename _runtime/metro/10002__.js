@@ -3,7 +3,7 @@
 // Module 10002
 import _mod9998 from "module_9998" /* 9998 */;
 import QRPolynomial from "QRPolynomial" /* 10003 */;
-import _mod10004 from "module_10004" /* 10004 */;
+import array2 from "array2" /* 10004 */;
 
 const exports = {
   PATTERN_POSITION_TABLE: null,
@@ -96,12 +96,12 @@ const exports = {
     if (0 < diff) {
       do {
         let tmp5 = QRPolynomial;
-        let obj2 = _mod10004;
+        let obj2 = array2;
         let items = [1, obj2.gexp(num)];
         let tmp6 = new.target;
         let tmp7 = new.target;
-        tmp5 = new tmp5(items, 0);
-        multiplyResult = multiplyResult.multiply(tmp5);
+        let tmp52 = new tmp5(items, 0);
+        multiplyResult = multiplyResult.multiply(tmp52);
         num = num + 1;
         tmp2 = multiplyResult;
       } while (num < diff);

@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "belgi", verb: "bo\u2018lishi kerak" }, file: { unit: "bayt", verb: "bo\u2018lishi kerak" }, array: { unit: "element", verb: "bo\u2018lishi kerak" }, set: { unit: "element", verb: "bo\u2018lishi kerak" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "belgi", verb: "bo\u2018lishi kerak" }, file: { unit: "bayt", verb: "bo\u2018lishi kerak" }, array: { unit: "element", verb: "bo\u2018lishi kerak" }, set: { unit: "element", verb: "bo\u2018lishi kerak" } };
         closure_1 = { regex: "kirish", email: "elektron pochta manzili", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO sana va vaqti", date: "ISO sana", time: "ISO vaqt", duration: "ISO davomiylik", ipv4: "IPv4 manzil", ipv6: "IPv6 manzil", mac: "MAC manzil", cidrv4: "IPv4 diapazon", cidrv6: "IPv6 diapazon", base64: "base64 kodlangan satr", base64url: "base64url kodlangan satr", json_string: "JSON satr", e164: "E.164 raqam", jwt: "JWT", template_literal: "kirish" };
         closure_2 = { nan: "NaN", number: "raqam", array: "massiv" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp45 == null) {
                 tmp45 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Noto\u2018g\u2018ri kirish: kutilgan instanceof " + code.expected + ", qabul qilingan " + tmp45;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str30 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -120,18 +119,18 @@ if (self2) {
               if (code.inclusive) {
                 str22 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              let str = minimum.toString();
+              const str1 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Juda kichik: kutilgan " + origin + " " + str22 + str + " " + tmp15.unit + " " + tmp15.verb;
+                let combined3 = "Juda kichik: kutilgan " + origin + " " + str22 + str1 + " " + tmp15.unit + " " + tmp15.verb;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Juda kichik: kutilgan " + origin + " " + str22 + str;
+                combined3 = "Juda kichik: kutilgan " + origin + " " + str22 + str1;
               }
               return combined3;
             case "invalid_format":
@@ -173,7 +172,6 @@ if (self2) {
               return "Noto\u2018g\u2018ri kirish";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = " da noto\u2018g\u2018ri qiymat";
               return "" + code.origin + " da noto\u2018g\u2018ri qiymat";
             default:
               return "Noto\u2018g\u2018ri kirish";

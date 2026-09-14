@@ -13,18 +13,15 @@ import DEFAULT_ENVIRONMENT2 from "DEFAULT_ENVIRONMENT" /* 723 */;
 require = arg1;
 const dependencyMap = arg6;
 function getDynamicSamplingContextFromSpan(spanContext) {
-  let obj = _mod713;
-  const client = obj.getClient();
+  const client = _mod713.getClient();
   if (client) {
-    let tmpResult = spanToJSON;
-    const rootSpan = tmpResult.getRootSpan(spanContext);
-    tmpResult = spanToJSON;
-    const spanToJSONResult = tmpResult.spanToJSON(rootSpan);
+    const rootSpan = spanToJSON.getRootSpan(spanContext);
+    const tmpResult = spanToJSON;
+    const spanToJSONResult = spanToJSON.spanToJSON(rootSpan);
     const data = spanToJSONResult.data;
     const traceState = rootSpan.spanContext().traceState;
     value = undefined;
     if (traceState != null) {
-      let str = "sentry.sample_rate";
       value = traceState.get("sentry.sample_rate");
     }
     if (value == null) {
@@ -44,14 +41,14 @@ function getDynamicSamplingContextFromSpan(spanContext) {
       }
       return tmp8;
     } else {
-      value = undefined;
+      let value3;
       if (traceState != null) {
-        value = traceState.get("sentry.dsc");
+        value3 = traceState.get("sentry.dsc");
       }
-      let result = value;
-      if (value) {
-        result = MAX_BAGGAGE_STRING_LENGTH.baggageHeaderToDynamicSamplingContext(value);
-        const tmpResult1 = MAX_BAGGAGE_STRING_LENGTH;
+      let result = value3;
+      if (value3) {
+        result = MAX_BAGGAGE_STRING_LENGTH.baggageHeaderToDynamicSamplingContext(value3);
+        const tmpResult8 = MAX_BAGGAGE_STRING_LENGTH;
       }
       if (result) {
         let tmp21 = typeof value !== "number";
@@ -69,35 +66,35 @@ function getDynamicSamplingContextFromSpan(spanContext) {
         if (!DEFAULT_ENVIRONMENT) {
           DEFAULT_ENVIRONMENT = DEFAULT_ENVIRONMENT2.DEFAULT_ENVIRONMENT;
         }
-        obj = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: client.getDsn() || {}.publicKey, trace_id: spanContext.spanContext().traceId, org_id: null };
+        const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: client.getDsn() || {}.publicKey, trace_id: spanContext.spanContext().traceId, org_id: null };
         const tmp12 = client.getDsn() || {};
-        obj.org_id = _mod702.extractOrgIdFromClient(client);
-        client.emit("createDsc", obj);
+        obj2.org_id = _mod702.extractOrgIdFromClient(client);
+        client.emit("createDsc", obj2);
         const description = spanToJSONResult.description;
-        const tmpResult2 = _mod702;
+        const tmpResult9 = _mod702;
         if (tmp14) {
-          obj.transaction = description;
+          obj2.transaction = description;
         }
         tmp14 = "url" !== data[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
-        if (tmpResult3.hasSpansEnabled()) {
+        if (tmpResult10.hasSpansEnabled()) {
           const _String = String;
-          obj.sampled = String(spanToJSON.spanIsSampled(rootSpan));
-          let value1;
+          obj2.sampled = String(spanToJSON.spanIsSampled(rootSpan));
+          let value4;
           if (traceState != null) {
-            value1 = traceState.get("sentry.sample_rand");
+            value4 = traceState.get("sentry.sample_rand");
           }
-          if (value1 == null) {
+          if (value4 == null) {
             const scope = unwrapScopeFromWeakRef.getCapturedScopesOnSpan(rootSpan).scope;
-            str = undefined;
+            let str1;
             if (scope != null) {
-              str = scope.getPropagationContext().sampleRand.toString();
+              str1 = scope.getPropagationContext().sampleRand.toString();
               const str6 = scope.getPropagationContext().sampleRand;
             }
-            value1 = str;
-            const tmpResult5 = unwrapScopeFromWeakRef;
+            value4 = str1;
+            const tmpResult12 = unwrapScopeFromWeakRef;
           }
-          obj.sample_rand = value1;
-          const tmpResult4 = spanToJSON;
+          obj2.sample_rand = value4;
+          const tmpResult11 = spanToJSON;
         }
         let tmp18 = typeof value !== "number";
         if (typeof value !== "number") {
@@ -105,12 +102,13 @@ function getDynamicSamplingContextFromSpan(spanContext) {
         }
         if (!tmp18) {
           const _HermesInternal = HermesInternal;
-          obj.sample_rate = "" + value;
+          obj2.sample_rate = "" + value;
         }
-        client.emit("createDsc", obj, rootSpan);
-        return obj;
+        client.emit("createDsc", obj2, rootSpan);
+        return obj2;
       }
     }
+    const tmpResult7 = spanToJSON;
   } else {
     return {};
   }

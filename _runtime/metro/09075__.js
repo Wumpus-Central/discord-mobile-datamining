@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "\u062D\u0631\u0641", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" }, file: { unit: "\u0628\u0627\u064A\u062A", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" }, array: { unit: "\u0639\u0646\u0635\u0631", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" }, set: { unit: "\u0639\u0646\u0635\u0631", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "\u062D\u0631\u0641", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" }, file: { unit: "\u0628\u0627\u064A\u062A", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" }, array: { unit: "\u0639\u0646\u0635\u0631", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" }, set: { unit: "\u0639\u0646\u0635\u0631", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" } };
         closure_1 = { regex: "\u0645\u062F\u062E\u0644", email: "\u0628\u0631\u064A\u062F \u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A", url: "\u0631\u0627\u0628\u0637", emoji: "\u0625\u064A\u0645\u0648\u062C\u064A", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "\u062A\u0627\u0631\u064A\u062E \u0648\u0648\u0642\u062A \u0628\u0645\u0639\u064A\u0627\u0631 ISO", date: "\u062A\u0627\u0631\u064A\u062E \u0628\u0645\u0639\u064A\u0627\u0631 ISO", time: "\u0648\u0642\u062A \u0628\u0645\u0639\u064A\u0627\u0631 ISO", duration: "\u0645\u062F\u0629 \u0628\u0645\u0639\u064A\u0627\u0631 ISO", ipv4: "\u0639\u0646\u0648\u0627\u0646 IPv4", ipv6: "\u0639\u0646\u0648\u0627\u0646 IPv6", cidrv4: "\u0645\u062F\u0649 \u0639\u0646\u0627\u0648\u064A\u0646 \u0628\u0635\u064A\u063A\u0629 IPv4", cidrv6: "\u0645\u062F\u0649 \u0639\u0646\u0627\u0648\u064A\u0646 \u0628\u0635\u064A\u063A\u0629 IPv6", base64: "\u0646\u064E\u0635 \u0628\u062A\u0631\u0645\u064A\u0632 base64-encoded", base64url: "\u0646\u064E\u0635 \u0628\u062A\u0631\u0645\u064A\u0632 base64url-encoded", json_string: "\u0646\u064E\u0635 \u0639\u0644\u0649 \u0647\u064A\u0626\u0629 JSON", e164: "\u0631\u0642\u0645 \u0647\u0627\u062A\u0641 \u0628\u0645\u0639\u064A\u0627\u0631 E.164", jwt: "JWT", template_literal: "\u0645\u062F\u062E\u0644" };
         closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp50 == null) {
                 tmp50 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "\u0645\u062F\u062E\u0644\u0627\u062A \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644\u0629: \u064A\u0641\u062A\u0631\u0636 \u0625\u062F\u062E\u0627\u0644 instanceof " + code.expected + "\u060C \u0648\u0644\u0643\u0646 \u062A\u0645 \u0625\u062F\u062E\u0627\u0644 " + tmp50;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str30 = "<=";
               }
-              let tmp29 = obj[code.origin];
+              let tmp29 = obj2[code.origin];
               if (tmp29 == null) {
                 tmp29 = null;
               }
@@ -104,13 +103,13 @@ if (self2) {
                 if (str31 == null) {
                   str31 = "\u0627\u0644\u0642\u064A\u0645\u0629";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str39 = tmp29.unit;
                 if (str39 == null) {
                   str39 = "\u0639\u0646\u0635\u0631";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = " \u0623\u0643\u0628\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0623\u0646 \u062A\u0643\u0648\u0646 " + str31 + " " + str30 + " " + str + " " + str39;
+                let combined2 = " \u0623\u0643\u0628\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0623\u0646 \u062A\u0643\u0648\u0646 " + str31 + " " + str30 + " " + str1 + " " + str39;
               } else {
                 let str32 = str31;
                 if (str31 == null) {
@@ -125,18 +124,18 @@ if (self2) {
               if (code.inclusive) {
                 str21 = ">=";
               }
-              let tmp17 = obj[code.origin];
+              let tmp17 = obj2[code.origin];
               if (tmp17 == null) {
                 tmp17 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str55 = minimum.toString();
               if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "\u0623\u0635\u063A\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0644\u0640 " + origin + " \u0623\u0646 \u064A\u0643\u0648\u0646 " + str21 + " " + str1 + " " + tmp17.unit;
+                let combined3 = "\u0623\u0635\u063A\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0644\u0640 " + origin + " \u0623\u0646 \u064A\u0643\u0648\u0646 " + str21 + " " + str55 + " " + tmp17.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "\u0623\u0635\u063A\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0644\u0640 " + origin + " \u0623\u0646 \u064A\u0643\u0648\u0646 " + str21 + " " + str1;
+                combined3 = "\u0623\u0635\u063A\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0644\u0640 " + origin + " \u0623\u0646 \u064A\u0643\u0648\u0646 " + str21 + " " + str55;
               }
               return combined3;
             case "invalid_format":
@@ -182,7 +181,6 @@ if (self2) {
               return "\u0645\u062F\u062E\u0644 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "\u0645\u062F\u062E\u0644 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644 \u0641\u064A ";
               return "\u0645\u062F\u062E\u0644 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644 \u0641\u064A " + code.origin;
             default:
               return "\u0645\u062F\u062E\u0644 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644";

@@ -7,16 +7,15 @@ import _mod6733 from "module_6733" /* 6733 */;
 _mod19.useCallback;
 
 export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
-  let obj = _mod6733;
-  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const bottomSheetInternal = _mod6733.useBottomSheetInternal();
   const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
   const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  obj = { setContentSize: null };
+  const obj2 = { setContentSize: null };
   const items = [enableDynamicSizing, animatedContentHeight];
-  obj.setContentSize = useCallback((arg0) => {
+  obj2.setContentSize = useCallback((arg0) => {
     if (enableDynamicSizing) {
       const result = animatedContentHeight.set(arg0);
     }
   }, items);
-  return obj;
+  return obj2;
 };

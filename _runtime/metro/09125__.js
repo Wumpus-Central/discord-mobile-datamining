@@ -655,10 +655,10 @@ if (self2) {
             obj = {};
           }
           const globalRegistry2 = globalRegistry.globalRegistry;
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(obj);
-          obj.description = description;
-          globalRegistry2.add(arg0, obj);
+          obj2.description = description;
+          globalRegistry2.add(arg0, obj2);
         }
       ];
       ZodCheck._zod.onattach = items;
@@ -678,10 +678,9 @@ if (self2) {
             obj = {};
           }
           const globalRegistry2 = globalRegistry.globalRegistry;
-          obj = {};
           const merged = Object.assign(obj);
           const merged1 = Object.assign(closure_0);
-          globalRegistry2.add(arg0, obj);
+          globalRegistry2.add(arg0, {});
         }
       ];
       ZodCheck._zod.onattach = items;
@@ -737,11 +736,9 @@ if (self2) {
       if ($ZodString == null) {
         $ZodString = closure_4.$ZodString;
       }
-      let obj = { type: "string", error: normalizeParamsResult.error };
-      const ZodString = new $ZodString(obj);
-      obj = { type: "boolean", error: normalizeParamsResult.error };
-      const ZodBoolean = new $ZodBoolean(obj);
-      obj = {
+      const ZodString = new $ZodString({ type: "string", error: normalizeParamsResult.error });
+      const ZodBoolean = new $ZodBoolean({ type: "boolean", error: normalizeParamsResult.error });
+      const ZodCodec = new $ZodCodec({
         type: "pipe",
         in: ZodString,
         out: ZodBoolean,
@@ -750,24 +747,24 @@ if (self2) {
           if ("sensitive" !== normalizeParamsResult.case) {
             formatted = str.toLowerCase();
           }
-          let hasItem = set.has(formatted);
-          if (!hasItem) {
-            hasItem = set1.has(formatted);
+          let hasItem1 = set.has(formatted);
+          if (!hasItem1) {
+            const hasItem = set1.has(formatted);
             let obj = !hasItem;
             if (!hasItem) {
               issues = issues.issues;
-              obj = { code: "invalid_value", expected: "stringbool", values: null, input: null, inst: null, continue: false };
+              const obj2 = { code: "invalid_value", expected: "stringbool", values: null, input: null, inst: null, continue: false };
               const items = [];
               HermesBuiltin.arraySpread(set1, HermesBuiltin.arraySpread(set, 0));
-              obj.values = items;
-              obj.input = issues.value;
-              obj.inst = ZodCodec;
-              issues.push(obj);
+              obj2.values = items;
+              obj2.input = issues.value;
+              obj2.inst = ZodCodec;
+              issues.push(obj2);
               obj = {};
             }
-            hasItem = obj;
+            hasItem1 = obj;
           }
-          return hasItem;
+          return hasItem1;
         },
         reverseTransform(value, issues) {
           if (true === value) {
@@ -779,8 +776,7 @@ if (self2) {
           return tmp2;
         },
         error: normalizeParamsResult.error
-      };
-      const ZodCodec = new $ZodCodec(obj);
+      });
       return ZodCodec;
     };
     exports._stringFormat = function _stringFormat(ZodCustomStringFormat, combined, hex) {
@@ -788,22 +784,22 @@ if (self2) {
       if (enc === undefined) {
         obj = {};
       }
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(closure_5.normalizeParams(obj));
-      obj.check = "string_format";
-      obj.type = "string";
-      obj.format = combined;
+      obj2.check = "string_format";
+      obj2.type = "string";
+      obj2.format = combined;
       let fn = hex;
       if (typeof hex !== "function") {
         fn = (arg0) => hex.test(arg0);
       }
-      obj.fn = fn;
+      obj2.fn = fn;
       const merged1 = Object.assign(closure_5.normalizeParams(obj));
       if (hex instanceof RegExp) {
-        obj.pattern = hex;
+        obj2.pattern = hex;
       }
       const normalizeParamsResult = closure_5.normalizeParams(obj);
-      return new ZodCustomStringFormat(obj);
+      return new ZodCustomStringFormat(obj2);
     };
     let closure_2 = fn(_mod9070);
     let closure_3 = fn($output);

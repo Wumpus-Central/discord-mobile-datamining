@@ -2,4 +2,4 @@
 
 // Module 1303
 
-export default ReferenceError;
+export default URIError;

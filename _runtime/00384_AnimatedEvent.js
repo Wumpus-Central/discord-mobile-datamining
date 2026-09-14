@@ -8,6 +8,8 @@ import result1Default from "result1" /* 357 */;
 import _modDef373 from "module_373" /* 373 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 
+const require = globalThis.__r;
+
 let AnimatedEvent = arg1;
 class AnimatedEvent {
   constructor(arg0, arg1) {
@@ -262,15 +264,15 @@ export const attachNativeEventImpl = function attachNativeEventImpl(current, arg
   }
   require("module_38")(nativeEvent, "Native driven events only support animated values contained inside `nativeEvent`.");
   traverse(arg2[0].nativeEvent, []);
-  let obj = AnimatedEvent(items[5]);
-  const findNodeHandleResult = obj.findNodeHandle(current);
+  const tmp2 = require("module_38");
+  const findNodeHandleResult = AnimatedEvent(items[5]).findNodeHandle(current);
   if (null != findNodeHandleResult) {
     const item = items.forEach((item) => {
       const API = result1Default.API;
       const result = API.addAnimatedEventToView(c4, closure_0, item);
     });
   }
-  obj = {
+  return {
     detach() {
       if (null != c4) {
         const item = items.forEach((animatedValueTag) => {
@@ -280,6 +282,5 @@ export const attachNativeEventImpl = function attachNativeEventImpl(current, arg
       }
     }
   };
-  return obj;
 };
 export const AnimatedEvent = _createClassDefault(AnimatedEvent, items);

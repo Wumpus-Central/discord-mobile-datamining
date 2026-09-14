@@ -19,7 +19,7 @@ class LegacyScrollView {
     obj = closure_6;
     ref = closure_6.useRef(null);
     ({ refreshControl, waitFor } = global);
-    obj = {};
+    obj1 = {};
     tmp2 = jsx;
     tmp3 = closure_9;
     merged = Object.assign(closure_5(global, closure_2));
@@ -29,15 +29,15 @@ class LegacyScrollView {
     }
     items = [];
     items[HermesBuiltin.arraySpread(obj3.toArray(waitFor), 0)] = ref;
-    obj.waitFor = items;
+    obj1.waitFor = items;
     cloneElementResult = undefined;
     if (refreshControl) {
-      obj1 = { ref: null };
-      obj1.ref = ref;
-      cloneElementResult = obj.cloneElement(refreshControl, obj1);
+      obj5 = { ref: null };
+      obj5.ref = ref;
+      cloneElementResult = obj.cloneElement(refreshControl, obj5);
     }
-    obj.refreshControl = cloneElementResult;
-    return tmp2(tmp3, obj);
+    obj1.refreshControl = cloneElementResult;
+    return tmp2(tmp3, obj1);
   }
 }
 const tmp3 = _modDef6870(RefreshControl, { disallowInterruption: true, shouldCancelWhenOutside: false });
@@ -52,41 +52,39 @@ export const LegacyFlatList = (arg0) => {
   const ref = noop.useRef(null);
   ({ waitFor: dependencyMap, refreshControl } = arg0);
   let obj = {};
-  obj = {};
   const entries = Object.entries(_objectWithoutProperties(arg0, closure_3));
   while (tmp3 !== undefined) {
-    let tmp6 = _slicedToArray(tmp4, 2);
-    let first = tmp6[0];
+    [first, tmp9] = tmp4;
     let tmp8 = first;
-    let tmp9 = tmp6[1];
     let nativeViewProps = ref(6798).nativeViewProps;
     if (nativeViewProps.includes(first)) {
-      obj[tmp8] = tmp9;
+      obj2[tmp8] = tmp9;
     } else {
       obj[tmp8] = tmp9;
     }
     continue;
   }
-  obj = {};
+  const obj3 = {};
   let merged = Object.assign(obj);
-  obj.renderScrollComponent = function renderScrollComponent(arg0) {
-    obj = {};
+  obj3.renderScrollComponent = function renderScrollComponent(arg0) {
+    const obj = {};
     const merged = Object.assign(arg0);
-    const merged1 = Object.assign(obj);
+    const merged1 = Object.assign(obj2);
+    obj2 = tagMessage;
     let items = dependencyMap;
     if (dependencyMap == null) {
       items = [];
     }
     const items1 = [];
-    items1[HermesBuiltin.arraySpread(tagMessage.toArray(items), 0)] = ref;
+    items1[HermesBuiltin.arraySpread(obj2.toArray(items), 0)] = ref;
     obj.waitFor = items1;
     return <LegacyScrollView />;
   };
   let cloneElementResult;
   if (refreshControl) {
-    const obj1 = { ref };
-    cloneElementResult = noop.cloneElement(refreshControl, obj1);
+    const obj4 = { ref };
+    cloneElementResult = noop.cloneElement(refreshControl, obj4);
   }
-  obj.refreshControl = cloneElementResult;
+  obj3.refreshControl = cloneElementResult;
   return <closure_7 />;
 };

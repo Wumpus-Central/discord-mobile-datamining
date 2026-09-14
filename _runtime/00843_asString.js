@@ -26,7 +26,7 @@ function baseRequestAttributes(ls_provider, unknown, chat, kwargs, temperature, 
   if (ls_provider == null) {
     str = "langchain";
   }
-  let obj = {};
+  const obj = {};
   obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_SYSTEM_ATTRIBUTE] = asString(str);
   obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_OPERATION_NAME_ATTRIBUTE] = chat;
   obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = asString(unknown);
@@ -53,12 +53,12 @@ function baseRequestAttributes(ls_provider, unknown, chat, kwargs, temperature, 
     temperature = temperature1;
   }
   if (typeof setNumberIfDefined === "function") {
-    obj = {};
+    const obj2 = {};
     const _Number = Number;
     const NumberResult = Number(temperature);
     const _Number2 = Number;
     if (!Number.isNaN(NumberResult)) {
-      obj[tmp8] = NumberResult;
+      obj2[tmp8] = NumberResult;
     }
     let max_tokens;
     if (temperature != null) {
@@ -83,7 +83,7 @@ function baseRequestAttributes(ls_provider, unknown, chat, kwargs, temperature, 
       const NumberResult1 = Number(max_tokens);
       const _Number4 = Number;
       if (!Number.isNaN(NumberResult1)) {
-        obj[tmp14] = NumberResult1;
+        obj2[tmp14] = NumberResult1;
       }
       let top_p;
       if (temperature != null) {
@@ -101,7 +101,7 @@ function baseRequestAttributes(ls_provider, unknown, chat, kwargs, temperature, 
         const NumberResult2 = Number(top_p);
         const _Number6 = Number;
         if (!Number.isNaN(NumberResult2)) {
-          obj[tmp18] = NumberResult2;
+          obj2[tmp18] = NumberResult2;
         }
         if (temperature != null) {
           const frequency_penalty = temperature.frequency_penalty;
@@ -111,7 +111,7 @@ function baseRequestAttributes(ls_provider, unknown, chat, kwargs, temperature, 
           const NumberResult3 = Number(frequency_penalty);
           const _Number8 = Number;
           if (!Number.isNaN(NumberResult3)) {
-            obj[tmp20] = NumberResult3;
+            obj2[tmp20] = NumberResult3;
           }
           if (temperature != null) {
             const presence_penalty = temperature.presence_penalty;
@@ -121,7 +121,7 @@ function baseRequestAttributes(ls_provider, unknown, chat, kwargs, temperature, 
             const NumberResult4 = Number(presence_penalty);
             const _Number10 = Number;
             if (!Number.isNaN(NumberResult4)) {
-              obj[tmp22] = NumberResult4;
+              obj2[tmp22] = NumberResult4;
             }
             let tmp24 = temperature;
             if (temperature) {
@@ -132,13 +132,13 @@ function baseRequestAttributes(ls_provider, unknown, chat, kwargs, temperature, 
               const BooleanResult = Boolean(temperature.stream);
               if (typeof setIfDefined === "function") {
                 if (null != BooleanResult) {
-                  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_STREAM_ATTRIBUTE] = BooleanResult;
+                  obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_STREAM_ATTRIBUTE] = BooleanResult;
                 }
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
             }
-            const merged = Object.assign(obj);
+            const merged = Object.assign(obj2);
             return obj;
           } else {
             throw new TypeError("Trying to call a non-function");
@@ -207,8 +207,8 @@ export const extractChatModelRequestAttributes = function extractChatModelReques
             if (tmp31 == null) {
               tmp31 = formatted;
             }
-            let obj = { role: tmp31, content: asString(_getType.content) };
-            return obj;
+            const obj2 = { role: tmp31, content: asString(_getType.content) };
+            return obj2;
           } else {
             const constructor = _getType.constructor;
             let name;
@@ -244,8 +244,8 @@ export const extractChatModelRequestAttributes = function extractChatModelReques
               if (tmp26 == null) {
                 tmp26 = formatted1;
               }
-              obj = { role: tmp26, content: asString(_getType.content) };
-              return obj;
+              const obj3 = { role: tmp26, content: asString(_getType.content) };
+              return obj3;
             } else if (_getType.type) {
               const _String2 = String;
               const str15 = String(_getType.type);
@@ -254,8 +254,8 @@ export const extractChatModelRequestAttributes = function extractChatModelReques
               if (tmp21 == null) {
                 tmp21 = formatted2;
               }
-              const obj1 = { role: tmp21, content: asString(_getType.content) };
-              return obj1;
+              const obj4 = { role: tmp21, content: asString(_getType.content) };
+              return obj4;
             } else if (_getType.role) {
               const _String = String;
               const formatted3 = String(_getType.role).toLowerCase();
@@ -263,8 +263,8 @@ export const extractChatModelRequestAttributes = function extractChatModelReques
               if (tmp15 == null) {
                 tmp15 = formatted3;
               }
-              const obj2 = { role: tmp15, content: asString(_getType.content) };
-              return obj2;
+              const obj5 = { role: tmp15, content: asString(_getType.content) };
+              return obj5;
             } else {
               if (1 === _getType.lc) {
                 if (_getType.kwargs) {
@@ -309,17 +309,17 @@ export const extractChatModelRequestAttributes = function extractChatModelReques
                   if (tmp8 == null) {
                     tmp8 = formatted4;
                   }
-                  const obj3 = { role: tmp8, content: null };
+                  const obj6 = { role: tmp8, content: null };
                   const kwargs = _getType.kwargs;
                   let content;
                   if (kwargs != null) {
                     content = kwargs.content;
                   }
-                  obj3.content = asString(content);
-                  return obj3;
+                  obj6.content = asString(content);
+                  return obj6;
                 }
               }
-              obj = { role: "user", content: asString(_getType.content) };
+              const obj = { role: "user", content: asString(_getType.content) };
               return obj;
             }
           }
@@ -698,8 +698,8 @@ export const normalizeLangChainMessages = function normalizeLangChainMessages(it
       if (tmp31 == null) {
         tmp31 = formatted;
       }
-      let obj = { role: tmp31, content: asString(_getType.content) };
-      return obj;
+      const obj2 = { role: tmp31, content: asString(_getType.content) };
+      return obj2;
     } else {
       const constructor = _getType.constructor;
       let name;
@@ -735,8 +735,8 @@ export const normalizeLangChainMessages = function normalizeLangChainMessages(it
         if (tmp26 == null) {
           tmp26 = formatted1;
         }
-        obj = { role: tmp26, content: asString(_getType.content) };
-        return obj;
+        const obj3 = { role: tmp26, content: asString(_getType.content) };
+        return obj3;
       } else if (_getType.type) {
         const _String2 = String;
         const str15 = String(_getType.type);
@@ -745,8 +745,8 @@ export const normalizeLangChainMessages = function normalizeLangChainMessages(it
         if (tmp21 == null) {
           tmp21 = formatted2;
         }
-        const obj1 = { role: tmp21, content: asString(_getType.content) };
-        return obj1;
+        const obj4 = { role: tmp21, content: asString(_getType.content) };
+        return obj4;
       } else if (_getType.role) {
         const _String = String;
         const formatted3 = String(_getType.role).toLowerCase();
@@ -754,8 +754,8 @@ export const normalizeLangChainMessages = function normalizeLangChainMessages(it
         if (tmp15 == null) {
           tmp15 = formatted3;
         }
-        const obj2 = { role: tmp15, content: asString(_getType.content) };
-        return obj2;
+        const obj5 = { role: tmp15, content: asString(_getType.content) };
+        return obj5;
       } else {
         if (1 === _getType.lc) {
           if (_getType.kwargs) {
@@ -800,17 +800,17 @@ export const normalizeLangChainMessages = function normalizeLangChainMessages(it
             if (tmp8 == null) {
               tmp8 = formatted4;
             }
-            const obj3 = { role: tmp8, content: null };
+            const obj6 = { role: tmp8, content: null };
             const kwargs = _getType.kwargs;
             let content;
             if (kwargs != null) {
               content = kwargs.content;
             }
-            obj3.content = asString(content);
-            return obj3;
+            obj6.content = asString(content);
+            return obj6;
           }
         }
-        obj = { role: "user", content: asString(_getType.content) };
+        const obj = { role: "user", content: asString(_getType.content) };
         return obj;
       }
     }

@@ -5,40 +5,39 @@ import CLIENT_ADDRESS_ATTRIBUTE from "CLIENT_ADDRESS_ATTRIBUTE" /* 805 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-let obj = { "tools/call": null, "resources/read": null, "resources/subscribe": null, "resources/unsubscribe": null, "prompts/get": null };
-obj = { targetField: "name", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_TOOL_NAME_ATTRIBUTE, captureArguments: true, argumentsField: "arguments" };
-obj["tools/call"] = obj;
-obj = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE, captureUri: true };
-obj["resources/read"] = obj;
+let obj = { "tools/call": { targetField: "name", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_TOOL_NAME_ATTRIBUTE, captureArguments: true, argumentsField: "arguments" }, "resources/read": null, "resources/subscribe": null, "resources/unsubscribe": null, "prompts/get": null };
+let obj2 = { targetField: "name", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_TOOL_NAME_ATTRIBUTE, captureArguments: true, argumentsField: "arguments" };
+obj["resources/read"] = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE, captureUri: true };
+let obj3 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE, captureUri: true };
 obj["resources/subscribe"] = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
-let obj1 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
+let obj4 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
 obj["resources/unsubscribe"] = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
-const obj2 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
+const obj5 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
 obj["prompts/get"] = { targetField: "name", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_PROMPT_NAME_ATTRIBUTE, captureName: true, captureArguments: true, argumentsField: "arguments" };
 
-export const extractTargetInfo = function extractTargetInfo(method, params) {
+export const extractTargetInfo = function extractTargetInfo(method, arg1) {
   if (obj[method]) {
     let tmp2;
     if (tmp.targetField) {
       let tmp5;
-      if (params != null) {
-        tmp5 = params[tmp.targetField];
+      if (arg1 != null) {
+        tmp5 = arg1[tmp.targetField];
       }
       if (typeof tmp5 === "string") {
-        tmp2 = params[tmp.targetField];
+        tmp2 = arg1[tmp.targetField];
       }
     }
-    obj = { target: tmp2, attributes: null };
+    const obj2 = { target: tmp2, attributes: null };
     if (tmp2) {
       if (tmp.targetAttribute) {
-        obj = {};
-        obj[tmp.targetAttribute] = tmp2;
-        let obj1 = obj;
+        const obj3 = {};
+        obj3[tmp.targetAttribute] = tmp2;
+        let obj4 = obj3;
       }
-      obj.attributes = obj1;
-      return obj;
+      obj2.attributes = obj4;
+      return obj2;
     }
-    obj1 = {};
+    obj4 = {};
   } else {
     obj = { attributes: {} };
     return obj;

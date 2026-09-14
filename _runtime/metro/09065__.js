@@ -65,12 +65,12 @@ export const $constructor = function $constructor(ZodError, initializer, Parent)
   function init(_zod, def) {
     if (!_zod._zod) {
       const _Object = Object;
-      let obj = { value: null, enumerable: false };
-      obj = { def, constr, traits: null };
+      const obj = { value: null, enumerable: false };
+      const obj2 = { def, constr, traits: null };
       const _Set = Set;
       const set = new Set();
-      obj.traits = set;
-      obj.value = obj;
+      obj2.traits = set;
+      obj.value = obj2;
       Object.defineProperty(_zod, "_zod", obj);
     }
     const traits = _zod._zod.traits;
@@ -141,10 +141,9 @@ export const $constructor = function $constructor(ZodError, initializer, Parent)
   constr(Definition, Parent);
   const tmp4 = _createClass(Definition);
   _getPrototypeOf = tmp4;
-  let obj = { value: ZodError };
-  Object.defineProperty(tmp4, "name", obj);
+  Object.defineProperty(tmp4, "name", { value: ZodError });
   Object.defineProperty(constr, "init", { value: init });
-  obj = {
+  Object.defineProperty(constr, Symbol.hasInstance, {
     value(_zod) {
       Parent = undefined;
       if (Parent != null) {
@@ -169,10 +168,8 @@ export const $constructor = function $constructor(ZodError, initializer, Parent)
       }
       return tmp3;
     }
-  };
-  Object.defineProperty(constr, Symbol.hasInstance, obj);
-  obj = { value: ZodError };
-  Object.defineProperty(constr, "name", obj);
+  });
+  Object.defineProperty(constr, "name", { value: ZodError });
   return constr;
 };
 export const config = function config(arg0) {

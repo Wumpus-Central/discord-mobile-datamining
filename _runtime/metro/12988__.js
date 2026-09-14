@@ -1,34 +1,34 @@
 // === Module 12988: ? ===
 
 // Module 12988
-import _mod12926 from "module_12926" /* 12926 */;
-import _mod12953 from "module_12953" /* 12953 */;
-import _mod12954 from "module_12954" /* 12954 */;
+import _mod12933 from "module_12933" /* 12933 */;
+import _mod12971 from "module_12971" /* 12971 */;
+import _mod12974 from "module_12974" /* 12974 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const initAndBind = function initAndBind(arg0, debug) {
-  if (true === debug.debug) {
-    const obj = _mod12926;
-    if (_mod12954.DEBUG_BUILD) {
-      const logger = obj.logger;
-      logger.enable();
-    } else {
-      obj.consoleSandbox(() => {
-        console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
-      });
-    }
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
   }
-  const currentScope = _mod12953.getCurrentScope();
-  currentScope.update(debug.initialScope);
-  const obj4 = new arg0(debug);
-  const currentScope1 = _mod12953.getCurrentScope();
-  currentScope1.setClient(obj4);
-  obj4.init();
-  return obj4;
-};
-export const setCurrentClient = function setCurrentClient(arg0) {
-  const currentScope = _mod12953.getCurrentScope();
-  currentScope.setClient(arg0);
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
+  }
+  if (tmp) {
+    obj.dsn = _mod12974.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod12933.dropUndefinedKeys(contexts);
+  }
+  const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod12971.createEnvelope(obj, items1);
 };

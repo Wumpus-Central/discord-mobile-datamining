@@ -1,8 +1,9 @@
 // === Module 3974: cloneObject ===
 
 // Module 3974 (cloneObject)
-import assign from "assign" /* 3975 */;
+import assign_mod from "assign" /* 3975 */;
 
+let assign = assign_mod;
 if (!assign) {
   const obj = { default: assign };
   let tmp3 = obj;

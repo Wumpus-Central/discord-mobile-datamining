@@ -378,7 +378,7 @@ class Yallist {
         call = global.call;
         value = iter.value;
         tmp2 = iter;
-        arr = arr.push(typeof call === "unknown" ? global(value, self) : call(tmp, value, self));
+        arr1 = arr.push(typeof call === "unknown" ? global(value, self) : call(tmp, value, self));
         iter = iter.next;
       } while (null !== iter);
     }
@@ -397,7 +397,7 @@ class Yallist {
         call = global.call;
         value = iter.value;
         tmp2 = iter;
-        arr = arr.push(typeof call === "unknown" ? global(value, self) : call(tmp, value, self));
+        arr1 = arr.push(typeof call === "unknown" ? global(value, self) : call(tmp, value, self));
         iter = iter.prev;
       } while (null !== iter);
     }
@@ -549,7 +549,7 @@ class Yallist {
         if (null !== iter) {
           num6 = 1;
           if (num3 < length2) {
-            arr = arr.push(iter.value);
+            arr1 = arr.push(iter.value);
             next2 = iter.next;
             tmp4 = num3;
             while (null !== next2) {
@@ -620,7 +620,7 @@ class Yallist {
         }
         if (null !== iter) {
           if (tmp2 > num2) {
-            arr = arr.push(iter.value);
+            arr1 = arr.push(iter.value);
             diff1 = tmp2 - 1;
             prev2 = iter.prev;
             while (null !== prev2) {

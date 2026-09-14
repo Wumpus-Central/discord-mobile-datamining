@@ -2,8 +2,9 @@
 
 // Module 4559 (ref)
 import noop from "module_19" /* 19 */;
-import shallowEqual from "shallowEqual" /* 4560 */;
+import shallowEqual_mod from "shallowEqual" /* 4560 */;
 
+let shallowEqual = shallowEqual_mod;
 if (shallowEqual) {
   if (typeof shallowEqual === "object") {
     if ("default" in shallowEqual) {

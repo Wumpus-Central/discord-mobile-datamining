@@ -67,7 +67,8 @@ function configureNext(duration, arg1, arg2) {
 }
 let closure_4 = javaScriptFlagGetter.isLayoutAnimationEnabled();
 let obj = { easeInEaseOut: { duration: 300, create: { type: "easeInEaseOut", property: "opacity" }, update: { type: "easeInEaseOut" }, delete: { type: "easeInEaseOut", property: "opacity" } }, linear: { duration: 500, create: { type: "linear", property: "opacity" }, update: { type: "linear" }, delete: { type: "linear", property: "opacity" } }, spring: { duration: 700, create: { type: "linear", property: "opacity" }, update: { type: "spring", springDamping: 0.4 }, delete: { type: "linear", property: "opacity" } } };
-obj = {
+
+export default {
   configureNext,
   create: function createLayoutAnimation(duration, type, property) {
     return { duration, create: { type, property }, update: { type }, delete: { type, property } };
@@ -85,5 +86,3 @@ obj = {
 
   }
 };
-
-export default obj;

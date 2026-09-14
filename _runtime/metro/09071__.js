@@ -128,8 +128,8 @@ if (self2) {
       } else {
         const _HermesInternal5 = HermesInternal;
         const _HermesInternal4 = HermesInternal;
-        tmp = new tmp("^" + "" + "(?:[01]\\d|2[0-3]):[0-5]\\d" + "(?::[0-5]\\d(?:\\.\\d+)?)?" + "$");
-        return tmp;
+        const tmp2 = new tmp("^" + "" + "(?:[01]\\d|2[0-3]):[0-5]\\d" + "(?::[0-5]\\d(?:\\.\\d+)?)?" + "$");
+        return tmp2;
       }
     };
     exports.datetime = function datetime(precision) {

@@ -1,7 +1,7 @@
 // === Module 4954: IsGenericDescriptor ===
 
 // Module 4954 (IsGenericDescriptor)
-import _mod1283 from "module_1283" /* 1283 */;
+import _mod1281 from "module_1281" /* 1281 */;
 import _mod4936 from "module_4936" /* 4936 */;
 import IsDataDescriptor from "IsDataDescriptor" /* 4940 */;
 import IsAccessorDescriptor from "IsAccessorDescriptor" /* 4949 */;
@@ -18,7 +18,7 @@ export default function IsGenericDescriptor(arg0) {
     }
     return tmp8;
   } else {
-    const tmp5 = new _mod1283("Assertion failed: `Desc` must be a Property Descriptor");
+    const tmp5 = new _mod1281("Assertion failed: `Desc` must be a Property Descriptor");
     throw tmp5;
   }
 };

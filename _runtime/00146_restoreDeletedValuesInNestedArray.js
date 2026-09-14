@@ -22,8 +22,8 @@ function restoreDeletedValuesInNestedArray(arg0, arg1, arg2) {
     }
   } else if (arg1) {
     if (closure_4 > 0) {
-      for (const key10009 in obj1) {
-        if (!obj1[key10009]) {
+      for (const key10009 in obj4) {
+        if (!obj4[key10009]) {
           continue;
         } else {
           let tmp2 = arg1[key10009];
@@ -49,7 +49,7 @@ function restoreDeletedValuesInNestedArray(arg0, arg1, arg2) {
                 }
                 arg0[key10009] = processResult;
               }
-              obj1[key10009] = false;
+              obj4[key10009] = false;
               closure_4 = closure_4 - 1;
               continue;
             }
@@ -279,8 +279,8 @@ function diffProperties(arr, arr, arg2, arg3) {
           tmp14 = tmp15;
           tmp13 = null;
         }
-        if (obj1) {
-          obj1[tmp9] = false;
+        if (obj4) {
+          obj4[tmp9] = false;
         }
         if (tmp8) {
           if (undefined !== tmp8[tmp9]) {
@@ -326,13 +326,13 @@ function diffProperties(arr, arr, arg2, arg3) {
             if (!tmp25) {
               continue;
             } else {
-              let obj = tmp8;
+              let obj2 = tmp8;
               let tmp29 = tmp8;
               if (!tmp8) {
-                obj = {};
-                tmp29 = obj;
+                obj2 = {};
+                tmp29 = obj2;
               }
-              obj[tmp9] = tmp13;
+              obj2[tmp9] = tmp13;
               tmp3 = tmp29;
               tmp4 = obj5;
               continue;
@@ -341,7 +341,7 @@ function diffProperties(arr, arr, arg2, arg3) {
           } else {
             if (typeof obj5.diff !== "function") {
               if (typeof obj5.process !== "function") {
-                obj1 = null;
+                obj4 = null;
                 closure_4 = 0;
                 let tmp71 = diffNestedProperty(tmp8, tmp14, tmp13, obj5);
                 let tmp16 = closure_4 > 0 && tmp71;
@@ -351,7 +351,7 @@ function diffProperties(arr, arr, arg2, arg3) {
                   continue;
                 } else {
                   let tmp18 = restoreDeletedValuesInNestedArray(tmp71, tmp13, obj5);
-                  obj1 = null;
+                  obj4 = null;
                   tmp4 = obj5;
                   tmp3 = tmp71;
                   continue;
@@ -365,7 +365,7 @@ function diffProperties(arr, arr, arg2, arg3) {
               if (typeof obj5.process === "function") {
                 processResult1 = obj5.process(tmp13);
               }
-              obj = tmp8;
+              let obj = tmp8;
               let tmp24 = tmp8;
               if (!tmp8) {
                 obj = {};
@@ -404,7 +404,7 @@ function diffProperties(arr, arr, arg2, arg3) {
   const keys1 = Object.keys();
   if (keys1 !== undefined) {
     let tmp34 = tmp5;
-    obj1 = tmp31;
+    obj4 = tmp31;
     tmp32 = tmp31;
     while (keys1[tmp2] !== undefined) {
       let tmp36 = undefined === arg2[tmp35];
@@ -412,19 +412,19 @@ function diffProperties(arr, arr, arg2, arg3) {
         tmp34 = arg3[tmp35];
       }
       tmp5 = tmp34;
-      tmp31 = obj1;
+      tmp31 = obj4;
       if (!tmp36) {
         continue;
       } else {
-        let tmp37 = obj1;
-        if (obj1) {
-          tmp37 = undefined !== obj1[tmp35];
+        let tmp37 = obj4;
+        if (obj4) {
+          tmp37 = undefined !== obj4[tmp35];
         }
-        let tmp38 = obj1;
+        let tmp38 = obj4;
         if (!tmp37) {
           arr = arr[tmp35];
           if (undefined === arr) {
-            tmp38 = obj1;
+            tmp38 = obj4;
           } else {
             if (typeof tmp34 === "object") {
               if (typeof tmp34.diff !== "function") {
@@ -433,8 +433,8 @@ function diffProperties(arr, arr, arg2, arg3) {
                     let _Array = Array;
                     if (Array.isArray(arr)) {
                       let num2 = 0;
-                      let tmp46 = obj1;
-                      let tmp47 = obj1;
+                      let tmp46 = obj4;
+                      let tmp47 = obj4;
                       if (0 < arr.length) {
                         do {
                           let arr2 = arr[num2];
@@ -464,26 +464,26 @@ function diffProperties(arr, arr, arg2, arg3) {
                         } while (num2 < arr.length);
                       }
                     } else {
-                      let tmp45 = diffProperties(obj1, arr, closure_2, tmp34);
+                      let tmp45 = diffProperties(obj4, arr, closure_2, tmp34);
                     }
                   }
                 }
               }
             }
-            obj = obj1;
-            let tmp59 = obj1;
-            if (!obj1) {
-              obj = {};
-              tmp59 = obj;
+            let obj3 = obj4;
+            let tmp59 = obj4;
+            if (!obj4) {
+              obj3 = {};
+              tmp59 = obj3;
             }
-            obj[tmp35] = null;
-            let tmp60 = obj1;
-            if (!obj1) {
-              obj1 = {};
-              tmp60 = obj1;
+            obj3[tmp35] = null;
+            let tmp60 = obj4;
+            if (!obj4) {
+              obj4 = {};
+              tmp60 = obj4;
             }
             if (!tmp60[tmp35]) {
-              obj1[tmp35] = true;
+              obj4[tmp35] = true;
               closure_4 = closure_4 + 1;
             }
           }

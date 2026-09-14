@@ -1,19 +1,21 @@
 // === Module 3977: ? ===
 
 // Module 3977
-import module_3973 from "module_3973" /* 3973 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import module_3973_mod from "module_3973" /* 3973 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let module_3973 = module_3973_mod;
 if (!module_3973) {
-  let obj = { default: module_3973 };
+  const obj = { default: module_3973 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3973;
 }
 module_3973 = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

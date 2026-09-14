@@ -1,17 +1,18 @@
 // === Module 4016: intervalToDuration ===
 
 // Module 4016 (intervalToDuration)
-import compareAsc from "compareAsc" /* 3901 */;
-import _typeof from "module_3872" /* 3872 */;
-import compareLocalAsc from "compareLocalAsc" /* 3916 */;
-import differenceInHours from "differenceInHours" /* 3917 */;
-import differenceInMinutes from "differenceInMinutes" /* 3922 */;
-import differenceInMonths from "differenceInMonths" /* 3923 */;
-import differenceInSeconds from "differenceInSeconds" /* 3928 */;
-import differenceInYears from "differenceInYears" /* 3930 */;
-import _typeof from "module_3725" /* 3725 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import compareAsc_mod from "compareAsc" /* 3901 */;
+import _typeof_mod from "module_3872" /* 3872 */;
+import compareLocalAsc_mod from "compareLocalAsc" /* 3916 */;
+import differenceInHours_mod from "differenceInHours" /* 3917 */;
+import differenceInMinutes_mod from "differenceInMinutes" /* 3922 */;
+import differenceInMonths_mod from "differenceInMonths" /* 3923 */;
+import differenceInSeconds_mod from "differenceInSeconds" /* 3928 */;
+import differenceInYears_mod from "differenceInYears" /* 3930 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let compareAsc = compareAsc_mod;
 if (!compareAsc) {
   let obj = { default: compareAsc };
   let tmp3 = obj;
@@ -19,65 +20,74 @@ if (!compareAsc) {
   tmp3 = compareAsc;
 }
 compareAsc = tmp3;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp5 = obj;
+  let obj2 = { default: _typeof };
+  let tmp5 = obj2;
 } else {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
+let compareLocalAsc = compareLocalAsc_mod;
 if (!compareLocalAsc) {
-  obj = { default: compareLocalAsc };
-  let tmp7 = obj;
+  let obj3 = { default: compareLocalAsc };
+  let tmp7 = obj3;
 } else {
   tmp7 = compareLocalAsc;
 }
 compareLocalAsc = tmp7;
+let differenceInHours = differenceInHours_mod;
 if (!differenceInHours) {
-  let obj1 = { default: differenceInHours };
-  let tmp9 = obj1;
+  let obj4 = { default: differenceInHours };
+  let tmp9 = obj4;
 } else {
   tmp9 = differenceInHours;
 }
 differenceInHours = tmp9;
+let differenceInMinutes = differenceInMinutes_mod;
 if (!differenceInMinutes) {
-  let obj2 = { default: differenceInMinutes };
-  let tmp11 = obj2;
+  let obj5 = { default: differenceInMinutes };
+  let tmp11 = obj5;
 } else {
   tmp11 = differenceInMinutes;
 }
 differenceInMinutes = tmp11;
+let differenceInMonths = differenceInMonths_mod;
 if (!differenceInMonths) {
-  let obj3 = { default: differenceInMonths };
-  let tmp13 = obj3;
+  const obj6 = { default: differenceInMonths };
+  let tmp13 = obj6;
 } else {
   tmp13 = differenceInMonths;
 }
 differenceInMonths = tmp13;
+let differenceInSeconds = differenceInSeconds_mod;
 if (!differenceInSeconds) {
-  const obj4 = { default: differenceInSeconds };
-  let tmp15 = obj4;
+  const obj7 = { default: differenceInSeconds };
+  let tmp15 = obj7;
 } else {
   tmp15 = differenceInSeconds;
 }
 differenceInSeconds = tmp15;
+let differenceInYears = differenceInYears_mod;
 if (!differenceInYears) {
-  const obj5 = { default: differenceInYears };
-  let tmp17 = obj5;
+  const obj8 = { default: differenceInYears };
+  let tmp17 = obj8;
 } else {
   tmp17 = differenceInYears;
 }
 differenceInYears = tmp17;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj6 = { default: _typeof };
-  let tmp19 = obj6;
+  const obj9 = { default: _typeof };
+  let tmp19 = obj9;
 } else {
   tmp19 = _typeof;
 }
 _typeof = tmp19;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj7 = { default: requiredArgs };
-  let tmp21 = obj7;
+  const obj10 = { default: requiredArgs };
+  let tmp21 = obj10;
 } else {
   tmp21 = requiredArgs;
 }
@@ -102,25 +112,25 @@ export default function intervalToDuration(start) {
       const _Math = Math;
       time.years = Math.abs(differenceInYears.default(defaultResult2, defaultResult1));
       const defaultResult3 = compareAsc.default(defaultResult2, defaultResult1);
-      let obj = { years: defaultResult3 * time.years };
+      const obj = { years: defaultResult3 * time.years };
       const defaultResult4 = _typeof.default(defaultResult1, obj);
       const _Math2 = Math;
       time.months = Math.abs(differenceInMonths.default(defaultResult2, defaultResult4));
-      obj = { months: defaultResult3 * time.months };
-      const defaultResult5 = _typeof.default(defaultResult4, obj);
+      const obj2 = { months: defaultResult3 * time.months };
+      const defaultResult5 = _typeof.default(defaultResult4, obj2);
       const _Math3 = Math;
       time.days = Math.abs(compareLocalAsc.default(defaultResult2, defaultResult5));
-      const obj1 = { days: defaultResult3 * time.days };
-      const defaultResult6 = _typeof.default(defaultResult5, obj1);
+      const obj3 = { days: defaultResult3 * time.days };
+      const defaultResult6 = _typeof.default(defaultResult5, obj3);
       const _Math4 = Math;
       time.hours = Math.abs(differenceInHours.default(defaultResult2, defaultResult6));
-      const obj2 = { hours: defaultResult3 * time.hours };
-      const defaultResult7 = _typeof.default(defaultResult6, obj2);
+      const obj4 = { hours: defaultResult3 * time.hours };
+      const defaultResult7 = _typeof.default(defaultResult6, obj4);
       const _Math5 = Math;
       time.minutes = Math.abs(differenceInMinutes.default(defaultResult2, defaultResult7));
-      const obj3 = { minutes: defaultResult3 * time.minutes };
+      const obj5 = { minutes: defaultResult3 * time.minutes };
       const _Math6 = Math;
-      time.seconds = Math.abs(differenceInSeconds.default(defaultResult2, _typeof.default(defaultResult7, obj3)));
+      time.seconds = Math.abs(differenceInSeconds.default(defaultResult2, _typeof.default(defaultResult7, obj5)));
       return time;
     }
   }

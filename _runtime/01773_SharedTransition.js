@@ -151,7 +151,7 @@ const items = [
       const _transitionDuration = this._transitionDuration;
       const _reduceMotion = this._reduceMotion;
       const fn = function t(targetTransformMatrix) {
-        let obj = {};
+        const obj = {};
         if (_customAnimationFactory) {
           const tmp20 = _customAnimationFactory(targetTransformMatrix);
           let animations = tmp20;
@@ -181,35 +181,35 @@ const items = [
             let str3 = nextResult;
             if ("transform" === nextResult) {
               let obj4 = _mod1708;
-              obj = { reduceMotion: _reduceMotion, duration: _transitionDuration };
-              obj.transformMatrix = obj4.withTiming(targetTransformMatrix.targetTransformMatrix, obj);
+              let obj3 = { reduceMotion: _reduceMotion, duration: _transitionDuration };
+              obj.transformMatrix = obj4.withTiming(targetTransformMatrix.targetTransformMatrix, obj3);
             } else {
               let str4 = str3.charAt(0);
               let formatted = str4.toUpperCase();
               let _HermesInternal = HermesInternal;
               let combined = "target" + formatted + str3.slice(1);
-              let obj1 = _mod1708;
-              obj = { reduceMotion: _reduceMotion, duration: _transitionDuration };
-              obj[str3] = obj1.withTiming(targetTransformMatrix[combined], obj);
+              let obj2 = _mod1708;
+              let obj5 = { reduceMotion: _reduceMotion, duration: _transitionDuration };
+              obj[str3] = obj2.withTiming(targetTransformMatrix[combined], obj5);
             }
             continue;
           }
         }
-        obj1 = {};
+        const obj6 = {};
         for (const key10075 in animations) {
           if ("transform" === key10075) {
-            obj1.transformMatrix = arg0.currentTransformMatrix;
+            obj6.transformMatrix = arg0.currentTransformMatrix;
             continue;
           } else {
             let str7 = key10075.charAt(0);
             let formatted1 = str7.toUpperCase();
             let _HermesInternal3 = HermesInternal;
-            obj1[key10075] = arg0["current" + formatted1 + key10075.slice(key10075, 1)];
+            obj6[key10075] = arg0["current" + formatted1 + key10075.slice(key10075, 1)];
             continue;
           }
           continue;
         }
-        return { initialValues: obj1, animations };
+        return { initialValues: obj6, animations };
       };
       fn.__closure = { animationFactory: _customAnimationFactory, SUPPORTED_PROPS, withTiming: _transitionDuration(_reduceMotion[6]).withTiming, reduceMotion: _reduceMotion, transitionDuration: _transitionDuration };
       fn.__workletHash = 5349002490567;

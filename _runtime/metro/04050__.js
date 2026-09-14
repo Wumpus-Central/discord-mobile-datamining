@@ -2,7 +2,7 @@
 
 // Module 4050
 import Parser2 from "Parser" /* 4031 */;
-import module_4049 from "module_4049" /* 4049 */;
+import module_4049_mod from "module_4049" /* 4049 */;
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -56,6 +56,7 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+let module_4049 = module_4049_mod;
 if (!module_4049) {
   let obj = { default: module_4049 };
   let tmp3 = obj;
@@ -151,8 +152,7 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-obj = { constructor: { value: LocalDayParser, writable: true, configurable: true } };
-LocalDayParser.prototype = Object.create(prototype, obj);
+LocalDayParser.prototype = Object.create(prototype, { constructor: { value: LocalDayParser, writable: true, configurable: true } });
 if (Parser) {
   _setPrototypeOf(LocalDayParser, Parser);
 }

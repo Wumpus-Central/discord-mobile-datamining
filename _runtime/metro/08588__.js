@@ -76,9 +76,9 @@ const entry = {
   value: function render() {
     const self = this;
     const props = this.props;
-    let obj = G(8589);
-    const propsAndStylesResult = obj.propsAndStyles(props);
+    const propsAndStylesResult = G(8589).propsAndStyles(props);
     const tmp5 = extractPropsDefault(propsAndStylesResult, this);
+    const obj = G(8589);
     const extractFontResult = G(8596).extractFont(propsAndStylesResult);
     if (typeof hasProps === "function") {
       const keys = Object.keys();
@@ -87,13 +87,13 @@ const entry = {
         if (flag) {
           tmp5.font = extractFontResult;
         }
-        obj = {
+        const obj3 = {
           ref(arg0) {
                 return self.refMethod(arg0);
               }
         };
         const merged = Object.assign(tmp5);
-        obj.children = props.children;
+        obj3.children = props.children;
         return jsx(_modDef8597, {
           ref(arg0) {
                 return self.refMethod(arg0);

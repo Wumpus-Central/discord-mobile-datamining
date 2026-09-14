@@ -6,11 +6,11 @@ export default function splitLayoutProps(arg0) {
   let outer = null;
   let inner = null;
   if (null != arg0) {
-    let obj = {};
-    obj = {};
+    const obj = {};
+    const obj2 = {};
     const _Object = Object;
     const keys = Object.keys(arg0);
-    inner = obj;
+    inner = obj2;
     outer = obj;
     for (const item10015 of keys) {
       switch (item10015) {
@@ -127,7 +127,7 @@ export default function splitLayoutProps(arg0) {
           continue;
         break;
         default:
-          obj[item10015] = arg0[item10015];
+          obj2[item10015] = arg0[item10015];
       }
     }
   }

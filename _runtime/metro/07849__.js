@@ -29,12 +29,12 @@ class BinTree {
     self = this;
     if (null === this._root) {
       tmp10 = Node;
-      obj = Object.create(Node.prototype);
-      obj1 = {};
-      obj1.data = global;
-      obj1.left = null;
-      obj1.right = null;
-      self._root = obj1;
+      obj1 = Object.create(Node.prototype);
+      obj3 = {};
+      obj3.data = global;
+      obj3.left = null;
+      obj3.right = null;
+      self._root = obj3;
       self.size = self.size + 1;
       flag3 = true;
       return true;
@@ -58,7 +58,7 @@ class BinTree {
         }
       }
       tmp6 = Node;
-      obj2 = Object.create(Node.prototype);
+      obj4 = Object.create(Node.prototype);
       obj = {};
       obj.data = global;
       obj.left = null;
@@ -78,21 +78,21 @@ class BinTree {
       return false;
     } else {
       tmp9 = Node;
-      obj = Object.create(Node.prototype);
-      obj1 = {};
-      obj1.data = undefined;
-      obj1.left = null;
-      obj1.right = null;
-      obj1.right = self._root;
+      obj1 = Object.create(Node.prototype);
+      obj5 = {};
+      obj5.data = undefined;
+      obj5.left = null;
+      obj5.right = null;
+      obj5.right = self._root;
       num2 = 1;
       num3 = 0;
       num = 1;
       tmp5 = null;
-      obj2 = obj1;
+      obj2 = obj5;
       tmp6 = null;
-      obj3 = obj1;
+      obj3 = obj5;
       tmp7 = null;
-      if (null !== obj1.get_child(1)) {
+      if (null !== obj5.get_child(1)) {
         do {
           get_childResult = obj2.get_child(num);
           _comparatorResult = self._comparator(global, get_childResult.data);
@@ -115,7 +115,7 @@ class BinTree {
         tmp6.data = obj3.data;
         ({ set_child, right } = tmp7);
         set_childResult = set_child(right === obj3, obj3.get_child(null === obj3.left));
-        self._root = obj1.right;
+        self._root = obj5.right;
         self.size = self.size - 1;
         flag = true;
       }

@@ -24,18 +24,18 @@ function toDotPath(path) {
       let _JSON2 = JSON;
       let _String = String;
       let _HermesInternal2 = HermesInternal;
-      arr = items.push("[" + JSON.stringify(String(tmp3)) + "]");
+      let arr6 = items.push("[" + JSON.stringify(String(tmp3)) + "]");
     } else {
       let obj = /[^\w$]/;
       if (obj.test(tmp3)) {
         let _JSON = JSON;
         let _HermesInternal = HermesInternal;
-        let arr1 = items.push("[" + JSON.stringify(tmp3) + "]");
+        let arr7 = items.push("[" + JSON.stringify(tmp3) + "]");
       } else {
         if (items.length) {
-          let arr2 = items.push(".");
+          let arr8 = items.push(".");
         }
-        let arr3 = items.push(tmp3);
+        let arr9 = items.push(tmp3);
       }
     }
     continue;
@@ -116,7 +116,7 @@ if (self2) {
           let arr3 = fieldErrors[tmp2.path[0]];
           let arr = arr3.push(fn(tmp2));
         } else {
-          arr = formErrors.push(fn(tmp2));
+          let arr2 = formErrors.push(fn(tmp2));
         }
         continue;
       }
@@ -145,13 +145,13 @@ if (self2) {
             }
           }
           if ("invalid_key" === tmp2.code) {
-            obj = { issues: null };
-            obj.issues = tmp2.issues;
-            let tmp34 = processError(obj);
+            let obj2 = { issues: null };
+            obj2.issues = tmp2.issues;
+            let tmp34 = processError(obj2);
           } else if ("invalid_element" === tmp2.code) {
-            obj = { issues: null };
-            obj.issues = tmp2.issues;
-            let tmp31 = processError(obj);
+            let obj3 = { issues: null };
+            obj3.issues = tmp2.issues;
+            let tmp31 = processError(obj3);
           } else if (0 === tmp2.path.length) {
             let _errors = obj._errors;
             let arr = _errors.push(fn(tmp2));
@@ -164,12 +164,12 @@ if (self2) {
                 if (num === tmp2.path.length - 1) {
                   let tmp13 = tmp21[tmp7];
                   if (!tmp13) {
-                    let obj1 = { _errors: [] };
-                    tmp13 = obj1;
+                    let obj4 = { _errors: [] };
+                    tmp13 = obj4;
                   }
                   tmp21[tmp7] = tmp13;
                   let _errors1 = tmp21[tmp7]._errors;
-                  arr = _errors1.push(fn(tmp2));
+                  let arr2 = _errors1.push(fn(tmp2));
                 } else {
                   let tmp10 = tmp21[tmp7];
                   if (!tmp10) {
@@ -214,33 +214,33 @@ if (self2) {
             }
           }
           if ("invalid_key" === iter.code) {
-            obj = { issues: iter.issues };
-            processError(obj, iter.path);
+            const obj2 = { issues: iter.issues };
+            processError(obj2, iter.path);
           } else if ("invalid_element" === iter.code) {
-            obj = { issues: iter.issues };
-            processError(obj, iter.path);
+            const obj3 = { issues: iter.issues };
+            processError(obj3, iter.path);
           } else {
-            items = [];
+            const items1 = [];
             HermesBuiltin.arraySpread(iter.path, HermesBuiltin.arraySpread(items, 0));
-            if (0 === items.length) {
+            if (0 === items1.length) {
               const errors1 = obj.errors;
               errors1.push(fn(iter));
               return 1;
             } else {
               let tmp10 = obj;
               let num = 0;
-              if (0 < items.length) {
+              if (0 < items1.length) {
                 do {
-                  let tmp = items[num];
-                  let diff = items.length - 1;
+                  let tmp = items1[num];
+                  let diff = items1.length - 1;
                   if (typeof tmp === "string") {
                     if (tmp10.properties == null) {
                       tmp10.properties = {};
                     }
                     properties = tmp10.properties;
                     if (properties[tmp] == null) {
-                      let obj1 = { errors: [] };
-                      properties[tmp] = obj1;
+                      let obj4 = { errors: [] };
+                      properties[tmp] = obj4;
                     }
                     let tmp6 = tmp10.properties[tmp];
                   } else {
@@ -256,11 +256,11 @@ if (self2) {
                   }
                   if (num === diff) {
                     let errors2 = tmp6.errors;
-                    let arr = errors2.push(fn(iter));
+                    let arr2 = errors2.push(fn(iter));
                   }
                   num = num + 1;
                   tmp10 = tmp6;
-                } while (num < items.length);
+                } while (num < items1.length);
               }
             }
           }
@@ -302,7 +302,7 @@ if (self2) {
         }
         if (length) {
           let _HermesInternal2 = HermesInternal;
-          arr = items.push("  \u2192 at " + toDotPath(tmp3.path));
+          let arr2 = items.push("  \u2192 at " + toDotPath(tmp3.path));
         }
         continue;
       }
@@ -312,18 +312,15 @@ if (self2) {
     function initializer(_zod, value) {
       const message = _zod;
       _zod.name = "$ZodError";
-      let obj = { value: _zod._zod, enumerable: false };
-      Object.defineProperty(_zod, "_zod", obj);
-      obj = { value, enumerable: false };
-      Object.defineProperty(_zod, "issues", obj);
+      Object.defineProperty(_zod, "_zod", { value: _zod._zod, enumerable: false });
+      Object.defineProperty(_zod, "issues", { value, enumerable: false });
       _zod.message = JSON.stringify(value, closure_2.jsonStringifyReplacer, 2);
-      obj = {
+      Object.defineProperty(_zod, "toString", {
         value() {
           return message.message;
         },
         enumerable: false
-      };
-      Object.defineProperty(_zod, "toString", obj);
+      });
     }
     exports.$ZodError = _mod9065.$constructor("$ZodError", initializer);
     let obj = { Parent: null };

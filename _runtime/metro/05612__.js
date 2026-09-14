@@ -148,8 +148,7 @@ let items = [
       ({ source, duration, containerStyle } = props);
       ({ style, autoPlay, textFiltersAndroid, textFiltersIOS, resizeMode } = props);
       const tmp = _objectWithoutProperties(props, closure_3);
-      let obj = LottieView(5614);
-      const parsePossibleSourcesResult = obj.parsePossibleSources(source);
+      const parsePossibleSourcesResult = LottieView(5614).parsePossibleSources(source);
       if (duration) {
         if (parsePossibleSourcesResult.sourceJson) {
           if (source.fr) {
@@ -166,21 +165,22 @@ let items = [
               return obj;
             });
           }
-          obj = { ref: self.captureRef };
+          const obj3 = { ref: self.captureRef };
           let merged = Object.assign(tmp);
-          obj.colorFilters = mapped;
-          obj.textFiltersAndroid = textFiltersAndroid;
-          obj.textFiltersIOS = textFiltersIOS;
-          obj.speed = speed;
-          obj.style = style;
+          obj3.colorFilters = mapped;
+          obj3.textFiltersAndroid = textFiltersAndroid;
+          obj3.textFiltersIOS = textFiltersIOS;
+          obj3.speed = speed;
+          obj3.style = style;
           ({ onAnimationFinish: obj2.onAnimationFinish, onAnimationFailure: obj2.onAnimationFailure, onAnimationLoaded: obj2.onAnimationLoaded } = self);
-          obj.autoPlay = autoPlay;
-          obj.resizeMode = resizeMode;
+          obj3.autoPlay = autoPlay;
+          obj3.resizeMode = resizeMode;
           const merged1 = Object.assign(parsePossibleSourcesResult);
           return jsx(_modDef5613, { ref: self.captureRef });
         }
       }
       speed = self.props.speed;
+      let obj = LottieView(5614);
     }
   },
   {

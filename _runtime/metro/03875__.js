@@ -1,51 +1,57 @@
 // === Module 3875: ? ===
 
 // Module 3875
-import module_3876 from "module_3876" /* 3876 */;
-import _typeof from "module_3725" /* 3725 */;
-import module_3729 from "module_3729" /* 3729 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
-import module_3877 from "module_3877" /* 3877 */;
-import module_3878 from "module_3878" /* 3878 */;
+import module_3876_mod from "module_3876" /* 3876 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import module_3729_mod from "module_3729" /* 3729 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import module_3877_mod from "module_3877" /* 3877 */;
+import module_3878_mod from "module_3878" /* 3878 */;
 
+let module_3876 = module_3876_mod;
 if (!module_3876) {
-  let obj = { default: module_3876 };
+  const obj = { default: module_3876 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3876;
 }
 module_3876 = tmp3;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp5 = obj;
+  let obj2 = { default: _typeof };
+  let tmp5 = obj2;
 } else {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  obj = { default: module_3729 };
-  let tmp7 = obj;
+  const obj3 = { default: module_3729 };
+  let tmp7 = obj3;
 } else {
   tmp7 = module_3729;
 }
 module_3729 = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
+let module_3877 = module_3877_mod;
 if (!module_3877) {
-  let obj2 = { default: module_3877 };
-  let tmp11 = obj2;
+  const obj5 = { default: module_3877 };
+  let tmp11 = obj5;
 } else {
   tmp11 = module_3877;
 }
 module_3877 = tmp11;
+let module_3878 = module_3878_mod;
 if (!module_3878) {
-  const obj3 = { default: module_3878 };
-  let tmp13 = obj3;
+  const obj6 = { default: module_3878 };
+  let tmp13 = obj6;
 } else {
   tmp13 = module_3878;
 }

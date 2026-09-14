@@ -1,6 +1,8 @@
 // === Module 8437: ? ===
 
 // Module 8437
+const require = globalThis.__r;
+
 function flattenStyle(obj) {
   if (null !== obj) {
     if (typeof obj === "object") {
@@ -35,7 +37,7 @@ export default function DeprecatedStyleSheetPropType(arg0) {
           const _Array = Array;
           tmp4 = arr;
           if (Array.isArray(arr)) {
-            let obj = {};
+            const obj = {};
             let num3 = 0;
             tmp4 = obj;
             if (0 < arr.length) {
@@ -47,21 +49,21 @@ export default function DeprecatedStyleSheetPropType(arg0) {
                     let _Array2 = Array;
                     tmp6 = arr2;
                     if (Array.isArray(arr2)) {
-                      obj = {};
+                      let obj2 = {};
                       let length2 = arr2.length;
                       let num4 = 0;
-                      tmp6 = obj;
+                      tmp6 = obj2;
                       if (0 < length2) {
                         do {
                           let tmp8 = flattenStyle(arr2[num4]);
                           if (tmp8) {
                             for (const key10029 in tmp8) {
-                              obj[key10029] = tmp8[key10029];
+                              obj2[key10029] = tmp8[key10029];
                               continue;
                             }
                           }
                           num4 = num4 + 1;
-                          tmp6 = obj;
+                          tmp6 = obj2;
                         } while (num4 < length2);
                       }
                     }
@@ -80,8 +82,8 @@ export default function DeprecatedStyleSheetPropType(arg0) {
           }
         }
       }
-      obj = {};
-      obj[arg1] = tmp4;
+      const obj3 = {};
+      obj3[arg1] = tmp4;
     }
     return closure_0(arg1, arg2, arg3, ...substr);
   };

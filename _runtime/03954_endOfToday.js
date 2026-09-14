@@ -1,8 +1,9 @@
 // === Module 3954: endOfToday ===
 
 // Module 3954 (endOfToday)
-import endOfDay from "endOfDay" /* 3925 */;
+import endOfDay_mod from "endOfDay" /* 3925 */;
 
+let endOfDay = endOfDay_mod;
 if (!endOfDay) {
   const obj = { default: endOfDay };
   let tmp3 = obj;

@@ -40,7 +40,6 @@ const __initData = { code: "function pnpm_decayTs3(){const{userConfig,isValidRub
 fn = function n(userConfig, fn) {
   _require = userConfig;
   dependencyMap = fn;
-  require("module_1676");
   fn = function c() {
     let obj = { deceleration: 0.998, velocityFactor: 1, velocity: 0, rubberBandFactor: 0.6 };
     if (obj) {
@@ -51,7 +50,7 @@ fn = function n(userConfig, fn) {
         return closure_0[item];
       });
     }
-    obj = {
+    const obj3 = {
       onFrame: userConfig(callback[2]).isValidRubberBandConfig(obj) ? ((current, lastTimestamp) => {
         obj = rubberBandDecay;
         return obj.rubberBandDecay(current, lastTimestamp, obj);
@@ -81,20 +80,20 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "GUILD_SETTINGS_VANITY_URL_RESET",
-      reduceMotion: "GUILD_SETTINGS_VANITY_URL_SET"
+      startTimestamp: "text-xxs/medium",
+      reduceMotion: 10
     };
     let num = obj.velocity;
     if (num == null) {
       num = 0;
     }
-    obj.velocity = num;
+    obj3.velocity = num;
     const obj2 = userConfig(callback[2]);
-    obj.reduceMotion = userConfig(callback[1]).getReduceMotionForAnimation(obj.reduceMotion);
-    return obj;
+    obj3.reduceMotion = userConfig(callback[1]).getReduceMotionForAnimation(obj.reduceMotion);
+    return obj3;
   };
-  let obj = { userConfig, isValidRubberBandConfig: require("module_1712").isValidRubberBandConfig, rubberBandDecay: require("rubberBandDecay").rubberBandDecay, rigidDecay: require("rigidDecay").rigidDecay, validateConfig, callback: fn, getReduceMotionForAnimation: require("module_1676").getReduceMotionForAnimation };
-  fn.__closure = obj;
+  let obj = require("module_1676");
+  fn.__closure = { userConfig, isValidRubberBandConfig: require("module_1712").isValidRubberBandConfig, rubberBandDecay: require("rubberBandDecay").rubberBandDecay, rigidDecay: require("rigidDecay").rigidDecay, validateConfig, callback: fn, getReduceMotionForAnimation: require("module_1676").getReduceMotionForAnimation };
   fn.__workletHash = 17099614658252;
   fn.__initData = __initData;
   return obj.defineAnimation(0, fn);

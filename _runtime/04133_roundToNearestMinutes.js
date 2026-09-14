@@ -2,19 +2,21 @@
 
 // Module 4133 (roundToNearestMinutes)
 import _mod3919 from "module_3919" /* 3919 */;
-import _typeof from "module_3725" /* 3725 */;
-import module_3729 from "module_3729" /* 3729 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import module_3729_mod from "module_3729" /* 3729 */;
 
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  let obj = { default: _typeof };
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  obj = { default: module_3729 };
-  let tmp5 = obj;
+  const obj2 = { default: module_3729 };
+  let tmp5 = obj2;
 } else {
   tmp5 = module_3729;
 }

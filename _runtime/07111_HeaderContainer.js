@@ -5,6 +5,8 @@ import Link from "Link" /* 1484 */;
 import _mod5712 from "module_5712" /* 5712 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
@@ -15,11 +17,10 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
   ({ mode: require, scenes, layout: dependencyMap, getPreviousScene: noop, contentHeight: closure_3, onContentHeightChange: jsx } = getFocusedRoute);
   const focusedRoute = getFocusedRoute.getFocusedRoute();
   closure_6 = noop.useContext(_mod5712.HeaderBackContext);
-  let obj = Link;
-  const buildHref = obj.useLinkBuilder().buildHref;
-  obj = { pointerEvents: "box-none", style: getFocusedRoute.style, children: null };
+  const buildHref = Link.useLinkBuilder().buildHref;
+  let obj2 = { pointerEvents: "box-none", style: getFocusedRoute.style, children: null };
   let substr = scenes.slice(-2);
-  obj.children = substr.map((descriptor, index, arr) => {
+  obj2.children = substr.map((descriptor, index, arr) => {
     if ("screen" !== descriptor) {
       if (descriptor) {
         let options = descriptor.descriptor.options;
@@ -30,18 +31,16 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
         }
         if (options.headerMode === tmp) {
           if (tmp3) {
-            let obj = { route: descriptor.descriptor.route };
+            const obj = { route: descriptor.descriptor.route };
             const tmp8 = closure_2(obj);
             let tmp9 = closure_6;
             let tmp10 = closure_6;
             if (tmp8) {
               const route = tmp8.descriptor.route;
               if (tmp8) {
-                obj = { title: null, href: null };
-                let obj2 = require("module_5712");
-                obj.title = obj2.getHeaderTitle(tmp11, route.name);
-                obj.href = buildHref(route.name, route.params);
-                tmp9 = obj;
+                const obj2 = { title: require("module_5712").getHeaderTitle(tmp11, route.name), href: buildHref(route.name, route.params) };
+                tmp9 = obj2;
+                const obj3 = require("module_5712");
               }
               tmp10 = tmp9;
             }
@@ -53,14 +52,14 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
             if (arr[index + 1] != null) {
               descriptor1 = tmp18.descriptor;
             }
-            options = undefined;
+            let options1;
             if (descriptor != null) {
-              options = descriptor.options;
+              options1 = descriptor.options;
             }
-            if (!options) {
-              options = {};
+            if (!options1) {
+              options1 = {};
             }
-            const headerShown2 = options.headerShown;
+            const headerShown2 = options1.headerShown;
             const substr = arr.slice(index + 1);
             const found = substr.find((descriptor) => {
               let options;
@@ -77,15 +76,15 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
               }
               return tmp3;
             });
-            let options1;
+            let options2;
             if (found != null) {
-              options1 = found.descriptor.options;
+              options2 = found.descriptor.options;
             }
-            if (!options1) {
-              options1 = {};
+            if (!options2) {
+              options2 = {};
             }
-            const gestureDirection = options1.gestureDirection;
-            obj = { layout, back: tmp10, progress: descriptor.progress, options: descriptor.descriptor.options, route: descriptor.descriptor.route, navigation: descriptor.descriptor.navigation, styleInterpolator: null };
+            const gestureDirection = options2.gestureDirection;
+            const obj4 = { layout, back: tmp10, progress: descriptor.progress, options: descriptor.descriptor.options, route: descriptor.descriptor.route, navigation: descriptor.descriptor.navigation, styleInterpolator: null };
             if ("float" === tmp) {
               if (!tmp22) {
                 let forNoAnimation = tmp5;
@@ -104,45 +103,45 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
             } else {
               forNoAnimation = require("module_7112").forNoAnimation;
             }
-            obj.styleInterpolator = forNoAnimation;
-            const obj1 = { route: descriptor.descriptor.route, navigation: descriptor.descriptor.navigation, children: null };
+            obj4.styleInterpolator = forNoAnimation;
+            const obj5 = { route: descriptor.descriptor.route, navigation: descriptor.descriptor.navigation, children: null };
             let str5 = "none";
             if (closure_5.key === descriptor.descriptor.route.key) {
               str5 = "box-none";
             }
-            obj2 = { pointerEvents: str5, "aria-hidden": closure_5.key !== descriptor.descriptor.route.key, style: null, children: null };
+            const obj6 = { pointerEvents: str5, "aria-hidden": closure_5.key !== descriptor.descriptor.route.key, style: null, children: null };
             if ("float" !== tmp) {
               let tmp39 = null;
-              obj2.style = tmp39;
+              obj6.style = tmp39;
               let fn;
               if (closure_4) {
                 fn = (height) => {
                   jsx({ route: descriptor.descriptor.route, height: height.nativeEvent.layout.height });
                 };
               }
-              const obj3 = { pointerEvents: "box-none", onLayout: fn, children: null };
+              const obj7 = { pointerEvents: "box-none", onLayout: fn, children: null };
               if (undefined !== header) {
-                let headerResult = header(obj);
+                let headerResult = header(obj4);
               } else {
-                const obj4 = {};
-                const merged = Object.assign(obj);
+                const obj8 = {};
+                const merged = Object.assign(obj4);
                 headerResult = jsx(require("Header").Header, {});
               }
-              obj3.children = headerResult;
-              obj2.children = <closure_1_3 pointerEvents="box-none" onLayout={fn}>{null}</closure_1_3>;
-              obj1.children = <closure_1_3 {...obj2} />;
-              return jsx(require("Link").NavigationProvider, obj1, descriptor.descriptor.route.key);
+              obj7.children = headerResult;
+              obj6.children = <closure_1_3 pointerEvents="box-none" onLayout={fn}>{null}</closure_1_3>;
+              obj5.children = <closure_1_3 {...obj6} />;
+              return jsx(require("Link").NavigationProvider, obj5, descriptor.descriptor.route.key);
             }
             const items = [closure_5.absolute, ];
             let tmp41 = null;
             if (tmp2) {
-              const obj5 = { minHeight };
-              tmp41 = obj5;
+              const obj9 = { minHeight };
+              tmp41 = obj9;
             }
             items[1] = tmp41;
             tmp39 = items;
             const tmp20 = undefined === headerShown2 || headerShown2;
-            tmp22 = (false === (undefined === headerShown2 || headerShown2) || "screen" === options.headerMode) && !descriptor1 || found;
+            tmp22 = (false === (undefined === headerShown2 || headerShown2) || "screen" === options1.headerMode) && !descriptor1 || found;
           }
         }
         return null;

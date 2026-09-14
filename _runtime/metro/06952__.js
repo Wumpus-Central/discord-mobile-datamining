@@ -2,12 +2,13 @@
 
 // Module 6952
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
 let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
 let noop = fn(19);
 const forwardRef = noop.forwardRef;
 ({ useMemo: metroRequire, memo } = noop);
+let noop = noop_mod;
 const jsx = fn(21).jsx;
 try {
   const FlashList = fn(6953);

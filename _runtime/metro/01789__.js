@@ -4,6 +4,8 @@
 import _mod19 from "module_19" /* 19 */;
 import runOnRuntime from "runOnRuntime" /* 1680 */;
 
+const require = globalThis.__r;
+
 let useEffect = _mod19.useEffect;
 let closure_3 = { code: "function pnpm_useAnimatedReactionTs1(){const{prepare,react,previous}=this.__closure;const input=prepare();react(input,previous.value);previous.value=input;}" };
 
@@ -32,14 +34,14 @@ export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items) 
       __closure1 = {};
     }
     items = [, ];
-    let arraySpreadResult = HermesBuiltin.arraySpread(Object.values(__closure1), 0);
+    const arraySpreadResult = HermesBuiltin.arraySpread(Object.values(__closure1), 0);
     let __closure2 = fn2.__closure;
     if (__closure2 == null) {
       __closure2 = {};
     }
-    arraySpreadResult = HermesBuiltin.arraySpread(Object.values(__closure2), arraySpreadResult);
-    items[arraySpreadResult] = fn.__workletHash;
-    items[arraySpreadResult + 1] = fn2.__workletHash;
+    const arraySpreadResult2 = HermesBuiltin.arraySpread(Object.values(__closure2), arraySpreadResult);
+    items[arraySpreadResult2] = fn.__workletHash;
+    items[arraySpreadResult2 + 1] = fn2.__workletHash;
     arr2 = items;
   } else {
     arr2.push(fn.__workletHash, fn2.__workletHash);

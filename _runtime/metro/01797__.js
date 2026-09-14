@@ -21,11 +21,11 @@ const fn = function t() {
           const startTime = value.startTime;
           if (null === startTime) {
             value.startTime = previousFrameTimestamp;
-            let obj = { timestamp: previousFrameTimestamp, timeSincePreviousFrame: null, timeSinceFirstFrame: 0 };
+            const obj = { timestamp: previousFrameTimestamp, timeSincePreviousFrame: null, timeSinceFirstFrame: 0 };
             value.callback(obj);
           } else {
-            obj = { timestamp: previousFrameTimestamp, timeSincePreviousFrame, timeSinceFirstFrame: previousFrameTimestamp - startTime };
-            value.callback(obj);
+            const obj2 = { timestamp: previousFrameTimestamp, timeSincePreviousFrame, timeSinceFirstFrame: previousFrameTimestamp - startTime };
+            value.callback(obj2);
           }
           const frameCallbackRegistry = self.frameCallbackRegistry;
         });

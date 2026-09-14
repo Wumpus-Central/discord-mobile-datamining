@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "caratteri", verb: "avere" }, file: { unit: "byte", verb: "avere" }, array: { unit: "elementi", verb: "avere" }, set: { unit: "elementi", verb: "avere" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "caratteri", verb: "avere" }, file: { unit: "byte", verb: "avere" }, array: { unit: "elementi", verb: "avere" }, set: { unit: "elementi", verb: "avere" } };
         closure_1 = { regex: "input", email: "indirizzo email", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "data e ora ISO", date: "data ISO", time: "ora ISO", duration: "durata ISO", ipv4: "indirizzo IPv4", ipv6: "indirizzo IPv6", cidrv4: "intervallo IPv4", cidrv6: "intervallo IPv6", base64: "stringa codificata in base64", base64url: "URL codificata in base64", json_string: "stringa JSON", e164: "numero E.164", jwt: "JWT", template_literal: "input" };
         closure_2 = { nan: "NaN", number: "numero", array: "vettore" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp50 == null) {
                 tmp50 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Input non valido: atteso instanceof " + code.expected + ", ricevuto " + tmp50;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str27 = "<=";
               }
-              let tmp29 = obj[code.origin];
+              let tmp29 = obj2[code.origin];
               if (tmp29 == null) {
                 tmp29 = null;
               }
@@ -104,13 +103,13 @@ if (self2) {
                 if (str28 == null) {
                   str28 = "valore";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str34 = tmp29.unit;
                 if (str34 == null) {
                   str34 = "elementi";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Troppo grande: " + str28 + " deve avere " + str27 + str + " " + str34;
+                let combined2 = "Troppo grande: " + str28 + " deve avere " + str27 + str1 + " " + str34;
               } else {
                 let str29 = str28;
                 if (str28 == null) {
@@ -125,18 +124,18 @@ if (self2) {
               if (code.inclusive) {
                 str21 = ">=";
               }
-              let tmp17 = obj[code.origin];
+              let tmp17 = obj2[code.origin];
               if (tmp17 == null) {
                 tmp17 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str48 = minimum.toString();
               if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Troppo piccolo: " + origin + " deve avere " + str21 + str1 + " " + tmp17.unit;
+                let combined3 = "Troppo piccolo: " + origin + " deve avere " + str21 + str48 + " " + tmp17.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Troppo piccolo: " + origin + " deve essere " + str21 + str1;
+                combined3 = "Troppo piccolo: " + origin + " deve essere " + str21 + str48;
               }
               return combined3;
             case "invalid_format":
@@ -182,7 +181,6 @@ if (self2) {
               return "Input non valido";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Valore non valido in ";
               return "Valore non valido in " + code.origin;
             default:
               return "Input non valido";

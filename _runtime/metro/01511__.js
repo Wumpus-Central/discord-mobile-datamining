@@ -67,33 +67,33 @@ export const useEventEmitter = function useEventEmitter(current, onEmitEvent) {
     c2 = undefined;
     let substr = ref3.current[type];
     if (undefined === substr) {
-      let obj = { type: null };
-      obj = { enumerable: true, value: type };
-      obj.type = obj;
+      const obj = { type: null };
+      const obj2 = { enumerable: true, value: type };
+      obj.type = obj2;
       if (undefined !== target) {
-        obj = { enumerable: true, value: target };
-        obj.target = obj;
+        const obj3 = { enumerable: true, value: target };
+        obj.target = obj3;
       }
       if (undefined !== data) {
-        const obj1 = { enumerable: true, value: data };
-        obj.data = obj1;
+        const obj4 = { enumerable: true, value: data };
+        obj.data = obj4;
       }
       c1 = false;
       if (tmp) {
-        const obj2 = {
+        const obj5 = {
           enumerable: true,
           get() {
                 return c1;
               }
         };
-        obj.defaultPrevented = obj2;
-        const obj3 = {
+        obj.defaultPrevented = obj5;
+        const obj6 = {
           enumerable: true,
           value() {
                 c1 = true;
               }
         };
-        obj.preventDefault = obj3;
+        obj.preventDefault = obj6;
       }
       const _Object2 = Object;
       const definePropertiesResult = Object.defineProperties({}, obj);

@@ -25,8 +25,7 @@ const animatedComponent = Animated.createAnimatedComponent(animatedComponentDefa
 const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, arg1) {
   noop.useRef(null);
   const imperativeHandle = noop.useImperativeHandle(arg1, () => ref.current, []);
-  let obj = _mod5008;
-  const previous = obj.usePrevious(activityState.activityState);
+  const previous = _mod5008.usePrevious(activityState.activityState);
   function setRef(current) {
     closure_1.current = current;
     const onComponentRef = activityState.onComponentRef;
@@ -34,22 +33,21 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, arg
       onComponentRef(current);
     }
   }
-  let obj1 = Animated;
   value = new Animated.Value(0);
   const current = noop.useRef(value).current;
-  value = new Animated.Value(0);
-  const current2 = noop.useRef(value).current;
-  const value1 = new Animated.Value(0);
-  const current3 = noop.useRef(value1).current;
+  const value3 = new Animated.Value(0);
+  const current2 = noop.useRef(value3).current;
+  const value4 = new Animated.Value(0);
+  const current3 = noop.useRef(value4).current;
   let enabled = activityState.enabled;
   if (undefined === enabled) {
-    let tmp2Result = _mod5004;
-    enabled = tmp2Result.screensEnabled();
+    enabled = _mod5004.screensEnabled();
+    const tmp2Result = _mod5004;
   }
   let freezeOnBlur = activityState.freezeOnBlur;
   if (undefined === freezeOnBlur) {
-    tmp2Result = _mod5004;
-    freezeOnBlur = tmp2Result.freezeEnabled();
+    freezeOnBlur = _mod5004.freezeEnabled();
+    const tmp2Result6 = _mod5004;
   }
   let shouldFreeze = activityState.shouldFreeze;
   const tmp9 = _objectWithoutProperties(activityState, closure_3);
@@ -73,7 +71,7 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, arg
   if (undefined !== sheetElevation) {
     num2 = sheetElevation;
   }
-  let sheetInitialDetentIndex = tmp9.sheetInitialDetentIndex;
+  const sheetInitialDetentIndex = tmp9.sheetInitialDetentIndex;
   let num3 = 0;
   if (undefined !== sheetInitialDetentIndex) {
     num3 = sheetInitialDetentIndex;
@@ -83,13 +81,13 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, arg
   if (enabled) {
     if (_mod5004.isNativePlatformSupported) {
       const sheetAllowedDetents1 = SHEET_FIT_TO_CONTENTS.resolveSheetAllowedDetents(sheetAllowedDetents);
-      const tmp2Result1 = SHEET_FIT_TO_CONTENTS;
+      const tmp2Result7 = SHEET_FIT_TO_CONTENTS;
       const sheetLargestUndimmedDetent = SHEET_FIT_TO_CONTENTS.resolveSheetLargestUndimmedDetent(SHEET_DIMMED_ALWAYS, sheetAllowedDetents1.length - 1);
-      const tmp2Result2 = SHEET_FIT_TO_CONTENTS;
+      const tmp2Result8 = SHEET_FIT_TO_CONTENTS;
       ({ active: active2, activityState: activityState2, children, isNativeStack, gestureResponseDistance, scrollEdgeEffects, onGestureCancel } = tmp9);
-      sheetInitialDetentIndex = SHEET_FIT_TO_CONTENTS.resolveSheetInitialDetentIndex(num3, sheetAllowedDetents1.length - 1);
+      const sheetInitialDetentIndex1 = SHEET_FIT_TO_CONTENTS.resolveSheetInitialDetentIndex(num3, sheetAllowedDetents1.length - 1);
       ({ fullScreenSwipeEnabled, style } = tmp9);
-      let tmp8Result = _objectWithoutProperties(tmp9, closure_4);
+      const tmp8Result = _objectWithoutProperties(tmp9, closure_4);
       if (tmp28) {
         const _console = console;
         console.warn("It appears that you are using old version of react-navigation library. Please update @react-navigation/bottom-tabs, @react-navigation/stack and @react-navigation/drawer to version 5.10.0 or above to take full advantage of new functionality added to react-native-screens");
@@ -116,35 +114,35 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, arg
         }
         freezeOnBlur = shouldFreeze;
       }
-      obj = { freeze: freezeOnBlur, children: null };
-      obj = {};
+      let obj3 = { freeze: freezeOnBlur, children: null };
+      const obj4 = {};
       tmp28 = undefined !== active2 && undefined === activityState2;
-      const tmp2Result3 = SHEET_FIT_TO_CONTENTS;
+      const tmp2Result9 = SHEET_FIT_TO_CONTENTS;
       let merged = Object.assign(tmp8Result);
-      obj.onAppear = tmp15;
-      obj.onDisappear = tmp16;
-      obj.onWillAppear = tmp17;
-      obj.onWillDisappear = tmp18;
+      obj4.onAppear = tmp15;
+      obj4.onDisappear = tmp16;
+      obj4.onWillAppear = tmp17;
+      obj4.onWillDisappear = tmp18;
       if (onGestureCancel == null) {
         onGestureCancel = () => {
 
         };
       }
-      obj.onGestureCancel = onGestureCancel;
+      obj4.onGestureCancel = onGestureCancel;
       const items = [style, { zIndex: "r" }];
-      obj.style = items;
-      obj.activityState = activityState2;
-      obj.screenId = tmp14;
-      obj.sheetAllowedDetents = sheetAllowedDetents1;
-      obj.sheetLargestUndimmedDetent = sheetLargestUndimmedDetent;
-      obj.sheetElevation = num2;
-      obj.sheetShouldOverflowTopInset = tmp12;
-      obj.sheetDefaultResizeAnimationEnabled = tmp13;
-      obj.sheetGrabberVisible = tmp10;
-      obj.sheetCornerRadius = num;
-      obj.sheetExpandsWhenScrolledToEdge = tmp11;
-      obj.sheetInitialDetent = sheetInitialDetentIndex;
-      obj.fullScreenSwipeEnabled = _mod5012.parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled);
+      obj4.style = items;
+      obj4.activityState = activityState2;
+      obj4.screenId = tmp14;
+      obj4.sheetAllowedDetents = sheetAllowedDetents1;
+      obj4.sheetLargestUndimmedDetent = sheetLargestUndimmedDetent;
+      obj4.sheetElevation = num2;
+      obj4.sheetShouldOverflowTopInset = tmp12;
+      obj4.sheetDefaultResizeAnimationEnabled = tmp13;
+      obj4.sheetGrabberVisible = tmp10;
+      obj4.sheetCornerRadius = num;
+      obj4.sheetExpandsWhenScrolledToEdge = tmp11;
+      obj4.sheetInitialDetent = sheetInitialDetentIndex1;
+      obj4.fullScreenSwipeEnabled = _mod5012.parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled);
       let num7;
       if (gestureResponseDistance != null) {
         num7 = gestureResponseDistance.start;
@@ -177,52 +175,52 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, arg
         num10 = -1;
       }
       rect.bottom = num10;
-      obj.gestureResponseDistance = rect;
-      obj.ref = function ref(viewConfig) {
+      obj4.gestureResponseDistance = rect;
+      obj4.ref = function ref(viewConfig) {
         let style;
         if (viewConfig != null) {
           viewConfig = viewConfig.viewConfig;
           if (viewConfig != null) {
-            let validAttributes = viewConfig.validAttributes;
+            const validAttributes = viewConfig.validAttributes;
             if (validAttributes != null) {
               style = validAttributes.style;
             }
           }
         }
         if (style) {
-          let obj = {};
+          const obj2 = {};
           const merged = Object.assign(viewConfig.viewConfig.validAttributes.style);
-          obj.display = null;
-          viewConfig.viewConfig.validAttributes.style = obj;
+          obj2.display = null;
+          viewConfig.viewConfig.validAttributes.style = obj2;
         } else {
           let style1;
           if (viewConfig != null) {
             const _viewConfig = viewConfig._viewConfig;
             if (_viewConfig != null) {
-              validAttributes = _viewConfig.validAttributes;
-              if (validAttributes != null) {
-                style1 = validAttributes.style;
+              const validAttributes2 = _viewConfig.validAttributes;
+              if (validAttributes2 != null) {
+                style1 = validAttributes2.style;
               }
             }
           }
           if (style1) {
-            obj = {};
+            const obj3 = {};
             const merged1 = Object.assign(viewConfig._viewConfig.validAttributes.style);
-            obj.display = null;
-            viewConfig._viewConfig.validAttributes.style = obj;
+            obj3.display = null;
+            viewConfig._viewConfig.validAttributes.style = obj3;
           } else {
             let style2;
             if (viewConfig != null) {
               const __viewConfig = viewConfig.__viewConfig;
               if (__viewConfig != null) {
-                validAttributes = __viewConfig.validAttributes;
-                if (validAttributes != null) {
-                  style2 = validAttributes.style;
+                const validAttributes3 = __viewConfig.validAttributes;
+                if (validAttributes3 != null) {
+                  style2 = validAttributes3.style;
                 }
               }
             }
             if (style2) {
-              obj = {};
+              const obj = {};
               const merged2 = Object.assign(viewConfig.__viewConfig.validAttributes.style);
               obj.display = null;
               viewConfig.__viewConfig.validAttributes.style = obj;
@@ -241,51 +239,54 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, arg
       };
       let eventResult;
       if (isNativeStack) {
-        obj1 = { nativeEvent: null };
-        const obj2 = { progress: current2, closing: current, goingForward: current3 };
-        obj1.nativeEvent = obj2;
-        const items1 = [obj1];
-        eventResult = obj1.event(items1, { useNativeDriver: true });
+        const obj5 = { nativeEvent: null };
+        const obj6 = { progress: current2, closing: current, goingForward: current3 };
+        obj5.nativeEvent = obj6;
+        const items1 = [obj5];
+        eventResult = Animated.event(items1, { useNativeDriver: true });
       }
-      obj.onTransitionProgress = eventResult;
+      obj4.onTransitionProgress = eventResult;
       let bottom;
       if (scrollEdgeEffects != null) {
         bottom = scrollEdgeEffects.bottom;
       }
-      obj.bottomScrollEdgeEffect = bottom;
+      obj4.bottomScrollEdgeEffect = bottom;
       let left;
       if (scrollEdgeEffects != null) {
         left = scrollEdgeEffects.left;
       }
-      obj.leftScrollEdgeEffect = left;
+      obj4.leftScrollEdgeEffect = left;
       let right;
       if (scrollEdgeEffects != null) {
         right = scrollEdgeEffects.right;
       }
-      obj.rightScrollEdgeEffect = right;
+      obj4.rightScrollEdgeEffect = right;
       let top;
       if (scrollEdgeEffects != null) {
         top = scrollEdgeEffects.top;
       }
-      obj.topScrollEdgeEffect = top;
-      obj.synchronousShadowStateUpdatesEnabled = get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousScreenUpdatesEnabled;
-      obj.androidResetScreenShadowStateOnOrientationChangeEnabled = get_synchronousScreenUpdatesEnabledDefault.experiment.androidResetScreenShadowStateOnOrientationChangeEnabled;
-      obj.iosOrientationInheritanceFixEnabled = get_synchronousScreenUpdatesEnabledDefault.experiment.iosOrientationInheritanceFixEnabled;
+      obj4.topScrollEdgeEffect = top;
+      obj4.synchronousShadowStateUpdatesEnabled = get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousScreenUpdatesEnabled;
+      obj4.androidResetScreenShadowStateOnOrientationChangeEnabled = get_synchronousScreenUpdatesEnabledDefault.experiment.androidResetScreenShadowStateOnOrientationChangeEnabled;
+      obj4.iosOrientationInheritanceFixEnabled = get_synchronousScreenUpdatesEnabledDefault.experiment.iosOrientationInheritanceFixEnabled;
       let tmp31Result = children;
       if (isNativeStack) {
-        const obj3 = { value: null, children: null };
-        const obj4 = { progress: current2, closing: current, goingForward: current3 };
-        obj3.value = obj4;
-        obj3.children = children;
+        const obj7 = { value: null, children: null };
+        const obj8 = { progress: current2, closing: current, goingForward: current3 };
+        obj7.value = obj8;
+        obj7.children = children;
         tmp31Result = jsx(_modDef5013.Provider, { value: null, children: null });
       }
-      obj.children = tmp31Result;
-      obj.children = <__INTERNAL_VIEW_CONFIG />;
-      return <tmp33 />;
+      obj4.children = tmp31Result;
+      obj3.children = <__INTERNAL_VIEW_CONFIG />;
+      return <tmp33 freeze={freezeOnBlur}>{null}</tmp33>;
     }
   }
   ({ active, activityState, onComponentRef } = tmp9);
-  tmp8Result = _objectWithoutProperties(tmp9, closure_5);
+  tmp10 = undefined !== sheetGrabberVisible && sheetGrabberVisible;
+  tmp11 = undefined === sheetExpandsWhenScrolledToEdge || sheetExpandsWhenScrolledToEdge;
+  tmp12 = undefined !== sheetShouldOverflowTopInset && sheetShouldOverflowTopInset;
+  tmp13 = undefined === sheetDefaultResizeAnimationEnabled || sheetDefaultResizeAnimationEnabled;
   if (tmp20) {
     let num4 = 0;
     if (0 !== active) {
@@ -299,8 +300,8 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, arg
     str = "flex";
   }
   items2[1] = { display: str };
-  let merged1 = Object.assign(tmp8Result);
-  return <obj1.View style={items2} ref={setRef} />;
+  let merged1 = Object.assign(_objectWithoutProperties(tmp9, closure_5));
+  return <Animated.View style={items2} ref={setRef} />;
 });
 const context = noop.createContext(forwardRefResult);
 const forwardRefResult1 = noop.forwardRef((arg0, ref) => {

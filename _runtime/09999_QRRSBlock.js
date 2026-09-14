@@ -26,8 +26,8 @@ QRRSBlock.getRSBlocks = (arg0, arg1) => {
         let result1 = 3 * num2;
         let tmp2 = rsBlockTable[result1];
         for (let num = 0; num < tmp2; num = num + 1) {
-          let obj = Object.create(QRRSBlock.prototype);
-          obj = { totalCount: tmp3, dataCount: tmp4 };
+          let obj2 = Object.create(QRRSBlock.prototype);
+          let obj = { totalCount: tmp3, dataCount: tmp4 };
           let arr = array.push(obj);
         }
         num2 = num2 + 1;

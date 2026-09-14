@@ -3,6 +3,8 @@
 // Module 4606 (Patterns)
 import _modDef4607 from "module_4607" /* 4607 */;
 
+const require = globalThis.__r;
+
 for (const key10016 in require("HapticFeedbackTypes")) {
   arg5[key10016] = require("HapticFeedbackTypes")[key10016];
   continue;

@@ -1,27 +1,30 @@
 // === Module 4152: ? ===
 
 // Module 4152
-import module_3729 from "module_3729" /* 3729 */;
-import _typeof from "module_3725" /* 3725 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import module_3729_mod from "module_3729" /* 3729 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  let obj = { default: module_3729 };
+  const obj = { default: module_3729 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3729;
 }
 module_3729 = tmp3;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp5 = obj;
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
 } else {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }

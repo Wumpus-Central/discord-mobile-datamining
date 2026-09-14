@@ -201,8 +201,8 @@ export const join = function join() {
 export { normalizePath };
 export const relative = function relative(root, replaced) {
   let length;
-  let arr = resolve(root);
-  const str = arr.slice(1);
+  const arr = resolve(root);
+  const str = resolve(root).slice(1);
   const arr2 = resolve(replaced);
   const parts = str.split("/");
   let num = 0;
@@ -299,7 +299,7 @@ export const relative = function relative(root, replaced) {
   let sum2 = tmp12;
   if (tmp12 < items.length) {
     do {
-      arr = items2.push("..");
+      let arr3 = items2.push("..");
       sum2 = sum2 + 1;
       length = items.length;
     } while (sum2 < length);

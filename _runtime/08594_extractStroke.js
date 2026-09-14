@@ -18,7 +18,7 @@ export default function extractStroke(arg0, arg1, arr) {
     arg0.stroke = extractBrushDefault(stroke);
   }
   if (null != strokeWidth) {
-    arr = arr.push("strokeWidth");
+    arr.push("strokeWidth");
     arg0.strokeWidth = strokeWidth;
   }
   if (null != strokeOpacity) {

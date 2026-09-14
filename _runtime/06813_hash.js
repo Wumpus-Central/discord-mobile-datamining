@@ -6,6 +6,8 @@ import allowedNativeProps from "allowedNativeProps" /* 6814 */;
 import _mod6823 from "module_6823" /* 6823 */;
 import _slicedToArray from "module_32" /* 32 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function hash(str) {
   let num = 5381;
@@ -90,7 +92,8 @@ export const bindSharedValues = function bindSharedValues(shouldUseReanimatedDet
             if (shouldUseReanimatedDetector) {
               tmp4 = !arg0;
             }
-            let obj = { dispatchesReanimatedEvents: tmp4 };
+            const obj2 = { dispatchesReanimatedEvents: tmp4 };
+            let obj = obj2;
           } else {
             obj = {};
             obj[tmp3] = arg0;

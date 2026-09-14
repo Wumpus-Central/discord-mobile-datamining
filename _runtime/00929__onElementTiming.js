@@ -13,33 +13,32 @@ function _onElementTiming(arg0) {
   const activeSpan = transactionName(682).getActiveSpan();
   let rootSpan;
   if (activeSpan) {
+    rootSpan = tmp(682).getRootSpan(activeSpan);
     let tmpResult = tmp(682);
-    rootSpan = tmpResult.getRootSpan(activeSpan);
   }
-  tmpResult = tmp(682);
+  const tmpResult2 = transactionName(682);
   if (rootSpan) {
-    transactionName = tmpResult.spanToJSON(rootSpan).description;
+    transactionName = tmpResult2.spanToJSON(rootSpan).description;
   } else {
-    const currentScope = tmpResult.getCurrentScope();
+    const currentScope = tmpResult2.getCurrentScope();
     transactionName = currentScope.getScopeData().transactionName;
   }
   const item = entries.forEach((identifier) => {
     if (identifier.identifier) {
       ({ name, renderTime, loadTime } = identifier);
       if (loadTime) {
-        let tmpResult = extractNetworkProtocol;
-        const items = [tmpResult.msToSec(loadTime), "load-time"];
+        const items = [extractNetworkProtocol.msToSec(loadTime), "load-time"];
         let items2 = items;
+        const tmpResult = extractNetworkProtocol;
       } else if (renderTime) {
-        tmpResult = extractNetworkProtocol;
-        const items1 = [tmpResult.msToSec(renderTime), "render-time"];
+        const items1 = [extractNetworkProtocol.msToSec(renderTime), "render-time"];
         items2 = items1;
+        const tmpResult3 = extractNetworkProtocol;
       } else {
         items2 = [_mod682.timestampInSeconds(), "entry-emission"];
-        const tmpResult1 = _mod682;
+        const tmpResult4 = _mod682;
       }
-      const tmp4 = _slicedToArray(items2, 2);
-      const startTime = tmp4[0];
+      [startTime, obj["sentry.span_start_time_source"]] = items2;
       if ("image-paint" === name) {
         let num4 = renderTime;
         if (renderTime == null) {
@@ -51,11 +50,10 @@ function _onElementTiming(arg0) {
         }
         extractNetworkProtocol.msToSec(Math.max(0, num4 - num5));
       }
-      let obj = {};
+      const obj = {};
       obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.elementtiming";
       obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "ui.elementtiming";
       obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "component";
-      obj["sentry.span_start_time_source"] = tmp4[1];
       obj["sentry.transaction_name"] = transactionName;
       ({ id: obj5["element.id"], element } = identifier);
       let str8;
@@ -81,12 +79,12 @@ function _onElementTiming(arg0) {
       obj["element.url"] = identifier.url || undefined;
       obj["element.identifier"] = identifier.identifier;
       obj["element.paint_type"] = name;
-      obj = { name: null, attributes: null, startTime: null, onlyIfParent: true };
+      const obj2 = { name: null, attributes: null, startTime: null, onlyIfParent: true };
       const _HermesInternal2 = HermesInternal;
-      obj.name = "element[" + identifier.identifier + "]";
-      obj.attributes = obj;
-      obj.startTime = startTime;
-      _mod682.startSpan(obj, (end) => {
+      obj2.name = "element[" + identifier.identifier + "]";
+      obj2.attributes = obj;
+      obj2.startTime = startTime;
+      _mod682.startSpan(obj2, (end) => {
         end.end(first + num3);
       });
     }
@@ -97,10 +95,9 @@ function _onElementTiming(arg0) {
 export { _onElementTiming };
 export const startTrackingElementTiming = function startTrackingElementTiming() {
   if (obj.getBrowserPerformanceAPI()) {
-    let tmpResult = _mod682;
     if (tmpResult.browserPerformanceTimeOrigin()) {
-      tmpResult = _mod899;
-      let fn = tmpResult.addPerformanceInstrumentationHandler("element", _onElementTiming);
+      let fn = _mod899.addPerformanceInstrumentationHandler("element", _onElementTiming);
+      const tmpResult2 = _mod899;
     }
     return fn;
   }

@@ -2,8 +2,9 @@
 
 // Module 6999 (VelocityTracker)
 import _modDef6968 from "module_6968" /* 6968 */;
-import _classCallCheck from "module_6967" /* 6967 */;
+import _classCallCheck_mod from "module_6967" /* 6967 */;
 
+let _classCallCheck = _classCallCheck_mod;
 class VelocityTracker {
   constructor() {
     tmp = closure_0(this, VelocityTracker);

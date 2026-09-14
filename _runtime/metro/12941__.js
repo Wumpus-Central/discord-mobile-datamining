@@ -1,19 +1,61 @@
 // === Module 12941: ? ===
 
 // Module 12941
+import _mod12928 from "module_12928" /* 12928 */;
 
-export const SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
-export const SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";
-export const SEMANTIC_ATTRIBUTE_CACHE_KEY = "cache.key";
-export const SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME = "sentry.exclusive_time";
-export const SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD = "http.request.method";
-export const SEMANTIC_ATTRIBUTE_PROFILE_ID = "sentry.profile_id";
-export const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = "sentry.custom_span_name";
-export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = "sentry.idle_span_finish_reason";
-export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT = "sentry.measurement_unit";
-export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE = "sentry.measurement_value";
-export const SEMANTIC_ATTRIBUTE_SENTRY_OP = "sentry.op";
-export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = "sentry.origin";
-export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = "sentry.sample_rate";
-export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = "sentry.source";
-export const SEMANTIC_ATTRIBUTE_URL_FULL = "url.full";
+function dateTimestampInSeconds() {
+  return Date.now() / 1000;
+}
+let timeOrigin;
+const _performance = _mod12928.GLOBAL_OBJ.performance;
+let fn = dateTimestampInSeconds;
+if (_performance) {
+  fn = dateTimestampInSeconds;
+  if (_performance.now) {
+    const _Date = Date;
+    const timestamp = Date.now();
+    timeOrigin = timestamp - _performance.now();
+    if (null != _performance.timeOrigin) {
+      timeOrigin = _performance.timeOrigin;
+    }
+    fn = () => (timeOrigin + _performance.now()) / 1000;
+  }
+}
+const _performance2 = _mod12928.GLOBAL_OBJ.performance;
+if (_performance2) {
+  if (_performance2.now) {
+    const nowResult = _performance2.now();
+    const _Date2 = Date;
+    const timestamp1 = Date.now();
+    let num2 = 3600000;
+    if (_performance2.timeOrigin) {
+      const _Math = Math;
+      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
+    }
+    let timeOrigin2 = _performance2.timing;
+    if (timeOrigin2) {
+      timeOrigin2 = _performance2.timing.navigationStart;
+    }
+    let num3 = 3600000;
+    if (typeof timeOrigin2 === "number") {
+      const _Math2 = Math;
+      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
+    }
+    if (!tmp6) {
+      if (num3 >= 3600000) {
+        exports._browserPerformanceTimeOriginMode = "dateNow";
+      }
+    }
+    if (num2 <= num3) {
+      exports._browserPerformanceTimeOriginMode = "timeOrigin";
+      timeOrigin2 = _performance2.timeOrigin;
+    } else {
+      exports._browserPerformanceTimeOriginMode = "navigationStart";
+    }
+    tmp6 = num2 < 3600000;
+  }
+}
+
+export const _browserPerformanceTimeOriginMode = "none";
+export { dateTimestampInSeconds };
+export const timestampInSeconds = fn;

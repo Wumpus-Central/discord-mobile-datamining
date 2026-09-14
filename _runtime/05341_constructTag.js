@@ -8,14 +8,15 @@ import _modDef5313 from "module_5313" /* 5313 */;
 import _modDef5325 from "module_5325" /* 5325 */;
 import _modDef5327 from "module_5327" /* 5327 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
 function constructTag(decompressResult, type, items2, items1) {
   let stringFromDataView = decompressResult;
   if (decompressResult instanceof DataView) {
-    let obj = _mod5294;
-    stringFromDataView = obj.getStringFromDataView(decompressResult, 0, decompressResult.byteLength);
+    stringFromDataView = _mod5294.getStringFromDataView(decompressResult, 0, decompressResult.byteLength);
   }
   const stringValueFromArray = _mod5294.getStringValueFromArray(items1);
   let combined = stringValueFromArray;
@@ -27,13 +28,13 @@ function constructTag(decompressResult, type, items2, items1) {
       const tmp4Result = _mod5294;
     }
   }
-  obj = { name: combined, value: stringFromDataView, description: null };
+  const obj3 = { name: combined, value: stringFromDataView, description: null };
   if (type === PNG_CHUNK_TYPE_SIZE.TYPE_ITXT) {
     const decoder = _modDef5327;
     stringFromDataView = decoder.decode("UTF-8", decompressResult);
   }
-  obj.description = stringFromDataView;
-  return obj;
+  obj3.description = stringFromDataView;
+  return obj3;
 }
 function isExifGroupTag(name, value) {
   let tmp = "raw profile type exif" === name.toLowerCase();
@@ -132,7 +133,7 @@ export default {
                     COMPRESSION_METHOD_NONE2 = tmp7;
                     tmp16 = tmp;
                   } else if (tmp === STATE_LANG) {
-                    arr = items2.push(uint8);
+                    let arr2 = items2.push(uint8);
                     sum1 = num2;
                     COMPRESSION_METHOD_NONE2 = tmp7;
                     tmp16 = tmp;
@@ -141,7 +142,7 @@ export default {
                     COMPRESSION_METHOD_NONE2 = tmp7;
                     tmp16 = tmp;
                     if (tmp === STATE_TRANSLATED_KEYWORD) {
-                      let arr1 = items3.push(uint8);
+                      let arr3 = items3.push(uint8);
                       sum1 = num2;
                       COMPRESSION_METHOD_NONE2 = tmp7;
                       tmp16 = tmp;
@@ -192,34 +193,30 @@ export default {
         let tmp38 = _require;
         if (tmp5 !== require("module_5294").COMPRESSION_METHOD_NONE) {
           if (!arg2) {
-            obj = {};
+            let obj2 = {};
             let _Promise2 = Promise;
-            if (obj instanceof Promise) {
-              let arr2 = items.push(obj.then((result) => {
+            if (obj2 instanceof Promise) {
+              let arr4 = items.push(obj2.then((result) => {
                 ({ name, value } = result);
                 try {
                   if (_modDef5297.USE_EXIF) {
                     if (isExifGroupTag(name, value)) {
-                      let obj = { __exif: null };
-                      let tmp2Result = _modDef5313;
-                      obj.__exif = tmp2Result.read(decodeRawData(value), c10, closure_0).tags;
-                      return obj;
+                      const obj2 = { __exif: _modDef5313.read(decodeRawData(value), c10, closure_0).tags };
+                      return obj2;
                     }
                   }
                   if (_modDef5297.USE_IPTC) {
                     if (isIptcGroupTag(name, value)) {
-                      obj = { __iptc: null };
-                      tmp2Result = _modDef5325;
-                      obj.__iptc = tmp2Result.read(decodeRawData(value), 0, closure_0);
-                      return obj;
+                      const obj3 = { __iptc: _modDef5325.read(decodeRawData(value), 0, closure_0) };
+                      return obj3;
                     }
                   }
                   if (name) {
                     if (!isExifGroupTag(name, value)) {
                       if (!isIptcGroupTag(name, value)) {
-                        obj = {};
-                        const obj1 = { value, description: tmp };
-                        obj[name] = obj1;
+                        const obj = {};
+                        const obj4 = { value, description: tmp };
+                        obj[name] = obj4;
                         return obj;
                       }
                     }
@@ -229,10 +226,10 @@ export default {
                 }
               }));
             } else {
-              let name = obj.name;
+              let name = obj2.name;
               if (name) {
-                obj = { value: tmp47, description: tmp48 };
-                obj[name] = obj;
+                let obj3 = { value: tmp47, description: tmp48 };
+                obj[name] = obj3;
               }
             }
             num = num + 1;
@@ -254,12 +251,12 @@ export default {
         }
       }
     }
-    let obj1 = { readTags: obj, readTagsPromise: null };
+    let obj4 = { readTags: obj, readTagsPromise: null };
     let allPromises;
     if (items.length > 0) {
       allPromises = Promise.all(items);
     }
-    obj1.readTagsPromise = allPromises;
-    return obj1;
+    obj4.readTagsPromise = allPromises;
+    return obj4;
   }
 };

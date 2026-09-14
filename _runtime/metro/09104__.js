@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "tekens", verb: "heeft" }, file: { unit: "bytes", verb: "heeft" }, array: { unit: "elementen", verb: "heeft" }, set: { unit: "elementen", verb: "heeft" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "tekens", verb: "heeft" }, file: { unit: "bytes", verb: "heeft" }, array: { unit: "elementen", verb: "heeft" }, set: { unit: "elementen", verb: "heeft" } };
         closure_1 = { regex: "invoer", email: "emailadres", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO datum en tijd", date: "ISO datum", time: "ISO tijd", duration: "ISO duur", ipv4: "IPv4-adres", ipv6: "IPv6-adres", cidrv4: "IPv4-bereik", cidrv6: "IPv6-bereik", base64: "base64-gecodeerde tekst", base64url: "base64 URL-gecodeerde tekst", json_string: "JSON string", e164: "E.164-nummer", jwt: "JWT", template_literal: "invoer" };
         closure_2 = { nan: "NaN", number: "getal" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp52 == null) {
                 tmp52 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Ongeldige invoer: verwacht instanceof " + code.expected + ", ontving " + tmp52;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str34 = "<=";
               }
-              let tmp29 = obj[code.origin];
+              let tmp29 = obj2[code.origin];
               if (tmp29 == null) {
                 tmp29 = null;
               }
@@ -112,13 +111,13 @@ if (self2) {
                 if (str39 == null) {
                   str39 = "waarde";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str47 = tmp29.unit;
                 if (str47 == null) {
                   str47 = "elementen";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Te " + str35 + ": verwacht dat " + str39 + " " + str34 + str + " " + str47 + " " + tmp29.verb;
+                let combined2 = "Te " + str35 + ": verwacht dat " + str39 + " " + str34 + str1 + " " + str47 + " " + tmp29.verb;
               } else {
                 let str40 = str39;
                 if (str39 == null) {
@@ -133,7 +132,7 @@ if (self2) {
               if (code.inclusive) {
                 str19 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
@@ -146,13 +145,13 @@ if (self2) {
                 str20 = str22;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str64 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Te " + str20 + ": verwacht dat " + origin + " " + str19 + str1 + " " + tmp15.unit + " " + tmp15.verb;
+                let combined3 = "Te " + str20 + ": verwacht dat " + origin + " " + str19 + str64 + " " + tmp15.unit + " " + tmp15.verb;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Te " + str20 + ": verwacht dat " + origin + " " + str19 + str1 + " is";
+                combined3 = "Te " + str20 + ": verwacht dat " + origin + " " + str19 + str64 + " is";
               }
               return combined3;
             case "invalid_format":
@@ -194,7 +193,6 @@ if (self2) {
               return "Ongeldige invoer";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Ongeldige waarde in ";
               return "Ongeldige waarde in " + code.origin;
             default:
               return "Ongeldige invoer";

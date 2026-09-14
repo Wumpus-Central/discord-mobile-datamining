@@ -15,18 +15,17 @@ const jsx = fn(21).jsx;
 export default function ScreenContainer(enabled) {
   enabled = enabled.enabled;
   if (undefined === enabled) {
-    let obj = _mod5004;
-    enabled = obj.screensEnabled();
+    enabled = _mod5004.screensEnabled();
   }
   const tmp3 = _objectWithoutProperties(enabled, closure_3);
   if (enabled) {
     if (_mod5004.isNativePlatformSupported) {
       if (enabled.hasTwoStates) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(tmp3);
         return jsx(_modDef5022, {});
       } else {
-        obj = {};
+        const obj3 = {};
         const merged1 = Object.assign(tmp3);
         return jsx(_modDef5022, {});
       }

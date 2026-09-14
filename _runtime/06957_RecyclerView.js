@@ -9,12 +9,13 @@ import StickyHeaders from "StickyHeaders" /* 7011 */;
 import ScrollAnchor from "ScrollAnchor" /* 7013 */;
 import _slicedToArray from "module_6958" /* 6958 */;
 import _objectWithoutProperties from "module_6964" /* 6964 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
 require = fn;
 let closure_2 = ["horizontal", "renderItem", "data", "extraData", "onLoad", "CellRendererComponent", "overrideProps", "refreshing", "onRefresh", "progressViewOffset", "ListEmptyComponent", "ListHeaderComponent", "ListHeaderComponentStyle", "ListFooterComponent", "ListFooterComponentStyle", "ItemSeparatorComponent", "renderScrollComponent", "style", "stickyHeaderIndices", "maintainVisibleContentPosition", "onCommitLayoutEffect", "onChangeStickyIndex", "stickyHeaderConfig", "inverted"];
 let noop = fn(19);
 ({ useCallback: hasOwnProperty, useLayoutEffect: metroRequire, useMemo: closure_7, useRef: closure_8, useState: closure_9, useId: c10, forwardRef } = noop);
+let noop = noop_mod;
 get_ActivityIndicator = fn(17);
 ({ Animated: closure_11, I18nManager: closure_12 } = get_ActivityIndicator);
 const jsxProd = fn(21);
@@ -109,9 +110,9 @@ class RecyclerViewComponent {
     tmp21 = onChangeStickyIndex(() => new Map(), []);
     closure_26 = tmp21;
     obj4 = horizontal(renderItem[8]);
-    recyclerViewManager = obj4.useRecyclerViewManager(global);
-    recyclerViewManager = recyclerViewManager.recyclerViewManager;
-    velocityTracker = recyclerViewManager.velocityTracker;
+    recyclerViewManager1 = obj4.useRecyclerViewManager(global);
+    recyclerViewManager = recyclerViewManager1.recyclerViewManager;
+    velocityTracker = recyclerViewManager1.velocityTracker;
     obj5 = horizontal(renderItem[9]);
     recyclerViewController = obj5.useRecyclerViewController(recyclerViewManager, fn, tmp8, tmp12);
     ({ applyOffsetCorrection, computeFirstVisibleIndexForOffsetCorrection } = recyclerViewController);
@@ -128,13 +129,11 @@ class RecyclerViewComponent {
     tmp27 = onCommitLayoutEffect(() => {
       if (ref.current) {
         if (ref2.current) {
-          let size = areDimensionsNotEqual.measureParentSize(ref.current);
+          const size = areDimensionsNotEqual.measureParentSize(ref.current);
           const size2 = areDimensionsNotEqual.measureFirstChildLayout(tmp2.current, ref.current);
           closure_17.current = size;
           const tmp7 = horizontal ? size2.x : size2.y;
-          size = { width: null, height: null };
-          size.width = horizontal ? size.width : size2.width;
-          size.height = horizontal ? size2.height : size.height;
+          const size1 = { width: horizontal ? size.width : size2.width, height: horizontal ? size2.height : size.height };
           let diff = tmp7;
           if (closure_35) {
             diff = tmp7;
@@ -142,7 +141,7 @@ class RecyclerViewComponent {
               diff = tmp7 - recyclerViewManager.getChildContainerDimensions().width;
             }
           }
-          recyclerViewManager.updateLayoutParams(size, diff);
+          recyclerViewManager.updateLayoutParams(size1, diff);
         }
       }
     });
@@ -404,14 +403,14 @@ class RecyclerViewComponent {
     items4[3] = flag;
     tmp20Result2 = tmp20(() => {
       if (closure_40) {
-        let obj = { nativeEvent: null };
-        obj = { contentOffset: null };
-        obj = { y: current2 };
-        obj.contentOffset = obj;
-        obj.nativeEvent = obj;
+        const obj = { nativeEvent: null };
+        const obj2 = { contentOffset: null };
+        const obj3 = { y: current2 };
+        obj2.contentOffset = obj3;
+        obj.nativeEvent = obj2;
         const items = [obj];
-        const obj1 = { useNativeDriver: flag, listener };
-        let eventResult = closure_2_11.event(items, obj1);
+        const obj4 = { useNativeDriver: flag, listener };
+        let eventResult = closure_2_11.event(items, obj4);
       } else {
         eventResult = listener;
       }
@@ -473,10 +472,10 @@ class RecyclerViewComponent {
       }
       return tmp;
     }, items7);
-    obj = { value: tmp20Result, children: null };
+    obj1 = { value: tmp20Result, children: null };
     tmp45 = closure_14;
     num3 = 1;
-    obj1 = {
+    obj15 = {
       style: null,
       ref: tmp9,
       collapsable: false,
@@ -512,15 +511,15 @@ class RecyclerViewComponent {
     items8[0] = { flex: num3, overflow: "hidden" };
     items8[1] = style;
     items8[2] = invertedTransformStyle;
-    obj1.style = items8;
-    obj2 = {};
+    obj15.style = items8;
+    obj16 = {};
     merged = Object.assign(tmp);
-    obj2.horizontal = horizontal;
-    obj2.ref = tmp8;
-    obj2.onScroll = tmp20Result2;
-    obj2.maintainVisibleContentPosition = tmp20Result3;
-    obj2.removeClippedSubviews = false;
-    obj2.refreshControl = refreshControl;
+    obj16.horizontal = horizontal;
+    obj16.ref = tmp8;
+    obj16.onScroll = tmp20Result2;
+    obj16.maintainVisibleContentPosition = tmp20Result3;
+    obj16.removeClippedSubviews = false;
+    obj16.refreshControl = refreshControl;
     merged1 = Object.assign(overrideProps);
     items9 = [, , , , , , ];
     items9[0] = tmp20Result5;
@@ -535,7 +534,7 @@ class RecyclerViewComponent {
       tmp49 = tmp20Result4;
     }
     items9[3] = tmp49;
-    obj3 = {
+    obj17 = {
       viewHolderCollectionRef: tmp24,
       data,
       horizontal,
@@ -591,12 +590,12 @@ class RecyclerViewComponent {
       hideStickyHeaderRelatedCell: flag2,
       inverted
     };
-    items9[4] = tmp44(tmp13(tmp14[21]).ViewHolderCollection, obj3);
+    items9[4] = tmp44(tmp13(tmp14[21]).ViewHolderCollection, obj17);
     items9[5] = renderEmpty;
     items9[6] = renderFooter;
-    obj2.children = items9;
+    obj16.children = items9;
     items10 = [, , ];
-    items10[0] = tmp45(CompatScrollView, obj2);
+    items10[0] = tmp45(CompatScrollView, obj16);
     tmp50 = null;
     if (stickyHeaderIndices) {
       tmp50 = null;
@@ -606,9 +605,9 @@ class RecyclerViewComponent {
     }
     items10[1] = tmp50;
     items10[2] = tmp20Result1;
-    obj1.children = items10;
-    obj.children = tmp45(tmp13(tmp14[19]).CompatView, obj1);
-    return tmp44(tmp13(tmp14[15]).RecyclerViewContextProvider, obj);
+    obj15.children = items10;
+    obj1.children = tmp45(tmp13(tmp14[19]).CompatView, obj15);
+    return tmp44(tmp13(tmp14[15]).RecyclerViewContextProvider, obj1);
   }
 }
 RecyclerViewComponent.displayName = "FlashList";

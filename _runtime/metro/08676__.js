@@ -99,20 +99,20 @@ const entry = {
       tmp5 = match[1];
     }
     if (tmp5) {
-      let obj1 = TextPath(8589);
-      const withoutXYResult = obj1.withoutXY(self, tmp);
+      const withoutXYResult = TextPath(8589).withoutXY(self, tmp);
       const _Object = Object;
-      let obj = { children };
-      obj = { href: tmp5, startOffset: num, method, spacing, side, alignmentBaseline, midLine };
-      const merged = Object.assign(withoutXYResult, extractFontDefault(obj, true), obj);
+      const obj3 = { children };
+      const obj4 = { href: tmp5, startOffset: num, method, spacing, side, alignmentBaseline, midLine };
+      const merged = Object.assign(withoutXYResult, extractFontDefault(obj3, true), obj4);
       withoutXYResult.ref = self.refMethod;
-      obj1 = {};
+      const obj5 = {};
+      const obj2 = TextPath(8589);
       const merged1 = Object.assign(withoutXYResult);
       return jsx(_modDef8677, {});
     } else {
       const _console = console;
       console.warn(`Invalid \`href\` prop for \`TextPath\` element, expected a href like "#id", but got: "${href}"`);
-      obj = { ref: self.refMethod, children };
+      const obj = { ref: self.refMethod, children };
       return jsx(_modDef8673, { ref: self.refMethod, children });
     }
     tmp = _objectWithoutProperties(props, closure_3);

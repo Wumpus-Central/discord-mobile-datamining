@@ -39,14 +39,14 @@ export default function setUpDefaltReactNativeEnvironment() {
     __fetchSegment;
     AppRegistry;
     if (obj2.enableIntersectionObserverByDefault()) {
-      let tmpResult = _mod262;
-      tmpResult.default();
-    }
-    tmpResult = _mod27;
-    if (tmpResult.enableMutationObserverByDefault()) {
-      _mod267.default();
-      const tmpResult1 = _mod267;
+      _mod262.default();
+      const tmpResult = _mod262;
     }
     obj2 = _mod27;
+    if (tmpResult3.enableMutationObserverByDefault()) {
+      _mod267.default();
+      const tmpResult4 = _mod267;
+    }
+    tmpResult3 = _mod27;
   }
 };

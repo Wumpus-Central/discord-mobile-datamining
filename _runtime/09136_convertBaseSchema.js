@@ -125,10 +125,10 @@ function convertBaseSchema(not, refs) {
                   if (mapped.length < 2) {
                     let first = mapped[0];
                   } else {
-                    items = [, ];
+                    const items1 = [, ];
                     [arr8[0], arr8[1]] = mapped;
                     HermesBuiltin.arraySpread(mapped.slice(2), 2);
-                    first = obj.union(items);
+                    first = obj.union(items1);
                   }
                   return first;
                 }
@@ -275,9 +275,9 @@ function convertBaseSchema(not, refs) {
                               if (0 === Object.keys(obj).length) {
                                 booleanResult = obj.record(tmp80, anyResult);
                               } else {
-                                let objectResult = obj.object(obj);
-                                booleanResult = obj.intersection(objectResult.passthrough(), obj.looseRecord(tmp80, anyResult));
-                                const passthroughResult = objectResult.passthrough();
+                                const objectResult = obj.object(obj);
+                                booleanResult = obj.intersection(obj.object(obj).passthrough(), obj.looseRecord(tmp80, anyResult));
+                                const passthroughResult = obj.object(obj).passthrough();
                               }
                             }
                             anyResult = obj.any();
@@ -285,7 +285,7 @@ function convertBaseSchema(not, refs) {
                             const patternProperties = not.patternProperties;
                             const _Object2 = Object;
                             const keys = Object.keys(patternProperties);
-                            const items1 = [];
+                            const items2 = [];
                             for (const item10130 of keys) {
                               let tmp50 = convertSchema(patternProperties[item10130], arg1);
                               let stringResult1 = obj.string();
@@ -293,47 +293,47 @@ function convertBaseSchema(not, refs) {
                               let tmp53 = new.target;
                               let tmp54 = new.target;
                               let regExp1 = new RegExp(item10130);
-                              let arr = items1.push(obj.looseRecord(stringResult1.regex(regExp1), tmp50));
+                              let arr = items2.push(obj.looseRecord(stringResult1.regex(regExp1), tmp50));
                               continue;
                             }
-                            const items2 = [];
+                            const items3 = [];
                             const _Object3 = Object;
                             if (Object.keys(obj).length > 0) {
-                              objectResult = obj.object(obj);
-                              items2.push(objectResult.passthrough());
+                              items3.push(obj.object(obj).passthrough());
+                              const objectResult4 = obj.object(obj);
                             }
-                            const push = items2.push;
-                            const items3 = [];
-                            HermesBuiltin.arraySpread(items1, 0);
-                            HermesBuiltin.apply(items3, items2);
-                            if (0 === items2.length) {
+                            const push = items3.push;
+                            const items4 = [];
+                            HermesBuiltin.arraySpread(items2, 0);
+                            HermesBuiltin.apply(items4, items3);
+                            if (0 === items3.length) {
                               booleanResult = obj.object({}).passthrough();
-                              const objectResult1 = obj.object({});
-                            } else if (1 === items2.length) {
-                              booleanResult = items2[0];
+                              const objectResult5 = obj.object({});
+                            } else if (1 === items3.length) {
+                              booleanResult = items3[0];
                             } else {
-                              const intersectionResult = obj.intersection(items2[0], items2[1]);
+                              const intersectionResult = obj.intersection(items3[0], items3[1]);
                               let num5 = 2;
                               let intersectionResult1 = intersectionResult;
                               let tmp73 = intersectionResult;
-                              if (2 < items2.length) {
+                              if (2 < items3.length) {
                                 do {
-                                  intersectionResult1 = obj.intersection(intersectionResult1, items2[num5]);
+                                  intersectionResult1 = obj.intersection(intersectionResult1, items3[num5]);
                                   num5 = num5 + 1;
                                   tmp73 = intersectionResult1;
-                                  length = items2.length;
+                                  length = items3.length;
                                 } while (num5 < length);
                               }
                               booleanResult = tmp73;
                             }
                           } else {
-                            const objectResult2 = obj.object(obj);
+                            const objectResult6 = obj.object(obj);
                             if (false === not.additionalProperties) {
-                              let strictResult = objectResult2.strict();
+                              let strictResult = objectResult6.strict();
                             } else if (typeof not.additionalProperties === "object") {
-                              strictResult = objectResult2.catchall(convertSchema(not.additionalProperties, refs));
+                              strictResult = objectResult6.catchall(convertSchema(not.additionalProperties, refs));
                             } else {
-                              strictResult = objectResult2.passthrough();
+                              strictResult = objectResult6.passthrough();
                             }
                             booleanResult = strictResult;
                           }
@@ -483,9 +483,9 @@ function convertSchema(items, version) {
   closure_0 = version;
   if (typeof items === "boolean") {
     if (items) {
-      let anyResult = obj4.any();
+      let anyResult = obj.any();
     } else {
-      anyResult = obj4.never();
+      anyResult = obj.never();
     }
     return anyResult;
   } else {
@@ -513,10 +513,9 @@ function convertSchema(items, version) {
         const xorResult = obj.xor(oneOf.map((item) => convertSchema(item, closure_0)));
         let intersectionResult1 = xorResult;
         if (tmp) {
-          intersectionResult1 = obj2.intersection(tmp2, xorResult);
+          intersectionResult1 = obj.intersection(tmp2, xorResult);
         }
         anyResult1 = intersectionResult1;
-        obj2 = obj;
       }
     }
     let tmp10 = anyResult1;
@@ -564,18 +563,18 @@ function convertSchema(items, version) {
     if (true === items.readOnly) {
       readonlyResult = obj.readonly(nullableResult);
     }
-    obj = {};
+    const obj3 = {};
     items = ["$id", "id", "$comment", "$anchor", "$vocabulary", "$dynamicRef", "$dynamicAnchor"];
     for (const item10086 of items) {
       if (item10086 in arg0) {
-        obj[item10086] = arg0[item10086];
+        obj3[item10086] = arg0[item10086];
       }
       continue;
     }
     const items1 = ["contentEncoding", "contentMediaType", "contentSchema"];
     for (const item10096 of items1) {
       if (item10096 in arg0) {
-        obj[item10096] = arg0[item10096];
+        obj3[item10096] = arg0[item10096];
       }
       continue;
     }
@@ -583,14 +582,14 @@ function convertSchema(items, version) {
     const keys = Object.keys(items);
     for (const item10110 of keys) {
       if (!set.has(item10110)) {
-        obj[item10110] = arg0[item10110];
+        obj3[item10110] = arg0[item10110];
       }
       continue;
     }
     const _Object2 = Object;
-    if (Object.keys(obj).length > 0) {
+    if (Object.keys(obj3).length > 0) {
       const registry = version.registry;
-      registry.add(readonlyResult, obj);
+      registry.add(readonlyResult, obj3);
     }
     return readonlyResult;
   }

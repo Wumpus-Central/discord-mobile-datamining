@@ -32,21 +32,21 @@ export const utf8ToBytes = function utf8ToBytes(str, arg1) {
             if (sum < 128) {
               let diff1 = tmp10 - 1;
               if (diff1 >= 0) {
-                arr = items.push(sum);
+                let arr9 = items.push(sum);
                 tmp12 = null;
                 tmp13 = diff1;
               }
             } else if (sum < 2048) {
               let diff2 = tmp10 - 2;
               if (diff2 >= 0) {
-                let arr1 = items.push(sum >> 6 | 192, 63 & sum | 128);
+                let arr10 = items.push(sum >> 6 | 192, 63 & sum | 128);
                 tmp12 = null;
                 tmp13 = diff2;
               }
             } else if (sum < 65536) {
               let diff3 = tmp10 - 3;
               if (diff3 >= 0) {
-                let arr2 = items.push(sum >> 12 | 224, sum >> 6 & 63 | 128, 63 & sum | 128);
+                let arr11 = items.push(sum >> 12 | 224, sum >> 6 & 63 | 128, 63 & sum | 128);
                 tmp12 = null;
                 tmp13 = diff3;
               }
@@ -55,7 +55,7 @@ export const utf8ToBytes = function utf8ToBytes(str, arg1) {
             } else {
               let diff4 = tmp10 - 4;
               if (diff4 >= 0) {
-                let arr3 = items.push(sum >> 18 | 240, sum >> 12 & 63 | 128, sum >> 6 & 63 | 128, 63 & sum | 128);
+                let arr12 = items.push(sum >> 18 | 240, sum >> 12 & 63 | 128, sum >> 6 & 63 | 128, 63 & sum | 128);
                 tmp12 = null;
                 tmp13 = diff4;
               }
@@ -65,7 +65,7 @@ export const utf8ToBytes = function utf8ToBytes(str, arg1) {
             tmp12 = tmp;
             tmp13 = diff5;
             if (-1 < diff5) {
-              let arr4 = items.push(239, 191, 189);
+              let arr13 = items.push(239, 191, 189);
               tmp12 = tmp;
               tmp13 = diff5;
             }
@@ -77,7 +77,7 @@ export const utf8ToBytes = function utf8ToBytes(str, arg1) {
               tmp12 = tmp;
               tmp13 = diff6;
               if (-1 < diff6) {
-                let arr5 = items.push(239, 191, 189);
+                let arr14 = items.push(239, 191, 189);
                 tmp12 = tmp;
                 tmp13 = diff6;
               }
@@ -98,7 +98,7 @@ export const utf8ToBytes = function utf8ToBytes(str, arg1) {
       sum = charCodeAtResult;
       tmp10 = tmp7;
       if (tmp6) {
-        let arr6 = items.push(239, 191, 189);
+        let arr15 = items.push(239, 191, 189);
         sum = charCodeAtResult;
         tmp10 = tmp7;
       }

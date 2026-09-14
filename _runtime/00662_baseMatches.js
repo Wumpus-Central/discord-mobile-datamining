@@ -3,6 +3,8 @@
 // Module 662 (baseMatches)
 import baseIsMatch from "baseIsMatch" /* 664 */;
 
+const require = globalThis.__r;
+
 
 export default function baseMatches(arg0) {
   _require = arg0;

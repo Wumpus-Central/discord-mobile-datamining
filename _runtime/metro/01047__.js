@@ -6,6 +6,8 @@ import convertToNormalizedObject from "convertToNormalizedObject" /* 879 */;
 import DEFAULT_BREADCRUMB_LEVEL2 from "DEFAULT_BREADCRUMB_LEVEL" /* 880 */;
 import init from "init" /* 1000 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 let dependencyMap = arg6;
 const weakMap = new WeakMap();

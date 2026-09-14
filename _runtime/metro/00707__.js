@@ -11,10 +11,10 @@ function withScope(arg0) {
   const sentryCarrier = AsyncContextStack(690).getSentryCarrier(mainCarrier);
   let stack = sentryCarrier.stack;
   if (!stack) {
-    let tmpResult = AsyncContextStack(712);
-    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-    tmpResult = AsyncContextStack(712);
-    stack = new _moduleResult(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+    const defaultCurrentScope = AsyncContextStack(712).getDefaultCurrentScope();
+    const tmpResult = AsyncContextStack(712);
+    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(712).getDefaultIsolationScope());
+    const tmpResult2 = AsyncContextStack(712);
   }
   sentryCarrier.stack = stack;
   return stack.withScope(arg0);
@@ -26,10 +26,10 @@ function withSetScope(scope, arg1) {
   const sentryCarrier = AsyncContextStack(690).getSentryCarrier(mainCarrier);
   let stack = sentryCarrier.stack;
   if (!stack) {
-    let tmpResult = AsyncContextStack(712);
-    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-    tmpResult = AsyncContextStack(712);
-    stack = new _moduleResult(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+    const defaultCurrentScope = AsyncContextStack(712).getDefaultCurrentScope();
+    const tmpResult = AsyncContextStack(712);
+    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(712).getDefaultIsolationScope());
+    const tmpResult2 = AsyncContextStack(712);
   }
   sentryCarrier.stack = stack;
   return stack.withScope(() => {
@@ -44,10 +44,10 @@ function withIsolationScope(arg0) {
   const sentryCarrier = AsyncContextStack(690).getSentryCarrier(mainCarrier);
   let stack = sentryCarrier.stack;
   if (!stack) {
-    let tmpResult = tmp(712);
-    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-    tmpResult = tmp(712);
-    stack = new closure_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+    const defaultCurrentScope = tmp(712).getDefaultCurrentScope();
+    const tmpResult = tmp(712);
+    stack = new closure_3(defaultCurrentScope, tmp(712).getDefaultIsolationScope());
+    const tmpResult2 = tmp(712);
   }
   sentryCarrier.stack = stack;
   return stack.withScope(() => {
@@ -56,10 +56,10 @@ function withIsolationScope(arg0) {
     const sentryCarrier = AsyncContextStack(690).getSentryCarrier(mainCarrier);
     let stack = sentryCarrier.stack;
     if (!stack) {
-      let tmp2Result = AsyncContextStack(712);
-      const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
-      tmp2Result = AsyncContextStack(712);
-      stack = new closure_2_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
+      const defaultCurrentScope = AsyncContextStack(712).getDefaultCurrentScope();
+      const tmp2Result = AsyncContextStack(712);
+      stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(712).getDefaultIsolationScope());
+      const tmp2Result2 = AsyncContextStack(712);
     }
     sentryCarrier.stack = stack;
     return closure_0(stack.getIsolationScope());
@@ -182,10 +182,10 @@ export function getStackAsyncContextStrategy() {
       let sentryCarrier = closure_0(690).getSentryCarrier(mainCarrier);
       let stack = sentryCarrier.stack;
       if (!stack) {
-        let tmpResult = tmp(712);
-        let defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-        tmpResult = tmp(712);
-        stack = new closure_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+        let defaultCurrentScope = tmp(712).getDefaultCurrentScope();
+        const tmpResult = tmp(712);
+        stack = new closure_3(defaultCurrentScope, tmp(712).getDefaultIsolationScope());
+        const tmpResult2 = tmp(712);
       }
       sentryCarrier.stack = stack;
       return stack.withScope(() => {
@@ -194,10 +194,10 @@ export function getStackAsyncContextStrategy() {
         const sentryCarrier = AsyncContextStack(690).getSentryCarrier(mainCarrier);
         let stack = sentryCarrier.stack;
         if (!stack) {
-          let tmp2Result = AsyncContextStack(712);
-          const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
-          tmp2Result = AsyncContextStack(712);
-          stack = new closure_2_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
+          const defaultCurrentScope = AsyncContextStack(712).getDefaultCurrentScope();
+          const tmp2Result = AsyncContextStack(712);
+          stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(712).getDefaultIsolationScope());
+          const tmp2Result2 = AsyncContextStack(712);
         }
         sentryCarrier.stack = stack;
         return closure_0(stack.getIsolationScope());
@@ -209,10 +209,10 @@ export function getStackAsyncContextStrategy() {
       const sentryCarrier = AsyncContextStack(690).getSentryCarrier(mainCarrier);
       let stack = sentryCarrier.stack;
       if (!stack) {
-        let tmpResult = AsyncContextStack(712);
-        const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-        tmpResult = AsyncContextStack(712);
-        stack = new closure_1_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+        const defaultCurrentScope = AsyncContextStack(712).getDefaultCurrentScope();
+        const tmpResult = AsyncContextStack(712);
+        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(712).getDefaultIsolationScope());
+        const tmpResult2 = AsyncContextStack(712);
       }
       sentryCarrier.stack = stack;
       return stack.getScope();
@@ -223,10 +223,10 @@ export function getStackAsyncContextStrategy() {
       const sentryCarrier = AsyncContextStack(690).getSentryCarrier(mainCarrier);
       let stack = sentryCarrier.stack;
       if (!stack) {
-        let tmpResult = AsyncContextStack(712);
-        const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-        tmpResult = AsyncContextStack(712);
-        stack = new closure_1_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
+        const defaultCurrentScope = AsyncContextStack(712).getDefaultCurrentScope();
+        const tmpResult = AsyncContextStack(712);
+        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(712).getDefaultIsolationScope());
+        const tmpResult2 = AsyncContextStack(712);
       }
       sentryCarrier.stack = stack;
       return stack.getIsolationScope();

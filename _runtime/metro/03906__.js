@@ -1,19 +1,21 @@
 // === Module 3906: ? ===
 
 // Module 3906
-import startOfDay from "startOfDay" /* 3889 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import startOfDay_mod from "startOfDay" /* 3889 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let startOfDay = startOfDay_mod;
 if (!startOfDay) {
-  let obj = { default: startOfDay };
+  const obj = { default: startOfDay };
   let tmp3 = obj;
 } else {
   tmp3 = startOfDay;
 }
 startOfDay = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

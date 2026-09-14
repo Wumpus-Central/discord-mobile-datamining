@@ -76,17 +76,17 @@ const items = [
         if (obj == null) {
           obj = {};
         }
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(obj);
         delete tmp2[tmp];
-        const obj1 = {};
-        const merged1 = Object.assign(obj);
+        const obj3 = {};
+        const merged1 = Object.assign(obj2);
         const _map2 = self._map;
         const merged2 = Object.assign(_map2.get(_zod));
         const _Object = Object;
         let tmp13;
-        if (Object.keys(obj1).length) {
-          tmp13 = obj1;
+        if (Object.keys(obj3).length) {
+          tmp13 = obj3;
         }
         return tmp13;
       } else {
@@ -106,8 +106,8 @@ const items = [
 const _moduleResult = _createClass($ZodRegistry, items);
 let closure_1 = _moduleResult;
 if (globalThis.__zod_globalRegistry == null) {
-  const tmpResult = new _moduleResult();
-  tmp4.__zod_globalRegistry = tmpResult;
+  const tmpResult1 = new _moduleResult();
+  tmp4.__zod_globalRegistry = tmpResult1;
 }
 
 export const registry = function registry() {

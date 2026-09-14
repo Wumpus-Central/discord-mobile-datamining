@@ -1,16 +1,16 @@
 // === Module 10569: ? ===
 
 // Module 10569
-import _mod10559 from "module_10559" /* 10559 */;
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10560 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10567 */;
+import _mod10560 from "module_10560" /* 10560 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10561 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10568 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENMonthNameMiddleEndianParser = require;
+const ENMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,27 +30,28 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(" + repeatedTimeunitPattern.matchAnyPattern(_mod10559.MONTH_DICTIONARY) + ")(?:-|/|\\s*,?\\s*)(" + _mod10559.ORDINAL_NUMBER_PATTERN + ")(?!\\s*(?:am|pm))\\s*(?:(?:to|\\-)\\s*(" + _mod10559.ORDINAL_NUMBER_PATTERN + ")\\s*)?(?:(?:-|/|\\s*,\\s*|\\s+)(" + _mod10559.YEAR_PATTERN + "))?(?=\\W|$)(?!\\:\\d)", "i");
-class ENMonthNameMiddleEndianParser {
-  constructor(arg0) {
+const regExp = new RegExp("(?:on\\s{0,3})?(" + _mod10560.ORDINAL_NUMBER_PATTERN + ")(?:\\s{0,3}(?:to|\\-|\\\u2013|until|through|till)?\\s{0,3}(" + _mod10560.ORDINAL_NUMBER_PATTERN + "))?(?:-|/|\\s{0,3}(?:of)?\\s{0,3})(" + repeatedTimeunitPattern.matchAnyPattern(_mod10560.MONTH_DICTIONARY) + ")(?:(?:-|/|,?\\s{0,3})(" + _mod10560.YEAR_PATTERN + "(?!\\w)))?(?=\\W|$)", "i");
+class ENMonthNameLittleEndianParser {
+  constructor() {
     self = this;
-    tmp = c2(this, ENMonthNameMiddleEndianParser);
+    tmp = c2(this, ENMonthNameLittleEndianParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMonthNameMiddleEndianParser);
+    obj = closure_4(ENMonthNameLittleEndianParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.shouldSkipYearLikeDate = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(ENMonthNameMiddleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -61,45 +62,36 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, index) {
-      const tmp3 = ENMonthNameMiddleEndianParser(10559).MONTH_DICTIONARY[index[1].toLowerCase(index[1])];
-      const result = ENMonthNameMiddleEndianParser(10559).parseOrdinalNumberPattern(index[2]);
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = ENMonthNameLittleEndianParser(10560).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const result = ENMonthNameLittleEndianParser(10560).parseOrdinalNumberPattern(index[1]);
       if (result > 31) {
+        index.index = index.index + index[1].length;
         return null;
       } else {
-        const self = this;
-        if (this.shouldSkipYearLikeDate) {
-          if (!index[3]) {
-            if (!index[4]) {
-              if (str2.match(/^2[0-5]$/)) {
-                return null;
-              }
-              str2 = index[2];
-            }
-          }
-        }
-        const date = { day: result, month: tmp3 };
-        const parsingComponents = createParsingComponents.createParsingComponents(date);
-        const addTagResult = parsingComponents.addTag("parser/ENMonthNameMiddleEndianParser");
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", result);
         if (index[4]) {
-          addTagResult.assign("year", ENMonthNameMiddleEndianParser(10559).parseYear(index[4]));
+          const start2 = parsingResult.start;
+          start2.assign("year", ENMonthNameLittleEndianParser(10560).parseYear(index[4]));
         } else {
-          addTagResult.imply("year", ENMonthNameMiddleEndianParser(10561).findYearClosestToRef(createParsingComponents.refDate, result, tmp3));
+          const start = parsingResult.start;
+          start.imply("year", ENMonthNameLittleEndianParser(10562).findYearClosestToRef(createParsingResult.refDate, result, tmp4));
         }
-        if (index[3]) {
-          const result1 = ENMonthNameMiddleEndianParser(10559).parseOrdinalNumberPattern(index[3]);
-          const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
-          parsingResult.start = addTagResult;
-          parsingResult.end = addTagResult.clone();
+        if (index[2]) {
+          const start3 = parsingResult.start;
+          const result1 = ENMonthNameLittleEndianParser(10560).parseOrdinalNumberPattern(index[2]);
+          parsingResult.end = start3.clone();
           const end = parsingResult.end;
           end.assign("day", result1);
-          return parsingResult;
-        } else {
-          return addTagResult;
         }
+        return parsingResult;
       }
     }
   }
 ];
 
-export default _createClass(ENMonthNameMiddleEndianParser, items);
+export default _createClass(ENMonthNameLittleEndianParser, items);

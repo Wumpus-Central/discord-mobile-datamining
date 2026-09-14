@@ -1,10 +1,10 @@
 // === Module 4465: ? ===
 
 // Module 4465
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 import emptyFunction from "module_4466" /* 4466 */;
 import warning from "warning" /* 1107 */;
-import invariant from "invariant" /* 1108 */;
+import invariant_mod from "invariant" /* 1108 */;
 
 let Component2 = require;
 let closure_4 = function _extends() {
@@ -51,6 +51,7 @@ let fn = function _setPrototypeOf(arg0, Component) {
   }
   return fn(arg0, Component);
 };
+let noop = noop_mod;
 if (noop) {
   if (typeof noop === "object") {
     if ("default" in noop) {
@@ -58,6 +59,7 @@ if (noop) {
     }
   }
 }
+let invariant = invariant_mod;
 if (invariant) {
   if (typeof invariant === "object") {
     if ("default" in invariant) {
@@ -132,20 +134,26 @@ let closure_10 = forwardRef((innerRef, arg1) => {
   ({ navigate: Component2, onClick: dependencyMap } = innerRef);
   const items = ["innerRef", "navigate", "onClick"];
   if (null == innerRef) {
-    let obj = {};
+    let obj2 = {};
   } else {
-    obj = {};
+    const obj = {};
     const _Object = Object;
     const keys = Object.keys(innerRef);
-    for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
-      let tmp2 = keys[num3];
-      if (0 > items.indexOf(tmp2)) {
-        obj[tmp2] = innerRef[tmp2];
-      }
+    let num3 = 0;
+    obj2 = obj;
+    if (0 < keys.length) {
+      do {
+        let tmp2 = keys[num3];
+        if (0 > items.indexOf(tmp2)) {
+          obj[tmp2] = innerRef[tmp2];
+        }
+        num3 = num3 + 1;
+        obj2 = obj;
+      } while (num3 < keys.length);
     }
   }
-  const target = obj.target;
-  obj = {
+  const target = obj2.target;
+  let tmp4 = closure_4({}, obj2, {
     onClick(defaultPrevented) {
       try {
         if (dependencyMap) {
@@ -176,8 +184,7 @@ let closure_10 = forwardRef((innerRef, arg1) => {
         throw tmp8;
       }
     }
-  };
-  let tmp4 = closure_4({}, obj, obj);
+  });
   tmp4.ref = forwardRefShim !== forwardRefShim && arg1 || innerRef.innerRef;
   return <a {......tmp4} />;
 });
@@ -190,16 +197,20 @@ const forwardRefResult = forwardRef((component, arg1) => {
   ({ replace: noop, to: invariant, innerRef: closure_4 } = component);
   const items = ["component", "replace", "to", "innerRef"];
   if (null == component) {
-    let obj = {};
+    let obj2 = {};
   } else {
-    obj = {};
+    let obj = {};
     const _Object = Object;
     const keys = Object.keys(component);
-    for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
-      let tmp2 = keys[num3];
-      if (0 > items.indexOf(tmp2)) {
-        obj[tmp2] = component[tmp2];
-      }
+    let num3 = 0;
+    if (0 < keys.length) {
+      do {
+        let tmp2 = keys[num3];
+        if (0 > items.indexOf(tmp2)) {
+          obj[tmp2] = component[tmp2];
+        }
+        num3 = num3 + 1;
+      } while (num3 < keys.length);
     }
   }
   return noop.createElement(Component2(component[5]).__RouterContext.Consumer, null, (history) => {
@@ -215,16 +226,16 @@ const forwardRefResult = forwardRef((component, arg1) => {
       }
       let _location = history.location;
       if (typeof tmp3 === "function") {
-        _location = tmp4Result;
+        let _location1 = tmp4Result;
         if (typeof tmp4Result === "string") {
-          const obj2 = closure_0(component[4]);
-          _location = obj2.createLocation(tmp4Result, null, null, _location);
+          obj2 = closure_0(component[4]);
+          _location1 = obj2.createLocation(tmp4Result, null, null, _location);
         }
         let str = "";
-        if (_location) {
-          str = history.createHref(_location);
+        if (_location1) {
+          str = history.createHref(_location1);
         }
-        obj = {
+        let obj = {
           href: str,
           navigate() {
                 if (typeof resolveToLocation === "function") {
@@ -250,13 +261,13 @@ const forwardRefResult = forwardRef((component, arg1) => {
                   } else {
                     throw new TypeError("Trying to call a non-function");
                   }
-                  obj = Component2(1101);
+                  const obj = Component2(1101);
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
               }
         };
-        const tmp10 = innerRef({}, obj, obj);
+        const tmp10 = innerRef({}, obj2, obj);
         if (closure_1_8 !== closure_1_9) {
           let tmp14 = closure_0;
           if (!closure_0) {
@@ -284,8 +295,8 @@ if (undefined === forwardRef2) {
   forwardRef2 = forwardRefShim$1;
 }
 
-export const MemoryRouter = Component2(4469).Redirect;
-export const Prompt = Component2(4469).Redirect;
+export const MemoryRouter = Component2(4469).MemoryRouter;
+export const Prompt = Component2(4469).Prompt;
 export const Redirect = Component2(4469).Redirect;
 export const Route = Component2(4469).Route;
 export const Router = Component2(4469).Router;
@@ -316,16 +327,20 @@ export const NavLink = forwardRef2((aria_current, arg1) => {
   ({ activeStyle: invariant, className: closure_4, exact: fn, isActive: resolveToLocation, location: normalizeToLocation, sensitive: forwardRefShim, strict: forwardRefShim, style: closure_10, to: closure_11, innerRef: forwardRefShim$1 } = aria_current);
   const items = ["aria-current", "activeClassName", "activeStyle", "className", "exact", "isActive", "location", "sensitive", "strict", "style", "to", "innerRef"];
   if (null == aria_current) {
-    let obj = {};
+    let obj2 = {};
   } else {
-    obj = {};
+    let obj = {};
     const _Object = Object;
     const keys = Object.keys(aria_current);
-    for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
-      let tmp3 = keys[num3];
-      if (0 > items.indexOf(tmp3)) {
-        obj[tmp3] = aria_current[tmp3];
-      }
+    let num3 = 0;
+    if (0 < keys.length) {
+      do {
+        let tmp3 = keys[num3];
+        if (0 > items.indexOf(tmp3)) {
+          obj[tmp3] = aria_current[tmp3];
+        }
+        num3 = num3 + 1;
+      } while (num3 < keys.length);
     }
   }
   return str2.createElement(Component2(str[5]).__RouterContext.Consumer, null, (location) => {
@@ -342,20 +357,20 @@ export const NavLink = forwardRef2((aria_current, arg1) => {
         tmp4Result = closure_1_11(_location);
       }
       if (typeof tmp3 === "function") {
-        _location = tmp4Result;
+        let _location1 = tmp4Result;
         if (typeof tmp4Result === "string") {
           const obj4 = Component2(1101);
-          _location = obj4.createLocation(tmp4Result, null, null, _location);
+          _location1 = obj4.createLocation(tmp4Result, null, null, _location);
         }
         let replaced = str;
-        if (_location.pathname) {
+        if (_location1.pathname) {
           replaced = str.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1");
         }
         let matchPathResult = null;
         if (replaced) {
-          Component2(4469);
-          obj = { path: replaced, exact, sensitive, strict };
-          matchPathResult = obj.matchPath(_location.pathname, obj);
+          obj2 = { path: replaced, exact, sensitive, strict };
+          matchPathResult = Component2(4469).matchPath(_location.pathname, obj2);
+          const obj = Component2(4469);
         }
         let tmp14Result = matchPathResult;
         if (closure_1_6) {
@@ -390,8 +405,8 @@ export const NavLink = forwardRef2((aria_current, arg1) => {
         if (!tmp27) {
           tmp27 = null;
         }
-        obj = { "aria-current": tmp27, className: tmp22, style: tmp21, to: _location };
-        const tmp26Result = closure_4(obj, obj);
+        const obj3 = { "aria-current": tmp27, className: tmp22, style: tmp21, to: _location1 };
+        const tmp26Result = closure_4(obj3, obj2);
         if (forwardRefShim$1 !== forwardRefShim$1) {
           let tmp33 = closure_0;
           if (!closure_0) {

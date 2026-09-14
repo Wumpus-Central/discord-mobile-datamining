@@ -6,6 +6,8 @@ import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6824 */;
 import _mod6828 from "module_6828" /* 6828 */;
 import _slicedToArray from "module_32" /* 32 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function isSupportedGesture(gestures) {
   if (obj.isComposedGesture(gestures)) {
@@ -49,8 +51,7 @@ export const useJSResponderHandler = function useJSResponderHandler(gesture) {
   const items = [gesture];
   closure_5(() => {
     const Reanimated = gesture(6799).Reanimated;
-    let obj = gesture(6813);
-    const enabledSharedValues = obj.getEnabledSharedValues(Reanimated);
+    const enabledSharedValues = gesture(6813).getEnabledSharedValues(Reanimated);
     if (undefined !== Reanimated) {
       if (0 !== enabledSharedValues.length) {
         const current = runOnJS.current;
@@ -64,8 +65,8 @@ export const useJSResponderHandler = function useJSResponderHandler(gesture) {
               continue;
             }
           };
-          obj = { runOnJS };
-          fn.__closure = obj;
+          const obj2 = { runOnJS };
+          fn.__closure = obj2;
           fn.__workletHash = 3030529712101;
           fn.__initData = __initData;
           const fn2 = function l(arg0, arg1) {
@@ -87,6 +88,7 @@ export const useJSResponderHandler = function useJSResponderHandler(gesture) {
         }
       }
     }
+    const obj = gesture(6813);
   }, items);
   const items1 = [tmp2[0], gesture];
   const tmp7 = closure_4(() => {

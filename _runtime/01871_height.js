@@ -12,8 +12,7 @@ const styles = StyleSheet.create({ absolute: { position: "absolute" }, stretch: 
 
 export default function _default(visible) {
   let children = visible.visible;
-  let obj = height(width[3]);
-  let size = obj.useWindowDimensions();
+  let size = height(width[3]).useWindowDimensions();
   height = size.height;
   width = size.width;
   let items = [height, width];
@@ -23,8 +22,9 @@ export default function _default(visible) {
       return size;
     }, items)
   ];
-  obj = { visible: children, children: null };
-  obj = {
+  const obj = height(width[3]);
+  const obj2 = { visible: children, children: null };
+  const obj3 = {
     collapsable: false,
     style: useMemo(() => {
       const items = [closure_1_5.absolute, undefined, closure_1_5.stretch];
@@ -35,17 +35,10 @@ export default function _default(visible) {
   if (children) {
     children = visible.children;
   }
-  obj.children = children;
-  obj.children = <closure_3 collapsable={false} style={useMemo(() => {
+  obj3.children = children;
+  obj2.children = <closure_3 collapsable={false} style={useMemo(() => {
     const items = [closure_1_5.absolute, undefined, closure_1_5.stretch];
     return items;
   }, items1)}>{null}</closure_3>;
-  return jsx(height(width[4]).RCTOverKeyboardView, {
-    collapsable: false,
-    style: useMemo(() => {
-      const items = [closure_1_5.absolute, undefined, closure_1_5.stretch];
-      return items;
-    }, items1),
-    children: null
-  });
+  return jsx(height(width[4]).RCTOverKeyboardView, { visible: children, children: null });
 };

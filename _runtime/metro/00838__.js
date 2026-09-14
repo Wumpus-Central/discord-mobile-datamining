@@ -6,6 +6,8 @@ import truncateTextByBytes from "truncateTextByBytes" /* 826 */;
 import contentUnionToMessages from "contentUnionToMessages" /* 840 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
+const require = globalThis.__r;
+
 function addPrivateRequestAttributes(setAttributes, config) {
   let systemInstruction = "config" in config && config.config && typeof config.config === "object";
   if (systemInstruction) {
@@ -17,9 +19,8 @@ function addPrivateRequestAttributes(setAttributes, config) {
   const items = [];
   if (systemInstruction) {
     const push = items.push;
-    let obj = contentUnionToMessages;
     const items1 = [];
-    HermesBuiltin.arraySpread(obj.contentUnionToMessages(config.config.systemInstruction, "system"), 0);
+    HermesBuiltin.arraySpread(contentUnionToMessages.contentUnionToMessages(config.config.systemInstruction, "system"), 0);
     HermesBuiltin.apply(items1, items);
   }
   if ("history" in config) {
@@ -41,11 +42,11 @@ function addPrivateRequestAttributes(setAttributes, config) {
     HermesBuiltin.apply(items4, items);
   }
   if (tmp33) {
-    obj = {};
-    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = items.length;
+    const obj5 = {};
+    obj5[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = items.length;
     const _JSON = JSON;
-    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = JSON.stringify(truncateTextByBytes.truncateGenAiMessages(items));
-    setAttributes.setAttributes(obj);
+    obj5[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = JSON.stringify(truncateTextByBytes.truncateGenAiMessages(items));
+    setAttributes.setAttributes(obj5);
   }
   tmp33 = Array.isArray(items) && items.length;
 }
@@ -74,21 +75,19 @@ export const extractModel = function extractModel(model, model2) {
   return "unknown";
 };
 export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(arg0, arg1) {
-  obj = require("module_713");
-  const client = obj.getClient();
+  const client = require("module_713").getClient();
   let sendDefaultPii;
   if (client != null) {
     sendDefaultPii = client.getOptions().sendDefaultPii;
   }
   const BooleanResult = Boolean(sendDefaultPii);
-  obj = { recordInputs: BooleanResult, recordOutputs: BooleanResult };
+  obj2 = { recordInputs: BooleanResult, recordOutputs: BooleanResult };
   const merged = Object.assign(arg1);
   _require = "";
-  obj = {
+  const proxy = new Proxy(arg0, {
     get(self, arg1, arg2) {
       let value = Reflect.get(self, arg1, arg2);
-      let obj1 = str(dependencyMap[3]);
-      let methodPath = obj1.buildMethodPath(str, String(arg1));
+      let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
       if (typeof value === "function") {
         if (tmpResult.shouldInstrument(methodPath)) {
           if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
@@ -101,10 +100,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       closure_0 = arr;
                       dependencyMap = arg2;
                       const first = arg2[0];
-                      let obj = {};
+                      const obj = {};
                       obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                      let obj1 = str(dependencyMap[3]);
-                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
                       obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
                       const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                       if (first) {
@@ -121,26 +119,26 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 if (tmp7) {
                                   tmp7 = typeof config.temperature === "number";
                                 }
-                                obj = {};
+                                let obj3 = {};
                                 if (tmp7) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
                                 }
                                 if (tmp8) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
                                 }
                                 if (tmp9) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
                                 }
                                 if (tmp10) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
                                 }
                                 if (tmp11) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
                                 }
                                 if (tmp12) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
                                 }
-                                const merged = Object.assign(obj, obj);
+                                const merged = Object.assign(obj, obj3);
                                 if ("tools" in config) {
                                   let _Array = Array;
                                   if (Array.isArray(config.tools)) {
@@ -178,10 +176,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           }
                         }
                       } else {
-                        obj = {};
-                        if ("model" in obj) {
-                          if (typeof obj.model === "string") {
-                            let str2 = obj.model;
+                        let obj4 = {};
+                        if ("model" in obj4) {
+                          if (typeof obj4.model === "string") {
+                            let str2 = obj4.model;
                           }
                           obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
                         }
@@ -208,16 +206,17 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       if (str15 == null) {
                         str15 = "unknown";
                       }
-                      let tmp4Result = tmp4(tmp5[3]);
-                      const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
-                      tmp4Result = tmp4(tmp5[5]);
-                      const tmp4Result1 = str(dependencyMap[7]);
+                      let obj2 = str(dependencyMap[3]);
+                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
+                      const tmp4Result = str(dependencyMap[3]);
+                      const tmp4Result5 = str(dependencyMap[5]);
+                      const tmp4Result6 = str(dependencyMap[7]);
                       if (isStreamingMethodResult) {
-                        obj1 = { name: null, op: null, attributes: null };
+                        let obj5 = { name: null, op: null, attributes: null };
                         const _HermesInternal2 = HermesInternal;
-                        obj1.name = "" + finalOperationName + " " + str15 + " stream-response";
-                        obj1.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                        obj1.attributes = obj;
+                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
+                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
+                        obj5.attributes = obj;
                         closure_0 = closure_2((_function) => {
                           c5 = 0;
                           c6 = 0;
@@ -230,8 +229,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               if (arg0 === 1) {
                                 throw value;
                               } else if (arg0 === 2) {
-                                let obj = { value, done: true };
-                                return obj;
+                                const obj2 = { value, done: true };
+                                return obj2;
                               } else {
                                 return { value: "HermesInternal", done: null };
                               }
@@ -244,8 +243,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                     throw value;
                                   } else if (arg0 === 2) {
                                     c6 = 3;
-                                    obj = { value, done: true };
-                                    return obj;
+                                    const obj3 = { value, done: true };
+                                    return obj3;
                                   } else {
                                     closure_2 = tmp3;
                                     dependencyMap = tmp7;
@@ -261,21 +260,20 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                     }
                                     c5 = 2;
                                     c6 = 1;
-                                    const obj1 = { value: _function.apply(dependencyMap, dependencyMap), done: false };
-                                    return obj1;
+                                    const obj4 = { value: _function.apply(dependencyMap, dependencyMap), done: false };
+                                    return obj4;
                                   }
                                 } else if (1 === tmp7) {
                                   c4 = 0;
                                   closure_129_2 = tmp37;
-                                  const obj2 = { code: str(dependencyMap[9]).SPAN_STATUS_ERROR, message: "internal_error" };
-                                  closure_129_0.setStatus(obj2);
-                                  let obj4 = str(dependencyMap[10]);
-                                  const obj3 = { mechanism: null };
-                                  obj4 = { handled: false, type: "auto.ai.google_genai", data: null };
-                                  const obj5 = { function: _function };
-                                  obj4.data = obj5;
-                                  obj3.mechanism = obj4;
-                                  obj4.captureException(closure_129_2, obj3);
+                                  const obj6 = { code: str(dependencyMap[9]).SPAN_STATUS_ERROR, message: "internal_error" };
+                                  closure_129_0.setStatus(obj6);
+                                  const obj7 = { mechanism: null };
+                                  const obj8 = { handled: false, type: "auto.ai.google_genai", data: null };
+                                  const obj9 = { function: _function };
+                                  obj8.data = obj9;
+                                  obj7.mechanism = obj8;
+                                  str(dependencyMap[10]).captureException(closure_129_2, obj7);
                                   closure_129_0.end();
                                   throw closure_129_2;
                                 } else if (arg0 === 1) {
@@ -284,16 +282,15 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 } else if (arg0 === 2) {
                                   c4 = 0;
                                   c6 = 3;
-                                  const obj6 = { value, done: true };
-                                  return obj6;
+                                  const obj10 = { value, done: true };
+                                  return obj10;
                                 } else {
                                   closure_129_1 = value;
-                                  obj = str(dependencyMap[8]);
                                   const _Boolean = Boolean;
                                   c4 = 0;
                                   c6 = 3;
-                                  const obj7 = { value: obj.instrumentStream(closure_129_1, closure_129_0, Boolean(first.recordOutputs)), done: true };
-                                  return obj7;
+                                  const obj11 = { value: str(dependencyMap[8]).instrumentStream(closure_129_1, closure_129_0, Boolean(first.recordOutputs)), done: true };
+                                  return obj11;
                                 }
                               } catch (tmp37) {
                                 if (tmp4 === c4) {
@@ -306,7 +303,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             }
                           })();
                         });
-                        let startSpanManualResult = tmp4Result1.startSpanManual(obj1, function(arg0) {
+                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
                           const self = this;
                           const apply = closure_0.apply;
                           if (typeof apply === "unknown") {
@@ -316,7 +313,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           }
                           return applyArgumentsResult;
                         });
-                        const tmp4Result2 = tmp4(tmp5[3]);
+                        const tmp4Result7 = tmp4(tmp5[3]);
                       } else {
                         const _HermesInternal = HermesInternal;
                         if (closure_3) {
@@ -324,45 +321,43 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         } else {
                           combined = concat(finalOperationName, " ", str15);
                         }
-                        let obj2 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                        startSpanManualResult = tmp4Result1.startSpan(obj2, (_function) => {
+                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
+                        startSpanManualResult = tmp4Result6.startSpan(obj6, (_function) => {
                           if (tmp) {
                             closure_3(_function, first);
                           }
                           return str(dependencyMap[11]).handleCallbackErrors(() => _function.apply(closure_1, dependencyMap), (arg0) => {
-                            _function(dependencyMap[10]);
-                            let obj = { mechanism: null };
-                            obj = { handled: false, type: "auto.ai.google_genai", data: { function: _function } };
-                            obj.mechanism = obj;
-                            obj.captureException(arg0, obj);
+                            const obj2 = { mechanism: null };
+                            const obj3 = { handled: false, type: "auto.ai.google_genai", data: { function: _function } };
+                            obj2.mechanism = obj3;
+                            _function(dependencyMap[10]).captureException(arg0, obj2);
                           }, () => {
 
                           }, (modelVersion) => {
                             if (!closure_3) {
-                              let obj = closure_0;
                               recordOutputs = recordOutputs.recordOutputs;
                               if (modelVersion) {
                                 if (typeof modelVersion === "object") {
                                   if (modelVersion.modelVersion) {
-                                    const attr = obj.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, modelVersion.modelVersion);
+                                    const attr = closure_0.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, modelVersion.modelVersion);
                                   }
                                   if (modelVersion.usageMetadata) {
                                     if (typeof modelVersion.usageMetadata === "object") {
                                       const usageMetadata = modelVersion.usageMetadata;
                                       if (typeof usageMetadata.promptTokenCount === "number") {
-                                        obj = {};
-                                        obj[str(dependencyMap[1]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = usageMetadata.promptTokenCount;
-                                        obj.setAttributes(obj);
+                                        const obj2 = {};
+                                        obj2[str(dependencyMap[1]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = usageMetadata.promptTokenCount;
+                                        closure_0.setAttributes(obj2);
                                       }
                                       if (typeof usageMetadata.candidatesTokenCount === "number") {
-                                        obj = {};
-                                        obj[str(dependencyMap[1]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = usageMetadata.candidatesTokenCount;
-                                        obj.setAttributes(obj);
+                                        const obj3 = {};
+                                        obj3[str(dependencyMap[1]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = usageMetadata.candidatesTokenCount;
+                                        closure_0.setAttributes(obj3);
                                       }
                                       if (typeof usageMetadata.totalTokenCount === "number") {
-                                        const obj1 = {};
-                                        obj1[str(dependencyMap[1]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = usageMetadata.totalTokenCount;
-                                        obj.setAttributes(obj1);
+                                        const obj4 = {};
+                                        obj4[str(dependencyMap[1]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = usageMetadata.totalTokenCount;
+                                        closure_0.setAttributes(obj4);
                                       }
                                     }
                                   }
@@ -374,9 +369,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                         let mapped = candidates.map(() => { ... });
                                         let found = mapped.filter(() => { ... });
                                         if (found.length > 0) {
-                                          const obj2 = {};
-                                          obj2[""(dependencyMap[1]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = found.join("");
-                                          obj.setAttributes(obj2);
+                                          const obj5 = {};
+                                          obj5[""(dependencyMap[1]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = found.join("");
+                                          closure_0.setAttributes(obj5);
                                         }
                                       }
                                     }
@@ -390,10 +385,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                         isArray = functionCalls.length > 0;
                                       }
                                       if (isArray) {
-                                        const obj3 = {};
+                                        const obj6 = {};
                                         const _JSON = JSON;
-                                        obj3[str(dependencyMap[1]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(functionCalls);
-                                        obj.setAttributes(obj3);
+                                        obj6[str(dependencyMap[1]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(functionCalls);
+                                        closure_0.setAttributes(obj6);
                                       }
                                     }
                                   }
@@ -402,7 +397,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             }
                           });
                         });
-                        const tmp4Result3 = tmp4(tmp5[3]);
+                        const tmp4Result8 = tmp4(tmp5[3]);
                       }
                       return startSpanManualResult;
                     }
@@ -426,8 +421,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                   let obj = {
                     get(self, arg1, arg2) {
                           let value = Reflect.get(self, arg1, arg2);
-                          let obj1 = str(dependencyMap[3]);
-                          let methodPath = obj1.buildMethodPath(str, String(arg1));
+                          let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
                           if (typeof value === "function") {
                             if (tmpResult.shouldInstrument(methodPath)) {
                               if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
@@ -440,10 +434,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           closure_0 = arr;
                                           dependencyMap = arg2;
                                           const first = arg2[0];
-                                          let obj = {};
+                                          const obj = {};
                                           obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                          let obj1 = str(dependencyMap[3]);
-                                          obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                                          obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
                                           obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
                                           const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                                           if (first) {
@@ -460,26 +453,26 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                     if (tmp7) {
                                                       tmp7 = typeof config.temperature === "number";
                                                     }
-                                                    obj = {};
+                                                    let obj3 = {};
                                                     if (tmp7) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
                                                     }
                                                     if (tmp8) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
                                                     }
                                                     if (tmp9) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
                                                     }
                                                     if (tmp10) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
                                                     }
                                                     if (tmp11) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
                                                     }
                                                     if (tmp12) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
                                                     }
-                                                    const merged = Object.assign(obj, obj);
+                                                    const merged = Object.assign(obj, obj3);
                                                     if ("tools" in config) {
                                                       let _Array = Array;
                                                       if (Array.isArray(config.tools)) {
@@ -517,10 +510,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                               }
                                             }
                                           } else {
-                                            obj = {};
-                                            if ("model" in obj) {
-                                              if (typeof obj.model === "string") {
-                                                let str2 = obj.model;
+                                            let obj4 = {};
+                                            if ("model" in obj4) {
+                                              if (typeof obj4.model === "string") {
+                                                let str2 = obj4.model;
                                               }
                                               obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
                                             }
@@ -547,19 +540,20 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           if (str15 == null) {
                                             str15 = "unknown";
                                           }
-                                          let tmp4Result = tmp4(tmp5[3]);
-                                          const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
-                                          tmp4Result = tmp4(tmp5[5]);
-                                          const tmp4Result1 = str(dependencyMap[7]);
+                                          let obj2 = str(dependencyMap[3]);
+                                          const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
+                                          const tmp4Result = str(dependencyMap[3]);
+                                          const tmp4Result5 = str(dependencyMap[5]);
+                                          const tmp4Result6 = str(dependencyMap[7]);
                                           if (isStreamingMethodResult) {
-                                            obj1 = { name: null, op: null, attributes: null };
+                                            let obj5 = { name: null, op: null, attributes: null };
                                             const _HermesInternal2 = HermesInternal;
-                                            obj1.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                            obj1.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                            obj1.attributes = obj;
-                                            closure_0 = closure_2(/* F120759 */ function() { ... });
-                                            let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
-                                            const tmp4Result2 = tmp4(tmp5[3]);
+                                            obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
+                                            obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
+                                            obj5.attributes = obj;
+                                            closure_0 = closure_2(/* F120762 */ function() { ... });
+                                            let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
+                                            const tmp4Result7 = tmp4(tmp5[3]);
                                           } else {
                                             const _HermesInternal = HermesInternal;
                                             if (closure_3) {
@@ -567,9 +561,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                             } else {
                                               combined = concat(finalOperationName, " ", str15);
                                             }
-                                            let obj2 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                            startSpanManualResult = tmp4Result1.startSpan(obj2, () => { ... });
-                                            const tmp4Result3 = tmp4(tmp5[3]);
+                                            let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
+                                            startSpanManualResult = tmp4Result6.startSpan(obj6, () => { ... });
+                                            const tmp4Result8 = tmp4(tmp5[3]);
                                           }
                                           return startSpanManualResult;
                                         }
@@ -602,15 +596,14 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 closure_2 = dependencyMap;
                                 closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                                 let _Proxy2 = Proxy;
-                                obj = {
+                                let obj3 = {
                                   apply(arr, arg1, arg2) {
                                           closure_0 = arr;
                                           dependencyMap = arg2;
                                           const first = arg2[0];
-                                          let obj = {};
+                                          const obj = {};
                                           obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                          let obj1 = str(dependencyMap[3]);
-                                          obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                                          obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
                                           obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
                                           const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                                           if (first) {
@@ -627,26 +620,26 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                     if (tmp7) {
                                                       tmp7 = typeof config.temperature === "number";
                                                     }
-                                                    obj = {};
+                                                    let obj3 = {};
                                                     if (tmp7) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
                                                     }
                                                     if (tmp8) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
                                                     }
                                                     if (tmp9) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
                                                     }
                                                     if (tmp10) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
                                                     }
                                                     if (tmp11) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
                                                     }
                                                     if (tmp12) {
-                                                      obj[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
+                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
                                                     }
-                                                    const merged = Object.assign(obj, obj);
+                                                    const merged = Object.assign(obj, obj3);
                                                     if ("tools" in config) {
                                                       let _Array = Array;
                                                       if (Array.isArray(config.tools)) {
@@ -684,10 +677,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                               }
                                             }
                                           } else {
-                                            obj = {};
-                                            if ("model" in obj) {
-                                              if (typeof obj.model === "string") {
-                                                let str2 = obj.model;
+                                            let obj4 = {};
+                                            if ("model" in obj4) {
+                                              if (typeof obj4.model === "string") {
+                                                let str2 = obj4.model;
                                               }
                                               obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
                                             }
@@ -714,19 +707,20 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           if (str15 == null) {
                                             str15 = "unknown";
                                           }
-                                          let tmp4Result = tmp4(tmp5[3]);
-                                          const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
-                                          tmp4Result = tmp4(tmp5[5]);
-                                          const tmp4Result1 = str(dependencyMap[7]);
+                                          let obj2 = str(dependencyMap[3]);
+                                          const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
+                                          const tmp4Result = str(dependencyMap[3]);
+                                          const tmp4Result5 = str(dependencyMap[5]);
+                                          const tmp4Result6 = str(dependencyMap[7]);
                                           if (isStreamingMethodResult) {
-                                            obj1 = { name: null, op: null, attributes: null };
+                                            let obj5 = { name: null, op: null, attributes: null };
                                             const _HermesInternal2 = HermesInternal;
-                                            obj1.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                            obj1.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                            obj1.attributes = obj;
-                                            closure_0 = closure_2(/* F120759 */ function() { ... });
-                                            let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
-                                            const tmp4Result2 = tmp4(tmp5[3]);
+                                            obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
+                                            obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
+                                            obj5.attributes = obj;
+                                            closure_0 = closure_2(/* F120762 */ function() { ... });
+                                            let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
+                                            const tmp4Result7 = tmp4(tmp5[3]);
                                           } else {
                                             const _HermesInternal = HermesInternal;
                                             if (closure_3) {
@@ -734,14 +728,14 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                             } else {
                                               combined = concat(finalOperationName, " ", str15);
                                             }
-                                            let obj2 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                            startSpanManualResult = tmp4Result1.startSpan(obj2, () => { ... });
-                                            const tmp4Result3 = tmp4(tmp5[3]);
+                                            let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
+                                            startSpanManualResult = tmp4Result6.startSpan(obj6, () => { ... });
+                                            const tmp4Result8 = tmp4(tmp5[3]);
                                           }
                                           return startSpanManualResult;
                                         }
                                 };
-                                let proxy1 = new Proxy(value, obj);
+                                let proxy1 = new Proxy(value, obj3);
                                 return proxy1;
                               }
                             }
@@ -759,11 +753,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                   str = "";
                                 }
                                 let _Proxy = Proxy;
-                                obj1 = {
+                                let obj4 = {
                                   get(self, arg1, arg2) {
                                           let value = Reflect.get(self, arg1, arg2);
-                                          let obj1 = str(dependencyMap[3]);
-                                          let methodPath = obj1.buildMethodPath(str, String(arg1));
+                                          let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
                                           if (typeof value === "function") {
                                             if (tmpResult.shouldInstrument(methodPath)) {
                                               if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
@@ -781,8 +774,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                 closure_2 = dependencyMap;
                                                 closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                                                 let _Proxy2 = Proxy;
-                                                obj = { apply() { ... } };
-                                                let proxy1 = new Proxy(value, obj);
+                                                let obj3 = { apply() { ... } };
+                                                let proxy1 = new Proxy(value, obj3);
                                                 return proxy1;
                                               }
                                             }
@@ -800,15 +793,15 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                   str = "";
                                                 }
                                                 let _Proxy = Proxy;
-                                                obj1 = { get() { ... } };
-                                                bindResult = new Proxy(value, obj1);
+                                                let obj4 = { get() { ... } };
+                                                bindResult = new Proxy(value, obj4);
                                               }
                                             }
                                           }
                                           return bindResult;
                                         }
                                 };
-                                bindResult = new Proxy(value, obj1);
+                                bindResult = new Proxy(value, obj4);
                               }
                             }
                           }
@@ -826,15 +819,14 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
             closure_2 = dependencyMap;
             closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
             let _Proxy2 = Proxy;
-            obj = {
+            let obj3 = {
               apply(arr, arg1, arg2) {
                       closure_0 = arr;
                       dependencyMap = arg2;
                       const first = arg2[0];
-                      let obj = {};
+                      const obj = {};
                       obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                      let obj1 = str(dependencyMap[3]);
-                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
                       obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
                       const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                       if (first) {
@@ -851,26 +843,26 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 if (tmp7) {
                                   tmp7 = typeof config.temperature === "number";
                                 }
-                                obj = {};
+                                let obj3 = {};
                                 if (tmp7) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
                                 }
                                 if (tmp8) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
                                 }
                                 if (tmp9) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
                                 }
                                 if (tmp10) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
                                 }
                                 if (tmp11) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
                                 }
                                 if (tmp12) {
-                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
+                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
                                 }
-                                const merged = Object.assign(obj, obj);
+                                const merged = Object.assign(obj, obj3);
                                 if ("tools" in config) {
                                   let _Array = Array;
                                   if (Array.isArray(config.tools)) {
@@ -908,10 +900,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           }
                         }
                       } else {
-                        obj = {};
-                        if ("model" in obj) {
-                          if (typeof obj.model === "string") {
-                            let str2 = obj.model;
+                        let obj4 = {};
+                        if ("model" in obj4) {
+                          if (typeof obj4.model === "string") {
+                            let str2 = obj4.model;
                           }
                           obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
                         }
@@ -938,16 +930,17 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       if (str15 == null) {
                         str15 = "unknown";
                       }
-                      let tmp4Result = tmp4(tmp5[3]);
-                      const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
-                      tmp4Result = tmp4(tmp5[5]);
-                      const tmp4Result1 = str(dependencyMap[7]);
+                      let obj2 = str(dependencyMap[3]);
+                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
+                      const tmp4Result = str(dependencyMap[3]);
+                      const tmp4Result5 = str(dependencyMap[5]);
+                      const tmp4Result6 = str(dependencyMap[7]);
                       if (isStreamingMethodResult) {
-                        obj1 = { name: null, op: null, attributes: null };
+                        let obj5 = { name: null, op: null, attributes: null };
                         const _HermesInternal2 = HermesInternal;
-                        obj1.name = "" + finalOperationName + " " + str15 + " stream-response";
-                        obj1.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                        obj1.attributes = obj;
+                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
+                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
+                        obj5.attributes = obj;
                         closure_0 = closure_2((_function) => {
                           c5 = 0;
                           c6 = 0;
@@ -960,8 +953,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               if (arg0 === 1) {
                                 throw value;
                               } else if (arg0 === 2) {
-                                let obj = { value, done: true };
-                                return obj;
+                                const obj2 = { value, done: true };
+                                return obj2;
                               } else {
                                 return { value: "HermesInternal", done: null };
                               }
@@ -974,8 +967,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                     throw value;
                                   } else if (arg0 === 2) {
                                     c6 = 3;
-                                    obj = { value, done: true };
-                                    return obj;
+                                    const obj3 = { value, done: true };
+                                    return obj3;
                                   } else {
                                     closure_2 = tmp3;
                                     dependencyMap = tmp7;
@@ -991,21 +984,20 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                     }
                                     c5 = 2;
                                     c6 = 1;
-                                    const obj1 = { value: _function.apply(dependencyMap, dependencyMap), done: false };
-                                    return obj1;
+                                    const obj4 = { value: _function.apply(dependencyMap, dependencyMap), done: false };
+                                    return obj4;
                                   }
                                 } else if (1 === tmp7) {
                                   c4 = 0;
                                   closure_129_2 = tmp37;
-                                  const obj2 = { code: str(dependencyMap[9]).SPAN_STATUS_ERROR, message: "internal_error" };
-                                  closure_129_0.setStatus(obj2);
-                                  let obj4 = str(dependencyMap[10]);
-                                  const obj3 = { mechanism: null };
-                                  obj4 = { handled: false, type: "auto.ai.google_genai", data: null };
-                                  const obj5 = { function: _function };
-                                  obj4.data = obj5;
-                                  obj3.mechanism = obj4;
-                                  obj4.captureException(closure_129_2, obj3);
+                                  const obj6 = { code: str(dependencyMap[9]).SPAN_STATUS_ERROR, message: "internal_error" };
+                                  closure_129_0.setStatus(obj6);
+                                  const obj7 = { mechanism: null };
+                                  const obj8 = { handled: false, type: "auto.ai.google_genai", data: null };
+                                  const obj9 = { function: _function };
+                                  obj8.data = obj9;
+                                  obj7.mechanism = obj8;
+                                  str(dependencyMap[10]).captureException(closure_129_2, obj7);
                                   closure_129_0.end();
                                   throw closure_129_2;
                                 } else if (arg0 === 1) {
@@ -1014,16 +1006,15 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 } else if (arg0 === 2) {
                                   c4 = 0;
                                   c6 = 3;
-                                  const obj6 = { value, done: true };
-                                  return obj6;
+                                  const obj10 = { value, done: true };
+                                  return obj10;
                                 } else {
                                   closure_129_1 = value;
-                                  obj = str(dependencyMap[8]);
                                   const _Boolean = Boolean;
                                   c4 = 0;
                                   c6 = 3;
-                                  const obj7 = { value: obj.instrumentStream(closure_129_1, closure_129_0, Boolean(first.recordOutputs)), done: true };
-                                  return obj7;
+                                  const obj11 = { value: str(dependencyMap[8]).instrumentStream(closure_129_1, closure_129_0, Boolean(first.recordOutputs)), done: true };
+                                  return obj11;
                                 }
                               } catch (tmp37) {
                                 if (tmp4 === c4) {
@@ -1036,7 +1027,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             }
                           })();
                         });
-                        let startSpanManualResult = tmp4Result1.startSpanManual(obj1, function(arg0) {
+                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
                           const self = this;
                           const apply = closure_0.apply;
                           if (typeof apply === "unknown") {
@@ -1046,7 +1037,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           }
                           return applyArgumentsResult;
                         });
-                        const tmp4Result2 = tmp4(tmp5[3]);
+                        const tmp4Result7 = tmp4(tmp5[3]);
                       } else {
                         const _HermesInternal = HermesInternal;
                         if (closure_3) {
@@ -1054,45 +1045,43 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         } else {
                           combined = concat(finalOperationName, " ", str15);
                         }
-                        let obj2 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                        startSpanManualResult = tmp4Result1.startSpan(obj2, (_function) => {
+                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
+                        startSpanManualResult = tmp4Result6.startSpan(obj6, (_function) => {
                           if (tmp) {
                             closure_3(_function, first);
                           }
                           return str(dependencyMap[11]).handleCallbackErrors(() => _function.apply(closure_1, dependencyMap), (arg0) => {
-                            _function(dependencyMap[10]);
-                            let obj = { mechanism: null };
-                            obj = { handled: false, type: "auto.ai.google_genai", data: { function: _function } };
-                            obj.mechanism = obj;
-                            obj.captureException(arg0, obj);
+                            const obj2 = { mechanism: null };
+                            const obj3 = { handled: false, type: "auto.ai.google_genai", data: { function: _function } };
+                            obj2.mechanism = obj3;
+                            _function(dependencyMap[10]).captureException(arg0, obj2);
                           }, () => {
 
                           }, (modelVersion) => {
                             if (!closure_3) {
-                              let obj = closure_0;
                               recordOutputs = recordOutputs.recordOutputs;
                               if (modelVersion) {
                                 if (typeof modelVersion === "object") {
                                   if (modelVersion.modelVersion) {
-                                    const attr = obj.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, modelVersion.modelVersion);
+                                    const attr = closure_0.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, modelVersion.modelVersion);
                                   }
                                   if (modelVersion.usageMetadata) {
                                     if (typeof modelVersion.usageMetadata === "object") {
                                       const usageMetadata = modelVersion.usageMetadata;
                                       if (typeof usageMetadata.promptTokenCount === "number") {
-                                        obj = {};
-                                        obj[str(dependencyMap[1]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = usageMetadata.promptTokenCount;
-                                        obj.setAttributes(obj);
+                                        const obj2 = {};
+                                        obj2[str(dependencyMap[1]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = usageMetadata.promptTokenCount;
+                                        closure_0.setAttributes(obj2);
                                       }
                                       if (typeof usageMetadata.candidatesTokenCount === "number") {
-                                        obj = {};
-                                        obj[str(dependencyMap[1]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = usageMetadata.candidatesTokenCount;
-                                        obj.setAttributes(obj);
+                                        const obj3 = {};
+                                        obj3[str(dependencyMap[1]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = usageMetadata.candidatesTokenCount;
+                                        closure_0.setAttributes(obj3);
                                       }
                                       if (typeof usageMetadata.totalTokenCount === "number") {
-                                        const obj1 = {};
-                                        obj1[str(dependencyMap[1]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = usageMetadata.totalTokenCount;
-                                        obj.setAttributes(obj1);
+                                        const obj4 = {};
+                                        obj4[str(dependencyMap[1]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = usageMetadata.totalTokenCount;
+                                        closure_0.setAttributes(obj4);
                                       }
                                     }
                                   }
@@ -1104,9 +1093,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                         let mapped = candidates.map(() => { ... });
                                         let found = mapped.filter(() => { ... });
                                         if (found.length > 0) {
-                                          const obj2 = {};
-                                          obj2[""(dependencyMap[1]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = found.join("");
-                                          obj.setAttributes(obj2);
+                                          const obj5 = {};
+                                          obj5[""(dependencyMap[1]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = found.join("");
+                                          closure_0.setAttributes(obj5);
                                         }
                                       }
                                     }
@@ -1120,10 +1109,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                         isArray = functionCalls.length > 0;
                                       }
                                       if (isArray) {
-                                        const obj3 = {};
+                                        const obj6 = {};
                                         const _JSON = JSON;
-                                        obj3[str(dependencyMap[1]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(functionCalls);
-                                        obj.setAttributes(obj3);
+                                        obj6[str(dependencyMap[1]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(functionCalls);
+                                        closure_0.setAttributes(obj6);
                                       }
                                     }
                                   }
@@ -1132,12 +1121,12 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             }
                           });
                         });
-                        const tmp4Result3 = tmp4(tmp5[3]);
+                        const tmp4Result8 = tmp4(tmp5[3]);
                       }
                       return startSpanManualResult;
                     }
             };
-            let proxy1 = new Proxy(value, obj);
+            let proxy1 = new Proxy(value, obj3);
             return proxy1;
           }
         }
@@ -1155,11 +1144,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               str = "";
             }
             let _Proxy = Proxy;
-            obj1 = {
+            let obj4 = {
               get(self, arg1, arg2) {
                       let value = Reflect.get(self, arg1, arg2);
-                      let obj1 = str(dependencyMap[3]);
-                      let methodPath = obj1.buildMethodPath(str, String(arg1));
+                      let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
                       if (typeof value === "function") {
                         if (tmpResult.shouldInstrument(methodPath)) {
                           if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
@@ -1172,10 +1160,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                       closure_0 = arr;
                                       dependencyMap = arg2;
                                       const first = arg2[0];
-                                      let obj = {};
+                                      const obj = {};
                                       obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                      let obj1 = str(dependencyMap[3]);
-                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
                                       obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
                                       const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                                       if (first) {
@@ -1192,26 +1179,26 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                 if (tmp7) {
                                                   tmp7 = typeof config.temperature === "number";
                                                 }
-                                                obj = {};
+                                                let obj3 = {};
                                                 if (tmp7) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
                                                 }
                                                 if (tmp8) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
                                                 }
                                                 if (tmp9) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
                                                 }
                                                 if (tmp10) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
                                                 }
                                                 if (tmp11) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
                                                 }
                                                 if (tmp12) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
                                                 }
-                                                const merged = Object.assign(obj, obj);
+                                                const merged = Object.assign(obj, obj3);
                                                 if ("tools" in config) {
                                                   let _Array = Array;
                                                   if (Array.isArray(config.tools)) {
@@ -1249,10 +1236,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           }
                                         }
                                       } else {
-                                        obj = {};
-                                        if ("model" in obj) {
-                                          if (typeof obj.model === "string") {
-                                            let str2 = obj.model;
+                                        let obj4 = {};
+                                        if ("model" in obj4) {
+                                          if (typeof obj4.model === "string") {
+                                            let str2 = obj4.model;
                                           }
                                           obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
                                         }
@@ -1279,23 +1266,24 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                       if (str15 == null) {
                                         str15 = "unknown";
                                       }
-                                      let tmp4Result = tmp4(tmp5[3]);
-                                      const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
-                                      tmp4Result = tmp4(tmp5[5]);
-                                      const tmp4Result1 = str(dependencyMap[7]);
+                                      let obj2 = str(dependencyMap[3]);
+                                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
+                                      const tmp4Result = str(dependencyMap[3]);
+                                      const tmp4Result5 = str(dependencyMap[5]);
+                                      const tmp4Result6 = str(dependencyMap[7]);
                                       if (isStreamingMethodResult) {
-                                        obj1 = { name: null, op: null, attributes: null };
+                                        let obj5 = { name: null, op: null, attributes: null };
                                         const _HermesInternal2 = HermesInternal;
-                                        obj1.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                        obj1.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                        obj1.attributes = obj;
+                                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
+                                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
+                                        obj5.attributes = obj;
                                         closure_0 = closure_2((_function) => {
                                           c5 = 0;
                                           c6 = 0;
                                           c4 = 0;
-                                          return (/* F124930 */ function*() { ... })();
+                                          return (/* F124933 */ function*() { ... })();
                                         });
-                                        let startSpanManualResult = tmp4Result1.startSpanManual(obj1, function(arg0) {
+                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
                                           const self = this;
                                           const apply = closure_0.apply;
                                           if (typeof apply === "unknown") {
@@ -1305,7 +1293,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           }
                                           return applyArgumentsResult;
                                         });
-                                        const tmp4Result2 = tmp4(tmp5[3]);
+                                        const tmp4Result7 = tmp4(tmp5[3]);
                                       } else {
                                         const _HermesInternal = HermesInternal;
                                         if (closure_3) {
@@ -1313,14 +1301,14 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                         } else {
                                           combined = concat(finalOperationName, " ", str15);
                                         }
-                                        let obj2 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                        startSpanManualResult = tmp4Result1.startSpan(obj2, (_function) => {
+                                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
+                                        startSpanManualResult = tmp4Result6.startSpan(obj6, (_function) => {
                                           if (tmp) {
                                             closure_3(_function, first);
                                           }
-                                          return str(dependencyMap[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F120763 */ function() { ... }, () => { ... });
+                                          return str(dependencyMap[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F120766 */ function() { ... }, () => { ... });
                                         });
-                                        const tmp4Result3 = tmp4(tmp5[3]);
+                                        const tmp4Result8 = tmp4(tmp5[3]);
                                       }
                                       return startSpanManualResult;
                                     }
@@ -1344,8 +1332,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                   let obj = {
                                     get(self, arg1, arg2) {
                                           let value = Reflect.get(self, arg1, arg2);
-                                          let obj1 = str(dependencyMap[3]);
-                                          let methodPath = obj1.buildMethodPath(str, String(arg1));
+                                          let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
                                           if (typeof value === "function") {
                                             if (tmpResult.shouldInstrument(methodPath)) {
                                               if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
@@ -1363,8 +1350,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                 closure_2 = dependencyMap;
                                                 closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                                                 let _Proxy2 = Proxy;
-                                                obj = { apply() { ... } };
-                                                let proxy1 = new Proxy(value, obj);
+                                                let obj3 = { apply() { ... } };
+                                                let proxy1 = new Proxy(value, obj3);
                                                 return proxy1;
                                               }
                                             }
@@ -1382,8 +1369,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                   str = "";
                                                 }
                                                 let _Proxy = Proxy;
-                                                obj1 = { get() { ... } };
-                                                bindResult = new Proxy(value, obj1);
+                                                let obj4 = { get() { ... } };
+                                                bindResult = new Proxy(value, obj4);
                                               }
                                             }
                                           }
@@ -1401,15 +1388,14 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             closure_2 = dependencyMap;
                             closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                             let _Proxy2 = Proxy;
-                            obj = {
+                            let obj3 = {
                               apply(arr, arg1, arg2) {
                                       closure_0 = arr;
                                       dependencyMap = arg2;
                                       const first = arg2[0];
-                                      let obj = {};
+                                      const obj = {};
                                       obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                      let obj1 = str(dependencyMap[3]);
-                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
                                       obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
                                       const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                                       if (first) {
@@ -1426,26 +1412,26 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                 if (tmp7) {
                                                   tmp7 = typeof config.temperature === "number";
                                                 }
-                                                obj = {};
+                                                let obj3 = {};
                                                 if (tmp7) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
                                                 }
                                                 if (tmp8) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
                                                 }
                                                 if (tmp9) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
                                                 }
                                                 if (tmp10) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
                                                 }
                                                 if (tmp11) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
                                                 }
                                                 if (tmp12) {
-                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
+                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
                                                 }
-                                                const merged = Object.assign(obj, obj);
+                                                const merged = Object.assign(obj, obj3);
                                                 if ("tools" in config) {
                                                   let _Array = Array;
                                                   if (Array.isArray(config.tools)) {
@@ -1483,10 +1469,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           }
                                         }
                                       } else {
-                                        obj = {};
-                                        if ("model" in obj) {
-                                          if (typeof obj.model === "string") {
-                                            let str2 = obj.model;
+                                        let obj4 = {};
+                                        if ("model" in obj4) {
+                                          if (typeof obj4.model === "string") {
+                                            let str2 = obj4.model;
                                           }
                                           obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
                                         }
@@ -1513,23 +1499,24 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                       if (str15 == null) {
                                         str15 = "unknown";
                                       }
-                                      let tmp4Result = tmp4(tmp5[3]);
-                                      const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
-                                      tmp4Result = tmp4(tmp5[5]);
-                                      const tmp4Result1 = str(dependencyMap[7]);
+                                      let obj2 = str(dependencyMap[3]);
+                                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
+                                      const tmp4Result = str(dependencyMap[3]);
+                                      const tmp4Result5 = str(dependencyMap[5]);
+                                      const tmp4Result6 = str(dependencyMap[7]);
                                       if (isStreamingMethodResult) {
-                                        obj1 = { name: null, op: null, attributes: null };
+                                        let obj5 = { name: null, op: null, attributes: null };
                                         const _HermesInternal2 = HermesInternal;
-                                        obj1.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                        obj1.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                        obj1.attributes = obj;
+                                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
+                                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
+                                        obj5.attributes = obj;
                                         closure_0 = closure_2((_function) => {
                                           c5 = 0;
                                           c6 = 0;
                                           c4 = 0;
-                                          return (/* F124930 */ function*() { ... })();
+                                          return (/* F124933 */ function*() { ... })();
                                         });
-                                        let startSpanManualResult = tmp4Result1.startSpanManual(obj1, function(arg0) {
+                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
                                           const self = this;
                                           const apply = closure_0.apply;
                                           if (typeof apply === "unknown") {
@@ -1539,7 +1526,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           }
                                           return applyArgumentsResult;
                                         });
-                                        const tmp4Result2 = tmp4(tmp5[3]);
+                                        const tmp4Result7 = tmp4(tmp5[3]);
                                       } else {
                                         const _HermesInternal = HermesInternal;
                                         if (closure_3) {
@@ -1547,19 +1534,19 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                         } else {
                                           combined = concat(finalOperationName, " ", str15);
                                         }
-                                        let obj2 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                        startSpanManualResult = tmp4Result1.startSpan(obj2, (_function) => {
+                                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
+                                        startSpanManualResult = tmp4Result6.startSpan(obj6, (_function) => {
                                           if (tmp) {
                                             closure_3(_function, first);
                                           }
-                                          return str(dependencyMap[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F120763 */ function() { ... }, () => { ... });
+                                          return str(dependencyMap[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F120766 */ function() { ... }, () => { ... });
                                         });
-                                        const tmp4Result3 = tmp4(tmp5[3]);
+                                        const tmp4Result8 = tmp4(tmp5[3]);
                                       }
                                       return startSpanManualResult;
                                     }
                             };
-                            let proxy1 = new Proxy(value, obj);
+                            let proxy1 = new Proxy(value, obj3);
                             return proxy1;
                           }
                         }
@@ -1577,11 +1564,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               str = "";
                             }
                             let _Proxy = Proxy;
-                            obj1 = {
+                            let obj4 = {
                               get(self, arg1, arg2) {
                                       let value = Reflect.get(self, arg1, arg2);
-                                      let obj1 = str(dependencyMap[3]);
-                                      let methodPath = obj1.buildMethodPath(str, String(arg1));
+                                      let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
                                       if (typeof value === "function") {
                                         if (tmpResult.shouldInstrument(methodPath)) {
                                           if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
@@ -1594,10 +1580,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                       closure_0 = arr;
                                                       dependencyMap = arg2;
                                                       const first = arg2[0];
-                                                      let obj = {};
+                                                      const obj = {};
                                                       obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                                      let obj1 = str(dependencyMap[3]);
-                                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
                                                       obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
                                                       const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                                                       if (first) {
@@ -1614,26 +1599,26 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                                 if (tmp7) {
                                                                   tmp7 = typeof config.temperature === "number";
                                                                 }
-                                                                obj = {};
+                                                                let obj3 = {};
                                                                 if (tmp7) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
                                                                 }
                                                                 if (tmp8) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
                                                                 }
                                                                 if (tmp9) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
                                                                 }
                                                                 if (tmp10) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
                                                                 }
                                                                 if (tmp11) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
                                                                 }
                                                                 if (tmp12) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
                                                                 }
-                                                                const merged = Object.assign(obj, obj);
+                                                                const merged = Object.assign(obj, obj3);
                                                                 if ("tools" in config) {
                                                                   let _Array = Array;
                                                                   if (Array.isArray(config.tools)) {
@@ -1671,10 +1656,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                           }
                                                         }
                                                       } else {
-                                                        obj = {};
-                                                        if ("model" in obj) {
-                                                          if (typeof obj.model === "string") {
-                                                            let str2 = obj.model;
+                                                        let obj4 = {};
+                                                        if ("model" in obj4) {
+                                                          if (typeof obj4.model === "string") {
+                                                            let str2 = obj4.model;
                                                           }
                                                           obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
                                                         }
@@ -1701,19 +1686,20 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                       if (str15 == null) {
                                                         str15 = "unknown";
                                                       }
-                                                      let tmp4Result = tmp4(tmp5[3]);
-                                                      const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
-                                                      tmp4Result = tmp4(tmp5[5]);
-                                                      const tmp4Result1 = str(dependencyMap[7]);
+                                                      let obj2 = str(dependencyMap[3]);
+                                                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
+                                                      const tmp4Result = str(dependencyMap[3]);
+                                                      const tmp4Result5 = str(dependencyMap[5]);
+                                                      const tmp4Result6 = str(dependencyMap[7]);
                                                       if (isStreamingMethodResult) {
-                                                        obj1 = { name: null, op: null, attributes: null };
+                                                        let obj5 = { name: null, op: null, attributes: null };
                                                         const _HermesInternal2 = HermesInternal;
-                                                        obj1.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                                        obj1.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                                        obj1.attributes = obj;
-                                                        closure_0 = closure_2(/* F120759 */ function() { ... });
-                                                        let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
-                                                        const tmp4Result2 = tmp4(tmp5[3]);
+                                                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
+                                                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
+                                                        obj5.attributes = obj;
+                                                        closure_0 = closure_2(/* F120762 */ function() { ... });
+                                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
+                                                        const tmp4Result7 = tmp4(tmp5[3]);
                                                       } else {
                                                         const _HermesInternal = HermesInternal;
                                                         if (closure_3) {
@@ -1721,9 +1707,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                         } else {
                                                           combined = concat(finalOperationName, " ", str15);
                                                         }
-                                                        let obj2 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                                        startSpanManualResult = tmp4Result1.startSpan(obj2, () => { ... });
-                                                        const tmp4Result3 = tmp4(tmp5[3]);
+                                                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
+                                                        startSpanManualResult = tmp4Result6.startSpan(obj6, () => { ... });
+                                                        const tmp4Result8 = tmp4(tmp5[3]);
                                                       }
                                                       return startSpanManualResult;
                                                     }
@@ -1756,15 +1742,14 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                             closure_2 = dependencyMap;
                                             closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                                             let _Proxy2 = Proxy;
-                                            obj = {
+                                            let obj3 = {
                                               apply(arr, arg1, arg2) {
                                                       closure_0 = arr;
                                                       dependencyMap = arg2;
                                                       const first = arg2[0];
-                                                      let obj = {};
+                                                      const obj = {};
                                                       obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                                      let obj1 = str(dependencyMap[3]);
-                                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = obj1.getFinalOperationName(closure_0);
+                                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
                                                       obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
                                                       const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                                                       if (first) {
@@ -1781,26 +1766,26 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                                 if (tmp7) {
                                                                   tmp7 = typeof config.temperature === "number";
                                                                 }
-                                                                obj = {};
+                                                                let obj3 = {};
                                                                 if (tmp7) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
                                                                 }
                                                                 if (tmp8) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
                                                                 }
                                                                 if (tmp9) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
                                                                 }
                                                                 if (tmp10) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
                                                                 }
                                                                 if (tmp11) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
                                                                 }
                                                                 if (tmp12) {
-                                                                  obj[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
+                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
                                                                 }
-                                                                const merged = Object.assign(obj, obj);
+                                                                const merged = Object.assign(obj, obj3);
                                                                 if ("tools" in config) {
                                                                   let _Array = Array;
                                                                   if (Array.isArray(config.tools)) {
@@ -1838,10 +1823,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                           }
                                                         }
                                                       } else {
-                                                        obj = {};
-                                                        if ("model" in obj) {
-                                                          if (typeof obj.model === "string") {
-                                                            let str2 = obj.model;
+                                                        let obj4 = {};
+                                                        if ("model" in obj4) {
+                                                          if (typeof obj4.model === "string") {
+                                                            let str2 = obj4.model;
                                                           }
                                                           obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
                                                         }
@@ -1868,19 +1853,20 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                       if (str15 == null) {
                                                         str15 = "unknown";
                                                       }
-                                                      let tmp4Result = tmp4(tmp5[3]);
-                                                      const finalOperationName = tmp4Result.getFinalOperationName(tmp2);
-                                                      tmp4Result = tmp4(tmp5[5]);
-                                                      const tmp4Result1 = str(dependencyMap[7]);
+                                                      let obj2 = str(dependencyMap[3]);
+                                                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
+                                                      const tmp4Result = str(dependencyMap[3]);
+                                                      const tmp4Result5 = str(dependencyMap[5]);
+                                                      const tmp4Result6 = str(dependencyMap[7]);
                                                       if (isStreamingMethodResult) {
-                                                        obj1 = { name: null, op: null, attributes: null };
+                                                        let obj5 = { name: null, op: null, attributes: null };
                                                         const _HermesInternal2 = HermesInternal;
-                                                        obj1.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                                        obj1.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                                        obj1.attributes = obj;
-                                                        closure_0 = closure_2(/* F120759 */ function() { ... });
-                                                        let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
-                                                        const tmp4Result2 = tmp4(tmp5[3]);
+                                                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
+                                                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
+                                                        obj5.attributes = obj;
+                                                        closure_0 = closure_2(/* F120762 */ function() { ... });
+                                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
+                                                        const tmp4Result7 = tmp4(tmp5[3]);
                                                       } else {
                                                         const _HermesInternal = HermesInternal;
                                                         if (closure_3) {
@@ -1888,14 +1874,14 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                         } else {
                                                           combined = concat(finalOperationName, " ", str15);
                                                         }
-                                                        let obj2 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                                        startSpanManualResult = tmp4Result1.startSpan(obj2, () => { ... });
-                                                        const tmp4Result3 = tmp4(tmp5[3]);
+                                                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
+                                                        startSpanManualResult = tmp4Result6.startSpan(obj6, () => { ... });
+                                                        const tmp4Result8 = tmp4(tmp5[3]);
                                                       }
                                                       return startSpanManualResult;
                                                     }
                                             };
-                                            let proxy1 = new Proxy(value, obj);
+                                            let proxy1 = new Proxy(value, obj3);
                                             return proxy1;
                                           }
                                         }
@@ -1913,11 +1899,10 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                               str = "";
                                             }
                                             let _Proxy = Proxy;
-                                            obj1 = {
+                                            let obj4 = {
                                               get(self, arg1, arg2) {
                                                       let value = Reflect.get(self, arg1, arg2);
-                                                      let obj1 = str(dependencyMap[3]);
-                                                      let methodPath = obj1.buildMethodPath(str, String(arg1));
+                                                      let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
                                                       if (typeof value === "function") {
                                                         if (tmpResult.shouldInstrument(methodPath)) {
                                                           if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
@@ -1935,8 +1920,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                             closure_2 = dependencyMap;
                                                             closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
                                                             let _Proxy2 = Proxy;
-                                                            obj = { apply() { ... } };
-                                                            let proxy1 = new Proxy(value, obj);
+                                                            let obj3 = { apply() { ... } };
+                                                            let proxy1 = new Proxy(value, obj3);
                                                             return proxy1;
                                                           }
                                                         }
@@ -1954,35 +1939,34 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                               str = "";
                                                             }
                                                             let _Proxy = Proxy;
-                                                            obj1 = { get() { ... } };
-                                                            bindResult = new Proxy(value, obj1);
+                                                            let obj4 = { get() { ... } };
+                                                            bindResult = new Proxy(value, obj4);
                                                           }
                                                         }
                                                       }
                                                       return bindResult;
                                                     }
                                             };
-                                            bindResult = new Proxy(value, obj1);
+                                            bindResult = new Proxy(value, obj4);
                                           }
                                         }
                                       }
                                       return bindResult;
                                     }
                             };
-                            bindResult = new Proxy(value, obj1);
+                            bindResult = new Proxy(value, obj4);
                           }
                         }
                       }
                       return bindResult;
                     }
             };
-            bindResult = new Proxy(value, obj1);
+            bindResult = new Proxy(value, obj4);
           }
         }
       }
       return bindResult;
     }
-  };
-  const proxy = new Proxy(arg0, obj);
+  });
   return proxy;
 };

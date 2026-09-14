@@ -22,8 +22,8 @@ let closure_7 = async function _queryCache(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -35,13 +35,12 @@ let closure_7 = async function _queryCache(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        obj = ImageLoaderDefault;
         c1 = 3;
-        const obj1 = { value: obj.queryCache(closure_0), done: true };
-        return obj1;
+        const obj4 = { value: ImageLoaderDefault.queryCache(closure_0), done: true };
+        return obj4;
       }
     } catch (tmp7) {
       c1 = tmp;
@@ -52,13 +51,12 @@ let closure_7 = async function _queryCache(arg0) {
 const use = fn(19).use;
 const jsx = fn(21).jsx;
 let closure_6 = 1;
-let closure_8 = { uri: "justifyContent", width: "call", height: "window" };
+let closure_8 = { uri: "test", width: "call", height: "intl" };
 function _BaseImage(arg0) {
   ({ alt, accessible, aria-labelledby: tmp, aria-busy: tmp2, aria-checked: tmp3, aria-disabled: tmp4, aria-expanded: tmp5, aria-label: tmp7, aria-selected: tmp8, accessibilityLabel, accessibilityLabelledBy, accessibilityState, defaultSource, loadingIndicatorSource, style, onLoadStart, onLoad, onLoadEnd, onError, width, height } = arg0);
   ({ ref, aria-hidden: tmp6, children, source, src, crossOrigin, referrerPolicy, srcSet, resizeMode } = arg0);
   const merged = Object.assign(arg0, Object.assign({ ref: 0, alt: 0, accessible: 0, "aria-labelledby": 0, "aria-busy": 0, "aria-checked": 0, "aria-disabled": 0, "aria-expanded": 0, "aria-hidden": 0, "aria-label": 0, "aria-selected": 0, accessibilityLabel: 0, accessibilityLabelledBy: 0, accessibilityState: 0, defaultSource: 0, loadingIndicatorSource: 0, children: 0, source: 0, src: 0, style: 0, crossOrigin: 0, referrerPolicy: 0, srcSet: 0, onLoadStart: 0, onLoad: 0, onLoadEnd: 0, onError: 0, width: 0, height: 0, resizeMode: 0 }));
-  let obj = _mod331;
-  const arr = obj.getImageSourcesFromImageProps({ crossOrigin, referrerPolicy, src, srcSet, width, height, source }) || closure_8;
+  const arr = _mod331.getImageSourcesFromImageProps({ crossOrigin, referrerPolicy, src, srcSet, width, height, source }) || closure_8;
   const tmp13 = resolveAssetSourceDefault(defaultSource);
   const tmp14 = resolveAssetSourceDefault(loadingIndicatorSource);
   if (null != children) {
@@ -152,70 +150,70 @@ function _BaseImage(arg0) {
           busy = accessibilityState.busy;
         }
       }
-      obj = { busy: tmp2, checked: null, disabled: null, expanded: null, selected: null };
+      const obj2 = { busy: tmp2, checked: null, disabled: null, expanded: null, selected: null };
       if (tmp3 == null) {
         let checked;
         if (accessibilityState != null) {
           checked = accessibilityState.checked;
         }
       }
-      obj.checked = tmp3;
+      obj2.checked = tmp3;
       if (tmp4 == null) {
         let disabled;
         if (accessibilityState != null) {
           disabled = accessibilityState.disabled;
         }
       }
-      obj.disabled = tmp4;
+      obj2.disabled = tmp4;
       if (tmp5 == null) {
         let expanded;
         if (accessibilityState != null) {
           expanded = accessibilityState.expanded;
         }
       }
-      obj.expanded = tmp5;
+      obj2.expanded = tmp5;
       if (tmp8 == null) {
         let selected;
         if (accessibilityState != null) {
           selected = accessibilityState.selected;
         }
       }
-      obj.selected = tmp8;
-      merged.accessibilityState = obj;
+      obj2.selected = tmp8;
+      merged.accessibilityState = obj2;
     }
     if (true === tmp6) {
       merged.importantForAccessibility = "no-hide-descendants";
     }
     const tmp28 = flattenStyleDefault(style);
-    let tmp10Result = convertObjectFitToResizeMode;
     let objectFit;
     if (tmp28 != null) {
       objectFit = tmp28.objectFit;
     }
-    let str4 = tmp10Result.convertObjectFitToResizeMode(objectFit) || resizeMode;
+    let str4 = convertObjectFitToResizeMode.convertObjectFitToResizeMode(objectFit) || resizeMode;
     if (!str4) {
-      resizeMode = undefined;
+      let resizeMode1;
       if (tmp28 != null) {
-        resizeMode = tmp28.resizeMode;
+        resizeMode1 = tmp28.resizeMode;
       }
-      str4 = resizeMode;
+      str4 = resizeMode1;
     }
     if (!str4) {
       str4 = "cover";
     }
     merged.resizeMode = str4;
-    tmp10Result = unstable_setImageComponentDecorator2;
+    const tmp10Result = convertObjectFitToResizeMode;
+    tmp20 = null != tmp13 && null != tmp13.uri;
+    tmp21 = null != tmp14 && null != tmp14.uri;
+    tmp22 = null == accessibilityState && null == tmp2 && null == tmp3 && null == tmp4 && null == tmp5 && null == tmp8;
+    const tmp10Result2 = unstable_setImageComponentDecorator2;
     const tmp33 = use(_modDef336);
     if (null !== tmp33) {
       merged.internal_analyticTag = tmp33;
     }
-    obj = {};
-    tmp20 = null != tmp13 && null != tmp13.uri;
-    tmp21 = null != tmp14 && null != tmp14.uri;
-    tmp22 = null == accessibilityState && null == tmp2 && null == tmp3 && null == tmp4 && null == tmp5 && null == tmp8;
-    const wrapRefWithImageAttachedCallbacks = tmp10Result.useWrapRefWithImageAttachedCallbacks(ref);
+    const obj3 = {};
+    const wrapRefWithImageAttachedCallbacks = unstable_setImageComponentDecorator2.useWrapRefWithImageAttachedCallbacks(ref);
     const merged1 = Object.assign(merged);
-    obj.ref = wrapRefWithImageAttachedCallbacks;
+    obj3.ref = wrapRefWithImageAttachedCallbacks;
     return jsx(_modDef337, {});
   }
 }

@@ -1,18 +1,18 @@
 // === Module 1455: ? ===
 
 // Module 1455
+import _mod1280 from "module_1280" /* 1280 */;
+import _mod1281 from "module_1281" /* 1281 */;
 import _mod1282 from "module_1282" /* 1282 */;
-import _mod1283 from "module_1283" /* 1283 */;
-import _mod1284 from "module_1284" /* 1284 */;
 import _mod1456 from "module_1456" /* 1456 */;
 import defineDataProperty from "defineDataProperty" /* 1457 */;
 
 let closure_2 = _mod1456();
-let closure_3 = _mod1282("%Math.floor%");
+let closure_3 = _mod1280("%Math.floor%");
 
 export default function setFunctionLength(fn, num) {
   if (typeof fn !== "function") {
-    const tmp25 = new _mod1283("`fn` is not a function");
+    const tmp25 = new _mod1281("`fn` is not a function");
     throw tmp25;
   } else {
     if (typeof num === "number") {
@@ -24,8 +24,8 @@ export default function setFunctionLength(fn, num) {
             if ("length" in fn) {
               flag = true;
               flag2 = true;
-              if (_mod1284) {
-                const tmp4 = _mod1284(fn, "length");
+              if (_mod1282) {
+                const tmp4 = _mod1282(fn, "length");
                 let tmp5 = tmp4;
                 if (tmp4) {
                   tmp5 = !tmp4.configurable;
@@ -65,7 +65,7 @@ export default function setFunctionLength(fn, num) {
         }
       }
     }
-    const tmp19 = new _mod1283("`length` must be a positive 32-bit integer");
+    const tmp19 = new _mod1281("`length` must be a positive 32-bit integer");
     throw tmp19;
   }
 };

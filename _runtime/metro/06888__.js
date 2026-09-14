@@ -53,16 +53,14 @@ class TouchableHighlight {
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.showUnderlay = () => {
-      let obj = closure_0;
       if (closure_0.hasPressHandler()) {
-        obj = { extraChildStyle: null, extraUnderlayStyle: null };
-        obj = { opacity: null };
-        obj.opacity = obj.props.activeOpacity;
-        obj.extraChildStyle = obj;
-        const obj1 = { backgroundColor: obj.props.underlayColor };
-        obj.extraUnderlayStyle = obj1;
-        obj.setState(obj);
-        const props = obj.props;
+        const obj2 = { extraChildStyle: null, extraUnderlayStyle: null };
+        const obj3 = { opacity: closure_0.props.activeOpacity };
+        obj2.extraChildStyle = obj3;
+        const obj4 = { backgroundColor: closure_0.props.underlayColor };
+        obj2.extraUnderlayStyle = obj4;
+        closure_0.setState(obj2);
+        const props = closure_0.props;
         const onShowUnderlay = props.onShowUnderlay;
         if (onShowUnderlay != null) {
           onShowUnderlay();

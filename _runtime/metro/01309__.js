@@ -2,4 +2,4 @@
 
 // Module 1309
 
-export default Math.max;
+export default Math.pow;

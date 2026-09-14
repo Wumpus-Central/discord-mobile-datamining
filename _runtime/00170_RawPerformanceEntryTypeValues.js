@@ -15,77 +15,77 @@ export { RawPerformanceEntryTypeValues };
 export const rawToPerformanceEntry = function rawToPerformanceEntry(entryType) {
   entryType = entryType.entryType;
   if (obj.EVENT === entryType) {
-    obj = { name: null, startTime: null, duration: null, processingStart: null, processingEnd: null, interactionId: null };
+    const obj4 = { name: null, startTime: null, duration: null, processingStart: null, processingEnd: null, interactionId: null };
     ({ name: obj6.name, startTime: obj6.startTime, duration: obj6.duration, processingStart: obj6.processingStart, processingEnd: obj6.processingEnd, interactionId: obj6.interactionId } = entryType);
-    const performanceEventTiming = new _mod162.PerformanceEventTiming(obj);
+    const performanceEventTiming = new _mod162.PerformanceEventTiming(obj4);
     return performanceEventTiming;
   } else if (tmp.LONGTASK === entryType) {
-    obj = { name: null, startTime: null, duration: null };
+    const obj11 = { name: null, startTime: null, duration: null };
     ({ name: obj5.name, startTime: obj5.startTime, duration: obj5.duration } = entryType);
-    const performanceLongTaskTiming = new _mod171.PerformanceLongTaskTiming(obj);
+    const performanceLongTaskTiming = new _mod171.PerformanceLongTaskTiming(obj11);
     return performanceLongTaskTiming;
   } else if (tmp.MARK === entryType) {
-    const obj1 = { startTime: entryType.startTime };
-    const performanceMark = new _mod169.PerformanceMark(entryType.name, obj1);
+    const obj12 = { startTime: entryType.startTime };
+    const performanceMark = new _mod169.PerformanceMark(entryType.name, obj12);
     return performanceMark;
   } else if (tmp.MEASURE === entryType) {
-    const obj2 = { name: null, startTime: null, duration: null };
+    const obj13 = { name: null, startTime: null, duration: null };
     ({ name: obj3.name, startTime: obj3.startTime, duration: obj3.duration } = entryType);
-    const performanceMeasure = new _mod169.PerformanceMeasure(obj2);
+    const performanceMeasure = new _mod169.PerformanceMeasure(obj13);
     return performanceMeasure;
   } else if (tmp.RESOURCE === entryType) {
-    const obj3 = { name: null, startTime: null, duration: null, fetchStart: null, requestStart: null, connectStart: null, connectEnd: null, responseStart: null, responseEnd: null, responseStatus: null, contentType: null, encodedBodySize: null, decodedBodySize: null };
+    const obj14 = { name: null, startTime: null, duration: null, fetchStart: null, requestStart: null, connectStart: null, connectEnd: null, responseStart: null, responseEnd: null, responseStatus: null, contentType: null, encodedBodySize: null, decodedBodySize: null };
     ({ name: obj2.name, startTime: obj2.startTime, duration: obj2.duration, fetchStart } = entryType);
     if (fetchStart == null) {
       fetchStart = 0;
     }
-    obj3.fetchStart = fetchStart;
+    obj14.fetchStart = fetchStart;
     let num = entryType.requestStart;
     if (num == null) {
       num = 0;
     }
-    obj3.requestStart = num;
+    obj14.requestStart = num;
     let num2 = entryType.connectStart;
     if (num2 == null) {
       num2 = 0;
     }
-    obj3.connectStart = num2;
+    obj14.connectStart = num2;
     let num3 = entryType.connectEnd;
     if (num3 == null) {
       num3 = 0;
     }
-    obj3.connectEnd = num3;
+    obj14.connectEnd = num3;
     let num4 = entryType.responseStart;
     if (num4 == null) {
       num4 = 0;
     }
-    obj3.responseStart = num4;
+    obj14.responseStart = num4;
     let num5 = entryType.responseEnd;
     if (num5 == null) {
       num5 = 0;
     }
-    obj3.responseEnd = num5;
+    obj14.responseEnd = num5;
     let num6 = entryType.responseStatus;
     if (num6 == null) {
       num6 = 0;
     }
-    obj3.responseStatus = num6;
+    obj14.responseStatus = num6;
     let str3 = entryType.contentType;
     if (str3 == null) {
       str3 = "";
     }
-    obj3.contentType = str3;
+    obj14.contentType = str3;
     let num7 = entryType.encodedBodySize;
     if (num7 == null) {
       num7 = 0;
     }
-    obj3.encodedBodySize = num7;
+    obj14.encodedBodySize = num7;
     let num8 = entryType.decodedBodySize;
     if (num8 == null) {
       num8 = 0;
     }
-    obj3.decodedBodySize = num8;
-    const performanceResourceTiming = new _mod172.PerformanceResourceTiming(obj3);
+    obj14.decodedBodySize = num8;
+    const performanceResourceTiming = new _mod172.PerformanceResourceTiming(obj14);
     return performanceResourceTiming;
   } else {
     const entryType2 = entryType.entryType;

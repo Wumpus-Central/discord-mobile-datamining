@@ -527,7 +527,7 @@ function recordTouchStart(identifier) {
       obj.previousTimeStamp = identifier.timeStamp || identifier.timestamp;
       tmp5[identifier] = obj;
     }
-    obj1.mostRecentTimeStamp = tmp(identifier);
+    obj4.mostRecentTimeStamp = tmp(identifier);
   }
 }
 function recordTouchMove(identifier) {
@@ -544,7 +544,7 @@ function recordTouchMove(identifier) {
     if (!timestamp) {
       timestamp = identifier.timestamp;
     }
-    obj1.mostRecentTimeStamp = timestamp;
+    obj4.mostRecentTimeStamp = timestamp;
   }
 }
 function recordTouchEnd(identifier) {
@@ -561,7 +561,7 @@ function recordTouchEnd(identifier) {
     if (!timestamp) {
       timestamp = identifier.timestamp;
     }
-    obj1.mostRecentTimeStamp = timestamp;
+    obj4.mostRecentTimeStamp = timestamp;
   }
 }
 function accumulateDirectionalDispatches$1(stateNode, bubbled, _dispatchListeners) {
@@ -776,7 +776,7 @@ function accumulateTwoPhaseDispatchesSingleSkipTarget(dispatchConfig) {
       let num4 = 0;
       if (0 < items.length) {
         do {
-          tmp3Result = accumulateDirectionalDispatches$1(items[num4], "bubbled", dispatchConfig);
+          let tmp3Result2 = accumulateDirectionalDispatches$1(items[num4], "bubbled", dispatchConfig);
           num4 = num4 + 1;
           length = items.length;
         } while (num4 < length);
@@ -822,7 +822,7 @@ function accumulateTwoPhaseDispatchesSingle$1(dispatchConfig) {
     let num4 = 0;
     if (0 < items.length) {
       do {
-        tmpResult = accumulateDirectionalDispatches$1(items[num4], "bubbled", dispatchConfig);
+        let tmpResult2 = accumulateDirectionalDispatches$1(items[num4], "bubbled", dispatchConfig);
         num4 = num4 + 1;
         length = items.length;
       } while (num4 < length);
@@ -942,7 +942,7 @@ function accumulateTwoPhaseDispatchesSingle(dispatchConfig) {
     let num4 = 0;
     if (0 < items.length) {
       do {
-        tmpResult = accumulateDirectionalDispatches(items[num4], "bubbled", dispatchConfig);
+        let tmpResult2 = accumulateDirectionalDispatches(items[num4], "bubbled", dispatchConfig);
         num4 = num4 + 1;
         length = items.length;
       } while (num4 < length);
@@ -1628,15 +1628,14 @@ function createCapturedValueAtFiber(value, current) {
     if (null !== value) {
       value = weakMap.get(value);
       if (undefined === value) {
-        obj = { value, source: current, stack: getStackByFiberInDevAndProd(current) };
-        const result = weakMap.set(value, obj);
-        value = obj;
+        const obj3 = { value, source: current, stack: getStackByFiberInDevAndProd(current) };
+        const result = weakMap.set(value, obj3);
+        value = obj3;
       }
       return value;
     }
   }
-  obj = { value, source: current, stack: getStackByFiberInDevAndProd(current) };
-  return obj;
+  return { value, source: current, stack: getStackByFiberInDevAndProd(current) };
 }
 function pushHostContainer(current, containerInfo) {
   sum = closure_86 + 1;
@@ -1723,7 +1722,7 @@ function propagateContextChanges(child, items, current, arg3) {
       if (null !== dependencies) {
         let child2 = child.child;
         iter = dependencies.firstContext;
-        child = child2;
+        let child1 = child2;
         if (null !== iter) {
           while (true) {
             num = 0;
@@ -1761,13 +1760,13 @@ function propagateContextChanges(child, items, current, arg3) {
                   }
                 }
               }
-              child = child2;
+              child1 = child2;
               if (!arg3) {
-                child = null;
+                child1 = null;
               }
             }
             iter = iter.next;
-            child = child2;
+            child1 = child2;
           }
         }
       } else if (18 === child.tag) {
@@ -1780,7 +1779,7 @@ function propagateContextChanges(child, items, current, arg3) {
           if (null !== alternate4) {
             alternate4.lanes = alternate4.lanes | current;
           }
-          child = null;
+          child1 = null;
           if (null !== _return) {
             while (true) {
               let alternate = _return.alternate;
@@ -1795,12 +1794,12 @@ function propagateContextChanges(child, items, current, arg3) {
                   alternate.childLanes = alternate.childLanes | current;
                 }
               }
-              child = null;
+              child1 = null;
               if (_return === child) {
                 break;
               } else {
                 _return = _return.return;
-                child = null;
+                child1 = null;
                 if (null !== _return) {
                   continue;
                 } else {
@@ -1812,11 +1811,11 @@ function propagateContextChanges(child, items, current, arg3) {
           }
         }
       } else {
-        child = child.child;
+        child1 = child.child;
       }
-      if (null !== child) {
-        child.return = child;
-        let tmp11 = child;
+      if (null !== child1) {
+        child1.return = child;
+        let tmp11 = child1;
       } else {
         let _return3 = child;
         tmp11 = child;
@@ -1903,7 +1902,7 @@ function propagateParentContextChanges(arg0, flags, current, arg3) {
             tmp6 = tmp;
             if (alternate2.memoizedState.memoizedState !== _return.memoizedState.memoizedState) {
               if (null !== tmp) {
-                arr = tmp.push(closure_366);
+                let arr2 = tmp.push(closure_366);
                 items1 = tmp;
               } else {
                 items1 = [closure_366];
@@ -1927,10 +1926,10 @@ function propagateParentContextChanges(arg0, flags, current, arg3) {
   }
   flags.flags = flags.flags | 262144;
 }
-function releaseCache(cache) {
-  closure_0 = cache;
-  cache.refCount = cache.refCount - 1;
-  if (0 === cache.refCount) {
+function releaseCache(cache1) {
+  closure_0 = cache1;
+  cache1.refCount = cache1.refCount - 1;
+  if (0 === cache1.refCount) {
     const result = peek.unstable_scheduleCallback(peek.unstable_NormalPriority, () => {
       const controller = pooledCache.controller;
       controller.abort();
@@ -2256,7 +2255,7 @@ function pingEngtangledActionScope() {
   closure_123 = diff;
   if (0 === diff) {
     if (null !== items) {
-      if (null !== obj) {
+      if (null !== obj2) {
         tmp4.status = "fulfilled";
       }
       items = null;
@@ -2450,14 +2449,14 @@ function enqueueUpdate$1(lanes, lastRenderedReducer, arg2, arg3) {
     alternate.lanes = alternate.lanes | 0;
   }
 }
-function enqueueConcurrentHookUpdate(lanes, pending, arg2, lane) {
+function enqueueConcurrentHookUpdate(lanes, pending, pending, lane) {
   let tmp = lanes;
   c143 = tmp2 + 1;
   closure_142[+c143] = lanes;
   c143 = tmp3 + 1;
   closure_142[+c143] = pending;
   c143 = tmp4 + 1;
-  closure_142[+c143] = arg2;
+  closure_142[+c143] = pending;
   c143 = tmp5 + 1;
   closure_142[+c143] = lane;
   c144 = c144 | lane;
@@ -2566,12 +2565,11 @@ function markUpdateLaneFromFiberToRoot(lanes, arg1, arg2) {
     if (flag2) {
       let diff = 31 - clz32Fallback(arg2);
       const hiddenUpdates = stateNode2.hiddenUpdates;
-      let arr = hiddenUpdates[diff];
-      if (null === arr) {
+      if (null === hiddenUpdates[diff]) {
         items = [arg1];
         hiddenUpdates[diff] = items;
       } else {
-        arr = arr.push(arg1);
+        arr.push(arg1);
       }
       diff = 536870912 | arg2;
       arg1.lane = diff;
@@ -2664,23 +2662,23 @@ function enqueueCapturedUpdate(arg0, next) {
       let tmp3 = null;
       if (null !== iter) {
         do {
-          obj = { lane: null, tag: null, payload: null, callback: null, next: null };
+          next = { lane: null, tag: null, payload: null, callback: null, next: null };
           ({ lane: obj.lane, tag: obj.tag, payload: obj.payload } = iter);
-          tmp7 = obj;
+          tmp7 = next;
           if (null !== tmp) {
-            tmp.next = obj;
+            tmp.next = next;
             tmp7 = tmp3;
           }
           iter = iter.next;
-          tmp = obj;
+          tmp = next;
           tmp3 = tmp7;
         } while (null !== iter);
-        obj.next = next;
+        next.next = next;
         tmp2 = tmp7;
       }
-      obj = { baseState: updateQueue2.baseState, firstBaseUpdate: tmp2, lastBaseUpdate: next, shared: null, callbacks: null };
+      const obj3 = { baseState: updateQueue2.baseState, firstBaseUpdate: tmp2, lastBaseUpdate: next, shared: null, callbacks: null };
       ({ shared: obj2.shared, callbacks: obj2.callbacks } = updateQueue2);
-      arg0.updateQueue = obj;
+      arg0.updateQueue = obj3;
     }
   }
   const lastBaseUpdate = updateQueue.lastBaseUpdate;
@@ -2748,10 +2746,10 @@ function processUpdateQueue(updateQueue, pendingProps7, stateNode, current) {
         }
         let tmp20 = tmp27;
         if (null !== tmp27) {
-          obj = { lane: 0, tag: null, payload: null, callback: null, next: null };
+          let obj3 = { lane: 0, tag: null, payload: null, callback: null, next: null };
           ({ tag: obj2.tag, payload: obj2.payload } = iter2);
-          tmp27.next = obj;
-          tmp20 = obj;
+          tmp27.next = obj3;
+          tmp20 = obj3;
         }
         let tag = iter2.tag;
         if (1 === tag) {
@@ -2783,7 +2781,7 @@ function processUpdateQueue(updateQueue, pendingProps7, stateNode, current) {
         }
         let callback = iter2.callback;
         let tmp17 = tmp21;
-        obj = tmp20;
+        lastBaseUpdate = tmp20;
         let tmp14 = tmp28;
         let tmp15 = tmp29;
         let tmp16 = num;
@@ -2797,26 +2795,26 @@ function processUpdateQueue(updateQueue, pendingProps7, stateNode, current) {
             items = [callback];
             updateQueue.callbacks = items;
             tmp17 = tmp21;
-            obj = tmp20;
+            lastBaseUpdate = tmp20;
             tmp14 = tmp28;
             tmp15 = tmp29;
             tmp16 = num;
           } else {
             let arr = callbacks.push(callback);
             tmp17 = tmp21;
-            obj = tmp20;
+            lastBaseUpdate = tmp20;
             tmp14 = tmp28;
             tmp15 = tmp29;
             tmp16 = num;
           }
         }
       } else {
-        obj = { lane: tmp4, tag: null, payload: null, callback: null, next: null };
+        lastBaseUpdate = { lane: tmp4, tag: null, payload: null, callback: null, next: null };
         ({ tag: obj.tag, payload: obj.payload, callback: obj.callback } = iter2);
-        tmp14 = obj;
+        tmp14 = lastBaseUpdate;
         tmp15 = baseState;
         if (null !== tmp27) {
-          tmp27.next = obj;
+          tmp27.next = lastBaseUpdate;
           tmp14 = tmp28;
           tmp15 = tmp29;
         }
@@ -2825,7 +2823,7 @@ function processUpdateQueue(updateQueue, pendingProps7, stateNode, current) {
       }
       iter2 = iter2.next;
       baseState = tmp17;
-      tmp27 = obj;
+      tmp27 = lastBaseUpdate;
       tmp28 = tmp14;
       tmp29 = tmp15;
       num = tmp16;
@@ -2834,12 +2832,12 @@ function processUpdateQueue(updateQueue, pendingProps7, stateNode, current) {
       } else {
         let iter3 = updateQueue.shared.pending;
         if (null === iter3) {
-          if (null === obj) {
+          if (null === lastBaseUpdate) {
             tmp15 = tmp17;
           }
           updateQueue.baseState = tmp15;
           updateQueue.firstBaseUpdate = tmp14;
-          updateQueue.lastBaseUpdate = obj;
+          updateQueue.lastBaseUpdate = lastBaseUpdate;
           if (null === tmp) {
             updateQueue.shared.lanes = 0;
           }
@@ -2852,7 +2850,7 @@ function processUpdateQueue(updateQueue, pendingProps7, stateNode, current) {
           updateQueue.lastBaseUpdate = iter3;
           updateQueue.shared.pending = null;
           baseState = tmp17;
-          tmp27 = obj;
+          tmp27 = lastBaseUpdate;
           tmp28 = tmp14;
           tmp29 = tmp15;
           num = tmp16;
@@ -2878,7 +2876,7 @@ function callCallback(arr, arg1) {
     }
   }
 }
-function commitCallbacks(updateQueue, stateNode) {
+function commitCallbacks(updateQueue, stateNode1) {
   const callbacks = updateQueue.callbacks;
   if (null !== callbacks) {
     updateQueue.callbacks = null;
@@ -2889,7 +2887,7 @@ function commitCallbacks(updateQueue, stateNode) {
         if (typeof call === "unknown") {
           let tmpResult = tmp();
         } else {
-          let callResult = call(stateNode);
+          let callResult = call(stateNode1);
         }
         num = num + 1;
       }
@@ -2994,7 +2992,7 @@ function renderWithHooks(memoizedState, updateQueue, TransitionAwareHostComponen
   updateQueue.lanes = 0;
   if (null !== memoizedState) {
     if (null !== memoizedState.memoizedState) {
-      let tmp2 = obj7;
+      let tmp2 = obj10;
     }
     tmp.H = tmp2;
     let tmp6 = TransitionAwareHostComponent(memoizedProps, ref);
@@ -3022,7 +3020,7 @@ function renderWithHooks(memoizedState, updateQueue, TransitionAwareHostComponen
             }
           }
           num3 = num3 + 1;
-          __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H = obj8;
+          __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H = obj11;
           tmp6 = TransitionAwareHostComponent(memoizedProps, ref);
         }
       }
@@ -3035,7 +3033,7 @@ function renderWithHooks(memoizedState, updateQueue, TransitionAwareHostComponen
   tmp2 = closure_210;
 }
 function finishRenderingHooks(dependencies) {
-  __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H = obj6;
+  __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H = obj9;
   c164 = 0;
   c165 = null;
   _null2 = null;
@@ -3090,7 +3088,7 @@ function TransitionAwareHostComponent() {
       const alternate = _null.alternate;
       if (null !== alternate) {
         if (null !== alternate.memoizedState) {
-          let tmp7 = obj7;
+          let tmp7 = obj10;
         }
         __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H = tmp7;
       }
@@ -3128,13 +3126,13 @@ function resetHooksOnUnwind(memoizedState) {
   items1 = null;
 }
 function mountWorkInProgressHook() {
-  obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-  if (null === obj) {
-    c165.memoizedState = obj;
+  const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+  if (null === next) {
+    c165.memoizedState = next;
   } else {
-    tmp.next = obj;
+    tmp.next = next;
   }
-  return obj;
+  return next;
 }
 function updateWorkInProgressHook() {
   if (null === _null2) {
@@ -3147,13 +3145,13 @@ function updateWorkInProgressHook() {
   } else {
     next = iter.next;
   }
-  if (null === obj) {
+  if (null === next) {
     let next2 = _null.memoizedState;
   } else {
     next2 = iter2.next;
   }
   if (null !== next2) {
-    obj = next2;
+    next = next2;
     _null2 = next;
   } else if (null === next) {
     if (null === _null.alternate) {
@@ -3164,19 +3162,19 @@ function updateWorkInProgressHook() {
       throw Error("Rendered more hooks than during the previous render.");
     }
   } else {
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
     _null2 = next;
-    obj.memoizedState = next.memoizedState;
-    obj.baseState = _null2.baseState;
-    obj.baseQueue = _null2.baseQueue;
-    obj.queue = _null2.queue;
-    if (null === obj) {
-      _null.memoizedState = obj;
+    next.memoizedState = next.memoizedState;
+    next.baseState = _null2.baseState;
+    next.baseQueue = _null2.baseQueue;
+    next.queue = _null2.queue;
+    if (null === next) {
+      _null.memoizedState = next;
     } else {
-      tmp7.next = obj;
+      tmp7.next = next;
     }
   }
-  return obj;
+  return next;
 }
 function useThenable(items2) {
   closure_171 = closure_171 + 1;
@@ -3192,7 +3190,7 @@ function useThenable(items2) {
     const alternate = _null.alternate;
     if (null !== alternate) {
       if (null !== alternate.memoizedState) {
-        let tmp5 = obj7;
+        let tmp5 = obj10;
       }
       tmp4.H = tmp5;
     }
@@ -3232,7 +3230,7 @@ function updateReducerImpl(queue, c166, basicStateReducer) {
     if (null === iter) {
       queue.memoizedState = baseState;
     } else {
-      const next = iter.next;
+      let next = iter.next;
       let flag2 = false;
       let iter2 = next;
       let tmp3 = null;
@@ -3247,10 +3245,10 @@ function updateReducerImpl(queue, c166, basicStateReducer) {
           tmp15 = (c164 & tmp7) === tmp7;
         }
         if (!tmp15) {
-          obj = { lane: tmp7, revertLane: null, gesture: null, action: null, hasEagerState: null, eagerState: null, next: null };
+          next = { lane: tmp7, revertLane: null, gesture: null, action: null, hasEagerState: null, eagerState: null, next: null };
           ({ revertLane: obj.revertLane, gesture: obj.gesture, action: obj.action, hasEagerState: obj.hasEagerState, eagerState: obj.eagerState } = iter2);
           if (null !== tmp3) {
-            tmp3.next = obj;
+            tmp3.next = next;
           }
           _null.lanes = _null.lanes | tmp7;
           closure_288 = closure_288 | tmp7;
@@ -3292,8 +3290,8 @@ function updateReducerImpl(queue, c166, basicStateReducer) {
             if (!is(tmp32, queue.memoizedState)) {
               c222 = true;
               if (flag4) {
-                if (null !== obj) {
-                  throw obj;
+                if (null !== obj2) {
+                  throw obj2;
                 }
               }
             }
@@ -3302,10 +3300,10 @@ function updateReducerImpl(queue, c166, basicStateReducer) {
             queue.baseQueue = tmp29;
             queue.lastRenderedState = tmp32;
           } else {
-            obj = { lane: 0, revertLane: null, gesture: null, action: null, hasEagerState: null, eagerState: null, next: null };
+            obj5 = { lane: 0, revertLane: null, gesture: null, action: null, hasEagerState: null, eagerState: null, next: null };
             ({ revertLane: obj2.revertLane, action: obj2.action, hasEagerState: obj2.hasEagerState, eagerState: obj2.eagerState } = iter2);
             if (null !== tmp3) {
-              tmp3.next = obj;
+              tmp3.next = obj5;
             }
             _null.lanes = _null.lanes | revertLane;
             closure_288 = closure_288 | revertLane;
@@ -3320,16 +3318,16 @@ function updateReducerImpl(queue, c166, basicStateReducer) {
       }
       let tmp33 = tmp3;
       if (null !== tmp3) {
-        obj = { lane: 0, revertLane: 0, gesture: null, action: null, hasEagerState: null, eagerState: null, next: null };
+        obj6 = { lane: 0, revertLane: 0, gesture: null, action: null, hasEagerState: null, eagerState: null, next: null };
         ({ action: obj3.action, hasEagerState: obj3.hasEagerState, eagerState: obj3.eagerState } = iter2);
-        tmp3.next = obj;
-        tmp33 = obj;
+        tmp3.next = obj6;
+        tmp33 = obj6;
       }
       flag3 = flag2;
-      obj = tmp33;
+      obj5 = tmp33;
       if (tmp7 === c124) {
         flag3 = true;
-        obj = tmp33;
+        obj5 = tmp33;
       }
     }
     if (null === iter) {
@@ -3388,7 +3386,8 @@ function mountStateImpl(fn) {
   }
   tmp3.baseState = tmp4;
   tmp3.memoizedState = tmp4;
-  tmp3.queue = { pending: null, lanes: 0, dispatch: null, lastRenderedReducer: basicStateReducer, lastRenderedState: tmp4 };
+  const queue = { pending: null, lanes: 0, dispatch: null, lastRenderedReducer: basicStateReducer, lastRenderedState: tmp4 };
+  tmp3.queue = queue;
   return tmp3;
 }
 function dispatchActionState(alternate, action, fn, fn2, payload) {
@@ -3440,22 +3439,21 @@ function runActionStateAction(state, next) {
   ({ action, payload } = next);
   state = state.state;
   if (next.isTransition) {
-    const T = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T;
-    obj = {};
-    __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = obj;
+    const T = {};
+    __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = T;
     try {
       const actionResult = action(state, payload);
       const S = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S;
       if (null !== S) {
-        tmp15(obj, actionResult);
+        tmp15(T, actionResult);
       }
       handleActionReturnValue(state, next, actionResult);
       let tmp25 = null !== T;
       if (tmp25) {
-        tmp25 = null !== obj.types;
+        tmp25 = null !== T.types;
       }
       if (tmp25) {
-        T.types = obj.types;
+        T.types = T.types;
       }
       __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = T;
     } catch (tmp28) {
@@ -3607,22 +3605,22 @@ function actionStateActionEffect(arg0, action) {
   arg0.action = action;
 }
 function pushSimpleEffect(arg0, inst, create, arg3) {
-  obj = { tag: 9, create, deps: null, inst, next: null };
+  const lastEffect = { tag: 9, create, deps: null, inst, next: null };
   let updateQueue = _null.updateQueue;
   if (null === updateQueue) {
-    obj = { lastEffect: null, events: null, stores: null, memoCache: null };
-    _null.updateQueue = obj;
-    updateQueue = obj;
+    obj2 = { lastEffect: null, events: null, stores: null, memoCache: null };
+    _null.updateQueue = obj2;
+    updateQueue = obj2;
   }
   if (null === updateQueue.lastEffect) {
-    obj.next = obj;
-    updateQueue.lastEffect = obj;
+    lastEffect.next = lastEffect;
+    updateQueue.lastEffect = lastEffect;
   } else {
-    iter.next = obj;
-    obj.next = iter.next;
-    updateQueue.lastEffect = obj;
+    iter.next = lastEffect;
+    lastEffect.next = iter.next;
+    updateQueue.lastEffect = lastEffect;
   }
-  return obj;
+  return lastEffect;
 }
 function updateEffectImpl(arg0, tag, create, combined) {
   const tmp = updateWorkInProgressHook();
@@ -3659,42 +3657,42 @@ function updateEffectImpl(arg0, tag, create, combined) {
         }
       }
       if (flag) {
-        obj = { tag, create, deps: tmp2, inst, next: null };
+        obj2 = { tag, create, deps: tmp2, inst, next: null };
         let updateQueue2 = _null.updateQueue;
         if (null === updateQueue2) {
-          obj = { lastEffect: null, events: null, stores: null, memoCache: null };
-          _null.updateQueue = obj;
-          updateQueue2 = obj;
+          const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
+          _null.updateQueue = obj3;
+          updateQueue2 = obj3;
         }
         if (null === updateQueue2.lastEffect) {
-          obj.next = obj;
-          updateQueue2.lastEffect = obj;
+          obj2.next = obj2;
+          updateQueue2.lastEffect = obj2;
         } else {
-          iter2.next = obj;
-          obj.next = iter2.next;
-          updateQueue2.lastEffect = obj;
+          iter2.next = obj2;
+          obj2.next = iter2.next;
+          updateQueue2.lastEffect = obj2;
         }
-        tmp.memoizedState = obj;
+        tmp.memoizedState = obj2;
       }
     }
   }
   _null.flags = _null.flags | arg0;
-  obj = { tag: 1 | tag, create, deps: tmp2, inst, next: null };
+  memoizedState = { tag: 1 | tag, create, deps: tmp2, inst, next: null };
   let updateQueue = _null.updateQueue;
   if (null === updateQueue) {
-    obj1 = { lastEffect: null, events: null, stores: null, memoCache: null };
-    _null.updateQueue = obj1;
-    updateQueue = obj1;
+    obj4 = { lastEffect: null, events: null, stores: null, memoCache: null };
+    _null.updateQueue = obj4;
+    updateQueue = obj4;
   }
   if (null === updateQueue.lastEffect) {
-    obj.next = obj;
-    updateQueue.lastEffect = obj;
+    memoizedState.next = memoizedState;
+    updateQueue.lastEffect = memoizedState;
   } else {
-    iter.next = obj;
-    obj.next = iter.next;
-    updateQueue.lastEffect = obj;
+    iter.next = memoizedState;
+    memoizedState.next = iter.next;
+    updateQueue.lastEffect = memoizedState;
   }
-  tmp.memoizedState = obj;
+  tmp.memoizedState = memoizedState;
 }
 function imperativeHandleEffect(fn, fn2) {
   closure_0 = fn2;
@@ -3784,15 +3782,14 @@ function startTransition(alternate, pending, action, action, fn) {
       num = tmp5;
     }
   }
-  const T = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T;
-  obj = {};
-  __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = obj;
+  const T = {};
+  __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = T;
   dispatchOptimisticSetState(alternate, false, pending, action);
   try {
     const promise = fn();
     const S = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S;
     if (null !== S) {
-      tmp9(obj, promise);
+      tmp9(T, promise);
     }
     if (null !== promise) {
       if (typeof promise === "object") {
@@ -3877,10 +3874,10 @@ function startTransition(alternate, pending, action, action, fn) {
         num = tmp5;
         let tmp31 = null !== T;
         if (tmp31) {
-          tmp31 = null !== obj.types;
+          tmp31 = null !== T.types;
         }
         if (tmp31) {
-          T.types = obj.types;
+          T.types = T.types;
         }
         __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = T;
       }
@@ -3934,20 +3931,20 @@ function refreshCache(_reactInternals) {
         }
       }
     }
-    obj = { cache: null };
-    obj = { controller: null, data: null, refCount: 0 };
+    obj2 = { cache: null };
+    const obj3 = { controller: null, data: null, refCount: 0 };
     const tmp15 = new closure_106();
-    obj.controller = tmp15;
+    obj3.controller = tmp15;
     const _Map = Map;
     map = new Map();
-    obj.data = map;
-    obj.cache = obj;
-    obj.payload = obj;
+    obj3.data = map;
+    obj2.cache = obj3;
+    obj.payload = obj2;
   }
 }
 function dispatchReducerAction(alternate, pending, action) {
   const tmp = requestUpdateLane(alternate);
-  obj = { lane: tmp, revertLane: 0, gesture: null, action, hasEagerState: false, eagerState: null, next: null };
+  pending = { lane: tmp, revertLane: 0, gesture: null, action, hasEagerState: false, eagerState: null, next: null };
   alternate = alternate.alternate;
   let tmp3 = alternate === c165;
   if (!tmp3) {
@@ -3958,14 +3955,14 @@ function dispatchReducerAction(alternate, pending, action) {
     c168 = true;
     c169 = true;
     if (null === pending.pending) {
-      obj.next = obj;
+      pending.next = pending;
     } else {
-      obj.next = iter.next;
-      iter.next = obj;
+      pending.next = iter.next;
+      iter.next = pending;
     }
-    pending.pending = obj;
+    pending.pending = pending;
   } else {
-    const tmp11 = enqueueConcurrentHookUpdate(alternate, pending, obj, tmp);
+    const tmp11 = enqueueConcurrentHookUpdate(alternate, pending, pending, tmp);
     if (null !== tmp11) {
       scheduleUpdateOnFiber(tmp11, alternate, tmp);
       if (4194048 & tmp) {
@@ -4213,20 +4210,20 @@ function constructClassInstance(_reactInternals, type3, memoizedProps) {
   }
   if (tmp2) {
     const _currentValue2 = contextType._currentValue2;
-    obj = { context: contextType, memoizedValue: _currentValue2, next: null };
-    if (null === obj) {
+    const next = { context: contextType, memoizedValue: _currentValue2, next: null };
+    if (null === obj2) {
       if (null === require) {
         const _Error = Error;
         throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
       } else {
-        obj = { lanes: 0, firstContext: null };
-        obj.firstContext = obj;
-        require.dependencies = obj;
+        obj2 = { lanes: 0, firstContext: next };
+        require.dependencies = obj2;
         require.flags = require.flags | 524288;
         tmp = _currentValue2;
       }
     } else {
-      tmp4.next = obj;
+      tmp4.next = next;
+      obj2 = next;
       tmp = _currentValue2;
     }
   }
@@ -4254,20 +4251,20 @@ function mountClassInstance(baseState, type3, props, current) {
   if (typeof contextType === "object") {
     if (null !== contextType) {
       const _currentValue2 = contextType._currentValue2;
-      obj = { context: contextType, memoizedValue: _currentValue2, next: null };
-      if (null === obj) {
+      const next = { context: contextType, memoizedValue: _currentValue2, next: null };
+      if (null === obj2) {
         if (null === require) {
           const _Error = Error;
           throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
         } else {
-          obj = { lanes: 0, firstContext: null };
-          obj.firstContext = obj;
-          require.dependencies = obj;
+          obj2 = { lanes: 0, firstContext: next };
+          require.dependencies = obj2;
           require.flags = require.flags | 524288;
           let tmp = _currentValue2;
         }
       } else {
-        tmp3.next = obj;
+        tmp3.next = next;
+        obj2 = next;
         tmp = _currentValue2;
       }
     }
@@ -4312,8 +4309,8 @@ function mountClassInstance(baseState, type3, props, current) {
       }
       processUpdateQueue(baseState, props, stateNode, current);
       if (c153) {
-        if (null !== obj) {
-          throw obj;
+        if (null !== obj2) {
+          throw obj2;
         }
       }
       stateNode.state = baseState.memoizedState;
@@ -4419,7 +4416,6 @@ function updateForwardRef(updateQueue, dependencies, type, pendingProps, current
     }
   }
   require = dependencies;
-  obj = null;
   dependencies = dependencies.dependencies;
   if (null !== dependencies) {
     dependencies.firstContext = null;
@@ -4682,14 +4678,14 @@ function updateOffscreenComponent(memoizedState, stateNode, current, pendingProp
           }
           pushOffscreenSuspenseHandler(stateNode);
         } else {
-          let cachePool = null;
+          let cachePool1 = null;
           if (null !== memoizedState) {
-            cachePool = memoizedState.cachePool;
+            cachePool1 = memoizedState.cachePool;
           }
           const sum4 = closure_86 + 1;
           closure_86 = sum4;
           closure_85[sum4] = closure_128.current;
-          closure_128.current = null === cachePool ? closure_128.current : cachePool.pool;
+          closure_128.current = null === cachePool1 ? closure_128.current : cachePool1.pool;
         }
       } else {
         stateNode.lanes = 536870912;
@@ -4717,7 +4713,7 @@ function updateOffscreenComponent(memoizedState, stateNode, current, pendingProp
       pushOffscreenSuspenseHandler(stateNode);
     }
   } else if (null !== memoizedState) {
-    cachePool = memoizedState.cachePool;
+    const cachePool = memoizedState.cachePool;
     const sum8 = closure_86 + 1;
     closure_86 = sum8;
     closure_85[sum8] = closure_128.current;
@@ -4798,13 +4794,13 @@ function deferHiddenOffscreenComponent(memoizedState, stateNode, baseLanes, curr
 }
 function retryActivityComponentWithoutHydrating(child, mode, current) {
   closure_140(mode, child.child, null, current);
-  const pendingProps = mode.pendingProps;
-  obj = { mode: pendingProps.mode, children: pendingProps.children };
-  obj = Object.create(FiberNode.prototype);
-  obj = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: obj, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null, lanes: 0, ref: mode.ref };
-  mode.child = obj;
-  obj.return = mode;
-  obj.flags = obj.flags | 2;
+  let pendingProps = mode.pendingProps;
+  pendingProps = { mode: pendingProps.mode, children: pendingProps.children };
+  Object.create(FiberNode.prototype);
+  obj4 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null, lanes: 0, ref: mode.ref };
+  mode.child = obj4;
+  obj4.return = mode;
+  obj4.flags = obj4.flags | 2;
   let tmp5 = closure_86;
   if (0 <= closure_86) {
     tmp3.current = dependencyMap3[tmp4];
@@ -4822,7 +4818,7 @@ function retryActivityComponentWithoutHydrating(child, mode, current) {
     closure_86 = closure_86 - 1;
   }
   mode.memoizedState = null;
-  return obj;
+  return obj4;
 }
 function replayFunctionComponent(alternate, dependencies, pendingProps, render, ref, c280) {
   require = dependencies;
@@ -4853,7 +4849,7 @@ function replayFunctionComponent(alternate, dependencies, pendingProps, render, 
         }
       }
       num = num + 1;
-      __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H = obj8;
+      __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H = obj11;
       let tmp5 = render(pendingProps, ref);
       if (c169) {
         continue;
@@ -4883,7 +4879,7 @@ function replayFunctionComponent(alternate, dependencies, pendingProps, render, 
 }
 function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedProps, current) {
   require = dependencies;
-  obj = null;
+  obj2 = null;
   dependencies = dependencies.dependencies;
   if (null !== dependencies) {
     dependencies.firstContext = null;
@@ -4905,16 +4901,16 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     ({ stateNode, memoizedProps: memoizedProps2 } = dependencies);
     let tmp55 = memoizedProps2;
     if ("ref" in memoizedProps2) {
-      obj = {};
-      tmp55 = obj;
+      obj2 = {};
+      tmp55 = obj2;
       const keys = Object.keys();
       if (keys !== undefined) {
-        tmp55 = obj;
+        tmp55 = obj2;
         while (keys[tmp] !== undefined) {
           if ("ref" === tmp58) {
             continue;
           } else {
-            obj[tmp58] = memoizedProps2[tmp58];
+            obj2[tmp58] = memoizedProps2[tmp58];
             continue;
           }
           continue;
@@ -4952,19 +4948,21 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     }
     if (tmp66) {
       const _currentValue22 = contextType2._currentValue2;
-      obj = { context: contextType2, memoizedValue: _currentValue22, next: null };
-      if (null === obj) {
+      const obj3 = { context: contextType2, memoizedValue: _currentValue22, next: null };
+      if (null === obj2) {
         if (null === tmp67) {
           const _Error2 = Error;
           throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
         } else {
-          obj1 = { lanes: 0, firstContext: obj };
-          tmp67.dependencies = obj1;
+          obj2 = obj3;
+          obj4 = { lanes: 0, firstContext: obj3 };
+          tmp67.dependencies = obj4;
           tmp67.flags = tmp67.flags | 524288;
           tmp65 = _currentValue22;
         }
       } else {
-        tmp68.next = obj;
+        tmp68.next = obj3;
+        obj2 = obj3;
         tmp65 = _currentValue22;
       }
     }
@@ -5004,8 +5002,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     stateNode.state = memoizedState3;
     processUpdateQueue(dependencies, memoizedProps, stateNode, current);
     if (c153) {
-      if (null !== obj) {
-        throw obj;
+      if (null !== obj2) {
+        throw obj2;
       }
     }
     let memoizedState4 = dependencies.memoizedState;
@@ -5072,23 +5070,23 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     const stateNode2 = dependencies.stateNode;
     updateQueue = updateQueue.updateQueue;
     if (dependencies.updateQueue === updateQueue) {
-      obj = { baseState: null, firstBaseUpdate: null, lastBaseUpdate: null, shared: null, callbacks: null };
+      updateQueue = { baseState: null, firstBaseUpdate: null, lastBaseUpdate: null, shared: null, callbacks: null };
       ({ baseState: obj.baseState, firstBaseUpdate: obj.firstBaseUpdate, lastBaseUpdate: obj.lastBaseUpdate, shared: obj.shared } = updateQueue);
-      dependencies.updateQueue = obj;
+      dependencies.updateQueue = updateQueue;
     }
     memoizedProps = dependencies.memoizedProps;
     let tmp2 = memoizedProps;
     if ("ref" in memoizedProps) {
-      obj2 = {};
-      tmp2 = obj2;
+      obj5 = {};
+      tmp2 = obj5;
       const keys2 = Object.keys();
       if (keys2 !== undefined) {
-        tmp2 = obj2;
+        tmp2 = obj5;
         while (keys2[tmp] !== undefined) {
           if ("ref" === tmp5) {
             continue;
           } else {
-            obj2[tmp5] = memoizedProps[tmp5];
+            obj5[tmp5] = memoizedProps[tmp5];
             continue;
           }
           continue;
@@ -5127,21 +5125,21 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     }
     if (tmp13) {
       const _currentValue2 = contextType._currentValue2;
-      obj3 = { context: contextType, memoizedValue: _currentValue2, next: null };
-      if (null === obj) {
+      obj6 = { context: contextType, memoizedValue: _currentValue2, next: null };
+      if (null === obj2) {
         if (null === tmp14) {
           const _Error = Error;
           throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
         } else {
-          obj = obj3;
-          obj4 = { lanes: 0, firstContext: obj3 };
-          tmp14.dependencies = obj4;
+          obj2 = obj6;
+          obj7 = { lanes: 0, firstContext: obj6 };
+          tmp14.dependencies = obj7;
           tmp14.flags = tmp14.flags | 524288;
           tmp12 = _currentValue2;
         }
       } else {
-        tmp15.next = obj3;
-        obj = obj3;
+        tmp15.next = obj6;
+        obj2 = obj6;
         tmp12 = _currentValue2;
       }
     }
@@ -5178,8 +5176,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     stateNode2.state = memoizedState;
     processUpdateQueue(dependencies, memoizedProps, stateNode2, current);
     if (c153) {
-      if (null !== obj) {
-        throw obj;
+      if (null !== obj2) {
+        throw obj2;
       }
     }
     let memoizedState2 = dependencies.memoizedState;
@@ -5383,31 +5381,31 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
       closure_86 = sum1;
       ({ current: closure_85[tmp114], current: closure_159.current } = closure_159);
       ({ mode: mode2, child: child7 } = pendingProps);
-      obj = { mode: "hidden", children };
+      obj2 = { mode: "hidden", children };
       if (!(1 & mode2)) {
         if (null !== child7) {
           child7.childLanes = 0;
-          child7.pendingProps = obj;
+          child7.pendingProps = obj2;
         }
-        obj = Object.create(FiberNode.prototype);
-        obj1 = { tag: 7, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: tmp94, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode2, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+        Object.create(FiberNode.prototype);
+        obj4 = { tag: 7, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: tmp94, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode2, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
         child7.return = pendingProps;
-        obj1.return = pendingProps;
-        child7.sibling = obj1;
+        obj4.return = pendingProps;
+        child7.sibling = obj4;
         pendingProps.child = child7;
         const child8 = pendingProps.child;
-        obj2 = { baseLanes: lanes, cachePool: null };
+        obj5 = { baseLanes: lanes, cachePool: null };
         let pooledCache4 = closure_128.current;
         if (null === pooledCache4) {
           pooledCache4 = _null4.pooledCache;
         }
         let tmp121 = null;
         if (null !== pooledCache4) {
-          obj3 = { parent: context._currentValue2, pool: pooledCache4 };
-          tmp121 = obj3;
+          obj6 = { parent: context._currentValue2, pool: pooledCache4 };
+          tmp121 = obj6;
         }
-        obj2.cachePool = tmp121;
-        child8.memoizedState = obj2;
+        obj5.cachePool = tmp121;
+        child8.memoizedState = obj5;
         let num30 = 0;
         if (null !== memoizedState) {
           num30 = memoizedState.childLanes & ~lanes;
@@ -5421,11 +5419,11 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
         if (null === child8.stateNode) {
           child8.stateNode = { _visibility: 1, _pendingMarkers: null, _retryCache: null, _transitions: null };
         }
-        let sibling = child8.sibling;
+        let sibling1 = child8.sibling;
       }
       Object.create(FiberNode.prototype);
-      const obj5 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: obj, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode2, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
-      child7 = obj5;
+      const obj8 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: obj2, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode2, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
+      child7 = obj8;
     } else {
       const alternate4 = pendingProps.alternate;
       const sum2 = closure_86 + 1;
@@ -5450,12 +5448,12 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
       if (tmp103) {
         c160 = pendingProps;
       }
-      obj6 = { mode: "visible", children };
+      obj9 = { mode: "visible", children };
       Object.create(FiberNode.prototype);
-      sibling = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: pendingProps, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: obj6, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: pendingProps.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
-      pendingProps.child = sibling;
+      sibling1 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: pendingProps, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: obj9, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: pendingProps.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
+      pendingProps.child = sibling1;
     }
-    return sibling;
+    return sibling1;
   } else {
     const memoizedState2 = memoizedState.memoizedState;
     if (null !== memoizedState2) {
@@ -5487,13 +5485,13 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
             }
             pendingProps.flags = pendingProps.flags & -257;
             closure_140(pendingProps, memoizedState.child, null, lanes);
-            obj8 = { mode: "visible", children: pendingProps.pendingProps.children };
+            obj11 = { mode: "visible", children: pendingProps.pendingProps.children };
             Object.create(FiberNode.prototype);
-            const obj10 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: pendingProps, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: obj8, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: pendingProps.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
-            pendingProps.child = obj10;
-            obj10.flags = obj10.flags | 2;
+            const obj13 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: pendingProps, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: obj11, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: pendingProps.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
+            pendingProps.child = obj13;
+            obj13.flags = obj13.flags | 2;
             pendingProps.memoizedState = null;
-            let sibling1 = obj10;
+            let sibling4 = obj13;
           } else if (null !== pendingProps.memoizedState) {
             const sum6 = closure_86 + 1;
             closure_86 = sum6;
@@ -5503,7 +5501,7 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
             ({ current: closure_85[tmp75], current: closure_159.current } = closure_159);
             pendingProps.child = memoizedState.child;
             pendingProps.flags = pendingProps.flags | 128;
-            sibling1 = null;
+            sibling4 = null;
           } else {
             const sum8 = closure_86 + 1;
             closure_86 = sum8;
@@ -5512,32 +5510,32 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
             closure_86 = sum9;
             ({ current: closure_85[tmp134], current: closure_159.current } = closure_159);
             const mode3 = pendingProps.mode;
-            const obj11 = { mode: "visible", children: pendingProps.children };
+            const obj14 = { mode: "visible", children: pendingProps.children };
             Object.create(FiberNode.prototype);
-            const obj13 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: obj11, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode3, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
+            const obj16 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: obj14, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode3, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
             Object.create(FiberNode.prototype);
-            const obj15 = { tag: 7, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: pendingProps.fallback, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode3, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
-            obj15.flags = obj15.flags | 2;
-            obj13.return = pendingProps;
-            obj15.return = pendingProps;
-            obj13.sibling = obj15;
-            pendingProps.child = obj13;
+            const obj18 = { tag: 7, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: pendingProps.fallback, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode3, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+            obj18.flags = obj18.flags | 2;
+            obj16.return = pendingProps;
+            obj18.return = pendingProps;
+            obj16.sibling = obj18;
+            pendingProps.child = obj16;
             if (1 & pendingProps.mode) {
               closure_140(pendingProps, memoizedState.child, null, lanes);
             }
             const child6 = pendingProps.child;
-            const obj16 = { baseLanes: lanes, cachePool: null };
+            const obj19 = { baseLanes: lanes, cachePool: null };
             let pooledCache3 = closure_128.current;
             if (null === pooledCache3) {
               pooledCache3 = _null4.pooledCache;
             }
             let tmp63 = null;
             if (null !== pooledCache3) {
-              const obj17 = { parent: context._currentValue2, pool: pooledCache3 };
-              tmp63 = obj17;
+              const obj20 = { parent: context._currentValue2, pool: pooledCache3 };
+              tmp63 = obj20;
             }
-            obj16.cachePool = tmp63;
-            child6.memoizedState = obj16;
+            obj19.cachePool = tmp63;
+            child6.memoizedState = obj19;
             let num15 = 0;
             if (null !== memoizedState) {
               num15 = memoizedState.childLanes & ~lanes;
@@ -5551,9 +5549,9 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
             if (null === child6.stateNode) {
               child6.stateNode = { _visibility: 1, _pendingMarkers: null, _retryCache: null, _transitions: null };
             }
-            sibling1 = child6.sibling;
+            sibling4 = child6.sibling;
           }
-          return sibling1;
+          return sibling4;
         } else {
           const alternate2 = pendingProps.alternate;
           const sum10 = closure_86 + 1;
@@ -5594,24 +5592,24 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
       const mode = pendingProps.mode;
       const child2 = memoizedState.child;
       const sibling2 = child2.sibling;
-      const obj18 = { mode: "hidden", children: pendingProps.children };
+      const obj21 = { mode: "hidden", children: pendingProps.children };
       if (!(1 & mode)) {
         if (pendingProps.child !== child2) {
           let child3 = pendingProps.child;
           child3.childLanes = 0;
-          child3.pendingProps = obj18;
+          child3.pendingProps = obj21;
           pendingProps.deletions = null;
         }
         if (null !== sibling2) {
-          let obj20 = createWorkInProgress(sibling2, fallback);
+          let obj49 = createWorkInProgress(sibling2, fallback);
         } else {
           Object.create(FiberNode.prototype);
-          obj20 = { tag: 7, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: fallback, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
-          obj20.flags = obj20.flags | 2;
+          obj49 = { tag: 7, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: fallback, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+          obj49.flags = obj49.flags | 2;
         }
-        obj20.return = pendingProps;
+        obj49.return = pendingProps;
         child3.return = pendingProps;
-        child3.sibling = obj20;
+        child3.sibling = obj49;
         pendingProps.child = child3;
         if (null === child3.stateNode) {
           child3.stateNode = { _visibility: 1, _pendingMarkers: null, _retryCache: null, _transitions: null };
@@ -5620,25 +5618,25 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
         const child4 = pendingProps.child;
         memoizedState = memoizedState.child.memoizedState;
         if (null === memoizedState) {
-          const obj21 = { baseLanes: lanes, cachePool: null };
+          const obj50 = { baseLanes: lanes, cachePool: null };
           let pooledCache2 = closure_128.current;
           if (null === pooledCache2) {
             pooledCache2 = _null4.pooledCache;
           }
           let tmp38 = null;
           if (null !== pooledCache2) {
-            const obj22 = { parent: context._currentValue2, pool: pooledCache2 };
-            tmp38 = obj22;
+            const obj51 = { parent: context._currentValue2, pool: pooledCache2 };
+            tmp38 = obj51;
           }
-          obj21.cachePool = tmp38;
-          let obj25 = obj21;
+          obj50.cachePool = tmp38;
+          let obj54 = obj50;
         } else {
           let cachePool = memoizedState.cachePool;
           if (null !== cachePool) {
             const _currentValue2 = context._currentValue2;
             if (cachePool.parent !== _currentValue2) {
-              const obj23 = { parent: _currentValue2, pool: _currentValue2 };
-              cachePool = obj23;
+              const obj52 = { parent: _currentValue2, pool: _currentValue2 };
+              cachePool = obj52;
             }
             let tmp33 = cachePool;
           } else {
@@ -5648,13 +5646,13 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
             }
             tmp33 = null;
             if (null !== pooledCache) {
-              const obj24 = { parent: context._currentValue2, pool: pooledCache };
-              tmp33 = obj24;
+              const obj53 = { parent: context._currentValue2, pool: pooledCache };
+              tmp33 = obj53;
             }
           }
-          obj25 = { baseLanes: memoizedState.baseLanes | lanes, cachePool: tmp33 };
+          obj54 = { baseLanes: memoizedState.baseLanes | lanes, cachePool: tmp33 };
         }
-        child4.memoizedState = obj25;
+        child4.memoizedState = obj54;
         let num11 = 0;
         if (null !== memoizedState) {
           num11 = memoizedState.childLanes & ~lanes;
@@ -5678,7 +5676,7 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
         }
         return child4.sibling;
       }
-      const tmp29 = createWorkInProgress(child2, obj18);
+      const tmp29 = createWorkInProgress(child2, obj21);
       tmp29.subtreeFlags = 65011712 & child2.subtreeFlags;
       child3 = tmp29;
     } else {
@@ -5706,7 +5704,7 @@ function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
         c160 = pendingProps;
       }
       const child = memoizedState.child;
-      sibling = child.sibling;
+      const sibling = child.sibling;
       obj = { mode: "visible", children: pendingProps.children };
       const tmp19 = createWorkInProgress(child, obj);
       if (!(1 & pendingProps.mode)) {
@@ -5888,8 +5886,8 @@ function updateSuspenseListComponent(child, pendingProps, current) {
       }
       const memoizedState3 = pendingProps.memoizedState;
       if (null === memoizedState3) {
-        obj = { isBackwards: false, rendering: null, renderingStartTime: 0, last: tmp29, tail: sibling4, tailMode: tail, treeForkCount: 0 };
-        pendingProps.memoizedState = obj;
+        obj2 = { isBackwards: false, rendering: null, renderingStartTime: 0, last: tmp29, tail: sibling4, tailMode: tail, treeForkCount: 0 };
+        pendingProps.memoizedState = obj2;
       } else {
         memoizedState3.isBackwards = false;
         memoizedState3.rendering = null;
@@ -5943,8 +5941,8 @@ function updateSuspenseListComponent(child, pendingProps, current) {
       }
       const memoizedState2 = pendingProps.memoizedState;
       if (null === memoizedState2) {
-        obj = { isBackwards: true, rendering: null, renderingStartTime: 0, last: null, tail: tmp24, tailMode: tail, treeForkCount: 0 };
-        pendingProps.memoizedState = obj;
+        memoizedState = { isBackwards: true, rendering: null, renderingStartTime: 0, last: null, tail: tmp24, tailMode: tail, treeForkCount: 0 };
+        pendingProps.memoizedState = memoizedState;
       } else {
         memoizedState2.isBackwards = true;
         memoizedState2.rendering = null;
@@ -6286,7 +6284,7 @@ function beginWork(alternate, _return, current) {
     case 0:
       ({ type: type6, pendingProps: pendingProps9 } = _return);
       require = _return;
-      obj = null;
+      obj2 = null;
       const dependencies6 = _return.dependencies;
       if (null !== dependencies6) {
         dependencies6.firstContext = null;
@@ -6313,16 +6311,16 @@ function beginWork(alternate, _return, current) {
       ({ type: type5, pendingProps: pendingProps8 } = _return);
       let tmp370 = pendingProps8;
       if ("ref" in pendingProps8) {
-        obj = {};
-        tmp370 = obj;
+        const obj3 = {};
+        tmp370 = obj3;
         const keys = Object.keys();
         if (keys !== undefined) {
-          tmp370 = obj;
+          tmp370 = obj3;
           while (keys[tmp] !== undefined) {
             if ("ref" === tmp373) {
               continue;
             } else {
-              obj[tmp373] = pendingProps8[tmp373];
+              obj3[tmp373] = pendingProps8[tmp373];
               continue;
             }
             continue;
@@ -6368,9 +6366,9 @@ function beginWork(alternate, _return, current) {
         ({ pendingProps: pendingProps7, memoizedState: memoizedState4 } = _return);
         const updateQueue2 = alternate.updateQueue;
         if (_return.updateQueue === updateQueue2) {
-          obj = { baseState: null, firstBaseUpdate: null, lastBaseUpdate: null, shared: null, callbacks: null };
           ({ baseState: obj15.baseState, firstBaseUpdate: obj15.firstBaseUpdate, lastBaseUpdate: obj15.lastBaseUpdate, shared: obj15.shared } = updateQueue2);
-          _return.updateQueue = obj;
+          _return.updateQueue = { baseState: null, firstBaseUpdate: null, lastBaseUpdate: null, shared: null, callbacks: null };
+          obj4 = { baseState: null, firstBaseUpdate: null, lastBaseUpdate: null, shared: null, callbacks: null };
         }
         processUpdateQueue(_return, pendingProps7, null, current);
         const memoizedState5 = _return.memoizedState;
@@ -6385,8 +6383,8 @@ function beginWork(alternate, _return, current) {
           propagateContextChanges(_return, items, current, true);
         }
         if (c153) {
-          if (null !== obj) {
-            throw obj;
+          if (null !== obj2) {
+            throw obj2;
           }
         }
         const element = memoizedState5.element;
@@ -6499,26 +6497,26 @@ function beginWork(alternate, _return, current) {
     case 9:
       const _context = _return.type._context;
       require = _return;
-      obj = null;
+      obj2 = null;
       const dependencies5 = _return.dependencies;
       if (null !== dependencies5) {
         dependencies5.firstContext = null;
       }
       const _currentValue22 = _context._currentValue2;
-      obj1 = { context: _context, memoizedValue: _currentValue22, next: null };
-      if (null === obj) {
+      obj5 = { context: _context, memoizedValue: _currentValue22, next: null };
+      if (null === obj2) {
         if (null === tmp230) {
           const _Error3 = Error;
           throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
         } else {
-          obj = obj1;
-          obj2 = { lanes: 0, firstContext: obj1 };
-          tmp230.dependencies = obj2;
+          obj2 = obj5;
+          obj6 = { lanes: 0, firstContext: obj5 };
+          tmp230.dependencies = obj6;
           tmp230.flags = tmp230.flags | 524288;
         }
       } else {
-        tmp231.next = obj1;
-        obj = obj1;
+        tmp231.next = obj5;
+        obj2 = obj5;
       }
       const childrenResult = _return.pendingProps.children(_currentValue22);
       _return.flags = _return.flags | 1;
@@ -6599,16 +6597,16 @@ function beginWork(alternate, _return, current) {
         if (!tmp409) {
           let tmp420 = pendingProps10;
           if ("ref" in pendingProps10) {
-            obj3 = {};
-            tmp420 = obj3;
+            obj9 = {};
+            tmp420 = obj9;
             const keys2 = Object.keys();
             if (keys2 !== undefined) {
-              tmp420 = obj3;
+              tmp420 = obj9;
               while (keys2[tmp2] !== undefined) {
                 if ("ref" === tmp423) {
                   continue;
                 } else {
-                  obj3[tmp423] = pendingProps10[tmp423];
+                  obj9[tmp423] = pendingProps10[tmp423];
                   continue;
                 }
                 continue;
@@ -6642,7 +6640,7 @@ function beginWork(alternate, _return, current) {
         } else {
           _return.tag = 0;
           require = _return;
-          obj = null;
+          obj2 = null;
           const dependencies7 = _return.dependencies;
           if (null !== dependencies7) {
             dependencies7.firstContext = null;
@@ -6657,16 +6655,16 @@ function beginWork(alternate, _return, current) {
       ({ type: type3, pendingProps: pendingProps3 } = _return);
       let tmp197 = pendingProps3;
       if ("ref" in pendingProps3) {
-        obj4 = {};
-        tmp197 = obj4;
+        obj11 = {};
+        tmp197 = obj11;
         const keys4 = Object.keys();
         if (keys4 !== undefined) {
-          tmp197 = obj4;
+          tmp197 = obj11;
           while (keys4[tmp] !== undefined) {
             if ("ref" === tmp200) {
               continue;
             } else {
-              obj4[tmp200] = pendingProps3[tmp200];
+              obj11[tmp200] = pendingProps3[tmp200];
               continue;
             }
             continue;
@@ -6706,7 +6704,7 @@ function beginWork(alternate, _return, current) {
       }
       _return.tag = 1;
       require = _return;
-      obj = null;
+      obj2 = null;
       const dependencies4 = _return.dependencies;
       if (null !== dependencies4) {
         dependencies4.firstContext = null;
@@ -6748,24 +6746,26 @@ function beginWork(alternate, _return, current) {
       throw ErrorResult;
     case 24:
       require = _return;
-      obj = null;
+      obj2 = null;
       const dependencies2 = _return.dependencies;
       if (null !== dependencies2) {
         dependencies2.firstContext = null;
       }
       const _currentValue2 = context._currentValue2;
-      obj = { context, memoizedValue: _currentValue2, next: null };
-      if (null === obj) {
+      const next = { context, memoizedValue: _currentValue2, next: null };
+      if (null === obj2) {
         if (null === tmp79) {
           const _Error = Error;
           throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
         } else {
-          const obj5 = { lanes: 0, firstContext: obj };
-          tmp79.dependencies = obj5;
+          obj2 = next;
+          const obj12 = { lanes: 0, firstContext: next };
+          tmp79.dependencies = obj12;
           tmp79.flags = tmp79.flags | 524288;
         }
       } else {
-        tmp80.next = obj;
+        tmp80.next = next;
+        obj2 = next;
       }
       if (null === alternate) {
         let pooledCache = closure_128.current;
@@ -6773,21 +6773,21 @@ function beginWork(alternate, _return, current) {
           pooledCache = _null4.pooledCache;
         }
         if (null === pooledCache) {
-          obj6 = { controller: null, data: null, refCount: 0 };
+          const obj13 = { controller: null, data: null, refCount: 0 };
           const tmp104 = new closure_106();
-          obj6.controller = tmp104;
+          obj13.controller = tmp104;
           const _Map = Map;
           map = new Map();
-          obj6.data = map;
-          _null4.pooledCache = obj6;
-          obj6.refCount = obj6.refCount + 1;
+          obj13.data = map;
+          _null4.pooledCache = obj13;
+          obj13.refCount = obj13.refCount + 1;
           _null4.pooledCacheLanes = _null4.pooledCacheLanes | current;
-          pooledCache = obj6;
+          pooledCache = obj13;
         }
-        obj7 = { parent: _currentValue2, cache: pooledCache };
-        _return.memoizedState = obj7;
-        obj8 = { baseState: _return.memoizedState, firstBaseUpdate: null, lastBaseUpdate: null, shared: { pending: null, lanes: 0, hiddenCallbacks: null }, callbacks: null };
-        _return.updateQueue = obj8;
+        const obj14 = { parent: _currentValue2, cache: pooledCache };
+        _return.memoizedState = obj14;
+        const obj16 = { baseState: _return.memoizedState, firstBaseUpdate: null, lastBaseUpdate: null, shared: { pending: null, lanes: 0, hiddenCallbacks: null }, callbacks: null };
+        _return.updateQueue = obj16;
         const sum20 = closure_86 + 1;
         closure_86 = sum20;
         closure_85[sum20] = closure_101.current;
@@ -6799,22 +6799,22 @@ function beginWork(alternate, _return, current) {
           if (_return.updateQueue === updateQueue) {
             ({ baseState: obj2.baseState, firstBaseUpdate: obj2.firstBaseUpdate, lastBaseUpdate: obj2.lastBaseUpdate, shared: obj2.shared } = updateQueue);
             _return.updateQueue = { baseState: null, firstBaseUpdate: null, lastBaseUpdate: null, shared: null, callbacks: null };
-            const obj9 = { baseState: null, firstBaseUpdate: null, lastBaseUpdate: null, shared: null, callbacks: null };
+            const obj17 = { baseState: null, firstBaseUpdate: null, lastBaseUpdate: null, shared: null, callbacks: null };
           }
           processUpdateQueue(_return, null, null, current);
           if (c153) {
-            if (null !== obj) {
-              throw obj;
+            if (null !== obj2) {
+              throw obj2;
             }
           }
         }
         const memoizedState3 = alternate.memoizedState;
         if (memoizedState3.parent !== _currentValue2) {
-          const obj10 = { parent: _currentValue2, cache: _currentValue2 };
-          _return.memoizedState = obj10;
+          const obj18 = { parent: _currentValue2, cache: _currentValue2 };
+          _return.memoizedState = obj18;
           if (0 === _return.lanes) {
-            _return.updateQueue.baseState = obj10;
-            _return.memoizedState = obj10;
+            _return.updateQueue.baseState = obj18;
+            _return.memoizedState = obj18;
           }
           const sum21 = closure_86 + 1;
           closure_86 = sum21;
@@ -6969,16 +6969,16 @@ function beginWork(alternate, _return, current) {
       ({ type: type2, pendingProps: pendingProps2 } = _return);
       let tmp175 = pendingProps2;
       if ("ref" in pendingProps2) {
-        const obj11 = {};
-        tmp175 = obj11;
+        const obj19 = {};
+        tmp175 = obj19;
         const keys6 = Object.keys();
         if (keys6 !== undefined) {
-          tmp175 = obj11;
+          tmp175 = obj19;
           while (keys6[tmp] !== undefined) {
             if ("ref" === tmp178) {
               continue;
             } else {
-              obj11[tmp178] = pendingProps2[tmp178];
+              obj19[tmp178] = pendingProps2[tmp178];
               continue;
             }
             continue;
@@ -7018,7 +7018,7 @@ function beginWork(alternate, _return, current) {
       }
       _return.tag = 0;
       require = _return;
-      obj = null;
+      obj2 = null;
       const dependencies3 = _return.dependencies;
       if (null !== dependencies3) {
         dependencies3.firstContext = null;
@@ -7041,11 +7041,11 @@ function beginWork(alternate, _return, current) {
       if (null === alternate) {
         ({ mode: obj10.mode, children: obj10.children } = pendingProps);
         Object.create(FiberNode.prototype);
-        const obj14 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: _return.ref, refCleanup: null, pendingProps: { mode: null, children: null }, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: _return.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
-        _return.child = obj14;
-        obj14.return = _return;
-        let tmp132 = obj14;
-        const obj12 = { mode: null, children: null };
+        const obj41 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: _return.ref, refCleanup: null, pendingProps: { mode: null, children: null }, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: _return.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
+        _return.child = obj41;
+        obj41.return = _return;
+        let tmp132 = obj41;
+        const obj39 = { mode: null, children: null };
       } else {
         const memoizedState6 = alternate.memoizedState;
         if (null !== memoizedState6) {
@@ -7077,14 +7077,14 @@ function beginWork(alternate, _return, current) {
             }
             if (!c222) {
               if (!(current & alternate.childLanes)) {
-                const obj15 = { mode: null, children: null };
                 ({ mode: obj8.mode, children: obj8.children } = pendingProps);
                 Object.create(FiberNode.prototype);
-                const obj17 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: _return.ref, refCleanup: null, pendingProps: obj15, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: _return.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
-                _return.child = obj17;
-                obj17.return = _return;
-                obj17.flags = obj17.flags | 4096;
-                tmp132 = obj17;
+                const obj44 = { tag: 22, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: _return.ref, refCleanup: null, pendingProps: { mode: null, children: null }, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: _return.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
+                _return.child = obj44;
+                obj44.return = _return;
+                obj44.flags = obj44.flags | 4096;
+                tmp132 = obj44;
+                const obj42 = { mode: null, children: null };
               }
             }
             if (null !== _null4) {
@@ -7183,7 +7183,7 @@ function beginWork(alternate, _return, current) {
           tmp132.ref = _return.ref;
           _return.child = tmp132;
           tmp132.return = _return;
-          const obj18 = { mode: null, children: null };
+          const obj45 = { mode: null, children: null };
         }
       }
       return tmp132;
@@ -7208,11 +7208,10 @@ function appendAllChildren(node, child, arg2, arg3) {
         }
         let tmp10 = stateNode;
         if (tmp9) {
-          obj = { style: { display: "none" } };
-          obj = { node: null, canonical: null };
-          obj.node = cloneNodeWithNewProps(stateNode.node, obj.createAttributePayload(obj, stateNode.canonical.viewConfig.validAttributes));
-          obj.canonical = stateNode.canonical;
-          tmp10 = obj;
+          obj = get_BatchedBridge;
+          obj2 = { style: { display: "none" } };
+          let obj3 = { node: cloneNodeWithNewProps(stateNode.node, obj.createAttributePayload(obj2, stateNode.canonical.viewConfig.validAttributes)), canonical: stateNode.canonical };
+          tmp10 = obj3;
         }
         let tmp15 = appendChild(node.node, tmp10.node);
       } else if (6 === child.tag) {
@@ -7276,11 +7275,10 @@ function appendAllChildrenToContainer(arg0, child, arg2, arg3) {
         }
         let tmp11 = stateNode;
         if (tmp10) {
-          obj = { style: { display: "none" } };
-          obj = { node: null, canonical: null };
-          obj.node = cloneNodeWithNewProps(stateNode.node, obj.createAttributePayload(obj, stateNode.canonical.viewConfig.validAttributes));
-          obj.canonical = stateNode.canonical;
-          tmp11 = obj;
+          obj = get_BatchedBridge;
+          obj2 = { style: { display: "none" } };
+          let obj3 = { node: cloneNodeWithNewProps(stateNode.node, obj.createAttributePayload(obj2, stateNode.canonical.viewConfig.validAttributes)), canonical: stateNode.canonical };
+          tmp11 = obj3;
         }
         let tmp16 = appendChildToSet(arg0, tmp11.node);
         let flag3 = flag;
@@ -7617,8 +7615,8 @@ function commitHookEffectListMount(arg0, sibling) {
       let iter2 = next;
       do {
         if ((iter2.tag & arg0) === arg0) {
-          obj = iter2.create();
-          iter2.inst.destroy = obj;
+          let destroy = iter2.create();
+          iter2.inst.destroy = destroy;
         }
         next2 = iter2.next;
         iter2 = next2;
@@ -7785,21 +7783,21 @@ function commitLayoutEffectOnFiber(arg0, alternate, c302) {
       if (64 & flags) {
         const updateQueue = _null5.updateQueue;
         if (null !== updateQueue) {
-          stateNode = null;
+          let stateNode1 = null;
           if (null !== _null5.child) {
             const tag = _null5.child.tag;
             if (27 !== tag) {
               if (5 !== tag) {
-                stateNode = null;
+                stateNode1 = null;
                 if (1 === tag) {
-                  stateNode = _null5.child.stateNode;
+                  stateNode1 = _null5.child.stateNode;
                 }
               }
             }
-            stateNode = getPublicInstance(_null5.child.stateNode);
+            stateNode1 = getPublicInstance(_null5.child.stateNode);
           }
           try {
-            commitCallbacks(updateQueue, stateNode);
+            commitCallbacks(updateQueue, stateNode1);
           } catch (tmp45) {
             captureCommitPhaseError(tmp, tmp.return, tmp45);
           }
@@ -8838,16 +8836,16 @@ function commitOffscreenPassiveMountEffects(alternate, sibling) {
   tmp3 = null !== sibling.memoizedState && null !== sibling.memoizedState.cachePool;
 }
 function commitCachePassiveMountEffect(arg0, alternate) {
-  let cache = null;
+  let cache1 = null;
   if (null !== alternate.alternate) {
-    cache = alternate.alternate.memoizedState.cache;
+    cache1 = alternate.alternate.memoizedState.cache;
   }
-  cache = alternate.memoizedState.cache;
-  if (cache !== cache) {
+  const cache = alternate.memoizedState.cache;
+  if (cache !== cache1) {
     cache.refCount = cache.refCount + 1;
-    if (null != cache) {
-      cache.refCount = cache.refCount - 1;
-      if (0 === cache.refCount) {
+    if (null != cache1) {
+      cache1.refCount = cache1.refCount - 1;
+      if (0 === cache1.refCount) {
         const result = peek.unstable_scheduleCallback(peek.unstable_NormalPriority, () => {
           const controller = pooledCache.controller;
           controller.abort();
@@ -8886,15 +8884,15 @@ function commitPassiveMountOnFiber(arg0, current, arg2, arg3) {
     case 3:
       recursivelyTraversePassiveMountEffects(arg0, current, arg2, arg3);
       if (2048 & flags) {
-        let cache = null;
+        let cache1 = null;
         if (null !== current.alternate) {
-          cache = current.alternate.memoizedState.cache;
+          cache1 = current.alternate.memoizedState.cache;
         }
-        cache = current.memoizedState.cache;
-        if (cache !== cache) {
+        const cache = current.memoizedState.cache;
+        if (cache !== cache1) {
           cache.refCount = cache.refCount + 1;
-          if (null != cache) {
-            releaseCache(cache);
+          if (null != cache1) {
+            releaseCache(cache1);
           }
         }
       }
@@ -9081,16 +9079,16 @@ function recursivelyTraverseReconnectPassiveEffects(arg0, subtreeFlags, arg2, ar
                 }
                 if (tmp18) {
                   let alternate = sibling.alternate;
-                  let cache = null;
+                  let cache1 = null;
                   if (null !== sibling.alternate) {
-                    cache = sibling.alternate.memoizedState.cache;
+                    cache1 = sibling.alternate.memoizedState.cache;
                   }
-                  cache = sibling.memoizedState.cache;
-                  if (cache !== cache) {
+                  let cache = sibling.memoizedState.cache;
+                  if (cache !== cache1) {
                     cache.refCount = cache.refCount + 1;
-                    if (null != cache) {
-                      cache.refCount = cache.refCount - 1;
-                      if (0 === cache.refCount) {
+                    if (null != cache1) {
+                      cache1.refCount = cache1.refCount - 1;
+                      if (0 === cache1.refCount) {
                         obj = peek;
                         let result = obj.unstable_scheduleCallback(peek.unstable_NormalPriority, () => {
                           const controller = pooledCache.controller;
@@ -9131,16 +9129,16 @@ function recursivelyTraverseAtomicPassiveEffects(arg0, sibling) {
           let tmp6 = recursivelyTraverseAtomicPassiveEffects(arg0, sibling);
           if (2048 & flags) {
             let alternate = sibling.alternate;
-            let cache = null;
+            let cache1 = null;
             if (null !== sibling.alternate) {
-              cache = sibling.alternate.memoizedState.cache;
+              cache1 = sibling.alternate.memoizedState.cache;
             }
-            cache = sibling.memoizedState.cache;
-            if (cache !== cache) {
+            let cache = sibling.memoizedState.cache;
+            if (cache !== cache1) {
               cache.refCount = cache.refCount + 1;
-              if (null != cache) {
-                cache.refCount = cache.refCount - 1;
-                if (0 === cache.refCount) {
+              if (null != cache1) {
+                cache1.refCount = cache1.refCount - 1;
+                if (0 === cache1.refCount) {
                   obj = peek;
                   let result = obj.unstable_scheduleCallback(peek.unstable_NormalPriority, () => {
                     const controller = pooledCache.controller;
@@ -10354,7 +10352,7 @@ function prepareFreshStack(timeoutHandle, tmp24Result) {
 function handleThrow(current, arg1) {
   let promise = arg1;
   c165 = null;
-  __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H = obj6;
+  __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H = obj9;
   if (arg1 !== closure_130) {
     if (promise !== closure_132) {
       if (promise === closure_131) {
@@ -10394,9 +10392,9 @@ function handleThrow(current, arg1) {
       }
       value = weakMap.get(promise);
       if (undefined === value) {
-        obj = { value: promise, source: current, stack: getStackByFiberInDevAndProd(current) };
-        const result = weakMap.set(promise, obj);
-        value = obj;
+        const obj3 = { value: promise, source: current, stack: getStackByFiberInDevAndProd(current) };
+        const result = weakMap.set(promise, obj3);
+        value = obj3;
       }
       obj = value;
     }
@@ -10412,9 +10410,9 @@ function handleThrow(current, arg1) {
 }
 function pushDispatcher() {
   let H = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H;
-  __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H = obj6;
+  __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H = obj9;
   if (null === H) {
-    H = obj6;
+    H = obj9;
   }
   return H;
 }
@@ -10646,12 +10644,12 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                       } else {
                         const updateQueue = current.updateQueue;
                         if (null === updateQueue) {
-                          obj = { transitions: null, markerInstances: null, retryQueue: null };
+                          const obj3 = { transitions: null, markerInstances: null, retryQueue: null };
                           const _Set4 = Set;
                           items = [cache];
                           set = new Set(items);
-                          obj.retryQueue = set;
-                          current.updateQueue = obj;
+                          obj3.retryQueue = set;
+                          current.updateQueue = obj3;
                         } else {
                           const retryQueue = updateQueue.retryQueue;
                           if (null === retryQueue) {
@@ -10665,7 +10663,7 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                         }
                         const pingCache2 = pingCache.pingCache;
                         if (null === pingCache2) {
-                          const obj11 = new closure_276();
+                          obj11 = new closure_276();
                           pingCache.pingCache = obj11;
                           const _Set6 = Set;
                           const set2 = new Set();
@@ -10739,8 +10737,8 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                   if (null === flags.alternate) {
                     flags.tag = 17;
                   } else {
-                    obj = { lane: 2, tag: 2, payload: null, callback: null, next: null };
-                    closure_151(flags, obj, 2);
+                    obj4 = { lane: 2, tag: 2, payload: null, callback: null, next: null };
+                    closure_151(flags, obj4, 2);
                   }
                 } else {
                   if (tmp117) {
@@ -10770,19 +10768,19 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                     const _Set9 = Set;
                     const set5 = new Set();
                     const result2 = obj14.set(cache, set5);
-                    value = set5;
+                    let value5 = set5;
                   } else {
-                    value = pingCache3.get(cache);
-                    if (undefined === value) {
+                    value5 = pingCache3.get(cache);
+                    if (undefined === value5) {
                       const _Set8 = Set;
                       const set6 = new Set();
                       const result3 = pingCache3.set(cache, set6);
-                      value = set6;
+                      value5 = set6;
                     }
                   }
-                  if (!value.has(lanes)) {
+                  if (!value5.has(lanes)) {
                     c285 = true;
-                    value.add(lanes);
+                    value5.add(lanes);
                     const bindResult1 = closure_335.bind(null, pingCache, cache, lanes);
                     cache.then(bindResult1, bindResult1);
                   }
@@ -10792,24 +10790,24 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
             } else if (1 === pingCache.tag) {
               pingCache = pingCache.pingCache;
               if (null === pingCache) {
-                obj8 = new closure_276();
+                const obj8 = new closure_276();
                 pingCache.pingCache = obj8;
                 const _Set2 = Set;
                 const set7 = new Set();
                 const result4 = obj8.set(cache, set7);
-                let value1 = set7;
+                let value6 = set7;
               } else {
-                value1 = pingCache.get(cache);
-                if (undefined === value1) {
+                value6 = pingCache.get(cache);
+                if (undefined === value6) {
                   const _Set = Set;
                   const set8 = new Set();
                   const result5 = pingCache.set(cache, set8);
-                  value1 = set8;
+                  value6 = set8;
                 }
               }
-              if (!value1.has(lanes)) {
+              if (!value6.has(lanes)) {
                 c285 = true;
-                value1.add(lanes);
+                value6.add(lanes);
                 const bindResult2 = closure_335.bind(null, pingCache, cache, lanes);
                 cache.then(bindResult2, bindResult2);
               }
@@ -10843,20 +10841,18 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
       const ErrorResult1 = Error("There was an error during concurrent rendering but React was able to recover by instead synchronously rendering the entire root.", { cause: ErrorResult });
       if (typeof ErrorResult1 === "object") {
         if (null !== ErrorResult1) {
-          obj1 = closure_91;
-          value2 = closure_91.get(ErrorResult1);
-          if (undefined === value2) {
-            obj1 = { value: ErrorResult1, source: flags, stack: closure_11(flags) };
-            const result6 = obj1.set(ErrorResult1, obj1);
-            value2 = obj1;
+          let value7 = closure_91.get(ErrorResult1);
+          if (undefined === value7) {
+            obj6 = { value: ErrorResult1, source: flags, stack: closure_11(flags) };
+            const result6 = closure_91.set(ErrorResult1, obj6);
+            value7 = obj6;
           }
-          obj = value2;
+          obj = value7;
         }
-        let arr = items3;
         if (null === items3) {
           items3 = [obj];
         } else {
-          arr = arr.push(obj);
+          arr.push(obj);
         }
         if (4 !== c287) {
           c287 = 2;
@@ -10865,15 +10861,16 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
           return true;
         } else {
           if (typeof ErrorResult !== "object") {
-            obj2 = { value: ErrorResult, source: flags, stack: closure_11(flags) };
+            obj7 = { value: ErrorResult, source: flags, stack: closure_11(flags) };
           }
-          let value3 = closure_91.get(ErrorResult);
-          if (undefined === value3) {
-            obj3 = { value: ErrorResult, source: flags, stack: closure_11(flags) };
-            const result7 = closure_91.set(ErrorResult, obj3);
-            value3 = obj3;
+          let value8 = closure_91.get(ErrorResult);
+          if (undefined === value8) {
+            obj9 = { value: ErrorResult, source: flags, stack: closure_11(flags) };
+            const result7 = closure_91.set(ErrorResult, obj9);
+            value8 = obj9;
           }
         }
+        arr = items3;
       }
       obj = { value: ErrorResult1, source: flags, stack: closure_11(flags) };
     })(current, _return, memoizedState, value, c280)) {
@@ -10935,13 +10932,13 @@ function completeUnitOfWork(pendingProps) {
     ({ return: _return, alternate } = tmp);
     let tmp3 = current;
     pendingProps = tmp.pendingProps;
-    let child = null;
+    let child1 = null;
     switch (tmp.tag) {
       case 0:
         let tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           let sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -10958,9 +10955,9 @@ function completeUnitOfWork(pendingProps) {
       break;
       case 1:
         tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -11066,7 +11063,7 @@ function completeUnitOfWork(pendingProps) {
           tmp.flags = tmp.flags | 4;
         }
         let tmp336 = bubbleProperties(tmp);
-        child = null;
+        child1 = null;
       break;
       case 4:
         let tmp161 = popHostContainer();
@@ -11103,7 +11100,7 @@ function completeUnitOfWork(pendingProps) {
           tmp.flags = tmp.flags | 4;
         }
         let tmp170 = bubbleProperties(tmp);
-        child = null;
+        child1 = null;
       break;
       case 5:
         let tmp273 = popHostContext(tmp);
@@ -11145,9 +11142,9 @@ function completeUnitOfWork(pendingProps) {
               let tmp312 = bubbleProperties(tmp);
               let tmp313 = tmp.flags & -16777217;
               tmp.flags = tmp313;
-              child = null;
+              child1 = null;
             }
-            let obj11 = get_BatchedBridge;
+            obj11 = get_BatchedBridge;
             let result = obj11.diffAttributePayloads(memoizedProps, pendingProps, stateNode.canonical.viewConfig.validAttributes);
             stateNode.canonical.currentProps = pendingProps;
             let node = stateNode.node;
@@ -11156,7 +11153,7 @@ function completeUnitOfWork(pendingProps) {
                 tmp.stateNode = stateNode;
               } else {
                 let tmp305 = cloneNodeWithNewProps(node, result);
-                obj = { node: tmp305, canonical: stateNode.canonical };
+                obj4 = { node: tmp305, canonical: stateNode.canonical };
               }
             }
             if (null !== result) {
@@ -11170,19 +11167,19 @@ function completeUnitOfWork(pendingProps) {
           let current3 = closure_95.current;
           sum = sum + 2;
           let tmp283 = get(tmp.type);
-          obj8 = get_BatchedBridge;
+          let obj8 = get_BatchedBridge;
           let attributePayload = obj8.createAttributePayload(pendingProps, tmp283.validAttributes);
-          obj = { node: null, canonical: null };
+          obj5 = { node: null, canonical: null };
           let tmp290 = createNode(sum, tmp283.uiViewClassName, current3.containerTag, attributePayload, tmp2);
-          obj.node = tmp290;
-          obj1 = { nativeTag: sum, viewConfig: tmp283, currentProps: pendingProps, internalInstanceHandle: tmp, publicInstance: null, publicRootInstance: current3.publicInstance };
-          obj.canonical = obj1;
+          obj5.node = tmp290;
+          obj6 = { nativeTag: sum, viewConfig: tmp283, currentProps: pendingProps, internalInstanceHandle: tmp, publicInstance: null, publicRootInstance: current3.publicInstance };
+          obj5.canonical = obj6;
           let tmp291 = tmp.flags | 8;
           tmp.flags = tmp291;
           let flag8 = false;
           let flag9 = false;
-          let tmp295 = appendAllChildren(obj, tmp2, false, false);
-          tmp.stateNode = obj;
+          let tmp295 = appendAllChildren(obj5, tmp2, false, false);
+          tmp.stateNode = obj5;
         } else if (null === tmp.stateNode) {
           let tmp277 = globalThis;
           let _Error5 = Error;
@@ -11191,7 +11188,7 @@ function completeUnitOfWork(pendingProps) {
           throw ErrorResult1;
         } else {
           let tmp276 = bubbleProperties(tmp);
-          child = null;
+          child1 = null;
         }
       break;
       case 6:
@@ -11201,16 +11198,16 @@ function completeUnitOfWork(pendingProps) {
               let current2 = closure_93.current;
               tmp.flags = tmp.flags | 8;
               sum = sum + 2;
-              obj2 = { node: null };
-              obj3 = { text: pendingProps };
+              obj7 = { node: null };
+              obj9 = { text: pendingProps };
               let str6 = "RCTRawText";
-              obj2.node = createNode(sum, "RCTRawText", closure_95.current.containerTag, obj3, tmp2);
-              tmp.stateNode = obj2;
+              obj7.node = createNode(sum, "RCTRawText", closure_95.current.containerTag, obj9, tmp2);
+              tmp.stateNode = obj7;
             } else {
               tmp.stateNode = alternate.stateNode;
             }
             let tmp271 = bubbleProperties(tmp);
-            child = null;
+            child1 = null;
           }
         }
         if (typeof pendingProps !== "string") {
@@ -11224,17 +11221,17 @@ function completeUnitOfWork(pendingProps) {
         current = closure_93.current;
         tmp.flags = tmp.flags | 8;
         sum = sum + 2;
-        obj4 = { node: null };
-        let obj5 = { text: pendingProps };
+        obj10 = { node: null };
+        let obj12 = { text: pendingProps };
         let str4 = "RCTRawText";
-        obj4.node = createNode(sum, "RCTRawText", closure_95.current.containerTag, obj5, tmp2);
-        tmp.stateNode = obj4;
+        obj10.node = createNode(sum, "RCTRawText", closure_95.current.containerTag, obj12, tmp2);
+        tmp.stateNode = obj10;
       break;
       case 7:
         tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -11251,9 +11248,9 @@ function completeUnitOfWork(pendingProps) {
       break;
       case 8:
         tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -11270,9 +11267,9 @@ function completeUnitOfWork(pendingProps) {
       break;
       case 9:
         tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -11295,13 +11292,13 @@ function completeUnitOfWork(pendingProps) {
           closure_86 = closure_86 - 1;
         }
         let tmp159 = bubbleProperties(tmp);
-        child = null;
+        child1 = null;
       break;
       case 11:
         tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -11318,9 +11315,9 @@ function completeUnitOfWork(pendingProps) {
       break;
       case 12:
         tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -11394,7 +11391,7 @@ function completeUnitOfWork(pendingProps) {
                       tmp187 = null;
                     }
                   }
-                  child = tmp187;
+                  child1 = tmp187;
                 }
               }
             }
@@ -11446,7 +11443,7 @@ function completeUnitOfWork(pendingProps) {
           }
           let tmp211 = null !== memoizedState2;
           if (tmp211) {
-            child = tmp.child;
+            let child = tmp.child;
             let tmp212 = null !== child.alternate;
             if (tmp212) {
               tmp212 = null !== child.alternate.memoizedState;
@@ -11498,13 +11495,13 @@ function completeUnitOfWork(pendingProps) {
           let tmp221 = bubbleProperties(tmp);
           tmp222 = null;
         }
-        child = tmp222;
+        child1 = tmp222;
       break;
       case 14:
         tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -11521,9 +11518,9 @@ function completeUnitOfWork(pendingProps) {
       break;
       case 15:
         tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -11540,9 +11537,9 @@ function completeUnitOfWork(pendingProps) {
       break;
       case 16:
         tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -11559,9 +11556,9 @@ function completeUnitOfWork(pendingProps) {
       break;
       case 17:
         tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -11595,7 +11592,7 @@ function completeUnitOfWork(pendingProps) {
         memoizedState = tmp.memoizedState;
         if (null === memoizedState) {
           let tmp152 = bubbleProperties(tmp);
-          child = null;
+          child1 = null;
         } else {
           let tmp348 = 128 & tmp.flags;
           let rendering = memoizedState.rendering;
@@ -11743,9 +11740,9 @@ function completeUnitOfWork(pendingProps) {
                       ({ memoizedProps: sibling10.memoizedProps, memoizedState: sibling10.memoizedState, updateQueue: sibling10.updateQueue, type: sibling10.type, dependencies } = alternate2);
                       let tmp127 = null;
                       if (null !== dependencies) {
-                        obj6 = { lanes: null, firstContext: null };
+                        let obj21 = { lanes: null, firstContext: null };
                         ({ lanes: obj2.lanes, firstContext: obj2.firstContext } = dependencies);
-                        tmp127 = obj6;
+                        tmp127 = obj21;
                       }
                       sibling10.dependencies = tmp127;
                     }
@@ -11755,7 +11752,7 @@ function completeUnitOfWork(pendingProps) {
                   closure_86 = sum1;
                   dependencyMap3[sum1] = closure_162.current;
                   closure_162.current = 1 & closure_162.current | 2;
-                  child = tmp.child;
+                  child1 = tmp.child;
                 }
               }
               let tmp103 = null !== memoizedState.tail;
@@ -11882,7 +11879,7 @@ function completeUnitOfWork(pendingProps) {
                     flag = true;
                     if (!rendering.alternate) {
                       let tmp98 = bubbleProperties(tmp);
-                      child = null;
+                      child1 = null;
                     }
                   }
                 }
@@ -11961,8 +11958,8 @@ function completeUnitOfWork(pendingProps) {
             let tail = memoizedState.tail;
             memoizedState.rendering = tail;
             memoizedState.tail = tail.sibling;
-            obj2 = peek;
-            memoizedState.renderingStartTime = obj2.unstable_now();
+            let obj3 = peek;
+            memoizedState.renderingStartTime = obj3.unstable_now();
             tail.sibling = null;
             let sum2 = 1 & closure_162.current;
             if (flag2) {
@@ -11976,7 +11973,7 @@ function completeUnitOfWork(pendingProps) {
             closure_162.current = tmp147;
           } else {
             let tmp141 = bubbleProperties(tmp);
-            child = null;
+            child1 = null;
           }
         }
       break;
@@ -12118,17 +12115,17 @@ function completeUnitOfWork(pendingProps) {
               let tmp67 = tmp.flags | 2048;
               tmp.flags = tmp67;
             }
-            child = null;
+            child1 = null;
             if (tmp40) {
               let tmp68 = closure_128;
               let tmp69 = closure_86;
-              child = null;
+              child1 = null;
               if (0 <= closure_86) {
                 tmp68.current = dependencyMap3[tmp69];
                 dependencyMap3[closure_86] = null;
                 let diff7 = closure_86 - 1;
                 closure_86 = diff7;
-                child = null;
+                child1 = null;
               }
             }
           }
@@ -12253,17 +12250,17 @@ function completeUnitOfWork(pendingProps) {
               tmp67 = tmp.flags | 2048;
               tmp.flags = tmp67;
             }
-            child = null;
+            child1 = null;
             if (tmp40) {
               tmp68 = closure_128;
               tmp69 = closure_86;
-              child = null;
+              child1 = null;
               if (0 <= closure_86) {
                 tmp68.current = dependencyMap3[tmp69];
                 dependencyMap3[closure_86] = null;
                 diff7 = closure_86 - 1;
                 closure_86 = diff7;
-                child = null;
+                child1 = null;
               }
             }
           }
@@ -12285,7 +12282,7 @@ function completeUnitOfWork(pendingProps) {
           closure_86 = closure_86 - 1;
         }
         let tmp13 = bubbleProperties(tmp);
-        child = null;
+        child1 = null;
       break;
       case 25:
       break;
@@ -12329,7 +12326,7 @@ function completeUnitOfWork(pendingProps) {
               tmp312 = bubbleProperties(tmp);
               tmp313 = tmp.flags & -16777217;
               tmp.flags = tmp313;
-              child = null;
+              child1 = null;
             }
             obj11 = get_BatchedBridge;
             result = obj11.diffAttributePayloads(memoizedProps, pendingProps, stateNode.canonical.viewConfig.validAttributes);
@@ -12340,7 +12337,7 @@ function completeUnitOfWork(pendingProps) {
                 tmp.stateNode = stateNode;
               } else {
                 tmp305 = cloneNodeWithNewProps(node, result);
-                obj = { node: tmp305, canonical: stateNode.canonical };
+                obj4 = { node: tmp305, canonical: stateNode.canonical };
               }
             }
             if (null !== result) {
@@ -12356,17 +12353,17 @@ function completeUnitOfWork(pendingProps) {
           tmp283 = get(tmp.type);
           obj8 = get_BatchedBridge;
           attributePayload = obj8.createAttributePayload(pendingProps, tmp283.validAttributes);
-          obj = { node: null, canonical: null };
+          obj5 = { node: null, canonical: null };
           tmp290 = createNode(sum, tmp283.uiViewClassName, current3.containerTag, attributePayload, tmp2);
-          obj.node = tmp290;
-          obj1 = { nativeTag: sum, viewConfig: tmp283, currentProps: pendingProps, internalInstanceHandle: tmp, publicInstance: null, publicRootInstance: current3.publicInstance };
-          obj.canonical = obj1;
+          obj5.node = tmp290;
+          obj6 = { nativeTag: sum, viewConfig: tmp283, currentProps: pendingProps, internalInstanceHandle: tmp, publicInstance: null, publicRootInstance: current3.publicInstance };
+          obj5.canonical = obj6;
           tmp291 = tmp.flags | 8;
           tmp.flags = tmp291;
           flag8 = false;
           flag9 = false;
-          tmp295 = appendAllChildren(obj, tmp2, false, false);
-          tmp.stateNode = obj;
+          tmp295 = appendAllChildren(obj5, tmp2, false, false);
+          tmp.stateNode = obj5;
         } else if (null === tmp.stateNode) {
           tmp277 = globalThis;
           _Error5 = Error;
@@ -12375,7 +12372,7 @@ function completeUnitOfWork(pendingProps) {
           throw ErrorResult1;
         } else {
           tmp276 = bubbleProperties(tmp);
-          child = null;
+          child1 = null;
         }
       break;
       case 27:
@@ -12418,7 +12415,7 @@ function completeUnitOfWork(pendingProps) {
               tmp312 = bubbleProperties(tmp);
               tmp313 = tmp.flags & -16777217;
               tmp.flags = tmp313;
-              child = null;
+              child1 = null;
             }
             obj11 = get_BatchedBridge;
             result = obj11.diffAttributePayloads(memoizedProps, pendingProps, stateNode.canonical.viewConfig.validAttributes);
@@ -12429,7 +12426,7 @@ function completeUnitOfWork(pendingProps) {
                 tmp.stateNode = stateNode;
               } else {
                 tmp305 = cloneNodeWithNewProps(node, result);
-                obj = { node: tmp305, canonical: stateNode.canonical };
+                obj4 = { node: tmp305, canonical: stateNode.canonical };
               }
             }
             if (null !== result) {
@@ -12445,17 +12442,17 @@ function completeUnitOfWork(pendingProps) {
           tmp283 = get(tmp.type);
           obj8 = get_BatchedBridge;
           attributePayload = obj8.createAttributePayload(pendingProps, tmp283.validAttributes);
-          obj = { node: null, canonical: null };
+          obj5 = { node: null, canonical: null };
           tmp290 = createNode(sum, tmp283.uiViewClassName, current3.containerTag, attributePayload, tmp2);
-          obj.node = tmp290;
-          obj1 = { nativeTag: sum, viewConfig: tmp283, currentProps: pendingProps, internalInstanceHandle: tmp, publicInstance: null, publicRootInstance: current3.publicInstance };
-          obj.canonical = obj1;
+          obj5.node = tmp290;
+          obj6 = { nativeTag: sum, viewConfig: tmp283, currentProps: pendingProps, internalInstanceHandle: tmp, publicInstance: null, publicRootInstance: current3.publicInstance };
+          obj5.canonical = obj6;
           tmp291 = tmp.flags | 8;
           tmp.flags = tmp291;
           flag8 = false;
           flag9 = false;
-          tmp295 = appendAllChildren(obj, tmp2, false, false);
-          tmp.stateNode = obj;
+          tmp295 = appendAllChildren(obj5, tmp2, false, false);
+          tmp.stateNode = obj5;
         } else if (null === tmp.stateNode) {
           tmp277 = globalThis;
           _Error5 = Error;
@@ -12464,14 +12461,14 @@ function completeUnitOfWork(pendingProps) {
           throw ErrorResult1;
         } else {
           tmp276 = bubbleProperties(tmp);
-          child = null;
+          child1 = null;
         }
       break;
       case 28:
         tmp338 = bubbleProperties(tmp);
-        child = null;
-        if (null !== child) {
-          _return = child;
+        child1 = null;
+        if (null !== child1) {
+          _return = child1;
         } else {
           sibling16 = tmp.sibling;
           if (null !== sibling16) {
@@ -12578,11 +12575,11 @@ function completeUnitOfWork(pendingProps) {
                 tmp240 = null;
               }
             }
-            child = tmp240;
+            child1 = tmp240;
           }
         }
         let tmp252 = bubbleProperties(tmp);
-        child = null;
+        child1 = null;
       break;
       default:
         tmp339 = globalThis;
@@ -12643,8 +12640,7 @@ function flushLayoutEffects() {
 function flushSpawnedWork() {
   let length;
   c300 = 0;
-  obj = peek;
-  const result = obj.unstable_requestPaint();
+  const result = peek.unstable_requestPaint();
   let tmp5 = c301;
   if (!(10256 & _null5.subtreeFlags)) {
     if (!(10256 & tmp6.flags)) {
@@ -12671,8 +12667,8 @@ function flushSpawnedWork() {
         if (0 < _null3.length) {
           do {
             iter = _null3[num4];
-            obj = { componentStack: iter.stack };
-            let onRecoverableErrorResult = onRecoverableError(iter.value, obj);
+            let obj3 = { componentStack: iter.stack };
+            let onRecoverableErrorResult = onRecoverableError(iter.value, obj3);
             sum = num4 + 1;
             num4 = sum;
             length = _null3.length;
@@ -12772,14 +12768,14 @@ function captureCommitPhaseErrorOnRoot(_return, source, value) {
     if (null !== value) {
       value = weakMap.get(value);
       if (undefined === value) {
-        obj = { value, source, stack: getStackByFiberInDevAndProd(source) };
-        const result = weakMap.set(value, obj);
-        value = obj;
+        const obj3 = { value, source, stack: getStackByFiberInDevAndProd(source) };
+        const result = weakMap.set(value, obj3);
+        value = obj3;
       }
       obj = value;
     }
     const stateNode = _return.stateNode;
-    obj = {
+    obj4 = {
       lane: 2,
       tag: 3,
       payload: { element: null },
@@ -12788,7 +12784,7 @@ function captureCommitPhaseErrorOnRoot(_return, source, value) {
         },
       next: null
     };
-    iter = enqueueUpdate(_return, obj, 2);
+    iter = enqueueUpdate(_return, obj4, 2);
     if (null !== iter) {
       iter.pendingLanes = iter.pendingLanes | 2;
       iter.suspendedLanes = 0;
@@ -12813,7 +12809,7 @@ function captureCommitPhaseErrorOnRoot(_return, source, value) {
           });
         } else {
           const result1 = stateNode(obj[3]).unstable_scheduleCallback(stateNode(obj[3]).unstable_ImmediatePriority, processRootScheduleInImmediateTask);
-          const obj5 = stateNode(obj[3]);
+          obj5 = stateNode(obj[3]);
         }
       }
       tmp7 = iter !== iter && null === iter.next;
@@ -12834,28 +12830,28 @@ function captureCommitPhaseError(tag, sibling2, value) {
             if (null !== value) {
               value = weakMap.get(value);
               if (undefined === value) {
-                obj = { value, source: tag, stack: null };
-                obj.stack = getStackByFiberInDevAndProd(tag);
-                let result = weakMap.set(value, obj);
-                value = obj;
+                let obj3 = { value, source: tag, stack: null };
+                obj3.stack = getStackByFiberInDevAndProd(tag);
+                let result = weakMap.set(value, obj3);
+                value = obj3;
               }
               obj = value;
             }
-            obj = { lane: 2, tag: 3, payload: null, callback: null, next: null };
-            iter = enqueueUpdate(_return, obj, 2);
+            obj4 = { lane: 2, tag: 3, payload: null, callback: null, next: null };
+            iter = enqueueUpdate(_return, obj4, 2);
             if (null !== iter) {
               let getDerivedStateFromError = _return.type.getDerivedStateFromError;
               if (typeof getDerivedStateFromError === "function") {
                 isArray = obj.value;
-                obj.payload = () => getDerivedStateFromError(value);
-                obj.callback = () => {
+                obj4.payload = () => getDerivedStateFromError(value);
+                obj4.callback = () => {
                   logCaughtError(iter, _return, obj);
                 };
               }
               let stateNode2 = _return.stateNode;
               let tmp7 = null !== stateNode2 && typeof stateNode2.componentDidCatch === "function";
               if (tmp7) {
-                obj.callback = function() {
+                obj4.callback = function() {
                   const self = this;
                   logCaughtError(obj, _return, obj);
                   if (typeof getDerivedStateFromError !== "function") {
@@ -12899,7 +12895,7 @@ function captureCommitPhaseError(tag, sibling2, value) {
                     }
                   });
                 } else {
-                  let obj5 = iter(_return[3]);
+                  obj5 = iter(_return[3]);
                   let result1 = obj5.unstable_scheduleCallback(iter(_return[3]).unstable_ImmediatePriority, processRootScheduleInImmediateTask);
                 }
               }
@@ -13093,19 +13089,17 @@ function FiberNode(arg0, arg1, arg2, arg3) {
 }
 function createFiberImplClass(arg0, promise, arg2, mode) {
   Object.create(FiberNode.prototype);
-  obj = { tag: 29, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: promise, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
-  return obj;
+  return { tag: 29, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: promise, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
 }
 function createWorkInProgress(child, pendingProps) {
   let alternate = child.alternate;
   if (null === alternate) {
     ({ tag, key, mode } = child);
     Object.create(FiberNode.prototype);
-    obj = { tag, key, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
+    alternate = { tag, key, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
     ({ elementType: obj.elementType, type: obj.type, stateNode: obj.stateNode } = child);
-    obj.alternate = child;
-    child.alternate = obj;
-    alternate = obj;
+    alternate.alternate = child;
+    child.alternate = alternate;
   } else {
     alternate.pendingProps = pendingProps;
     alternate.type = child.type;
@@ -13117,9 +13111,9 @@ function createWorkInProgress(child, pendingProps) {
   ({ childLanes: alternate.childLanes, lanes: alternate.lanes, child: alternate.child, memoizedProps: alternate.memoizedProps, memoizedState: alternate.memoizedState, updateQueue: alternate.updateQueue, dependencies } = child);
   let tmp3 = null;
   if (null !== dependencies) {
-    obj = { lanes: null, firstContext: null };
     ({ lanes: obj2.lanes, firstContext: obj2.firstContext } = dependencies);
-    tmp3 = obj;
+    tmp3 = { lanes: null, firstContext: null };
+    obj5 = { lanes: null, firstContext: null };
   }
   alternate.dependencies = tmp3;
   ({ sibling: alternate.sibling, index: alternate.index, ref: alternate.ref, refCleanup: alternate.refCleanup } = child);
@@ -13150,12 +13144,12 @@ function createFiberFromTypeAndProps(type, key, props, arg3, mode, lanes) {
     if (typeof type !== "string") {
       if (closure_25 === type) {
         Object.create(FiberNode.prototype);
-        obj = { tag: 31, key, elementType: tmp26, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: props, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
-        return obj;
+        const obj3 = { tag: 31, key, elementType: tmp26, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: props, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+        return obj3;
       } else if (closure_15 === type) {
         Object.create(FiberNode.prototype);
-        obj2 = { tag: 7, key, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: props.children, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
-        return obj2;
+        obj5 = { tag: 7, key, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: props.children, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+        return obj5;
       } else if (closure_16 === type) {
         num = 8;
         tmp2 = tmp17;
@@ -13169,12 +13163,12 @@ function createFiberFromTypeAndProps(type, key, props, arg3, mode, lanes) {
         }
       } else if (closure_17 === type) {
         Object.create(FiberNode.prototype);
-        obj4 = { tag: 12, key, elementType: tmp29, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: props, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: 2 | mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
-        return obj4;
+        const obj17 = { tag: 12, key, elementType: tmp29, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: props, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: 2 | mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+        return obj17;
       } else if (closure_21 === type) {
         Object.create(FiberNode.prototype);
-        obj6 = { tag: 13, key, elementType: tmp30, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: props, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
-        return obj6;
+        const obj19 = { tag: 13, key, elementType: tmp30, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: props, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+        return obj19;
       } else if (closure_22 === type) {
         Object.create(FiberNode.prototype);
         obj = { tag: 19, key, elementType: tmp31, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: props, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
@@ -13226,10 +13220,10 @@ function createFiberFromTypeAndProps(type, key, props, arg3, mode, lanes) {
     }
   }
   Object.create(FiberNode.prototype);
-  const obj9 = { tag: num, key, elementType: type, type: tmp3, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: ErrorResult, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: tmp2, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
-  return obj9;
+  const obj22 = { tag: num, key, elementType: type, type: tmp3, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: ErrorResult, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: tmp2, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+  return obj22;
 }
-function FiberRootNode(containerInfo, tag, arg2, identifierPrefix, onUncaughtError, onCaughtError, onRecoverableError, arg7, formState) {
+function FiberRootNode(containerInfo, tag, arg2, identifierPrefix, onUncaughtError, onCaughtError, onRecoverableError, nativeOnDefaultTransitionIndicator, formState) {
   obj = { tag, containerInfo, pendingChildren: null, current: null, pingCache: null, timeoutHandle: -1, cancelPendingCommit: null, context: null, pendingContext: null, next: null, callbackNode: null, callbackPriority: 0 };
   items = [];
   num = 0;
@@ -13249,14 +13243,14 @@ function FiberRootNode(containerInfo, tag, arg2, identifierPrefix, onUncaughtErr
   items1 = [];
   let num2 = 0;
   do {
-    arr = items1.push(0);
+    let arr2 = items1.push(0);
     num2 = num2 + 1;
   } while (num2 < 31);
   obj.entanglements = items1;
   const items2 = [];
   let num3 = 0;
   do {
-    let arr1 = items2.push(null);
+    let arr3 = items2.push(null);
     num3 = num3 + 1;
   } while (num3 < 31);
   obj.hiddenUpdates = items2;
@@ -13844,12 +13838,11 @@ SyntheticEvent.extend = function(arg0) {
   SyntheticEvent.eventPool = [];
   SyntheticEvent.release = releasePooledEvent;
 })(SyntheticEvent);
-obj = {
+let closure_41 = SyntheticEvent.extend({
   touchHistory() {
     return null;
   }
-};
-let closure_41 = SyntheticEvent.extend(obj);
+});
 let items = ["topTouchStart"];
 let items1 = ["topTouchMove"];
 let items2 = ["topTouchCancel", "topTouchEnd"];
@@ -13868,15 +13861,15 @@ let closure_49 = {
     } else if ("topTouchStart" === framebus) {
       const changedTouches1 = changedTouches.changedTouches;
       const item1 = changedTouches1.forEach(recordTouchStart);
-      obj1.numberActiveTouches = changedTouches.touches.length;
-      if (1 === obj1.numberActiveTouches) {
+      obj4.numberActiveTouches = changedTouches.touches.length;
+      if (1 === obj4.numberActiveTouches) {
         tmp11.indexOfSingleActiveTouch = changedTouches.touches[0].identifier;
       }
     } else if ("topTouchEnd" === framebus) {
       const changedTouches2 = changedTouches.changedTouches;
       const item2 = changedTouches2.forEach(recordTouchEnd);
-      obj1.numberActiveTouches = changedTouches.touches.length;
-      if (1 === obj1.numberActiveTouches) {
+      obj4.numberActiveTouches = changedTouches.touches.length;
+      if (1 === obj4.numberActiveTouches) {
         let num2 = 0;
         if (0 < items3.length) {
           while (true) {
@@ -13888,7 +13881,7 @@ let closure_49 = {
             }
             num2 = num2 + 1;
           }
-          obj1.indexOfSingleActiveTouch = num2;
+          obj4.indexOfSingleActiveTouch = num2;
         }
       }
     }
@@ -13897,7 +13890,7 @@ let closure_49 = {
 };
 let c50 = null;
 let closure_51 = 0;
-let obj3 = {
+let obj6 = {
   _getResponder() {
     return c50;
   },
@@ -13926,13 +13919,13 @@ let obj3 = {
         }
       }
       if (tmp) {
-        let scrollShouldSetResponder = closure_41.startShouldSetResponder;
+        let scrollShouldSetResponder = obj5.startShouldSetResponder;
       } else if ("topTouchMove" === arg0) {
-        scrollShouldSetResponder = closure_41.moveShouldSetResponder;
+        scrollShouldSetResponder = obj5.moveShouldSetResponder;
       } else if ("topSelectionChange" === arg0) {
-        scrollShouldSetResponder = closure_41.selectionChangeShouldSetResponder;
+        scrollShouldSetResponder = obj5.selectionChangeShouldSetResponder;
       } else {
-        scrollShouldSetResponder = closure_41.scrollShouldSetResponder;
+        scrollShouldSetResponder = obj5.scrollShouldSetResponder;
       }
       let tmp12 = arg1;
       if (c50) {
@@ -14116,7 +14109,7 @@ let obj3 = {
       if (tmp55) {
         tmp5 = null;
         if (tmp55 !== c50) {
-          const pooled1 = closure_41.getPooled(closure_41.responderGrant, tmp55, responderIgnoreScroll, arg3);
+          const pooled1 = closure_41.getPooled(obj5.responderGrant, tmp55, responderIgnoreScroll, arg3);
           pooled1.touchHistory = closure_49.touchHistory;
           const _Array7 = Array;
           if (Array.isArray(pooled1)) {
@@ -14147,7 +14140,7 @@ let obj3 = {
             pooled1._dispatchListeners = null;
             pooled1._dispatchInstances = null;
             if (c50) {
-              const pooled2 = closure_41.getPooled(closure_41.responderTerminationRequest, c50, responderIgnoreScroll, arg3);
+              const pooled2 = closure_41.getPooled(obj5.responderTerminationRequest, c50, responderIgnoreScroll, arg3);
               pooled2.touchHistory = closure_49.touchHistory;
               const _Array2 = Array;
               if (Array.isArray(pooled2)) {
@@ -14189,7 +14182,7 @@ let obj3 = {
               }
               const getPooled = closure_41.getPooled;
               if (tmp75) {
-                const pooled3 = getPooled(closure_41.responderTerminate, c50, responderIgnoreScroll, arg3);
+                const pooled3 = getPooled(obj5.responderTerminate, c50, responderIgnoreScroll, arg3);
                 pooled3.touchHistory = closure_49.touchHistory;
                 const _Array4 = Array;
                 if (Array.isArray(pooled3)) {
@@ -14205,13 +14198,13 @@ let obj3 = {
                 items = [pooled1, pooled3];
                 c50 = tmp55;
                 tmp5 = items;
-                if (null !== obj3.GlobalResponderHandler) {
-                  obj3.GlobalResponderHandler.onChange(tmp92, tmp55, tmp66);
+                if (null !== obj6.GlobalResponderHandler) {
+                  obj6.GlobalResponderHandler.onChange(tmp92, tmp55, tmp66);
                   tmp5 = items;
-                  const GlobalResponderHandler = obj3.GlobalResponderHandler;
+                  const GlobalResponderHandler = obj6.GlobalResponderHandler;
                 }
               } else {
-                const pooled4 = getPooled(closure_41.responderReject, tmp55, responderIgnoreScroll, arg3);
+                const pooled4 = getPooled(obj5.responderReject, tmp55, responderIgnoreScroll, arg3);
                 pooled4.touchHistory = closure_49.touchHistory;
                 const _Array3 = Array;
                 if (Array.isArray(pooled4)) {
@@ -14236,10 +14229,10 @@ let obj3 = {
             } else {
               c50 = tmp55;
               tmp5 = pooled1;
-              if (null !== obj3.GlobalResponderHandler) {
-                obj3.GlobalResponderHandler.onChange(tmp68, tmp55, tmp66);
+              if (null !== obj6.GlobalResponderHandler) {
+                obj6.GlobalResponderHandler.onChange(tmp68, tmp55, tmp66);
                 tmp5 = pooled1;
-                const GlobalResponderHandler3 = obj3.GlobalResponderHandler;
+                const GlobalResponderHandler3 = obj6.GlobalResponderHandler;
               }
             }
           }
@@ -14263,13 +14256,13 @@ let obj3 = {
       tmp94 = tmp97;
     }
     if (tmp95) {
-      let responderStart = closure_41.responderStart;
+      let responderStart = obj5.responderStart;
     } else if (tmp96) {
-      responderStart = closure_41.responderMove;
+      responderStart = obj5.responderMove;
     } else {
       responderStart = null;
       if (tmp94) {
-        responderStart = closure_41.responderEnd;
+        responderStart = obj5.responderEnd;
       }
     }
     obj = tmp5;
@@ -14388,11 +14381,11 @@ let obj3 = {
       }
     }
     if (tmp115) {
-      let responderTerminate = closure_41.responderTerminate;
+      let responderTerminate = obj5.responderTerminate;
     } else {
       responderTerminate = null;
       if (flag2) {
-        responderTerminate = closure_41.responderRelease;
+        responderTerminate = obj5.responderRelease;
       }
     }
     let tmp125 = obj;
@@ -14416,10 +14409,10 @@ let obj3 = {
       } else if (null == obj) {
         c50 = null;
         tmp125 = pooled6;
-        if (null !== obj3.GlobalResponderHandler) {
-          obj3.GlobalResponderHandler.onChange(tmp139, null, undefined);
+        if (null !== obj6.GlobalResponderHandler) {
+          obj6.GlobalResponderHandler.onChange(tmp139, null, undefined);
           tmp125 = pooled6;
-          const GlobalResponderHandler2 = obj3.GlobalResponderHandler;
+          const GlobalResponderHandler2 = obj6.GlobalResponderHandler;
         }
       } else if (isArray(obj)) {
         let combined1 = obj.concat(pooled6);
@@ -14435,11 +14428,11 @@ let obj3 = {
   GlobalResponderHandler: null,
   injection: {
     injectGlobalResponderHandler(GlobalResponderHandler) {
-      obj3.GlobalResponderHandler = GlobalResponderHandler;
+      obj6.GlobalResponderHandler = GlobalResponderHandler;
     }
   }
 };
-let obj4 = {};
+let obj7 = {};
 let closure_60 = [];
 let closure_61 = {};
 const dependencyMap2 = {};
@@ -14449,8 +14442,8 @@ let call = slice.call;
 let items4 = ["ResponderEventPlugin", "ReactNativeBridgeEventPlugin"];
 function recomputePluginOrdering() {
   if (closure_58) {
-    for (const key10004 in obj4) {
-      let tmp21 = obj4[key10004];
+    for (const key10004 in obj7) {
+      let tmp21 = obj7[key10004];
       let index = closure_58.indexOf(key10004);
       if (-1 >= index) {
         let tmp18 = globalThis;
@@ -14549,8 +14542,8 @@ function recomputePluginOrdering() {
 }
 let closure_58 = typeof call === "unknown" ? slice() : call(items4);
 let result = recomputePluginOrdering();
-let obj5 = {
-  ResponderEventPlugin: obj3,
+let obj8 = {
+  ResponderEventPlugin: obj6,
   ReactNativeBridgeEventPlugin: {
     eventTypes: {},
     extractEvents(event, arg1, arg2, arg3) {
@@ -14647,18 +14640,18 @@ let keys = Object.keys();
 if (keys !== undefined) {
   flag2 = flag;
   while (keys[tmp] !== undefined) {
-    if (!obj5.hasOwnProperty(tmp13)) {
+    if (!obj8.hasOwnProperty(tmp13)) {
       continue;
     } else {
-      let tmp14 = obj5[tmp13];
-      if (!obj4.hasOwnProperty(tmp13)) {
-        if (obj4[tmp13]) {
+      let tmp14 = obj8[tmp13];
+      if (!obj7.hasOwnProperty(tmp13)) {
+        if (obj7[tmp13]) {
           let _Error = Error;
           let str = "EventPluginRegistry: Cannot inject two different event plugins using the same name, `";
           let str2 = "`.";
           throw Error("EventPluginRegistry: Cannot inject two different event plugins using the same name, `" + tmp13 + "`.");
         } else {
-          obj4[tmp13] = tmp14;
+          obj7[tmp13] = tmp14;
           flag = true;
           continue;
         }
@@ -14729,7 +14722,7 @@ let closure_89 = typeof reportError === "function" ? reportError : ((message) =>
             let StringResult = String(message.message);
           }
           obj = { bubbles: true, cancelable: true, message: StringResult, error: message };
-          tmp = new tmp("error", obj);
+          const tmp2 = new tmp("error", obj);
           const _window2 = window;
         }
       }
@@ -14757,19 +14750,19 @@ let closure_101 = createCursor(null);
 require = null;
 function readContext(_currentValue2) {
   _currentValue2 = _currentValue2._currentValue2;
-  obj = { context: _currentValue2, memoizedValue: _currentValue2, next: null };
-  if (null === obj) {
+  const next = { context: _currentValue2, memoizedValue: _currentValue2, next: null };
+  if (null === obj2) {
     if (null === require) {
       const _Error = Error;
       throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
     } else {
-      obj = { lanes: 0, firstContext: null };
-      obj.firstContext = obj;
-      require.dependencies = obj;
+      obj2 = { lanes: 0, firstContext: next };
+      require.dependencies = obj2;
       require.flags = require.flags | 524288;
     }
   } else {
-    tmp2.next = obj;
+    tmp2.next = next;
+    obj2 = next;
   }
   return _currentValue2;
 }
@@ -14786,8 +14779,8 @@ function createChildReconciler(arg0) {
       return tmp2;
     }
     Object.create(FiberNode.prototype);
+    tmp2 = { tag: 6, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null, lanes, return: mode };
     obj = { tag: 6, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: mode.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null, lanes, return: mode };
-    tmp2 = obj;
   }
   function updateElement(dependencies, elementType, type, lanes) {
     type = type.type;
@@ -14836,12 +14829,12 @@ function createChildReconciler(arg0) {
     let containerInfo = dependencies.mode;
     Object.create(FiberNode.prototype);
     obj = { tag: 4, key: implementation.key, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: null !== implementation.children ? implementation.children : [], memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: containerInfo, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
-    obj = { containerInfo: null, pendingChildren: null, implementation: null };
+    obj4 = { containerInfo: null, pendingChildren: null, implementation: null };
     containerInfo = implementation.containerInfo;
-    obj.containerInfo = containerInfo;
+    obj4.containerInfo = containerInfo;
     implementation = implementation.implementation;
-    obj.implementation = implementation;
-    obj.stateNode = obj;
+    obj4.implementation = implementation;
+    obj.stateNode = obj4;
     obj.return = dependencies;
     const tmp4 = null !== implementation.children ? implementation.children : [];
   }
@@ -14856,8 +14849,8 @@ function createChildReconciler(arg0) {
       return tmp2;
     }
     Object.create(FiberNode.prototype);
+    tmp2 = { tag: 7, key, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: children2, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: children.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null, lanes, return: children };
     obj = { tag: 7, key, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: children2, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: children.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null, lanes, return: children };
-    tmp2 = obj;
   }
   function createChild(BaseFramework, children, lanes) {
     if (typeof children !== "string") {
@@ -14876,12 +14869,12 @@ function createChildReconciler(arg0) {
                 tmp25.return = BaseFramework;
                 return tmp25;
               } else if (closure_14 === $$typeof) {
-                Object.create(FiberNode.prototype);
-                obj = { tag: 4, key: children.key, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: null !== children.children ? children.children : [], memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: BaseFramework.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+                obj2 = Object.create(FiberNode.prototype);
+                const obj3 = { tag: 4, key: children.key, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: null !== children.children ? children.children : [], memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: BaseFramework.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
                 ({ containerInfo: obj6.containerInfo, implementation: obj6.implementation } = children);
-                obj.stateNode = { containerInfo: null, pendingChildren: null, implementation: null };
-                obj.return = BaseFramework;
-                return obj;
+                obj3.stateNode = { containerInfo: null, pendingChildren: null, implementation: null };
+                obj3.return = BaseFramework;
+                return obj3;
               } else if (closure_24 === $$typeof) {
                 return createChild(BaseFramework, resolveLazy(children), lanes);
               } else {
@@ -14917,27 +14910,27 @@ function createChildReconciler(arg0) {
                     } else if (children.$$typeof === forResult) {
                       if (null === require) {
                         require = BaseFramework;
-                        obj = null;
+                        obj2 = null;
                         const dependencies = BaseFramework.dependencies;
                         if (null !== dependencies) {
                           dependencies.firstContext = null;
                         }
                       }
                       const _currentValue2 = children._currentValue2;
-                      obj2 = { context: children, memoizedValue: _currentValue2, next: null };
-                      if (null === obj) {
+                      obj5 = { context: children, memoizedValue: _currentValue2, next: null };
+                      if (null === obj2) {
                         if (null === BaseFramework) {
                           const _Error2 = Error;
                           throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
                         } else {
-                          obj = obj2;
-                          obj3 = { lanes: 0, firstContext: obj2 };
-                          BaseFramework.dependencies = obj3;
+                          obj2 = obj5;
+                          obj7 = { lanes: 0, firstContext: obj5 };
+                          BaseFramework.dependencies = obj7;
                           BaseFramework.flags = BaseFramework.flags | 524288;
                         }
                       } else {
-                        tmp10.next = obj2;
-                        obj = obj2;
+                        tmp10.next = obj5;
+                        obj2 = obj5;
                       }
                       return createChild(BaseFramework, _currentValue2, lanes);
                     } else if (children.$$typeof === closure_12) {
@@ -14957,8 +14950,8 @@ function createChildReconciler(arg0) {
                   }
                 }
                 Object.create(FiberNode.prototype);
-                const obj5 = { tag: 7, key: null, elementType: null, type: null, stateNode: null, return: BaseFramework, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: children, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: BaseFramework.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
-                return obj5;
+                const obj17 = { tag: 7, key: null, elementType: null, type: null, stateNode: null, return: BaseFramework, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: children, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: BaseFramework.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+                return obj17;
               }
             }
           }
@@ -14967,7 +14960,7 @@ function createChildReconciler(arg0) {
       }
     }
     const text1 = `${children}`;
-    obj6 = Object.create(FiberNode.prototype);
+    Object.create(FiberNode.prototype);
     return { tag: 6, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: text1, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: BaseFramework.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null, lanes, return: BaseFramework };
   }
   function updateSlot(dependencies, key, children, lanes) {
@@ -15028,26 +15021,25 @@ function createChildReconciler(arg0) {
                     } else if (children.$$typeof === forResult) {
                       if (null === require) {
                         require = dependencies;
-                        obj = null;
+                        obj2 = null;
                         dependencies = dependencies.dependencies;
                         if (null !== dependencies) {
                           dependencies.firstContext = null;
                         }
                       }
                       const _currentValue2 = children._currentValue2;
-                      obj = { context: children, memoizedValue: _currentValue2, next: null };
-                      if (null === obj) {
+                      obj2 = { context: children, memoizedValue: _currentValue2, next: null };
+                      if (null === obj2) {
                         if (null === dependencies) {
                           const _Error2 = Error;
                           throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
                         } else {
-                          obj = { lanes: 0, firstContext: null };
-                          obj.firstContext = obj;
-                          dependencies.dependencies = obj;
+                          const obj3 = { lanes: 0, firstContext: obj2 };
+                          dependencies.dependencies = obj3;
                           dependencies.flags = dependencies.flags | 524288;
                         }
                       } else {
-                        tmp10.next = obj;
+                        tmp10.next = obj2;
                       }
                       return updateSlot(dependencies, key, _currentValue2, lanes);
                     } else if (children.$$typeof === closure_12) {
@@ -15140,26 +15132,25 @@ function createChildReconciler(arg0) {
                     } else if (children.$$typeof === forResult) {
                       if (null === require) {
                         require = dependencies;
-                        obj = null;
+                        obj2 = null;
                         dependencies = dependencies.dependencies;
                         if (null !== dependencies) {
                           dependencies.firstContext = null;
                         }
                       }
                       const _currentValue2 = children._currentValue2;
-                      obj = { context: children, memoizedValue: _currentValue2, next: null };
-                      if (null === obj) {
+                      obj2 = { context: children, memoizedValue: _currentValue2, next: null };
+                      if (null === obj2) {
                         if (null === dependencies) {
                           const _Error2 = Error;
                           throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
                         } else {
-                          obj = { lanes: 0, firstContext: null };
-                          obj.firstContext = obj;
-                          dependencies.dependencies = obj;
+                          const obj3 = { lanes: 0, firstContext: obj2 };
+                          dependencies.dependencies = obj3;
                           dependencies.flags = dependencies.flags | 524288;
                         }
                       } else {
-                        tmp10.next = obj;
+                        tmp10.next = obj2;
                       }
                       return updateFromMap(map, dependencies, sum1, _currentValue2, lanes);
                     } else if (children.$$typeof === closure_12) {
@@ -15190,7 +15181,6 @@ function createChildReconciler(arg0) {
     return updateTextNode(dependencies, map.get(sum1) || null, "" + children, lanes);
   }
   function reconcileChildFibersImpl(deletions, sibling, type, lanes) {
-    let arr;
     let iter7;
     let sibling5;
     let sibling9;
@@ -15225,7 +15215,7 @@ function createChildReconciler(arg0) {
                   deletions.deletions = items;
                   deletions.flags = deletions.flags | 16;
                 } else {
-                  arr = deletions.push(sibling);
+                  let arr2 = deletions.push(sibling);
                 }
               }
               sibling = sibling.sibling;
@@ -15244,7 +15234,7 @@ function createChildReconciler(arg0) {
                           deletions.deletions = items1;
                           deletions.flags = deletions.flags | 16;
                         } else {
-                          arr = deletions1.push(sibling16);
+                          let arr3 = deletions1.push(sibling16);
                         }
                       }
                       sibling16 = sibling16.sibling;
@@ -15277,7 +15267,7 @@ function createChildReconciler(arg0) {
                         deletions.deletions = items2;
                         deletions.flags = deletions.flags | 16;
                       } else {
-                        let arr1 = deletions2.push(sibling14);
+                        let arr4 = deletions2.push(sibling14);
                       }
                     }
                     sibling14 = sibling14.sibling;
@@ -15305,7 +15295,7 @@ function createChildReconciler(arg0) {
                       deletions.deletions = items3;
                       deletions.flags = deletions.flags | 16;
                     } else {
-                      let arr2 = deletions3.push(sibling15);
+                      let arr5 = deletions3.push(sibling15);
                     }
                   }
                   sibling15 = sibling15.sibling;
@@ -15315,8 +15305,8 @@ function createChildReconciler(arg0) {
           }
           if (children.type === closure_1_15) {
             Object.create(FiberNode.prototype);
-            obj = { tag: 7, key: children.key, elementType: null, type: null, stateNode: null, return: deletions, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: children.props.children, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: deletions.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
-            tmp229 = obj;
+            obj4 = { tag: 7, key: children.key, elementType: null, type: null, stateNode: null, return: deletions, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: children.props.children, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: deletions.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+            tmp229 = obj4;
           } else {
             const tmp238 = createFiberFromTypeAndProps(children.type, children.key, children.props, 0, deletions.mode, lanes);
             let tmp239 = null;
@@ -15338,7 +15328,7 @@ function createChildReconciler(arg0) {
                   deletions.deletions = items4;
                   deletions.flags = deletions.flags | 16;
                 } else {
-                  let arr3 = deletions4.push(sibling11);
+                  let arr6 = deletions4.push(sibling11);
                 }
               }
               sibling11 = sibling11.sibling;
@@ -15357,7 +15347,7 @@ function createChildReconciler(arg0) {
                             deletions.deletions = items5;
                             deletions.flags = deletions.flags | 16;
                           } else {
-                            let arr4 = deletions5.push(sibling13);
+                            let arr7 = deletions5.push(sibling13);
                           }
                         }
                         sibling13 = sibling13.sibling;
@@ -15368,17 +15358,17 @@ function createChildReconciler(arg0) {
                   tmp217.index = 0;
                   tmp217.sibling = null;
                   tmp217.return = deletions;
-                  obj2 = tmp217;
+                  obj7 = tmp217;
                   const tmp215 = children.children || [];
                 }
                 let tmp218 = deletions;
                 if (deletions) {
-                  tmp218 = null === obj2.alternate;
+                  tmp218 = null === obj7.alternate;
                 }
                 if (tmp218) {
-                  obj2.flags = obj2.flags | 67108866;
+                  obj7.flags = obj7.flags | 67108866;
                 }
-                return obj2;
+                return obj7;
               }
             }
             if (deletions) {
@@ -15392,7 +15382,7 @@ function createChildReconciler(arg0) {
                       deletions.deletions = items6;
                       deletions.flags = deletions.flags | 16;
                     } else {
-                      let arr5 = deletions6.push(sibling12);
+                      let arr8 = deletions6.push(sibling12);
                     }
                   }
                   sibling12 = sibling12.sibling;
@@ -15401,11 +15391,11 @@ function createChildReconciler(arg0) {
             }
           }
           Object.create(FiberNode.prototype);
-          obj2 = { tag: 4, key: children.key, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: null !== children.children ? children.children : [], memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: deletions.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
+          obj7 = { tag: 4, key: children.key, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: null !== children.children ? children.children : [], memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: deletions.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
           ({ containerInfo: obj6.containerInfo, implementation: obj6.implementation } = children);
-          obj2.stateNode = { containerInfo: null, pendingChildren: null, implementation: null };
-          obj2.return = deletions;
-          obj3 = { containerInfo: null, pendingChildren: null, implementation: null };
+          obj7.stateNode = { containerInfo: null, pendingChildren: null, implementation: null };
+          obj7.return = deletions;
+          const obj15 = { containerInfo: null, pendingChildren: null, implementation: null };
           const tmp208 = null !== children.children ? children.children : [];
         } else if (closure_1_24 === $$typeof) {
           return reconcileChildFibersImpl(deletions, sibling, resolveLazy(children), lanes);
@@ -15456,7 +15446,7 @@ function createChildReconciler(arg0) {
                         deletions.deletions = items7;
                         deletions.flags = deletions.flags | 16;
                       } else {
-                        let arr6 = deletions7.push(tmp130);
+                        let arr9 = deletions7.push(tmp130);
                       }
                     }
                   }
@@ -15527,7 +15517,7 @@ function createChildReconciler(arg0) {
                       deletions.deletions = items8;
                       deletions.flags = deletions.flags | 16;
                     } else {
-                      let arr7 = deletions8.push(sibling8);
+                      let arr10 = deletions8.push(sibling8);
                     }
                   }
                   sibling8 = sibling8.sibling;
@@ -15763,7 +15753,7 @@ function createChildReconciler(arg0) {
                               deletions.deletions = items9;
                               deletions.flags = deletions.flags | 16;
                             } else {
-                              let arr8 = deletions9.push(tmp54);
+                              let arr11 = deletions9.push(tmp54);
                             }
                           }
                         }
@@ -15840,7 +15830,7 @@ function createChildReconciler(arg0) {
                             deletions.deletions = items10;
                             deletions.flags = deletions.flags | 16;
                           } else {
-                            let arr9 = deletions10.push(sibling6);
+                            let arr12 = deletions10.push(sibling6);
                           }
                         }
                         sibling6 = sibling6.sibling;
@@ -15997,25 +15987,25 @@ function createChildReconciler(arg0) {
           } else if (children.$$typeof === closure_1_19) {
             if (null === closure_102) {
               closure_102 = deletions;
-              obj4 = null;
+              obj16 = null;
               const dependencies = deletions.dependencies;
               if (null !== dependencies) {
                 dependencies.firstContext = null;
               }
             }
             const _currentValue2 = children._currentValue2;
-            obj4 = { context: children, memoizedValue: _currentValue2, next: null };
-            if (null === obj4) {
+            obj16 = { context: children, memoizedValue: _currentValue2, next: null };
+            if (null === obj16) {
               if (null === deletions) {
                 const _Error2 = Error;
                 throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
               } else {
-                const obj5 = { lanes: 0, firstContext: obj4 };
-                deletions.dependencies = obj5;
+                const obj17 = { lanes: 0, firstContext: obj16 };
+                deletions.dependencies = obj17;
                 deletions.flags = deletions.flags | 524288;
               }
             } else {
-              tmp32.next = obj4;
+              tmp32.next = obj16;
             }
             return reconcileChildFibersImpl(deletions, sibling, _currentValue2, lanes);
           } else if (children.$$typeof === closure_1_12) {
@@ -16051,7 +16041,7 @@ function createChildReconciler(arg0) {
                     deletions.deletions = items12;
                     deletions.flags = deletions.flags | 16;
                   } else {
-                    let arr10 = deletions11.push(sibling2);
+                    let arr13 = deletions11.push(sibling2);
                   }
                 }
                 sibling2 = sibling2.sibling;
@@ -16080,7 +16070,7 @@ function createChildReconciler(arg0) {
                   deletions.deletions = items13;
                   deletions.flags = deletions.flags | 16;
                 } else {
-                  let arr11 = deletions12.push(sibling4);
+                  let arr14 = deletions12.push(sibling4);
                 }
               }
               sibling4 = sibling4.sibling;
@@ -16119,7 +16109,7 @@ function createChildReconciler(arg0) {
               deletions.deletions = items14;
               deletions.flags = deletions.flags | 16;
             } else {
-              let arr12 = deletions13.push(sibling3);
+              let arr15 = deletions13.push(sibling3);
             }
           }
           sibling3 = sibling3.sibling;
@@ -16128,7 +16118,7 @@ function createChildReconciler(arg0) {
       }
       tmp11 = tmp10;
     }
-    obj6 = Object.create(FiberNode.prototype);
+    Object.create(FiberNode.prototype);
     obj = { tag: 6, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: text1, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: deletions.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null, lanes, return: deletions };
   }
   return (deletions, sibling, type, lanes) => {
@@ -16163,13 +16153,13 @@ function use($$typeof) {
           items1 = items;
           tmp5 = items;
         }
-        if (null !== (null === obj ? _null.memoizedState : obj.next)) {
+        if (null !== (null === next ? _null.memoizedState : next.next)) {
           return trackUsedThenable(tmp5, $$typeof, tmp4);
         } else {
           const alternate = _null.alternate;
           if (null !== alternate) {
             if (null !== alternate.memoizedState) {
-              let tmp9 = obj7;
+              let tmp9 = obj10;
             }
             tmp8.H = tmp9;
           }
@@ -16178,19 +16168,19 @@ function use($$typeof) {
         tmp4 = closure_171;
       } else if ($$typeof.$$typeof === forResult) {
         const _currentValue2 = $$typeof._currentValue2;
-        obj = { context: $$typeof, memoizedValue: _currentValue2, next: null };
-        if (null === obj) {
+        next = { context: $$typeof, memoizedValue: _currentValue2, next: null };
+        if (null === obj2) {
           if (null === require) {
             const _Error = Error;
             throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
           } else {
-            obj = { lanes: 0, firstContext: null };
-            obj.firstContext = obj;
-            require.dependencies = obj;
+            obj2 = { lanes: 0, firstContext: next };
+            require.dependencies = obj2;
             require.flags = require.flags | 524288;
           }
         } else {
-          tmp2.next = obj;
+          tmp2.next = next;
+          obj2 = next;
         }
         return _currentValue2;
       }
@@ -16200,38 +16190,38 @@ function use($$typeof) {
 }
 function useMemoCache(arg0) {
   let updateQueue = _null.updateQueue;
-  let memoCache = null;
+  let memoCache1 = null;
   if (null !== updateQueue) {
-    memoCache = updateQueue.memoCache;
+    memoCache1 = updateQueue.memoCache;
   }
-  let tmp2 = memoCache;
-  if (null == memoCache) {
+  let tmp2 = memoCache1;
+  if (null == memoCache1) {
     const alternate = _null.alternate;
-    tmp2 = memoCache;
+    tmp2 = memoCache1;
     if (null !== alternate) {
       const updateQueue2 = alternate.updateQueue;
-      let tmp4 = memoCache;
+      let tmp4 = memoCache1;
       if (null !== updateQueue2) {
-        memoCache = updateQueue2.memoCache;
+        const memoCache = updateQueue2.memoCache;
         if (null != memoCache) {
           obj = { data: null, index: 0 };
-          data = memoCache.data;
-          obj.data = data.map((arr) => arr.slice());
-          memoCache = obj;
+          const data1 = memoCache.data;
+          obj.data = data1.map((arr) => arr.slice());
+          memoCache1 = obj;
         }
-        tmp4 = memoCache;
+        tmp4 = memoCache1;
       }
       tmp2 = tmp4;
     }
   }
   if (null == tmp2) {
-    obj = { data: [], index: 0 };
-    tmp2 = obj;
+    obj2 = { data: [], index: 0 };
+    tmp2 = obj2;
   }
   if (null === updateQueue) {
-    obj = { lastEffect: null, events: null, stores: null, memoCache: null };
-    _null.updateQueue = obj;
-    updateQueue = obj;
+    const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
+    _null.updateQueue = obj3;
+    updateQueue = obj3;
   }
   updateQueue.memoCache = tmp2;
   let tmp6 = tmp2.data[tmp2.index];
@@ -16272,70 +16262,70 @@ function updateSyncExternalStore(serializer, getSnapshot) {
     return tmp3;
   }
   _null.flags = _null.flags | 2048;
-  obj = { tag: 9, create: updateStoreInstance.bind(null, _null, queue, tmp3, getSnapshot), deps: null, inst: { destroy: "r" }, next: null };
+  const lastEffect = { tag: 9, create: updateStoreInstance.bind(null, _null, queue, tmp3, getSnapshot), deps: null, inst: { destroy: "r" }, next: null };
   let updateQueue = _null.updateQueue;
   if (null === updateQueue) {
-    obj = { lastEffect: null, events: null, stores: null, memoCache: null };
-    _null.updateQueue = obj;
-    updateQueue = obj;
+    obj2 = { lastEffect: null, events: null, stores: null, memoCache: null };
+    _null.updateQueue = obj2;
+    updateQueue = obj2;
   }
   if (null === updateQueue.lastEffect) {
-    obj.next = obj;
-    updateQueue.lastEffect = obj;
+    lastEffect.next = lastEffect;
+    updateQueue.lastEffect = lastEffect;
   } else {
-    iter.next = obj;
-    obj.next = iter.next;
-    updateQueue.lastEffect = obj;
+    iter.next = lastEffect;
+    lastEffect.next = iter.next;
+    updateQueue.lastEffect = lastEffect;
   }
   if (null === c278) {
     const _Error = Error;
     throw Error("Expected a work-in-progress root. This is a bug in React. Please file an issue.");
   } else if (!(127 & c164)) {
     _null.flags = _null.flags | 16384;
-    obj = { getSnapshot, value: tmp3 };
+    const obj3 = { getSnapshot, value: tmp3 };
     const updateQueue2 = _null.updateQueue;
     if (null === updateQueue2) {
-      obj1 = { lastEffect: null, events: null, stores: null, memoCache: null };
-      _null.updateQueue = obj1;
-      items1 = [obj];
-      obj1.stores = items1;
+      obj4 = { lastEffect: null, events: null, stores: null, memoCache: null };
+      _null.updateQueue = obj4;
+      items1 = [obj3];
+      obj4.stores = items1;
     } else {
       const stores = updateQueue2.stores;
       if (null === stores) {
-        const items2 = [obj];
+        const items2 = [obj3];
         updateQueue2.stores = items2;
       } else {
-        stores.push(obj);
+        stores.push(obj3);
       }
     }
   }
 }
 function mountActionState(action, baseState) {
-  obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-  if (null === obj) {
-    c165.memoizedState = obj;
+  let next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+  if (null === next) {
+    c165.memoizedState = next;
   } else {
-    tmp.next = obj;
+    tmp.next = next;
   }
-  obj.baseState = baseState;
-  obj.memoizedState = baseState;
-  obj = { pending: null, lanes: 0, dispatch: null, lastRenderedReducer: actionStateReducer, lastRenderedState: baseState };
-  obj.queue = obj;
-  const bindResult = dispatchSetState.bind(null, c165, obj);
-  obj.dispatch = bindResult;
-  obj = { state: baseState, dispatch: null, action, pending: null };
-  obj1 = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-  if (null === obj) {
-    obj = obj1;
-    c165.memoizedState = obj1;
+  next.baseState = baseState;
+  next.memoizedState = baseState;
+  obj2 = { pending: null, lanes: 0, dispatch: null, lastRenderedReducer: actionStateReducer, lastRenderedState: baseState };
+  next.queue = obj2;
+  const bindResult = dispatchSetState.bind(null, c165, obj2);
+  obj2.dispatch = bindResult;
+  const obj3 = { state: baseState, dispatch: null, action, pending: null };
+  obj4 = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+  if (null === next) {
+    next = obj4;
+    c165.memoizedState = obj4;
   } else {
-    tmp5.next = obj1;
-    obj = obj1;
+    tmp5.next = obj4;
+    next = obj4;
   }
-  obj.queue = obj;
-  const bindResult2 = dispatchActionState.bind(null, c165, obj, dispatchOptimisticSetState.bind(null, c165, false, mountStateImpl(false).queue), bindResult);
-  obj.dispatch = bindResult2;
-  obj.memoizedState = action;
+  next.queue = obj3;
+  const bindResult2 = dispatchActionState.bind(null, c165, obj3, dispatchOptimisticSetState.bind(null, c165, false, mountStateImpl(false).queue), bindResult);
+  obj3.dispatch = bindResult2;
+  next.memoizedState = action;
   items = [baseState, bindResult2, false];
   return items;
 }
@@ -16348,9 +16338,9 @@ function rerenderActionState(memoizedState) {
     return updateActionStateImpl(tmp2, tmp3, memoizedState);
   } else {
     updateWorkInProgressHook();
-    const tmpResult = updateWorkInProgressHook();
-    tmpResult.memoizedState = memoizedState;
-    items = [tmp2.memoizedState, tmpResult.queue.dispatch, false];
+    const tmpResult2 = updateWorkInProgressHook();
+    tmpResult2.memoizedState = memoizedState;
+    items = [tmp2.memoizedState, tmpResult2.queue.dispatch, false];
     return items;
   }
 }
@@ -16366,10 +16356,10 @@ function updateEvent(nextImpl) {
   _null.flags = _null.flags | 4;
   const updateQueue = _null.updateQueue;
   if (null === updateQueue) {
-    obj = { lastEffect: null, events: null, stores: null, memoCache: null };
-    _null.updateQueue = obj;
+    obj2 = { lastEffect: null, events: null, stores: null, memoCache: null };
+    _null.updateQueue = obj2;
     items = [obj];
-    obj.events = items;
+    obj2.events = items;
   } else {
     const events = updateQueue.events;
     if (null === events) {
@@ -16482,19 +16472,19 @@ function updateMemo(fn, arg1) {
 }
 function useHostTransitionStatus() {
   const _currentValue2 = context2._currentValue2;
-  obj = { context: context2, memoizedValue: _currentValue2, next: null };
-  if (null === obj) {
+  const next = { context: context2, memoizedValue: _currentValue2, next: null };
+  if (null === obj2) {
     if (null === require) {
       const _Error = Error;
       throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
     } else {
-      obj = { lanes: 0, firstContext: null };
-      obj.firstContext = obj;
-      require.dependencies = obj;
+      obj2 = { lanes: 0, firstContext: next };
+      require.dependencies = obj2;
       require.flags = require.flags | 524288;
     }
   } else {
-    tmp2.next = obj;
+    tmp2.next = next;
+    obj2 = next;
   }
   return _currentValue2;
 }
@@ -16551,13 +16541,10 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) 
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      obj = {
-        status: "pending",
-        value: "Array",
-        then(arg0) {
-              items.push(arg0);
-            }
+      { status: "pending", value: "Array", then: false }.then = function then(arg0) {
+        items.push(arg0);
       };
+      obj2 = { status: "pending", value: "Array", then: false };
     }
     closure_123 = closure_123 + 1;
     obj.then(pingEngtangledActionScope, pingEngtangledActionScope);
@@ -16601,33 +16588,33 @@ function rerenderReducer(lastRenderedReducer) {
   }
 }
 function mountEffect(create, arg1) {
-  obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-  if (null === obj) {
-    _null.memoizedState = obj;
+  const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+  if (null === next) {
+    _null.memoizedState = next;
   } else {
-    tmp.next = obj;
+    tmp.next = next;
   }
   _null.flags = _null.flags | 8390656;
   let tmp4 = null;
   if (undefined !== arg1) {
     tmp4 = arg1;
   }
-  obj = { tag: 9, create, deps: tmp4, inst: { destroy: "r" }, next: null };
+  obj2 = { tag: 9, create, deps: tmp4, inst: { destroy: "r" }, next: null };
   let updateQueue = _null.updateQueue;
   if (null === updateQueue) {
-    obj = { lastEffect: null, events: null, stores: null, memoCache: null };
-    _null.updateQueue = obj;
-    updateQueue = obj;
+    const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
+    _null.updateQueue = obj3;
+    updateQueue = obj3;
   }
   if (null === updateQueue.lastEffect) {
-    obj.next = obj;
-    updateQueue.lastEffect = obj;
+    obj2.next = obj2;
+    updateQueue.lastEffect = obj2;
   } else {
-    iter.next = obj;
-    obj.next = iter.next;
-    updateQueue.lastEffect = obj;
+    iter.next = obj2;
+    obj2.next = iter.next;
+    updateQueue.lastEffect = obj2;
   }
-  obj.memoizedState = obj;
+  next.memoizedState = obj2;
 }
 let closure_128 = createCursor(null);
 let closure_130 = Error("Suspense Exception: This is not a real error! It's an implementation detail of `use` to interrupt the current render. You must either rethrow it immediately, or move the `use` call outside of the `try/catch` block. Capturing without rethrowing will lead to unexpected behavior.\n\nTo handle async errors, wrap your component in an error boundary, or call the promise's `.catch` method and pass the result to `use`.");
@@ -16668,11 +16655,11 @@ let closure_210 = {
   readContext,
   use,
   useCallback(arg0, arg1) {
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      c165.memoizedState = obj;
+    const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === next) {
+      c165.memoizedState = next;
     } else {
-      tmp.next = obj;
+      tmp.next = next;
     }
     items = [arg0, ];
     let tmp4 = null;
@@ -16680,7 +16667,7 @@ let closure_210 = {
       tmp4 = arg1;
     }
     items[1] = tmp4;
-    obj.memoizedState = items;
+    next.memoizedState = items;
     return arg0;
   },
   useContext: readContext,
@@ -16691,92 +16678,92 @@ let closure_210 = {
       items = [cache];
       combined = arr.concat(items);
     }
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      _null.memoizedState = obj;
+    const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === next) {
+      _null.memoizedState = next;
     } else {
-      tmp3.next = obj;
+      tmp3.next = next;
     }
     _null.flags = _null.flags | 4194308;
     let tmp6 = null;
     if (undefined !== combined) {
       tmp6 = combined;
     }
-    obj = { tag: 5, create: imperativeHandleEffect.bind(null, c165, cache), deps: tmp6, inst: { destroy: "r" }, next: null };
+    obj2 = { tag: 5, create: imperativeHandleEffect.bind(null, c165, cache), deps: tmp6, inst: { destroy: "r" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
-      obj = { lastEffect: null, events: null, stores: null, memoCache: null };
-      _null.updateQueue = obj;
-      updateQueue = obj;
+      const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
+      _null.updateQueue = obj3;
+      updateQueue = obj3;
     }
     if (null === updateQueue.lastEffect) {
-      obj.next = obj;
-      updateQueue.lastEffect = obj;
+      obj2.next = obj2;
+      updateQueue.lastEffect = obj2;
     } else {
-      iter.next = obj;
-      obj.next = iter.next;
-      updateQueue.lastEffect = obj;
+      iter.next = obj2;
+      obj2.next = iter.next;
+      updateQueue.lastEffect = obj2;
     }
-    obj.memoizedState = obj;
+    next.memoizedState = obj2;
     const bindResult = imperativeHandleEffect.bind(null, c165, cache);
   },
   useLayoutEffect(create, arg1) {
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      _null.memoizedState = obj;
+    const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === next) {
+      _null.memoizedState = next;
     } else {
-      tmp.next = obj;
+      tmp.next = next;
     }
     _null.flags = _null.flags | 4194308;
     let tmp4 = null;
     if (undefined !== arg1) {
       tmp4 = arg1;
     }
-    obj = { tag: 5, create, deps: tmp4, inst: { destroy: "r" }, next: null };
+    obj2 = { tag: 5, create, deps: tmp4, inst: { destroy: "r" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
-      obj = { lastEffect: null, events: null, stores: null, memoCache: null };
-      _null.updateQueue = obj;
-      updateQueue = obj;
+      const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
+      _null.updateQueue = obj3;
+      updateQueue = obj3;
     }
     if (null === updateQueue.lastEffect) {
-      obj.next = obj;
-      updateQueue.lastEffect = obj;
+      obj2.next = obj2;
+      updateQueue.lastEffect = obj2;
     } else {
-      iter.next = obj;
-      obj.next = iter.next;
-      updateQueue.lastEffect = obj;
+      iter.next = obj2;
+      obj2.next = iter.next;
+      updateQueue.lastEffect = obj2;
     }
-    obj.memoizedState = obj;
+    next.memoizedState = obj2;
   },
   useInsertionEffect(create, arg1) {
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      _null.memoizedState = obj;
+    const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === next) {
+      _null.memoizedState = next;
     } else {
-      tmp.next = obj;
+      tmp.next = next;
     }
     _null.flags = _null.flags | 4;
     let tmp4 = null;
     if (undefined !== arg1) {
       tmp4 = arg1;
     }
-    obj = { tag: 3, create, deps: tmp4, inst: { destroy: "r" }, next: null };
+    obj2 = { tag: 3, create, deps: tmp4, inst: { destroy: "r" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
-      obj = { lastEffect: null, events: null, stores: null, memoCache: null };
-      _null.updateQueue = obj;
-      updateQueue = obj;
+      const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
+      _null.updateQueue = obj3;
+      updateQueue = obj3;
     }
     if (null === updateQueue.lastEffect) {
-      obj.next = obj;
-      updateQueue.lastEffect = obj;
+      obj2.next = obj2;
+      updateQueue.lastEffect = obj2;
     } else {
-      iter.next = obj;
-      obj.next = iter.next;
-      updateQueue.lastEffect = obj;
+      iter.next = obj2;
+      obj2.next = iter.next;
+      updateQueue.lastEffect = obj2;
     }
-    obj.memoizedState = obj;
+    next.memoizedState = obj2;
   },
   useMemo(fn, arg1) {
     let tmp4 = null;
@@ -16818,23 +16805,25 @@ let closure_210 = {
     }
     tmp3.baseState = tmp4;
     tmp3.memoizedState = tmp4;
-    obj = { pending: null, lanes: 0, dispatch: null, lastRenderedReducer, lastRenderedState: tmp4 };
-    tmp3.queue = obj;
-    const bindResult = dispatchReducerAction.bind(null, c165, obj);
-    obj.dispatch = bindResult;
+    const queue = { pending: null, lanes: 0, dispatch: null, lastRenderedReducer, lastRenderedState: tmp4 };
+    tmp3.queue = queue;
+    const bindResult = dispatchReducerAction.bind(null, c165, queue);
+    queue.dispatch = bindResult;
     items = [tmp3.memoizedState, bindResult];
     return items;
   },
   useRef(current) {
-    obj = { current };
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      c165.memoizedState = obj;
+    memoizedState = { current };
+    obj2 = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === memoizedState) {
+      memoizedState = obj2;
+      c165.memoizedState = obj2;
     } else {
-      tmp.next = obj;
+      tmp.next = obj2;
+      memoizedState = obj2;
     }
-    obj.memoizedState = obj;
-    return obj;
+    memoizedState.memoizedState = memoizedState;
+    return memoizedState;
   },
   useState(fn) {
     const tmp = mountStateImpl(fn);
@@ -16846,11 +16835,11 @@ let closure_210 = {
   },
   useDebugValue: mountDebugValue,
   useDeferredValue(memoizedState, arg1) {
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      _null.memoizedState = obj;
+    const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === next) {
+      _null.memoizedState = next;
     } else {
-      tmp.next = obj;
+      tmp.next = next;
     }
     let tmp3 = arg1;
     if (undefined !== arg1) {
@@ -16876,27 +16865,27 @@ let closure_210 = {
       _null.lanes = _null.lanes | closure_291;
       closure_288 = closure_288 | closure_291;
     }
-    obj.memoizedState = memoizedState;
+    next.memoizedState = memoizedState;
     tmp3 = memoizedState;
   },
   useTransition() {
     const bindResult = startTransition.bind(null, c165, mountStateImpl(false).queue, true, false);
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      c165.memoizedState = obj;
+    const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === next) {
+      c165.memoizedState = next;
     } else {
-      tmp2.next = obj;
+      tmp2.next = next;
     }
-    obj.memoizedState = bindResult;
+    next.memoizedState = bindResult;
     items = [false, bindResult];
     return items;
   },
   useSyncExternalStore(serializer, getSnapshot) {
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      _null.memoizedState = obj;
+    let next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === next) {
+      _null.memoizedState = next;
     } else {
-      tmp2.next = obj;
+      tmp2.next = next;
     }
     const tmp4 = getSnapshot();
     if (null === c278) {
@@ -16905,129 +16894,128 @@ let closure_210 = {
     } else {
       if (!(127 & c280)) {
         _null.flags = _null.flags | 16384;
-        obj = { getSnapshot, value: tmp4 };
+        obj2 = { getSnapshot, value: tmp4 };
         const updateQueue = _null.updateQueue;
         if (null === updateQueue) {
-          obj = { lastEffect: null, events: null, stores: null, memoCache: null };
-          _null.updateQueue = obj;
-          items = [obj];
-          obj.stores = items;
+          const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
+          _null.updateQueue = obj3;
+          items = [obj2];
+          obj3.stores = items;
         } else {
           const stores = updateQueue.stores;
           if (null === stores) {
-            items1 = [obj];
+            items1 = [obj2];
             updateQueue.stores = items1;
           } else {
-            stores.push(obj);
+            stores.push(obj2);
           }
         }
       }
       tmp3.memoizedState = tmp4;
-      obj1 = { value: tmp4, getSnapshot };
-      tmp3.queue = obj1;
+      obj4 = { value: tmp4, getSnapshot };
+      tmp3.queue = obj4;
       const items2 = [serializer];
-      obj2 = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-      if (null === obj) {
-        obj = obj2;
-        _null.memoizedState = obj2;
+      obj5 = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+      if (null === next) {
+        next = obj5;
+        _null.memoizedState = obj5;
       } else {
-        tmp16.next = obj2;
-        obj = obj2;
+        tmp16.next = obj5;
+        next = obj5;
       }
       _null.flags = _null.flags | 8390656;
-      obj3 = { tag: 9, create: subscribeToStore.bind(null, _null, obj1, serializer), deps: items2, inst: { destroy: "r" }, next: null };
+      obj6 = { tag: 9, create: subscribeToStore.bind(null, _null, obj4, serializer), deps: items2, inst: { destroy: "r" }, next: null };
       let updateQueue2 = _null.updateQueue;
       if (null === updateQueue2) {
-        obj4 = { lastEffect: null, events: null, stores: null, memoCache: null };
-        _null.updateQueue = obj4;
-        updateQueue2 = obj4;
+        obj7 = { lastEffect: null, events: null, stores: null, memoCache: null };
+        _null.updateQueue = obj7;
+        updateQueue2 = obj7;
       }
       if (null === updateQueue2.lastEffect) {
-        obj3.next = obj3;
-        updateQueue2.lastEffect = obj3;
+        obj6.next = obj6;
+        updateQueue2.lastEffect = obj6;
       } else {
-        iter.next = obj3;
-        obj3.next = iter.next;
-        updateQueue2.lastEffect = obj3;
+        iter.next = obj6;
+        obj6.next = iter.next;
+        updateQueue2.lastEffect = obj6;
       }
-      obj.memoizedState = obj3;
+      next.memoizedState = obj6;
       _null.flags = _null.flags | 2048;
-      const obj5 = { tag: 9, create: updateStoreInstance.bind(null, _null, obj1, tmp4, getSnapshot), deps: null, inst: { destroy: "r" }, next: null };
+      const obj8 = { tag: 9, create: updateStoreInstance.bind(null, _null, obj4, tmp4, getSnapshot), deps: null, inst: { destroy: "r" }, next: null };
       let updateQueue3 = _null.updateQueue;
       if (null === updateQueue3) {
-        obj6 = { lastEffect: null, events: null, stores: null, memoCache: null };
-        _null.updateQueue = obj6;
-        updateQueue3 = obj6;
+        obj9 = { lastEffect: null, events: null, stores: null, memoCache: null };
+        _null.updateQueue = obj9;
+        updateQueue3 = obj9;
       }
       if (null === updateQueue3.lastEffect) {
-        obj5.next = obj5;
-        updateQueue3.lastEffect = obj5;
+        obj8.next = obj8;
+        updateQueue3.lastEffect = obj8;
       } else {
-        iter2.next = obj5;
-        obj5.next = iter2.next;
-        updateQueue3.lastEffect = obj5;
+        iter2.next = obj8;
+        obj8.next = iter2.next;
+        updateQueue3.lastEffect = obj8;
       }
       return tmp4;
     }
   },
   useId() {
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      c165.memoizedState = obj;
+    const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === next) {
+      c165.memoizedState = next;
     } else {
-      tmp.next = obj;
+      tmp.next = next;
     }
     closure_173 = str + 1;
     const text = `${`_${c278.identifierPrefix}` + "r_" + str.toString(32)}_`;
-    obj.memoizedState = text;
+    next.memoizedState = text;
     return `${`_${c278.identifierPrefix}` + "r_" + +closure_173.toString(32)}_`;
   },
   useHostTransitionStatus,
   useFormState: mountActionState,
   useActionState: mountActionState,
   useOptimistic(baseState) {
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      c165.memoizedState = obj;
+    const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === next) {
+      c165.memoizedState = next;
     } else {
-      tmp.next = obj;
+      tmp.next = next;
     }
-    obj.baseState = baseState;
-    obj.memoizedState = baseState;
-    obj = { pending: null, lanes: 0, dispatch: null, lastRenderedReducer: null, lastRenderedState: null };
-    obj.queue = obj;
-    const bindResult = dispatchOptimisticSetState.bind(null, c165, true, obj);
-    obj.dispatch = bindResult;
+    next.baseState = baseState;
+    next.memoizedState = baseState;
+    obj2 = { pending: null, lanes: 0, dispatch: null, lastRenderedReducer: null, lastRenderedState: null };
+    next.queue = obj2;
+    const bindResult = dispatchOptimisticSetState.bind(null, c165, true, obj2);
+    obj2.dispatch = bindResult;
     items = [baseState, bindResult];
     return items;
   },
   useMemoCache,
   useCacheRefresh() {
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      c165.memoizedState = obj;
+    const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === next) {
+      c165.memoizedState = next;
     } else {
-      tmp.next = obj;
+      tmp.next = next;
     }
     const bindResult = refreshCache.bind(null, c165);
-    obj.memoizedState = bindResult;
+    next.memoizedState = bindResult;
     return bindResult;
   },
   useEffectEvent(impl) {
-    obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
-    if (null === obj) {
-      c165.memoizedState = obj;
+    const next = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
+    if (null === next) {
+      c165.memoizedState = next;
     } else {
-      tmp.next = obj;
+      tmp.next = next;
     }
-    obj = { impl };
-    obj.memoizedState = obj;
+    next.memoizedState = { impl };
     return () => {
       if (2 & closure_277) {
         const _Error = Error;
         throw Error("A function wrapped in useEffectEvent can't be called during rendering.");
       } else {
-        const impl = obj.impl;
+        const impl = obj2.impl;
         const apply = impl.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(undefined);
@@ -17075,7 +17063,7 @@ let closure_210 = {
         const alternate = _null.alternate;
         if (null !== alternate) {
           if (null !== alternate.memoizedState) {
-            let tmp8 = obj7;
+            let tmp8 = obj10;
           }
           tmp7.H = tmp8;
         }
@@ -17235,7 +17223,7 @@ let closure_210 = {
           const alternate = _null.alternate;
           if (null !== alternate) {
             if (null !== alternate.memoizedState) {
-              let tmp16 = obj7;
+              let tmp16 = obj10;
             }
             tmp15.H = tmp16;
           }
@@ -17372,19 +17360,19 @@ let closure_270 = 8192;
 A = {
   getCacheForType(fn) {
     const _currentValue2 = context._currentValue2;
-    obj = { context, memoizedValue: _currentValue2, next: null };
-    if (null === obj) {
+    const next = { context, memoizedValue: _currentValue2, next: null };
+    if (null === obj2) {
       if (null === require) {
         const _Error = Error;
         throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
       } else {
-        obj = { lanes: 0, firstContext: null };
-        obj.firstContext = obj;
-        require.dependencies = obj;
+        obj2 = { lanes: 0, firstContext: next };
+        require.dependencies = obj2;
         require.flags = require.flags | 524288;
       }
     } else {
-      tmp2.next = obj;
+      tmp2.next = next;
+      obj2 = next;
     }
     const data = _currentValue2.data;
     value = data.get(fn);
@@ -17398,19 +17386,19 @@ A = {
   },
   cacheSignal() {
     const _currentValue2 = context._currentValue2;
-    obj = { context, memoizedValue: _currentValue2, next: null };
-    if (null === obj) {
+    const next = { context, memoizedValue: _currentValue2, next: null };
+    if (null === obj2) {
       if (null === require) {
         const _Error = Error;
         throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
       } else {
-        obj = { lanes: 0, firstContext: null };
-        obj.firstContext = obj;
-        require.dependencies = obj;
+        obj2 = { lanes: 0, firstContext: next };
+        require.dependencies = obj2;
         require.flags = require.flags | 524288;
       }
     } else {
-      tmp2.next = obj;
+      tmp2.next = next;
+      obj2 = next;
     }
     return _currentValue2.controller.signal;
   }
@@ -17459,7 +17447,7 @@ let closure_355 = globalThis.nativeFabricUIManager.unstable_DiscreteEventPriorit
 let closure_356 = globalThis.nativeFabricUIManager.unstable_ContinuousEventPriority;
 let closure_357 = globalThis.nativeFabricUIManager.unstable_IdleEventPriority;
 let closure_358 = globalThis.nativeFabricUIManager.unstable_getCurrentEventPriority;
-let obj9 = {
+let obj12 = {
   getInspectorDataForInstance: "r",
   getInspectorDataForViewTag() {
     throw Error("getInspectorDataForViewTag() is not available in production");
@@ -17697,7 +17685,7 @@ N = function N(stateNode) {
     return publicInstance;
   }
 };
-const injection = obj3.injection;
+const injection = obj6.injection;
 let result2 = injection.injectGlobalResponderHandler({
   onChange(stateNode, stateNode2, arg2) {
     if (stateNode) {
@@ -17745,13 +17733,13 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
     }
   };
   let _Map = Map;
-  let obj11 = { bundleType: 0, version: "19.2.3", rendererPackageName: "react-native-renderer", currentDispatcherRef: __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, reconcilerVersion: "19.2.3", rendererConfig: obj9 };
+  const obj26 = { bundleType: 0, version: "19.2.3", rendererPackageName: "react-native-renderer", currentDispatcherRef: __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, reconcilerVersion: "19.2.3", rendererConfig: obj12 };
   if (typeof globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined") {
     __REACT_DEVTOOLS_GLOBAL_HOOK__2 = globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__;
     if (!globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__.isDisabled) {
       if (__REACT_DEVTOOLS_GLOBAL_HOOK__2.supportsFiber) {
         try {
-          closure_72 = __REACT_DEVTOOLS_GLOBAL_HOOK__2.inject(obj11);
+          closure_72 = __REACT_DEVTOOLS_GLOBAL_HOOK__2.inject(obj26);
         } catch (err) {
         }
       }
@@ -17926,7 +17914,6 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
     throw Error("isChildPublicInstance() is not available in production.");
   };
   exports.render = (element, containerTag, arg2, arg3, onUncaughtError) => {
-    obj = map;
     value = map.get(containerTag);
     if (!value) {
       onUncaughtError = nativeOnUncaughtError;
@@ -17953,40 +17940,36 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
       if (tmp5) {
         onRecoverableError = onUncaughtError.onRecoverableError;
       }
-      let tmp7 = FiberRootNode;
-      obj = { publicInstance: null, containerTag: null };
-      obj2 = get_BatchedBridge;
-      obj.publicInstance = obj2.createPublicRootInstance(containerTag);
-      obj.containerTag = containerTag;
+      obj2 = { publicInstance: get_BatchedBridge.createPublicRootInstance(containerTag), containerTag };
       let num2 = 0;
       if (arg3) {
         num2 = 1;
       }
-      obj = Object.create(tmp7.prototype);
-      tmp7 = new tmp7(obj, num2, false, "", onUncaughtError, onCaughtError, onRecoverableError, nativeOnDefaultTransitionIndicator, null);
+      obj4 = Object.create(FiberRootNode.prototype);
+      new FiberRootNode(obj2, num2, false, "", onUncaughtError, onCaughtError, onRecoverableError, nativeOnDefaultTransitionIndicator, null);
       let num4 = 0;
       if (1 === num2) {
         num4 = 1;
       }
       Object.create(FiberNode.prototype);
-      obj2 = { tag: 3, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: null, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: num4, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
-      obj.current = obj2;
-      obj2.stateNode = obj;
-      obj3 = { controller: null, data: null, refCount: 0 };
+      obj6 = { tag: 3, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: null, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: num4, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null };
+      obj4.current = obj6;
+      obj6.stateNode = obj4;
+      obj7 = { controller: null, data: null, refCount: 0 };
       const tmp27 = new closure_106();
-      obj3.controller = tmp27;
+      obj7.controller = tmp27;
       const _Map = Map;
       map = new Map();
-      obj3.data = map;
-      obj3.refCount = obj3.refCount + 1;
-      obj.pooledCache = obj3;
-      obj3.refCount = obj3.refCount + 1;
-      obj4 = { element: null, isDehydrated: false, cache: obj3 };
-      obj2.memoizedState = obj4;
-      const obj5 = { baseState: obj2.memoizedState, firstBaseUpdate: null, lastBaseUpdate: null, shared: { pending: null, lanes: 0, hiddenCallbacks: null }, callbacks: null };
-      obj2.updateQueue = obj5;
-      const result = obj.set(containerTag, obj);
-      value = obj;
+      obj7.data = map;
+      obj7.refCount = obj7.refCount + 1;
+      obj4.pooledCache = obj7;
+      obj7.refCount = obj7.refCount + 1;
+      const obj15 = { element: null, isDehydrated: false, cache: obj7 };
+      obj6.memoizedState = obj15;
+      const obj16 = { baseState: obj6.memoizedState, firstBaseUpdate: null, lastBaseUpdate: null, shared: { pending: null, lanes: 0, hiddenCallbacks: null }, callbacks: null };
+      obj6.updateQueue = obj16;
+      const result = map.set(containerTag, obj4);
+      value = obj4;
     }
     updateContainer(element, value, 0, arg2);
     current = value.current;
@@ -18001,7 +17984,7 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
       canonical = current.child.stateNode;
       if (null != canonical.canonical) {
         if (null == canonical.canonical.publicInstance) {
-          obj8 = get_BatchedBridge;
+          const obj8 = get_BatchedBridge;
           const nativeTag = canonical.canonical.nativeTag;
           const viewConfig = canonical.canonical.viewConfig;
           const internalInstanceHandle = canonical.canonical.internalInstanceHandle;
@@ -18060,34 +18043,7 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
   };
   let map = new Map();
 }
-let obj1 = { touchBank: items3, numberActiveTouches: 0, indexOfSingleActiveTouch: -1, mostRecentTimeStamp: 0 };
 let obj10 = {
-  onChange(stateNode, stateNode2, arg2) {
-    if (stateNode) {
-      stateNode = stateNode.stateNode;
-    }
-    let flag = arg2;
-    if (stateNode) {
-      let flag2 = flag;
-      if (!flag) {
-        flag2 = false;
-      }
-      globalThis.nativeFabricUIManager.setIsJSResponder(stateNode.stateNode.node, false, flag2);
-    }
-    if (stateNode2) {
-      stateNode2 = stateNode2.stateNode;
-    }
-    if (stateNode2) {
-      if (!flag) {
-        flag = false;
-      }
-      globalThis.nativeFabricUIManager.setIsJSResponder(stateNode2.stateNode.node, true, flag);
-    }
-  }
-};
-let obj2 = { startShouldSetResponder: { phasedRegistrationNames: { bubbled: "onStartShouldSetResponder", captured: "onStartShouldSetResponderCapture" }, dependencies: items }, scrollShouldSetResponder: { phasedRegistrationNames: { bubbled: "onScrollShouldSetResponder", captured: "onScrollShouldSetResponderCapture" }, dependencies: ["topScroll"] }, selectionChangeShouldSetResponder: { phasedRegistrationNames: { bubbled: "onSelectionChangeShouldSetResponder", captured: "onSelectionChangeShouldSetResponderCapture" }, dependencies: ["topSelectionChange"] }, moveShouldSetResponder: { phasedRegistrationNames: { bubbled: "onMoveShouldSetResponder", captured: "onMoveShouldSetResponderCapture" }, dependencies: items1 }, responderStart: { registrationName: "onResponderStart", dependencies: items }, responderMove: { registrationName: "onResponderMove", dependencies: items1 }, responderEnd: { registrationName: "onResponderEnd", dependencies: items2 }, responderRelease: { registrationName: "onResponderRelease", dependencies: items2 }, responderTerminationRequest: { registrationName: "onResponderTerminationRequest", dependencies: [] }, responderGrant: { registrationName: "onResponderGrant", dependencies: [] }, responderReject: { registrationName: "onResponderReject", dependencies: [] }, responderTerminate: { registrationName: "onResponderTerminate", dependencies: [] } };
-let obj6 = { readContext, use, useCallback: throwInvalidHookError, useContext: throwInvalidHookError, useEffect: throwInvalidHookError, useImperativeHandle: throwInvalidHookError, useLayoutEffect: throwInvalidHookError, useInsertionEffect: throwInvalidHookError, useMemo: throwInvalidHookError, useReducer: throwInvalidHookError, useRef: throwInvalidHookError, useState: throwInvalidHookError, useDebugValue: throwInvalidHookError, useDeferredValue: throwInvalidHookError, useTransition: throwInvalidHookError, useSyncExternalStore: throwInvalidHookError, useId: throwInvalidHookError, useHostTransitionStatus: throwInvalidHookError, useFormState: throwInvalidHookError, useActionState: throwInvalidHookError, useOptimistic: throwInvalidHookError, useMemoCache: throwInvalidHookError, useCacheRefresh: throwInvalidHookError };
-let obj7 = {
   readContext,
   use,
   useCallback: updateCallback,
@@ -18123,7 +18079,7 @@ let obj7 = {
         const alternate = _null.alternate;
         if (null !== alternate) {
           if (null !== alternate.memoizedState) {
-            let tmp8 = obj7;
+            let tmp8 = obj10;
           }
           tmp7.H = tmp8;
         }
@@ -18150,7 +18106,7 @@ let obj7 = {
   useMemoCache,
   useCacheRefresh: updateRefresh
 };
-let obj8 = {
+let obj11 = {
   readContext,
   use,
   useCallback: updateCallback,
@@ -18283,7 +18239,7 @@ let obj8 = {
           const alternate = _null.alternate;
           if (null !== alternate) {
             if (null !== alternate.memoizedState) {
-              let tmp16 = obj7;
+              let tmp16 = obj10;
             }
             tmp15.H = tmp16;
           }
@@ -18317,3 +18273,35 @@ let obj8 = {
   useMemoCache,
   useCacheRefresh: updateRefresh
 };
+let obj13 = {
+  onChange(stateNode, stateNode2, arg2) {
+    if (stateNode) {
+      stateNode = stateNode.stateNode;
+    }
+    let flag = arg2;
+    if (stateNode) {
+      let flag2 = flag;
+      if (!flag) {
+        flag2 = false;
+      }
+      globalThis.nativeFabricUIManager.setIsJSResponder(stateNode.stateNode.node, false, flag2);
+    }
+    if (stateNode2) {
+      stateNode2 = stateNode2.stateNode;
+    }
+    if (stateNode2) {
+      if (!flag) {
+        flag = false;
+      }
+      globalThis.nativeFabricUIManager.setIsJSResponder(stateNode2.stateNode.node, true, flag);
+    }
+  }
+};
+let obj3 = {
+  touchHistory() {
+    return null;
+  }
+};
+let obj4 = { touchBank: items3, numberActiveTouches: 0, indexOfSingleActiveTouch: -1, mostRecentTimeStamp: 0 };
+let obj5 = { startShouldSetResponder: { phasedRegistrationNames: { bubbled: "onStartShouldSetResponder", captured: "onStartShouldSetResponderCapture" }, dependencies: items }, scrollShouldSetResponder: { phasedRegistrationNames: { bubbled: "onScrollShouldSetResponder", captured: "onScrollShouldSetResponderCapture" }, dependencies: ["topScroll"] }, selectionChangeShouldSetResponder: { phasedRegistrationNames: { bubbled: "onSelectionChangeShouldSetResponder", captured: "onSelectionChangeShouldSetResponderCapture" }, dependencies: ["topSelectionChange"] }, moveShouldSetResponder: { phasedRegistrationNames: { bubbled: "onMoveShouldSetResponder", captured: "onMoveShouldSetResponderCapture" }, dependencies: items1 }, responderStart: { registrationName: "onResponderStart", dependencies: items }, responderMove: { registrationName: "onResponderMove", dependencies: items1 }, responderEnd: { registrationName: "onResponderEnd", dependencies: items2 }, responderRelease: { registrationName: "onResponderRelease", dependencies: items2 }, responderTerminationRequest: { registrationName: "onResponderTerminationRequest", dependencies: [] }, responderGrant: { registrationName: "onResponderGrant", dependencies: [] }, responderReject: { registrationName: "onResponderReject", dependencies: [] }, responderTerminate: { registrationName: "onResponderTerminate", dependencies: [] } };
+let obj9 = { readContext, use, useCallback: throwInvalidHookError, useContext: throwInvalidHookError, useEffect: throwInvalidHookError, useImperativeHandle: throwInvalidHookError, useLayoutEffect: throwInvalidHookError, useInsertionEffect: throwInvalidHookError, useMemo: throwInvalidHookError, useReducer: throwInvalidHookError, useRef: throwInvalidHookError, useState: throwInvalidHookError, useDebugValue: throwInvalidHookError, useDeferredValue: throwInvalidHookError, useTransition: throwInvalidHookError, useSyncExternalStore: throwInvalidHookError, useId: throwInvalidHookError, useHostTransitionStatus: throwInvalidHookError, useFormState: throwInvalidHookError, useActionState: throwInvalidHookError, useOptimistic: throwInvalidHookError, useMemoCache: throwInvalidHookError, useCacheRefresh: throwInvalidHookError };

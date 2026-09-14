@@ -28,23 +28,23 @@ export const SafeAreaView = noop.forwardRef((edges, ref) => {
       if (str == null) {
         str = "off";
       }
-      rect = { top: str, right: null, bottom: null, left: null };
+      const rect1 = { top: str, right: null, bottom: null, left: null };
       let str2 = rect.right;
       if (str2 == null) {
         str2 = "off";
       }
-      rect.right = str2;
+      rect1.right = str2;
       let str3 = rect.bottom;
       if (str3 == null) {
         str3 = "off";
       }
-      rect.bottom = str3;
+      rect1.bottom = str3;
       let str4 = rect.left;
       if (str4 == null) {
         str4 = "off";
       }
-      rect.left = str4;
-      return rect;
+      rect1.left = str4;
+      return rect1;
     }
   }, items);
   const merged1 = Object.assign(merged);

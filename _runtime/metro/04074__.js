@@ -1,19 +1,21 @@
 // === Module 4074: ? ===
 
 // Module 4074
-import startOfISOWeekYear from "startOfISOWeekYear" /* 3886 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 3886 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let startOfISOWeekYear = startOfISOWeekYear_mod;
 if (!startOfISOWeekYear) {
-  let obj = { default: startOfISOWeekYear };
+  const obj = { default: startOfISOWeekYear };
   let tmp3 = obj;
 } else {
   tmp3 = startOfISOWeekYear;
 }
 startOfISOWeekYear = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

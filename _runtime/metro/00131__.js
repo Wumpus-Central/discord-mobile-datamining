@@ -10,6 +10,8 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import javaScriptFlagGetter from "module_27" /* 27 */;
 
+const require = globalThis.__r;
+
 const ReadOnlyNode = fn;
 function _isNativeReflectConstruct() {
   try {
@@ -155,7 +157,7 @@ let items = [
           items2 = [arr, index];
         }
       }
-      [arr5, tmp9] = _slicedToArray(items2, 2);
+      [arr5, tmp9] = items2;
       let tmp10 = null;
       if (tmp9 !== arr5.length - 1) {
         tmp10 = arr5[tmp9 + 1];

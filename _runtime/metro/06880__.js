@@ -2,7 +2,7 @@
 
 // Module 6880
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
@@ -27,17 +27,18 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 function changeEventCalculator(rotation, rotation2) {
   if (undefined === rotation2) {
-    let obj = { rotationChange: rotation.rotation };
+    const obj2 = { rotationChange: rotation.rotation };
+    let obj = obj2;
   } else {
     obj = { rotationChange: rotation.rotation - rotation2.rotation };
   }
-  obj = {};
   const merged = Object.assign(rotation);
   const merged1 = Object.assign(obj);
-  return obj;
+  return {};
 }
 changeEventCalculator.__closure = {};
 changeEventCalculator.__workletHash = 11988645380499;

@@ -2,8 +2,9 @@
 
 // Module 211 (FormData)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 
+let _classCallCheck = _classCallCheck_mod;
 class FormData {
   constructor() {
     tmp = closure_0(this, FormData);
@@ -43,7 +44,7 @@ let items = [
       const _parts = this._parts;
       return _parts.map((item) => {
         [tmp, tmp2] = item;
-        let obj = { "content-disposition": `form-data; name="${tmp}"` };
+        const obj = { "content-disposition": `form-data; name="${tmp}"` };
         if (typeof tmp2 === "object") {
           const _Array = Array;
           if (!Array.isArray(tmp2)) {
@@ -56,15 +57,16 @@ let items = [
               if (typeof tmp2.type === "string") {
                 obj["content-type"] = tmp2.type;
               }
-              obj = {};
+              let obj2 = {};
               const merged = Object.assign(tmp2);
-              obj.headers = obj;
-              obj.fieldName = tmp;
+              obj2.headers = obj;
+              obj2.fieldName = tmp;
             }
-            return obj;
+            return obj2;
           }
         }
-        obj = { string: String(tmp2), headers: obj, fieldName: tmp };
+        obj2 = { string: String(tmp2), headers: obj, fieldName: tmp };
+        const obj3 = { string: String(tmp2), headers: obj, fieldName: tmp };
       });
     }
   }

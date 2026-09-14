@@ -3,6 +3,8 @@
 // Module 464
 import merge from "merge" /* 67 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 

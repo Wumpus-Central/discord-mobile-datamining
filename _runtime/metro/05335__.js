@@ -17,7 +17,7 @@ function parseTags(buffer) {
     const error1 = new Error("ICC profile too short");
     throw error1;
   } else {
-    let obj = {};
+    const obj2 = {};
     const _Object = Object;
     const keys = Object.keys(iccTags.iccProfile);
     for (let num = 0; num < keys.length; num = num + 1) {
@@ -29,8 +29,8 @@ function parseTags(buffer) {
       if (iter.description) {
         descriptionResult = iter.description(valueResult);
       }
-      obj = { value: valueResult, description: descriptionResult };
-      obj[iter.name] = obj;
+      let obj = { value: valueResult, description: descriptionResult };
+      obj2[iter.name] = obj;
     }
     const _String = String;
     const _Uint8Array = Uint8Array;
@@ -42,7 +42,7 @@ function parseTags(buffer) {
     } else {
       let num6 = 132;
       if (buffer.length < 132) {
-        return obj;
+        return obj2;
       } else {
         const uint32 = buffer.getUint32(128);
         let num7 = 0;
@@ -53,14 +53,14 @@ function parseTags(buffer) {
             let uint321 = buffer.getUint32(num6 + 4);
             let uint322 = buffer.getUint32(num6 + 8);
             if (uint321 > buffer.length) {
-              return obj;
+              return obj2;
             } else {
               let tmp55Result = _mod5294;
               let stringFromDataView1 = tmp55Result.getStringFromDataView(buffer, uint321, 4);
               if (stringFromDataView1 === desc) {
                 let uint323 = buffer.getUint32(uint321 + 8);
                 if (uint323 > uint322) {
-                  return obj;
+                  return obj2;
                 } else {
                   let _String4 = String;
                   let _Uint8Array4 = Uint8Array;
@@ -69,11 +69,11 @@ function parseTags(buffer) {
                   let uint8Array1 = new Uint8Array(buffer.slice(uint321 + 12, uint321 + uint323 + 11));
                   let applyResult = fromCharCode4.apply(null, uint8Array1);
                   if (iccTags.iccTags[stringFromDataView]) {
-                    obj = { value: applyResult, description: applyResult };
-                    obj[iccTags.iccTags[stringFromDataView].name] = obj;
+                    let obj3 = { value: applyResult, description: applyResult };
+                    obj2[iccTags.iccTags[stringFromDataView].name] = obj3;
                   } else {
-                    let obj1 = { value: applyResult, description: applyResult };
-                    obj[stringFromDataView] = obj1;
+                    let obj4 = { value: applyResult, description: applyResult };
+                    obj2[stringFromDataView] = obj4;
                   }
                 }
               } else if (stringFromDataView1 === mluc) {
@@ -84,15 +84,15 @@ function parseTags(buffer) {
                 let tmp25 = require;
                 if (0 < uint324) {
                   do {
-                    let obj5 = _mod5294;
-                    let stringFromDataView2 = obj5.getStringFromDataView(buffer, sum, 2);
                     let obj6 = _mod5294;
-                    let stringFromDataView3 = obj6.getStringFromDataView(buffer, sum + 2, 2);
+                    let stringFromDataView2 = obj6.getStringFromDataView(buffer, sum, 2);
+                    let obj7 = _mod5294;
+                    let stringFromDataView3 = obj7.getStringFromDataView(buffer, sum + 2, 2);
                     let uint325 = buffer.getUint32(sum + 4);
                     let uint326 = buffer.getUint32(sum + 8);
-                    let obj7 = _mod5294;
-                    let obj2 = { languageCode: stringFromDataView2, countryCode: stringFromDataView3, text: obj7.getUnicodeStringFromDataView(buffer, uint321 + uint326, uint325) };
-                    let arr = items.push(obj2);
+                    let obj8 = _mod5294;
+                    let obj5 = { languageCode: stringFromDataView2, countryCode: stringFromDataView3, text: obj8.getUnicodeStringFromDataView(buffer, uint321 + uint326, uint325) };
+                    let arr = items.push(obj5);
                     sum = sum + tmp22;
                     num4 = num4 + 1;
                     tmp25 = require;
@@ -101,29 +101,29 @@ function parseTags(buffer) {
                 if (1 === uint324) {
                   text = items[0].text;
                   if (tmp25(5336).iccTags[stringFromDataView]) {
-                    let obj3 = { value: text, description: text };
-                    obj[tmp25(5336).iccTags[stringFromDataView].name] = obj3;
+                    let obj9 = { value: text, description: text };
+                    obj2[tmp25(5336).iccTags[stringFromDataView].name] = obj9;
                   } else {
-                    let obj4 = { value: text, description: text };
-                    obj[stringFromDataView] = obj4;
+                    let obj10 = { value: text, description: text };
+                    obj2[stringFromDataView] = obj10;
                   }
                 } else {
-                  obj5 = {};
+                  let obj11 = {};
                   let num5 = 0;
                   if (0 < items.length) {
                     do {
                       let _HermesInternal = HermesInternal;
-                      obj5["" + items[num5].languageCode + "-" + items[num5].countryCode] = items[num5].text;
+                      obj11["" + items[num5].languageCode + "-" + items[num5].countryCode] = items[num5].text;
                       num5 = num5 + 1;
                       length = items.length;
                     } while (num5 < length);
                   }
                   if (iccTags.iccTags[stringFromDataView]) {
-                    obj6 = { value: obj5, description: obj5 };
-                    obj[iccTags.iccTags[stringFromDataView].name] = obj6;
+                    let obj12 = { value: obj11, description: obj11 };
+                    obj2[iccTags.iccTags[stringFromDataView].name] = obj12;
                   } else {
-                    obj7 = { value: obj5, description: obj5 };
-                    obj[stringFromDataView] = obj7;
+                    let obj13 = { value: obj11, description: obj11 };
+                    obj2[stringFromDataView] = obj13;
                   }
                 }
               } else if (stringFromDataView1 === text) {
@@ -134,11 +134,11 @@ function parseTags(buffer) {
                 let uint8Array2 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + uint322 - 7));
                 let applyResult1 = fromCharCode2.apply(null, uint8Array2);
                 if (iccTags.iccTags[stringFromDataView]) {
-                  let obj8 = { value: applyResult1, description: applyResult1 };
-                  obj[iccTags.iccTags[stringFromDataView].name] = obj8;
+                  let obj14 = { value: applyResult1, description: applyResult1 };
+                  obj2[iccTags.iccTags[stringFromDataView].name] = obj14;
                 } else {
-                  let obj9 = { value: applyResult1, description: applyResult1 };
-                  obj[stringFromDataView] = obj9;
+                  let obj15 = { value: applyResult1, description: applyResult1 };
+                  obj2[stringFromDataView] = obj15;
                 }
               } else if (stringFromDataView1 === c7) {
                 let _String3 = String;
@@ -148,20 +148,20 @@ function parseTags(buffer) {
                 let uint8Array3 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + 12));
                 let applyResult2 = fromCharCode3.apply(null, uint8Array3);
                 if (iccTags.iccTags[stringFromDataView]) {
-                  let obj10 = { value: applyResult2, description: applyResult2 };
-                  obj[iccTags.iccTags[stringFromDataView].name] = obj10;
+                  let obj16 = { value: applyResult2, description: applyResult2 };
+                  obj2[iccTags.iccTags[stringFromDataView].name] = obj16;
                 } else {
-                  let obj11 = { value: applyResult2, description: applyResult2 };
-                  obj[stringFromDataView] = obj11;
+                  let obj18 = { value: applyResult2, description: applyResult2 };
+                  obj2[stringFromDataView] = obj18;
                 }
               }
               num6 = num6 + 12;
               num7 = num7 + 1;
             }
           }
-          return obj;
+          return obj2;
         }
-        return obj;
+        return obj2;
       }
     }
   }

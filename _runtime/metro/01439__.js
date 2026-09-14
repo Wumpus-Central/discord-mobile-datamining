@@ -149,7 +149,7 @@ class PseudoMap {
     if (!(typeof call === "unknown" ? tmp2(`_${global}`) : call(_data, `_${global}`))) {
       _data.size = _data.size + 1;
       tmp11 = Entry;
-      obj = Object.create(Entry.prototype);
+      obj1 = Object.create(Entry.prototype);
       obj = {};
       obj.key = global;
       obj.value = require;

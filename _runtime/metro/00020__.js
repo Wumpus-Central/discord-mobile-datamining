@@ -111,16 +111,14 @@ function mapIntoArray(element, items, arg2, arg3, fn) {
           }
           const _HermesInternal = HermesInternal;
           const props = element.props;
-          element = { $$typeof: _typeof, type: null, key: null, ref: null, props: null };
-          element.type = element.type;
-          element.key = arg2 + str18 + arg3;
+          const element1 = { $$typeof: _typeof, type: element.type, key: arg2 + str18 + arg3, ref: null, props: null };
           let tmp57 = null;
           if (undefined !== props.ref) {
             tmp57 = ref;
           }
-          element.ref = tmp57;
-          element.props = props;
-          tmp52 = element;
+          element1.ref = tmp57;
+          element1.props = props;
+          tmp52 = element1;
         }
         items.push(tmp52);
       }
@@ -194,15 +192,15 @@ function mapIntoArray(element, items, arg2, arg3, fn) {
         num7 = 0;
         if (!iter2.done) {
           while (true) {
-            value = iter2.value;
-            if (typeof value === "object") {
-              if (null !== value) {
-                if (null != value.key) {
+            let value3 = iter2.value;
+            if (typeof value3 === "object") {
+              if (null !== value3) {
+                if (null != value3.key) {
                   let text6 = `${value2.key}`;
                   c0 = { "=": "=0", ":": "=2" };
                   let text7 = `$${`${value2.key}`.replace(/[=:]/g, (arg0) => _null[arg0])}`;
                   num5 = num5 + 1;
-                  num6 = num6 + tmp26(value, items, arg2, str5 + `$${`${value2.key}`.replace(/[=:]/g, (arg0) => _null[arg0])}`, fn);
+                  num6 = num6 + tmp26(value3, items, arg2, str5 + `$${`${value2.key}`.replace(/[=:]/g, (arg0) => _null[arg0])}`, fn);
                   let iter3 = iter.next();
                   iter2 = iter3;
                   num7 = num6;
@@ -329,12 +327,12 @@ const refs = {};
 Component.prototype.isReactComponent = {};
 ComponentDummy.prototype = Component.prototype;
 const forResult3 = Symbol.for("react.suspense");
-let obj = Object.create(ComponentDummy.prototype);
-PureComponent.prototype = obj;
-obj.constructor = PureComponent;
-obj = assign(obj, Component.prototype);
-obj.isPureReactComponent = true;
-obj = { H: null, A: null, T: null, S: null };
+const obj2 = Object.create(ComponentDummy.prototype);
+PureComponent.prototype = obj2;
+obj2.constructor = PureComponent;
+assign(obj2, Component.prototype);
+obj2.isPureReactComponent = true;
+let obj = { H: null, A: null, T: null, S: null };
 const re15 = /\/+/g;
 let closure_18 = typeof reportError === "function" ? reportError : ((message) => {
   if (typeof window === "object") {
@@ -348,7 +346,7 @@ let closure_18 = typeof reportError === "function" ? reportError : ((message) =>
             let StringResult = String(message.message);
           }
           obj = { bubbles: true, cancelable: true, message: StringResult, error: message };
-          tmp = new tmp("error", obj);
+          const tmp2 = new tmp("error", obj);
           const _window2 = window;
         }
       }
@@ -393,17 +391,17 @@ export const Children = {
       const items = [];
       c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f69410.call;
+        const call = f69413.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f69410(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f69413(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       return items;
     }
   },
   forEach(element, arg1, arg2) {
-    const f69408 = function() {
+    const f69411 = function() {
       const self = this;
-      const apply = f69408.apply;
+      const apply = f69411.apply;
       if (typeof apply === "unknown") {
         HermesBuiltin.applyArguments(self);
       } else {
@@ -414,9 +412,9 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f69410.call;
+        const call = f69413.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f69410(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f69413(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
   },
@@ -427,23 +425,23 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f69410.call;
+        const call = f69413.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f69410(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f69413(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
     return closure_0;
   },
   toArray(element) {
-    const f69410 = (arg0) => arg0;
+    const f69413 = (arg0) => arg0;
     let items1 = element;
     if (null != element) {
       const items = [];
       closure_2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f69410.call;
+        const call = f69413.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f69410(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f69413(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       items1 = items;
     }
@@ -558,10 +556,8 @@ export const cloneElement = (onlyResult, key, children) => {
   }
 };
 export const createContext = (fakeSharedValue) => {
-  Consumer = { $$typeof: _typeof3, _currentValue: fakeSharedValue, _currentValue2: fakeSharedValue, _threadCount: 0, Provider: Consumer, Consumer: null };
-  Consumer = { $$typeof: _typeof2, _context: Consumer };
-  Consumer.Consumer = Consumer;
-  return Consumer;
+  _context = { $$typeof: _typeof3, _currentValue: fakeSharedValue, _currentValue2: fakeSharedValue, _threadCount: 0, Provider: _context, Consumer: { $$typeof: _typeof2, _context } };
+  return _context;
 };
 export const createElement = (div, merged, element) => {
   const props = {};
@@ -633,10 +629,8 @@ export () => ({ current: null })
 export (render) => ({ $$typeof: _typeof4, render })
 export { isValidElement };
 export (_result) => {
-  let _payload = { $$typeof: _typeof6, _payload: null, _init: lazyInitializer };
-  _payload = { _status: -1, _result };
-  _payload._payload = _payload;
-  return _payload;
+  obj = { $$typeof: _typeof6, _payload: { _status: -1, _result }, _init: lazyInitializer };
+  return obj;
 }
 export (noop, memo4) => {
   obj = { $$typeof: _typeof5, type: noop, compare: null };

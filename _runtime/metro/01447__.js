@@ -1,9 +1,9 @@
 // === Module 1447: ? ===
 
 // Module 1447
-import _mod1284 from "module_1284" /* 1284 */;
-import _mod1315 from "module_1315" /* 1315 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1316 */;
+import _mod1282 from "module_1282" /* 1282 */;
+import _mod1313 from "module_1313" /* 1313 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1314 */;
 
 if (tmp) {
   let closure_2 = callBoundIntrinsic("RegExp.prototype.exec");
@@ -20,9 +20,9 @@ if (tmp) {
   function isRegex(obj) {
     if (obj) {
       if (typeof obj === "object") {
-        const tmp8 = _mod1284(obj, "lastIndex");
+        const tmp8 = _mod1282(obj, "lastIndex");
         if (tmp8) {
-          if (_mod1315(tmp8, "value")) {
+          if (_mod1313(tmp8, "value")) {
             try {
               closure_2(obj, obj);
             } catch (tmp4) {

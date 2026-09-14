@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "k\u00FD t\u1EF1", verb: "c\u00F3" }, file: { unit: "byte", verb: "c\u00F3" }, array: { unit: "ph\u1EA7n t\u1EED", verb: "c\u00F3" }, set: { unit: "ph\u1EA7n t\u1EED", verb: "c\u00F3" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "k\u00FD t\u1EF1", verb: "c\u00F3" }, file: { unit: "byte", verb: "c\u00F3" }, array: { unit: "ph\u1EA7n t\u1EED", verb: "c\u00F3" }, set: { unit: "ph\u1EA7n t\u1EED", verb: "c\u00F3" } };
         closure_1 = { regex: "\u0111\u1EA7u v\u00E0o", email: "\u0111\u1ECBa ch\u1EC9 email", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ng\u00E0y gi\u1EDD ISO", date: "ng\u00E0y ISO", time: "gi\u1EDD ISO", duration: "kho\u1EA3ng th\u1EDDi gian ISO", ipv4: "\u0111\u1ECBa ch\u1EC9 IPv4", ipv6: "\u0111\u1ECBa ch\u1EC9 IPv6", cidrv4: "d\u1EA3i IPv4", cidrv6: "d\u1EA3i IPv6", base64: "chu\u1ED7i m\u00E3 h\u00F3a base64", base64url: "chu\u1ED7i m\u00E3 h\u00F3a base64url", json_string: "chu\u1ED7i JSON", e164: "s\u1ED1 E.164", jwt: "JWT", template_literal: "\u0111\u1EA7u v\u00E0o" };
         closure_2 = { nan: "NaN", number: "s\u1ED1", array: "m\u1EA3ng" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp47 == null) {
                 tmp47 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "\u0110\u1EA7u v\u00E0o kh\u00F4ng h\u1EE3p l\u1EC7: mong \u0111\u1EE3i instanceof " + code.expected + ", nh\u1EADn \u0111\u01B0\u1EE3c " + tmp47;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str27 = "<=";
               }
-              let tmp25 = obj[code.origin];
+              let tmp25 = obj2[code.origin];
               if (tmp25 == null) {
                 tmp25 = null;
               }
@@ -105,13 +104,13 @@ if (self2) {
                   str28 = "gi\u00E1 tr\u1ECB";
                 }
                 const verb = tmp25.verb;
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str34 = tmp25.unit;
                 if (str34 == null) {
                   str34 = "ph\u1EA7n t\u1EED";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Qu\u00E1 l\u1EDBn: mong \u0111\u1EE3i " + str28 + " " + verb + " " + str27 + str + " " + str34;
+                let combined2 = "Qu\u00E1 l\u1EDBn: mong \u0111\u1EE3i " + str28 + " " + verb + " " + str27 + str1 + " " + str34;
               } else {
                 let str29 = str28;
                 if (str28 == null) {
@@ -126,7 +125,7 @@ if (self2) {
               if (code.inclusive) {
                 str17 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
@@ -174,7 +173,6 @@ if (self2) {
               return "\u0110\u1EA7u v\u00E0o kh\u00F4ng h\u1EE3p l\u1EC7";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Gi\u00E1 tr\u1ECB kh\u00F4ng h\u1EE3p l\u1EC7 trong ";
               return "Gi\u00E1 tr\u1ECB kh\u00F4ng h\u1EE3p l\u1EC7 trong " + code.origin;
             default:
               return "\u0110\u1EA7u v\u00E0o kh\u00F4ng h\u1EE3p l\u1EC7";

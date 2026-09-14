@@ -1,14 +1,16 @@
 // === Module 4882: ? ===
 
 // Module 4882
-import _mod1282 from "module_1282" /* 1282 */;
+import _mod1280 from "module_1280" /* 1280 */;
 import requirePromise from "requirePromise" /* 4880 */;
 import PromiseResolve from "PromiseResolve" /* 4956 */;
-import callBind from "callBind" /* 1454 */;
+import callBind_mod from "callBind" /* 1454 */;
 
 requirePromise();
-let closure_2 = callBind(_mod1282("%Promise.all%"));
-let closure_3 = callBind(_mod1282("%Promise.reject%"));
+let callBind = callBind_mod;
+let closure_2 = callBind(_mod1280("%Promise.all%"));
+let callBind = callBind_mod;
+let closure_3 = callBind(_mod1280("%Promise.reject%"));
 
 export default function allSettled(arg0) {
   const self = this;

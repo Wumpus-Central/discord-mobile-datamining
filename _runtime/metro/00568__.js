@@ -27,15 +27,12 @@ function _addListener(_events, type, listener, arg3) {
       _events._events = obj;
       _events._eventsCount = 0;
       _events = obj;
-    } else {
-      if (undefined !== _events.newListener) {
-        if (listener.listener) {
-          listener = listener.listener;
-        }
-        _events.emit("newListener", type, listener);
-        _events = _events._events;
+    } else if (undefined !== _events.newListener) {
+      if (listener.listener) {
+        listener = listener.listener;
       }
-      let arr = _events[type];
+      _events.emit("newListener", type, listener);
+      _events = _events._events;
     }
     if (undefined === arr) {
       _events[type] = listener;
@@ -54,10 +51,10 @@ function _addListener(_events, type, listener, arg3) {
       _events[type] = tmp7;
     } else {
       if (arg3) {
-        arr = arr.unshift(listener);
+        arr.unshift(listener);
         let arr2 = arr;
       } else {
-        arr = arr.push(listener);
+        arr.push(listener);
         arr2 = arr;
       }
       if (undefined === _events._maxListeners) {
@@ -129,7 +126,7 @@ function _listeners(_events, arg1, arg2) {
       }
     } else if (arg2) {
       const _Array2 = Array;
-      let array = new Array(items1.length);
+      const array = new Array(items1.length);
       let num3 = 0;
       items = array;
       if (0 < array.length) {
@@ -145,14 +142,14 @@ function _listeners(_events, arg1, arg2) {
       }
     } else {
       const _Array = Array;
-      array = new Array(length);
+      const array2 = new Array(length);
       let num = 0;
-      items = array;
+      items = array2;
       if (0 < items1.length) {
         do {
-          array[num] = items1[num];
+          array2[num] = items1[num];
           num = num + 1;
-          items = array;
+          items = array2;
         } while (num < length);
       }
     }
@@ -260,7 +257,7 @@ if (null) {
         num = 1;
         if (1 < arguments.length) {
           do {
-            arr = items.push(arguments[num]);
+            arr1 = items.push(arguments[num]);
             num = num + 1;
             length = arguments.length;
           } while (num < length);
@@ -359,7 +356,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "c\u0103ldur\u0103", type: "cu limba scoas\u0103", listener: "fa\u021B\u0103" };
+          obj = { fired: false, wrapFn: "a", target: "cara", type: "cara sonriendo", listener: "divertido" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -384,7 +381,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "c\u0103ldur\u0103", type: "cu limba scoas\u0103", listener: "fa\u021B\u0103" };
+          obj = { fired: false, wrapFn: "a", target: "cara", type: "cara sonriendo", listener: "divertido" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -442,7 +439,7 @@ if (null) {
                       return self;
                     } else {
                       if (0 === num) {
-                        arr = arr.shift();
+                        arr1 = arr.shift();
                       } else {
                         if (num + 1 < arr.length) {
                           do {
@@ -453,7 +450,7 @@ if (null) {
                             sum1 = sum + 1;
                           } while (sum1 < length);
                         }
-                        arr1 = arr.pop();
+                        arr2 = arr.pop();
                       }
                       if (1 === arr.length) {
                         _events[global] = arr[0];
@@ -613,9 +610,10 @@ if (null) {
       closure_0 = arg0;
       closure_1 = arg1;
       return new Promise((arg0, arg1) => {
+        const obj = arg0;
         let error = arg1;
         function errorListener(event) {
-          closure_0.removeListener(closure_1, obj);
+          closure_0.removeListener(closure_1, obj3);
           error(event);
         }
         function resolver() {
@@ -631,10 +629,11 @@ if (null) {
           }
           closure_0(substr);
         }
-        let obj = { once: true };
+        const obj2 = { once: true };
         errorListener = resolver;
+        let obj3 = obj2;
         if (typeof obj.on === "function") {
-          if (obj.once) {
+          if (obj2.once) {
             obj.once(tmp, resolver);
           } else {
             obj.on(tmp, resolver);
@@ -645,7 +644,7 @@ if (null) {
           throw typeError;
         } else {
           function wrapListener(event) {
-            if (obj.once) {
+            if (obj3.once) {
               const removed = obj.removeEventListener(error, wrapListener2);
             }
             errorListener(event);
@@ -655,10 +654,10 @@ if (null) {
         }
         if ("error" !== error) {
           if (typeof obj.on === "function") {
-            obj = { once: true };
+            obj3 = { once: true };
             error = "error";
             if (typeof obj.on === "function") {
-              if (obj.once) {
+              if (obj3.once) {
                 obj.once("error", errorListener);
               } else {
                 obj.on("error", errorListener);
@@ -669,7 +668,7 @@ if (null) {
               throw typeError1;
             } else {
               wrapListener2 = function wrapListener(event) {
-                if (obj.once) {
+                if (obj3.once) {
                   const removed = obj.removeEventListener(error, wrapListener2);
                 }
                 errorListener(event);

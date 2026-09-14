@@ -4,8 +4,8 @@
 const require = fn;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_repeatTs2(){const{_nextAnimation,numberOfReps,reverse,callback,getReduceMotionForAnimation,reduceMotion}=this.__closure;const nextAnimation=typeof _nextAnimation==='function'?_nextAnimation():_nextAnimation;function repeat(animation,now){const finished=nextAnimation.onFrame(nextAnimation,now);animation.current=nextAnimation.current;if(finished){animation.reps+=1;if(nextAnimation.callback){nextAnimation.callback(true,animation.current);}if(animation.reduceMotion||numberOfReps>0&&animation.reps>=numberOfReps){return true;}const startValue=reverse?nextAnimation.current:animation.startValue;if(reverse){nextAnimation.toValue=animation.startValue;animation.startValue=startValue;}nextAnimation.onStart(nextAnimation,startValue,now,nextAnimation.previousAnimation);return false;}return false;}const repCallback=function(finished){if(callback){callback(finished);}if(!finished&&nextAnimation.callback){nextAnimation.callback(false);}};function onStart(animation,value,now,previousAnimation){animation.startValue=value;animation.reps=0;if(nextAnimation.reduceMotion===undefined){nextAnimation.reduceMotion=animation.reduceMotion;}if(animation.reduceMotion&&reverse&&(numberOfReps<=0||numberOfReps%2===0)){animation.current=animation.startValue;animation.onFrame=function(){return true;};}else{nextAnimation.onStart(nextAnimation,value,now,previousAnimation);}}return{isHigherOrder:true,onFrame:repeat,onStart:onStart,reps:0,current:nextAnimation.current,callback:repCallback,startValue:0,reduceMotion:getReduceMotionForAnimation(reduceMotion)};}" };
-fn = function n(tmp5Result1, arg1, arg2) {
-  _require = tmp5Result1;
+fn = function n(tmp5Result16, arg1, arg2) {
+  _require = tmp5Result16;
   let num = arg1;
   if (arg1 === undefined) {
     num = 2;
@@ -15,10 +15,9 @@ fn = function n(tmp5Result1, arg1, arg2) {
     flag = false;
   }
   closure_4 = reduceMotion;
-  require("module_1676");
   const fn = function l() {
-    let tmpResult = tmp5Result1;
-    if (typeof tmp5Result1 === "function") {
+    let tmpResult = tmp5Result16;
+    if (typeof tmp5Result16 === "function") {
       tmpResult = tmp();
     }
     const obj = {
@@ -77,11 +76,11 @@ fn = function n(tmp5Result1, arg1, arg2) {
     };
     return obj;
   };
-  let obj = { _nextAnimation: tmp5Result1, numberOfReps: num, reverse: flag, callback, getReduceMotionForAnimation: require("module_1676").getReduceMotionForAnimation, reduceMotion };
-  fn.__closure = obj;
+  let obj = require("module_1676");
+  fn.__closure = { _nextAnimation: tmp5Result16, numberOfReps: num, reverse: flag, callback, getReduceMotionForAnimation: require("module_1676").getReduceMotionForAnimation, reduceMotion };
   fn.__workletHash = 11413099333511;
   fn.__initData = flag;
-  return obj.defineAnimation(tmp5Result1, fn);
+  return obj.defineAnimation(tmp5Result16, fn);
 };
 fn.__closure = { defineAnimation: fn(1676).defineAnimation, getReduceMotionForAnimation: fn(1676).getReduceMotionForAnimation };
 fn.__workletHash = 13638828150427;

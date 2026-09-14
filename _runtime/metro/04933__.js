@@ -7,7 +7,7 @@ import DefinePropertyOrThrow from "DefinePropertyOrThrow" /* 4935 */;
 const tmp = _mod4934("%Reflect.construct%", true);
 let closure_0 = tmp;
 try {
-  let obj = {
+  const obj = {
     () => {
 
       }
@@ -17,21 +17,21 @@ try {
   if (tmp4) {
     if (tmp) {
       let closure_1 = {};
-      obj = {};
-      obj = {
+      const obj3 = {
         () => {
                 throw closure_1;
               },
         "[[Enumerable]]": true
       };
-      tmp4(obj, "length", obj);
+      tmp4({}, "length", obj3);
       module.exports = function IsConstructor(arg0) {
         try {
-          closure_0(arg0, obj);
+          closure_0(arg0, obj2);
         } catch (tmp5) {
           return tmp5 === closure_1;
         }
       };
+      const obj2 = {};
     }
   }
   module.exports = function IsConstructor(fn) {

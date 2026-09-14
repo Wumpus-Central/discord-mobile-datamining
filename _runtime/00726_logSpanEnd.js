@@ -11,8 +11,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const logSpanEnd = function logSpanEnd(spanContext) {
   if (_mod688.DEBUG_BUILD) {
-    let tmpResult = spanToJSON;
-    const spanToJSONResult = tmpResult.spanToJSON(spanContext);
+    const spanToJSONResult = spanToJSON.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
     let str = "< unknown name >";
     if (undefined !== description) {
@@ -24,21 +23,21 @@ export const logSpanEnd = function logSpanEnd(spanContext) {
       str2 = op;
     }
     const spanId = spanContext.spanContext().spanId;
-    tmpResult = spanToJSON;
+    const tmpResult = spanToJSON;
     let str3 = "";
-    if (tmpResult.getRootSpan(spanContext) === spanContext) {
+    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
       str3 = "root ";
     }
     const _HermesInternal = HermesInternal;
     const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
     const debug = consoleSandbox.debug;
     debug.log(combined);
+    tmpResult2 = spanToJSON;
   }
 };
 export const logSpanStart = function logSpanStart(spanContext) {
   if (_mod688.DEBUG_BUILD) {
-    let tmpResult = spanToJSON;
-    const spanToJSONResult = tmpResult.spanToJSON(spanContext);
+    const spanToJSONResult = spanToJSON.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
     let str = "< unknown name >";
     if (undefined !== description) {
@@ -50,8 +49,9 @@ export const logSpanStart = function logSpanStart(spanContext) {
       str2 = op;
     }
     const parent_span_id = spanToJSONResult.parent_span_id;
-    tmpResult = spanToJSON;
-    const spanIsSampledResult = tmpResult.spanIsSampled(spanContext);
+    const tmpResult = spanToJSON;
+    const tmpResult4 = spanToJSON;
+    const spanIsSampledResult = spanToJSON.spanIsSampled(spanContext);
     const rootSpan = spanToJSON.getRootSpan(spanContext);
     let str3 = "unsampled";
     if (spanIsSampledResult) {
@@ -74,7 +74,7 @@ export const logSpanStart = function logSpanStart(spanContext) {
       items.push("parent ID: " + parent_span_id);
     }
     if (rootSpan !== spanContext) {
-      const tmpResult2 = spanToJSON;
+      const tmpResult6 = spanToJSON;
       ({ op: op2, description: description2 } = spanToJSON.spanToJSON(rootSpan));
       const _HermesInternal6 = HermesInternal;
       items.push("root ID: " + rootSpan.spanContext().spanId);
@@ -91,6 +91,6 @@ export const logSpanStart = function logSpanStart(spanContext) {
     const debug = consoleSandbox.debug;
     const _HermesInternal9 = HermesInternal;
     debug.log("" + combined + "\n  " + items.join("\n  "));
-    const tmpResult1 = spanToJSON;
+    const tmpResult5 = spanToJSON;
   }
 };

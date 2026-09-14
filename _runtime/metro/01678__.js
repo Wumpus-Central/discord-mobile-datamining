@@ -590,7 +590,7 @@ scaleVector.__closure = {};
 scaleVector.__workletHash = 11236256734309;
 scaleVector.__initData = { code: "function scaleVector_Pnpm_matrixUtilsTsx17(u,a){return u.map(function(e){return e*a;});}" };
 function gramSchmidtAlgorithm(items7) {
-  [tmp3, arr, arr2, arr3] = _slicedToArray(items7, 4);
+  [tmp3, arr, arr2, arr3] = items7;
   if (typeof subtractVectors === "function") {
     arr11 = arr;
     arr3 = tmp5;
@@ -622,7 +622,7 @@ function gramSchmidtAlgorithm(items7) {
                         arr3 = tmp13;
                         if (typeof assertVectorsHaveEqualLengths === "function") {
                           items[3] = mapped4.map((item, index) => arr11[index] - arr3[index]);
-                          [arr8, arr9, arr10, arr11] = _slicedToArray(items.map((arr) => {
+                          [arr8, arr9, arr10, arr11] = items.map((arr) => {
                             if (typeof innerProduct === "function") {
                               closure_0 = arr;
                               closure_1 = arr;
@@ -639,7 +639,7 @@ function gramSchmidtAlgorithm(items7) {
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
-                          }), 4);
+                          });
                           const items1 = [arr8[0], arr9[0], arr10[0], arr11[0]];
                           const items2 = [items1, , , ];
                           const items3 = [arr8[1], arr9[1], arr10[1], arr11[1]];

@@ -94,11 +94,9 @@ function visit(arg0, __sentry_skip_normalization__) {
               }
             }
             if (obj.isVueViewModel(_events)) {
-              let tmp4Result = _mod698;
-              return tmp4Result.getVueInternalName(_events);
+              return _mod698.getVueInternalName(_events);
             } else {
-              tmp4Result = _mod692;
-              if (tmp4Result.isSyntheticEvent(_events)) {
+              if (tmp4Result3.isSyntheticEvent(_events)) {
                 return "[SyntheticEvent]";
               } else {
                 if (typeof _events === "number") {
@@ -141,6 +139,7 @@ function visit(arg0, __sentry_skip_normalization__) {
                   return combined;
                 }
               }
+              tmp4Result3 = _mod692;
             }
             obj = _mod692;
           }

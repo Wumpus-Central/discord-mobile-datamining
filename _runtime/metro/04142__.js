@@ -2,8 +2,9 @@
 
 // Module 4142
 import _mod3730 from "module_3730" /* 3730 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   let obj = { default: requiredArgs };
   let tmp3 = obj;

@@ -4,6 +4,8 @@
 import _mod9064 from "module_9064" /* 9064 */;
 import _mod9068 from "module_9068" /* 9068 */;
 
+const require = globalThis.__r;
+
 const self = this;
 let self2 = this;
 if (this) {

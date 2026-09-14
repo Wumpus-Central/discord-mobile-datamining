@@ -2,9 +2,10 @@
 
 // Module 1028 (AsyncExpiringMap)
 import _createClassDefault from "_createClass" /* 42 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray_mod from "module_32" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 
+let _slicedToArray = _slicedToArray_mod;
 class AsyncExpiringMap {
   constructor() {
     obj = global;
@@ -39,23 +40,22 @@ const entry = {
     if (typeof value === "object") {
       if (value) {
         if ("then" in value) {
-          let obj = { value: "r", expiresAt: "flexDirection", promise: value };
+          const obj2 = { value: "r", expiresAt: "flexDirection", promise: value };
           const _map2 = self._map;
-          const result = _map2.set(arg0, obj);
+          const result = _map2.set(arg0, obj2);
           value.then((value) => {
-            obj.value = value;
-            obj.expiresAt = Date.now() + self._ttl;
-            obj.promise = null;
+            obj2.value = value;
+            obj2.expiresAt = Date.now() + self._ttl;
+            obj2.promise = null;
           }, () => {
-            obj.expiresAt = Date.now() + self._ttl;
-            obj.promise = null;
+            obj2.expiresAt = Date.now() + self._ttl;
+            obj2.promise = null;
           });
         }
       }
     }
     const _map = self._map;
-    obj = { value, expiresAt: Date.now() + self._ttl, promise: null };
-    const result1 = _map.set(arg0, obj);
+    const result1 = _map.set(arg0, { value, expiresAt: Date.now() + self._ttl, promise: null });
   }
 };
 const items = [

@@ -7,9 +7,10 @@ import _mod1661 from "module_1661" /* 1661 */;
 import _mod1677 from "module_1677" /* 1677 */;
 import _mod1678 from "module_1678" /* 1678 */;
 import _mod1679 from "module_1679" /* 1679 */;
-import module_1639 from "module_1639" /* 1639 */;
+import module_1639_mod from "module_1639" /* 1639 */;
 
 const React2 = false;
+let module_1639 = module_1639_mod;
 module_1639 = module_1639.shouldBeUseWeb();
 const size = { originX: true, originY: true, width: true, height: true, borderRadius: true, globalOriginX: true, globalOriginY: true, opacity: true, transform: true, backgroundColor: true };
 function isValidLayoutAnimationProp(arg0) {
@@ -35,8 +36,7 @@ function assertEasingIsWorklet(factory) {
     }
   }
 }
-let obj = { SHOULD_BE_USE_WEB: module_1639, isWorkletFunction: _mod1661.isWorkletFunction };
-assertEasingIsWorklet.__closure = obj;
+assertEasingIsWorklet.__closure = { SHOULD_BE_USE_WEB: module_1639, isWorkletFunction: _mod1661.isWorkletFunction };
 assertEasingIsWorklet.__workletHash = 8431488219943;
 assertEasingIsWorklet.__initData = { code: "function assertEasingIsWorklet_Pnpm_utilTs2(easing){const{SHOULD_BE_USE_WEB,isWorkletFunction}=this.__closure;if(_WORKLET){return;}if(SHOULD_BE_USE_WEB){return;}if(easing!==null&&easing!==void 0&&easing.factory){return;}if(!isWorkletFunction(easing)){throw new ReanimatedError('The easing function is not a worklet. Please make sure you import `Easing` from react-native-reanimated.');}}" };
 function recognizePrefixSuffix(current) {
@@ -47,7 +47,7 @@ function recognizePrefixSuffix(current) {
       if (str2 == null) {
         str2 = "";
       }
-      let obj = { prefix: match[1], suffix: match[4], strippedValue: null };
+      const obj = { prefix: match[1], suffix: match[4], strippedValue: null };
       const _parseFloat = parseFloat;
       obj.strippedValue = parseFloat(match[2] + str2);
       return obj;
@@ -56,8 +56,8 @@ function recognizePrefixSuffix(current) {
       throw reanimatedError;
     }
   } else {
-    obj = { strippedValue: current };
-    return obj;
+    const obj2 = { strippedValue: current };
+    return obj2;
   }
 }
 recognizePrefixSuffix.__closure = {};
@@ -73,8 +73,8 @@ function getReduceMotionFromConfig(reduceMotion) {
   }
   value = uiValue.value;
 }
-obj = { ReduceMotion: _mod1661.ReduceMotion, isReduceMotionOnUI: uiValue };
-getReduceMotionFromConfig.__closure = obj;
+let obj = { SHOULD_BE_USE_WEB: module_1639, isWorkletFunction: _mod1661.isWorkletFunction };
+getReduceMotionFromConfig.__closure = { ReduceMotion: _mod1661.ReduceMotion, isReduceMotionOnUI: uiValue };
 getReduceMotionFromConfig.__workletHash = 7977910521960;
 getReduceMotionFromConfig.__initData = { code: "function getReduceMotionFromConfig_Pnpm_utilTs4(config){const{ReduceMotion,isReduceMotionOnUI}=this.__closure;return!config||config===ReduceMotion.System?isReduceMotionOnUI.value:config===ReduceMotion.Always;}" };
 function getReduceMotionForAnimation(reduceMotion) {
@@ -100,6 +100,7 @@ function applyProgressToMatrix(arg0, arr, arr) {
   const obj2 = _mod1678;
   return obj.addMatrices(arr, obj2.scaleMatrix(_mod1678.subtractMatrices(arr, arr), arg0));
 }
+let obj2 = { ReduceMotion: _mod1661.ReduceMotion, isReduceMotionOnUI: uiValue };
 applyProgressToMatrix.__closure = { addMatrices: _mod1678.addMatrices, scaleMatrix: _mod1678.scaleMatrix, subtractMatrices: _mod1678.subtractMatrices };
 applyProgressToMatrix.__workletHash = 4822273347900;
 applyProgressToMatrix.__initData = { code: "function applyProgressToMatrix_Pnpm_utilTs6(progress,a,b){const{addMatrices,scaleMatrix,subtractMatrices}=this.__closure;return addMatrices(a,scaleMatrix(subtractMatrices(b,a),progress));}" };
@@ -254,26 +255,24 @@ function decorateAnimation(isHigherOrder) {
         reduceMotion.startTime = 0;
         reduceMotion.onFrame = () => true;
       } else {
-        let obj = fn(1679);
         if (obj.isColor(current)) {
           closure_129_0 = reduceMotion;
           closure_129_1 = arg2;
           closure_129_2 = current2;
           const items = [];
           closure_129_6 = items;
-          let tmp3Result = fn(1679);
           if (tmp3Result.isColor(current)) {
-            tmp3Result = fn(1679);
-            closure_129_4 = tmp3Result.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.current));
-            const tmp3Result1 = fn(1679);
-            const tmp3Result2 = fn(1679);
-            closure_129_3 = tmp3Result2.toLinearSpace(fn(1679).convertToRGBA(current));
+            const tmp3Result13 = fn(1679);
+            closure_129_4 = tmp3Result13.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.current));
+            const tmp3Result14 = fn(1679);
+            const tmp3Result15 = fn(1679);
+            closure_129_3 = tmp3Result15.toLinearSpace(fn(1679).convertToRGBA(current));
             if (reduceMotion.toValue) {
-              const tmp3Result4 = fn(1679);
-              closure_129_5 = tmp3Result4.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.toValue));
-              const tmp3Result5 = fn(1679);
+              const tmp3Result17 = fn(1679);
+              closure_129_5 = tmp3Result17.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.toValue));
+              const tmp3Result18 = fn(1679);
             }
-            const tmp3Result3 = fn(1679);
+            const tmp3Result16 = fn(1679);
           }
           const item = closure_4.forEach((item, index) => {
             toValue[item] = Object.assign({}, dependencyMap);
@@ -291,16 +290,17 @@ function decorateAnimation(isHigherOrder) {
             transformationMatrixOnFrame.push(toValue[item].current);
           });
           reduceMotion.unroundedCurrent = items;
+          tmp3Result = fn(1679);
           fn(1679).clampRGBA(items);
-          const tmp3Result6 = fn(1679);
-          const tmp3Result7 = fn(1679);
-          reduceMotion.current = tmp3Result7.rgbaArrayToRGBAColor(fn(1679).toGammaSpace(items));
+          const tmp3Result19 = fn(1679);
+          const tmp3Result20 = fn(1679);
+          reduceMotion.current = tmp3Result20.rgbaArrayToRGBAColor(fn(1679).toGammaSpace(items));
           reduceMotion.onFrame = colorOnFrame;
-          const tmp3Result8 = fn(1679);
+          const tmp3Result21 = fn(1679);
         } else {
-          if (tmp3Result9.isAffineMatrixFlat(current)) {
+          if (tmp3Result22.isAffineMatrixFlat(current)) {
             reduceMotion.startMatrices = fn(1678).decomposeMatrixIntoMatricesAndAngles(current);
-            const tmp3Result10 = fn(1678);
+            const tmp3Result23 = fn(1678);
             reduceMotion.stopMatrices = fn(1678).decomposeMatrixIntoMatricesAndAngles(reduceMotion.toValue);
             const _Object = Object;
             reduceMotion[0] = Object.assign({}, dependencyMap);
@@ -315,7 +315,7 @@ function decorateAnimation(isHigherOrder) {
             first.onStart(first1, 0, arg2, first2);
             reduceMotion.current = current;
             reduceMotion.onFrame = transformationMatrixOnFrame;
-            const tmp3Result11 = fn(1678);
+            const tmp3Result24 = fn(1678);
           } else {
             prefix = globalThis;
             const _Array = Array;
@@ -346,17 +346,18 @@ function decorateAnimation(isHigherOrder) {
                     if (str2 == null) {
                       str2 = "";
                     }
-                    obj = { prefix: match[1], suffix: match[4], strippedValue: null };
+                    const obj2 = { prefix: match[1], suffix: match[4], strippedValue: null };
                     const _parseFloat = parseFloat;
-                    obj.strippedValue = parseFloat(match[2] + str2);
+                    obj2.strippedValue = parseFloat(match[2] + str2);
+                    let obj3 = obj2;
                   } else {
                     const reanimatedError = new fn(1647).ReanimatedError("Couldn't parse animation value.");
                     throw reanimatedError;
                   }
                 } else {
-                  obj = { strippedValue: current };
+                  obj3 = { strippedValue: current };
                 }
-                ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj);
+                ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj3);
                 reduceMotion.strippedCurrent = strippedValue;
                 if (typeof colorOnFrame === "function") {
                   if (typeof str3 === "string") {
@@ -366,20 +367,20 @@ function decorateAnimation(isHigherOrder) {
                       if (str5 == null) {
                         str5 = "";
                       }
-                      const obj1 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
+                      const obj4 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
                       const _parseFloat2 = parseFloat;
-                      obj1.strippedValue = parseFloat(match1[2] + str5);
-                      let obj2 = obj1;
+                      obj4.strippedValue = parseFloat(match1[2] + str5);
+                      let obj5 = obj4;
                     } else {
                       const reanimatedError1 = new fn(1647).ReanimatedError("Couldn't parse animation value.");
                       throw reanimatedError1;
                     }
                   } else {
-                    obj2 = { strippedValue: str3 };
+                    obj5 = { strippedValue: str3 };
                   }
                   reduceMotion.current = strippedValue;
                   reduceMotion.startValue = strippedValue;
-                  reduceMotion.toValue = obj2.strippedValue;
+                  reduceMotion.toValue = obj5.strippedValue;
                   if (current2) {
                     if (current2 !== reduceMotion) {
                       if (typeof colorOnFrame === "function") {
@@ -390,18 +391,18 @@ function decorateAnimation(isHigherOrder) {
                             if (str8 == null) {
                               str8 = "";
                             }
-                            const obj3 = { prefix: match2[1], suffix: match2[4], strippedValue: prefix.parseFloat(match2[2] + str8) };
-                            let obj4 = obj3;
+                            const obj6 = { prefix: match2[1], suffix: match2[4], strippedValue: prefix.parseFloat(match2[2] + str8) };
+                            let obj7 = obj6;
                           } else {
                             const reanimatedError2 = new fn(1647).ReanimatedError("Couldn't parse animation value.");
                             throw reanimatedError2;
                           }
                         } else {
-                          obj4 = { strippedValue: str7 };
+                          obj7 = { strippedValue: str7 };
                         }
-                        ({ prefix, strippedValue: current2.current } = obj4);
+                        ({ prefix, strippedValue: current2.current } = obj7);
                         current2.__prefix = prefix;
-                        current2.__suffix = obj4.suffix;
+                        current2.__suffix = obj7.suffix;
                       } else {
                         throw new TypeError("Trying to call a non-function");
                       }
@@ -467,14 +468,14 @@ function decorateAnimation(isHigherOrder) {
               toValue(reduceMotion, current, arg2, current2);
             }
           }
-          tmp3Result9 = fn(1678);
+          tmp3Result22 = fn(1678);
         }
         return tmp11;
       }
     };
   }
 }
-let obj1 = { addMatrices: _mod1678.addMatrices, scaleMatrix: _mod1678.scaleMatrix, subtractMatrices: _mod1678.subtractMatrices };
+let obj3 = { addMatrices: _mod1678.addMatrices, scaleMatrix: _mod1678.scaleMatrix, subtractMatrices: _mod1678.subtractMatrices };
 decorateAnimation.__closure = { getReduceMotionFromConfig, recognizePrefixSuffix, isColor: _mod1679.isColor, toLinearSpace: _mod1679.toLinearSpace, convertToRGBA: _mod1679.convertToRGBA, clampRGBA: _mod1679.clampRGBA, rgbaArrayToRGBAColor: _mod1679.rgbaArrayToRGBAColor, toGammaSpace: _mod1679.toGammaSpace, decomposeMatrixIntoMatricesAndAngles: _mod1678.decomposeMatrixIntoMatricesAndAngles, applyProgressToMatrix, applyProgressToNumber, getRotationMatrix: _mod1678.getRotationMatrix, multiplyMatrices: _mod1678.multiplyMatrices, flatten: _mod1678.flatten, isAffineMatrixFlat: _mod1678.isAffineMatrixFlat };
 decorateAnimation.__workletHash = 6240615473022;
 decorateAnimation.__initData = { code: "function decorateAnimation_Pnpm_utilTs8(animation){const{getReduceMotionFromConfig,recognizePrefixSuffix,isColor,toLinearSpace,convertToRGBA,clampRGBA,rgbaArrayToRGBAColor,toGammaSpace,decomposeMatrixIntoMatricesAndAngles,applyProgressToMatrix,applyProgressToNumber,getRotationMatrix,multiplyMatrices,flatten,isAffineMatrixFlat}=this.__closure;const baseOnStart=animation.onStart;const baseOnFrame=animation.onFrame;if(animation.isHigherOrder){animation.onStart=function(animation,value,timestamp,previousAnimation){if(animation.reduceMotion===undefined){animation.reduceMotion=getReduceMotionFromConfig();}return baseOnStart(animation,value,timestamp,previousAnimation);};return;}const animationCopy=Object.assign({},animation);delete animationCopy.callback;const prefNumberSuffOnStart=function(animation,value,timestamp,previousAnimation){var _animation$__prefix,_animation$__suffix;const{prefix:prefix,suffix:suffix,strippedValue:strippedValue}=recognizePrefixSuffix(value);animation.__prefix=prefix;animation.__suffix=suffix;animation.strippedCurrent=strippedValue;const{strippedValue:strippedToValue}=recognizePrefixSuffix(animation.toValue);animation.current=strippedValue;animation.startValue=strippedValue;animation.toValue=strippedToValue;if(previousAnimation&&previousAnimation!==animation){const{prefix:paPrefix,suffix:paSuffix,strippedValue:paStrippedValue}=recognizePrefixSuffix(previousAnimation.current);previousAnimation.current=paStrippedValue;previousAnimation.__prefix=paPrefix;previousAnimation.__suffix=paSuffix;}baseOnStart(animation,strippedValue,timestamp,previousAnimation);animation.current=((_animation$__prefix=animation.__prefix)!==null&&_animation$__prefix!==void 0?_animation$__prefix:'')+animation.current+((_animation$__suffix=animation.__suffix)!==null&&_animation$__suffix!==void 0?_animation$__suffix:'');if(previousAnimation&&previousAnimation!==animation){var _previousAnimation$__,_previousAnimation$__2;previousAnimation.current=((_previousAnimation$__=previousAnimation.__prefix)!==null&&_previousAnimation$__!==void 0?_previousAnimation$__:'')+previousAnimation.current+((_previousAnimation$__2=previousAnimation.__suffix)!==null&&_previousAnimation$__2!==void 0?_previousAnimation$__2:'');}};const prefNumberSuffOnFrame=function(animation,timestamp){var _animation$__prefix2,_animation$__suffix2;animation.current=animation.strippedCurrent;const res=baseOnFrame(animation,timestamp);animation.strippedCurrent=animation.current;animation.current=((_animation$__prefix2=animation.__prefix)!==null&&_animation$__prefix2!==void 0?_animation$__prefix2:'')+animation.current+((_animation$__suffix2=animation.__suffix)!==null&&_animation$__suffix2!==void 0?_animation$__suffix2:'');return res;};const tab=['R','G','B','A'];const colorOnStart=function(animation,value,timestamp,previousAnimation){let RGBAValue;let RGBACurrent;let RGBAToValue;const res=[];if(isColor(value)){RGBACurrent=toLinearSpace(convertToRGBA(animation.current));RGBAValue=toLinearSpace(convertToRGBA(value));if(animation.toValue){RGBAToValue=toLinearSpace(convertToRGBA(animation.toValue));}}tab.forEach(function(i,index){animation[i]=Object.assign({},animationCopy);animation[i].current=RGBACurrent[index];animation[i].toValue=RGBAToValue?RGBAToValue[index]:undefined;animation[i].onStart(animation[i],RGBAValue[index],timestamp,previousAnimation?previousAnimation[i]:undefined);res.push(animation[i].current);});animation.unroundedCurrent=res;clampRGBA(res);animation.current=rgbaArrayToRGBAColor(toGammaSpace(res));};const colorOnFrame=function(animation,timestamp){const res=[];let finished=true;animation.current=animation.nonscaledCurrent;tab.forEach(function(i){const result=animation[i].onFrame(animation[i],timestamp);finished=finished&&result;res.push(animation[i].current);});clampRGBA(res);animation.nonscaledCurrent=res;animation.current=rgbaArrayToRGBAColor(toGammaSpace(res));return finished;};const transformationMatrixOnStart=function(animation,value,timestamp,previousAnimation){const toValue=animation.toValue;animation.startMatrices=decomposeMatrixIntoMatricesAndAngles(value);animation.stopMatrices=decomposeMatrixIntoMatricesAndAngles(toValue);animation[0]=Object.assign({},animationCopy);animation[0].current=0;animation[0].toValue=100;animation[0].onStart(animation[0],0,timestamp,previousAnimation?previousAnimation[0]:undefined);animation.current=value;};const transformationMatrixOnFrame=function(animation,timestamp){let finished=true;const result=animation[0].onFrame(animation[0],timestamp);finished=finished&&result;const progress=animation[0].current/100;const transforms=['translationMatrix','scaleMatrix','skewMatrix'];const mappedTransforms=[];transforms.forEach(function(key,_){return mappedTransforms.push(applyProgressToMatrix(progress,animation.startMatrices[key],animation.stopMatrices[key]));});const[currentTranslation,currentScale,skewMatrix]=mappedTransforms;const rotations=['x','y','z'];const mappedRotations=[];rotations.forEach(function(key,_){const angle=applyProgressToNumber(progress,animation.startMatrices['r'+key],animation.stopMatrices['r'+key]);mappedRotations.push(getRotationMatrix(angle,key));});const[rotationMatrixX,rotationMatrixY,rotationMatrixZ]=mappedRotations;const rotationMatrix=multiplyMatrices(rotationMatrixX,multiplyMatrices(rotationMatrixY,rotationMatrixZ));const updated=flatten(multiplyMatrices(multiplyMatrices(currentScale,multiplyMatrices(skewMatrix,rotationMatrix)),currentTranslation));animation.current=updated;return finished;};const arrayOnStart=function(animation,value,timestamp,previousAnimation){value.forEach(function(v,i){animation[i]=Object.assign({},animationCopy);animation[i].current=v;animation[i].toValue=animation.toValue[i];animation[i].onStart(animation[i],v,timestamp,previousAnimation?previousAnimation[i]:undefined);});animation.current=[...value];};const arrayOnFrame=function(animation,timestamp){let finished=true;animation.current.forEach(function(_,i){const result=animation[i].onFrame(animation[i],timestamp);finished=finished&&result;animation.current[i]=animation[i].current;});return finished;};const objectOnStart=function(animation,value,timestamp,previousAnimation){for(const key in value){animation[key]=Object.assign({},animationCopy);animation[key].onStart=animation.onStart;animation[key].current=value[key];animation[key].toValue=animation.toValue[key];animation[key].onStart(animation[key],value[key],timestamp,previousAnimation?previousAnimation[key]:undefined);}animation.current=value;};const objectOnFrame=function(animation,timestamp){let finished=true;const newObject={};for(const key in animation.current){const result=animation[key].onFrame(animation[key],timestamp);finished=finished&&result;newObject[key]=animation[key].current;}animation.current=newObject;return finished;};animation.onStart=function(animation,value,timestamp,previousAnimation){if(animation.reduceMotion===undefined){animation.reduceMotion=getReduceMotionFromConfig();}if(animation.reduceMotion){if(animation.toValue!==undefined){animation.current=animation.toValue;}else{baseOnStart(animation,value,timestamp,previousAnimation);}animation.startTime=0;animation.onFrame=function(){return true;};return;}if(isColor(value)){colorOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=colorOnFrame;return;}else if(isAffineMatrixFlat(value)){transformationMatrixOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=transformationMatrixOnFrame;return;}else if(Array.isArray(value)){arrayOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=arrayOnFrame;return;}else if(typeof value==='string'){prefNumberSuffOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=prefNumberSuffOnFrame;return;}else if(typeof value==='object'&&value!==null){objectOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=objectOnFrame;return;}baseOnStart(animation,value,timestamp,previousAnimation);};}" };
@@ -630,26 +631,24 @@ function defineAnimation(substr, fn) {
               reduceMotion.startTime = 0;
               reduceMotion.onFrame = () => true;
             } else {
-              let obj = fn(1679);
               if (obj.isColor(current)) {
                 closure_129_0 = reduceMotion;
                 closure_129_1 = arg2;
                 closure_129_2 = current2;
                 const items = [];
                 closure_129_6 = items;
-                let tmp3Result = fn(1679);
                 if (tmp3Result.isColor(current)) {
-                  tmp3Result = fn(1679);
-                  closure_129_4 = tmp3Result.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.current));
-                  const tmp3Result1 = fn(1679);
-                  const tmp3Result2 = fn(1679);
-                  closure_129_3 = tmp3Result2.toLinearSpace(fn(1679).convertToRGBA(current));
+                  const tmp3Result13 = fn(1679);
+                  closure_129_4 = tmp3Result13.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.current));
+                  const tmp3Result14 = fn(1679);
+                  const tmp3Result15 = fn(1679);
+                  closure_129_3 = tmp3Result15.toLinearSpace(fn(1679).convertToRGBA(current));
                   if (reduceMotion.toValue) {
-                    const tmp3Result4 = fn(1679);
-                    closure_129_5 = tmp3Result4.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.toValue));
-                    const tmp3Result5 = fn(1679);
+                    const tmp3Result17 = fn(1679);
+                    closure_129_5 = tmp3Result17.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.toValue));
+                    const tmp3Result18 = fn(1679);
                   }
-                  const tmp3Result3 = fn(1679);
+                  const tmp3Result16 = fn(1679);
                 }
                 const item = closure_4.forEach((item, index) => {
                   toValue[item] = Object.assign({}, dependencyMap);
@@ -667,16 +666,17 @@ function defineAnimation(substr, fn) {
                   transformationMatrixOnFrame.push(toValue[item].current);
                 });
                 reduceMotion.unroundedCurrent = items;
+                tmp3Result = fn(1679);
                 fn(1679).clampRGBA(items);
-                const tmp3Result6 = fn(1679);
-                const tmp3Result7 = fn(1679);
-                reduceMotion.current = tmp3Result7.rgbaArrayToRGBAColor(fn(1679).toGammaSpace(items));
+                const tmp3Result19 = fn(1679);
+                const tmp3Result20 = fn(1679);
+                reduceMotion.current = tmp3Result20.rgbaArrayToRGBAColor(fn(1679).toGammaSpace(items));
                 reduceMotion.onFrame = colorOnFrame;
-                const tmp3Result8 = fn(1679);
+                const tmp3Result21 = fn(1679);
               } else {
-                if (tmp3Result9.isAffineMatrixFlat(current)) {
+                if (tmp3Result22.isAffineMatrixFlat(current)) {
                   reduceMotion.startMatrices = fn(1678).decomposeMatrixIntoMatricesAndAngles(current);
-                  const tmp3Result10 = fn(1678);
+                  const tmp3Result23 = fn(1678);
                   reduceMotion.stopMatrices = fn(1678).decomposeMatrixIntoMatricesAndAngles(reduceMotion.toValue);
                   const _Object = Object;
                   reduceMotion[0] = Object.assign({}, dependencyMap);
@@ -691,7 +691,7 @@ function defineAnimation(substr, fn) {
                   first.onStart(first1, 0, arg2, first2);
                   reduceMotion.current = current;
                   reduceMotion.onFrame = transformationMatrixOnFrame;
-                  const tmp3Result11 = fn(1678);
+                  const tmp3Result24 = fn(1678);
                 } else {
                   prefix = globalThis;
                   const _Array = Array;
@@ -722,17 +722,18 @@ function defineAnimation(substr, fn) {
                           if (str2 == null) {
                             str2 = "";
                           }
-                          obj = { prefix: match[1], suffix: match[4], strippedValue: null };
+                          const obj2 = { prefix: match[1], suffix: match[4], strippedValue: null };
                           const _parseFloat = parseFloat;
-                          obj.strippedValue = parseFloat(match[2] + str2);
+                          obj2.strippedValue = parseFloat(match[2] + str2);
+                          let obj3 = obj2;
                         } else {
                           const reanimatedError = new fn(1647).ReanimatedError("Couldn't parse animation value.");
                           throw reanimatedError;
                         }
                       } else {
-                        obj = { strippedValue: current };
+                        obj3 = { strippedValue: current };
                       }
-                      ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj);
+                      ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj3);
                       reduceMotion.strippedCurrent = strippedValue;
                       if (typeof colorOnFrame === "function") {
                         if (typeof str3 === "string") {
@@ -742,20 +743,20 @@ function defineAnimation(substr, fn) {
                             if (str5 == null) {
                               str5 = "";
                             }
-                            const obj1 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
+                            const obj4 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
                             const _parseFloat2 = parseFloat;
-                            obj1.strippedValue = parseFloat(match1[2] + str5);
-                            let obj2 = obj1;
+                            obj4.strippedValue = parseFloat(match1[2] + str5);
+                            let obj5 = obj4;
                           } else {
                             const reanimatedError1 = new fn(1647).ReanimatedError("Couldn't parse animation value.");
                             throw reanimatedError1;
                           }
                         } else {
-                          obj2 = { strippedValue: str3 };
+                          obj5 = { strippedValue: str3 };
                         }
                         reduceMotion.current = strippedValue;
                         reduceMotion.startValue = strippedValue;
-                        reduceMotion.toValue = obj2.strippedValue;
+                        reduceMotion.toValue = obj5.strippedValue;
                         if (current2) {
                           if (current2 !== reduceMotion) {
                             if (typeof colorOnFrame === "function") {
@@ -766,18 +767,18 @@ function defineAnimation(substr, fn) {
                                   if (str8 == null) {
                                     str8 = "";
                                   }
-                                  const obj3 = { prefix: match2[1], suffix: match2[4], strippedValue: prefix.parseFloat(match2[2] + str8) };
-                                  let obj4 = obj3;
+                                  const obj6 = { prefix: match2[1], suffix: match2[4], strippedValue: prefix.parseFloat(match2[2] + str8) };
+                                  let obj7 = obj6;
                                 } else {
                                   const reanimatedError2 = new fn(1647).ReanimatedError("Couldn't parse animation value.");
                                   throw reanimatedError2;
                                 }
                               } else {
-                                obj4 = { strippedValue: str7 };
+                                obj7 = { strippedValue: str7 };
                               }
-                              ({ prefix, strippedValue: current2.current } = obj4);
+                              ({ prefix, strippedValue: current2.current } = obj7);
                               current2.__prefix = prefix;
-                              current2.__suffix = obj4.suffix;
+                              current2.__suffix = obj7.suffix;
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
@@ -843,7 +844,7 @@ function defineAnimation(substr, fn) {
                     toValue(reduceMotion, current, arg2, current2);
                   }
                 }
-                tmp3Result9 = fn(1678);
+                tmp3Result22 = fn(1678);
               }
               return tmp11;
             }
@@ -1011,26 +1012,24 @@ function defineAnimation(substr, fn) {
             reduceMotion.startTime = 0;
             reduceMotion.onFrame = () => true;
           } else {
-            let obj = fn(1679);
             if (obj.isColor(current)) {
               closure_129_0 = reduceMotion;
               closure_129_1 = arg2;
               closure_129_2 = current2;
               const items = [];
               closure_129_6 = items;
-              let tmp3Result = fn(1679);
               if (tmp3Result.isColor(current)) {
-                tmp3Result = fn(1679);
-                closure_129_4 = tmp3Result.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.current));
-                const tmp3Result1 = fn(1679);
-                const tmp3Result2 = fn(1679);
-                closure_129_3 = tmp3Result2.toLinearSpace(fn(1679).convertToRGBA(current));
+                const tmp3Result13 = fn(1679);
+                closure_129_4 = tmp3Result13.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.current));
+                const tmp3Result14 = fn(1679);
+                const tmp3Result15 = fn(1679);
+                closure_129_3 = tmp3Result15.toLinearSpace(fn(1679).convertToRGBA(current));
                 if (reduceMotion.toValue) {
-                  const tmp3Result4 = fn(1679);
-                  closure_129_5 = tmp3Result4.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.toValue));
-                  const tmp3Result5 = fn(1679);
+                  const tmp3Result17 = fn(1679);
+                  closure_129_5 = tmp3Result17.toLinearSpace(fn(1679).convertToRGBA(reduceMotion.toValue));
+                  const tmp3Result18 = fn(1679);
                 }
-                const tmp3Result3 = fn(1679);
+                const tmp3Result16 = fn(1679);
               }
               const item = closure_4.forEach((item, index) => {
                 toValue[item] = Object.assign({}, dependencyMap);
@@ -1048,16 +1047,17 @@ function defineAnimation(substr, fn) {
                 transformationMatrixOnFrame.push(toValue[item].current);
               });
               reduceMotion.unroundedCurrent = items;
+              tmp3Result = fn(1679);
               fn(1679).clampRGBA(items);
-              const tmp3Result6 = fn(1679);
-              const tmp3Result7 = fn(1679);
-              reduceMotion.current = tmp3Result7.rgbaArrayToRGBAColor(fn(1679).toGammaSpace(items));
+              const tmp3Result19 = fn(1679);
+              const tmp3Result20 = fn(1679);
+              reduceMotion.current = tmp3Result20.rgbaArrayToRGBAColor(fn(1679).toGammaSpace(items));
               reduceMotion.onFrame = colorOnFrame;
-              const tmp3Result8 = fn(1679);
+              const tmp3Result21 = fn(1679);
             } else {
-              if (tmp3Result9.isAffineMatrixFlat(current)) {
+              if (tmp3Result22.isAffineMatrixFlat(current)) {
                 reduceMotion.startMatrices = fn(1678).decomposeMatrixIntoMatricesAndAngles(current);
-                const tmp3Result10 = fn(1678);
+                const tmp3Result23 = fn(1678);
                 reduceMotion.stopMatrices = fn(1678).decomposeMatrixIntoMatricesAndAngles(reduceMotion.toValue);
                 const _Object = Object;
                 reduceMotion[0] = Object.assign({}, dependencyMap);
@@ -1072,7 +1072,7 @@ function defineAnimation(substr, fn) {
                 first.onStart(first1, 0, arg2, first2);
                 reduceMotion.current = current;
                 reduceMotion.onFrame = transformationMatrixOnFrame;
-                const tmp3Result11 = fn(1678);
+                const tmp3Result24 = fn(1678);
               } else {
                 prefix = globalThis;
                 const _Array = Array;
@@ -1103,17 +1103,18 @@ function defineAnimation(substr, fn) {
                         if (str2 == null) {
                           str2 = "";
                         }
-                        obj = { prefix: match[1], suffix: match[4], strippedValue: null };
+                        const obj2 = { prefix: match[1], suffix: match[4], strippedValue: null };
                         const _parseFloat = parseFloat;
-                        obj.strippedValue = parseFloat(match[2] + str2);
+                        obj2.strippedValue = parseFloat(match[2] + str2);
+                        let obj3 = obj2;
                       } else {
                         const reanimatedError = new fn(1647).ReanimatedError("Couldn't parse animation value.");
                         throw reanimatedError;
                       }
                     } else {
-                      obj = { strippedValue: current };
+                      obj3 = { strippedValue: current };
                     }
-                    ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj);
+                    ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj3);
                     reduceMotion.strippedCurrent = strippedValue;
                     if (typeof colorOnFrame === "function") {
                       if (typeof str3 === "string") {
@@ -1123,20 +1124,20 @@ function defineAnimation(substr, fn) {
                           if (str5 == null) {
                             str5 = "";
                           }
-                          const obj1 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
+                          const obj4 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
                           const _parseFloat2 = parseFloat;
-                          obj1.strippedValue = parseFloat(match1[2] + str5);
-                          let obj2 = obj1;
+                          obj4.strippedValue = parseFloat(match1[2] + str5);
+                          let obj5 = obj4;
                         } else {
                           const reanimatedError1 = new fn(1647).ReanimatedError("Couldn't parse animation value.");
                           throw reanimatedError1;
                         }
                       } else {
-                        obj2 = { strippedValue: str3 };
+                        obj5 = { strippedValue: str3 };
                       }
                       reduceMotion.current = strippedValue;
                       reduceMotion.startValue = strippedValue;
-                      reduceMotion.toValue = obj2.strippedValue;
+                      reduceMotion.toValue = obj5.strippedValue;
                       if (current2) {
                         if (current2 !== reduceMotion) {
                           if (typeof colorOnFrame === "function") {
@@ -1147,18 +1148,18 @@ function defineAnimation(substr, fn) {
                                 if (str8 == null) {
                                   str8 = "";
                                 }
-                                const obj3 = { prefix: match2[1], suffix: match2[4], strippedValue: prefix.parseFloat(match2[2] + str8) };
-                                let obj4 = obj3;
+                                const obj6 = { prefix: match2[1], suffix: match2[4], strippedValue: prefix.parseFloat(match2[2] + str8) };
+                                let obj7 = obj6;
                               } else {
                                 const reanimatedError2 = new fn(1647).ReanimatedError("Couldn't parse animation value.");
                                 throw reanimatedError2;
                               }
                             } else {
-                              obj4 = { strippedValue: str7 };
+                              obj7 = { strippedValue: str7 };
                             }
-                            ({ prefix, strippedValue: current2.current } = obj4);
+                            ({ prefix, strippedValue: current2.current } = obj7);
                             current2.__prefix = prefix;
-                            current2.__suffix = obj4.suffix;
+                            current2.__suffix = obj7.suffix;
                           } else {
                             throw new TypeError("Trying to call a non-function");
                           }
@@ -1224,7 +1225,7 @@ function defineAnimation(substr, fn) {
                   toValue(reduceMotion, current, arg2, current2);
                 }
               }
-              tmp3Result9 = fn(1678);
+              tmp3Result22 = fn(1678);
             }
             return tmp11;
           }
@@ -1248,15 +1249,15 @@ let cancelAnimationWeb = function cancelAnimationNative(current) {
     const fn = function n() {
       value.value = value.value;
     };
-    const obj = { sharedValue: current };
-    fn.__closure = obj;
+    const obj2 = { sharedValue: current };
+    fn.__closure = obj2;
     fn.__workletHash = 14261344384038;
     fn.__initData = __initData2;
-    obj.runOnUI(fn)();
+    runWorkletOnJS.runOnUI(fn)();
   }
 };
-let obj2 = { getReduceMotionFromConfig, recognizePrefixSuffix, isColor: _mod1679.isColor, toLinearSpace: _mod1679.toLinearSpace, convertToRGBA: _mod1679.convertToRGBA, clampRGBA: _mod1679.clampRGBA, rgbaArrayToRGBAColor: _mod1679.rgbaArrayToRGBAColor, toGammaSpace: _mod1679.toGammaSpace, decomposeMatrixIntoMatricesAndAngles: _mod1678.decomposeMatrixIntoMatricesAndAngles, applyProgressToMatrix, applyProgressToNumber, getRotationMatrix: _mod1678.getRotationMatrix, multiplyMatrices: _mod1678.multiplyMatrices, flatten: _mod1678.flatten, isAffineMatrixFlat: _mod1678.isAffineMatrixFlat };
-let obj3 = { IN_STYLE_UPDATER: React2, decorateAnimation, SHOULD_BE_USE_WEB: module_1639 };
+let obj4 = { getReduceMotionFromConfig, recognizePrefixSuffix, isColor: _mod1679.isColor, toLinearSpace: _mod1679.toLinearSpace, convertToRGBA: _mod1679.convertToRGBA, clampRGBA: _mod1679.clampRGBA, rgbaArrayToRGBAColor: _mod1679.rgbaArrayToRGBAColor, toGammaSpace: _mod1679.toGammaSpace, decomposeMatrixIntoMatricesAndAngles: _mod1678.decomposeMatrixIntoMatricesAndAngles, applyProgressToMatrix, applyProgressToNumber, getRotationMatrix: _mod1678.getRotationMatrix, multiplyMatrices: _mod1678.multiplyMatrices, flatten: _mod1678.flatten, isAffineMatrixFlat: _mod1678.isAffineMatrixFlat };
+let obj5 = { IN_STYLE_UPDATER: React2, decorateAnimation, SHOULD_BE_USE_WEB: module_1639 };
 cancelAnimationWeb.__closure = { runOnUI: runWorkletOnJS.runOnUI };
 cancelAnimationWeb.__workletHash = 796831326214;
 cancelAnimationWeb.__initData = { code: "function cancelAnimationNative_Pnpm_utilTs11(sharedValue){const{runOnUI}=this.__closure;if(_WORKLET){sharedValue.value=sharedValue.value;}else{runOnUI(function(){'worklet';sharedValue.value=sharedValue.value;})();}}" };

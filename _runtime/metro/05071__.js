@@ -1,26 +1,31 @@
 // === Module 5071: ? ===
 
 // Module 5071
-import pointsDiffer from "pointsDiffer" /* 78 */;
-import processColorElement from "processColorElement" /* 80 */;
+import pointsDiffer_mod from "pointsDiffer" /* 78 */;
+import processColorElement_mod from "processColorElement" /* 80 */;
 import module_65 from "module_65" /* 65 */;
 
+let pointsDiffer = pointsDiffer_mod;
 if ("default" in pointsDiffer) {
   pointsDiffer = pointsDiffer.default;
 }
-let __INTERNAL_VIEW_CONFIG = { startPoint: { diff: pointsDiffer }, endPoint: null, colors: null, locations: true, useAngle: true, angleCenter: null, angle: true, borderRadii: true };
+const obj = { startPoint: { diff: pointsDiffer }, endPoint: null, colors: null, locations: true, useAngle: true, angleCenter: null, angle: true, borderRadii: true };
+let pointsDiffer = pointsDiffer_mod;
 if ("default" in pointsDiffer) {
   pointsDiffer = pointsDiffer.default;
 }
-__INTERNAL_VIEW_CONFIG.endPoint = { diff: pointsDiffer };
+obj.endPoint = { diff: pointsDiffer };
+let processColorElement = processColorElement_mod;
 if ("default" in processColorElement) {
   processColorElement = processColorElement.default;
 }
-__INTERNAL_VIEW_CONFIG.colors = { process: processColorElement };
+obj.colors = { process: processColorElement };
+let pointsDiffer = pointsDiffer_mod;
 if ("default" in pointsDiffer) {
   pointsDiffer = pointsDiffer.default;
 }
-__INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNLinearGradient", validAttributes: __INTERNAL_VIEW_CONFIG, angleCenter: { diff: pointsDiffer } };
+const obj2 = { uiViewClassName: "RNLinearGradient", validAttributes: obj };
+obj.angleCenter = { diff: pointsDiffer };
 
-export default module_65.get("RNLinearGradient", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default module_65.get("RNLinearGradient", () => obj2);
+export const __INTERNAL_VIEW_CONFIG = obj2;

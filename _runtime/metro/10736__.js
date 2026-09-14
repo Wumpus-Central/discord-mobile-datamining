@@ -1,15 +1,15 @@
 // === Module 10736: ? ===
 
 // Module 10736
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10567 */;
-import _mod10729 from "module_10729" /* 10729 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10575 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENTimeUnitAgoFormatParser = require;
+const ENTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,44 +29,95 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(" + _mod10729.TIME_UNITS_PATTERN + ")\\s{0,5}(?:fa|prima|precedente)(?=(?:\\W|$))", "i");
-const regExp1 = new RegExp("(" + _mod10729.TIME_UNITS_PATTERN + ")\\s{0,5}fa(?=(?:\\W|$))", "i");
-class ENTimeUnitAgoFormatParser {
+class ENTimeExpressionParser {
   constructor(arg0) {
     self = this;
-    tmp = c2(this, ENTimeUnitAgoFormatParser);
+    tmp = c2(this, ENTimeExpressionParser);
+    items = [];
+    items[0] = global;
     tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitAgoFormatParser);
+    obj = closure_4(ENTimeExpressionParser);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (metroRequire()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      constructResult = obj.apply(self, items);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return this.strictMode ? regExp1 : regExp;
+  key: "followingPhase",
+  value: function followingPhase() {
+    return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|\\?)\\s*";
   }
 };
-const items = [
+let items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = ENTimeUnitAgoFormatParser(10729).parseDuration(arg1[1]);
-      const ParsingComponents = ENTimeUnitAgoFormatParser(10563).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, ENTimeUnitAgoFormatParser(10562).reverseDuration(ENTimeUnitAgoFormatParser(10729).parseDuration(arg1[1])));
+    key: "primaryPrefix",
+    value: function primaryPrefix() {
+      return "(?:(?:alle|dalle)\\s*)??";
+    }
+  },
+  {
+    key: "primarySuffix",
+    value: function primarySuffix() {
+      return "(?:\\s*(?:o\\W*in punto|alle\\s*sera|in\\s*del\\s*(?:mattina|pomeriggio)))?(?!/)(?=\\W|$)";
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      const self = this;
+      const tmp = hasOwnProperty(_getPrototypeOf(ENTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
+      dependencyMap = tmp;
+      let fn = tmp;
+      if (typeof tmp === "function") {
+        fn = (items) => closure_1.apply(self, items);
+      }
+      const items = [arg0, arg1];
+      const fnResult = fn(items);
+      if (fnResult) {
+        const first = arg1[0];
+        if (first.endsWith("sera")) {
+          value = fnResult.get("hour");
+          if (value >= 6) {
+            if (value < 12) {
+              fnResult.assign("hour", fnResult.get("hour") + 12);
+              fnResult.assign("meridiem", ENTimeExpressionParser(10555).Meridiem.PM);
+            }
+          }
+          if (value < 6) {
+            fnResult.assign("meridiem", ENTimeExpressionParser(10555).Meridiem.AM);
+          }
+        }
+        const first1 = arg1[0];
+        if (first1.endsWith("pomeriggio")) {
+          fnResult.assign("meridiem", ENTimeExpressionParser(10555).Meridiem.PM);
+          value2 = fnResult.get("hour");
+          let tmp14 = value2 >= 0;
+          if (tmp14) {
+            tmp14 = value2 <= 6;
+          }
+          if (tmp14) {
+            fnResult.assign("hour", fnResult.get("hour") + 12);
+          }
+        }
+        const first2 = arg1[0];
+        if (first2.endsWith("mattina")) {
+          fnResult.assign("meridiem", ENTimeExpressionParser(10555).Meridiem.AM);
+          if (fnResult.get("hour") < 12) {
+            fnResult.assign("hour", fnResult.get("hour"));
+          }
+        }
+      }
+      return fnResult;
     }
   }
 ];
 
-export default _createClass(ENTimeUnitAgoFormatParser, items);
+export default _createClass(ENTimeExpressionParser, items);

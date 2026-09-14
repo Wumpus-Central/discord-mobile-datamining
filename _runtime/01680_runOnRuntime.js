@@ -11,6 +11,8 @@ import _mod1686 from "module_1686" /* 1686 */;
 import controlEdgeToEdgeValues from "module_1681" /* 1681 */;
 import module_1639 from "module_1639" /* 1639 */;
 
+const require = globalThis.__r;
+
 let closure_3 = controlEdgeToEdgeValues.isEdgeToEdge();
 let closure_4 = module_1639.shouldBeUseWeb();
 function isReanimated3() {

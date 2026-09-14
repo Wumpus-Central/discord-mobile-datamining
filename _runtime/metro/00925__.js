@@ -3,6 +3,8 @@
 // Module 925
 import _mod904 from "module_904" /* 904 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

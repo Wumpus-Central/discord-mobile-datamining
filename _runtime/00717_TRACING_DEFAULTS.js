@@ -8,6 +8,8 @@ import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 705 */;
 import logIgnoredSpan from "logIgnoredSpan" /* 724 */;
 import _toArray from "_toArray" /* 718 */;
 
+const require = globalThis.__r;
+
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const TRACING_DEFAULTS = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };
 
@@ -31,8 +33,8 @@ export const startIdleSpan = function startIdleSpan(arg0) {
     c2 = true;
     map.clear();
     const item = items.forEach((fn) => fn());
+    closure_0(map[8])._setSpanForScope(closure_12, closure_13);
     let obj = closure_0(map[8]);
-    obj._setSpanForScope(closure_12, closure_13);
     let spanToJSONResult = closure_0(map[5]).spanToJSON(c14);
     if (spanToJSONResult.start_timestamp) {
       if (!spanToJSONResult.data[tmp3(undefined, tmp4[9]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON]) {
@@ -44,8 +46,8 @@ export const startIdleSpan = function startIdleSpan(arg0) {
         tmp9 = "unknown" !== status;
       }
       if (!tmp9) {
-        obj = { code: tmp3(tmp4[10]).SPAN_STATUS_OK };
-        c14.setStatus(obj);
+        const obj4 = { code: tmp3(tmp4[10]).SPAN_STATUS_OK };
+        c14.setStatus(obj4);
       }
       let debug = tmp3(tmp4[11]).debug;
       const _HermesInternal = HermesInternal;
@@ -124,23 +126,22 @@ export const startIdleSpan = function startIdleSpan(arg0) {
   closure_10 = undefined === trimIdleSpanEndTimestamp || trimIdleSpanEndTimestamp;
   client = require("module_713").getClient();
   if (client) {
-    let tmp5Result = tmp5(tmp6[2]);
     if (tmp5Result.hasSpansEnabled()) {
-      tmp5Result = tmp5(tmp6[1]);
-      currentScope = tmp5Result.getCurrentScope();
+      currentScope = tmp5(tmp6[1]).getCurrentScope();
+      const tmp5Result8 = tmp5(tmp6[1]);
       activeSpan = tmp5(tmp6[5]).getActiveSpan();
-      const tmp5Result1 = tmp5(tmp6[5]);
+      const tmp5Result9 = tmp5(tmp6[5]);
       const startInactiveSpanResult = tmp5(tmp6[14]).startInactiveSpan(arg0);
-      const tmp5Result2 = tmp5(tmp6[14]);
-      const tmp5Result3 = tmp5(tmp6[8]);
-      tmp5Result3._setSpanForScope(tmp5(tmp6[1]).getCurrentScope(), startInactiveSpanResult);
+      const tmp5Result10 = tmp5(tmp6[14]);
+      const tmp5Result11 = tmp5(tmp6[8]);
+      tmp5Result11._setSpanForScope(tmp5(tmp6[1]).getCurrentScope(), startInactiveSpanResult);
       if (tmp5(tmp6[12]).DEBUG_BUILD) {
         let debug = tmp5(tmp6[11]).debug;
         debug.log("[Tracing] Started span is an idle span");
       }
       c14 = startInactiveSpanResult;
       const _Proxy = Proxy;
-      obj = {
+      let obj3 = {
         apply(arg0, arg1, arg2) {
               if (c9) {
                 tmp(c14);
@@ -150,11 +151,11 @@ export const startIdleSpan = function startIdleSpan(arg0) {
                 let first = arr[0];
                 const substr = arr.slice(1);
                 if (!first) {
-                  let tmp4Result = closure_0(map[6]);
-                  first = tmp4Result.timestampInSeconds();
+                  first = closure_0(map[6]).timestampInSeconds();
+                  const tmp4Result = closure_0(map[6]);
                 }
-                tmp4Result = closure_0(map[5]);
-                const result = tmp4Result.spanTimeInputToSeconds(first);
+                const result = closure_0(map[5]).spanTimeInputToSeconds(first);
+                const tmp4Result4 = closure_0(map[5]);
                 const spanDescendants = closure_0(map[5]).getSpanDescendants(c14);
                 const found = spanDescendants.filter((item) => item !== _undefined);
                 closure_0(map[5]);
@@ -211,7 +212,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
               }
             }
       };
-      const proxy = new Proxy(startInactiveSpanResult.end, obj);
+      const proxy = new Proxy(startInactiveSpanResult.end, obj3);
       startInactiveSpanResult.end = proxy;
       items.push(client.on("spanStart", (isStandaloneSpan) => {
         let timestamp = c2;
@@ -353,12 +354,13 @@ export const startIdleSpan = function startIdleSpan(arg0) {
       }, finalTimeout);
       return startInactiveSpanResult;
     }
+    tmp5Result = tmp5(tmp6[2]);
   }
   const sentryNonRecordingSpan = new tmp5(tmp6[3]).SentryNonRecordingSpan();
-  obj = { sample_rate: "0", sampled: "false" };
   let obj2 = require("module_713");
+  let obj4 = { sample_rate: "0", sampled: "false" };
   const merged = Object.assign(require("module_722").getDynamicSamplingContextFromSpan(sentryNonRecordingSpan));
-  const tmp5Result5 = require("module_722");
-  require("module_722").freezeDscOnSpan(sentryNonRecordingSpan, obj);
+  const tmp5Result13 = require("module_722");
+  require("module_722").freezeDscOnSpan(sentryNonRecordingSpan, obj4);
   return sentryNonRecordingSpan;
 };

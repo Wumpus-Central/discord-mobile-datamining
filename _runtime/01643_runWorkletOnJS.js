@@ -4,12 +4,14 @@
 import ReanimatedModule2 from "ReanimatedModule" /* 1644 */;
 import _mod1661 from "module_1661" /* 1661 */;
 import freezeObjectInDev from "freezeObjectInDev" /* 1666 */;
-import module_1639 from "module_1639" /* 1639 */;
+import module_1639_mod from "module_1639" /* 1639 */;
 
 function runWorkletOnJS(fn) {
   fn(...HermesBuiltin.copyRestArgs());
 }
+let module_1639 = module_1639_mod;
 module_1639.isJest();
+let module_1639 = module_1639_mod;
 module_1639 = module_1639.shouldBeUseWeb();
 let closure_5 = [];
 function setupMicrotasks() {
@@ -68,11 +70,11 @@ function runOnUI(fn) {
       fn = function s() {
         items(...items);
       };
-      let obj = { worklet: items, args: items };
-      fn.__closure = obj;
+      const obj2 = { worklet: items, args: items };
+      fn.__closure = obj2;
       fn.__workletHash = 10268384484340;
       fn.__initData = __initData;
-      ReanimatedModule.scheduleOnUI(obj.makeShareableCloneRecursive(fn));
+      ReanimatedModule.scheduleOnUI(freezeObjectInDev.makeShareableCloneRecursive(fn));
     } else {
       const items1 = [items, items];
       closure_1_5.push(items1);
@@ -82,7 +84,6 @@ function runOnUI(fn) {
           closure_0 = queue;
           queue = [];
           const ReanimatedModule = closure_1(1644).ReanimatedModule;
-          closure_1(1666);
           fn = function n() {
             const item = closure_0.forEach((item) => {
               [tmp, tmp2] = item;
@@ -90,18 +91,16 @@ function runOnUI(fn) {
             });
             callMicrotasks();
           };
-          const obj = { queue, callMicrotasks };
-          fn.__closure = obj;
+          fn.__closure = { queue, callMicrotasks };
           fn.__workletHash = 2773761092576;
           fn.__initData = __initData;
-          ReanimatedModule.scheduleOnUI(obj.makeShareableCloneRecursive(fn));
+          ReanimatedModule.scheduleOnUI(closure_1(1666).makeShareableCloneRecursive(fn));
         });
       }
     }
   };
 }
-let obj = { __DEV__: false, SHOULD_BE_USE_WEB: module_1639, isWorkletFunction: _mod1661.isWorkletFunction, IS_JEST: module_1639, ReanimatedModule: ReanimatedModule2.ReanimatedModule, makeShareableCloneRecursive: freezeObjectInDev.makeShareableCloneRecursive, callMicrotasks: callMicrotasksOnUIThread };
-runOnUI.__closure = obj;
+runOnUI.__closure = { __DEV__: false, SHOULD_BE_USE_WEB: module_1639, isWorkletFunction: _mod1661.isWorkletFunction, IS_JEST: module_1639, ReanimatedModule: ReanimatedModule2.ReanimatedModule, makeShareableCloneRecursive: freezeObjectInDev.makeShareableCloneRecursive, callMicrotasks: callMicrotasksOnUIThread };
 runOnUI.__workletHash = 8710271011487;
 runOnUI.__initData = { code: "function runOnUI_Pnpm_threadsTs3(worklet){const{__DEV__,SHOULD_BE_USE_WEB,isWorkletFunction,IS_JEST,ReanimatedModule,makeShareableCloneRecursive,callMicrotasks}=this.__closure;if(__DEV__&&!SHOULD_BE_USE_WEB&&_WORKLET){throw new ReanimatedError('`runOnUI` cannot be called on the UI runtime. Please call the function synchronously or use `queueMicrotask` or `requestAnimationFrame` instead.');}if(__DEV__&&!SHOULD_BE_USE_WEB&&!isWorkletFunction(worklet)){throw new ReanimatedError('`runOnUI` can only be used with worklets.');}return function(...args){if(IS_JEST){ReanimatedModule.scheduleOnUI(makeShareableCloneRecursive(function(){'worklet';worklet(...args);}));return;}if(__DEV__){makeShareableCloneRecursive(worklet);makeShareableCloneRecursive(args);}_runOnUIQueue.push([worklet,args]);if(_runOnUIQueue.length===1){queueMicrotask(function(){const queue=_runOnUIQueue;_runOnUIQueue=[];ReanimatedModule.scheduleOnUI(makeShareableCloneRecursive(function(){'worklet';queue.forEach(function([worklet,args]){worklet(...args);});callMicrotasks();}));});}};}" };
 let closure_9 = { code: "function pnpm_threadsTs6(){const{worklet,args,makeShareableCloneOnUIRecursive}=this.__closure;const result=worklet(...args);return makeShareableCloneOnUIRecursive(result);}" };
@@ -114,15 +113,14 @@ function runOnUIImmediately(fn) {
     fn = function u() {
       items(...items);
     };
-    const obj = { worklet: items, args: items };
-    fn.__closure = obj;
+    fn.__closure = { worklet: items, args: items };
     fn.__workletHash = 6969436050040;
     fn.__initData = __initData;
-    ReanimatedModule.scheduleOnUI(obj.makeShareableCloneRecursive(fn));
+    ReanimatedModule.scheduleOnUI(freezeObjectInDev.makeShareableCloneRecursive(fn));
   };
 }
-obj = { __DEV__: false, SHOULD_BE_USE_WEB: module_1639, isWorkletFunction: _mod1661.isWorkletFunction, ReanimatedModule: ReanimatedModule2.ReanimatedModule, makeShareableCloneRecursive: freezeObjectInDev.makeShareableCloneRecursive };
-runOnUIImmediately.__closure = obj;
+let obj = { __DEV__: false, SHOULD_BE_USE_WEB: module_1639, isWorkletFunction: _mod1661.isWorkletFunction, IS_JEST: module_1639, ReanimatedModule: ReanimatedModule2.ReanimatedModule, makeShareableCloneRecursive: freezeObjectInDev.makeShareableCloneRecursive, callMicrotasks: callMicrotasksOnUIThread };
+runOnUIImmediately.__closure = { __DEV__: false, SHOULD_BE_USE_WEB: module_1639, isWorkletFunction: _mod1661.isWorkletFunction, ReanimatedModule: ReanimatedModule2.ReanimatedModule, makeShareableCloneRecursive: freezeObjectInDev.makeShareableCloneRecursive };
 runOnUIImmediately.__workletHash = 3385146413149;
 runOnUIImmediately.__initData = { code: "function runOnUIImmediately_Pnpm_threadsTs7(worklet){const{__DEV__,SHOULD_BE_USE_WEB,isWorkletFunction,ReanimatedModule,makeShareableCloneRecursive}=this.__closure;if(__DEV__&&!SHOULD_BE_USE_WEB&&_WORKLET){throw new ReanimatedError('`runOnUIImmediately` cannot be called on the UI runtime. Please call the function synchronously or use `queueMicrotask` or `requestAnimationFrame` instead.');}if(__DEV__&&!SHOULD_BE_USE_WEB&&!isWorkletFunction(worklet)){throw new ReanimatedError('`runOnUIImmediately` can only be used with worklets.');}return function(...args){ReanimatedModule.scheduleOnUI(makeShareableCloneRecursive(function(){'worklet';worklet(...args);}));};}" };
 function runOnJS(__remoteFunction) {
@@ -304,6 +302,7 @@ function runOnJS(__remoteFunction) {
     return queueMicrotask(items.length ? (() => __remoteFunction(...items)) : items);
   };
 }
+let obj2 = { __DEV__: false, SHOULD_BE_USE_WEB: module_1639, isWorkletFunction: _mod1661.isWorkletFunction, ReanimatedModule: ReanimatedModule2.ReanimatedModule, makeShareableCloneRecursive: freezeObjectInDev.makeShareableCloneRecursive };
 runOnJS.__closure = { SHOULD_BE_USE_WEB: module_1639, isWorkletFunction: _mod1661.isWorkletFunction, runWorkletOnJS, makeShareableCloneOnUIRecursive: freezeObjectInDev.makeShareableCloneOnUIRecursive };
 runOnJS.__workletHash = 4576792393858;
 runOnJS.__initData = { code: "function runOnJS_Pnpm_threadsTs9(fun){const runOnJS_Pnpm_threadsTs9=this._recur;const{SHOULD_BE_USE_WEB,isWorkletFunction,runWorkletOnJS,makeShareableCloneOnUIRecursive}=this.__closure;if(SHOULD_BE_USE_WEB||!_WORKLET){return function(...args){return queueMicrotask(args.length?function(){return fun(...args);}:fun);};}if(isWorkletFunction(fun)){return function(...args){return runOnJS_Pnpm_threadsTs9(runWorkletOnJS)(fun,...args);};}if(fun.__remoteFunction){fun=fun.__remoteFunction;}const scheduleOnJS=typeof fun==='function'?global._scheduleHostFunctionOnJS:global._scheduleRemoteFunctionOnJS;return function(...args){scheduleOnJS(fun,args.length>0?makeShareableCloneOnUIRecursive(args):undefined);};}" };
@@ -320,8 +319,8 @@ export function executeOnUIRuntimeSync(fn) {
       const tmp = items(...items);
       return freezeObjectInDev.makeShareableCloneOnUIRecursive(tmp);
     };
-    const obj = { worklet: items, args: items, makeShareableCloneOnUIRecursive: freezeObjectInDev.makeShareableCloneOnUIRecursive };
-    fn.__closure = obj;
+    const obj = freezeObjectInDev;
+    fn.__closure = { worklet: items, args: items, makeShareableCloneOnUIRecursive: freezeObjectInDev.makeShareableCloneOnUIRecursive };
     fn.__workletHash = 6038069575410;
     fn.__initData = __initData;
     return ReanimatedModule.executeOnUIRuntimeSync(obj.makeShareableCloneRecursive(fn));

@@ -2,9 +2,10 @@
 
 // Module 6982 (RenderStackManager)
 import _modDef6968 from "module_6968" /* 6968 */;
-import _slicedToArray from "module_6958" /* 6958 */;
+import _slicedToArray_mod from "module_6958" /* 6958 */;
 import _classCallCheck from "module_6967" /* 6967 */;
 
+let _slicedToArray = _slicedToArray_mod;
 class RenderStackManager {
   constructor() {
     MAX_SAFE_INTEGER = global;
@@ -40,8 +41,8 @@ const entry = {
     this.clearRecyclePool();
     let unProcessedIndices = this.unProcessedIndices;
     unProcessedIndices.clear();
-    let keyMap = this.keyMap;
-    const item = keyMap.forEach((item, index) => {
+    const keyMap1 = this.keyMap;
+    const item = keyMap1.forEach((item, index) => {
       index = item.index;
       if (index >= closure_0) {
         self.recycleKey(index);
@@ -82,7 +83,7 @@ const entry = {
       continue;
     }
     const items = [];
-    keyMap = self.keyMap;
+    const keyMap = self.keyMap;
     const values = keyMap.values();
     for (const item10057 of values) {
       let index = item10057.index;
@@ -158,7 +159,7 @@ let items = [
             let result = self.deleteKeyFromRecyclePool(itemType, tmp7);
             let stableIdMap = self.stableIdMap;
             let deleteResult = stableIdMap.delete(stableId);
-            arr = arr.push(tmp7);
+            let arr2 = arr.push(tmp7);
           }
         }
         continue;
@@ -173,8 +174,7 @@ let items = [
         const diff1 = diff - self.maxItemsInRecyclePool;
         const _Array = Array;
         const keyMap4 = self.keyMap;
-        arr = Array.from(keyMap4.entries());
-        const reversed = arr.reverse();
+        const reversed = Array.from(keyMap4.entries()).reverse();
         if (0 < reversed.length) {
           let num = 0;
           let num2 = 0;
@@ -205,6 +205,7 @@ let items = [
             }
           }
         }
+        const arr4 = Array.from(keyMap4.entries());
       }
       const tmp = arr;
       tmp3 = entries[Symbol.iterator]();

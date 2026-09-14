@@ -1,207 +1,148 @@
 // === Module 12950: ? ===
 
 // Module 12950
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import _mod12933 from "module_12933" /* 12933 */;
+import _mod12938 from "module_12938" /* 12938 */;
+import _mod12941 from "module_12941" /* 12941 */;
+import _mod12951 from "module_12951" /* 12951 */;
+import __SENTRY_DEBUG__ from "module_12926" /* 12926 */;
+import consoleSandbox from "module_12927" /* 12927 */;
 
-const SyncPromise = require;
-const obj = { PENDING: 0 };
-obj[0] = "PENDING";
-obj.RESOLVED = 1;
-obj[1] = "RESOLVED";
-obj.REJECTED = 2;
-obj[2] = "REJECTED";
-class SyncPromise {
-  constructor(arg0) {
-    self = this;
-    tmp = SyncPromise;
-    tmp2 = closure_3(this, SyncPromise);
-    __init = SyncPromise.prototype.__init;
-    call = __init.call;
-    if (typeof call === "unknown") {
-      __initResult = __init();
-    } else {
-      callResult = call(self);
+function updateSession(ipAddress) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  if (obj.user) {
+    ipAddress = ipAddress.ipAddress;
+    let ip_address = !ipAddress;
+    if (!ipAddress) {
+      ip_address = obj.user.ip_address;
     }
-    __init2 = tmp.prototype.__init2;
-    call2 = __init2.call;
-    if (typeof call2 === "unknown") {
-      __init2Result = __init2();
-    } else {
-      call2Result = call2(self);
+    if (ip_address) {
+      ipAddress.ipAddress = obj.user.ip_address;
     }
-    __init3 = tmp.prototype.__init3;
-    call3 = __init3.call;
-    if (typeof call3 === "unknown") {
-      __init3Result = __init3();
-    } else {
-      call3Result = call3(self);
+    if (!tmp) {
+      ipAddress.did = obj.user.id || obj.user.email || obj.user.username;
     }
-    __init4 = tmp.prototype.__init4;
-    call4 = __init4.call;
-    if (typeof call4 === "unknown") {
-      __init4 = __init4();
-    } else {
-      call4Result = call4(self);
+    tmp = ipAddress.did || obj.did;
+  }
+  let timestamp = obj.timestamp;
+  if (!timestamp) {
+    timestamp = _mod12941.timestampInSeconds();
+  }
+  ipAddress.timestamp = timestamp;
+  if (obj.abnormal_mechanism) {
+    ipAddress.abnormal_mechanism = obj.abnormal_mechanism;
+  }
+  if (obj.ignoreDuration) {
+    ipAddress.ignoreDuration = obj.ignoreDuration;
+  }
+  if (!obj.sid) {
+    if (undefined !== obj.init) {
+      ipAddress.init = obj.init;
     }
-    self._state = c2.PENDING;
-    self._handlers = [];
-    return;
+    const did = ipAddress.did;
+    let did2 = !did;
+    if (!did) {
+      did2 = obj.did;
+    }
+    if (did2) {
+      const _HermesInternal = HermesInternal;
+      ipAddress.did = "" + obj.did;
+    }
+    if (typeof obj.started === "number") {
+      ipAddress.started = obj.started;
+    }
+    if (ipAddress.ignoreDuration) {
+      ipAddress.duration = undefined;
+    } else if (typeof obj.duration === "number") {
+      ipAddress.duration = obj.duration;
+    } else {
+      const diff = ipAddress.timestamp - ipAddress.started;
+      let num2 = 0;
+      if (diff >= 0) {
+        num2 = diff;
+      }
+      ipAddress.duration = num2;
+    }
+    if (obj.release) {
+      ipAddress.release = obj.release;
+    }
+    if (obj.environment) {
+      ipAddress.environment = obj.environment;
+    }
+    const ipAddress2 = ipAddress.ipAddress;
+    let ipAddress3 = !ipAddress2;
+    if (!ipAddress2) {
+      ipAddress3 = obj.ipAddress;
+    }
+    if (ipAddress3) {
+      ipAddress.ipAddress = obj.ipAddress;
+    }
+    const userAgent = ipAddress.userAgent;
+    let userAgent2 = !userAgent;
+    if (!userAgent) {
+      userAgent2 = obj.userAgent;
+    }
+    if (userAgent2) {
+      ipAddress.userAgent = obj.userAgent;
+    }
+    if (typeof obj.errors === "number") {
+      ipAddress.errors = obj.errors;
+    }
+    if (obj.status) {
+      ipAddress.status = obj.status;
+    }
+  } else {
+    if (32 === obj.sid.length) {
+      let sid = obj.sid;
+    } else {
+      sid = _mod12938.uuid4();
+    }
+    ipAddress.sid = sid;
   }
 }
-const entry = {
-  key: "then",
-  value: function then(arg0, arg1) {
-    const self = this;
-    closure_1 = arg0;
-    closure_0 = arg1;
-    SyncPromise((arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      const _handlers = self._handlers;
-      const items = [
-        false,
-        (arg0) => {
-          if (closure_1) {
-            try {
-              closure_0(tmp(arg0));
-            } catch (tmp6) {
-              closure_1(tmp6);
-            }
-          } else {
-            closure_0(arg0);
-          }
-        },
-        (arg0) => {
-          if (closure_0) {
-            try {
-              closure_0(tmp(arg0));
-            } catch (tmp6) {
-              closure_1(tmp6);
-            }
-          } else {
-            closure_1(arg0);
-          }
-        }
-      ];
-      _handlers.push(items);
-      self._executeHandlers();
-    });
-    return Object.create(SyncPromise.prototype);
-  }
-};
-let items = [
-  entry,
-  {
-    key: "catch",
-    value: function _catch(arg0) {
-      return this.then((result) => result, arg0);
-    }
-  },
-  {
-    key: "finally",
-    value: function _finally(arg0) {
-      const self = this;
-      closure_0 = arg0;
-      SyncPromise((arg0, arg1) => {
-        closure_0 = arg0;
-        _self = arg1;
-        return _self.then((result) => {
-          c3 = false;
-          closure_2 = result;
-          if (closure_0) {
-            tmp();
-          }
-        }, (arg0) => {
-          c3 = true;
-          closure_2 = arg0;
-          if (closure_0) {
-            tmp();
-          }
-        }).then(() => {
-          if (c3) {
-            closure_1(closure_2);
-          } else {
-            closure_0(closure_2);
-          }
-        });
-      });
-      return Object.create(SyncPromise.prototype);
-    }
-  },
-  {
-    key: "__init",
-    value: function __init() {
-      const self = this;
-      this._resolve = (arg0) => {
-        self._setResult(obj.RESOLVED, arg0);
-      };
-    }
-  },
-  {
-    key: "__init2",
-    value: function __init2() {
-      const self = this;
-      this._reject = (arg0) => {
-        self._setResult(obj.REJECTED, arg0);
-      };
-    }
-  },
-  {
-    key: "__init3",
-    value: function __init3() {
-      const self = this;
-      this._setResult = (_state, _value) => {
-        if (self._state === self.PENDING) {
-          if (obj2.isThenable(_value)) {
-            _value.then(self._resolve, self._reject);
-          } else {
-            self._state = _state;
-            self._value = _value;
-            self._executeHandlers();
-          }
-          obj2 = SyncPromise(12933);
-        }
-      };
-    }
-  },
-  {
-    key: "__init4",
-    value: function __init4() {
-      const self = this;
-      this._executeHandlers = () => {
-        if (self._state !== obj.PENDING) {
-          const _handlers = self._handlers;
-          const substr = _handlers.slice();
-          self._handlers = [];
-          const item = substr.forEach((item) => {
-            if (!item[0]) {
-              if (_state._state === constants.RESOLVED) {
-                item[1](_state._value);
-              }
-              if (_state._state === constants.REJECTED) {
-                item[2](_state._value);
-              }
-              item[0] = true;
-            }
-          });
-        }
-      };
-    }
-  }
-];
-const _moduleResult = _createClass(SyncPromise, items);
+_mod12951;
 
-export const SyncPromise = _moduleResult;
-export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
-  closure_0 = arg0;
-  return new _moduleResult((arg0, fn) => {
-    fn(closure_0);
-  });
+export const closeSession = function closeSession(status, status2) {
+  if (status2) {
+    const obj2 = { status: status2 };
+    let obj = obj2;
+  } else {
+    obj = {};
+    if ("ok" === status.status) {
+      obj = { status: "exited" };
+    }
+  }
+  updateSession(status, obj);
 };
-export const resolvedSyncPromise = function resolvedSyncPromise(item) {
-  closure_0 = item;
-  return new _moduleResult((fn) => {
-    fn(closure_0);
-  });
+export const makeSession = function makeSession(arg0) {
+  const timestampInSecondsResult = obj2(12941).timestampInSeconds();
+  obj2 = { sid: null, init: true, timestamp: null, started: null, duration: 0, status: "ok", errors: 0, ignoreDuration: false, toJSON: null };
+  let obj = obj2(12941);
+  obj2.sid = obj2(12938).uuid4();
+  obj2.timestamp = timestampInSecondsResult;
+  obj2.started = timestampInSecondsResult;
+  obj2.toJSON = function toJSON() {
+    const obj3 = { sid: "" + obj2.sid, init: obj2.init, started: null, timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
+    const obj = _mod12933;
+    obj3.started = new Date(1000 * obj2.started).toISOString();
+    const date = new Date(1000 * obj2.started);
+    obj3.timestamp = new Date(1000 * obj2.timestamp).toISOString();
+    ({ status: obj2.status, errors: obj2.errors } = obj2);
+    if (typeof obj2.did === "number") {
+      const _HermesInternal = HermesInternal;
+      const combined = "" + obj2.did;
+    }
+    obj3.did = combined;
+    ({ duration: obj2.duration, abnormal_mechanism: obj2.abnormal_mechanism } = obj2);
+    obj3.attrs = { release: obj2.release, environment: obj2.environment, ip_address: obj2.ipAddress, user_agent: obj2.userAgent };
+    return obj.dropUndefinedKeys(obj3);
+  };
+  if (arg0) {
+    updateSession(obj2, arg0);
+  }
+  return obj2;
 };
+export { updateSession };

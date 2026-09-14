@@ -3,6 +3,8 @@
 // Module 551 (debounce)
 import _mod556 from "module_556" /* 556 */;
 
+const require = globalThis.__r;
+
 
 export default function debounce(fn, arg1, leading) {
   _require = fn;

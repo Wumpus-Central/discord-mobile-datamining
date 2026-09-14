@@ -1,64 +1,51 @@
 // === Module 13044: ? ===
 
 // Module 13044
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12929 */;
-import _mod12932 from "module_12932" /* 12932 */;
-import _mod13042 from "module_13042" /* 13042 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
-  let replaced;
-  if (str) {
-    replaced = str.replace(/^file:\/\//, "");
-  }
-  let sum;
-  if (location.location.columnNumber) {
-    sum = location.location.columnNumber + 1;
-  }
-  let sum1;
-  if (location.location.lineNumber) {
-    sum1 = location.location.lineNumber + 1;
-  }
-  const obj = { filename: replaced, module: fn(replaced), function: location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION, colno: sum, lineno: sum1, in_app: null };
-  let filenameIsInAppResult;
-  if (replaced) {
-    filenameIsInAppResult = _mod13042.filenameIsInApp(replaced);
-    const tmp4Result = _mod13042;
-  }
-  obj.in_app = filenameIsInAppResult;
-  return obj.dropUndefinedKeys(obj);
-};
-export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
-  closure_0 = arg1;
-  closure_1 = arg2;
-  closure_2 = arg3;
-  const navigation = fn();
-  c4 = false;
-  closure_5 = true;
-  const timerId = setInterval(() => {
-    const timeMs = navigation.getTimeMs();
-    let tmp2 = false === c4;
-    if (tmp2) {
-      tmp2 = timeMs > closure_0 + closure_1;
-    }
-    if (tmp2) {
-      c4 = true;
-      if (closure_5) {
-        closure_2();
+export function makeFifoCache(arg0) {
+  closure_0 = arg0;
+  closure_1 = [];
+  dependencyMap = {};
+  return {
+    add(arg0, arg1) {
+      if (closure_1.length >= closure_0) {
+        do {
+          if (undefined !== closure_1.shift()) {
+            delete tmp[tmp2];
+          }
+        } while (closure_1.length >= closure_0);
+      }
+      if (dependencyMap[arg0]) {
+        const self = this;
+        this.delete(arg0);
+      }
+      closure_1.push(arg0);
+      dependencyMap[arg0] = arg1;
+    },
+    clear() {
+      closure_2 = {};
+      closure_1 = [];
+    },
+    get(arg0) {
+      return dependencyMap[arg0];
+    },
+    size() {
+      return closure_1.length;
+    },
+    delete(arg0) {
+      if (dependencyMap[arg0]) {
+        delete tmp[tmp2];
+        let num = 0;
+        if (0 < closure_1.length) {
+          while (closure_1[num] !== arg0) {
+            num = num + 1;
+          }
+          closure_1.splice(num, 1);
+        }
+        return true;
+      } else {
+        return false;
       }
     }
-    if (timeMs < closure_0 + closure_1) {
-      c4 = false;
-    }
-  }, 20);
-  return {
-    poll() {
-      navigation.reset();
-    },
-    enabled(arg0) {
-      closure_5 = arg0;
-    }
   };
-};
+}

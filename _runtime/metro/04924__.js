@@ -1,10 +1,10 @@
 // === Module 4924: ? ===
 
 // Module 4924
-import _mod1282 from "module_1282" /* 1282 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1316 */;
+import _mod1280 from "module_1280" /* 1280 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1314 */;
 
-const tmp = _mod1282("%Array%");
+const tmp = _mod1280("%Array%");
 const isArray = tmp.isArray;
 let tmp2 = !isArray;
 if (!isArray) {

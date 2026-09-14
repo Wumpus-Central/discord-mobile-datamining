@@ -2,43 +2,48 @@
 
 // Module 4151
 import _mod3730 from "module_3730" /* 3730 */;
-import differenceInCalendarDays from "differenceInCalendarDays" /* 3887 */;
-import startOfWeekYear from "startOfWeekYear" /* 4007 */;
-import _typeof from "module_3725" /* 3725 */;
-import module_3729 from "module_3729" /* 3729 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import differenceInCalendarDays_mod from "differenceInCalendarDays" /* 3887 */;
+import startOfWeekYear_mod from "startOfWeekYear" /* 4007 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import module_3729_mod from "module_3729" /* 3729 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let differenceInCalendarDays = differenceInCalendarDays_mod;
 if (!differenceInCalendarDays) {
-  let obj = { default: differenceInCalendarDays };
+  const obj = { default: differenceInCalendarDays };
   let tmp3 = obj;
 } else {
   tmp3 = differenceInCalendarDays;
 }
 differenceInCalendarDays = tmp3;
+let startOfWeekYear = startOfWeekYear_mod;
 if (!startOfWeekYear) {
-  obj = { default: startOfWeekYear };
-  let tmp5 = obj;
+  const obj2 = { default: startOfWeekYear };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfWeekYear;
 }
 startOfWeekYear = tmp5;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp7 = obj;
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  const obj1 = { default: module_3729 };
-  let tmp9 = obj1;
+  const obj4 = { default: module_3729 };
+  let tmp9 = obj4;
 } else {
   tmp9 = module_3729;
 }
 module_3729 = tmp9;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp11 = obj2;
+  const obj5 = { default: requiredArgs };
+  let tmp11 = obj5;
 } else {
   tmp11 = requiredArgs;
 }

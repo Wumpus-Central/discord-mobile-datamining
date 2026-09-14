@@ -1,19 +1,21 @@
 // === Module 4075: ? ===
 
 // Module 4075
-import startOfMinute from "startOfMinute" /* 3934 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import startOfMinute_mod from "startOfMinute" /* 3934 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let startOfMinute = startOfMinute_mod;
 if (!startOfMinute) {
-  let obj = { default: startOfMinute };
+  const obj = { default: startOfMinute };
   let tmp3 = obj;
 } else {
   tmp3 = startOfMinute;
 }
 startOfMinute = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

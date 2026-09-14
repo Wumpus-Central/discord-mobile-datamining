@@ -26,8 +26,9 @@ class PlatformColor {
   constructor() {
     items = [...arguments];
     if (closure_0(closure_1[0]).IS_IOS) {
-      obj = { semantic: null };
-      obj.semantic = items;
+      obj1 = { semantic: null };
+      obj1.semantic = items;
+      obj = obj1;
     } else {
       obj = { resource_paths: null };
       obj.resource_paths = items;
@@ -35,8 +36,7 @@ class PlatformColor {
     return obj;
   }
 }
-let ERROR_MESSAGES = { IS_IOS: fn(1747).IS_IOS };
-PlatformColor.__closure = ERROR_MESSAGES;
+PlatformColor.__closure = { IS_IOS: fn(1747).IS_IOS };
 PlatformColor.__workletHash = 12890406291275;
 PlatformColor.__initData = { code: "function PlatformColor_Pnpm_colorsTs2(...names){const{IS_IOS}=this.__closure;return IS_IOS?{semantic:names}:{resource_paths:names};}" };
 function isPlatformColorObject(semantic) {
@@ -115,28 +115,28 @@ function isDynamicColorObjectIOS(dynamic) {
 isDynamicColorObjectIOS.__closure = { isRecord };
 isDynamicColorObjectIOS.__workletHash = 1181760541767;
 isDynamicColorObjectIOS.__initData = { code: "function isDynamicColorObjectIOS_Pnpm_colorsTs5(value){const{isRecord}=this.__closure;return isRecord(value)&&isRecord(value.dynamic)&&'light'in value.dynamic&&'dark'in value.dynamic;}" };
-ERROR_MESSAGES = { invalidColor: null, invalidProcessedColor: null, dynamicNotAvailableOnPlatform: null };
+let obj2 = { invalidColor: null, invalidProcessedColor: null, dynamicNotAvailableOnPlatform: null };
 const fn2 = function t(arg0) {
   return "Invalid color value: " + JSON.stringify(arg0);
 };
 fn2.__closure = {};
 fn2.__workletHash = 16453254098770;
 fn2.__initData = { code: "function pnpm_colorsTs6(color){return\"Invalid color value: \"+JSON.stringify(color);}" };
-ERROR_MESSAGES.invalidColor = fn2;
+obj2.invalidColor = fn2;
 const fn3 = function n(arg0) {
   return "Invalid processed color value: " + JSON.stringify(arg0);
 };
 fn3.__closure = {};
 fn3.__workletHash = 8662920964153;
 fn3.__initData = { code: "function pnpm_colorsTs7(color){return\"Invalid processed color value: \"+JSON.stringify(color);}" };
-ERROR_MESSAGES.invalidProcessedColor = fn3;
+obj2.invalidProcessedColor = fn3;
 const fn4 = function o() {
   return "DynamicColorIOS is not available on this platform.";
 };
 fn4.__closure = {};
 fn4.__workletHash = 13235944247491;
 fn4.__initData = { code: "function pnpm_colorsTs8(){return'DynamicColorIOS is not available on this platform.';}" };
-ERROR_MESSAGES.dynamicNotAvailableOnPlatform = fn4;
+obj2.dynamicNotAvailableOnPlatform = fn4;
 function processColorNumber(semantic) {
   const result = _mod1679.processColorInitially(semantic);
   let tmp3 = result;
@@ -145,8 +145,8 @@ function processColorNumber(semantic) {
   }
   return tmp3;
 }
-ERROR_MESSAGES = { processColorInitially: fn(1679).processColorInitially, IS_ANDROID: fn(1747).IS_ANDROID };
-processColorNumber.__closure = ERROR_MESSAGES;
+let obj = { IS_IOS: fn(1747).IS_IOS };
+processColorNumber.__closure = { processColorInitially: fn(1679).processColorInitially, IS_ANDROID: fn(1747).IS_ANDROID };
 processColorNumber.__workletHash = 11813019963227;
 processColorNumber.__initData = { code: "function processColorNumber_Pnpm_colorsTs9(value){const{processColorInitially,IS_ANDROID}=this.__closure;let normalizedColor=processColorInitially(value);if(IS_ANDROID&&typeof normalizedColor=='number'){normalizedColor=normalizedColor|0x0;}return normalizedColor;}" };
 function unprocessColorNumber(arg0) {
@@ -193,8 +193,7 @@ unprocessDynamicColorObjectIOS.__workletHash = 3217615757982;
 unprocessDynamicColorObjectIOS.__initData = { code: "function unprocessDynamicColorObjectIOS_Pnpm_colorsTs12(value){const{DynamicColorIOSProperties,unprocessColorNumber}=this.__closure;const result={};for(const property of DynamicColorIOSProperties){if(value.dynamic[property]!==undefined){result[property]=unprocessColorNumber(value.dynamic[property]);}}return{dynamic:result};}" };
 function processColor(semantic, target) {
   if (typeof processColorNumber === "function") {
-    obj = _mod1679;
-    const result = obj.processColorInitially(semantic);
+    const result = _mod1679.processColorInitially(semantic);
     let tmp6 = result;
     if (tmp5) {
       tmp6 = result | 0;
@@ -241,12 +240,12 @@ function processColor(semantic, target) {
             if (JEST_WORKER_ID.IS_IOS) {
               tmp13 = processDynamicColorObjectIOS(semantic);
             } else {
-              const reanimatedError = new _mod1647.ReanimatedError(obj.dynamicNotAvailableOnPlatform());
+              const reanimatedError = new _mod1647.ReanimatedError(obj2.dynamicNotAvailableOnPlatform());
               throw reanimatedError;
             }
           }
           if (null === tmp13) {
-            const reanimatedError1 = new _mod1647.ReanimatedError(obj.invalidColor(semantic));
+            const reanimatedError1 = new _mod1647.ReanimatedError(obj2.invalidColor(semantic));
             throw reanimatedError1;
           } else {
             return tmp13;
@@ -263,7 +262,8 @@ function processColor(semantic, target) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-processColor.__closure = { processColorNumber, ValueProcessorTarget: fn(1748).ValueProcessorTarget, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: fn(1747).IS_IOS, ERROR_MESSAGES, processDynamicColorObjectIOS };
+const obj3 = { processColorInitially: fn(1679).processColorInitially, IS_ANDROID: fn(1747).IS_ANDROID };
+processColor.__closure = { processColorNumber, ValueProcessorTarget: fn(1748).ValueProcessorTarget, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: fn(1747).IS_IOS, ERROR_MESSAGES: obj2, processDynamicColorObjectIOS };
 processColor.__workletHash = 3532980737440;
 processColor.__initData = { code: "function processColor_Pnpm_colorsTs13(value,context){const{processColorNumber,ValueProcessorTarget,isPlatformColorObject,isDynamicColorObjectIOS,IS_IOS,ERROR_MESSAGES,processDynamicColorObjectIOS}=this.__closure;let result=processColorNumber(value);if(result){return result;}if(result===0){if((context===null||context===void 0?void 0:context.target)===ValueProcessorTarget.CSS&&value==='transparent'){return false;}return result;}if(isPlatformColorObject(value)){return value;}if(isDynamicColorObjectIOS(value)){if(!IS_IOS){throw new ReanimatedError(ERROR_MESSAGES.dynamicNotAvailableOnPlatform());}result=processDynamicColorObjectIOS(value);}if(result===null){throw new ReanimatedError(ERROR_MESSAGES.invalidColor(value));}return result;}" };
 function unprocessColor(arr) {
@@ -299,11 +299,11 @@ function unprocessColor(arr) {
         if (JEST_WORKER_ID.IS_IOS) {
           return unprocessDynamicColorObjectIOS(arr);
         } else {
-          const reanimatedError = new _mod1647.ReanimatedError(obj.dynamicNotAvailableOnPlatform());
+          const reanimatedError = new _mod1647.ReanimatedError(obj2.dynamicNotAvailableOnPlatform());
           throw reanimatedError;
         }
       } else {
-        const reanimatedError1 = new _mod1647.ReanimatedError(obj.invalidProcessedColor(arr));
+        const reanimatedError1 = new _mod1647.ReanimatedError(obj2.invalidProcessedColor(arr));
         throw reanimatedError1;
       }
     } else {
@@ -313,8 +313,8 @@ function unprocessColor(arr) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-const obj1 = { processColorNumber, ValueProcessorTarget: fn(1748).ValueProcessorTarget, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: fn(1747).IS_IOS, ERROR_MESSAGES, processDynamicColorObjectIOS };
-unprocessColor.__closure = { unprocessColorNumber, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: fn(1747).IS_IOS, ERROR_MESSAGES, unprocessDynamicColorObjectIOS };
+const obj4 = { processColorNumber, ValueProcessorTarget: fn(1748).ValueProcessorTarget, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: fn(1747).IS_IOS, ERROR_MESSAGES: obj2, processDynamicColorObjectIOS };
+unprocessColor.__closure = { unprocessColorNumber, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: fn(1747).IS_IOS, ERROR_MESSAGES: obj2, unprocessDynamicColorObjectIOS };
 unprocessColor.__workletHash = 11221362619601;
 unprocessColor.__initData = { code: "function unprocessColor_Pnpm_colorsTs14(value){const{unprocessColorNumber,isPlatformColorObject,isDynamicColorObjectIOS,IS_IOS,ERROR_MESSAGES,unprocessDynamicColorObjectIOS}=this.__closure;if(typeof value==='number'){return unprocessColorNumber(value);}if(isPlatformColorObject(value)){return value;}if(isDynamicColorObjectIOS(value)){if(!IS_IOS){throw new ReanimatedError(ERROR_MESSAGES.dynamicNotAvailableOnPlatform());}return unprocessDynamicColorObjectIOS(value);}throw new ReanimatedError(ERROR_MESSAGES.invalidProcessedColor(value));}" };
 function processColorsInProps(obj) {
@@ -336,7 +336,7 @@ function processColorsInProps(obj) {
     continue;
   }
 }
-const obj2 = { unprocessColorNumber, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: fn(1747).IS_IOS, ERROR_MESSAGES, unprocessDynamicColorObjectIOS };
+const obj5 = { unprocessColorNumber, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: fn(1747).IS_IOS, ERROR_MESSAGES: obj2, unprocessDynamicColorObjectIOS };
 processColorsInProps.__closure = { ColorProperties: fn(1679).ColorProperties, processColor };
 processColorsInProps.__workletHash = 10982881159897;
 processColorsInProps.__initData = { code: "function processColorsInProps_Pnpm_colorsTs15(props){const{ColorProperties,processColor}=this.__closure;for(const key in props){if(!ColorProperties.includes(key)){continue;}const value=props[key];props[key]=Array.isArray(value)?value.map(function(c){return processColor(c);}):processColor(value);}}" };
@@ -359,14 +359,14 @@ function unprocessColorsInProps(styleProps) {
     continue;
   }
 }
-const obj3 = { ColorProperties: fn(1679).ColorProperties, processColor };
+const obj6 = { ColorProperties: fn(1679).ColorProperties, processColor };
 unprocessColorsInProps.__closure = { ColorProperties: fn(1679).ColorProperties, unprocessColor };
 unprocessColorsInProps.__workletHash = 1282697128442;
 unprocessColorsInProps.__initData = { code: "function unprocessColorsInProps_Pnpm_colorsTs16(props){const{ColorProperties,unprocessColor}=this.__closure;for(const key in props){if(!ColorProperties.includes(key)){continue;}const value=props[key];props[key]=Array.isArray(value)?value.map(function(c){return unprocessColor(c);}):unprocessColor(value);}}" };
 
 export { PlatformColor };
 export { DynamicColorIOS };
-export { ERROR_MESSAGES };
+export const ERROR_MESSAGES = obj2;
 export { processColorNumber };
 export { processColor };
 export { unprocessColor };

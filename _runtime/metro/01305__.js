@@ -2,4 +2,4 @@
 
 // Module 1305
 
-export default URIError;
+export default Math.abs;

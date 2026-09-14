@@ -57,18 +57,16 @@ export const createReduxEnhancer = function createReduxEnhancer(arg0) {
       closure_0 = arg0;
       const tmp4 = closure_0((arg0, arg1) => {
         const tmp = closure_0(arg0, arg1);
-        obj = closure_0(dependencyMap[0]);
-        const currentScope = obj.getCurrentScope();
+        const currentScope = closure_0(dependencyMap[0]).getCurrentScope();
         const actionTransformerResult = closure_0.actionTransformer(arg1);
         if (null != actionTransformerResult) {
-          let tmp2Result = closure_0(dependencyMap[0]);
-          obj = { category: "redux.action", data: actionTransformerResult, type: "info" };
-          tmp2Result.addBreadcrumb(obj);
+          const obj2 = { category: "redux.action", data: actionTransformerResult, type: "info" };
+          closure_0(dependencyMap[0]).addBreadcrumb(obj2);
+          const tmp2Result = closure_0(dependencyMap[0]);
         }
         const stateTransformerResult = closure_0.stateTransformer(tmp);
         if (null != stateTransformerResult) {
-          tmp2Result = closure_0(dependencyMap[0]);
-          const client = tmp2Result.getClient();
+          const client = closure_0(dependencyMap[0]).getClient();
           let options;
           if (client != null) {
             options = client.getOptions();
@@ -80,12 +78,13 @@ export const createReduxEnhancer = function createReduxEnhancer(arg0) {
           if (!num) {
             num = 3;
           }
-          obj = { state: null };
-          const obj1 = { type: "redux", value: stateTransformerResult };
-          obj.state = obj1;
-          const result = closure_0(dependencyMap[0]).addNonEnumerableProperty(obj, "__sentry_override_normalization_depth__", 3 + num);
-          currentScope.setContext("state", obj);
-          const tmp2Result1 = closure_0(dependencyMap[0]);
+          const obj4 = { state: null };
+          const obj5 = { type: "redux", value: stateTransformerResult };
+          obj4.state = obj5;
+          const tmp2Result3 = closure_0(dependencyMap[0]);
+          const result = closure_0(dependencyMap[0]).addNonEnumerableProperty(obj4, "__sentry_override_normalization_depth__", 3 + num);
+          currentScope.setContext("state", obj4);
+          const tmp2Result4 = closure_0(dependencyMap[0]);
         } else {
           currentScope.setContext("state", null);
         }
@@ -95,24 +94,22 @@ export const createReduxEnhancer = function createReduxEnhancer(arg0) {
         }
         return tmp;
       }, arg1);
-      obj = {
+      const proxy = new Proxy(tmp4.replaceReducer, {
         apply(apply, arg1, arg2) {
           closure_0 = arg2[0];
           const items = [
             (arg0, arg1) => {
               const tmp = closure_0(arg0, arg1);
-              obj = closure_0(dependencyMap[0]);
-              const currentScope = obj.getCurrentScope();
+              const currentScope = closure_0(dependencyMap[0]).getCurrentScope();
               const actionTransformerResult = closure_0.actionTransformer(arg1);
               if (null != actionTransformerResult) {
-                let tmp2Result = closure_0(dependencyMap[0]);
-                obj = { category: "redux.action", data: actionTransformerResult, type: "info" };
-                tmp2Result.addBreadcrumb(obj);
+                const obj2 = { category: "redux.action", data: actionTransformerResult, type: "info" };
+                closure_0(dependencyMap[0]).addBreadcrumb(obj2);
+                const tmp2Result = closure_0(dependencyMap[0]);
               }
               const stateTransformerResult = closure_0.stateTransformer(tmp);
               if (null != stateTransformerResult) {
-                tmp2Result = closure_0(dependencyMap[0]);
-                const client = tmp2Result.getClient();
+                const client = closure_0(dependencyMap[0]).getClient();
                 let options;
                 if (client != null) {
                   options = client.getOptions();
@@ -124,12 +121,13 @@ export const createReduxEnhancer = function createReduxEnhancer(arg0) {
                 if (!num) {
                   num = 3;
                 }
-                obj = { state: null };
-                const obj1 = { type: "redux", value: stateTransformerResult };
-                obj.state = obj1;
-                const result = closure_0(dependencyMap[0]).addNonEnumerableProperty(obj, "__sentry_override_normalization_depth__", 3 + num);
-                currentScope.setContext("state", obj);
-                const tmp2Result1 = closure_0(dependencyMap[0]);
+                const obj4 = { state: null };
+                const obj5 = { type: "redux", value: stateTransformerResult };
+                obj4.state = obj5;
+                const tmp2Result3 = closure_0(dependencyMap[0]);
+                const result = closure_0(dependencyMap[0]).addNonEnumerableProperty(obj4, "__sentry_override_normalization_depth__", 3 + num);
+                currentScope.setContext("state", obj4);
+                const tmp2Result4 = closure_0(dependencyMap[0]);
               } else {
                 currentScope.setContext("state", null);
               }
@@ -142,8 +140,7 @@ export const createReduxEnhancer = function createReduxEnhancer(arg0) {
           ];
           apply.apply(arg1, items);
         }
-      };
-      const proxy = new Proxy(tmp4.replaceReducer, obj);
+      });
       tmp4.replaceReducer = proxy;
       return tmp4;
     };

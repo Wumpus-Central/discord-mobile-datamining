@@ -3,6 +3,8 @@
 // Module 4709 (baseClone)
 import assignValue from "assignValue" /* 4718 */;
 
+const require = globalThis.__r;
+
 let obj = {};
 obj["[object Uint32Array]"] = true;
 obj["[object Uint16Array]"] = true;
@@ -70,22 +72,22 @@ function baseClone(arr, arg1, fn, key, arr, height) {
             }
             if (!tmp2) {
               if (!tmp12) {
-                obj = tmp32(4713)(arr);
+                let obj2 = tmp32(4713)(arr);
               }
-              closure_4 = obj;
-              tmp14 = obj;
+              closure_4 = obj2;
+              tmp14 = obj2;
               if (!tmp) {
                 if (tmp2) {
-                  let tmp32Result = tmp32(4716);
-                  let tmp32ResultResult = tmp32Result(arr, tmp32(4720)(obj, arr));
+                  let tmp32ResultResult = tmp32(4716)(arr, tmp32(4720)(obj2, arr));
+                  const tmp32Result = tmp32(4716);
                 } else {
-                  tmp32Result = tmp32(4724);
-                  tmp32ResultResult = tmp32Result(arr, tmp32(4725)(obj, arr));
+                  tmp32ResultResult = tmp32(4724)(arr, tmp32(4725)(obj2, arr));
+                  const tmp32Result3 = tmp32(4724);
                 }
                 return tmp32ResultResult;
               }
             }
-            obj = {};
+            obj2 = {};
           }
         }
         let obj3 = height;

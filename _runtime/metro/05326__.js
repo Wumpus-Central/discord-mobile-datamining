@@ -89,49 +89,48 @@ function getEncodingName(value) {
   return str;
 }
 let obj = { iptc: null };
-obj = { 256: null, 261: null, 276: null, 278: null, 286: "Service Identifier", 296: "Envelope Number", 306: "Product ID", 316: "Envelope Priority", 326: null, 336: null, 346: null, 356: "UNO", 376: null, 378: null, 512: null, 515: "Object Type Reference", 516: "Object Attribute Reference", 517: "Object Name", 519: "Edit Status", 520: null, 522: "Urgency", 524: null, 527: "Category", 532: null, 534: "Fixture Identifier", 537: null, 538: null, 539: null, 542: "Release Date", 547: "Release Time", 549: "Expiration Date", 550: "Expiration Time", 552: "Special Instructions", 554: null, 557: null, 559: null, 562: null, 567: null, 572: null, 574: null, 575: null, 577: "Originating Program", 582: "Program Version", 587: null, 592: null, 597: null, 602: "City", 604: "Sub-location", 607: "Province/State", 612: "Country/Primary Location Code", 613: "Country/Primary Location Name", 615: "Original Transmission Reference", 617: "Headline", 622: "Credit", 627: "Source", 628: "Copyright Notice", 630: null, 632: "Caption/Abstract", 634: null, 637: null, 642: "Image Type", 643: null, 647: "Language Identifier", 662: null, 663: null, 664: null, 665: null, 666: "Audio Outcue", 698: "Short Document ID", 699: "Unique Document ID", 700: "Owner ID", 712: null, 713: null, 714: "ObjectData Preview Data", 1802: null, 1812: null, 1882: null, 1887: null };
-obj = {
+const obj2 = { 256: null, 261: null, 276: null, 278: null, 286: "Service Identifier", 296: "Envelope Number", 306: "Product ID", 316: "Envelope Priority", 326: null, 336: null, 346: null, 356: "UNO", 376: null, 378: null, 512: null, 515: "Object Type Reference", 516: "Object Attribute Reference", 517: "Object Name", 519: "Edit Status", 520: null, 522: "Urgency", 524: null, 527: "Category", 532: null, 534: "Fixture Identifier", 537: null, 538: null, 539: null, 542: "Release Date", 547: "Release Time", 549: "Expiration Date", 550: "Expiration Time", 552: "Special Instructions", 554: null, 557: null, 559: null, 562: null, 567: null, 572: null, 574: null, 575: null, 577: "Originating Program", 582: "Program Version", 587: null, 592: null, 597: null, 602: "City", 604: "Sub-location", 607: "Province/State", 612: "Country/Primary Location Code", 613: "Country/Primary Location Name", 615: "Original Transmission Reference", 617: "Headline", 622: "Credit", 627: "Source", 628: "Copyright Notice", 630: null, 632: "Caption/Abstract", 634: null, 637: null, 642: "Image Type", 643: null, 647: "Language Identifier", 662: null, 663: null, 664: null, 665: null, 666: "Audio Outcue", 698: "Short Document ID", 699: "Unique Document ID", 700: "Owner ID", 712: null, 713: null, 714: "ObjectData Preview Data", 1802: null, 1812: null, 1882: null, 1887: null };
+obj2[256] = {
   name: "Model Version",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
   }
 };
-obj[256] = obj;
-obj[261] = { name: "Destination", repeatable: true };
-obj[276] = {
+obj2[261] = { name: "Destination", repeatable: true };
+obj2[276] = {
   name: "File Format",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
   }
 };
-obj[278] = {
+obj2[278] = {
   name: "File Format Version",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
   }
 };
-obj[326] = { name: "Date Sent", description: getCreationDate };
-obj[336] = { name: "Time Sent", description: getCreationTime };
-obj[346] = { name: "Coded Character Set", description: getEncodingName, encoding_name: getEncodingName };
-obj[376] = {
+obj2[326] = { name: "Date Sent", description: getCreationDate };
+obj2[336] = { name: "Time Sent", description: getCreationTime };
+obj2[346] = { name: "Coded Character Set", description: getEncodingName, encoding_name: getEncodingName };
+obj2[376] = {
   name: "ARM Identifier",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
   }
 };
-obj[378] = {
+obj2[378] = {
   name: "ARM Version",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
   }
 };
-obj[512] = {
+obj2[512] = {
   name: "Record Version",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
   }
 };
-obj[520] = {
+obj2[520] = {
   name: "Editorial Update",
   description(value) {
     let str = "Unknown";
@@ -141,7 +140,7 @@ obj[520] = {
     return str;
   }
 };
-obj[524] = {
+obj2[524] = {
   name: "Subject Reference",
   repeatable: true,
   description(value) {
@@ -158,11 +157,11 @@ obj[524] = {
     return sum + str2;
   }
 };
-obj[532] = { name: "Supplemental Category", repeatable: true };
-obj[537] = { name: "Keywords", repeatable: true };
-obj[538] = { name: "Content Location Code", repeatable: true };
-obj[539] = { name: "Content Location Name", repeatable: true };
-obj[554] = {
+obj2[532] = { name: "Supplemental Category", repeatable: true };
+obj2[537] = { name: "Keywords", repeatable: true };
+obj2[538] = { name: "Content Location Code", repeatable: true };
+obj2[539] = { name: "Content Location Name", repeatable: true };
+obj2[554] = {
   name: "Action Advised",
   description(value) {
     const stringValue = _mod5319.getStringValue(value);
@@ -185,14 +184,14 @@ obj[554] = {
     return str;
   }
 };
-obj[557] = { name: "Reference Service", repeatable: true };
-obj[559] = { name: "Reference Date", repeatable: true };
-obj[562] = { name: "Reference Number", repeatable: true };
-obj[567] = { name: "Date Created", description: getCreationDate };
-obj[572] = { name: "Time Created", description: getCreationTime };
-obj[574] = { name: "Digital Creation Date", description: getCreationDate };
-obj[575] = { name: "Digital Creation Time", description: getCreationTime };
-obj[587] = {
+obj2[557] = { name: "Reference Service", repeatable: true };
+obj2[559] = { name: "Reference Date", repeatable: true };
+obj2[562] = { name: "Reference Number", repeatable: true };
+obj2[567] = { name: "Date Created", description: getCreationDate };
+obj2[572] = { name: "Time Created", description: getCreationTime };
+obj2[574] = { name: "Digital Creation Date", description: getCreationDate };
+obj2[575] = { name: "Digital Creation Time", description: getCreationTime };
+obj2[587] = {
   name: "Object Cycle",
   description(value) {
     const stringValue = _mod5319.getStringValue(value);
@@ -211,17 +210,17 @@ obj[587] = {
     return str;
   }
 };
-obj[592] = { name: "By-line", repeatable: true };
-obj[597] = { name: "By-line Title", repeatable: true };
-obj[630] = { name: "Contact", repeatable: true };
-obj[634] = { name: "Writer/Editor", repeatable: true };
-obj[637] = {
+obj2[592] = { name: "By-line", repeatable: true };
+obj2[597] = { name: "By-line Title", repeatable: true };
+obj2[630] = { name: "Contact", repeatable: true };
+obj2[634] = { name: "Writer/Editor", repeatable: true };
+obj2[637] = {
   name: "Rasterized Caption",
   description(arg0) {
     return arg0;
   }
 };
-obj[643] = {
+obj2[643] = {
   name: "Image Orientation",
   description(value) {
     const stringValue = _mod5319.getStringValue(value);
@@ -240,7 +239,7 @@ obj[643] = {
     return str;
   }
 };
-obj[662] = {
+obj2[662] = {
   name: "Audio Type",
   description(value) {
     let str = _mod5319.getStringValue(value);
@@ -279,13 +278,13 @@ obj[662] = {
     return str;
   }
 };
-obj[663] = {
+obj2[663] = {
   name: "Audio Sampling Rate",
   description(value) {
     return parseInt(_mod5319.getStringValue(value), 10) + " Hz";
   }
 };
-obj[664] = {
+obj2[664] = {
   name: "Audio Sampling Resolution",
   description(value) {
     const parsed = parseInt(_mod5319.getStringValue(value), 10);
@@ -296,7 +295,7 @@ obj[664] = {
     return parsed + str;
   }
 };
-obj[665] = {
+obj2[665] = {
   name: "Audio Duration",
   description(value) {
     const stringValue = _mod5319.getStringValue(value);
@@ -309,7 +308,7 @@ obj[665] = {
     return text2;
   }
 };
-obj[712] = {
+obj2[712] = {
   name(arg0) {
     let str = "Record 2 destination";
     if (2 === arg0.length) {
@@ -447,7 +446,7 @@ obj[712] = {
     }
   }
 };
-obj[713] = {
+obj2[713] = {
   name: "ObjectData Preview File Format Version",
   description(value, ObjectData_Preview_File_Format) {
     const obj = { "00": { "00": "1" }, "01": { "01": "1", "02": "2", "03": "3", "04": "4" }, "02": { "04": "4" }, "03": { "01": "5.0", "02": "6.0" }, "04": { "01": "1.40" }, "05": { "01": "2" }, "06": { "01": "1" }, 11: null, 20: null, 21: null };
@@ -467,13 +466,13 @@ obj[713] = {
     return stringValue;
   }
 };
-obj[1802] = {
+obj2[1802] = {
   name: "Size Mode",
   description(arg0) {
     return arg0[0].toString();
   }
 };
-obj[1812] = {
+obj2[1812] = {
   name: "Max Subfile Size",
   description(arg0) {
     let length;
@@ -491,7 +490,7 @@ obj[1812] = {
     return num3.toString();
   }
 };
-obj[1882] = {
+obj2[1882] = {
   name: "ObjectData Size Announced",
   description(arg0) {
     let length;
@@ -509,7 +508,7 @@ obj[1882] = {
     return num3.toString();
   }
 };
-obj[1887] = {
+obj2[1887] = {
   name: "Maximum ObjectData Size",
   description(arg0) {
     let length;
@@ -527,6 +526,6 @@ obj[1887] = {
     return num3.toString();
   }
 };
-obj.iptc = obj;
+obj.iptc = obj2;
 
 export default obj;

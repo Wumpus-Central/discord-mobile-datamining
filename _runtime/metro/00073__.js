@@ -38,14 +38,14 @@ function getViewManagerConfig(arg0) {
           getConstants()[arg0] = tmp15.viewConfig;
           (function lazifyViewManagerConfig(arg0) {
             if (!c7) {
-              obj = closure_2(74);
-              constants = obj.getConstants();
+              constants = closure_2(74).getConstants();
               c7 = true;
+              obj = closure_2(74);
             }
             closure_0 = tmp3;
             closure_4[arg0] = constants[arg0];
             if (constants[arg0].Manager) {
-              obj = {
+              const obj3 = {
                 get() {
                     const tmp = require("genModule").default[closure_0.Manager];
                     closure_0 = tmp;
@@ -62,9 +62,9 @@ function getViewManagerConfig(arg0) {
                     return obj;
                   }
               };
-              closure_1(49).default(tmp3, "Constants", obj);
+              closure_1(49).default(tmp3, "Constants", obj3);
               const obj2 = closure_1(49);
-              obj = {
+              const obj5 = {
                 get() {
                     const tmp = require("genModule").default[closure_0.Manager];
                     closure_0 = tmp;
@@ -83,7 +83,7 @@ function getViewManagerConfig(arg0) {
                     return obj;
                   }
               };
-              closure_1(49).default(tmp3, "Commands", obj);
+              closure_1(49).default(tmp3, "Commands", obj5);
               const obj4 = closure_1(49);
             }
           })(arg0);
@@ -129,12 +129,11 @@ if (timestampProducer.ViewManagerNames) {
   const ViewManagerNames = require("UIManager").getConstants().ViewManagerNames;
   let item = ViewManagerNames.forEach((item) => {
     closure_0 = item;
-    obj = {
+    defineLazyObjectProperty.default(require("UIManager"), item, {
       get() {
         return require("nullthrows")(require("UIManager").getConstantsForViewManager)(closure_0);
       }
-    };
-    obj.default(require("UIManager"), item, obj);
+    });
   });
   const importDefaultResult1 = require("UIManager");
 }
@@ -150,19 +149,19 @@ if (!global.nativeCallSyncHook) {
     if (!_default.includes(item)) {
       if (!dependencyMap[item]) {
         if (!c7) {
-          obj = require("UIManager");
-          constants = obj.getConstants();
+          constants = require("UIManager").getConstants();
           c7 = true;
+          obj = require("UIManager");
         }
         tmp3[item] = constants[item];
       }
-      obj = {
+      const obj2 = {
         get() {
             console.warn("Accessing view manager configs directly off UIManager via UIManager['" + closure_0 + "'] is no longer supported. Use UIManager.getViewManagerConfig('" + closure_0 + "') instead.");
             return obj.getViewManagerConfig(closure_0);
           }
       };
-      defineLazyObjectProperty.default(require("UIManager"), item, obj);
+      defineLazyObjectProperty.default(require("UIManager"), item, obj2);
       const tmpResult = defineLazyObjectProperty;
     }
     _default = _mod76.default;

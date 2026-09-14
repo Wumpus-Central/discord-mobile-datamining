@@ -34,12 +34,11 @@ const entry = {
     const self = this;
     this.worklet = worklet;
     this.eventNames = eventNames;
-    let arr = _classPrivateFieldBase(this, closure_5)[closure_5];
-    let item = arr.forEach((arr) => {
+    let item = _classPrivateFieldBase(this, closure_5)[closure_5].forEach((arr) => {
       const item = arr.forEach((item) => _self(closure_1_1[5]).unregisterEventHandler(item));
     });
-    arr = Array.from(_classPrivateFieldBase(this, closure_4)[closure_4]);
-    const item1 = arr.forEach((item) => {
+    const arr = _classPrivateFieldBase(this, closure_5)[closure_5];
+    const item1 = Array.from(_classPrivateFieldBase(this, closure_4)[closure_4]).forEach((item) => {
       _self = item;
       const eventNames = _self.eventNames;
       const mapped = eventNames.map((item) => WorkletEventHandlerWeb(1680).registerEventHandler(self.worklet, item, closure_0));

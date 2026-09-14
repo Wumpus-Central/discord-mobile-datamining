@@ -1,60 +1,130 @@
 // === Module 12983: ? ===
 
 // Module 12983
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
+import _mod12927 from "module_12927" /* 12927 */;
+import _mod12954 from "module_12954" /* 12954 */;
+import _mod12955 from "module_12955" /* 12955 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+function setupIntegration(on, name, arg2) {
+  closure_0 = on;
+  if (arg2[name.name]) {
+    if (_mod12955.DEBUG_BUILD) {
+      const logger2 = _mod12927.logger;
+      const _HermesInternal2 = HermesInternal;
+      logger2.log("Integration skipped because it was already installed: " + name.name);
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+  } else {
+    arg2[name.name] = name;
+    if (tmp) {
+      name.setupOnce();
+      items.push(name.name);
+    }
+    if (tmp4) {
+      name.setup(on);
+    }
+    if (typeof name.preprocessEvent === "function") {
+      const preprocessEvent = name.preprocessEvent;
+      closure_1 = preprocessEvent.bind(name);
+      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
+    }
+    if (typeof name.processEvent === "function") {
+      const processEvent = name.processEvent;
+      closure_2 = processEvent.bind(name);
+      const _Object = Object;
+      const obj = { id: name.name };
+      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
+    }
+    if (_mod12955.DEBUG_BUILD) {
+      const logger = _mod12927.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Integration installed: " + name.name);
+    }
+    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
+    tmp4 = name.setup && typeof name.setup === "function";
   }
 }
-_possibleConstructorReturn;
-class SentryError {
-  constructor(arg0) {
-    str = require;
-    if (require === undefined) {
-      str = "warn";
+let items = [];
+
+export const addIntegration = function addIntegration(name) {
+  const client = _mod12954.getClient();
+  if (client) {
+    client.addIntegration(name);
+  } else if (_mod12955.DEBUG_BUILD) {
+    const logger = _mod12927.logger;
+    const _HermesInternal = HermesInternal;
+    logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
+  }
+};
+export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
+  const iter = arg1[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let obj = nextResult;
+    if (nextResult) {
+      let afterAllSetup = obj.afterAllSetup;
     }
-    self = this;
-    tmp = closure_0(this, SentryError);
+    if (nextResult) {
+      let afterAllSetupResult = obj.afterAllSetup(arg0);
+    }
+    continue;
+  }
+};
+export function defineIntegration(arg0) {
+  return arg0;
+}
+export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
+  const arr = defaultIntegrations.defaultIntegrations || [];
+  const integrations = defaultIntegrations.integrations;
+  const item = arr.forEach((item) => {
+    item.isDefaultInstance = true;
+  });
+  if (Array.isArray(integrations)) {
     items = [];
-    items[0] = global;
-    tmp2 = c2;
-    obj = c2(SentryError);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
+    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
+    let arr2 = items;
+  } else {
+    arr2 = arr;
+    if (typeof integrations === "function") {
+      const integrationsResult = integrations(arr);
+      const _Array = Array;
+      let tmp2 = integrationsResult;
+      if (!Array.isArray(integrationsResult)) {
+        const items1 = [integrationsResult];
+        tmp2 = items1;
+      }
+      arr2 = tmp2;
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.message = global;
-    tmp3Result.logLevel = str;
-    return tmp3Result;
   }
-}
-_classCallCheck = SentryError;
-_inherits(SentryError, _wrapNativeSuper(Error));
-
-export const SentryError = _createClass(SentryError);
+  const item1 = arr2.forEach((name) => {
+    name = name.name;
+    let isDefaultInstance = tmp2;
+    if (obj[name]) {
+      isDefaultInstance = !tmp2.isDefaultInstance;
+    }
+    if (isDefaultInstance) {
+      isDefaultInstance = name.isDefaultInstance;
+    }
+    if (!isDefaultInstance) {
+      obj[name] = name;
+    }
+  });
+  const values = Object.values({});
+  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
+  if (findIndexResult > -1) {
+    values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
+  }
+  return values;
+};
+export const installedIntegrations = items;
+export { setupIntegration };
+export const setupIntegrations = function setupIntegrations(arg0, arr) {
+  closure_0 = arg0;
+  const obj = {};
+  const item = arr.forEach((item) => {
+    if (item) {
+      setupIntegration(closure_0, item, obj);
+    }
+  });
+  return obj;
+};

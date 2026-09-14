@@ -3,8 +3,8 @@
 // Module 913 (runOnce)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export (arg0) => {
-  closure_0 = arg0;
+export (fn) => {
+  closure_0 = fn;
   c1 = false;
   return () => {
     if (!c1) {

@@ -8,7 +8,7 @@ import _createClass from "_createClass" /* 42 */;
 import metroRequire from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
 const LinearGradient = global;
 function _isNativeReflectConstruct() {
@@ -33,6 +33,7 @@ function _isNativeReflectConstruct() {
 let closure_3 = ["children", "colors", "end", "locations", "useAngle", "angleCenter", "angle", "start", "style"];
 let noop = fn(19);
 ({ createRef: closure_8, Component } = noop);
+let noop = noop_mod;
 get_ActivityIndicator = fn(17);
 ({ processColor: closure_9, StyleSheet: c10, View: closure_11 } = get_ActivityIndicator);
 const jsxProd = fn(21);
@@ -137,16 +138,16 @@ let items = [
         tmp6 = borderBottomLeftRadius2;
       }
       items[7] = tmp6;
-      let obj = { ref: this.gradientRef };
+      const obj = { ref: this.gradientRef };
       const merged = Object.assign(_objectWithoutProperties(props, closure_3));
       obj.style = style;
-      obj = { style: { position: "absolute", top: 0, left: 0, bottom: 0, right: 0 }, colors: null, startPoint: null, endPoint: null, locations: null, useAngle: null, angleCenter: null, angle: null, borderRadii: null };
+      const obj2 = { style: { position: "absolute", top: 0, left: 0, bottom: 0, right: 0 }, colors: null, startPoint: null, endPoint: null, locations: null, useAngle: null, angleCenter: null, angle: null, borderRadii: null };
       let mapped = colors;
       const tmp = _objectWithoutProperties(props, closure_3);
       if (!LinearGradient.RN$Bridgeless) {
         mapped = colors.map(React7);
       }
-      obj.colors = mapped;
+      obj2.colors = mapped;
       if (typeof convertPoint === "function") {
         const _Array = Array;
         let tmp23 = start;
@@ -158,7 +159,7 @@ let items = [
           [obj3.x, obj3.y] = start;
           tmp23 = point;
         }
-        obj.startPoint = tmp23;
+        obj2.startPoint = tmp23;
         if (typeof convertPoint === "function") {
           const _Array2 = Array;
           let tmp25 = end;
@@ -170,13 +171,13 @@ let items = [
             [obj4.x, obj4.y] = end;
             tmp25 = point1;
           }
-          obj.endPoint = tmp25;
+          obj2.endPoint = tmp25;
           let substr = null;
           if (locations) {
             substr = locations.slice(0, colors.length);
           }
-          obj.locations = substr;
-          obj.useAngle = useAngle;
+          obj2.locations = substr;
+          obj2.useAngle = useAngle;
           if (typeof convertPoint === "function") {
             const _Array3 = Array;
             let tmp28 = angleCenter;
@@ -188,10 +189,10 @@ let items = [
               [obj5.x, obj5.y] = angleCenter;
               tmp28 = point2;
             }
-            obj.angleCenter = tmp28;
-            obj.angle = angle;
-            obj.borderRadii = items;
-            const items1 = [closure_1_12(tmp18, obj), children];
+            obj2.angleCenter = tmp28;
+            obj2.angle = angle;
+            obj2.borderRadii = items;
+            const items1 = [closure_1_12(tmp18, obj2), children];
             obj.children = items1;
             return map1(closure_1_11, obj);
           } else {

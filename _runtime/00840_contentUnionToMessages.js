@@ -12,8 +12,8 @@ function contentUnionToMessages(contents) {
     str = "user";
   }
   if (typeof contents === "string") {
-    let obj = { role: str, content: contents };
-    const items = [obj];
+    const obj2 = { role: str, content: contents };
+    const items = [obj2];
     let flatMapResult = items;
   } else {
     const _Array = Array;
@@ -24,13 +24,13 @@ function contentUnionToMessages(contents) {
         if (contents) {
           if (!("role" in contents)) {
             if ("parts" in contents) {
-              obj = {};
+              const obj3 = {};
               const merged = Object.assign(contents);
-              obj.role = str;
-              const items1 = [obj];
+              obj3.role = str;
+              const items1 = [obj3];
               let items2 = items1;
             } else {
-              obj = { role: str, content: contents };
+              const obj = { role: str, content: contents };
               items2 = [obj];
             }
           }

@@ -1,67 +1,75 @@
 // === Module 3905: differenceInBusinessDays ===
 
 // Module 3905 (differenceInBusinessDays)
-import module_3873 from "module_3873" /* 3873 */;
-import differenceInCalendarDays from "differenceInCalendarDays" /* 3887 */;
-import module_3906 from "module_3906" /* 3906 */;
-import module_3907 from "module_3907" /* 3907 */;
-import module_3876 from "module_3876" /* 3876 */;
-import _typeof from "module_3725" /* 3725 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
-import module_3729 from "module_3729" /* 3729 */;
+import module_3873_mod from "module_3873" /* 3873 */;
+import differenceInCalendarDays_mod from "differenceInCalendarDays" /* 3887 */;
+import module_3906_mod from "module_3906" /* 3906 */;
+import module_3907_mod from "module_3907" /* 3907 */;
+import module_3876_mod from "module_3876" /* 3876 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import module_3729_mod from "module_3729" /* 3729 */;
 
+let module_3873 = module_3873_mod;
 if (!module_3873) {
-  let obj = { default: module_3873 };
+  const obj = { default: module_3873 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3873;
 }
 module_3873 = tmp3;
+let differenceInCalendarDays = differenceInCalendarDays_mod;
 if (!differenceInCalendarDays) {
-  obj = { default: differenceInCalendarDays };
-  let tmp5 = obj;
+  const obj2 = { default: differenceInCalendarDays };
+  let tmp5 = obj2;
 } else {
   tmp5 = differenceInCalendarDays;
 }
 differenceInCalendarDays = tmp5;
+let module_3906 = module_3906_mod;
 if (!module_3906) {
-  obj = { default: module_3906 };
-  let tmp7 = obj;
+  const obj3 = { default: module_3906 };
+  let tmp7 = obj3;
 } else {
   tmp7 = module_3906;
 }
 module_3906 = tmp7;
+let module_3907 = module_3907_mod;
 if (!module_3907) {
-  const obj1 = { default: module_3907 };
-  let tmp9 = obj1;
+  const obj4 = { default: module_3907 };
+  let tmp9 = obj4;
 } else {
   tmp9 = module_3907;
 }
 module_3907 = tmp9;
+let module_3876 = module_3876_mod;
 if (!module_3876) {
-  const obj2 = { default: module_3876 };
-  let tmp11 = obj2;
+  const obj5 = { default: module_3876 };
+  let tmp11 = obj5;
 } else {
   tmp11 = module_3876;
 }
 module_3876 = tmp11;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj3 = { default: _typeof };
-  let tmp13 = obj3;
+  const obj6 = { default: _typeof };
+  let tmp13 = obj6;
 } else {
   tmp13 = _typeof;
 }
 _typeof = tmp13;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp15 = obj4;
+  const obj7 = { default: requiredArgs };
+  let tmp15 = obj7;
 } else {
   tmp15 = requiredArgs;
 }
 requiredArgs = tmp15;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  const obj5 = { default: module_3729 };
-  let tmp17 = obj5;
+  const obj8 = { default: module_3729 };
+  let tmp17 = obj8;
 } else {
   tmp17 = module_3729;
 }

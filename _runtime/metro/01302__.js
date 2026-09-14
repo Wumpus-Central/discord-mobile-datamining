@@ -2,4 +2,4 @@
 
 // Module 1302
 
-export default RangeError;
+export default SyntaxError;

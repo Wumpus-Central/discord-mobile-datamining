@@ -29,14 +29,13 @@ function withSequence(withTimingResult) {
         };
         return obj;
       };
-      let obj = { getReduceMotionForAnimation: substr(1676).getReduceMotionForAnimation, reduceMotion: undefined };
-      fn2.__closure = obj;
+      const obj2 = { getReduceMotionForAnimation: substr(1676).getReduceMotionForAnimation, reduceMotion: undefined };
+      fn2.__closure = obj2;
       fn2.__workletHash = 3306563388298;
       fn2.__initData = __initData;
       let defineAnimationResult = substr(1676).defineAnimation(0, fn2);
       const obj3 = substr(1676);
     } else {
-      substr(1676);
       const fn = function s() {
         const mapped = substr.map((fn) => {
           let tmp = fn;
@@ -134,11 +133,12 @@ function withSequence(withTimingResult) {
         };
         return obj;
       };
-      obj = { _animations: substr, getReduceMotionForAnimation: substr(1676).getReduceMotionForAnimation, reduceMotion: undefined };
-      fn.__closure = obj;
+      const obj4 = { _animations: substr, getReduceMotionForAnimation: substr(1676).getReduceMotionForAnimation, reduceMotion: undefined };
+      fn.__closure = obj4;
       fn.__workletHash = 13427604040510;
       fn.__initData = __initData2;
-      defineAnimationResult = obj.defineAnimation(substr[0], fn);
+      defineAnimationResult = substr(1676).defineAnimation(substr[0], fn);
+      let obj = substr(1676);
     }
     return defineAnimationResult;
   } else if (typeof withTimingResult === "string") {

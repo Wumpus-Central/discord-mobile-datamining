@@ -52,18 +52,17 @@ let items = [
       CellRenderMask(38)(tmp2, "CellRenderMask.addCells called with invalid cell range");
       if (VirtualizedList.last >= VirtualizedList.first) {
         let num7 = 2;
-        [tmp24, tmp25] = _slicedToArray(self._findRegion(VirtualizedList.first), 2);
+        [tmp24, tmp25] = self._findRegion(VirtualizedList.first);
         const tmp23 = _slicedToArray(self._findRegion(VirtualizedList.first), 2);
-        [last, splice] = _slicedToArray(self._findRegion(VirtualizedList.last), 2);
+        [last, splice] = self._findRegion(VirtualizedList.last);
         const items = [];
-        let obj = {};
+        const obj = {};
         const merged = Object.assign(VirtualizedList);
         obj.isSpacer = false;
         if (tmp24.first < obj.first) {
           if (tmp24.isSpacer) {
-            obj = { first: tmp24.first, last: null, isSpacer: true };
-            obj.last = obj.first - 1;
-            items.push(obj);
+            const obj2 = { first: tmp24.first, last: obj.first - 1, isSpacer: true };
+            items.push(obj2);
           } else {
             obj.first = tmp24.first;
           }
@@ -71,9 +70,9 @@ let items = [
         let items1 = [];
         if (last.last <= obj.last) {
           const items2 = [];
-          let arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
           items2[arraySpreadResult] = obj;
-          arraySpreadResult = HermesBuiltin.arraySpread(items1, arraySpreadResult + 1);
+          HermesBuiltin.arraySpread(items1, arraySpreadResult + 1);
           items1 = self._regions;
           const sum = splice - tmp25 + 1;
           splice = items1.splice;
@@ -83,11 +82,10 @@ let items = [
         } else if (!last.isSpacer) {
           obj.last = last.last;
         }
-        obj = { first: null, last: null, isSpacer: true };
-        obj.first = obj.last + 1;
+        const obj3 = { first: obj.last + 1, last: null, isSpacer: true };
         last = last.last;
-        obj.last = last;
-        items1.push(obj);
+        obj3.last = last;
+        items1.push(obj3);
         const tmp26 = _slicedToArray(self._findRegion(VirtualizedList.last), 2);
       }
       const tmp = CellRenderMask(38);

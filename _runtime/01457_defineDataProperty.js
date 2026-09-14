@@ -1,24 +1,24 @@
 // === Module 1457: defineDataProperty ===
 
 // Module 1457 (defineDataProperty)
-import _mod1283 from "module_1283" /* 1283 */;
-import _mod1284 from "module_1284" /* 1284 */;
-import _mod1304 from "module_1304" /* 1304 */;
-import flag from "flag" /* 1306 */;
+import _mod1281 from "module_1281" /* 1281 */;
+import _mod1282 from "module_1282" /* 1282 */;
+import _mod1302 from "module_1302" /* 1302 */;
+import flag from "flag" /* 1304 */;
 
 
 export default function defineDataProperty(obj, str, value) {
   if (obj) {
     if (typeof str !== "string") {
       if (typeof str !== "symbol") {
-        const tmp44 = new _mod1283("`property` must be a string or a symbol`");
+        const tmp44 = new _mod1281("`property` must be a string or a symbol`");
         throw tmp44;
       }
     }
     if (arguments.length > 3) {
       if (typeof arguments[3] !== "boolean") {
         if (null !== arguments[3]) {
-          const tmp38 = new _mod1283("`nonEnumerable`, if provided, must be a boolean or null");
+          const tmp38 = new _mod1281("`nonEnumerable`, if provided, must be a boolean or null");
           throw tmp38;
         }
       }
@@ -26,7 +26,7 @@ export default function defineDataProperty(obj, str, value) {
     if (arguments.length > 4) {
       if (typeof arguments[4] !== "boolean") {
         if (null !== arguments[4]) {
-          const tmp32 = new _mod1283("`nonWritable`, if provided, must be a boolean or null");
+          const tmp32 = new _mod1281("`nonWritable`, if provided, must be a boolean or null");
           throw tmp32;
         }
       }
@@ -34,14 +34,14 @@ export default function defineDataProperty(obj, str, value) {
     if (arguments.length > 5) {
       if (typeof arguments[5] !== "boolean") {
         if (null !== arguments[5]) {
-          const tmp26 = new _mod1283("`nonConfigurable`, if provided, must be a boolean or null");
+          const tmp26 = new _mod1281("`nonConfigurable`, if provided, must be a boolean or null");
           throw tmp26;
         }
       }
     }
     if (arguments.length > 6) {
       if (typeof arguments[6] !== "boolean") {
-        const tmp20 = new _mod1283("`loose`, if provided, must be a boolean");
+        const tmp20 = new _mod1281("`loose`, if provided, must be a boolean");
         throw tmp20;
       }
     }
@@ -57,7 +57,7 @@ export default function defineDataProperty(obj, str, value) {
     if (arguments.length > 5) {
       tmp5 = arguments[5];
     }
-    const tmp9 = _mod1284 && _mod1284(obj, str);
+    const tmp9 = _mod1282 && _mod1282(obj, str);
     if (flag) {
       if (null === tmp5) {
         if (tmp9) {
@@ -81,12 +81,12 @@ export default function defineDataProperty(obj, str, value) {
       configurable = !tmp5;
     } else {
       if (!tmp6) {
-        const tmp13 = new _mod1304("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
+        const tmp13 = new _mod1302("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
         throw tmp13;
       }
       obj[str] = value;
     }
     tmp6 = arguments.length > 6 && arguments[6];
   }
-  throw new _mod1283("`obj` must be an object or a function`");
+  throw new _mod1281("`obj` must be an object or a function`");
 };

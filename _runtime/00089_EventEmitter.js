@@ -2,10 +2,11 @@
 
 // Module 89 (EventEmitter)
 import _classPrivateFieldKeyDefault from "_classPrivateFieldKey" /* 91 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
 
+let _classCallCheck = _classCallCheck_mod;
 let closure_2 = _classPrivateFieldKeyDefault("registry");
 class EventEmitter {
   constructor() {
@@ -33,15 +34,15 @@ const entry = {
         tmp16[arg0] = set;
         obj = set;
       }
-      obj = {
+      const obj2 = {
         context,
         listener,
         remove() {
-            obj.delete(obj);
+            obj.delete(obj2);
           }
       };
-      obj.add(obj);
-      return obj;
+      obj.add(obj2);
+      return obj2;
     }
   }
 };

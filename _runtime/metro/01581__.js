@@ -7,6 +7,8 @@ import _mod1584 from "module_1584" /* 1584 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_2 = ["children", "id", "initialRouteName", "layout", "screenLayout", "screenListeners", "screenOptions", "UNSTABLE_routeNamesChangeBehavior", "UNSTABLE_router"];
 const jsx = fn(21).jsx;
@@ -31,14 +33,13 @@ export const createStandardNavigationFactories = function createStandardNavigati
   } else {
     let obj = {
       createNavigator: require("BaseNavigationContainer").createNavigatorFactory(function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
-          let obj = BaseNavigationContainer;
-          const navigationBuilder = obj.useNavigationBuilder(closure_0, UNSTABLE_routeNamesChangeBehavior);
+          const navigationBuilder = BaseNavigationContainer.useNavigationBuilder(closure_0, UNSTABLE_routeNamesChangeBehavior);
           closure_1 = _mod1582.useBuildHref();
           let tmp2 = _mod1584;
           let flag = tmp2.useMemoArray;
           if (!("preloadedRoutes" in navigationBuilder.state)) {
-            let routes = navigationBuilder.state.routes;
-            const flagResult = flag(routes.map((key) => {
+            let routes1 = navigationBuilder.state.routes;
+            const flagResult = flag(routes1.map((key) => {
               const tmp = closure_1(key.name, key.params);
               const items = [{ key: key.key, name: key.name, params: key.params, href: tmp }, ];
               const items1 = [, , , ];
@@ -49,15 +50,14 @@ export const createStandardNavigationFactories = function createStandardNavigati
             }));
             closure_2 = flagResult;
             let items = [navigationBuilder.state.index, flagResult];
-            obj = {};
             const routes2 = noop.useMemo(() => ({ index: navigationBuilder.state.index, routes: flagResult }), items).routes;
             tmp2 = routes2[Symbol.iterator]();
             flag = true;
           } else {
             const _Array = Array;
           }
-          routes = navigationBuilder.state.routes;
-          routes = routes.concat(navigationBuilder.state.preloadedRoutes);
+          const routes = navigationBuilder.state.routes;
+          routes1 = routes.concat(navigationBuilder.state.preloadedRoutes);
         }),
       createScreen: null
     };

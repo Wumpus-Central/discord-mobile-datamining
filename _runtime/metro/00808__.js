@@ -43,14 +43,14 @@ function getNotificationAttributes(method, requestId, recordInputs) {
       const _String6 = String;
       obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_LOGGING_LOGGER_ATTRIBUTE] = String(requestId.logger);
     }
-    let data;
+    let data1;
     if (requestId != null) {
-      data = requestId.data;
+      data1 = requestId.data;
     }
-    if (undefined !== data) {
+    if (undefined !== data1) {
       obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_LOGGING_DATA_TYPE_ATTRIBUTE] = typeof requestId.data;
       if (recordInputs) {
-        data = requestId.data;
+        const data = requestId.data;
         let json = data;
         if (typeof data !== "string") {
           const _JSON = JSON;
@@ -127,20 +127,20 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 export const buildTypeSpecificAttributes = function buildTypeSpecificAttributes(request, message, params, recordInputs) {
   let obj = params;
   if ("request" === request) {
-    let obj2 = extractTargetInfo;
+    let obj2 = obj;
     if (!obj) {
-      obj = {};
+      obj2 = {};
     }
     let tmp5 = undefined !== message.id;
     if (tmp5) {
-      obj = {};
+      const obj4 = {};
       const _String = String;
-      obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_REQUEST_ID_ATTRIBUTE] = String(message.id);
-      tmp5 = obj;
+      obj4[CLIENT_ADDRESS_ATTRIBUTE.MCP_REQUEST_ID_ATTRIBUTE] = String(message.id);
+      tmp5 = obj4;
     }
-    const obj1 = {};
+    const obj5 = {};
     const merged = Object.assign(tmp5);
-    const merged1 = Object.assign(obj2.extractTargetInfo(message.method, obj).attributes);
+    const merged1 = Object.assign(extractTargetInfo.extractTargetInfo(message.method, obj2).attributes);
     if (recordInputs) {
       if (!obj) {
         obj = {};
@@ -151,13 +151,13 @@ export const buildTypeSpecificAttributes = function buildTypeSpecificAttributes(
       requestArguments = {};
     }
     const merged2 = Object.assign(requestArguments);
-    return obj1;
+    return obj5;
   } else {
-    obj2 = obj;
+    let obj6 = obj;
     if (!obj) {
-      obj2 = {};
+      obj6 = {};
     }
-    return getNotificationAttributes(message.method, obj2, recordInputs);
+    return getNotificationAttributes(message.method, obj6, recordInputs);
   }
 };
 export { getNotificationAttributes };

@@ -145,7 +145,7 @@ if (self2) {
       let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = _mod5267.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
       if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(item10079.toLowerCase())) {
         let FileTypes3 = tmp21(5267).FileTypes;
-        arr = items3.push(FileTypes3.getInfoByName(item10079));
+        let arr2 = items3.push(FileTypes3.getInfoByName(item10079));
       }
       continue;
     }

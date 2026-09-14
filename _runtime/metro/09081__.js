@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "tegn", verb: "havde" }, file: { unit: "bytes", verb: "havde" }, array: { unit: "elementer", verb: "indeholdt" }, set: { unit: "elementer", verb: "indeholdt" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "tegn", verb: "havde" }, file: { unit: "bytes", verb: "havde" }, array: { unit: "elementer", verb: "indeholdt" }, set: { unit: "elementer", verb: "indeholdt" } };
         closure_1 = { regex: "input", email: "e-mailadresse", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO dato- og klokkesl\u00E6t", date: "ISO-dato", time: "ISO-klokkesl\u00E6t", duration: "ISO-varighed", ipv4: "IPv4-omr\u00E5de", ipv6: "IPv6-omr\u00E5de", cidrv4: "IPv4-spektrum", cidrv6: "IPv6-spektrum", base64: "base64-kodet streng", base64url: "base64url-kodet streng", json_string: "JSON-streng", e164: "E.164-nummer", jwt: "JWT", template_literal: "input" };
         closure_2 = { nan: "NaN", string: "streng", number: "tal", boolean: "boolean", array: "liste", object: "objekt", set: "s\u00E6t", file: "fil" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp49 == null) {
                 tmp49 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Ugyldigt input: forventede instanceof " + code.expected + ", fik " + tmp49;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str31 = "<=";
               }
-              let tmp26 = obj[code.origin];
+              let tmp26 = obj2[code.origin];
               if (tmp26 == null) {
                 tmp26 = null;
               }
@@ -108,13 +107,13 @@ if (self2) {
                   str32 = "value";
                 }
                 const verb = tmp26.verb;
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str39 = tmp26.unit;
                 if (str39 == null) {
                   str39 = "elementer";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "For stor: forventede " + str32 + " " + verb + " " + str31 + " " + str + " " + str39;
+                let combined2 = "For stor: forventede " + str32 + " " + verb + " " + str31 + " " + str1 + " " + str39;
               } else {
                 let str33 = str32;
                 if (str32 == null) {
@@ -129,7 +128,7 @@ if (self2) {
               if (code.inclusive) {
                 str19 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
@@ -184,7 +183,6 @@ if (self2) {
               return "Ugyldigt input: matcher ingen af de tilladte typer";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Ugyldig v\u00E6rdi i ";
               return "Ugyldig v\u00E6rdi i " + code.origin;
             default:
               return "Ugyldigt input";

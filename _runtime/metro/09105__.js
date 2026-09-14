@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "tegn", verb: "\u00E5 ha" }, file: { unit: "bytes", verb: "\u00E5 ha" }, array: { unit: "elementer", verb: "\u00E5 inneholde" }, set: { unit: "elementer", verb: "\u00E5 inneholde" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "tegn", verb: "\u00E5 ha" }, file: { unit: "bytes", verb: "\u00E5 ha" }, array: { unit: "elementer", verb: "\u00E5 inneholde" }, set: { unit: "elementer", verb: "\u00E5 inneholde" } };
         closure_1 = { regex: "input", email: "e-postadresse", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO dato- og klokkeslett", date: "ISO-dato", time: "ISO-klokkeslett", duration: "ISO-varighet", ipv4: "IPv4-omr\u00E5de", ipv6: "IPv6-omr\u00E5de", cidrv4: "IPv4-spekter", cidrv6: "IPv6-spekter", base64: "base64-enkodet streng", base64url: "base64url-enkodet streng", json_string: "JSON-streng", e164: "E.164-nummer", jwt: "JWT", template_literal: "input" };
         closure_2 = { nan: "NaN", number: "tall", array: "liste" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Ugyldig input: forventet instanceof " + code.expected + ", fikk " + tmp48;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str24 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -104,13 +103,13 @@ if (self2) {
                 if (str25 == null) {
                   str25 = "value";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str31 = tmp27.unit;
                 if (str31 == null) {
                   str31 = "elementer";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "For stor(t): forventet " + str25 + " til \u00E5 ha " + str24 + str + " " + str31;
+                let combined2 = "For stor(t): forventet " + str25 + " til \u00E5 ha " + str24 + str1 + " " + str31;
               } else {
                 let str26 = str25;
                 if (str25 == null) {
@@ -125,18 +124,18 @@ if (self2) {
               if (code.inclusive) {
                 str18 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str45 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "For lite(n): forventet " + origin + " til \u00E5 ha " + str18 + str1 + " " + tmp15.unit;
+                let combined3 = "For lite(n): forventet " + origin + " til \u00E5 ha " + str18 + str45 + " " + tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "For lite(n): forventet " + origin + " til \u00E5 ha " + str18 + str1;
+                combined3 = "For lite(n): forventet " + origin + " til \u00E5 ha " + str18 + str45;
               }
               return combined3;
             case "invalid_format":
@@ -178,7 +177,6 @@ if (self2) {
               return "Ugyldig input";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Ugyldig verdi i ";
               return "Ugyldig verdi i " + code.origin;
             default:
               return "Ugyldig input";

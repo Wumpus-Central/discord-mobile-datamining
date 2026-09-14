@@ -19,76 +19,76 @@ const dependencyMap = arg6;
 export default {
   parseAppMarkers(byteLength, flag2) {
     if (_modDef5297.USE_TIFF) {
-      let tmpResult = _modDef5298;
       if (tmpResult.isTiffFile(byteLength)) {
-        tmpResult = _modDef5298;
-        const findTiffOffsetsResult = tmpResult.findTiffOffsets();
-        let obj = { fileType: { value: "tiff", description: "TIFF" } };
+        const tmpResult16 = _modDef5298;
+        const findTiffOffsetsResult = _modDef5298.findTiffOffsets();
+        const obj = { fileType: { value: "tiff", description: "TIFF" } };
         return _mod5294.objectAssign({}, findTiffOffsetsResult, obj);
       }
+      tmpResult = _modDef5298;
     }
     if (_modDef5297.USE_JPEG) {
-      if (tmpResult1.isJpegFile(byteLength)) {
-        const tmpResult2 = sumDefault;
+      if (tmpResult17.isJpegFile(byteLength)) {
+        const tmpResult18 = sumDefault;
         const findJpegOffsetsResult = sumDefault.findJpegOffsets(byteLength);
-        obj = { fileType: { value: "jpeg", description: "JPEG" } };
-        return _mod5294.objectAssign({}, findJpegOffsetsResult, obj);
+        const obj2 = { fileType: { value: "jpeg", description: "JPEG" } };
+        return _mod5294.objectAssign({}, findJpegOffsetsResult, obj2);
       }
-      tmpResult1 = sumDefault;
+      tmpResult17 = sumDefault;
     }
     if (_modDef5297.USE_PNG) {
-      if (tmpResult3.isPngFile(byteLength)) {
-        const tmpResult4 = PNG_CHUNK_TYPE_SIZEDefault;
+      if (tmpResult19.isPngFile(byteLength)) {
+        const tmpResult20 = PNG_CHUNK_TYPE_SIZEDefault;
         const findPngOffsetsResult = PNG_CHUNK_TYPE_SIZEDefault.findPngOffsets(byteLength, flag2);
-        const obj1 = { fileType: { value: "png", description: "PNG" } };
-        return _mod5294.objectAssign({}, findPngOffsetsResult, obj1);
+        const obj3 = { fileType: { value: "png", description: "PNG" } };
+        return _mod5294.objectAssign({}, findPngOffsetsResult, obj3);
       }
-      tmpResult3 = PNG_CHUNK_TYPE_SIZEDefault;
+      tmpResult19 = PNG_CHUNK_TYPE_SIZEDefault;
     }
     if (_modDef5297.USE_HEIC) {
-      if (tmpResult5.isHeicFile(byteLength)) {
-        const tmpResult6 = _modDef5302;
+      if (tmpResult21.isHeicFile(byteLength)) {
+        const tmpResult22 = _modDef5302;
         const findHeicOffsetsResult = _modDef5302.findHeicOffsets(byteLength);
-        const obj2 = { fileType: { value: "heic", description: "HEIC" } };
-        return _mod5294.objectAssign({}, findHeicOffsetsResult, obj2);
+        const obj4 = { fileType: { value: "heic", description: "HEIC" } };
+        return _mod5294.objectAssign({}, findHeicOffsetsResult, obj4);
       }
-      tmpResult5 = _modDef5302;
+      tmpResult21 = _modDef5302;
     }
     if (_modDef5297.USE_AVIF) {
-      if (tmpResult7.isAvifFile(byteLength)) {
-        const tmpResult8 = _modDef5306;
+      if (tmpResult23.isAvifFile(byteLength)) {
+        const tmpResult24 = _modDef5306;
         const findAvifOffsetsResult = _modDef5306.findAvifOffsets(byteLength);
-        const obj3 = { fileType: { value: "avif", description: "AVIF" } };
-        return _mod5294.objectAssign({}, findAvifOffsetsResult, obj3);
+        const obj5 = { fileType: { value: "avif", description: "AVIF" } };
+        return _mod5294.objectAssign({}, findAvifOffsetsResult, obj5);
       }
-      tmpResult7 = _modDef5306;
+      tmpResult23 = _modDef5306;
     }
     if (_modDef5297.USE_WEBP) {
-      if (tmpResult9.isWebpFile(byteLength)) {
-        const tmpResult10 = _modDef5307;
+      if (tmpResult25.isWebpFile(byteLength)) {
+        const tmpResult26 = _modDef5307;
         const findOffsetsResult = _modDef5307.findOffsets(byteLength);
-        const obj4 = { fileType: { value: "webp", description: "WebP" } };
-        return _mod5294.objectAssign({}, findOffsetsResult, obj4);
+        const obj6 = { fileType: { value: "webp", description: "WebP" } };
+        return _mod5294.objectAssign({}, findOffsetsResult, obj6);
       }
-      tmpResult9 = _modDef5307;
+      tmpResult25 = _modDef5307;
     }
     if (_modDef5297.USE_GIF) {
-      if (tmpResult11.isGifFile(byteLength)) {
-        const tmpResult12 = _modDef5308;
+      if (tmpResult27.isGifFile(byteLength)) {
+        const tmpResult28 = _modDef5308;
         const findOffsetsResult1 = _modDef5308.findOffsets(byteLength);
-        const obj5 = { fileType: { value: "gif", description: "GIF" } };
-        return _mod5294.objectAssign({}, findOffsetsResult1, obj5);
+        const obj7 = { fileType: { value: "gif", description: "GIF" } };
+        return _mod5294.objectAssign({}, findOffsetsResult1, obj7);
       }
-      tmpResult11 = _modDef5308;
+      tmpResult27 = _modDef5308;
     }
     if (_modDef5297.USE_XMP) {
-      if (tmpResult13.isXMLFile(byteLength)) {
-        const tmpResult14 = _modDef5309;
+      if (tmpResult29.isXMLFile(byteLength)) {
+        const tmpResult30 = _modDef5309;
         const findOffsetsResult2 = _modDef5309.findOffsets(byteLength);
-        const obj6 = { fileType: { value: "xml", description: "XML" } };
-        return _mod5294.objectAssign({}, findOffsetsResult2, obj6);
+        const obj8 = { fileType: { value: "xml", description: "XML" } };
+        return _mod5294.objectAssign({}, findOffsetsResult2, obj8);
       }
-      tmpResult13 = _modDef5309;
+      tmpResult29 = _modDef5309;
     }
     const error = new Error("Invalid image format");
     throw error;

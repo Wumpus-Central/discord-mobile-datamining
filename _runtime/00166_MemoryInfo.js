@@ -1,11 +1,12 @@
 // === Module 166: MemoryInfo ===
 
 // Module 166 (MemoryInfo)
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
 import _classPrivateFieldKey from "_classPrivateFieldKey" /* 91 */;
 
+let _classCallCheck = _classCallCheck_mod;
 let closure_2 = _classPrivateFieldKey("jsHeapSizeLimit");
 let closure_3 = _classPrivateFieldKey("totalJSHeapSize");
 let closure_4 = _classPrivateFieldKey("usedJSHeapSize");

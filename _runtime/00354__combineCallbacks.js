@@ -21,9 +21,9 @@ function _combineCallbacks(arg0, arg1) {
 }
 function maybeVectorAnim(g, obj, timingImpl) {
   if (g instanceof _modDef373) {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(obj);
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(obj);
     for (const key10066 in arg1) {
       ({ x, y } = arg1[key10066]);
@@ -34,19 +34,19 @@ function maybeVectorAnim(g, obj, timingImpl) {
       if (!tmp29) {
         continue;
       } else {
-        obj[key10066] = x;
-        obj[key10066] = y;
+        obj2[key10066] = x;
+        obj3[key10066] = y;
         continue;
       }
       continue;
     }
-    const items = [timingImpl(g.x, obj), timingImpl(g.y, obj)];
+    const items = [timingImpl(g.x, obj2), timingImpl(g.y, obj3)];
     if (typeof parallelImpl === "function") {
       let items1 = items;
       c1 = 0;
       closure_2 = {};
       closure_3 = false !== { stopTogether: false }.stopTogether;
-      const obj1 = {
+      const obj4 = {
         start(fn, arg1) {
               c1 = arg1;
               if (c1 !== fn.length) {
@@ -121,20 +121,20 @@ function maybeVectorAnim(g, obj, timingImpl) {
               return false;
             }
       };
-      let obj5 = obj1;
-      return obj1;
+      let obj8 = obj4;
+      return obj4;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    const tmp30 = timingImpl(g.x, obj);
+    const tmp30 = timingImpl(g.x, obj2);
   } else if (g instanceof _modDef374) {
     obj = {};
     const merged2 = Object.assign(obj);
-    const obj2 = {};
+    const obj5 = {};
     const merged3 = Object.assign(obj);
-    const obj3 = {};
+    const obj6 = {};
     const merged4 = Object.assign(obj);
-    const obj4 = {};
+    const obj7 = {};
     const merged5 = Object.assign(obj);
     for (const key10031 in arg1) {
       ({ r, g, b, a } = arg1[key10031]);
@@ -152,21 +152,21 @@ function maybeVectorAnim(g, obj, timingImpl) {
         continue;
       } else {
         obj[key10031] = r;
-        obj2[key10031] = g;
-        obj3[key10031] = b;
-        obj4[key10031] = a;
+        obj5[key10031] = g;
+        obj6[key10031] = b;
+        obj7[key10031] = a;
         continue;
       }
       continue;
     }
     const tmp18 = timingImpl(g.r, obj);
-    const tmp19 = timingImpl(g.g, obj2);
-    items1 = [tmp18, tmp19, timingImpl(g.b, obj3), timingImpl(g.a, obj4)];
+    const tmp19 = timingImpl(g.g, obj5);
+    items1 = [tmp18, tmp19, timingImpl(g.b, obj6), timingImpl(g.a, obj7)];
     if (typeof parallelImpl === "function") {
       c1 = 0;
       closure_2 = {};
       closure_3 = false !== { stopTogether: false }.stopTogether;
-      obj5 = {
+      obj8 = {
         start(fn, arg1) {
               c1 = arg1;
               if (c1 !== fn.length) {
@@ -241,11 +241,11 @@ function maybeVectorAnim(g, obj, timingImpl) {
               return false;
             }
       };
-      return obj5;
+      return obj8;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    const tmp20 = timingImpl(g.b, obj3);
+    const tmp20 = timingImpl(g.b, obj6);
   } else {
     return null;
   }
@@ -277,9 +277,9 @@ function springImpl(g, arg1) {
         }
         stopTracking.stopTracking();
         if (onComplete.toValue instanceof closure_1(start[8])) {
-          let tmp4Result = tmp4(start[9]);
-          tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, tmp4(start[10]), onComplete, fn);
-          stopTracking.track(tmp4Result);
+          const tmp4Result1 = new tmp4(start[9])(stopTracking, onComplete.toValue, tmp4(start[10]), onComplete, fn);
+          stopTracking.track(tmp4Result1);
+          const tmp4Result = tmp4(start[9]);
         } else {
           const tmp9 = new tmp4(start[10])(onComplete);
           stopTracking.animate(tmp9, fn);
@@ -345,9 +345,9 @@ function timingImpl(g, arg1) {
         }
         stopTracking.stopTracking();
         if (onComplete.toValue instanceof v0(start[8])) {
-          let tmp4Result = v0(start[9]);
-          tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, v0(start[11]), onComplete, fn);
-          stopTracking.track(tmp4Result);
+          const tmp4Result1 = new v0(start[9])(stopTracking, onComplete.toValue, v0(start[11]), onComplete, fn);
+          stopTracking.track(tmp4Result1);
+          const tmp4Result = v0(start[9]);
         } else {
           const tmp9 = new v0(start[11])(onComplete);
           stopTracking.animate(tmp9, fn);
@@ -622,9 +622,9 @@ function delayImpl(delay) {
           }
           stopTracking.stopTracking();
           if (onComplete.toValue instanceof v0(start[8])) {
-            let tmp4Result = v0(start[9]);
-            tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, v0(start[11]), onComplete, fn);
-            stopTracking.track(tmp4Result);
+            const tmp4Result1 = new v0(start[9])(stopTracking, onComplete.toValue, v0(start[11]), onComplete, fn);
+            stopTracking.track(tmp4Result1);
+            const tmp4Result = v0(start[9]);
           } else {
             const tmp9 = new v0(start[11])(onComplete);
             stopTracking.animate(tmp9, fn);
@@ -639,7 +639,7 @@ function delayImpl(delay) {
     };
     let tmp5 = maybeVectorAnim(tmp2, obj, timingImpl);
     if (!tmp5) {
-      obj = {
+      const obj2 = {
         start(arg0, isLooping) {
               obj = {};
               const merged = Object.assign(c1);
@@ -662,7 +662,7 @@ function delayImpl(delay) {
               return v0.useNativeDriver || false;
             }
       };
-      tmp5 = obj;
+      tmp5 = obj2;
     }
     return tmp5;
   } else {
@@ -734,9 +734,9 @@ export default {
                   }
                   stopTracking.stopTracking();
                   if (onComplete.toValue instanceof v0(start[8])) {
-                    let tmp4Result = v0(start[9]);
-                    tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, v0(start[11]), onComplete, fn);
-                    stopTracking.track(tmp4Result);
+                    const tmp4Result1 = new v0(start[9])(stopTracking, onComplete.toValue, v0(start[11]), onComplete, fn);
+                    stopTracking.track(tmp4Result1);
+                    const tmp4Result = v0(start[9]);
                   } else {
                     const tmp9 = new v0(start[11])(onComplete);
                     stopTracking.animate(tmp9, fn);
@@ -751,7 +751,7 @@ export default {
             }
             let tmp11 = maybeVectorAnim(tmp8, obj, timingImpl);
             if (!tmp11) {
-              obj = {
+              const obj2 = {
                 start(arg0, isLooping) {
                         obj = {};
                         const merged = Object.assign(c1);
@@ -774,12 +774,12 @@ export default {
                         return v0.useNativeDriver || false;
                       }
               };
-              tmp11 = obj;
+              tmp11 = obj2;
             }
             items = [tmp11, item];
             if (typeof tmp === "function") {
               c1 = 0;
-              obj = {
+              const obj3 = {
                 start(fn, arg1) {
                         items = fn;
                         closure_1 = arg1;
@@ -828,7 +828,7 @@ export default {
                         return false;
                       }
               };
-              return obj;
+              return obj3;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -938,7 +938,7 @@ export default {
     }
     c3 = false;
     closure_4 = 0;
-    obj = {
+    return {
       start(fn) {
         navigation = fn;
         function restart() {
@@ -961,16 +961,15 @@ export default {
             navigation(obj);
           }
         }
-        let obj = navigation;
         if (navigation) {
           if (0 !== restart) {
             if (obj._isUsingNativeDriver()) {
               obj._startNativeLoop(tmp);
             } else {
-              obj = { finished: true };
+              const obj2 = { finished: true };
               if (!c3) {
                 if (closure_4 !== tmp) {
-                  if (false !== obj.finished) {
+                  if (false !== obj2.finished) {
                     closure_4 = closure_4 + 1;
                     if (flag) {
                       obj.reset();
@@ -980,7 +979,7 @@ export default {
                 }
               }
               if (fn) {
-                fn(obj);
+                fn(obj2);
               }
             }
           }
@@ -1006,7 +1005,6 @@ export default {
         return navigation._isUsingNativeDriver();
       }
     };
-    return obj;
   },
   event(dependencyMap, useNativeDriver) {
     const animatedEvent = new AnimatedEvent.AnimatedEvent(dependencyMap, useNativeDriver);

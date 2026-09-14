@@ -10,6 +10,8 @@ import _mod9134 from "module_9134" /* 9134 */;
 import _mod9135 from "module_9135" /* 9135 */;
 import _mod9137 from "module_9137" /* 9137 */;
 
+const require = globalThis.__r;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -146,166 +148,166 @@ if (self2) {
     };
     Object.defineProperty(exports, "globalRegistry", obj);
     const _Object5 = Object;
-    obj = {
+    const obj2 = {
       enumerable: true,
       get() {
             return require("module_9064").registry;
           }
     };
-    Object.defineProperty(exports, "registry", obj);
+    Object.defineProperty(exports, "registry", obj2);
     const _Object6 = Object;
-    const obj1 = {
+    const obj3 = {
       enumerable: true,
       get() {
             return require("module_9064").config;
           }
     };
-    Object.defineProperty(exports, "config", obj1);
+    Object.defineProperty(exports, "config", obj3);
     const _Object7 = Object;
-    const obj2 = {
+    const obj4 = {
       enumerable: true,
       get() {
             return require("module_9064").$output;
           }
     };
-    Object.defineProperty(exports, "$output", obj2);
+    Object.defineProperty(exports, "$output", obj4);
     const _Object8 = Object;
-    const obj3 = {
+    const obj5 = {
       enumerable: true,
       get() {
             return require("module_9064").$input;
           }
     };
-    Object.defineProperty(exports, "$input", obj3);
+    Object.defineProperty(exports, "$input", obj5);
     const _Object9 = Object;
-    const obj4 = {
+    const obj6 = {
       enumerable: true,
       get() {
             return require("module_9064").$brand;
           }
     };
-    Object.defineProperty(exports, "$brand", obj4);
+    Object.defineProperty(exports, "$brand", obj6);
     const _Object10 = Object;
-    const obj5 = {
+    const obj7 = {
       enumerable: true,
       get() {
             return require("module_9064").clone;
           }
     };
-    Object.defineProperty(exports, "clone", obj5);
+    Object.defineProperty(exports, "clone", obj7);
     const _Object11 = Object;
-    const obj6 = {
+    const obj8 = {
       enumerable: true,
       get() {
             return require("module_9064").regexes;
           }
     };
-    Object.defineProperty(exports, "regexes", obj6);
+    Object.defineProperty(exports, "regexes", obj8);
     const _Object12 = Object;
-    const obj7 = {
+    const obj9 = {
       enumerable: true,
       get() {
             return require("module_9064").treeifyError;
           }
     };
-    Object.defineProperty(exports, "treeifyError", obj7);
+    Object.defineProperty(exports, "treeifyError", obj9);
     const _Object13 = Object;
-    const obj8 = {
+    const obj10 = {
       enumerable: true,
       get() {
             return require("module_9064").prettifyError;
           }
     };
-    Object.defineProperty(exports, "prettifyError", obj8);
+    Object.defineProperty(exports, "prettifyError", obj10);
     const _Object14 = Object;
-    const obj9 = {
+    const obj11 = {
       enumerable: true,
       get() {
             return require("module_9064").formatError;
           }
     };
-    Object.defineProperty(exports, "formatError", obj9);
+    Object.defineProperty(exports, "formatError", obj11);
     const _Object15 = Object;
-    const obj10 = {
+    const obj12 = {
       enumerable: true,
       get() {
             return require("module_9064").flattenError;
           }
     };
-    Object.defineProperty(exports, "flattenError", obj10);
+    Object.defineProperty(exports, "flattenError", obj12);
     const _Object16 = Object;
-    const obj11 = {
+    const obj13 = {
       enumerable: true,
       get() {
             return require("module_9064").TimePrecision;
           }
     };
-    Object.defineProperty(exports, "TimePrecision", obj11);
+    Object.defineProperty(exports, "TimePrecision", obj13);
     const _Object17 = Object;
-    const obj12 = {
+    const obj14 = {
       enumerable: true,
       get() {
             return require("module_9064").util;
           }
     };
-    Object.defineProperty(exports, "util", obj12);
+    Object.defineProperty(exports, "util", obj14);
     const _Object18 = Object;
-    const obj13 = {
+    const obj15 = {
       enumerable: true,
       get() {
             return require("module_9064").NEVER;
           }
     };
-    Object.defineProperty(exports, "NEVER", obj13);
+    Object.defineProperty(exports, "NEVER", obj15);
     const _Object19 = Object;
-    const obj14 = {
+    const obj16 = {
       enumerable: true,
       get() {
             return require("stringProcessor").toJSONSchema;
           }
     };
-    Object.defineProperty(exports, "toJSONSchema", obj14);
+    Object.defineProperty(exports, "toJSONSchema", obj16);
     const _Object20 = Object;
-    const obj15 = {
+    const obj17 = {
       enumerable: true,
       get() {
             return require("convertBaseSchema").fromJSONSchema;
           }
     };
-    Object.defineProperty(exports, "fromJSONSchema", obj15);
+    Object.defineProperty(exports, "fromJSONSchema", obj17);
     exports.locales = fn(ar);
     const _Object21 = Object;
-    const obj16 = {
+    const obj18 = {
       enumerable: true,
       get() {
             return require("module_9132").ZodISODateTime;
           }
     };
-    Object.defineProperty(exports, "ZodISODateTime", obj16);
+    Object.defineProperty(exports, "ZodISODateTime", obj18);
     const _Object22 = Object;
-    const obj17 = {
+    const obj19 = {
       enumerable: true,
       get() {
             return require("module_9132").ZodISODate;
           }
     };
-    Object.defineProperty(exports, "ZodISODate", obj17);
+    Object.defineProperty(exports, "ZodISODate", obj19);
     const _Object23 = Object;
-    const obj18 = {
+    const obj20 = {
       enumerable: true,
       get() {
             return require("module_9132").ZodISOTime;
           }
     };
-    Object.defineProperty(exports, "ZodISOTime", obj18);
+    Object.defineProperty(exports, "ZodISOTime", obj20);
     const _Object24 = Object;
-    const obj19 = {
+    const obj21 = {
       enumerable: true,
       get() {
             return require("module_9132").ZodISODuration;
           }
     };
-    Object.defineProperty(exports, "ZodISODuration", obj19);
+    Object.defineProperty(exports, "ZodISODuration", obj21);
     exports.iso = fn(require("module_9132"));
     exports.coerce = fn(_mod9137);
     const fn3Result = fn3(_mod9083);

@@ -7,6 +7,8 @@ import _modDef5715 from "module_5715" /* 5715 */;
 import _modDef5716 from "module_5716" /* 5716 */;
 import _modDef5717 from "module_5717" /* 5717 */;
 
+const require = globalThis.__r;
+
 const items = [_modDef5713, _modDef5714, _modDef5715, _modDef5716, _modDef5717];
 for (const key10025 in require("module_5718")) {
   arg5[key10025] = require("module_5718")[key10025];

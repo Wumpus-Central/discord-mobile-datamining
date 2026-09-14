@@ -7,6 +7,8 @@ import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
 import get_hairlineWidth from "get hairlineWidth" /* 254 */;
 
+const require = globalThis.__r;
+
 function InternalTextInput(value) {
   importDefault = value;
   ({ aria-busy: tmp, aria-checked: tmp2, aria-disabled: tmp3, aria-expanded: tmp4, aria-selected: tmp5, accessibilityState, id, tabIndex, selection, selectionColor, selectionHandleColor, cursorColor } = value);
@@ -66,8 +68,8 @@ function InternalTextInput(value) {
     }
     if (tmp5) {
       obj.selection = tmp4;
-      obj = { mostRecentEventCount, selection: tmp4 };
-      hitSlop(obj);
+      const obj2 = { mostRecentEventCount, selection: tmp4 };
+      hitSlop(obj2);
     }
     let tmp10 = 0 !== Object.keys(obj).length;
     if (tmp10) {
@@ -117,10 +119,9 @@ function InternalTextInput(value) {
   const tmp20 = onPress((current) => {
     first.current = current;
     if (null != current) {
-      obj = _modDef144;
-      obj.registerInput(current);
+      _modDef144.registerInput(current);
       const _Object = Object;
-      obj = {
+      const obj2 = {
         clear() {
             if (null != ref.current) {
               obj.setTextAndSelection(tmp.current, mostRecentEventCount, "", 0, 0);
@@ -143,7 +144,7 @@ function InternalTextInput(value) {
             }
           }
       };
-      const merged = Object.assign(current, obj);
+      const merged = Object.assign(current, obj2);
     }
   }, items1);
   if (flag == null) {
@@ -181,10 +182,9 @@ function InternalTextInput(value) {
   const tmp23 = require("module_334")(onPress((current) => {
     first.current = current;
     if (null != current) {
-      obj = _modDef144;
-      obj.registerInput(current);
+      _modDef144.registerInput(current);
       const _Object = Object;
-      obj = {
+      const obj2 = {
         clear() {
             if (null != ref.current) {
               obj.setTextAndSelection(tmp.current, mostRecentEventCount, "", 0, 0);
@@ -207,7 +207,7 @@ function InternalTextInput(value) {
             }
           }
       };
-      const merged = Object.assign(current, obj);
+      const merged = Object.assign(current, obj2);
     }
   }, items1), value.forwardedRef);
   if (require("get Version").isTesting) {
@@ -271,36 +271,36 @@ function InternalTextInput(value) {
         busy = accessibilityState.busy;
       }
     }
-    obj = { busy: tmp, checked: null, disabled: null, expanded: null, selected: null };
+    let obj2 = { busy: tmp, checked: null, disabled: null, expanded: null, selected: null };
     if (tmp2 == null) {
       let checked;
       if (accessibilityState != null) {
         checked = accessibilityState.checked;
       }
     }
-    obj.checked = tmp2;
+    obj2.checked = tmp2;
     if (tmp3 == null) {
       let disabled;
       if (accessibilityState != null) {
         disabled = accessibilityState.disabled;
       }
     }
-    obj.disabled = tmp3;
+    obj2.disabled = tmp3;
     if (tmp4 == null) {
       let expanded;
       if (accessibilityState != null) {
         expanded = accessibilityState.expanded;
       }
     }
-    obj.expanded = tmp4;
+    obj2.expanded = tmp4;
     if (tmp5 == null) {
       let selected;
       if (accessibilityState != null) {
         selected = accessibilityState.selected;
       }
     }
-    obj.selected = tmp5;
-    tmp30 = obj;
+    obj2.selected = tmp5;
+    tmp30 = obj2;
   }
   const style = value.style;
   const tmp36 = require("flattenStyle")(value.style);
@@ -312,18 +312,18 @@ function InternalTextInput(value) {
     }
     let tmp39 = null;
     if (typeof fontWeight === "number") {
-      obj = { fontWeight: tmp36.fontWeight.toString() };
-      tmp39 = obj;
+      let obj3 = { fontWeight: tmp36.fontWeight.toString() };
+      tmp39 = obj3;
     }
     let tmp40 = tmp39;
     if (null != tmp36.verticalAlign) {
-      let obj1 = tmp39;
+      let obj4 = tmp39;
       if (!tmp39) {
-        obj1 = {};
+        obj4 = {};
       }
-      obj1.textAlignVertical = closure_19[tmp36.verticalAlign];
-      obj1.verticalAlign = undefined;
-      tmp40 = obj1;
+      obj4.textAlignVertical = closure_19[tmp36.verticalAlign];
+      obj4.verticalAlign = undefined;
+      tmp40 = obj4;
     }
     tmp37 = style;
     if (null != tmp40) {
@@ -350,7 +350,7 @@ function InternalTextInput(value) {
   if (str6 == null) {
     str6 = "";
   }
-  let children = value.children;
+  const children = value.children;
   const Children = hitSlop.Children;
   const countResult = Children.count(children);
   let tmp47 = null != value.value;
@@ -363,54 +363,54 @@ function InternalTextInput(value) {
   require("module_38")(!tmp47, "Cannot specify both value and children.");
   let tmp49 = children;
   if (countResult > 1) {
-    let obj2 = { children };
+    const obj5 = { children };
     tmp49 = jsx(tmp21(tmp22[12]), { children });
   }
-  let obj3 = { ref: tmp23 };
+  const obj6 = { ref: tmp23 };
   let merged = Object.assign(tmp7);
   if (undefined === cursorColor) {
     cursorColor = selectionColor;
   }
-  const obj4 = { cursorColor, selectionColor, selectionHandleColor: null };
+  const obj7 = { cursorColor, selectionColor, selectionHandleColor: null };
   if (undefined === selectionHandleColor) {
     selectionHandleColor = selectionColor;
   }
   let tmp55 = false !== focusable;
-  obj4.selectionHandleColor = selectionHandleColor;
-  const merged1 = Object.assign(obj4);
+  obj7.selectionHandleColor = selectionHandleColor;
+  const merged1 = Object.assign(obj7);
   const merged2 = Object.assign(tmp6Result);
-  obj3.accessibilityLabel = prop;
-  obj3.accessibilityLabelledBy = prop1;
-  obj3.accessibilityState = tmp30;
-  obj3.accessible = false !== accessible;
-  obj3.acceptDragAndDropTypes = value.experimental_acceptDragAndDropTypes;
-  obj3.autoCapitalize = tmp42;
-  obj3.submitBehavior = str;
-  obj3.caretHidden = caretHidden;
-  obj3.children = tmp49;
-  obj3.disableFullscreenUI = value.disableFullscreenUI;
+  obj6.accessibilityLabel = prop;
+  obj6.accessibilityLabelledBy = prop1;
+  obj6.accessibilityState = tmp30;
+  obj6.accessible = false !== accessible;
+  obj6.acceptDragAndDropTypes = value.experimental_acceptDragAndDropTypes;
+  obj6.autoCapitalize = tmp42;
+  obj6.submitBehavior = str;
+  obj6.caretHidden = caretHidden;
+  obj6.children = tmp49;
+  obj6.disableFullscreenUI = value.disableFullscreenUI;
   if (undefined !== tabIndex) {
     tmp55 = !tabIndex;
   }
-  obj3.focusable = tmp55;
-  obj3.importantForAccessibility = str5;
-  obj3.mostRecentEventCount = mostRecentEventCount;
+  obj6.focusable = tmp55;
+  obj6.importantForAccessibility = str5;
+  obj6.mostRecentEventCount = mostRecentEventCount;
   if (id == null) {
     id = value.nativeID;
   }
-  obj3.nativeID = id;
+  obj6.nativeID = id;
   let numberOfLines = value.rows;
   if (numberOfLines == null) {
     numberOfLines = value.numberOfLines;
   }
-  obj3.numberOfLines = numberOfLines;
-  obj3.onBlur = function onBlur(arg0) {
+  obj6.numberOfLines = numberOfLines;
+  obj6.onBlur = function onBlur(arg0) {
     _modDef144.blurInput(first.current);
     if (value.onBlur) {
       value.onBlur(arg0);
     }
   };
-  obj3.onChange = function onChange(nativeEvent) {
+  obj6.onChange = function onChange(nativeEvent) {
     const text = nativeEvent.nativeEvent.text;
     if (value.onChange) {
       value.onChange(nativeEvent);
@@ -423,33 +423,32 @@ function InternalTextInput(value) {
       defaultValue(nativeEvent.nativeEvent.eventCount);
     }
   };
-  obj3.onFocus = function onFocus(arg0) {
+  obj6.onFocus = function onFocus(arg0) {
     _modDef144.focusInput(first.current);
     if (value.onFocus) {
       value.onFocus(arg0);
     }
   };
-  obj3.onScroll = function onScroll(arg0) {
+  obj6.onScroll = function onScroll(arg0) {
     if (value.onScroll) {
       value.onScroll(arg0);
     }
   };
-  obj3.onSelectionChange = function onSelectionChange(nativeEvent) {
-    obj = value;
+  obj6.onSelectionChange = function onSelectionChange(nativeEvent) {
     if (value.onSelectionChange) {
-      obj.onSelectionChange(nativeEvent);
+      value.onSelectionChange(nativeEvent);
     }
     if (null != first.current) {
-      obj = { mostRecentEventCount, selection: nativeEvent.nativeEvent.selection };
-      closure_6(obj);
+      const obj2 = { mostRecentEventCount, selection: nativeEvent.nativeEvent.selection };
+      closure_6(obj2);
     }
   };
-  obj3.placeholder = str6;
-  obj3.style = tmp37;
-  obj3.text = defaultValue;
-  obj3.textBreakStrategy = value.textBreakStrategy;
-  children = <defaultValue ref={tmp23} />;
-  return jsx(require("module_111"), { value: true, children });
+  obj6.placeholder = str6;
+  obj6.style = tmp37;
+  obj6.text = defaultValue;
+  obj6.textBreakStrategy = value.textBreakStrategy;
+  const children1 = <defaultValue ref={tmp23} />;
+  return jsx(require("module_111"), { value: true, children: children1 });
 }
 let closure_2 = ["aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-selected", "accessibilityState", "id", "tabIndex", "selection", "selectionColor", "selectionHandleColor", "cursorColor"];
 let closure_3 = ["onBlur", "onFocus"];
@@ -511,9 +510,8 @@ class TextInput {
   }
 }
 TextInput.displayName = "TextInput";
-let obj = { blurTextInput: _modDef144.blurTextInput, currentlyFocusedField: _modDef144.currentlyFocusedField, currentlyFocusedInput: _modDef144.currentlyFocusedInput, focusTextInput: _modDef144.focusTextInput };
-TextInput.State = obj;
-obj = get_hairlineWidth.create({ multilineDefault: { paddingTop: 5 } });
+TextInput.State = { blurTextInput: _modDef144.blurTextInput, currentlyFocusedField: _modDef144.currentlyFocusedField, currentlyFocusedInput: _modDef144.currentlyFocusedInput, focusTextInput: _modDef144.focusTextInput };
+get_hairlineWidth.create({ multilineDefault: { paddingTop: 5 } });
 let closure_19 = { auto: "auto", bottom: "bottom", middle: "center", top: "top" };
 
 export default TextInput;

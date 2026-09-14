@@ -1,8 +1,10 @@
 // === Module 6897: ? ===
 
 // Module 6897
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6729 */;
+import value2 from "value2" /* 6729 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
+
+const require = globalThis.__r;
 
 require = arg1;
 let dependencyMap = arg6;
@@ -18,8 +20,7 @@ export const useGestureHandler = (CONTENT, animatedContentGestureState, sharedVa
   __initData2 = handleOnStart;
   __initData3 = handleOnChange;
   __initData4 = handleOnEnd;
-  let obj = { handleOnStart: null, handleOnChange: null, handleOnEnd: null, handleOnFinalize: null };
-  let obj1 = require("cancelAnimation");
+  const obj = { handleOnStart: null, handleOnChange: null, handleOnEnd: null, handleOnFinalize: null };
   class R {
     constructor(arg0) {
       closure_1.value = closure_0(closure_1[1]).State.BEGAN;
@@ -28,12 +29,13 @@ export const useGestureHandler = (CONTENT, animatedContentGestureState, sharedVa
       return;
     }
   }
-  obj = { state: animatedContentGestureState, State: require("LegacyBaseButton").State, gestureSource: sharedValue, source: CONTENT, onStart: handleOnStart };
-  R.__closure = obj;
+  const obj2 = require("cancelAnimation");
+  R.__closure = { state: animatedContentGestureState, State: require("LegacyBaseButton").State, gestureSource: sharedValue, source: CONTENT, onStart: handleOnStart };
   R.__workletHash = 16113572067379;
   R.__initData = __initData;
   const items = [animatedContentGestureState, sharedValue, CONTENT, handleOnStart];
-  obj.handleOnStart = obj1.useWorkletCallback(R, items);
+  obj.handleOnStart = obj2.useWorkletCallback(R, items);
+  const obj3 = { state: animatedContentGestureState, State: require("LegacyBaseButton").State, gestureSource: sharedValue, source: CONTENT, onStart: handleOnStart };
   class U {
     constructor(arg0) {
       if (closure_2.value === closure_0) {
@@ -67,13 +69,13 @@ export const useGestureHandler = (CONTENT, animatedContentGestureState, sharedVa
       return;
     }
   }
-  obj = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onEnd: handleOnEnd };
-  C.__closure = obj;
+  const obj5 = require("cancelAnimation");
+  C.__closure = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("value2").GESTURE_SOURCE, onEnd: handleOnEnd };
   C.__workletHash = 10682034812271;
   C.__initData = __initData3;
   const items2 = [animatedContentGestureState, sharedValue, CONTENT, handleOnEnd];
-  obj.handleOnEnd = require("cancelAnimation").useWorkletCallback(C, items2);
-  const obj5 = require("cancelAnimation");
+  obj.handleOnEnd = obj5.useWorkletCallback(C, items2);
+  const obj6 = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("value2").GESTURE_SOURCE, onEnd: handleOnEnd };
   class T {
     constructor(arg0) {
       if (closure_2.value === closure_0) {
@@ -89,11 +91,11 @@ export const useGestureHandler = (CONTENT, animatedContentGestureState, sharedVa
       return;
     }
   }
-  obj1 = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onFinalize: handleOnFinalize };
-  T.__closure = obj1;
+  const obj7 = require("cancelAnimation");
+  T.__closure = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("value2").GESTURE_SOURCE, onFinalize: handleOnFinalize };
   T.__workletHash = 9696716573416;
   T.__initData = __initData4;
   const items3 = [animatedContentGestureState, sharedValue, CONTENT, handleOnFinalize];
-  obj.handleOnFinalize = require("cancelAnimation").useWorkletCallback(T, items3);
+  obj.handleOnFinalize = obj7.useWorkletCallback(T, items3);
   return obj;
 };

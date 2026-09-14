@@ -1,132 +1,109 @@
 // === Module 14476: ? ===
 
 // Module 14476
-import _mod17 from "module_17" /* 17 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import base64Decode from "base64Decode" /* 14477 */;
-import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
+import _createClassDefault from "_createClass" /* 42 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 
-let QuotaExceededError = global;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+function monadic(call, get, fn, g_v) {
+  let tmp2 = g_v;
+  if (!tmp) {
+    tmp2 = fn(g_v);
+  }
+  value = get.get(tmp2);
+  if (undefined !== value) {
+    return value;
+  } else {
+    const self = this;
+    let result = call;
+    call = call.call;
+    const tmp6 = typeof call === "unknown" ? result(g_v) : call(self, g_v);
+    result = get.set(tmp2, tmp6);
   }
 }
-_possibleConstructorReturn;
-const NativeModules = _mod17.NativeModules;
-class TypeMismatchError {
+function variadic(apply, get, fn) {
+  const call = slice.call;
+  if (typeof call === "unknown") {
+    let substr = slice(3);
+  } else {
+    substr = call(arguments, 3);
+  }
+  const tmp3 = fn(substr);
+  value = get.get(tmp3);
+  if (undefined === value) {
+    const self = this;
+    const applyResult = apply.apply(this, substr);
+    const result = get.set(tmp3, applyResult);
+    value = applyResult;
+  }
+  return value;
+}
+function strategyDefault(c165, cache) {
+  cache = cache.cache;
+  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
+}
+let _classCallCheck = _classCallCheck_mod;
+function serializerDefault() {
+  return JSON.stringify(arguments);
+}
+class ObjectWithoutPrototypeCache {
   constructor() {
-    self = this;
-    tmp = closure_3(this, QuotaExceededError);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(QuotaExceededError);
-    tmp3 = closure_4;
-    if (metroRequire()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = closure_0(this, ObjectWithoutPrototypeCache);
+    this.cache = Object.create(null);
+    return;
   }
 }
-QuotaExceededError = TypeMismatchError;
-_inherits(TypeMismatchError, _wrapNativeSuper(Error));
-let closure_8 = _createClass(TypeMismatchError);
-class QuotaExceededError {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, QuotaExceededError);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(QuotaExceededError);
-    tmp3 = closure_4;
-    if (metroRequire()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+_classCallCheck = ObjectWithoutPrototypeCache;
+const entry = {
+  key: "get",
+  value: function get(arg0) {
+    return this.cache[arg0];
   }
-}
-_inherits(QuotaExceededError, _wrapNativeSuper(Error));
-let closure_9 = _createClass(QuotaExceededError);
-if (typeof global.crypto !== "object") {
-  global.crypto = {};
-}
-if (typeof global.crypto.getRandomValues !== "function") {
-  global.crypto.getRandomValues = function getRandomValues(uint8Array) {
-    if (!(uint8Array instanceof Int8Array)) {
-      const _Uint8Array = Uint8Array;
-      if (!(uint8Array instanceof Uint8Array)) {
-        const _Int16Array = Int16Array;
-        if (!(uint8Array instanceof Int16Array)) {
-          const _Uint16Array = Uint16Array;
-          if (!(uint8Array instanceof Uint16Array)) {
-            const _Int32Array = Int32Array;
-            if (!(uint8Array instanceof Int32Array)) {
-              const _Uint32Array = Uint32Array;
-              if (!(uint8Array instanceof Uint32Array)) {
-                const _Uint8ClampedArray = Uint8ClampedArray;
-                if (!(uint8Array instanceof Uint8ClampedArray)) {
-                  const tmp4 = new closure_8("Expected an integer array");
-                  throw tmp4;
-                }
-              }
-            }
-          }
+};
+const items = [
+  entry,
+  {
+    key: "set",
+    value: function set(arg0, arg1) {
+      this.cache[arg0] = arg1;
+    }
+  }
+];
+let closure_5 = _createClassDefault(ObjectWithoutPrototypeCache, items);
+let closure_6 = {
+  create() {
+    return new closure_5();
+  }
+};
+
+export const memoize = function memoize(arg0, cache) {
+  if (cache) {
+    if (cache.cache) {
+      cache = cache.cache;
+    }
+    if (cache) {
+      if (cache.serializer) {
+        let serializer = cache.serializer;
+      }
+      if (cache) {
+        if (cache.strategy) {
+          let strategy = cache.strategy;
         }
+        const obj = { cache, serializer };
+        return strategy(arg0, obj);
       }
+      strategy = strategyDefault;
     }
-    if (uint8Array.byteLength > 65536) {
-      const tmp19 = new closure_9("Can only request a maximum of 65536 bytes");
-      throw tmp19;
-    } else {
-      const byteLength = uint8Array.byteLength;
-      if (NativeModules.RNGetRandomValues) {
-        const RNGetRandomValues = NativeModules.RNGetRandomValues;
-        let randomBase64 = RNGetRandomValues.getRandomBase64(byteLength);
-      } else if (NativeModules.ExpoRandom) {
-        const ExpoRandom2 = NativeModules.ExpoRandom;
-        randomBase64 = ExpoRandom2.getRandomBase64String(byteLength);
-      } else if (QuotaExceededError.ExpoModules) {
-        const ExpoRandom = QuotaExceededError.ExpoModules.ExpoRandom;
-        randomBase64 = ExpoRandom.getRandomBase64String(byteLength);
-      } else {
-        const _Error = Error;
-        const error = new Error("Native module not found");
-        throw error;
-      }
-      const _Uint8Array2 = Uint8Array;
-      uint8Array = new Uint8Array(uint8Array.buffer, uint8Array.byteOffset, uint8Array.byteLength);
-      base64Decode(randomBase64, uint8Array);
-      return uint8Array;
-    }
-  };
-}
+    serializer = serializerDefault;
+  }
+  cache = closure_6;
+};
+export const strategies = {
+  variadic: function strategyVariadic(c165, cache) {
+    cache = cache.cache;
+    return variadic.bind(this, c165, cache.create(), cache.serializer);
+  },
+  monadic: function strategyMonadic(c165, cache) {
+    cache = cache.cache;
+    return monadic.bind(this, c165, cache.create(), cache.serializer);
+  }
+};

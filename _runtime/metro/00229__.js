@@ -22,18 +22,18 @@ class Event {
       if (!(tmp5 in self)) {
         _Object = Object;
         closure_0 = tmp5;
-        obj = { get: null, set: null, configurable: true, enumerable: true };
-        obj.get = function get() {
+        obj1 = { get: null, set: null, configurable: true, enumerable: true };
+        obj1.get = function get() {
           value = weakMap.get(this);
           console.assert(null != value, "'this' is expected an Event object, but got", this);
           return value.event[closure_0];
         };
-        obj.set = function set(arg0) {
+        obj1.set = function set(arg0) {
           value = weakMap.get(this);
           console.assert(null != value, "'this' is expected an Event object, but got", this);
           value.event[closure_0] = arg0;
         };
-        definePropertyResult1 = Object.defineProperty(self, tmp5, obj);
+        definePropertyResult1 = Object.defineProperty(self, tmp5, obj1);
       }
     }
     return;
@@ -66,10 +66,10 @@ function getWrapper(prototypeOf) {
             }
           }
           const _Object5 = Object;
-          let obj = { constructor: null };
-          obj = { value: CustomEvent, configurable: true, writable: true };
-          obj.constructor = obj;
-          CustomEvent.prototype = Object.create(tmp9.prototype, obj);
+          const obj2 = { constructor: null };
+          const obj4 = { value: CustomEvent, configurable: true, writable: true };
+          obj2.constructor = obj4;
+          CustomEvent.prototype = Object.create(tmp9.prototype, obj2);
           tmp4 = CustomEvent;
           if (0 < keys.length) {
             class CustomEvent {
@@ -131,7 +131,7 @@ function getWrapper(prototypeOf) {
                   return;
                 }
               }
-              obj = {
+              const obj = {
                 value() {
                               value = weakMap.get(this);
                               console.assert(null != value, "'this' is expected an Event object, but got", this);
@@ -147,7 +147,7 @@ function getWrapper(prototypeOf) {
                 configurable: true,
                 enumerable: true
               };
-              let obj1 = obj;
+              let obj5 = obj;
             } else {
               class CustomEvent {
                 constructor(arg0, arg1) {
@@ -162,7 +162,7 @@ function getWrapper(prototypeOf) {
                   return;
                 }
               }
-              obj1 = {
+              obj5 = {
                 get() {
                               value = weakMap.get(this);
                               console.assert(null != value, "'this' is expected an Event object, but got", this);
@@ -177,7 +177,7 @@ function getWrapper(prototypeOf) {
                 enumerable: true
               };
             }
-            Object.defineProperty(CustomEvent.prototype, tmp, obj1);
+            Object.defineProperty(CustomEvent.prototype, tmp, obj5);
           }
         }
         const result = weakMap1.set(prototypeOf, tmp4);
@@ -242,11 +242,11 @@ class EventTarget {
             }
           }
           _Object3 = Object;
-          obj = { constructor: null };
-          obj1 = { value: null, configurable: true, writable: true };
-          obj1.value = CustomEventTarget;
-          obj.constructor = obj1;
-          CustomEventTarget.prototype = Object.create(tmp2.prototype, obj);
+          obj1 = { constructor: null };
+          obj7 = { value: null, configurable: true, writable: true };
+          obj7.value = CustomEventTarget;
+          obj1.constructor = obj7;
+          CustomEventTarget.prototype = Object.create(tmp2.prototype, obj1);
           str3 = "on";
           num6 = 0;
           if (0 < first.length) {
@@ -255,8 +255,8 @@ class EventTarget {
               _Object4 = Object;
               _HermesInternal2 = HermesInternal;
               closure_129_0 = tmp16;
-              obj2 = { get: null, set: null, configurable: true, enumerable: true };
-              obj2.get = function get() {
+              obj8 = { get: null, set: null, configurable: true, enumerable: true };
+              obj8.get = function get() {
                 value = weakMap2.get(this);
                 if (null == value) {
                   const _TypeError = TypeError;
@@ -273,7 +273,7 @@ class EventTarget {
                   return null;
                 }
               };
-              obj2.set = function set(fn) {
+              obj8.set = function set(fn) {
                 let tmp = fn;
                 let tmp2 = typeof fn === "function";
                 if (typeof fn !== "function") {
@@ -289,11 +289,11 @@ class EventTarget {
                   const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
                   throw typeError;
                 } else {
-                  value = value.get(closure_0);
-                  let iter = value;
+                  value2 = value.get(closure_0);
+                  let iter = value2;
                   let tmp11 = null;
                   let tmp12 = null;
-                  if (null != value) {
+                  if (null != value2) {
                     do {
                       let tmp6 = iter;
                       if (3 === iter.listenerType) {
@@ -323,7 +323,7 @@ class EventTarget {
                   }
                 }
               };
-              definePropertyResult = Object.defineProperty(CustomEventTarget.prototype, "on" + tmp16, obj2);
+              definePropertyResult = Object.defineProperty(CustomEventTarget.prototype, "on" + tmp16, obj8);
               num6 = num6 + 1;
               length3 = first.length;
             } while (num6 < length3);
@@ -375,9 +375,9 @@ class EventTarget {
         _Object = Object;
         tmp13 = EventTarget;
         obj = { constructor: null };
-        obj3 = { value: null, configurable: true, writable: true };
-        obj3.value = CustomEventTarget;
-        obj.constructor = obj3;
+        obj9 = { value: null, configurable: true, writable: true };
+        obj9.value = CustomEventTarget;
+        obj.constructor = obj9;
         CustomEventTarget.prototype = Object.create(EventTarget.prototype, obj);
         str2 = "on";
         num5 = 0;
@@ -387,8 +387,8 @@ class EventTarget {
             _Object2 = Object;
             _HermesInternal = HermesInternal;
             closure_0 = tmp14;
-            obj4 = { get: null, set: null, configurable: true, enumerable: true };
-            obj4.get = function get() {
+            obj10 = { get: null, set: null, configurable: true, enumerable: true };
+            obj10.get = function get() {
               value = weakMap2.get(this);
               if (null == value) {
                 const _TypeError = TypeError;
@@ -405,7 +405,7 @@ class EventTarget {
                 return null;
               }
             };
-            obj4.set = function set(fn) {
+            obj10.set = function set(fn) {
               let tmp = fn;
               let tmp2 = typeof fn === "function";
               if (typeof fn !== "function") {
@@ -421,11 +421,11 @@ class EventTarget {
                 const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
                 throw typeError;
               } else {
-                value = value.get(closure_0);
-                let iter = value;
+                value2 = value.get(closure_0);
+                let iter = value2;
                 let tmp11 = null;
                 let tmp12 = null;
-                if (null != value) {
+                if (null != value2) {
                   do {
                     let tmp6 = iter;
                     if (3 === iter.listenerType) {
@@ -455,7 +455,7 @@ class EventTarget {
                 }
               }
             };
-            definePropertyResult1 = Object.defineProperty(CustomEventTarget.prototype, "on" + tmp14, obj4);
+            definePropertyResult1 = Object.defineProperty(CustomEventTarget.prototype, "on" + tmp14, obj10);
             num5 = num5 + 1;
             length2 = arr.length;
           } while (num5 < length2);
@@ -685,8 +685,7 @@ obj.initEvent = function initEvent() {
 
 };
 Event.prototype = obj;
-obj = { value: Event, configurable: true, writable: true };
-Object.defineProperty(Event.prototype, "constructor", obj);
+Object.defineProperty(Event.prototype, "constructor", { value: Event, configurable: true, writable: true });
 if (typeof window !== "undefined") {
   const _window2 = window;
   class Event {
@@ -710,18 +709,18 @@ if (typeof window !== "undefined") {
         if (!(tmp5 in self)) {
           _Object = Object;
           closure_0 = tmp5;
-          obj = { get: null, set: null, configurable: true, enumerable: true };
-          obj.get = function get() {
+          obj1 = { get: null, set: null, configurable: true, enumerable: true };
+          obj1.get = function get() {
             value = weakMap.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
             return value.event[closure_0];
           };
-          obj.set = function set(arg0) {
+          obj1.set = function set(arg0) {
             value = weakMap.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
             value.event[closure_0] = arg0;
           };
-          definePropertyResult1 = Object.defineProperty(self, tmp5, obj);
+          definePropertyResult1 = Object.defineProperty(self, tmp5, obj1);
         }
       }
       return;
@@ -751,18 +750,18 @@ if (tmp4) {
         if (!(tmp5 in self)) {
           _Object = Object;
           closure_0 = tmp5;
-          obj = { get: null, set: null, configurable: true, enumerable: true };
-          obj.get = function get() {
+          obj1 = { get: null, set: null, configurable: true, enumerable: true };
+          obj1.get = function get() {
             value = weakMap.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
             return value.event[closure_0];
           };
-          obj.set = function set(arg0) {
+          obj1.set = function set(arg0) {
             value = weakMap.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
             value.event[closure_0] = arg0;
           };
-          definePropertyResult1 = Object.defineProperty(self, tmp5, obj);
+          definePropertyResult1 = Object.defineProperty(self, tmp5, obj1);
         }
       }
       return;
@@ -814,11 +813,11 @@ EventTarget.prototype = {
           BooleanResult1 = Boolean(capture.once);
         }
         obj.once = BooleanResult1;
-        value = value.get(arg0);
-        if (undefined !== value) {
-          let iter = value;
+        value2 = value.get(arg0);
+        if (undefined !== value2) {
+          let iter = value2;
           let tmp15 = null;
-          if (null != value) {
+          if (null != value2) {
             while (true) {
               let tmp16 = iter;
               if (iter.listener === listener) {
@@ -856,10 +855,10 @@ EventTarget.prototype = {
         if (_BooleanResult) {
           num = 1;
         }
-        value = value.get(arg0);
-        let iter = value;
+        value2 = value.get(arg0);
+        let iter = value2;
         let tmp6 = null;
-        if (null != value) {
+        if (null != value2) {
           while (true) {
             let tmp7 = iter;
             if (iter.listener === arg1) {
@@ -911,11 +910,11 @@ EventTarget.prototype = {
                 tmp4 = tmp17;
               }
             }
-            let listener = null;
+            let listener1 = null;
             if (iter.passive) {
-              listener = iter.listener;
+              listener1 = iter.listener;
             }
-            setPassiveListener(tmp24, listener);
+            setPassiveListener(tmp24, listener1);
             if (typeof iter.listener === "function") {
               try {
                 const listener2 = iter.listener;
@@ -938,7 +937,7 @@ EventTarget.prototype = {
               }
             } else {
               if (tmp10) {
-                listener = iter.listener;
+                const listener = iter.listener;
                 listener.handleEvent(tmp24);
               }
               tmp10 = 3 !== iter.listenerType && typeof iter.listener.handleEvent === "function";
@@ -991,18 +990,18 @@ if (typeof window !== "undefined") {
         if (!(tmp5 in self)) {
           _Object = Object;
           closure_0 = tmp5;
-          obj = { get: null, set: null, configurable: true, enumerable: true };
-          obj.get = function get() {
+          obj1 = { get: null, set: null, configurable: true, enumerable: true };
+          obj1.get = function get() {
             value = weakMap.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
             return value.event[closure_0];
           };
-          obj.set = function set(arg0) {
+          obj1.set = function set(arg0) {
             value = weakMap.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
             value.event[closure_0] = arg0;
           };
-          definePropertyResult1 = Object.defineProperty(self, tmp5, obj);
+          definePropertyResult1 = Object.defineProperty(self, tmp5, obj1);
         }
       }
       return;
@@ -1032,18 +1031,18 @@ if (tmp9) {
         if (!(tmp5 in self)) {
           _Object = Object;
           closure_0 = tmp5;
-          obj = { get: null, set: null, configurable: true, enumerable: true };
-          obj.get = function get() {
+          obj1 = { get: null, set: null, configurable: true, enumerable: true };
+          obj1.get = function get() {
             value = weakMap.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
             return value.event[closure_0];
           };
-          obj.set = function set(arg0) {
+          obj1.set = function set(arg0) {
             value = weakMap.get(this);
             console.assert(null != value, "'this' is expected an Event object, but got", this);
             value.event[closure_0] = arg0;
           };
-          definePropertyResult1 = Object.defineProperty(self, tmp5, obj);
+          definePropertyResult1 = Object.defineProperty(self, tmp5, obj1);
         }
       }
       return;
@@ -1087,11 +1086,11 @@ function defineEventAttribute(prototype, abort) {
         const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
         throw typeError;
       } else {
-        value = value.get(closure_0);
-        let iter = value;
+        value2 = value.get(closure_0);
+        let iter = value2;
         let tmp11 = null;
         let tmp12 = null;
-        if (null != value) {
+        if (null != value2) {
           do {
             let tmp6 = iter;
             if (3 === iter.listenerType) {

@@ -2,8 +2,9 @@
 
 // Module 293 (PressabilityPerformanceEventEmitter)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 
+let _classCallCheck = _classCallCheck_mod;
 class PressabilityPerformanceEventEmitter {
   constructor() {
     tmp = closure_0(this, PressabilityPerformanceEventEmitter);

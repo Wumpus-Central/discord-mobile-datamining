@@ -21,10 +21,9 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
   });
   let items = [router, context, emitter.emit, getState, onAction, onUnhandledAction, id, ref];
   return onUnhandledAction.useMemo(() => {
-    let obj = {};
     const merged = Object.assign(router.actionCreators);
     const merged1 = Object.assign(id(onAction[3]).CommonActions);
-    const keys = Object.keys(obj);
+    const keys = Object.keys({});
     const reduced = keys.reduce((acc, item) => {
       closure_0 = item;
       acc[item] = () => {
@@ -34,7 +33,7 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
         if (typeof applyResult === "function") {
           applyResultResult = applyResult(closure_1_3());
         }
-        if (!closure_1_1(applyResultResult)) {
+        if (!obj2(applyResultResult)) {
           if (closure_1_2 != null) {
             closure_1_2(applyResultResult);
           }
@@ -42,23 +41,23 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
       };
       return acc;
     }, {});
-    obj = {};
+    let obj2 = {};
     const merged2 = Object.assign(context);
     const merged3 = Object.assign(reduced);
-    obj.dispatch = function dispatch(fn) {
+    obj2.dispatch = function dispatch(fn) {
       let tmp = fn;
       if (typeof fn === "function") {
         tmp = fn(getState());
       }
-      if (!obj(tmp)) {
+      if (!obj2(tmp)) {
         if (onUnhandledAction != null) {
           onUnhandledAction(tmp);
         }
       }
     };
-    obj.emit = emitter.emit;
-    obj.isFocused = context ? context.isFocused : (() => true);
-    obj.canGoBack = function canGoBack() {
+    obj2.emit = emitter.emit;
+    obj2.isFocused = context ? context.isFocused : (() => true);
+    obj2.canGoBack = function canGoBack() {
       const tmp = getState();
       const CommonActions = id(onAction[3]).CommonActions;
       let flag = null !== stateForAction.getStateForAction(tmp, CommonActions.goBack(), { routeNames: tmp.routeNames, routeParamList: {}, routeGetIdList: {} });
@@ -74,14 +73,14 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
       }
       return flag;
     };
-    obj.getId = function getId() {
+    obj2.getId = function getId() {
       return obj;
     };
-    obj.getParent = function getParent(arg0) {
+    obj2.getParent = function getParent(arg0) {
       if (undefined !== arg0) {
-        let tmp2 = obj;
-        if (obj) {
-          let obj2 = obj;
+        let tmp2 = obj2;
+        if (obj2) {
+          obj2 = obj;
           tmp2 = obj;
           if (arg0 !== obj.getId()) {
             const parent = obj2.getParent();
@@ -100,7 +99,7 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
         return context;
       }
     };
-    obj.getState = function getState() {
+    obj2.getState = function getState() {
       const tmp = getState();
       const current = ref.current;
       let state = tmp;
@@ -112,6 +111,6 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
       }
       return state;
     };
-    return obj;
+    return obj2;
   }, items);
 };

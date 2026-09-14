@@ -42,21 +42,21 @@ class ActivityIndicator {
         sizeSmall.width = size;
       }
     }
-    obj = { animating: flag, color, hidesWhenStopped: flag2 };
+    obj1 = { animating: flag, color, hidesWhenStopped: flag2 };
     merged1 = Object.assign(merged);
-    obj.ref = global.ref;
-    obj.style = sizeSmall;
-    obj.size = str2;
-    obj1 = { onLayout, style: null, children: null };
+    obj1.ref = global.ref;
+    obj1.style = sizeSmall;
+    obj1.size = str2;
+    obj6 = { onLayout, style: null, children: null };
     tmp6 = closure_0(closure_1[3]);
     obj4 = closure_0(closure_1[4]);
-    obj1.style = obj4.compose(closure_4.container, global.style);
-    obj2 = {};
-    merged2 = Object.assign(obj);
-    obj2.styleAttr = "Normal";
-    obj2.indeterminate = true;
-    obj1.children = jsx(closure_3, obj2);
-    return jsx(tmp6, obj1);
+    obj6.style = obj4.compose(closure_4.container, global.style);
+    obj7 = {};
+    merged2 = Object.assign(obj1);
+    obj7.styleAttr = "Normal";
+    obj7.indeterminate = true;
+    obj6.children = jsx(closure_3, obj7);
+    return jsx(tmp6, obj6);
   }
 }
 ActivityIndicator.displayName = "ActivityIndicator";

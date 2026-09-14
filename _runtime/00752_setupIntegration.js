@@ -17,10 +17,9 @@ function setupIntegration(on, name, arg2) {
     }
   } else {
     arg2[name.name] = name;
-    let arr = items;
     if (!tmp) {
       name.setupOnce();
-      arr = arr.push(name.name);
+      items.push(name.name);
     }
     if (tmp4) {
       name.setup(on);

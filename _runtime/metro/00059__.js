@@ -53,19 +53,19 @@ export default function processBackgroundRepeat(str) {
                   if ("repeat-x" === formatted) {
                     let arr = items.push({ x: "repeat", y: "no-repeat" });
                   } else if ("repeat-y" === tmp35) {
-                    arr = items.push({ x: "no-repeat", y: "repeat" });
+                    let arr2 = items.push({ x: "no-repeat", y: "repeat" });
                   } else if ("repeat" === tmp35) {
-                    let arr1 = items.push({ x: "repeat", y: "repeat" });
+                    let arr3 = items.push({ x: "repeat", y: "repeat" });
                   } else if ("space" === tmp35) {
-                    let arr2 = items.push({ x: "space", y: "space" });
+                    let arr4 = items.push({ x: "space", y: "space" });
                   } else if ("round" === tmp35) {
-                    let arr3 = items.push({ x: "round", y: "round" });
+                    let arr5 = items.push({ x: "round", y: "round" });
                   } else if ("no-repeat" !== tmp35) {
                     let items3 = [];
                     iter.return();
                     return items3;
                   } else {
-                    let arr4 = items.push({ x: "no-repeat", y: "no-repeat" });
+                    let arr6 = items.push({ x: "no-repeat", y: "no-repeat" });
                   }
                 }
               } else if (2 === arr11.length) {
@@ -82,7 +82,7 @@ export default function processBackgroundRepeat(str) {
                         let point = { x: null, y: null };
                         point.x = tmp5;
                         point.y = formatted2;
-                        let arr5 = items.push(point);
+                        let arr7 = items.push(point);
                       }
                     }
                     let items4 = [];

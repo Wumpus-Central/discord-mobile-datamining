@@ -83,14 +83,13 @@ class PerformanceEventTiming {
 }
 EventCounts = PerformanceEventTiming;
 _inherits(PerformanceEventTiming, fn(163).PerformanceEntry);
-let obj = {
-  key: "processingStart",
-  get() {
-    return _classPrivateFieldBase(this, closure_9)[closure_9];
-  }
-};
 let items = [
-  obj,
+  {
+    key: "processingStart",
+    get() {
+      return _classPrivateFieldBase(this, closure_9)[closure_9];
+    }
+  },
   {
     key: "processingEnd",
     get() {
@@ -136,26 +135,25 @@ class EventCounts {
     return;
   }
 }
-obj = {
-  key: "size",
-  get() {
-    let tmp = map;
-    if (!map) {
-      let eventCounts = NativePerformanceCxx.getEventCounts();
-      if (eventCounts == null) {
-        eventCounts = [];
-      }
-      map = new Map(eventCounts);
-      EventCounts.queueMicrotask(() => {
-        c7 = null;
-      });
-      tmp = map;
-    }
-    return tmp.size;
-  }
-};
 const items1 = [
-  obj,
+  {
+    key: "size",
+    get() {
+      let tmp = map;
+      if (!map) {
+        let eventCounts = NativePerformanceCxx.getEventCounts();
+        if (eventCounts == null) {
+          eventCounts = [];
+        }
+        map = new Map(eventCounts);
+        EventCounts.queueMicrotask(() => {
+          c7 = null;
+        });
+        tmp = map;
+      }
+      return tmp.size;
+    }
+  },
   {
     key: "entries",
     value: function entries() {

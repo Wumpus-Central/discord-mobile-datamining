@@ -4,6 +4,8 @@
 import extractPathFromURL from "extractPathFromURL" /* 1592 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: c3, Platform } = get_ActivityIndicator);

@@ -41,12 +41,11 @@ function useBuildHref() {
       enabled = tmp.enabled;
     }
     if (false !== enabled) {
-      let obj = context;
       let tmp3 = context;
       if (context) {
         let key;
-        if (obj != null) {
-          key = obj.key;
+        if (obj3 != null) {
+          key = obj3.key;
         }
         tmp3 = key;
       }
@@ -55,72 +54,72 @@ function useBuildHref() {
       }
       let tmp5 = tmp3;
       if (tmp5) {
-        let obj1 = context(context1[1]);
-        const findFocusedRouteResult = obj1.findFocusedRoute(stateForPath);
+        const findFocusedRouteResult = context(context1[1]).findFocusedRoute(stateForPath);
         let key1;
         if (findFocusedRouteResult != null) {
           key1 = findFocusedRouteResult.key;
         }
-        let someResult = obj.key === key1;
+        let someResult = obj3.key === key1;
         if (someResult) {
-          const routes = obj.getState().routes;
-          someResult = routes.some((key) => key.key === obj.key);
+          const routes = context.getState().routes;
+          someResult = routes.some((key) => key.key === obj3.key);
         }
         tmp5 = someResult;
+        let obj2 = context(context1[1]);
       }
       context = tmp5;
-      obj = { routes: null };
-      obj = { name, params };
-      let items = [obj];
-      obj.routes = items;
+      obj3 = { routes: null };
+      const obj4 = { name, params };
+      let items = [obj4];
+      obj3.routes = items;
       constructState = function constructState(state) {
         if (state) {
           const first = state.routes[0];
           if (someResult) {
             if (!first.state) {
-              let tmp4 = obj;
+              let tmp4 = obj3;
             }
             return tmp4;
           }
-          obj = { routes: null };
-          obj = {};
+          const obj = { routes: null };
+          const obj2 = {};
           const merged = Object.assign(first);
-          obj.state = constructState(first.state);
-          const items = [obj];
+          obj2.state = constructState(first.state);
+          const items = [obj2];
           obj.routes = items;
           tmp4 = obj;
         } else {
-          return obj;
+          return obj3;
         }
       };
-      let tmp15 = obj;
+      let tmp15 = obj3;
       if (stateForPath) {
         let first = stateForPath.routes[0];
         if (!tmp5) {
-          obj1 = {};
+          const obj5 = {};
           let merged = Object.assign(first);
           const state = first.state;
-          let tmp21 = obj;
+          let tmp21 = obj3;
           if (state) {
             const first1 = state.routes[0];
             if (!tmp5) {
-              const obj2 = { routes: null };
-              const obj3 = {};
+              const obj6 = { routes: null };
+              const obj7 = {};
               const merged1 = Object.assign(first1);
-              obj3.state = constructState(first1.state);
-              const items1 = [obj3];
-              obj2.routes = items1;
-              obj = obj2;
+              obj7.state = constructState(first1.state);
+              const items1 = [obj7];
+              obj6.routes = items1;
+              obj3 = obj6;
             }
-            tmp21 = obj;
+            tmp21 = obj3;
           }
-          const obj4 = { routes: null };
-          obj1.state = tmp21;
-          const items2 = [obj1];
-          obj4.routes = items2;
-          let tmp17 = obj4;
+          const obj8 = { routes: null };
+          obj5.state = tmp21;
+          const items2 = [obj5];
+          obj8.routes = items2;
+          let tmp17 = obj8;
         } else {
-          tmp17 = obj;
+          tmp17 = obj3;
         }
         tmp15 = tmp17;
       }

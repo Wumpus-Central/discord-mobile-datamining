@@ -5,6 +5,8 @@ import cancelAnimation from "cancelAnimation" /* 1636 */;
 import NOOP from "NOOP" /* 1829 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 ({ useEffect: c2, useLayoutEffect: c3 } = noop);
 function useResizeMode() {
   React2(() => {
@@ -111,8 +113,7 @@ export const useKeyboardHandler = function useKeyboardHandler(handler, items) {
         return KeyboardController.setDefaultMode();
       };
     }, []);
-    let obj = NOOP;
-    obj.useKeyboardContext();
+    NOOP.useKeyboardContext();
     const obj2 = cancelAnimation;
     const fn = function u(eventName) {
       eventName = eventName.eventName;
@@ -144,8 +145,8 @@ export const useKeyboardHandler = function useKeyboardHandler(handler, items) {
         }
       }
     };
-    obj = { handler };
-    fn.__closure = obj;
+    const obj4 = { handler };
+    fn.__closure = obj4;
     fn.__workletHash = 7080794218426;
     fn.__initData = __initData;
     closure_2 = cancelAnimation.useEvent(fn, ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"], obj2.useHandler(handler, items).doDependenciesDiffer);
@@ -158,16 +159,12 @@ export const useKeyboardHandler = function useKeyboardHandler(handler, items) {
   }
 };
 export const useKeyboardController = function useKeyboardController() {
-  let obj = NOOP;
-  const keyboardContext = obj.useKeyboardContext();
-  obj = { setEnabled: keyboardContext.setEnabled, enabled: keyboardContext.enabled };
-  return obj;
+  const keyboardContext = NOOP.useKeyboardContext();
+  return { setEnabled: keyboardContext.setEnabled, enabled: keyboardContext.enabled };
 };
 export const useReanimatedFocusedInput = function useReanimatedFocusedInput() {
-  let obj = NOOP;
-  const keyboardContext = obj.useKeyboardContext();
-  obj = { input: keyboardContext.layout, update: keyboardContext.update };
-  return obj;
+  const keyboardContext = NOOP.useKeyboardContext();
+  return { input: keyboardContext.layout, update: keyboardContext.update };
 };
 export const useFocusedInputHandler = function useFocusedInputHandler(handler, items10) {
   NOOP.useKeyboardContext();

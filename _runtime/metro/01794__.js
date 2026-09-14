@@ -4,6 +4,8 @@
 import runOnRuntime from "runOnRuntime" /* 1680 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 ({ useEffect: c2, useRef: c3 } = noop);
 let closure_4 = { code: "function pnpm_useDerivedValueTs1(){const{sharedValue,updater}=this.__closure;sharedValue.value=updater();}" };
 
@@ -36,9 +38,9 @@ export const useDerivedValue = function useDerivedValue(fn, items) {
     arr2.push(fn.__workletHash);
   }
   if (null === tmp.current) {
-    tmp2(tmp3[2]);
-    const tmp2Result = tmp2(tmp3[3]);
-    tmp.current = tmp2Result.makeMutable(tmp2Result.initialUpdaterRun(fn));
+    const tmp2Result = tmp2(tmp3[2]);
+    tmp.current = tmp2Result.makeMutable(tmp2(tmp3[3]).initialUpdaterRun(fn));
+    const tmp2Result2 = tmp2(tmp3[3]);
   }
   const current = tmp.current;
   current(() => {

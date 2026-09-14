@@ -37,14 +37,14 @@ export const callDispose = function callDispose(current) {
   }
   try {
     const _Object2 = Object;
-    const obj = {
+    const obj2 = {
       value() {
           return "[disposed HybridObject]";
         },
       enumerable: false,
       configurable: true
     };
-    Object.defineProperty(current, "toString", obj);
+    Object.defineProperty(current, "toString", obj2);
     try {
       current.dispose();
     } catch (tmp5) {

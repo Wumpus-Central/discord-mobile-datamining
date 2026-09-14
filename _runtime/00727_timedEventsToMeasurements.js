@@ -13,8 +13,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
   let activeSpan = _getSpanForScopeResult;
   if (_getSpanForScopeResult === undefined) {
-    let obj = spanToJSON;
-    activeSpan = obj.getActiveSpan();
+    activeSpan = spanToJSON.getActiveSpan();
   }
   let rootSpan = activeSpan;
   if (activeSpan) {
@@ -26,10 +25,10 @@ export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
       const _HermesInternal = HermesInternal;
       debug.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
     }
-    obj = {};
-    obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
-    rootSpan.addEvent(arg0, obj);
+    const obj2 = {};
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    rootSpan.addEvent(arg0, obj2);
   }
 };
 export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {

@@ -3,6 +3,8 @@
 // Module 645 (equalArrays)
 import cacheHas from "cacheHas" /* 650 */;
 
+const require = globalThis.__r;
+
 
 export default function equalArrays(key, value, arg2, fn, fn2, get) {
   _require = arg2;
@@ -13,10 +15,10 @@ export default function equalArrays(key, value, arg2, fn, fn2, get) {
     return false;
   }
   value = get.get(key);
-  value = get.get(value);
+  value2 = get.get(value);
   if (value) {
-    if (value) {
-      return value == value && value == key;
+    if (value2) {
+      return value == value && value2 == key;
     }
   }
   let tmp4;

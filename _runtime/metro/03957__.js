@@ -2,75 +2,85 @@
 
 // Module 3957
 import throwProtectedError from "throwProtectedError" /* 3972 */;
-import module_3907 from "module_3907" /* 3907 */;
-import subMilliseconds from "subMilliseconds" /* 3958 */;
-import _typeof from "module_3725" /* 3725 */;
+import module_3907_mod from "module_3907" /* 3907 */;
+import subMilliseconds_mod from "subMilliseconds" /* 3958 */;
+import _typeof_mod from "module_3725" /* 3725 */;
 import G from "G" /* 3959 */;
-import dateLongFormatter from "dateLongFormatter" /* 3970 */;
-import module_3888 from "module_3888" /* 3888 */;
-import module_3729 from "module_3729" /* 3729 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
-import code from "module_3971" /* 3971 */;
+import dateLongFormatter_mod from "dateLongFormatter" /* 3970 */;
+import module_3888_mod from "module_3888" /* 3888 */;
+import module_3729_mod from "module_3729" /* 3729 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import code_mod from "module_3971" /* 3971 */;
 
+const require = globalThis.__r;
+
+let module_3907 = module_3907_mod;
 if (!module_3907) {
-  let obj = { default: module_3907 };
+  const obj = { default: module_3907 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3907;
 }
 module_3907 = tmp3;
+let subMilliseconds = subMilliseconds_mod;
 if (!subMilliseconds) {
-  obj = { default: subMilliseconds };
-  let tmp5 = obj;
+  let obj2 = { default: subMilliseconds };
+  let tmp5 = obj2;
 } else {
   tmp5 = subMilliseconds;
 }
 subMilliseconds = tmp5;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp7 = obj;
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
 if (!G) {
-  const obj1 = { default: G };
-  let tmp9 = obj1;
+  const obj4 = { default: G };
+  let tmp9 = obj4;
 } else {
   tmp9 = G;
 }
 let closure_5 = tmp9;
+let dateLongFormatter = dateLongFormatter_mod;
 if (!dateLongFormatter) {
-  const obj2 = { default: dateLongFormatter };
-  let tmp11 = obj2;
+  const obj5 = { default: dateLongFormatter };
+  let tmp11 = obj5;
 } else {
   tmp11 = dateLongFormatter;
 }
 dateLongFormatter = tmp11;
+let module_3888 = module_3888_mod;
 if (!module_3888) {
-  const obj3 = { default: module_3888 };
-  let tmp13 = obj3;
+  const obj6 = { default: module_3888 };
+  let tmp13 = obj6;
 } else {
   tmp13 = module_3888;
 }
 module_3888 = tmp13;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  const obj4 = { default: module_3729 };
-  let tmp15 = obj4;
+  const obj7 = { default: module_3729 };
+  let tmp15 = obj7;
 } else {
   tmp15 = module_3729;
 }
 module_3729 = tmp15;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj5 = { default: requiredArgs };
-  let tmp17 = obj5;
+  const obj8 = { default: requiredArgs };
+  let tmp17 = obj8;
 } else {
   tmp17 = requiredArgs;
 }
 requiredArgs = tmp17;
+let code = code_mod;
 if (!code) {
-  const obj6 = { default: code };
-  let tmp19 = obj6;
+  const obj9 = { default: code };
+  let tmp19 = obj9;
 } else {
   tmp19 = code;
 }
@@ -87,18 +97,17 @@ export default function format(arg0, arg1, locale) {
   module_3907 = locale;
   requiredArgs.default(2, arguments);
   const defaultOptions = require("module_3730").getDefaultOptions();
-  locale = undefined;
+  let locale1;
   if (null != locale) {
-    locale = locale.locale;
+    locale1 = locale.locale;
   }
-  if (null === locale) {
-    locale = defaultOptions.locale;
+  if (null === locale1) {
+    locale1 = defaultOptions.locale;
   }
-  if (null === locale) {
-    locale = code.default;
+  if (null === locale1) {
+    locale1 = code.default;
   }
   let prop;
-  let obj = module_3729;
   if (null != locale) {
     prop = locale.firstWeekContainsDate;
   }
@@ -193,20 +202,20 @@ export default function format(arg0, arg1, locale) {
           num4 = weekStartsOn;
         }
       }
-      const defaultResult2 = obj.default(num4);
+      const defaultResult2 = module_3729.default(num4);
       if (defaultResult2 >= 0) {
         if (defaultResult2 <= 6) {
-          if (locale.localize) {
-            if (locale.formatLong) {
+          if (locale1.localize) {
+            if (locale1.formatLong) {
               const defaultResult3 = _typeof.default(arg0);
               if (module_3907.default(defaultResult3)) {
-                _typeof = locale.default(defaultResult3, module_3888.default(defaultResult3));
-                obj = { firstWeekContainsDate: defaultResult1, weekStartsOn: defaultResult2, locale, _originalDate: defaultResult3 };
+                _typeof = locale1.default(defaultResult3, module_3888.default(defaultResult3));
+                const obj2 = { firstWeekContainsDate: defaultResult1, weekStartsOn: defaultResult2, locale: locale1, _originalDate: defaultResult3 };
                 let match = str.match(closure_12);
                 const mapped = match.map((item) => {
                   const first = item[0];
                   if ("p" === first) {
-                    let tmp2 = dateLongFormatter.default[first](item, locale.formatLong);
+                    let tmp2 = dateLongFormatter.default[first](item, locale1.formatLong);
                   } else {
                     tmp2 = item;
                   }
@@ -223,7 +232,7 @@ export default function format(arg0, arg1, locale) {
                       str = match[1].replace(re14, "'");
                     }
                     return str;
-                  } else if (closure_5.default[str6]) {
+                  } else if (obj2.default[str6]) {
                     let tmp9 = null != locale && locale.useAdditionalWeekYearTokens;
                     if (!tmp9) {
                       tmp9 = !throwProtectedError.isProtectedWeekYearToken(str);
@@ -240,7 +249,7 @@ export default function format(arg0, arg1, locale) {
                       const _String2 = String;
                       throwProtectedError.throwProtectedError(str, closure_1, String(closure_0));
                     }
-                    return tmp35(closure_4, str, locale.localize, obj);
+                    return tmp35(closure_4, str, locale1.localize, obj2);
                   } else if (str6.match(re15)) {
                     const _RangeError = RangeError;
                     const rangeError = new RangeError("Format string contains an unescaped latin alphabet character `" + str6 + "`");

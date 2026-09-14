@@ -2,57 +2,32 @@
 
 // Module 12924
 import _mod12925 from "module_12925" /* 12925 */;
-import _mod12926 from "module_12926" /* 12926 */;
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12929 */;
+import _mod12928 from "module_12928" /* 12928 */;
 
 require = arg1;
-const dependencyMap = {};
-let closure_3 = {};
+const dependencyMap = arg6;
+function instrumentError() {
+  onerror = _mod12928.GLOBAL_OBJ.onerror;
+  _mod12928.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
+    _mod12925.triggerHandlers("error", { column, error, line, msg, url });
+    if (!onerror) {
+      return onerror;
+    } else {
+      const self = this;
+      const apply = onerror.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+    }
+    const obj = { column, error, line, msg, url };
+  };
+  _mod12928.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
+}
+let onerror = null;
 
-export const addHandler = function addHandler(console, errorCallback) {
-  dependencyMap[console] = dependencyMap[console] || [];
-  let arr = dependencyMap[console];
-  arr = arr.push(errorCallback);
-  const tmp2 = dependencyMap[console] || [];
-};
-export const maybeInstrument = function maybeInstrument(console, fn) {
-  if (!closure_3[console]) {
-    tmp2[console] = true;
-    try {
-      fn();
-    } catch (tmp5) {
-      if (_mod12925.DEBUG_BUILD) {
-        const logger = _mod12926.logger;
-        const _HermesInternal = HermesInternal;
-        logger.error("Error while instrumenting " + tmp, tmp5);
-      }
-    }
-  }
-};
-export const resetInstrumentationHandlers = function resetInstrumentationHandlers() {
-  const keys = Object.keys(closure_2);
-  const item = keys.forEach((item) => {
-    dependencyMap[item] = undefined;
-  });
-};
-export const triggerHandlers = function triggerHandlers(arg0, arg1) {
-  let tmp8 = arg0;
-  if (arg0) {
-    tmp8 = dependencyMap[arg0];
-  }
-  if (tmp8) {
-    const iter = tmp8[Symbol.iterator]();
-    if (iter !== undefined) {
-      try {
-        tmp15(arg1);
-      } catch (tmp18) {
-        if (_mod12925.DEBUG_BUILD) {
-          const logger = _mod12926.logger;
-          logger.error(tmp2 + tmp6 + tmp3 + stackParserFromStackParserOptions.getFunctionName(tmp7) + tmp4, tmp18);
-          const tmp19Result = stackParserFromStackParserOptions;
-        }
-      }
-    }
-    const nextResult = iter.next();
-  }
+export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(errorCallback) {
+  _mod12925.addHandler("error", errorCallback);
+  _mod12925.maybeInstrument("error", instrumentError);
 };

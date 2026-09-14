@@ -41,22 +41,31 @@ class InternetReachability {
     };
     this._checkInternetReachability = () => {
       const abortController = new AbortController();
-      let obj = { headers: _self._configuration.reachabilityHeaders, method: _self._configuration.reachabilityMethod, cache: "no-cache", signal: abortController.signal };
-      const response = fetch(_self._configuration.reachabilityUrl, obj);
-      new Promise((arg0, arg1) => {
-        const timeout = setTimeout(() => closure_0("timedout"), self._configuration.reachabilityRequestTimeout);
-      });
+      const response = fetch(_self._configuration.reachabilityUrl, { headers: _self._configuration.reachabilityHeaders, method: _self._configuration.reachabilityMethod, cache: "no-cache", signal: abortController.signal });
       function cancel() {
 
       }
+      const obj = { headers: _self._configuration.reachabilityHeaders, method: _self._configuration.reachabilityMethod, cache: "no-cache", signal: abortController.signal };
       const promise = new Promise((arg0, arg1) => {
+        const timeout = setTimeout(() => closure_0("timedout"), self._configuration.reachabilityRequestTimeout);
+      });
+      const obj2 = { promise: null, cancel: null };
+      const items = [
+        response,
+        promise,
+        new Promise((arg0, arg1) => {
+          closure_0 = arg1;
+          cancel = function cancel() {
+            return closure_0("canceled");
+          };
+        })
+      ];
+      const promise2 = new Promise((arg0, arg1) => {
         closure_0 = arg1;
         cancel = function cancel() {
           return closure_0("canceled");
         };
       });
-      obj = { promise: null, cancel: null };
-      const items = [response, promise, promise];
       const racePromise = Promise.race(items);
       const nextPromise = Promise.race(items).then((result) => {
         const _configuration = closure_0._configuration;
@@ -70,7 +79,7 @@ class InternetReachability {
         const _configuration = closure_0._configuration;
         closure_0._currentTimeoutHandle = setTimeout(closure_0._checkInternetReachability, closure_0._isInternetReachable ? _configuration.reachabilityLongTimeout : _configuration.reachabilityShortTimeout);
       });
-      obj.promise = Promise.race(items).then((result) => {
+      obj2.promise = Promise.race(items).then((result) => {
         const _configuration = closure_0._configuration;
         return _configuration.reachabilityTest(result);
       }).then((result) => {
@@ -94,8 +103,8 @@ class InternetReachability {
         clearTimeout(closure_0);
         throw arg0;
       });
-      obj.cancel = cancel;
-      return obj;
+      obj2.cancel = cancel;
+      return obj2;
     };
     this.update = (isInternetReachable) => {
       if (typeof isInternetReachable.isInternetReachable === "boolean") {

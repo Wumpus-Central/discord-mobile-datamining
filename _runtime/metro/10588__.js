@@ -1,110 +1,117 @@
 // === Module 10588: ? ===
 
 // Module 10588
-import _mod10559 from "module_10559" /* 10559 */;
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10560 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10567 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import ReferenceWithTimezone from "ReferenceWithTimezone" /* 10564 */;
+import Meridiem from "Meridiem" /* 10566 */;
 
-const ENRelativeDateFormatParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+require = arg1;
+const dependencyMap = arg6;
+function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
+  const day = dateWithAdjustedTimezone.getDay();
+  if ("this" === next) {
+    const diff = sum - dateWithAdjustedTimezone.getDay();
+    sum = diff;
+    if (diff < 0) {
+      sum = diff + 7;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-const regExp = new RegExp("(this|last|past|next|after\\s*this)\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10559.TIME_UNIT_DICTIONARY) + ")(?=\\s*)(?=\\W|$)", "i");
-class ENRelativeDateFormatParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, ENRelativeDateFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENRelativeDateFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+    return sum;
+  } else if ("last" === next) {
+    const diff1 = sum - dateWithAdjustedTimezone.getDay();
+    let diff2 = diff1;
+    if (diff1 >= 0) {
+      diff2 = diff1 - 7;
     }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(ENRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
-  }
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const str3 = arg1[2].toLowerCase();
-      const tmp3 = ENRelativeDateFormatParser(10559).TIME_UNIT_DICTIONARY[str3];
-      if ("next" != formatted) {
-        if (!formatted.startsWith("after")) {
-          if ("last" != formatted) {
-            if ("past" != formatted) {
-              const parsingComponents = createParsingComponents.createParsingComponents();
-              const _Date = Date;
-              const instant = createParsingComponents.reference.instant;
-              const date = new Date(instant.getTime());
-              if (str3.match(/week/i)) {
-                date.setDate(date.getDate() - date.getDay());
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.imply("year", date.getFullYear());
-                const date1 = date.getDate();
-              } else if (str3.match(/month/i)) {
-                date.setDate(1);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.assign("year", date.getFullYear());
-                parsingComponents.assign("month", date.getMonth() + 1);
-              } else if (str3.match(/year/i)) {
-                date.setDate(1);
-                date.setMonth(0);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.assign("year", date.getFullYear());
-              }
-              return parsingComponents;
-            }
+    return diff2;
+  } else if ("next" === next) {
+    if (day == Meridiem.Weekday.SUNDAY) {
+      let num12 = 7;
+      if (sum != Meridiem.Weekday.SUNDAY) {
+        num12 = sum;
+      }
+      let sum3 = num12;
+    } else if (day == Meridiem.Weekday.SATURDAY) {
+      let num9 = 7;
+      if (sum != Meridiem.Weekday.SATURDAY) {
+        let num10 = 8;
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          num10 = 1 + sum;
+        }
+        num9 = num10;
+      }
+      sum3 = num9;
+    } else {
+      if (sum < day) {
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          const diff3 = sum - dateWithAdjustedTimezone.getDay();
+          let sum1 = diff3;
+          if (diff3 < 0) {
+            sum1 = diff3 + 7;
           }
-          const obj2 = {};
-          obj2[tmp3] = -1;
-          const ParsingComponents = ENRelativeDateFormatParser(10563).ParsingComponents;
-          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj2);
+          sum3 = sum1;
         }
       }
-      const ParsingComponents2 = ENRelativeDateFormatParser(10563).ParsingComponents;
-      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
+      const diff4 = sum - dateWithAdjustedTimezone.getDay();
+      let sum2 = diff4;
+      if (diff4 < 0) {
+        sum2 = diff4 + 7;
+      }
+      sum3 = sum2 + 7;
     }
+    return sum3;
+  } else {
+    const diff5 = sum - dateWithAdjustedTimezone.getDay();
+    let diff6 = diff5;
+    if (diff5 >= 0) {
+      diff6 = diff5 - 7;
+    }
+    const diff7 = sum - dateWithAdjustedTimezone.getDay();
+    let sum4 = diff7;
+    if (diff7 < 0) {
+      sum4 = diff7 + 7;
+    }
+    if (sum4 < -diff6) {
+      diff6 = sum4;
+    }
+    return diff6;
   }
-];
+}
 
-export default _createClass(ENRelativeDateFormatParser, items);
+export const createParsingComponentsAtWeekday = function createParsingComponentsAtWeekday(reference, sum, next) {
+  const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference);
+  const addDurationAsImpliedResult = parsingComponents.addDurationAsImplied({ day: getDaysToWeekday(reference.getDateWithAdjustedTimezone(), sum, next) });
+  addDurationAsImpliedResult.assign("weekday", sum);
+  return addDurationAsImpliedResult;
+};
+export { getDaysToWeekday };
+export const getDaysToWeekdayClosest = function getDaysToWeekdayClosest(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  const diff2 = arg1 - getDay.getDay();
+  let sum = diff2;
+  if (diff2 < 0) {
+    sum = diff2 + 7;
+  }
+  if (sum < -diff1) {
+    diff1 = sum;
+  }
+  return diff1;
+};
+export const getDaysForwardToWeekday = function getDaysForwardToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let sum = diff;
+  if (diff < 0) {
+    sum = diff + 7;
+  }
+  return sum;
+};
+export const getBackwardDaysToWeekday = function getBackwardDaysToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  return diff1;
+};

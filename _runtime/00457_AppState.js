@@ -3,6 +3,8 @@
 // Module 457 (AppState)
 import _modDef458 from "module_458" /* 458 */;
 
+const require = globalThis.__r;
+
 for (const key10016 in require("module_458")) {
   arg5[key10016] = require("module_458")[key10016];
   continue;

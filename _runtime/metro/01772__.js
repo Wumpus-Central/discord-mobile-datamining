@@ -72,11 +72,11 @@ const items = [
             ProgressTransitionRegister.frame(progress);
           }
         };
-        const obj = { lastProgressValue: progress };
-        fn.__closure = obj;
+        const obj2 = { lastProgressValue: progress };
+        fn.__closure = obj2;
         fn.__workletHash = 1831800135022;
         fn.__initData = __initData3;
-        _eventHandler.onTransitionProgress = obj.registerEventHandler(fn, "onTransitionProgress");
+        _eventHandler.onTransitionProgress = runOnRuntime.registerEventHandler(fn, "onTransitionProgress");
         const fn2 = function s() {
           const ProgressTransitionRegister = progress.ProgressTransitionRegister;
           ProgressTransitionRegister.onTransitionEnd();
@@ -207,7 +207,7 @@ function createProgressTransitionRegister() {
 createProgressTransitionRegister.__closure = { IS_ANDROID: true };
 createProgressTransitionRegister.__workletHash = 2226368593346;
 createProgressTransitionRegister.__initData = { code: "function createProgressTransitionRegister_Pnpm_ProgressTransitionManagerTs8(){const{IS_ANDROID}=this.__closure;const progressAnimations=new Map();const snapshots=new Map();const currentTransitions=new Set();const toRemove=new Set();let skipCleaning=false;let isTransitionRestart=false;const progressTransitionManager={addProgressAnimation:function(viewTag,progressAnimation){if(currentTransitions.size>0&&!progressAnimations.has(viewTag)){isTransitionRestart=!IS_ANDROID;}progressAnimations.set(viewTag,progressAnimation);},removeProgressAnimation:function(viewTag,isUnmounting){if(currentTransitions.size>0){isTransitionRestart=!IS_ANDROID;}if(isUnmounting){toRemove.add(viewTag);}else{progressAnimations.delete(viewTag);}},onTransitionStart:function(viewTag,snapshot){skipCleaning=isTransitionRestart;snapshots.set(viewTag,snapshot);currentTransitions.add(viewTag);progressTransitionManager.frame(0);},frame:function(progress){for(const viewTag of currentTransitions){const progressAnimation=progressAnimations.get(viewTag);if(!progressAnimation){continue;}const snapshot=snapshots.get(viewTag);progressAnimation(viewTag,snapshot,progress);}},onAndroidFinishTransitioning:function(){if(toRemove.size>0){progressTransitionManager.onTransitionEnd();}},onTransitionEnd:function(removeViews=false){if(currentTransitions.size===0){toRemove.clear();return;}if(skipCleaning){skipCleaning=false;isTransitionRestart=false;return;}for(const viewTag of currentTransitions){global._notifyAboutEnd(viewTag,removeViews);}currentTransitions.clear();if(isTransitionRestart){return;}snapshots.clear();if(toRemove.size>0){for(const viewTag of toRemove){progressAnimations.delete(viewTag);global._notifyAboutEnd(viewTag,removeViews);}toRemove.clear();}}};return progressTransitionManager;}" };
-let module_1639 = fn(1639);
+const module_1639 = fn(1639);
 if (module_1639.shouldBeUseWeb()) {
   function maybeThrowError() {
     if (!obj.isJest()) {
@@ -236,7 +236,6 @@ if (module_1639.shouldBeUseWeb()) {
   const proxy = new Proxy({}, obj);
   global.ProgressTransitionRegister = proxy;
 } else {
-  obj = { code: "function pnpm_ProgressTransitionManagerTs9(){const{createProgressTransitionRegister}=this.__closure;global.ProgressTransitionRegister=createProgressTransitionRegister();}" };
   fn = function n() {
     if (typeof createProgressTransitionRegister === "function") {
       const _Map = Map;
@@ -327,11 +326,12 @@ if (module_1639.shouldBeUseWeb()) {
       throw new TypeError("Trying to call a non-function");
     }
   };
-  module_1639 = { createProgressTransitionRegister };
-  fn.__closure = module_1639;
+  const obj5 = { createProgressTransitionRegister };
+  fn.__closure = obj5;
   fn.__workletHash = 1488439266980;
-  fn.__initData = obj;
+  fn.__initData = { code: "function pnpm_ProgressTransitionManagerTs9(){const{createProgressTransitionRegister}=this.__closure;global.ProgressTransitionRegister=createProgressTransitionRegister();}" };
   fn(1643).runOnUIImmediately(fn)();
+  let obj3 = { code: "function pnpm_ProgressTransitionManagerTs9(){const{createProgressTransitionRegister}=this.__closure;global.ProgressTransitionRegister=createProgressTransitionRegister();}" };
   let obj4 = fn(1643);
 }
 

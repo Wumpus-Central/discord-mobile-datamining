@@ -1,8 +1,8 @@
 // === Module 4921: ArraySpeciesCreate ===
 
 // Module 4921 (ArraySpeciesCreate)
-import _mod1282 from "module_1282" /* 1282 */;
-import _mod1283 from "module_1283" /* 1283 */;
+import _mod1280 from "module_1280" /* 1280 */;
+import _mod1281 from "module_1281" /* 1281 */;
 import _mod4885 from "module_4885" /* 4885 */;
 import _mod4922 from "module_4922" /* 4922 */;
 import _mod4923 from "module_4923" /* 4923 */;
@@ -10,7 +10,7 @@ import ArrayCreate from "ArrayCreate" /* 4925 */;
 import Get from "Get" /* 4931 */;
 import _mod4933 from "module_4933" /* 4933 */;
 
-let closure_2 = _mod1282("%Symbol.species%", true);
+let closure_2 = _mod1280("%Symbol.species%", true);
 
 export default function ArraySpeciesCreate(arg0, arg1) {
   if (_mod4922(arg1)) {
@@ -30,10 +30,10 @@ export default function ArraySpeciesCreate(arg0, arg1) {
         if (undefined === tmp6) {
           return ArrayCreate(arg1);
         } else if (_mod4933(tmp6)) {
-          tmp6 = new tmp6(arg1);
-          return tmp6;
+          const tmp62 = new tmp6(arg1);
+          return tmp62;
         } else {
-          const tmp11 = new _mod1283("C must be a constructor");
+          const tmp11 = new _mod1281("C must be a constructor");
           throw tmp11;
         }
       } else {
@@ -41,5 +41,5 @@ export default function ArraySpeciesCreate(arg0, arg1) {
       }
     }
   }
-  throw new _mod1283("Assertion failed: length must be an integer >= 0");
+  throw new _mod1281("Assertion failed: length must be an integer >= 0");
 };

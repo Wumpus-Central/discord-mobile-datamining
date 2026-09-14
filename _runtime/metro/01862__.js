@@ -21,38 +21,17 @@ export default function _default(icon) {
   if (icon === undefined) {
     icon = _modDef1856;
   }
-  let obj = onPress(1861);
-  const toolbarContext = obj.useToolbarContext();
+  const toolbarContext = onPress(1861).useToolbarContext();
   const theme = toolbarContext.theme;
   if (disabled == null) {
     disabled = toolbarContext.isNextDisabled;
   }
   const items = [onPress];
-  obj = {
-    accessibilityHint: "Moves focus to the next field",
-    accessibilityLabel: "Next",
-    disabled,
-    rippleRadius,
-    style,
-    testID: onPress(1854).TEST_ID_KEYBOARD_TOOLBAR_NEXT,
-    theme,
-    onPress: useCallback((isDefaultPrevented) => {
-      if (onPress != null) {
-        tmp(isDefaultPrevented);
-      }
-      if (!isDefaultPrevented.isDefaultPrevented()) {
-        const KeyboardController = _mod1828.KeyboardController;
-        KeyboardController.setFocusTo("next");
-      }
-    }, items),
-    children: null
-  };
-  if (children == null) {
-    obj = { disabled, theme, type: "next" };
-    children = <icon disabled={disabled} theme={theme} type="next" />;
-  }
-  obj.children = children;
-  return <button accessibilityHint="Moves focus to the next field" accessibilityLabel="Next" disabled={disabled} rippleRadius={rippleRadius} style={style} testID={onPress(1854).TEST_ID_KEYBOARD_TOOLBAR_NEXT} theme={theme} onPress={useCallback((isDefaultPrevented) => {
+  const obj2 = { accessibilityHint: "Moves focus to the next field", accessibilityLabel: "Next", disabled, rippleRadius, style, testID: null, theme: null, onPress: null, children: null };
+  const obj = onPress(1861);
+  obj2.testID = onPress(1854).TEST_ID_KEYBOARD_TOOLBAR_NEXT;
+  obj2.theme = theme;
+  obj2.onPress = useCallback((isDefaultPrevented) => {
     if (onPress != null) {
       tmp(isDefaultPrevented);
     }
@@ -60,5 +39,11 @@ export default function _default(icon) {
       const KeyboardController = _mod1828.KeyboardController;
       KeyboardController.setFocusTo("next");
     }
-  }, items)}>{null}</button>;
+  }, items);
+  if (children == null) {
+    const obj3 = { disabled, theme, type: "next" };
+    children = <icon disabled={disabled} theme={theme} type="next" />;
+  }
+  obj2.children = children;
+  return <button accessibilityHint="Moves focus to the next field" accessibilityLabel="Next" disabled={disabled} rippleRadius={rippleRadius} style={style} testID={null} theme={null} onPress={null}>{null}</button>;
 };

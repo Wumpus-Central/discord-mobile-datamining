@@ -30,8 +30,8 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
   const stickyHeaderConfig = ListHeaderComponent.stickyHeaderConfig;
   let invertedTransformStyle;
   if (ListHeaderComponent.inverted) {
+    invertedTransformStyle = ListHeaderComponent(ListHeaderComponentStyle[3]).getInvertedTransformStyle(tmp);
     let obj = ListHeaderComponent(ListHeaderComponentStyle[3]);
-    invertedTransformStyle = obj.getInvertedTransformStyle(tmp);
   }
   let items = [onRefresh, refreshing, progressViewOffset, refreshControl];
   const items1 = [ListHeaderComponent, ListHeaderComponentStyle, invertedTransformStyle];
@@ -80,19 +80,18 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
     backdropComponent = stickyHeaderConfig.backdropComponent;
   }
   const items4 = [backdropComponent, invertedTransformStyle];
-  obj = {
+  let obj2 = {
     refreshControl: tmp6,
     renderHeader: tmp7,
     renderFooter: tmp8,
     renderEmpty: ListEmptyComponentStyle(() => {
       if (ListEmptyComponent) {
-        let obj = _mod7009;
-        const validComponent = obj.getValidComponent(tmp);
+        const validComponent = _mod7009.getValidComponent(tmp);
         if (invertedTransformStyle) {
-          obj = { style: null, children: null };
+          const obj2 = { style: null, children: null };
           const items = [ListEmptyComponentStyle, tmp5];
-          obj.style = items;
-          obj.children = validComponent;
+          obj2.style = items;
+          obj2.children = validComponent;
           let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
         } else {
           tmp7 = validComponent;
@@ -107,13 +106,12 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
   const items5 = [renderScrollComponent];
   const tmp9 = ListEmptyComponentStyle(() => {
     if (ListEmptyComponent) {
-      let obj = _mod7009;
-      const validComponent = obj.getValidComponent(tmp);
+      const validComponent = _mod7009.getValidComponent(tmp);
       if (invertedTransformStyle) {
-        obj = { style: null, children: null };
+        const obj2 = { style: null, children: null };
         const items = [ListEmptyComponentStyle, tmp5];
-        obj.style = items;
-        obj.children = validComponent;
+        obj2.style = items;
+        obj2.children = validComponent;
         let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
       } else {
         tmp7 = validComponent;
@@ -122,7 +120,7 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
     }
     return null;
   }, items3);
-  obj.CompatScrollView = ListEmptyComponentStyle(() => {
+  obj2.CompatScrollView = ListEmptyComponentStyle(() => {
     if (typeof renderScrollComponent === "function") {
       if (!tmpResult.isComponentClass(renderScrollComponent)) {
         let CompatAnimatedScroller = noop.forwardRef((arg0, ref) => {
@@ -140,7 +138,7 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
       CompatAnimatedScroller = renderScrollComponent;
     }
   }, items5);
-  obj.renderStickyHeaderBackdrop = ListEmptyComponentStyle(() => {
+  obj2.renderStickyHeaderBackdrop = ListEmptyComponentStyle(() => {
     let backdropComponent;
     if (stickyHeaderConfig != null) {
       backdropComponent = stickyHeaderConfig.backdropComponent;
@@ -159,5 +157,5 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
     }
     return tmp4Result;
   }, items4);
-  return obj;
+  return obj2;
 };

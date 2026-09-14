@@ -17,16 +17,14 @@ export const AnimatedScrollView = module_1775.componentWithRef((scrollViewOffset
   scrollViewOffset = scrollViewOffset.scrollViewOffset;
   const tmp2 = _objectWithoutProperties(scrollViewOffset, closure_2);
   if (null === arg1) {
-    let obj = eulerToQuaternion;
-    animatedRef = obj.useAnimatedRef();
+    animatedRef = eulerToQuaternion.useAnimatedRef();
   }
   if (scrollViewOffset) {
-    scrollViewOffset = eulerToQuaternion.useScrollViewOffset(animatedRef, scrollViewOffset);
+    const scrollViewOffset1 = eulerToQuaternion.useScrollViewOffset(animatedRef, scrollViewOffset);
   }
   if (!("scrollEventThrottle" in tmp2)) {
     tmp2.scrollEventThrottle = 1;
   }
-  obj = { ref: animatedRef };
   const merged = Object.assign(tmp2);
   return <closure_5 ref={animatedRef} />;
 });

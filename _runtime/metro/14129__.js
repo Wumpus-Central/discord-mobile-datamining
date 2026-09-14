@@ -1,104 +1,60 @@
 // === Module 14129: ? ===
 
 // Module 14129
-import _mod14101 from "module_14101" /* 14101 */;
-import _mod14102 from "module_14102" /* 14102 */;
-import _mod14106 from "module_14106" /* 14106 */;
+import _mod14123 from "module_14123" /* 14123 */;
+import _mod14124 from "module_14124" /* 14124 */;
+import _mod14125 from "module_14125" /* 14125 */;
+import _mod14126 from "module_14126" /* 14126 */;
+import _mod14127 from "module_14127" /* 14127 */;
+import _mod14128 from "module_14128" /* 14128 */;
 
 
-export default (num, arg1) => {
-  if (num instanceof _mod14102) {
-    return num;
-  } else {
-    let StringResult = num;
-    if (typeof num === "number") {
-      const _String = String;
-      StringResult = String(num);
-    }
-    if (typeof StringResult !== "string") {
-      return null;
-    } else {
-      let obj = arg1;
-      if (!arg1) {
-        obj = {};
+export default (version, arg1, version2, arg3) => {
+  switch (arg1) {
+    case "===":
+      let version3 = version;
+      if (typeof version === "object") {
+        version3 = version.version;
       }
-      if (obj.rtl) {
-        const safeRe2 = _mod14106.safeRe;
-        const t2 = _mod14106.t;
-        if (obj.includePrerelease) {
-          let obj2 = safeRe2[t2.COERCERTLFULL];
-        } else {
-          obj2 = safeRe2[t2.COERCERTL];
-        }
-        let match = obj2.exec(StringResult);
-        let tmp6 = null;
-        let tmp8 = null;
-        if (match) {
-          while (true) {
-            let tmp10 = tmp6;
-            let tmp11 = tmp6;
-            if (tmp6) {
-              tmp11 = match.index + match[0].length === tmp10.index + tmp10[0].length;
-            }
-            if (!tmp11) {
-              tmp10 = match;
-            }
-            obj2.lastIndex = match.index + match[1].length + match[2].length;
-            let match1 = obj2.exec(StringResult);
-            tmp8 = tmp10;
-            if (!match1) {
-              break;
-            } else {
-              match = match1;
-              tmp6 = tmp10;
-              if (!tmp10) {
-                continue;
-              } else {
-                match = match1;
-                tmp6 = tmp10;
-                tmp8 = tmp10;
-                if (tmp10.index + tmp10[0].length === StringResult.length) {
-                  break;
-                }
-              }
-              continue;
-            }
-          }
-        }
-        obj2.lastIndex = -1;
-        let match2 = tmp8;
-      } else {
-        const safeRe = _mod14106.safeRe;
-        const t = _mod14106.t;
-        if (obj.includePrerelease) {
-          let tmp3 = safeRe[t.COERCEFULL];
-        } else {
-          tmp3 = safeRe[t.COERCE];
-        }
-        match2 = StringResult.match(tmp3);
+      let version4 = version2;
+      if (typeof version2 === "object") {
+        version4 = version2.version;
       }
-      if (null === match2) {
-        return null;
-      } else {
-        let str2 = "";
-        if (obj.includePrerelease) {
-          str2 = "";
-          if (match2[5]) {
-            const _HermesInternal = HermesInternal;
-            str2 = "-" + match2[5];
-          }
-        }
-        let str4 = "";
-        if (obj.includePrerelease) {
-          str4 = "";
-          if (match2[6]) {
-            const _HermesInternal2 = HermesInternal;
-            str4 = "+" + match2[6];
-          }
-        }
-        const _HermesInternal3 = HermesInternal;
-        return _mod14101("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
+      return version3 === version4;
+    case "!==":
+      if (typeof version === "object") {
+        version = version.version;
       }
-    }
+      if (typeof version2 === "object") {
+        version2 = version2.version;
+      }
+      return version !== version2;
+    case "":
+      let tmp13 = _mod14125;
+      let tmp13Result = tmp13(version, version2, arg3);
+      return tmp13Result;
+    case "=":
+      tmp13 = _mod14125;
+      tmp13Result = tmp13(version, version2, arg3);
+      return tmp13Result;
+    case "==":
+      tmp13 = _mod14125;
+      tmp13Result = tmp13(version, version2, arg3);
+      return tmp13Result;
+    case "!=":
+      return _mod14126(version, version2, arg3);
+    case ">":
+      return _mod14123(version, version2, arg3);
+    case ">=":
+      return _mod14127(version, version2, arg3);
+    case "<":
+      return _mod14124(version, version2, arg3);
+    case "<=":
+      return _mod14128(version, version2, arg3);
+    default:
+      const _TypeError = TypeError;
+      const _HermesInternal = HermesInternal;
+      const typeError = new TypeError("Invalid operator: " + arg1);
+      throw typeError;
   }
 };

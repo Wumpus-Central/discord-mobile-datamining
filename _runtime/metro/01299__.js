@@ -2,4 +2,4 @@
 
 // Module 1299
 
-export default Function.prototype.apply;
+export default EvalError;

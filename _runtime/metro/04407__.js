@@ -7,7 +7,7 @@ import noop from "module_19" /* 19 */;
 let deps = Symbol("UNINITIALIZED");
 
 export const useDisposableMemo = function useDisposableMemo(fn2, _temp, items, current2) {
-  let obj = { value: "r", deps, pendingDisposal: null };
+  const obj = { value: "r", deps, pendingDisposal: null };
   const tmp2 = React(obj);
   closure_0 = tmp2;
   const obj2 = React(_temp);
@@ -25,8 +25,8 @@ export const useDisposableMemo = function useDisposableMemo(fn2, _temp, items, c
       } catch (err) {
       }
     }
-    obj = { value: fn2(), deps: items, pendingDisposal: null };
-    tmp2.current = obj;
+    const obj3 = { value: fn2(), deps: items, pendingDisposal: null };
+    tmp2.current = obj3;
     if (tmp3.current) {
       tmp3.current.current = tmp2.current.value;
     }

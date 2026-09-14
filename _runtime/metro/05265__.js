@@ -77,12 +77,12 @@ export const detectFile = function detectFile(uint8Array, chunkSize) {
           ({ extension: obj.extension, mimeType: obj.mimeType, description: obj.description } = infoByName);
           let _Object2 = Object;
           let _Object3 = Object;
-          obj = { sequence: null };
+          let obj2 = { sequence: null };
           let sequence = detectbBySignaturesResult.sequence;
           let merged = Object.assign({}, detectbBySignaturesResult);
-          obj.sequence = sequence.map((item) => item.toString(16));
-          obj.signature = Object.assign(merged, obj);
-          arr = items.push(obj);
+          obj2.sequence = sequence.map((item) => item.toString(16));
+          obj.signature = Object.assign(merged, obj2);
+          let arr2 = items.push(obj);
           continue;
         }
         continue;

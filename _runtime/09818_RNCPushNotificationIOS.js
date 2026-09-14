@@ -268,7 +268,8 @@ const items1 = [
     key: "requestPermissions",
     value: function requestPermissions(alert) {
       if (alert) {
-        let obj = { alert: alert.alert, badge: alert.badge, sound: alert.sound };
+        const obj2 = { alert: alert.alert, badge: alert.badge, sound: alert.sound };
+        let obj = obj2;
       } else {
         obj = { alert: true, badge: true, sound: true };
       }

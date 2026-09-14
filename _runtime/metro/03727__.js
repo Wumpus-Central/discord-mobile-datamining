@@ -1,19 +1,21 @@
 // === Module 3727: ? ===
 
 // Module 3727
-import requiredArgs from "requiredArgs" /* 3726 */;
-import startOfUTCWeek from "startOfUTCWeek" /* 3728 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import startOfUTCWeek_mod from "startOfUTCWeek" /* 3728 */;
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  let obj = { default: requiredArgs };
+  const obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;
 }
 requiredArgs = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
 if (!startOfUTCWeek) {
-  obj = { default: startOfUTCWeek };
-  let tmp5 = obj;
+  const obj2 = { default: startOfUTCWeek };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfUTCWeek;
 }

@@ -48,11 +48,11 @@ function getHeaderHeights(arg0, arg1, arg2, arg3, arg4, arg5) {
 
 }
 function getDistanceFromOptions(size, gestureDirection, arg2) {
-  gestureDirection = undefined;
+  let gestureDirection1;
   if (gestureDirection != null) {
-    gestureDirection = gestureDirection.gestureDirection;
+    gestureDirection1 = gestureDirection.gestureDirection;
   }
-  if (gestureDirection) {
+  if (gestureDirection1) {
     return CardStack(7122).getDistanceForDirection(size, gestureDirection.gestureDirection, arg2);
   } else {
     let presentation;
@@ -75,11 +75,11 @@ function getDistanceFromOptions(size, gestureDirection, arg2) {
       if (gestureDirection != null) {
         animation1 = gestureDirection.animation;
       }
-      let gestureDirection1;
+      let gestureDirection2;
       if (obj[animation1] != null) {
-        gestureDirection1 = tmp10.gestureDirection;
+        gestureDirection2 = tmp10.gestureDirection;
       }
-      gestureDirection = gestureDirection1;
+      gestureDirection = gestureDirection2;
     }
     return tmp3(7122).getDistanceForDirection(size, gestureDirection, arg2);
   }
@@ -210,12 +210,12 @@ class CardStack {
         headerHeights = headerHeights.headerHeights;
         let tmp3 = null;
         if (headerHeights[key.key] !== closure_1_1) {
-          headerHeights = { headerHeights: null };
-          headerHeights = {};
+          obj = { headerHeights: null };
+          const obj2 = {};
           const merged = Object.assign(headerHeights);
-          headerHeights[tmp.key] = tmp2;
-          headerHeights.headerHeights = headerHeights;
-          tmp3 = headerHeights;
+          obj2[tmp.key] = tmp2;
+          obj.headerHeights = obj2;
+          tmp3 = obj;
         }
         return tmp3;
       });
@@ -232,8 +232,8 @@ class CardStack {
       }
       obj = { route: route.route };
     };
-    obj = { routes: [], scenes: [], gestures: {}, layout: closure_0(closure_1[10]).SafeAreaProviderCompat.initialMetrics.frame, descriptors: tmp3Result.props.descriptors, activeStates: [], headerHeights: {} };
-    tmp3Result.state = obj;
+    obj1 = { routes: [], scenes: [], gestures: {}, layout: closure_0(closure_1[10]).SafeAreaProviderCompat.initialMetrics.frame, descriptors: tmp3Result.props.descriptors, activeStates: [], headerHeights: {} };
+    tmp3Result.state = obj1;
     return tmp3Result;
   }
 }
@@ -249,10 +249,11 @@ const entry = {
     ({ isParentHeaderShown: closure_9, isParentModal: _isNativeReflectConstruct, onTransitionStart: obj, onTransitionEnd: closure_12, onGestureStart: getInterpolationIndex, onGestureEnd: getIsModalPresentation, onGestureCancel: getIsModal, detachInactiveScreens } = props);
     const enabled = tmp;
     const state2 = self.state;
+    const scenes = state2.scenes;
     const layout = state2.layout;
     ({ gestures: closure_19, activeStates: closure_20, headerHeights } = state2);
-    const scenes = self.state.scenes;
-    const substr = scenes.slice(-2);
+    const scenes1 = self.state.scenes;
+    const substr = scenes1.slice(-2);
     let someResult = substr.some((descriptor) => {
       let options = descriptor.descriptor.options;
       if (options == null) {
@@ -271,20 +272,20 @@ const entry = {
     });
     CardStack = someResult;
     obj = { style: closure_19.container, children: null };
-    obj = { mode: "float", layout, scenes, getPreviousScene: self.getPreviousScene, getFocusedRoute: self.getFocusedRoute, contentHeight: headerHeights[tmp2.key], onContentHeightChange: self.handleHeaderLayout, style: null };
+    const obj2 = { mode: "float", layout, scenes, getPreviousScene: self.getPreviousScene, getFocusedRoute: self.getFocusedRoute, contentHeight: headerHeights[state.routes[state.index].key], onContentHeightChange: self.handleHeaderLayout, style: null };
     let items = [closure_19.floating, ];
     if (someResult) {
-      const obj1 = { height: headerHeights[tmp2.key] };
-      const items1 = [obj1, closure_19.absolute];
+      let obj3 = { height: headerHeights[tmp2.key] };
+      const items1 = [obj3, closure_19.absolute];
       someResult = items1;
     }
     items[1] = someResult;
-    obj.style = items;
-    const items2 = [renderHeader(obj), ];
-    const obj2 = { enabled: undefined === detachInactiveScreens || detachInactiveScreens, style: closure_19.container, onLayout: self.handleLayout, children: null };
+    obj2.style = items;
+    const items2 = [renderHeader(obj2), ];
+    const obj4 = { enabled: undefined === detachInactiveScreens || detachInactiveScreens, style: closure_19.container, onLayout: self.handleLayout, children: null };
     const items3 = [];
     HermesBuiltin.arraySpread(state.preloadedRoutes, HermesBuiltin.arraySpread(routes, 0));
-    obj2.children = items3.map((key, index) => {
+    obj4.children = items3.map((key, index) => {
       const preloadedRoutes = state.preloadedRoutes;
       let hasItem = preloadedRoutes.includes(key);
       if (hasItem) {
@@ -371,22 +372,22 @@ const entry = {
           }
           obj.shouldFreeze = tmp31;
           obj.homeIndicatorHidden = autoHideHomeIndicator;
-          obj = { index, interpolationIndex: num4, modal: flag, active: index === routes.length - 1, focused: key.key === key.key, opening: _getPrototypeOf.includes(key.key), closing: Value.includes(key.key), layout, gesture: closure_1_19[key.key], scene: tmp2, safeAreaInsetTop: top, safeAreaInsetRight: right, safeAreaInsetBottom: bottom, safeAreaInsetLeft: left, onGestureStart, onGestureCancel, onGestureEnd, headerHeight: num, isParentHeaderShown, onHeaderHeightChange: null, getPreviousScene: null, getFocusedRoute: null, hasAbsoluteFloatHeader: null, renderHeader: null, onOpenRoute: null, onCloseRoute: null, onTransitionStart: null, onTransitionEnd: null, isNextScreenTransparent: null, detachCurrentScreen: null, preloaded: null };
+          const obj3 = { index, interpolationIndex: num4, modal: flag, active: index === routes.length - 1, focused: key.key === key.key, opening: _getPrototypeOf.includes(key.key), closing: Value.includes(key.key), layout, gesture: closure_1_19[key.key], scene: tmp2, safeAreaInsetTop: top, safeAreaInsetRight: right, safeAreaInsetBottom: bottom, safeAreaInsetLeft: left, onGestureStart, onGestureCancel, onGestureEnd, headerHeight: num, isParentHeaderShown, onHeaderHeightChange: null, getPreviousScene: null, getFocusedRoute: null, hasAbsoluteFloatHeader: null, renderHeader: null, onOpenRoute: null, onCloseRoute: null, onTransitionStart: null, onTransitionEnd: null, isNextScreenTransparent: null, detachCurrentScreen: null, preloaded: null };
           ({ handleHeaderLayout: obj2.onHeaderHeightChange, getPreviousScene: obj2.getPreviousScene, getFocusedRoute: obj2.getFocusedRoute } = self);
           let tmp42 = someResult;
           if (someResult) {
             tmp42 = !headerTransparent;
           }
-          obj.hasAbsoluteFloatHeader = tmp42;
-          obj.renderHeader = renderHeader;
-          obj.onOpenRoute = onOpenRoute;
-          obj.onCloseRoute = onCloseRoute;
-          obj.onTransitionStart = onTransitionStart;
-          obj.onTransitionEnd = onTransitionEnd;
-          obj.isNextScreenTransparent = "transparentModal" === presentation;
-          obj.detachCurrentScreen = false !== detachPreviousScreen;
-          obj.preloaded = hasItem;
-          obj.children = React6(CardStack(7125).CardContainer, obj);
+          obj3.hasAbsoluteFloatHeader = tmp42;
+          obj3.renderHeader = renderHeader;
+          obj3.onOpenRoute = onOpenRoute;
+          obj3.onCloseRoute = onCloseRoute;
+          obj3.onTransitionStart = onTransitionStart;
+          obj3.onTransitionEnd = onTransitionEnd;
+          obj3.isNextScreenTransparent = "transparentModal" === presentation;
+          obj3.detachCurrentScreen = false !== detachPreviousScreen;
+          obj3.preloaded = hasItem;
+          obj.children = React6(CardStack(7125).CardContainer, obj3);
           return React6(CardStack(7124).MaybeScreen, obj, key.key);
         } else {
           throw new TypeError("Trying to call a non-function");
@@ -396,7 +397,7 @@ const entry = {
       }
       tmp6 = undefined === headerShown || headerShown;
     });
-    items2[1] = renderHeader(CardStack(7124).MaybeScreenContainer, obj2);
+    items2[1] = renderHeader(CardStack(7124).MaybeScreenContainer, obj4);
     obj.children = items2;
     return isParentHeaderShown(View, obj);
   }
@@ -441,12 +442,10 @@ const entry1 = {
       acc[key.key] = value;
       return acc;
     }, {});
-    CardStack(7134);
     let items1 = [...routes.state.preloadedRoutes];
-    obj = {};
     let merged = Object.assign(routes.descriptors);
     let merged1 = Object.assign(routes.preloadedDescriptors);
-    const modalRouteKeys = obj.getModalRouteKeys(items1, obj);
+    const modalRouteKeys = CardStack(7134).getModalRouteKeys(items1, {});
     let items2 = [...routes.state.preloadedRoutes];
     const mapped = items2.map((key, index, arg2) => {
       const preloadedRoutes = __memo.state.preloadedRoutes;
@@ -460,13 +459,6 @@ const entry1 = {
         tmp4 = arg2[index + 1];
       }
       __memo = tmp6;
-      let descriptor = reduced[key.key];
-      if (tmp3) {
-        let obj1 = reduced[tmp3.key];
-      }
-      if (tmp4) {
-        let obj2 = reduced[tmp4.key];
-      }
       const tmp8 = hasItem ? __memo.preloadedDescriptors : __memo.descriptors[key.key] || closure_1.descriptors[key.key];
       if (tmp8) {
         let tmp10 = tmp4;
@@ -483,11 +475,11 @@ const entry1 = {
             }
             tmp13 = closure_1.descriptors[key1];
           }
-          let options;
+          let options1;
           if (tmp13 != null) {
-            options = tmp13.options;
+            options1 = tmp13.options;
           }
-          tmp10 = options;
+          tmp10 = options1;
         }
         let tmp16 = tmp3;
         if (tmp3) {
@@ -503,11 +495,11 @@ const entry1 = {
             }
             tmp19 = closure_1.descriptors[key3];
           }
-          let options1;
+          let options2;
           if (tmp19 != null) {
-            options1 = tmp19.options;
+            options2 = tmp19.options;
           }
-          tmp16 = options1;
+          tmp16 = options2;
         }
         if (index !== arg2.length - 1) {
           if (tmp10) {
@@ -515,7 +507,7 @@ const entry1 = {
             if (tmp10 != null) {
               presentation = tmp10.presentation;
             }
-            options = tmp10;
+            let options = tmp10;
           }
           let str2 = options.animation;
           const hasItem1 = closure_3.includes(key.key);
@@ -527,7 +519,7 @@ const entry1 = {
             str3 = "default";
           }
           if ("default" !== str2) {
-            let ModalTransition = descriptor[str2];
+            let ModalTransition = obj[str2];
           } else if ("transparentModal" === options.presentation) {
             ModalTransition = CardStack(7118).ModalFadeTransition;
           } else {
@@ -602,21 +594,21 @@ const entry1 = {
                 }
               }
             }
-            descriptor = { route: key, descriptor: null, progress: null, __memo: null };
-            descriptor = {};
+            const obj4 = { route: key, descriptor: null, progress: null, __memo: null };
+            const obj5 = {};
             const merged = Object.assign(tmp8);
-            obj1 = {};
+            const obj6 = {};
             const merged1 = Object.assign(tmp8.options);
-            obj1.animation = str2;
-            obj1.cardOverlayEnabled = cardOverlayEnabled;
-            obj1.cardStyleInterpolator = cardStyleInterpolator;
-            obj1.gestureDirection = gestureDirection;
-            obj1.gestureEnabled = tmp34;
-            obj1.headerStyleInterpolator = headerStyleInterpolator;
-            obj1.transitionSpec = transitionSpec;
-            obj1.headerMode = str10;
-            descriptor.options = obj1;
-            descriptor.descriptor = descriptor;
+            obj6.animation = str2;
+            obj6.cardOverlayEnabled = cardOverlayEnabled;
+            obj6.cardStyleInterpolator = cardStyleInterpolator;
+            obj6.gestureDirection = gestureDirection;
+            obj6.gestureEnabled = tmp34;
+            obj6.headerStyleInterpolator = headerStyleInterpolator;
+            obj6.transitionSpec = transitionSpec;
+            obj6.headerMode = str10;
+            obj5.options = obj6;
+            obj4.descriptor = obj5;
             const layout = closure_1.layout;
             if (typeof getProgressFromGesture === "function") {
               const size = { width: null, height: null };
@@ -626,20 +618,20 @@ const entry1 = {
               size.height = Math.max(1, layout.height);
               const tmp59 = getDistanceFromOptions(size, tmp55, "rtl" === tmp.direction);
               if (tmp59 > 0) {
-                obj2 = { inputRange: null, outputRange: null };
+                const obj7 = { inputRange: null, outputRange: null };
                 const items = [0, tmp59];
-                obj2.inputRange = items;
-                obj2.outputRange = [1, 0];
-                let interpolateResult = descriptor.interpolate(obj2);
+                obj7.inputRange = items;
+                obj7.outputRange = [1, 0];
+                let interpolateResult = obj.interpolate(obj7);
               } else {
-                const obj3 = { inputRange: null, outputRange: null };
+                const obj8 = { inputRange: null, outputRange: null };
                 const items1 = [tmp59, 0];
-                obj3.inputRange = items1;
-                obj3.outputRange = [0, 1];
-                interpolateResult = descriptor.interpolate(obj3);
+                obj8.inputRange = items1;
+                obj8.outputRange = [0, 1];
+                interpolateResult = obj.interpolate(obj8);
               }
-              const obj4 = { current: interpolateResult, next: null, previous: null };
-              if (obj2) {
+              const obj9 = { current: interpolateResult, next: null, previous: null };
+              if (obj3) {
                 let presentation3;
                 if (tmp10 != null) {
                   presentation3 = tmp10.presentation;
@@ -652,35 +644,35 @@ const entry1 = {
                     size1.width = Math.max(1, layout3.width);
                     const _Math4 = Math;
                     size1.height = Math.max(1, layout3.height);
-                    let tmp57Result = getDistanceFromOptions(size1, tmp10, tmp56);
+                    const tmp57Result = getDistanceFromOptions(size1, tmp10, tmp56);
                     if (tmp57Result > 0) {
-                      const obj5 = { inputRange: null, outputRange: null };
+                      const obj10 = { inputRange: null, outputRange: null };
                       const items2 = [0, tmp57Result];
-                      obj5.inputRange = items2;
-                      obj5.outputRange = [1, 0];
-                      let interpolateResult1 = obj2.interpolate(obj5);
+                      obj10.inputRange = items2;
+                      obj10.outputRange = [1, 0];
+                      let interpolateResult1 = obj3.interpolate(obj10);
                     } else {
-                      const obj6 = { inputRange: null, outputRange: null };
+                      const obj11 = { inputRange: null, outputRange: null };
                       const items3 = [tmp57Result, 0];
-                      obj6.inputRange = items3;
-                      obj6.outputRange = [0, 1];
-                      interpolateResult1 = obj2.interpolate(obj6);
+                      obj11.inputRange = items3;
+                      obj11.outputRange = [0, 1];
+                      interpolateResult1 = obj3.interpolate(obj11);
                     }
                   } else {
                     throw new TypeError("Trying to call a non-function");
                   }
                 }
               }
-              obj4.next = undefined;
-              if (!obj1) {
-                obj4.previous = undefined;
-                descriptor.progress = obj4;
-                const items4 = [closure_1.layout, tmp8, tmp10, tmp16, descriptor, obj2, obj1];
-                descriptor.__memo = items4;
-                let tmp69 = descriptor;
+              obj9.next = undefined;
+              if (!obj2) {
+                obj9.previous = undefined;
+                obj4.progress = obj9;
+                const items4 = [closure_1.layout, tmp8, tmp10, tmp16, obj, obj3, obj2];
+                obj4.__memo = items4;
+                let tmp69 = obj4;
                 if (tmp6) {
-                  __memo = descriptor.__memo;
-                  tmp69 = descriptor;
+                  __memo = obj4.__memo;
+                  tmp69 = obj4;
                   if (__memo.every((item, index) => __memo.__memo[index] === item)) {
                     tmp69 = tmp6;
                   }
@@ -694,19 +686,19 @@ const entry1 = {
                   size2.width = Math.max(1, layout2.width);
                   const _Math6 = Math;
                   size2.height = Math.max(1, layout2.height);
-                  tmp57Result = getDistanceFromOptions(size2, tmp16, tmp56);
-                  if (tmp57Result > 0) {
-                    const obj7 = { inputRange: null, outputRange: null };
-                    const items5 = [0, tmp57Result];
-                    obj7.inputRange = items5;
-                    obj7.outputRange = [1, 0];
-                    let interpolateResult2 = obj1.interpolate(obj7);
+                  const tmp57Result2 = getDistanceFromOptions(size2, tmp16, tmp56);
+                  if (tmp57Result2 > 0) {
+                    const obj12 = { inputRange: null, outputRange: null };
+                    const items5 = [0, tmp57Result2];
+                    obj12.inputRange = items5;
+                    obj12.outputRange = [1, 0];
+                    let interpolateResult2 = obj2.interpolate(obj12);
                   } else {
-                    const obj8 = { inputRange: null, outputRange: null };
-                    const items6 = [tmp57Result, 0];
-                    obj8.inputRange = items6;
-                    obj8.outputRange = [0, 1];
-                    interpolateResult2 = obj1.interpolate(obj8);
+                    const obj13 = { inputRange: null, outputRange: null };
+                    const items6 = [tmp57Result2, 0];
+                    obj13.inputRange = items6;
+                    obj13.outputRange = [0, 1];
+                    interpolateResult2 = obj2.interpolate(obj13);
                   }
                 } else {
                   throw new TypeError("Trying to call a non-function");
@@ -802,7 +794,7 @@ const entry1 = {
         return num;
       });
     }
-    obj = { routes: routes.routes, scenes: mapped, gestures: reduced, descriptors: routes.descriptors, activeStates, headerHeights: null };
+    const obj3 = { routes: routes.routes, scenes: mapped, gestures: reduced, descriptors: routes.descriptors, activeStates, headerHeights: null };
     if (typeof getHeaderHeights === "function") {
       closure_129_0 = mapped;
       closure_129_1 = tmp15;
@@ -810,7 +802,7 @@ const entry1 = {
       closure_129_3 = tmp17;
       closure_129_4 = tmp18;
       closure_129_5 = tmp19;
-      obj.headerHeights = mapped.reduce((acc, descriptor, index) => {
+      obj3.headerHeights = mapped.reduce((acc, descriptor, index) => {
         const options = descriptor.descriptor.options;
         let headerStatusBarHeight = options.headerStatusBarHeight;
         if (undefined === headerStatusBarHeight) {
@@ -885,10 +877,12 @@ const entry1 = {
         }
         height = tmp9[descriptor.route.key];
       }, {});
-      return obj;
+      return obj3;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
+    obj = CardStack(7134);
+    const obj2 = {};
   }
 };
 let items1 = [entry1];

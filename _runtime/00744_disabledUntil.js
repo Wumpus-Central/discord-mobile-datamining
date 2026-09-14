@@ -42,10 +42,9 @@ export const updateRateLimits = function updateRateLimits(arg0, headers) {
   headers = headers.headers;
   let safeDateNowResult = arg2;
   if (arg2 === undefined) {
-    let obj = safeDateNow;
-    safeDateNowResult = obj.safeDateNow();
+    safeDateNowResult = safeDateNow.safeDateNow();
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(arg0);
   let prop;
   if (headers != null) {
@@ -82,20 +81,20 @@ export const updateRateLimits = function updateRateLimits(arg0, headers) {
             tmp25 = !parts2.includes("custom");
           }
           if (!tmp25) {
-            obj[item10070] = safeDateNowResult + result;
+            obj2[item10070] = safeDateNowResult + result;
           }
           continue;
         }
       } else {
-        obj.all = safeDateNowResult + result;
+        obj2.all = safeDateNowResult + result;
       }
       continue;
     }
     str7 = iter.next();
   } else if (prop1) {
-    obj.all = safeDateNowResult + parseRetryAfterHeader(prop1, safeDateNowResult);
+    obj2.all = safeDateNowResult + parseRetryAfterHeader(prop1, safeDateNowResult);
   } else if (429 === headers.statusCode) {
-    obj.all = safeDateNowResult + 60000;
+    obj2.all = safeDateNowResult + 60000;
   }
-  return obj;
+  return obj2;
 };

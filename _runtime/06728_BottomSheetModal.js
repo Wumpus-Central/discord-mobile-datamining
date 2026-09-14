@@ -26,8 +26,10 @@ import _modDef7031 from "module_7031" /* 7031 */;
 import BottomSheetBackdrop from "BottomSheetBackdrop" /* 7033 */;
 import TouchableOpacityDefault from "TouchableOpacity" /* 7037 */;
 
-for (const key10013 in require("GESTURE_SOURCE")) {
-  arg5[key10013] = require("GESTURE_SOURCE")[key10013];
+const require = globalThis.__r;
+
+for (const key10013 in require("value2")) {
+  arg5[key10013] = require("value2")[key10013];
   continue;
 }
 

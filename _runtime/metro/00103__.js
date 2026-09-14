@@ -7,45 +7,57 @@ importDefault = arg2;
 const dependencyMap = arg6;
 
 export const createViewConfig = function createViewConfig(uiViewClassName) {
-  let obj = { uiViewClassName: uiViewClassName.uiViewClassName, Commands: {}, bubblingEventTypes: null, directEventTypes: null, validAttributes: null };
-  let bubblingEventTypes = uiViewClassName.bubblingEventTypes;
-  if (null != bubblingEventTypes) {
+  const obj = { uiViewClassName: uiViewClassName.uiViewClassName, Commands: {}, bubblingEventTypes: null, directEventTypes: null, validAttributes: null };
+  let bubblingEventTypes1 = _modDef104.bubblingEventTypes;
+  const bubblingEventTypes = uiViewClassName.bubblingEventTypes;
+  if (null != bubblingEventTypes1) {
     if (null != bubblingEventTypes) {
-      obj = {};
-      const merged = Object.assign(bubblingEventTypes);
+      let obj2 = {};
+      const merged = Object.assign(bubblingEventTypes1);
       const merged1 = Object.assign(bubblingEventTypes);
     }
-    obj.bubblingEventTypes = obj;
-    let directEventTypes = uiViewClassName.directEventTypes;
-    if (null != directEventTypes) {
+    obj.bubblingEventTypes = obj2;
+    let directEventTypes1 = _modDef104.directEventTypes;
+    const directEventTypes = uiViewClassName.directEventTypes;
+    if (null != directEventTypes1) {
       if (null != directEventTypes) {
-        obj = {};
-        const merged2 = Object.assign(directEventTypes);
+        let obj3 = {};
+        const merged2 = Object.assign(directEventTypes1);
         const merged3 = Object.assign(directEventTypes);
       }
-      obj.directEventTypes = obj;
-      let obj2 = uiViewClassName.validAttributes;
-      if (null != obj2) {
-        if (null != obj2) {
-          let obj1 = {};
-          const merged4 = Object.assign(obj2);
-          const merged5 = Object.assign(obj2);
+      obj.directEventTypes = obj3;
+      let validAttributes2 = _modDef104.validAttributes;
+      const validAttributes = uiViewClassName.validAttributes;
+      if (null != validAttributes2) {
+        if (null != validAttributes) {
+          let obj4 = {};
+          const merged4 = Object.assign(validAttributes2);
+          const merged5 = Object.assign(validAttributes);
         }
-        obj.validAttributes = obj1;
+        obj.validAttributes = obj4;
         return obj;
       }
-      if (obj2 == null) {
-        obj2 = {};
+      if (validAttributes2 == null) {
+        validAttributes2 = validAttributes;
       }
-      obj1 = obj2;
+      if (validAttributes2 == null) {
+        validAttributes2 = {};
+      }
+      obj4 = validAttributes2;
     }
-    if (directEventTypes == null) {
-      directEventTypes = {};
+    if (directEventTypes1 == null) {
+      directEventTypes1 = directEventTypes;
     }
-    obj = directEventTypes;
+    if (directEventTypes1 == null) {
+      directEventTypes1 = {};
+    }
+    obj3 = directEventTypes1;
   }
-  if (bubblingEventTypes == null) {
-    bubblingEventTypes = {};
+  if (bubblingEventTypes1 == null) {
+    bubblingEventTypes1 = bubblingEventTypes;
   }
-  obj = bubblingEventTypes;
+  if (bubblingEventTypes1 == null) {
+    bubblingEventTypes1 = {};
+  }
+  obj2 = bubblingEventTypes1;
 };

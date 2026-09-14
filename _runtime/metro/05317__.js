@@ -314,10 +314,10 @@ export default {
     }
     return str;
   },
-  FocalLengthIn35mmFilm(value4) {
+  FocalLengthIn35mmFilm(value7) {
     let str = "Unknown";
-    if (0 !== value4) {
-      str = `${value4} mm`;
+    if (0 !== value7) {
+      str = `${value7} mm`;
     }
     return str;
   },

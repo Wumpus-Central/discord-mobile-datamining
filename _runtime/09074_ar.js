@@ -1,6 +1,8 @@
 // === Module 9074: ar ===
 
 // Module 9074 (ar)
+const require = globalThis.__r;
+
 const require = arg1;
 const dependencyMap = arg6;
 let fn = this;
@@ -19,8 +21,8 @@ if (!fn) {
   };
 }
 
-export const ar = fn(require("module_9077")).default;
-export const az = fn(require("module_9077")).default;
+export const ar = fn(require("module_9075")).default;
+export const az = fn(require("module_9076")).default;
 export const be = fn(require("module_9077")).default;
 export const bg = fn(require("module_9078")).default;
 export const ca = fn(require("module_9079")).default;

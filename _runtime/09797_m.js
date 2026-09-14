@@ -48,16 +48,16 @@ let fn = function m() {
   function Q(arg0, arg1) {
     let obj = {};
     if (typeof closure_46 === "function") {
-      obj = { done: true, rules: tmp2 };
+      const obj2 = { done: true, rules: tmp2 };
       let tmp4 = null;
-      if (obj.start(arg0)) {
-        obj.expect("every");
-        let acceptNumberResult = obj.acceptNumber();
+      if (obj2.start(arg0)) {
+        obj2.expect("every");
+        let acceptNumberResult = obj2.acceptNumber();
         if (acceptNumberResult) {
           let _parseInt = parseInt;
           obj.interval = parseInt(acceptNumberResult[0], 10);
         }
-        if (obj.isDone()) {
+        if (obj2.isDone()) {
           const _Error20 = Error;
           let error = new Error("Unexpected end");
           throw error;
@@ -66,32 +66,31 @@ let fn = function m() {
             let parsed;
             if (acceptResult) {
               while (true) {
-                let iter = obj;
-                let symbol = obj.symbol;
+                let symbol = obj2.symbol;
                 let str = "last";
                 if ("last" === symbol) {
-                  let nextSymbolResult = iter.nextSymbol();
+                  let nextSymbolResult = obj2.nextSymbol();
                   let flag = -1;
                 } else {
                   let str20 = "first";
                   if ("first" === symbol) {
-                    let nextSymbolResult1 = iter.nextSymbol();
+                    let nextSymbolResult1 = obj2.nextSymbol();
                     flag = 1;
                   } else {
                     let str21 = "second";
                     if ("second" === symbol) {
-                      let nextSymbolResult2 = iter.nextSymbol();
+                      let nextSymbolResult2 = obj2.nextSymbol();
                       let num3 = 2;
-                      if (iter.accept("last")) {
+                      if (obj2.accept("last")) {
                         num3 = -2;
                       }
                       flag = num3;
                     } else {
                       let str22 = "third";
                       if ("third" === symbol) {
-                        let nextSymbolResult3 = iter.nextSymbol();
+                        let nextSymbolResult3 = obj2.nextSymbol();
                         let num2 = 3;
-                        if (iter.accept("last")) {
+                        if (obj2.accept("last")) {
                           num2 = -3;
                         }
                         flag = num2;
@@ -101,15 +100,15 @@ let fn = function m() {
                         if ("nth" === symbol) {
                           let tmp49 = globalThis;
                           let _parseInt3 = parseInt;
-                          parsed = parseInt(iter.value[1], 10);
+                          parsed = parseInt(obj2.value[1], 10);
                           if (parsed < -366) {
                             break;
                           } else if (parsed > 366) {
                             break;
                           } else {
-                            let nextSymbolResult4 = iter.nextSymbol();
+                            let nextSymbolResult4 = obj2.nextSymbol();
                             let tmp4 = parsed;
-                            if (iter.accept("last")) {
+                            if (obj2.accept("last")) {
                               tmp4 = -parsed;
                             }
                             flag = tmp4;
@@ -119,7 +118,7 @@ let fn = function m() {
                     }
                   }
                 }
-                let symbol2 = iter.symbol;
+                let symbol2 = obj2.symbol;
                 let str3 = "monday";
                 if ("monday" !== symbol2) {
                   let str4 = "tuesday";
@@ -136,69 +135,68 @@ let fn = function m() {
                             let flag2 = false;
                           }
                           let flag3 = 12;
-                          switch (iter.symbol) {
+                          switch (obj2.symbol) {
                             case "january":
                               flag3 = 1;
                               if (flag) {
                                 if (flag2) {
-                                  let nextSymbolResult5 = iter.nextSymbol();
+                                  let nextSymbolResult5 = obj2.nextSymbol();
                                   let tmp46 = obj;
                                   if (!obj.byweekday) {
                                     tmp46.byweekday = [];
                                   }
                                   let byweekday = tmp46.byweekday;
-                                  obj3 = constants[flag2];
+                                  let obj3 = constants[flag2];
                                   let arr = byweekday.push(obj3.nth(flag));
-                                  obj = iter;
+                                  obj = obj2;
                                 } else {
                                   let tmp42 = obj;
                                   if (!obj.bymonthday) {
                                     tmp42.bymonthday = [];
                                   }
                                   let bymonthday = tmp42.bymonthday;
-                                  arr = bymonthday.push(flag);
+                                  let arr2 = bymonthday.push(flag);
                                   let str18 = "day(s)";
-                                  let acceptResult1 = iter.accept("day(s)");
-                                  obj = iter;
+                                  let acceptResult1 = obj2.accept("day(s)");
+                                  obj = obj2;
                                 }
                               } else if (flag2) {
-                                let nextSymbolResult6 = iter.nextSymbol();
+                                let nextSymbolResult6 = obj2.nextSymbol();
                                 let tmp39 = obj;
                                 if (!obj.byweekday) {
                                   tmp39.byweekday = [];
                                 }
                                 let byweekday1 = tmp39.byweekday;
-                                let arr1 = byweekday1.push(constants[flag2]);
-                                obj = iter;
+                                let arr3 = byweekday1.push(constants[flag2]);
+                                obj = obj2;
                               } else {
                                 let str12 = "weekday(s)";
-                                if ("weekday(s)" === iter.symbol) {
-                                  let nextSymbolResult7 = iter.nextSymbol();
-                                  obj = iter;
+                                if ("weekday(s)" === obj2.symbol) {
+                                  let nextSymbolResult7 = obj2.nextSymbol();
+                                  obj = obj2;
                                   if (!obj.byweekday) {
                                     let items = [constants.MO, constants.TU, constants.WE, constants.TH, constants.FR];
                                     tmp32.byweekday = items;
-                                    obj = iter;
+                                    obj = obj2;
                                   }
                                 } else {
                                   let str24 = "week(s)";
-                                  if ("week(s)" === iter.symbol) {
-                                    let nextSymbolResult8 = iter.nextSymbol();
-                                    let acceptNumberResult = iter.acceptNumber();
+                                  if ("week(s)" === obj2.symbol) {
+                                    let nextSymbolResult8 = obj2.nextSymbol();
+                                    let acceptNumberResult = obj2.acceptNumber();
                                     let tmp18 = globalThis;
                                     if (acceptNumberResult) {
                                       let _parseInt = parseInt;
                                       let items1 = [parseInt(acceptNumberResult[0], 10)];
                                       obj.byweekno = items1;
                                       let str15 = "comma";
-                                      obj = iter;
-                                      if (iter.accept("comma")) {
-                                        obj2 = obj;
-                                        let acceptNumberResult1 = obj.acceptNumber();
+                                      obj = obj2;
+                                      if (obj2.accept("comma")) {
+                                        let acceptNumberResult1 = obj2.acceptNumber();
                                         while (acceptNumberResult1) {
                                           let byweekno = obj.byweekno;
                                           let _parseInt2 = parseInt;
-                                          let arr2 = byweekno.push(parseInt(acceptNumberResult1[0], 10));
+                                          let arr4 = byweekno.push(parseInt(acceptNumberResult1[0], 10));
                                           obj = obj2;
                                           continue;
                                         }
@@ -216,18 +214,18 @@ let fn = function m() {
                                       let tmp19 = new.target;
                                       let str14 = ", expected week number";
                                       let tmp20 = new.target;
-                                      let error1 = new Error("Unexpected symbol " + iter.symbol + ", expected week number");
+                                      let error1 = new Error("Unexpected symbol " + obj2.symbol + ", expected week number");
                                       throw error1;
                                     }
                                   } else if (flag3) {
-                                    let nextSymbolResult9 = iter.nextSymbol();
+                                    let nextSymbolResult9 = obj2.nextSymbol();
                                     let tmp14 = obj;
                                     if (!obj.bymonth) {
                                       tmp14.bymonth = [];
                                     }
                                     let bymonth = tmp14.bymonth;
-                                    let arr3 = bymonth.push(flag3);
-                                    obj = iter;
+                                    let arr5 = bymonth.push(flag3);
+                                    obj = obj2;
                                   }
                                 }
                               }
@@ -274,7 +272,7 @@ let fn = function m() {
                     }
                   }
                 }
-                let str10 = iter.symbol;
+                let str10 = obj2.symbol;
                 let str11 = str10.substr(0, 2);
                 flag2 = str11.toUpperCase();
               }
@@ -282,21 +280,21 @@ let fn = function m() {
               const error2 = new Error("Nth out of range: " + parsed);
               throw error2;
             }
-            acceptResult = obj.accept("on");
+            acceptResult = obj2.accept("on");
           };
-          switch (obj.symbol) {
+          switch (obj2.symbol) {
             case "day(s)":
               obj.freq = constants.DAILY;
               tmp4 = obj;
-              if (obj.nextSymbol()) {
-                if (obj.accept("at")) {
-                  let acceptNumberResult1 = obj.acceptNumber();
+              if (obj2.nextSymbol()) {
+                if (obj2.accept("at")) {
+                  let acceptNumberResult1 = obj2.acceptNumber();
                   while (acceptNumberResult1) {
                     let _parseInt10 = parseInt;
                     let items = [parseInt(acceptNumberResult1[0], 10)];
                     obj.byhour = items;
-                    if (obj.accept("comma")) {
-                      let acceptNumberResult2 = obj.acceptNumber();
+                    if (obj2.accept("comma")) {
+                      let acceptNumberResult2 = obj2.acceptNumber();
                       while (acceptNumberResult2) {
                         let byhour = obj.byhour;
                         let _parseInt11 = parseInt;
@@ -308,18 +306,18 @@ let fn = function m() {
                       let tmp223 = new.target;
                       let str69 = "; expected hour";
                       let tmp224 = new.target;
-                      let error1 = new Error("Unexpected symbol " + obj.symbol + "; expected hour");
+                      let error1 = new Error("Unexpected symbol " + obj2.symbol + "; expected hour");
                       throw error1;
                     }
                     continue;
                   }
                   const _Error16 = Error;
-                  let error2 = new Error("Unexpected symbol " + obj.symbol + ", expected hour");
+                  let error2 = new Error("Unexpected symbol " + obj2.symbol + ", expected hour");
                   throw error2;
                 }
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   const _Date17 = Date;
-                  let parsed = Date.parse(obj.text);
+                  let parsed = Date.parse(obj2.text);
                   if (parsed) {
                     const _Date18 = Date;
                     date = new Date(parsed);
@@ -327,15 +325,15 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     const _Error18 = Error;
-                    const error3 = new Error("Cannot parse until date:" + obj.text);
+                    const error3 = new Error("Cannot parse until date:" + obj2.text);
                     throw error3;
                   }
                 } else {
                   tmp4 = obj;
-                  if (obj.accept("for")) {
+                  if (obj2.accept("for")) {
                     const _parseInt12 = parseInt;
-                    obj.count = parseInt(obj.value[0], 10);
-                    obj.expect("number");
+                    obj.count = parseInt(obj2.value[0], 10);
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -346,10 +344,10 @@ let fn = function m() {
               let items1 = [, , , , ];
               ({ MO: arr7[0], TU: arr7[1], WE: arr7[2], TH: arr7[3], FR: arr7[4] } = constants);
               obj.byweekday = items1;
-              obj.nextSymbol();
-              if ("until" === obj.symbol) {
+              obj2.nextSymbol();
+              if ("until" === obj2.symbol) {
                 const _Date15 = Date;
-                const parsed1 = Date.parse(obj.text);
+                const parsed1 = Date.parse(obj2.text);
                 if (parsed1) {
                   const _Date16 = Date;
                   const date1 = new Date(parsed1);
@@ -357,15 +355,15 @@ let fn = function m() {
                   tmp4 = obj;
                 } else {
                   const _Error15 = Error;
-                  const error4 = new Error("Cannot parse until date:" + obj.text);
+                  const error4 = new Error("Cannot parse until date:" + obj2.text);
                   throw error4;
                 }
               } else {
                 tmp4 = obj;
-                if (obj.accept("for")) {
+                if (obj2.accept("for")) {
                   const _parseInt9 = parseInt;
-                  obj.count = parseInt(obj.value[0], 10);
-                  obj.expect("number");
+                  obj.count = parseInt(obj2.value[0], 10);
+                  obj2.expect("number");
                   tmp4 = obj;
                 }
               }
@@ -373,11 +371,11 @@ let fn = function m() {
             case "week(s)":
               obj.freq = constants.WEEKLY;
               tmp4 = obj;
-              if (obj.nextSymbol()) {
+              if (obj2.nextSymbol()) {
                 fn();
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   const _Date13 = Date;
-                  const parsed2 = Date.parse(obj.text);
+                  const parsed2 = Date.parse(obj2.text);
                   if (parsed2) {
                     const _Date14 = Date;
                     const date2 = new Date(parsed2);
@@ -385,15 +383,15 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     const _Error14 = Error;
-                    const error5 = new Error("Cannot parse until date:" + obj.text);
+                    const error5 = new Error("Cannot parse until date:" + obj2.text);
                     throw error5;
                   }
                 } else {
                   tmp4 = obj;
-                  if (obj.accept("for")) {
+                  if (obj2.accept("for")) {
                     const _parseInt8 = parseInt;
-                    obj.count = parseInt(obj.value[0], 10);
-                    obj.expect("number");
+                    obj.count = parseInt(obj2.value[0], 10);
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -402,11 +400,11 @@ let fn = function m() {
             case "hour(s)":
               obj.freq = constants.HOURLY;
               tmp4 = obj;
-              if (obj.nextSymbol()) {
+              if (obj2.nextSymbol()) {
                 fn();
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   const _Date11 = Date;
-                  const parsed3 = Date.parse(obj.text);
+                  const parsed3 = Date.parse(obj2.text);
                   if (parsed3) {
                     const _Date12 = Date;
                     const date3 = new Date(parsed3);
@@ -414,15 +412,15 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     const _Error13 = Error;
-                    const error6 = new Error("Cannot parse until date:" + obj.text);
+                    const error6 = new Error("Cannot parse until date:" + obj2.text);
                     throw error6;
                   }
                 } else {
                   tmp4 = obj;
-                  if (obj.accept("for")) {
+                  if (obj2.accept("for")) {
                     const _parseInt7 = parseInt;
-                    obj.count = parseInt(obj.value[0], 10);
-                    obj.expect("number");
+                    obj.count = parseInt(obj2.value[0], 10);
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -431,11 +429,11 @@ let fn = function m() {
             case "minute(s)":
               obj.freq = constants.MINUTELY;
               tmp4 = obj;
-              if (obj.nextSymbol()) {
+              if (obj2.nextSymbol()) {
                 fn();
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   const _Date9 = Date;
-                  const parsed4 = Date.parse(obj.text);
+                  const parsed4 = Date.parse(obj2.text);
                   if (parsed4) {
                     const _Date10 = Date;
                     const date4 = new Date(parsed4);
@@ -443,15 +441,15 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     const _Error12 = Error;
-                    const error7 = new Error("Cannot parse until date:" + obj.text);
+                    const error7 = new Error("Cannot parse until date:" + obj2.text);
                     throw error7;
                   }
                 } else {
                   tmp4 = obj;
-                  if (obj.accept("for")) {
+                  if (obj2.accept("for")) {
                     const _parseInt6 = parseInt;
-                    obj.count = parseInt(obj.value[0], 10);
-                    obj.expect("number");
+                    obj.count = parseInt(obj2.value[0], 10);
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -460,11 +458,11 @@ let fn = function m() {
             case "month(s)":
               obj.freq = constants.MONTHLY;
               tmp4 = obj;
-              if (obj.nextSymbol()) {
+              if (obj2.nextSymbol()) {
                 fn();
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   const _Date7 = Date;
-                  const parsed5 = Date.parse(obj.text);
+                  const parsed5 = Date.parse(obj2.text);
                   if (parsed5) {
                     const _Date8 = Date;
                     const date5 = new Date(parsed5);
@@ -472,15 +470,15 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     const _Error11 = Error;
-                    const error8 = new Error("Cannot parse until date:" + obj.text);
+                    const error8 = new Error("Cannot parse until date:" + obj2.text);
                     throw error8;
                   }
                 } else {
                   tmp4 = obj;
-                  if (obj.accept("for")) {
+                  if (obj2.accept("for")) {
                     const _parseInt5 = parseInt;
-                    obj.count = parseInt(obj.value[0], 10);
-                    obj.expect("number");
+                    obj.count = parseInt(obj2.value[0], 10);
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -489,11 +487,11 @@ let fn = function m() {
             case "year(s)":
               obj.freq = constants.YEARLY;
               tmp4 = obj;
-              if (obj.nextSymbol()) {
+              if (obj2.nextSymbol()) {
                 fn();
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   const _Date5 = Date;
-                  const parsed6 = Date.parse(obj.text);
+                  const parsed6 = Date.parse(obj2.text);
                   if (parsed6) {
                     const _Date6 = Date;
                     const date6 = new Date(parsed6);
@@ -501,15 +499,15 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     const _Error10 = Error;
-                    const error9 = new Error("Cannot parse until date:" + obj.text);
+                    const error9 = new Error("Cannot parse until date:" + obj2.text);
                     throw error9;
                   }
                 } else {
                   tmp4 = obj;
-                  if (obj.accept("for")) {
+                  if (obj2.accept("for")) {
                     const _parseInt4 = parseInt;
-                    obj.count = parseInt(obj.value[0], 10);
-                    obj.expect("number");
+                    obj.count = parseInt(obj2.value[0], 10);
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -517,19 +515,19 @@ let fn = function m() {
             break;
             case "monday":
               obj.freq = constants.WEEKLY;
-              let str10 = obj.symbol;
+              let str10 = obj2.symbol;
               let str11 = str10.substr(0, 2);
               let formatted = str11.toUpperCase();
               let items2 = [constants[formatted]];
               obj.byweekday = items2;
-              let nextSymbolResult1 = obj.nextSymbol();
+              let nextSymbolResult1 = obj2.nextSymbol();
               tmp4 = obj;
               if (nextSymbolResult1) {
-                let acceptResult = obj.accept("comma");
+                let acceptResult = obj2.accept("comma");
                 if (acceptResult) {
-                  let isDoneResult = obj.isDone();
+                  let isDoneResult = obj2.isDone();
                   while (!isDoneResult) {
-                    let symbol2 = obj.symbol;
+                    let symbol2 = obj2.symbol;
                     if ("monday" !== symbol2) {
                       if ("tuesday" !== symbol2) {
                         if ("wednesday" !== symbol2) {
@@ -540,18 +538,18 @@ let fn = function m() {
                               }
                               if (flag4) {
                                 let byweekday = obj.byweekday;
-                                arr = byweekday.push(constants[flag4]);
-                                let nextSymbolResult2 = obj.nextSymbol();
-                                let acceptResult1 = obj.accept("comma");
+                                let arr2 = byweekday.push(constants[flag4]);
+                                let nextSymbolResult2 = obj2.nextSymbol();
+                                let acceptResult1 = obj2.accept("comma");
                               } else {
                                 let tmp51 = globalThis;
                                 let _Error4 = Error;
-                                let symbol3 = obj.symbol;
+                                let symbol3 = obj2.symbol;
                                 let str22 = "Unexpected symbol ";
-                                let text = `Unexpected symbol ${symbol3}`;
+                                let text1 = `Unexpected symbol ${symbol3}`;
                                 let tmp53 = new.target;
                                 let str23 = ", expected weekday";
-                                let text1 = `Unexpected symbol ${symbol3}, expected weekday`;
+                                let text3 = `Unexpected symbol ${symbol3}, expected weekday`;
                                 let tmp55 = new.target;
                                 let error10 = new Error(`Unexpected symbol ${symbol3}, expected weekday`);
                                 throw error10;
@@ -561,7 +559,7 @@ let fn = function m() {
                         }
                       }
                     }
-                    let str20 = obj.symbol;
+                    let str20 = obj2.symbol;
                     let str21 = str20.substr(0, 2);
                     flag4 = str21.toUpperCase();
                   }
@@ -569,26 +567,26 @@ let fn = function m() {
                   let error11 = new Error("Unexpected end");
                   throw error11;
                 }
-                obj.accept("on");
-                obj.accept("the");
-                let symbol4 = obj.symbol;
+                obj2.accept("on");
+                obj2.accept("the");
+                let symbol4 = obj2.symbol;
                 if ("last" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   let flag5 = -1;
                 } else if ("first" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = 1;
                 } else if ("second" === symbol4) {
-                  obj.nextSymbol();
-                  let acceptResult4 = obj.accept("last");
+                  obj2.nextSymbol();
+                  let acceptResult4 = obj2.accept("last");
                   let num19 = 2;
                   if (acceptResult4) {
                     num19 = -2;
                   }
                   flag5 = num19;
                 } else if ("third" === symbol4) {
-                  obj.nextSymbol();
-                  let acceptResult5 = obj.accept("last");
+                  obj2.nextSymbol();
+                  let acceptResult5 = obj2.accept("last");
                   let num18 = 3;
                   if (acceptResult5) {
                     num18 = -3;
@@ -598,11 +596,11 @@ let fn = function m() {
                   flag5 = false;
                   if ("nth" === symbol4) {
                     let _parseInt13 = parseInt;
-                    let parsed7 = parseInt(obj.value[1], 10);
+                    let parsed7 = parseInt(obj2.value[1], 10);
                     if (parsed7 >= -366) {
                       if (parsed7 <= 366) {
-                        obj.nextSymbol();
-                        let acceptResult6 = obj.accept("last");
+                        obj2.nextSymbol();
+                        let acceptResult6 = obj2.accept("last");
                         let tmp66 = parsed7;
                         if (acceptResult6) {
                           tmp66 = -parsed7;
@@ -611,7 +609,7 @@ let fn = function m() {
                       }
                     }
                     let _Error5 = Error;
-                    let text2 = `Nth out of range: ${tmp250}`;
+                    let text4 = `Nth out of range: ${tmp250}`;
                     let error12 = new Error(`Nth out of range: ${tmp250}`);
                     throw error12;
                   }
@@ -619,28 +617,28 @@ let fn = function m() {
                 if (flag5) {
                   let items3 = [flag5];
                   obj.bymonthday = items3;
-                  obj.nextSymbol();
-                  let acceptResult7 = obj.accept("comma");
+                  obj2.nextSymbol();
+                  let acceptResult7 = obj2.accept("comma");
                   if (acceptResult7) {
                     while (true) {
-                      let symbol5 = obj.symbol;
+                      let symbol5 = obj2.symbol;
                       if ("last" === symbol5) {
-                        let nextSymbolResult9 = obj.nextSymbol();
+                        let nextSymbolResult9 = obj2.nextSymbol();
                         let flag6 = -1;
                       } else if ("first" === symbol5) {
-                        let nextSymbolResult10 = obj.nextSymbol();
+                        let nextSymbolResult10 = obj2.nextSymbol();
                         flag6 = 1;
                       } else if ("second" === symbol5) {
-                        let nextSymbolResult11 = obj.nextSymbol();
-                        let acceptResult8 = obj.accept("last");
+                        let nextSymbolResult11 = obj2.nextSymbol();
+                        let acceptResult8 = obj2.accept("last");
                         let num29 = 2;
                         if (acceptResult8) {
                           num29 = -2;
                         }
                         flag6 = num29;
                       } else if ("third" === symbol5) {
-                        let nextSymbolResult12 = obj.nextSymbol();
-                        let acceptResult9 = obj.accept("last");
+                        let nextSymbolResult12 = obj2.nextSymbol();
+                        let acceptResult9 = obj2.accept("last");
                         let num28 = 3;
                         if (acceptResult9) {
                           num28 = -3;
@@ -650,14 +648,14 @@ let fn = function m() {
                         flag6 = false;
                         if ("nth" === symbol5) {
                           let _parseInt14 = parseInt;
-                          let parsed8 = parseInt(obj.value[1], 10);
+                          let parsed8 = parseInt(obj2.value[1], 10);
                           if (parsed8 < -366) {
                             break;
                           } else if (parsed8 > 366) {
                             break;
                           } else {
-                            let nextSymbolResult13 = obj.nextSymbol();
-                            let acceptResult10 = obj.accept("last");
+                            let nextSymbolResult13 = obj2.nextSymbol();
+                            let acceptResult10 = obj2.accept("last");
                             let tmp83 = parsed8;
                             if (acceptResult10) {
                               tmp83 = -parsed8;
@@ -668,31 +666,31 @@ let fn = function m() {
                       }
                       if (flag6) {
                         let bymonthday = obj.bymonthday;
-                        let arr1 = bymonthday.push(flag6);
-                        let nextSymbolResult14 = obj.nextSymbol();
-                        let acceptResult11 = obj.accept("comma");
+                        let arr3 = bymonthday.push(flag6);
+                        let nextSymbolResult14 = obj2.nextSymbol();
+                        let acceptResult11 = obj2.accept("comma");
                       } else {
                         let _Error7 = Error;
-                        let symbol6 = obj.symbol;
+                        let symbol6 = obj2.symbol;
                         let str33 = "Unexpected symbol ";
-                        let text3 = `Unexpected symbol ${symbol6}`;
+                        let text5 = `Unexpected symbol ${symbol6}`;
                         let tmp96 = new.target;
                         let str34 = "; expected monthday";
-                        let text4 = `Unexpected symbol ${symbol6}; expected monthday`;
+                        let text6 = `Unexpected symbol ${symbol6}; expected monthday`;
                         let tmp98 = new.target;
                         let error13 = new Error(`Unexpected symbol ${symbol6}; expected monthday`);
                         throw error13;
                       }
                     }
                     let _Error6 = Error;
-                    let text5 = `Nth out of range: ${tmp251}`;
+                    let text7 = `Nth out of range: ${tmp251}`;
                     let error14 = new Error(`Nth out of range: ${tmp251}`);
                     throw error14;
                   }
                 }
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   let _Date3 = Date;
-                  let parsed9 = Date.parse(obj.text);
+                  let parsed9 = Date.parse(obj2.text);
                   if (parsed9) {
                     let _Date4 = Date;
                     let date7 = new Date(parsed9);
@@ -700,19 +698,19 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     let _Error8 = Error;
-                    text2 = obj.text;
-                    let text6 = `Cannot parse until date:${text2}`;
+                    let text2 = obj2.text;
+                    let text8 = `Cannot parse until date:${text2}`;
                     let error15 = new Error(`Cannot parse until date:${text2}`);
                     throw error15;
                   }
                 } else {
-                  let acceptResult12 = obj.accept("for");
+                  let acceptResult12 = obj2.accept("for");
                   tmp4 = obj;
                   if (acceptResult12) {
                     let _parseInt3 = parseInt;
-                    let parsed10 = parseInt(obj.value[0], 10);
+                    let parsed10 = parseInt(obj2.value[0], 10);
                     obj.count = parsed10;
-                    obj.expect("number");
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -720,19 +718,19 @@ let fn = function m() {
             break;
             case "tuesday":
               obj.freq = constants.WEEKLY;
-              str10 = obj.symbol;
+              str10 = obj2.symbol;
               str11 = str10.substr(0, 2);
               formatted = str11.toUpperCase();
               items2 = [constants[formatted]];
               obj.byweekday = items2;
-              nextSymbolResult1 = obj.nextSymbol();
+              nextSymbolResult1 = obj2.nextSymbol();
               tmp4 = obj;
               if (nextSymbolResult1) {
-                acceptResult = obj.accept("comma");
+                acceptResult = obj2.accept("comma");
                 if (acceptResult) {
-                  isDoneResult = obj.isDone();
+                  isDoneResult = obj2.isDone();
                   while (!isDoneResult) {
-                    symbol2 = obj.symbol;
+                    symbol2 = obj2.symbol;
                     if ("monday" !== symbol2) {
                       if ("tuesday" !== symbol2) {
                         if ("wednesday" !== symbol2) {
@@ -743,18 +741,18 @@ let fn = function m() {
                               }
                               if (flag4) {
                                 byweekday = obj.byweekday;
-                                arr = byweekday.push(constants[flag4]);
-                                nextSymbolResult2 = obj.nextSymbol();
-                                acceptResult1 = obj.accept("comma");
+                                arr2 = byweekday.push(constants[flag4]);
+                                nextSymbolResult2 = obj2.nextSymbol();
+                                acceptResult1 = obj2.accept("comma");
                               } else {
                                 tmp51 = globalThis;
                                 _Error4 = Error;
-                                symbol3 = obj.symbol;
+                                symbol3 = obj2.symbol;
                                 str22 = "Unexpected symbol ";
-                                text = `Unexpected symbol ${symbol3}`;
+                                text1 = `Unexpected symbol ${symbol3}`;
                                 tmp53 = new.target;
                                 str23 = ", expected weekday";
-                                text1 = `Unexpected symbol ${symbol3}, expected weekday`;
+                                text3 = `Unexpected symbol ${symbol3}, expected weekday`;
                                 tmp55 = new.target;
                                 error10 = new Error(`Unexpected symbol ${symbol3}, expected weekday`);
                                 throw error10;
@@ -764,7 +762,7 @@ let fn = function m() {
                         }
                       }
                     }
-                    str20 = obj.symbol;
+                    str20 = obj2.symbol;
                     str21 = str20.substr(0, 2);
                     flag4 = str21.toUpperCase();
                   }
@@ -772,26 +770,26 @@ let fn = function m() {
                   error11 = new Error("Unexpected end");
                   throw error11;
                 }
-                obj.accept("on");
-                obj.accept("the");
-                symbol4 = obj.symbol;
+                obj2.accept("on");
+                obj2.accept("the");
+                symbol4 = obj2.symbol;
                 if ("last" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = -1;
                 } else if ("first" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = 1;
                 } else if ("second" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult4 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult4 = obj2.accept("last");
                   num19 = 2;
                   if (acceptResult4) {
                     num19 = -2;
                   }
                   flag5 = num19;
                 } else if ("third" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult5 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult5 = obj2.accept("last");
                   num18 = 3;
                   if (acceptResult5) {
                     num18 = -3;
@@ -801,11 +799,11 @@ let fn = function m() {
                   flag5 = false;
                   if ("nth" === symbol4) {
                     _parseInt13 = parseInt;
-                    parsed7 = parseInt(obj.value[1], 10);
+                    parsed7 = parseInt(obj2.value[1], 10);
                     if (parsed7 >= -366) {
                       if (parsed7 <= 366) {
-                        obj.nextSymbol();
-                        acceptResult6 = obj.accept("last");
+                        obj2.nextSymbol();
+                        acceptResult6 = obj2.accept("last");
                         tmp66 = parsed7;
                         if (acceptResult6) {
                           tmp66 = -parsed7;
@@ -814,7 +812,7 @@ let fn = function m() {
                       }
                     }
                     _Error5 = Error;
-                    text2 = `Nth out of range: ${tmp250}`;
+                    text4 = `Nth out of range: ${tmp250}`;
                     error12 = new Error(`Nth out of range: ${tmp250}`);
                     throw error12;
                   }
@@ -822,28 +820,28 @@ let fn = function m() {
                 if (flag5) {
                   items3 = [flag5];
                   obj.bymonthday = items3;
-                  obj.nextSymbol();
-                  acceptResult7 = obj.accept("comma");
+                  obj2.nextSymbol();
+                  acceptResult7 = obj2.accept("comma");
                   if (acceptResult7) {
                     while (true) {
-                      symbol5 = obj.symbol;
+                      symbol5 = obj2.symbol;
                       if ("last" === symbol5) {
-                        nextSymbolResult9 = obj.nextSymbol();
+                        nextSymbolResult9 = obj2.nextSymbol();
                         flag6 = -1;
                       } else if ("first" === symbol5) {
-                        nextSymbolResult10 = obj.nextSymbol();
+                        nextSymbolResult10 = obj2.nextSymbol();
                         flag6 = 1;
                       } else if ("second" === symbol5) {
-                        nextSymbolResult11 = obj.nextSymbol();
-                        acceptResult8 = obj.accept("last");
+                        nextSymbolResult11 = obj2.nextSymbol();
+                        acceptResult8 = obj2.accept("last");
                         num29 = 2;
                         if (acceptResult8) {
                           num29 = -2;
                         }
                         flag6 = num29;
                       } else if ("third" === symbol5) {
-                        nextSymbolResult12 = obj.nextSymbol();
-                        acceptResult9 = obj.accept("last");
+                        nextSymbolResult12 = obj2.nextSymbol();
+                        acceptResult9 = obj2.accept("last");
                         num28 = 3;
                         if (acceptResult9) {
                           num28 = -3;
@@ -853,14 +851,14 @@ let fn = function m() {
                         flag6 = false;
                         if ("nth" === symbol5) {
                           _parseInt14 = parseInt;
-                          parsed8 = parseInt(obj.value[1], 10);
+                          parsed8 = parseInt(obj2.value[1], 10);
                           if (parsed8 < -366) {
                             break;
                           } else if (parsed8 > 366) {
                             break;
                           } else {
-                            nextSymbolResult13 = obj.nextSymbol();
-                            acceptResult10 = obj.accept("last");
+                            nextSymbolResult13 = obj2.nextSymbol();
+                            acceptResult10 = obj2.accept("last");
                             tmp83 = parsed8;
                             if (acceptResult10) {
                               tmp83 = -parsed8;
@@ -871,31 +869,31 @@ let fn = function m() {
                       }
                       if (flag6) {
                         bymonthday = obj.bymonthday;
-                        arr1 = bymonthday.push(flag6);
-                        nextSymbolResult14 = obj.nextSymbol();
-                        acceptResult11 = obj.accept("comma");
+                        arr3 = bymonthday.push(flag6);
+                        nextSymbolResult14 = obj2.nextSymbol();
+                        acceptResult11 = obj2.accept("comma");
                       } else {
                         _Error7 = Error;
-                        symbol6 = obj.symbol;
+                        symbol6 = obj2.symbol;
                         str33 = "Unexpected symbol ";
-                        text3 = `Unexpected symbol ${symbol6}`;
+                        text5 = `Unexpected symbol ${symbol6}`;
                         tmp96 = new.target;
                         str34 = "; expected monthday";
-                        text4 = `Unexpected symbol ${symbol6}; expected monthday`;
+                        text6 = `Unexpected symbol ${symbol6}; expected monthday`;
                         tmp98 = new.target;
                         error13 = new Error(`Unexpected symbol ${symbol6}; expected monthday`);
                         throw error13;
                       }
                     }
                     _Error6 = Error;
-                    text5 = `Nth out of range: ${tmp251}`;
+                    text7 = `Nth out of range: ${tmp251}`;
                     error14 = new Error(`Nth out of range: ${tmp251}`);
                     throw error14;
                   }
                 }
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   _Date3 = Date;
-                  parsed9 = Date.parse(obj.text);
+                  parsed9 = Date.parse(obj2.text);
                   if (parsed9) {
                     _Date4 = Date;
                     date7 = new Date(parsed9);
@@ -903,19 +901,19 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     _Error8 = Error;
-                    text2 = obj.text;
-                    text6 = `Cannot parse until date:${text2}`;
+                    text2 = obj2.text;
+                    text8 = `Cannot parse until date:${text2}`;
                     error15 = new Error(`Cannot parse until date:${text2}`);
                     throw error15;
                   }
                 } else {
-                  acceptResult12 = obj.accept("for");
+                  acceptResult12 = obj2.accept("for");
                   tmp4 = obj;
                   if (acceptResult12) {
                     _parseInt3 = parseInt;
-                    parsed10 = parseInt(obj.value[0], 10);
+                    parsed10 = parseInt(obj2.value[0], 10);
                     obj.count = parsed10;
-                    obj.expect("number");
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -923,19 +921,19 @@ let fn = function m() {
             break;
             case "wednesday":
               obj.freq = constants.WEEKLY;
-              str10 = obj.symbol;
+              str10 = obj2.symbol;
               str11 = str10.substr(0, 2);
               formatted = str11.toUpperCase();
               items2 = [constants[formatted]];
               obj.byweekday = items2;
-              nextSymbolResult1 = obj.nextSymbol();
+              nextSymbolResult1 = obj2.nextSymbol();
               tmp4 = obj;
               if (nextSymbolResult1) {
-                acceptResult = obj.accept("comma");
+                acceptResult = obj2.accept("comma");
                 if (acceptResult) {
-                  isDoneResult = obj.isDone();
+                  isDoneResult = obj2.isDone();
                   while (!isDoneResult) {
-                    symbol2 = obj.symbol;
+                    symbol2 = obj2.symbol;
                     if ("monday" !== symbol2) {
                       if ("tuesday" !== symbol2) {
                         if ("wednesday" !== symbol2) {
@@ -946,18 +944,18 @@ let fn = function m() {
                               }
                               if (flag4) {
                                 byweekday = obj.byweekday;
-                                arr = byweekday.push(constants[flag4]);
-                                nextSymbolResult2 = obj.nextSymbol();
-                                acceptResult1 = obj.accept("comma");
+                                arr2 = byweekday.push(constants[flag4]);
+                                nextSymbolResult2 = obj2.nextSymbol();
+                                acceptResult1 = obj2.accept("comma");
                               } else {
                                 tmp51 = globalThis;
                                 _Error4 = Error;
-                                symbol3 = obj.symbol;
+                                symbol3 = obj2.symbol;
                                 str22 = "Unexpected symbol ";
-                                text = `Unexpected symbol ${symbol3}`;
+                                text1 = `Unexpected symbol ${symbol3}`;
                                 tmp53 = new.target;
                                 str23 = ", expected weekday";
-                                text1 = `Unexpected symbol ${symbol3}, expected weekday`;
+                                text3 = `Unexpected symbol ${symbol3}, expected weekday`;
                                 tmp55 = new.target;
                                 error10 = new Error(`Unexpected symbol ${symbol3}, expected weekday`);
                                 throw error10;
@@ -967,7 +965,7 @@ let fn = function m() {
                         }
                       }
                     }
-                    str20 = obj.symbol;
+                    str20 = obj2.symbol;
                     str21 = str20.substr(0, 2);
                     flag4 = str21.toUpperCase();
                   }
@@ -975,26 +973,26 @@ let fn = function m() {
                   error11 = new Error("Unexpected end");
                   throw error11;
                 }
-                obj.accept("on");
-                obj.accept("the");
-                symbol4 = obj.symbol;
+                obj2.accept("on");
+                obj2.accept("the");
+                symbol4 = obj2.symbol;
                 if ("last" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = -1;
                 } else if ("first" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = 1;
                 } else if ("second" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult4 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult4 = obj2.accept("last");
                   num19 = 2;
                   if (acceptResult4) {
                     num19 = -2;
                   }
                   flag5 = num19;
                 } else if ("third" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult5 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult5 = obj2.accept("last");
                   num18 = 3;
                   if (acceptResult5) {
                     num18 = -3;
@@ -1004,11 +1002,11 @@ let fn = function m() {
                   flag5 = false;
                   if ("nth" === symbol4) {
                     _parseInt13 = parseInt;
-                    parsed7 = parseInt(obj.value[1], 10);
+                    parsed7 = parseInt(obj2.value[1], 10);
                     if (parsed7 >= -366) {
                       if (parsed7 <= 366) {
-                        obj.nextSymbol();
-                        acceptResult6 = obj.accept("last");
+                        obj2.nextSymbol();
+                        acceptResult6 = obj2.accept("last");
                         tmp66 = parsed7;
                         if (acceptResult6) {
                           tmp66 = -parsed7;
@@ -1017,7 +1015,7 @@ let fn = function m() {
                       }
                     }
                     _Error5 = Error;
-                    text2 = `Nth out of range: ${tmp250}`;
+                    text4 = `Nth out of range: ${tmp250}`;
                     error12 = new Error(`Nth out of range: ${tmp250}`);
                     throw error12;
                   }
@@ -1025,28 +1023,28 @@ let fn = function m() {
                 if (flag5) {
                   items3 = [flag5];
                   obj.bymonthday = items3;
-                  obj.nextSymbol();
-                  acceptResult7 = obj.accept("comma");
+                  obj2.nextSymbol();
+                  acceptResult7 = obj2.accept("comma");
                   if (acceptResult7) {
                     while (true) {
-                      symbol5 = obj.symbol;
+                      symbol5 = obj2.symbol;
                       if ("last" === symbol5) {
-                        nextSymbolResult9 = obj.nextSymbol();
+                        nextSymbolResult9 = obj2.nextSymbol();
                         flag6 = -1;
                       } else if ("first" === symbol5) {
-                        nextSymbolResult10 = obj.nextSymbol();
+                        nextSymbolResult10 = obj2.nextSymbol();
                         flag6 = 1;
                       } else if ("second" === symbol5) {
-                        nextSymbolResult11 = obj.nextSymbol();
-                        acceptResult8 = obj.accept("last");
+                        nextSymbolResult11 = obj2.nextSymbol();
+                        acceptResult8 = obj2.accept("last");
                         num29 = 2;
                         if (acceptResult8) {
                           num29 = -2;
                         }
                         flag6 = num29;
                       } else if ("third" === symbol5) {
-                        nextSymbolResult12 = obj.nextSymbol();
-                        acceptResult9 = obj.accept("last");
+                        nextSymbolResult12 = obj2.nextSymbol();
+                        acceptResult9 = obj2.accept("last");
                         num28 = 3;
                         if (acceptResult9) {
                           num28 = -3;
@@ -1056,14 +1054,14 @@ let fn = function m() {
                         flag6 = false;
                         if ("nth" === symbol5) {
                           _parseInt14 = parseInt;
-                          parsed8 = parseInt(obj.value[1], 10);
+                          parsed8 = parseInt(obj2.value[1], 10);
                           if (parsed8 < -366) {
                             break;
                           } else if (parsed8 > 366) {
                             break;
                           } else {
-                            nextSymbolResult13 = obj.nextSymbol();
-                            acceptResult10 = obj.accept("last");
+                            nextSymbolResult13 = obj2.nextSymbol();
+                            acceptResult10 = obj2.accept("last");
                             tmp83 = parsed8;
                             if (acceptResult10) {
                               tmp83 = -parsed8;
@@ -1074,31 +1072,31 @@ let fn = function m() {
                       }
                       if (flag6) {
                         bymonthday = obj.bymonthday;
-                        arr1 = bymonthday.push(flag6);
-                        nextSymbolResult14 = obj.nextSymbol();
-                        acceptResult11 = obj.accept("comma");
+                        arr3 = bymonthday.push(flag6);
+                        nextSymbolResult14 = obj2.nextSymbol();
+                        acceptResult11 = obj2.accept("comma");
                       } else {
                         _Error7 = Error;
-                        symbol6 = obj.symbol;
+                        symbol6 = obj2.symbol;
                         str33 = "Unexpected symbol ";
-                        text3 = `Unexpected symbol ${symbol6}`;
+                        text5 = `Unexpected symbol ${symbol6}`;
                         tmp96 = new.target;
                         str34 = "; expected monthday";
-                        text4 = `Unexpected symbol ${symbol6}; expected monthday`;
+                        text6 = `Unexpected symbol ${symbol6}; expected monthday`;
                         tmp98 = new.target;
                         error13 = new Error(`Unexpected symbol ${symbol6}; expected monthday`);
                         throw error13;
                       }
                     }
                     _Error6 = Error;
-                    text5 = `Nth out of range: ${tmp251}`;
+                    text7 = `Nth out of range: ${tmp251}`;
                     error14 = new Error(`Nth out of range: ${tmp251}`);
                     throw error14;
                   }
                 }
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   _Date3 = Date;
-                  parsed9 = Date.parse(obj.text);
+                  parsed9 = Date.parse(obj2.text);
                   if (parsed9) {
                     _Date4 = Date;
                     date7 = new Date(parsed9);
@@ -1106,19 +1104,19 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     _Error8 = Error;
-                    text2 = obj.text;
-                    text6 = `Cannot parse until date:${text2}`;
+                    text2 = obj2.text;
+                    text8 = `Cannot parse until date:${text2}`;
                     error15 = new Error(`Cannot parse until date:${text2}`);
                     throw error15;
                   }
                 } else {
-                  acceptResult12 = obj.accept("for");
+                  acceptResult12 = obj2.accept("for");
                   tmp4 = obj;
                   if (acceptResult12) {
                     _parseInt3 = parseInt;
-                    parsed10 = parseInt(obj.value[0], 10);
+                    parsed10 = parseInt(obj2.value[0], 10);
                     obj.count = parsed10;
-                    obj.expect("number");
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -1126,19 +1124,19 @@ let fn = function m() {
             break;
             case "thursday":
               obj.freq = constants.WEEKLY;
-              str10 = obj.symbol;
+              str10 = obj2.symbol;
               str11 = str10.substr(0, 2);
               formatted = str11.toUpperCase();
               items2 = [constants[formatted]];
               obj.byweekday = items2;
-              nextSymbolResult1 = obj.nextSymbol();
+              nextSymbolResult1 = obj2.nextSymbol();
               tmp4 = obj;
               if (nextSymbolResult1) {
-                acceptResult = obj.accept("comma");
+                acceptResult = obj2.accept("comma");
                 if (acceptResult) {
-                  isDoneResult = obj.isDone();
+                  isDoneResult = obj2.isDone();
                   while (!isDoneResult) {
-                    symbol2 = obj.symbol;
+                    symbol2 = obj2.symbol;
                     if ("monday" !== symbol2) {
                       if ("tuesday" !== symbol2) {
                         if ("wednesday" !== symbol2) {
@@ -1149,18 +1147,18 @@ let fn = function m() {
                               }
                               if (flag4) {
                                 byweekday = obj.byweekday;
-                                arr = byweekday.push(constants[flag4]);
-                                nextSymbolResult2 = obj.nextSymbol();
-                                acceptResult1 = obj.accept("comma");
+                                arr2 = byweekday.push(constants[flag4]);
+                                nextSymbolResult2 = obj2.nextSymbol();
+                                acceptResult1 = obj2.accept("comma");
                               } else {
                                 tmp51 = globalThis;
                                 _Error4 = Error;
-                                symbol3 = obj.symbol;
+                                symbol3 = obj2.symbol;
                                 str22 = "Unexpected symbol ";
-                                text = `Unexpected symbol ${symbol3}`;
+                                text1 = `Unexpected symbol ${symbol3}`;
                                 tmp53 = new.target;
                                 str23 = ", expected weekday";
-                                text1 = `Unexpected symbol ${symbol3}, expected weekday`;
+                                text3 = `Unexpected symbol ${symbol3}, expected weekday`;
                                 tmp55 = new.target;
                                 error10 = new Error(`Unexpected symbol ${symbol3}, expected weekday`);
                                 throw error10;
@@ -1170,7 +1168,7 @@ let fn = function m() {
                         }
                       }
                     }
-                    str20 = obj.symbol;
+                    str20 = obj2.symbol;
                     str21 = str20.substr(0, 2);
                     flag4 = str21.toUpperCase();
                   }
@@ -1178,26 +1176,26 @@ let fn = function m() {
                   error11 = new Error("Unexpected end");
                   throw error11;
                 }
-                obj.accept("on");
-                obj.accept("the");
-                symbol4 = obj.symbol;
+                obj2.accept("on");
+                obj2.accept("the");
+                symbol4 = obj2.symbol;
                 if ("last" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = -1;
                 } else if ("first" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = 1;
                 } else if ("second" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult4 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult4 = obj2.accept("last");
                   num19 = 2;
                   if (acceptResult4) {
                     num19 = -2;
                   }
                   flag5 = num19;
                 } else if ("third" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult5 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult5 = obj2.accept("last");
                   num18 = 3;
                   if (acceptResult5) {
                     num18 = -3;
@@ -1207,11 +1205,11 @@ let fn = function m() {
                   flag5 = false;
                   if ("nth" === symbol4) {
                     _parseInt13 = parseInt;
-                    parsed7 = parseInt(obj.value[1], 10);
+                    parsed7 = parseInt(obj2.value[1], 10);
                     if (parsed7 >= -366) {
                       if (parsed7 <= 366) {
-                        obj.nextSymbol();
-                        acceptResult6 = obj.accept("last");
+                        obj2.nextSymbol();
+                        acceptResult6 = obj2.accept("last");
                         tmp66 = parsed7;
                         if (acceptResult6) {
                           tmp66 = -parsed7;
@@ -1220,7 +1218,7 @@ let fn = function m() {
                       }
                     }
                     _Error5 = Error;
-                    text2 = `Nth out of range: ${tmp250}`;
+                    text4 = `Nth out of range: ${tmp250}`;
                     error12 = new Error(`Nth out of range: ${tmp250}`);
                     throw error12;
                   }
@@ -1228,28 +1226,28 @@ let fn = function m() {
                 if (flag5) {
                   items3 = [flag5];
                   obj.bymonthday = items3;
-                  obj.nextSymbol();
-                  acceptResult7 = obj.accept("comma");
+                  obj2.nextSymbol();
+                  acceptResult7 = obj2.accept("comma");
                   if (acceptResult7) {
                     while (true) {
-                      symbol5 = obj.symbol;
+                      symbol5 = obj2.symbol;
                       if ("last" === symbol5) {
-                        nextSymbolResult9 = obj.nextSymbol();
+                        nextSymbolResult9 = obj2.nextSymbol();
                         flag6 = -1;
                       } else if ("first" === symbol5) {
-                        nextSymbolResult10 = obj.nextSymbol();
+                        nextSymbolResult10 = obj2.nextSymbol();
                         flag6 = 1;
                       } else if ("second" === symbol5) {
-                        nextSymbolResult11 = obj.nextSymbol();
-                        acceptResult8 = obj.accept("last");
+                        nextSymbolResult11 = obj2.nextSymbol();
+                        acceptResult8 = obj2.accept("last");
                         num29 = 2;
                         if (acceptResult8) {
                           num29 = -2;
                         }
                         flag6 = num29;
                       } else if ("third" === symbol5) {
-                        nextSymbolResult12 = obj.nextSymbol();
-                        acceptResult9 = obj.accept("last");
+                        nextSymbolResult12 = obj2.nextSymbol();
+                        acceptResult9 = obj2.accept("last");
                         num28 = 3;
                         if (acceptResult9) {
                           num28 = -3;
@@ -1259,14 +1257,14 @@ let fn = function m() {
                         flag6 = false;
                         if ("nth" === symbol5) {
                           _parseInt14 = parseInt;
-                          parsed8 = parseInt(obj.value[1], 10);
+                          parsed8 = parseInt(obj2.value[1], 10);
                           if (parsed8 < -366) {
                             break;
                           } else if (parsed8 > 366) {
                             break;
                           } else {
-                            nextSymbolResult13 = obj.nextSymbol();
-                            acceptResult10 = obj.accept("last");
+                            nextSymbolResult13 = obj2.nextSymbol();
+                            acceptResult10 = obj2.accept("last");
                             tmp83 = parsed8;
                             if (acceptResult10) {
                               tmp83 = -parsed8;
@@ -1277,31 +1275,31 @@ let fn = function m() {
                       }
                       if (flag6) {
                         bymonthday = obj.bymonthday;
-                        arr1 = bymonthday.push(flag6);
-                        nextSymbolResult14 = obj.nextSymbol();
-                        acceptResult11 = obj.accept("comma");
+                        arr3 = bymonthday.push(flag6);
+                        nextSymbolResult14 = obj2.nextSymbol();
+                        acceptResult11 = obj2.accept("comma");
                       } else {
                         _Error7 = Error;
-                        symbol6 = obj.symbol;
+                        symbol6 = obj2.symbol;
                         str33 = "Unexpected symbol ";
-                        text3 = `Unexpected symbol ${symbol6}`;
+                        text5 = `Unexpected symbol ${symbol6}`;
                         tmp96 = new.target;
                         str34 = "; expected monthday";
-                        text4 = `Unexpected symbol ${symbol6}; expected monthday`;
+                        text6 = `Unexpected symbol ${symbol6}; expected monthday`;
                         tmp98 = new.target;
                         error13 = new Error(`Unexpected symbol ${symbol6}; expected monthday`);
                         throw error13;
                       }
                     }
                     _Error6 = Error;
-                    text5 = `Nth out of range: ${tmp251}`;
+                    text7 = `Nth out of range: ${tmp251}`;
                     error14 = new Error(`Nth out of range: ${tmp251}`);
                     throw error14;
                   }
                 }
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   _Date3 = Date;
-                  parsed9 = Date.parse(obj.text);
+                  parsed9 = Date.parse(obj2.text);
                   if (parsed9) {
                     _Date4 = Date;
                     date7 = new Date(parsed9);
@@ -1309,19 +1307,19 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     _Error8 = Error;
-                    text2 = obj.text;
-                    text6 = `Cannot parse until date:${text2}`;
+                    text2 = obj2.text;
+                    text8 = `Cannot parse until date:${text2}`;
                     error15 = new Error(`Cannot parse until date:${text2}`);
                     throw error15;
                   }
                 } else {
-                  acceptResult12 = obj.accept("for");
+                  acceptResult12 = obj2.accept("for");
                   tmp4 = obj;
                   if (acceptResult12) {
                     _parseInt3 = parseInt;
-                    parsed10 = parseInt(obj.value[0], 10);
+                    parsed10 = parseInt(obj2.value[0], 10);
                     obj.count = parsed10;
-                    obj.expect("number");
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -1329,19 +1327,19 @@ let fn = function m() {
             break;
             case "friday":
               obj.freq = constants.WEEKLY;
-              str10 = obj.symbol;
+              str10 = obj2.symbol;
               str11 = str10.substr(0, 2);
               formatted = str11.toUpperCase();
               items2 = [constants[formatted]];
               obj.byweekday = items2;
-              nextSymbolResult1 = obj.nextSymbol();
+              nextSymbolResult1 = obj2.nextSymbol();
               tmp4 = obj;
               if (nextSymbolResult1) {
-                acceptResult = obj.accept("comma");
+                acceptResult = obj2.accept("comma");
                 if (acceptResult) {
-                  isDoneResult = obj.isDone();
+                  isDoneResult = obj2.isDone();
                   while (!isDoneResult) {
-                    symbol2 = obj.symbol;
+                    symbol2 = obj2.symbol;
                     if ("monday" !== symbol2) {
                       if ("tuesday" !== symbol2) {
                         if ("wednesday" !== symbol2) {
@@ -1352,18 +1350,18 @@ let fn = function m() {
                               }
                               if (flag4) {
                                 byweekday = obj.byweekday;
-                                arr = byweekday.push(constants[flag4]);
-                                nextSymbolResult2 = obj.nextSymbol();
-                                acceptResult1 = obj.accept("comma");
+                                arr2 = byweekday.push(constants[flag4]);
+                                nextSymbolResult2 = obj2.nextSymbol();
+                                acceptResult1 = obj2.accept("comma");
                               } else {
                                 tmp51 = globalThis;
                                 _Error4 = Error;
-                                symbol3 = obj.symbol;
+                                symbol3 = obj2.symbol;
                                 str22 = "Unexpected symbol ";
-                                text = `Unexpected symbol ${symbol3}`;
+                                text1 = `Unexpected symbol ${symbol3}`;
                                 tmp53 = new.target;
                                 str23 = ", expected weekday";
-                                text1 = `Unexpected symbol ${symbol3}, expected weekday`;
+                                text3 = `Unexpected symbol ${symbol3}, expected weekday`;
                                 tmp55 = new.target;
                                 error10 = new Error(`Unexpected symbol ${symbol3}, expected weekday`);
                                 throw error10;
@@ -1373,7 +1371,7 @@ let fn = function m() {
                         }
                       }
                     }
-                    str20 = obj.symbol;
+                    str20 = obj2.symbol;
                     str21 = str20.substr(0, 2);
                     flag4 = str21.toUpperCase();
                   }
@@ -1381,26 +1379,26 @@ let fn = function m() {
                   error11 = new Error("Unexpected end");
                   throw error11;
                 }
-                obj.accept("on");
-                obj.accept("the");
-                symbol4 = obj.symbol;
+                obj2.accept("on");
+                obj2.accept("the");
+                symbol4 = obj2.symbol;
                 if ("last" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = -1;
                 } else if ("first" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = 1;
                 } else if ("second" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult4 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult4 = obj2.accept("last");
                   num19 = 2;
                   if (acceptResult4) {
                     num19 = -2;
                   }
                   flag5 = num19;
                 } else if ("third" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult5 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult5 = obj2.accept("last");
                   num18 = 3;
                   if (acceptResult5) {
                     num18 = -3;
@@ -1410,11 +1408,11 @@ let fn = function m() {
                   flag5 = false;
                   if ("nth" === symbol4) {
                     _parseInt13 = parseInt;
-                    parsed7 = parseInt(obj.value[1], 10);
+                    parsed7 = parseInt(obj2.value[1], 10);
                     if (parsed7 >= -366) {
                       if (parsed7 <= 366) {
-                        obj.nextSymbol();
-                        acceptResult6 = obj.accept("last");
+                        obj2.nextSymbol();
+                        acceptResult6 = obj2.accept("last");
                         tmp66 = parsed7;
                         if (acceptResult6) {
                           tmp66 = -parsed7;
@@ -1423,7 +1421,7 @@ let fn = function m() {
                       }
                     }
                     _Error5 = Error;
-                    text2 = `Nth out of range: ${tmp250}`;
+                    text4 = `Nth out of range: ${tmp250}`;
                     error12 = new Error(`Nth out of range: ${tmp250}`);
                     throw error12;
                   }
@@ -1431,28 +1429,28 @@ let fn = function m() {
                 if (flag5) {
                   items3 = [flag5];
                   obj.bymonthday = items3;
-                  obj.nextSymbol();
-                  acceptResult7 = obj.accept("comma");
+                  obj2.nextSymbol();
+                  acceptResult7 = obj2.accept("comma");
                   if (acceptResult7) {
                     while (true) {
-                      symbol5 = obj.symbol;
+                      symbol5 = obj2.symbol;
                       if ("last" === symbol5) {
-                        nextSymbolResult9 = obj.nextSymbol();
+                        nextSymbolResult9 = obj2.nextSymbol();
                         flag6 = -1;
                       } else if ("first" === symbol5) {
-                        nextSymbolResult10 = obj.nextSymbol();
+                        nextSymbolResult10 = obj2.nextSymbol();
                         flag6 = 1;
                       } else if ("second" === symbol5) {
-                        nextSymbolResult11 = obj.nextSymbol();
-                        acceptResult8 = obj.accept("last");
+                        nextSymbolResult11 = obj2.nextSymbol();
+                        acceptResult8 = obj2.accept("last");
                         num29 = 2;
                         if (acceptResult8) {
                           num29 = -2;
                         }
                         flag6 = num29;
                       } else if ("third" === symbol5) {
-                        nextSymbolResult12 = obj.nextSymbol();
-                        acceptResult9 = obj.accept("last");
+                        nextSymbolResult12 = obj2.nextSymbol();
+                        acceptResult9 = obj2.accept("last");
                         num28 = 3;
                         if (acceptResult9) {
                           num28 = -3;
@@ -1462,14 +1460,14 @@ let fn = function m() {
                         flag6 = false;
                         if ("nth" === symbol5) {
                           _parseInt14 = parseInt;
-                          parsed8 = parseInt(obj.value[1], 10);
+                          parsed8 = parseInt(obj2.value[1], 10);
                           if (parsed8 < -366) {
                             break;
                           } else if (parsed8 > 366) {
                             break;
                           } else {
-                            nextSymbolResult13 = obj.nextSymbol();
-                            acceptResult10 = obj.accept("last");
+                            nextSymbolResult13 = obj2.nextSymbol();
+                            acceptResult10 = obj2.accept("last");
                             tmp83 = parsed8;
                             if (acceptResult10) {
                               tmp83 = -parsed8;
@@ -1480,31 +1478,31 @@ let fn = function m() {
                       }
                       if (flag6) {
                         bymonthday = obj.bymonthday;
-                        arr1 = bymonthday.push(flag6);
-                        nextSymbolResult14 = obj.nextSymbol();
-                        acceptResult11 = obj.accept("comma");
+                        arr3 = bymonthday.push(flag6);
+                        nextSymbolResult14 = obj2.nextSymbol();
+                        acceptResult11 = obj2.accept("comma");
                       } else {
                         _Error7 = Error;
-                        symbol6 = obj.symbol;
+                        symbol6 = obj2.symbol;
                         str33 = "Unexpected symbol ";
-                        text3 = `Unexpected symbol ${symbol6}`;
+                        text5 = `Unexpected symbol ${symbol6}`;
                         tmp96 = new.target;
                         str34 = "; expected monthday";
-                        text4 = `Unexpected symbol ${symbol6}; expected monthday`;
+                        text6 = `Unexpected symbol ${symbol6}; expected monthday`;
                         tmp98 = new.target;
                         error13 = new Error(`Unexpected symbol ${symbol6}; expected monthday`);
                         throw error13;
                       }
                     }
                     _Error6 = Error;
-                    text5 = `Nth out of range: ${tmp251}`;
+                    text7 = `Nth out of range: ${tmp251}`;
                     error14 = new Error(`Nth out of range: ${tmp251}`);
                     throw error14;
                   }
                 }
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   _Date3 = Date;
-                  parsed9 = Date.parse(obj.text);
+                  parsed9 = Date.parse(obj2.text);
                   if (parsed9) {
                     _Date4 = Date;
                     date7 = new Date(parsed9);
@@ -1512,19 +1510,19 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     _Error8 = Error;
-                    text2 = obj.text;
-                    text6 = `Cannot parse until date:${text2}`;
+                    text2 = obj2.text;
+                    text8 = `Cannot parse until date:${text2}`;
                     error15 = new Error(`Cannot parse until date:${text2}`);
                     throw error15;
                   }
                 } else {
-                  acceptResult12 = obj.accept("for");
+                  acceptResult12 = obj2.accept("for");
                   tmp4 = obj;
                   if (acceptResult12) {
                     _parseInt3 = parseInt;
-                    parsed10 = parseInt(obj.value[0], 10);
+                    parsed10 = parseInt(obj2.value[0], 10);
                     obj.count = parsed10;
-                    obj.expect("number");
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -1532,19 +1530,19 @@ let fn = function m() {
             break;
             case "saturday":
               obj.freq = constants.WEEKLY;
-              str10 = obj.symbol;
+              str10 = obj2.symbol;
               str11 = str10.substr(0, 2);
               formatted = str11.toUpperCase();
               items2 = [constants[formatted]];
               obj.byweekday = items2;
-              nextSymbolResult1 = obj.nextSymbol();
+              nextSymbolResult1 = obj2.nextSymbol();
               tmp4 = obj;
               if (nextSymbolResult1) {
-                acceptResult = obj.accept("comma");
+                acceptResult = obj2.accept("comma");
                 if (acceptResult) {
-                  isDoneResult = obj.isDone();
+                  isDoneResult = obj2.isDone();
                   while (!isDoneResult) {
-                    symbol2 = obj.symbol;
+                    symbol2 = obj2.symbol;
                     if ("monday" !== symbol2) {
                       if ("tuesday" !== symbol2) {
                         if ("wednesday" !== symbol2) {
@@ -1555,18 +1553,18 @@ let fn = function m() {
                               }
                               if (flag4) {
                                 byweekday = obj.byweekday;
-                                arr = byweekday.push(constants[flag4]);
-                                nextSymbolResult2 = obj.nextSymbol();
-                                acceptResult1 = obj.accept("comma");
+                                arr2 = byweekday.push(constants[flag4]);
+                                nextSymbolResult2 = obj2.nextSymbol();
+                                acceptResult1 = obj2.accept("comma");
                               } else {
                                 tmp51 = globalThis;
                                 _Error4 = Error;
-                                symbol3 = obj.symbol;
+                                symbol3 = obj2.symbol;
                                 str22 = "Unexpected symbol ";
-                                text = `Unexpected symbol ${symbol3}`;
+                                text1 = `Unexpected symbol ${symbol3}`;
                                 tmp53 = new.target;
                                 str23 = ", expected weekday";
-                                text1 = `Unexpected symbol ${symbol3}, expected weekday`;
+                                text3 = `Unexpected symbol ${symbol3}, expected weekday`;
                                 tmp55 = new.target;
                                 error10 = new Error(`Unexpected symbol ${symbol3}, expected weekday`);
                                 throw error10;
@@ -1576,7 +1574,7 @@ let fn = function m() {
                         }
                       }
                     }
-                    str20 = obj.symbol;
+                    str20 = obj2.symbol;
                     str21 = str20.substr(0, 2);
                     flag4 = str21.toUpperCase();
                   }
@@ -1584,26 +1582,26 @@ let fn = function m() {
                   error11 = new Error("Unexpected end");
                   throw error11;
                 }
-                obj.accept("on");
-                obj.accept("the");
-                symbol4 = obj.symbol;
+                obj2.accept("on");
+                obj2.accept("the");
+                symbol4 = obj2.symbol;
                 if ("last" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = -1;
                 } else if ("first" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = 1;
                 } else if ("second" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult4 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult4 = obj2.accept("last");
                   num19 = 2;
                   if (acceptResult4) {
                     num19 = -2;
                   }
                   flag5 = num19;
                 } else if ("third" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult5 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult5 = obj2.accept("last");
                   num18 = 3;
                   if (acceptResult5) {
                     num18 = -3;
@@ -1613,11 +1611,11 @@ let fn = function m() {
                   flag5 = false;
                   if ("nth" === symbol4) {
                     _parseInt13 = parseInt;
-                    parsed7 = parseInt(obj.value[1], 10);
+                    parsed7 = parseInt(obj2.value[1], 10);
                     if (parsed7 >= -366) {
                       if (parsed7 <= 366) {
-                        obj.nextSymbol();
-                        acceptResult6 = obj.accept("last");
+                        obj2.nextSymbol();
+                        acceptResult6 = obj2.accept("last");
                         tmp66 = parsed7;
                         if (acceptResult6) {
                           tmp66 = -parsed7;
@@ -1626,7 +1624,7 @@ let fn = function m() {
                       }
                     }
                     _Error5 = Error;
-                    text2 = `Nth out of range: ${tmp250}`;
+                    text4 = `Nth out of range: ${tmp250}`;
                     error12 = new Error(`Nth out of range: ${tmp250}`);
                     throw error12;
                   }
@@ -1634,28 +1632,28 @@ let fn = function m() {
                 if (flag5) {
                   items3 = [flag5];
                   obj.bymonthday = items3;
-                  obj.nextSymbol();
-                  acceptResult7 = obj.accept("comma");
+                  obj2.nextSymbol();
+                  acceptResult7 = obj2.accept("comma");
                   if (acceptResult7) {
                     while (true) {
-                      symbol5 = obj.symbol;
+                      symbol5 = obj2.symbol;
                       if ("last" === symbol5) {
-                        nextSymbolResult9 = obj.nextSymbol();
+                        nextSymbolResult9 = obj2.nextSymbol();
                         flag6 = -1;
                       } else if ("first" === symbol5) {
-                        nextSymbolResult10 = obj.nextSymbol();
+                        nextSymbolResult10 = obj2.nextSymbol();
                         flag6 = 1;
                       } else if ("second" === symbol5) {
-                        nextSymbolResult11 = obj.nextSymbol();
-                        acceptResult8 = obj.accept("last");
+                        nextSymbolResult11 = obj2.nextSymbol();
+                        acceptResult8 = obj2.accept("last");
                         num29 = 2;
                         if (acceptResult8) {
                           num29 = -2;
                         }
                         flag6 = num29;
                       } else if ("third" === symbol5) {
-                        nextSymbolResult12 = obj.nextSymbol();
-                        acceptResult9 = obj.accept("last");
+                        nextSymbolResult12 = obj2.nextSymbol();
+                        acceptResult9 = obj2.accept("last");
                         num28 = 3;
                         if (acceptResult9) {
                           num28 = -3;
@@ -1665,14 +1663,14 @@ let fn = function m() {
                         flag6 = false;
                         if ("nth" === symbol5) {
                           _parseInt14 = parseInt;
-                          parsed8 = parseInt(obj.value[1], 10);
+                          parsed8 = parseInt(obj2.value[1], 10);
                           if (parsed8 < -366) {
                             break;
                           } else if (parsed8 > 366) {
                             break;
                           } else {
-                            nextSymbolResult13 = obj.nextSymbol();
-                            acceptResult10 = obj.accept("last");
+                            nextSymbolResult13 = obj2.nextSymbol();
+                            acceptResult10 = obj2.accept("last");
                             tmp83 = parsed8;
                             if (acceptResult10) {
                               tmp83 = -parsed8;
@@ -1683,31 +1681,31 @@ let fn = function m() {
                       }
                       if (flag6) {
                         bymonthday = obj.bymonthday;
-                        arr1 = bymonthday.push(flag6);
-                        nextSymbolResult14 = obj.nextSymbol();
-                        acceptResult11 = obj.accept("comma");
+                        arr3 = bymonthday.push(flag6);
+                        nextSymbolResult14 = obj2.nextSymbol();
+                        acceptResult11 = obj2.accept("comma");
                       } else {
                         _Error7 = Error;
-                        symbol6 = obj.symbol;
+                        symbol6 = obj2.symbol;
                         str33 = "Unexpected symbol ";
-                        text3 = `Unexpected symbol ${symbol6}`;
+                        text5 = `Unexpected symbol ${symbol6}`;
                         tmp96 = new.target;
                         str34 = "; expected monthday";
-                        text4 = `Unexpected symbol ${symbol6}; expected monthday`;
+                        text6 = `Unexpected symbol ${symbol6}; expected monthday`;
                         tmp98 = new.target;
                         error13 = new Error(`Unexpected symbol ${symbol6}; expected monthday`);
                         throw error13;
                       }
                     }
                     _Error6 = Error;
-                    text5 = `Nth out of range: ${tmp251}`;
+                    text7 = `Nth out of range: ${tmp251}`;
                     error14 = new Error(`Nth out of range: ${tmp251}`);
                     throw error14;
                   }
                 }
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   _Date3 = Date;
-                  parsed9 = Date.parse(obj.text);
+                  parsed9 = Date.parse(obj2.text);
                   if (parsed9) {
                     _Date4 = Date;
                     date7 = new Date(parsed9);
@@ -1715,19 +1713,19 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     _Error8 = Error;
-                    text2 = obj.text;
-                    text6 = `Cannot parse until date:${text2}`;
+                    text2 = obj2.text;
+                    text8 = `Cannot parse until date:${text2}`;
                     error15 = new Error(`Cannot parse until date:${text2}`);
                     throw error15;
                   }
                 } else {
-                  acceptResult12 = obj.accept("for");
+                  acceptResult12 = obj2.accept("for");
                   tmp4 = obj;
                   if (acceptResult12) {
                     _parseInt3 = parseInt;
-                    parsed10 = parseInt(obj.value[0], 10);
+                    parsed10 = parseInt(obj2.value[0], 10);
                     obj.count = parsed10;
-                    obj.expect("number");
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -1735,19 +1733,19 @@ let fn = function m() {
             break;
             case "sunday":
               obj.freq = constants.WEEKLY;
-              str10 = obj.symbol;
+              str10 = obj2.symbol;
               str11 = str10.substr(0, 2);
               formatted = str11.toUpperCase();
               items2 = [constants[formatted]];
               obj.byweekday = items2;
-              nextSymbolResult1 = obj.nextSymbol();
+              nextSymbolResult1 = obj2.nextSymbol();
               tmp4 = obj;
               if (nextSymbolResult1) {
-                acceptResult = obj.accept("comma");
+                acceptResult = obj2.accept("comma");
                 if (acceptResult) {
-                  isDoneResult = obj.isDone();
+                  isDoneResult = obj2.isDone();
                   while (!isDoneResult) {
-                    symbol2 = obj.symbol;
+                    symbol2 = obj2.symbol;
                     if ("monday" !== symbol2) {
                       if ("tuesday" !== symbol2) {
                         if ("wednesday" !== symbol2) {
@@ -1758,18 +1756,18 @@ let fn = function m() {
                               }
                               if (flag4) {
                                 byweekday = obj.byweekday;
-                                arr = byweekday.push(constants[flag4]);
-                                nextSymbolResult2 = obj.nextSymbol();
-                                acceptResult1 = obj.accept("comma");
+                                arr2 = byweekday.push(constants[flag4]);
+                                nextSymbolResult2 = obj2.nextSymbol();
+                                acceptResult1 = obj2.accept("comma");
                               } else {
                                 tmp51 = globalThis;
                                 _Error4 = Error;
-                                symbol3 = obj.symbol;
+                                symbol3 = obj2.symbol;
                                 str22 = "Unexpected symbol ";
-                                text = `Unexpected symbol ${symbol3}`;
+                                text1 = `Unexpected symbol ${symbol3}`;
                                 tmp53 = new.target;
                                 str23 = ", expected weekday";
-                                text1 = `Unexpected symbol ${symbol3}, expected weekday`;
+                                text3 = `Unexpected symbol ${symbol3}, expected weekday`;
                                 tmp55 = new.target;
                                 error10 = new Error(`Unexpected symbol ${symbol3}, expected weekday`);
                                 throw error10;
@@ -1779,7 +1777,7 @@ let fn = function m() {
                         }
                       }
                     }
-                    str20 = obj.symbol;
+                    str20 = obj2.symbol;
                     str21 = str20.substr(0, 2);
                     flag4 = str21.toUpperCase();
                   }
@@ -1787,26 +1785,26 @@ let fn = function m() {
                   error11 = new Error("Unexpected end");
                   throw error11;
                 }
-                obj.accept("on");
-                obj.accept("the");
-                symbol4 = obj.symbol;
+                obj2.accept("on");
+                obj2.accept("the");
+                symbol4 = obj2.symbol;
                 if ("last" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = -1;
                 } else if ("first" === symbol4) {
-                  obj.nextSymbol();
+                  obj2.nextSymbol();
                   flag5 = 1;
                 } else if ("second" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult4 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult4 = obj2.accept("last");
                   num19 = 2;
                   if (acceptResult4) {
                     num19 = -2;
                   }
                   flag5 = num19;
                 } else if ("third" === symbol4) {
-                  obj.nextSymbol();
-                  acceptResult5 = obj.accept("last");
+                  obj2.nextSymbol();
+                  acceptResult5 = obj2.accept("last");
                   num18 = 3;
                   if (acceptResult5) {
                     num18 = -3;
@@ -1816,11 +1814,11 @@ let fn = function m() {
                   flag5 = false;
                   if ("nth" === symbol4) {
                     _parseInt13 = parseInt;
-                    parsed7 = parseInt(obj.value[1], 10);
+                    parsed7 = parseInt(obj2.value[1], 10);
                     if (parsed7 >= -366) {
                       if (parsed7 <= 366) {
-                        obj.nextSymbol();
-                        acceptResult6 = obj.accept("last");
+                        obj2.nextSymbol();
+                        acceptResult6 = obj2.accept("last");
                         tmp66 = parsed7;
                         if (acceptResult6) {
                           tmp66 = -parsed7;
@@ -1829,7 +1827,7 @@ let fn = function m() {
                       }
                     }
                     _Error5 = Error;
-                    text2 = `Nth out of range: ${tmp250}`;
+                    text4 = `Nth out of range: ${tmp250}`;
                     error12 = new Error(`Nth out of range: ${tmp250}`);
                     throw error12;
                   }
@@ -1837,28 +1835,28 @@ let fn = function m() {
                 if (flag5) {
                   items3 = [flag5];
                   obj.bymonthday = items3;
-                  obj.nextSymbol();
-                  acceptResult7 = obj.accept("comma");
+                  obj2.nextSymbol();
+                  acceptResult7 = obj2.accept("comma");
                   if (acceptResult7) {
                     while (true) {
-                      symbol5 = obj.symbol;
+                      symbol5 = obj2.symbol;
                       if ("last" === symbol5) {
-                        nextSymbolResult9 = obj.nextSymbol();
+                        nextSymbolResult9 = obj2.nextSymbol();
                         flag6 = -1;
                       } else if ("first" === symbol5) {
-                        nextSymbolResult10 = obj.nextSymbol();
+                        nextSymbolResult10 = obj2.nextSymbol();
                         flag6 = 1;
                       } else if ("second" === symbol5) {
-                        nextSymbolResult11 = obj.nextSymbol();
-                        acceptResult8 = obj.accept("last");
+                        nextSymbolResult11 = obj2.nextSymbol();
+                        acceptResult8 = obj2.accept("last");
                         num29 = 2;
                         if (acceptResult8) {
                           num29 = -2;
                         }
                         flag6 = num29;
                       } else if ("third" === symbol5) {
-                        nextSymbolResult12 = obj.nextSymbol();
-                        acceptResult9 = obj.accept("last");
+                        nextSymbolResult12 = obj2.nextSymbol();
+                        acceptResult9 = obj2.accept("last");
                         num28 = 3;
                         if (acceptResult9) {
                           num28 = -3;
@@ -1868,14 +1866,14 @@ let fn = function m() {
                         flag6 = false;
                         if ("nth" === symbol5) {
                           _parseInt14 = parseInt;
-                          parsed8 = parseInt(obj.value[1], 10);
+                          parsed8 = parseInt(obj2.value[1], 10);
                           if (parsed8 < -366) {
                             break;
                           } else if (parsed8 > 366) {
                             break;
                           } else {
-                            nextSymbolResult13 = obj.nextSymbol();
-                            acceptResult10 = obj.accept("last");
+                            nextSymbolResult13 = obj2.nextSymbol();
+                            acceptResult10 = obj2.accept("last");
                             tmp83 = parsed8;
                             if (acceptResult10) {
                               tmp83 = -parsed8;
@@ -1886,31 +1884,31 @@ let fn = function m() {
                       }
                       if (flag6) {
                         bymonthday = obj.bymonthday;
-                        arr1 = bymonthday.push(flag6);
-                        nextSymbolResult14 = obj.nextSymbol();
-                        acceptResult11 = obj.accept("comma");
+                        arr3 = bymonthday.push(flag6);
+                        nextSymbolResult14 = obj2.nextSymbol();
+                        acceptResult11 = obj2.accept("comma");
                       } else {
                         _Error7 = Error;
-                        symbol6 = obj.symbol;
+                        symbol6 = obj2.symbol;
                         str33 = "Unexpected symbol ";
-                        text3 = `Unexpected symbol ${symbol6}`;
+                        text5 = `Unexpected symbol ${symbol6}`;
                         tmp96 = new.target;
                         str34 = "; expected monthday";
-                        text4 = `Unexpected symbol ${symbol6}; expected monthday`;
+                        text6 = `Unexpected symbol ${symbol6}; expected monthday`;
                         tmp98 = new.target;
                         error13 = new Error(`Unexpected symbol ${symbol6}; expected monthday`);
                         throw error13;
                       }
                     }
                     _Error6 = Error;
-                    text5 = `Nth out of range: ${tmp251}`;
+                    text7 = `Nth out of range: ${tmp251}`;
                     error14 = new Error(`Nth out of range: ${tmp251}`);
                     throw error14;
                   }
                 }
-                if ("until" === obj.symbol) {
+                if ("until" === obj2.symbol) {
                   _Date3 = Date;
-                  parsed9 = Date.parse(obj.text);
+                  parsed9 = Date.parse(obj2.text);
                   if (parsed9) {
                     _Date4 = Date;
                     date7 = new Date(parsed9);
@@ -1918,19 +1916,19 @@ let fn = function m() {
                     tmp4 = obj;
                   } else {
                     _Error8 = Error;
-                    text2 = obj.text;
-                    text6 = `Cannot parse until date:${text2}`;
+                    text2 = obj2.text;
+                    text8 = `Cannot parse until date:${text2}`;
                     error15 = new Error(`Cannot parse until date:${text2}`);
                     throw error15;
                   }
                 } else {
-                  acceptResult12 = obj.accept("for");
+                  acceptResult12 = obj2.accept("for");
                   tmp4 = obj;
                   if (acceptResult12) {
                     _parseInt3 = parseInt;
-                    parsed10 = parseInt(obj.value[0], 10);
+                    parsed10 = parseInt(obj2.value[0], 10);
                     obj.count = parsed10;
-                    obj.expect("number");
+                    obj2.expect("number");
                     tmp4 = obj;
                   }
                 }
@@ -1944,12 +1942,12 @@ let fn = function m() {
                   flag2 = 1;
                   let items4 = [flag2];
                   obj.bymonth = items4;
-                  let nextSymbolResult15 = obj.nextSymbol();
+                  let nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    let acceptResult13 = obj.accept("comma");
+                    let acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      let isDoneResult1 = obj.isDone();
+                      let isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         let flag3 = 12;
                         switch (tmp13) {
@@ -1957,18 +1955,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               let bymonth = obj.bymonth;
-                              let arr2 = bymonth.push(flag3);
-                              let nextSymbolResult16 = obj.nextSymbol();
-                              let acceptResult14 = obj.accept("comma");
+                              let arr4 = bymonth.push(flag3);
+                              let nextSymbolResult16 = obj2.nextSymbol();
+                              let acceptResult14 = obj2.accept("comma");
                             } else {
                               let tmp14 = globalThis;
                               let _Error = Error;
-                              let symbol = obj.symbol;
+                              let symbol = obj2.symbol;
                               let str3 = "Unexpected symbol ";
-                              let text7 = `Unexpected symbol ${symbol}`;
+                              let text9 = `Unexpected symbol ${symbol}`;
                               let tmp16 = new.target;
                               let str4 = ", expected month";
-                              let text8 = `Unexpected symbol ${symbol}, expected month`;
+                              let text10 = `Unexpected symbol ${symbol}, expected month`;
                               let tmp18 = new.target;
                               let error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -2015,9 +2013,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       let _Date = Date;
-                      let parsed11 = Date.parse(obj.text);
+                      let parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         let _Date2 = Date;
                         let date8 = new Date(parsed11);
@@ -2025,19 +2023,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         let _Error2 = Error;
-                        text = obj.text;
-                        let text9 = `Cannot parse until date:${text}`;
+                        let text = obj2.text;
+                        let text11 = `Cannot parse until date:${text}`;
                         let error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      let acceptResult15 = obj.accept("for");
+                      let acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         let _parseInt2 = parseInt;
-                        let parsed12 = parseInt(obj.value[0], 10);
+                        let parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -2087,12 +2085,12 @@ let fn = function m() {
                   flag2 = 1;
                   items4 = [flag2];
                   obj.bymonth = items4;
-                  nextSymbolResult15 = obj.nextSymbol();
+                  nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    acceptResult13 = obj.accept("comma");
+                    acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      isDoneResult1 = obj.isDone();
+                      isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         flag3 = 12;
                         switch (tmp13) {
@@ -2100,18 +2098,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               bymonth = obj.bymonth;
-                              arr2 = bymonth.push(flag3);
-                              nextSymbolResult16 = obj.nextSymbol();
-                              acceptResult14 = obj.accept("comma");
+                              arr4 = bymonth.push(flag3);
+                              nextSymbolResult16 = obj2.nextSymbol();
+                              acceptResult14 = obj2.accept("comma");
                             } else {
                               tmp14 = globalThis;
                               _Error = Error;
-                              symbol = obj.symbol;
+                              symbol = obj2.symbol;
                               str3 = "Unexpected symbol ";
-                              text7 = `Unexpected symbol ${symbol}`;
+                              text9 = `Unexpected symbol ${symbol}`;
                               tmp16 = new.target;
                               str4 = ", expected month";
-                              text8 = `Unexpected symbol ${symbol}, expected month`;
+                              text10 = `Unexpected symbol ${symbol}, expected month`;
                               tmp18 = new.target;
                               error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -2158,9 +2156,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       _Date = Date;
-                      parsed11 = Date.parse(obj.text);
+                      parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         _Date2 = Date;
                         date8 = new Date(parsed11);
@@ -2168,19 +2166,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         _Error2 = Error;
-                        text = obj.text;
-                        text9 = `Cannot parse until date:${text}`;
+                        text = obj2.text;
+                        text11 = `Cannot parse until date:${text}`;
                         error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      acceptResult15 = obj.accept("for");
+                      acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         _parseInt2 = parseInt;
-                        parsed12 = parseInt(obj.value[0], 10);
+                        parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -2230,12 +2228,12 @@ let fn = function m() {
                   flag2 = 1;
                   items4 = [flag2];
                   obj.bymonth = items4;
-                  nextSymbolResult15 = obj.nextSymbol();
+                  nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    acceptResult13 = obj.accept("comma");
+                    acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      isDoneResult1 = obj.isDone();
+                      isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         flag3 = 12;
                         switch (tmp13) {
@@ -2243,18 +2241,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               bymonth = obj.bymonth;
-                              arr2 = bymonth.push(flag3);
-                              nextSymbolResult16 = obj.nextSymbol();
-                              acceptResult14 = obj.accept("comma");
+                              arr4 = bymonth.push(flag3);
+                              nextSymbolResult16 = obj2.nextSymbol();
+                              acceptResult14 = obj2.accept("comma");
                             } else {
                               tmp14 = globalThis;
                               _Error = Error;
-                              symbol = obj.symbol;
+                              symbol = obj2.symbol;
                               str3 = "Unexpected symbol ";
-                              text7 = `Unexpected symbol ${symbol}`;
+                              text9 = `Unexpected symbol ${symbol}`;
                               tmp16 = new.target;
                               str4 = ", expected month";
-                              text8 = `Unexpected symbol ${symbol}, expected month`;
+                              text10 = `Unexpected symbol ${symbol}, expected month`;
                               tmp18 = new.target;
                               error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -2301,9 +2299,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       _Date = Date;
-                      parsed11 = Date.parse(obj.text);
+                      parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         _Date2 = Date;
                         date8 = new Date(parsed11);
@@ -2311,19 +2309,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         _Error2 = Error;
-                        text = obj.text;
-                        text9 = `Cannot parse until date:${text}`;
+                        text = obj2.text;
+                        text11 = `Cannot parse until date:${text}`;
                         error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      acceptResult15 = obj.accept("for");
+                      acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         _parseInt2 = parseInt;
-                        parsed12 = parseInt(obj.value[0], 10);
+                        parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -2373,12 +2371,12 @@ let fn = function m() {
                   flag2 = 1;
                   items4 = [flag2];
                   obj.bymonth = items4;
-                  nextSymbolResult15 = obj.nextSymbol();
+                  nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    acceptResult13 = obj.accept("comma");
+                    acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      isDoneResult1 = obj.isDone();
+                      isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         flag3 = 12;
                         switch (tmp13) {
@@ -2386,18 +2384,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               bymonth = obj.bymonth;
-                              arr2 = bymonth.push(flag3);
-                              nextSymbolResult16 = obj.nextSymbol();
-                              acceptResult14 = obj.accept("comma");
+                              arr4 = bymonth.push(flag3);
+                              nextSymbolResult16 = obj2.nextSymbol();
+                              acceptResult14 = obj2.accept("comma");
                             } else {
                               tmp14 = globalThis;
                               _Error = Error;
-                              symbol = obj.symbol;
+                              symbol = obj2.symbol;
                               str3 = "Unexpected symbol ";
-                              text7 = `Unexpected symbol ${symbol}`;
+                              text9 = `Unexpected symbol ${symbol}`;
                               tmp16 = new.target;
                               str4 = ", expected month";
-                              text8 = `Unexpected symbol ${symbol}, expected month`;
+                              text10 = `Unexpected symbol ${symbol}, expected month`;
                               tmp18 = new.target;
                               error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -2444,9 +2442,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       _Date = Date;
-                      parsed11 = Date.parse(obj.text);
+                      parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         _Date2 = Date;
                         date8 = new Date(parsed11);
@@ -2454,19 +2452,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         _Error2 = Error;
-                        text = obj.text;
-                        text9 = `Cannot parse until date:${text}`;
+                        text = obj2.text;
+                        text11 = `Cannot parse until date:${text}`;
                         error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      acceptResult15 = obj.accept("for");
+                      acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         _parseInt2 = parseInt;
-                        parsed12 = parseInt(obj.value[0], 10);
+                        parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -2516,12 +2514,12 @@ let fn = function m() {
                   flag2 = 1;
                   items4 = [flag2];
                   obj.bymonth = items4;
-                  nextSymbolResult15 = obj.nextSymbol();
+                  nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    acceptResult13 = obj.accept("comma");
+                    acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      isDoneResult1 = obj.isDone();
+                      isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         flag3 = 12;
                         switch (tmp13) {
@@ -2529,18 +2527,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               bymonth = obj.bymonth;
-                              arr2 = bymonth.push(flag3);
-                              nextSymbolResult16 = obj.nextSymbol();
-                              acceptResult14 = obj.accept("comma");
+                              arr4 = bymonth.push(flag3);
+                              nextSymbolResult16 = obj2.nextSymbol();
+                              acceptResult14 = obj2.accept("comma");
                             } else {
                               tmp14 = globalThis;
                               _Error = Error;
-                              symbol = obj.symbol;
+                              symbol = obj2.symbol;
                               str3 = "Unexpected symbol ";
-                              text7 = `Unexpected symbol ${symbol}`;
+                              text9 = `Unexpected symbol ${symbol}`;
                               tmp16 = new.target;
                               str4 = ", expected month";
-                              text8 = `Unexpected symbol ${symbol}, expected month`;
+                              text10 = `Unexpected symbol ${symbol}, expected month`;
                               tmp18 = new.target;
                               error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -2587,9 +2585,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       _Date = Date;
-                      parsed11 = Date.parse(obj.text);
+                      parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         _Date2 = Date;
                         date8 = new Date(parsed11);
@@ -2597,19 +2595,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         _Error2 = Error;
-                        text = obj.text;
-                        text9 = `Cannot parse until date:${text}`;
+                        text = obj2.text;
+                        text11 = `Cannot parse until date:${text}`;
                         error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      acceptResult15 = obj.accept("for");
+                      acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         _parseInt2 = parseInt;
-                        parsed12 = parseInt(obj.value[0], 10);
+                        parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -2659,12 +2657,12 @@ let fn = function m() {
                   flag2 = 1;
                   items4 = [flag2];
                   obj.bymonth = items4;
-                  nextSymbolResult15 = obj.nextSymbol();
+                  nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    acceptResult13 = obj.accept("comma");
+                    acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      isDoneResult1 = obj.isDone();
+                      isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         flag3 = 12;
                         switch (tmp13) {
@@ -2672,18 +2670,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               bymonth = obj.bymonth;
-                              arr2 = bymonth.push(flag3);
-                              nextSymbolResult16 = obj.nextSymbol();
-                              acceptResult14 = obj.accept("comma");
+                              arr4 = bymonth.push(flag3);
+                              nextSymbolResult16 = obj2.nextSymbol();
+                              acceptResult14 = obj2.accept("comma");
                             } else {
                               tmp14 = globalThis;
                               _Error = Error;
-                              symbol = obj.symbol;
+                              symbol = obj2.symbol;
                               str3 = "Unexpected symbol ";
-                              text7 = `Unexpected symbol ${symbol}`;
+                              text9 = `Unexpected symbol ${symbol}`;
                               tmp16 = new.target;
                               str4 = ", expected month";
-                              text8 = `Unexpected symbol ${symbol}, expected month`;
+                              text10 = `Unexpected symbol ${symbol}, expected month`;
                               tmp18 = new.target;
                               error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -2730,9 +2728,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       _Date = Date;
-                      parsed11 = Date.parse(obj.text);
+                      parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         _Date2 = Date;
                         date8 = new Date(parsed11);
@@ -2740,19 +2738,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         _Error2 = Error;
-                        text = obj.text;
-                        text9 = `Cannot parse until date:${text}`;
+                        text = obj2.text;
+                        text11 = `Cannot parse until date:${text}`;
                         error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      acceptResult15 = obj.accept("for");
+                      acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         _parseInt2 = parseInt;
-                        parsed12 = parseInt(obj.value[0], 10);
+                        parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -2802,12 +2800,12 @@ let fn = function m() {
                   flag2 = 1;
                   items4 = [flag2];
                   obj.bymonth = items4;
-                  nextSymbolResult15 = obj.nextSymbol();
+                  nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    acceptResult13 = obj.accept("comma");
+                    acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      isDoneResult1 = obj.isDone();
+                      isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         flag3 = 12;
                         switch (tmp13) {
@@ -2815,18 +2813,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               bymonth = obj.bymonth;
-                              arr2 = bymonth.push(flag3);
-                              nextSymbolResult16 = obj.nextSymbol();
-                              acceptResult14 = obj.accept("comma");
+                              arr4 = bymonth.push(flag3);
+                              nextSymbolResult16 = obj2.nextSymbol();
+                              acceptResult14 = obj2.accept("comma");
                             } else {
                               tmp14 = globalThis;
                               _Error = Error;
-                              symbol = obj.symbol;
+                              symbol = obj2.symbol;
                               str3 = "Unexpected symbol ";
-                              text7 = `Unexpected symbol ${symbol}`;
+                              text9 = `Unexpected symbol ${symbol}`;
                               tmp16 = new.target;
                               str4 = ", expected month";
-                              text8 = `Unexpected symbol ${symbol}, expected month`;
+                              text10 = `Unexpected symbol ${symbol}, expected month`;
                               tmp18 = new.target;
                               error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -2873,9 +2871,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       _Date = Date;
-                      parsed11 = Date.parse(obj.text);
+                      parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         _Date2 = Date;
                         date8 = new Date(parsed11);
@@ -2883,19 +2881,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         _Error2 = Error;
-                        text = obj.text;
-                        text9 = `Cannot parse until date:${text}`;
+                        text = obj2.text;
+                        text11 = `Cannot parse until date:${text}`;
                         error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      acceptResult15 = obj.accept("for");
+                      acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         _parseInt2 = parseInt;
-                        parsed12 = parseInt(obj.value[0], 10);
+                        parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -2945,12 +2943,12 @@ let fn = function m() {
                   flag2 = 1;
                   items4 = [flag2];
                   obj.bymonth = items4;
-                  nextSymbolResult15 = obj.nextSymbol();
+                  nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    acceptResult13 = obj.accept("comma");
+                    acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      isDoneResult1 = obj.isDone();
+                      isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         flag3 = 12;
                         switch (tmp13) {
@@ -2958,18 +2956,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               bymonth = obj.bymonth;
-                              arr2 = bymonth.push(flag3);
-                              nextSymbolResult16 = obj.nextSymbol();
-                              acceptResult14 = obj.accept("comma");
+                              arr4 = bymonth.push(flag3);
+                              nextSymbolResult16 = obj2.nextSymbol();
+                              acceptResult14 = obj2.accept("comma");
                             } else {
                               tmp14 = globalThis;
                               _Error = Error;
-                              symbol = obj.symbol;
+                              symbol = obj2.symbol;
                               str3 = "Unexpected symbol ";
-                              text7 = `Unexpected symbol ${symbol}`;
+                              text9 = `Unexpected symbol ${symbol}`;
                               tmp16 = new.target;
                               str4 = ", expected month";
-                              text8 = `Unexpected symbol ${symbol}, expected month`;
+                              text10 = `Unexpected symbol ${symbol}, expected month`;
                               tmp18 = new.target;
                               error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -3016,9 +3014,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       _Date = Date;
-                      parsed11 = Date.parse(obj.text);
+                      parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         _Date2 = Date;
                         date8 = new Date(parsed11);
@@ -3026,19 +3024,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         _Error2 = Error;
-                        text = obj.text;
-                        text9 = `Cannot parse until date:${text}`;
+                        text = obj2.text;
+                        text11 = `Cannot parse until date:${text}`;
                         error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      acceptResult15 = obj.accept("for");
+                      acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         _parseInt2 = parseInt;
-                        parsed12 = parseInt(obj.value[0], 10);
+                        parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -3088,12 +3086,12 @@ let fn = function m() {
                   flag2 = 1;
                   items4 = [flag2];
                   obj.bymonth = items4;
-                  nextSymbolResult15 = obj.nextSymbol();
+                  nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    acceptResult13 = obj.accept("comma");
+                    acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      isDoneResult1 = obj.isDone();
+                      isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         flag3 = 12;
                         switch (tmp13) {
@@ -3101,18 +3099,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               bymonth = obj.bymonth;
-                              arr2 = bymonth.push(flag3);
-                              nextSymbolResult16 = obj.nextSymbol();
-                              acceptResult14 = obj.accept("comma");
+                              arr4 = bymonth.push(flag3);
+                              nextSymbolResult16 = obj2.nextSymbol();
+                              acceptResult14 = obj2.accept("comma");
                             } else {
                               tmp14 = globalThis;
                               _Error = Error;
-                              symbol = obj.symbol;
+                              symbol = obj2.symbol;
                               str3 = "Unexpected symbol ";
-                              text7 = `Unexpected symbol ${symbol}`;
+                              text9 = `Unexpected symbol ${symbol}`;
                               tmp16 = new.target;
                               str4 = ", expected month";
-                              text8 = `Unexpected symbol ${symbol}, expected month`;
+                              text10 = `Unexpected symbol ${symbol}, expected month`;
                               tmp18 = new.target;
                               error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -3159,9 +3157,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       _Date = Date;
-                      parsed11 = Date.parse(obj.text);
+                      parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         _Date2 = Date;
                         date8 = new Date(parsed11);
@@ -3169,19 +3167,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         _Error2 = Error;
-                        text = obj.text;
-                        text9 = `Cannot parse until date:${text}`;
+                        text = obj2.text;
+                        text11 = `Cannot parse until date:${text}`;
                         error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      acceptResult15 = obj.accept("for");
+                      acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         _parseInt2 = parseInt;
-                        parsed12 = parseInt(obj.value[0], 10);
+                        parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -3231,12 +3229,12 @@ let fn = function m() {
                   flag2 = 1;
                   items4 = [flag2];
                   obj.bymonth = items4;
-                  nextSymbolResult15 = obj.nextSymbol();
+                  nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    acceptResult13 = obj.accept("comma");
+                    acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      isDoneResult1 = obj.isDone();
+                      isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         flag3 = 12;
                         switch (tmp13) {
@@ -3244,18 +3242,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               bymonth = obj.bymonth;
-                              arr2 = bymonth.push(flag3);
-                              nextSymbolResult16 = obj.nextSymbol();
-                              acceptResult14 = obj.accept("comma");
+                              arr4 = bymonth.push(flag3);
+                              nextSymbolResult16 = obj2.nextSymbol();
+                              acceptResult14 = obj2.accept("comma");
                             } else {
                               tmp14 = globalThis;
                               _Error = Error;
-                              symbol = obj.symbol;
+                              symbol = obj2.symbol;
                               str3 = "Unexpected symbol ";
-                              text7 = `Unexpected symbol ${symbol}`;
+                              text9 = `Unexpected symbol ${symbol}`;
                               tmp16 = new.target;
                               str4 = ", expected month";
-                              text8 = `Unexpected symbol ${symbol}, expected month`;
+                              text10 = `Unexpected symbol ${symbol}, expected month`;
                               tmp18 = new.target;
                               error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -3302,9 +3300,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       _Date = Date;
-                      parsed11 = Date.parse(obj.text);
+                      parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         _Date2 = Date;
                         date8 = new Date(parsed11);
@@ -3312,19 +3310,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         _Error2 = Error;
-                        text = obj.text;
-                        text9 = `Cannot parse until date:${text}`;
+                        text = obj2.text;
+                        text11 = `Cannot parse until date:${text}`;
                         error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      acceptResult15 = obj.accept("for");
+                      acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         _parseInt2 = parseInt;
-                        parsed12 = parseInt(obj.value[0], 10);
+                        parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -3374,12 +3372,12 @@ let fn = function m() {
                   flag2 = 1;
                   items4 = [flag2];
                   obj.bymonth = items4;
-                  nextSymbolResult15 = obj.nextSymbol();
+                  nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    acceptResult13 = obj.accept("comma");
+                    acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      isDoneResult1 = obj.isDone();
+                      isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         flag3 = 12;
                         switch (tmp13) {
@@ -3387,18 +3385,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               bymonth = obj.bymonth;
-                              arr2 = bymonth.push(flag3);
-                              nextSymbolResult16 = obj.nextSymbol();
-                              acceptResult14 = obj.accept("comma");
+                              arr4 = bymonth.push(flag3);
+                              nextSymbolResult16 = obj2.nextSymbol();
+                              acceptResult14 = obj2.accept("comma");
                             } else {
                               tmp14 = globalThis;
                               _Error = Error;
-                              symbol = obj.symbol;
+                              symbol = obj2.symbol;
                               str3 = "Unexpected symbol ";
-                              text7 = `Unexpected symbol ${symbol}`;
+                              text9 = `Unexpected symbol ${symbol}`;
                               tmp16 = new.target;
                               str4 = ", expected month";
-                              text8 = `Unexpected symbol ${symbol}, expected month`;
+                              text10 = `Unexpected symbol ${symbol}, expected month`;
                               tmp18 = new.target;
                               error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -3445,9 +3443,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       _Date = Date;
-                      parsed11 = Date.parse(obj.text);
+                      parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         _Date2 = Date;
                         date8 = new Date(parsed11);
@@ -3455,19 +3453,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         _Error2 = Error;
-                        text = obj.text;
-                        text9 = `Cannot parse until date:${text}`;
+                        text = obj2.text;
+                        text11 = `Cannot parse until date:${text}`;
                         error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      acceptResult15 = obj.accept("for");
+                      acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         _parseInt2 = parseInt;
-                        parsed12 = parseInt(obj.value[0], 10);
+                        parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -3517,12 +3515,12 @@ let fn = function m() {
                   flag2 = 1;
                   items4 = [flag2];
                   obj.bymonth = items4;
-                  nextSymbolResult15 = obj.nextSymbol();
+                  nextSymbolResult15 = obj2.nextSymbol();
                   tmp4 = obj;
                   if (nextSymbolResult15) {
-                    acceptResult13 = obj.accept("comma");
+                    acceptResult13 = obj2.accept("comma");
                     if (acceptResult13) {
-                      isDoneResult1 = obj.isDone();
+                      isDoneResult1 = obj2.isDone();
                       while (!isDoneResult1) {
                         flag3 = 12;
                         switch (tmp13) {
@@ -3530,18 +3528,18 @@ let fn = function m() {
                             flag3 = 1;
                             if (flag3) {
                               bymonth = obj.bymonth;
-                              arr2 = bymonth.push(flag3);
-                              nextSymbolResult16 = obj.nextSymbol();
-                              acceptResult14 = obj.accept("comma");
+                              arr4 = bymonth.push(flag3);
+                              nextSymbolResult16 = obj2.nextSymbol();
+                              acceptResult14 = obj2.accept("comma");
                             } else {
                               tmp14 = globalThis;
                               _Error = Error;
-                              symbol = obj.symbol;
+                              symbol = obj2.symbol;
                               str3 = "Unexpected symbol ";
-                              text7 = `Unexpected symbol ${symbol}`;
+                              text9 = `Unexpected symbol ${symbol}`;
                               tmp16 = new.target;
                               str4 = ", expected month";
-                              text8 = `Unexpected symbol ${symbol}, expected month`;
+                              text10 = `Unexpected symbol ${symbol}, expected month`;
                               tmp18 = new.target;
                               error16 = new Error(`Unexpected symbol ${symbol}, expected month`);
                               throw error16;
@@ -3588,9 +3586,9 @@ let fn = function m() {
                       throw error17;
                     }
                     fn();
-                    if ("until" === obj.symbol) {
+                    if ("until" === obj2.symbol) {
                       _Date = Date;
-                      parsed11 = Date.parse(obj.text);
+                      parsed11 = Date.parse(obj2.text);
                       if (parsed11) {
                         _Date2 = Date;
                         date8 = new Date(parsed11);
@@ -3598,19 +3596,19 @@ let fn = function m() {
                         tmp4 = obj;
                       } else {
                         _Error2 = Error;
-                        text = obj.text;
-                        text9 = `Cannot parse until date:${text}`;
+                        text = obj2.text;
+                        text11 = `Cannot parse until date:${text}`;
                         error18 = new Error(`Cannot parse until date:${text}`);
                         throw error18;
                       }
                     } else {
-                      acceptResult15 = obj.accept("for");
+                      acceptResult15 = obj2.accept("for");
                       tmp4 = obj;
                       if (acceptResult15) {
                         _parseInt2 = parseInt;
-                        parsed12 = parseInt(obj.value[0], 10);
+                        parsed12 = parseInt(obj2.value[0], 10);
                         obj.count = parsed12;
-                        obj.expect("number");
+                        obj2.expect("number");
                         tmp4 = obj;
                       }
                     }
@@ -3706,7 +3704,7 @@ let fn = function m() {
                   }
                 }
                 if (tmp13) {
-                  arr = items.push(tmp);
+                  let arr2 = items.push(tmp);
                 }
                 num = num + 1;
               } else {
@@ -3768,14 +3766,14 @@ let fn = function m() {
           const error = new Error("Invalid UNTIL value: ".concat(tmp3));
           throw error;
         }
-        obj3 = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/;
+        const obj3 = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
     } else {
       return obj;
     }
-    obj2 = /DTSTART(?:;TZID=([^:=]+?))?(?::|=)([^;\s]+)/i;
+    const obj2 = /DTSTART(?:;TZID=([^:=]+?))?(?::|=)([^;\s]+)/i;
   }
   function st(str) {
     const replaced = str.replace(/^\s+|\s+$/, "");
@@ -3805,7 +3803,7 @@ let fn = function m() {
           [str, str2] = parts;
           switch (str.toUpperCase()) {
             case "FREQ":
-              closure_1.freq = obj3[str2.toUpperCase(str2)];
+              closure_1.freq = obj6[str2.toUpperCase(str2)];
             break;
             case "WKST":
               closure_1.wkst = closure_2_69[str2.toUpperCase(str2)];
@@ -3816,7 +3814,7 @@ let fn = function m() {
                 let parts1 = str2.split(",");
                 let mapped = parts1.map(ht);
               } else {
-                obj2 = /^[+-]?\d+$/;
+                let obj2 = /^[+-]?\d+$/;
                 let isMatch = obj2.test(str2);
                 mapped = str2;
                 if (isMatch) {
@@ -4122,7 +4120,7 @@ let fn = function m() {
           [str, str2] = parts;
           switch (str.toUpperCase()) {
             case "FREQ":
-              closure_1.freq = obj3[str2.toUpperCase(str2)];
+              closure_1.freq = obj6[str2.toUpperCase(str2)];
             break;
             case "WKST":
               closure_1.wkst = closure_2_69[str2.toUpperCase(str2)];
@@ -4133,7 +4131,7 @@ let fn = function m() {
                 let parts1 = str2.split(",");
                 let mapped = parts1.map(ht);
               } else {
-                obj2 = /^[+-]?\d+$/;
+                let obj2 = /^[+-]?\d+$/;
                 let isMatch = obj2.test(str2);
                 mapped = str2;
                 if (isMatch) {
@@ -4476,7 +4474,7 @@ let fn = function m() {
                     if (null != str5) {
                       if (!isArray(str5)) {
                         if ("FREQ" === formatted) {
-                          let str1 = constants.FREQUENCIES[tzid.freq];
+                          let str21 = constants.FREQUENCIES[tzid.freq];
                           let str6 = formatted;
                           let tmp12 = str2;
                         } else if ("WKST" === formatted) {
@@ -4485,15 +4483,15 @@ let fn = function m() {
                               let tmp34 = new.target;
                               if (typeof closure_2 === "function") {
                                 let obj = { weekday: str5, n: undefined };
-                                str = obj.toString();
+                                let str1 = obj.toString();
                               } else {
                                 let str20 = "Trying to call a non-function";
                                 throw new TypeError("Trying to call a non-function");
                               }
                             } else {
-                              str = str5.toString();
+                              str1 = str5.toString();
                             }
-                            str1 = str;
+                            str21 = str1;
                             str6 = formatted;
                             tmp12 = str2;
                           } else {
@@ -4511,14 +4509,15 @@ let fn = function m() {
                             if (!(weekday instanceof closure_1_2)) {
                               if (isArray(weekday)) {
                                 if (typeof closure_1_2 === "function") {
-                                  let obj = {};
+                                  const obj2 = {};
                                   if (0 === tmp6) {
                                     const _Error = Error;
                                     const error = new Error("Can't create weekday with n == 0");
                                     throw error;
                                   } else {
-                                    obj.weekday = tmp5;
-                                    obj.n = tmp6;
+                                    obj2.weekday = tmp5;
+                                    obj2.n = tmp6;
+                                    let obj = obj2;
                                   }
                                 } else {
                                   throw new TypeError("Trying to call a non-function");
@@ -4532,7 +4531,7 @@ let fn = function m() {
                             }
                             return tmp2;
                           });
-                          str1 = str10.toString();
+                          str21 = str10.toString();
                           str6 = "BYDAY";
                           tmp12 = str2;
                         } else if ("DTSTART" === formatted) {
@@ -4544,7 +4543,7 @@ let fn = function m() {
                             date = new Date(str5);
                             let tmp26 = new.target;
                             if (typeof closure_55 === "function") {
-                              obj = {};
+                              let obj2 = {};
                               let _isNaN = isNaN;
                               if (isNaN(date.getTime())) {
                                 let _RangeError = RangeError;
@@ -4554,8 +4553,8 @@ let fn = function m() {
                                 let rangeError = new RangeError("Invalid date passed to DateWithZone");
                                 throw rangeError;
                               } else {
-                                obj.date = date;
-                                obj.tzid = tmp20;
+                                obj2.date = date;
+                                obj2.tzid = tmp20;
                                 text = `DTSTART${obj3.toString()}`;
                               }
                             } else {
@@ -4564,7 +4563,7 @@ let fn = function m() {
                             }
                           }
                           tmp12 = text;
-                          str1 = str;
+                          str21 = str;
                           str6 = formatted;
                         } else if ("UNTIL" === formatted) {
                           tzid = tzid.tzid;
@@ -4581,7 +4580,7 @@ let fn = function m() {
                               str8 = "Z";
                             }
                             items2[7] = str8;
-                            str1 = items2.join(str);
+                            str21 = items2.join(str);
                             str6 = formatted;
                             tmp12 = str2;
                           } else {
@@ -4599,18 +4598,18 @@ let fn = function m() {
                               length = str5.length;
                             } while (num2 < length);
                           }
-                          str1 = items3.toString();
+                          str21 = items3.toString();
                           str6 = formatted;
                           tmp12 = str2;
                         } else {
                           let _String = String;
-                          str1 = String(str5);
+                          str21 = String(str5);
                           str6 = formatted;
                           tmp12 = str2;
                         }
                         tmp3 = tmp12;
-                        if (str1) {
-                          let items4 = [str6, str1];
+                        if (str21) {
+                          let items4 = [str6, str21];
                           let arr = items.push(items4);
                           tmp3 = tmp12;
                         }
@@ -4664,8 +4663,8 @@ let fn = function m() {
           obj.options = count;
           obj.rebuild(date.year, date.month);
           ({ freq: freq2, byhour, byminute, bysecond } = count);
-          let tmp3 = obj3;
-          if (freq2 >= obj3.HOURLY) {
+          let tmp3 = obj6;
+          if (freq2 >= obj6.HOURLY) {
             if (freq2 >= constants.HOURLY) {
               if (typeof f === "function") {
                 if (typeof l === "function") {
@@ -4807,8 +4806,8 @@ let fn = function m() {
           closure_1 = dtstart.getTime() % 1000;
           if (count.freq < tmp3.HOURLY) {
             const items1 = [];
-            byhour = count.byhour;
-            let item = byhour.forEach((item) => {
+            const byhour1 = count.byhour;
+            let item = byhour1.forEach((item) => {
               byminute = item;
               byminute = byminute.byminute;
               item = byminute.forEach((item) => {
@@ -4849,21 +4848,20 @@ let fn = function m() {
     const keys = Object.keys(obj);
     let tzid = Object.keys(closure_73);
     let item = keys.forEach((item) => {
-      let arr = closure_1;
       if (typeof p === "function") {
         if (typeof f === "function") {
           if (typeof l === "function") {
             if (typeof i === "function") {
               let tmp6 = !tmp5;
-              if (null != arr) {
-                tmp6 = 0 === arr.length;
+              if (null != tzid) {
+                tmp6 = 0 === tzid.length;
               }
               let tmp8 = !tmp6;
               if (tmp8) {
-                tmp8 = -1 !== arr.indexOf(item);
+                tmp8 = -1 !== tzid.indexOf(item);
               }
               if (!tmp8) {
-                arr = items.push(item);
+                items.push(item);
               }
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -4939,16 +4937,17 @@ let fn = function m() {
           if (value) {
             if (-1 === value.indexOf(":")) {
               let obj = { name: "RRULE", value };
+              let obj2 = obj;
             } else {
               const parts = value.split(":");
               const substr = parts.slice(0, 1);
               const substr1 = parts.slice(1);
               items = [substr1.join(":")];
               const combined = substr.concat(items);
-              obj = { name: null, value: null };
+              obj2 = { name: null, value: null };
               [obj3.name, obj3.value] = combined;
             }
-            ({ name, value } = obj);
+            ({ name, value } = obj2);
             const parts1 = name.split(";");
             if (parts1) {
               const str5 = parts1[0].toUpperCase();
@@ -5017,7 +5016,7 @@ let fn = function m() {
                     throw new TypeError("Trying to call a non-function");
                   }
                 }));
-                const obj5 = /RDATE(?:;TZID=([^:=]+))?/i;
+                obj5 = /RDATE(?:;TZID=([^:=]+))?/i;
               } else if ("EXRULE" === formatted) {
                 if (substr2.length) {
                   const _Error2 = Error;
@@ -5096,16 +5095,15 @@ let fn = function m() {
                 if (!arr9.length) {
                   const tmp20 = items1[0] || {};
                   let dtstart2 = tmp20.dtstart;
-                  let tmp21 = closure_72;
                   if (!dtstart2) {
                     dtstart2 = tmp5.dtstart;
                   }
                   if (!dtstart2) {
                     dtstart2 = dtstart;
                   }
-                  obj = { dtstart: dtstart2, tzid: tmp20.tzid || tmp5.tzid || tmp18 };
+                  let obj2 = { dtstart: dtstart2, tzid: tmp20.tzid || tmp5.tzid || tmp18 };
                   let tmp24 = new.target;
-                  tmp21 = new tmp21(closure_38(closure_38({}, tmp20), obj), tmp19);
+                  new closure_72(closure_38(closure_38({}, tmp20), obj2), tmp19);
                   let tmp22 = tmp20.tzid || tmp5.tzid || tmp18;
                 }
                 return tmp24;
@@ -5115,11 +5113,11 @@ let fn = function m() {
         }
         if (typeof closure_76 === "function") {
           const call = closure_200_0.call;
-          obj = {};
+          const obj3 = {};
           if (typeof call === "unknown") {
-            closure_200_0(obj, tmp19);
+            closure_200_0(obj3, tmp19);
           } else {
-            let callResult = call(tmp29, obj, tmp19);
+            let callResult = call(tmp29, obj3, tmp19);
           }
           if (!callResult) {
             callResult = tmp29;
@@ -5309,11 +5307,11 @@ let fn = function m() {
     }
   };
   closure_0 = obj;
-  obj = {};
-  obj.r(obj);
-  obj = {
+  let obj2 = {};
+  obj.r(obj2);
+  obj.d(obj2, {
     Frequency() {
-      return obj3;
+      return obj6;
     },
     RRule() {
       return constants;
@@ -5330,8 +5328,7 @@ let fn = function m() {
     rrulestr() {
       return Bt;
     }
-  };
-  obj.d(obj, obj);
+  });
   closure_1 = ["MO", "TU", "WE", "TH", "FR", "SA", "SU"];
   class t {
     constructor(arg0, arg1) {
@@ -5361,7 +5358,7 @@ let fn = function m() {
       self = this;
       if (this.n !== arg0) {
         tmp2 = t;
-        obj = Object.create(t.prototype);
+        obj1 = Object.create(t.prototype);
         obj = {};
         num = 0;
         if (0 === arg0) {
@@ -5662,7 +5659,7 @@ let fn = function m() {
     }
     add(arg0) {
       _result = this._result;
-      arr = _result.push(arg0);
+      arr1 = _result.push(arg0);
       return true;
     }
     getValue() {
@@ -5779,7 +5776,7 @@ let fn = function m() {
       flag = this.iterator(arg0, this._result.length);
       if (flag) {
         _result = this._result;
-        arr = _result.push(arg0);
+        arr1 = _result.push(arg0);
         flag = true;
       }
       return flag;
@@ -5794,11 +5791,11 @@ let fn = function m() {
   }
   fn(e, t);
   n.prototype = t.prototype;
-  const obj1 = Object.create(n.prototype);
-  obj1.constructor = e;
-  e.prototype = obj1;
+  const obj4 = Object.create(n.prototype);
+  obj4.constructor = e;
+  e.prototype = obj4;
   closure_40 = e;
-  let obj2 = { dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], tokens: { SKIP: /^[ \r\n\t]+|^\.$/, number: /^[1-9][0-9]*/, numberAsText: /^(one|two|three)/i, every: /^every/i, "day(s)": /^days?/i, "weekday(s)": /^weekdays?/i, "week(s)": /^weeks?/i, "hour(s)": /^hours?/i, "minute(s)": /^minutes?/i, "month(s)": /^months?/i, "year(s)": /^years?/i, on: /^(on|in)/i, at: /^(at)/i, the: /^the/i, first: /^first/i, second: /^second/i, third: /^third/i, nth: /^([1-9][0-9]*)(\.|th|nd|rd|st)/i, last: /^last/i, for: /^for/i, "time(s)": /^times?/i, until: /^(un)?til/i, monday: /^mo(n(day)?)?/i, tuesday: /^tu(e(s(day)?)?)?/i, wednesday: /^we(d(n(esday)?)?)?/i, thursday: /^th(u(r(sday)?)?)?/i, friday: /^fr(i(day)?)?/i, saturday: /^sa(t(urday)?)?/i, sunday: /^su(n(day)?)?/i, january: /^jan(uary)?/i, february: /^feb(ruary)?/i, march: /^mar(ch)?/i, april: /^apr(il)?/i, may: /^may/i, june: /^june?/i, july: /^july?/i, august: /^aug(ust)?/i, september: /^sep(t(ember)?)?/i, october: /^oct(ober)?/i, november: /^nov(ember)?/i, december: /^dec(ember)?/i, comma: /^(,\s*|(and|or)\s*)+/i } };
+  let obj5 = { dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], tokens: { SKIP: /^[ \r\n\t]+|^\.$/, number: /^[1-9][0-9]*/, numberAsText: /^(one|two|three)/i, every: /^every/i, "day(s)": /^days?/i, "weekday(s)": /^weekdays?/i, "week(s)": /^weeks?/i, "hour(s)": /^hours?/i, "minute(s)": /^minutes?/i, "month(s)": /^months?/i, "year(s)": /^years?/i, on: /^(on|in)/i, at: /^(at)/i, the: /^the/i, first: /^first/i, second: /^second/i, third: /^third/i, nth: /^([1-9][0-9]*)(\.|th|nd|rd|st)/i, last: /^last/i, for: /^for/i, "time(s)": /^times?/i, until: /^(un)?til/i, monday: /^mo(n(day)?)?/i, tuesday: /^tu(e(s(day)?)?)?/i, wednesday: /^we(d(n(esday)?)?)?/i, thursday: /^th(u(r(sday)?)?)?/i, friday: /^fr(i(day)?)?/i, saturday: /^sa(t(urday)?)?/i, sunday: /^su(n(day)?)?/i, january: /^jan(uary)?/i, february: /^feb(ruary)?/i, march: /^mar(ch)?/i, april: /^apr(il)?/i, may: /^may/i, june: /^june?/i, july: /^july?/i, august: /^aug(ust)?/i, september: /^sep(t(ember)?)?/i, october: /^oct(ober)?/i, november: /^nov(ember)?/i, december: /^dec(ember)?/i, comma: /^(,\s*|(and|or)\s*)+/i } };
   function z(arg0, arg1) {
 
   }
@@ -5861,9 +5858,9 @@ let fn = function m() {
           tmp10 = globalThis;
           _String = String;
           StringResult = String(items2);
-          obj = { allWeeks: null, someWeeks: null, isWeekdays: null, isEveryDay: null };
-          obj.allWeeks = items2.filter((item) => !item.n);
-          obj.someWeeks = items2.filter((item) => Boolean(item.n));
+          obj1 = { allWeeks: null, someWeeks: null, isWeekdays: null, isEveryDay: null };
+          obj1.allWeeks = items2.filter((item) => !item.n);
+          obj1.someWeeks = items2.filter((item) => Boolean(item.n));
           str = "MO";
           num = -1;
           tmp11 = -1 !== StringResult.indexOf("MO");
@@ -5891,7 +5888,7 @@ let fn = function m() {
             str7 = "SU";
             tmp11 = -1 === StringResult.indexOf("SU");
           }
-          obj.isWeekdays = tmp11;
+          obj1.isWeekdays = tmp11;
           tmp12 = -1 !== StringResult.indexOf("MO");
           if (tmp12) {
             str8 = "TU";
@@ -5917,8 +5914,8 @@ let fn = function m() {
             str13 = "SU";
             tmp12 = -1 !== StringResult.indexOf("SU");
           }
-          obj.isEveryDay = tmp12;
-          obj.byweekday = obj;
+          obj1.isEveryDay = tmp12;
+          obj.byweekday = obj1;
           fn = function y(weekday, weekday2) {
             return weekday.weekday - weekday2.weekday;
           };
@@ -6407,14 +6404,14 @@ let fn = function m() {
     }
     add(arg0) {
       text = this.text;
-      arr = text.push(" ");
+      arr1 = text.push(" ");
       text1 = this.text;
-      arr1 = text1.push(arg0);
+      arr3 = text1.push(arg0);
       return this;
     }
     list(arg0, arg1, arg2, arg3) {
       fn = arg1;
-      f125550 = arg1;
+      f125553 = arg1;
       str = arg3;
       self = this;
       if (undefined === arg3) {
@@ -6429,7 +6426,7 @@ let fn = function m() {
       if (!fn) {
         fn = (arg0) => arg0.toString();
       }
-      f125550 = fn;
+      f125553 = fn;
       mapped = arr.map(function o(item) {
         if (!fn) {
           return fn;
@@ -6583,30 +6580,30 @@ let fn = function m() {
     }
   }
   closure_46 = t;
-  let obj3 = { YEARLY: 0 };
-  obj3[0] = "YEARLY";
-  obj3.MONTHLY = 1;
-  obj3[1] = "MONTHLY";
-  obj3.WEEKLY = 2;
-  obj3[2] = "WEEKLY";
-  obj3.DAILY = 3;
-  obj3[3] = "DAILY";
-  obj3.HOURLY = 4;
-  obj3[4] = "HOURLY";
-  obj3.MINUTELY = 5;
-  obj3[5] = "MINUTELY";
-  obj3.SECONDLY = 6;
-  obj3[6] = "SECONDLY";
+  const obj6 = { YEARLY: 0 };
+  obj6[0] = "YEARLY";
+  obj6.MONTHLY = 1;
+  obj6[1] = "MONTHLY";
+  obj6.WEEKLY = 2;
+  obj6[2] = "WEEKLY";
+  obj6.DAILY = 3;
+  obj6[3] = "DAILY";
+  obj6.HOURLY = 4;
+  obj6[4] = "HOURLY";
+  obj6.MINUTELY = 5;
+  obj6[5] = "MINUTELY";
+  obj6.SECONDLY = 6;
+  obj6[6] = "SECONDLY";
   let items = ["count", "until", "interval", "byweekday", "bymonthday", "bymonth"];
   t.IMPLEMENTED = [];
-  t.IMPLEMENTED[obj3.HOURLY] = items;
-  t.IMPLEMENTED[obj3.MINUTELY] = items;
+  t.IMPLEMENTED[obj6.HOURLY] = items;
+  t.IMPLEMENTED[obj6.MINUTELY] = items;
   let items1 = ["byhour"];
-  t.IMPLEMENTED[obj3.DAILY] = items1.concat(items);
-  t.IMPLEMENTED[obj3.WEEKLY] = items;
-  t.IMPLEMENTED[obj3.MONTHLY] = items;
+  t.IMPLEMENTED[obj6.DAILY] = items1.concat(items);
+  t.IMPLEMENTED[obj6.WEEKLY] = items;
+  t.IMPLEMENTED[obj6.MONTHLY] = items;
   let items2 = ["byweekno", "byyearday"];
-  t.IMPLEMENTED[obj3.YEARLY] = items2.concat(items);
+  t.IMPLEMENTED[obj6.YEARLY] = items2.concat(items);
   const isFullyConvertible = t.isFullyConvertible;
   class t {
     constructor(arg0, arg1, arg2, arg3) {
@@ -7207,9 +7204,9 @@ let fn = function m() {
   }
   fn(e, t);
   n.prototype = t.prototype;
-  const obj4 = Object.create(n.prototype);
-  obj4.constructor = e;
-  e.prototype = obj4;
+  const obj13 = Object.create(n.prototype);
+  obj13.constructor = e;
+  e.prototype = obj13;
   closure_50 = e;
   class t {
     constructor(arg0, arg1) {
@@ -7243,10 +7240,10 @@ let fn = function m() {
         tmp3 = new.target;
         tmp4 = new.target;
         tmp5 = time;
-        date = new Date(time);
-        tmp6 = date;
+        date1 = new Date(time);
+        tmp6 = date1;
         tmp7 = y;
-        str = date.getUTCFullYear();
+        str = date1.getUTCFullYear();
         str2 = "0";
         num = 4;
         num2 = 0;
@@ -7254,13 +7251,13 @@ let fn = function m() {
         items[0] = y(str.toString(), 4, "0");
         num3 = 1;
         num4 = 2;
-        items[1] = y(date.getUTCMonth() + 1, 2, "0");
-        items[2] = y(date.getUTCDate(), 2, "0");
+        items[1] = y(date1.getUTCMonth() + 1, 2, "0");
+        items[2] = y(date1.getUTCDate(), 2, "0");
         str3 = "T";
         items[3] = "T";
-        items[4] = y(date.getUTCHours(), 2, "0");
-        items[5] = y(date.getUTCMinutes(), 2, "0");
-        items[6] = y(date.getUTCSeconds(), 2, "0");
+        items[4] = y(date1.getUTCHours(), 2, "0");
+        items[5] = y(date1.getUTCMinutes(), 2, "0");
+        items[6] = y(date1.getUTCSeconds(), 2, "0");
         str4 = "";
         str5 = "";
         if (flag) {
@@ -7291,7 +7288,7 @@ let fn = function m() {
     rezonedDate() {
       date = this.date;
       if (this.isUTC) {
-        date1 = date;
+        date2 = date;
       } else {
         tzid = tmp.tzid;
         tmp2 = globalThis;
@@ -7307,27 +7304,27 @@ let fn = function m() {
           str5 = "Z";
           tmp7 = new.target;
           tmp8 = new.target;
-          tmp5 = new tmp5(str2.replace(" ", "T") + "Z");
+          tmp51 = new tmp5(str2.replace(" ", "T") + "Z");
           tmp9 = null;
           str6 = "UTC";
           if (null != tzid) {
             str6 = tzid;
           }
           if (typeof tmp6 === "function") {
-            tmp10 = tmp5;
-            obj = { timeZone: null };
-            obj.timeZone = str6;
-            str7 = date.toLocaleString("sv-SE", obj);
+            tmp10 = tmp51;
+            obj1 = { timeZone: null };
+            obj1.timeZone = str6;
+            str7 = date.toLocaleString("sv-SE", obj1);
             tmp11 = new.target;
             tmp12 = new.target;
-            date = new Date(str7.replace(" ", "T") + "Z");
-            tmp13 = date;
-            time = date.getTime();
+            date1 = new Date(str7.replace(" ", "T") + "Z");
+            tmp13 = date1;
+            time = date1.getTime();
             _Date = Date;
-            diff = time - tmp5.getTime();
+            diff = time - tmp51.getTime();
             tmp16 = new.target;
             tmp17 = new.target;
-            date1 = new Date(date.getTime() - diff);
+            date2 = new Date(date.getTime() - diff);
           } else {
             str9 = "Trying to call a non-function";
             throw new TypeError("Trying to call a non-function");
@@ -7337,7 +7334,7 @@ let fn = function m() {
           throw new TypeError("Trying to call a non-function");
         }
       }
-      return date1;
+      return date2;
     }
   }
   Object.defineProperty(t.prototype, "isUTC", {
@@ -7369,7 +7366,7 @@ let fn = function m() {
           tmp17 = arg2;
           arg2._value = arr;
           arr3 = self[arg0];
-          arr = arr3.push(arg2);
+          arr1 = arr3.push(arg2);
         }
         return;
       } else {
@@ -7650,7 +7647,7 @@ let fn = function m() {
   }
   const items7 = [];
   const fn2Result = fn2([], items3, true);
-  let obj5 = {
+  const obj14 = {
     get() {
       const tzid = this.tzid;
       let tmp = !tzid;
@@ -7661,6 +7658,26 @@ let fn = function m() {
     },
     enumerable: false,
     configurable: true
+  };
+  let obj3 = {
+    Frequency() {
+      return obj6;
+    },
+    RRule() {
+      return constants;
+    },
+    RRuleSet() {
+      return closure_1_76;
+    },
+    Weekday() {
+      return closure_2;
+    },
+    datetime() {
+      return b;
+    },
+    rrulestr() {
+      return Bt;
+    }
   };
   let num6 = 0;
   let num7 = 0;

@@ -3,7 +3,7 @@
 // Module 849
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class SentryError {

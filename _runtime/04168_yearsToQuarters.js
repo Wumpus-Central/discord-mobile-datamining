@@ -2,8 +2,9 @@
 
 // Module 4168 (yearsToQuarters)
 import daysInWeek from "daysInWeek" /* 3904 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj = { default: requiredArgs };
   let tmp3 = obj;

@@ -8,8 +8,12 @@ import noop from "module_19" /* 19 */;
 require = arg1;
 
 export const renderElement = function renderElement(rootTag) {
-  const obj = { onCaughtError: _mod289.onCaughtError, onUncaughtError: _mod289.onUncaughtError, onRecoverableError: _mod289.onRecoverableError };
-  obj.render(rootTag.element, Number(rootTag.rootTag), null, true, obj);
+  const obj2 = { onCaughtError: null, onUncaughtError: null, onRecoverableError: null };
+  const obj = ReactFabricDefault;
+  obj2.onCaughtError = _mod289.onCaughtError;
+  obj2.onUncaughtError = _mod289.onUncaughtError;
+  obj2.onRecoverableError = _mod289.onRecoverableError;
+  obj.render(rootTag.element, Number(rootTag.rootTag), null, true, obj2);
 };
 export const dispatchCommand = ReactFabricDefault.dispatchCommand;
 export const findHostInstance_DEPRECATED = ReactFabricDefault.findHostInstance_DEPRECATED;

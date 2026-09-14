@@ -13,10 +13,10 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const handleResponseError = function handleResponseError(setStatus, error) {
   if (error.error) {
-    let obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: error.error.type || "internal_error" };
+    const obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: error.error.type || "internal_error" };
     setStatus.setStatus(obj);
-    obj = { mechanism: { handled: false, type: "auto.ai.anthropic.anthropic_error" } };
-    captureCheckIn.captureException(error.error, obj);
+    const obj2 = { mechanism: { handled: false, type: "auto.ai.anthropic.anthropic_error" } };
+    captureCheckIn.captureException(error.error, obj2);
     const tmp2Result = captureCheckIn;
   }
 };
@@ -40,11 +40,11 @@ export const messagesFromParams = function messagesFromParams(system) {
   }
   if (Array.isArray(messages)) {
     const items3 = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
+    const arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
     if (tmp == null) {
       tmp = messages;
     }
-    arraySpreadResult = HermesBuiltin.arraySpread(tmp, arraySpreadResult);
+    HermesBuiltin.arraySpread(tmp, arraySpreadResult);
     return items3;
   } else if (null != messages) {
     const items4 = [messages];

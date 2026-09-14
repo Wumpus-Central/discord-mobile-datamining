@@ -2,14 +2,18 @@
 
 // Module 1864
 import _mod17 from "module_17" /* 17 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import cancelAnimation from "cancelAnimation" /* 1636 */;
+import cancelAnimation_mod from "cancelAnimation" /* 1636 */;
 
+let noop = noop_mod;
 ({ useCallback: c3, useMemo: closure_4, forwardRef } = noop);
+let noop = noop_mod;
 const StyleSheet = _mod17.StyleSheet;
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+let cancelAnimation = cancelAnimation_mod;
 let closure_8 = cancelAnimation.makeMutable(0);
+let cancelAnimation = cancelAnimation_mod;
 let closure_9 = cancelAnimation.makeMutable(0);
 const __initData = { code: "function pnpm_indexTsx1(){const{freeze}=this.__closure;return typeof freeze===\"boolean\"?freeze:freeze.value;}" };
 const __initData2 = { code: "function pnpm_indexTsx2(){const{blankSpace,padding,extraContentPadding}=this.__closure;return Math.max(blankSpace.value,padding.value+extraContentPadding.value);}" };
@@ -58,8 +62,8 @@ export default forwardRef((onEndVisible, arg1) => {
   onLayout2 = undefined;
   onContentSizeChange2 = undefined;
   animatedStyle = undefined;
+  const animatedRef = flag2(blankSpace[3]).useAnimatedRef();
   let obj = flag2(blankSpace[3]);
-  const animatedRef = obj.useAnimatedRef();
   const tmp5 = extraContentPadding(blankSpace[4])(arg1, animatedRef);
   class M {
     constructor() {
@@ -81,7 +85,7 @@ export default forwardRef((onEndVisible, arg1) => {
   ({ contentOffsetY, scroll, layout, size, onLayout: onLayout2 } = chatKeyboard);
   onContentSizeChange2 = chatKeyboard.onContentSizeChange;
   const obj3 = flag2(blankSpace[5]);
-  extraContentPadding = flag2(blankSpace[6]).useExtraContentPadding({ scrollViewRef: animatedRef, extraContentPadding, keyboardPadding: padding, blankSpace, scroll, layout, size, contentOffsetY, inverted: flag, keyboardLiftBehavior: str, freeze: derivedValue });
+  const extraContentPadding1 = flag2(blankSpace[6]).useExtraContentPadding({ scrollViewRef: animatedRef, extraContentPadding, keyboardPadding: padding, blankSpace, scroll, layout, size, contentOffsetY, inverted: flag, keyboardLiftBehavior: str, freeze: derivedValue });
   const obj4 = flag2(blankSpace[6]);
   const endVisible = flag2(blankSpace[7]).useEndVisible({ scroll, layout, size, inverted: flag, onEndVisible: onEndVisible.onEndVisible });
   const obj5 = flag2(blankSpace[7]);
@@ -120,9 +124,9 @@ export default forwardRef((onEndVisible, arg1) => {
   class J {
     constructor() {
       obj = { transform: null };
-      obj = { translateY: -currentHeight.value };
+      obj1 = { translateY: -currentHeight.value };
       items = [];
-      items[0] = obj;
+      items[0] = obj1;
       obj.transform = items;
       return obj;
     }
@@ -132,24 +136,24 @@ export default forwardRef((onEndVisible, arg1) => {
   J.__initData = __initData4;
   animatedStyle = flag2(blankSpace[3]).useAnimatedStyle(J, []);
   const items2 = [animatedStyle];
-  obj = { children: null };
+  const obj9 = { children: null };
   const obj8 = flag2(blankSpace[3]);
-  obj = { ref: tmp5 };
+  const obj10 = { ref: tmp5 };
   const tmp15 = onContentSizeChange(() => {
     const items = [commitView.commitView, animatedStyle];
     return items;
   }, items2);
   const merged1 = Object.assign(merged);
-  obj.applyWorkaroundForContentInsetHitTestBug = flag3;
-  obj.bottomPadding = derivedValue1;
-  obj.contentOffsetY = contentOffsetY;
-  obj.inverted = flag;
-  obj.scrollIndicatorPadding = derivedValue2;
-  obj.ScrollViewComponent = ScrollView;
-  obj.onContentSizeChange = tmp13;
-  obj.onLayout = tmp12;
-  obj.children = onEndVisible.children;
-  const items3 = [padding(extraContentPadding(blankSpace[8]), obj), padding(extraContentPadding(blankSpace[3]).View, { style: tmp15 })];
-  obj.children = items3;
-  return onLayout2(currentHeight, obj);
+  obj10.applyWorkaroundForContentInsetHitTestBug = flag3;
+  obj10.bottomPadding = derivedValue1;
+  obj10.contentOffsetY = contentOffsetY;
+  obj10.inverted = flag;
+  obj10.scrollIndicatorPadding = derivedValue2;
+  obj10.ScrollViewComponent = ScrollView;
+  obj10.onContentSizeChange = tmp13;
+  obj10.onLayout = tmp12;
+  obj10.children = onEndVisible.children;
+  const items3 = [padding(extraContentPadding(blankSpace[8]), obj10), padding(extraContentPadding(blankSpace[3]).View, { style: tmp15 })];
+  obj9.children = items3;
+  return onLayout2(currentHeight, obj9);
 });

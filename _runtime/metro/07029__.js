@@ -3,11 +3,13 @@
 // Module 7029
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6729 */;
+import value2 from "value2" /* 6729 */;
 import _mod7030 from "module_7030" /* 7030 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
+let noop = noop_mod;
 ({ useEffect: c2, useCallback: c3, useMemo: closure_4 } = noop);
+let noop = noop_mod;
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
 const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
@@ -23,12 +25,12 @@ const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
   ({ style, children } = focusHook);
   const merged = Object.assign(focusHook, Object.assign({ focusHook: 0, enableFooterMarginAdjustment: 0, onLayout: 0, style: 0, children: 0 }));
   let animatedScrollableContentOffsetY;
-  let obj = onLayout(animatedScrollableContentOffsetY[3]);
-  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const bottomSheetInternal = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetInternal();
   animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
   animatedScrollableType = bottomSheetInternal.animatedScrollableType;
   const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
   const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj = onLayout(animatedScrollableContentOffsetY[3]);
   const bottomSheetContentContainerStyle = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetContentContainerStyle(flag, style);
   let items = [bottomSheetContentContainerStyle];
   const items1 = [animatedScrollableContentOffsetY, animatedScrollableType];
@@ -40,12 +42,12 @@ const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
   }, items);
   const tmp5 = enableDynamicSizing(() => {
     animatedScrollableContentOffsetY.value = 0;
-    animatedScrollableType.value = GESTURE_SOURCE.SCROLLABLE_TYPE.VIEW;
+    animatedScrollableType.value = value2.SCROLLABLE_TYPE.VIEW;
   }, items1);
   focusHook(tmp5);
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.onLayout = enableDynamicSizing((nativeEvent) => {
+  obj3.onLayout = enableDynamicSizing((nativeEvent) => {
     if (enableDynamicSizing) {
       const result = animatedContentHeight.set(nativeEvent.nativeEvent.layout.height);
     }
@@ -53,8 +55,8 @@ const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
       tmp3(nativeEvent);
     }
   }, items2);
-  obj.style = tmp4;
-  obj.children = children;
+  obj3.style = tmp4;
+  obj3.children = children;
   return <bottomSheetContentContainerStyle />;
 });
 memoResult.displayName = "BottomSheetView";

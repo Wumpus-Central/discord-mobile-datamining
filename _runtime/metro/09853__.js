@@ -24,11 +24,10 @@ export const useModal = (props) => {
   const tmp3 = props((id) => {
     if (id.id === id) {
       closure_4.current = true;
-      let date = id.date;
       if (props.onConfirm) {
         const _Date = Date;
-        date = new Date(date);
-        props.onConfirm(date);
+        const date1 = new Date(date);
+        props.onConfirm(date1);
       }
     }
   }, items);

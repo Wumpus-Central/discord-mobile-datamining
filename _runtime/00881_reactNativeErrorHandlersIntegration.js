@@ -20,7 +20,7 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn, arg1) => {
+    return new _Promise((fn, arg1) => {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -42,14 +42,14 @@ if (!fn) {
         if (done.done) {
           closure_0(done.value);
         } else {
-          let tmp = done.value;
-          closure_0 = tmp;
-          if (!(tmp instanceof Promise)) {
-            tmp = new tmp((fn) => {
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
               fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -63,31 +63,30 @@ if (!fn) {
         fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
+          tmp32 = new tmp3((fn) => {
             fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
-let data = {
+let obj = {
   onUnhandled(id, originalException) {
-    data = { data: null, originalException, syntheticException: null, mechanism: null };
-    data = { id };
-    data.data = data;
+    const obj2 = { data: { id }, originalException, syntheticException: null, mechanism: null };
+    obj = _mod682;
+    const obj3 = { id };
     let syntheticError;
     if (!obj4.isErrorLike(originalException)) {
       syntheticError = _mod678.createSyntheticError();
       const tmpResult = _mod678;
     }
-    data.syntheticException = syntheticError;
-    data.mechanism = { handled: true, type: "onunhandledrejection" };
-    data.captureException(originalException, data);
+    obj2.syntheticException = syntheticError;
+    obj2.mechanism = { handled: true, type: "onunhandledrejection" };
+    obj.captureException(originalException, obj2);
     obj4 = _mod678;
   },
   onHandled(displayId) {
@@ -96,20 +95,18 @@ let data = {
 };
 
 export (arg0) => {
-  let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = {
+  return {
     name: "ReactNativeErrorHandlers",
     setupOnce() {
       const merged = Object.assign({ onerror: true, onunhandledrejection: true, patchGlobalPromise: true }, obj);
       if (merged.onunhandledrejection) {
         (function setupUnhandledRejectionsTracking(patchGlobalPromise) {
           try {
-            obj = c0(_undefined[0]);
             if (obj.isHermesEnabled()) {
-              let _HermesInternal = c0(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
+              const _HermesInternal = c0(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
               let prop;
               if (null !== _HermesInternal) {
                 if (undefined !== tmp8) {
@@ -117,14 +114,14 @@ export (arg0) => {
                 }
               }
               if (prop) {
-                _HermesInternal = undefined;
+                let _HermesInternal1;
                 if (null !== c0(_undefined[1]).RN_GLOBAL_OBJ) {
                   if (undefined !== c0(_undefined[1]).RN_GLOBAL_OBJ) {
-                    _HermesInternal = c0(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
+                    _HermesInternal1 = c0(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
                   }
                 }
                 let hasPromise;
-                if (null !== _HermesInternal) {
+                if (null !== _HermesInternal1) {
                   if (undefined !== tmp19) {
                     hasPromise = tmp19.hasPromise;
                   }
@@ -135,7 +132,7 @@ export (arg0) => {
                     if (typeof call === "unknown") {
                       let callResult = tmp23();
                     } else {
-                      callResult = call(_HermesInternal);
+                      callResult = call(_HermesInternal1);
                     }
                   }
                 }
@@ -143,47 +140,46 @@ export (arg0) => {
                   const debug3 = c0(_undefined[2]).debug;
                   debug3.log("Using Hermes native promise rejection tracking");
                   const _HermesInternal2 = c0(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
-                  obj = { allRejections: true, onUnhandled: null, onHandled: null };
                   ({ onUnhandled: obj6.onUnhandled, onHandled: obj6.onHandled } = closure_1_3);
-                  let result = _HermesInternal2.enablePromiseRejectionTracker(obj);
+                  let result = _HermesInternal2.enablePromiseRejectionTracker({ allRejections: true, onUnhandled: null, onHandled: null });
                   const debug4 = c0(_undefined[2]).debug;
                   debug4.log("Unhandled promise rejections will be caught by Sentry.");
+                  let obj2 = { allRejections: true, onUnhandled: null, onHandled: null };
                 }
               }
             }
-            let tmp3Result = c0(_undefined[0]);
+            obj = c0(_undefined[0]);
             if (tmp3Result.isWeb()) {
               const debug2 = c0(_undefined[2]).debug;
               debug2.log("Using Browser JS promise rejection tracking for React Native Web");
-              tmp3Result = c0(_undefined[2]);
-              const result1 = tmp3Result.addGlobalUnhandledRejectionInstrumentationHandler((originalException) => {
-                closure_1_0(682);
-                obj = { originalException, syntheticException: null, mechanism: null };
+              const result1 = c0(_undefined[2]).addGlobalUnhandledRejectionInstrumentationHandler((originalException) => {
+                const obj2 = { originalException, syntheticException: null, mechanism: null };
+                obj = closure_1_0(682);
                 let syntheticError;
                 if (!obj3.isErrorLike(originalException)) {
                   syntheticError = closure_1_0(678).createSyntheticError();
                   const tmpResult = closure_1_0(678);
                 }
-                obj.syntheticException = syntheticError;
-                obj.mechanism = { handled: false, type: "onunhandledrejection" };
-                obj.captureException(originalException, obj);
+                obj2.syntheticException = syntheticError;
+                obj2.mechanism = { handled: false, type: "onunhandledrejection" };
+                obj.captureException(originalException, obj2);
                 obj3 = closure_1_0(678);
               });
+              const tmp3Result4 = c0(_undefined[2]);
             } else if (patchGlobalPromise) {
               c0(_undefined[4]).polyfillPromise();
               (function attachUnhandledRejectionHandler() {
-                obj = closure_1_0(882);
-                const result = obj.requireRejectionTracking();
-                obj = { allRejections: true, onUnhandled: closure_1_3.onUnhandled, onHandled: closure_1_3.onHandled };
-                result.enable(obj);
+                const result = closure_1_0(882).requireRejectionTracking();
+                result.enable({ allRejections: true, onUnhandled: closure_1_3.onUnhandled, onHandled: closure_1_3.onHandled });
               })();
-              const tmp3Result1 = c0(_undefined[4]);
+              const tmp3Result5 = c0(_undefined[4]);
               c0(_undefined[4]).checkPromiseAndWarn();
-              const tmp3Result2 = c0(_undefined[4]);
+              const tmp3Result6 = c0(_undefined[4]);
             } else {
               const debug = c0(_undefined[2]).debug;
               debug.log("Unhandled promise rejections will not be caught by Sentry.");
             }
+            tmp3Result = c0(_undefined[0]);
           } catch (err) {
             const debug5 = c0(_undefined[2]).debug;
             debug5.warn("Failed to set up promise rejection tracking. Unhandled promise rejections will not be caught by Sentry.See https://docs.sentry.io/platforms/react-native/troubleshooting/ for more details.");
@@ -212,8 +208,8 @@ export (arg0) => {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
-                  obj = { value, done: true };
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
@@ -226,8 +222,8 @@ export (arg0) => {
                       throw value;
                     } else if (arg0 === 2) {
                       c3 = 3;
-                      obj = { value, done: true };
-                      return obj;
+                      const obj5 = { value, done: true };
+                      return obj5;
                     } else {
                       dependencyMap = 0;
                       c0 = tmp2;
@@ -239,50 +235,50 @@ export (arg0) => {
                           const debug2 = originalException(682).debug;
                           debug2.log("Encountered multiple fatals in a row. The latest:", originalException);
                           c3 = 3;
-                          let obj1 = { value: undefined, done: true };
-                          return obj1;
+                          const obj6 = { value: undefined, done: true };
+                          return obj6;
                         } else {
                           c0 = true;
                         }
                       }
-                      let obj3 = originalException(682);
-                      const client = obj3.getClient();
+                      const client = originalException(682).getClient();
                       closure_128_0 = client;
                       if (client) {
-                        const obj2 = { originalException, attachments: null };
+                        const obj7 = { originalException, attachments: null };
                         const currentScope = originalException(682).getCurrentScope();
-                        obj2.attachments = currentScope.getScopeData().attachments;
-                        closure_128_1 = obj2;
+                        obj7.attachments = currentScope.getScopeData().attachments;
+                        closure_128_1 = obj7;
                         c2 = 1;
                         c3 = 1;
-                        obj3 = { value: client.eventFromException(originalException, obj2), done: false };
-                        return obj3;
+                        const obj9 = { value: client.eventFromException(originalException, obj7), done: false };
+                        return obj9;
                       } else {
                         let debug = originalException(682).debug;
                         debug.error("Sentry client is missing, the error event might be lost.", originalException);
                         dependencyMap(originalException, dependencyMap);
                         c3 = 3;
-                        const obj4 = { value: undefined, done: true };
-                        return obj4;
+                        const obj10 = { value: undefined, done: true };
+                        return obj10;
                       }
+                      const obj4 = originalException(682);
                     }
                   } else if (arg0 === 1) {
                     c3 = 3;
                     throw value;
                   } else if (arg0 === 2) {
                     c3 = 3;
-                    const obj5 = { value, done: true };
-                    return obj5;
+                    const obj11 = { value, done: true };
+                    return obj11;
                   } else {
                     closure_128_2 = value;
                     if (closure_129_1) {
                       tmp48.level = "fatal";
-                      obj1 = originalException(682);
-                      const result = obj1.addExceptionMechanism(closure_128_2, { handled: false, type: "onerror" });
+                      const result = originalException(682).addExceptionMechanism(closure_128_2, { handled: false, type: "onerror" });
+                      const obj2 = originalException(682);
                     } else {
                       tmp48.level = "error";
+                      const result1 = originalException(682).addExceptionMechanism(closure_128_2, { handled: true, type: "generic" });
                       obj = originalException(682);
-                      const result1 = obj.addExceptionMechanism(closure_128_2, { handled: true, type: "generic" });
                     }
                     closure_128_0.captureEvent(closure_128_2, closure_128_1);
                     let num3 = closure_128_0.getOptions().shutdownTimeout;
@@ -312,5 +308,4 @@ export (arg0) => {
       }
     }
   };
-  return obj;
 }

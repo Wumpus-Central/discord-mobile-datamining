@@ -25,7 +25,7 @@ export const createConsolaReporter = function createConsolaReporter() {
   }
   set = new Set(levels);
   client = obj.client;
-  obj = {
+  return {
     log(arg0) {
       ({ type, level, message, args, tag, date } = arg0);
       const tmp = _objectWithoutProperties(arg0, closure_3);
@@ -89,5 +89,4 @@ export const createConsolaReporter = function createConsolaReporter() {
       }
     }
   };
-  return obj;
 };

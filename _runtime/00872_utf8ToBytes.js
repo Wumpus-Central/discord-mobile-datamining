@@ -4,6 +4,8 @@
 import _mod874 from "module_874" /* 874 */;
 import base64StringFromByteArray from "base64StringFromByteArray" /* 876 */;
 
+const require = globalThis.__r;
+
 for (const key10013 in require("module_873")) {
   arg5[key10013] = require("module_873")[key10013];
   continue;

@@ -19,18 +19,17 @@ let wrappedSetGestureState = function t(arg0, arg1) {
     throw error;
   }
 };
-let obj = { tagMessage: fn(6761).tagMessage };
-wrappedSetGestureState.__closure = obj;
+wrappedSetGestureState.__closure = { tagMessage: fn(6761).tagMessage };
 wrappedSetGestureState.__workletHash = 727405139747;
 wrappedSetGestureState.__initData = { code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}" };
 const __initData = { code: "function pnpm_gestureStateManagerTs3(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.BEGAN);}" };
 const __initData2 = { code: "function pnpm_gestureStateManagerTs4(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.ACTIVE);}" };
 const __initData3 = { code: "function pnpm_gestureStateManagerTs5(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.FAILED);}" };
 const __initData4 = { code: "function pnpm_gestureStateManagerTs6(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.END);}" };
-obj = { create: null };
+let obj2 = { create: null };
 function create(handlerTag) {
   _require = handlerTag;
-  let obj = { handlerTag, begin: null, activate: null, fail: null, end: null };
+  const obj = { handlerTag, begin: null, activate: null, fail: null, end: null };
   const wrappedSetGestureState = function p() {
     const BEGAN = _mod6762.State.BEGAN;
     if (typeof fn === "function") {
@@ -50,8 +49,7 @@ function create(handlerTag) {
       throw new TypeError("Trying to call a non-function");
     }
   };
-  obj = { wrappedSetGestureState, handlerTag, State: require("module_6762").State };
-  wrappedSetGestureState.__closure = obj;
+  wrappedSetGestureState.__closure = { wrappedSetGestureState, handlerTag, State: require("module_6762").State };
   wrappedSetGestureState.__workletHash = 15218261064802;
   wrappedSetGestureState.__initData = __initData;
   obj.begin = wrappedSetGestureState;
@@ -74,8 +72,8 @@ function create(handlerTag) {
       throw new TypeError("Trying to call a non-function");
     }
   };
-  obj = { wrappedSetGestureState, handlerTag, State: require("module_6762").State };
-  fn2.__closure = obj;
+  const obj2 = { wrappedSetGestureState, handlerTag, State: require("module_6762").State };
+  fn2.__closure = { wrappedSetGestureState, handlerTag, State: require("module_6762").State };
   fn2.__workletHash = 4587865373510;
   fn2.__initData = __initData2;
   obj.activate = fn2;
@@ -111,6 +109,7 @@ function create(handlerTag) {
       }
     }
   }
+  const obj3 = { wrappedSetGestureState, handlerTag, State: require("module_6762").State };
   S.__closure = { wrappedSetGestureState, handlerTag, State: require("module_6762").State };
   S.__workletHash = 12634480855880;
   S.__initData = __initData3;
@@ -134,17 +133,17 @@ function create(handlerTag) {
       throw new TypeError("Trying to call a non-function");
     }
   };
-  const obj1 = { wrappedSetGestureState, handlerTag, State: require("module_6762").State };
+  const obj4 = { wrappedSetGestureState, handlerTag, State: require("module_6762").State };
   fn3.__closure = { wrappedSetGestureState, handlerTag, State: require("module_6762").State };
   fn3.__workletHash = 6198601582791;
   fn3.__initData = __initData4;
   obj.end = fn3;
   return obj;
 }
-obj = { wrappedSetGestureState, State: fn(6762).State };
-create.__closure = obj;
+let obj = { tagMessage: fn(6761).tagMessage };
+create.__closure = { wrappedSetGestureState, State: fn(6762).State };
 create.__workletHash = 1974124167608;
 create.__initData = { code: "function create_Pnpm_gestureStateManagerTs2(handlerTag){const{wrappedSetGestureState,State}=this.__closure;return{handlerTag:handlerTag,begin:function(){'worklet';wrappedSetGestureState(handlerTag,State.BEGAN);},activate:function(){'worklet';wrappedSetGestureState(handlerTag,State.ACTIVE);},fail:function(){'worklet';wrappedSetGestureState(handlerTag,State.FAILED);},end:function(){'worklet';wrappedSetGestureState(handlerTag,State.END);}};}" };
-obj.create = create;
+obj2.create = create;
 
-export const GestureStateManager = obj;
+export const GestureStateManager = obj2;

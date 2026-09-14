@@ -1,8 +1,9 @@
 // === Module 4154: startOfToday ===
 
 // Module 4154 (startOfToday)
-import startOfDay from "startOfDay" /* 3889 */;
+import startOfDay_mod from "startOfDay" /* 3889 */;
 
+let startOfDay = startOfDay_mod;
 if (!startOfDay) {
   const obj = { default: startOfDay };
   let tmp3 = obj;

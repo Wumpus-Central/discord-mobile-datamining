@@ -1,87 +1,62 @@
 // === Module 12943: ? ===
 
 // Module 12943
+import _mod12933 from "module_12933" /* 12933 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-export const SPAN_STATUS_ERROR = 2;
-export const SPAN_STATUS_OK = 1;
-export const SPAN_STATUS_UNSET = 0;
-export const getSpanStatusFromHttpCode = function getSpanStatusFromHttpCode(arg0) {
-  if (arg0 < 400) {
-    if (arg0 >= 100) {
-      return { code: 1 };
-    }
-  }
-  if (arg0 >= 400) {
-    if (arg0 < 500) {
-      if (401 === arg0) {
-        return { code: 2, message: "unauthenticated" };
-      } else if (403 === arg0) {
-        return { code: 2, message: "permission_denied" };
-      } else if (404 === arg0) {
-        return { code: 2, message: "not_found" };
-      } else if (409 === arg0) {
-        return { code: 2, message: "already_exists" };
-      } else if (413 === arg0) {
-        return { code: 2, message: "failed_precondition" };
-      } else if (429 === arg0) {
-        return { code: 2, message: "resource_exhausted" };
-      } else {
-        return 499 === arg0 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
+const _sentryMetrics = "_sentryMetrics";
+
+export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
+  if (self[_sentryMetrics]) {
+    const obj = {};
+    const tmp3 = tmp[Symbol.iterator]();
+    while (tmp3 !== undefined) {
+      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
+      [tmp9, tmp11] = tmp8;
+      let arr = obj[tmp9];
+      if (!arr) {
+        let items = [];
+        obj[tmp10] = items;
+        arr = items;
       }
+      let obj2 = _mod12933;
+      let arr2 = arr.push(obj2.dropUndefinedKeys(tmp11));
+      continue;
     }
+    return obj;
   }
-  if (arg0 >= 500) {
-    if (arg0 < 600) {
-      if (501 === arg0) {
-        return { code: 2, message: "unimplemented" };
-      } else if (503 === arg0) {
-        return { code: 2, message: "unavailable" };
-      } else {
-        return 504 === arg0 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
-      }
-    }
-  }
-  return { code: 2, message: "unknown_error" };
 };
-export const setHttpStatus = function setHttpStatus(setAttribute, arg1) {
-  const attr = setAttribute.setAttribute("http.response.status_code", arg1);
-  if (arg1 < 400) {
-    if (arg1 >= 100) {
-      let obj = { code: 1 };
-    }
-    if ("unknown_error" !== obj.message) {
-      setAttribute.setStatus(obj);
-    }
+export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(activeSpan, metricType, sanitizeMetricKeyResult, min, sanitizeUnitResult, tags, bucketKey) {
+  let obj = activeSpan[_sentryMetrics];
+  if (!obj) {
+    const _Map = Map;
+    const map = new Map();
+    activeSpan[tmp] = map;
+    obj = map;
   }
-  if (arg1 >= 400) {
-    if (arg1 < 500) {
-      if (401 === arg1) {
-        obj = { code: 2, message: "unauthenticated" };
-      } else if (403 === arg1) {
-        obj = { code: 2, message: "permission_denied" };
-      } else if (404 === arg1) {
-        obj = { code: 2, message: "not_found" };
-      } else if (409 === arg1) {
-        obj = { code: 2, message: "already_exists" };
-      } else if (413 === arg1) {
-        obj = { code: 2, message: "failed_precondition" };
-      } else if (429 === arg1) {
-        obj = { code: 2, message: "resource_exhausted" };
-      } else {
-        obj = 499 === arg1 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
-      }
-    }
+  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
+  value = obj.get(bucketKey);
+  if (value) {
+    const range = _slicedToArray(value, 2)[1];
+    const items = [combined, ];
+    const range1 = { min: null, max: null, count: null, sum: null, tags: null };
+    const _Math = Math;
+    range1.min = Math.min(range.min, min);
+    const _Math2 = Math;
+    range1.max = Math.max(range.max, min);
+    const sum = range.count + 1;
+    range.count = sum;
+    range1.count = sum;
+    const sum1 = range.sum + min;
+    range.sum = sum1;
+    range1.sum = sum1;
+    range1.tags = range.tags;
+    items[1] = range1;
+    const result = obj.set(bucketKey, items);
+  } else {
+    const items1 = [combined, ];
+    const range2 = { min, max: min, count: 1, sum: min, tags };
+    items1[1] = range2;
+    const result1 = obj.set(bucketKey, items1);
   }
-  if (arg1 >= 500) {
-    if (arg1 < 600) {
-      if (501 === arg1) {
-        obj = { code: 2, message: "unimplemented" };
-      } else if (503 === arg1) {
-        obj = { code: 2, message: "unavailable" };
-      } else {
-        obj = 504 === arg1 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
-      }
-    }
-  }
-  obj = { code: 2, message: "unknown_error" };
 };

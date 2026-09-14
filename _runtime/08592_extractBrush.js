@@ -25,11 +25,10 @@ export default function extractBrush(str) {
       match = str.match(re3);
     }
     if (match) {
-      let obj = { type: 1, brushRef: match[1] };
-      return obj;
+      const obj2 = { type: 1, brushRef: match[1] };
+      return obj2;
     } else {
-      obj = percentTo255;
-      const tmp4 = processColor(obj.convertPercentageColor(str));
+      const tmp4 = processColor(percentTo255.convertPercentageColor(str));
       if (typeof tmp4 === "number") {
         const action = { type: 0, payload: tmp4 };
         let tmp7 = action;

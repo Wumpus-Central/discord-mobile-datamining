@@ -1,7 +1,7 @@
 // === Module 4935: DefinePropertyOrThrow ===
 
 // Module 4935 (DefinePropertyOrThrow)
-import _mod1283 from "module_1283" /* 1283 */;
+import _mod1281 from "module_1281" /* 1281 */;
 import _mod4885 from "module_4885" /* 4885 */;
 import _mod4932 from "module_4932" /* 4932 */;
 import _mod4936 from "module_4936" /* 4936 */;
@@ -20,18 +20,19 @@ export default function DefinePropertyOrThrow(arg0, arg1, arg2) {
         tmp13 = ToPropertyDescriptor(arg2);
       }
       if (_mod4936(tmp13)) {
-        const tmpResult = IsDataDescriptor;
-        return tmpResult(tmpResult, SameValue, FromPropertyDescriptor, arg0, arg1, tmp14);
+        const tmpResult3 = IsDataDescriptor;
+        const tmpResult = DefineOwnProperty;
+        return tmpResult(tmpResult3, SameValue, FromPropertyDescriptor, arg0, arg1, tmp14);
       } else {
-        const tmp17 = new _mod1283("Assertion failed: Desc is not a valid Property Descriptor");
+        const tmp17 = new _mod1281("Assertion failed: Desc is not a valid Property Descriptor");
         throw tmp17;
       }
     } else {
-      const tmp10 = new _mod1283("Assertion failed: P is not a Property Key");
+      const tmp10 = new _mod1281("Assertion failed: P is not a Property Key");
       throw tmp10;
     }
   } else {
-    const tmp5 = new _mod1283("Assertion failed: Type(O) is not Object");
+    const tmp5 = new _mod1281("Assertion failed: Type(O) is not Object");
     throw tmp5;
   }
 };

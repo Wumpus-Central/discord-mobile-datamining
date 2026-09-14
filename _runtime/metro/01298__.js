@@ -2,4 +2,4 @@
 
 // Module 1298
 
-export default Function.prototype.call;
+export default Error;

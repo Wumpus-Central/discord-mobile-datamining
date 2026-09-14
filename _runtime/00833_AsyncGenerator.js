@@ -34,8 +34,8 @@ class AsyncGenerator {
             str3 = "return";
           }
           if ("return" === str3) {
-            obj = { value, done: true };
-            obj.resolve(obj);
+            const obj2 = { value, done: true };
+            obj.resolve(obj2);
           } else if ("throw" === str3) {
             obj.reject(value);
           } else {
@@ -59,8 +59,8 @@ class AsyncGenerator {
     };
     settle = function settle(arg0, value) {
       if ("return" === arg0) {
-        obj = { value, done: true };
-        obj.resolve(obj);
+        const obj2 = { value, done: true };
+        obj.resolve(obj2);
       } else if ("throw" === arg0) {
         obj.reject(value);
       } else {
@@ -152,8 +152,8 @@ export default function _wrapAsyncGenerator(arg0) {
             str3 = "return";
           }
           if ("return" === str3) {
-            obj = { value, done: true };
-            obj.resolve(obj);
+            const obj2 = { value, done: true };
+            obj.resolve(obj2);
           } else if ("throw" === str3) {
             obj.reject(value);
           } else {
@@ -177,8 +177,8 @@ export default function _wrapAsyncGenerator(arg0) {
     }
     function settle(arg0, value) {
       if ("return" === arg0) {
-        obj = { value, done: true };
-        obj.resolve(obj);
+        const obj2 = { value, done: true };
+        obj.resolve(obj2);
       } else if ("throw" === arg0) {
         obj.reject(value);
       } else {

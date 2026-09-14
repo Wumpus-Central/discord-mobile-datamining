@@ -1,6 +1,8 @@
 // === Module 8431: get ColorPropType ===
 
 // Module 8431 (get ColorPropType)
+const require = globalThis.__r;
+
 const obj = {};
 Object.defineProperty(obj, "ColorPropType", { get: () => require("colorPropType"), set: undefined });
 Object.defineProperty(obj, "EdgeInsetsPropType", { get: () => require("module_8434"), set: undefined });

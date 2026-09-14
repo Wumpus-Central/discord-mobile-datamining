@@ -58,19 +58,19 @@ const entry = {
   value: function render() {
     const self = this;
     const props = this.props;
-    let obj = {};
+    const obj = {};
     ({ cx, cy, rx, ry } = props);
     const merged = Object.assign(Ellipse(8589).extract(this, props));
     obj.cx = cx;
     obj.cy = cy;
     obj.rx = rx;
     obj.ry = ry;
-    obj = {
+    const obj2 = Ellipse(8589);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const obj2 = Ellipse(8589);
     const merged1 = Object.assign(obj);
     return jsx(_modDef8609, {
       ref(arg0) {

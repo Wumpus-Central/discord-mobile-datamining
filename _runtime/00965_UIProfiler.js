@@ -249,9 +249,9 @@ let items = [
   {
     key: "_clearAllRootSpanTimeouts",
     value: function _clearAllRootSpanTimeouts() {
-      let _rootSpanTimeouts = this._rootSpanTimeouts;
-      const item = _rootSpanTimeouts.forEach((item) => clearTimeout(item));
-      _rootSpanTimeouts = this._rootSpanTimeouts;
+      const _rootSpanTimeouts1 = this._rootSpanTimeouts;
+      const item = _rootSpanTimeouts1.forEach((item) => clearTimeout(item));
+      const _rootSpanTimeouts = this._rootSpanTimeouts;
       _rootSpanTimeouts.clear();
     }
   },
@@ -353,8 +353,8 @@ closure_0 = asyncGeneratorStep(async function() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -367,8 +367,8 @@ closure_0 = asyncGeneratorStep(async function() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = self;
             closure_2 = tmp3;
@@ -381,8 +381,8 @@ closure_0 = asyncGeneratorStep(async function() {
               c4 = 1;
               c6 = 2;
               c7 = 1;
-              const obj1 = { value: _profiler.stop(), done: false };
-              return obj1;
+              const obj4 = { value: _profiler.stop(), done: false };
+              return obj4;
             }
           }
         } else {
@@ -399,8 +399,8 @@ closure_0 = asyncGeneratorStep(async function() {
           } else if (arg0 === 2) {
             c4 = 0;
             c7 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_129_0 = value;
             closure_129_1 = self(tmp5[3]).createProfileChunkPayload(closure_129_0, closure_3._client, closure_3._profilerId);
@@ -422,7 +422,7 @@ closure_0 = asyncGeneratorStep(async function() {
           }
           c4 = 0;
           c7 = 3;
-          obj = { value: undefined, done: true };
+          const obj = { value: undefined, done: true };
           return obj;
         }
         c7 = 3;
@@ -453,42 +453,42 @@ items[14] = {
   key: "_sendProfileChunk",
   value: function _sendProfileChunk(arg0) {
     const _client = this._client;
-    let obj = closure_0(UIProfiler[5]);
     const getSdkMetadata = _client.getSdkMetadata;
     let sdkMetadata;
     if (getSdkMetadata != null) {
       sdkMetadata = getSdkMetadata();
     }
-    const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(sdkMetadata);
+    const sdkMetadataForEnvelopeHeader = closure_0(UIProfiler[5]).getSdkMetadataForEnvelopeHeader(sdkMetadata);
     const dsn = _client.getDsn();
-    closure_0(UIProfiler[5]);
-    obj = { event_id: null, sent_at: null };
+    const obj = closure_0(UIProfiler[5]);
+    const obj2 = { event_id: null, sent_at: null };
     const tmpResult = closure_0(UIProfiler[5]);
-    obj.event_id = tmpResult.uuid4();
-    obj.sent_at = new Date().toISOString();
+    obj2.event_id = closure_0(UIProfiler[5]).uuid4();
+    const tmpResult3 = closure_0(UIProfiler[5]);
+    obj2.sent_at = new Date().toISOString();
     let tmp6 = sdkMetadataForEnvelopeHeader;
     if (sdkMetadataForEnvelopeHeader) {
-      obj = { sdk: sdkMetadataForEnvelopeHeader };
-      tmp6 = obj;
+      const obj3 = { sdk: sdkMetadataForEnvelopeHeader };
+      tmp6 = obj3;
     }
     const merged = Object.assign(tmp6);
     let tmp8 = _client.getOptions().tunnel && dsn;
     if (tmp8) {
-      const obj1 = { dsn: closure_0(UIProfiler[5]).dsnToString(dsn) };
-      tmp8 = obj1;
-      const tmpResult1 = closure_0(UIProfiler[5]);
+      const obj4 = { dsn: closure_0(UIProfiler[5]).dsnToString(dsn) };
+      tmp8 = obj4;
+      const tmpResult4 = closure_0(UIProfiler[5]);
     }
     const merged1 = Object.assign(tmp8);
     const items = [{ type: "profile_chunk" }, arg0];
     const items1 = [items];
     const date = new Date();
-    _client.sendEnvelope(tmpResult.createEnvelope(obj, items1)).then(null, (arg0) => {
+    _client.sendEnvelope(tmpResult.createEnvelope(obj2, items1)).then(null, (arg0) => {
       if (closure_1_0(UIProfiler[4]).DEBUG_BUILD) {
         const debug = closure_1_0(UIProfiler[5]).debug;
         debug.error("Error while sending profile chunk envelope:", arg0);
       }
     });
-    const sendEnvelopeResult = _client.sendEnvelope(tmpResult.createEnvelope(obj, items1));
+    const sendEnvelopeResult = _client.sendEnvelope(tmpResult.createEnvelope(obj2, items1));
   }
 };
 

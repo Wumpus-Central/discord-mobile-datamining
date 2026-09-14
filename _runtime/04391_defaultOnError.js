@@ -4,6 +4,8 @@
 import RiveErrorType from "RiveErrorType" /* 4392 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_2 = ["onError", "hybridRef"];
 const noop = fn(19);
@@ -14,8 +16,7 @@ function defaultOnError(message) {
 }
 
 export const RiveView = function RiveView(arg0) {
-  let obj = require("c");
-  const cResult = obj.c(16);
+  const cResult = require("c").c(16);
   if (cResult[0] !== arg0) {
     ({ onError, hybridRef } = arg0);
     _require = hybridRef;
@@ -73,18 +74,18 @@ export const RiveView = function RiveView(arg0) {
     tmp13 = cResult[7];
   }
   if (cResult[8] !== tmp4) {
-    obj = { f: tmp4 };
+    const obj2 = { f: tmp4 };
     cResult[8] = tmp4;
-    cResult[9] = obj;
-    let tmp14 = obj;
+    cResult[9] = obj2;
+    let tmp14 = obj2;
   } else {
     tmp14 = cResult[9];
   }
   if (cResult[10] !== tmp13) {
-    obj = { f: tmp13 };
+    const obj3 = { f: tmp13 };
     cResult[10] = tmp13;
-    cResult[11] = obj;
-    let tmp15 = obj;
+    cResult[11] = obj3;
+    let tmp15 = obj3;
   } else {
     tmp15 = cResult[11];
   }
@@ -96,14 +97,15 @@ export const RiveView = function RiveView(arg0) {
       return tmp16;
     }
   }
-  const obj1 = {};
+  const obj4 = {};
   const merged = Object.assign(tmp5);
-  obj1.onError = tmp14;
-  obj1.hybridRef = tmp15;
+  obj4.onError = tmp14;
+  obj4.hybridRef = tmp15;
   const tmp18 = jsx(require("NitroRiveView").NitroRiveView, {});
   cResult[12] = tmp5;
   cResult[13] = tmp14;
   cResult[14] = tmp15;
   cResult[15] = tmp18;
   tmp16 = tmp18;
+  let obj = require("c");
 };

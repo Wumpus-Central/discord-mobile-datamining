@@ -56,24 +56,24 @@ export const init = function init() {
   } else {
     defaultIntegrations = obj.defaultIntegrations;
   }
-  obj = {};
+  const obj12 = {};
   const merged = Object.assign(obj);
   let enabled = !result;
   if (!result) {
     enabled = obj.enabled;
   }
-  obj.enabled = enabled;
+  obj12.enabled = enabled;
   let defaultStackParser = obj.stackParser;
   if (!defaultStackParser) {
     defaultStackParser = extractSafariExtensionDetails.defaultStackParser;
   }
-  obj.stackParser = _mod682.stackParserFromStackParserOptions(defaultStackParser);
-  let tmp7Result = _mod682;
-  obj = { integrations: obj.integrations, defaultIntegrations };
-  obj.integrations = tmp7Result.getIntegrationsToSetup(obj);
-  obj.transport = obj.transport || _mod897.makeFetchTransport;
-  tmp7Result = _mod682;
-  return tmp7Result.initAndBind(_mod895.BrowserClient, obj);
+  obj12.stackParser = _mod682.stackParserFromStackParserOptions(defaultStackParser);
+  obj12.integrations = _mod682.getIntegrationsToSetup({ integrations: obj.integrations, defaultIntegrations });
+  const obj14 = { integrations: obj.integrations, defaultIntegrations };
+  const tmp7Result = _mod682;
+  obj12.transport = obj.transport || _mod897.makeFetchTransport;
+  const tmp9 = obj.transport || _mod897.makeFetchTransport;
+  return _mod682.initAndBind(_mod895.BrowserClient, obj12);
 };
 export const onLoad = function onLoad(fn) {
   fn();

@@ -1,6 +1,8 @@
 // === Module 1456: ? ===
 
 // Module 1456
+const require = globalThis.__r;
+
 function hasPropertyDescriptors() {
   return require("flag");
 }

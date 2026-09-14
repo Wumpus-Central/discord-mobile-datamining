@@ -57,14 +57,14 @@ function processColor(arg0) {
         return null;
       } else {
         if (typeof tmp4 === "object") {
-          let obj = AnimatedColor(52);
-          const processColorObjectResult = obj.processColorObject(tmp4);
+          const processColorObjectResult = AnimatedColor(52).processColorObject(tmp4);
           if (null != processColorObjectResult) {
             return processColorObjectResult;
           }
+          const obj = AnimatedColor(52);
         } else if (typeof tmp4 === "number") {
-          obj = { r: (4278190080 & tmp4) >>> 24, g: (16711680 & tmp4) >>> 16, b: (65280 & tmp4) >>> 8, a: (255 & tmp4) / 255 };
-          return obj;
+          const obj2 = { r: (4278190080 & tmp4) >>> 24, g: (16711680 & tmp4) >>> 16, b: (65280 & tmp4) >>> 8, a: (255 & tmp4) / 255 };
+          return obj2;
         }
         return null;
       }
@@ -138,16 +138,16 @@ class AnimatedColor {
         tmp18 = typeof tmp17.a === "number";
       }
       if (tmp18) {
-        obj = { rgbaValue: null };
-        obj.rgbaValue = tmp17;
-        obj1 = obj;
+        obj1 = { rgbaValue: null };
+        obj1.rgbaValue = tmp17;
+        obj5 = obj1;
       } else {
-        obj1 = { nativeColor: null, rgbaValue: null };
-        obj1.nativeColor = tmp17;
+        obj5 = { nativeColor: null, rgbaValue: null };
+        obj5.nativeColor = tmp17;
         tmp19 = closure_8;
-        obj1.rgbaValue = closure_8;
+        obj5.rgbaValue = closure_8;
       }
-      ({ rgbaValue, nativeColor } = obj1);
+      ({ rgbaValue, nativeColor } = obj5);
       if (nativeColor) {
         tmp3Result.nativeColor = nativeColor;
       }
@@ -458,7 +458,8 @@ export const getRgbaValueAndNativeColor = function getRgbaValueAndNativeColor(ar
     tmp2 = typeof tmp.a === "number";
   }
   if (tmp2) {
-    let obj = { rgbaValue: tmp };
+    const obj2 = { rgbaValue: tmp };
+    let obj = obj2;
   } else {
     obj = { nativeColor: tmp, rgbaValue };
   }

@@ -8,6 +8,8 @@ import _mod9071 from "module_9071" /* 9071 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
+const require = globalThis.__r;
+
 let self = this;
 function isValidBase64(value) {
   if ("" === value) {
@@ -129,11 +131,11 @@ function handleCatchall(items, value, tmp12Result, arg3, value2, inst) {
         let arr = items.push(key10019);
         continue;
       } else {
-        let obj = { value: arg1[key10019], issues: [] };
-        let runResult = _zod.run(obj, arg3);
+        let obj2 = { value: arg1[key10019], issues: [] };
+        let runResult = _zod.run(obj2, arg3);
         let _Promise2 = Promise;
         if (runResult instanceof Promise) {
-          arr = arg0.push(runResult.then((issues) => {
+          let arr2 = arg0.push(runResult.then((issues) => {
             if (issues.issues.length) {
               if (!dependencyMap) {
                 issues = exports.issues;
@@ -185,7 +187,7 @@ function handleCatchall(items, value, tmp12Result, arg3, value2, inst) {
   }
   if (items.length) {
     const issues1 = iter.issues;
-    obj = { code: "unrecognized_keys", keys: items, input: value, inst };
+    const obj = { code: "unrecognized_keys", keys: items, input: value, inst };
     issues1.push(obj);
   }
   if (items.length) {
@@ -232,7 +234,7 @@ function handleExclusiveUnionResults(arr, issues, inst, arg3) {
     issues.value = found[0].value;
   } else if (0 === found.length) {
     issues = issues.issues;
-    let obj = {
+    const obj2 = {
       code: "invalid_union",
       input: issues.value,
       inst,
@@ -241,38 +243,37 @@ function handleExclusiveUnionResults(arr, issues, inst, arg3) {
           return issues.map((item) => closure_2_10.finalizeIssue(item, closure_1_0, closure_2_8.config()));
         })
     };
-    arr = issues.push(obj);
+    arr = issues.push(obj2);
   } else {
     const issues1 = issues.issues;
-    obj = { code: "invalid_union", input: issues.value, inst, errors: [], inclusive: false };
-    arr = issues1.push(obj);
+    const obj = { code: "invalid_union", input: issues.value, inst, errors: [], inclusive: false };
+    issues1.push(obj);
   }
   return issues;
 }
 function mergeValues(value, value2) {
   if (value === value2) {
-    let obj = { valid: true, data: value };
-    return obj;
+    const obj2 = { valid: true, data: value };
+    return obj2;
   } else {
     const _Date2 = Date;
     if (value instanceof Date) {
       const _Date = Date;
       if (value2 instanceof Date) {
         if (+value === +value2) {
-          obj = { valid: true, data: value };
-          return obj;
+          const obj3 = { valid: true, data: value };
+          return obj3;
         }
       }
     }
-    obj = closure_10;
     if (closure_10.isPlainObject(value)) {
-      if (obj.isPlainObject(value2)) {
+      if (closure_10.isPlainObject(value2)) {
         const _Object = Object;
         closure_0 = Object.keys(value2);
         const _Object2 = Object;
         const keys = Object.keys(value);
         const found = keys.filter((item) => -1 !== closure_0.indexOf(item));
-        const obj1 = {};
+        const obj4 = {};
         const merged = Object.assign(value);
         const merged1 = Object.assign(value2);
         const iter = found[Symbol.iterator]();
@@ -282,19 +283,19 @@ function mergeValues(value, value2) {
           let tmp20 = mergeValues(value[nextResult], value2[nextResult]);
           let tmp21 = tmp20;
           if (tmp20.valid) {
-            obj1[tmp18] = tmp21.data;
+            obj4[tmp18] = tmp21.data;
             continue;
           } else {
-            let obj2 = { valid: false, mergeErrorPath: null };
+            let obj5 = { valid: false, mergeErrorPath: null };
             let items = [tmp18];
             let arraySpreadResult = HermesBuiltin.arraySpread(tmp21.mergeErrorPath, 1);
-            obj2.mergeErrorPath = items;
+            obj5.mergeErrorPath = items;
             iter.return();
-            return obj2;
+            return obj5;
           }
         }
-        const obj3 = { valid: true, data: obj1 };
-        return obj3;
+        const obj6 = { valid: true, data: obj4 };
+        return obj6;
       }
     }
     const _Array = Array;
@@ -302,8 +303,8 @@ function mergeValues(value, value2) {
       const _Array2 = Array;
       if (Array.isArray(value2)) {
         if (value.length !== value2.length) {
-          const obj4 = { valid: false, mergeErrorPath: [] };
-          return obj4;
+          const obj7 = { valid: false, mergeErrorPath: [] };
+          return obj7;
         } else {
           const items1 = [];
           let num2 = 0;
@@ -313,19 +314,19 @@ function mergeValues(value, value2) {
               let arr = items1.push(tmp2.data);
               num2 = num2 + 1;
             }
-            const obj5 = { valid: false, mergeErrorPath: null };
+            const obj8 = { valid: false, mergeErrorPath: null };
             const items2 = [num2];
             HermesBuiltin.arraySpread(tmp2.mergeErrorPath, 1);
-            obj5.mergeErrorPath = items2;
-            return obj5;
+            obj8.mergeErrorPath = items2;
+            return obj8;
           }
-          const obj6 = { valid: true, data: items1 };
-          return obj6;
+          const obj9 = { valid: true, data: items1 };
+          return obj9;
         }
       }
     }
-    const obj7 = { valid: false, mergeErrorPath: [] };
-    return obj7;
+    const obj10 = { valid: false, mergeErrorPath: [] };
+    return obj10;
   }
 }
 function handleIntersectionResults(nextPromise, runResult, runResult1) {
@@ -365,7 +366,7 @@ function handleIntersectionResults(nextPromise, runResult, runResult1) {
       }
     } else {
       let issues1 = arg0.issues;
-      arr = issues1.push(item10054);
+      let arr2 = issues1.push(item10054);
     }
     continue;
   }
@@ -415,19 +416,18 @@ function handleTupleResult(promise, nextPromise, key10019) {
 function handleMapResult(issues, issues2, issues3, key, value, inst, arg6) {
   closure_0 = arg6;
   if (issues.issues.length) {
-    let obj = closure_10;
     const propertyKeyTypes = closure_10.propertyKeyTypes;
     issues = issues3.issues;
     const push = issues.push;
     if (propertyKeyTypes.has(typeof key)) {
       const items = [];
-      HermesBuiltin.arraySpread(obj.prefixIssues(key, issues.issues), 0);
+      HermesBuiltin.arraySpread(closure_10.prefixIssues(key, issues.issues), 0);
       HermesBuiltin.apply(items, issues);
     } else {
-      obj = { code: "invalid_key", origin: "map", input: value, inst, issues: null };
+      const obj2 = { code: "invalid_key", origin: "map", input: value, inst, issues: null };
       const issues1 = issues.issues;
-      obj.issues = issues1.map((item) => closure_10.finalizeIssue(item, closure_0, fnResult.config()));
-      push(obj);
+      obj2.issues = issues1.map((item) => closure_10.finalizeIssue(item, closure_0, fnResult.config()));
+      push(obj2);
     }
   }
   if (issues2.issues.length) {
@@ -439,10 +439,10 @@ function handleMapResult(issues, issues2, issues3, key, value, inst, arg6) {
       HermesBuiltin.arraySpread(closure_10.prefixIssues(key, issues2.issues), 0);
       HermesBuiltin.apply(items1, issues2);
     } else {
-      obj = { origin: "map", code: "invalid_element", input: value, inst, key, issues: null };
+      const obj4 = { origin: "map", code: "invalid_element", input: value, inst, key, issues: null };
       issues3 = issues2.issues;
-      obj.issues = issues3.map((item) => closure_10.finalizeIssue(item, closure_0, fnResult.config()));
-      push2(obj);
+      obj4.issues = issues3.map((item) => closure_10.finalizeIssue(item, closure_0, fnResult.config()));
+      push2(obj4);
     }
   }
   value = issues3.value;
@@ -485,8 +485,8 @@ function handleCodecAResult(issues, transform, direction) {
         nextPromise = issues;
       } else {
         const _zod2 = tmp5._zod;
-        let obj = { value: transformResult, issues: issues.issues };
-        nextPromise = _zod2.run(obj, direction);
+        const obj2 = { value: transformResult, issues: issues.issues };
+        nextPromise = _zod2.run(obj2, direction);
       }
       return nextPromise;
     } else {
@@ -508,7 +508,7 @@ function handleCodecAResult(issues, transform, direction) {
         nextPromise1 = issues;
       } else {
         let _zod = tmp2._zod;
-        obj = { value: reverseTransformResult, issues: issues.issues };
+        let obj = { value: reverseTransformResult, issues: issues.issues };
         nextPromise1 = _zod.run(obj, direction);
       }
       return nextPromise1;
@@ -757,8 +757,8 @@ if (self2) {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
-                  obj = { value, done: true };
-                  return obj;
+                  const obj2 = { value, done: true };
+                  return obj2;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
@@ -771,13 +771,13 @@ if (self2) {
                       throw value;
                     } else if (arg0 === 2) {
                       c2 = 3;
-                      obj = { value, done: true };
-                      return obj;
+                      const obj3 = { value, done: true };
+                      return obj3;
                     } else {
                       c1 = 1;
                       c2 = 1;
-                      const obj1 = { value: checkResult, done: false };
-                      return obj1;
+                      const obj4 = { value: checkResult, done: false };
+                      return obj4;
                     }
                   } else if (arg0 === 1) {
                     c2 = 3;
@@ -824,10 +824,10 @@ if (self2) {
           } else if ("backward" === skipChecks.direction) {
             const _zod2 = closure_0._zod;
             obj = { value: value.value, issues: [] };
-            obj = {};
+            const obj2 = {};
             const merged = Object.assign(skipChecks);
-            obj.skipChecks = true;
-            const parsed = _zod2.parse(obj, obj);
+            obj2.skipChecks = true;
+            const parsed = _zod2.parse(obj, obj2);
             if (parsed instanceof Promise) {
               let nextPromise = parsed.then((result) => {
                 if (typeof handleCanaryResult === "function") {
@@ -904,7 +904,8 @@ if (self2) {
           try {
             const safeParseResult = obj(runChecks[7]).safeParse(closure_1_0, arg0);
             if (safeParseResult.success) {
-              obj = { value: safeParseResult.data };
+              let obj2 = { value: safeParseResult.data };
+              obj = obj2;
             } else {
               let error = tmp7.error;
               let issues;
@@ -917,7 +918,8 @@ if (self2) {
           } catch (err) {
             return obj(runChecks[7]).safeParseAsync(closure_1_0, tmp2).then((success) => {
               if (success.success) {
-                obj = { value: success.data };
+                const obj2 = { value: success.data };
+                obj = obj2;
               } else {
                 const error = success.error;
                 let issues;
@@ -958,11 +960,11 @@ if (self2) {
         patterns = [];
       }
       const items = [...patterns];
-      let stringResult = items.pop();
-      if (stringResult == null) {
-        stringResult = closure_9.string(_zod._zod.bag);
+      let arr = items.pop();
+      if (arr == null) {
+        arr = closure_9.string(_zod._zod.bag);
       }
-      _zod._zod.pattern = stringResult;
+      _zod._zod.pattern = arr;
       _zod._zod.parse = (value, arg1) => {
         if (coerce.coerce) {
           try {
@@ -1033,24 +1035,24 @@ if (self2) {
             const hostname = url2.hostname;
             if (!hostname.test(url.hostname)) {
               const issues = value.issues;
-              let obj = { code: "invalid_format", format: "url", note: "Invalid hostname", pattern: url2.hostname.source, input: value.value, inst, continue: !url2.abort };
+              const obj = { code: "invalid_format", format: "url", note: "Invalid hostname", pattern: url2.hostname.source, input: value.value, inst, continue: !url2.abort };
               issues.push(obj);
             }
           }
           if (url2.protocol) {
             url2.protocol.lastIndex = 0;
-            let protocol = url2.protocol;
+            const protocol = url2.protocol;
             const protocol2 = url.protocol;
-            protocol = url.protocol;
+            const protocol1 = url.protocol;
             if (protocol2.endsWith(":")) {
-              let substr = protocol.slice(0, -1);
+              let substr = protocol1.slice(0, -1);
             } else {
-              substr = protocol;
+              substr = protocol1;
             }
             if (!protocol.test(substr)) {
               const issues1 = value.issues;
-              obj = { code: "invalid_format", format: "url", note: "Invalid protocol", pattern: url2.protocol.source, input: value.value, inst, continue: !url2.abort };
-              issues1.push(obj);
+              const obj2 = { code: "invalid_format", format: "url", note: "Invalid protocol", pattern: url2.protocol.source, input: value.value, inst, continue: !url2.abort };
+              issues1.push(obj2);
             }
           }
           if (url2.normalize) {
@@ -1061,8 +1063,8 @@ if (self2) {
           }
         } catch (err) {
           const issues2 = iter.issues;
-          obj = { code: "invalid_format", format: "url", input: iter.value, inst, continue: !closure_1.abort };
-          issues2.push(obj);
+          const obj3 = { code: "invalid_format", format: "url", input: iter.value, inst, continue: !closure_1.abort };
+          issues2.push(obj3);
           return tmp;
         }
       };
@@ -1203,7 +1205,7 @@ if (self2) {
             const error = new Error();
             throw error;
           } else {
-            [tmp30, tmp31] = _slicedToArray(parts, 2);
+            [tmp30, tmp31] = parts;
             if (tmp31) {
               const _Number = Number;
               const NumberResult = Number(tmp31);
@@ -1357,14 +1359,14 @@ if (self2) {
           tmp2 = str2;
         }
         const issues = value.issues;
-        let obj = { expected: "number", code: "invalid_type", input: value, inst };
         if (tmp2) {
-          obj = { received: tmp2 };
+          const obj2 = { received: tmp2 };
+          let obj3 = obj2;
         } else {
-          obj = {};
+          obj3 = {};
         }
-        const merged = Object.assign(obj);
-        issues.push(obj);
+        const merged = Object.assign(obj3);
+        issues.push({ expected: "number", code: "invalid_type", input: value, inst });
         return value;
       };
     });
@@ -1555,8 +1557,8 @@ if (self2) {
           let items = [];
           for (let num3 = 0; num3 < value.length; num3 = num3 + 1) {
             let _zod = element.element._zod;
-            let obj = { value: value[num3], issues: [] };
-            let runResult = _zod.run(obj, arg1);
+            let obj2 = { value: value[num3], issues: [] };
+            let runResult = _zod.run(obj2, arg1);
             let _Promise = Promise;
             if (runResult instanceof Promise) {
               let arr = items.push(runResult.then((issues) => {
@@ -1587,7 +1589,7 @@ if (self2) {
           return iter;
         } else {
           const issues1 = iter.issues;
-          obj = { expected: "array", code: "invalid_type", input: value, inst };
+          const obj = { expected: "array", code: "invalid_type", input: value, inst };
           issues1.push(obj);
           return iter;
         }
@@ -1878,8 +1880,8 @@ if (self2) {
       closure_10.defineLazy(_zod._zod, "pattern", () => {
         options = options.options;
         if (options.every((_zod) => _zod._zod.pattern)) {
-          options = tmp.options;
-          const mapped = options.map((_zod) => _zod._zod.pattern);
+          const options1 = tmp.options;
+          const mapped = options1.map((_zod) => _zod._zod.pattern);
           const _RegExp = RegExp;
           const mapped1 = mapped.map((source) => closure_1_10.cleanRegex(source.source));
           const _HermesInternal = HermesInternal;
@@ -1913,7 +1915,7 @@ if (self2) {
               iter.return();
               return tmp7;
             } else {
-              arr = items.push(tmp7);
+              let arr3 = items.push(tmp7);
             }
             continue;
           }
@@ -1965,7 +1967,7 @@ if (self2) {
                 iter.value = found[0].value;
               } else if (0 === found.length) {
                 let issues = iter.issues;
-                let obj = {
+                const obj2 = {
                   code: "invalid_union",
                   input: iter.value,
                   inst: tmp,
@@ -1974,11 +1976,11 @@ if (self2) {
                       return issues.map((item) => closure_2_10.finalizeIssue(item, closure_1_0, closure_2_8.config()));
                     })
                 };
-                arr = issues.push(obj);
+                arr = issues.push(obj2);
               } else {
                 const issues1 = iter.issues;
-                obj = { code: "invalid_union", input: iter.value, inst: tmp, errors: [], inclusive: false };
-                arr = issues1.push(obj);
+                const obj = { code: "invalid_union", input: iter.value, inst: tmp, errors: [], inclusive: false };
+                issues1.push(obj);
               }
               return closure_0;
             });
@@ -2011,10 +2013,8 @@ if (self2) {
               let _Object2 = Object;
               let entries = Object.entries(tmp3);
               for (const item10026 of entries) {
-                let tmp7 = _slicedToArray(item10026, 2);
-                let first = tmp7[0];
+                [first, tmp10] = item10026;
                 let tmp9 = first;
-                let tmp10 = tmp7[1];
                 if (!obj[first]) {
                   let _Set = Set;
                   let tmp12 = new.target;
@@ -2092,30 +2092,30 @@ if (self2) {
       _zod._zod.parse = (value, arg1) => {
         value = value.value;
         if (object.isObject(value)) {
-          value = value.value;
+          value2 = value.value;
           let tmp5;
           if (value != null) {
             tmp5 = value[closure_1.discriminator];
           }
-          value = value.get(tmp5);
-          if (value) {
-            const _zod = value._zod;
+          const value4 = value2.get(tmp5);
+          if (value4) {
+            const _zod = value4._zod;
             let runResult = _zod.run(value, arg1);
           } else if (closure_1.unionFallback) {
             runResult = parse(value, arg1);
           } else {
             const issues = value.issues;
-            let obj = { code: "invalid_union", errors: [], note: "No matching discriminator", discriminator: closure_1.discriminator, input: value, path: null, inst: null };
+            const obj2 = { code: "invalid_union", errors: [], note: "No matching discriminator", discriminator: closure_1.discriminator, input: value, path: null, inst: null };
             const items = [closure_1.discriminator];
-            obj.path = items;
-            obj.inst = inst;
-            issues.push(obj);
+            obj2.path = items;
+            obj2.inst = inst;
+            issues.push(obj2);
             runResult = value;
           }
           return runResult;
         } else {
           const issues1 = value.issues;
-          obj = { code: "invalid_type", expected: "object", input: value, inst };
+          const obj = { code: "invalid_type", expected: "object", input: value, inst };
           issues1.push(obj);
           return value;
         }
@@ -2168,16 +2168,17 @@ if (self2) {
           if (!items.rest) {
             let issues = nextPromise.issues;
             if (tmp9) {
-              let obj = { code: "too_big", maximum: arr4.length, inclusive: true };
+              const obj2 = { code: "too_big", maximum: arr4.length, inclusive: true };
+              let obj3 = obj2;
             } else {
-              obj = { code: "too_small", minimum: arr4.length };
+              obj3 = { code: "too_small", minimum: arr4.length };
             }
-            const obj1 = {};
-            const merged = Object.assign(obj);
-            obj1.input = value;
-            obj1.inst = inst;
-            obj1.origin = "array";
-            issues.push(obj1);
+            const obj4 = {};
+            const merged = Object.assign(obj3);
+            obj4.input = value;
+            obj4.inst = inst;
+            obj4.origin = "array";
+            issues.push(obj4);
             return nextPromise;
           }
           let num6 = -1;
@@ -2188,14 +2189,14 @@ if (self2) {
             sum1 = sum;
             if (sum < value.length) {
               let _zod = tmp17._zod;
-              let obj2 = { value: null, issues: null };
-              obj2.value = value[num6];
-              obj2.issues = [];
-              let runResult = _zod.run(obj2, arg1);
+              let obj5 = { value: null, issues: null };
+              obj5.value = value[num6];
+              obj5.issues = [];
+              let runResult = _zod.run(obj5, arg1);
               let promise = runResult;
               let _Promise = Promise;
               if (runResult instanceof Promise) {
-                let arr = items.push(promise.then((issues) => {
+                let arr2 = items.push(promise.then((issues) => {
                   if (issues.issues.length) {
                     issues = value.issues;
                     const push = issues.push;
@@ -2217,12 +2218,12 @@ if (self2) {
               sum1 = num6 + 1;
               num6 = sum1;
               let _zod2 = items.rest._zod;
-              let obj3 = { value: item10098, issues: [] };
-              let runResult1 = _zod2.run(obj3, arg1);
+              let obj6 = { value: item10098, issues: [] };
+              let runResult1 = _zod2.run(obj6, arg1);
               let promise2 = runResult1;
               let _Promise2 = Promise;
               if (runResult1 instanceof Promise) {
-                let arr1 = items.push(promise2.then((issues) => {
+                let arr3 = items.push(promise2.then((issues) => {
                   if (issues.issues.length) {
                     issues = value.issues;
                     const push = issues.push;
@@ -2245,7 +2246,7 @@ if (self2) {
           return nextPromise;
         } else {
           const issues1 = nextPromise.issues;
-          obj = { input: value, inst, expected: "tuple", code: "invalid_type" };
+          const obj = { input: value, inst, expected: "tuple", code: "invalid_type" };
           issues1.push(obj);
           return nextPromise;
         }
@@ -2331,8 +2332,8 @@ if (self2) {
             }
             if (tmp26) {
               let issues = nextPromise.issues;
-              let obj = { code: "unrecognized_keys", input: value, inst, keys: tmp21 };
-              issues.push(obj);
+              let obj2 = { code: "unrecognized_keys", input: value, inst, keys: tmp21 };
+              issues.push(obj2);
             }
           } else {
             const _Reflect = Reflect;
@@ -2342,8 +2343,8 @@ if (self2) {
                 return 0;
               } else {
                 const _zod3 = closure_1.keyType._zod;
-                let obj = { value: iter, issues: [] };
-                const runResult = _zod3.run(obj, runResult1);
+                const obj2 = { value: iter, issues: [] };
+                const runResult = _zod3.run(obj2, runResult1);
                 runResult1 = runResult;
                 if (runResult instanceof Promise) {
                   const _Error2 = Error;
@@ -2358,7 +2359,7 @@ if (self2) {
                       iter = runResult;
                       if (runResult.issues.length) {
                         const _zod = closure_1.keyType._zod;
-                        obj = { value: null, issues: null };
+                        const obj = { value: null, issues: null };
                         const _Number = Number;
                         obj.value = Number(iter);
                         obj.issues = [];
@@ -2381,20 +2382,20 @@ if (self2) {
                       inst.value[iter] = value[iter];
                     } else {
                       let issues = inst.issues;
-                      obj = { code: "invalid_key", origin: "record", issues: null, input: null, path: null, inst: null };
+                      const obj3 = { code: "invalid_key", origin: "record", issues: null, input: null, path: null, inst: null };
                       const issues1 = iter.issues;
-                      obj.issues = issues1.map((item) => closure_3_10.finalizeIssue(item, runResult1, closure_3_8.config()));
-                      obj.input = iter;
+                      obj3.issues = issues1.map((item) => closure_3_10.finalizeIssue(item, runResult1, closure_3_8.config()));
+                      obj3.input = iter;
                       items = [iter];
-                      obj.path = items;
-                      obj.inst = inst;
-                      issues.push(obj);
+                      obj3.path = items;
+                      obj3.inst = inst;
+                      issues.push(obj3);
                     }
                     return 0;
                   } else {
                     const _zod2 = closure_1.valueType._zod;
-                    const obj1 = { value: value[iter], issues: [] };
-                    const runResult2 = _zod2.run(obj1, tmp28);
+                    const obj4 = { value: value[iter], issues: [] };
+                    const runResult2 = _zod2.run(obj4, tmp28);
                     if (runResult2 instanceof Promise) {
                       items.push(runResult2.then((issues) => {
                         if (issues.issues.length) {
@@ -2434,7 +2435,7 @@ if (self2) {
           return nextPromise;
         } else {
           let issues1 = nextPromise.issues;
-          obj = { expected: "record", code: "invalid_type", input: value, inst };
+          let obj = { expected: "record", code: "invalid_type", input: value, inst };
           issues1.push(obj);
           return nextPromise;
         }
@@ -2459,11 +2460,9 @@ if (self2) {
           function _loop7(value) {
             closure_0 = value;
             const _zod = closure_1.keyType._zod;
-            let obj = { value, issues: [] };
-            const runResult = _zod.run(obj, closure_1);
+            const runResult = _zod.run({ value, issues: [] }, closure_1);
             const _zod2 = closure_1.valueType._zod;
-            obj = { value, issues: [] };
-            const runResult1 = _zod2.run(obj, closure_1);
+            const runResult1 = _zod2.run({ value, issues: [] }, closure_1);
             if (!(runResult instanceof Promise)) {
               if (!(runResult1 instanceof Promise)) {
                 handleMapResult(runResult, runResult1, closure_0, value, closure_2, closure_0, closure_1);
@@ -2475,6 +2474,8 @@ if (self2) {
               handleMapResult(tmp, tmp2, closure_0, closure_0, value, closure_0, closure_1);
             }));
             const allPromises = Promise.all(items);
+            const obj = { value, issues: [] };
+            const obj2 = { value, issues: [] };
           }
           const tmp9 = value[Symbol.iterator]();
           while (tmp9 !== undefined) {
@@ -2513,8 +2514,8 @@ if (self2) {
           const tmp9 = value[Symbol.iterator]();
           while (tmp9 !== undefined) {
             let _zod = valueType.valueType._zod;
-            let obj = { value: tmp11, issues: [] };
-            let runResult = _zod.run(obj, arg1);
+            let obj2 = { value: tmp11, issues: [] };
+            let runResult = _zod.run(obj2, arg1);
             let promise = runResult;
             let _Promise = Promise;
             if (runResult instanceof Promise) {
@@ -2541,7 +2542,7 @@ if (self2) {
           return nextPromise;
         } else {
           let issues = nextPromise.issues;
-          obj = { input: value, inst, expected: "set", code: "invalid_type" };
+          const obj = { input: value, inst, expected: "set", code: "invalid_type" };
           issues.push(obj);
           return nextPromise;
         }
@@ -2915,12 +2916,12 @@ if (self2) {
             let nextPromise = runResult.then((value) => {
               value.value = value.value;
               if (value.issues.length) {
-                let obj = {};
+                const obj = {};
                 const merged = Object.assign(value);
-                obj = { issues: null };
+                const obj2 = { issues: null };
                 const issues = value.issues;
-                obj.issues = issues.map((item) => closure_3_10.finalizeIssue(item, direction, closure_3_8.config()));
-                obj.error = obj;
+                obj2.issues = issues.map((item) => closure_3_10.finalizeIssue(item, direction, closure_3_8.config()));
+                obj.error = obj2;
                 obj.input = value.value;
                 value.value = value.catchValue(obj);
                 value.issues = [];
@@ -2933,10 +2934,10 @@ if (self2) {
             if (runResult.issues.length) {
               let obj = {};
               let merged = Object.assign(value);
-              obj = { issues: null };
+              let obj2 = { issues: null };
               let issues = runResult.issues;
-              obj.issues = issues.map((item) => closure_10.finalizeIssue(item, closure_1, fnResult.config()));
-              obj.error = obj;
+              obj2.issues = issues.map((item) => closure_10.finalizeIssue(item, closure_1, fnResult.config()));
+              obj.error = obj2;
               obj.input = value.value;
               value.value = value.catchValue(obj);
               value.issues = [];
@@ -2997,9 +2998,9 @@ if (self2) {
             nextPromise = runResult;
           } else {
             const _zod3 = tmp5._zod;
-            let obj = { value: null, issues: null };
             ({ value: obj2.value, issues: obj2.issues } = runResult);
-            nextPromise = _zod3.run(obj, direction);
+            nextPromise = _zod3.run({ value: null, issues: null }, direction);
+            const obj3 = { value: null, issues: null };
           }
           return nextPromise;
         } else {
@@ -3023,7 +3024,7 @@ if (self2) {
             nextPromise1 = runResult1;
           } else {
             let _zod = tmp._zod;
-            obj = { value: null, issues: null };
+            let obj = { value: null, issues: null };
             ({ value: obj.value, issues: obj.issues } = runResult1);
             nextPromise1 = _zod.run(obj, direction);
           }
@@ -3177,14 +3178,14 @@ if (self2) {
       _zod._zod.parse = (value, arg1) => {
         if (typeof value.value !== "string") {
           const issues = value.issues;
-          let obj = { input: value.value, inst, expected: "string", code: "invalid_type" };
-          issues.push(obj);
+          const obj2 = { input: value.value, inst, expected: "string", code: "invalid_type" };
+          issues.push(obj2);
         } else {
           inst._zod.pattern.lastIndex = 0;
           const pattern = inst._zod.pattern;
           if (!pattern.test(value.value)) {
             const issues1 = value.issues;
-            obj = { input: value.value, inst, code: "invalid_format", format: null, pattern: null };
+            const obj = { input: value.value, inst, code: "invalid_format", format: null, pattern: null };
             let str = format.format;
             if (str == null) {
               str = "template_literal";
@@ -3330,21 +3331,21 @@ if (self2) {
       };
       _zod.input = () => {
         const items = [...arguments];
-        let constructor = inst.constructor;
-        let obj = { type: "function", input: null, output: null };
+        const constructor = inst.constructor;
+        const obj = { type: "function", input: null, output: null };
         if (Array.isArray(items[0])) {
-          obj = { type: "tuple", items: null, rest: null };
+          const obj3 = { type: "tuple", items: null, rest: null };
           [obj2.items, obj2.rest] = items;
-          const ZodTuple = new exports.$ZodTuple(obj);
+          const ZodTuple = new exports.$ZodTuple(obj3);
           obj.input = ZodTuple;
           obj.output = inst._def.output;
-          constructor = new constructor(obj);
+          let constructor1 = new constructor(obj);
         } else {
           obj.input = items[0];
           obj.output = inst._def.output;
-          constructor = new constructor(obj);
+          constructor1 = new constructor(obj);
         }
-        return constructor;
+        return constructor1;
       };
       _zod.output = (output) => {
         const constructor = new inst.constructor({ type: "function", input: inst._def.input, output });

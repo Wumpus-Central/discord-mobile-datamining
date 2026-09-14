@@ -49,11 +49,13 @@ function _getGraphQLOperation(operationName) {
       ({ query, operationName } = operationName);
       const match = query.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)(\w+)(?:\s*)[{(]/);
       if (match) {
-        let obj = { operationType: match[1], operationName: match[2] };
+        const obj2 = { operationType: match[1], operationName: match[2] };
+        let obj = obj2;
       } else {
         const match1 = query.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
         if (match1) {
-          obj = { operationType: match1[1], operationName: "a" };
+          const obj3 = { operationType: match1[1], operationName: "a" };
+          obj = obj3;
         } else {
           obj = { operationType: "Array", operationName: "PX_16" };
         }
@@ -158,24 +160,22 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
         if ("http.client" === tmp3[closure_0(undefined, 682).SEMANTIC_ATTRIBUTE_SENTRY_OP]) {
           const tmp4 = tmp3[closure_0(undefined, 682).SEMANTIC_ATTRIBUTE_URL_FULL] || tmp3["http.url"];
           const tmp5 = tmp3[closure_0(undefined, 682).SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] || tmp3["http.method"];
-          let tmpResult = closure_0(682);
           if (tmpResult.isString(tmp4)) {
-            tmpResult = closure_0(682);
-            if (tmpResult.isString(tmp5)) {
+            if (tmpResult6.isString(tmp5)) {
               const result = closure_0(682).stringMatchesSomePattern(tmp4, closure_0.endpoints);
               if ("xhr" in input) {
                 const tmp11 = input.xhr[closure_0(undefined, 898).SENTRY_XHR_DATA_KEY];
                 let first = tmp11;
                 if (tmp11) {
                   first = closure_0(898).getBodyString(tmp11.body)[0];
-                  const tmpResult2 = closure_0(898);
+                  const tmpResult8 = closure_0(898);
                 }
                 let first1 = first;
               } else {
                 const fetchRequestArgBody = closure_0(898).getFetchRequestArgBody(input.input);
-                const tmpResult3 = closure_0(898);
+                const tmpResult9 = closure_0(898);
                 first1 = closure_0(898).getBodyString(fetchRequestArgBody)[0];
-                const tmpResult4 = closure_0(898);
+                const tmpResult10 = closure_0(898);
               }
               if (result) {
                 if (first1) {
@@ -229,9 +229,11 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
                   }
                 }
               }
-              const tmpResult1 = closure_0(682);
+              const tmpResult7 = closure_0(682);
             }
+            tmpResult6 = closure_0(682);
           }
+          tmpResult = closure_0(682);
         }
         const obj = closure_0(682);
       });
@@ -248,15 +250,15 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
               const tmp10 = input.xhr[closure_0(undefined, 898).SENTRY_XHR_DATA_KEY];
               let first = tmp10;
               if (tmp10) {
-                let tmp5Result = closure_0(898);
-                first = tmp5Result.getBodyString(tmp10.body)[0];
+                first = closure_0(898).getBodyString(tmp10.body)[0];
+                const tmp5Result = closure_0(898);
               }
               let first1 = first;
             } else {
-              tmp5Result = closure_0(898);
-              const fetchRequestArgBody = tmp5Result.getFetchRequestArgBody(input.input);
+              const fetchRequestArgBody = closure_0(898).getFetchRequestArgBody(input.input);
+              const tmp5Result3 = closure_0(898);
               first1 = closure_0(898).getBodyString(fetchRequestArgBody)[0];
-              const tmp5Result1 = closure_0(898);
+              const tmp5Result4 = closure_0(898);
             }
             if (result) {
               if (data) {
@@ -323,12 +325,13 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
 export const parseGraphQLQuery = function parseGraphQLQuery(str) {
   const match = str.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)(\w+)(?:\s*)[{(]/);
   if (match) {
-    let obj = { operationType: match[1], operationName: match[2] };
-    return obj;
+    const obj2 = { operationType: match[1], operationName: match[2] };
+    return obj2;
   } else {
     const match1 = str.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
     if (match1) {
-      obj = { operationType: match1[1], operationName: "a" };
+      const obj3 = { operationType: match1[1], operationName: "a" };
+      let obj = obj3;
     } else {
       obj = { operationType: "Array", operationName: "PX_16" };
     }

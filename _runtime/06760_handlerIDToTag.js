@@ -65,14 +65,14 @@ export const findHandlerByTestID = function findHandlerByTestID(arg0) {
   value = map3.get(arg0);
   let tmp2 = null;
   if (undefined !== value) {
-    value = map1.get(value);
-    if (value == null) {
-      value = map.get(value);
+    value2 = map1.get(value);
+    if (value2 == null) {
+      value2 = map.get(value);
     }
-    if (value == null) {
-      value = null;
+    if (value2 == null) {
+      value2 = null;
     }
-    tmp2 = value;
+    tmp2 = value2;
   }
   return tmp2;
 };

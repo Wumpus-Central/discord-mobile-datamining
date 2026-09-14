@@ -3,7 +3,7 @@
 // Module 4379
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: c3, Platform } = get_ActivityIndicator);
@@ -68,21 +69,21 @@ class ModuleNotFoundError {
     } else {
       items1 = [];
       str7 = "Make sure react-native-nitro-modules/NitroModules is correctly autolinked (run `npx react-native config` to verify)";
-      arr = items1.push("Make sure react-native-nitro-modules/NitroModules is correctly autolinked (run `npx react-native config` to verify)");
+      arr1 = items1.push("Make sure react-native-nitro-modules/NitroModules is correctly autolinked (run `npx react-native config` to verify)");
       str8 = "Make sure you enabled the new architecture (TurboModules) and CodeGen properly generated the \"NativeNitroModules\"/NitroModules specs. See https://github.com/reactwg/react-native-new-architecture/blob/main/docs/enable-apps.md";
-      arr1 = items1.push("Make sure you enabled the new architecture (TurboModules) and CodeGen properly generated the \"NativeNitroModules\"/NitroModules specs. See https://github.com/reactwg/react-native-new-architecture/blob/main/docs/enable-apps.md");
+      arr4 = items1.push("Make sure you enabled the new architecture (TurboModules) and CodeGen properly generated the \"NativeNitroModules\"/NitroModules specs. See https://github.com/reactwg/react-native-new-architecture/blob/main/docs/enable-apps.md");
       str9 = "Make sure you are using react-native 0.75.0 or higher.";
-      arr2 = items1.push("Make sure you are using react-native 0.75.0 or higher.");
+      arr5 = items1.push("Make sure you are using react-native 0.75.0 or higher.");
       str10 = "Make sure you rebuilt the app.";
-      arr3 = items1.push("Make sure you rebuilt the app.");
+      arr6 = items1.push("Make sure you rebuilt the app.");
       str11 = "expo";
       if ("expo" === str) {
         str3 = "Make sure you ran `expo prebuild`.";
-        arr4 = items1.push("Make sure you ran `expo prebuild`.");
+        arr7 = items1.push("Make sure you ran `expo prebuild`.");
       }
       tmp5 = global;
       str4 = "Make sure gradle is synced.";
-      arr5 = items1.push("Make sure gradle is synced.");
+      arr8 = items1.push("Make sure gradle is synced.");
       str5 = "\n* ";
       str6 = "Failed to get NitroModules: The native \"NitroModules\" Turbo/Native-Module could not be found.\n* ";
       items2 = [, ];

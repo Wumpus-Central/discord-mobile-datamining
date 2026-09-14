@@ -32,14 +32,13 @@ export const addUserAgentToTransportHeaders = function addUserAgentToTransportHe
       combined = "" + name1 + "/" + version1;
     }
   }
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(_metadata.transportOptions);
   let tmp9 = combined;
   if (combined) {
-    obj = { "user-agent": combined };
-    tmp9 = obj;
+    const obj2 = { "user-agent": combined };
+    tmp9 = obj2;
   }
-  obj = {};
   const merged1 = Object.assign(tmp9);
   const transportOptions = _metadata.transportOptions;
   let headers;
@@ -47,6 +46,6 @@ export const addUserAgentToTransportHeaders = function addUserAgentToTransportHe
     headers = transportOptions.headers;
   }
   const merged2 = Object.assign(headers);
-  obj.headers = obj;
+  obj.headers = {};
   _metadata.transportOptions = obj;
 };

@@ -3,6 +3,8 @@
 // Module 1752
 import startObservingProgress from "startObservingProgress" /* 1672 */;
 
+const require = globalThis.__r;
+
 for (const key10015 in require("BaseAnimationBuilder")) {
   arg5[key10015] = require("BaseAnimationBuilder")[key10015];
   continue;

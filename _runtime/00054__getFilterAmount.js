@@ -259,8 +259,8 @@ export default function processFilter(str) {
             if (null == tmp41) {
               return [];
             } else {
-              let obj = { dropShadow: tmp41 };
-              let arr = items.push(obj);
+              let obj2 = { dropShadow: tmp41 };
+              let arr = items.push(obj2);
             }
           } else {
             let str9 = "dropShadow";
@@ -275,9 +275,9 @@ export default function processFilter(str) {
             if (null == tmp38) {
               break;
             } else {
-              obj = {};
-              obj[str9] = tmp38;
-              arr = items.push(obj);
+              let obj3 = {};
+              obj3[str9] = tmp38;
+              let arr2 = items.push(obj3);
             }
           }
           match = re4.exec(replaced);
@@ -287,13 +287,11 @@ export default function processFilter(str) {
     } else {
       const _Array = Array;
       if (Array.isArray(str)) {
-        obj = str[Symbol.iterator]();
+        const obj = str[Symbol.iterator]();
         while (obj !== undefined) {
           let _Object = Object;
-          let tmp10 = _slicedToArray(Object.entries(tmp7)[0], 2);
-          let first = tmp10[0];
+          [first, tmp13] = Object.entries(tmp7)[0];
           let tmp12 = first;
-          let tmp13 = tmp10[1];
           if ("dropShadow" === first) {
             let tmp25 = parseDropShadow(tmp13);
             if (null == tmp25) {
@@ -301,9 +299,9 @@ export default function processFilter(str) {
               obj.return();
               return items1;
             } else {
-              let obj1 = { dropShadow: null };
-              obj1.dropShadow = tmp26;
-              let arr1 = items.push(obj1);
+              let obj4 = { dropShadow: null };
+              obj4.dropShadow = tmp26;
+              let arr3 = items.push(obj4);
             }
           } else {
             let tmp17 = _getFilterAmount(tmp12, tmp13);
@@ -312,9 +310,9 @@ export default function processFilter(str) {
               obj.return();
               return items2;
             } else {
-              let obj2 = {};
-              obj2[tmp12] = tmp18;
-              let arr2 = items.push(obj2);
+              let obj5 = {};
+              obj5[tmp12] = tmp18;
+              let arr7 = items.push(obj5);
             }
           }
           continue;

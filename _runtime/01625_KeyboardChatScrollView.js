@@ -4,6 +4,8 @@
 import KeyboardAvoidingView from "KeyboardAvoidingView" /* 1841 */;
 import OverKeyboardView from "OverKeyboardView" /* 1870 */;
 
+const require = globalThis.__r;
+
 for (const key10013 in require("nativeEventEmitter")) {
   arg5[key10013] = require("nativeEventEmitter")[key10013];
   continue;

@@ -3,6 +3,8 @@
 // Module 347
 import _modDef348 from "module_348" /* 348 */;
 
+const require = globalThis.__r;
+
 for (const key10016 in require("module_348")) {
   arg5[key10016] = require("module_348")[key10016];
   continue;

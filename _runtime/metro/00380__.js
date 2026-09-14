@@ -99,17 +99,17 @@ class AnimatedProps {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    obj = { value: closure_2_16 };
-    definePropertyResult = Object.defineProperty(tmp3Result, closure_13, obj);
-    obj1 = { value: closure_2_15 };
-    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_12, obj1);
-    obj2 = { value: closure_2_14 };
-    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_11, obj2);
+    obj1 = { value: closure_2_16 };
+    definePropertyResult = Object.defineProperty(tmp3Result, closure_13, obj1);
+    obj8 = { value: closure_2_15 };
+    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_12, obj8);
+    obj9 = { value: closure_2_14 };
+    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_11, obj9);
     tmp3Result._target = null;
     tmp3Result._rootTag = undefined;
     items1 = [];
     items2 = [];
-    obj3 = {};
+    obj10 = {};
     keys = Object.keys(global);
     length = keys.length;
     num = 0;
@@ -121,7 +121,7 @@ class AnimatedProps {
         if (null != importDefault) {
           tmp13 = closure_2_18;
           if (!closure_2_18(importDefault, tmp10)) {
-            obj3[tmp10] = tmp11;
+            obj10[tmp10] = tmp11;
           }
           num = num + 1;
           if (num >= length) {
@@ -156,18 +156,18 @@ class AnimatedProps {
           tmp17 = tmp11;
         }
         if (null == fromResult) {
-          obj3[tmp10] = tmp17;
+          obj10[tmp10] = tmp17;
         } else {
-          arr = items1.push(tmp10);
-          arr1 = items2.push(fromResult);
-          obj3[tmp10] = fromResult;
+          arr1 = items1.push(tmp10);
+          arr6 = items2.push(fromResult);
+          obj10[tmp10] = fromResult;
         }
       }
     }
     items3 = [, , ];
     items3[0] = items1;
     items3[1] = items2;
-    items3[2] = obj3;
+    items3[2] = obj10;
     tmp24 = closure_4(items3, 3);
     [tmp6._nodeKeys, tmp6._nodes, tmp6._props] = tmp24;
     tmp3Result._callback = arg1;
@@ -202,7 +202,7 @@ let items = [
     value: function __getValueWithStaticProps(style) {
       let obj2;
       let tmp10;
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(style);
       const keys = Object.keys(style);
       let num = 0;
@@ -225,16 +225,17 @@ let items = [
           num = num + 1;
         }
         if (null == tmp10) {
-          obj = {};
+          let obj3 = {};
         } else {
-          obj = tmp10;
+          obj3 = tmp10;
           if (tmp10 === tmp7) {
-            obj = {};
+            const obj4 = {};
             const merged1 = Object.assign(tmp10);
+            obj3 = obj4;
           }
         }
-        const result = obj2.__replaceAnimatedNodeWithValues(obj);
-        obj[tmp2] = obj2.__getValueForStyle(obj);
+        const result = obj2.__replaceAnimatedNodeWithValues(obj3);
+        obj[tmp2] = obj2.__getValueForStyle(obj3);
       }
       return obj;
     }

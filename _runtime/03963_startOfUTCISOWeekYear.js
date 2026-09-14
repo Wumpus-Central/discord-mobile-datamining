@@ -1,27 +1,30 @@
 // === Module 3963: startOfUTCISOWeekYear ===
 
 // Module 3963 (startOfUTCISOWeekYear)
-import module_3964 from "module_3964" /* 3964 */;
-import startOfUTCISOWeek from "startOfUTCISOWeek" /* 3962 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import module_3964_mod from "module_3964" /* 3964 */;
+import startOfUTCISOWeek_mod from "startOfUTCISOWeek" /* 3962 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let module_3964 = module_3964_mod;
 if (!module_3964) {
-  let obj = { default: module_3964 };
+  const obj = { default: module_3964 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3964;
 }
 module_3964 = tmp3;
+let startOfUTCISOWeek = startOfUTCISOWeek_mod;
 if (!startOfUTCISOWeek) {
-  obj = { default: startOfUTCISOWeek };
-  let tmp5 = obj;
+  const obj2 = { default: startOfUTCISOWeek };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfUTCISOWeek;
 }
 startOfUTCISOWeek = tmp5;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }

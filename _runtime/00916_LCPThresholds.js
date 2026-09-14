@@ -5,6 +5,8 @@ import _mod906 from "module_906" /* 906 */;
 import _mod907 from "module_907" /* 907 */;
 import whenIdleOrHidden from "whenIdleOrHidden" /* 918 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -49,10 +51,9 @@ export const onLCP = (arg0, arg1) => {
     const observeResult = closure_0(obj[6]).observe("largest-contentful-paint", handleEntries);
     closure_5 = observeResult;
     if (observeResult) {
-      let tmp2Result = tmp2(tmp4[7]);
+      const tmp2Result = tmp2(tmp4[7]);
       closure_0 = tmp2Result.bindReporter(closure_0, metric, closure_1_2, tmp6.reportAllChanges);
-      tmp2Result = tmp2(tmp4[8]);
-      closure_6 = tmp2Result.runOnce(() => {
+      closure_6 = tmp2(tmp4[8]).runOnce(() => {
         handleEntries(observeResult.takeRecords());
         observeResult.disconnect();
         closure_0(true);
@@ -69,6 +70,7 @@ export const onLCP = (arg0, arg1) => {
         let addPageListenerResult = obj7.addPageListener(item10048, stopListeningWrapper, { capture: true });
         continue;
       }
+      const tmp2Result2 = tmp2(tmp4[8]);
     }
     const obj4 = closure_0(obj[6]);
   });

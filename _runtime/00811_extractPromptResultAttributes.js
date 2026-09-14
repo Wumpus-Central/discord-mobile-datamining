@@ -78,11 +78,10 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
   obj2 = obj(messages[2]);
 };
 export const extractToolResultAttributes = function extractToolResultAttributes(protocolVersion, recordOutputs) {
-  let obj = validateMcpServerInstance;
   if (obj.isValidContentItem(protocolVersion)) {
     const _Array = Array;
     if (Array.isArray(protocolVersion.content)) {
-      obj = (function buildAllContentItemAttributes(content, recordOutputs) {
+      let obj2 = (function buildAllContentItemAttributes(content, recordOutputs) {
         closure_1 = recordOutputs;
         let obj = { [closure_0(closure_1[1]).MCP_TOOL_RESULT_CONTENT_COUNT_ATTRIBUTE]: content.length };
         function _loop() {
@@ -150,13 +149,14 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
         return obj;
       })(protocolVersion.content, recordOutputs);
     } else {
-      obj = {};
+      obj2 = {};
     }
     if (typeof protocolVersion.isError === "boolean") {
-      obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_TOOL_RESULT_IS_ERROR_ATTRIBUTE] = protocolVersion.isError;
+      obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_TOOL_RESULT_IS_ERROR_ATTRIBUTE] = protocolVersion.isError;
     }
-    return obj;
+    return obj2;
   } else {
     return {};
   }
+  obj = validateMcpServerInstance;
 };

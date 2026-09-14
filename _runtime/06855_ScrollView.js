@@ -8,6 +8,8 @@ import noop from "module_19" /* 19 */;
 import "module_6768";
 import module_6768 from "module_6768" /* 6768 */;
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_3 = ["children", "refreshControl", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER", "keyboardShouldPersistTaps"];
 let closure_4 = ["refreshControl", "ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
@@ -49,21 +51,21 @@ class ScrollView {
       obj.refreshControl = undefined;
       tmp9 = closure_1;
       tmp10 = closure_2;
-      obj = { keyboardShouldPersistTaps: null, children: null };
-      obj.keyboardShouldPersistTaps = keyboardShouldPersistTaps;
-      obj.children = global.children;
-      obj.children = tmp4(closure_1(closure_2[8]), obj);
+      obj1 = { keyboardShouldPersistTaps: null, children: null };
+      obj1.keyboardShouldPersistTaps = keyboardShouldPersistTaps;
+      obj1.children = global.children;
+      obj.children = tmp4(closure_1(closure_2[8]), obj1);
       return tmp4(tmp5, obj);
     } else {
       tmp7 = closure_7;
       if (first) {
-        obj1 = { block: null };
-        obj1.block = first;
-        obj2 = obj1;
+        obj5 = { block: null };
+        obj5.block = first;
+        obj6 = obj5;
       } else {
-        obj2 = {};
+        obj6 = {};
       }
-      cloneElementResult = closure_7.cloneElement(refreshControl, obj2);
+      cloneElementResult = closure_7.cloneElement(refreshControl, obj6);
     }
     return;
   }
@@ -76,9 +78,7 @@ export const Switch = module_6768(Switch, { shouldCancelWhenOutside: false, shou
 export const TextInput = module_6768(TextInput);
 export const FlatList = (ref) => {
   ({ refreshControl, onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER: require } = ref);
-  const tmp2 = _slicedToArray(useState(null), 2);
-  const block = tmp2[0];
-  dependencyMap = tmp2[1];
+  [block, dependencyMap] = useState(null);
   function updateGesture(arg0) {
     const handlerTag = arg0;
     require("ghQueueMicrotask").ghQueueMicrotask(() => {
@@ -94,41 +94,38 @@ export const FlatList = (ref) => {
       }
     });
   }
-  let obj = {};
-  obj = {};
-  const entries = Object.entries(_objectWithoutProperties(ref, obj));
+  const obj = {};
+  const obj2 = {};
+  const entries = Object.entries(_objectWithoutProperties(ref, obj2));
   for (const item10028 of entries) {
-    let tmp6 = _slicedToArray(item10028, 2);
-    let first1 = tmp6[0];
+    [first1, tmp9] = item10028;
     let tmp8 = first1;
-    let tmp9 = tmp6[1];
     let NativeWrapperProps = DEFAULT_PROPS_TRANSFORMER.NativeWrapperProps;
     if (NativeWrapperProps.has(first1)) {
-      obj[tmp8] = tmp9;
+      obj2[tmp8] = tmp9;
     } else {
       obj[tmp8] = tmp9;
     }
     continue;
   }
-  obj = { ref: ref.ref };
+  const obj3 = { ref: ref.ref };
   let merged = Object.assign(obj);
-  obj.renderScrollComponent = function renderScrollComponent(arg0) {
-    obj = { onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER: updateGesture };
+  obj3.renderScrollComponent = function renderScrollComponent(arg0) {
     const merged = Object.assign(arg0);
-    const merged1 = Object.assign(obj);
+    const merged1 = Object.assign(obj2);
     return <ScrollView onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER={updateGesture} />;
   };
   if (!refreshControl) {
-    obj.refreshControl = undefined;
-    return <closure_9 {...obj} />;
+    obj3.refreshControl = undefined;
+    return <closure_9 {...obj3} />;
   } else {
     if (block) {
-      const obj1 = { block };
-      let obj2 = obj1;
+      const obj4 = { block };
+      let obj5 = obj4;
     } else {
-      obj2 = {};
+      obj5 = {};
     }
-    noop.cloneElement(refreshControl, obj2);
+    noop.cloneElement(refreshControl, obj5);
   }
-  let tmp = _objectWithoutProperties(ref, obj);
+  let tmp = _objectWithoutProperties(ref, obj2);
 };

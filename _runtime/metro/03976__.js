@@ -2,14 +2,15 @@
 
 // Module 3976
 import _mod3730 from "module_3730" /* 3730 */;
-import module_3888 from "module_3888" /* 3888 */;
-import compareAsc from "compareAsc" /* 3901 */;
-import _typeof from "module_3725" /* 3725 */;
-import cloneObject from "cloneObject" /* 3974 */;
-import assign from "assign" /* 3975 */;
-import code from "module_3971" /* 3971 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import module_3888_mod from "module_3888" /* 3888 */;
+import compareAsc_mod from "compareAsc" /* 3901 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import cloneObject_mod from "cloneObject" /* 3974 */;
+import assign_mod from "assign" /* 3975 */;
+import code_mod from "module_3971" /* 3971 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let module_3888 = module_3888_mod;
 if (!module_3888) {
   let obj = { default: module_3888 };
   let tmp3 = obj;
@@ -17,44 +18,50 @@ if (!module_3888) {
   tmp3 = module_3888;
 }
 module_3888 = tmp3;
+let compareAsc = compareAsc_mod;
 if (!compareAsc) {
-  obj = { default: compareAsc };
-  let tmp5 = obj;
+  const obj2 = { default: compareAsc };
+  let tmp5 = obj2;
 } else {
   tmp5 = compareAsc;
 }
 compareAsc = tmp5;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp7 = obj;
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
+let cloneObject = cloneObject_mod;
 if (!cloneObject) {
-  const obj1 = { default: cloneObject };
-  let tmp9 = obj1;
+  const obj4 = { default: cloneObject };
+  let tmp9 = obj4;
 } else {
   tmp9 = cloneObject;
 }
 cloneObject = tmp9;
+let assign = assign_mod;
 if (!assign) {
-  const obj2 = { default: assign };
-  let tmp11 = obj2;
+  const obj5 = { default: assign };
+  let tmp11 = obj5;
 } else {
   tmp11 = assign;
 }
 assign = tmp11;
+let code = code_mod;
 if (!code) {
-  const obj3 = { default: code };
-  let tmp13 = obj3;
+  const obj6 = { default: code };
+  let tmp13 = obj6;
 } else {
   tmp13 = code;
 }
 code = tmp13;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp15 = obj4;
+  const obj7 = { default: requiredArgs };
+  let tmp15 = obj7;
 } else {
   tmp15 = requiredArgs;
 }

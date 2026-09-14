@@ -2,8 +2,8 @@
 
 // Module 4042
 import Parser2 from "Parser" /* 4031 */;
-import module_4043 from "module_4043" /* 4043 */;
-import startOfUTCWeek from "startOfUTCWeek" /* 3728 */;
+import module_4043_mod from "module_4043" /* 4043 */;
+import startOfUTCWeek_mod from "startOfUTCWeek" /* 3728 */;
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -57,6 +57,7 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+let module_4043 = module_4043_mod;
 if (!module_4043) {
   let obj = { default: module_4043 };
   let tmp3 = obj;
@@ -64,9 +65,10 @@ if (!module_4043) {
   tmp3 = module_4043;
 }
 module_4043 = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
 if (!startOfUTCWeek) {
-  obj = { default: startOfUTCWeek };
-  let tmp5 = obj;
+  const obj2 = { default: startOfUTCWeek };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfUTCWeek;
 }
@@ -159,8 +161,7 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-obj = { constructor: { value: LocalWeekParser, writable: true, configurable: true } };
-LocalWeekParser.prototype = Object.create(prototype, obj);
+LocalWeekParser.prototype = Object.create(prototype, { constructor: { value: LocalWeekParser, writable: true, configurable: true } });
 if (Parser) {
   _setPrototypeOf(LocalWeekParser, Parser);
 }

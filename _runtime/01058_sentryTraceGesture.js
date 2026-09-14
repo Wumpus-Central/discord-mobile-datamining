@@ -6,24 +6,26 @@ import DEFAULT from "DEFAULT" /* 1020 */;
 import SPAN_ORIGIN_AUTO_INTERACTION from "SPAN_ORIGIN_AUTO_INTERACTION" /* 1023 */;
 import userInteractionIntegration from "userInteractionIntegration" /* 1030 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 function addGestureBreadcrumb(message, event) {
   event = event.event;
-  let obj = { message, level: "info", type: user, category: gesture };
+  const obj = { message, level: "info", type: user, category: gesture };
   if (event) {
-    obj = { gesture: tmp };
+    const obj2 = { gesture: tmp };
     const _Object = Object;
     const keys = Object.keys(closure_6);
     for (const item10018 of keys) {
       let tmp8 = closure_6[item10018];
       let tmp9 = tmp8;
       if (tmp8 in event) {
-        obj[tmp9] = event[tmp9];
+        obj2[tmp9] = event[tmp9];
       }
       continue;
     }
-    obj.data = obj;
+    obj.data = obj2;
   }
   _mod682.addBreadcrumb(obj);
   const debug = _mod682.debug;
@@ -51,16 +53,17 @@ export const sentryTraceGesture = function sentryTraceGesture(elementId, handler
         }
         const onBegin = handlers.handlers.onBegin;
         handlers.handlers.onBegin = (event) => {
-          let obj = { elementId, op: "" + DEFAULT.UI_ACTION + "." + formatted };
-          const result = obj.startUserInteractionSpan(obj);
+          const obj = userInteractionIntegration;
+          const result = obj.startUserInteractionSpan({ elementId, op: "" + DEFAULT.UI_ACTION + "." + formatted });
           if (result) {
             const attr = result.setAttribute(_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION);
           }
-          obj = { event, name: formatted };
-          addGestureBreadcrumb("Gesture " + elementId + " begin.", obj);
+          addGestureBreadcrumb("Gesture " + elementId + " begin.", { event, name: formatted });
           if (onBegin) {
             onBegin(event);
           }
+          const obj2 = { elementId, op: "" + DEFAULT.UI_ACTION + "." + formatted };
+          const obj3 = { event, name: formatted };
         };
         const onEnd = handlers.handlers.onEnd;
         handlers.handlers.onEnd = (event) => {

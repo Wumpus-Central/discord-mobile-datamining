@@ -29,11 +29,11 @@ export default function TouchableWithoutFeedback(disabled) {
   const onPressIn = disabled.onPressIn;
   const onPressOut = disabled.onPressOut;
   const items = [rejectResponderTermination, disabled, prop, , , , , , , , , , , , , ];
-  disabled = undefined;
+  let disabled1;
   if (accessibilityState != null) {
-    disabled = accessibilityState.disabled;
+    disabled1 = accessibilityState.disabled;
   }
-  items[3] = disabled;
+  items[3] = disabled1;
   items[4] = hitSlop;
   items[5] = delayLongPress;
   items[6] = delayPressIn;
@@ -128,11 +128,11 @@ export default function TouchableWithoutFeedback(disabled) {
   let prop2 = disabled["aria-disabled"];
   if (prop2 == null) {
     const accessibilityState4 = disabled.accessibilityState;
-    let disabled1;
+    let disabled2;
     if (accessibilityState4 != null) {
-      disabled1 = accessibilityState4.disabled;
+      disabled2 = accessibilityState4.disabled;
     }
-    prop2 = disabled1;
+    prop2 = disabled2;
   }
   obj.disabled = prop2;
   let prop3 = disabled["aria-expanded"];
@@ -156,28 +156,28 @@ export default function TouchableWithoutFeedback(disabled) {
   }
   obj.selected = prop4;
   ({ onBlur: onBlur2, onFocus: onFocus2 } = tmp5);
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(_objectWithoutProperties(tmp5, closure_2));
-  obj.accessible = false !== disabled.accessible;
+  obj2.accessible = false !== disabled.accessible;
   let tmp18 = obj;
   if (null != disabled.disabled) {
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(obj);
-    obj.disabled = disabled.disabled;
-    tmp18 = obj;
+    obj3.disabled = disabled.disabled;
+    tmp18 = obj3;
   }
-  obj.accessibilityState = tmp18;
-  obj.focusable = false !== disabled.focusable && undefined !== disabled.onPress && !disabled.disabled;
+  obj2.accessibilityState = tmp18;
+  obj2.focusable = false !== disabled.focusable && undefined !== disabled.onPress && !disabled.disabled;
   let accessibilityElementsHidden = disabled["aria-hidden"];
   if (accessibilityElementsHidden == null) {
     accessibilityElementsHidden = disabled.accessibilityElementsHidden;
   }
-  obj.accessibilityElementsHidden = accessibilityElementsHidden;
+  obj2.accessibilityElementsHidden = accessibilityElementsHidden;
   let str = "no-hide-descendants";
   if (true !== disabled["aria-hidden"]) {
     str = disabled.importantForAccessibility;
   }
-  obj.importantForAccessibility = str;
+  obj2.importantForAccessibility = str;
   let str2 = "none";
   if ("off" !== accessibilityLiveRegion) {
     if (accessibilityLiveRegion == null) {
@@ -185,17 +185,17 @@ export default function TouchableWithoutFeedback(disabled) {
     }
     str2 = accessibilityLiveRegion;
   }
-  obj.accessibilityLiveRegion = str2;
+  obj2.accessibilityLiveRegion = str2;
   let nativeID = disabled.id;
   if (nativeID == null) {
     nativeID = disabled.nativeID;
   }
-  obj.nativeID = nativeID;
+  obj2.nativeID = nativeID;
   for (const item10094 of closure_7) {
     if (undefined !== arg0[item10094]) {
-      obj[item10094] = arg0[item10094];
+      obj2[item10094] = arg0[item10094];
     }
     continue;
   }
-  return hasOwnProperty(obj, ...items1);
+  return hasOwnProperty(obj2, ...items1);
 };

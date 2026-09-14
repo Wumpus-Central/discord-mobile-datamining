@@ -43,8 +43,8 @@ let closure_4 = async function _asyncRequire(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -56,11 +56,11 @@ let closure_4 = async function _asyncRequire(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c2 = 3;
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         c2 = 3;
-        obj = { value: asyncRequireImpl(closure_0, closure_1), done: true };
+        const obj = { value: asyncRequireImpl(closure_0, closure_1), done: true };
         return obj;
       }
     } catch (tmp7) {

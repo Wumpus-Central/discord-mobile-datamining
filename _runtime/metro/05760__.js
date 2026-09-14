@@ -13,9 +13,7 @@ const jsxProd = fn(21);
 const container = StyleSheet.create({ container: { flex: 1 }, content: { flex: 1 }, header: { zIndex: 1 }, absolute: { position: "absolute", top: 0, start: 0, end: 0 } });
 
 export const Screen = function Screen(aria_hidden) {
-  let obj = modal(headerStatusBarHeight[4]);
-  let obj1 = noop;
-  const safeAreaInsets = obj.useSafeAreaInsets();
+  const safeAreaInsets = modal(headerStatusBarHeight[4]).useSafeAreaInsets();
   const context = noop.useContext(modal(headerStatusBarHeight[5]).HeaderShownContext);
   let num = noop.useContext(modal(headerStatusBarHeight[6]).HeaderHeightContext);
   modal = aria_hidden.modal;
@@ -38,12 +36,13 @@ export const Screen = function Screen(aria_hidden) {
     headerStatusBarHeight = num2;
   }
   ({ route, navigation, children, style } = aria_hidden);
+  const obj = modal(headerStatusBarHeight[4]);
   const frameSize = modal(headerStatusBarHeight[7]).useFrameSize((layout) => _mod5733.getDefaultHeaderHeight(layout, modal, headerStatusBarHeight));
-  const ref = obj1.useRef(null);
+  const ref = noop.useRef(null);
   const tmpResult = modal(headerStatusBarHeight[7]);
-  [tmp10, noop] = ref(obj1.useState(frameSize), 2);
+  [tmp10, noop] = ref(noop.useState(frameSize), 2);
   const items = [route.name];
-  const layoutEffect = obj1.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     const current = ref.current;
     if (current != null) {
       current.measure((arg0, arg1, arg2, arg3) => {
@@ -51,24 +50,24 @@ export const Screen = function Screen(aria_hidden) {
       });
     }
   }, items);
-  obj = { "aria-hidden": !aria_hidden.focused, style: null, collapsable: false, children: null };
+  const obj3 = { "aria-hidden": !aria_hidden.focused, style: null, collapsable: false, children: null };
   const items1 = [container.container, style];
-  obj.style = items1;
+  obj3.style = items1;
   let tmp15Result = null;
   if (tmp6) {
-    obj = { route, navigation, children: null };
+    const obj4 = { route, navigation, children: null };
     const items2 = [container.header, ];
     let tmp17 = null;
     if (headerTransparent) {
       const items3 = [container.absolute, ];
-      obj1 = { minHeight: tmp10 };
-      items3[1] = obj1;
+      const obj5 = { minHeight: tmp10 };
+      items3[1] = obj5;
       tmp17 = items3;
     }
-    const obj2 = { style: null, children: null };
+    const obj6 = { style: null, children: null };
     items2[1] = tmp17;
-    obj2.style = items2;
-    const obj3 = {
+    obj6.style = items2;
+    const obj7 = {
       ref,
       pointerEvents: "box-none",
       onLayout(nativeEvent) {
@@ -76,25 +75,25 @@ export const Screen = function Screen(aria_hidden) {
         },
       children: aria_hidden.header
     };
-    obj2.children = closure_5(closure_4, obj3);
-    obj.children = closure_5(closure_4, obj2);
-    tmp15Result = closure_5(tmp(tmp2[10]).NavigationProvider, obj);
+    obj6.children = closure_5(closure_4, obj7);
+    obj4.children = closure_5(closure_4, obj6);
+    tmp15Result = closure_5(tmp(tmp2[10]).NavigationProvider, obj4);
   }
   const items4 = [tmp15Result, ];
-  const obj4 = { style: container.content, children: null };
+  const obj8 = { style: container.content, children: null };
   let tmp20 = context;
   if (!context) {
     tmp20 = false !== tmp6;
   }
-  const obj5 = { value: tmp20, children: null };
+  const obj9 = { value: tmp20, children: null };
   if (!tmp6) {
     if (num == null) {
       num = 0;
     }
   }
-  obj5.children = closure_5(modal(headerStatusBarHeight[6]).HeaderHeightContext.Provider, { value: tmp10, children });
-  obj4.children = closure_5(modal(headerStatusBarHeight[5]).HeaderShownContext.Provider, obj5);
-  items4[1] = closure_5(closure_4, obj4);
-  obj.children = items4;
-  return closure_6(modal(headerStatusBarHeight[9]).Background, obj);
+  obj9.children = closure_5(modal(headerStatusBarHeight[6]).HeaderHeightContext.Provider, { value: tmp10, children });
+  obj8.children = closure_5(modal(headerStatusBarHeight[5]).HeaderShownContext.Provider, obj9);
+  items4[1] = closure_5(closure_4, obj8);
+  obj3.children = items4;
+  return closure_6(modal(headerStatusBarHeight[9]).Background, obj3);
 };

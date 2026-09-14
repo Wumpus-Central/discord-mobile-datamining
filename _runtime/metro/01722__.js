@@ -3,6 +3,8 @@
 // Module 1722
 import _makeShareableClone from "_makeShareableClone" /* 1646 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 const weakMap = new WeakMap();

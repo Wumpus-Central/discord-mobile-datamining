@@ -1,27 +1,30 @@
 // === Module 4160: subHours ===
 
 // Module 4160 (subHours)
-import module_3879 from "module_3879" /* 3879 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
-import module_3729 from "module_3729" /* 3729 */;
+import module_3879_mod from "module_3879" /* 3879 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import module_3729_mod from "module_3729" /* 3729 */;
 
+let module_3879 = module_3879_mod;
 if (!module_3879) {
-  let obj = { default: module_3879 };
+  const obj = { default: module_3879 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3879;
 }
 module_3879 = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  obj = { default: module_3729 };
-  let tmp7 = obj;
+  const obj3 = { default: module_3729 };
+  let tmp7 = obj3;
 } else {
   tmp7 = module_3729;
 }

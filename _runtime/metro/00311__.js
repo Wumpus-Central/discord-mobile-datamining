@@ -12,6 +12,8 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 const FlatList = fn;
 function _isNativeReflectConstruct() {
   try {
@@ -128,17 +130,17 @@ class FlatList {
           ({ item, index: closure_1 } = arg0);
           const _Array = Array;
           separators(num[10])(Array.isArray(item), "Expected array of items with numColumns > 1");
-          let obj = { style: null, children: null };
+          let obj2 = { style: null, children: null };
           const tmp11 = separators(num[10]);
           const tmp16 = closure_1(num[11]);
-          obj.style = separators(num[12]).default.compose(row.row, closure_2);
-          obj.children = item.map((item, index) => {
-            let obj = { item, index: closure_1_1 * num + index, separators: separators.separators };
+          obj2.style = separators(num[12]).default.compose(row.row, closure_2);
+          obj2.children = item.map((item, index) => {
+            const obj = { item, index: closure_1_1 * num + index, separators: separators.separators };
             if (typeof render === "function") {
               if (separators) {
-                obj = {};
+                const obj2 = {};
                 const merged = Object.assign(obj);
-                let tmp2Result = closure_1_10(tmp, obj);
+                let tmp2Result = closure_1_10(tmp, obj2);
               } else {
                 tmp2Result = null;
                 if (closure_1) {
@@ -147,7 +149,7 @@ class FlatList {
               }
               let tmp8 = null;
               if (null != tmp2Result) {
-                obj = { children: tmp2Result };
+                const obj3 = { children: tmp2Result };
                 tmp8 = < key={index}>{tmp2Result}</>;
               }
               return tmp8;
@@ -155,10 +157,10 @@ class FlatList {
               throw new TypeError("Trying to call a non-function");
             }
           });
-          return closure_1_10(tmp16, obj);
+          return closure_1_10(tmp16, obj2);
         } else if (typeof render === "function") {
           if (separators) {
-            obj = {};
+            let obj = {};
             let merged = Object.assign(arg0);
             let tmp3Result = closure_1_10(tmp2, obj);
           } else {
@@ -173,7 +175,8 @@ class FlatList {
         }
       }
       if (arg0) {
-        let obj = { ListItemComponent: renderProp };
+        let obj2 = { ListItemComponent: renderProp };
+        let obj = obj2;
       } else {
         obj = { renderItem: renderProp };
       }
@@ -187,16 +190,16 @@ class FlatList {
       tmp3Result._virtualizedListPairs = prop.map((viewabilityConfig) => ({ viewabilityConfig: viewabilityConfig.viewabilityConfig, onViewableItemsChanged: closure_0._createOnViewableItemsChanged(viewabilityConfig.onViewableItemsChanged) }));
     } else if (props.onViewableItemsChanged) {
       prop1 = tmp3Result._virtualizedListPairs;
-      obj = { viewabilityConfig: null, onViewableItemsChanged: null };
-      obj.viewabilityConfig = tmp3Result.props.viewabilityConfig;
-      obj.onViewableItemsChanged = tmp3Result._createOnViewableItemsChanged(() => {
+      obj1 = { viewabilityConfig: null, onViewableItemsChanged: null };
+      obj1.viewabilityConfig = tmp3Result.props.viewabilityConfig;
+      obj1.onViewableItemsChanged = tmp3Result._createOnViewableItemsChanged(() => {
         const items = [...arguments];
         FlatList(38)(closure_0.props.onViewableItemsChanged, "Changing the nullability of onViewableItemsChanged is not supported. Once a function or null is supplied that cannot be changed.");
         const props = closure_0.props;
         const items1 = [...items];
         return props.onViewableItemsChanged.apply(items1);
       });
-      arr = prop1.push(obj);
+      arr1 = prop1.push(obj1);
     }
     return tmp3Result;
   }

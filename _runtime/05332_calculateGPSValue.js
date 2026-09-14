@@ -5,7 +5,7 @@ import _modDef5317 from "module_5317" /* 5317 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 function calculateGPSValue(str) {
-  [tmp2, str] = _slicedToArray(str.split(","), 2);
+  [tmp2, str] = str.split(",");
   if (undefined !== tmp2) {
     if (undefined !== str) {
       const _parseFloat = parseFloat;

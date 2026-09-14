@@ -3,6 +3,8 @@
 // Module 817 (safeJoinConsoleArgs)
 import normalize from "normalize" /* 730 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

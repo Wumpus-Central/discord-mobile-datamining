@@ -2,35 +2,39 @@
 
 // Module 4007 (startOfWeekYear)
 import _mod3730 from "module_3730" /* 3730 */;
-import module_4008 from "module_4008" /* 4008 */;
-import startOfWeek from "startOfWeek" /* 3884 */;
-import module_3729 from "module_3729" /* 3729 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import module_4008_mod from "module_4008" /* 4008 */;
+import startOfWeek_mod from "startOfWeek" /* 3884 */;
+import module_3729_mod from "module_3729" /* 3729 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let module_4008 = module_4008_mod;
 if (!module_4008) {
-  let obj = { default: module_4008 };
+  const obj = { default: module_4008 };
   let tmp3 = obj;
 } else {
   tmp3 = module_4008;
 }
 module_4008 = tmp3;
+let startOfWeek = startOfWeek_mod;
 if (!startOfWeek) {
-  obj = { default: startOfWeek };
-  let tmp5 = obj;
+  const obj2 = { default: startOfWeek };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfWeek;
 }
 startOfWeek = tmp5;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  obj = { default: module_3729 };
-  let tmp7 = obj;
+  const obj3 = { default: module_3729 };
+  let tmp7 = obj3;
 } else {
   tmp7 = module_3729;
 }
 module_3729 = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }

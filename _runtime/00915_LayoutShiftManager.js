@@ -1,9 +1,10 @@
 // === Module 915: LayoutShiftManager ===
 
 // Module 915 (LayoutShiftManager)
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
+let _classCallCheck = _classCallCheck_mod;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class LayoutShiftManager {
   constructor() {

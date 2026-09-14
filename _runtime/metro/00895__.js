@@ -67,11 +67,11 @@ class BrowserClient {
       if (obj.sendDefaultPii) {
         str = "auto";
       }
-      obj = { infer_ip: null };
-      obj.infer_ip = str;
-      tmp8 = obj;
+      obj1 = { infer_ip: null };
+      obj1.infer_ip = str;
+      tmp8 = obj1;
       merged1 = Object.assign(obj._metadata.sdk.settings);
-      obj._metadata.sdk.settings = obj;
+      obj._metadata.sdk.settings = obj1;
     }
     items = [];
     items[0] = obj;
@@ -91,10 +91,11 @@ class BrowserClient {
     enableLogs = _options.enableLogs;
     ({ _experiments, enableMetrics, sendDefaultPii } = _options);
     if (enableMetrics == null) {
-      enableMetrics = undefined;
+      enableMetrics1 = undefined;
       if (_experiments != null) {
-        enableMetrics = _experiments.enableMetrics;
+        enableMetrics1 = _experiments.enableMetrics;
       }
+      enableMetrics = enableMetrics1;
     }
     if (enableMetrics == null) {
       enableMetrics = true;
@@ -119,12 +120,12 @@ class BrowserClient {
             closure_0._flushOutcomes();
           }
           if (enableLogs) {
-            let tmpResult = BrowserClient(682);
-            const result = tmpResult._INTERNAL_flushLogsBuffer(closure_0);
+            const result = BrowserClient(682)._INTERNAL_flushLogsBuffer(closure_0);
+            const tmpResult = BrowserClient(682);
           }
           if (enableMetrics) {
-            tmpResult = BrowserClient(682);
-            const result1 = tmpResult._INTERNAL_flushMetricsBuffer(closure_0);
+            const result1 = BrowserClient(682)._INTERNAL_flushMetricsBuffer(closure_0);
+            const tmpResult2 = BrowserClient(682);
           }
         }
       });

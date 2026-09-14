@@ -2,4 +2,4 @@
 
 // Module 1301
 
-export default EvalError;
+export default ReferenceError;

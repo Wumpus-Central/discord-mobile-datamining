@@ -67,28 +67,28 @@ export const feedbackIntegration = () => {
     obj = {};
   }
   ({ buttonOptions, screenshotButtonOptions, colorScheme, themeLight, themeDark } = obj);
-  obj = { name: MobileFeedback, options: fn(obj, ["buttonOptions", "screenshotButtonOptions", "colorScheme", "themeLight", "themeDark"]), buttonOptions: null, screenshotButtonOptions: null, colorScheme: null, themeLight: null, themeDark: null };
+  const obj2 = { name: MobileFeedback, options: fn(obj, ["buttonOptions", "screenshotButtonOptions", "colorScheme", "themeLight", "themeDark"]), buttonOptions: null, screenshotButtonOptions: null, colorScheme: null, themeLight: null, themeDark: null };
   if (!buttonOptions) {
     buttonOptions = {};
   }
-  obj.buttonOptions = buttonOptions;
+  obj2.buttonOptions = buttonOptions;
   if (!screenshotButtonOptions) {
     screenshotButtonOptions = {};
   }
-  obj.screenshotButtonOptions = screenshotButtonOptions;
+  obj2.screenshotButtonOptions = screenshotButtonOptions;
   if (!colorScheme) {
     colorScheme = "system";
   }
-  obj.colorScheme = colorScheme;
+  obj2.colorScheme = colorScheme;
   if (!themeLight) {
     themeLight = {};
   }
-  obj.themeLight = themeLight;
+  obj2.themeLight = themeLight;
   if (!themeDark) {
     themeDark = {};
   }
-  obj.themeDark = themeDark;
-  return obj;
+  obj2.themeDark = themeDark;
+  return obj2;
 };
 export const getFeedbackOptions = () => {
   if (typeof _getClientIntegration === "function") {

@@ -4,7 +4,8 @@
 import _mod5724 from "module_5724" /* 5724 */;
 import swizzle from "swizzle" /* 5727 */;
 
-let obj = Object.create(null);
+const require = globalThis.__r;
+
 for (const key10013 in require("module_5724")) {
   let call = hasOwnProperty.call;
   let tmp4 = require("module_5724");
@@ -16,36 +17,13 @@ for (const key10013 in require("module_5724")) {
   if (!hasOwnPropertyResult) {
     continue;
   } else {
-    obj[require("module_5724")[key10013]] = key10013;
+    obj2[require("module_5724")[key10013]] = key10013;
     continue;
   }
   continue;
 }
-obj = { to: {}, get: {} };
-obj.get = (str) => {
-  str = str.substring(0, 3);
-  const formatted = str.toLowerCase();
-  if ("hsl" === formatted) {
-    const get3 = obj.get;
-    let hslResult = get3.hsl(str);
-    let str3 = "hsl";
-  } else if ("hwb" === formatted) {
-    const get2 = obj.get;
-    hslResult = get2.hwb(str);
-    str3 = "hwb";
-  } else {
-    const get = obj.get;
-    hslResult = get.rgb(str);
-    str3 = "rgb";
-  }
-  let tmp6 = null;
-  if (hslResult) {
-    obj = { model: str3, value: hslResult };
-    tmp6 = obj;
-  }
-  return tmp6;
-};
-obj.get.rgb = (str) => {
+const exports = { to: {}, get: {} };
+exports.get.rgb = (str) => {
   let sum;
   let sum1;
   if (str) {
@@ -161,7 +139,7 @@ obj.get.rgb = (str) => {
     return null;
   }
 };
-obj.get.hsl = (str) => {
+exports.get.hsl = (str) => {
   if (str) {
     const match = str.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
     if (match) {
@@ -193,7 +171,7 @@ obj.get.hsl = (str) => {
     return null;
   }
 };
-obj.get.hwb = (str) => {
+exports.get.hwb = (str) => {
   if (str) {
     const match = str.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
     if (match) {
@@ -225,7 +203,7 @@ obj.get.hwb = (str) => {
     return null;
   }
 };
-obj.to.hex = () => {
+exports.to.hex = () => {
   const tmp = swizzle(arguments);
   const str = Math.round(tmp[0]);
   const formatted = Math.round(tmp[0]).toString(16).toUpperCase();
@@ -265,7 +243,7 @@ obj.to.hex = () => {
   }
   return sum1 + str10;
 };
-obj.to.rgb = () => {
+exports.to.rgb = () => {
   const arr = swizzle(arguments);
   if (arr.length >= 4) {
     if (1 !== arr[3]) {
@@ -282,7 +260,7 @@ obj.to.rgb = () => {
   const text4 = `${`rgb(${Math.round(arr[0])}`}, ${Math.round(arr[1])}`;
   text2 = `${tmp6 + ", " + Math.round(arr[2])})`;
 };
-obj.to.rgb.percent = () => {
+exports.to.rgb.percent = () => {
   const arr = swizzle(arguments);
   const rounded = Math.round(arr[0] / 255 * 100);
   const rounded1 = Math.round(arr[1] / 255 * 100);
@@ -295,7 +273,7 @@ obj.to.rgb.percent = () => {
   }
   text = `${"rgb(" + tmp + "%, " + tmp2 + "%, " + tmp3}%)`;
 };
-obj.to.hsl = () => {
+exports.to.hsl = () => {
   const arr = swizzle(arguments);
   if (arr.length >= 4) {
     if (1 !== arr[3]) {
@@ -305,7 +283,7 @@ obj.to.hsl = () => {
   }
   text = `${"hsl(" + arr[0] + ", " + arr[1] + "%, " + arr[2]}%)`;
 };
-obj.to.hwb = () => {
+exports.to.hwb = () => {
   const arr = swizzle(arguments);
   let tmp = arr.length >= 4;
   if (tmp) {
@@ -317,6 +295,30 @@ obj.to.hwb = () => {
   }
   return "hwb(" + arr[0] + ", " + arr[1] + "%, " + arr[2] + "%" + str + ")";
 };
-obj.to.keyword = (arg0) => obj[arg0.slice(arg0, 0, 3)];
+exports.to.keyword = (arg0) => obj2[arg0.slice(arg0, 0, 3)];
+const obj2 = Object.create(null);
 
-export default obj;
+export default exports;
+export const get = (str) => {
+  str = str.substring(0, 3);
+  const formatted = str.toLowerCase();
+  if ("hsl" === formatted) {
+    const get3 = obj.get;
+    let hslResult = get3.hsl(str);
+    let str3 = "hsl";
+  } else if ("hwb" === formatted) {
+    const get2 = obj.get;
+    hslResult = get2.hwb(str);
+    str3 = "hwb";
+  } else {
+    const get = obj.get;
+    hslResult = get.rgb(str);
+    str3 = "rgb";
+  }
+  let tmp6 = null;
+  if (hslResult) {
+    obj = { model: str3, value: hslResult };
+    tmp6 = obj;
+  }
+  return tmp6;
+};

@@ -13,34 +13,32 @@ importDefault = arg2;
 const dependencyMap = arg6;
 
 export default function dispatchNativeEvent(self, arg1, timeStamp) {
-  let obj = _mod283;
-  const result = obj.processResponderEvent(arg1, self, timeStamp);
+  const result = _mod283.processResponderEvent(arg1, self, timeStamp);
   let tmp4 = customBubblingEventTypes.customBubblingEventTypes[arg1];
   if (null != tmp4) {
     let tmp6 = null != tmp4;
     if (tmp6) {
       tmp6 = true !== tmp4.phasedRegistrationNames.skipBubbling;
     }
-    let tmpResult = topLevelTypeToEventType;
-    const result1 = tmpResult.topLevelTypeToEventType(arg1);
-    obj = { bubbles: tmp6, cancelable: true };
+    const result1 = topLevelTypeToEventType.topLevelTypeToEventType(arg1);
+    const obj2 = { bubbles: tmp6, cancelable: true };
     let timestamp = timeStamp.timeStamp;
     if (timestamp == null) {
       timestamp = timeStamp.timestamp;
     }
     if (typeof timestamp === "number") {
-      tmpResult = COMPOSED_PATH_KEY;
-      const result2 = tmpResult.setEventInitTimeStamp(obj, timestamp);
+      const result2 = COMPOSED_PATH_KEY.setEventInitTimeStamp(obj2, timestamp);
+      const tmpResult4 = COMPOSED_PATH_KEY;
     }
-    let tmp9 = _modDef286;
+    const tmpResult = topLevelTypeToEventType;
     if (tmp4 == null) {
       tmp4 = tmp5;
     }
-    tmp9 = new tmp9(result1, obj, timeStamp, tmp4);
-    EVENT_TARGET_GET_THE_PARENT_KEY.dispatchTrustedEvent(self, tmp9);
-    const tmpResult1 = EVENT_TARGET_GET_THE_PARENT_KEY;
+    const tmp92 = new _modDef286(result1, obj2, timeStamp, tmp4);
+    EVENT_TARGET_GET_THE_PARENT_KEY.dispatchTrustedEvent(self, tmp92);
+    const tmpResult5 = EVENT_TARGET_GET_THE_PARENT_KEY;
   }
   tmp5 = customBubblingEventTypes.customDirectEventTypes[arg1];
   _mod283.rethrowCaughtError();
-  const tmpResult2 = _mod283;
+  const tmpResult6 = _mod283;
 };

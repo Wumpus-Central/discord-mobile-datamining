@@ -1,13 +1,14 @@
 // === Module 10695: ? ===
 
 // Module 10695
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10578 from "module_10578" /* 10578 */;
+import _mod10692 from "module_10692" /* 10692 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const RUTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,30 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class RUMergeDateRangeRefiner {
+class RUTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, RUMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(RUMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, RUTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(RUTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -63,14 +48,23 @@ class RUMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = RUMergeDateRangeRefiner;
-_inherits(RUMergeDateRangeRefiner, fn(_mod10578).default);
+_inherits(RUTimeUnitAgoFormatParser, _mod10692.AbstractParserWithLeftBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(и до|и по|до|по|-)\s*$/i;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(" + RUTimeUnitAgoFormatParser(10690).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))";
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = RUTimeUnitAgoFormatParser(10690).parseDuration(arg1[1]);
+      const ParsingComponents = RUTimeUnitAgoFormatParser(10564).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitAgoFormatParser(10563).reverseDuration(RUTimeUnitAgoFormatParser(10690).parseDuration(arg1[1])));
+    }
+  }
+];
 
-export default _createClass(RUMergeDateRangeRefiner, items);
+export default _createClass(RUTimeUnitAgoFormatParser, items);

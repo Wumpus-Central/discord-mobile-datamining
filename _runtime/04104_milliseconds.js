@@ -1,8 +1,9 @@
 // === Module 4104: milliseconds ===
 
 // Module 4104 (milliseconds)
-import requiredArgs from "requiredArgs" /* 3726 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj = { default: requiredArgs };
   let tmp3 = obj;

@@ -1,27 +1,30 @@
 // === Module 3887: differenceInCalendarDays ===
 
 // Module 3887 (differenceInCalendarDays)
-import module_3888 from "module_3888" /* 3888 */;
-import startOfDay from "startOfDay" /* 3889 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import module_3888_mod from "module_3888" /* 3888 */;
+import startOfDay_mod from "startOfDay" /* 3889 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let module_3888 = module_3888_mod;
 if (!module_3888) {
-  let obj = { default: module_3888 };
+  const obj = { default: module_3888 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3888;
 }
 module_3888 = tmp3;
+let startOfDay = startOfDay_mod;
 if (!startOfDay) {
-  obj = { default: startOfDay };
-  let tmp5 = obj;
+  const obj2 = { default: startOfDay };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfDay;
 }
 startOfDay = tmp5;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }

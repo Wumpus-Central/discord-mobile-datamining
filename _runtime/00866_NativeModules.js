@@ -23,7 +23,7 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn, arg1) => {
+    return new _Promise((fn, arg1) => {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -45,14 +45,14 @@ if (!fn) {
         if (done.done) {
           closure_0(done.value);
         } else {
-          let tmp = done.value;
-          closure_0 = tmp;
-          if (!(tmp instanceof Promise)) {
-            tmp = new tmp((fn) => {
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
               fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -66,16 +66,15 @@ if (!fn) {
         fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
+          tmp32 = new tmp3((fn) => {
             fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
 let fn2 = self;
@@ -128,7 +127,7 @@ if (!fn2) {
     return obj;
   };
 }
-let module_867 = fn(867);
+const module_867 = fn(867);
 if (module_867.isTurboModuleEnabled()) {
   let TurboModuleRegistry = fn(862).ReactNativeLibraries.TurboModuleRegistry;
   let value;
@@ -158,7 +157,7 @@ function getRNSentryModule() {
 }
 const encodeUTF8 = fn(869);
 let closure_7 = encodeUTF8.encodeUTF8("\n");
-module_867 = {
+let obj3 = {
   fetchModules() {
     return fn(this, undefined, undefined, function() {
       const self = this;
@@ -167,10 +166,10 @@ module_867 = {
       return (function*() {
         closure_1 = tmp2;
         if (!self.enableNative) {
-          throw obj2._DisabledNativeError;
+          throw self._DisabledNativeError;
         }
         if (!self._isModuleLoaded(RNSentry)) {
-          throw obj2._NativeClientError;
+          throw self._NativeClientError;
         }
         yield RNSentry.fetchModules();
         closure_129_0 = value;
@@ -198,8 +197,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -212,16 +211,16 @@ module_867 = {
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value, done: true };
-                return obj;
+                let obj8 = { value, done: true };
+                return obj8;
               } else if (self.enableNative) {
                 if (self._isModuleLoaded(c6)) {
                   let tmp13 = closure_2(closure_0, 2);
                   let tmp14 = tmp13[1];
                   let _JSON = JSON;
                   let json = JSON.stringify(tmp13[0]);
-                  let obj1 = self(closure_1[4]);
-                  let encodeUTF8Result = obj1.encodeUTF8(json);
+                  let obj2 = self(closure_1[4]);
+                  let encodeUTF8Result = obj2.encodeUTF8(json);
                   let _Uint8Array = Uint8Array;
                   let tmp19 = new.target;
                   let tmp20 = new.target;
@@ -288,11 +287,11 @@ module_867 = {
                     continue;
                   }
                   let obj9 = self(closure_1[7]);
-                  obj1 = { hardCrashed: flag };
+                  let obj10 = { hardCrashed: flag };
                   c4 = 2;
                   c3 = 1;
-                  let obj2 = { value: c6.captureEnvelope(obj9.base64StringFromByteArray(arr2), obj1), done: false };
-                  return obj2;
+                  let obj11 = { value: c6.captureEnvelope(obj9.base64StringFromByteArray(arr2), obj10), done: false };
+                  return obj11;
                 } else {
                   throw self._NativeClientError;
                 }
@@ -309,7 +308,7 @@ module_867 = {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
+              let obj = { value, done: true };
               return obj;
             }
             c3 = 3;
@@ -334,11 +333,11 @@ module_867 = {
           if (enableLogs) {
             enableLogs = "js" !== _self.logsOrigin;
           }
-          let obj2 = { enableLogs };
+          let obj6 = { enableLogs };
         } else {
-          obj2 = {};
+          obj6 = {};
         }
-        const merged1 = Object.assign(merged, obj2);
+        const merged1 = Object.assign(merged, obj6);
         if (!merged1.enableNative) {
           if (merged1.enableNativeNagger) {
             const debug = self(tmp2[5]).debug;
@@ -364,16 +363,16 @@ module_867 = {
         if (!self._isModuleLoaded(closure_1_6)) {
           throw self._NativeClientError;
         }
-        ignoreErrors = merged1.ignoreErrors;
-        if (null !== ignoreErrors) {
-          if (undefined !== ignoreErrors) {
-            const found = ignoreErrors.filter((item) => typeof item === "string");
-          }
-        }
         const ignoreErrors1 = merged1.ignoreErrors;
         if (null !== ignoreErrors1) {
           if (undefined !== ignoreErrors1) {
-            const found1 = ignoreErrors1.filter((item) => item instanceof RegExp);
+            const found = ignoreErrors1.filter((item) => typeof item === "string");
+          }
+        }
+        const ignoreErrors2 = merged1.ignoreErrors;
+        if (null !== ignoreErrors2) {
+          if (undefined !== ignoreErrors2) {
+            const found1 = ignoreErrors2.filter((item) => item instanceof RegExp);
             const mapped = found1.map((source) => source.source);
           }
         }
@@ -418,8 +417,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -431,23 +430,18 @@ module_867 = {
               throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              obj = self;
-              if (self.enableNative) {
-                let obj1 = RNSentry;
-                if (obj._isModuleLoaded(RNSentry)) {
-                  c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1.value = obj1.fetchNativeLogAttributes();
-                  return obj1;
-                } else {
-                  throw obj._NativeClientError;
-                }
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (self.enableNative) {
+              if (self._isModuleLoaded(RNSentry)) {
+                c1 = 3;
+                const obj5 = { value: RNSentry.fetchNativeLogAttributes(), done: true };
+                return obj5;
               } else {
-                throw obj._DisabledNativeError;
+                throw self._NativeClientError;
               }
+            } else {
+              throw self._DisabledNativeError;
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -469,8 +463,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -482,23 +476,18 @@ module_867 = {
               throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              obj = self;
-              if (self.enableNative) {
-                let obj1 = RNSentry;
-                if (obj._isModuleLoaded(RNSentry)) {
-                  c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1.value = obj1.fetchNativeRelease();
-                  return obj1;
-                } else {
-                  throw obj._NativeClientError;
-                }
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (self.enableNative) {
+              if (self._isModuleLoaded(RNSentry)) {
+                c1 = 3;
+                const obj5 = { value: RNSentry.fetchNativeRelease(), done: true };
+                return obj5;
               } else {
-                throw obj._DisabledNativeError;
+                throw self._NativeClientError;
               }
+            } else {
+              throw self._DisabledNativeError;
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -520,8 +509,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -533,23 +522,18 @@ module_867 = {
               throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              obj = self;
-              if (self.enableNative) {
-                let obj1 = RNSentry;
-                if (obj._isModuleLoaded(RNSentry)) {
-                  c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1.value = obj1.fetchNativeSdkInfo();
-                  return obj1;
-                } else {
-                  throw obj._NativeClientError;
-                }
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (self.enableNative) {
+              if (self._isModuleLoaded(RNSentry)) {
+                c1 = 3;
+                const obj5 = { value: RNSentry.fetchNativeSdkInfo(), done: true };
+                return obj5;
               } else {
-                throw obj._DisabledNativeError;
+                throw self._NativeClientError;
               }
+            } else {
+              throw self._DisabledNativeError;
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -571,8 +555,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -584,23 +568,18 @@ module_867 = {
               throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              obj = self;
-              if (self.enableNative) {
-                let obj1 = RNSentry;
-                if (obj._isModuleLoaded(RNSentry)) {
-                  c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1.value = obj1.fetchNativeDeviceContexts();
-                  return obj1;
-                } else {
-                  throw obj._NativeClientError;
-                }
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (self.enableNative) {
+              if (self._isModuleLoaded(RNSentry)) {
+                c1 = 3;
+                const obj5 = { value: RNSentry.fetchNativeDeviceContexts(), done: true };
+                return obj5;
               } else {
-                throw obj._DisabledNativeError;
+                throw self._NativeClientError;
               }
+            } else {
+              throw self._DisabledNativeError;
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -622,8 +601,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -635,17 +614,16 @@ module_867 = {
               throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value, done: true };
-              return obj;
+              obj3 = { value, done: true };
+              return obj3;
             } else {
               if (!self.enableNative) {
                 const debug = _mod682.debug;
                 debug.warn(self._DisabledNativeError);
                 c1 = 3;
               }
-              obj = RNSentry;
               if (self._isModuleLoaded(RNSentry)) {
-                let nativeAppStart = obj.fetchNativeAppStart();
+                let nativeAppStart = RNSentry.fetchNativeAppStart();
               } else {
                 const debug2 = _mod682.debug;
                 debug2.error(self._NativeClientError);
@@ -672,8 +650,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -685,23 +663,18 @@ module_867 = {
               throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              obj = self;
-              if (self.enableNative) {
-                let obj1 = RNSentry;
-                if (obj._isModuleLoaded(RNSentry)) {
-                  c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1.value = obj1.fetchNativeFrames();
-                  return obj1;
-                } else {
-                  throw obj._NativeClientError;
-                }
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (self.enableNative) {
+              if (self._isModuleLoaded(RNSentry)) {
+                c1 = 3;
+                const obj5 = { value: RNSentry.fetchNativeFrames(), done: true };
+                return obj5;
               } else {
-                throw obj._DisabledNativeError;
+                throw self._NativeClientError;
               }
+            } else {
+              throw self._DisabledNativeError;
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -787,7 +760,6 @@ module_867 = {
   addBreadcrumb(level) {
     const self = this;
     if (this.enableNative) {
-      let obj = RNSentry;
       if (self._isModuleLoaded(RNSentry)) {
         const _Object = Object;
         let _processLevelResult;
@@ -795,8 +767,8 @@ module_867 = {
         if (level.level) {
           _processLevelResult = self._processLevel(level.level);
         }
-        obj = { level: _processLevelResult };
-        obj.addBreadcrumb(Object.assign(merged, obj));
+        const obj2 = { level: _processLevelResult };
+        RNSentry.addBreadcrumb(Object.assign(merged, obj2));
       } else {
         throw self._NativeClientError;
       }
@@ -849,8 +821,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -862,20 +834,20 @@ module_867 = {
               throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              obj = self;
               closure_0 = self;
               if (self.enableNative) {
-                let obj1 = RNSentry;
-                if (obj._isModuleLoaded(RNSentry)) {
+                if (self._isModuleLoaded(RNSentry)) {
                   c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1.value = obj1.closeNativeSdk().then(() => {
-                    closure_0.enableNative = false;
-                  });
-                  return obj1;
+                  const obj5 = {
+                    value: RNSentry.closeNativeSdk().then(() => {
+                                closure_0.enableNative = false;
+                              }),
+                    done: true
+                  };
+                  return obj5;
                 }
               }
               c1 = 3;
@@ -970,10 +942,10 @@ module_867 = {
       return (function*() {
         closure_1 = tmp2;
         if (!self.enableNative) {
-          throw obj2._DisabledNativeError;
+          throw self._DisabledNativeError;
         }
         if (!self._isModuleLoaded(RNSentry)) {
-          throw obj2._NativeClientError;
+          throw self._NativeClientError;
         }
         yield RNSentry.fetchViewHierarchy();
         closure_129_0 = value;
@@ -1009,9 +981,8 @@ module_867 = {
   stopProfiling() {
     const self = this;
     if (this.enableNative) {
-      let obj = RNSentry;
       if (self._isModuleLoaded(RNSentry)) {
-        ({ profile, androidProfile, error } = obj.stopProfiling());
+        ({ profile, androidProfile, error } = RNSentry.stopProfiling());
         if (profile) {
           if (!error) {
             if (!androidProfile) {
@@ -1019,12 +990,12 @@ module_867 = {
               debug.warn("[NATIVE] Stop Profiling Failed: No Android Profile");
             }
             try {
-              obj = { hermesProfile: null, nativeProfile: null, androidProfile: null };
+              const obj2 = { hermesProfile: null, nativeProfile: null, androidProfile: null };
               const _JSON = JSON;
-              obj.hermesProfile = JSON.parse(profile);
-              obj.nativeProfile = tmp2;
-              obj.androidProfile = androidProfile;
-              return obj;
+              obj2.hermesProfile = JSON.parse(profile);
+              obj2.nativeProfile = tmp2;
+              obj2.androidProfile = androidProfile;
+              return obj2;
             } catch (tmp7) {
               const debug2 = _mod682.debug;
               debug2.error("[NATIVE] Failed to parse Hermes Profile JSON", tmp7);
@@ -1082,8 +1053,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -1095,17 +1066,14 @@ module_867 = {
               throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              obj = self;
               if (self.enableNative) {
-                let obj1 = RNSentry;
-                if (obj._isModuleLoaded(RNSentry)) {
+                if (self._isModuleLoaded(RNSentry)) {
                   c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1.value = obj1.initNativeReactNavigationNewFrameTracking();
-                  return obj1;
+                  const obj5 = { value: RNSentry.initNativeReactNavigationNewFrameTracking(), done: true };
+                  return obj5;
                 }
               }
               c1 = 3;
@@ -1133,8 +1101,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -1147,8 +1115,8 @@ module_867 = {
                 throw value;
               } else if (arg0 === 2) {
                 dependencyMap = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 if (!self.enableNative) {
                   const debug = self(682).debug;
@@ -1157,13 +1125,11 @@ module_867 = {
                   const resolved = Promise.resolve(null);
                   dependencyMap = 3;
                 }
-                let obj1 = closure_1_6;
                 if (self._isModuleLoaded(closure_1_6)) {
                   c2 = 1;
                   dependencyMap = 1;
-                  obj1 = { value: null, done: false };
-                  obj1.value = obj1.captureReplay(closure_0);
-                  return obj1;
+                  const obj5 = { value: closure_1_6.captureReplay(closure_0), done: false };
+                  return obj5;
                 } else {
                   const debug2 = self(682).debug;
                   const _HermesInternal2 = HermesInternal;
@@ -1181,7 +1147,7 @@ module_867 = {
               }
             }
             dependencyMap = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } catch (tmp19) {
             dependencyMap = tmp;
@@ -1257,8 +1223,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -1271,20 +1237,19 @@ module_867 = {
                 throw value;
               } else if (arg0 === 2) {
                 c6 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj5 = { value, done: true };
+                return obj5;
               } else {
-                let obj2 = self;
                 closure_2 = tmp3;
                 closure_1 = tmp7;
                 closure_129_0 = undefined;
                 if (self.enableNative) {
-                  if (obj2._isModuleLoaded(c6)) {
+                  if (self._isModuleLoaded(c6)) {
                     c4 = 1;
                     c5 = 2;
                     c6 = 1;
-                    const obj1 = { value: obj4.getDataFromUri(closure_0), done: false };
-                    return obj1;
+                    const obj6 = { value: obj4.getDataFromUri(closure_0), done: false };
+                    return obj6;
                   }
                   obj4 = c6;
                 }
@@ -1304,15 +1269,15 @@ module_867 = {
             } else if (arg0 === 2) {
               c4 = 0;
               c6 = 3;
-              obj2 = { value, done: true };
-              return obj2;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
               closure_129_0 = value;
               const _Uint8Array = Uint8Array;
               const uint8Array = new Uint8Array(closure_129_0);
               c4 = 0;
               c6 = 3;
-              obj = { value: uint8Array, done: true };
+              const obj = { value: uint8Array, done: true };
               return obj;
             }
           } catch (tmp23) {
@@ -1371,8 +1336,8 @@ module_867 = {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -1385,25 +1350,25 @@ module_867 = {
                 throw value;
               } else if (arg0 === 2) {
                 c6 = 3;
-                obj = { value, done: true };
-                return obj;
+                obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_2 = tmp3;
                 closure_1 = tmp7;
                 if (self.enableNative) {
-                  let obj3 = c6;
                   if (self._isModuleLoaded(c6)) {
                     c4 = 1;
                     const _Array = Array;
                     c5 = 2;
                     c6 = 1;
-                    const obj1 = { value: obj3.encodeToBase64(Array.from(closure_0)), done: false };
-                    return obj1;
+                    const obj5 = { value: obj4.encodeToBase64(Array.from(closure_0)), done: false };
+                    return obj5;
                   }
+                  obj4 = c6;
                 }
                 c6 = 3;
-                const obj2 = { value: Promise.resolve(null), done: true };
-                return obj2;
+                const obj6 = { value: Promise.resolve(null), done: true };
+                return obj6;
               }
             } else if (1 === tmp7) {
               c4 = 0;
@@ -1411,16 +1376,16 @@ module_867 = {
               const debug = self(closure_1[5]).debug;
               debug.error("Error:", closure_129_0);
               c6 = 3;
-              obj3 = { value: Promise.resolve(null), done: true };
-              return obj3;
+              const obj7 = { value: Promise.resolve(null), done: true };
+              return obj7;
             } else if (arg0 === 1) {
               c6 = 3;
               throw value;
             } else if (arg0 === 2) {
               c4 = 0;
               c6 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj8 = { value, done: true };
+              return obj8;
             } else {
               let tmp8 = value;
               if (!value) {
@@ -1428,7 +1393,7 @@ module_867 = {
               }
               c4 = 0;
               c6 = 3;
-              obj = { value: tmp8, done: true };
+              const obj = { value: tmp8, done: true };
               return obj;
             }
           } catch (tmp18) {
@@ -1456,7 +1421,7 @@ module_867 = {
       }
     }
     const _processLevelsResult = this._processLevels(tmp[1]);
-    let tmp4 = "android" === module_867.platform;
+    let tmp4 = "android" === obj3.platform;
     if (tmp4) {
       tmp4 = "message" in _processLevelsResult;
     }
@@ -1525,12 +1490,12 @@ module_867 = {
   platform: "android"
 };
 const sentryError = new fn(682).SentryError("Native is disabled");
-module_867._DisabledNativeError = sentryError;
+obj3._DisabledNativeError = sentryError;
 const sentryError1 = new fn(682).SentryError("Native Client is not available, can't start on native.");
-module_867._NativeClientError = sentryError1;
+obj3._NativeClientError = sentryError1;
 
 export { getRNSentryModule };
-export const NATIVE = module_867;
+export const NATIVE = obj3;
 export const getDataFromUri = function getDataFromUri(arg0) {
   closure_0 = arg0;
   return fn(this, undefined, undefined, function*() {
@@ -1541,8 +1506,8 @@ export const getDataFromUri = function getDataFromUri(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1554,11 +1519,11 @@ export const getDataFromUri = function getDataFromUri(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          obj3 = { value, done: true };
+          return obj3;
         } else {
           c0 = 3;
-          obj = { value: dataFromUri.getDataFromUri(closure_0), done: true };
+          const obj = { value: dataFromUri.getDataFromUri(closure_0), done: true };
           return obj;
         }
       } catch (tmp6) {

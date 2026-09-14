@@ -1,19 +1,21 @@
 // === Module 3948: endOfISOWeek ===
 
 // Module 3948 (endOfISOWeek)
-import endOfWeek from "endOfWeek" /* 3949 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import endOfWeek_mod from "endOfWeek" /* 3949 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let endOfWeek = endOfWeek_mod;
 if (!endOfWeek) {
-  let obj = { default: endOfWeek };
+  const obj = { default: endOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = endOfWeek;
 }
 endOfWeek = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

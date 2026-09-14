@@ -29,7 +29,7 @@ function _parseCookieHeaders(Cookie, headers) {
 function _parseCookieString(str) {
   const parts = str.split("; ");
   return parts.reduce((acc, item) => {
-    [tmp2, tmp3] = _slicedToArray(item.split("="), 2);
+    [tmp2, tmp3] = item.split("=");
     let tmp4 = tmp2;
     if (tmp2) {
       tmp4 = tmp3;
@@ -70,8 +70,7 @@ function _shouldCaptureResponse(failedRequestStatusCodes, arg1, arg2) {
   return someResult;
 }
 function _createEvent(error) {
-  let obj = registerSpanErrorInstrumentation;
-  const client = obj.getClient();
+  const client = registerSpanErrorInstrumentation.getClient();
   let stack;
   if (client) {
     if (error.error) {
@@ -89,20 +88,20 @@ function _createEvent(error) {
     }
   }
   const combined = "HTTP Client Error with status code: " + error.status;
-  obj = { message: combined, exception: null, request: null, contexts: null };
-  obj = { type: "Error", value: combined, stacktrace: null };
+  const obj2 = { message: combined, exception: null, request: null, contexts: null };
+  const obj3 = { type: "Error", value: combined, stacktrace: null };
   let tmp7;
   if (stackParserResult) {
-    const obj1 = { frames: stackParserResult };
-    tmp7 = obj1;
+    const obj4 = { frames: stackParserResult };
+    tmp7 = obj4;
   }
-  const obj2 = { values: null };
-  obj.stacktrace = tmp7;
-  const items = [obj];
-  obj2.values = items;
-  obj.exception = obj2;
-  obj.request = { url: error.url, method: error.method, headers: error.requestHeaders, cookies: error.requestCookies };
-  const obj3 = { status_code: error.status, headers: error.responseHeaders, cookies: error.responseCookies, body_size: null };
+  const obj5 = { values: null };
+  obj3.stacktrace = tmp7;
+  const items = [obj3];
+  obj5.values = items;
+  obj2.exception = obj5;
+  obj2.request = { url: error.url, method: error.method, headers: error.requestHeaders, cookies: error.requestCookies };
+  const obj6 = { status_code: error.status, headers: error.responseHeaders, cookies: error.responseCookies, body_size: null };
   const responseHeaders = error.responseHeaders;
   let parsed;
   if (responseHeaders) {
@@ -111,11 +110,11 @@ function _createEvent(error) {
       parsed = parseInt(tmp9, 10);
     }
   }
-  obj3.body_size = parsed;
-  obj.contexts = { response: obj3 };
+  obj6.body_size = parsed;
+  obj2.contexts = { response: obj6 };
   const tmpResult = registerSpanErrorInstrumentation;
-  const result = tmpResult.addExceptionMechanism(obj, { type: "auto.http.client." + error.type, handled: false });
-  return obj;
+  const result = tmpResult.addExceptionMechanism(obj2, { type: "auto.http.client." + error.type, handled: false });
+  return obj2;
 }
 function _shouldSendDefaultPii() {
   const client = registerSpanErrorInstrumentation.getClient();
@@ -133,25 +132,22 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = { failedRequestStatusCodes: null, failedRequestTargets: null };
+  let obj2 = { failedRequestStatusCodes: null, failedRequestTargets: null };
   const items = [[500, 599]];
-  obj.failedRequestStatusCodes = items;
+  obj2.failedRequestStatusCodes = items;
   const items1 = [/.*/];
-  obj.failedRequestTargets = items1;
+  obj2.failedRequestTargets = items1;
   const merged = Object.assign(obj);
-  obj = {
+  return {
     name: "HttpClient",
     setup(arg0) {
       closure_0 = arg0;
-      closure_1 = obj;
-      obj = registerSpanErrorInstrumentation;
+      closure_1 = obj2;
       if (obj.supportsNativeFetch()) {
-        let tmp2Result = registerSpanErrorInstrumentation;
-        const result = tmp2Result.addFetchInstrumentationHandler((args) => {
-          obj = obj(682);
+        const result = registerSpanErrorInstrumentation.addFetchInstrumentationHandler((args) => {
           if (obj.getClient() === closure_0) {
             ({ response, error } = args);
-            [tmp27, tmp28] = _slicedToArray(args.args, 2);
+            [tmp27, tmp28] = args.args;
             if (response) {
               if (!error) {
                 error = args.virtualError;
@@ -178,9 +174,9 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                 });
               }
               if (someResult) {
-                tmp(682);
-                const tmpResult = tmp(682);
-                someResult = !tmpResult.isSentryRequestUrl(url, tmpResult.getClient());
+                const tmpResult = obj2(682);
+                someResult = !tmpResult.isSentryRequestUrl(url, obj2(682).getClient());
+                const tmpResult4 = obj2(682);
               }
               if (someResult) {
                 if (tmp28) {
@@ -195,17 +191,17 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                   const _Request = Request;
                   request = tmp27;
                 }
-                const client = tmp(682).getClient();
+                const client = obj2(682).getClient();
                 let BooleanResult = client;
                 if (BooleanResult) {
                   const _Boolean = Boolean;
                   BooleanResult = Boolean(client.getOptions().sendDefaultPii);
                 }
                 if (BooleanResult) {
-                  let tmp25Result = _slicedToArray(_parseCookieHeaders("Cookie", request), 2);
-                  [tmp17, tmp15] = tmp25Result;
-                  tmp25Result = _slicedToArray(_parseCookieHeaders("Set-Cookie", response), 2);
-                  [tmp16, tmp14] = tmp25Result;
+                  [tmp17, tmp15] = _parseCookieHeaders("Cookie", request);
+                  const tmp25Result = _slicedToArray(_parseCookieHeaders("Cookie", request), 2);
+                  [tmp16, tmp14] = _parseCookieHeaders("Set-Cookie", response);
+                  const tmp25Result2 = _slicedToArray(_parseCookieHeaders("Set-Cookie", response), 2);
                 }
                 const request1 = { url: null, method: null, status: null, requestHeaders: null, responseHeaders: null, requestCookies: null, responseCookies: null, error: null, type: "fetch" };
                 ({ url: obj6.url, method: obj6.method } = request);
@@ -215,25 +211,25 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                 request1.requestCookies = undefined;
                 request1.responseCookies = undefined;
                 request1.error = error;
-                const tmpResult1 = tmp(682);
+                const tmpResult5 = obj2(682);
                 const tmp22 = _createEvent(request1);
-                tmp(682).captureEvent(tmp22);
-                const tmpResult2 = tmp(682);
+                obj2(682).captureEvent(tmp22);
+                const tmpResult6 = obj2(682);
               }
             }
             const tmp26 = _slicedToArray(args.args, 2);
           }
+          obj = obj2(682);
         }, false);
+        const tmp2Result = registerSpanErrorInstrumentation;
       }
       closure_0 = arg0;
-      closure_1 = obj;
+      closure_1 = obj2;
       if ("XMLHttpRequest" in registerSpanErrorInstrumentation.GLOBAL_OBJ) {
-        tmp2Result = triggerHandlers;
-        const result1 = tmp2Result.addXhrInstrumentationHandler((arg0) => {
-          obj = obj(682);
+        const result1 = triggerHandlers.addXhrInstrumentationHandler((arg0) => {
           if (obj.getClient() === closure_0) {
             ({ error, xhr, virtualError } = arg0);
-            const tmp16 = xhr[tmp4(undefined, 898).SENTRY_XHR_DATA_KEY];
+            const tmp16 = xhr[obj2(undefined, 898).SENTRY_XHR_DATA_KEY];
             if (tmp16) {
               ({ method, request_headers } = tmp16);
               try {
@@ -246,7 +242,7 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                       const request = { url: xhr.responseURL, method, status: xhr.status, requestHeaders: undefined, responseHeaders: undefined, responseCookies: undefined, error, type: "xhr" };
                       const tmp11 = closure_1_6(request);
                       closure_1_0(dependencyMap[1]).captureEvent(tmp11);
-                      const obj2 = closure_1_0(dependencyMap[1]);
+                      obj2 = closure_1_0(dependencyMap[1]);
                     } else {
                       try {
                         let responseHeader = xhr.getResponseHeader("Set-Cookie");
@@ -281,10 +277,11 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
               }
             }
           }
-          tmp4 = obj;
+          obj = obj2(682);
         });
+        const tmp2Result2 = triggerHandlers;
       }
+      obj = registerSpanErrorInstrumentation;
     }
   };
-  return obj;
 });

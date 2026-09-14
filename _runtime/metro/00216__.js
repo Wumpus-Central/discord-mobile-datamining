@@ -300,28 +300,29 @@ const fn = function t(arg0) {
               }
             } else {
               tmp9 = Headers;
-              headers = arg0.headers;
-              obj = Object.create(Headers.prototype);
-              obj.map = {};
-              if (headers instanceof Headers) {
-                item = headers.forEach(function(item, index) {
+              headers1 = arg0.headers;
+              obj1 = Object.create(Headers.prototype);
+              headers = headers1;
+              obj1.map = {};
+              if (headers1 instanceof Headers) {
+                item = headers1.forEach(function(item, index) {
                   this.append(index, item);
-                }, obj);
-                self.headers = obj;
+                }, obj1);
+                self.headers = obj1;
               } else {
                 tmp11 = globalThis;
                 _Array = Array;
-                if (!Array.isArray(headers)) {
-                  if (headers) {
+                if (!Array.isArray(headers1)) {
+                  if (headers1) {
                     _Object = Object;
-                    ownPropertyNames = Object.getOwnPropertyNames(headers);
+                    ownPropertyNames = Object.getOwnPropertyNames(headers1);
                     item1 = ownPropertyNames.forEach(function(item) {
                       this.append(item, headers[item]);
-                    }, obj);
+                    }, obj1);
                   }
                 }
               }
-              item2 = headers.forEach(function(item) {
+              item2 = headers1.forEach(function(item) {
                 if (2 != item.length) {
                   const _TypeError = TypeError;
                   const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + item.length);
@@ -330,7 +331,7 @@ const fn = function t(arg0) {
                   const self = this;
                   this.append(item[0], item[1]);
                 }
-              }, obj);
+              }, obj1);
             }
           }
         } else {
@@ -428,29 +429,29 @@ const fn = function t(arg0) {
           return;
         } else {
           tmp17 = Headers;
-          headers1 = request.headers;
-          obj1 = Object.create(Headers.prototype);
-          headers = headers1;
-          obj1.map = {};
-          if (headers1 instanceof Headers) {
-            item3 = headers1.forEach(function(item, index) {
+          headers3 = request.headers;
+          obj5 = Object.create(Headers.prototype);
+          headers = headers3;
+          obj5.map = {};
+          if (headers3 instanceof Headers) {
+            item3 = headers3.forEach(function(item, index) {
               this.append(index, item);
-            }, obj1);
-            self.headers = obj1;
+            }, obj5);
+            self.headers = obj5;
           } else {
             tmp19 = globalThis;
             _Array2 = Array;
-            if (!Array.isArray(headers1)) {
-              if (headers1) {
+            if (!Array.isArray(headers3)) {
+              if (headers3) {
                 _Object2 = Object;
-                ownPropertyNames1 = Object.getOwnPropertyNames(headers1);
+                ownPropertyNames1 = Object.getOwnPropertyNames(headers3);
                 item4 = ownPropertyNames1.forEach(function(item) {
                   this.append(item, headers[item]);
-                }, obj1);
+                }, obj5);
               }
             }
           }
-          item5 = headers1.forEach(function(item) {
+          item5 = headers3.forEach(function(item) {
             if (2 != item.length) {
               const _TypeError = TypeError;
               const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + item.length);
@@ -459,7 +460,7 @@ const fn = function t(arg0) {
               const self = this;
               this.append(item[0], item[1]);
             }
-          }, obj1);
+          }, obj5);
         }
       } else {
         tmp2 = globalThis;
@@ -475,9 +476,9 @@ const fn = function t(arg0) {
     }
     clone() {
       obj = { body: this._bodyInit };
-      obj = Object.create(Request.prototype);
+      obj1 = Object.create(Request.prototype);
       tmp2 = Request(this, obj);
-      return obj;
+      return obj1;
     }
   }
   function decode(str) {
@@ -1412,14 +1413,14 @@ const fn = function t(arg0) {
                         isPrototypeOfResult = prototype4.isPrototypeOf(_bodyInit);
                       }
                       if (isPrototypeOfResult) {
-                        let buffer = _bodyInit.buffer;
-                        if (buffer.slice) {
-                          let buffer2 = buffer.slice(0);
+                        const buffer1 = _bodyInit.buffer;
+                        if (buffer1.slice) {
+                          let buffer2 = buffer1.slice(0);
                         } else {
                           const _Uint8Array3 = Uint8Array;
-                          const uint8Array = new Uint8Array(buffer.byteLength);
+                          const uint8Array = new Uint8Array(buffer1.byteLength);
                           const _Uint8Array4 = Uint8Array;
-                          const uint8Array1 = new Uint8Array(buffer);
+                          const uint8Array1 = new Uint8Array(buffer1);
                           const result = uint8Array.set(uint8Array1);
                           buffer2 = uint8Array.buffer;
                         }
@@ -1435,7 +1436,7 @@ const fn = function t(arg0) {
                   if (closure_1_6) {
                     const _ArrayBuffer = ArrayBuffer;
                     if (_bodyInit.slice) {
-                      buffer = _bodyInit.slice(0);
+                      let buffer = _bodyInit.slice(0);
                     } else {
                       const _Uint8Array = Uint8Array;
                       const uint8Array2 = new Uint8Array(_bodyInit.byteLength);
@@ -1633,7 +1634,7 @@ const fn = function t(arg0) {
   Body.clone = function() {
     const response = { status: this.status, statusText: this.statusText, headers: null, url: null };
     const headers = this.headers;
-    let obj = Object.create(Headers.prototype);
+    const obj = Object.create(Headers.prototype);
     obj.map = {};
     if (headers instanceof Headers) {
       const item = headers.forEach(function(item, index) {
@@ -1662,9 +1663,8 @@ const fn = function t(arg0) {
     }
     response.headers = obj;
     response.url = this.url;
-    obj = Object.create(Response.prototype);
     Response(this._bodyInit, response);
-    return obj;
+    return Object.create(Response.prototype);
   };
   Response.error = () => {
     const obj = Object.create(Response.prototype);
@@ -1682,11 +1682,10 @@ const fn = function t(arg0) {
       throw rangeError;
     } else {
       const response = { status, headers: null };
-      let obj = { location };
+      const obj = { location };
       response.headers = obj;
-      obj = Object.create(Response.prototype);
       Response(null, response);
-      return obj;
+      return Object.create(Response.prototype);
     }
   };
   DOMException = _globalThis.DOMException;

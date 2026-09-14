@@ -3,11 +3,13 @@
 // Module 8418 (originWhitelistToRegex)
 import _modDef8419 from "module_8419" /* 8419 */;
 import _modDef8420 from "module_8420" /* 8420 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
+let noop = noop_mod;
 ({ useCallback: c2, useMemo: c3, useRef: closure_4, useState: hasOwnProperty } = noop);
+let noop = noop_mod;
 ({ Linking: metroRequire, View: closure_7, ActivityIndicator: closure_8, Text: closure_9, Platform } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let fn = this;
@@ -111,13 +113,13 @@ export const defaultOriginWhitelist = ["http://*", "https://*"];
 export { createOnShouldStartLoadWithRequest };
 export const defaultRenderLoading = () => closure_1_10(React5, { style: _modDef8420.loadingOrErrorView, children: closure_1_10(React6, {}) });
 export const defaultRenderError = (arg0, arg1, arg2) => {
-  let obj = { style: _modDef8420.loadingOrErrorView, children: null };
-  obj = { style: _modDef8420.errorTextTitle, children: "Error loading page" };
-  const items = [closure_1_10(React7, obj), , , ];
-  obj = { style: _modDef8420.errorText, children: "Domain: ".concat(arg0) };
-  items[1] = closure_1_10(React7, obj);
+  const obj = { style: _modDef8420.loadingOrErrorView, children: null };
+  const items = [closure_1_10(React7, { style: _modDef8420.errorTextTitle, children: "Error loading page" }), , , ];
+  const obj2 = { style: _modDef8420.errorTextTitle, children: "Error loading page" };
+  items[1] = closure_1_10(React7, { style: _modDef8420.errorText, children: "Domain: ".concat(arg0) });
+  const obj3 = { style: _modDef8420.errorText, children: "Domain: ".concat(arg0) };
   items[2] = closure_1_10(React7, { style: _modDef8420.errorText, children: "Error Code: ".concat(arg1) });
-  const obj1 = { style: _modDef8420.errorText, children: "Error Code: ".concat(arg1) };
+  const obj4 = { style: _modDef8420.errorText, children: "Error Code: ".concat(arg1) };
   items[3] = closure_1_10(React7, { style: _modDef8420.errorText, children: "Description: ".concat(arg2) });
   obj.children = items;
   return closure_1_11(React5, obj);
@@ -140,10 +142,10 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
   if (onNavigationStateChange.startInLoadingState) {
     str = "LOADING";
   }
-  tmp(str);
+  let tmpResult = onError(str);
   closure_13 = tmp3;
-  let tmpResult = tmp(null);
-  closure_14 = tmpResult[1];
+  const tmpResult2 = onError(null);
+  closure_14 = tmpResult2[1];
   onLoadEnd(null);
   let items = [onNavigationStateChange];
   const tmp5 = onLoad((nativeEvent) => {
@@ -294,6 +296,6 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
   obj.onMessage = tmp12;
   obj.viewState = tmpResult[0];
   obj.setViewState = tmpResult[1];
-  obj.lastErrorEvent = tmpResult[0];
+  obj.lastErrorEvent = tmpResult2[0];
   return obj;
 };

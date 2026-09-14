@@ -1,35 +1,39 @@
 // === Module 3924: ? ===
 
 // Module 3924
-import _typeof from "module_3725" /* 3725 */;
-import endOfDay from "endOfDay" /* 3925 */;
-import endOfMonth from "endOfMonth" /* 3926 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import endOfDay_mod from "endOfDay" /* 3925 */;
+import endOfMonth_mod from "endOfMonth" /* 3926 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  let obj = { default: _typeof };
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
+let endOfDay = endOfDay_mod;
 if (!endOfDay) {
-  obj = { default: endOfDay };
-  let tmp5 = obj;
+  const obj2 = { default: endOfDay };
+  let tmp5 = obj2;
 } else {
   tmp5 = endOfDay;
 }
 endOfDay = tmp5;
+let endOfMonth = endOfMonth_mod;
 if (!endOfMonth) {
-  obj = { default: endOfMonth };
-  let tmp7 = obj;
+  const obj3 = { default: endOfMonth };
+  let tmp7 = obj3;
 } else {
   tmp7 = endOfMonth;
 }
 endOfMonth = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }

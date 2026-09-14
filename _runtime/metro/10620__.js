@@ -2,8 +2,8 @@
 
 // Module 10620
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10578 from "module_10578" /* 10578 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _mod10582 from "module_10582" /* 10582 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
 let fn = this;
 if (this) {
@@ -43,12 +44,12 @@ if (!fn) {
     return tmp;
   };
 }
-class FRMergeDateRangeRefiner {
+class FRMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, FRMergeDateRangeRefiner);
+    tmp = closure_0(this, FRMergeDateTimeRefiner);
     tmp2 = c2;
-    obj = c2(FRMergeDateRangeRefiner);
+    obj = c2(FRMergeDateTimeRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -63,14 +64,15 @@ class FRMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FRMergeDateRangeRefiner;
-_inherits(FRMergeDateRangeRefiner, fn(_mod10578).default);
+_classCallCheck = FRMergeDateTimeRefiner;
+_inherits(FRMergeDateTimeRefiner, fn(_mod10582).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    return /^\s*(à|a|au|-)\s*$/i;
+    const regExp = new RegExp("^\\s*(T|\u00E0|a|au|vers|de|,|-)?\\s*$");
+    return regExp;
   }
 };
 const items = [entry];
 
-export default _createClass(FRMergeDateRangeRefiner, items);
+export default _createClass(FRMergeDateTimeRefiner, items);

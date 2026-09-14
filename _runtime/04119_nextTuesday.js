@@ -1,19 +1,21 @@
 // === Module 4119: nextTuesday ===
 
 // Module 4119 (nextTuesday)
-import nextDay from "nextDay" /* 4113 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import nextDay_mod from "nextDay" /* 4113 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let nextDay = nextDay_mod;
 if (!nextDay) {
-  let obj = { default: nextDay };
+  const obj = { default: nextDay };
   let tmp3 = obj;
 } else {
   tmp3 = nextDay;
 }
 nextDay = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

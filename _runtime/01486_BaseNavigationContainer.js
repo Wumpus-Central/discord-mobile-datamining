@@ -35,6 +35,8 @@ import _mod1578 from "module_1578" /* 1578 */;
 import _mod1579 from "module_1579" /* 1579 */;
 import _mod1580 from "module_1580" /* 1580 */;
 
+const require = globalThis.__r;
+
 for (const key10013 in require("PrivateValueStore")) {
   arg5[key10013] = require("PrivateValueStore")[key10013];
   continue;

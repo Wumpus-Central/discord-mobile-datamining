@@ -10,10 +10,9 @@ const jsx = fn(21).jsx;
 
 export const Background = function Background(style) {
   const merged = Object.assign(style, Object.assign({ style: 0 }));
-  let obj = {};
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  obj = { flex: 1, backgroundColor: obj.useTheme().colors.background };
-  const items = [obj, style.style];
-  obj.style = items;
-  return <Animated.View flex={1} backgroundColor={obj.useTheme().colors.background} />;
+  const items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
+  obj2.style = items;
+  return <Animated.View />;
 };

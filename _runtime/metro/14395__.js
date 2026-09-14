@@ -1,14 +1,9 @@
 // === Module 14395: ? ===
 
 // Module 14395
-import _mod14396 from "module_14396" /* 14396 */;
+import _mod14393 from "module_14393" /* 14393 */;
 
+let closure_0 = _mod14393({}.toString);
+let closure_1 = _mod14393("".slice);
 
-export default (arg0) => {
-  if (_mod14396(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
-  }
-};
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

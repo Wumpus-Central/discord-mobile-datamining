@@ -178,8 +178,8 @@ function rebuildRoutePathFromAllRoutes(routes2, _location) {
                 if ("/" === arr2[arr2.length - 1]) {
                   substr = arr2.slice(0, -1);
                 }
-                let obj = { v: substr };
-                let obj1 = obj;
+                const obj = { v: substr };
+                let obj3 = obj;
               } else {
                 if (!str2) {
                   str2 = "";
@@ -188,8 +188,8 @@ function rebuildRoutePathFromAllRoutes(routes2, _location) {
                 if ("/" === str2[str2.length - 1]) {
                   substr1 = str2.slice(0, -1);
                 }
-                obj = { pathname: arr2 };
-                const tmp11 = rebuildRoutePathFromAllRoutes(item10012.filter((item) => item !== item10012.route), obj);
+                const obj2 = { pathname: arr2 };
+                const tmp11 = rebuildRoutePathFromAllRoutes(item10012.filter((item) => item !== item10012.route), obj2);
                 let combined = tmp11;
                 if ("/" !== tmp11[0]) {
                   const _HermesInternal2 = HermesInternal;
@@ -200,9 +200,9 @@ function rebuildRoutePathFromAllRoutes(routes2, _location) {
                 if ("/" === sum[sum.length - 1]) {
                   substr2 = sum.slice(0, -1);
                 }
-                obj1 = { v: substr2 };
+                obj3 = { v: substr2 };
               }
-              return obj1;
+              return obj3;
             }
           }
         })(item10012);
@@ -355,25 +355,23 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_5 = [];
 
 export const clearNavigationContext = function clearNavigationContext(navigationContext) {
-  let arr = closure_5;
   let token;
   if (closure_5[closure_5.length - 1] != null) {
     token = tmp.token;
   }
   if (token === navigationContext) {
-    arr = arr.pop();
+    closure_5.pop();
   }
 };
 export const getActiveRootSpan = function getActiveRootSpan() {
   const activeSpan = _mod682.getActiveSpan();
   let rootSpan;
   if (activeSpan) {
-    let tmpResult = _mod682;
-    rootSpan = tmpResult.getRootSpan(activeSpan);
+    rootSpan = _mod682.getRootSpan(activeSpan);
+    const tmpResult = _mod682;
   }
   if (rootSpan) {
-    tmpResult = _mod682;
-    const op = tmpResult.spanToJSON(rootSpan).op;
+    const op = _mod682.spanToJSON(rootSpan).op;
     if ("navigation" === op) {
       const tmp5 = rootSpan;
     }
@@ -423,7 +421,7 @@ export const resolveRouteNameAndSource = function resolveRouteNameAndSource(_loc
     pathname = combined;
   }
   if (!tmp) {
-    [tmp2, str2] = _slicedToArray(getNormalizedName(routes, _location, items, str), 2);
+    [tmp2, str2] = getNormalizedName(routes, _location, items, str);
     const tmp13 = _slicedToArray(getNormalizedName(routes, _location, items, str), 2);
   }
   if (!pathname) {
@@ -434,17 +432,15 @@ export const resolveRouteNameAndSource = function resolveRouteNameAndSource(_loc
 };
 export { routeIsDescendant };
 export const setNavigationContext = function setNavigationContext(path, activeRootSpan) {
-  let arr = closure_5;
   if (closure_5.length >= 10) {
     if (_mod1007.DEBUG_BUILD) {
       const debug = _mod682.debug;
       debug.warn("[React Router] Navigation context stack overflow - removing oldest context");
     }
-    arr = arr.shift();
+    closure_5.shift();
   }
-  let obj = {};
-  obj = { token: obj, targetPath: path, span: activeRootSpan };
-  arr = arr.push(obj);
+  const obj = {};
+  closure_5.push({ token: obj, targetPath: path, span: activeRootSpan });
   return obj;
 };
 export const transactionNameHasWildcard = function transactionNameHasWildcard(description) {

@@ -60,7 +60,7 @@ function replacer(arg0, _default) {
             }
           }
         }
-        arr = closure_4.unshift(combined);
+        closure_4.unshift(combined);
         return combined;
       }
     }
@@ -171,7 +171,7 @@ export const createStringifySafeWithLimits = function createStringifySafeWithLim
               }
             }
           }
-          arr = closure_4.unshift(combined);
+          closure_4.unshift(combined);
           return combined;
         }
       }

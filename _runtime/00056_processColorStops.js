@@ -20,13 +20,13 @@ function processColorStops(nextResult) {
             if (typeof first !== "number") {
               return null;
             }
-            let obj = { color: null, position: first };
-            let arr = items.push(obj);
+            let obj2 = { color: null, position: first };
+            let arr = items.push(obj2);
             num = num + 1;
           }
         }
       }
-      obj = processColor;
+      let obj = processColor;
       let defaultResult = obj.default(tmp.color);
       if (null == defaultResult) {
         break;
@@ -38,14 +38,14 @@ function processColorStops(nextResult) {
                 obj3.return();
                 return null;
               }
-              obj = { color: defaultResult, position: item10036 };
-              arr = items.push(obj);
+              let obj5 = { color: defaultResult, position: item10036 };
+              let arr2 = items.push(obj5);
               continue;
             }
           }
         }
-        let obj1 = { color: defaultResult, position: null };
-        let arr1 = items.push(obj1);
+        let obj6 = { color: defaultResult, position: null };
+        let arr5 = items.push(obj6);
       }
     }
     return null;
@@ -55,7 +55,7 @@ function processColorStops(nextResult) {
 function parseRadialGradientCSSString(str) {
   let tmp = ellipse;
   let tmp2 = c13;
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(closure_14);
   const parts = str.split(re5);
   const items = [...parts];
@@ -531,8 +531,8 @@ function parseRadialGradientCSSString(str) {
   const tmp35 = parseColorStopsCSSString(items);
   let tmp36 = null;
   if (null != tmp35) {
-    obj = { type: "radial-gradient", shape: tmp32, size: tmp6, position: tmp5, colorStops: tmp35 };
-    tmp36 = obj;
+    const obj2 = { type: "radial-gradient", shape: tmp32, size: tmp6, position: tmp5, colorStops: tmp35 };
+    tmp36 = obj2;
   }
   return tmp36;
 }
@@ -567,12 +567,12 @@ function parseLinearGradientCSSString(str) {
     if (null == result) {
       return null;
     } else {
-      let obj = { type: "angle", value: result };
+      const obj2 = { type: "angle", value: result };
       parts.shift();
-      tmp = obj;
+      tmp = obj2;
     }
   } else if (re9.test(str3)) {
-    obj = null;
+    let obj = null;
     if (null != str3) {
       obj = null;
       switch (str5.toLowerCase()) {
@@ -625,8 +625,8 @@ function parseLinearGradientCSSString(str) {
   const tmp16 = parseColorStopsCSSString(parts);
   let tmp17 = null;
   if (null != tmp16) {
-    obj = { type: "linear-gradient", direction: tmp, colorStops: tmp16 };
-    tmp17 = obj;
+    const obj3 = { type: "linear-gradient", direction: tmp, colorStops: tmp16 };
+    tmp17 = obj3;
   }
   return tmp17;
 }
@@ -661,10 +661,10 @@ function parseColorStopsCSSString(items) {
         } else {
           if (null != parsed) {
             if (null != parsed1) {
-              let obj = { color: defaultResult, position: parsed };
-              items.push(obj);
-              obj = { color: defaultResult, position: parsed1 };
-              let arr = items.push(obj);
+              let obj2 = { color: defaultResult, position: parsed };
+              let arr = items.push(obj2);
+              let obj3 = { color: defaultResult, position: parsed1 };
+              let arr2 = items.push(obj3);
             }
           }
           return null;
@@ -684,8 +684,8 @@ function parseColorStopsCSSString(items) {
         } else if (null == parsed2) {
           return null;
         } else {
-          let obj1 = { color: defaultResult1, position: parsed2 };
-          let arr1 = items.push(obj1);
+          let obj4 = { color: defaultResult1, position: parsed2 };
+          let arr3 = items.push(obj4);
         }
       } else if (1 !== match.length) {
         return null;
@@ -712,18 +712,18 @@ function parseColorStopsCSSString(items) {
           }
           if (num !== parts.length - 1) {
             if (0 !== num) {
-              let obj2 = { color: null, position: parsed3 };
-              let arr2 = items.push(obj2);
+              let obj7 = { color: null, position: parsed3 };
+              let arr8 = items.push(obj7);
             }
           }
         } else {
-          obj = processColor;
+          let obj = processColor;
           let defaultResult2 = obj.default(match[0]);
           if (null == defaultResult2) {
             return null;
           } else {
-            let obj3 = { color: defaultResult2, position: null };
-            let arr3 = items.push(obj3);
+            let obj11 = { color: defaultResult2, position: null };
+            let arr9 = items.push(obj11);
           }
         }
       }
@@ -748,25 +748,25 @@ function getDirectionForKeyword(str) {
       case "to left":
         return { type: "angle", value: 270 };
       case "to top right":
-        let obj = { type: "keyword", value: "to top right" };
-        return obj;
+        let obj2 = { type: "keyword", value: "to top right" };
+        return obj2;
       case "to right top":
-        obj = { type: "keyword", value: "to top right" };
-        return obj;
+        obj2 = { type: "keyword", value: "to top right" };
+        return obj2;
       case "to bottom right":
-        obj = { type: "keyword", value: "to bottom right" };
-        return obj;
+        let obj3 = { type: "keyword", value: "to bottom right" };
+        return obj3;
       case "to right bottom":
-        obj = { type: "keyword", value: "to bottom right" };
-        return obj;
+        obj3 = { type: "keyword", value: "to bottom right" };
+        return obj3;
       case "to top left":
-        let obj1 = { type: "keyword", value: "to top left" };
-        return obj1;
+        let obj4 = { type: "keyword", value: "to top left" };
+        return obj4;
       case "to left top":
-        obj1 = { type: "keyword", value: "to top left" };
-        return obj1;
+        obj4 = { type: "keyword", value: "to top left" };
+        return obj4;
       case "to bottom left":
-        obj = { type: "keyword", value: "to bottom left" };
+        let obj = { type: "keyword", value: "to bottom left" };
         return obj;
       case "to left bottom":
         obj = { type: "keyword", value: "to bottom left" };
@@ -895,9 +895,7 @@ export default function processBackgroundImage(str) {
         while (iter !== undefined) {
           let match = regex.exec(str.toLowerCase());
           if (match) {
-            let tmp7 = _slicedToArray(tmp4, 3);
-            let str2 = tmp7[1];
-            let tmp8 = tmp7[2];
+            [, str2, tmp8] = tmp4;
             if ("radial" === str2.toLowerCase()) {
               let tmp11 = parseRadialGradientCSSString(tmp8);
             } else {
@@ -958,17 +956,17 @@ export default function processBackgroundImage(str) {
               iter.return();
               return items4;
             }
-            obj = { type: "linear-gradient", direction: null, colorStops: null };
-            obj.direction = tmp28;
-            obj.colorStops = tmp8;
-            let combined = items.concat(obj);
+            let obj2 = { type: "linear-gradient", direction: null, colorStops: null };
+            obj2.direction = tmp28;
+            obj2.colorStops = tmp8;
+            let combined = items.concat(obj2);
           } else {
             if ("radial-gradient" === tmp5.type) {
               let shape = ellipse;
               let size = c13;
-              let obj1 = {};
+              let obj3 = {};
               let merged = Object.assign(closure_14);
-              let position = obj1;
+              let position = obj3;
               if (null != tmp5.shape) {
                 if ("circle" !== tmp5.shape) {
                   if ("ellipse" !== tmp5.shape) {
@@ -1005,12 +1003,12 @@ export default function processBackgroundImage(str) {
               if (null != tmp5.position) {
                 position = tmp5.position;
               }
-              let obj2 = { type: "radial-gradient", shape: null, size: null, position: null, colorStops: null };
-              obj2.shape = shape;
-              obj2.size = size;
-              obj2.position = position;
-              obj2.colorStops = tmp8;
-              items = items.concat(obj2);
+              let obj4 = { type: "radial-gradient", shape: null, size: null, position: null, colorStops: null };
+              obj4.shape = shape;
+              obj4.size = size;
+              obj4.position = position;
+              obj4.colorStops = tmp8;
+              items = items.concat(obj4);
             }
             continue;
           }

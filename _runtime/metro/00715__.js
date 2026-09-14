@@ -12,8 +12,7 @@ let closure_3 = {};
 
 export const addHandler = function addHandler(console, errorCallback) {
   dependencyMap[console] = dependencyMap[console] || [];
-  let arr = dependencyMap[console];
-  arr = arr.push(errorCallback);
+  dependencyMap[console].push(errorCallback);
   const tmp2 = dependencyMap[console] || [];
 };
 export const maybeInstrument = function maybeInstrument(console, fn) {

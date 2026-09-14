@@ -2,7 +2,7 @@
 
 // Module 4052
 import Parser2 from "Parser" /* 4031 */;
-import module_4053 from "module_4053" /* 4053 */;
+import module_4053_mod from "module_4053" /* 4053 */;
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -56,6 +56,7 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+let module_4053 = module_4053_mod;
 if (!module_4053) {
   let obj = { default: module_4053 };
   let tmp3 = obj;
@@ -151,8 +152,7 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-obj = { constructor: { value: ISODayParser, writable: true, configurable: true } };
-ISODayParser.prototype = Object.create(prototype, obj);
+ISODayParser.prototype = Object.create(prototype, { constructor: { value: ISODayParser, writable: true, configurable: true } });
 if (Parser) {
   _setPrototypeOf(ISODayParser, Parser);
 }

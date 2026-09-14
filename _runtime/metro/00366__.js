@@ -4,7 +4,7 @@
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import result1Default from "result1" /* 357 */;
 import _assertNativeAnimatedModuleDefault from "_assertNativeAnimatedModule" /* 367 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
@@ -29,6 +29,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 const connectAnimatedNodes = result1Default.API.connectAnimatedNodes;
 const disconnectAnimatedNodes = result1Default.API.disconnectAnimatedNodes;

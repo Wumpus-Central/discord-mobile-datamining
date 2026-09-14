@@ -3,13 +3,19 @@
 // Module 9850
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import noop from "module_19" /* 19 */;
-import module_9851 from "module_9851" /* 9851 */;
+import noop_mod from "module_19" /* 19 */;
+import module_9851_mod from "module_9851" /* 9851 */;
 
+const require = globalThis.__r;
+
+let noop = noop_mod;
 ({ useCallback: c2, useEffect: c3, useRef: closure_4 } = noop);
+let noop = noop_mod;
 const NativeEventEmitter = _mod17.NativeEventEmitter;
 const jsx = jsxProd.jsx;
+let module_9851 = module_9851_mod;
 const nativeComponent = module_9851.getNativeComponent();
+let module_9851 = module_9851_mod;
 const nativeModule = module_9851.getNativeModule();
 const memoResult = noop.memo((date) => {
   _require = date;
@@ -21,12 +27,12 @@ const memoResult = noop.memo((date) => {
     if (null === id) {
       if (typeof fromIsoWithTimeZoneOffset === "function") {
         const _Date = Date;
-        date = new Date(date);
+        const date1 = new Date(date);
         if (date.onDateChange) {
-          obj.onDateChange(date);
+          date.onDateChange(date1);
         }
         if (date.onDateStringChange) {
-          obj.onDateStringChange(tmp);
+          date.onDateStringChange(tmp);
         }
       } else {
         throw new TypeError("Trying to call a non-function");
@@ -98,13 +104,11 @@ const memoResult = noop.memo((date) => {
             obj.style = items3;
             obj.onChange = tmp;
             obj.onStateChange = tmp2;
-            obj = { props: null, id: null };
-            obj.props = obj;
-            obj.id = current;
-            const modal = require("module_9853").useModal(obj);
+            const obj2 = { props: obj, id: current };
+            const modal = require("module_9853").useModal(obj2);
             let tmp16 = null;
             if (!date.modal) {
-              obj = {};
+              const obj4 = {};
               const merged1 = Object.assign(obj);
               tmp16 = <closure_7 />;
             }

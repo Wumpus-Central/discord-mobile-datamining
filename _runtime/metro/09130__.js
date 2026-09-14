@@ -8,6 +8,8 @@ import _mod9132 from "module_9132" /* 9132 */;
 import _mod9133 from "module_9133" /* 9133 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
+const require = globalThis.__r;
+
 let self = this;
 let self2 = this;
 if (this) {
@@ -68,7 +70,7 @@ if (self2) {
         if (!tmp3) {
           input1 = input.input;
         }
-        let obj = { type: "tuple", items: input1, rest: null };
+        const obj = { type: "tuple", items: input1, rest: null };
         const util = _mod9064.util;
         const merged = Object.assign(util.normalizeParams(undefined));
         let zodTuple = new exports.ZodTuple(obj);
@@ -81,7 +83,7 @@ if (self2) {
           zodTuple = fnResult._array(exports.ZodArray, fnResult._unknown(exports.ZodUnknown), undefined);
         }
       }
-      obj = { type: "function", input: zodTuple, output: null };
+      const obj2 = { type: "function", input: zodTuple, output: null };
       let output;
       if (input != null) {
         output = input.output;
@@ -89,8 +91,8 @@ if (self2) {
       if (output == null) {
         output = fnResult._unknown(exports.ZodUnknown);
       }
-      obj.output = output;
-      const zodFunction = new exports.ZodFunction(obj);
+      obj2.output = output;
+      const zodFunction = new exports.ZodFunction(obj2);
       return zodFunction;
     }
     const _Object3 = Object;
@@ -124,8 +126,8 @@ if (self2) {
       const zodUnion = new exports.ZodUnion({ type: "union", options: roles });
       return zodUnion;
     }
-    function intersection(arr, items2) {
-      const rect = { type: "intersection", left: arr, right: items2 };
+    function intersection(found, items3) {
+      const rect = { type: "intersection", left: found, right: items3 };
       const zodIntersection = new exports.ZodIntersection(rect);
       return zodIntersection;
     }
@@ -495,10 +497,9 @@ if (self2) {
       if (arg0 == null) {
         obj = {};
       }
-      obj = { type: "object", shape: obj };
       const util = _mod9064.util;
       const merged = Object.assign(util.normalizeParams(message));
-      const zodObject = new exports.ZodObject(obj);
+      const zodObject = new exports.ZodObject({ type: "object", shape: obj });
       return zodObject;
     };
     exports.strictObject = function strictObject(shape, message) {
@@ -529,12 +530,12 @@ if (self2) {
     exports.intersection = intersection;
     exports.tuple = tuple;
     exports.record = record;
-    exports.partialRecord = function partialRecord(z11, objectResult, message) {
+    exports.partialRecord = function partialRecord(z11, objectResult4, message) {
       const cloneResult = fnResult.clone(z11);
       cloneResult._zod.values = undefined;
       const util = _mod9064.util;
       const merged = Object.assign(util.normalizeParams(message));
-      const zodRecord = new exports.ZodRecord({ type: "record", keyType: cloneResult, valueType: objectResult });
+      const zodRecord = new exports.ZodRecord({ type: "record", keyType: cloneResult, valueType: objectResult4 });
       return zodRecord;
     };
     exports.looseRecord = function looseRecord(stringResult1, anyResult, message) {
@@ -581,10 +582,8 @@ if (self2) {
     exports.exactOptional = exactOptional;
     exports.nullable = nullable;
     exports.nullish = function nullish(innerType) {
-      let obj = { type: "nullable", innerType };
-      const zodNullable = new exports.ZodNullable(obj);
-      obj = { type: "optional", innerType: zodNullable };
-      const zodOptional = new exports.ZodOptional(obj);
+      const zodNullable = new exports.ZodNullable({ type: "nullable", innerType });
+      const zodOptional = new exports.ZodOptional({ type: "optional", innerType: zodNullable });
       return zodOptional;
     };
     exports._default = _default;
@@ -638,17 +637,16 @@ if (self2) {
       if (message === undefined) {
         obj = {};
       }
-      obj = {
+      const util = _mod9064.util;
+      const merged = Object.assign(util.normalizeParams(obj));
+      const zodCustom = new exports.ZodCustom({
         type: "custom",
         check: "custom",
         fn(D) {
           return D instanceof closure_0;
         },
         abort: true
-      };
-      const util = _mod9064.util;
-      const merged = Object.assign(util.normalizeParams(obj));
-      const zodCustom = new exports.ZodCustom(obj);
+      });
       zodCustom._zod.bag.Class = Class;
       zodCustom._zod.check = (value) => {
         if (!(value.value instanceof closure_0)) {
@@ -672,25 +670,21 @@ if (self2) {
         type: "lazy",
         getter: () => {
           const items = [fnResult._string(exports.ZodString, closure_0), fnResult._number(exports.ZodNumber, undefined), fnResult._boolean(exports.ZodBoolean, undefined), fnResult._null(exports.ZodNull, undefined), fnResult._array(exports.ZodArray, zodLazy, undefined), ];
-          let obj = { type: "record", keyType: fnResult._string(exports.ZodString, undefined), valueType: zodLazy };
           const util = _mod9064.util;
           const merged = Object.assign(util.normalizeParams(undefined));
-          const zodRecord = new exports.ZodRecord(obj);
+          const zodRecord = new exports.ZodRecord({ type: "record", keyType: fnResult._string(exports.ZodString, undefined), valueType: zodLazy });
           items[5] = zodRecord;
-          obj = { type: "union", options: items };
           const util2 = _mod9064.util;
           const merged1 = Object.assign(util2.normalizeParams(undefined));
-          const zodUnion = new exports.ZodUnion(obj);
+          const zodUnion = new exports.ZodUnion({ type: "union", options: items });
           return zodUnion;
         }
       });
       return zodLazy;
     };
     exports.preprocess = function preprocess(transform, out) {
-      let obj = { type: "transform", transform };
-      const zodTransform = new exports.ZodTransform(obj);
-      obj = { type: "pipe", in: zodTransform, out };
-      const zodPipe = new exports.ZodPipe(obj);
+      const zodTransform = new exports.ZodTransform({ type: "transform", transform });
+      const zodPipe = new exports.ZodPipe({ type: "pipe", in: zodTransform, out });
       return zodPipe;
     };
     const fnResult = fn(_mod9064);
@@ -703,15 +697,12 @@ if (self2) {
       _require = _standard;
       const $ZodType = closure_6.$ZodType;
       $ZodType.init(_standard, def);
-      let obj = { jsonSchema: null };
-      obj = { input: require("initializeContext").createStandardJSONSchemaMethod(_standard, "input"), output: require("initializeContext").createStandardJSONSchemaMethod(_standard, "output") };
-      obj.jsonSchema = obj;
+      let obj = { jsonSchema: { input: require("initializeContext").createStandardJSONSchemaMethod(_standard, "input"), output: require("initializeContext").createStandardJSONSchemaMethod(_standard, "output") } };
       let merged = Object.assign(_standard["~standard"], obj);
       _standard.toJSONSchema = require("initializeContext").createToJSONSchemaMethod(_standard, {});
       _standard.def = def;
       _standard.type = def.type;
-      obj = { value: def };
-      Object.defineProperty(_standard, "_def", obj);
+      Object.defineProperty(_standard, "_def", { value: def });
       _standard.check = () => {
         const items = [...arguments];
         const util = _mod9064.util;
@@ -725,9 +716,9 @@ if (self2) {
           ...items.map((check) => {
             let tmp = check;
             if (typeof check === "function") {
-              let obj = { _zod: null };
-              obj = { check, def: { check: "custom" }, onattach: [] };
-              obj._zod = obj;
+              const obj = { _zod: null };
+              const obj2 = { check, def: { check: "custom" }, onattach: [] };
+              obj._zod = obj2;
               tmp = obj;
             }
             return tmp;
@@ -757,8 +748,8 @@ if (self2) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -770,13 +761,13 @@ if (self2) {
                 throw value;
               } else if (arg0 === 2) {
                 c2 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
-                obj = { callee: parseAsync.parseAsync };
+                const obj = { callee: parseAsync.parseAsync };
                 c2 = 3;
-                const obj1 = { value: closure_2_10.parseAsync(parseAsync, parseAsync, closure_1, obj), done: true };
-                return obj1;
+                const obj4 = { value: closure_2_10.parseAsync(parseAsync, parseAsync, closure_1, obj), done: true };
+                return obj4;
               }
             } catch (tmp11) {
               c2 = tmp;
@@ -803,8 +794,8 @@ if (self2) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -816,11 +807,11 @@ if (self2) {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               c2 = 3;
-              obj = { value: closure_2_10.safeParseAsync(closure_0, closure_0, closure_1), done: true };
+              const obj = { value: closure_2_10.safeParseAsync(closure_0, closure_0, closure_1), done: true };
               return obj;
             }
           } catch (tmp8) {
@@ -850,8 +841,8 @@ if (self2) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -863,11 +854,11 @@ if (self2) {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               c2 = 3;
-              obj = { value: closure_2_10.encodeAsync(closure_0, closure_0, closure_1), done: true };
+              const obj = { value: closure_2_10.encodeAsync(closure_0, closure_0, closure_1), done: true };
               return obj;
             }
           } catch (tmp8) {
@@ -894,8 +885,8 @@ if (self2) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -907,11 +898,11 @@ if (self2) {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               c2 = 3;
-              obj = { value: closure_2_10.decodeAsync(closure_0, closure_0, closure_1), done: true };
+              const obj = { value: closure_2_10.decodeAsync(closure_0, closure_0, closure_1), done: true };
               return obj;
             }
           } catch (tmp8) {
@@ -940,8 +931,8 @@ if (self2) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -953,11 +944,11 @@ if (self2) {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               c2 = 3;
-              obj = { value: closure_2_10.safeEncodeAsync(closure_0, closure_0, closure_1), done: true };
+              const obj = { value: closure_2_10.safeEncodeAsync(closure_0, closure_0, closure_1), done: true };
               return obj;
             }
           } catch (tmp8) {
@@ -984,8 +975,8 @@ if (self2) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -997,11 +988,11 @@ if (self2) {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               c2 = 3;
-              obj = { value: closure_2_10.safeDecodeAsync(closure_0, closure_0, closure_1), done: true };
+              const obj = { value: closure_2_10.safeDecodeAsync(closure_0, closure_0, closure_1), done: true };
               return obj;
             }
           } catch (tmp8) {
@@ -1042,10 +1033,8 @@ if (self2) {
         return zodNullable;
       };
       _standard.nullish = () => {
-        let obj = { type: "nullable", innerType };
-        const zodNullable = new exports.ZodNullable(obj);
-        obj = { type: "optional", innerType: zodNullable };
-        const zodOptional = new exports.ZodOptional(obj);
+        const zodNullable = new exports.ZodNullable({ type: "nullable", innerType });
+        const zodOptional = new exports.ZodOptional({ type: "optional", innerType: zodNullable });
         return zodOptional;
       };
       _standard.nonoptional = (message) => {
@@ -1068,10 +1057,8 @@ if (self2) {
         return zodIntersection;
       };
       _standard.transform = (transform) => {
-        let obj = { type: "transform", transform };
-        const zodTransform = new exports.ZodTransform(obj);
-        obj = { type: "pipe", in: _in, out: zodTransform };
-        const zodPipe = new exports.ZodPipe(obj);
+        const zodTransform = new exports.ZodTransform({ type: "transform", transform });
+        const zodPipe = new exports.ZodPipe({ type: "pipe", in: _in, out: zodTransform });
         return zodPipe;
       };
       _standard.default = (arg0) => {
@@ -1807,7 +1794,7 @@ if (self2) {
       _zod.options = Object.values(arg1.entries);
       const set = new Set(Object.keys(arg1.entries));
       _zod.extract = (arg0, message) => {
-        let obj = {};
+        const obj = {};
         const iter = arg0[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
@@ -1827,17 +1814,16 @@ if (self2) {
             throw error;
           }
         }
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(closure_1);
-        obj.checks = [];
+        obj2.checks = [];
         const util = _mod9064.util;
         const merged1 = Object.assign(util.normalizeParams(message));
-        obj.entries = obj;
-        const zodEnum = new exports.ZodEnum(obj);
+        obj2.entries = obj;
+        const zodEnum = new exports.ZodEnum(obj2);
         return zodEnum;
       };
       _zod.exclude = (arg0, message) => {
-        let obj = {};
         const merged = Object.assign(closure_1.entries);
         const iter = arg0[Symbol.iterator]();
         const nextResult = iter.next();
@@ -1858,13 +1844,13 @@ if (self2) {
             throw error;
           }
         }
-        obj = {};
+        const obj2 = {};
         const merged1 = Object.assign(closure_1);
-        obj.checks = [];
+        obj2.checks = [];
         const util = _mod9064.util;
         const merged2 = Object.assign(util.normalizeParams(message));
-        obj.entries = obj;
-        const zodEnum = new exports.ZodEnum(obj);
+        obj2.entries = {};
+        const zodEnum = new exports.ZodEnum(obj2);
         return zodEnum;
       };
     });

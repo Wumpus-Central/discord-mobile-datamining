@@ -50,10 +50,10 @@ function instrumentHistory() {
         return closure_0.apply(self, items);
       };
     }
+    _mod682.fill(_mod904.WINDOW.history, "pushState", historyReplacementFunction);
     let tmpResult = _mod682;
-    tmpResult.fill(_mod904.WINDOW.history, "pushState", historyReplacementFunction);
-    tmpResult = _mod682;
-    tmpResult.fill(_mod904.WINDOW.history, "replaceState", historyReplacementFunction);
+    _mod682.fill(_mod904.WINDOW.history, "replaceState", historyReplacementFunction);
+    const tmpResult2 = _mod682;
   }
   obj = _mod682;
 }

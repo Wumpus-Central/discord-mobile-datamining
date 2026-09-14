@@ -4,6 +4,8 @@
 import noop from "module_19" /* 19 */;
 import module_1639 from "module_1639" /* 1639 */;
 
+const require = globalThis.__r;
+
 function getWebScrollableElement(getScrollableNode) {
   let scrollableNode;
   if (getScrollableNode != null) {
@@ -23,11 +25,10 @@ let closure_9 = ["onScroll", "onScrollBeginDrag", "onScrollEndDrag", "onMomentum
 export const useScrollViewOffset = module_1639.isWeb() ? (function useScrollViewOffsetWeb(animatedRef, arg1) {
   _require = animatedRef;
   let sharedValue = arg1;
-  let obj = require("module_1788");
   if (arg1 == null) {
     sharedValue = obj.useSharedValue(0);
   }
-  current = closure_4(sharedValue).current;
+  let current = closure_4(sharedValue).current;
   const fn = function _() {
     if (closure_0) {
       current = tmp.current;
@@ -41,8 +42,7 @@ export const useScrollViewOffset = module_1639.isWeb() ? (function useScrollView
       current.value = 0 === scrollableNode.scrollLeft ? scrollableNode.scrollTop : scrollableNode.scrollLeft;
     }
   };
-  obj = { animatedRef, getWebScrollableElement, offset: current };
-  fn.__closure = obj;
+  fn.__closure = { animatedRef, getWebScrollableElement, offset: current };
   fn.__workletHash = 2244034762234;
   fn.__initData = __initData;
   const items = [animatedRef, current];

@@ -12,56 +12,56 @@ export const count = function count(name, arg1) {
   if (arg1 === undefined) {
     num = 1;
   }
-  const obj = { type: "counter", name, value: num, unit: null, attributes: null };
+  const obj2 = { type: "counter", name, value: num, unit: null, attributes: null };
   let unit;
   if (unit != null) {
     unit = unit.unit;
   }
-  obj.unit = unit;
+  obj2.unit = unit;
   let attributes;
   if (unit != null) {
     attributes = unit.attributes;
   }
-  obj.attributes = attributes;
+  obj2.attributes = attributes;
   let scope;
   if (unit != null) {
     scope = unit.scope;
   }
-  const result = obj._INTERNAL_captureMetric(obj, { scope });
+  const result = _INTERNAL_captureSerializedMetric._INTERNAL_captureMetric(obj2, { scope });
 };
 export const distribution = function distribution(name, value, unit) {
-  const obj = { type: "distribution", name, value, unit: null, attributes: null };
+  const obj2 = { type: "distribution", name, value, unit: null, attributes: null };
   unit = undefined;
   if (unit != null) {
     unit = unit.unit;
   }
-  obj.unit = unit;
+  obj2.unit = unit;
   let attributes;
   if (unit != null) {
     attributes = unit.attributes;
   }
-  obj.attributes = attributes;
+  obj2.attributes = attributes;
   let scope;
   if (unit != null) {
     scope = unit.scope;
   }
-  const result = obj._INTERNAL_captureMetric(obj, { scope });
+  const result = _INTERNAL_captureSerializedMetric._INTERNAL_captureMetric(obj2, { scope });
 };
 export const gauge = function gauge(name, value, unit) {
-  const obj = { type: "gauge", name, value, unit: null, attributes: null };
+  const obj2 = { type: "gauge", name, value, unit: null, attributes: null };
   unit = undefined;
   if (unit != null) {
     unit = unit.unit;
   }
-  obj.unit = unit;
+  obj2.unit = unit;
   let attributes;
   if (unit != null) {
     attributes = unit.attributes;
   }
-  obj.attributes = attributes;
+  obj2.attributes = attributes;
   let scope;
   if (unit != null) {
     scope = unit.scope;
   }
-  const result = obj._INTERNAL_captureMetric(obj, { scope });
+  const result = _INTERNAL_captureSerializedMetric._INTERNAL_captureMetric(obj2, { scope });
 };

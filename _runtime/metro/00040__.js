@@ -136,7 +136,7 @@ let items = [
           arr = arr.push(self._callID << 1);
         }
         if (arg4) {
-          arr = arr.push(self._callID << 1 | 1);
+          arr.push(self._callID << 1 | 1);
         }
         const result = self._successCallbacks.set(self._callID, arg4);
         const result1 = self._failureCallbacks.set(self._callID, arg3);
@@ -153,23 +153,21 @@ let items = [
       this.processCallbacks(substr, error, substr, items, items2);
       const first = this._queue[0];
       first.push(substr);
-      let arr1 = this._queue[1];
-      arr1.push(error);
-      arr1 = this._queue[2].push(substr);
+      this._queue[1].push(error);
+      this._queue[2].push(substr);
       const timestamp = Date.now();
-      let obj = MessageQueue;
       if (MessageQueue.nativeFlushQueueImmediate) {
         if (timestamp - self._lastFlush >= 5) {
           items = [[], [], [], self._callID];
           self._queue = items;
           self._lastFlush = timestamp;
-          const result = obj.nativeFlushQueueImmediate(self._queue);
+          const result = MessageQueue.nativeFlushQueueImmediate(self._queue);
         }
       }
       _mod46.counterEvent("pending_js_to_native_queue", self._queue[0].length);
       if (self.__spy) {
-        obj = { type: 1, module: "" + substr, method: error, args: substr };
-        self.__spy(obj);
+        const obj3 = { type: 1, module: "" + substr, method: error, args: substr };
+        self.__spy(obj3);
       }
     }
   },
@@ -259,17 +257,17 @@ let items = [
             str9 = "true";
           }
           const _HermesInternal3 = HermesInternal;
-          let tmp11Result = tmp11(38);
-          tmp11Result(false, "Failed to call into JavaScript module method " + module + "." + method + "(). Module has not been registered as callable. Bridgeless Mode: " + str9 + ". Registered callable JavaScript modules (n = " + keys.length + "): " + joined + ".\n          A frequent cause of the error is that the application entry file path is incorrect. This can also happen when the JS bundle is corrupt or there is an early initialization error when loading React Native.");
+          tmp11(38)(false, "Failed to call into JavaScript module method " + module + "." + method + "(). Module has not been registered as callable. Bridgeless Mode: " + str9 + ". Registered callable JavaScript modules (n = " + keys.length + "): " + joined + ".\n          A frequent cause of the error is that the application entry file path is incorrect. This can also happen when the JS bundle is corrupt or there is an early initialization error when loading React Native.");
+          const tmp11Result = tmp11(38);
         }
         if (!callableModule[method]) {
           const _HermesInternal4 = HermesInternal;
-          tmp11Result = tmp11(38);
-          tmp11Result(false, "Failed to call into JavaScript module method " + module + "." + method + "(). Module exists, but the method is undefined.");
+          tmp11(38)(false, "Failed to call into JavaScript module method " + module + "." + method + "(). Module exists, but the method is undefined.");
+          const tmp11Result3 = tmp11(38);
         }
         callableModule[method].apply(callableModule, args);
         tmp11(46).endEvent();
-        const tmp11Result1 = tmp11(46);
+        const tmp11Result4 = tmp11(46);
       } catch (tmp35) {
         tmp2(tmp[2]).endEvent();
         throw tmp35;

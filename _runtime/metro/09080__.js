@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "znak\u016F", verb: "m\u00EDt" }, file: { unit: "bajt\u016F", verb: "m\u00EDt" }, array: { unit: "prvk\u016F", verb: "m\u00EDt" }, set: { unit: "prvk\u016F", verb: "m\u00EDt" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "znak\u016F", verb: "m\u00EDt" }, file: { unit: "bajt\u016F", verb: "m\u00EDt" }, array: { unit: "prvk\u016F", verb: "m\u00EDt" }, set: { unit: "prvk\u016F", verb: "m\u00EDt" } };
         closure_1 = { regex: "regul\u00E1rn\u00ED v\u00FDraz", email: "e-mailov\u00E1 adresa", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "datum a \u010Das ve form\u00E1tu ISO", date: "datum ve form\u00E1tu ISO", time: "\u010Das ve form\u00E1tu ISO", duration: "doba trv\u00E1n\u00ED ISO", ipv4: "IPv4 adresa", ipv6: "IPv6 adresa", cidrv4: "rozsah IPv4", cidrv6: "rozsah IPv6", base64: "\u0159et\u011Bzec zak\u00F3dovan\u00FD ve form\u00E1tu base64", base64url: "\u0159et\u011Bzec zak\u00F3dovan\u00FD ve form\u00E1tu base64url", json_string: "\u0159et\u011Bzec ve form\u00E1tu JSON", e164: "\u010D\u00EDslo E.164", jwt: "JWT", template_literal: "vstup" };
         closure_2 = { nan: "NaN", number: "\u010D\u00EDslo", string: "\u0159et\u011Bzec", function: "funkce", array: "pole" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp49 == null) {
                 tmp49 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no instanceof " + code.expected + ", obdr\u017Eeno " + tmp49;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str27 = "<=";
               }
-              let tmp28 = obj[code.origin];
+              let tmp28 = obj2[code.origin];
               if (tmp28 == null) {
                 tmp28 = null;
               }
@@ -104,13 +103,13 @@ if (self2) {
                 if (str28 == null) {
                   str28 = "hodnota";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str34 = tmp28.unit;
                 if (str34 == null) {
                   str34 = "prvk\u016F";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Hodnota je p\u0159\u00EDli\u0161 velk\u00E1: " + str28 + " mus\u00ED m\u00EDt " + str27 + str + " " + str34;
+                let combined2 = "Hodnota je p\u0159\u00EDli\u0161 velk\u00E1: " + str28 + " mus\u00ED m\u00EDt " + str27 + str1 + " " + str34;
               } else {
                 let str29 = str28;
                 if (str28 == null) {
@@ -125,7 +124,7 @@ if (self2) {
               if (code.inclusive) {
                 str16 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
@@ -134,13 +133,13 @@ if (self2) {
                 if (str17 == null) {
                   str17 = "hodnota";
                 }
-                const str1 = code.minimum.toString();
+                const str48 = code.minimum.toString();
                 let str23 = tmp15.unit;
                 if (str23 == null) {
                   str23 = "prvk\u016F";
                 }
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Hodnota je p\u0159\u00EDli\u0161 mal\u00E1: " + str17 + " mus\u00ED m\u00EDt " + str16 + str1 + " " + str23;
+                let combined3 = "Hodnota je p\u0159\u00EDli\u0161 mal\u00E1: " + str17 + " mus\u00ED m\u00EDt " + str16 + str48 + " " + str23;
               } else {
                 let str18 = str17;
                 if (str17 == null) {
@@ -185,7 +184,6 @@ if (self2) {
               return "Neplatn\u00FD vstup";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Neplatn\u00E1 hodnota v ";
               return "Neplatn\u00E1 hodnota v " + code.origin;
             default:
               return "Neplatn\u00FD vstup";

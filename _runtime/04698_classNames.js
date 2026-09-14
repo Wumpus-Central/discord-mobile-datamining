@@ -24,8 +24,8 @@ function classNames() {
                 let _Object = Object;
                 if (str3.toString !== Object.prototype.toString) {
                   let str5 = str3.toString;
-                  str = str5.toString();
-                  if (!str.includes("[native code]")) {
+                  let str1 = str5.toString();
+                  if (!str1.includes("[native code]")) {
                     str4 = str3.toString();
                   }
                 }

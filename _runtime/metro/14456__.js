@@ -1,34 +1,5 @@
 // === Module 14456: ? ===
 
 // Module 14456
-import _mod17 from "module_17" /* 17 */;
-import replaceByteInByteSequence from "replaceByteInByteSequence" /* 14457 */;
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
-}
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
-  }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
-  }
-};
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {
-
-};
-
-export const URL = replaceByteInByteSequence.URL;
+export default { name: "react-native-url-polyfill", version: "2.0.0", description: "A lightweight and trustworthy URL polyfill for React Native", keywords: ["URL", "URLSearchParams", "polyfill", "react native", "whatwg-url"], bugs: { url: "https://github.com/charpeni/react-native-url-polyfill/issues" }, homepage: "https://github.com/charpeni/react-native-url-polyfill", readme: "https://github.com/charpeni/react-native-url-polyfill#readme", repository: { type: "git", url: "https://github.com/charpeni/react-native-url-polyfill.git" }, main: "index.js", types: "index.d.ts", scripts: { test: "jest", lint: "eslint .", prepare: "husky install", "bundle-size": "node scripts/bundle-size" }, author: "Nicolas Charpentier <nicolas.charpentier079@gmail.com>", license: "MIT", dependencies: { "whatwg-url-without-unicode": "8.0.0-3" }, devDependencies: { "@react-native-community/eslint-config": "3.2.0", detox: "20.9.1", eslint: "8.44.0", "eslint-plugin-prettier": "4.2.1", husky: "8.0.3", jest: "29.5.0", "lint-staged": "13.2.3", "metro-react-native-babel-preset": "0.76.7", nanoid: "3.3.6", prettier: "2.8.8", react: "18.2.0", "react-native": "0.72.1", "react-native-bundle-scale": "1.1.0", typescript: "5.1.6" }, peerDependencies: { "react-native": "*" }, jest: { preset: "react-native", testPathIgnorePatterns: ["/node_modules/", "./platforms/"] }, "lint-staged": { "*.js": ["eslint --fix"] } };

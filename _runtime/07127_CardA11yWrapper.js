@@ -11,7 +11,7 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
   ({ focused, animated } = arg0);
   c0 = undefined;
   ({ active, isNextScreenTransparent, detachCurrentScreen, children } = arg0);
-  [tmp2, c0] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, c0] = noop.useState(false);
   const imperativeHandle = noop.useImperativeHandle(arg1, () => ({ setInert }), []);
   let tmp4 = !animated;
   if (!animated) {
@@ -23,7 +23,7 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
   if (tmp4) {
     tmp4 = !focused;
   }
-  let obj = { "aria-hidden": !focused, pointerEvents: null, style: null, collapsable: false, children: null };
+  const obj = { "aria-hidden": !focused, pointerEvents: null, style: null, collapsable: false, children: null };
   if (!animated) {
     tmp2 = !focused;
   }
@@ -33,21 +33,21 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
   }
   obj.pointerEvents = str;
   const items = [absoluteFill.absoluteFill, ];
-  obj = { overflow: str2, display: null, visibility: null };
+  const obj2 = { overflow: "hidden", display: null, visibility: null };
   let str3 = "flex";
   if (tmp4) {
     str3 = "none";
   }
-  obj.display = str3;
+  obj2.display = str3;
   let str4 = "visible";
   if (tmp4) {
     str4 = "hidden";
   }
-  obj.visibility = str4;
-  items[1] = obj;
+  obj2.visibility = str4;
+  items[1] = obj2;
   obj.style = items;
   obj.children = children;
-  return <React3 overflow={str2} display={null} visibility={null} />;
+  return <React3 aria-hidden={!focused} pointerEvents={null} style={null} collapsable={false}>{null}</React3>;
 });
 forwardRefResult.displayName = "CardA11yWrapper";
 

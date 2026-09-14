@@ -15,22 +15,22 @@ export const JumpingTransition = function JumpingTransition(name, translateX) {
   } else {
     diff = -translateY + result;
   }
-  let obj = { name, style: null, duration: 300 };
-  obj = { 0: null, 50: null, 100: null };
-  obj = { transform: null, easing: null };
+  const obj = { name, style: null, duration: 300 };
+  const obj2 = { 0: null, 50: null, 100: null };
+  const obj3 = { transform: null, easing: null };
   const items = [{ translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY }];
-  obj.transform = items;
-  obj.easing = linear.Easing.exp;
-  obj.transform = obj;
-  const obj2 = { transform: null };
-  const obj1 = { translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY };
+  obj3.transform = items;
+  obj3.easing = linear.Easing.exp;
+  obj2[0] = obj3;
+  const obj5 = { transform: null };
+  const obj4 = { translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY };
   const items1 = [{ translateX: `${translateX / 2}px`, translateY: "" + diff + "px", scale: "" + scaleX + "," + scaleY }];
-  obj2.transform = items1;
-  obj[50] = obj2;
-  const obj4 = { transform: null };
+  obj5.transform = items1;
+  obj2[50] = obj5;
+  const obj7 = { transform: null };
   const items2 = [{ translateX: "0px", translateY: "0px", scale: "1,1" }];
-  obj4.transform = items2;
-  obj[100] = obj4;
-  obj.style = obj;
+  obj7.transform = items2;
+  obj2[100] = obj7;
+  obj.style = obj2;
   return obj;
 };

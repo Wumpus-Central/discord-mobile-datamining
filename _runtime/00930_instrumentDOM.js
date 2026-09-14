@@ -42,15 +42,15 @@ function instrumentDOM() {
             tmp2 = tmp5;
           }
           if (!tmp2) {
-            let obj = _mod682;
-            const result = obj.addNonEnumerableProperty(event, "_sentryCaptured", true);
+            const result = _mod682.addNonEnumerableProperty(event, "_sentryCaptured", true);
             let tmp10 = tmp;
             if (tmp) {
               tmp10 = !tmp._sentryId;
             }
             if (tmp10) {
               const tmp7Result = _mod682;
-              const result1 = tmp7Result.addNonEnumerableProperty(tmp, "_sentryId", tmp7Result.uuid4());
+              const result1 = tmp7Result.addNonEnumerableProperty(tmp, "_sentryId", _mod682.uuid4());
+              const tmp7Result2 = _mod682;
             }
             let str6 = "input";
             if ("keypress" !== event.type) {
@@ -71,8 +71,8 @@ function instrumentDOM() {
                 }
               }
             })(event)) {
-              obj = { event, name: str6, global: flag };
-              closure_0(obj);
+              const obj2 = { event, name: str6, global: flag };
+              closure_0(obj2);
               type = event.type;
               _sentryId = undefined;
               if (tmp) {
@@ -109,8 +109,7 @@ function instrumentDOM() {
         }
       }
       if (hasOwnPropertyResult) {
-        let tmpResult = _mod682;
-        tmpResult.fill(prototype, "addEventListener", (arg0) => {
+        _mod682.fill(prototype, "addEventListener", (arg0) => {
           closure_0 = arg0;
           return function(arg0, arg1, arg2) {
             const self = this;
@@ -149,8 +148,8 @@ function instrumentDOM() {
             return call2Result;
           };
         });
-        tmpResult = _mod682;
-        tmpResult.fill(prototype, "removeEventListener", (arg0) => {
+        const tmpResult = _mod682;
+        _mod682.fill(prototype, "removeEventListener", (arg0) => {
           closure_0 = arg0;
           return function(arg0, arg1, arg2) {
             const self = this;
@@ -193,6 +192,7 @@ function instrumentDOM() {
             return call2Result;
           };
         });
+        const tmpResult2 = _mod682;
       }
     });
     const triggerHandlers = tmp(682).triggerHandlers;
@@ -234,15 +234,15 @@ function makeDOMEventHandler(arg0) {
           tmp2 = tmp5;
         }
         if (!tmp2) {
-          let obj = _mod682;
-          const result = obj.addNonEnumerableProperty(event, "_sentryCaptured", true);
+          const result = _mod682.addNonEnumerableProperty(event, "_sentryCaptured", true);
           let tmp10 = tmp;
           if (tmp) {
             tmp10 = !tmp._sentryId;
           }
           if (tmp10) {
             const tmp7Result = _mod682;
-            const result1 = tmp7Result.addNonEnumerableProperty(tmp, "_sentryId", tmp7Result.uuid4());
+            const result1 = tmp7Result.addNonEnumerableProperty(tmp, "_sentryId", _mod682.uuid4());
+            const tmp7Result2 = _mod682;
           }
           let str6 = "input";
           if ("keypress" !== event.type) {
@@ -263,8 +263,8 @@ function makeDOMEventHandler(arg0) {
               }
             }
           })(event)) {
-            obj = { event, name: str6, global: flag };
-            closure_0(obj);
+            const obj2 = { event, name: str6, global: flag };
+            closure_0(obj2);
             type = event.type;
             _sentryId = undefined;
             if (tmp) {

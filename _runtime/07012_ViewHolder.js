@@ -1,10 +1,14 @@
 // === Module 7012: ViewHolder ===
 
 // Module 7012 (ViewHolder)
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
+const require = globalThis.__r;
+
+let noop = noop_mod;
 ({ useCallback: c2, useLayoutEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+let noop = noop_mod;
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 
 export const ViewHolder = noop.memo((index) => {
@@ -51,8 +55,8 @@ export const ViewHolder = noop.memo((index) => {
     return tmp2;
   }, items2);
   if (inverted) {
+    invertedTransformStyle = require("module_6975").getInvertedTransformStyle(horizontal);
     let obj = require("module_6975");
-    invertedTransformStyle = obj.getInvertedTransformStyle(horizontal);
   }
   let str = "column";
   if (horizontal) {
@@ -84,7 +88,7 @@ export const ViewHolder = noop.memo((index) => {
   if (CellRendererComponent == null) {
     CellRendererComponent = require("CompatView").CompatView;
   }
-  obj = { ref: tmp, onLayout: tmp3, style: size, index, children: null };
+  const obj3 = { ref: tmp, onLayout: tmp3, style: size, index, children: null };
   const items4 = [
     renderItem(() => {
       let tmpResult;
@@ -99,8 +103,8 @@ export const ViewHolder = noop.memo((index) => {
     }, items3),
     tmp4
   ];
-  obj.children = items4;
-  return target(CellRendererComponent, obj);
+  obj3.children = items4;
+  return target(CellRendererComponent, obj3);
 }, (index, index2) => {
   let tmp = index.index === index2.index;
   if (tmp) {

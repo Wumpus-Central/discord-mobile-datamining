@@ -7,6 +7,8 @@ import findFocusedRoute from "findFocusedRoute" /* 1510 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_3 = ["key", "routeNames"];
 const jsx = fn(21).jsx;
@@ -48,19 +50,17 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
   let stackRef;
   let getIsStateEmitted;
   let callback2;
-  let obj = setState;
   ({ theme, children } = onReady);
   const context = setState.useContext(require("get getKey").NavigationStateContext);
-  let obj1 = require("module_1501");
   if (!context.isDefault) {
-    if (!obj1.useNavigationIndependentTree()) {
+    if (!obj2.useNavigationIndependentTree()) {
       const _Error = Error;
       let error = new Error("Looks like you have nested a 'NavigationContainer' inside another. Normally you need only one container at the root of the app, so this was probably an error. If this was intentional, wrap the container in 'NavigationIndependentTree' explicitly. Note that this will make the child navigators disconnected from the parent and you won't be able to navigate between them.");
       throw error;
     }
   }
-  let tmpResult = require("module_1503");
-  const syncState = tmpResult.useSyncState(() => {
+  obj2 = require("module_1501");
+  const syncState = require("module_1503").useSyncState(() => {
     if (typeof getPartialState === "function") {
       let tmp3;
       if (undefined !== require) {
@@ -72,50 +72,50 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
         obj.routes = routes.map((state) => {
           let tmp = state;
           if (undefined !== state.state) {
-            let obj = {};
+            const obj2 = {};
             const merged = Object.assign(state);
             state = state.state;
             if (typeof flushUpdates === "function") {
               let tmp2;
               if (undefined !== state) {
                 ({ key, routeNames } = state);
-                obj = {};
+                const obj = {};
                 const merged1 = Object.assign(getState(state, closure_1_3));
                 obj.stale = true;
                 const routes = state.routes;
                 obj.routes = routes.map((state) => {
                   let tmp = state;
                   if (undefined !== state.state) {
-                    let obj = {};
+                    const obj2 = {};
                     const merged = Object.assign(state);
                     state = state.state;
                     if (typeof flushUpdates === "function") {
                       let tmp2;
                       if (undefined !== state) {
                         ({ key, routeNames } = state);
-                        obj = {};
+                        const obj = {};
                         const merged1 = Object.assign(getState(state, closure_1_3));
                         obj.stale = true;
                         const routes = state.routes;
                         obj.routes = routes.map((state) => {
                           let tmp = state;
                           if (undefined !== state.state) {
-                            let obj = {};
+                            const obj2 = {};
                             const merged = Object.assign(state);
                             state = state.state;
                             if (typeof flushUpdates === "function") {
                               let tmp2;
                               if (undefined !== state) {
                                 ({ key, routeNames } = state);
-                                obj = {};
+                                const obj = {};
                                 const merged1 = Object.assign(getState(state, closure_1_3));
                                 obj.stale = true;
                                 const routes = state.routes;
                                 obj.routes = routes.map(() => { ... });
                                 tmp2 = obj;
                               }
-                              obj.state = tmp2;
-                              tmp = obj;
+                              obj2.state = tmp2;
+                              tmp = obj2;
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
@@ -124,8 +124,8 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
                         });
                         tmp2 = obj;
                       }
-                      obj.state = tmp2;
-                      tmp = obj;
+                      obj2.state = tmp2;
+                      tmp = obj2;
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }
@@ -134,8 +134,8 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
                 });
                 tmp2 = obj;
               }
-              obj.state = tmp2;
-              tmp = obj;
+              obj2.state = tmp2;
+              tmp = obj2;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -154,20 +154,21 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
   setState = syncState.setState;
   scheduleUpdate = syncState.scheduleUpdate;
   flushUpdates = syncState.flushUpdates;
-  tmpResult = require("module_1506");
-  const lazyValue = tmpResult.useLazyValue(() => {
+  const tmpResult = require("module_1503");
+  const lazyValue = require("module_1506").useLazyValue(() => {
     const weakMap = new WeakMap();
     return weakMap;
   });
-  obj.useRef(true);
-  obj.useRef(undefined);
+  setState.useRef(true);
+  setState.useRef(undefined);
   getKey = obj.useCallback(() => ref2.current, []);
   callback1 = obj.useCallback((current) => {
     closure_9.current = current;
   }, []);
+  const tmpResult6 = require("module_1506");
   const childListeners = require("module_1507").useChildListeners();
   ({ listeners: c12, addListener } = childListeners);
-  const tmpResult1 = require("module_1507");
+  const tmpResult7 = require("module_1507");
   const keyedChildListeners = require("module_1508").useKeyedChildListeners();
   ({ keyedListeners: c14, addKeyedListener } = keyedChildListeners);
   const tmp15 = onStateChange(onReady[9])((arg0) => {
@@ -240,9 +241,9 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
   getCurrentRoute = tmp19;
   const tmp20 = onStateChange(onReady[9])(() => null != _undefined.focus[0]);
   isReady = tmp20;
-  const tmpResult2 = require("module_1508");
+  const tmpResult8 = require("module_1508");
   eventEmitter = require("module_1511").useEventEmitter();
-  const tmpResult3 = require("module_1511");
+  const tmpResult9 = require("module_1511");
   const optionsGetters = require("module_1512").useOptionsGetters({});
   addOptionsGetter = optionsGetters.addOptionsGetter;
   getCurrentOptions = optionsGetters.getCurrentOptions;
@@ -284,9 +285,7 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
   let items1 = [memo];
   const imperativeHandle = obj.useImperativeHandle(arg1, () => memo, items1);
   const tmp25 = onStateChange(onReady[9])((action, noop) => {
-    let obj = { type: "__unsafe_action__", data: null };
-    obj = { action, noop, stack: stackRef.current };
-    obj.data = obj;
+    const obj = { type: "__unsafe_action__", data: { action, noop, stack: stackRef.current } };
     eventEmitter.emit(obj);
   });
   onDispatchAction = tmp25;
@@ -294,19 +293,19 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
     eventEmitter.emit({ type: "__unsafe_event__", data });
   });
   onEmitEvent = tmp26;
-  obj.useRef(undefined);
+  setState.useRef(undefined);
   const tmp27 = onStateChange(onReady[9])((current) => {
     if (ref3.current !== current) {
       ref3.current = current;
-      let obj = { type: "options", data: null };
-      obj = { options: current };
-      obj.data = obj;
+      const obj = { type: "options", data: null };
+      const obj2 = { options: current };
+      obj.data = obj2;
       eventEmitter.emit(obj);
     }
   });
   onOptionsChange = tmp27;
   stackRef = obj.useRef(undefined);
-  obj.useRef(undefined);
+  setState.useRef(undefined);
   const tmp28 = onStateChange(onReady[9])(() => {
     const current = ref.current;
     let tmp = !current;
@@ -318,18 +317,18 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
   getIsStateEmitted = tmp28;
   const items2 = [addListener, addKeyedListener, tmp25, tmp26, tmp27, tmp28, scheduleUpdate, flushUpdates];
   const memo1 = obj.useMemo(() => ({ addListener, addKeyedListener, onDispatchAction, onEmitEvent, onOptionsChange, getIsStateEmitted, scheduleUpdate, flushUpdates, stackRef }), items2);
-  obj.useRef(true);
+  setState.useRef(true);
   callback2 = obj.useCallback(() => ref5.current, []);
   const items3 = [state, getState, setState, getKey, callback1, callback2, addOptionsGetter];
   const memo2 = obj.useMemo(() => ({ state, getState, setState, getKey, setKey: callback1, getIsInitial: callback2, addOptionsGetter }), items3);
-  obj.useRef(onReady);
-  obj.useRef(onStateChange);
+  setState.useRef(onReady);
+  setState.useRef(onStateChange);
   const effect = obj.useEffect(() => {
     closure_33.current = false;
     closure_36.current = onStateChange;
     closure_35.current = onReady;
   });
-  obj.useRef(false);
+  setState.useRef(false);
   const items4 = [state, tmp20, eventEmitter];
   const effect1 = obj.useEffect(() => {
     const current = ref8.current;
@@ -362,26 +361,26 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
     const obj = { type: "state", data: { state } };
     tmp = getRootState();
   }, items5);
-  const tmpResult4 = require("module_1512");
-  obj = { value: memo, children: null };
-  obj = { value: memo1, children: null };
-  obj1 = { value: memo2, children: null };
-  const obj2 = { value: lazyValue, children: null };
+  const tmpResult10 = require("module_1512");
+  const obj3 = { value: memo, children: null };
+  const obj4 = { value: memo1, children: null };
+  const obj5 = { value: memo2, children: null };
+  const obj6 = { value: lazyValue, children: null };
   if (onUnhandledAction == null) {
     onUnhandledAction = tmp35;
   }
-  const obj3 = { value: false, children: null };
-  const obj4 = { value: onUnhandledAction, children: null };
-  const obj5 = { value: navigationInChildEnabled, children: null };
+  const obj7 = { value: false, children: null };
+  const obj8 = { value: onUnhandledAction, children: null };
+  const obj9 = { value: navigationInChildEnabled, children: null };
   tmp35 = onStateChange(onReady[9])((arg0) => {
 
   });
-  obj5.children = scheduleUpdate(require("module_1518").EnsureSingleNavigator, { children: scheduleUpdate(require("ThemeProvider").ThemeProvider, { value: theme, children }) });
-  obj4.children = scheduleUpdate(require("DeprecatedNavigationInChildContext").DeprecatedNavigationInChildContext.Provider, obj5);
-  obj2.children = scheduleUpdate(require("UnhandledActionContext").UnhandledActionContext.Provider, obj4);
-  obj1.children = scheduleUpdate(require("ConsumedParamsContext").ConsumedParamsContext.Provider, obj2);
-  obj.children = scheduleUpdate(require("get getKey").NavigationStateContext.Provider, obj1);
-  obj.children = scheduleUpdate(require("NavigationBuilderContext").NavigationBuilderContext.Provider, obj);
-  obj3.children = scheduleUpdate(require("NavigationContainerRefContext").NavigationContainerRefContext.Provider, obj);
-  return scheduleUpdate(require("NavigationIndependentTreeContext").NavigationIndependentTreeContext.Provider, obj3);
+  obj9.children = scheduleUpdate(require("module_1518").EnsureSingleNavigator, { children: scheduleUpdate(require("ThemeProvider").ThemeProvider, { value: theme, children }) });
+  obj8.children = scheduleUpdate(require("DeprecatedNavigationInChildContext").DeprecatedNavigationInChildContext.Provider, obj9);
+  obj6.children = scheduleUpdate(require("UnhandledActionContext").UnhandledActionContext.Provider, obj8);
+  obj5.children = scheduleUpdate(require("ConsumedParamsContext").ConsumedParamsContext.Provider, obj6);
+  obj4.children = scheduleUpdate(require("get getKey").NavigationStateContext.Provider, obj5);
+  obj3.children = scheduleUpdate(require("NavigationBuilderContext").NavigationBuilderContext.Provider, obj4);
+  obj7.children = scheduleUpdate(require("NavigationContainerRefContext").NavigationContainerRefContext.Provider, obj3);
+  return scheduleUpdate(require("NavigationIndependentTreeContext").NavigationIndependentTreeContext.Provider, obj7);
 });

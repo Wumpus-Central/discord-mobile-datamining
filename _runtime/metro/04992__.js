@@ -22,23 +22,22 @@ export default function TabsHost(arg0) {
   const nativeContainerStyle = tmp2.nativeContainerStyle;
   ({ children, direction, onTabSelected, navStateRequest } = tmp2);
   const ref = noop.useRef(null);
-  let obj = _mod4997;
-  obj = { style: null, navStateRequest, onTabSelected: obj.useTabsHost({ componentNodeRef: ref, onTabSelected }).onTabSelected, nativeContainerBackgroundColor: null, ref: null };
-  const items = [fillParent.fillParent, { direction }];
-  obj.style = items;
-  let backgroundColor;
   const tmp3 = _objectWithoutProperties(tmp2, closure_4);
+  const obj2 = { style: null, navStateRequest, onTabSelected: _mod4997.useTabsHost({ componentNodeRef: ref, onTabSelected }).onTabSelected, nativeContainerBackgroundColor: null, ref: null };
+  const items = [fillParent.fillParent, { direction }];
+  obj2.style = items;
+  let backgroundColor;
   if (nativeContainerStyle != null) {
     backgroundColor = nativeContainerStyle.backgroundColor;
   }
-  obj.nativeContainerBackgroundColor = backgroundColor;
-  obj.ref = ref;
+  obj2.nativeContainerBackgroundColor = backgroundColor;
+  obj2.ref = ref;
   const merged = Object.assign(tmp3);
   let prop;
   if (android != null) {
     prop = android.tabBarRespectsIMEInsets;
   }
-  obj.tabBarRespectsIMEInsets = prop;
-  obj.children = children;
-  return jsx(_modDef4998, { style: null, navStateRequest, onTabSelected: obj.useTabsHost({ componentNodeRef: ref, onTabSelected }).onTabSelected, nativeContainerBackgroundColor: null, ref: null });
+  obj2.tabBarRespectsIMEInsets = prop;
+  obj2.children = children;
+  return jsx(_modDef4998, { style: null, navStateRequest, onTabSelected: _mod4997.useTabsHost({ componentNodeRef: ref, onTabSelected }).onTabSelected, nativeContainerBackgroundColor: null, ref: null });
 };

@@ -3,8 +3,9 @@
 // Module 1684
 import runWorkletOnJS from "runWorkletOnJS" /* 1643 */;
 import _mod1685 from "module_1685" /* 1685 */;
-import module_1639 from "module_1639" /* 1639 */;
+import module_1639_mod from "module_1639" /* 1639 */;
 
+let module_1639 = module_1639_mod;
 module_1639 = module_1639.isJest();
 function createMapperRegistry() {
   function updateMappersOrder() {
@@ -36,7 +37,7 @@ function createMapperRegistry() {
             items = [arg0];
             let result = map.set(item10009, items);
           } else {
-            arr = arr.push(arg0);
+            let arr2 = arr.push(arg0);
           }
           continue;
         }
@@ -184,7 +185,6 @@ export const startMapper = function startMapper(fn) {
   const sum = c5 + 1;
   c5 = sum;
   module_1639 = sum;
-  items(items1[2]);
   const worklet = function f() {
     let __mapperRegistry = global.__mapperRegistry;
     if (undefined === __mapperRegistry) {
@@ -218,7 +218,7 @@ export const startMapper = function startMapper(fn) {
                   items = [arg0];
                   let result = map.set(item10009, items);
                 } else {
-                  arr = arr.push(arg0);
+                  let arr2 = arr.push(arg0);
                 }
                 continue;
               }
@@ -354,11 +354,10 @@ export const startMapper = function startMapper(fn) {
     }
     __mapperRegistry.start(sum, closure_0, items, items1);
   };
-  let obj = { createMapperRegistry, mapperID: sum, worklet, inputs: items, outputs: items1 };
-  worklet.__closure = obj;
+  worklet.__closure = { createMapperRegistry, mapperID: sum, worklet, inputs: items, outputs: items1 };
   worklet.__workletHash = 1517453109481;
   worklet.__initData = __initData;
-  obj.runOnUI(worklet)();
+  items(items1[2]).runOnUI(worklet)();
   return sum;
 };
 export const stopMapper = function stopMapper(_inlinePropsMapperId) {

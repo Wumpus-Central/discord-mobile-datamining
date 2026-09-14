@@ -15,6 +15,8 @@ import _mod1065 from "module_1065" /* 1065 */;
 import _mod1070 from "module_1070" /* 1070 */;
 import warn from "warn" /* 1072 */;
 
+const require = globalThis.__r;
+
 for (const key10013 in require("debugSymbolicatorIntegration")) {
   arg5[key10013] = require("debugSymbolicatorIntegration")[key10013];
   continue;

@@ -2,9 +2,10 @@
 
 // Module 858 (LRUMap)
 import _readOnlyError from "_readOnlyError" /* 377 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
+let _classCallCheck = _classCallCheck_mod;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class LRUMap {
   constructor(arg0) {

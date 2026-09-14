@@ -1,68 +1,127 @@
 // === Module 1244: ? ===
 
 // Module 1244
-import is from "is" /* 1245 */;
 import noop from "module_19" /* 19 */;
 
-function identity(arg0) {
-  return arg0;
-}
-function createWithEqualityFnImpl(arg0, arg1) {
-  _require = arg1;
-  store = require("module_561").createStore(arg0);
-  function useBoundStoreWithEqualityFn(arg0) {
-    let tmp = arg1;
-    if (arg1 === undefined) {
-      tmp = closure_0;
-    }
-    let tmp2 = arg0;
-    if (arg0 === undefined) {
-      tmp2 = identity;
-    }
-    const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(store.subscribe, store.getState, store.getInitialState, tmp2, tmp);
-    const debugValue = noop.useDebugValue(syncExternalStoreWithSelector);
-    return syncExternalStoreWithSelector;
-  }
-  const merged = Object.assign(useBoundStoreWithEqualityFn, store);
-  return useBoundStoreWithEqualityFn;
-}
+const require = globalThis.__r;
 
-export const createWithEqualityFn = (arg0, shallow) => {
-  if (arg0) {
-    if (typeof createWithEqualityFnImpl === "function") {
-      _require = shallow;
-      store = require("module_561").createStore(arg0);
-      function useBoundStoreWithEqualityFn(arg0) {
-        let tmp = arg1;
-        if (arg1 === undefined) {
-          tmp = closure_0;
-        }
-        let tmp2 = arg0;
-        if (arg0 === undefined) {
-          tmp2 = identity;
-        }
-        const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(store.subscribe, store.getState, store.getInitialState, tmp2, tmp);
-        const debugValue = noop.useDebugValue(syncExternalStoreWithSelector);
-        return syncExternalStoreWithSelector;
+if (typeof Object.is === "function") {
+  const _Object = Object;
+} else {
+  is = function is(arg0, arg1) {
+    let tmp = arg0 === arg1;
+    if (tmp) {
+      let tmp2 = 0 !== arg0;
+      if (!tmp2) {
+        tmp2 = 1 / arg0 === 1 / arg1;
       }
-      const _Object = Object;
-      const merged = Object.assign(useBoundStoreWithEqualityFn, store);
-      let tmp2 = useBoundStoreWithEqualityFn;
-      const obj = require("module_561");
-    } else {
-      throw new TypeError("Trying to call a non-function");
+      tmp = tmp2;
     }
+    if (!tmp) {
+      tmp = arg0 != arg0 && arg1 != arg1;
+      const tmp3 = arg0 != arg0 && arg1 != arg1;
+    }
+    return tmp;
+  };
+}
+({ useRef: c3, useEffect: closure_4, useMemo: hasOwnProperty, useDebugValue: metroRequire } = noop);
+
+export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) => {
+  _require = arg1;
+  dependencyMap = arg2;
+  closure_2 = arg3;
+  closure_3 = arg4;
+  let tmp = closure_3(null);
+  if (null === tmp.current) {
+    const obj = { hasValue: false, value: null };
+    let current = obj;
+    tmp.current = obj;
   } else {
-    tmp2 = createWithEqualityFnImpl;
+    current = tmp.current;
   }
-  return tmp2;
-};
-export const useStoreWithEqualityFn = function useStoreWithEqualityFn(context, arg1) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = identity;
-  }
-  const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(context.subscribe, context.getState, context.getInitialState, tmp, shallow);
-  const debugValue = noop.useDebugValue(syncExternalStoreWithSelector);
-  return syncExternalStoreWithSelector;
+  let items = [arg1, arg2, arg3, arg4];
+  const tmp2 = syncExternalStore(() => {
+    c2 = false;
+    let tmp = null;
+    if (undefined !== closure_1) {
+      tmp = closure_1;
+    }
+    closure_3 = tmp;
+    const items = [
+      () => {
+        const tmp = closure_0();
+        if (c2) {
+          let tmp3 = value;
+          if (!is(closure_0, tmp)) {
+            let tmp9 = _true(tmp);
+            if (undefined === closure_3) {
+              closure_0 = tmp;
+              value = tmp9;
+            }
+            closure_0 = tmp;
+            tmp9 = tmp5;
+          }
+          tmp5 = value;
+        } else {
+          c2 = true;
+          closure_0 = tmp;
+          tmp3 = _true(tmp);
+          if (undefined !== closure_3) {
+            if (current.hasValue) {
+              value = current.value;
+              if (tmp4(value, tmp3)) {
+                tmp3 = value;
+              }
+            }
+          }
+          value = tmp3;
+        }
+        return tmp3;
+      },
+
+    ];
+    let fn;
+    if (null !== tmp) {
+      fn = () => {
+        const tmp = closure_3();
+        if (c2) {
+          let tmp3 = value;
+          if (!is(closure_0, tmp)) {
+            let tmp10 = _true(tmp);
+            if (undefined === closure_3) {
+              closure_0 = tmp;
+              value = tmp10;
+            }
+            closure_0 = tmp;
+            tmp10 = tmp6;
+          }
+          tmp6 = value;
+        } else {
+          c2 = true;
+          closure_0 = tmp;
+          tmp3 = _true(tmp);
+          if (undefined !== closure_3) {
+            if (current.hasValue) {
+              value = current.value;
+              if (closure_3(value, tmp3)) {
+                tmp3 = value;
+              }
+            }
+          }
+          value = tmp3;
+        }
+        return tmp3;
+      };
+    }
+    items[1] = fn;
+    return items;
+  }, items);
+  syncExternalStore = require("module_1245").useSyncExternalStore(arg0, tmp2[0], tmp2[1]);
+  const items1 = [syncExternalStore];
+  current(() => {
+    current.hasValue = true;
+    current.value = syncExternalStore;
+  }, items1);
+  closure_6(syncExternalStore);
+  return syncExternalStore;
 };

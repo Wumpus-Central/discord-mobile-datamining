@@ -3,6 +3,8 @@
 // Module 486 (ShareModule)
 import _modDef487 from "module_487" /* 487 */;
 
+const require = globalThis.__r;
+
 for (const key10016 in require("module_487")) {
   arg5[key10016] = require("module_487")[key10016];
   continue;

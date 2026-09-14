@@ -37,7 +37,7 @@ export function makeOfflineTransport(arg0) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             return { value: "HermesInternal", done: null };
@@ -51,24 +51,24 @@ export function makeOfflineTransport(arg0) {
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 closure_0 = tmp2;
                 closure_128_0 = undefined;
                 c2 = undefined;
                 c2 = 1;
                 c3 = 1;
-                const obj1 = { value: closure_2_3.shift(), done: false };
-                return obj1;
+                const obj3 = { value: closure_2_3.shift(), done: false };
+                return obj3;
               }
             } else if (arg0 === 1) {
               c3 = 3;
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_128_0 = value;
               if (closure_128_0) {
@@ -113,7 +113,7 @@ export function makeOfflineTransport(arg0) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               return { value: "HermesInternal", done: null };
@@ -127,24 +127,24 @@ export function makeOfflineTransport(arg0) {
                   throw value;
                 } else if (arg0 === 2) {
                   c3 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj2 = { value, done: true };
+                  return obj2;
                 } else {
                   closure_0 = tmp2;
                   closure_128_0 = undefined;
                   c2 = undefined;
                   c2 = 1;
                   c3 = 1;
-                  const obj1 = { value: closure_2_3.shift(), done: false };
-                  return obj1;
+                  const obj3 = { value: closure_2_3.shift(), done: false };
+                  return obj3;
                 }
               } else if (arg0 === 1) {
                 c3 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                const obj2 = { value, done: true };
-                return obj2;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 closure_128_0 = value;
                 if (closure_128_0) {
@@ -197,12 +197,12 @@ export function makeOfflineTransport(arg0) {
           return { value, done: true };
         } else {
           if (!closure_130_1) {
-            let obj13 = createStore(729);
-            if (obj13.envelopeContainsItemType(closure_130_0, ["replay_event", "replay_recording"])) {
+            if (obj14.envelopeContainsItemType(closure_130_0, ["replay_event", "replay_recording"])) {
               c6 = 2;
               c7 = 1;
               return { value: closure_131_3.push(closure_130_0), done: false };
             }
+            obj14 = createStore(729);
           }
           c5 = 1;
           if (closure_131_0.shouldSend) {
@@ -221,8 +221,7 @@ export function makeOfflineTransport(arg0) {
         } else {
           closure_131_5(closure_2_3);
           c7 = 3;
-          let obj5 = { value: {}, done: true };
-          return obj5;
+          return { value: {}, done: true };
         }
       } else if (3 === tmp6) {
         c5 = 0;
@@ -309,8 +308,8 @@ export function makeOfflineTransport(arg0) {
               }
             }
           }
-          obj5 = createStore(744);
-          closure_130_3 = obj5.parseRetryAfterHeader(closure_130_2.headers["retry-after"]);
+          closure_130_3 = createStore(744).parseRetryAfterHeader(closure_130_2.headers["retry-after"]);
+          createStore(744);
         }
       } else if (6 === tmp6) {
         if (arg0 === 1) {
@@ -332,8 +331,7 @@ export function makeOfflineTransport(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj13 = { value, done: true };
-            return obj13;
+            return { value, done: true };
           }
         } else if (arg0 === 1) {
           c7 = 3;
@@ -376,7 +374,7 @@ export function makeOfflineTransport(arg0) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
                 return { value: "HermesInternal", done: null };
@@ -390,24 +388,24 @@ export function makeOfflineTransport(arg0) {
                     throw value;
                   } else if (arg0 === 2) {
                     c3 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj2 = { value, done: true };
+                    return obj2;
                   } else {
                     closure_0 = tmp2;
                     closure_128_0 = undefined;
                     c2 = undefined;
                     c2 = 1;
                     c3 = 1;
-                    const obj1 = { value: closure_2_3.shift(), done: false };
-                    return obj1;
+                    const obj3 = { value: closure_2_3.shift(), done: false };
+                    return obj3;
                   }
                 } else if (arg0 === 1) {
                   c3 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c3 = 3;
-                  const obj2 = { value, done: true };
-                  return obj2;
+                  const obj4 = { value, done: true };
+                  return obj4;
                 } else {
                   closure_128_0 = value;
                   if (closure_128_0) {
@@ -458,7 +456,7 @@ export function makeOfflineTransport(arg0) {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value, done: true };
+                    const obj = { value, done: true };
                     return obj;
                   } else {
                     return { value: "HermesInternal", done: null };
@@ -472,24 +470,24 @@ export function makeOfflineTransport(arg0) {
                         throw value;
                       } else if (arg0 === 2) {
                         c3 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj2 = { value, done: true };
+                        return obj2;
                       } else {
                         closure_0 = tmp2;
                         closure_128_0 = undefined;
                         c2 = undefined;
                         c2 = 1;
                         c3 = 1;
-                        const obj1 = { value: closure_2_3.shift(), done: false };
-                        return obj1;
+                        const obj3 = { value: closure_2_3.shift(), done: false };
+                        return obj3;
                       }
                     } else if (arg0 === 1) {
                       c3 = 3;
                       throw value;
                     } else if (arg0 === 2) {
                       c3 = 3;
-                      const obj2 = { value, done: true };
-                      return obj2;
+                      const obj4 = { value, done: true };
+                      return obj4;
                     } else {
                       closure_128_0 = value;
                       if (closure_128_0) {

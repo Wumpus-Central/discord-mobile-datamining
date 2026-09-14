@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "caract\u00E8res", verb: "avoir" }, file: { unit: "octets", verb: "avoir" }, array: { unit: "\u00E9l\u00E9ments", verb: "avoir" }, set: { unit: "\u00E9l\u00E9ments", verb: "avoir" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "caract\u00E8res", verb: "avoir" }, file: { unit: "octets", verb: "avoir" }, array: { unit: "\u00E9l\u00E9ments", verb: "avoir" }, set: { unit: "\u00E9l\u00E9ments", verb: "avoir" } };
         closure_1 = { regex: "entr\u00E9e", email: "adresse courriel", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "date-heure ISO", date: "date ISO", time: "heure ISO", duration: "dur\u00E9e ISO", ipv4: "adresse IPv4", ipv6: "adresse IPv6", cidrv4: "plage IPv4", cidrv6: "plage IPv6", base64: "cha\u00EEne encod\u00E9e en base64", base64url: "cha\u00EEne encod\u00E9e en base64url", json_string: "cha\u00EEne JSON", e164: "num\u00E9ro E.164", jwt: "JWT", template_literal: "entr\u00E9e" };
         closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp47 == null) {
                 tmp47 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Entr\u00E9e invalide : attendu instanceof " + code.expected + ", re\u00E7u " + tmp47;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str27 = "\u2264";
               }
-              let tmp29 = obj[code.origin];
+              let tmp29 = obj2[code.origin];
               if (tmp29 == null) {
                 tmp29 = null;
               }
@@ -120,18 +119,18 @@ if (self2) {
               if (code.inclusive) {
                 str21 = "\u2265";
               }
-              let tmp17 = obj[code.origin];
+              let tmp17 = obj2[code.origin];
               if (tmp17 == null) {
                 tmp17 = null;
               }
               ({ origin, minimum } = code);
-              let str = minimum.toString();
+              const str1 = minimum.toString();
               if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Trop petit : attendu que " + origin + " ait " + str21 + str + " " + tmp17.unit;
+                let combined3 = "Trop petit : attendu que " + origin + " ait " + str21 + str1 + " " + tmp17.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Trop petit : attendu que " + origin + " soit " + str21 + str;
+                combined3 = "Trop petit : attendu que " + origin + " soit " + str21 + str1;
               }
               return combined3;
             case "invalid_format":
@@ -177,7 +176,6 @@ if (self2) {
               return "Entr\u00E9e invalide";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Valeur invalide dans ";
               return "Valeur invalide dans " + code.origin;
             default:
               return "Entr\u00E9e invalide";

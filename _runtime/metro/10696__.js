@@ -2,8 +2,8 @@
 
 // Module 10696
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10581 from "module_10581" /* 10581 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _mod10579 from "module_10579" /* 10579 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
 let fn = this;
 if (this) {
@@ -43,12 +44,12 @@ if (!fn) {
     return tmp;
   };
 }
-class RUMergeDateTimeRefiner {
+class RUMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, RUMergeDateTimeRefiner);
+    tmp = closure_0(this, RUMergeDateRangeRefiner);
     tmp2 = c2;
-    obj = c2(RUMergeDateTimeRefiner);
+    obj = c2(RUMergeDateRangeRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -63,15 +64,14 @@ class RUMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = RUMergeDateTimeRefiner;
-_inherits(RUMergeDateTimeRefiner, fn(_mod10581).default);
+_classCallCheck = RUMergeDateRangeRefiner;
+_inherits(RUMergeDateRangeRefiner, fn(_mod10579).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|\u0432|,|-)?\\s*$");
-    return regExp;
+    return /^\s*(и до|и по|до|по|-)\s*$/i;
   }
 };
 const items = [entry];
 
-export default _createClass(RUMergeDateTimeRefiner, items);
+export default _createClass(RUMergeDateRangeRefiner, items);

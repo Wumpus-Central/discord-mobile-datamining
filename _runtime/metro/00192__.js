@@ -50,37 +50,37 @@ export default function parseHermesStack(str) {
       num3 = tmp5;
       tmp = items1;
     }
-    obj = { type: "FRAME", functionName: match[1], location: null };
+    const obj2 = { type: "FRAME", functionName: match[1], location: null };
     if ("native" === match[2]) {
-      obj = { type: "NATIVE" };
+      let obj3 = { type: "NATIVE" };
     } else if ("address at " === match[3]) {
       if ("InternalBytecode.js" === match[4]) {
-        const obj1 = { type: "INTERNAL_BYTECODE", sourceUrl: match[4], line1Based: null, virtualOffset0Based: null };
+        const obj4 = { type: "INTERNAL_BYTECODE", sourceUrl: match[4], line1Based: null, virtualOffset0Based: null };
         const _Number6 = Number;
-        obj1.line1Based = Number.parseInt(match[5], 10);
+        obj4.line1Based = Number.parseInt(match[5], 10);
         const _Number7 = Number;
         match = Number.parseInt(match[6], 10);
-        obj1.virtualOffset0Based = match;
-        let obj2 = obj1;
+        obj4.virtualOffset0Based = match;
+        let obj5 = obj4;
       } else {
-        obj2 = { type: "BYTECODE", sourceUrl: match[4], line1Based: null, virtualOffset0Based: null };
+        obj5 = { type: "BYTECODE", sourceUrl: match[4], line1Based: null, virtualOffset0Based: null };
         const _Number4 = Number;
-        obj2.line1Based = Number.parseInt(match[5], 10);
+        obj5.line1Based = Number.parseInt(match[5], 10);
         const _Number5 = Number;
-        obj2.virtualOffset0Based = Number.parseInt(match[6], 10);
+        obj5.virtualOffset0Based = Number.parseInt(match[6], 10);
       }
     } else {
-      obj = { type: "SOURCE", sourceUrl: match[4], line1Based: null, column1Based: null };
+      obj3 = { type: "SOURCE", sourceUrl: match[4], line1Based: null, column1Based: null };
       const _Number2 = Number;
-      obj.line1Based = Number.parseInt(match[5], 10);
+      obj3.line1Based = Number.parseInt(match[5], 10);
       const _Number3 = Number;
-      obj.column1Based = Number.parseInt(match[6], 10);
+      obj3.column1Based = Number.parseInt(match[6], 10);
     }
-    obj.location = obj;
+    obj2.location = obj3;
   }
-  const obj3 = { message: null, entries: null };
+  const obj6 = { message: null, entries: null };
   const substr = parts.slice(0, num3 + 1);
-  obj3.message = substr.join("\n");
-  obj3.entries = tmp;
-  return obj3;
+  obj6.message = substr.join("\n");
+  obj6.entries = tmp;
+  return obj6;
 };

@@ -3,6 +3,8 @@
 // Module 1694 (convertAnimationObjectToKeyframes)
 import _slicedToArray from "module_32" /* 32 */;
 
+const require = globalThis.__r;
+
 const require = arg1;
 
 export const convertAnimationObjectToKeyframes = function convertAnimationObjectToKeyframes(BounceIn) {
@@ -24,10 +26,8 @@ export const convertAnimationObjectToKeyframes = function convertAnimationObject
     let _Object = Object;
     let entries1 = Object.entries(tmp8);
     for (const item10063 of entries1) {
-      let tmp16 = _slicedToArray(item10063, 2);
-      let first = tmp16[0];
+      [first, arr] = item10063;
       let tmp18 = first;
-      let arr = tmp16[1];
       if ("easing" !== first) {
         if ("originX" !== tmp18) {
           if ("originY" !== tmp18) {

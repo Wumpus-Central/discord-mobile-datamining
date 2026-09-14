@@ -8,7 +8,6 @@ fn = function n(c12, tmpResult, reduceMotion) {
   _require = delayMs;
   dependencyMap = tmpResult;
   __initData = reduceMotion;
-  require("module_1676");
   const fn = function s() {
     if (typeof tmpResult === "function") {
       tmpResult = tmp();
@@ -63,8 +62,8 @@ fn = function n(c12, tmpResult, reduceMotion) {
     };
     return obj;
   };
-  let obj = { _nextAnimation: tmpResult, delayMs, getReduceMotionForAnimation: require("module_1676").getReduceMotionForAnimation, reduceMotion };
-  fn.__closure = obj;
+  let obj = require("module_1676");
+  fn.__closure = { _nextAnimation: tmpResult, delayMs, getReduceMotionForAnimation: require("module_1676").getReduceMotionForAnimation, reduceMotion };
   fn.__workletHash = 7904568249320;
   fn.__initData = __initData;
   return obj.defineAnimation(tmpResult, fn);

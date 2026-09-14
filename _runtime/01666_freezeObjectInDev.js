@@ -9,7 +9,7 @@ function freezeObjectInDev(arg0) {
 
 }
 let module_1639 = fn(1639);
-module_1639.shouldBeUseWeb();
+module_1639 = module_1639.shouldBeUseWeb();
 const REANIMATED_MAGIC_KEY = "REANIMATED_MAGIC_KEY";
 function isHostObject(__remoteFunction) {
   return REANIMATED_MAGIC_KEY in __remoteFunction;
@@ -17,7 +17,7 @@ function isHostObject(__remoteFunction) {
 isHostObject.__closure = { MAGIC_KEY: "REANIMATED_MAGIC_KEY" };
 isHostObject.__workletHash = 10372729533958;
 isHostObject.__initData = { code: "function isHostObject_Pnpm_shareablesTs1(value){const{MAGIC_KEY}=this.__closure;return MAGIC_KEY in value;}" };
-module_1639 = { __init: null };
+let obj2 = { __init: null };
 fn = function u() {
   const proxy = new Proxy({}, {
     get(arg0, arg1) {
@@ -41,7 +41,7 @@ fn = function u() {
 fn.__closure = {};
 fn.__workletHash = 15880119471501;
 fn.__initData = { code: "function pnpm_shareablesTs2(){return new Proxy({},{get:function(_,prop){if(prop==='_isReanimatedSharedValue'||prop==='__remoteFunction'){return false;}throw new ReanimatedError(\"Trying to access property `\"+String(prop)+\"` of an object which cannot be sent to the UI runtime.\");},set:function(){throw new ReanimatedError('Trying to write to an object which cannot be sent to the UI runtime.');}});}" };
-module_1639.__init = fn;
+obj2.__init = fn;
 const VALID_ARRAY_VIEWS_NAMES = ["Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Uint16Array", "Int32Array", "Uint32Array", "Float32Array", "Float64Array", "BigInt64Array", "BigUint64Array", "DataView"];
 const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
   return arg0;
@@ -119,8 +119,8 @@ const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
                   const fn4 = function c() {
                     return buffer();
                   };
-                  obj = { workletContextObjectFactory: __workletContextObjectFactory };
-                  fn4.__closure = obj;
+                  obj2 = { workletContextObjectFactory: __workletContextObjectFactory };
+                  fn4.__closure = obj2;
                   fn4.__workletHash = 16264240301234;
                   fn4.__initData = __initData;
                   obj.__init = fn4;
@@ -174,17 +174,17 @@ const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
                     buffer = source;
                     const flags = __workletContextObjectFactory.flags;
                     name = flags;
-                    const obj1 = { __init: null };
+                    const obj3 = { __init: null };
                     const fn3 = function s() {
                       const regExp = new RegExp(buffer, name);
                       return regExp;
                     };
-                    const obj2 = { pattern: source, flags };
-                    fn3.__closure = obj2;
+                    const obj4 = { pattern: source, flags };
+                    fn3.__closure = obj4;
                     fn3.__workletHash = 17343605339188;
                     fn3.__initData = __initData2;
-                    obj1.__init = fn3;
-                    const tmp33 = closure_10(obj1);
+                    obj3.__init = fn3;
+                    const tmp33 = closure_10(obj3);
                     const shareableMappingCache8 = shareableMappingCache13(result[2]).shareableMappingCache;
                     const result8 = shareableMappingCache8.set(__workletContextObjectFactory, tmp33);
                     tmp17 = tmp33;
@@ -196,7 +196,7 @@ const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
                       const message = __workletContextObjectFactory.message;
                       name = message;
                       stack = __workletContextObjectFactory.stack;
-                      const obj3 = { __init: null };
+                      const obj5 = { __init: null };
                       const fn2 = function u() {
                         const error = new Error();
                         error.name = buffer;
@@ -208,8 +208,8 @@ const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
                       fn2.__closure = error;
                       fn2.__workletHash = 1273124072033;
                       fn2.__initData = __initData3;
-                      obj3.__init = fn2;
-                      const tmp29 = closure_10(obj3);
+                      obj5.__init = fn2;
+                      const tmp29 = closure_10(obj5);
                       const shareableMappingCache7 = shareableMappingCache13(result[2]).shareableMappingCache;
                       const result9 = shareableMappingCache7.set(__workletContextObjectFactory, tmp29);
                       tmp17 = tmp29;
@@ -228,17 +228,16 @@ const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
                         if (ArrayBuffer.isView(__workletContextObjectFactory)) {
                           buffer = __workletContextObjectFactory.buffer;
                           name = __workletContextObjectFactory.constructor.name;
-                          const obj4 = { __init: null };
+                          const obj6 = { __init: null };
                           const fn = function s() {
                             if (closure_9.includes(name)) {
-                              let tmp10 = global[name];
-                              if (undefined === tmp10) {
+                              if (undefined === global[name]) {
                                 const _HermesInternal2 = HermesInternal;
                                 const reanimatedError = new require("module_1647").ReanimatedError("[Reanimated] Constructor for `" + name + "` not found.");
                                 throw reanimatedError;
                               } else {
-                                tmp10 = new tmp10(buffer);
-                                return tmp10;
+                                const tmp102 = new tmp10(buffer);
+                                return tmp102;
                               }
                             } else {
                               const _HermesInternal = HermesInternal;
@@ -246,17 +245,17 @@ const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
                               throw reanimatedError1;
                             }
                           };
-                          const obj5 = { VALID_ARRAY_VIEWS_NAMES, typeName: name, buffer };
-                          fn.__closure = obj5;
+                          const obj7 = { VALID_ARRAY_VIEWS_NAMES, typeName: name, buffer };
+                          fn.__closure = obj7;
                           fn.__workletHash = 2440560686150;
                           fn.__initData = __initData4;
-                          obj4.__init = fn;
-                          const tmp22 = closure_10(obj4);
+                          obj6.__init = fn;
+                          const tmp22 = closure_10(obj6);
                           const shareableMappingCache4 = shareableMappingCache13(result[2]).shareableMappingCache;
                           const result12 = shareableMappingCache4.set(__workletContextObjectFactory, tmp22);
                           tmp17 = tmp22;
                         } else {
-                          tmp17 = closure_10(module_1639);
+                          tmp17 = closure_10(obj2);
                           const shareableMappingCache3 = shareableMappingCache13(result[2]).shareableMappingCache;
                           const result13 = shareableMappingCache3.set(__workletContextObjectFactory, tmp17);
                         }
@@ -361,12 +360,12 @@ export const makeShareable = module_1639 ? (function makeShareableJS(arg0) {
   if (shareableMappingCache.get(value)) {
     return value;
   } else {
-    let obj = { __init: null };
+    const obj = { __init: null };
     const fn = function n() {
       return closure_0;
     };
-    obj = { value };
-    fn.__closure = obj;
+    obj2 = { value };
+    fn.__closure = obj2;
     fn.__workletHash = 5731865988281;
     fn.__initData = __initData5;
     obj.__init = fn;

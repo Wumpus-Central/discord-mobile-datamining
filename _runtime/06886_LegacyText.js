@@ -2,12 +2,13 @@
 
 // Module 6886 (LegacyText)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
 const require = fn;
 let closure_2 = ["onPress", "onLongPress", "ref"];
 let noop = fn(19);
 ({ useEffect: closure_4, useMemo: hasOwnProperty, useRef: metroRequire } = noop);
+let noop = noop_mod;
 get_ActivityIndicator = fn(17);
 ({ Platform, Text: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
@@ -36,23 +37,29 @@ export const LegacyText = (arg0) => {
   }, []);
   if (!onPress) {
     if (!onLongPress) {
-      let obj = { ref: tmp3 };
+      const obj = { ref: tmp3 };
       const merged = Object.assign(tmp);
       let tmp10 = <closure_7 ref={tmp3} />;
     }
     return tmp10;
   }
-  obj = {
+  const obj2 = {
     gesture: closure_5(() => {
       const GestureObjects = ref(closure_1[4]).GestureObjects;
       return GestureObjects.Native().runOnJS(true);
     }, []),
     children: null
   };
-  obj = { onPress, onLongPress, ref: tmp3 };
   const merged1 = Object.assign(tmp);
-  obj.children = <closure_7 onPress={onPress} onLongPress={onLongPress} ref={tmp3} />;
-  tmp10 = jsx(ref(6779).GestureDetector, { onPress, onLongPress, ref: tmp3 });
+  obj2.children = <closure_7 onPress={onPress} onLongPress={onLongPress} ref={tmp3} />;
+  tmp10 = jsx(ref(6779).GestureDetector, {
+    gesture: closure_5(() => {
+      const GestureObjects = ref(closure_1[4]).GestureObjects;
+      return GestureObjects.Native().runOnJS(true);
+    }, []),
+    children: null
+  });
+  const obj3 = { onPress, onLongPress, ref: tmp3 };
   const tmp2 = closure_5(() => {
     const GestureObjects = ref(closure_1[4]).GestureObjects;
     return GestureObjects.Native().runOnJS(true);

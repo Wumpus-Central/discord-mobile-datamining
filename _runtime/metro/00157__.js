@@ -2,7 +2,7 @@
 
 // Module 157
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
@@ -29,6 +29,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 let closure_5 = { IndexSizeError: 1, HierarchyRequestError: 3, WrongDocumentError: 4, InvalidCharacterError: 5, NoModificationAllowedError: 7, NotFoundError: 8, NotSupportedError: 9, InUseAttributeError: 10, InvalidStateError: 11, SyntaxError: 12, InvalidModificationError: 13, NamespaceError: 14, InvalidAccessError: 15, TypeMismatchError: 17, SecurityError: 18, NetworkError: 19, AbortError: 20, URLMismatchError: 21, QuotaExceededError: 22, TimeoutError: 23, InvalidNodeTypeError: 24, DataCloneError: 25 };
 let obj = { INDEX_SIZE_ERR: 1, DOMSTRING_SIZE_ERR: 2, HIERARCHY_REQUEST_ERR: 3, WRONG_DOCUMENT_ERR: 4, INVALID_CHARACTER_ERR: 5, NO_DATA_ALLOWED_ERR: 6, NO_MODIFICATION_ALLOWED_ERR: 7, NOT_FOUND_ERR: 8, NOT_SUPPORTED_ERR: 9, INUSE_ATTRIBUTE_ERR: 10, INVALID_STATE_ERR: 11, SYNTAX_ERR: 12, INVALID_MODIFICATION_ERR: 13, NAMESPACE_ERR: 14, INVALID_ACCESS_ERR: 15, VALIDATION_ERR: 16, TYPE_MISMATCH_ERR: 17, SECURITY_ERR: 18, NETWORK_ERR: 19, ABORT_ERR: 20, URL_MISMATCH_ERR: 21, QUOTA_EXCEEDED_ERR: 22, TIMEOUT_ERR: 23, INVALID_NODE_TYPE_ERR: 24, DATA_CLONE_ERR: 25 };
@@ -80,14 +81,13 @@ class DOMException {
 }
 _classCallCheck = DOMException;
 _inherits(DOMException, _wrapNativeSuper(Error));
-obj = {
-  key: "name",
-  get() {
-    return _classPrivateFieldBase(this, closure_6)[closure_6];
-  }
-};
 let items = [
-  obj,
+  {
+    key: "name",
+    get() {
+      return _classPrivateFieldBase(this, closure_6)[closure_6];
+    }
+  },
   {
     key: "code",
     get() {
@@ -98,20 +98,29 @@ let items = [
 const importDefaultResultResult = _createClass(DOMException, items);
 for (const key10045 in obj) {
   let _Object = Object;
-  obj = { enumerable: true, value: null };
-  obj.value = obj[key10045];
-  let definePropertyResult1 = Object.defineProperty(importDefaultResultResult, key10045, obj);
+  let obj4 = { enumerable: true, value: obj[key10045] };
+  let definePropertyResult1 = Object.defineProperty(importDefaultResultResult, key10045, obj4);
   let _Object2 = Object;
-  let obj1 = { enumerable: true, value: obj[key10045] };
-  let definePropertyResult2 = Object.defineProperty(importDefaultResultResult.prototype, key10045, obj1);
+  let obj5 = { enumerable: true, value: obj[key10045] };
+  let definePropertyResult2 = Object.defineProperty(importDefaultResultResult.prototype, key10045, obj5);
   continue;
 }
-fn(126);
-const module_126 = {
+const module_126 = fn(126);
+module_126.setPlatformObject(importDefaultResultResult, {
+  clone(message) {
+    return new importDefaultResultResult(message.message, message.name);
+  }
+});
+const obj2 = {
+  key: "name",
+  get() {
+    return _classPrivateFieldBase(this, closure_6)[closure_6];
+  }
+};
+const obj6 = {
   clone(message) {
     return new importDefaultResultResult(message.message, message.name);
   }
 };
-module_126.setPlatformObject(importDefaultResultResult, module_126);
 
 export default importDefaultResultResult;

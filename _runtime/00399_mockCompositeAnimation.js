@@ -22,7 +22,8 @@ let obj = {
 function mockCompositeAnimation(arg0) {
 
 }
-obj = {
+
+export default {
   Value: fn2(356),
   ValueXY: fn2(373),
   Color: fn2(374),
@@ -35,8 +36,8 @@ obj = {
     value = arg0;
     obj = {};
     const merged = Object.assign(value);
-    const f70788 = (fn) => {
-      value.setValue(f70788.toValue);
+    const f70791 = (fn) => {
+      value.setValue(f70791.toValue);
       if (fn != null) {
         fn({ finished: true });
       }
@@ -71,8 +72,8 @@ obj = {
   spring(animation, arg1) {
     obj = {};
     const merged = Object.assign(animation);
-    const f70789 = (fn) => {
-      animation.setValue(f70789.toValue);
+    const f70792 = (fn) => {
+      animation.setValue(f70792.toValue);
       if (fn != null) {
         fn({ finished: true });
       }
@@ -117,7 +118,7 @@ obj = {
     if (typeof mockCompositeAnimation === "function") {
       obj = {};
       const merged = Object.assign(obj);
-      const f70787 = (fn) => {
+      const f70790 = (fn) => {
         const item = c0.forEach((start) => start.start());
         if (fn != null) {
           fn({ finished: true });
@@ -157,7 +158,7 @@ obj = {
     if (typeof mockCompositeAnimation === "function") {
       obj = {};
       const merged = Object.assign(obj);
-      const f70787 = (fn) => {
+      const f70790 = (fn) => {
         const item = c0.forEach((start) => start.start());
         if (fn != null) {
           fn({ finished: true });
@@ -247,5 +248,3 @@ obj = {
   unforkEvent: fn2(354).unforkEvent,
   Event: fn(384).AnimatedEvent
 };
-
-export default obj;

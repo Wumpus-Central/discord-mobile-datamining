@@ -1,136 +1,52 @@
 // === Module 12969: ? ===
 
 // Module 12969
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12931 */;
-import _mod12970 from "module_12970" /* 12970 */;
-import _mod12973 from "module_12973" /* 12973 */;
-import __SENTRY_DEBUG__ from "module_12925" /* 12925 */;
-import consoleSandbox from "module_12926" /* 12926 */;
+import _mod12927 from "module_12927" /* 12927 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12932 */;
+import _mod12942 from "module_12942" /* 12942 */;
+import _mod12955 from "module_12955" /* 12955 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export const createEventEnvelope = function createEventEnvelope(type, url, sdk, arg3) {
-  const sdkMetadataForEnvelopeHeader = _mod12970.getSdkMetadataForEnvelopeHeader(sdk);
-  let str = "event";
-  if (type.type) {
-    str = "event";
-    if ("replay_event" !== type.type) {
-      str = type.type;
-    }
+export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
+  if (activeSpan === undefined) {
+    activeSpan = spanTimeInputToSeconds.getActiveSpan();
   }
-  if (sdk) {
-    sdk = sdk.sdk;
+  let rootSpan = activeSpan;
+  if (activeSpan) {
+    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
   }
-  if (sdk) {
-    type.sdk = type.sdk || {};
-    let name = type.sdk.name;
-    if (!name) {
-      name = sdk.name;
+  if (rootSpan) {
+    if (_mod12955.DEBUG_BUILD) {
+      const logger = _mod12927.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
     }
-    type.sdk.name = name;
-    let version = type.sdk.version;
-    if (!version) {
-      version = sdk.version;
-    }
-    type.sdk.version = version;
-    let integrations = type.sdk.integrations;
-    if (!integrations) {
-      integrations = [];
-    }
-    const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
-    const tmp9 = sdk.integrations || [];
-    arraySpreadResult = HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
-    type.sdk.integrations = items;
-    let packages = type.sdk.packages;
-    if (!packages) {
-      packages = [];
-    }
-    const items1 = [];
-    const arraySpreadResult1 = HermesBuiltin.arraySpread(packages, 0);
-    const tmp17 = sdk.packages || [];
-    HermesBuiltin.arraySpread(tmp17, arraySpreadResult1);
-    type.sdk.packages = items1;
+    const obj2 = {};
+    obj2[_mod12942.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj2[_mod12942.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    rootSpan.addEvent(arg0, obj2);
   }
-  let tmp3Result = _mod12970;
-  const eventEnvelopeHeaders = tmp3Result.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
-  delete tmp[tmp2];
-  const items2 = [{ type: str }, type];
-  tmp3Result = _mod12970;
-  const items3 = [items2];
-  return tmp3Result.createEnvelope(eventEnvelopeHeaders, items3);
 };
-export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1, sdk, arg3) {
-  let obj = _mod12970;
-  const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(sdk);
-  obj = { sent_at: new Date().toISOString() };
-  let tmp4 = sdkMetadataForEnvelopeHeader;
-  if (sdkMetadataForEnvelopeHeader) {
-    obj = { sdk: sdkMetadataForEnvelopeHeader };
-    tmp4 = obj;
+export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
+  if (arr) {
+    if (0 !== arr.length) {
+      let obj = {};
+      const item = arr.forEach((attributes) => {
+        const tmp = attributes.attributes || {};
+        const tmp2 = tmp[_mod12942.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
+        const tmp3 = tmp[_mod12942.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
+        let tmp4 = typeof tmp2 === "string";
+        if (typeof tmp2 === "string") {
+          tmp4 = typeof tmp3 === "number";
+        }
+        if (tmp4) {
+          obj = { value: tmp3, unit: tmp2 };
+          obj[attributes.name] = obj;
+        }
+      });
+      return obj;
+    }
   }
-  const merged = Object.assign(tmp4);
-  let tmp6 = arg3 && arg1;
-  if (tmp6) {
-    const obj1 = { dsn: null };
-    let tmpResult = _mod12973;
-    obj1.dsn = tmpResult.dsnToString(arg1);
-    tmp6 = obj1;
-  }
-  const merged1 = Object.assign(tmp6);
-  if ("aggregates" in toJSON) {
-    const items = [{ type: "sessions" }, toJSON];
-    let items1 = items;
-  } else {
-    items1 = [{ type: "session" }, toJSON.toJSON()];
-  }
-  tmpResult = _mod12970;
-  const items2 = [items1];
-  return tmpResult.createEnvelope(obj, items2);
-};
-export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
-  let obj = beforeSendSpan(12962);
-  const dynamicSamplingContextFromSpan = obj.getDynamicSamplingContextFromSpan(arg0[0]);
-  let dsn = getDsn;
-  if (getDsn) {
-    dsn = getDsn.getDsn();
-  }
-  let tunnel = getDsn;
-  if (getDsn) {
-    tunnel = getDsn.getOptions().tunnel;
-  }
-  obj = { sent_at: new Date().toISOString() };
-  let tmp7 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
-    return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
-  })(dynamicSamplingContextFromSpan);
-  if (tmp7) {
-    obj = { trace: dynamicSamplingContextFromSpan };
-    tmp7 = obj;
-  }
-  const merged = Object.assign(tmp7);
-  let tmp9 = tunnel && dsn;
-  if (tmp9) {
-    const obj1 = { dsn: tmp2(12973).dsnToString(dsn) };
-    tmp9 = obj1;
-    const tmp2Result = tmp2(12973);
-  }
-  const merged1 = Object.assign(tmp9);
-  beforeSendSpan = getDsn;
-  if (getDsn) {
-    beforeSendSpan = getDsn.getOptions().beforeSendSpan;
-  }
-  if (beforeSendSpan) {
-    const fn2 = (arg0) => {
-      const tmp3 = beforeSendSpan(spanTimeInputToSeconds.spanToJSON(arg0));
-      if (!tmp3) {
-        spanTimeInputToSeconds.showSpanDropWarning();
-        const tmpResult = spanTimeInputToSeconds;
-      }
-      return tmp3;
-    };
-  } else {
-    const fn = (arg0) => beforeSendSpan(dependencyMap[5]).spanToJSON(arg0);
-  }
-  arg0[Symbol.iterator]();
-  const date = new Date();
-  tmp2 = beforeSendSpan;
 };

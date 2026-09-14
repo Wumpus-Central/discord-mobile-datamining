@@ -10,6 +10,8 @@ import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
 import _classPrivateFieldKey from "_classPrivateFieldKey" /* 91 */;
 import nullthrows from "nullthrows" /* 70 */;
 
+const require = globalThis.__r;
+
 const Performance = fn;
 let closure_6 = ["mark", "measure"];
 const NativePerformanceCxx = nullthrows(_modDef154);
@@ -179,9 +181,8 @@ let items = [
                     tmp64 = closure_1_10(start);
                     if (null == tmp64) {
                       const _HermesInternal6 = HermesInternal;
-                      let tmp73 = _modDef157;
-                      tmp73 = new tmp73("Failed to execute 'measure' on 'Performance': The mark '" + start + "' does not exist.", "SyntaxError");
-                      throw tmp73;
+                      const tmp732 = new _modDef157("Failed to execute 'measure' on 'Performance': The mark '" + start + "' does not exist.", "SyntaxError");
+                      throw tmp732;
                     }
                   } else {
                     throw new TypeError("Trying to call a non-function");
@@ -193,9 +194,8 @@ let items = [
                     tmp64 = closure_1_10(StringResult1);
                     if (null == tmp64) {
                       const _HermesInternal8 = HermesInternal;
-                      let tmp145 = _modDef157;
-                      tmp145 = new tmp145("Failed to execute 'measure' on 'Performance': The mark '" + StringResult1 + "' does not exist.", "SyntaxError");
-                      throw tmp145;
+                      const tmp1452 = new _modDef157("Failed to execute 'measure' on 'Performance': The mark '" + StringResult1 + "' does not exist.", "SyntaxError");
+                      throw tmp1452;
                     }
                   } else {
                     throw new TypeError("Trying to call a non-function");
@@ -210,9 +210,8 @@ let items = [
                     tmp80 = closure_1_10(end);
                     if (null == tmp80) {
                       const _HermesInternal7 = HermesInternal;
-                      let tmp89 = _modDef157;
-                      tmp89 = new tmp89("Failed to execute 'measure' on 'Performance': The mark '" + end + "' does not exist.", "SyntaxError");
-                      throw tmp89;
+                      const tmp892 = new _modDef157("Failed to execute 'measure' on 'Performance': The mark '" + end + "' does not exist.", "SyntaxError");
+                      throw tmp892;
                     }
                   } else {
                     throw new TypeError("Trying to call a non-function");
@@ -224,9 +223,8 @@ let items = [
                     tmp80 = closure_1_10(StringResult2);
                     if (null == tmp80) {
                       const _HermesInternal9 = HermesInternal;
-                      let tmp152 = _modDef157;
-                      tmp152 = new tmp152("Failed to execute 'measure' on 'Performance': The mark '" + StringResult2 + "' does not exist.", "SyntaxError");
-                      throw tmp152;
+                      const tmp1522 = new _modDef157("Failed to execute 'measure' on 'Performance': The mark '" + StringResult2 + "' does not exist.", "SyntaxError");
+                      throw tmp1522;
                     }
                   } else {
                     throw new TypeError("Trying to call a non-function");
@@ -280,18 +278,16 @@ let items = [
               const tmp42 = closure_1_10(arg1);
               if (null == tmp42) {
                 const _HermesInternal5 = HermesInternal;
-                let tmp57 = _modDef157;
-                tmp57 = new tmp57("Failed to execute 'measure' on 'Performance': The mark '" + arg1 + "' does not exist.", "SyntaxError");
-                throw tmp57;
+                const tmp572 = new _modDef157("Failed to execute 'measure' on 'Performance': The mark '" + arg1 + "' does not exist.", "SyntaxError");
+                throw tmp572;
               } else {
                 if (undefined !== arg2) {
                   if (typeof tmp40 === "function") {
                     const tmp41Result = closure_1_10(arg2);
                     if (null == tmp41Result) {
                       const _HermesInternal4 = HermesInternal;
-                      let tmp49 = _modDef157;
-                      tmp49 = new tmp49("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
-                      throw tmp49;
+                      const tmp492 = new _modDef157("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
+                      throw tmp492;
                     } else {
                       let diff1 = tmp41Result - tmp42;
                     }
@@ -315,18 +311,16 @@ let items = [
               const tmp21 = closure_1_10(StringResult3);
               if (null == tmp21) {
                 const _HermesInternal3 = HermesInternal;
-                let tmp35 = _modDef157;
-                tmp35 = new tmp35("Failed to execute 'measure' on 'Performance': The mark '" + StringResult3 + "' does not exist.", "SyntaxError");
-                throw tmp35;
+                const tmp352 = new _modDef157("Failed to execute 'measure' on 'Performance': The mark '" + StringResult3 + "' does not exist.", "SyntaxError");
+                throw tmp352;
               } else {
                 if (undefined !== arg2) {
                   if (typeof getMarkTimeForMeasure === "function") {
                     const tmp20Result = closure_1_10(arg2);
                     if (null == tmp20Result) {
                       const _HermesInternal2 = HermesInternal;
-                      let tmp28 = _modDef157;
-                      tmp28 = new tmp28("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
-                      throw tmp28;
+                      const tmp282 = new _modDef157("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
+                      throw tmp282;
                     } else {
                       let diff2 = tmp20Result - tmp21;
                     }
@@ -350,9 +344,8 @@ let items = [
               const tmp9 = closure_1_10(arg2);
               if (null == tmp9) {
                 const _HermesInternal = HermesInternal;
-                let tmp13 = _modDef157;
-                tmp13 = new tmp13("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
-                throw tmp13;
+                const tmp131 = new _modDef157("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
+                throw tmp131;
               } else {
                 currentTimeStamp = tmp9;
               }

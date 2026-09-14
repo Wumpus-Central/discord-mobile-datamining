@@ -76,29 +76,29 @@ let items = [
       const props = this.props;
       ({ style, importantForAccessibility } = props);
       ({ children, imageStyle, imageRef } = props);
-      let size = ImageBackground(148)(style);
-      let obj = { accessibilityIgnoresInvertColors: true, importantForAccessibility, style, ref: this._captureRef, children: null };
+      const size = ImageBackground(148)(style);
+      const obj = { accessibilityIgnoresInvertColors: true, importantForAccessibility, style, ref: this._captureRef, children: null };
       const tmp = _objectWithoutProperties(props, closure_2);
-      obj = {};
+      const obj2 = {};
       const tmp3 = ImageBackground(108);
       const merged = Object.assign(tmp);
-      obj.importantForAccessibility = importantForAccessibility;
+      obj2.importantForAccessibility = importantForAccessibility;
       const items = [ImageBackground(254).absoluteFill, , ];
       let width;
       if (size != null) {
         width = size.width;
       }
-      size = { width, height: null };
+      const size1 = { width, height: null };
       let height;
       if (size != null) {
         height = size.height;
       }
-      size.height = height;
-      items[1] = size;
+      size1.height = height;
+      items[1] = size1;
       items[2] = imageStyle;
-      obj.style = items;
-      obj.ref = imageRef;
-      const items1 = [React5(ImageBackground(328), obj), children];
+      obj2.style = items;
+      obj2.ref = imageRef;
+      const items1 = [React5(ImageBackground(328), obj2), children];
       obj.children = items1;
       return React6(tmp3, obj);
     }

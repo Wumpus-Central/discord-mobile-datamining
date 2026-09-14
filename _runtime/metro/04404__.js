@@ -9,10 +9,9 @@ const noop = fn(19);
 ({ useRef: c3, useCallback, useState: closure_4 } = noop);
 
 export const useRive = function useRive() {
-  let obj = c;
-  const cResult = obj.c(4);
+  const cResult = c.c(4);
   const tmp2 = React3(null);
-  [tmp4, dependencyMap] = _slicedToArray(React4(null), 2);
+  [tmp4, dependencyMap] = React4(null);
   React3(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(current) {
@@ -82,17 +81,17 @@ export const useRive = function useRive() {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    obj = { f: first };
-    cResult[1] = obj;
-    let tmp6 = obj;
+    const obj2 = { f: first };
+    cResult[1] = obj2;
+    let tmp6 = obj2;
   } else {
     tmp6 = cResult[1];
   }
   if (cResult[2] !== tmp4) {
-    obj = { riveRef: tmp2, riveViewRef: tmp4, setHybridRef: tmp6 };
+    const obj3 = { riveRef: tmp2, riveViewRef: tmp4, setHybridRef: tmp6 };
     cResult[2] = tmp4;
-    cResult[3] = obj;
-    let tmp7 = obj;
+    cResult[3] = obj3;
+    let tmp7 = obj3;
   } else {
     tmp7 = cResult[3];
   }

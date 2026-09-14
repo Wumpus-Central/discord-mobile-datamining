@@ -96,16 +96,16 @@ Object.defineProperty(obj, "value", {
   set: undefined
 });
 const set = new Set(["string", "number", "symbol"]);
-obj = { safeint: null, int32: [-2147483648, 2147483647], uint32: [0, 4294967295], float32: [-340282346638528860000000000000000000000, 340282346638528860000000000000000000000], float64: null };
+let obj2 = { safeint: null, int32: [-2147483648, 2147483647], uint32: [0, 4294967295], float32: [-340282346638528860000000000000000000000, 340282346638528860000000000000000000000], float64: null };
 let items = [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER];
-obj.safeint = items;
+obj2.safeint = items;
 const items1 = [-Number.MAX_VALUE, Number.MAX_VALUE];
-obj.float64 = items1;
-obj = { int64: null, uint64: null };
+obj2.float64 = items1;
+let obj3 = { int64: null, uint64: null };
 const items2 = [BigInt("-9223372036854775808"), BigInt("9223372036854775807")];
-obj.int64 = items2;
+obj3.int64 = items2;
 const items3 = [BigInt(0), BigInt("18446744073709551615")];
-obj.uint64 = items3;
+obj3.uint64 = items3;
 class Class {
   constructor() {
     tmp = closure_0(this, Class);
@@ -249,9 +249,9 @@ export const defineLazy = function defineLazy(_zod, values, arg2) {
     configurable: true
   });
 };
-export const objectClone = function objectClone(_Object6Result) {
-  const prototypeOf = Object.getPrototypeOf(_Object6Result);
-  return Object.create(prototypeOf, Object.getOwnPropertyDescriptors(_Object6Result));
+export const objectClone = function objectClone(arg0) {
+  const prototypeOf = Object.getPrototypeOf(arg0);
+  return Object.create(prototypeOf, Object.getOwnPropertyDescriptors(arg0));
 };
 export const assignProp = function assignProp(arg0, arg1, value) {
   Object.defineProperty(arg0, arg1, { value, writable: true, enumerable: true, configurable: true });
@@ -392,7 +392,7 @@ export const clone = function clone(_zod, arg1, parent) {
 export const normalizeParams = function normalizeParams(message) {
   if (message) {
     if (typeof message === "string") {
-      let obj = {
+      const obj = {
         error() {
               return closure_0;
             }
@@ -419,12 +419,12 @@ export const normalizeParams = function normalizeParams(message) {
       delete tmp2[tmp];
       let tmp5 = message;
       if (typeof message.error === "string") {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(message);
-        obj.error = function error() {
+        obj2.error = function error() {
           return message.error;
         };
-        tmp5 = obj;
+        tmp5 = obj2;
       }
       return tmp5;
     }
@@ -737,7 +737,7 @@ export const partial = function partial(arg0, _zod, arg2) {
   Object.defineProperty(obj, "shape", {
     get: function() {
       const shape = _zod._zod.def.shape;
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(shape);
       if (closure_2) {
         for (const key10020 in tmp2) {
@@ -747,14 +747,14 @@ export const partial = function partial(arg0, _zod, arg2) {
             } else {
               let tmp16 = shape[key10020];
               if (closure_0) {
-                obj = { type: "optional", innerType: tmp16 };
+                let obj2 = { type: "optional", innerType: tmp16 };
                 let tmp18 = new.target;
                 let tmp19 = new.target;
-                let tmp15 = new tmp15(obj);
+                let tmp152 = new tmp15(obj2);
               } else {
-                tmp15 = tmp16;
+                tmp152 = tmp16;
               }
-              obj[key10020] = tmp15;
+              obj[key10020] = tmp152;
               continue;
             }
             continue;
@@ -774,14 +774,14 @@ export const partial = function partial(arg0, _zod, arg2) {
         for (const key10011 in shape) {
           let tmp24 = shape[key10011];
           if (closure_0) {
-            obj = { type: "optional", innerType: tmp24 };
+            let obj3 = { type: "optional", innerType: tmp24 };
             let tmp5 = new.target;
             let tmp6 = new.target;
-            let tmp23 = new tmp23(obj);
+            let tmp232 = new tmp23(obj3);
           } else {
-            tmp23 = tmp24;
+            tmp232 = tmp24;
           }
-          obj[key10011] = tmp23;
+          obj[key10011] = tmp232;
           continue;
         }
       }
@@ -812,7 +812,7 @@ export const required = function required(arg0, _zod, arg2) {
   Object.defineProperty(obj, "shape", {
     get: function() {
       const shape = _zod._zod.def.shape;
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(shape);
       if (closure_2) {
         for (const key10014 in tmp2) {
@@ -820,10 +820,10 @@ export const required = function required(arg0, _zod, arg2) {
             if (!closure_2[key10014]) {
               continue;
             } else {
-              obj = { type: "nonoptional", innerType: shape[key10014] };
+              let obj2 = { type: "nonoptional", innerType: shape[key10014] };
               let tmp12 = new.target;
               let tmp13 = new.target;
-              let tmp15 = new closure_0(obj);
+              let tmp15 = new closure_0(obj2);
               obj[key10014] = tmp15;
               continue;
             }
@@ -842,10 +842,10 @@ export const required = function required(arg0, _zod, arg2) {
         }
       } else {
         for (const key10011 in shape) {
-          obj = { type: "nonoptional", innerType: shape[key10011] };
+          let obj3 = { type: "nonoptional", innerType: shape[key10011] };
           let tmp20 = new.target;
           let tmp21 = new.target;
-          let tmp23 = new closure_0(obj);
+          let tmp23 = new closure_0(obj3);
           obj[key10011] = tmp23;
           continue;
         }
@@ -1075,12 +1075,12 @@ export const issue = function issue() {
   const items = [...arguments];
   const first = items[0];
   if (typeof first === "string") {
-    let obj = { message: first, code: "custom", input: tmp2, inst: tmp3 };
+    const obj = { message: first, code: "custom", input: tmp2, inst: tmp3 };
     return obj;
   } else {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(first);
-    return obj;
+    return obj2;
   }
 };
 export const cleanEnum = function cleanEnum(arg0) {
@@ -1265,6 +1265,6 @@ export const getParsedType = (self) => {
 };
 export const propertyKeyTypes = new Set(["string", "number", "symbol"]);
 export const primitiveTypes = new Set(["string", "number", "bigint", "boolean", "symbol", "undefined"]);
-export const NUMBER_FORMAT_RANGES = obj;
-export const BIGINT_FORMAT_RANGES = obj;
+export const NUMBER_FORMAT_RANGES = obj2;
+export const BIGINT_FORMAT_RANGES = obj3;
 export const Class = _createClass(Class);

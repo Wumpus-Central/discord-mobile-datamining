@@ -1,11 +1,13 @@
 // === Module 9131: lt ===
 
 // Module 9131 (lt)
+const require = globalThis.__r;
+
 const require = arg1;
 const dependencyMap = arg6;
 
-export const lt = require("module_9064")._gt;
-export const lte = require("module_9064")._gt;
+export const lt = require("module_9064")._lt;
+export const lte = require("module_9064")._lte;
 export const gt = require("module_9064")._gt;
 export const gte = require("module_9064")._gte;
 export const positive = require("module_9064")._positive;

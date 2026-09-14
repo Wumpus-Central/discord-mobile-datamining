@@ -79,13 +79,13 @@ const entry = {
     if (href) {
       let tmp10 = href;
       if (typeof href === "string") {
-        let obj = { uri: href };
+        const obj = { uri: href };
         tmp10 = obj;
       }
       assetSource = Image.resolveAssetSource(tmp10);
     }
     size.src = assetSource;
-    obj = {
+    const obj2 = {
       ref(arg0) {
         return self.refMethod(arg0);
       }

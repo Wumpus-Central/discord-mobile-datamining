@@ -23,8 +23,11 @@ import pinchHandlerName from "pinchHandlerName" /* 6894 */;
 import rotationHandlerName from "rotationHandlerName" /* 6895 */;
 import PointerType from "PointerType" /* 6896 */;
 import module_6757 from "module_6757" /* 6757 */;
-import initialize from "module_6758" /* 6758 */;
+import initialize_mod from "module_6758" /* 6758 */;
 
+const require = globalThis.__r;
+
+let initialize = initialize_mod;
 initialize = initialize.initialize();
 for (const key10019 in require("BaseButton")) {
   arg5[key10019] = require("BaseButton")[key10019];

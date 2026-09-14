@@ -1,11 +1,12 @@
 // === Module 4939: DefineOwnProperty ===
 
 // Module 4939 (DefineOwnProperty)
-import flag2 from "flag" /* 1306 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1316 */;
+import flag2 from "flag" /* 1304 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1314 */;
 import _mod4924 from "module_4924" /* 4924 */;
-import flag from "module_1456" /* 1456 */;
+import flag_mod from "module_1456" /* 1456 */;
 
+let flag = flag_mod;
 flag = flag.hasArrayLengthDefineBug();
 if (flag) {
   flag = _mod4924;

@@ -1,19 +1,21 @@
 // === Module 4073: ? ===
 
 // Module 4073
-import startOfWeek from "startOfWeek" /* 3884 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import startOfWeek_mod from "startOfWeek" /* 3884 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let startOfWeek = startOfWeek_mod;
 if (!startOfWeek) {
-  let obj = { default: startOfWeek };
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = startOfWeek;
 }
 startOfWeek = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

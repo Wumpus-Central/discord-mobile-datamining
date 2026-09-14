@@ -1,10 +1,9 @@
 // === Module 1568: ? ===
 
 // Module 1568
-import _mod1547 from "module_1547" /* 1547 */;
 import noop from "module_19" /* 19 */;
 
-require = arg1;
+const require = arg1;
 
 export const useOnGetState = function useOnGetState(getState) {
   getState = getState.getState;
@@ -35,13 +34,12 @@ export const useOnGetState = function useOnGetState(getState) {
       }
       return tmp3;
     });
-    let obj = _mod1547;
     let tmp3 = tmp;
     if (!obj.isArrayEqual(tmp.routes, mapped)) {
-      obj = {};
+      const obj2 = {};
       let merged = Object.assign(tmp);
-      obj.routes = mapped;
-      tmp3 = obj;
+      obj2.routes = mapped;
+      tmp3 = obj2;
     }
     return tmp3;
   }, items);

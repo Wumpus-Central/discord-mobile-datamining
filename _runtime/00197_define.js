@@ -19,8 +19,8 @@
       }
       obj = { type: "normal", arg: callResult };
     } catch (tmp4) {
-      obj = { type: "throw", arg: tmp4 };
-      return obj;
+      const obj2 = { type: "throw", arg: tmp4 };
+      return obj2;
     }
   }
   class Generator {
@@ -479,7 +479,7 @@
               return nextPromise;
             }
       };
-      tmp = f69876(this, "_invoke", obj);
+      tmp = f69879(this, "_invoke", obj);
       return;
     }
   }
@@ -624,16 +624,19 @@
         tmp = Generator;
       }
       let items = arg3;
-      let obj = Object.create(tmp.prototype);
+      const obj2 = Object.create(tmp.prototype);
       if (!arg3) {
         items = [];
       }
-      obj = Object.create(Context.prototype);
+      const obj = Object.create(Context.prototype);
       const items1 = [{ tryLoc: "root" }];
       obj.tryEntries = items1;
       const item = items.forEach(pushTryEntry, obj);
       obj.reset(true);
-      obj = {
+      closure_0 = arg0;
+      closure_1 = arg2;
+      closure_3 = closure_7;
+      obj(obj2, "_invoke", {
         value: function invoke(method, arg) {
           if (closure_3 === closure_2_9) {
             const _Error = Error;
@@ -701,12 +704,8 @@
             throw iter.arg;
           }
         }
-      };
-      closure_0 = arg0;
-      closure_1 = arg2;
-      closure_3 = closure_7;
-      obj(obj, "_invoke", obj);
-      return obj;
+      });
+      return obj2;
     };
     class Generator {
       constructor() {
@@ -1164,7 +1163,7 @@
                   return nextPromise;
                 }
         };
-        tmp = f69876(this, "_invoke", obj);
+        tmp = f69879(this, "_invoke", obj);
         return;
       }
     }
@@ -1207,9 +1206,9 @@
         });
       }
       const _Object2 = Object;
-      obj = Object.create(obj);
-      Generator.prototype = obj;
-      GeneratorFunctionPrototype.prototype = obj;
+      let obj2 = Object.create(obj);
+      Generator.prototype = obj2;
+      GeneratorFunctionPrototype.prototype = obj2;
       class Generator {
         constructor() {
           return;
@@ -1227,7 +1226,7 @@
           return;
         }
       }
-      tmp(obj, "constructor", tmp15);
+      tmp(obj2, "constructor", tmp15);
       class AsyncIterator {
         constructor(arg0, arg1) {
           closure_0 = arg0;
@@ -1669,7 +1668,7 @@
                       return nextPromise;
                     }
           };
-          tmp = f69876(this, "_invoke", obj);
+          tmp = f69879(this, "_invoke", obj);
           return;
         }
       }
@@ -1714,16 +1713,18 @@
           tmp4 = fn;
         }
         let items = arg3;
-        let obj = Object.create(tmp4.prototype);
+        const obj2 = Object.create(tmp4.prototype);
         if (!arg3) {
           items = [];
         }
-        obj = Object.create(Context.prototype);
+        let obj = Object.create(Context.prototype);
         const items1 = [{ tryLoc: "root" }];
         obj.tryEntries = items1;
         const item = items.forEach(pushTryEntry, obj);
         obj.reset(true);
-        obj = {
+        closure_1 = arg2;
+        closure_3 = closure_7;
+        obj(obj2, "_invoke", {
           value: function invoke(method, arg) {
             if (closure_3 === closure_2_9) {
               const _Error = Error;
@@ -1791,12 +1792,9 @@
               throw iter.arg;
             }
           }
-        };
-        closure_1 = arg2;
-        closure_3 = closure_7;
-        obj(obj, "_invoke", obj);
+        });
         let iter = Object.create(AsyncIterator.prototype);
-        closure_129_0 = obj;
+        closure_129_0 = obj2;
         closure_129_1 = _Promise;
         closure_129_2 = undefined;
         obj(iter, "_invoke", {
@@ -1954,12 +1952,12 @@
         }
         return nextPromise;
       };
-      const result1 = defineIteratorMethods(obj);
-      tmp7(obj, tmp5, "Generator");
-      tmp7(obj, tmp3, function() {
+      const result1 = defineIteratorMethods(obj2);
+      tmp7(obj2, tmp5, "Generator");
+      tmp7(obj2, tmp3, function() {
         return this;
       });
-      tmp7(obj, "toString", () => "[object Generator]");
+      tmp7(obj2, "toString", () => "[object Generator]");
       arg0.keys = (arg0) => {
         const ObjectResult = Object(arg0);
         closure_0 = ObjectResult;
@@ -1971,8 +1969,7 @@
         const reversed = items.reverse();
         function next() {
           if (items.length) {
-            const arr = items.pop();
-            next.value = arr;
+            next.value = items.pop();
             next.done = false;
             return next;
           }
@@ -1982,7 +1979,7 @@
         return next;
       };
       arg0.values = values;
-      obj = {
+      const obj4 = {
         constructor: Context,
         reset(arg0) {
               const obj = { prev: 0, next: 0, _sent: undefined, sent: undefined, done: false, delegate: null, method: "next", arg: undefined };
@@ -2197,16 +2194,16 @@
                 while (this.tryEntries[diff].tryLoc !== arg0) {
                   diff = diff - 1;
                 }
-                let completion = tmp4.completion;
+                const completion = tmp4.completion;
                 let arg;
                 if ("throw" === completion.type) {
-                  completion = tmp4.completion;
-                  if (!completion) {
-                    completion = {};
+                  let completion1 = tmp4.completion;
+                  if (!completion1) {
+                    completion1 = {};
                   }
-                  completion.type = "normal";
+                  completion1.type = "normal";
                   delete tmp[tmp2];
-                  tmp4.completion = completion;
+                  tmp4.completion = completion1;
                   arg = completion.arg;
                 }
                 return arg;
@@ -2260,7 +2257,7 @@
               return closure_11;
             }
       };
-      Context.prototype = obj;
+      Context.prototype = obj4;
       return arg0;
     } else {
       let call = hasOwnProperty.call;

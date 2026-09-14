@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "\u5B57\u7B26", verb: "\u5305\u542B" }, file: { unit: "\u5B57\u8282", verb: "\u5305\u542B" }, array: { unit: "\u9879", verb: "\u5305\u542B" }, set: { unit: "\u9879", verb: "\u5305\u542B" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "\u5B57\u7B26", verb: "\u5305\u542B" }, file: { unit: "\u5B57\u8282", verb: "\u5305\u542B" }, array: { unit: "\u9879", verb: "\u5305\u542B" }, set: { unit: "\u9879", verb: "\u5305\u542B" } };
         closure_1 = { regex: "\u8F93\u5165", email: "\u7535\u5B50\u90AE\u4EF6", url: "URL", emoji: "\u8868\u60C5\u7B26\u53F7", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO\u65E5\u671F\u65F6\u95F4", date: "ISO\u65E5\u671F", time: "ISO\u65F6\u95F4", duration: "ISO\u65F6\u957F", ipv4: "IPv4\u5730\u5740", ipv6: "IPv6\u5730\u5740", cidrv4: "IPv4\u7F51\u6BB5", cidrv6: "IPv6\u7F51\u6BB5", base64: "base64\u7F16\u7801\u5B57\u7B26\u4E32", base64url: "base64url\u7F16\u7801\u5B57\u7B26\u4E32", json_string: "JSON\u5B57\u7B26\u4E32", e164: "E.164\u53F7\u7801", jwt: "JWT", template_literal: "\u8F93\u5165" };
         closure_2 = { nan: "NaN", number: "\u6570\u5B57", array: "\u6570\u7EC4", null: "\u7A7A\u503C(null)" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "\u65E0\u6548\u8F93\u5165\uFF1A\u671F\u671B instanceof " + code.expected + "\uFF0C\u5B9E\u9645\u63A5\u6536 " + tmp48;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str26 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -104,13 +103,13 @@ if (self2) {
                 if (str27 == null) {
                   str27 = "\u503C";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str33 = tmp27.unit;
                 if (str33 == null) {
                   str33 = "\u4E2A\u5143\u7D20";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "\u6570\u503C\u8FC7\u5927\uFF1A\u671F\u671B " + str27 + " " + str26 + str + " " + str33;
+                let combined2 = "\u6570\u503C\u8FC7\u5927\uFF1A\u671F\u671B " + str27 + " " + str26 + str1 + " " + str33;
               } else {
                 let str28 = str27;
                 if (str27 == null) {
@@ -125,18 +124,18 @@ if (self2) {
               if (code.inclusive) {
                 str19 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str48 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "\u6570\u503C\u8FC7\u5C0F\uFF1A\u671F\u671B " + origin + " " + str19 + str1 + " " + tmp15.unit;
+                let combined3 = "\u6570\u503C\u8FC7\u5C0F\uFF1A\u671F\u671B " + origin + " " + str19 + str48 + " " + tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "\u6570\u503C\u8FC7\u5C0F\uFF1A\u671F\u671B " + origin + " " + str19 + str1;
+                combined3 = "\u6570\u503C\u8FC7\u5C0F\uFF1A\u671F\u671B " + origin + " " + str19 + str48;
               }
               return combined3;
             case "invalid_format":
@@ -174,7 +173,6 @@ if (self2) {
               return "\u65E0\u6548\u8F93\u5165";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = " \u4E2D\u5305\u542B\u65E0\u6548\u503C(value)";
               return "" + code.origin + " \u4E2D\u5305\u542B\u65E0\u6548\u503C(value)";
             default:
               return "\u65E0\u6548\u8F93\u5165";

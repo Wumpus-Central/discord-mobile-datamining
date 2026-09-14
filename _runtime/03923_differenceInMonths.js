@@ -1,43 +1,48 @@
 // === Module 3923: differenceInMonths ===
 
 // Module 3923 (differenceInMonths)
-import _typeof from "module_3725" /* 3725 */;
-import differenceInCalendarMonths from "differenceInCalendarMonths" /* 3911 */;
-import compareAsc from "compareAsc" /* 3901 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
-import module_3924 from "module_3924" /* 3924 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import differenceInCalendarMonths_mod from "differenceInCalendarMonths" /* 3911 */;
+import compareAsc_mod from "compareAsc" /* 3901 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import module_3924_mod from "module_3924" /* 3924 */;
 
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  let obj = { default: _typeof };
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
+let differenceInCalendarMonths = differenceInCalendarMonths_mod;
 if (!differenceInCalendarMonths) {
-  obj = { default: differenceInCalendarMonths };
-  let tmp5 = obj;
+  const obj2 = { default: differenceInCalendarMonths };
+  let tmp5 = obj2;
 } else {
   tmp5 = differenceInCalendarMonths;
 }
 differenceInCalendarMonths = tmp5;
+let compareAsc = compareAsc_mod;
 if (!compareAsc) {
-  obj = { default: compareAsc };
-  let tmp7 = obj;
+  const obj3 = { default: compareAsc };
+  let tmp7 = obj3;
 } else {
   tmp7 = compareAsc;
 }
 compareAsc = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
+let module_3924 = module_3924_mod;
 if (!module_3924) {
-  const obj2 = { default: module_3924 };
-  let tmp11 = obj2;
+  const obj5 = { default: module_3924 };
+  let tmp11 = obj5;
 } else {
   tmp11 = module_3924;
 }

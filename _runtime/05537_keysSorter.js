@@ -4,6 +4,8 @@
 import decodeComponents from "decodeComponents" /* 1541 */;
 import _mod5538 from "module_5538" /* 5538 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 let dependencyMap = arg6;
 function keysSorter(arr) {

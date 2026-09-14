@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "znak\u00F3w", verb: "mie\u0107" }, file: { unit: "bajt\u00F3w", verb: "mie\u0107" }, array: { unit: "element\u00F3w", verb: "mie\u0107" }, set: { unit: "element\u00F3w", verb: "mie\u0107" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "znak\u00F3w", verb: "mie\u0107" }, file: { unit: "bajt\u00F3w", verb: "mie\u0107" }, array: { unit: "element\u00F3w", verb: "mie\u0107" }, set: { unit: "element\u00F3w", verb: "mie\u0107" } };
         closure_1 = { regex: "wyra\u017Cenie", email: "adres email", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "data i godzina w formacie ISO", date: "data w formacie ISO", time: "godzina w formacie ISO", duration: "czas trwania ISO", ipv4: "adres IPv4", ipv6: "adres IPv6", cidrv4: "zakres IPv4", cidrv6: "zakres IPv6", base64: "ci\u0105g znak\u00F3w zakodowany w formacie base64", base64url: "ci\u0105g znak\u00F3w zakodowany w formacie base64url", json_string: "ci\u0105g znak\u00F3w w formacie JSON", e164: "liczba E.164", jwt: "JWT", template_literal: "wej\u015Bcie" };
         closure_2 = { nan: "NaN", number: "liczba", array: "tablica" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp49 == null) {
                 tmp49 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano instanceof " + code.expected + ", otrzymano " + tmp49;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str29 = "<=";
               }
-              let tmp28 = obj[code.origin];
+              let tmp28 = obj2[code.origin];
               if (tmp28 == null) {
                 tmp28 = null;
               }
@@ -104,13 +103,13 @@ if (self2) {
                 if (str30 == null) {
                   str30 = "warto\u015B\u0107";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str36 = tmp28.unit;
                 if (str36 == null) {
                   str36 = "element\u00F3w";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Za du\u017Ca warto\u015B\u0107: oczekiwano, \u017Ce " + str30 + " b\u0119dzie mie\u0107 " + str29 + str + " " + str36;
+                let combined2 = "Za du\u017Ca warto\u015B\u0107: oczekiwano, \u017Ce " + str30 + " b\u0119dzie mie\u0107 " + str29 + str1 + " " + str36;
               } else {
                 let str31 = str30;
                 if (str30 == null) {
@@ -125,7 +124,7 @@ if (self2) {
               if (code.inclusive) {
                 str18 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
@@ -134,13 +133,13 @@ if (self2) {
                 if (str19 == null) {
                   str19 = "warto\u015B\u0107";
                 }
-                const str1 = code.minimum.toString();
+                const str50 = code.minimum.toString();
                 let str25 = tmp15.unit;
                 if (str25 == null) {
                   str25 = "element\u00F3w";
                 }
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Za ma\u0142a warto\u015B\u0107: oczekiwano, \u017Ce " + str19 + " b\u0119dzie mie\u0107 " + str18 + str1 + " " + str25;
+                let combined3 = "Za ma\u0142a warto\u015B\u0107: oczekiwano, \u017Ce " + str19 + " b\u0119dzie mie\u0107 " + str18 + str50 + " " + str25;
               } else {
                 let str20 = str19;
                 if (str19 == null) {
@@ -189,7 +188,6 @@ if (self2) {
               return "Nieprawid\u0142owe dane wej\u015Bciowe";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Nieprawid\u0142owa warto\u015B\u0107 w ";
               return "Nieprawid\u0142owa warto\u015B\u0107 w " + code.origin;
             default:
               return "Nieprawid\u0142owe dane wej\u015Bciowe";

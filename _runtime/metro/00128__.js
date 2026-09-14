@@ -10,8 +10,8 @@ export function* createValueIterator(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -24,8 +24,8 @@ export function* createValueIterator(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_129_0 = length;
@@ -33,8 +33,8 @@ export function* createValueIterator(arg0) {
           if (closure_129_1 < length.length) {
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: closure_129_0[closure_129_1], done: false };
-            return obj1;
+            const obj4 = { value: closure_129_0[closure_129_1], done: false };
+            return obj4;
           } else {
             c3 = 3;
           }
@@ -46,7 +46,7 @@ export function* createValueIterator(arg0) {
         closure_129_1 = closure_129_1 + 1;
       }
       c3 = 3;
-      obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } catch (tmp15) {
       c3 = tmp;
@@ -62,8 +62,8 @@ export function* createKeyIterator(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -76,8 +76,8 @@ export function* createKeyIterator(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_129_0 = length;
@@ -85,8 +85,8 @@ export function* createKeyIterator(arg0) {
           if (closure_129_1 < length.length) {
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: closure_129_1, done: false };
-            return obj1;
+            const obj4 = { value: closure_129_1, done: false };
+            return obj4;
           } else {
             c3 = 3;
           }
@@ -98,7 +98,7 @@ export function* createKeyIterator(arg0) {
         closure_129_1 = closure_129_1 + 1;
       }
       c3 = 3;
-      obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } catch (tmp13) {
       c3 = tmp;
@@ -114,8 +114,8 @@ export function* createEntriesIterator(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -128,8 +128,8 @@ export function* createEntriesIterator(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_129_0 = length;
@@ -138,8 +138,8 @@ export function* createEntriesIterator(arg0) {
             const items = [closure_129_1, closure_129_0[closure_129_1]];
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: items, done: false };
-            return obj1;
+            const obj4 = { value: items, done: false };
+            return obj4;
           } else {
             c3 = 3;
           }
@@ -151,7 +151,7 @@ export function* createEntriesIterator(arg0) {
         closure_129_1 = closure_129_1 + 1;
       }
       c3 = 3;
-      obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } catch (tmp16) {
       c3 = tmp;

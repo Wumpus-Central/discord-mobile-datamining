@@ -2,7 +2,7 @@
 
 // Module 6902
 import _mod19 from "module_19" /* 19 */;
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6729 */;
+import value22 from "value2" /* 6729 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 
 const useEffect = _mod19.useEffect;
@@ -16,8 +16,8 @@ const __initData = { code: "function pnpm_useKeyboardTs3(result){const{temporary
 export const useKeyboard = (includeBottomOffset) => {
   includeBottomOffset = includeBottomOffset.includeBottomOffset;
   let shouldHandleKeyboardEvents;
+  shouldHandleKeyboardEvents = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(false);
   let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  shouldHandleKeyboardEvents = obj.useSharedValue(false);
   const state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED);
   const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
   const height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
@@ -30,13 +30,13 @@ export const useKeyboard = (includeBottomOffset) => {
   const obj6 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
   const fn = function v(value, arg1, value2, value3, arg4) {
     value = arg1;
-    if (value === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
+    if (value === value22.KEYBOARD_STATE.SHOWN) {
       if (!shouldHandleKeyboardEvents.value) {
         const items = [value, value, value2, value3];
         sharedValue5.value = items;
       }
     }
-    if (value !== GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
+    if (value !== value22.KEYBOARD_STATE.SHOWN) {
       value = height.value;
     }
     height.value = value;
@@ -52,11 +52,11 @@ export const useKeyboard = (includeBottomOffset) => {
     state.value = value;
     sharedValue5.value = [];
   };
-  obj = { KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE, shouldHandleKeyboardEvents, temporaryCachedKeyboardEvent: sharedValue5, keyboardHeight: height, includeBottomOffset, keyboardAnimationDuration: animationDuration, keyboardAnimationEasing: animationEasing, keyboardState: state };
-  fn.__closure = obj;
+  const obj7 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  fn.__closure = { KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE, shouldHandleKeyboardEvents, temporaryCachedKeyboardEvent: sharedValue5, keyboardHeight: height, includeBottomOffset, keyboardAnimationDuration: animationDuration, keyboardAnimationEasing: animationEasing, keyboardState: state };
   fn.__workletHash = 7905199978020;
   fn.__initData = sharedValue5;
-  const workletCallback = includeBottomOffset(shouldHandleKeyboardEvents[2]).useWorkletCallback(fn, []);
+  const workletCallback = obj7.useWorkletCallback(fn, []);
   let items = [workletCallback];
   state(() => {
     closure_0 = height.addListener(animationEasing, (endCoordinates) => {
@@ -73,7 +73,7 @@ export const useKeyboard = (includeBottomOffset) => {
       closure_1.remove();
     };
   }, items);
-  const obj7 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const obj8 = { KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE, shouldHandleKeyboardEvents, temporaryCachedKeyboardEvent: sharedValue5, keyboardHeight: height, includeBottomOffset, keyboardAnimationDuration: animationDuration, keyboardAnimationEasing: animationEasing, keyboardState: state };
   const fn2 = function b() {
     return shouldHandleKeyboardEvents.value;
   };

@@ -37,7 +37,6 @@ export function makeMultiplexedTransport(arg0, arg1) {
         const _HermesInternal = HermesInternal;
         combined = "" + arg0 + ":" + arg1;
       }
-      let result = map;
       value = map.get(combined);
       if (value) {
         const items = [arg0, value];
@@ -48,13 +47,13 @@ export function makeMultiplexedTransport(arg0, arg1) {
           let merged = tunnel;
           const envelopeEndpointWithUrlEncodedAuth = _mod740.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
           let tmp9 = tunnel;
-          result = {};
+          let obj3 = {};
           if (arg1) {
             merged = Object.assign(merged);
-            result.url = envelopeEndpointWithUrlEncodedAuth;
-            let tmp9Result = tmp9(result);
+            obj3.url = envelopeEndpointWithUrlEncodedAuth;
+            const tmp9Result = tmp9(obj3);
             closure_1 = tmp9Result;
-            let obj = {};
+            const obj4 = {};
             const merged1 = Object.assign(tmp9Result);
             tmp9 = asyncGeneratorStep;
             tunnel = asyncGeneratorStep(async (release) => {
@@ -67,8 +66,8 @@ export function makeMultiplexedTransport(arg0, arg1) {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value, done: true };
-                    return obj;
+                    const obj2 = { value, done: true };
+                    return obj2;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
@@ -80,15 +79,15 @@ export function makeMultiplexedTransport(arg0, arg1) {
                       throw value;
                     } else if (arg0 === 2) {
                       c1 = 3;
-                      obj = { value, done: true };
-                      return obj;
+                      const obj3 = { value, done: true };
+                      return obj3;
                     } else {
                       const tmp6 = getTransport(release, ["event", "transaction", "profile", "replay_event"]);
                       if (tmp6) {
                         tmp6.release = release;
                       }
                       c1 = 3;
-                      obj = { value: closure_1.send(release), done: true };
+                      const obj = { value: closure_1.send(release), done: true };
                       return obj;
                     }
                   } catch (tmp9) {
@@ -98,7 +97,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
                 }
               })();
             });
-            obj.send = function send(arg0) {
+            obj4.send = function send(arg0) {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -108,13 +107,13 @@ export function makeMultiplexedTransport(arg0, arg1) {
               }
               return applyArgumentsResult;
             };
-            tmp9Result = obj;
+            let tmp9Result2 = obj4;
           } else {
             const merged2 = Object.assign(merged);
-            result.url = envelopeEndpointWithUrlEncodedAuth;
-            tmp9Result = tmp9(result);
+            obj3.url = envelopeEndpointWithUrlEncodedAuth;
+            tmp9Result2 = tmp9(obj3);
           }
-          result = result.set(combined, tmp9Result);
+          obj3 = map.set(combined, tmp9Result2);
           const tmp4Result = _mod740;
         }
       }
@@ -156,10 +155,10 @@ export function makeMultiplexedTransport(arg0, arg1) {
           [tmp, obj] = item;
           const first = 5;
           if (tmp) {
-            obj = {};
+            const obj3 = {};
             const merged = Object.assign(first);
-            obj.dsn = tmp;
-            let tmp4 = obj;
+            obj3.dsn = tmp;
+            let tmp4 = obj3;
           } else {
             tmp4 = first;
           }

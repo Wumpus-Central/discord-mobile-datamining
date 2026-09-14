@@ -32,7 +32,7 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn, arg1) => {
+    return new _Promise((fn, arg1) => {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -54,14 +54,14 @@ if (!fn) {
         if (done.done) {
           closure_0(done.value);
         } else {
-          let tmp = done.value;
-          closure_0 = tmp;
-          if (!(tmp instanceof Promise)) {
-            tmp = new tmp((fn) => {
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
               fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -75,16 +75,15 @@ if (!fn) {
         fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
+          tmp32 = new tmp3((fn) => {
             fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
 const AppStart = "AppStart";
@@ -110,8 +109,8 @@ export const captureAppStart = function captureAppStart() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -124,8 +123,8 @@ export const captureAppStart = function captureAppStart() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             _true = tmp7;
             closure_128_0 = undefined;
@@ -135,17 +134,17 @@ export const captureAppStart = function captureAppStart() {
             closure_128_0 = client;
             if (client) {
               c5 = c0;
-              let obj2 = _true(tmp3[0]);
-              closure_128_1 = 1000 * obj2.timestampInSeconds();
+              closure_128_1 = 1000 * _true(tmp3[0]).timestampInSeconds();
               closure_128_2 = null;
               if (_true(tmp3[1]).NATIVE.enableNative) {
                 c3 = 1;
                 const NATIVE = _true(tmp3[1]).NATIVE;
                 c4 = 2;
                 c5 = 1;
-                const obj1 = { value: NATIVE.fetchNativeFrames(), done: false };
-                return obj1;
+                const obj5 = { value: NATIVE.fetchNativeFrames(), done: false };
+                return obj5;
               }
+              const obj3 = _true(tmp3[0]);
             } else {
               const debug3 = _true(tmp3[0]).debug;
               debug3.warn("[AppStart] Could not capture App Start, missing client.");
@@ -166,8 +165,8 @@ export const captureAppStart = function captureAppStart() {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_128_2 = value;
             const debug = _true(tmp3[0]).debug;
@@ -179,11 +178,11 @@ export const captureAppStart = function captureAppStart() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
-        const obj3 = { timestampMs: closure_128_1, endFrames: closure_128_2 };
-        _setAppStartEndData(obj3);
+        const obj7 = { timestampMs: closure_128_1, endFrames: closure_128_2 };
+        _setAppStartEndData(obj7);
         const integrationByName = closure_128_0.getIntegrationByName(c3);
         closure_129_1 = integrationByName;
         let result;
@@ -194,8 +193,8 @@ export const captureAppStart = function captureAppStart() {
         }
         c4 = 3;
         c5 = 1;
-        const obj4 = { value: result, done: false };
-        return obj4;
+        const obj8 = { value: result, done: false };
+        return obj8;
       } catch (tmp45) {
         closure_2 = tmp45;
         if (tmp4 === c3) {
@@ -219,8 +218,8 @@ export const _captureAppStart = function _captureAppStart(_captureAppStartResult
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -233,8 +232,8 @@ export const _captureAppStart = function _captureAppStart(_captureAppStartResult
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             _true = tmp7;
             closure_128_0 = undefined;
@@ -244,17 +243,17 @@ export const _captureAppStart = function _captureAppStart(_captureAppStartResult
             closure_128_0 = client;
             if (client) {
               c5 = c0;
-              let obj2 = _true(tmp3[0]);
-              closure_128_1 = 1000 * obj2.timestampInSeconds();
+              closure_128_1 = 1000 * _true(tmp3[0]).timestampInSeconds();
               closure_128_2 = null;
               if (_true(tmp3[1]).NATIVE.enableNative) {
                 c3 = 1;
                 const NATIVE = _true(tmp3[1]).NATIVE;
                 c4 = 2;
                 c5 = 1;
-                const obj1 = { value: NATIVE.fetchNativeFrames(), done: false };
-                return obj1;
+                const obj5 = { value: NATIVE.fetchNativeFrames(), done: false };
+                return obj5;
               }
+              const obj3 = _true(tmp3[0]);
             } else {
               const debug3 = _true(tmp3[0]).debug;
               debug3.warn("[AppStart] Could not capture App Start, missing client.");
@@ -275,8 +274,8 @@ export const _captureAppStart = function _captureAppStart(_captureAppStartResult
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_128_2 = value;
             const debug = _true(tmp3[0]).debug;
@@ -288,11 +287,11 @@ export const _captureAppStart = function _captureAppStart(_captureAppStartResult
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
-        const obj3 = { timestampMs: closure_128_1, endFrames: closure_128_2 };
-        _setAppStartEndData(obj3);
+        const obj7 = { timestampMs: closure_128_1, endFrames: closure_128_2 };
+        _setAppStartEndData(obj7);
         const integrationByName = closure_128_0.getIntegrationByName(c3);
         closure_129_1 = integrationByName;
         let result;
@@ -303,8 +302,8 @@ export const _captureAppStart = function _captureAppStart(_captureAppStartResult
         }
         c4 = 3;
         c5 = 1;
-        const obj4 = { value: result, done: false };
-        return obj4;
+        const obj8 = { value: result, done: false };
+        return obj8;
       } catch (tmp45) {
         closure_2 = tmp45;
         if (tmp4 === c3) {
@@ -372,8 +371,8 @@ export const appStartIntegration = () => {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          let obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -387,8 +386,8 @@ export const appStartIntegration = () => {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              let obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_2 = tmp2;
               dependencyMap = tmp3;
@@ -425,22 +424,22 @@ export const appStartIntegration = () => {
                         const debug13 = closure_0(682).debug;
                         debug13.warn("[AppStart] First started active root span id does not match the transaction event span id. Can not attached app start.");
                         c4 = 3;
-                        let obj1 = { value: undefined, done: true };
-                        return obj1;
+                        let obj5 = { value: undefined, done: true };
+                        return obj5;
                       }
                     } else {
                       const debug12 = closure_0(682).debug;
                       debug12.warn("[AppStart] No first started active root span id recorded. Can not attach app start.");
                       c4 = 3;
-                      let obj2 = { value: undefined, done: true };
-                      return obj2;
+                      let obj6 = { value: undefined, done: true };
+                      return obj6;
                     }
                   }
                   const NATIVE = closure_0(866).NATIVE;
                   c3 = 1;
                   c4 = 1;
-                  let obj3 = { value: NATIVE.fetchNativeAppStart(), done: false };
-                  return obj3;
+                  let obj7 = { value: NATIVE.fetchNativeAppStart(), done: false };
+                  return obj7;
                 } else {
                   const debug11 = closure_0(682).debug;
                   debug11.warn("[AppStart] Transaction event is missing trace context. Can not attach app start.");
@@ -455,8 +454,8 @@ export const appStartIntegration = () => {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj8 = { value, done: true };
+              return obj8;
             } else {
               closure_129_0 = value;
               if (!closure_129_0) {
@@ -476,8 +475,8 @@ export const appStartIntegration = () => {
                 timestampMs = _true.timestampMs;
               }
               if (!timestampMs) {
-                obj = closure_0(1021);
-                timestampMs = obj.getBundleStartTimestampMs();
+                timestampMs = closure_0(1021).getBundleStartTimestampMs();
+                let obj = closure_0(1021);
               }
               closure_129_2 = timestampMs;
               if (closure_129_2) {
@@ -542,19 +541,18 @@ export const appStartIntegration = () => {
                         APP_START_WARM = closure_0(1020).APP_START_WARM;
                       }
                       closure_129_10 = APP_START_WARM;
-                      obj2 = closure_0(1021);
-                      let obj5 = { op: closure_129_10, description: null, start_timestamp: null, timestamp: null, trace_id: null, parent_span_id: null, origin: null };
+                      let obj9 = { op: closure_129_10, description: null, start_timestamp: null, timestamp: null, trace_id: null, parent_span_id: null, origin: null };
                       let str9 = "Warm Start";
                       if ("cold" === closure_129_0.type) {
                         str9 = "Cold Start";
                       }
-                      obj5.description = str9;
-                      obj5.start_timestamp = closure_129_5;
-                      obj5.timestamp = closure_129_9;
-                      obj5.trace_id = closure_130_0.contexts.trace.trace_id;
-                      obj5.parent_span_id = closure_130_0.contexts.trace.span_id;
-                      obj5.origin = closure_129_4;
-                      closure_129_11 = obj2.createSpanJSON(obj5);
+                      obj9.description = str9;
+                      obj9.start_timestamp = closure_129_5;
+                      obj9.timestamp = closure_129_9;
+                      obj9.trace_id = closure_130_0.contexts.trace.trace_id;
+                      obj9.parent_span_id = closure_130_0.contexts.trace.span_id;
+                      obj9.origin = closure_129_4;
+                      closure_129_11 = closure_0(1021).createSpanJSON(obj9);
                       let endFrames;
                       if (null != _true) {
                         endFrames = _true.endFrames;
@@ -578,26 +576,25 @@ export const appStartIntegration = () => {
                         })(closure_129_11, _true.endFrames);
                       }
                       closure_129_14 = (function createJSExecutionStartSpan(start_timestamp, recordFirstStartedActiveRootSpanId) {
-                        let obj = closure_1_0(1021);
-                        const bundleStartTimestampMs = obj.getBundleStartTimestampMs();
+                        const bundleStartTimestampMs = closure_1_0(1021).getBundleStartTimestampMs();
                         if (bundleStartTimestampMs) {
                           const result = bundleStartTimestampMs / 1000;
                           if (result < start_timestamp.start_timestamp) {
                             const debug2 = closure_1_0(682).debug;
                             debug2.warn("Bundle start timestamp is before the app start span start timestamp. Skipping JS execution span.");
                           } else if (recordFirstStartedActiveRootSpanId) {
-                            closure_1_0(1021);
-                            obj = { description: "JS Bundle Execution Before React Root", start_timestamp: result, timestamp: recordFirstStartedActiveRootSpanId / 1000, origin: null };
-                            const tmpResult = closure_1_0(1023);
-                            obj.origin = closure_1_7 ? tmpResult.SPAN_ORIGIN_MANUAL_APP_START : tmpResult.SPAN_ORIGIN_AUTO_APP_START;
-                            return tmpResult.createChildSpanJSON(start_timestamp, obj);
+                            const obj2 = { description: "JS Bundle Execution Before React Root", start_timestamp: result, timestamp: recordFirstStartedActiveRootSpanId / 1000, origin: null };
+                            const tmpResult3 = closure_1_0(1023);
+                            obj2.origin = closure_1_7 ? tmpResult3.SPAN_ORIGIN_MANUAL_APP_START : tmpResult3.SPAN_ORIGIN_AUTO_APP_START;
+                            return closure_1_0(1021).createChildSpanJSON(start_timestamp, obj2);
                           } else {
                             const debug = closure_1_0(682).debug;
                             debug.warn("Missing the root component first constructor call timestamp.");
-                            obj = { description: "JS Bundle Execution Start", start_timestamp: result, timestamp: result, origin: closure_1_0(1023).SPAN_ORIGIN_AUTO_APP_START };
-                            return closure_1_0(1021).createChildSpanJSON(start_timestamp, obj);
+                            const obj3 = { description: "JS Bundle Execution Start", start_timestamp: result, timestamp: result, origin: closure_1_0(1023).SPAN_ORIGIN_AUTO_APP_START };
+                            return closure_1_0(1021).createChildSpanJSON(start_timestamp, obj3);
                           }
                         }
+                        const obj = closure_1_0(1021);
                       })(closure_129_11, recordFirstStartedActiveRootSpanId);
                       const items = [closure_129_11];
                       closure_0 = num6;
@@ -614,27 +611,27 @@ export const appStartIntegration = () => {
                       closure_0 = HermesBuiltin.arraySpread(found.map((description) => {
                         let start_timestamp_ms = description;
                         if ("UIKit init" === description.description) {
-                          let obj = closure_0(1025);
-                          let obj1 = closure_0(1021);
-                          let bundleStartTimestampMs = obj1.getBundleStartTimestampMs();
+                          const obj = closure_0(1025);
+                          let bundleStartTimestampMs = closure_0(1021).getBundleStartTimestampMs();
                           if (!bundleStartTimestampMs) {
-                            obj = { description: "UIKit Init", start_timestamp: start_timestamp_ms.start_timestamp_ms / 1000, timestamp: start_timestamp_ms.end_timestamp_ms / 1000, origin: closure_0(1023).SPAN_ORIGIN_AUTO_APP_START };
-                            let childSpanJSON = closure_0(1021).createChildSpanJSON(start_timestamp, obj);
+                            const obj4 = { description: "UIKit Init", start_timestamp: start_timestamp_ms.start_timestamp_ms / 1000, timestamp: start_timestamp_ms.end_timestamp_ms / 1000, origin: closure_0(1023).SPAN_ORIGIN_AUTO_APP_START };
+                            let childSpanJSON = closure_0(1021).createChildSpanJSON(start_timestamp, obj4);
                             obj.setMainThreadInfo(childSpanJSON);
                             const obj3 = closure_0(1021);
                           }
-                          obj = { description: "UIKit Init to JS Exec Start", start_timestamp: null, timestamp: null, origin: null };
+                          const obj2 = closure_0(1021);
+                          const obj6 = { description: "UIKit Init to JS Exec Start", start_timestamp: null, timestamp: null, origin: null };
                           start_timestamp_ms = start_timestamp_ms.start_timestamp_ms;
-                          obj.start_timestamp = start_timestamp_ms / 1000;
-                          obj.timestamp = bundleStartTimestampMs / 1000;
+                          obj6.start_timestamp = start_timestamp_ms / 1000;
+                          obj6.timestamp = bundleStartTimestampMs / 1000;
                           bundleStartTimestampMs = closure_0;
-                          obj.origin = closure_0(1023).SPAN_ORIGIN_AUTO_APP_START;
-                          childSpanJSON = closure_0(1021).createChildSpanJSON(start_timestamp, obj);
+                          obj6.origin = closure_0(1023).SPAN_ORIGIN_AUTO_APP_START;
+                          childSpanJSON = closure_0(1021).createChildSpanJSON(start_timestamp, obj6);
                           const obj5 = closure_0(1021);
                         } else {
                           const obj7 = closure_0(1025);
-                          obj1 = { description: start_timestamp_ms.description, start_timestamp: start_timestamp_ms.start_timestamp_ms / 1000, timestamp: start_timestamp_ms.end_timestamp_ms / 1000, origin: closure_0(1023).SPAN_ORIGIN_AUTO_APP_START };
-                          return obj7.setMainThreadInfo(closure_0(1021).createChildSpanJSON(start_timestamp, obj1));
+                          const obj9 = { description: start_timestamp_ms.description, start_timestamp: start_timestamp_ms.start_timestamp_ms / 1000, timestamp: start_timestamp_ms.end_timestamp_ms / 1000, origin: closure_0(1023).SPAN_ORIGIN_AUTO_APP_START };
+                          return obj7.setMainThreadInfo(closure_0(1021).createChildSpanJSON(start_timestamp, obj9));
                         }
                       }), closure_0);
                       closure_129_15 = items;
@@ -651,8 +648,8 @@ export const appStartIntegration = () => {
                         APP_START_WARM2 = closure_0(1024).APP_START_WARM;
                       }
                       closure_129_16 = APP_START_WARM2;
-                      const obj6 = { value: closure_129_3, unit: "millisecond" };
-                      closure_129_17 = obj6;
+                      const obj10 = { value: closure_129_3, unit: "millisecond" };
+                      closure_129_17 = obj10;
                       let measurements = closure_130_0.measurements;
                       if (!measurements) {
                         measurements = {};
@@ -663,6 +660,7 @@ export const appStartIntegration = () => {
                       const debug7 = closure_0(682).debug;
                       const _JSON = JSON;
                       debug7.log("[AppStart] Added app start measurement to transaction event.", JSON.stringify(closure_129_17, undefined, 2));
+                      let obj3 = closure_0(1021);
                     }
                   }
                 }
@@ -699,7 +697,7 @@ export const appStartIntegration = () => {
       obj = _mod987;
     }
   }
-  obj = {
+  return {
     name,
     setup(getOptions) {
       closure_1 = getOptions;
@@ -740,8 +738,8 @@ export const appStartIntegration = () => {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -754,8 +752,8 @@ export const appStartIntegration = () => {
                 throw value;
               } else if (arg0 === 2) {
                 c2 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 let tmp5 = !c2;
                 if (c2) {
@@ -767,8 +765,8 @@ export const appStartIntegration = () => {
                 if (!tmp5) {
                   c1 = 1;
                   c2 = 1;
-                  const obj1 = { value: attachAppStartToTransactionEvent(tmp4), done: false };
-                  return obj1;
+                  const obj4 = { value: attachAppStartToTransactionEvent(tmp4), done: false };
+                  return obj4;
                 }
               }
             } else if (arg0 === 1) {
@@ -776,12 +774,12 @@ export const appStartIntegration = () => {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
             c2 = 3;
-            const obj2 = { value: closure_128_0, done: true };
-            return obj2;
+            const obj5 = { value: closure_128_0, done: true };
+            return obj5;
           } catch (tmp10) {
             c2 = tmp;
             throw tmp10;
@@ -798,8 +796,8 @@ export const appStartIntegration = () => {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -812,8 +810,8 @@ export const appStartIntegration = () => {
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 closure_0 = tmp7;
                 closure_128_0 = undefined;
@@ -835,8 +833,8 @@ export const appStartIntegration = () => {
                         const NATIVE = closure_0(tmp3[1]).NATIVE;
                         c4 = 2;
                         c5 = 1;
-                        const obj1 = { value: NATIVE.fetchNativeFrames(), done: false };
-                        return obj1;
+                        const obj5 = { value: NATIVE.fetchNativeFrames(), done: false };
+                        return obj5;
                       }
                     }
                   } else {
@@ -848,8 +846,8 @@ export const appStartIntegration = () => {
                 }
                 c5 = 3;
                 c5 = 3;
-                let obj2 = { value, done: true };
-                return obj2;
+                const obj6 = { value, done: true };
+                return obj6;
               }
             } else if (1 === tmp7) {
               c3 = 0;
@@ -863,8 +861,8 @@ export const appStartIntegration = () => {
               } else if (arg0 === 2) {
                 c3 = 0;
                 c5 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj8 = { value, done: true };
+                return obj8;
               } else {
                 closure_128_0 = value;
                 const debug4 = closure_0(tmp3[0]).debug;
@@ -874,12 +872,12 @@ export const appStartIntegration = () => {
                   timestampMs = c4.timestampMs;
                 }
                 if (!timestampMs) {
-                  obj2 = closure_0(tmp3[0]);
-                  timestampMs = 1000 * obj2.timestampInSeconds();
+                  timestampMs = 1000 * closure_0(tmp3[0]).timestampInSeconds();
+                  const obj3 = closure_0(tmp3[0]);
                 }
                 closure_128_1 = timestampMs;
-                const obj4 = { timestampMs: closure_128_1, endFrames: closure_128_0 };
-                closure_1_8(obj4);
+                const obj12 = { timestampMs: closure_128_1, endFrames: closure_128_0 };
+                closure_1_8(obj12);
                 c3 = 0;
               }
             } else if (arg0 === 1) {
@@ -890,17 +888,16 @@ export const appStartIntegration = () => {
                 if (0 !== closure_128_3.spans.length) {
                   let scope = closure_0(tmp3[0]).getCapturedScopesOnSpan(closure_128_2).scope;
                   if (!scope) {
-                    obj = closure_0(tmp3[0]);
-                    scope = obj.getCurrentScope();
+                    scope = closure_0(tmp3[0]).getCurrentScope();
+                    const obj = closure_0(tmp3[0]);
                   }
                   scope.captureEvent(closure_128_3);
                   const obj15 = closure_0(tmp3[0]);
                 }
               }
             }
-            let obj6 = closure_0(tmp3[0]);
-            const obj5 = { forceTransaction: true, name: "App Start", op: closure_0(tmp3[4]).UI_LOAD };
-            closure_128_2 = obj6.startInactiveSpan(obj5);
+            const obj13 = { forceTransaction: true, name: "App Start", op: closure_0(tmp3[4]).UI_LOAD };
+            closure_128_2 = closure_0(tmp3[0]).startInactiveSpan(obj13);
             if (!(closure_128_2 instanceof closure_0(tmp3[0]).SentryNonRecordingSpan)) {
               const obj9 = closure_0(tmp3[3]);
               obj9.setEndTimeValue(closure_128_2, closure_0(tmp3[0]).timestampInSeconds());
@@ -910,14 +907,15 @@ export const appStartIntegration = () => {
               if (closure_128_3) {
                 c4 = 3;
                 c5 = 1;
-                obj6 = { value: closure_129_7(closure_128_3), done: false };
-                return obj6;
+                const obj14 = { value: closure_129_7(closure_128_3), done: false };
+                return obj14;
               } else {
                 const debug3 = closure_0(tmp3[0]).debug;
                 debug3.warn("[AppStart] Failed to convert App Start span to transaction.");
               }
               const obj11 = closure_0(tmp3[3]);
             }
+            const obj7 = closure_0(tmp3[0]);
           } catch (tmp81) {
             closure_2 = tmp81;
             if (tmp4 === c3) {
@@ -936,5 +934,4 @@ export const appStartIntegration = () => {
       debug.log("[AppStart] First started active root span id recorded.", closure_5);
     }
   };
-  return obj;
 };

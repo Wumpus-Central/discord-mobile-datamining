@@ -12,20 +12,19 @@ function genModule(global, index) {
     require = tmp4;
     dependencyMap = tmp3[3];
     _slicedToArray = tmp3[4];
-    const startsWithResult = module.startsWith("RCT");
+    const startsWithResult = obj.startsWith("RCT");
     let tmp9 = !startsWithResult;
     if (!startsWithResult) {
-      tmp9 = !module.startsWith("RK");
+      tmp9 = !obj.startsWith("RK");
     }
     require("module_38")(tmp9, `Module name prefixes should've been stripped by the native side but wasn't for ${obj}`);
     if (!tmp4) {
       if (!arr) {
-        module = { name: null };
-        module.name = module;
-        return module;
+        const obj2 = { name: obj };
+        return obj2;
       }
     }
-    module = {};
+    const obj3 = {};
     if (tmp3[2]) {
       const item = arr.forEach((item, index) => {
         let flag = str;
@@ -60,7 +59,7 @@ function genModule(global, index) {
           const error = new Error();
           return new Promise((substr, error) => {
             error(str[2]).default.enqueueNativeCall(substr, error, substr, (arg0) => substr(arg0), (arg0) => {
-              obj = arg0;
+              let obj = arg0;
               if (!arg0) {
                 obj = {};
               }
@@ -98,15 +97,15 @@ function genModule(global, index) {
           }
         });
         tmp4.type = str;
-        obj[item] = tmp4;
+        obj3[item] = tmp4;
         arr = str;
         let tmp = require("module_38");
       });
     }
     let _Object = Object;
-    const merged = Object.assign(module, tmp4);
-    if (null == module.getConstants) {
-      module.getConstants = () => {
+    const merged = Object.assign(obj3, tmp4);
+    if (null == obj3.getConstants) {
+      obj3.getConstants = () => {
         let frozen = closure_1;
         if (!closure_1) {
           const _Object = Object;
@@ -117,10 +116,10 @@ function genModule(global, index) {
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.warn("Unable to define method 'getConstants()' on NativeModule '" + module + "'. NativeModule '" + module + "' already has a constant or method called 'getConstants'. Please remove it.");
+      console.warn("Unable to define method 'getConstants()' on NativeModule '" + obj + "'. NativeModule '" + obj + "' already has a constant or method called 'getConstants'. Please remove it.");
     }
-    const obj1 = { name: module, module };
-    return obj1;
+    const obj4 = { name: obj, module: obj3 };
+    return obj4;
   } else {
     return null;
   }

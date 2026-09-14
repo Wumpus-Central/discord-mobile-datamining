@@ -4,4 +4,4 @@
 import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/main_tabs", width: 48, height: 48, scales: [1], hash: "af7e0b726a672f5506a1ba72e26e2adc", name: "NitroWheelIconWithGradient", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 20, height: 20, scales: [2, 3], hash: "abac82ff1ac426da4eac76f9342c367b", name: "ic_person_waving", type: "png" });

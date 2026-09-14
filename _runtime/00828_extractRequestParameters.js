@@ -27,7 +27,7 @@ export const addChatCompletionAttributes = function addChatCompletionAttributes(
   ({ id, model } = created);
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
-  let obj = {};
+  const obj = {};
   obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created.created).toISOString();
   setAttributes.setAttributes(obj);
   if (created.usage) {
@@ -35,21 +35,21 @@ export const addChatCompletionAttributes = function addChatCompletionAttributes(
     const completion_tokens = created.usage.completion_tokens;
     const total_tokens = created.usage.total_tokens;
     if (undefined !== prompt_tokens) {
-      obj = {};
-      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = prompt_tokens;
-      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = prompt_tokens;
-      setAttributes.setAttributes(obj);
+      const obj2 = {};
+      obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = prompt_tokens;
+      obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = prompt_tokens;
+      setAttributes.setAttributes(obj2);
     }
     if (undefined !== completion_tokens) {
-      obj = {};
-      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = completion_tokens;
-      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = completion_tokens;
-      setAttributes.setAttributes(obj);
+      const obj3 = {};
+      obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = completion_tokens;
+      obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = completion_tokens;
+      setAttributes.setAttributes(obj3);
     }
     if (undefined !== total_tokens) {
-      const obj1 = {};
-      obj1[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
-      setAttributes.setAttributes(obj1);
+      const obj4 = {};
+      obj4[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
+      setAttributes.setAttributes(obj4);
     }
   }
   if (Array.isArray(created.choices)) {
@@ -57,10 +57,10 @@ export const addChatCompletionAttributes = function addChatCompletionAttributes(
     const mapped = choices.map((finish_reason) => finish_reason.finish_reason);
     const found = mapped.filter((item) => null !== item);
     if (found.length > 0) {
-      const obj2 = {};
+      const obj5 = {};
       const _JSON = JSON;
-      obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(found);
-      setAttributes.setAttributes(obj2);
+      obj5[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(found);
+      setAttributes.setAttributes(obj5);
     }
     if (recordOutputs) {
       const choices1 = created.choices;
@@ -81,10 +81,10 @@ export const addChatCompletionAttributes = function addChatCompletionAttributes(
       });
       const flatResult = found1.flat();
       if (flatResult.length > 0) {
-        const obj3 = {};
+        const obj6 = {};
         const _JSON2 = JSON;
-        obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(flatResult);
-        setAttributes.setAttributes(obj3);
+        obj6[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(flatResult);
+        setAttributes.setAttributes(obj6);
       }
     }
   }
@@ -102,58 +102,58 @@ export const addConversationAttributes = function addConversationAttributes(setA
   }
 };
 export const addEmbeddingsAttributes = function addEmbeddingsAttributes(setAttributes, model) {
-  let obj = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model.model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model.model };
-  setAttributes.setAttributes(obj);
+  setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model.model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model.model });
   if (model.usage) {
     const prompt_tokens = model.usage.prompt_tokens;
     const total_tokens = model.usage.total_tokens;
     if (undefined !== prompt_tokens) {
-      obj = {};
-      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = prompt_tokens;
-      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = prompt_tokens;
-      setAttributes.setAttributes(obj);
+      const obj2 = {};
+      obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = prompt_tokens;
+      obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = prompt_tokens;
+      setAttributes.setAttributes(obj2);
     }
     if (undefined !== total_tokens) {
-      obj = {};
-      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
-      setAttributes.setAttributes(obj);
+      const obj3 = {};
+      obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
+      setAttributes.setAttributes(obj3);
     }
   }
+  const obj = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model.model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model.model };
 };
 export const addResponsesApiAttributes = function addResponsesApiAttributes(setAttributes, created_at, recordOutputs) {
   ({ id, model } = created_at);
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
-  let obj = {};
+  const obj = {};
   obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created_at.created_at).toISOString();
   setAttributes.setAttributes(obj);
   if (created_at.status) {
-    obj = {};
+    const obj2 = {};
     const _JSON = JSON;
     const items = [created_at.status];
-    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(items);
-    setAttributes.setAttributes(obj);
+    obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(items);
+    setAttributes.setAttributes(obj2);
   }
   if (created_at.usage) {
     const input_tokens = created_at.usage.input_tokens;
     const output_tokens = created_at.usage.output_tokens;
     const total_tokens = created_at.usage.total_tokens;
     if (undefined !== input_tokens) {
-      obj = {};
-      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = input_tokens;
-      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = input_tokens;
-      setAttributes.setAttributes(obj);
+      const obj3 = {};
+      obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = input_tokens;
+      obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = input_tokens;
+      setAttributes.setAttributes(obj3);
     }
     if (undefined !== output_tokens) {
-      const obj1 = {};
-      obj1[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = output_tokens;
-      obj1[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = output_tokens;
-      setAttributes.setAttributes(obj1);
+      const obj4 = {};
+      obj4[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = output_tokens;
+      obj4[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = output_tokens;
+      setAttributes.setAttributes(obj4);
     }
     if (undefined !== total_tokens) {
-      const obj2 = {};
-      obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
-      setAttributes.setAttributes(obj2);
+      const obj5 = {};
+      obj5[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
+      setAttributes.setAttributes(obj5);
     }
   }
   if (recordOutputs) {
@@ -172,10 +172,10 @@ export const addResponsesApiAttributes = function addResponsesApiAttributes(setA
           return tmp;
         });
         if (found.length > 0) {
-          const obj3 = {};
+          const obj6 = {};
           const _JSON2 = JSON;
-          obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(found);
-          setAttributes.setAttributes(obj3);
+          obj6[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(found);
+          setAttributes.setAttributes(obj6);
         }
       }
     }
@@ -307,31 +307,31 @@ export const isResponsesApiStreamEvent = function isResponsesApiStreamEvent(type
   return startsWithResult;
 };
 export const setCommonResponseAttributes = function setCommonResponseAttributes(setAttributes, responseId, responseModel, responseTimestamp) {
-  let obj = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: responseId, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: responseId };
-  setAttributes.setAttributes(obj);
-  obj = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: responseModel, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: responseModel };
-  setAttributes.setAttributes(obj);
-  obj = {};
-  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * responseTimestamp).toISOString();
-  setAttributes.setAttributes(obj);
+  setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: responseId, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: responseId });
+  const obj = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: responseId, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: responseId };
+  setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: responseModel, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: responseModel });
+  const obj3 = {};
+  const obj2 = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: responseModel, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: responseModel };
+  obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * responseTimestamp).toISOString();
+  setAttributes.setAttributes(obj3);
 };
 export const setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes, arg1, arg2, arg3) {
   if (undefined !== arg1) {
-    let obj = {};
+    const obj = {};
     obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = arg1;
     obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = arg1;
     setAttributes.setAttributes(obj);
   }
   if (undefined !== arg2) {
-    obj = {};
-    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = arg2;
-    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = arg2;
-    setAttributes.setAttributes(obj);
+    const obj2 = {};
+    obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = arg2;
+    obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = arg2;
+    setAttributes.setAttributes(obj2);
   }
   if (undefined !== arg3) {
-    obj = {};
-    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = arg3;
-    setAttributes.setAttributes(obj);
+    const obj3 = {};
+    obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = arg3;
+    setAttributes.setAttributes(obj3);
   }
 };
 export const shouldInstrument = function shouldInstrument(arg0) {

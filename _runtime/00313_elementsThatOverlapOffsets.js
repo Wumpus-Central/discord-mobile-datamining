@@ -47,7 +47,7 @@ export const newRangeCount = function newRangeCount(arg0, arg1) {
   const sum1 = 1 + Math.min(arg1.last, arg0.last);
   return sum - Math.max(0, sum1 - Math.max(arg1.first, arg0.first));
 };
-export const computeWindowedRenderLimits = function computeWindowedRenderLimits(getItemCount, result2, tmpResult2, cellsAroundViewport, _listMetrics, _scrollMetrics) {
+export const computeWindowedRenderLimits = function computeWindowedRenderLimits(getItemCount, result2, tmpResult6, cellsAroundViewport, _listMetrics, _scrollMetrics) {
   const itemCount = getItemCount.getItemCount(getItemCount.data);
   if (0 === itemCount) {
     return { first: 0, last: -1 };
@@ -61,7 +61,7 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
     const bound = Math.max(0, _scrollMetrics.offset);
     const sum = bound + visibleLength;
     const str2 = "after";
-    const result = (tmpResult2 - 1) * visibleLength;
+    const result = (tmpResult6 - 1) * visibleLength;
     if (velocity <= 1) {
       let str3 = "none";
       if (velocity < -1) {
@@ -74,14 +74,14 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
     const _Math3 = Math;
     const bound2 = Math.max(0, sum + result1);
     if (_listMetrics.getCellMetricsApprox(itemCount - 1, getItemCount).offset * num < bound1) {
-      let obj = { first: null, last: null };
+      const obj3 = { first: null, last: null };
       const _Math9 = Math;
-      obj.first = Math.max(0, itemCount - 1 - result2);
-      obj.last = itemCount - 1;
-      return obj;
+      obj3.first = Math.max(0, itemCount - 1 - result2);
+      obj3.last = itemCount - 1;
+      return obj3;
     } else {
       const items = [bound1, bound, sum, bound2];
-      [tmp61, tmp13, tmp14, tmp12] = _slicedToArray(elementsThatOverlapOffsets(items, getItemCount, _listMetrics, num), 4);
+      [tmp61, tmp13, tmp14, tmp12] = elementsThatOverlapOffsets(items, getItemCount, _listMetrics, num);
       let num4 = 0;
       if (null != tmp61) {
         num4 = tmp61;
@@ -93,7 +93,7 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
         const _Math4 = Math;
         bound3 = Math.max(0, num4);
       }
-      obj = { first: bound3, last: null };
+      const obj = { first: bound3, last: null };
       if (null == bound4) {
         const _Math5 = Math;
         bound4 = Math.min(diff, bound3 + result2 - 1);
@@ -111,9 +111,9 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
       if (bound3 > num4) {
         while (true) {
           let tmp26 = tmp21 >= result2;
-          let obj1 = _modAll27;
+          let obj2 = _modAll27;
           let tmp29 = tmp23 <= cellsAroundViewport.first;
-          if (obj1.fixVirtualizeListCollapseWindowSize()) {
+          if (obj2.fixVirtualizeListCollapseWindowSize()) {
             let tmp34 = tmp22 >= cellsAroundViewport.last;
             let tmp33 = tmp29;
           } else {
@@ -222,8 +222,8 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
               if (tmp25 <= diff) {
                 if (tmp24 <= obj.first) {
                   if (tmp25 >= obj.last) {
-                    obj = { first: tmp24, last: tmp25 };
-                    return obj;
+                    const obj4 = { first: tmp24, last: tmp25 };
+                    return obj4;
                   }
                 }
               }
@@ -233,8 +233,8 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
       }
       const _Error = Error;
       const _JSON = JSON;
-      obj1 = { first: tmp24, last: tmp25, itemCount, overscanFirst: num4, overscanLast: diff, visible: obj };
-      const error = new Error("Bad window calculation " + JSON.stringify(obj1));
+      const obj5 = { first: tmp24, last: tmp25, itemCount, overscanFirst: num4, overscanLast: diff, visible: obj };
+      const error = new Error("Bad window calculation " + JSON.stringify(obj5));
       throw error;
     }
   }
@@ -251,11 +251,11 @@ export const keyExtractor = function keyExtractor(key, arg1) {
     return id;
   }
   if (typeof key === "object") {
-    id = undefined;
+    let id1;
     if (key != null) {
-      id = key.id;
+      id1 = key.id;
     }
-    if (null != id) {
+    if (null != id1) {
       id = key.id;
     }
   }

@@ -1,21 +1,20 @@
 // === Module 4904: StringToNumber ===
 
 // Module 4904 (StringToNumber)
-import _mod1282 from "module_1282" /* 1282 */;
-import _mod1283 from "module_1283" /* 1283 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1316 */;
+import _mod1280 from "module_1280" /* 1280 */;
+import _mod1281 from "module_1281" /* 1281 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1314 */;
 import regexTester from "regexTester" /* 1446 */;
 import trim from "trim" /* 4905 */;
 
-let tmp = _mod1282("%RegExp%");
-const React2 = _mod1282("%parseInt%");
+const React2 = _mod1280("%parseInt%");
 const React3 = callBoundIntrinsic("String.prototype.slice");
 const React4 = regexTester(/^0b[01]+$/i);
 const hasOwnProperty = regexTester(/^0o[0-7]+$/i);
 const timestampProducer = regexTester(/^[-+]0x[0-9a-f]+$/i);
 const items = ["\u0085", "\u200B", "\uFFFE"];
-tmp = new tmp("[" + items.join("") + "]", "g");
-const React5 = regexTester(tmp);
+const tmp = _mod1280("%RegExp%");
+const React5 = regexTester(new _mod1280("%RegExp%")("[" + items.join("") + "]", "g"));
 class StringToNumber {
   constructor(arg0) {
     if (typeof global !== "string") {

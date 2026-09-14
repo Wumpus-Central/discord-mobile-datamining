@@ -8,6 +8,8 @@ import _mod1055 from "module_1055" /* 1055 */;
 import _mod1056 from "module_1056" /* 1056 */;
 import sentryTraceGesture from "sentryTraceGesture" /* 1058 */;
 
+const require = globalThis.__r;
+
 for (const key10013 in require("DEFAULT")) {
   arg5[key10013] = require("DEFAULT")[key10013];
   continue;

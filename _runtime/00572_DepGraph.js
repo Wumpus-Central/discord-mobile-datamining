@@ -76,12 +76,11 @@ DepGraph.prototype = {
     const self = this;
     if (this.hasNode(arg0)) {
       if (self.hasNode(arg1)) {
-        let arr = self.outgoingEdges[arg0];
         if (-1 === arr.indexOf(arg1)) {
-          arr = self.outgoingEdges[arg0].push(arg1);
+          self.outgoingEdges[arg0].push(arg1);
         }
         if (-1 === arr3.indexOf(arg0)) {
-          arr = self.incomingEdges[arg1].push(arg0);
+          self.incomingEdges[arg1].push(arg0);
         }
         return true;
       } else {
@@ -173,7 +172,7 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            if (typeof f19970 === "function") {
+            if (typeof f19971 === "function") {
               str = " -> ";
               str2 = "Dependency Cycle Found: ";
               tmp16 = globalThis;
@@ -269,7 +268,7 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            if (typeof f19970 === "function") {
+            if (typeof f19971 === "function") {
               str = " -> ";
               str2 = "Dependency Cycle Found: ";
               tmp16 = globalThis;
@@ -369,7 +368,7 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            if (typeof f19970 === "function") {
+            if (typeof f19971 === "function") {
               str = " -> ";
               str2 = "Dependency Cycle Found: ";
               tmp16 = globalThis;
@@ -453,7 +452,7 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            if (typeof f19970 === "function") {
+            if (typeof f19971 === "function") {
               str = " -> ";
               str2 = "Dependency Cycle Found: ";
               tmp16 = globalThis;
@@ -512,16 +511,14 @@ class tmp {
     setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(this));
     if (Error.captureStackTrace) {
       _Error = Error;
-      tmp3 = f19970;
-      captureStackTraceResult = Error.captureStackTrace(error, f19970);
+      tmp3 = f19971;
+      captureStackTraceResult = Error.captureStackTrace(error, f19971);
     }
     return error;
   }
 }
 let circular = tmp;
-let obj = { constructor: null };
-obj = { value: Error, enumerable: false, writable: true, configurable: true };
-obj.constructor = obj;
+let obj = { constructor: { value: Error, enumerable: false, writable: true, configurable: true } };
 tmp.prototype = Object.create(Error.prototype, obj);
 Object.setPrototypeOf(tmp, Error);
 

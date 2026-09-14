@@ -33,7 +33,8 @@ const entry = {
         const _ArrayBuffer = ArrayBuffer;
         if (!ArrayBuffer.isView(data)) {
           if (data instanceof Blob.default) {
-            let obj = { data: data.data, type: "blob" };
+            const obj2 = { data: data.data, type: "blob" };
+            let obj = obj2;
           } else {
             obj = { data: null, type: "string" };
             const _String = String;
@@ -54,22 +55,21 @@ const entry = {
       }
       return sum;
     }, 0);
-    let obj = BlobModuleDefault;
-    const fromParts = obj.createFromParts(mapped, replaced);
-    obj = { blobId: replaced, offset: 0, size: reduced, type: null, lastModified: null };
+    const fromParts = BlobModuleDefault.createFromParts(mapped, replaced);
+    let obj2 = { blobId: replaced, offset: 0, size: reduced, type: null, lastModified: null };
     let str = "";
     if (type) {
       str = type.type;
     }
-    obj.type = str;
+    obj2.type = str;
     if (type) {
       let lastModified = type.lastModified;
     } else {
       const _Date = Date;
       lastModified = Date.now();
     }
-    obj.lastModified = lastModified;
-    return BlobManager.createFromOptions(obj);
+    obj2.lastModified = lastModified;
+    return BlobManager.createFromOptions(obj2);
   }
 };
 const items = [
@@ -77,21 +77,19 @@ const items = [
   {
     key: "createFromOptions",
     value: function createFromOptions(_response) {
-      let obj = register;
-      obj.register(_response.blobId);
+      register.register(_response.blobId);
       let data = _response;
-      obj = Object.create(Blob.default.prototype);
       if (null == _response.__collector) {
-        obj = {};
+        const obj5 = {};
         const merged = Object.assign(_response);
         let result = null;
         if (null != BlobManager.__blobCollectorProvider) {
           result = BlobManager.__blobCollectorProvider(tmp7);
         }
-        obj.__collector = result;
-        data = obj;
+        obj5.__collector = result;
+        data = obj5;
       }
-      return Object.assign(obj, { data });
+      return Object.assign(Object.create(Blob.default.prototype), { data });
     }
   },
   {

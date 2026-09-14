@@ -1,105 +1,36 @@
 // === Module 12959: ? ===
 
 // Module 12959
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import _mod12954 from "module_12954" /* 12954 */;
 
-const SentryNonRecordingSpan = require;
-class SentryNonRecordingSpan {
-  constructor() {
-    obj = global;
-    if (global === undefined) {
-      obj = {};
-    }
-    self = this;
-    tmp = c2(this, SentryNonRecordingSpan);
-    traceId = obj.traceId;
-    if (!traceId) {
-      tmp2 = closure_0;
-      tmp3 = closure_1;
-      obj2 = closure_0(closure_1[2]);
-      traceId = obj2.generateTraceId();
-    }
-    self._traceId = traceId;
-    spanId = obj.spanId;
-    if (!spanId) {
-      tmp4 = closure_0;
-      tmp5 = closure_1;
-      obj3 = closure_0(closure_1[2]);
-      spanId = obj3.generateSpanId();
-    }
-    self._spanId = spanId;
-    return;
-  }
-}
-const entry = {
-  key: "spanContext",
-  value: function spanContext() {
-    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(12931).TRACE_FLAG_NONE };
-  }
-};
-const items = [
-  entry,
-  {
-    key: "end",
-    value: function end(arg0) {
+require = arg1;
+const dependencyMap = arg6;
 
-    }
-  },
-  {
-    key: "setAttribute",
-    value: function setAttribute(arg0, arg1) {
-      return this;
-    }
-  },
-  {
-    key: "setAttributes",
-    value: function setAttributes(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "setStatus",
-    value: function setStatus(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "updateName",
-    value: function updateName(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "isRecording",
-    value: function isRecording() {
+export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
+  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
+    if (!globalThis.__SENTRY_TRACING__) {
       return false;
     }
-  },
-  {
-    key: "addEvent",
-    value: function addEvent(arg0, arg1, arg2) {
-      return this;
-    }
-  },
-  {
-    key: "addLink",
-    value: function addLink(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "addLinks",
-    value: function addLinks(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "recordException",
-    value: function recordException(arg0, arg1) {
-
-    }
   }
-];
-
-export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);
+  let tmp = tracesSampler;
+  const client = _mod12954.getClient();
+  if (!tracesSampler) {
+    let options = client;
+    if (client) {
+      options = client.getOptions();
+    }
+    tmp = options;
+  }
+  let tmp3 = tmp;
+  if (tmp3) {
+    let enableTracing = tmp.enableTracing;
+    if (!enableTracing) {
+      enableTracing = "tracesSampleRate" in tmp;
+    }
+    if (!enableTracing) {
+      enableTracing = "tracesSampler" in tmp;
+    }
+    tmp3 = enableTracing;
+  }
+  return tmp3;
+};

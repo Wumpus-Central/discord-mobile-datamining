@@ -19,7 +19,7 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
   if (!CONSOLE_LEVELS) {
     CONSOLE_LEVELS = CONSOLE_LEVELS(689).CONSOLE_LEVELS;
   }
-  obj = {
+  return {
     name: "ConsoleLogs",
     setup(getOptions) {
       closure_0 = getOptions;
@@ -29,7 +29,6 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
       if (options.enableLogs) {
         const result = CONSOLE_LEVELS(dependencyMap[3]).addConsoleInstrumentationHandler((arg0) => {
           ({ args, level } = arg0);
-          let obj = _mod713;
           if (obj.getClient() === closure_0) {
             if (CONSOLE_LEVELS.includes(level)) {
               const first = args[0];
@@ -37,14 +36,14 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
               if ("assert" !== level) {
                 let tmp9 = args.length > 1 && typeof args[0] === "string";
                 if (tmp9) {
-                  let tmpResult = safeJoinConsoleArgs;
-                  tmp9 = !tmpResult.hasConsoleSubstitutions(args[0]);
+                  tmp9 = !safeJoinConsoleArgs.hasConsoleSubstitutions(args[0]);
+                  const tmpResult = safeJoinConsoleArgs;
                 }
-                obj = {};
+                const obj2 = {};
                 const merged = Object.assign(attributes);
                 if (tmp9) {
-                  tmpResult = safeJoinConsoleArgs;
-                  let consoleTemplateAttributes = tmpResult.createConsoleTemplateAttributes(first, substr);
+                  let consoleTemplateAttributes = safeJoinConsoleArgs.createConsoleTemplateAttributes(first, substr);
+                  const tmpResult6 = safeJoinConsoleArgs;
                 } else {
                   consoleTemplateAttributes = {};
                 }
@@ -53,30 +52,31 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
                 if ("log" !== level) {
                   str5 = level;
                 }
-                obj = { level: str5, message: null, severityNumber: null, attributes: null };
-                const tmpResult1 = _INTERNAL_captureSerializedLog;
-                obj.message = safeJoinConsoleArgs.formatConsoleArgs(args, num, num2);
+                const obj3 = { level: str5, message: null, severityNumber: null, attributes: null };
+                const tmpResult7 = _INTERNAL_captureSerializedLog;
+                obj3.message = safeJoinConsoleArgs.formatConsoleArgs(args, num, num2);
                 let num3;
                 if ("log" === level) {
                   num3 = 10;
                 }
-                obj.severityNumber = num3;
-                obj.attributes = obj;
-                tmpResult1._INTERNAL_captureLog(obj);
-                const tmpResult2 = safeJoinConsoleArgs;
+                obj3.severityNumber = num3;
+                obj3.attributes = obj2;
+                tmpResult7._INTERNAL_captureLog(obj3);
+                const tmpResult8 = safeJoinConsoleArgs;
               } else if (!first) {
                 let str2 = "Assertion failed";
                 if (substr.length > 0) {
                   const _HermesInternal = HermesInternal;
                   str2 = "Assertion failed: " + safeJoinConsoleArgs.formatConsoleArgs(substr, num, num2);
-                  const tmpResult3 = safeJoinConsoleArgs;
+                  const tmpResult9 = safeJoinConsoleArgs;
                 }
-                const obj1 = { level: "error", message: str2, attributes };
-                _INTERNAL_captureSerializedLog._INTERNAL_captureLog(obj1);
-                const tmpResult4 = _INTERNAL_captureSerializedLog;
+                const obj4 = { level: "error", message: str2, attributes };
+                _INTERNAL_captureSerializedLog._INTERNAL_captureLog(obj4);
+                const tmpResult10 = _INTERNAL_captureSerializedLog;
               }
             }
           }
+          obj = _mod713;
         });
         const tmp2Result = CONSOLE_LEVELS(dependencyMap[3]);
       } else if (CONSOLE_LEVELS(dependencyMap[2]).DEBUG_BUILD) {
@@ -85,5 +85,4 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
       }
     }
   };
-  return obj;
 });

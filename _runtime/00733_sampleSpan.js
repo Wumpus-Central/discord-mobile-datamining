@@ -10,13 +10,12 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const sampleSpan = function sampleSpan(tracesSampler, parentSampled, arg2) {
-  let obj = _mod720;
+export const sampleSpan = function sampleSpan(tracesSampler, parentSampled, sampleRand) {
   if (obj.hasSpansEnabled(tracesSampler)) {
     if (typeof tracesSampler.tracesSampler === "function") {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(parentSampled);
-      obj.inheritOrSampleWith = function inheritOrSampleWith(arg0) {
+      obj2.inheritOrSampleWith = function inheritOrSampleWith(arg0) {
         if (typeof parentSampled.parentSampleRate === "number") {
           let parentSampleRate = parentSampled.parentSampleRate;
         } else {
@@ -28,7 +27,7 @@ export const sampleSpan = function sampleSpan(tracesSampler, parentSampled, arg2
         }
         return parentSampleRate;
       };
-      let tracesSampleRate = tracesSampler.tracesSampler(obj);
+      let tracesSampleRate = tracesSampler.tracesSampler(obj2);
       let flag2 = true;
     } else if (undefined !== parentSampled.parentSampled) {
       tracesSampleRate = parentSampled.parentSampled;
@@ -49,7 +48,7 @@ export const sampleSpan = function sampleSpan(tracesSampler, parentSampled, arg2
       const items = [false];
       return items;
     } else if (parseSampleRateResult) {
-      if (arg2 >= parseSampleRateResult) {
+      if (sampleRand >= parseSampleRateResult) {
         if (_mod688.DEBUG_BUILD) {
           const debug2 = consoleSandbox.debug;
           let _Number = Number;
@@ -57,7 +56,7 @@ export const sampleSpan = function sampleSpan(tracesSampler, parentSampled, arg2
           debug2.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(tracesSampleRate) + ")");
         }
       }
-      const items1 = [arg2 < parseSampleRateResult, parseSampleRateResult, flag2];
+      const items1 = [sampleRand < parseSampleRateResult, parseSampleRateResult, flag2];
       return items1;
     } else {
       if (_mod688.DEBUG_BUILD) {
@@ -76,4 +75,5 @@ export const sampleSpan = function sampleSpan(tracesSampler, parentSampled, arg2
     const items3 = [false];
     return items3;
   }
+  obj = _mod720;
 };

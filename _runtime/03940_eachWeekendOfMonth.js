@@ -1,11 +1,12 @@
 // === Module 3940: eachWeekendOfMonth ===
 
 // Module 3940 (eachWeekendOfMonth)
-import eachWeekendOfInterval from "eachWeekendOfInterval" /* 3939 */;
-import startOfMonth from "startOfMonth" /* 3941 */;
-import endOfMonth from "endOfMonth" /* 3926 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import eachWeekendOfInterval_mod from "eachWeekendOfInterval" /* 3939 */;
+import startOfMonth_mod from "startOfMonth" /* 3941 */;
+import endOfMonth_mod from "endOfMonth" /* 3926 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let eachWeekendOfInterval = eachWeekendOfInterval_mod;
 if (!eachWeekendOfInterval) {
   let obj = { default: eachWeekendOfInterval };
   let tmp3 = obj;
@@ -13,23 +14,26 @@ if (!eachWeekendOfInterval) {
   tmp3 = eachWeekendOfInterval;
 }
 eachWeekendOfInterval = tmp3;
+let startOfMonth = startOfMonth_mod;
 if (!startOfMonth) {
-  obj = { default: startOfMonth };
-  let tmp5 = obj;
+  const obj2 = { default: startOfMonth };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfMonth;
 }
 startOfMonth = tmp5;
+let endOfMonth = endOfMonth_mod;
 if (!endOfMonth) {
-  obj = { default: endOfMonth };
-  let tmp7 = obj;
+  const obj3 = { default: endOfMonth };
+  let tmp7 = obj3;
 } else {
   tmp7 = endOfMonth;
 }
 endOfMonth = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }

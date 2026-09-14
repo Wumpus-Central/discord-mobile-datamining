@@ -10,9 +10,7 @@ import jsxProd from "jsxProd" /* 21 */;
 const noop = module_8397(_mod19);
 
 export const StepNumber = function StepNumber(arg0) {
-  let obj = { style: _mod8401.styles.stepNumber, children: null };
+  const obj = { style: _mod8401.styles.stepNumber, children: <get ActivityIndicator.Text testID={"" + index + "th-step"} style={style}>{i}</get ActivityIndicator.Text> };
   ({ i, index, style } = arg0);
-  obj = { testID: "" + index + "th-step", style, children: i };
-  obj.children = <get ActivityIndicator.Text testID={"" + index + "th-step"} style={style}>{i}</get ActivityIndicator.Text>;
-  return <get ActivityIndicator.View testID={"" + index + "th-step"} style={style}>{i}</get ActivityIndicator.View>;
+  return <get ActivityIndicator.View style={_mod8401.styles.stepNumber}><get ActivityIndicator.Text testID={"" + index + "th-step"} style={style}>{i}</get ActivityIndicator.Text></get ActivityIndicator.View>;
 };

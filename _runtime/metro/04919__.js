@@ -1,7 +1,7 @@
 // === Module 4919: ? ===
 
 // Module 4919
-import _mod1308 from "module_1308" /* 1308 */;
+import _mod1306 from "module_1306" /* 1306 */;
 
 
 export default function mod(arg0, arg1) {
@@ -10,5 +10,5 @@ export default function mod(arg0, arg1) {
   if (result < 0) {
     sum = result + arg1;
   }
-  return _mod1308(sum);
+  return _mod1306(sum);
 };

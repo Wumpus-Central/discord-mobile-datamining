@@ -32,8 +32,7 @@ function getHandler(arg0, onBegin) {
     return onBegin.onTouchesCancelled;
   }
 }
-let obj = { CALLBACK_TYPE: fn(6777).CALLBACK_TYPE };
-getHandler.__closure = obj;
+getHandler.__closure = { CALLBACK_TYPE: fn(6777).CALLBACK_TYPE };
 getHandler.__workletHash = 611602598219;
 getHandler.__initData = { code: "function getHandler_Pnpm_useAnimatedGestureTs1(type,gesture){const{CALLBACK_TYPE}=this.__closure;switch(type){case CALLBACK_TYPE.BEGAN:return gesture.onBegin;case CALLBACK_TYPE.START:return gesture.onStart;case CALLBACK_TYPE.UPDATE:return gesture.onUpdate;case CALLBACK_TYPE.CHANGE:return gesture.onChange;case CALLBACK_TYPE.END:return gesture.onEnd;case CALLBACK_TYPE.FINALIZE:return gesture.onFinalize;case CALLBACK_TYPE.TOUCHES_DOWN:return gesture.onTouchesDown;case CALLBACK_TYPE.TOUCHES_MOVE:return gesture.onTouchesMove;case CALLBACK_TYPE.TOUCHES_UP:return gesture.onTouchesUp;case CALLBACK_TYPE.TOUCHES_CANCEL:return gesture.onTouchesCancelled;}}" };
 function touchEventTypeToCallbackType(arg0) {
@@ -49,8 +48,8 @@ function touchEventTypeToCallbackType(arg0) {
     return _mod6777.CALLBACK_TYPE.UNDEFINED;
   }
 }
-obj = { TouchEventType: fn(6764).TouchEventType, CALLBACK_TYPE: fn(6777).CALLBACK_TYPE };
-touchEventTypeToCallbackType.__closure = obj;
+let obj = { CALLBACK_TYPE: fn(6777).CALLBACK_TYPE };
+touchEventTypeToCallbackType.__closure = { TouchEventType: fn(6764).TouchEventType, CALLBACK_TYPE: fn(6777).CALLBACK_TYPE };
 touchEventTypeToCallbackType.__workletHash = 12322546845125;
 touchEventTypeToCallbackType.__initData = { code: "function touchEventTypeToCallbackType_Pnpm_useAnimatedGestureTs2(eventType){const{TouchEventType,CALLBACK_TYPE}=this.__closure;switch(eventType){case TouchEventType.TOUCHES_DOWN:return CALLBACK_TYPE.TOUCHES_DOWN;case TouchEventType.TOUCHES_MOVE:return CALLBACK_TYPE.TOUCHES_MOVE;case TouchEventType.TOUCHES_UP:return CALLBACK_TYPE.TOUCHES_UP;case TouchEventType.TOUCHES_CANCEL:return CALLBACK_TYPE.TOUCHES_CANCEL;}return CALLBACK_TYPE.UNDEFINED;}" };
 function runWorklet(END, arg1, handlerTag) {
@@ -67,8 +66,8 @@ function runWorklet(END, arg1, handlerTag) {
     console.warn(tagMessage.tagMessage("Animated gesture callback must be a worklet"));
   }
 }
-obj = { getHandler, tagMessage: fn(6761).tagMessage };
-runWorklet.__closure = obj;
+const obj2 = { TouchEventType: fn(6764).TouchEventType, CALLBACK_TYPE: fn(6777).CALLBACK_TYPE };
+runWorklet.__closure = { getHandler, tagMessage: fn(6761).tagMessage };
 runWorklet.__workletHash = 6506685255530;
 runWorklet.__initData = { code: "function runWorklet_Pnpm_useAnimatedGestureTs3(type,gesture,event,...args){const{getHandler,tagMessage}=this.__closure;const handler=getHandler(type,gesture);if(gesture.isWorklet[type]){handler===null||handler===void 0||handler(event,...args);}else if(handler){console.warn(tagMessage('Animated gesture callback must be a worklet'));}}" };
 function isStateChangeEvent(oldState) {

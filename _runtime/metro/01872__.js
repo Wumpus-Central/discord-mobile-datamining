@@ -16,8 +16,7 @@ export default function _default(children) {
   if (!tmp) {
     tmp = enabled;
   }
-  let obj = { enabled: tmp, children: null };
-  obj = { style: { opacity: obj.useKeyboardAnimation().progress }, children: children.children };
-  obj.children = <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{children.children}</closure_3>;
-  return jsx(KeyboardAvoidingView.KeyboardStickyView, { style: { opacity: obj.useKeyboardAnimation().progress }, children: children.children });
+  const obj2 = { enabled: tmp, children: null };
+  obj2.children = <closure_3 style={{ opacity: _mod1830.useKeyboardAnimation().progress }}>{children.children}</closure_3>;
+  return jsx(KeyboardAvoidingView.KeyboardStickyView, { enabled: tmp, children: null });
 };

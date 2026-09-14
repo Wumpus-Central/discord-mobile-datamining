@@ -1,19 +1,21 @@
 // === Module 3909: differenceInCalendarISOWeekYears ===
 
 // Module 3909 (differenceInCalendarISOWeekYears)
-import module_3882 from "module_3882" /* 3882 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import module_3882_mod from "module_3882" /* 3882 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let module_3882 = module_3882_mod;
 if (!module_3882) {
-  let obj = { default: module_3882 };
+  const obj = { default: module_3882 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3882;
 }
 module_3882 = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

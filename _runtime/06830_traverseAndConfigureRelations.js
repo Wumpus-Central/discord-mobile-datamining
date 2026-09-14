@@ -13,7 +13,6 @@ function traverseAndConfigureRelations(gestures, map, set) {
   if (items === undefined) {
     items = [];
   }
-  let obj = require("module_6823");
   if (obj.isComposedGesture(gestures)) {
     gestures = gestures.gestures;
     let item = gestures.forEach((type) => {
@@ -63,13 +62,12 @@ function traverseAndConfigureRelations(gestures, map, set) {
           items.length = items.length;
         }
       } else {
-        let arr = items;
         traverseAndConfigureRelations(type, closure_1, set, items);
         if (deleteResult) {
           set.add(type.handlerTag);
         }
         if (gestures.type === ComposedGestureName.ComposedGestureName.Exclusive) {
-          arr = arr.push(type.handlerTag);
+          items.push(type.handlerTag);
         }
         deleteResult = set.delete(type.handlerTag);
       }
@@ -86,9 +84,10 @@ function traverseAndConfigureRelations(gestures, map, set) {
     const items2 = [];
     HermesBuiltin.arraySpread(items, 0);
     HermesBuiltin.apply(items2, waitFor);
-    obj = { waitFor: gestures.gestureRelations.waitFor, simultaneousHandlers: gestures.gestureRelations.simultaneousHandlers, blocksHandlers: gestures.gestureRelations.blocksHandlers };
-    const result = map.set(gestures.handlerTag, obj);
+    const obj2 = { waitFor: gestures.gestureRelations.waitFor, simultaneousHandlers: gestures.gestureRelations.simultaneousHandlers, blocksHandlers: gestures.gestureRelations.blocksHandlers };
+    const result = map.set(gestures.handlerTag, obj2);
   }
+  obj = require("module_6823");
   tmp = _require;
 }
 

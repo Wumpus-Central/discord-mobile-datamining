@@ -1,8 +1,9 @@
 // === Module 1667: ? ===
 
 // Module 1667
-import module_1639 from "module_1639" /* 1639 */;
+import module_1639_mod from "module_1639" /* 1639 */;
 
+let module_1639 = module_1639_mod;
 module_1639 = module_1639.shouldBeUseWeb();
 const SymbolResult = Symbol("shareable flag");
 let weakMap = null;

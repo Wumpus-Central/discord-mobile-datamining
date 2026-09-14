@@ -3,11 +3,15 @@
 // Module 8417
 import _modDef39 from "module_39" /* 39 */;
 import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
+const require = globalThis.__r;
+
+let noop = noop_mod;
 ({ useCallback: c3, useEffect: closure_4, useImperativeHandle: hasOwnProperty, useMemo: metroRequire, useRef: closure_7, forwardRef } = noop);
+let noop = noop_mod;
 ({ View: closure_8, NativeModules } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let fn = this;
@@ -111,29 +115,15 @@ const forwardRefResult = forwardRef((overScrollMode, arg1) => {
   const tmp6 = undefined !== saveFormDataDisabled && saveFormDataDisabled;
   const tmp7 = undefined === cacheEnabled || cacheEnabled;
   const tmp8 = undefined !== androidHardwareAccelerationDisabled && androidHardwareAccelerationDisabled;
-  let obj = current(onShouldStartLoadWithRequest2[4]);
-  const webWiewLogic = obj.useWebWiewLogic({
-    onNavigationStateChange,
-    onLoad,
-    onError,
-    onHttpErrorProp: onHttpError,
-    onLoadEnd,
-    onLoadProgress,
-    onLoadStart,
-    onRenderProcessGoneProp: onRenderProcessGone,
-    onMessageProp: onMessage,
-    startInLoadingState,
-    originWhitelist: defaultOriginWhitelist,
-    onShouldStartLoadWithRequestProp: onShouldStartLoadWithRequest,
-    onShouldStartLoadWithRequestCallback: onMessage2((arg0, arg1, arg2) => {
-      if (arg2) {
-        const RNCWebView = NativeModules.RNCWebView;
-        const result = RNCWebView.onShouldStartLoadWithRequestCallback(arg0, arg2);
-      } else if (arg0) {
-        const url = navigation.loadUrl(ref.current, arg1);
-      }
-    }, [])
-  });
+  const tmp18 = onMessage2((arg0, arg1, arg2) => {
+    if (arg2) {
+      const RNCWebView = NativeModules.RNCWebView;
+      const result = RNCWebView.onShouldStartLoadWithRequestCallback(arg0, arg2);
+    } else if (arg0) {
+      const url = navigation.loadUrl(ref.current, arg1);
+    }
+  }, []);
+  const webWiewLogic = current(onShouldStartLoadWithRequest2[4]).useWebWiewLogic({ onNavigationStateChange, onLoad, onError, onHttpErrorProp: onHttpError, onLoadEnd, onLoadProgress, onLoadStart, onRenderProcessGoneProp: onRenderProcessGone, onMessageProp: onMessage, startInLoadingState, originWhitelist: defaultOriginWhitelist, onShouldStartLoadWithRequestProp: onShouldStartLoadWithRequest, onShouldStartLoadWithRequestCallback: tmp18 });
   onShouldStartLoadWithRequest2 = webWiewLogic.onShouldStartLoadWithRequest;
   onMessage2 = webWiewLogic.onMessage;
   ({ viewState, setViewState } = webWiewLogic);
@@ -229,49 +219,49 @@ const forwardRefResult = forwardRef((overScrollMode, arg1) => {
   if (!component) {
     component = require("module_8421");
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(tmp15);
   let tmp38 = typeof onMessage === "function";
   if (typeof onMessage !== "function") {
     tmp38 = null != messagingWithWebViewKeyEnabled && messagingWithWebViewKeyEnabled;
     const tmp39 = null != messagingWithWebViewKeyEnabled && messagingWithWebViewKeyEnabled;
   }
-  obj.messagingEnabled = tmp38;
-  obj.messagingModuleName = current;
-  obj.onLoadingError = onLoadingError;
-  obj.onLoadingFinish = onLoadingFinish;
-  obj.onLoadingProgress = onLoadingProgress;
-  obj.onLoadingStart = onLoadingStart;
-  obj.onHttpError = onHttpError2;
-  obj.onRenderProcessGone = onRenderProcessGone2;
-  obj.onMessage = onMessage2;
-  obj.onShouldStartLoadWithRequest = onShouldStartLoadWithRequest2;
-  obj.ref = tmp17;
-  obj.source = resolveAssetSource(source);
-  obj.style = items3;
-  obj.overScrollMode = str;
-  obj.javaScriptEnabled = tmp;
-  obj.thirdPartyCookiesEnabled = tmp2;
-  obj.scalesPageToFit = tmp3;
-  obj.allowsFullscreenVideo = tmp4;
-  obj.allowFileAccess = tmp5;
-  obj.saveFormDataDisabled = tmp6;
-  obj.cacheEnabled = tmp7;
-  obj.androidHardwareAccelerationDisabled = tmp8;
-  obj.androidLayerType = str2;
-  obj.setSupportMultipleWindows = tmp11;
-  obj.setBuiltInZoomControls = tmp12;
-  obj.setDisplayZoomControls = tmp13;
-  obj.nestedScrollEnabled = tmp14;
+  obj2.messagingEnabled = tmp38;
+  obj2.messagingModuleName = current;
+  obj2.onLoadingError = onLoadingError;
+  obj2.onLoadingFinish = onLoadingFinish;
+  obj2.onLoadingProgress = onLoadingProgress;
+  obj2.onLoadingStart = onLoadingStart;
+  obj2.onHttpError = onHttpError2;
+  obj2.onRenderProcessGone = onRenderProcessGone2;
+  obj2.onMessage = onMessage2;
+  obj2.onShouldStartLoadWithRequest = onShouldStartLoadWithRequest2;
+  obj2.ref = tmp17;
+  obj2.source = resolveAssetSource(source);
+  obj2.style = items3;
+  obj2.overScrollMode = str;
+  obj2.javaScriptEnabled = tmp;
+  obj2.thirdPartyCookiesEnabled = tmp2;
+  obj2.scalesPageToFit = tmp3;
+  obj2.allowsFullscreenVideo = tmp4;
+  obj2.allowFileAccess = tmp5;
+  obj2.saveFormDataDisabled = tmp6;
+  obj2.cacheEnabled = tmp7;
+  obj2.androidHardwareAccelerationDisabled = tmp8;
+  obj2.androidLayerType = str2;
+  obj2.setSupportMultipleWindows = tmp11;
+  obj2.setBuiltInZoomControls = tmp12;
+  obj2.setDisplayZoomControls = tmp13;
+  obj2.nestedScrollEnabled = tmp14;
   let props;
   if (null != nativeConfig) {
     props = nativeConfig.props;
   }
   const merged1 = Object.assign(props);
-  obj = { style: items4, children: null };
-  const items5 = [closure_10(component, obj, "webViewKey"), renderLoadingResult];
-  obj.children = items5;
-  return closure_11(closure_8, obj);
+  const obj3 = { style: items4, children: null };
+  const items5 = [closure_10(component, obj2, "webViewKey"), renderLoadingResult];
+  obj3.children = items5;
+  return closure_11(closure_8, obj3);
 });
 
 export default Object.assign(forwardRefResult, { isFileUploadSupported: RNCWebView.isFileUploadSupported() });

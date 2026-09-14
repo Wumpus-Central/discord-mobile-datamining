@@ -61,7 +61,7 @@ const entry = {
       fx = cx;
     }
     let fy = props.fy;
-    let obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
+    const obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
     if (undefined === fy) {
       fy = cy;
     }
@@ -76,11 +76,6 @@ const entry = {
     obj.ry = ry;
     obj.cx = cx;
     obj.cy = cy;
-    obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
     const merged = Object.assign(obj);
     const merged1 = Object.assign(RadialGradient(8651)(props, this));
     return jsx(RadialGradient(8666), {

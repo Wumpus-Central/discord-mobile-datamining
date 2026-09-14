@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "car\u00E0cters", verb: "contenir" }, file: { unit: "bytes", verb: "contenir" }, array: { unit: "elements", verb: "contenir" }, set: { unit: "elements", verb: "contenir" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "car\u00E0cters", verb: "contenir" }, file: { unit: "bytes", verb: "contenir" }, array: { unit: "elements", verb: "contenir" }, set: { unit: "elements", verb: "contenir" } };
         closure_1 = { regex: "entrada", email: "adre\u00E7a electr\u00F2nica", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "data i hora ISO", date: "data ISO", time: "hora ISO", duration: "durada ISO", ipv4: "adre\u00E7a IPv4", ipv6: "adre\u00E7a IPv6", cidrv4: "rang IPv4", cidrv6: "rang IPv6", base64: "cadena codificada en base64", base64url: "cadena codificada en base64url", json_string: "cadena JSON", e164: "n\u00FAmero E.164", jwt: "JWT", template_literal: "entrada" };
         closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp50 == null) {
                 tmp50 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Tipus inv\u00E0lid: s'esperava instanceof " + code.expected + ", s'ha rebut " + tmp50;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str29 = "com a m\u00E0xim";
               }
-              let tmp29 = obj[code.origin];
+              let tmp29 = obj2[code.origin];
               if (tmp29 == null) {
                 tmp29 = null;
               }
@@ -104,13 +103,13 @@ if (self2) {
                 if (str30 == null) {
                   str30 = "el valor";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str37 = tmp29.unit;
                 if (str37 == null) {
                   str37 = "elements";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Massa gran: s'esperava que " + str30 + " contingu\u00E9s " + str29 + " " + str + " " + str37;
+                let combined2 = "Massa gran: s'esperava que " + str30 + " contingu\u00E9s " + str29 + " " + str1 + " " + str37;
               } else {
                 let str31 = str30;
                 if (str30 == null) {
@@ -125,18 +124,18 @@ if (self2) {
               if (code.inclusive) {
                 str20 = "com a m\u00EDnim";
               }
-              let tmp17 = obj[code.origin];
+              let tmp17 = obj2[code.origin];
               if (tmp17 == null) {
                 tmp17 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str53 = minimum.toString();
               if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Massa petit: s'esperava que " + origin + " contingu\u00E9s " + str20 + " " + str1 + " " + tmp17.unit;
+                let combined3 = "Massa petit: s'esperava que " + origin + " contingu\u00E9s " + str20 + " " + str53 + " " + tmp17.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Massa petit: s'esperava que " + origin + " fos " + str20 + " " + str1;
+                combined3 = "Massa petit: s'esperava que " + origin + " fos " + str20 + " " + str53;
               }
               return combined3;
             case "invalid_format":
@@ -182,7 +181,6 @@ if (self2) {
               return "Entrada inv\u00E0lida";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Element inv\u00E0lid a ";
               return "Element inv\u00E0lid a " + code.origin;
             default:
               return "Entrada inv\u00E0lida";

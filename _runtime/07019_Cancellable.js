@@ -2,8 +2,9 @@
 
 // Module 7019 (Cancellable)
 import _modDef6968 from "module_6968" /* 6968 */;
-import _classCallCheck from "module_6967" /* 6967 */;
+import _classCallCheck_mod from "module_6967" /* 6967 */;
 
+let _classCallCheck = _classCallCheck_mod;
 class Cancellable {
   constructor() {
     tmp = closure_0(this, Cancellable);

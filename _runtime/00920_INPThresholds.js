@@ -8,6 +8,8 @@ import _mod914 from "module_914" /* 914 */;
 import _mod921 from "module_921" /* 921 */;
 import InteractionManager from "InteractionManager" /* 922 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

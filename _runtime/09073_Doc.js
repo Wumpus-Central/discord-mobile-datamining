@@ -1,9 +1,10 @@
 // === Module 9073: Doc ===
 
 // Module 9073 (Doc)
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
+let _classCallCheck = _classCallCheck_mod;
 class Doc {
   constructor() {
     items = global;

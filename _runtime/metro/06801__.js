@@ -8,6 +8,8 @@ import dropHandlers from "dropHandlers" /* 6803 */;
 import attachHandlers from "attachHandlers" /* 6804 */;
 import _mod6805 from "module_6805" /* 6805 */;
 
+const require = globalThis.__r;
+
 _mod19.useCallback;
 
 export const useDetectorUpdater = function useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers) {
@@ -19,21 +21,21 @@ export const useDetectorUpdater = function useDetectorUpdater(current, current2,
   return gesture((arg0) => {
     const tmp3 = _modDef6791(current.viewRef);
     if (tmp3 === current.previousViewTag) {
-      let obj = needsToReattach;
       if (!obj.needsToReattach(preparedGesture, gesturesToAttach)) {
         if (!arg0) {
           _mod6805.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
           const tmp5Result = _mod6805;
         }
       }
+      obj = needsToReattach;
     }
     dropHandlers.dropHandlers(preparedGesture);
-    obj = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
-    attachHandlers.attachHandlers(obj);
+    attachHandlers.attachHandlers({ preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 });
     if (tmp3 !== current.previousViewTag) {
       current.previousViewTag = tmp3;
       current.forceRebuildReanimatedEvent = true;
       forceRender();
     }
+    const obj2 = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
   }, items);
 };

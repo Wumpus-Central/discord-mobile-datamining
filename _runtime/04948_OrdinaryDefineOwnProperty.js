@@ -1,9 +1,9 @@
 // === Module 4948: OrdinaryDefineOwnProperty ===
 
 // Module 4948 (OrdinaryDefineOwnProperty)
-import _mod1283 from "module_1283" /* 1283 */;
-import _mod1284 from "module_1284" /* 1284 */;
-import _mod1304 from "module_1304" /* 1304 */;
+import _mod1281 from "module_1281" /* 1281 */;
+import _mod1282 from "module_1282" /* 1282 */;
+import _mod1302 from "module_1302" /* 1302 */;
 import _mod4885 from "module_4885" /* 4885 */;
 import _mod4932 from "module_4932" /* 4932 */;
 import _mod4936 from "module_4936" /* 4936 */;
@@ -18,15 +18,15 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
   if (_mod4885(arg0)) {
     if (_mod4932(arg1)) {
       if (_mod4936(__Writable__)) {
-        if (_mod1284) {
-          const tmp30 = _mod1284(arg0, arg1);
+        if (_mod1282) {
+          const tmp30 = _mod1282(arg0, arg1);
           let tmp31 = tmp30;
           if (tmp30) {
             tmp31 = ToPropertyDescriptor(tmp30);
           }
           return ValidateAndApplyPropertyDescriptor(arg0, arg1, _mod4950(arg0), __Writable__, tmp31);
         } else if (IsAccessorDescriptor(__Writable__)) {
-          const tmp28 = new _mod1304("This environment does not support accessor property descriptors.");
+          const tmp28 = new _mod1302("This environment does not support accessor property descriptors.");
           throw tmp28;
         } else {
           let tmp17 = !(arg1 in arg0) && __Writable__["[[Writable]]"] && __Writable__["[[Enumerable]]"] && __Writable__["[[Configurable]]"];
@@ -51,7 +51,7 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
           }
           if (!tmp17) {
             if (!tmp18) {
-              const tmp24 = new _mod1304("This environment does not support defining non-writable, non-enumerable, or non-configurable properties");
+              const tmp24 = new _mod1302("This environment does not support defining non-writable, non-enumerable, or non-configurable properties");
               throw tmp24;
             }
           }
@@ -59,15 +59,15 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
           return SameValue(arg0[arg1], __Writable__["[[Value]]"]);
         }
       } else {
-        const tmp15 = new _mod1283("Assertion failed: Desc must be a Property Descriptor");
+        const tmp15 = new _mod1281("Assertion failed: Desc must be a Property Descriptor");
         throw tmp15;
       }
     } else {
-      const tmp10 = new _mod1283("Assertion failed: P must be a Property Key");
+      const tmp10 = new _mod1281("Assertion failed: P must be a Property Key");
       throw tmp10;
     }
   } else {
-    const tmp5 = new _mod1283("Assertion failed: O must be an Object");
+    const tmp5 = new _mod1281("Assertion failed: O must be an Object");
     throw tmp5;
   }
 };

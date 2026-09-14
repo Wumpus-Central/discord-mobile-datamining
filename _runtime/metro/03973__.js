@@ -2,16 +2,17 @@
 
 // Module 3973
 import _mod3730 from "module_3730" /* 3730 */;
-import compareAsc from "compareAsc" /* 3901 */;
-import differenceInMonths from "differenceInMonths" /* 3923 */;
-import differenceInSeconds from "differenceInSeconds" /* 3928 */;
-import code from "module_3971" /* 3971 */;
-import _typeof from "module_3725" /* 3725 */;
-import cloneObject from "cloneObject" /* 3974 */;
-import assign from "assign" /* 3975 */;
-import module_3888 from "module_3888" /* 3888 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import compareAsc_mod from "compareAsc" /* 3901 */;
+import differenceInMonths_mod from "differenceInMonths" /* 3923 */;
+import differenceInSeconds_mod from "differenceInSeconds" /* 3928 */;
+import code_mod from "module_3971" /* 3971 */;
+import _typeof_mod from "module_3725" /* 3725 */;
+import cloneObject_mod from "cloneObject" /* 3974 */;
+import assign_mod from "assign" /* 3975 */;
+import module_3888_mod from "module_3888" /* 3888 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let compareAsc = compareAsc_mod;
 if (!compareAsc) {
   let obj = { default: compareAsc };
   let tmp3 = obj;
@@ -19,58 +20,66 @@ if (!compareAsc) {
   tmp3 = compareAsc;
 }
 compareAsc = tmp3;
+let differenceInMonths = differenceInMonths_mod;
 if (!differenceInMonths) {
-  obj = { default: differenceInMonths };
-  let tmp5 = obj;
+  const obj2 = { default: differenceInMonths };
+  let tmp5 = obj2;
 } else {
   tmp5 = differenceInMonths;
 }
 differenceInMonths = tmp5;
+let differenceInSeconds = differenceInSeconds_mod;
 if (!differenceInSeconds) {
-  obj = { default: differenceInSeconds };
-  let tmp7 = obj;
+  const obj3 = { default: differenceInSeconds };
+  let tmp7 = obj3;
 } else {
   tmp7 = differenceInSeconds;
 }
 differenceInSeconds = tmp7;
+let code = code_mod;
 if (!code) {
-  const obj1 = { default: code };
-  let tmp9 = obj1;
+  const obj4 = { default: code };
+  let tmp9 = obj4;
 } else {
   tmp9 = code;
 }
 code = tmp9;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp11 = obj2;
+  const obj5 = { default: _typeof };
+  let tmp11 = obj5;
 } else {
   tmp11 = _typeof;
 }
 _typeof = tmp11;
+let cloneObject = cloneObject_mod;
 if (!cloneObject) {
-  const obj3 = { default: cloneObject };
-  let tmp13 = obj3;
+  const obj6 = { default: cloneObject };
+  let tmp13 = obj6;
 } else {
   tmp13 = cloneObject;
 }
 cloneObject = tmp13;
+let assign = assign_mod;
 if (!assign) {
-  const obj4 = { default: assign };
-  let tmp15 = obj4;
+  const obj7 = { default: assign };
+  let tmp15 = obj7;
 } else {
   tmp15 = assign;
 }
 assign = tmp15;
+let module_3888 = module_3888_mod;
 if (!module_3888) {
-  const obj5 = { default: module_3888 };
-  let tmp17 = obj5;
+  const obj8 = { default: module_3888 };
+  let tmp17 = obj8;
 } else {
   tmp17 = module_3888;
 }
 module_3888 = tmp17;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj6 = { default: requiredArgs };
-  let tmp19 = obj6;
+  const obj9 = { default: requiredArgs };
+  let tmp19 = obj9;
 } else {
   tmp19 = requiredArgs;
 }

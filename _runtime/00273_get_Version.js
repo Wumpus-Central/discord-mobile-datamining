@@ -1,6 +1,8 @@
 // === Module 273: get Version ===
 
 // Module 273 (get Version)
+const require = globalThis.__r;
+
 const importDefault = arg2;
 const dependencyMap = arg6;
 let obj = { __constants: null, OS: "android" };

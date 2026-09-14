@@ -1,33 +1,71 @@
 // === Module 14519: ? ===
 
 // Module 14519
-import emptyPromise from "emptyPromise" /* 14502 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-require = arg1;
-const dependencyMap = arg6;
+function getDevMenu() {
 
-export default () => (log) => {
-  const result = emptyPromise.assertHasLoggerPlugin(log);
-  closure_0 = log;
-  return {
-    onConnect() {
-      log = console.log;
-      console.log = () => {
-        const items = [...arguments];
-        log(...items);
-        const items1 = [...items];
-        log.log.apply(items1);
-      };
-      console.warn = () => {
-        const items = [...arguments];
-        warn(...items);
-        log.warn(items[0]);
-      };
-      console.debug = () => {
-        const items = [...arguments];
-        debug(...items);
-        log.debug(items[0]);
-      };
+}
+
+export default () => () => ({
+  onCommand(type) {
+    if ("devtools.open" === type.type) {
+      if ("devtools.open" === type.type) {
+        if (typeof closure_1_1 === "function") {
+          const obj = {
+            reload() {
+                    console.warn("DevMenu." + "reload" + "() not available in this environment");
+                  },
+            show() {
+                    console.warn("DevMenu." + "show" + "() not available in this environment");
+                  },
+            getConstants() {
+                    return {};
+                  },
+            debugRemotely() {
+                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
+                  },
+            setHotLoadingEnabled() {
+                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
+                  },
+            setProfilingEnabled() {
+                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
+                  }
+          };
+          const OS = Platform.Platform.OS;
+          obj.show();
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      }
+      if ("devtools.reload" === type.type) {
+        if (typeof closure_1_1 === "function") {
+          const obj2 = {
+            reload() {
+                    console.warn("DevMenu." + "reload" + "() not available in this environment");
+                  },
+            show() {
+                    console.warn("DevMenu." + "show" + "() not available in this environment");
+                  },
+            getConstants() {
+                    return {};
+                  },
+            debugRemotely() {
+                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
+                  },
+            setHotLoadingEnabled() {
+                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
+                  },
+            setProfilingEnabled() {
+                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
+                  }
+          };
+          const OS2 = Platform.Platform.OS;
+          obj2.reload();
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      }
     }
-  };
-};
+  }
+});

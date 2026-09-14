@@ -7,6 +7,8 @@ import _modDef380 from "module_380" /* 380 */;
 import _mod390 from "module_390" /* 390 */;
 import _slicedToArray from "module_32" /* 32 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function addListenersToPropsValue(propValue, arr) {
   if (propValue instanceof _modDef356) {
@@ -93,13 +95,12 @@ export default function createAnimatedPropsHook(arg0) {
       };
     }, items);
     const items1 = [obj];
-    obj = {};
+    let obj2 = {};
     const tmp3 = closure_1_5((instance) => {
       obj.setNativeView(instance);
       items.current = () => {
         let isPublicInstanceResult = _mod390.isPublicInstance(instance);
         if (!isPublicInstanceResult) {
-          let tmpResult = _mod390;
           let nativeScrollRef;
           if (instance != null) {
             const getNativeScrollRef = instance.getNativeScrollRef;
@@ -107,10 +108,10 @@ export default function createAnimatedPropsHook(arg0) {
               nativeScrollRef = getNativeScrollRef();
             }
           }
-          isPublicInstanceResult = tmpResult.isPublicInstance(nativeScrollRef);
+          isPublicInstanceResult = _mod390.isPublicInstance(nativeScrollRef);
+          const tmpResult = _mod390;
         }
         if (!isPublicInstanceResult) {
-          tmpResult = _mod390;
           let nativeScrollRef2;
           if (instance != null) {
             const getScrollResponder = instance.getScrollResponder;
@@ -124,7 +125,8 @@ export default function createAnimatedPropsHook(arg0) {
               }
             }
           }
-          isPublicInstanceResult = tmpResult.isPublicInstance(nativeScrollRef2);
+          isPublicInstanceResult = _mod390.isPublicInstance(nativeScrollRef2);
+          const tmpResult2 = _mod390;
         }
         if (instance.__isNative) {
           if (isPublicInstanceResult) {
@@ -205,15 +207,14 @@ export default function createAnimatedPropsHook(arg0) {
       };
     }, items1);
     const merged = Object.assign(obj.__getValueWithStaticProps(fn));
-    obj.collapsable = false;
+    obj2.collapsable = false;
     const items2 = [
-      obj,
+      obj2,
       closure_1(335)(closure_1_5((instance) => {
         obj.setNativeView(instance);
         items.current = () => {
           let isPublicInstanceResult = _mod390.isPublicInstance(instance);
           if (!isPublicInstanceResult) {
-            let tmpResult = _mod390;
             let nativeScrollRef;
             if (instance != null) {
               const getNativeScrollRef = instance.getNativeScrollRef;
@@ -221,10 +222,10 @@ export default function createAnimatedPropsHook(arg0) {
                 nativeScrollRef = getNativeScrollRef();
               }
             }
-            isPublicInstanceResult = tmpResult.isPublicInstance(nativeScrollRef);
+            isPublicInstanceResult = _mod390.isPublicInstance(nativeScrollRef);
+            const tmpResult = _mod390;
           }
           if (!isPublicInstanceResult) {
-            tmpResult = _mod390;
             let nativeScrollRef2;
             if (instance != null) {
               const getScrollResponder = instance.getScrollResponder;
@@ -238,7 +239,8 @@ export default function createAnimatedPropsHook(arg0) {
                 }
               }
             }
-            isPublicInstanceResult = tmpResult.isPublicInstance(nativeScrollRef2);
+            isPublicInstanceResult = _mod390.isPublicInstance(nativeScrollRef2);
+            const tmpResult2 = _mod390;
           }
           if (instance.__isNative) {
             if (isPublicInstanceResult) {

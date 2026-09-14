@@ -5,9 +5,10 @@ import _modDef412 from "module_412" /* 412 */;
 
 if (_modDef412) {
   const constants = _modDef412.getConstants();
-  let obj = { isRTL: null, doLeftAndRightSwapInRTL: null, localeIdentifier: null };
   ({ isRTL: obj3.isRTL, doLeftAndRightSwapInRTL: obj3.doLeftAndRightSwapInRTL, localeIdentifier: obj3.localeIdentifier } = constants);
+  let obj = { isRTL: null, doLeftAndRightSwapInRTL: null, localeIdentifier: null };
   const importDefaultResult = _modDef412;
+  const obj2 = { isRTL: null, doLeftAndRightSwapInRTL: null, localeIdentifier: null };
 } else {
   obj = { isRTL: false, doLeftAndRightSwapInRTL: true };
 }

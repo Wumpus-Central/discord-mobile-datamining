@@ -3,7 +3,7 @@
 // Module 124
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import DOMRectReadOnlyDefault from "DOMRectReadOnly" /* 125 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 class DOMRect {
   constructor() {
@@ -50,17 +51,16 @@ class DOMRect {
 }
 _classCallCheck = DOMRect;
 _inherits(DOMRect, DOMRectReadOnlyDefault);
-let obj = {
-  key: "x",
-  get() {
-    return this.__getInternalX();
-  },
-  set(arg0) {
-    this.__setInternalX(arg0);
-  }
-};
 const items = [
-  obj,
+  {
+    key: "x",
+    get() {
+      return this.__getInternalX();
+    },
+    set(arg0) {
+      this.__setInternalX(arg0);
+    }
+  },
   {
     key: "y",
     get() {
@@ -105,11 +105,10 @@ const entry = {
 const items1 = [entry];
 const importDefaultResultResult = _createClass(DOMRect, items, items1);
 const module_126 = fn(126);
-obj = {
+module_126.setPlatformObject(importDefaultResultResult, {
   clone(arg0) {
     return new importDefaultResultResult(arg0.x, arg0.y, arg0.width, arg0.height);
   }
-};
-module_126.setPlatformObject(importDefaultResultResult, obj);
+});
 
 export default importDefaultResultResult;

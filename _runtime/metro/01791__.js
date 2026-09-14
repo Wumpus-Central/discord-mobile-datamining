@@ -11,11 +11,11 @@ const __initData = { code: "function pnpm_useAnimatedScrollHandlerTs1(event){con
 export const useAnimatedScrollHandler = function useAnimatedScrollHandler(fn, items) {
   let tmp = fn;
   if (typeof fn === "function") {
-    let obj = { onScroll: fn };
-    tmp = obj;
+    let obj2 = { onScroll: fn };
+    tmp = obj2;
   }
-  obj = _mod1781;
-  const handler = obj.useHandler(tmp, items);
+  obj2 = tmp;
+  const handler = _mod1781.useHandler(tmp, items);
   const context = handler.context;
   items = ["onScroll"];
   if (undefined !== tmp.onBeginDrag) {
@@ -31,7 +31,7 @@ export const useAnimatedScrollHandler = function useAnimatedScrollHandler(fn, it
     items.push("onMomentumScrollEnd");
   }
   fn = function l(eventName) {
-    ({ onScroll, onBeginDrag, onEndDrag, onMomentumBegin, onMomentumEnd } = obj);
+    ({ onScroll, onBeginDrag, onEndDrag, onMomentumBegin, onMomentumEnd } = obj2);
     if (onScroll) {
       eventName = eventName.eventName;
       if (eventName.endsWith("onScroll")) {

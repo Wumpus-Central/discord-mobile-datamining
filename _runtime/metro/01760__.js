@@ -1,7 +1,7 @@
 // === Module 1760: ? ===
 
 // Module 1760
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray_mod from "module_32" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c2 from "_possibleConstructorReturn" /* 93 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _slicedToArray = _slicedToArray_mod;
 let closure_5 = { code: "function pnpm_RotateTs1(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{rotate:delayFunction(delay,animation('0deg',config))},{translateX:delayFunction(delay,animation(0,config))},{translateY:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{rotate:'-90deg'},{translateX:values.targetWidth/2-values.targetHeight/2},{translateY:-(values.targetWidth/2-values.targetHeight/2)}],...initialValues},callback:callback};}" };
 class RotateInDownLeft {
   constructor() {
@@ -56,19 +57,20 @@ class RotateInDownLeft {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(targetWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
-        const items = [obj, { translateX: delayFunction(delay, first(0, closure_2)) }, ];
-        const obj1 = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const items = [{ rotate: delayFunction(delay, first("0deg", closure_2)) }, , ];
+        const obj3 = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        items[1] = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj4 = { translateX: delayFunction(delay, first(0, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(0, closure_2)) };
-        obj.transform = items;
-        obj.animations = obj;
-        const obj3 = { opacity: 0, transform: null };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj6 = { opacity: 0, transform: null };
         const items1 = [{ rotate: "-90deg" }, { translateX: targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }, { translateY: -targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }];
-        obj3.transform = items1;
+        obj6.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj3;
+        obj.initialValues = obj6;
         obj.callback = callbackV;
         return obj;
       };
@@ -120,19 +122,20 @@ class RotateInDownRight {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(targetWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
-        const items = [obj, { translateX: delayFunction(delay, first(0, closure_2)) }, ];
-        const obj1 = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const items = [{ rotate: delayFunction(delay, first("0deg", closure_2)) }, , ];
+        const obj3 = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        items[1] = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj4 = { translateX: delayFunction(delay, first(0, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(0, closure_2)) };
-        obj.transform = items;
-        obj.animations = obj;
-        const obj3 = { opacity: 0, transform: null };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj6 = { opacity: 0, transform: null };
         const items1 = [{ rotate: "90deg" }, { translateX: -targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }, { translateY: -targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }];
-        obj3.transform = items1;
+        obj6.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj3;
+        obj.initialValues = obj6;
         obj.callback = callbackV;
         return obj;
       };
@@ -184,19 +187,20 @@ class RotateInUpLeft {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(targetWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
-        const items = [obj, { translateX: delayFunction(delay, first(0, closure_2)) }, ];
-        const obj1 = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const items = [{ rotate: delayFunction(delay, first("0deg", closure_2)) }, , ];
+        const obj3 = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        items[1] = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj4 = { translateX: delayFunction(delay, first(0, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(0, closure_2)) };
-        obj.transform = items;
-        obj.animations = obj;
-        const obj3 = { opacity: 0, transform: null };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj6 = { opacity: 0, transform: null };
         const items1 = [{ rotate: "90deg" }, { translateX: targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }, { translateY: targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }];
-        obj3.transform = items1;
+        obj6.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj3;
+        obj.initialValues = obj6;
         obj.callback = callbackV;
         return obj;
       };
@@ -248,19 +252,20 @@ class RotateInUpRight {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(targetWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
-        const items = [obj, { translateX: delayFunction(delay, first(0, closure_2)) }, ];
-        const obj1 = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const items = [{ rotate: delayFunction(delay, first("0deg", closure_2)) }, , ];
+        const obj3 = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        items[1] = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj4 = { translateX: delayFunction(delay, first(0, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(0, closure_2)) };
-        obj.transform = items;
-        obj.animations = obj;
-        const obj3 = { opacity: 0, transform: null };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj6 = { opacity: 0, transform: null };
         const items1 = [{ rotate: "-90deg" }, { translateX: -targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }, { translateY: targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }];
-        obj3.transform = items1;
+        obj6.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj3;
+        obj.initialValues = obj6;
         obj.callback = callbackV;
         return obj;
       };
@@ -312,19 +317,20 @@ class RotateOutDownLeft {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(currentWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("90deg", closure_2)) };
-        const items = [obj, { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) }, ];
-        const obj1 = { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const items = [{ rotate: delayFunction(delay, first("90deg", closure_2)) }, , ];
+        const obj3 = { rotate: delayFunction(delay, first("90deg", closure_2)) };
+        items[1] = { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
+        const obj4 = { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
-        obj.transform = items;
-        obj.animations = obj;
-        const obj3 = { opacity: 1, transform: null };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj6 = { opacity: 1, transform: null };
         const items1 = [{ rotate: "0deg" }, { translateX: 0 }, { translateY: 0 }];
-        obj3.transform = items1;
+        obj6.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj3;
+        obj.initialValues = obj6;
         obj.callback = callbackV;
         return obj;
       };
@@ -376,19 +382,20 @@ class RotateOutDownRight {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(currentWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("-90deg", closure_2)) };
-        const items = [obj, { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) }, ];
-        const obj1 = { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const items = [{ rotate: delayFunction(delay, first("-90deg", closure_2)) }, , ];
+        const obj3 = { rotate: delayFunction(delay, first("-90deg", closure_2)) };
+        items[1] = { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
+        const obj4 = { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
-        obj.transform = items;
-        obj.animations = obj;
-        const obj3 = { opacity: 1, transform: null };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj6 = { opacity: 1, transform: null };
         const items1 = [{ rotate: "0deg" }, { translateX: 0 }, { translateY: 0 }];
-        obj3.transform = items1;
+        obj6.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj3;
+        obj.initialValues = obj6;
         obj.callback = callbackV;
         return obj;
       };
@@ -440,19 +447,20 @@ class RotateOutUpLeft {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(currentWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("-90deg", closure_2)) };
-        const items = [obj, { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) }, ];
-        const obj1 = { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const items = [{ rotate: delayFunction(delay, first("-90deg", closure_2)) }, , ];
+        const obj3 = { rotate: delayFunction(delay, first("-90deg", closure_2)) };
+        items[1] = { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
+        const obj4 = { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
-        obj.transform = items;
-        obj.animations = obj;
-        const obj3 = { opacity: 1, transform: null };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj6 = { opacity: 1, transform: null };
         const items1 = [{ rotate: "0deg" }, { translateX: 0 }, { translateY: 0 }];
-        obj3.transform = items1;
+        obj6.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj3;
+        obj.initialValues = obj6;
         obj.callback = callbackV;
         return obj;
       };
@@ -504,19 +512,20 @@ class RotateOutUpRight {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(currentWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("90deg", closure_2)) };
-        const items = [obj, { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) }, ];
-        const obj1 = { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const items = [{ rotate: delayFunction(delay, first("90deg", closure_2)) }, , ];
+        const obj3 = { rotate: delayFunction(delay, first("90deg", closure_2)) };
+        items[1] = { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
+        const obj4 = { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
-        obj.transform = items;
-        obj.animations = obj;
-        const obj3 = { opacity: 1, transform: null };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj6 = { opacity: 1, transform: null };
         const items1 = [{ rotate: "0deg" }, { translateX: 0 }, { translateY: 0 }];
-        obj3.transform = items1;
+        obj6.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj3;
+        obj.initialValues = obj6;
         obj.callback = callbackV;
         return obj;
       };

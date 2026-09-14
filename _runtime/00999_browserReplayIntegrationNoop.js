@@ -16,7 +16,7 @@ export const browserReplayIntegration = () => {
   }
   if (obj2.notWeb()) {
     if (typeof browserReplayIntegrationNoop === "function") {
-      obj = {
+      const obj3 = {
         name: "Replay",
         start() {
 
@@ -37,7 +37,7 @@ export const browserReplayIntegration = () => {
 
             }
       };
-      let replayIntegrationResult = obj;
+      let replayIntegrationResult = obj3;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -48,15 +48,15 @@ export const browserReplayIntegration = () => {
     if (!mask) {
       mask = [];
     }
-    obj = { mask: null, unmask: null };
+    const obj4 = { mask: null, unmask: null };
     const items = [".sentry-react-native-mask"];
     HermesBuiltin.arraySpread(mask, 1);
-    obj.mask = items;
+    obj4.mask = items;
     const tmp8 = obj.unmask || [];
     const items1 = [".sentry-react-native-unmask:not(.sentry-react-native-mask *) > *"];
     HermesBuiltin.arraySpread(tmp8, 1);
-    obj.unmask = items1;
-    replayIntegrationResult = init.replayIntegration(Object.assign(merged, obj));
+    obj4.unmask = items1;
+    replayIntegrationResult = init.replayIntegration(Object.assign(merged, obj4));
     const tmpResult = init;
   }
   return replayIntegrationResult;

@@ -34,52 +34,50 @@ const fn = function n(moment) {
     weekdaysMin: "do_lu_ma_mi_ju_vi_s\u00E1".split("_"),
     weekdaysParseExact: true,
     longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "DD/MM/YYYY", LL: "D [de] MMMM [de] YYYY", LLL: "D [de] MMMM [de] YYYY H:mm", LLLL: "dddd, D [de] MMMM [de] YYYY H:mm" },
-    calendar: null,
+    calendar: {
+      sameDay() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[hoy a la" + str + "] LT";
+      },
+      nextDay() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[ma\u00F1ana a la" + str + "] LT";
+      },
+      nextWeek() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "dddd [a la" + str + "] LT";
+      },
+      lastDay() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[ayer a la" + str + "] LT";
+      },
+      lastWeek() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[el] dddd [pasado a la" + str + "] LT";
+      },
+      sameElse: "L"
+    },
     relativeTime: { future: "en %s", past: "hace %s", s: "unos segundos", ss: "%d segundos", m: "un minuto", mm: "%d minutos", h: "una hora", hh: "%d horas", d: "un d\u00EDa", dd: "%d d\u00EDas", w: "una semana", ww: "%d semanas", M: "un mes", MM: "%d meses", y: "un a\u00F1o", yy: "%d a\u00F1os" },
     dayOfMonthOrdinalParse: /\d{1,2}º/,
     ordinal: "%d\u00BA",
     week: { dow: 1, doy: 4 },
     invalidDate: "Fecha inv\u00E1lida"
   };
-  obj = {
-    sameDay() {
-      let str = "";
-      if (1 !== this.hours()) {
-        str = "s";
-      }
-      return "[hoy a la" + str + "] LT";
-    },
-    nextDay() {
-      let str = "";
-      if (1 !== this.hours()) {
-        str = "s";
-      }
-      return "[ma\u00F1ana a la" + str + "] LT";
-    },
-    nextWeek() {
-      let str = "";
-      if (1 !== this.hours()) {
-        str = "s";
-      }
-      return "dddd [a la" + str + "] LT";
-    },
-    lastDay() {
-      let str = "";
-      if (1 !== this.hours()) {
-        str = "s";
-      }
-      return "[ayer a la" + str + "] LT";
-    },
-    lastWeek() {
-      let str = "";
-      if (1 !== this.hours()) {
-        str = "s";
-      }
-      return "[el] dddd [pasado a la" + str + "] LT";
-    },
-    sameElse: "L"
-  };
-  obj.calendar = obj;
   return moment.defineLocale("es", obj);
 };
 if (typeof exports === "object") {

@@ -17,7 +17,7 @@ class NESTED_NOOP {
   }
 }
 let closure_129_0 = 0;
-let obj = {
+const obj = {
   value: 0,
   addListener: NOOP,
   removeListener: NOOP,
@@ -28,7 +28,15 @@ let obj = {
   set: NOOP
 };
 let closure_130_0 = null;
-obj = {
+const obj3 = { enabled: true, animated: null, reanimated: null, layout: null, update: null, setKeyboardHandlers: null, setInputHandlers: null, setEnabled: null };
+const obj4 = { progress: null, height: null };
+const value = new Animated.Value(0);
+obj4.progress = value;
+const value2 = new Animated.Value(0);
+obj4.height = value2;
+obj3.animated = obj4;
+obj3.reanimated = { progress: obj, height: obj };
+obj3.layout = {
   value: null,
   addListener: NOOP,
   removeListener: NOOP,
@@ -38,20 +46,11 @@ obj = {
   },
   set: NOOP
 };
-obj = { enabled: true, animated: null, reanimated: null, layout: null, update: null, setKeyboardHandlers: null, setInputHandlers: null, setEnabled: null };
-const obj1 = { progress: null, height: null };
-let value = new Animated.Value(0);
-obj1.progress = value;
-value = new Animated.Value(0);
-obj1.height = value;
-obj.animated = obj1;
-obj.reanimated = { progress: obj, height: obj };
-obj.layout = obj;
-obj.update = Promise.resolve;
-obj.setKeyboardHandlers = NESTED_NOOP;
-obj.setInputHandlers = NESTED_NOOP;
-obj.setEnabled = NOOP;
-const context = createContext(obj);
+obj3.update = Promise.resolve;
+obj3.setKeyboardHandlers = NESTED_NOOP;
+obj3.setInputHandlers = NESTED_NOOP;
+obj3.setEnabled = NOOP;
+const context = createContext(obj3);
 
 export const KeyboardContext = context;
 export const useKeyboardContext = () => React(context);

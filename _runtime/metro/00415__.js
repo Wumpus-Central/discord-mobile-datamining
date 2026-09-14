@@ -27,21 +27,20 @@ export default function useAndroidRippleForView(arg0, arg1) {
         }
       }
     }
-    let obj = { type: "RippleAndroid", color: processColorDefault(color), borderless: true === borderless, rippleRadius: radius, rippleCornerRadius, alpha: null };
+    const obj = { type: "RippleAndroid", color: processColorDefault(color), borderless: true === borderless, rippleRadius: radius, rippleCornerRadius, alpha: null };
     let tmp4 = alpha;
     if (alpha == null) {
       tmp4 = null;
     }
     obj.alpha = tmp4;
     if (true === foreground) {
-      obj = { nativeForegroundAndroid: null };
-      obj.nativeForegroundAndroid = obj;
+      const obj2 = { nativeForegroundAndroid: obj };
+      let obj3 = obj2;
     } else {
-      obj = { nativeBackgroundAndroid: null };
-      obj.nativeBackgroundAndroid = obj;
+      obj3 = { nativeBackgroundAndroid: obj };
     }
     return {
-      viewProps: obj,
+      viewProps: obj3,
       onPressIn(nativeEvent) {
         const current = ref.current;
         if (null != current) {

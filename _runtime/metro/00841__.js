@@ -96,13 +96,13 @@ function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
     if (promptFeedback != null) {
       promptFeedback = promptFeedback.promptFeedback;
     }
-    let blockReason;
+    let blockReason1;
     if (promptFeedback != null) {
-      blockReason = promptFeedback.blockReason;
+      blockReason1 = promptFeedback.blockReason;
     }
     let flag = false;
-    if (blockReason) {
-      blockReason = promptFeedback.blockReasonMessage;
+    if (blockReason1) {
+      let blockReason = promptFeedback.blockReasonMessage;
       if (blockReason == null) {
         blockReason = promptFeedback.blockReason;
       }
@@ -111,8 +111,8 @@ function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
       obj.message = "Content blocked: " + blockReason;
       setStatus.setStatus(obj);
       const _HermesInternal2 = HermesInternal;
-      obj = { mechanism: { handled: false, type: "auto.ai.google_genai" } };
-      captureCheckIn.captureException("Content blocked: " + blockReason, obj);
+      const obj3 = { mechanism: { handled: false, type: "auto.ai.google_genai" } };
+      captureCheckIn.captureException("Content blocked: " + blockReason, obj3);
       flag = true;
     }
     tmp = !flag;
@@ -158,8 +158,8 @@ function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
           finishReason = !finishReasons.includes(item10027.finishReason);
         }
         if (finishReason) {
-          finishReasons = arg1.finishReasons;
-          let arr = finishReasons.push(item10027.finishReason);
+          let finishReasons1 = arg1.finishReasons;
+          let arr = finishReasons1.push(item10027.finishReason);
         }
         let parts;
         if (item10027 != null) {
@@ -178,12 +178,12 @@ function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
           }
           if (text) {
             let responseTexts = arg1.responseTexts;
-            arr = responseTexts.push(item10050.text);
+            let arr2 = responseTexts.push(item10050.text);
           }
           if (item10050.functionCall) {
             let toolCalls1 = arg1.toolCalls;
             let obj = { type: "function", id: item10050.functionCall.id, name: item10050.functionCall.name, arguments: item10050.functionCall.args };
-            let arr1 = toolCalls1.push(obj);
+            let arr3 = toolCalls1.push(obj);
           }
           continue;
         }
@@ -207,8 +207,8 @@ let closure_6 = async function _instrumentStream(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -222,8 +222,8 @@ let closure_6 = async function _instrumentStream(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c12 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_7 = tmp4;
               closure_8 = tmp16;
@@ -234,8 +234,8 @@ let closure_6 = async function _instrumentStream(arg0) {
               closure_136_7 = undefined;
               let value4;
               closure_136_9 = undefined;
-              const obj1 = { responseTexts: [], finishReasons: [], toolCalls: [] };
-              closure_136_2 = obj1;
+              const obj4 = { responseTexts: [], finishReasons: [], toolCalls: [] };
+              closure_136_2 = obj4;
               closure_136_4 = false;
               closure_136_5 = false;
               c9 = 4;
@@ -258,12 +258,11 @@ let closure_6 = async function _instrumentStream(arg0) {
                     let tmp5 = arg0[str];
                     if (null != tmp5) {
                       let call = tmp5.call;
-                      let tmp10 = value2;
                       let tmp11 = typeof call === "unknown" ? tmp5() : call(arg0);
                       let tmp12 = new.target;
                       let tmp13 = new.target;
-                      tmp10 = new tmp10(tmp11);
-                      return tmp10;
+                      let tmp102 = new value2(tmp11);
+                      return tmp102;
                     }
                   }
                   num = num - 1;
@@ -286,15 +285,15 @@ let closure_6 = async function _instrumentStream(arg0) {
               closure_136_7 = iter;
               c11 = 5;
               c12 = 1;
-              const obj2 = { value: _awaitAsyncGenerator(iter.next()), done: false };
-              return obj2;
+              const obj5 = { value: _awaitAsyncGenerator(iter.next()), done: false };
+              return obj5;
             }
           break;
           case 1:
             c9 = 0;
-            const obj3 = {};
-            obj3[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-            closure_136_9 = obj3;
+            const obj6 = {};
+            obj6[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+            closure_136_9 = obj6;
             if (closure_136_2.responseId) {
               closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
             }
@@ -350,8 +349,8 @@ let closure_6 = async function _instrumentStream(arg0) {
             } else {
               c11 = 16;
               c12 = 1;
-              const obj4 = { value: closure_135_2(closure_136_7.return()), done: false };
-              return obj4;
+              const obj7 = { value: closure_135_2(closure_136_7.return()), done: false };
+              return obj7;
             }
           break;
           case 3:
@@ -374,17 +373,17 @@ let closure_6 = async function _instrumentStream(arg0) {
             if (tmp598) {
               c11 = 15;
               c12 = 1;
-              const obj5 = { value: closure_135_2(closure_136_7.return()), done: false };
-              return obj5;
+              const obj8 = { value: closure_135_2(closure_136_7.return()), done: false };
+              return obj8;
             } else {
               c9 = 1;
               if (closure_136_5) {
                 throw closure_136_3;
               } else {
                 c9 = 0;
-                const obj6 = {};
-                obj6[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_136_9 = obj6;
+                const obj9 = {};
+                obj9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_9 = obj9;
                 if (closure_136_2.responseId) {
                   closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
                 }
@@ -442,17 +441,17 @@ let closure_6 = async function _instrumentStream(arg0) {
                 if (tmp512) {
                   c11 = 9;
                   c12 = 1;
-                  const obj7 = { value: closure_135_2(closure_136_7.return()), done: false };
-                  return obj7;
+                  const obj10 = { value: closure_135_2(closure_136_7.return()), done: false };
+                  return obj10;
                 } else {
                   c9 = 1;
                   if (closure_136_5) {
                     throw closure_136_3;
                   } else {
                     c9 = 0;
-                    const obj8 = {};
-                    obj8[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                    closure_136_9 = obj8;
+                    const obj11 = {};
+                    obj11[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    closure_136_9 = obj11;
                     if (closure_136_2.responseId) {
                       closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
                     }
@@ -491,8 +490,8 @@ let closure_6 = async function _instrumentStream(arg0) {
                     closure_136_0.setAttributes(closure_136_9);
                     closure_136_0.end();
                     c12 = 3;
-                    const obj9 = { value: value3, done: true };
-                    return obj9;
+                    const obj12 = { value: value3, done: true };
+                    return obj12;
                   }
                 }
               } else {
@@ -514,17 +513,17 @@ let closure_6 = async function _instrumentStream(arg0) {
                   if (tmp331) {
                     c11 = 11;
                     c12 = 1;
-                    const obj10 = { value: closure_135_2(closure_136_7.return()), done: false };
-                    return obj10;
+                    const obj13 = { value: closure_135_2(closure_136_7.return()), done: false };
+                    return obj13;
                   } else {
                     c9 = 1;
                     if (closure_136_5) {
                       throw closure_136_3;
                     } else {
                       c9 = 0;
-                      const obj11 = {};
-                      obj11[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                      closure_136_9 = obj11;
+                      const obj14 = {};
+                      obj14[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                      closure_136_9 = obj14;
                       if (closure_136_2.responseId) {
                         closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
                       }
@@ -563,8 +562,8 @@ let closure_6 = async function _instrumentStream(arg0) {
                       closure_136_0.setAttributes(closure_136_9);
                       closure_136_0.end();
                       c12 = 3;
-                      const obj12 = { value: value2, done: true };
-                      return obj12;
+                      const obj15 = { value: value2, done: true };
+                      return obj15;
                     }
                   }
                 }
@@ -584,17 +583,17 @@ let closure_6 = async function _instrumentStream(arg0) {
               if (tmp418) {
                 c11 = 13;
                 c12 = 1;
-                const obj13 = { value: closure_135_2(closure_136_7.return()), done: false };
-                return obj13;
+                const obj16 = { value: closure_135_2(closure_136_7.return()), done: false };
+                return obj16;
               } else {
                 c9 = 1;
                 if (closure_136_5) {
                   throw closure_136_3;
                 } else {
                   c9 = 0;
-                  const obj14 = {};
-                  obj14[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                  closure_136_9 = obj14;
+                  const obj17 = {};
+                  obj17[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                  closure_136_9 = obj17;
                   if (closure_136_2.responseId) {
                     closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
                   }
@@ -633,16 +632,16 @@ let closure_6 = async function _instrumentStream(arg0) {
                   closure_136_0.setAttributes(closure_136_9);
                   closure_136_0.end();
                   c12 = 3;
-                  const obj15 = { value, done: true };
-                  return obj15;
+                  const obj18 = { value, done: true };
+                  return obj18;
                 }
               }
             } else {
               closure_136_4 = false;
               c11 = 7;
               c12 = 1;
-              const obj16 = { value: closure_135_2(closure_136_7.next()), done: false };
-              return obj16;
+              const obj19 = { value: closure_135_2(closure_136_7.next()), done: false };
+              return obj19;
             }
           break;
           case 7:
@@ -676,9 +675,9 @@ let closure_6 = async function _instrumentStream(arg0) {
                 throw closure_136_3;
               } else {
                 c9 = 0;
-                const obj17 = {};
-                obj17[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_136_9 = obj17;
+                const obj20 = {};
+                obj20[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_9 = obj20;
                 if (closure_136_2.responseId) {
                   closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
                 }
@@ -717,8 +716,8 @@ let closure_6 = async function _instrumentStream(arg0) {
                 closure_136_0.setAttributes(closure_136_9);
                 closure_136_0.end();
                 c12 = 3;
-                const obj18 = { value, done: true };
-                return obj18;
+                const obj21 = { value, done: true };
+                return obj21;
               }
             }
           break;
@@ -740,9 +739,9 @@ let closure_6 = async function _instrumentStream(arg0) {
                 throw closure_136_3;
               } else {
                 c9 = 0;
-                const obj19 = {};
-                obj19[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_136_9 = obj19;
+                const obj22 = {};
+                obj22[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_9 = obj22;
                 if (closure_136_2.responseId) {
                   closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
                 }
@@ -781,8 +780,8 @@ let closure_6 = async function _instrumentStream(arg0) {
                 closure_136_0.setAttributes(closure_136_9);
                 closure_136_0.end();
                 c12 = 3;
-                const obj20 = { value, done: true };
-                return obj20;
+                const obj23 = { value, done: true };
+                return obj23;
               }
             }
           break;
@@ -804,9 +803,9 @@ let closure_6 = async function _instrumentStream(arg0) {
                 throw closure_136_3;
               } else {
                 c9 = 0;
-                const obj21 = {};
-                obj21[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_136_9 = obj21;
+                const obj24 = {};
+                obj24[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_9 = obj24;
                 if (closure_136_2.responseId) {
                   closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
                 }
@@ -845,8 +844,8 @@ let closure_6 = async function _instrumentStream(arg0) {
                 closure_136_0.setAttributes(closure_136_9);
                 closure_136_0.end();
                 c12 = 3;
-                const obj22 = { value, done: true };
-                return obj22;
+                const obj25 = { value, done: true };
+                return obj25;
               }
             }
           break;
@@ -868,7 +867,7 @@ let closure_6 = async function _instrumentStream(arg0) {
                 throw closure_136_3;
               } else {
                 c9 = 0;
-                obj = {};
+                const obj = {};
                 obj[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
                 closure_136_9 = obj;
                 if (closure_136_2.responseId) {
@@ -909,8 +908,8 @@ let closure_6 = async function _instrumentStream(arg0) {
                 closure_136_0.setAttributes(closure_136_9);
                 closure_136_0.end();
                 c12 = 3;
-                const obj23 = { value, done: true };
-                return obj23;
+                const obj26 = { value, done: true };
+                return obj26;
               }
             }
           break;
@@ -924,9 +923,9 @@ let closure_6 = async function _instrumentStream(arg0) {
                 throw closure_136_3;
               } else {
                 c9 = 0;
-                const obj24 = {};
-                obj24[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_136_9 = obj24;
+                const obj27 = {};
+                obj27[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_9 = obj27;
                 if (closure_136_2.responseId) {
                   closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
                 }
@@ -965,8 +964,8 @@ let closure_6 = async function _instrumentStream(arg0) {
                 closure_136_0.setAttributes(closure_136_9);
                 closure_136_0.end();
                 c12 = 3;
-                const obj25 = { value, done: true };
-                return obj25;
+                const obj28 = { value, done: true };
+                return obj28;
               }
             }
         }

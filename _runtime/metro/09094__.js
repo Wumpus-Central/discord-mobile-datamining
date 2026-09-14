@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "stafi", verb: "a\u00F0 hafa" }, file: { unit: "b\u00E6ti", verb: "a\u00F0 hafa" }, array: { unit: "hluti", verb: "a\u00F0 hafa" }, set: { unit: "hluti", verb: "a\u00F0 hafa" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "stafi", verb: "a\u00F0 hafa" }, file: { unit: "b\u00E6ti", verb: "a\u00F0 hafa" }, array: { unit: "hluti", verb: "a\u00F0 hafa" }, set: { unit: "hluti", verb: "a\u00F0 hafa" } };
         closure_1 = { regex: "gildi", email: "netfang", url: "vefsl\u00F3\u00F0", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO dagsetning og t\u00EDmi", date: "ISO dagsetning", time: "ISO t\u00EDmi", duration: "ISO t\u00EDmalengd", ipv4: "IPv4 address", ipv6: "IPv6 address", cidrv4: "IPv4 range", cidrv6: "IPv6 range", base64: "base64-encoded strengur", base64url: "base64url-encoded strengur", json_string: "JSON strengur", e164: "E.164 t\u00F6lugildi", jwt: "JWT", template_literal: "gildi" };
         closure_2 = { nan: "NaN", number: "n\u00FAmer", array: "fylki" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Rangt gildi: \u00DE\u00FA sl\u00F3st inn " + tmp48 + " \u00FEar sem \u00E1 a\u00F0 vera instanceof " + code.expected;
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str24 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -104,13 +103,13 @@ if (self2) {
                 if (str25 == null) {
                   str25 = "gildi";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str31 = tmp27.unit;
                 if (str31 == null) {
                   str31 = "hluti";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Of st\u00F3rt: gert er r\u00E1\u00F0 fyrir a\u00F0 " + str25 + " hafi " + str24 + str + " " + str31;
+                let combined2 = "Of st\u00F3rt: gert er r\u00E1\u00F0 fyrir a\u00F0 " + str25 + " hafi " + str24 + str1 + " " + str31;
               } else {
                 let str26 = str25;
                 if (str25 == null) {
@@ -125,18 +124,18 @@ if (self2) {
               if (code.inclusive) {
                 str18 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str45 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Of l\u00EDti\u00F0: gert er r\u00E1\u00F0 fyrir a\u00F0 " + origin + " hafi " + str18 + str1 + " " + tmp15.unit;
+                let combined3 = "Of l\u00EDti\u00F0: gert er r\u00E1\u00F0 fyrir a\u00F0 " + origin + " hafi " + str18 + str45 + " " + tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Of l\u00EDti\u00F0: gert er r\u00E1\u00F0 fyrir a\u00F0 " + origin + " s\u00E9 " + str18 + str1;
+                combined3 = "Of l\u00EDti\u00F0: gert er r\u00E1\u00F0 fyrir a\u00F0 " + origin + " s\u00E9 " + str18 + str45;
               }
               return combined3;
             case "invalid_format":
@@ -178,7 +177,6 @@ if (self2) {
               return "Rangt gildi";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Rangt gildi \u00ED ";
               return "Rangt gildi \u00ED " + code.origin;
             default:
               return "Rangt gildi";

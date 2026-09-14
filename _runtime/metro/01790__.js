@@ -19,7 +19,7 @@ if (!module_1639) {
 const __initData = { code: "function pnpm_useAnimatedRefTs1(){const{tagOrWrapper,viewName}=this.__closure;const f=function(){return tagOrWrapper.value;};if(viewName){f.viewName=viewName;}return f;}" };
 
 export const useAnimatedRef = module_1639 ? (function useAnimatedRefWeb() {
-  const f74548 = (getScrollableNode) => {
+  const f74551 = (getScrollableNode) => {
     if (getScrollableNode.getScrollableNode) {
       let scrollableNode = getScrollableNode.getScrollableNode();
     } else {
@@ -193,7 +193,7 @@ export const useAnimatedRef = module_1639 ? (function useAnimatedRefWeb() {
   const current = tmp4.current;
   const shareableMappingCache = viewName(first1[6]).shareableMappingCache;
   if (!shareableMappingCache.get(current)) {
-    let obj = { __init: null };
+    const obj = { __init: null };
     let fn = function n() {
       const fn = function f() {
         return value.value;
@@ -203,8 +203,8 @@ export const useAnimatedRef = module_1639 ? (function useAnimatedRefWeb() {
       }
       return fn;
     };
-    obj = { tagOrWrapper: first1, viewName };
-    fn.__closure = obj;
+    const obj2 = { tagOrWrapper: first1, viewName };
+    fn.__closure = obj2;
     fn.__workletHash = 5138727370224;
     fn.__initData = __initData;
     obj.__init = fn;

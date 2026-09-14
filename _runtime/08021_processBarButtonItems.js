@@ -22,7 +22,7 @@ function transformIcon(arg0) {
 function getMenuItem(type) {
   if ("submenu" === type.type) {
     ({ icon, items, multiselectable } = type);
-    let obj = {};
+    const obj2 = {};
     ({ label, inline, layout } = type);
     const merged = Object.assign(_objectWithoutProperties(type, closure_4));
     if (typeof transformIcon === "function") {
@@ -31,30 +31,30 @@ function getMenuItem(type) {
         type = icon.type;
       }
       if ("image" !== type) {
-        obj.icon = icon;
-        obj.title = label;
-        obj.displayAsPalette = "palette" === layout;
-        obj.displayInline = inline;
+        obj2.icon = icon;
+        obj2.title = label;
+        obj2.displayAsPalette = "palette" === layout;
+        obj2.displayInline = inline;
         let tmp14;
         if (typeof multiselectable === "boolean") {
           tmp14 = !multiselectable;
         }
-        obj.singleSelection = tmp14;
-        obj.items = items.map(getMenuItem);
-        return obj;
+        obj2.singleSelection = tmp14;
+        obj2.items = items.map(getMenuItem);
+        return obj2;
       } else if (false === icon.tinted) {
-        obj = { type: "imageSource", imageSource: null };
+        const obj3 = { type: "imageSource", imageSource: null };
         icon = icon.source;
-        obj.imageSource = icon;
+        obj3.imageSource = icon;
       } else {
-        const obj1 = { type: "templateSource", templateSource: icon.source };
+        const obj4 = { type: "templateSource", templateSource: icon.source };
       }
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   } else {
     let source = type.icon;
-    const obj2 = {};
+    const obj5 = {};
     ({ label: label2, description } = type);
     const merged1 = Object.assign(_objectWithoutProperties(type, closure_5));
     if (typeof transformIcon === "function") {
@@ -63,17 +63,16 @@ function getMenuItem(type) {
         type1 = source.type;
       }
       if ("image" !== type1) {
-        obj2.icon = source;
-        obj2.title = label2;
-        obj2.subtitle = description;
-        return obj2;
+        obj5.icon = source;
+        obj5.title = label2;
+        obj5.subtitle = description;
+        return obj5;
       } else if (false === source.tinted) {
-        const obj3 = { type: "imageSource", imageSource: null };
+        const obj6 = { type: "imageSource", imageSource: null };
         source = source.source;
-        obj3.imageSource = source;
-        obj = obj3;
+        obj6.imageSource = source;
       } else {
-        obj = { type: "templateSource", templateSource: source.source };
+        const obj = { type: "templateSource", templateSource: source.source };
       }
     } else {
       throw new TypeError("Trying to call a non-function");
@@ -90,21 +89,20 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   ({ headerBackground, headerLeft, headerRight, headerTintColor, headerTitle, headerTitleAlign, headerTransparent, headerSearchBarOptions, headerTopInsetEnabled, headerBack, unstable_headerInsets, unstable_headerLeftItems, unstable_headerRightItems } = headerLargeTitle);
   ({ headerLargeTitleShadowVisible, headerLargeTitleStyle, headerShown, headerStyle, headerBlurEffect, headerTitleStyle, route, title } = headerLargeTitle);
   let obj = colors(1484);
-  let obj1 = colors(1484);
-  const theme = obj1.useTheme();
+  const theme = colors(1484).useTheme();
   ({ colors, fonts } = theme);
   let text = headerTintColor;
   if (headerTintColor == null) {
     text = colors.text;
   }
-  let obj2 = closure_8;
   let items = [fonts.regular, headerBackTitleStyle];
   const tmp4 = closure_8.flatten(items) || {};
   const items1 = [fonts.medium, headerLargeTitleStyle];
-  const tmp5 = obj2.flatten(items1) || {};
+  const tmp5 = closure_8.flatten(items1) || {};
   const items2 = [fonts.medium, headerTitleStyle];
-  const tmp6 = obj2.flatten(items2) || {};
-  const tmp7 = obj2.flatten(headerStyle) || {};
+  const tmp6 = closure_8.flatten(items2) || {};
+  let obj2 = colors(1484);
+  const tmp7 = closure_8.flatten(headerStyle) || {};
   let backgroundColor = tmp7.backgroundColor;
   if (backgroundColor == null) {
     let str2 = "transparent";
@@ -116,16 +114,16 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     }
     backgroundColor = str2;
   }
-  let tmpResult = colors(8022);
+  const tmp8 = closure_8.flatten(headerLargeStyle) || {};
   const items3 = [tmp4.fontFamily, tmp5.fontFamily, tmp6.fontFamily];
-  const tmp8 = obj2.flatten(headerLargeStyle) || {};
+  const tmpResult = colors(8022);
   let fontSize;
-  [tmp10, tmp11, tmp12] = _slicedToArray(tmpResult.processFonts(items3), 3);
+  [tmp10, tmp11, tmp12] = colors(8022).processFonts(items3);
   if ("fontSize" in tmp4) {
     fontSize = tmp4.fontSize;
   }
-  tmpResult = colors(5712);
-  headerTitle = tmpResult.getHeaderTitle({ title, headerTitle }, route.name);
+  const tmp9 = _slicedToArray(colors(8022).processFonts(items3), 3);
+  const headerTitle1 = colors(5712).getHeaderTitle({ title, headerTitle }, route.name);
   if ("color" in tmp6) {
     headerTintColor = tmp6.color;
   } else if (headerTintColor == null) {
@@ -144,39 +142,39 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   if ("fontSize" in tmp5) {
     fontSize2 = tmp5.fontSize;
   }
-  obj = { color: headerTintColor };
+  let obj4 = { color: headerTintColor };
   if (null != tmp6.fontFamily) {
-    obj.fontFamily = tmp6.fontFamily;
+    obj4.fontFamily = tmp6.fontFamily;
   }
   if (null != fontSize1) {
-    obj.fontSize = fontSize1;
+    obj4.fontSize = fontSize1;
   }
   if (null != fontWeight) {
-    obj.fontWeight = fontWeight;
+    obj4.fontWeight = fontWeight;
   }
   let headerLeftResult;
   if (headerLeft != null) {
-    obj = { tintColor: text, canGoBack: tmp18, label: null, href: "a" };
+    let obj5 = { tintColor: text, canGoBack: tmp18, label: null, href: "Array" };
     let tmp20 = headerBackTitle;
     if (headerBackTitle == null) {
-      title = undefined;
+      let title1;
       if (headerBack != null) {
-        title = headerBack.title;
+        title1 = headerBack.title;
       }
-      tmp20 = title;
+      tmp20 = title1;
     }
-    obj.label = tmp20;
-    headerLeftResult = headerLeft(obj);
+    obj5.label = tmp20;
+    headerLeftResult = headerLeft(obj5);
   }
   let headerRightResult;
   if (headerRight != null) {
-    obj1 = { tintColor: text, canGoBack: tmp18 };
-    headerRightResult = headerRight(obj1);
+    let obj6 = { tintColor: text, canGoBack: tmp18 };
+    headerRightResult = headerRight(obj6);
   }
   let headerTitleResult = null;
   if (typeof headerTitle === "function") {
-    obj2 = { tintColor: text, children: headerTitle };
-    headerTitleResult = headerTitle(obj2);
+    let obj7 = { tintColor: text, children: headerTitle1 };
+    headerTitleResult = headerTitle(obj7);
   }
   const isSearchBarAvailableForCurrentPlatform = colors(4988).isSearchBarAvailableForCurrentPlatform;
   let isSearchBarAvailableForCurrentPlatform2 = typeof isSearchBarAvailableForCurrentPlatform === "boolean";
@@ -203,13 +201,13 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     tmp26 = flag;
   }
   if (unstable_headerLeftItems != null) {
-    let obj3 = { tintColor: text, canGoBack: tmp18 };
-    const result = unstable_headerLeftItems(obj3);
+    let obj8 = { tintColor: text, canGoBack: tmp18 };
+    const result = unstable_headerLeftItems(obj8);
   }
   let result1;
   if (unstable_headerRightItems != null) {
-    let obj4 = { tintColor: text, canGoBack: tmp18 };
-    result1 = unstable_headerRightItems(obj4);
+    let obj9 = { tintColor: text, canGoBack: tmp18 };
+    result1 = unstable_headerRightItems(obj9);
   }
   let reversed = result1;
   if (result1) {
@@ -218,26 +216,26 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     reversed = items4.reverse();
   }
   if (null != headerLeftResult) {
-    let obj5 = null;
+    let obj10 = null;
     if (!tmp31) {
-      obj5 = { flex: 1 };
+      obj10 = { flex: 1 };
     }
-    let obj6 = { style: obj5, children: null };
+    const obj11 = { style: obj10, children: null };
     const items5 = [headerLeftResult, ];
     if ("center" === headerTitleAlign) {
       items5[1] = null;
-      obj6.children = items5;
-      let tmp32Result = closure_12(colors(4988).ScreenStackHeaderLeftView, obj6);
+      obj11.children = items5;
+      let tmp32Result = closure_12(colors(4988).ScreenStackHeaderLeftView, obj11);
     } else {
       if (typeof headerTitle === "function") {
-        const obj7 = { style: { flex: 1 }, children: headerTitleResult };
-        let obj8 = obj7;
+        const obj12 = { style: { flex: 1 }, children: headerTitleResult };
+        let obj13 = obj12;
       } else {
-        obj8 = { style: { flex: 1 }, children: null };
-        const obj9 = { tintColor: text, style: obj, children: headerTitle };
-        obj8.children = closure_10(colors(5712).HeaderTitle, obj9);
+        obj13 = { style: { flex: 1 }, children: null };
+        const obj14 = { tintColor: text, style: obj4, children: headerTitle1 };
+        obj13.children = closure_10(colors(5712).HeaderTitle, obj14);
       }
-      closure_10(closure_9, obj8);
+      closure_10(closure_9, obj13);
     }
   } else {
     tmp32Result = null;
@@ -246,11 +244,11 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   let tmp38Result = null;
   if ("center" === headerTitleAlign) {
     if (typeof headerTitle !== "function") {
-      const obj10 = { tintColor: text, style: obj, children: headerTitle };
-      headerTitleResult = closure_10(colors(5712).HeaderTitle, obj10);
+      const obj15 = { tintColor: text, style: obj4, children: headerTitle1 };
+      headerTitleResult = closure_10(colors(5712).HeaderTitle, obj15);
     }
-    const obj11 = { children: headerTitleResult };
-    tmp38Result = closure_10(colors(4988).ScreenStackHeaderCenterView, obj11);
+    const obj16 = { children: headerTitleResult };
+    tmp38Result = closure_10(colors(4988).ScreenStackHeaderCenterView, obj16);
   }
   items6[1] = tmp38Result;
   const items7 = [closure_12(closure_11, { children: items6 }), , , ];
@@ -262,30 +260,30 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     if (source == null) {
       source = headerBackImageSource;
     }
-    const obj12 = { source };
-    let tmp40Result = closure_10(colors(4988).ScreenStackHeaderBackButtonImage, obj12);
+    const obj17 = { source };
+    let tmp40Result = closure_10(colors(4988).ScreenStackHeaderBackButtonImage, obj17);
   } else {
     tmp40Result = null;
   }
   items7[1] = tmp40Result;
   let tmp42 = null;
   if (null != headerRightResult) {
-    const obj13 = { children: headerRightResult };
-    tmp42 = closure_10(colors(4988).ScreenStackHeaderRightView, obj13);
+    const obj18 = { children: headerRightResult };
+    tmp42 = closure_10(colors(4988).ScreenStackHeaderRightView, obj18);
   }
   items7[2] = tmp42;
   let tmp44 = null;
   if (isSearchBarAvailableForCurrentPlatform2) {
-    const obj14 = { children: null };
-    const obj15 = {};
+    const obj19 = { children: null };
+    const obj20 = {};
     let merged = Object.assign(headerSearchBarOptions);
-    obj14.children = closure_10(colors(4988).SearchBar, obj15);
-    tmp44 = closure_10(colors(4988).ScreenStackHeaderSearchBarView, obj14);
+    obj19.children = closure_10(colors(4988).SearchBar, obj20);
+    tmp44 = closure_10(colors(4988).ScreenStackHeaderSearchBarView, obj19);
   }
   items7[3] = tmp44;
-  const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "fill", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "gpt-5.6-sol", title: "GPT-5.6 Sol", titleColor: "openai", titleFontFamily: true, titleFontSize: "/assets/.cache/intl/ZGVzaWdu", titleFontWeight: null, topInsetEnabled: "86b91484df1ac0b8ccad956aae12b775", disableTopInsetApplication: "bg.messages.86b91484df1ac0b8ccad956aae12b775.compiled.messages", disableLeftInsetApplication: "jsona", disableRightInsetApplication: "gpt-5.6-terra", disableBottomInsetApplication: "GPT-5.6 Terra", translucent: "openai", children: true, headerLeftBarButtonItems: "/assets/.cache/intl/ZGVzaWdu", headerRightBarButtonItems: null, experimental_userInterfaceStyle: "72a624908b343db34ae78e6d520bec11" };
+  const obj21 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "fill", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "gpt-5.6-sol", title: "GPT-5.6 Sol", titleColor: "openai", titleFontFamily: true, titleFontSize: "/assets/.cache/intl/ZGVzaWdu", titleFontWeight: null, topInsetEnabled: "28eaf73d0eb1a1456a138ded13cb8941", disableTopInsetApplication: "de.messages.28eaf73d0eb1a1456a138ded13cb8941.compiled.messages", disableLeftInsetApplication: "jsona", disableRightInsetApplication: "gpt-5.6-terra", disableBottomInsetApplication: "GPT-5.6 Terra", translucent: "openai", children: true, headerLeftBarButtonItems: "/assets/.cache/intl/ZGVzaWdu", headerRightBarButtonItems: null, experimental_userInterfaceStyle: "84406581322fd3209a5e50ba02a76da6" };
   let tmp50 = false === headerShadowVisible;
-  tmp32Result = closure_12(closure_11, { children: items7 });
+  const tmpResult2 = colors(5712);
   if (!tmp50) {
     tmp50 = null != headerBackground;
   }
@@ -295,20 +293,20 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     }
     tmp50 = headerTransparent;
   }
-  obj16.hideShadow = tmp50;
-  obj16.largeTitle = headerLargeTitleEnabled;
-  obj16.largeTitleBackgroundColor = tmp8.backgroundColor;
-  obj16.largeTitleColor = color;
-  obj16.largeTitleFontFamily = tmp11;
-  obj16.largeTitleFontSize = fontSize2;
-  obj16.largeTitleFontWeight = tmp5.fontWeight;
-  obj16.largeTitleHideShadow = false === headerLargeTitleShadowVisible;
-  obj16.title = headerTitle;
-  obj16.titleColor = headerTintColor;
-  obj16.titleFontFamily = tmp12;
-  obj16.titleFontSize = fontSize1;
-  obj16.titleFontWeight = String(fontWeight);
-  obj16.topInsetEnabled = headerTopInsetEnabled;
+  obj21.hideShadow = tmp50;
+  obj21.largeTitle = headerLargeTitleEnabled;
+  obj21.largeTitleBackgroundColor = tmp8.backgroundColor;
+  obj21.largeTitleColor = color;
+  obj21.largeTitleFontFamily = tmp11;
+  obj21.largeTitleFontSize = fontSize2;
+  obj21.largeTitleFontWeight = tmp5.fontWeight;
+  obj21.largeTitleHideShadow = false === headerLargeTitleShadowVisible;
+  obj21.title = headerTitle1;
+  obj21.titleColor = headerTintColor;
+  obj21.titleFontFamily = tmp12;
+  obj21.titleFontSize = fontSize1;
+  obj21.titleFontWeight = String(fontWeight);
+  obj21.topInsetEnabled = headerTopInsetEnabled;
   let top;
   if (unstable_headerInsets != null) {
     top = unstable_headerInsets.top;
@@ -318,7 +316,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   } else {
     tmp52 = !headerTopInsetEnabled;
   }
-  obj16.disableTopInsetApplication = tmp52;
+  obj21.disableTopInsetApplication = tmp52;
   let left;
   if (unstable_headerInsets != null) {
     left = unstable_headerInsets.left;
@@ -327,7 +325,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   if (undefined !== left) {
     tmp54 = !unstable_headerInsets.left;
   }
-  obj16.disableLeftInsetApplication = tmp54;
+  obj21.disableLeftInsetApplication = tmp54;
   let right;
   if (unstable_headerInsets != null) {
     right = unstable_headerInsets.right;
@@ -336,7 +334,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   if (undefined !== right) {
     tmp56 = !unstable_headerInsets.right;
   }
-  obj16.disableRightInsetApplication = tmp56;
+  obj21.disableRightInsetApplication = tmp56;
   let bottom;
   if (unstable_headerInsets != null) {
     bottom = unstable_headerInsets.bottom;
@@ -345,9 +343,9 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   if (undefined !== bottom) {
     tmp58 = !unstable_headerInsets.bottom;
   }
-  obj16.disableBottomInsetApplication = tmp58;
-  obj16.translucent = true === tmp26;
-  obj16.children = tmp32Result;
+  obj21.disableBottomInsetApplication = tmp58;
+  obj21.translucent = true === tmp26;
+  obj21.children = closure_12(closure_11, { children: items7 });
   if (typeof processBarButtonItems === "function") {
     let found;
     if (result != null) {
@@ -384,14 +382,14 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
             }
           }
           ({ badge, labelStyle, icon } = type);
-          let obj = {};
+          const obj = {};
           const merged = Object.assign(_objectWithoutProperties(type, closure_3));
           obj.index = index;
           obj.title = type.label;
-          obj = {};
+          const obj2 = {};
           const merged1 = Object.assign(fonts.regular);
           const merged2 = Object.assign(labelStyle);
-          obj.titleStyle = obj;
+          obj.titleStyle = obj2;
           if (typeof transformIcon === "function") {
             type = undefined;
             if (icon != null) {
@@ -403,20 +401,20 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
                 if ("menu" === type.type) {
                   const menu = type.menu;
                   const multiselectable = menu.multiselectable;
-                  obj = {};
+                  const obj3 = {};
                   const merged3 = Object.assign(obj);
-                  const obj1 = {};
+                  const obj4 = {};
                   const merged4 = Object.assign(obj.menu);
                   let tmp34;
                   if (typeof multiselectable === "boolean") {
                     tmp34 = !multiselectable;
                   }
-                  obj1.singleSelection = tmp34;
-                  obj1.displayAsPalette = "palette" === menu.layout;
+                  obj4.singleSelection = tmp34;
+                  obj4.displayAsPalette = "palette" === menu.layout;
                   const items = type.menu.items;
-                  obj1.items = items.map(getMenuItem);
-                  obj.menu = obj1;
-                  let tmp23 = obj;
+                  obj4.items = items.map(getMenuItem);
+                  obj3.menu = obj4;
+                  let tmp23 = obj3;
                 }
                 let tmp36 = tmp23;
                 if (badge) {
@@ -428,23 +426,23 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
                   if (backgroundColor == null) {
                     backgroundColor = colors.notification;
                   }
-                  let obj6 = ColorDefault(backgroundColor);
                   let str9 = "white";
-                  if (obj6.isLight()) {
+                  if (obj7.isLight()) {
                     str9 = "black";
                   }
-                  const obj2 = {};
+                  const obj5 = {};
                   const merged5 = Object.assign(tmp23);
-                  const obj3 = {};
+                  const obj6 = {};
                   const merged6 = Object.assign(badge);
                   const _String = String;
-                  obj3.value = String(badge.value);
-                  const obj4 = { backgroundColor, color: str9 };
+                  obj6.value = String(badge.value);
+                  const obj8 = { backgroundColor, color: str9 };
                   const merged7 = Object.assign(fonts.regular);
                   const merged8 = Object.assign(badge.style);
-                  obj3.style = obj4;
-                  obj2.badge = obj3;
-                  tmp36 = obj2;
+                  obj6.style = obj8;
+                  obj5.badge = obj6;
+                  tmp36 = obj5;
+                  obj7 = ColorDefault(backgroundColor);
                 }
                 return tmp36;
               }
@@ -457,12 +455,11 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
               const error3 = new Error("Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button' and 'menu'.");
               throw error3;
             } else if (false === icon.tinted) {
-              const obj5 = { type: "imageSource", imageSource: null };
+              const obj9 = { type: "imageSource", imageSource: null };
               icon = icon.source;
-              obj5.imageSource = icon;
-              obj6 = obj5;
+              obj9.imageSource = icon;
             } else {
-              obj6 = { type: "templateSource", templateSource: icon.source };
+              const obj10 = { type: "templateSource", templateSource: icon.source };
             }
           } else {
             throw new TypeError("Trying to call a non-function");
@@ -471,7 +468,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
       });
       found = mapped.filter((item) => null != item);
     }
-    obj16.headerLeftBarButtonItems = found;
+    obj21.headerLeftBarButtonItems = found;
     if (typeof tmp59 === "function") {
       closure_129_0 = colors;
       closure_129_1 = fonts;
@@ -510,14 +507,14 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
               }
             }
             ({ badge, labelStyle, icon } = type);
-            let obj = {};
+            const obj = {};
             const merged = Object.assign(_objectWithoutProperties(type, closure_3));
             obj.index = index;
             obj.title = type.label;
-            obj = {};
+            const obj2 = {};
             const merged1 = Object.assign(fonts.regular);
             const merged2 = Object.assign(labelStyle);
-            obj.titleStyle = obj;
+            obj.titleStyle = obj2;
             if (typeof transformIcon === "function") {
               type = undefined;
               if (icon != null) {
@@ -529,20 +526,20 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
                   if ("menu" === type.type) {
                     const menu = type.menu;
                     const multiselectable = menu.multiselectable;
-                    obj = {};
+                    const obj3 = {};
                     const merged3 = Object.assign(obj);
-                    const obj1 = {};
+                    const obj4 = {};
                     const merged4 = Object.assign(obj.menu);
                     let tmp34;
                     if (typeof multiselectable === "boolean") {
                       tmp34 = !multiselectable;
                     }
-                    obj1.singleSelection = tmp34;
-                    obj1.displayAsPalette = "palette" === menu.layout;
+                    obj4.singleSelection = tmp34;
+                    obj4.displayAsPalette = "palette" === menu.layout;
                     const items = type.menu.items;
-                    obj1.items = items.map(getMenuItem);
-                    obj.menu = obj1;
-                    let tmp23 = obj;
+                    obj4.items = items.map(getMenuItem);
+                    obj3.menu = obj4;
+                    let tmp23 = obj3;
                   }
                   let tmp36 = tmp23;
                   if (badge) {
@@ -554,23 +551,23 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
                     if (backgroundColor == null) {
                       backgroundColor = colors.notification;
                     }
-                    let obj6 = ColorDefault(backgroundColor);
                     let str9 = "white";
-                    if (obj6.isLight()) {
+                    if (obj7.isLight()) {
                       str9 = "black";
                     }
-                    const obj2 = {};
+                    const obj5 = {};
                     const merged5 = Object.assign(tmp23);
-                    const obj3 = {};
+                    const obj6 = {};
                     const merged6 = Object.assign(badge);
                     const _String = String;
-                    obj3.value = String(badge.value);
-                    const obj4 = { backgroundColor, color: str9 };
+                    obj6.value = String(badge.value);
+                    const obj8 = { backgroundColor, color: str9 };
                     const merged7 = Object.assign(fonts.regular);
                     const merged8 = Object.assign(badge.style);
-                    obj3.style = obj4;
-                    obj2.badge = obj3;
-                    tmp36 = obj2;
+                    obj6.style = obj8;
+                    obj5.badge = obj6;
+                    tmp36 = obj5;
+                    obj7 = ColorDefault(backgroundColor);
                   }
                   return tmp36;
                 }
@@ -583,12 +580,11 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
                 const error3 = new Error("Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button' and 'menu'.");
                 throw error3;
               } else if (false === icon.tinted) {
-                const obj5 = { type: "imageSource", imageSource: null };
+                const obj9 = { type: "imageSource", imageSource: null };
                 icon = icon.source;
-                obj5.imageSource = icon;
-                obj6 = obj5;
+                obj9.imageSource = icon;
               } else {
-                obj6 = { type: "templateSource", templateSource: icon.source };
+                const obj10 = { type: "templateSource", templateSource: icon.source };
               }
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -597,18 +593,18 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
         });
         found1 = mapped1.filter((item) => null != item);
       }
-      obj16.headerRightBarButtonItems = found1;
+      obj21.headerRightBarButtonItems = found1;
       let str3 = "light";
       if (theme.dark) {
         str3 = "dark";
       }
-      obj16.experimental_userInterfaceStyle = str3;
-      return obj16;
+      obj21.experimental_userInterfaceStyle = str3;
+      return obj21;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  const tmp9 = _slicedToArray(tmpResult.processFonts(items3), 3);
+  const tmp32Result2 = closure_12(closure_11, { children: items7 });
 };

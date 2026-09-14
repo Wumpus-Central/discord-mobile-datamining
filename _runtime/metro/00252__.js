@@ -14,13 +14,13 @@ export default function _default(rootTag) {
   ({ children, WrapperComponent, rootViewStyle } = rootTag);
   let tmp2 = children;
   if (null != WrapperComponent) {
-    let obj = { initialProps: tmp, children };
+    const obj = { initialProps: tmp, children };
     tmp2 = <WrapperComponent initialProps={tmp}>{children}</WrapperComponent>;
   }
-  obj = { value: RootTagContext.createRootTag(rootTag.rootTag), children: null };
+  const obj2 = { value: RootTagContext.createRootTag(rootTag.rootTag), children: null };
   if (!rootViewStyle) {
     rootViewStyle = root.root;
   }
-  obj.children = jsx(ViewDefault, { style: rootViewStyle, pointerEvents: "box-none", children: tmp2 });
+  obj2.children = jsx(ViewDefault, { style: rootViewStyle, pointerEvents: "box-none", children: tmp2 });
   return jsx(RootTagContext.RootTagContext.Provider, { value: RootTagContext.createRootTag(rootTag.rootTag), children: null });
 };

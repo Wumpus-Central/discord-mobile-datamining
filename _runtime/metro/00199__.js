@@ -309,10 +309,10 @@ const items1 = [
     key: "__didUploadProgress",
     value: function __didUploadProgress(arg0, loaded, total) {
       if (arg0 === this._requestId) {
-        XMLHttpRequest(135);
-        const obj = { lengthComputable: true, loaded, total };
-        const tmp10 = new _modDef207("progress", obj);
-        obj.dispatchTrustedEvent(tmp.upload, tmp10);
+        const obj2 = { lengthComputable: true, loaded, total };
+        const tmp10 = new _modDef207("progress", obj2);
+        XMLHttpRequest(135).dispatchTrustedEvent(tmp.upload, tmp10);
+        const obj = XMLHttpRequest(135);
       }
     }
   },
@@ -391,10 +391,10 @@ const items1 = [
     key: "__didReceiveDataProgress",
     value: function __didReceiveDataProgress(arg0, loaded, total) {
       if (arg0 === this._requestId) {
-        XMLHttpRequest(135);
-        const obj = { lengthComputable: total >= 0, loaded, total };
-        const tmp10 = new _modDef207("progress", obj);
-        obj.dispatchTrustedEvent(tmp, tmp10);
+        const obj2 = { lengthComputable: total >= 0, loaded, total };
+        const tmp10 = new _modDef207("progress", obj2);
+        XMLHttpRequest(135).dispatchTrustedEvent(tmp, tmp10);
+        const obj = XMLHttpRequest(135);
       }
     }
   },
@@ -693,29 +693,29 @@ const items1 = [
       obj2.dispatchTrustedEvent(this, new EventDefault("readystatechange"));
       if (DONE === this.DONE) {
         if (self._aborted) {
-          let objResult = obj(135);
           const tmp23 = new EventDefault("abort");
-          objResult.dispatchTrustedEvent(self, tmp23);
+          obj(135).dispatchTrustedEvent(self, tmp23);
           obj = obj(135);
-          let tmp2Result = EventDefault;
+          const objResult = obj(135);
           const tmp2 = new.target;
-          tmp2Result = new tmp2Result("loadend");
-          obj.dispatchTrustedEvent(self, tmp2Result);
+          const tmp2Result2 = new EventDefault("loadend");
+          obj.dispatchTrustedEvent(self, tmp2Result2);
+          const tmp2Result = EventDefault;
         } else if (!self._hasError) {
-          objResult = obj(135);
           const tmp7 = new EventDefault("load");
-          objResult.dispatchTrustedEvent(self, tmp7);
+          obj(135).dispatchTrustedEvent(self, tmp7);
+          const objResult3 = obj(135);
         }
         const dispatchTrustedEvent = obj(135).dispatchTrustedEvent;
-        const tmp2Result1 = EventDefault;
+        const tmp2Result3 = EventDefault;
         if (self._timedOut) {
-          const tmp2Result11 = new tmp2Result1("timeout");
+          const tmp2Result11 = new tmp2Result3("timeout");
           dispatchTrustedEvent(self, tmp2Result11);
         } else {
-          const tmp2Result12 = new tmp2Result1("error");
+          const tmp2Result12 = new tmp2Result3("error");
           dispatchTrustedEvent(self, tmp2Result12);
         }
-        const objResult1 = obj(135);
+        const objResult4 = obj(135);
       }
     }
   },

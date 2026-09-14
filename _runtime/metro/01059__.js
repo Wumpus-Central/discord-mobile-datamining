@@ -108,9 +108,9 @@ let items = [
           combined = "" + first.name + str3;
         }
         const self = this;
-        let obj = { category: this.props.breadcrumbCategory, data: null, level: "info", message: null, type: null };
-        obj = { path: items };
-        obj.data = obj;
+        const obj = { category: this.props.breadcrumbCategory, data: null, level: "info", message: null, type: null };
+        const obj2 = { path: items };
+        obj.data = obj2;
         const _HermesInternal3 = HermesInternal;
         obj.message = "Touch event within element: " + combined;
         obj.type = this.props.breadcrumbType;
@@ -156,6 +156,7 @@ let items = [
   {
     key: "_onTouchStart",
     value: function _onTouchStart(_targetInst) {
+      let displayName;
       let labelName;
       if (_targetInst._targetInst) {
         const self = this;
@@ -165,13 +166,13 @@ let items = [
           if (self.props.maxComponentTreeSize) {
             if (items.length < self.props.maxComponentTreeSize) {
               const elementType3 = _targetInst.elementType;
-              let displayName;
+              let displayName1;
               if (null !== elementType3) {
                 if (undefined !== elementType3) {
-                  displayName = elementType3.displayName;
+                  displayName1 = elementType3.displayName;
                 }
               }
-              if (displayName !== TouchEventBoundary.displayName) {
+              if (displayName1 !== TouchEventBoundary.displayName) {
                 while (true) {
                   labelName = self.props.labelName;
                   let elementType = _targetInst.elementType;
@@ -194,10 +195,10 @@ let items = [
                       if (self.props.maxComponentTreeSize) {
                         if (items.length < self.props.maxComponentTreeSize) {
                           let elementType2 = _return.elementType;
-                          let displayName1;
+                          let displayName2;
                           if (null !== elementType2) {
                             if (undefined !== elementType2) {
-                              displayName1 = elementType2.displayName;
+                              displayName2 = elementType2.displayName;
                             }
                           }
                           _targetInst = _return;
@@ -219,7 +220,7 @@ let items = [
                 if (!tmp10) {
                   tmp10 = displayName;
                 }
-                obj = { name: tmp10, element: null, file: null, label: null };
+                const obj3 = { name: tmp10, element: null, file: null, label: null };
                 let tmp13 = typeof tmp12 === "string";
                 if (typeof tmp4[closure_11] === "string") {
                   tmp13 = tmp4[closure_11].length > 0;
@@ -230,7 +231,7 @@ let items = [
                 if (tmp13) {
                   tmp13 = tmp4[closure_11];
                 }
-                obj.element = tmp13;
+                obj3.element = tmp13;
                 let tmp16 = typeof tmp15 === "string";
                 if (typeof tmp4[closure_12] === "string") {
                   tmp16 = tmp4[closure_12].length > 0;
@@ -241,7 +242,7 @@ let items = [
                 if (tmp16) {
                   tmp16 = tmp4[closure_12];
                 }
-                obj.file = tmp16;
+                obj3.file = tmp16;
                 if (typeof tmp4[closure_9] !== "string") {
                   let tmp18;
                   if (typeof labelName === "string") {
@@ -251,8 +252,8 @@ let items = [
                       }
                     }
                   }
-                  obj.label = tmp18;
-                  obj2.dropUndefinedKeys(obj);
+                  obj3.label = tmp18;
+                  obj2.dropUndefinedKeys(obj3);
                 }
                 tmp18 = tmp4[closure_9];
                 obj2 = TouchEventBoundary(682);
@@ -270,8 +271,8 @@ let items = [
         if (items.length > 0) {
           self._logTouchEvent(items, label);
         }
-        obj = { elementId: label, op: TouchEventBoundary(1020).UI_ACTION_TOUCH };
-        const result = TouchEventBoundary(1030).startUserInteractionSpan(obj);
+        const obj5 = { elementId: label, op: TouchEventBoundary(1020).UI_ACTION_TOUCH };
+        const result = TouchEventBoundary(1030).startUserInteractionSpan(obj5);
         if (result) {
           const attr = result.setAttribute(TouchEventBoundary(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, TouchEventBoundary(1023).SPAN_ORIGIN_AUTO_INTERACTION);
         }
@@ -339,12 +340,12 @@ export const withTouchEventBoundary = (arg0, arg1) => {
   class WrappedComponent {
     constructor(arg0) {
       obj = closure_5;
-      obj = closure_1;
+      obj1 = closure_1;
       tmp = closure_13;
       if (null == closure_1) {
-        obj = {};
+        obj1 = {};
       }
-      merged = Object.assign({}, obj);
+      merged = Object.assign({}, obj1);
       return closure_5.createElement(tmp, merged, obj.createElement(closure_0, Object.assign({}, arg0)));
     }
   }

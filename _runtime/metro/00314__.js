@@ -140,44 +140,44 @@ class VirtualizedList {
       let progressViewOffset = onRefresh.onRefresh;
       if (closure_0._isNestedWithSameOrientation()) {
         const onContentSizeChange = onRefresh.onContentSizeChange;
-        let obj = {};
+        const obj2 = {};
         const merged = Object.assign(hasOwnProperty(onRefresh, closure_4));
-        return collapsedCategories(value2, obj);
+        return collapsedCategories(value2, obj2);
       } else if (progressViewOffset) {
         let str = onRefresh.refreshing;
         if (str == null) {
           str = "undefined";
         }
         closure_1(38)(typeof onRefresh.refreshing === "boolean", `\`refreshing\` prop must be set as a boolean in order to use \`onRefresh\`, but got \`${tmp11(str)}\``);
-        obj = {};
+        const obj3 = {};
         const merged1 = Object.assign(onRefresh);
         if (null == onRefresh.refreshControl) {
-          const obj1 = { refreshing: onRefresh.refreshing, onRefresh: progressViewOffset, progressViewOffset: null };
+          const obj4 = { refreshing: onRefresh.refreshing, onRefresh: progressViewOffset, progressViewOffset: null };
           progressViewOffset = onRefresh.progressViewOffset;
-          obj1.progressViewOffset = progressViewOffset;
-          let refreshControl = collapsedCategories(map1, obj1);
+          obj4.progressViewOffset = progressViewOffset;
+          let refreshControl = collapsedCategories(map1, obj4);
         } else {
           refreshControl = onRefresh.refreshControl;
         }
-        obj.refreshControl = refreshControl;
-        collapsedCategories(value, obj);
+        obj3.refreshControl = refreshControl;
+        collapsedCategories(value, obj3);
         const tmp13 = typeof onRefresh.refreshing === "boolean";
         const tmp8 = closure_1(38);
       } else {
-        obj = {};
+        const obj = {};
         const merged2 = Object.assign(onRefresh);
         return collapsedCategories(value, obj);
       }
     };
     tmp3Result._onCellLayout = (layout, cellKey, cellIndex) => {
       const _listMetrics = closure_0._listMetrics;
-      const obj = { cellIndex, cellKey, layout: layout.nativeEvent.layout, orientation: closure_0._orientation() };
-      if (_listMetrics.notifyCellLayout(obj)) {
-        const result = obj._scheduleCellsToRenderUpdate();
+      if (_listMetrics.notifyCellLayout(obj2)) {
+        const result = closure_0._scheduleCellsToRenderUpdate();
       }
-      const result1 = obj._triggerRemeasureForChildListsInCell(cellKey);
-      obj._computeBlankness();
-      obj._updateViewableItems(obj.props, obj.state.cellsAroundViewport);
+      const result1 = closure_0._triggerRemeasureForChildListsInCell(cellKey);
+      closure_0._computeBlankness();
+      closure_0._updateViewableItems(closure_0.props, closure_0.state.cellsAroundViewport);
+      obj2 = { cellIndex, cellKey, layout: layout.nativeEvent.layout, orientation: closure_0._orientation() };
     };
     tmp3Result._onCellFocusCapture = (_lastFocusedCellKey) => {
       closure_0._lastFocusedCellKey = _lastFocusedCellKey;
@@ -221,15 +221,15 @@ class VirtualizedList {
     };
     tmp3Result._onContentSizeChange = (width, height) => {
       const _listMetrics = closure_0._listMetrics;
-      const obj = { layout: { width, height }, orientation: closure_0._orientation() };
-      const result = _listMetrics.notifyListContentLayout(obj);
+      const result = _listMetrics.notifyListContentLayout({ layout: { width, height }, orientation: closure_0._orientation() });
       const result1 = closure_0._maybeScrollToInitialScrollIndex(width, height);
       if (closure_0.props.onContentSizeChange) {
-        const props = obj.props;
+        const props = closure_0.props;
         props.onContentSizeChange(width, height);
       }
-      const result2 = obj._scheduleCellsToRenderUpdate();
-      const result3 = obj._maybeCallOnEdgeReached();
+      const result2 = closure_0._scheduleCellsToRenderUpdate();
+      const result3 = closure_0._maybeCallOnEdgeReached();
+      const obj2 = { layout: { width, height }, orientation: closure_0._orientation() };
     };
     tmp3Result._convertParentScrollMetrics = (visibleLength) => {
       const diff = visibleLength.offset - closure_0._offsetFromParentVirtualizedList;
@@ -242,7 +242,6 @@ class VirtualizedList {
     };
     tmp3Result._onScroll = (timeStamp) => {
       closure_0 = timeStamp;
-      let obj = closure_0;
       const _nestedChildLists = closure_0._nestedChildLists;
       const item = _nestedChildLists.forEach((_onScroll) => {
         _onScroll._onScroll(closure_0);
@@ -252,22 +251,22 @@ class VirtualizedList {
         props.onScroll(timeStamp);
       }
       timeStamp = timeStamp.timeStamp;
-      const _selectLengthResult = obj._selectLength(timeStamp.nativeEvent.layoutMeasurement);
+      const _selectLengthResult = closure_0._selectLength(timeStamp.nativeEvent.layoutMeasurement);
       contentLength = obj._selectLength(timeStamp.nativeEvent.contentSize);
       const result = obj._offsetFromScrollEvent(timeStamp);
       dOffset = result - obj._scrollMetrics.offset;
       offset = result;
       visibleLength = _selectLengthResult;
-      if (obj._isNestedWithSameOrientation()) {
+      if (closure_0._isNestedWithSameOrientation()) {
         const _listMetrics = obj._listMetrics;
         if (0 !== _listMetrics.getContentLength()) {
-          obj = { visibleLength: _selectLengthResult, offset: result };
-          const result1 = obj._convertParentScrollMetrics(obj);
+          const obj2 = { visibleLength: _selectLengthResult, offset: result };
+          const result1 = obj._convertParentScrollMetrics(obj2);
           ({ visibleLength, contentLength, offset, dOffset } = result1);
         }
       }
       let num2 = 1;
-      if (obj._scrollMetrics.timestamp) {
+      if (closure_0._scrollMetrics.timestamp) {
         const _Math = Math;
         num2 = Math.max(1, timeStamp - obj._scrollMetrics.timestamp);
       }
@@ -280,22 +279,20 @@ class VirtualizedList {
         tmp7 = !obj._hasWarned.perf;
       }
       if (tmp7) {
-        obj = { dt: num2, prevDt: null, contentLength: null };
-        obj.prevDt = obj._scrollMetrics.dt;
-        obj.contentLength = contentLength;
-        closure_1(317)("VirtualizedList: You have a large list that is slow to update - make sure your renderItem function renders components that follow React performance best practices like PureComponent, shouldComponentUpdate, etc.", obj);
+        const obj3 = { dt: num2, prevDt: obj._scrollMetrics.dt, contentLength };
+        closure_1(317)("VirtualizedList: You have a large list that is slow to update - make sure your renderItem function renders components that follow React performance best practices like PureComponent, shouldComponentUpdate, etc.", obj3);
         obj._hasWarned.perf = true;
       }
       let num4 = 1;
       if (timeStamp.nativeEvent.zoomScale >= 0) {
         num4 = timeStamp.nativeEvent.zoomScale;
       }
-      obj._scrollMetrics = { dt: num2, dOffset, offset, timestamp: timeStamp, velocity: result2, visibleLength, zoomScale: num4 };
-      if (obj.state.pendingScrollUpdateCount > 0) {
+      closure_0._scrollMetrics = { dt: num2, dOffset, offset, timestamp: timeStamp, velocity: result2, visibleLength, zoomScale: num4 };
+      if (closure_0.state.pendingScrollUpdateCount > 0) {
         obj.setState((pendingScrollUpdateCount) => ({ pendingScrollUpdateCount: pendingScrollUpdateCount.pendingScrollUpdateCount - 1 }));
       }
-      obj._updateViewableItems(obj.props, obj.state.cellsAroundViewport);
-      if (obj.props) {
+      closure_0._updateViewableItems(closure_0.props, closure_0.state.cellsAroundViewport);
+      if (closure_0.props) {
         const result3 = obj._maybeCallOnEdgeReached();
         if (0 !== result2) {
           const _fillRateHelper = obj._fillRateHelper;
@@ -461,15 +458,15 @@ class VirtualizedList {
       ({ onViewableItemsChanged, viewabilityConfig } = props);
       if (onViewableItemsChanged) {
         _viewabilityTuples = tmp3Result._viewabilityTuples;
-        obj = { viewabilityHelper: null, onViewableItemsChanged: null };
+        obj1 = { viewabilityHelper: null, onViewableItemsChanged: null };
         tmp13 = new.target;
         tmp14 = new.target;
         tmp15 = viewabilityConfig;
         tmp16 = new tmp6(tmp7[15])(viewabilityConfig);
         tmp17 = tmp16;
-        obj.viewabilityHelper = tmp16;
-        obj.onViewableItemsChanged = onViewableItemsChanged;
-        arr = _viewabilityTuples.push(obj);
+        obj1.viewabilityHelper = tmp16;
+        obj1.onViewableItemsChanged = onViewableItemsChanged;
+        arr1 = _viewabilityTuples.push(obj1);
       }
     }
     _initialRenderRegionResult = obj._initialRenderRegion(global);
@@ -481,13 +478,13 @@ class VirtualizedList {
     if (num == null) {
       num = 0;
     }
-    obj1 = { cellsAroundViewport: _initialRenderRegionResult, renderMask: obj._createRenderMask(global, _initialRenderRegionResult), firstVisibleItemKey: null, pendingScrollUpdateCount: null };
+    obj6 = { cellsAroundViewport: _initialRenderRegionResult, renderMask: obj._createRenderMask(global, _initialRenderRegionResult), firstVisibleItemKey: null, pendingScrollUpdateCount: null };
     props2 = tmp3Result.props;
     _getItemKeyResult = null;
     if (props2.getItemCount(tmp3Result.props.data) > num) {
       _getItemKeyResult = obj._getItemKey(tmp3Result.props, num);
     }
-    obj1.firstVisibleItemKey = _getItemKeyResult;
+    obj6.firstVisibleItemKey = _getItemKeyResult;
     num2 = 0;
     if (null != tmp3Result.props.initialScrollIndex) {
       num2 = 0;
@@ -495,8 +492,8 @@ class VirtualizedList {
         num2 = 1;
       }
     }
-    obj1.pendingScrollUpdateCount = num2;
-    tmp3Result.state = obj1;
+    obj6.pendingScrollUpdateCount = num2;
+    tmp3Result.state = obj6;
     return tmp3Result;
   }
 }
@@ -540,7 +537,7 @@ let items = [
         const _listMetrics = self._listMetrics;
         if (index > _listMetrics.getHighestMeasuredCellIndex()) {
           _modDef38(onScrollToIndexFailed, "scrollToIndex should be used in conjunction with getItemLayout or onScrollToIndexFailed, otherwise there is no way to know the location of offscreen indices or handle failures.");
-          let obj = { averageItemLength: null, highestMeasuredFrameIndex: null, index: null };
+          const obj = { averageItemLength: null, highestMeasuredFrameIndex: null, index: null };
           const _listMetrics2 = self._listMetrics;
           obj.averageItemLength = _listMetrics2.getAverageCellLength();
           const _listMetrics3 = self._listMetrics;
@@ -560,8 +557,8 @@ let items = [
       if (!viewOffset) {
         viewOffset = 0;
       }
-      obj = { offset: bound - viewOffset, animated: animated.animated };
-      self.scrollToOffset(obj);
+      self.scrollToOffset({ offset: bound - viewOffset, animated: animated.animated });
+      const obj2 = { offset: bound - viewOffset, animated: animated.animated };
       const tmp10 = index < getItemCount(data);
     }
   },
@@ -622,16 +619,17 @@ let items = [
           const _listMetrics = self._listMetrics;
           const cartesianOffsetResult = _listMetrics.cartesianOffset(x + self._scrollMetrics.visibleLength);
           if (horizontal) {
-            let obj = { x: cartesianOffsetResult };
+            const obj2 = { x: cartesianOffsetResult };
+            let obj3 = obj2;
           } else {
-            obj = { y: cartesianOffsetResult };
+            obj3 = { y: cartesianOffsetResult };
           }
-          return obj;
+          return obj3;
         }
       }
       if (horizontal) {
-        const obj1 = { x };
-        obj = obj1;
+        const obj4 = { x };
+        let obj = obj4;
       } else {
         obj = { y: x };
       }
@@ -772,24 +770,23 @@ let items = [
     value: function _adjustCellsAroundViewport(onEndReachedThreshold, cellsAroundViewport, pendingScrollUpdateCount) {
       const self = this;
       ({ data, getItemCount } = onEndReachedThreshold);
-      let obj = VirtualizedList(320);
       const visibleLength = this._scrollMetrics.visibleLength;
       const _listMetrics = this._listMetrics;
-      const result = obj.onEndReachedThresholdOrDefault(onEndReachedThreshold.onEndReachedThreshold);
+      const result = VirtualizedList(320).onEndReachedThresholdOrDefault(onEndReachedThreshold.onEndReachedThreshold);
       const contentLength = _listMetrics.getContentLength();
       if (visibleLength > 0) {
         if (contentLength > 0) {
           if (onEndReachedThreshold.disableVirtualization) {
             let num = 0;
             if (tmp5 < result * visibleLength) {
-              let tmpResult = VirtualizedList(320);
-              num = tmpResult.maxToRenderPerBatchOrDefault(onEndReachedThreshold.maxToRenderPerBatch);
+              num = VirtualizedList(320).maxToRenderPerBatchOrDefault(onEndReachedThreshold.maxToRenderPerBatch);
+              const tmpResult = VirtualizedList(320);
             }
-            obj = { first: 0, last: null };
+            const obj2 = { first: 0, last: null };
             const _Math = Math;
             const sum = cellsAroundViewport.last + num;
-            obj.last = Math.min(sum, getItemCount(data) - 1);
-            let windowedRenderLimits = obj;
+            obj2.last = Math.min(sum, getItemCount(data) - 1);
+            let windowedRenderLimits = obj2;
           } else if (pendingScrollUpdateCount > 0) {
             let result1 = cellsAroundViewport;
             if (cellsAroundViewport.last >= getItemCount(data)) {
@@ -797,11 +794,11 @@ let items = [
             }
             return result1;
           } else {
-            tmpResult = VirtualizedList(313);
+            const tmpResult4 = VirtualizedList(313);
             const result2 = VirtualizedList(320).maxToRenderPerBatchOrDefault(onEndReachedThreshold.maxToRenderPerBatch);
-            const tmpResult1 = VirtualizedList(320);
-            windowedRenderLimits = tmpResult.computeWindowedRenderLimits(onEndReachedThreshold, result2, VirtualizedList(320).windowSizeOrDefault(onEndReachedThreshold.windowSize), cellsAroundViewport, self._listMetrics, self._scrollMetrics);
-            const tmpResult2 = VirtualizedList(320);
+            const tmpResult5 = VirtualizedList(320);
+            windowedRenderLimits = tmpResult4.computeWindowedRenderLimits(onEndReachedThreshold, result2, VirtualizedList(320).windowSizeOrDefault(onEndReachedThreshold.windowSize), cellsAroundViewport, self._listMetrics, self._scrollMetrics);
+            const tmpResult6 = VirtualizedList(320);
             _modDef38(windowedRenderLimits.last < getItemCount(data), "computeWindowedRenderLimits() should return range in-bounds");
           }
           const _nestedChildLists = self._nestedChildLists;
@@ -922,11 +919,11 @@ let items = [
         };
         obj.renderItem = renderItem;
         if (enabledResult) {
-          obj = { onCellLayout: self._onCellLayout };
-          enabledResult = obj;
+          let obj2 = { onCellLayout: self._onCellLayout };
+          enabledResult = obj2;
         }
         let merged = Object.assign(enabledResult);
-        arr = items.push(collapsedCategories(tmp18, obj, _keyExtractorResult));
+        let arr2 = items.push(collapsedCategories(tmp18, obj, _keyExtractorResult));
         sum = tmp5 + 1;
         tmp4 = _keyExtractorResult;
         tmp5 = sum;
@@ -986,10 +983,10 @@ let items = [
           if (!closure_1_11(ListHeaderComponent)) {
             tmp14 = collapsedCategories(ListHeaderComponent, {});
           }
-          let obj = { cellKey: `${self._getCellKey()}-header`, children: null };
-          obj = { collapsable: false, onLayout: self._onLayoutHeader, style: StyleSheet.compose(null, self.props.ListHeaderComponentStyle), children: tmp14 };
-          obj.children = collapsedCategories(value2, obj);
-          items.push(collapsedCategories(VirtualizedList(322).VirtualizedListCellContextProvider, obj, "$header"));
+          const obj2 = { cellKey: `${self._getCellKey()}-header`, children: null };
+          const obj3 = { collapsable: false, onLayout: self._onLayoutHeader, style: StyleSheet.compose(null, self.props.ListHeaderComponentStyle), children: tmp14 };
+          obj2.children = collapsedCategories(value2, obj3);
+          items.push(collapsedCategories(VirtualizedList(322).VirtualizedListCellContextProvider, obj2, "$header"));
         }
         const props = self.props;
         const itemCount = props.getItemCount(tmp2);
@@ -999,8 +996,8 @@ let items = [
             if (!closure_1_11(ListEmptyComponent)) {
               tmp24 = collapsedCategories(ListEmptyComponent, {});
             }
-            const obj1 = { cellKey: `${self._getCellKey()}-empty`, children: self._renderEmptyComponent(tmp24, null) };
-            items.push(collapsedCategories(VirtualizedList(322).VirtualizedListCellContextProvider, obj1, "$empty"));
+            const obj4 = { cellKey: `${self._getCellKey()}-empty`, children: self._renderEmptyComponent(tmp24, null) };
+            items.push(collapsedCategories(VirtualizedList(322).VirtualizedListCellContextProvider, obj4, "$empty"));
           }
         }
         if (itemCount > 0) {
@@ -1035,12 +1032,12 @@ let items = [
                   let _listMetrics3 = self._listMetrics;
                   let cellMetricsApprox = _listMetrics2.getCellMetricsApprox(tmp36.first, self.props);
                   let cellMetricsApprox1 = _listMetrics3.getCellMetricsApprox(last, self.props);
-                  let obj2 = { style: null };
-                  let obj3 = {};
-                  obj3[_getSpacerKeyResult] = cellMetricsApprox1.offset + cellMetricsApprox1.length - cellMetricsApprox.offset;
-                  obj2.style = obj3;
+                  let obj5 = { style: null };
+                  let obj6 = {};
+                  obj6[_getSpacerKeyResult] = cellMetricsApprox1.offset + cellMetricsApprox1.length - cellMetricsApprox.offset;
+                  obj5.style = obj6;
                   let _HermesInternal = HermesInternal;
-                  let arr2 = items.push(collapsedCategories(value2, obj2, "$spacer-" + tmp36.first));
+                  let arr4 = items.push(collapsedCategories(value2, obj5, "$spacer-" + tmp36.first));
                 }
                 last = tmp36.last;
               }
@@ -1067,69 +1064,69 @@ let items = [
           if (!closure_1_11(ListFooterComponent)) {
             tmp60 = collapsedCategories(ListFooterComponent, {});
           }
-          const obj4 = { cellKey: self._getFooterCellKey(), children: null };
-          const obj5 = { onLayout: self._onLayoutFooter, style: StyleSheet.compose(null, self.props.ListFooterComponentStyle), children: tmp60 };
-          obj4.children = collapsedCategories(value2, obj5);
-          items.push(collapsedCategories(VirtualizedList(322).VirtualizedListCellContextProvider, obj4, "$footer"));
+          const obj7 = { cellKey: self._getFooterCellKey(), children: null };
+          const obj8 = { onLayout: self._onLayoutFooter, style: StyleSheet.compose(null, self.props.ListFooterComponentStyle), children: tmp60 };
+          obj7.children = collapsedCategories(value2, obj8);
+          items.push(collapsedCategories(VirtualizedList(322).VirtualizedListCellContextProvider, obj7, "$footer"));
         }
-        const obj6 = {};
+        const obj9 = {};
         const merged = Object.assign(self.props);
         ({ _onContentSizeChange: obj10.onContentSizeChange, _onLayout: obj10.onLayout, _onScroll: obj10.onScroll, _onScrollBeginDrag: obj10.onScrollBeginDrag, _onScrollEndDrag: obj10.onScrollEndDrag, _onMomentumScrollBegin: obj10.onMomentumScrollBegin, _onMomentumScrollEnd: obj10.onMomentumScrollEnd } = self);
         let num3 = self.props.scrollEventThrottle;
         if (num3 == null) {
           num3 = 0.0001;
         }
-        obj6.scrollEventThrottle = num3;
+        obj9.scrollEventThrottle = num3;
         if (undefined !== self.props.invertStickyHeaders) {
           let inverted = self.props.invertStickyHeaders;
         } else {
           inverted = self.props.inverted;
         }
-        obj6.invertStickyHeaders = inverted;
-        obj6.stickyHeaderIndices = items1;
+        obj9.invertStickyHeaders = inverted;
+        obj9.stickyHeaderIndices = items1;
         if (null) {
           const items2 = [null, self.props.style];
           let style = items2;
         } else {
           style = self.props.style;
         }
-        obj6.style = style;
-        obj6.isInvertedVirtualizedList = self.props.inverted;
+        obj9.style = style;
+        obj9.isInvertedVirtualizedList = self.props.inverted;
         let tmp70;
         if (null != self.props.maintainVisibleContentPosition) {
-          const obj7 = {};
+          const obj11 = {};
           const merged1 = Object.assign(self.props.maintainVisibleContentPosition);
           let num4 = 0;
           if (self.props.ListHeaderComponent) {
             num4 = 1;
           }
-          obj7.minIndexForVisible = self.props.maintainVisibleContentPosition.minIndexForVisible + num4;
-          tmp70 = obj7;
+          obj11.minIndexForVisible = self.props.maintainVisibleContentPosition.minIndexForVisible + num4;
+          tmp70 = obj11;
         }
-        obj6.maintainVisibleContentPosition = tmp70;
+        obj9.maintainVisibleContentPosition = tmp70;
         self._hasMore = self.state.cellsAroundViewport.last < itemCount - 1;
-        const obj8 = { value: null, children: null };
-        const obj9 = { cellKey: null, getScrollMetrics: self._getScrollMetrics, horizontal: VirtualizedList(320).horizontalOrDefault(self.props.horizontal), getOutermostParentListRef: null, registerAsNestedChild: null, unregisterAsNestedChild: null };
+        const obj12 = { value: null, children: null };
+        const obj15 = { cellKey: null, getScrollMetrics: self._getScrollMetrics, horizontal: VirtualizedList(320).horizontalOrDefault(self.props.horizontal), getOutermostParentListRef: null, registerAsNestedChild: null, unregisterAsNestedChild: null };
         ({ _getOutermostParentListRef: obj13.getOutermostParentListRef, _registerAsNestedChild: obj13.registerAsNestedChild, _unregisterAsNestedChild: obj13.unregisterAsNestedChild } = self);
-        obj8.value = obj9;
+        obj12.value = obj15;
         let _defaultRenderScrollComponent = self.props.renderScrollComponent;
         if (!_defaultRenderScrollComponent) {
           _defaultRenderScrollComponent = self._defaultRenderScrollComponent;
         }
-        const obj10 = { ref: self._captureScrollRef };
-        obj8.children = closure_1_10(_defaultRenderScrollComponent(obj6), obj10, items);
-        const tmp73Result = collapsedCategories(VirtualizedList(322).VirtualizedListContextProvider, obj8);
+        const obj16 = { ref: self._captureScrollRef };
+        obj12.children = closure_1_10(_defaultRenderScrollComponent(obj9), obj16, items);
+        const tmp73Result = collapsedCategories(VirtualizedList(322).VirtualizedListContextProvider, obj12);
         let tmp78 = tmp73Result;
         if (self.props.debug) {
-          const obj11 = { style: debug.debug, children: null };
+          const obj29 = { style: debug.debug, children: null };
           const items3 = [tmp73Result, self._renderDebugOverlay()];
-          obj11.children = items3;
-          tmp78 = closure_1_19(value2, obj11);
+          obj29.children = items3;
+          tmp78 = closure_1_19(value2, obj29);
         }
         return tmp78;
       } else {
-        obj = VirtualizedList(320);
-        obj.horizontalOrDefault(self.props.horizontal) ? debug.horizontallyInverted : debug.verticallyInverted;
+        VirtualizedList(320).horizontalOrDefault(self.props.horizontal) ? debug.horizontallyInverted : debug.verticallyInverted;
+        const obj = VirtualizedList(320);
       }
     }
   },
@@ -1244,29 +1241,28 @@ let items = [
       const diff = cellMetricsApprox1.offset + cellMetricsApprox1.length - offset;
       const items2 = [
         items.map((item, index) => {
-          let obj = { style: null };
+          const obj = { style: null };
           const items = [, , ];
           ({ debugOverlayBase: arr[0], debugOverlayFrame: arr[1] } = closure_23);
-          obj = { top: item.offset * result, height: item.length * result };
-          items[2] = obj;
+          items[2] = { top: item.offset * result, height: item.length * result };
           obj.style = items;
           return collapsedCategories(value2, obj, "f" + index);
         }),
       ,
 
       ];
-      obj = { style: null };
+      const obj2 = { style: null };
       const items3 = [, , ];
       ({ debugOverlayBase: arr5[0], debugOverlayFrameLast: arr5[1] } = closure_23);
       items3[2] = { top: offset * result, height: diff * result };
-      obj.style = items3;
-      items2[1] = closure_18(closure_16, obj);
-      obj = { style: null };
+      obj2.style = items3;
+      items2[1] = closure_18(closure_16, obj2);
+      const obj3 = { style: null };
       const items4 = [, , ];
       ({ debugOverlayBase: arr6[0], debugOverlayFrameVis: arr6[1] } = closure_23);
       items4[2] = { top: self._scrollMetrics.offset * result, height: self._scrollMetrics.visibleLength * result };
-      obj.style = items4;
-      items2[2] = closure_18(closure_16, obj);
+      obj3.style = items4;
+      items2[2] = closure_18(closure_16, obj3);
       obj.children = items2;
       return closure_19(closure_16, obj);
     }
@@ -1336,7 +1332,7 @@ let items = [
             if (tmp3) {
               const _listMetrics3 = self._listMetrics;
               self._sentEndForContentLength = _listMetrics3.getContentLength();
-              let obj = { distanceFromEnd: num2 };
+              const obj = { distanceFromEnd: num2 };
               onEndReached(obj);
             }
             let tmp6 = null != onStartReached && 0 === self.state.cellsAroundViewport.first && tmp2;
@@ -1347,8 +1343,8 @@ let items = [
             if (tmp6) {
               const _listMetrics5 = self._listMetrics;
               self._sentStartForContentLength = _listMetrics5.getContentLength();
-              obj = { distanceFromStart: offset };
-              onStartReached(obj);
+              const obj2 = { distanceFromStart: offset };
+              onStartReached(obj2);
             }
             if (offset > num4) {
               self._sentStartForContentLength = 0;
@@ -1672,26 +1668,23 @@ let items1 = [
             }
           }
         }
-        let obj = VirtualizedList;
         const cellsAroundViewport = renderMask.cellsAroundViewport;
         if (null != tmp4) {
-          obj = { first: cellsAroundViewport.first + tmp4, last: renderMask.cellsAroundViewport.last + tmp4 };
-          let tmp9 = obj;
+          const obj2 = { first: cellsAroundViewport.first + tmp4, last: renderMask.cellsAroundViewport.last + tmp4 };
+          let tmp9 = obj2;
         } else {
           tmp9 = cellsAroundViewport;
         }
         const result1 = VirtualizedList._constrainToItemCount(tmp9, getItemCount);
-        obj = { cellsAroundViewport: result1, renderMask: null, firstVisibleItemKey: null, pendingScrollUpdateCount: null };
-        obj.renderMask = obj._createRenderMask(getItemCount, result1);
-        obj.firstVisibleItemKey = _getItemKeyResult;
+        const obj3 = { cellsAroundViewport: result1, renderMask: VirtualizedList._createRenderMask(getItemCount, result1), firstVisibleItemKey: _getItemKeyResult, pendingScrollUpdateCount: null };
         const pendingScrollUpdateCount = renderMask.pendingScrollUpdateCount;
         if (null != tmp4) {
           let sum = pendingScrollUpdateCount + 1;
         } else {
           sum = pendingScrollUpdateCount;
         }
-        obj.pendingScrollUpdateCount = sum;
-        return obj;
+        obj3.pendingScrollUpdateCount = sum;
+        return obj3;
       }
     }
   },
@@ -1699,12 +1692,11 @@ let items1 = [
     key: "_constrainToItemCount",
     value: function _constrainToItemCount(cellsAroundViewport, getItemCount) {
       const diff = getItemCount.getItemCount(getItemCount.data) - 1;
-      VirtualizedList(320);
-      const obj = { first: null, last: null };
-      const bound = Math.max(0, diff - obj.maxToRenderPerBatchOrDefault(getItemCount.maxToRenderPerBatch));
-      obj.first = clampDefault(0, cellsAroundViewport.first, bound);
-      obj.last = Math.min(diff, cellsAroundViewport.last);
-      return obj;
+      const obj2 = { first: null, last: null };
+      const bound = Math.max(0, diff - VirtualizedList(320).maxToRenderPerBatchOrDefault(getItemCount.maxToRenderPerBatch));
+      obj2.first = clampDefault(0, cellsAroundViewport.first, bound);
+      obj2.last = Math.min(diff, cellsAroundViewport.last);
+      return obj2;
     }
   },
   {
@@ -1730,14 +1722,14 @@ let items1 = [
 const importDefaultResultResult = _createClass(VirtualizedList, items, items1);
 importDefaultResultResult.contextType = fn(322).VirtualizedListContext;
 let obj = { verticallyInverted: null, horizontallyInverted: null, debug: { flex: 1 }, debugOverlayBase: { position: "absolute", top: 0, right: 0 }, debugOverlay: { bottom: 0, width: 20, borderColor: "blue", borderWidth: 1 }, debugOverlayFrame: { left: 0, backgroundColor: "orange" }, debugOverlayFrameLast: { left: 0, borderColor: "green", borderWidth: 2 }, debugOverlayFrameVis: { left: 0, borderColor: "red", borderWidth: 2 } };
-obj = { transform: null };
+let obj2 = { transform: null };
 let items2 = [{ scale: -1 }];
-obj.transform = items2;
-obj.verticallyInverted = obj;
-let obj1 = { transform: null };
+obj2.transform = items2;
+obj.verticallyInverted = obj2;
+let obj3 = { transform: null };
 let items3 = [{ scaleX: -1 }];
-obj1.transform = items3;
-obj.horizontallyInverted = obj1;
+obj3.transform = items3;
+obj.horizontallyInverted = obj3;
 const debug = StyleSheet.create(obj);
 
 export default importDefaultResultResult;

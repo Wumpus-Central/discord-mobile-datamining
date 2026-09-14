@@ -1,6 +1,8 @@
 // === Module 272: get BatchedBridge ===
 
 // Module 272 (get BatchedBridge)
+const require = globalThis.__r;
+
 const obj = {};
 Object.defineProperty(obj, "BatchedBridge", { get: () => require("module_39").default, set: undefined });
 Object.defineProperty(obj, "ExceptionsManager", { get: () => require("module_189").default, set: undefined });

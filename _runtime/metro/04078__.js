@@ -1,19 +1,21 @@
 // === Module 4078: ? ===
 
 // Module 4078
-import startOfSecond from "startOfSecond" /* 4079 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import startOfSecond_mod from "startOfSecond" /* 4079 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let startOfSecond = startOfSecond_mod;
 if (!startOfSecond) {
-  let obj = { default: startOfSecond };
+  const obj = { default: startOfSecond };
   let tmp3 = obj;
 } else {
   tmp3 = startOfSecond;
 }
 startOfSecond = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

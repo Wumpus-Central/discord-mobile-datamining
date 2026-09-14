@@ -7,7 +7,7 @@ import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import get from "module_305" /* 305 */;
+import get_mod from "module_305" /* 305 */;
 
 const StatusBar = importDefault;
 function _isNativeReflectConstruct() {
@@ -147,28 +147,28 @@ let items1 = [
       }
       let tmp = null;
       if (null != animated.backgroundColor) {
-        let obj = { value: animated.backgroundColor, animated: flag };
+        const obj = { value: animated.backgroundColor, animated: flag };
         tmp = obj;
       }
-      obj = { backgroundColor: tmp, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
+      const obj2 = { backgroundColor: tmp, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
       let tmp2 = null;
       if (null != animated.barStyle) {
-        obj = { value: animated.barStyle, animated: flag };
-        tmp2 = obj;
+        const obj3 = { value: animated.barStyle, animated: flag };
+        tmp2 = obj3;
       }
-      obj.barStyle = tmp2;
-      obj.translucent = animated.translucent;
+      obj2.barStyle = tmp2;
+      obj2.translucent = animated.translucent;
       let tmp3 = null;
       if (null != animated.hidden) {
-        const obj1 = { value: animated.hidden, animated: flag, transition: str };
-        tmp3 = obj1;
+        const obj4 = { value: animated.hidden, animated: flag, transition: str };
+        tmp3 = obj4;
       }
-      obj.hidden = tmp3;
-      obj.networkActivityIndicatorVisible = animated.networkActivityIndicatorVisible;
+      obj2.hidden = tmp3;
+      obj2.networkActivityIndicatorVisible = animated.networkActivityIndicatorVisible;
       const _propsStack = StatusBar._propsStack;
-      _propsStack.push(obj);
+      _propsStack.push(obj2);
       StatusBar._updatePropsStack();
-      return obj;
+      return obj2;
     }
   },
   {
@@ -196,37 +196,38 @@ let items1 = [
       }
       let tmp = null;
       if (null != animated.backgroundColor) {
-        let obj = { value: animated.backgroundColor, animated: flag };
+        const obj = { value: animated.backgroundColor, animated: flag };
         tmp = obj;
       }
-      obj = { backgroundColor: tmp, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
+      const obj2 = { backgroundColor: tmp, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
       let tmp2 = null;
       if (null != animated.barStyle) {
-        obj = { value: animated.barStyle, animated: flag };
-        tmp2 = obj;
+        const obj3 = { value: animated.barStyle, animated: flag };
+        tmp2 = obj3;
       }
-      obj.barStyle = tmp2;
-      obj.translucent = animated.translucent;
+      obj2.barStyle = tmp2;
+      obj2.translucent = animated.translucent;
       let tmp3 = null;
       if (null != animated.hidden) {
-        const obj1 = { value: animated.hidden, animated: flag, transition: str };
-        tmp3 = obj1;
+        const obj4 = { value: animated.hidden, animated: flag, transition: str };
+        tmp3 = obj4;
       }
-      obj.hidden = tmp3;
-      obj.networkActivityIndicatorVisible = animated.networkActivityIndicatorVisible;
+      obj2.hidden = tmp3;
+      obj2.networkActivityIndicatorVisible = animated.networkActivityIndicatorVisible;
       const _propsStack = StatusBar._propsStack;
       const index = _propsStack.indexOf(arg0);
       if (-1 !== index) {
-        StatusBar._propsStack[index] = obj;
+        StatusBar._propsStack[index] = obj2;
       }
       StatusBar._updatePropsStack();
-      return obj;
+      return obj2;
     }
   }
 ];
 const importDefaultResultResult = _createClass(StatusBar, items, items1);
 let c2 = importDefaultResultResult;
 importDefaultResultResult._propsStack = [];
+let get = get_mod;
 let str = get.getConstants().DEFAULT_BACKGROUND_COLOR;
 if (str == null) {
   str = "black";
@@ -242,29 +243,28 @@ if (str2 == null) {
 }
 let tmp6 = null;
 if (null != obj.backgroundColor) {
-  obj = { value: null, animated: null };
-  obj.value = obj.backgroundColor;
-  obj.animated = flag;
-  tmp6 = obj;
+  let obj2 = { value: obj.backgroundColor, animated: flag };
+  tmp6 = obj2;
 }
-let obj1 = { backgroundColor: tmp6, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
+let obj3 = { backgroundColor: tmp6, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
 let tmp7 = null;
 if (null != obj.barStyle) {
-  let obj2 = { value: obj.barStyle, animated: flag };
-  tmp7 = obj2;
+  let obj4 = { value: obj.barStyle, animated: flag };
+  tmp7 = obj4;
 }
-obj1.barStyle = tmp7;
-obj1.translucent = obj.translucent;
+obj3.barStyle = tmp7;
+obj3.translucent = obj.translucent;
 let tmp8 = null;
 if (null != obj.hidden) {
-  const obj3 = { value: obj.hidden, animated: flag, transition: str2 };
-  tmp8 = obj3;
+  const obj5 = { value: obj.hidden, animated: flag, transition: str2 };
+  tmp8 = obj5;
 }
-obj1.hidden = tmp8;
-obj1.networkActivityIndicatorVisible = obj.networkActivityIndicatorVisible;
-importDefaultResultResult._defaultProps = obj1;
+obj3.hidden = tmp8;
+obj3.networkActivityIndicatorVisible = obj.networkActivityIndicatorVisible;
+importDefaultResultResult._defaultProps = obj3;
 importDefaultResultResult._updateImmediate = null;
 importDefaultResultResult._currentValues = null;
+let get = get_mod;
 importDefaultResultResult.currentHeight = get.getConstants().HEIGHT;
 importDefaultResultResult._updatePropsStack = () => {
   clearImmediate(importDefaultResultResult._updateImmediate);
@@ -291,8 +291,8 @@ importDefaultResultResult._updatePropsStack = () => {
       console.warn("`StatusBar._updatePropsStack`: Color " + reduced.backgroundColor.value + " parsed to null or undefined");
     } else {
       StatusBar(38)(typeof tmp7 === "number", "Unexpected color given in StatusBar._updatePropsStack");
-      let tmp4Result = StatusBar(305);
-      tmp4Result.setColor(tmp7, reduced.backgroundColor.animated);
+      StatusBar(305).setColor(tmp7, reduced.backgroundColor.animated);
+      const tmp4Result = StatusBar(305);
     }
     let tmp12 = _currentValues;
     if (_currentValues) {
@@ -303,8 +303,8 @@ importDefaultResultResult._updatePropsStack = () => {
       tmp12 = value === reduced.hidden.value;
     }
     if (!tmp12) {
-      tmp4Result = StatusBar(305);
-      tmp4Result.setHidden(reduced.hidden.value);
+      StatusBar(305).setHidden(reduced.hidden.value);
+      const tmp4Result3 = StatusBar(305);
     }
     let tmp15 = _currentValues;
     if (_currentValues) {
@@ -315,7 +315,7 @@ importDefaultResultResult._updatePropsStack = () => {
     }
     if (!tmp15) {
       StatusBar(305).setTranslucent(reduced.translucent);
-      const tmp4Result1 = StatusBar(305);
+      const tmp4Result4 = StatusBar(305);
     }
     _defaultProps._currentValues = reduced;
     const obj = {};

@@ -12,7 +12,7 @@ export const generateIteratee = function generateIteratee(arg0) {
     if (root.filename) {
       let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
       if (!isMatch) {
-        let filename = root.filename;
+        const filename = root.filename;
         let hasItem = filename.includes("\\");
         if (hasItem) {
           const filename2 = root.filename;
@@ -22,9 +22,9 @@ export const generateIteratee = function generateIteratee(arg0) {
       }
       if (fn) {
         if (root) {
-          filename = root.filename;
-          if (0 === filename.indexOf(root)) {
-            root.filename = filename.replace(root, prefix);
+          const filename1 = root.filename;
+          if (0 === filename1.indexOf(root)) {
+            root.filename = filename1.replace(root, prefix);
           }
         }
       } else if (isMatch) {
@@ -65,7 +65,7 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
       if (root.filename) {
         let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
         if (!isMatch) {
-          let filename = root.filename;
+          const filename = root.filename;
           let hasItem = filename.includes("\\");
           if (hasItem) {
             const filename2 = root.filename;
@@ -75,9 +75,9 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
         }
         if (fn) {
           if (root) {
-            filename = root.filename;
-            if (0 === filename.indexOf(root)) {
-              root.filename = filename.replace(root, prefix);
+            const filename1 = root.filename;
+            if (0 === filename1.indexOf(root)) {
+              root.filename = filename1.replace(root, prefix);
             }
           }
         } else if (isMatch) {
@@ -102,7 +102,7 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
       }
     };
   }
-  obj = {
+  return {
     name: "RewriteFrames",
     processEvent(exception) {
       exception = exception.exception;
@@ -114,18 +114,17 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
       if (exception) {
         tmp2 = (function _processExceptionsEvent(exception) {
           try {
-            let obj = {};
+            const obj = {};
             let merged = Object.assign(exception);
-            obj = {};
+            let obj2 = {};
             let merged1 = Object.assign(exception.exception);
             const values = exception.exception.values;
-            obj.values = values.map((stacktrace) => {
-              let obj = {};
+            obj2.values = values.map((stacktrace) => {
               const merged = Object.assign(stacktrace);
               stacktrace = stacktrace.stacktrace;
               if (stacktrace) {
                 const stacktrace2 = stacktrace.stacktrace;
-                obj = {};
+                const obj2 = {};
                 const merged1 = Object.assign(stacktrace2);
                 let mapped;
                 if (stacktrace2 != null) {
@@ -134,14 +133,15 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
                     mapped = frames.map((item) => closure_1_0(item));
                   }
                 }
-                obj = { stacktrace: null, frames: mapped };
-                obj.stacktrace = obj;
-                stacktrace = obj;
+                const obj3 = { stacktrace: null };
+                obj2.frames = mapped;
+                obj3.stacktrace = obj2;
+                stacktrace = obj3;
               }
               const merged2 = Object.assign(stacktrace);
-              return obj;
+              return {};
             });
-            obj.exception = obj;
+            obj.exception = obj2;
             return obj;
           } catch (err) {
             return tmp;
@@ -151,5 +151,4 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
       return tmp2;
     }
   };
-  return obj;
 });

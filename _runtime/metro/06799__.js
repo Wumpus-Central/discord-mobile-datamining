@@ -41,12 +41,12 @@ try {
       const fn2 = function o() {
         console.warn(tagMessage.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
       };
-      let obj = { tagMessage: null };
-      obj = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}", tagMessage: tagMessage.tagMessage };
+      const obj = { tagMessage: tagMessage.tagMessage };
       fn2.__closure = obj;
       fn2.__workletHash = 3596069664305;
-      fn2.__initData = obj;
+      fn2.__initData = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
       _module.setGestureState = fn2;
+      const obj2 = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
     }
     exports.Reanimated = _module;
   } catch (err) {

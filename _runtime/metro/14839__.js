@@ -4,4 +4,4 @@
 import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/tiny_bronco", scales: [1], hash: "35c64d699c4390efa8a41f9c45023348", name: "TinyBronco.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "d8641ffe0d02df1d7f73ad72a6f538b1", name: "zh-TW.messages.d8641ffe0d02df1d7f73ad72a6f538b1.compiled.messages", type: "jsona" });

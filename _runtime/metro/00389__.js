@@ -99,8 +99,8 @@ function createCompositeKeyForProps(arg0, style) {
                           let _Array5 = Array;
                           let tmp38 = new.target;
                           let tmp39 = new.target;
-                          array = new Array(arr2.length);
-                          fillResult1 = array.fill(null);
+                          let array2 = new Array(arr2.length);
+                          fillResult1 = array2.fill(null);
                         }
                         fillResult1[num3] = tmp17;
                         tmp36 = fillResult1;
@@ -261,8 +261,8 @@ function createCompositeKeyForObject(arr2, D) {
                     let _Array5 = Array;
                     let tmp40 = new.target;
                     let tmp41 = new.target;
-                    array = new Array(arr2.length);
-                    fillResult1 = array.fill(null);
+                    let array2 = new Array(arr2.length);
+                    fillResult1 = array2.fill(null);
                   }
                   fillResult1[num2] = tmp19;
                   tmp38 = fillResult1;
@@ -282,12 +282,12 @@ function createCompositeKeyForObject(arr2, D) {
         }
         let tmp7 = tmp;
         if (null != tmp10) {
-          obj = tmp;
+          let obj4 = tmp;
           if (null == tmp) {
-            obj = {};
+            obj4 = {};
           }
-          obj[tmp3] = tmp10;
-          tmp7 = obj;
+          obj4[tmp3] = tmp10;
+          tmp7 = obj4;
         }
       } else {
         tmp7 = tmp;

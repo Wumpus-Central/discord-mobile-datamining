@@ -26,13 +26,13 @@ function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mec
       mechanism.mechanism = obj;
       const tmp7 = fn(value, errors[source]);
       length = length.length;
-      obj = { handled: true };
+      let obj2 = { handled: true };
       let merged2 = Object.assign(tmp7.mechanism);
-      obj.type = "chained";
-      obj.source = source;
-      obj.exception_id = length;
-      obj.parent_id = exception_id;
-      tmp7.mechanism = obj;
+      obj2.type = "chained";
+      obj2.source = source;
+      obj2.exception_id = length;
+      obj2.parent_id = exception_id;
+      tmp7.mechanism = obj2;
       const items1 = [tmp7];
       HermesBuiltin.arraySpread(length, 1);
       length = aggregateExceptionsFromError(fn, value, arg2, errors[source], source, items1, tmp7, length);
@@ -41,29 +41,29 @@ function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mec
     if (Array.isArray(errors.errors)) {
       errors = errors.errors;
       const item = errors.forEach((item, index) => {
-        let obj = _mod692;
         if (obj.isInstanceOf(item, Error)) {
-          obj = { handled: true, type: "auto.core.linked_errors" };
+          const obj2 = { handled: true, type: "auto.core.linked_errors" };
           const merged = Object.assign(mechanism.mechanism);
           const tmp5 = "AggregateError" === mechanism.type && { is_exception_group: true };
           const merged1 = Object.assign(tmp5);
-          obj.exception_id = exception_id;
-          mechanism.mechanism = obj;
+          obj2.exception_id = exception_id;
+          mechanism.mechanism = obj2;
           const tmp12 = closure_0(closure_1, item);
           length = length.length;
           const _HermesInternal = HermesInternal;
-          obj = { handled: true };
+          const obj3 = { handled: true };
           const combined = "errors[" + index + "]";
           const merged2 = Object.assign(tmp12.mechanism);
-          obj.type = "chained";
-          obj.source = combined;
-          obj.exception_id = length;
-          obj.parent_id = exception_id;
-          tmp12.mechanism = obj;
+          obj3.type = "chained";
+          obj3.source = combined;
+          obj3.exception_id = length;
+          obj3.parent_id = exception_id;
+          tmp12.mechanism = obj3;
           const items = [tmp12];
           HermesBuiltin.arraySpread(length, 1);
           length = aggregateExceptionsFromError(closure_0, closure_1, closure_2, item, closure_3, items, tmp12, length);
         }
+        obj = _mod692;
       });
     }
     return length;

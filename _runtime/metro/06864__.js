@@ -15,19 +15,16 @@ export const useComposedGesture = function useComposedGesture(type) {
     }
     return handlerTags;
   });
-  let obj = substr(6824);
   if (obj.containsDuplicates(flatMapResult)) {
     const _Error2 = Error;
-    let tmp2Result = tmp2(6761);
-    const error = new Error(tmp2Result.tagMessage("Each gesture can be used only once in the gesture composition."));
+    const error = new Error(tmp2(6761).tagMessage("Each gesture can be used only once in the gesture composition."));
     throw error;
   } else {
-    obj = { shouldUseReanimatedDetector: substr.some((config) => config.config.shouldUseReanimatedDetector), dispatchesAnimatedEvents: substr.some((config) => config.config.dispatchesAnimatedEvents) };
-    if (obj.shouldUseReanimatedDetector) {
-      if (obj.dispatchesAnimatedEvents) {
+    const obj2 = { shouldUseReanimatedDetector: substr.some((config) => config.config.shouldUseReanimatedDetector), dispatchesAnimatedEvents: substr.some((config) => config.config.dispatchesAnimatedEvents) };
+    if (obj2.shouldUseReanimatedDetector) {
+      if (obj2.dispatchesAnimatedEvents) {
         const _Error = Error;
-        tmp2Result = tmp2(6761);
-        const error1 = new Error(tmp2Result.tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."));
+        const error1 = new Error(tmp2(6761).tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."));
         throw error1;
       }
     }
@@ -41,9 +38,8 @@ export const useComposedGesture = function useComposedGesture(type) {
     if (found.length > 0) {
       animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
     }
-    obj = { handlerTags: flatMapResult, type, config: null, detectorCallbacks: null, externalSimultaneousHandlers: null, gestures: null };
-    obj.config = obj;
-    const obj1 = {
+    const obj3 = { handlerTags: flatMapResult, type, config: obj2, detectorCallbacks: null, externalSimultaneousHandlers: null, gestures: null };
+    const obj4 = {
       jsEventHandler(arg0) {
           for (const item10007 of substr) {
             if (item10007.detectorCallbacks.jsEventHandler) {
@@ -56,9 +52,10 @@ export const useComposedGesture = function useComposedGesture(type) {
       reanimatedEventHandler: composedEventHandler,
       animatedEventHandler
     };
-    obj.detectorCallbacks = obj1;
-    obj.externalSimultaneousHandlers = [];
-    obj.gestures = substr;
-    return obj;
+    obj3.detectorCallbacks = obj4;
+    obj3.externalSimultaneousHandlers = [];
+    obj3.gestures = substr;
+    return obj3;
   }
+  obj = substr(6824);
 };

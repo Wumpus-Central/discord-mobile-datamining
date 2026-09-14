@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "characters", verb: "to have" }, file: { unit: "bytes", verb: "to have" }, array: { unit: "items", verb: "to have" }, set: { unit: "items", verb: "to have" }, map: { unit: "entries", verb: "to have" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "characters", verb: "to have" }, file: { unit: "bytes", verb: "to have" }, array: { unit: "items", verb: "to have" }, set: { unit: "items", verb: "to have" }, map: { unit: "entries", verb: "to have" } };
         closure_1 = { regex: "input", email: "email address", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO datetime", date: "ISO date", time: "ISO time", duration: "ISO duration", ipv4: "IPv4 address", ipv6: "IPv6 address", mac: "MAC address", cidrv4: "IPv4 range", cidrv6: "IPv6 range", base64: "base64-encoded string", base64url: "base64url-encoded string", json_string: "JSON string", e164: "E.164 number", jwt: "JWT", template_literal: "input" };
         closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
@@ -88,7 +88,7 @@ if (self2) {
               if (code.inclusive) {
                 str24 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -97,13 +97,13 @@ if (self2) {
                 if (str25 == null) {
                   str25 = "value";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str31 = tmp27.unit;
                 if (str31 == null) {
                   str31 = "elements";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined1 = "Too big: expected " + str25 + " to have " + str24 + str + " " + str31;
+                let combined1 = "Too big: expected " + str25 + " to have " + str24 + str1 + " " + str31;
               } else {
                 let str26 = str25;
                 if (str25 == null) {
@@ -118,18 +118,18 @@ if (self2) {
               if (code.inclusive) {
                 str18 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str43 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined2 = "Too small: expected " + origin + " to have " + str18 + str1 + " " + tmp15.unit;
+                let combined2 = "Too small: expected " + origin + " to have " + str18 + str43 + " " + tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined2 = "Too small: expected " + origin + " to be " + str18 + str1;
+                combined2 = "Too small: expected " + origin + " to be " + str18 + str43;
               }
               return combined2;
             case "invalid_format":
@@ -171,7 +171,6 @@ if (self2) {
               return "Invalid input";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Invalid value in ";
               return "Invalid value in " + code.origin;
             default:
               return "Invalid input";

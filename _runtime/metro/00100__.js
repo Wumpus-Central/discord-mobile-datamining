@@ -3,6 +3,8 @@
 // Module 100
 import _modDef101 from "module_101" /* 101 */;
 
+const require = globalThis.__r;
+
 for (const key10013 in require("module_101")) {
   arg5[key10013] = require("module_101")[key10013];
   continue;

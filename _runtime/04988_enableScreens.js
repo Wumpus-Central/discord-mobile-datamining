@@ -16,6 +16,7 @@ import FullWindowOverlayDefault from "FullWindowOverlay" /* 5036 */;
 import _modDef5038 from "module_5038" /* 5038 */;
 import RNSModule from "RNSModule" /* 4989 */;
 
+const require = globalThis.__r;
 const _modDef5005 = _mod5005;
 
 for (const key10015 in require("Tabs")) {

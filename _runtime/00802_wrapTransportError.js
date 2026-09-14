@@ -9,6 +9,8 @@ import _mod806 from "module_806" /* 806 */;
 import _mod810 from "module_810" /* 810 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
+const require = globalThis.__r;
+
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const wrapTransportError = function wrapTransportError(onerror) {
@@ -57,49 +59,48 @@ export const wrapTransportOnMessage = function wrapTransportOnMessage(onmessage,
           closure_0 = tmp10;
           if ("initialize" === method.method) {
             try {
-              let tmpResult = tmp(dependencyMap[3]);
-              const result = tmpResult.extractSessionDataFromInitializeRequest(method);
+              const result = tmp(dependencyMap[3]).extractSessionDataFromInitializeRequest(method);
               closure_3 = result;
-              tmpResult = tmp(dependencyMap[4]);
-              const result1 = tmpResult.storeSessionDataForTransport(self, result);
+              let tmpResult = tmp(dependencyMap[3]);
+              const result1 = tmp(dependencyMap[4]).storeSessionDataForTransport(self, result);
+              const tmpResult6 = tmp(dependencyMap[4]);
             } catch (err) {
             }
           }
           const isolationScope = tmp(dependencyMap[5]).getIsolationScope();
-          const tmpResult1 = tmp(dependencyMap[5]);
+          const tmpResult7 = tmp(dependencyMap[5]);
           const cloneResult = isolationScope.clone();
           return tmp(dependencyMap[5]).withIsolationScope(cloneResult, () => {
-            let obj = _mod806;
-            const mcpServerSpanConfig = obj.buildMcpServerSpanConfig(method, self, closure_2, closure_0);
+            const mcpServerSpanConfig = _mod806.buildMcpServerSpanConfig(method, self, closure_2, closure_0);
             const startInactiveSpanResult = _mod731.startInactiveSpan(mcpServerSpanConfig);
             let tmp6 = closure_0;
             if (closure_0) {
               tmp6 = result;
             }
             if (tmp6) {
-              obj = {};
-              let tmpResult = extractClientInfo;
-              const merged = Object.assign(tmpResult.buildClientAttributesFromInfo(result.clientInfo));
+              const obj3 = {};
+              const merged = Object.assign(extractClientInfo.buildClientAttributesFromInfo(result.clientInfo));
               let protocolVersion = result.protocolVersion;
               if (protocolVersion) {
-                obj = {};
-                obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_PROTOCOL_VERSION_ATTRIBUTE] = result.protocolVersion;
-                protocolVersion = obj;
+                const obj4 = {};
+                obj4[CLIENT_ADDRESS_ATTRIBUTE.MCP_PROTOCOL_VERSION_ATTRIBUTE] = result.protocolVersion;
+                protocolVersion = obj4;
               }
               const merged1 = Object.assign(protocolVersion);
-              startInactiveSpanResult.setAttributes(obj);
+              startInactiveSpanResult.setAttributes(obj3);
+              const tmpResult = extractClientInfo;
             }
-            tmpResult = _mod810;
-            tmpResult.storeSpanForRequest(self, method.id, startInactiveSpanResult, method.method);
+            _mod810.storeSpanForRequest(self, method.id, startInactiveSpanResult, method.method);
+            const tmpResult3 = _mod810;
             return _mod731.withActiveSpan(startInactiveSpanResult, () => {
               const call = closure_0.call;
               return typeof call === "unknown" ? closure_0(method, extra) : call(self, method, extra);
             });
           });
         } else {
-          if (tmpResult3.isJsonRpcNotification(method)) {
-            const tmpResult4 = tmp(dependencyMap[6]);
-            let mcpNotificationSpan = tmpResult4.createMcpNotificationSpan(method, self, extra, closure_0, () => {
+          if (tmpResult9.isJsonRpcNotification(method)) {
+            const tmpResult10 = tmp(dependencyMap[6]);
+            let mcpNotificationSpan = tmpResult10.createMcpNotificationSpan(method, self, extra, closure_0, () => {
               const call = closure_0.call;
               return typeof call === "unknown" ? closure_0(closure_1, closure_2) : call(self, closure_1, closure_2);
             });
@@ -134,8 +135,8 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -148,8 +149,8 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
                   throw value;
                 } else if (arg0 === 2) {
                   c7 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj8 = { value, done: true };
+                  return obj8;
                 } else {
                   closure_4 = self;
                   closure_3 = tmp3;
@@ -169,23 +170,22 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
                     throw value;
                   } else if (arg0 === 2) {
                     c7 = 3;
-                    let obj1 = { value, done: true };
-                    return obj1;
+                    const obj9 = { value, done: true };
+                    return obj9;
                   } else {
                     closure_130_2 = closure_130_1[0];
                     if (obj12.isJsonRpcNotification(closure_130_2)) {
                       const obj7 = _self(806);
                       c7 = 3;
-                      let obj2 = {
+                      const obj10 = {
                         value: obj7.createMcpOutgoingNotificationSpan(closure_130_2, closure_4, self, () => {
                                       const items = [closure_1_3, ...closure_1_1];
                                       return self.call.apply(items);
                                     }),
                         done: true
                       };
-                      return obj2;
+                      return obj10;
                     } else {
-                      obj = _self(801);
                       if (obj.isJsonRpcResponse(closure_130_2)) {
                         if (null !== closure_130_2.id) {
                           if (undefined !== closure_130_2.id) {
@@ -212,17 +212,17 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
                                 }
                               })(closure_130_2.error);
                             }
-                            obj1 = _self(801);
-                            if (obj1.isValidContentItem(closure_130_2.result)) {
+                            if (obj2.isValidContentItem(closure_130_2.result)) {
                               if (closure_130_2.result.protocolVersion) {
                                 c5 = 1;
-                                obj2 = _self(803);
-                                closure_130_0 = obj2.extractSessionDataFromInitializeResponse(closure_130_2.result);
-                                let obj3 = _self(804);
-                                const result = obj3.updateSessionDataForTransport(closure_4, closure_130_0);
+                                closure_130_0 = _self(803).extractSessionDataFromInitializeResponse(closure_130_2.result);
+                                const obj3 = _self(803);
+                                const result = _self(804).updateSessionDataForTransport(closure_4, closure_130_0);
                                 c5 = 0;
+                                const obj4 = _self(804);
                               }
                             }
+                            obj2 = _self(801);
                           }
                         }
                       }
@@ -230,8 +230,8 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
                       let items = [closure_4];
                       HermesBuiltin.arraySpread(closure_130_1, 1);
                       c7 = 3;
-                      obj3 = { value: HermesBuiltin.apply(items, closure_131_0), done: true };
-                      return obj3;
+                      const obj11 = { value: HermesBuiltin.apply(items, closure_131_0), done: true };
+                      return obj11;
                     }
                     obj12 = _self(801);
                   }

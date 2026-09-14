@@ -1,8 +1,8 @@
 // === Module 4936: ? ===
 
 // Module 4936
-import _mod1283 from "module_1283" /* 1283 */;
-import _mod1315 from "module_1315" /* 1315 */;
+import _mod1281 from "module_1281" /* 1281 */;
+import _mod1313 from "module_1313" /* 1313 */;
 
 let closure_2 = Object.assign({ "[[Configurable]]": true, "[[Enumerable]]": true, "[[Get]]": true, "[[Set]]": true, "[[Value]]": true, "[[Writable]]": true });
 
@@ -10,7 +10,7 @@ export default function isPropertyDescriptor(obj) {
   if (obj) {
     if (typeof obj === "object") {
       for (const key10001 in arg0) {
-        if (!_mod1315(arg0, key10001)) {
+        if (!_mod1313(arg0, key10001)) {
           continue;
         } else if (closure_2[key10001]) {
           continue;
@@ -20,17 +20,17 @@ export default function isPropertyDescriptor(obj) {
         }
         continue;
       }
-      let tmp4 = _mod1315(obj, "[[Value]]");
+      let tmp4 = _mod1313(obj, "[[Value]]");
       if (!tmp4) {
-        tmp4 = _mod1315(obj, "[[Writable]]");
+        tmp4 = _mod1313(obj, "[[Writable]]");
       }
-      let tmp5 = _mod1315(obj, "[[Get]]");
+      let tmp5 = _mod1313(obj, "[[Get]]");
       if (!tmp5) {
-        tmp5 = _mod1315(obj, "[[Set]]");
+        tmp5 = _mod1313(obj, "[[Set]]");
       }
       if (tmp4) {
         if (tmp5) {
-          const tmp8 = new _mod1283("Property Descriptors may not be both accessor and data descriptors");
+          const tmp8 = new _mod1281("Property Descriptors may not be both accessor and data descriptors");
           throw tmp8;
         }
       }

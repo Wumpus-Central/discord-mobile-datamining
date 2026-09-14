@@ -17,9 +17,9 @@ export const createNavigatorFactory = function createNavigatorFactory(Accessible
   return function createNavigator(config) {
     Navigator = config;
     if (null != config) {
-      let obj = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group, config };
-      Navigator = Navigator(str[1]).createComponentForStaticNavigation(obj, Navigator);
-      obj = {
+      const obj3 = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group, config };
+      Navigator = Navigator(str[1]).createComponentForStaticNavigation(obj3, Navigator);
+      const obj4 = {
         config,
         with(IMAGE_ONLY_ANSWERS) {
             config = IMAGE_ONLY_ANSWERS;
@@ -41,9 +41,9 @@ export const createNavigatorFactory = function createNavigatorFactory(Accessible
             return closure_1;
           }
       };
-      return obj;
+      return obj4;
     } else {
-      obj = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group };
+      const obj = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group };
       return obj;
     }
   };

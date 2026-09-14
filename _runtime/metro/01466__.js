@@ -3,6 +3,8 @@
 // Module 1466
 import _mod17 from "module_17" /* 17 */;
 
+const require = globalThis.__r;
+
 const NativeEventEmitter = _mod17.NativeEventEmitter;
 if (require("module_1467")) {
   let closure_3 = null;

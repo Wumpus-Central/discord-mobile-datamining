@@ -1,14 +1,13 @@
 // === Module 178: ? ===
 
 // Module 178
-import noop from "module_177" /* 177 */;
+import noop_mod from "module_177" /* 177 */;
 
 function valuePromise(_z) {
-  let tmp = noop;
-  tmp = new tmp(noop._D);
-  tmp._y = 1;
-  tmp._z = _z;
-  return tmp;
+  const tmp2 = new noop(noop._D);
+  tmp2._y = 1;
+  tmp2._z = _z;
+  return tmp2;
 }
 function onSettledFulfill(value) {
   return { status: "fulfilled", value };
@@ -26,55 +25,59 @@ function mapAllSettled(value) {
       }
       const then = value.then;
       if (typeof then === "function") {
-        let tmpResult = noop;
-        tmpResult = new tmpResult(then.bind(value));
-        return tmpResult.then(onSettledFulfill, onSettledReject);
+        const tmpResult1 = new noop(then.bind(value));
+        return tmpResult1.then(onSettledFulfill, onSettledReject);
       }
     }
   }
   return { status: "fulfilled", value };
 }
-noop = new noop(noop._D);
-noop._y = 1;
-noop._z = true;
-noop = new noop(noop._D);
-noop._y = 1;
-noop._z = false;
-noop = new noop(noop._D);
-noop._y = 1;
-noop._z = null;
-noop = new noop(noop._D);
-noop._y = 1;
-noop._z = undefined;
-noop = new noop(noop._D);
-noop._y = 1;
-noop._z = 0;
-noop = new noop(noop._D);
-noop._y = 1;
-noop._z = "";
+let noop = noop_mod;
+const _module6 = new noop(noop._D);
+_module6._y = 1;
+_module6._z = true;
+let noop = noop_mod;
+const _module11 = new noop(noop._D);
+_module11._y = 1;
+_module11._z = false;
+let noop = noop_mod;
+const _module21 = new noop(noop._D);
+_module21._y = 1;
+_module21._z = null;
+let noop = noop_mod;
+const _module31 = new noop(noop._D);
+_module31._y = 1;
+_module31._z = undefined;
+let noop = noop_mod;
+const _module41 = new noop(noop._D);
+_module41._y = 1;
+_module41._z = 0;
+let noop = noop_mod;
+const _module51 = new noop(noop._D);
+_module51._y = 1;
+_module51._z = "";
 noop.resolve = (self) => {
   if (self instanceof noop) {
     return self;
   } else if (null === self) {
-    return noop;
+    return _module21;
   } else if (undefined === self) {
-    return noop;
+    return _module31;
   } else if (true === self) {
-    return noop;
+    return _module6;
   } else if (false === self) {
-    return noop;
+    return _module11;
   } else if (0 === self) {
-    return noop;
+    return _module41;
   } else if ("" === self) {
-    return noop;
+    return _module51;
   } else {
     if (typeof self === "object") {
       try {
         const then = self.then;
         if (typeof then === "function") {
-          let tmp4Result = noop;
-          tmp4Result = new tmp4Result(obj.bind(self));
-          return tmp4Result;
+          const tmp4Result1 = new noop(obj.bind(self));
+          return tmp4Result1;
         }
         obj = then;
       } catch (tmp14) {
@@ -141,11 +144,11 @@ noop.all = (arg0) => {
           }
           const then = _y.then;
           if (typeof then === "function") {
-            let tmpResult = tmp(dependencyMap[0]);
-            tmpResult = new tmpResult(then.bind(_y));
-            tmpResult.then((result) => {
+            const tmpResult1 = new tmp(dependencyMap[0])(then.bind(_y));
+            tmpResult1.then((result) => {
               res(closure_0, result);
             }, closure_1);
+            const tmpResult = tmp(dependencyMap[0]);
           }
         }
       }

@@ -11,7 +11,7 @@ const noop = module_8397(_mod19);
 
 export const SliderTrackMark = function SliderTrackMark(arg0) {
   ({ isTrue, thumbImage, StepMarker } = arg0);
-  let obj = { style: _mod8401.styles.trackMarkContainer, children: null };
+  const obj2 = { style: _mod8401.styles.trackMarkContainer, children: null };
   ({ index, currentValue, min, max } = arg0);
   let jsxResult = null;
   if (StepMarker) {
@@ -23,13 +23,13 @@ export const SliderTrackMark = function SliderTrackMark(arg0) {
   if (thumbImage) {
     jsxResult1 = null;
     if (isTrue) {
-      obj = { style: _mod8401.styles.thumbImageContainer, testID: "sliderTrackMark-thumbImage", children: null };
-      const obj1 = { source: thumbImage, style: _mod8401.styles.thumbImage };
-      obj.children = <get ActivityIndicator.Image source={thumbImage} style={_mod8401.styles.thumbImage} />;
+      const obj3 = { style: _mod8401.styles.thumbImageContainer, testID: "sliderTrackMark-thumbImage", children: null };
+      const obj4 = { source: thumbImage, style: _mod8401.styles.thumbImage };
+      obj3.children = <get ActivityIndicator.Image source={thumbImage} style={_mod8401.styles.thumbImage} />;
       jsxResult1 = <get ActivityIndicator.View style={_mod8401.styles.thumbImageContainer} testID="sliderTrackMark-thumbImage">{null}</get ActivityIndicator.View>;
     }
   }
   items[1] = jsxResult1;
-  obj.children = items;
+  obj2.children = items;
   return <get ActivityIndicator.View style={_mod8401.styles.trackMarkContainer}>{null}</get ActivityIndicator.View>;
 };

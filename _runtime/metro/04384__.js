@@ -9,9 +9,8 @@ const map = new Map();
 
 export const getHybridObjectConstructor = function getHybridObjectConstructor(arg0) {
   closure_0 = arg0;
-  let obj = map;
   if (map.has(arg0)) {
-    return obj.get(arg0);
+    return map.get(arg0);
   } else {
     function constructorFunc() {
       const NitroModules = _mod4376.NitroModules;
@@ -26,7 +25,7 @@ export const getHybridObjectConstructor = function getHybridObjectConstructor(ar
     constructorFunc.prototypeInitialized = false;
     let _Object = Object;
     const _Symbol = Symbol;
-    obj = {
+    const obj2 = {
       value(arg0) {
           if (!constructorFunc.prototypeInitialized) {
             const NitroModules = _mod4376.NitroModules;
@@ -45,8 +44,8 @@ export const getHybridObjectConstructor = function getHybridObjectConstructor(ar
           return false;
         }
     };
-    Object.defineProperty(constructorFunc, Symbol.hasInstance, obj);
-    const result = obj.set(arg0, constructorFunc);
+    Object.defineProperty(constructorFunc, Symbol.hasInstance, obj2);
+    const result = map.set(arg0, constructorFunc);
     return constructorFunc;
   }
 };

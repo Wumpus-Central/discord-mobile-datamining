@@ -5,12 +5,13 @@ import normalizeSnapPoint from "normalizeSnapPoint" /* 6745 */;
 import id from "id" /* 6935 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["name", "stackBehavior", "enableDismissOnClose", "onDismiss", "onAnimate", "index", "snapPoints", "enablePanDownToClose", "animateOnMount", "containerComponent", "onChange", "children"];
 let noop = fn(19);
 ({ useCallback: metroRequire, useImperativeHandle: closure_7, useMemo: closure_8, useRef: closure_9, useState: c10, createElement: closure_11, forwardRef, memo } = noop);
+let noop = noop_mod;
 const jsx = fn(21).jsx;
 let closure_14 = { mount: false, data: "PX_16" };
 const memoResult = memo(forwardRef(function BottomSheetModalComponent(name, arg1) {
@@ -49,14 +50,14 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name, arg1
   const first = tmp9[0];
   const mount = first.mount;
   closure_9 = tmp9[1];
-  let obj = require("module_6733");
-  const bottomSheetModalInternal = obj.useBottomSheetModalInternal();
+  const bottomSheetModalInternal = require("module_6733").useBottomSheetModalInternal();
   ({ hostName, mountSheet } = bottomSheetModalInternal);
   const unmountSheet = bottomSheetModalInternal.unmountSheet;
   willUnmountSheet = bottomSheetModalInternal.willUnmountSheet;
   ({ containerHeight, containerOffset } = bottomSheetModalInternal);
-  let obj1 = require("Portal");
-  const removePortal = obj1.usePortal(hostName).removePortal;
+  let obj = require("module_6733");
+  const tmp11 = _require;
+  const removePortal = require("Portal").usePortal(hostName).removePortal;
   const tmp15 = closure_9(null);
   closure_14 = tmp15;
   let num2 = -1;
@@ -81,8 +82,7 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name, arg1
   }, items);
   closure_21 = tmp17;
   function resetVariables() {
-    const obj = { component: memoResult.name, method: resetVariables.name };
-    obj.print(obj);
+    normalizeSnapPoint.print({ component: memoResult.name, method: resetVariables.name });
     closure_15.current = -1;
     closure_17.current = -1;
     closure_18.current = false;
@@ -258,6 +258,7 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name, arg1
     }
   }, []);
   const items5 = [tmp17, tmp19, willUnmountSheet];
+  const obj2 = require("Portal");
   const tmp21 = num(function handlePortalRender(fn) {
     if (ref5.current) {
       fn();
@@ -265,7 +266,6 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name, arg1
   }, []);
   const items6 = [onChange];
   const items7 = [onAnimate];
-  const tmp11 = _require;
   const tmp20 = num(function handlePortalOnUnmount() {
     let tmp = -1 === ref.current;
     if (tmp) {
@@ -300,34 +300,34 @@ const memoResult = memo(forwardRef(function BottomSheetModalComponent(name, arg1
     }
   }, items7);
   enablePanDownToClose(arg1, () => ({ snapToIndex, snapToPosition, setToIndex, setToPosition, expand, collapse, close, forceClose, dismiss, present, minimize, restore }));
-  let tmp27Result = null;
+  let tmp27Result2 = null;
   if (mount) {
-    obj = { name: tmp17, hostName, handleOnMount: tmp21, handleOnUpdate: tmp21, handleOnUnmount: tmp20, children: null };
-    obj = {};
+    const obj3 = { name: tmp17, hostName, handleOnMount: tmp21, handleOnUpdate: tmp21, handleOnUnmount: tmp20, children: null };
+    const obj4 = {};
     const merged = Object.assign(tmp8);
-    obj.ref = tmp15;
-    obj.key = tmp17;
-    obj.index = num;
-    obj.snapPoints = name.snapPoints;
-    obj.enablePanDownToClose = tmp5;
-    obj.animateOnMount = tmp6;
-    obj.containerHeight = containerHeight;
-    obj.containerOffset = containerOffset;
-    obj.onChange = tmp22;
-    obj.onClose = tmp24;
-    obj.onAnimate = tmp23;
-    obj.$modal = true;
-    tmp27Result = children;
+    obj4.ref = tmp15;
+    obj4.key = tmp17;
+    obj4.index = num;
+    obj4.snapPoints = name.snapPoints;
+    obj4.enablePanDownToClose = tmp5;
+    obj4.animateOnMount = tmp6;
+    obj4.containerHeight = containerHeight;
+    obj4.containerOffset = containerOffset;
+    obj4.onChange = tmp22;
+    obj4.onClose = tmp24;
+    obj4.onAnimate = tmp23;
+    obj4.$modal = true;
+    let tmp27Result = children;
     if (typeof children === "function") {
-      obj1 = { data: first.data };
-      tmp27Result = tmp27(children, obj1);
+      const obj5 = { data: first.data };
+      tmp27Result = tmp27(children, obj5);
     }
-    const obj2 = { children: unmountSheet(name(tmp12[9]), obj, tmp27Result) };
-    obj.children = removePortal(Fragment, obj2, tmp17);
-    tmp27Result = tmp27(tmp11(tmp12[6]).Portal, obj, tmp17);
+    const obj6 = { children: unmountSheet(name(tmp12[9]), obj4, tmp27Result) };
+    obj3.children = removePortal(Fragment, obj6, tmp17);
+    tmp27Result2 = tmp27(tmp11(tmp12[6]).Portal, obj3, tmp17);
     const tmp30 = name(tmp12[9]);
   }
-  return tmp27Result;
+  return tmp27Result2;
 }));
 memoResult.displayName = "BottomSheetModal";
 

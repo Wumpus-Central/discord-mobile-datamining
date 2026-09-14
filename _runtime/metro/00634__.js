@@ -5,21 +5,28 @@ import _mod611 from "module_611" /* 611 */;
 import _mod636 from "module_636" /* 636 */;
 import _mod637 from "module_637" /* 637 */;
 import _mod638 from "module_638" /* 638 */;
-import module_606 from "module_606" /* 606 */;
-import module_522 from "module_522" /* 522 */;
-import module_635 from "module_635" /* 635 */;
+import module_606_mod from "module_606" /* 606 */;
+import module_522_mod from "module_522" /* 522 */;
+import module_635_mod from "module_635" /* 635 */;
 
+let module_606 = module_606_mod;
 module_606(module_635);
+let module_606 = module_606_mod;
 const module_611 = module_606(_mod611);
+let module_606 = module_606_mod;
 const module_636 = module_606(_mod636);
+let module_606 = module_606_mod;
 const module_637 = module_606(_mod637);
+let module_606 = module_606_mod;
 const module_638 = module_606(_mod638);
+let module_522 = module_522_mod;
+let module_635 = module_635_mod;
 if (module_635) {
   const _ArrayBuffer = ArrayBuffer;
-  let _module6 = module_635;
+  const _module6 = module_635;
   const arrayBuffer = new ArrayBuffer(1);
-  _module6 = new _module6(arrayBuffer);
-  module_635 = module_522(_module6) != "[object DataView]";
+  const _module61 = new _module6(arrayBuffer);
+  module_635 = module_522(_module61) != "[object DataView]";
 }
 if (!module_635) {
   let _module7 = _mod611;
@@ -54,11 +61,11 @@ if (!module_635) {
   module_635 = _module11;
 }
 if (module_635) {
-  module_522 = function v(_module6) {
-    const tmp3 = module_522(_module6);
+  module_522 = function v(_module61) {
+    const tmp3 = module_522(_module61);
     let constructor;
     if ("[object Object]" == tmp3) {
-      constructor = _module6.constructor;
+      constructor = _module61.constructor;
     }
     let str = "";
     if (constructor) {

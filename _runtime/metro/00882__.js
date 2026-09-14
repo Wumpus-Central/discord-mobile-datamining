@@ -7,6 +7,8 @@ import TurboModuleRegistry from "TurboModuleRegistry" /* 862 */;
 import done from "done" /* 883 */;
 import _mod885 from "module_885" /* 885 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 function getPromisePolyfill() {

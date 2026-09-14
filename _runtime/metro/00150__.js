@@ -8,6 +8,8 @@ import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const require = globalThis.__r;
+
 const ReadOnlyCharacterData = arg1;
 function _isNativeReflectConstruct() {
   try {

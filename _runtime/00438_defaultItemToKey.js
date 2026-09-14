@@ -82,21 +82,21 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
     const merged = Object.assign(children, Object.assign({ children: 0, items: 0, itemToKey: 0, removeClippedSubviews: 0, testID: 0 }));
     const tmp2 = obj(closure_1_7(Math.ceil(items.itemCount)), 2);
     closure_5 = tmp2[1];
-    items = [children, itemToKey, flag];
+    const items1 = [children, itemToKey, flag];
     let tmp3 = closure_1_5((arg0) => {
       const tmp = itemToKey(arg0);
       obj = { nativeID: tmp, removeClippedSubviews: flag, children: null };
       let tmp6 = null;
       if (null != _modDef439) {
-        obj = { nativeID: tmp };
-        tmp6 = React6(_modDef439, obj);
+        const obj2 = { nativeID: tmp };
+        tmp6 = React6(_modDef439, obj2);
       }
       items = [tmp6, closure_0(arg0, tmp)];
       obj.children = items;
       return React7(defaultHiddenStyleDefault, obj, tmp);
-    }, items);
+    }, items1);
     closure_0 = tmp3;
-    const items1 = [tmp3];
+    const items2 = [tmp3];
     closure_6 = closure_1_6(() => {
       const weakMap = new WeakMap();
       return (arg0) => {
@@ -108,11 +108,11 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
         }
         return value;
       };
-    }, items1);
+    }, items2);
     const bound = Math.min(tmp2[0], items.size);
     const diff = items.size - bound;
     c7 = diff;
-    const items2 = [diff, testID];
+    const items3 = [diff, testID];
     obj = {};
     const arr = Array.from({ length: bound }, (arg0, arg1) => closure_6(items.at(arg1)));
     const merged1 = Object.assign(merged);
@@ -134,7 +134,7 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
         tmp3Result = React6(VirtualCollectionSpacer, obj);
       }
       return tmp3Result;
-    }, items2);
+    }, items3);
     obj.children = arr;
     return closure_1_8(closure_0, obj);
   };

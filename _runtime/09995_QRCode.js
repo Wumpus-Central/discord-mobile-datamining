@@ -1,11 +1,11 @@
 // === Module 9995: QRCode ===
 
 // Module 9995 (QRCode)
-import QRCode from "module_9996" /* 9996 */;
-import module_10000 from "module_10000" /* 10000 */;
+import QRCode_mod from "module_9996" /* 9996 */;
+import module_10000_mod from "module_10000" /* 10000 */;
 import emptyFunction from "module_10005" /* 10005 */;
-import noop from "module_19" /* 19 */;
-import QRCodeSvg from "QRCodeSvg" /* 10008 */;
+import noop_mod from "module_19" /* 19 */;
+import QRCodeSvg_mod from "QRCodeSvg" /* 10008 */;
 
 let fn = Object.assign;
 if (!fn) {
@@ -33,6 +33,7 @@ if (!fn) {
     return arg0;
   };
 }
+let QRCode = QRCode_mod;
 if (!QRCode) {
   let obj = { default: QRCode };
   let tmp3 = obj;
@@ -40,38 +41,41 @@ if (!QRCode) {
   tmp3 = QRCode;
 }
 QRCode = tmp3;
+let module_10000 = module_10000_mod;
 if (!module_10000) {
-  obj = { default: module_10000 };
-  let tmp5 = obj;
+  let obj2 = { default: module_10000 };
+  let tmp5 = obj2;
 } else {
   tmp5 = module_10000;
 }
 module_10000 = tmp5;
 if (!emptyFunction) {
-  obj = { default: emptyFunction };
-  let tmp7 = obj;
+  const obj3 = { default: emptyFunction };
+  let tmp7 = obj3;
 } else {
   tmp7 = emptyFunction;
 }
+let noop = noop_mod;
 if (!noop) {
-  const obj1 = { default: noop };
-  let tmp8 = obj1;
+  const obj4 = { default: noop };
+  let tmp8 = obj4;
 } else {
   tmp8 = noop;
 }
 noop = tmp8;
+let QRCodeSvg = QRCodeSvg_mod;
 if (!QRCodeSvg) {
-  const obj2 = { default: QRCodeSvg };
-  let tmp10 = obj2;
+  const obj5 = { default: QRCodeSvg };
+  let tmp10 = obj5;
 } else {
   tmp10 = QRCodeSvg;
 }
 QRCodeSvg = tmp10;
-const obj3 = { bgColor: null, fgColor: null, level: tmp7.default.string, size: tmp7.default.number, value: tmp7.default.string.isRequired };
+const obj6 = { bgColor: null, fgColor: null, level: tmp7.default.string, size: tmp7.default.number, value: tmp7.default.string.isRequired };
 let items = [tmp7.default.object, tmp7.default.string];
-obj3.bgColor = tmp7.default.oneOfType(items);
+obj6.bgColor = tmp7.default.oneOfType(items);
 const items1 = [tmp7.default.object, tmp7.default.string];
-obj3.fgColor = tmp7.default.oneOfType(items1);
+obj6.fgColor = tmp7.default.oneOfType(items1);
 const forwardRefResult = noop.forwardRef((obj, ref) => {
   const items = ["bgColor", "fgColor", "level", "size", "value"];
   obj = {};
@@ -98,12 +102,11 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
     }
     continue;
   }
-  let _default = new QRCode.default(-1, module_10000.default[level]);
-  _default.addData(value);
-  _default.make();
-  const modules = _default.modules;
-  _default = noop.default;
-  obj = { bgColor, bgD: null, fgColor: null, fgD: null, ref: null, size: null, viewBoxSize: null };
+  const _default1 = new QRCode.default(-1, module_10000.default[level]);
+  _default1.addData(value);
+  _default1.make();
+  const modules = _default1.modules;
+  const obj2 = { bgColor, bgD: null, fgColor: null, fgD: null, ref: null, size: null, viewBoxSize: null };
   let mapped = modules.map((arr, index) => {
     closure_0 = index;
     const mapped = arr.map((item, index) => {
@@ -115,8 +118,8 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
     });
     return mapped.join(" ");
   });
-  obj.bgD = mapped.join(" ");
-  obj.fgColor = fgColor;
+  obj2.bgD = mapped.join(" ");
+  obj2.fgColor = fgColor;
   const mapped1 = modules.map((arr, index) => {
     closure_0 = index;
     const mapped = arr.map((item, index) => {
@@ -128,14 +131,14 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
     });
     return mapped.join(" ");
   });
-  obj.fgD = mapped1.join(" ");
-  obj.ref = ref;
-  obj.size = size;
-  obj.viewBoxSize = modules.length;
-  return <QRCodeSvg.default {......fn({}, obj, obj)} />;
+  obj2.fgD = mapped1.join(" ");
+  obj2.ref = ref;
+  obj2.size = size;
+  obj2.viewBoxSize = modules.length;
+  return <QRCodeSvg.default {......fn({}, obj, obj2)} />;
 });
 forwardRefResult.displayName = "QRCode";
-forwardRefResult.propTypes = obj3;
+forwardRefResult.propTypes = obj6;
 forwardRefResult.defaultProps = { bgColor: "#FFFFFF", fgColor: "#000000", level: "L", size: 256 };
 
 export default forwardRefResult;

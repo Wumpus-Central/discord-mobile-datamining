@@ -49,7 +49,7 @@ function _htmlElementAsString(tagName, arr) {
     } else {
       if (tagName.id) {
         const _HermesInternal = HermesInternal;
-        arr = items.push("#" + tagName.id);
+        items.push("#" + tagName.id);
       }
       if (tagName.className) {
         if (tmp2Result.isString(str4)) {
@@ -57,7 +57,7 @@ function _htmlElementAsString(tagName, arr) {
           const tmp14 = parts[Symbol.iterator]();
           while (tmp14 !== undefined) {
             let _HermesInternal2 = HermesInternal;
-            let arr1 = items.push("." + tmp17);
+            let arr3 = items.push("." + tmp17);
             continue;
           }
         }
@@ -75,7 +75,7 @@ function _htmlElementAsString(tagName, arr) {
         let str9 = "[";
         let str10 = "=\"";
         let str11 = "\"]";
-        let arr2 = items.push("[" + tmp25 + "=\"" + tmp27 + "\"]");
+        let arr7 = items.push("[" + tmp25 + "=\"" + tmp27 + "\"]");
       }
       continue;
     }

@@ -62,9 +62,9 @@ prototype.make = function() {
         do {
           let obj3 = self.dataList[num5];
           let putResult = obj2.put(obj3.mode, 4);
-          length = obj3.getLength();
+          let length1 = obj3.getLength();
           let obj4 = _mod10002;
-          let putResult1 = obj2.put(length, obj4.getLengthInBits(obj3.mode, num));
+          let putResult1 = obj2.put(length1, obj4.getLengthInBits(obj3.mode, num));
           let writeResult = obj3.write(obj2);
           num5 = num5 + 1;
           length2 = self.dataList.length;
@@ -88,7 +88,7 @@ prototype.make = function() {
 prototype.makeImpl = function(arg0, arg1) {
   const self = this;
   this.moduleCount = 4 * this.typeNumber + 17;
-  let array = new Array(this.moduleCount);
+  const array = new Array(this.moduleCount);
   this.modules = array;
   let num = 0;
   if (0 < this.moduleCount) {
@@ -96,8 +96,8 @@ prototype.makeImpl = function(arg0, arg1) {
       let _Array = Array;
       let tmp2 = new.target;
       let tmp3 = new.target;
-      array = new Array(self.moduleCount);
-      self.modules[num] = array;
+      let array2 = new Array(self.moduleCount);
+      self.modules[num] = array2;
       let num2 = 0;
       if (0 < self.moduleCount) {
         do {
@@ -431,9 +431,9 @@ QRCode.createData = (arg0, arg1, arg2) => {
     do {
       let obj3 = arg2[num];
       let putResult = obj2.put(obj3.mode, 4);
-      length = obj3.getLength();
+      let length1 = obj3.getLength();
       let obj4 = _mod10002;
-      let putResult1 = obj2.put(length, obj4.getLengthInBits(obj3.mode, arg0));
+      let putResult1 = obj2.put(length1, obj4.getLengthInBits(obj3.mode, arg0));
       let writeResult = obj3.write(obj2);
       num = num + 1;
       length = arg2.length;
@@ -482,8 +482,8 @@ QRCode.createData = (arg0, arg1, arg2) => {
 };
 QRCode.createBytes = (arg0, arg1) => {
   let length2;
-  new Array(arg1.length);
   const array = new Array(arg1.length);
+  const array5 = new Array(arg1.length);
   let num = 0;
   let num2 = 0;
   let num3 = 0;
@@ -501,8 +501,8 @@ QRCode.createBytes = (arg0, arg1) => {
       let _Array = Array;
       let tmp6 = new.target;
       let tmp7 = new.target;
-      let array1 = new Array(dataCount);
-      array[num] = array1;
+      let array6 = new Array(dataCount);
+      array[num] = array6;
       let num7 = 0;
       if (0 < array[num].length) {
         do {
@@ -517,20 +517,20 @@ QRCode.createBytes = (arg0, arg1) => {
       let tmp16 = QRPolynomial;
       let tmp17 = new.target;
       let tmp18 = new.target;
-      tmp16 = new tmp16(array[num], errorCorrectPolynomial.getLength() - 1);
-      let modResult = tmp16.mod(errorCorrectPolynomial);
+      let tmp162 = new tmp16(array[num], errorCorrectPolynomial.getLength() - 1);
+      let modResult = tmp162.mod(errorCorrectPolynomial);
       let _Array2 = Array;
       let tmp20 = new.target;
       let tmp21 = new.target;
-      let array2 = new Array(errorCorrectPolynomial.getLength() - 1);
-      array[num] = array2;
-      for (let num8 = 0; num8 < array[num].length; num8 = num8 + 1) {
-        let diff1 = num8 + modResult.getLength() - array[num].length;
+      let array7 = new Array(errorCorrectPolynomial.getLength() - 1);
+      array5[num] = array7;
+      for (let num8 = 0; num8 < array5[num].length; num8 = num8 + 1) {
+        let diff1 = num8 + modResult.getLength() - array5[num].length;
         let num9 = 0;
         if (0 <= diff1) {
           num9 = modResult.get(diff1);
         }
-        array[num][num8] = num9;
+        array5[num][num8] = num9;
       }
       num = num + 1;
       num2 = bound1;
@@ -551,7 +551,7 @@ QRCode.createBytes = (arg0, arg1) => {
       length2 = arg1.length;
     } while (num11 < length2);
   }
-  const array3 = new Array(num12);
+  const array8 = new Array(num12);
   let num13 = 0;
   let num14 = 0;
   let num15 = 0;
@@ -565,7 +565,7 @@ QRCode.createBytes = (arg0, arg1) => {
           let sum1 = tmp27;
           if (num14 < array[num16].length) {
             sum1 = tmp27 + 1;
-            array3[tmp27] = array[num16][num14];
+            array8[tmp27] = array[num16][num14];
           }
           num16 = num16 + 1;
           tmp27 = sum1;
@@ -586,9 +586,9 @@ QRCode.createBytes = (arg0, arg1) => {
       if (0 < arg1.length) {
         do {
           let sum2 = tmp33;
-          if (num17 < array[num18].length) {
+          if (num17 < array5[num18].length) {
             sum2 = tmp33 + 1;
-            array3[tmp33] = array[num18][num17];
+            array8[tmp33] = array5[num18][num17];
           }
           num18 = num18 + 1;
           tmp33 = sum2;
@@ -599,7 +599,7 @@ QRCode.createBytes = (arg0, arg1) => {
       num15 = tmp35;
     } while (num17 < num5);
   }
-  return array3;
+  return array8;
 };
 
 export default QRCode;

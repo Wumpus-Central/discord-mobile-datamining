@@ -1,19 +1,21 @@
 // === Module 4070: ? ===
 
 // Module 4070
-import startOfHour from "startOfHour" /* 4071 */;
-import requiredArgs from "requiredArgs" /* 3726 */;
+import startOfHour_mod from "startOfHour" /* 4071 */;
+import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
+let startOfHour = startOfHour_mod;
 if (!startOfHour) {
-  let obj = { default: startOfHour };
+  const obj = { default: startOfHour };
   let tmp3 = obj;
 } else {
   tmp3 = startOfHour;
 }
 startOfHour = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

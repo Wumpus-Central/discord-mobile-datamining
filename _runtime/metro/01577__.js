@@ -4,6 +4,8 @@
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 const require = arg1;
 
 export const usePreventRemove = function usePreventRemove(stateFromStores, arg1) {

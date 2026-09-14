@@ -35,13 +35,13 @@ export const useExtraContentPadding = function useExtraContentPadding(scrollView
       cancelAnimation.scrollTo(scrollViewRef, 0, closure_0, false);
     });
   };
-  let obj = { contentOffsetY, IS_FABRIC: scrollViewRef(extraContentPadding[2]).IS_FABRIC, Platform: blankSpace, scrollTo: scrollViewRef(extraContentPadding[3]).scrollTo, scrollViewRef };
-  fn.__closure = obj;
+  fn.__closure = { contentOffsetY, IS_FABRIC: scrollViewRef(extraContentPadding[2]).IS_FABRIC, Platform: blankSpace, scrollTo: scrollViewRef(extraContentPadding[3]).scrollTo, scrollViewRef };
   fn.__workletHash = 2925167321956;
   fn.__initData = scroll;
   const items = [scrollViewRef, contentOffsetY];
   const tmp = keyboardPadding(fn, items);
   closure_11 = tmp;
+  const obj = { contentOffsetY, IS_FABRIC: scrollViewRef(extraContentPadding[2]).IS_FABRIC, Platform: blankSpace, scrollTo: scrollViewRef(extraContentPadding[3]).scrollTo, scrollViewRef };
   const fn2 = function v() {
     return extraContentPadding.value;
   };
@@ -75,10 +75,10 @@ export const useExtraContentPadding = function useExtraContentPadding(scrollView
       }
     }
   };
-  obj = { freeze, blankSpace, keyboardPadding, isScrollAtEnd: scrollViewRef(extraContentPadding[4]).isScrollAtEnd, scroll, layout, size, inverted, keyboardLiftBehavior, shouldShiftContent: scrollViewRef(extraContentPadding[4]).shouldShiftContent, scrollToTarget: tmp };
-  fn3.__closure = obj;
+  let obj2 = scrollViewRef(extraContentPadding[3]);
+  fn3.__closure = { freeze, blankSpace, keyboardPadding, isScrollAtEnd: scrollViewRef(extraContentPadding[4]).isScrollAtEnd, scroll, layout, size, inverted, keyboardLiftBehavior, shouldShiftContent: scrollViewRef(extraContentPadding[4]).shouldShiftContent, scrollToTarget: tmp };
   fn3.__workletHash = 14660760767987;
   fn3.__initData = size;
   const items1 = [inverted, keyboardLiftBehavior];
-  const animatedReaction = scrollViewRef(extraContentPadding[3]).useAnimatedReaction(fn2, fn3, items1);
+  const animatedReaction = obj2.useAnimatedReaction(fn2, fn3, items1);
 };

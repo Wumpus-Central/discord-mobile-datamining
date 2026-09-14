@@ -56,8 +56,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = { string: { unit: "\u06A9\u0627\u0631\u0627\u06A9\u062A\u0631", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" }, file: { unit: "\u0628\u0627\u06CC\u062A", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" }, array: { unit: "\u0622\u06CC\u062A\u0645", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" }, set: { unit: "\u0622\u06CC\u062A\u0645", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" } };
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "\u06A9\u0627\u0631\u0627\u06A9\u062A\u0631", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" }, file: { unit: "\u0628\u0627\u06CC\u062A", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" }, array: { unit: "\u0622\u06CC\u062A\u0645", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" }, set: { unit: "\u0622\u06CC\u062A\u0645", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" } };
         closure_1 = { regex: "\u0648\u0631\u0648\u062F\u06CC", email: "\u0622\u062F\u0631\u0633 \u0627\u06CC\u0645\u06CC\u0644", url: "URL", emoji: "\u0627\u06CC\u0645\u0648\u062C\u06CC", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "\u062A\u0627\u0631\u06CC\u062E \u0648 \u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648", date: "\u062A\u0627\u0631\u06CC\u062E \u0627\u06CC\u0632\u0648", time: "\u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648", duration: "\u0645\u062F\u062A \u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648", ipv4: "IPv4 \u0622\u062F\u0631\u0633", ipv6: "IPv6 \u0622\u062F\u0631\u0633", cidrv4: "IPv4 \u062F\u0627\u0645\u0646\u0647", cidrv6: "IPv6 \u062F\u0627\u0645\u0646\u0647", base64: "base64-encoded \u0631\u0634\u062A\u0647", base64url: "base64url-encoded \u0631\u0634\u062A\u0647", json_string: "JSON \u0631\u0634\u062A\u0647", e164: "E.164 \u0639\u062F\u062F", jwt: "JWT", template_literal: "\u0648\u0631\u0648\u062F\u06CC" };
         closure_2 = { nan: "NaN", number: "\u0639\u062F\u062F", array: "\u0622\u0631\u0627\u06CC\u0647" };
         obj.localeError = (code) => {
@@ -72,7 +72,6 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A instanceof " + code.expected + " \u0645\u06CC\u200C\u0628\u0648\u062F\u060C " + tmp48 + " \u062F\u0631\u06CC\u0627\u0641\u062A \u0634\u062F";
@@ -95,7 +94,7 @@ if (self2) {
               if (code.inclusive) {
                 str29 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -104,13 +103,13 @@ if (self2) {
                 if (str30 == null) {
                   str30 = "\u0645\u0642\u062F\u0627\u0631";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str37 = tmp27.unit;
                 if (str37 == null) {
                   str37 = "\u0639\u0646\u0635\u0631";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "\u062E\u06CC\u0644\u06CC \u0628\u0632\u0631\u06AF: " + str30 + " \u0628\u0627\u06CC\u062F " + str29 + str + " " + str37 + " \u0628\u0627\u0634\u062F";
+                let combined2 = "\u062E\u06CC\u0644\u06CC \u0628\u0632\u0631\u06AF: " + str30 + " \u0628\u0627\u06CC\u062F " + str29 + str1 + " " + str37 + " \u0628\u0627\u0634\u062F";
               } else {
                 let str31 = str30;
                 if (str30 == null) {
@@ -125,18 +124,18 @@ if (self2) {
               if (code.inclusive) {
                 str21 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str56 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "\u062E\u06CC\u0644\u06CC \u06A9\u0648\u0686\u06A9: " + origin + " \u0628\u0627\u06CC\u062F " + str21 + str1 + " " + tmp15.unit + " \u0628\u0627\u0634\u062F";
+                let combined3 = "\u062E\u06CC\u0644\u06CC \u06A9\u0648\u0686\u06A9: " + origin + " \u0628\u0627\u06CC\u062F " + str21 + str56 + " " + tmp15.unit + " \u0628\u0627\u0634\u062F";
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "\u062E\u06CC\u0644\u06CC \u06A9\u0648\u0686\u06A9: " + origin + " \u0628\u0627\u06CC\u062F " + str21 + str1 + " \u0628\u0627\u0634\u062F";
+                combined3 = "\u062E\u06CC\u0644\u06CC \u06A9\u0648\u0686\u06A9: " + origin + " \u0628\u0627\u06CC\u062F " + str21 + str56 + " \u0628\u0627\u0634\u062F";
               }
               return combined3;
             case "invalid_format":
@@ -178,7 +177,6 @@ if (self2) {
               return "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "\u0645\u0642\u062F\u0627\u0631 \u0646\u0627\u0645\u0639\u062A\u0628\u0631 \u062F\u0631 ";
               return "\u0645\u0642\u062F\u0627\u0631 \u0646\u0627\u0645\u0639\u062A\u0628\u0631 \u062F\u0631 " + code.origin;
             default:
               return "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631";

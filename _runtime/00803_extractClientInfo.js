@@ -140,12 +140,12 @@ export const buildTransportAttributes = function buildTransportAttributes(transp
   } else {
     obj = {};
   }
-  let constructor;
+  let constructor1;
   if (transport != null) {
-    constructor = transport.constructor;
+    constructor1 = transport.constructor;
   }
-  if (constructor) {
-    constructor = transport.constructor;
+  if (constructor1) {
+    const constructor = transport.constructor;
     let name;
     if (constructor != null) {
       name = constructor.name;
@@ -166,37 +166,36 @@ export const buildTransportAttributes = function buildTransportAttributes(transp
         str5 = "tcp";
       }
     }
-    obj = { mcpTransport: str3, networkTransport: str5 };
+    const obj2 = { mcpTransport: str3, networkTransport: str5 };
+    let obj3 = obj2;
   } else {
-    obj = { mcpTransport: "unknown", networkTransport: "unknown" };
+    obj3 = { mcpTransport: "unknown", networkTransport: "unknown" };
   }
-  ({ mcpTransport, networkTransport } = obj);
-  let obj4 = _mod804;
-  const clientInfoForTransport = obj4.getClientInfoForTransport(transport);
+  ({ mcpTransport, networkTransport } = obj3);
+  const clientInfoForTransport = _mod804.getClientInfoForTransport(transport);
   let name1;
   if (clientInfoForTransport != null) {
     name1 = clientInfoForTransport.name;
   }
-  const obj1 = {};
+  const obj4 = {};
   if (name1) {
-    obj1["mcp.client.name"] = clientInfoForTransport.name;
+    obj4["mcp.client.name"] = clientInfoForTransport.name;
   }
   let title;
   if (clientInfoForTransport != null) {
     title = clientInfoForTransport.title;
   }
   if (title) {
-    obj1["mcp.client.title"] = clientInfoForTransport.title;
+    obj4["mcp.client.title"] = clientInfoForTransport.title;
   }
   let version;
   if (clientInfoForTransport != null) {
     version = clientInfoForTransport.version;
   }
   if (version) {
-    obj1["mcp.client.version"] = clientInfoForTransport.version;
+    obj4["mcp.client.version"] = clientInfoForTransport.version;
   }
-  let tmp6Result = _mod804;
-  const sessionDataForTransport = tmp6Result.getSessionDataForTransport(transport);
+  const sessionDataForTransport = _mod804.getSessionDataForTransport(transport);
   let serverInfo;
   if (sessionDataForTransport != null) {
     serverInfo = sessionDataForTransport.serverInfo;
@@ -205,145 +204,143 @@ export const buildTransportAttributes = function buildTransportAttributes(transp
   if (serverInfo != null) {
     name2 = serverInfo.name;
   }
-  const obj2 = {};
+  const obj6 = {};
   if (name2) {
-    obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
+    obj6[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
   }
   let title1;
   if (serverInfo != null) {
     title1 = serverInfo.title;
   }
   if (title1) {
-    obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
+    obj6[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
   }
   let version1;
   if (serverInfo != null) {
     version1 = serverInfo.version;
   }
   if (version1) {
-    obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
+    obj6[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
   }
-  tmp6Result = _mod804;
-  const protocolVersionForTransport = tmp6Result.getProtocolVersionForTransport(transport);
+  const tmp6Result = _mod804;
+  const protocolVersionForTransport = _mod804.getProtocolVersionForTransport(transport);
   let tmp18 = sessionId;
   if (sessionId) {
-    const obj3 = {};
-    obj3[CLIENT_ADDRESS_ATTRIBUTE.MCP_SESSION_ID_ATTRIBUTE] = sessionId;
-    tmp18 = obj3;
+    const obj7 = {};
+    obj7[CLIENT_ADDRESS_ATTRIBUTE.MCP_SESSION_ID_ATTRIBUTE] = sessionId;
+    tmp18 = obj7;
   }
-  obj4 = {};
+  const obj8 = {};
   const merged = Object.assign(tmp18);
   let address = obj.address;
   if (address) {
-    const obj5 = {};
-    obj5[CLIENT_ADDRESS_ATTRIBUTE.CLIENT_ADDRESS_ATTRIBUTE] = obj.address;
-    address = obj5;
+    const obj9 = {};
+    obj9[CLIENT_ADDRESS_ATTRIBUTE.CLIENT_ADDRESS_ATTRIBUTE] = obj.address;
+    address = obj9;
   }
   const merged1 = Object.assign(address);
   let port = obj.port;
   if (port) {
-    const obj6 = {};
-    obj6[CLIENT_ADDRESS_ATTRIBUTE.CLIENT_PORT_ATTRIBUTE] = obj.port;
-    port = obj6;
+    const obj10 = {};
+    obj10[CLIENT_ADDRESS_ATTRIBUTE.CLIENT_PORT_ATTRIBUTE] = obj.port;
+    port = obj10;
   }
   const merged2 = Object.assign(port);
-  obj4[CLIENT_ADDRESS_ATTRIBUTE.MCP_TRANSPORT_ATTRIBUTE] = mcpTransport;
-  obj4[CLIENT_ADDRESS_ATTRIBUTE.NETWORK_TRANSPORT_ATTRIBUTE] = networkTransport;
-  obj4[CLIENT_ADDRESS_ATTRIBUTE.NETWORK_PROTOCOL_VERSION_ATTRIBUTE] = "2.0";
+  obj8[CLIENT_ADDRESS_ATTRIBUTE.MCP_TRANSPORT_ATTRIBUTE] = mcpTransport;
+  obj8[CLIENT_ADDRESS_ATTRIBUTE.NETWORK_TRANSPORT_ATTRIBUTE] = networkTransport;
+  obj8[CLIENT_ADDRESS_ATTRIBUTE.NETWORK_PROTOCOL_VERSION_ATTRIBUTE] = "2.0";
   let tmp22 = protocolVersionForTransport;
   if (protocolVersionForTransport) {
-    const obj7 = {};
-    obj7[CLIENT_ADDRESS_ATTRIBUTE.MCP_PROTOCOL_VERSION_ATTRIBUTE] = protocolVersionForTransport;
-    tmp22 = obj7;
+    const obj11 = {};
+    obj11[CLIENT_ADDRESS_ATTRIBUTE.MCP_PROTOCOL_VERSION_ATTRIBUTE] = protocolVersionForTransport;
+    tmp22 = obj11;
   }
   const merged3 = Object.assign(tmp22);
-  const merged4 = Object.assign(obj1);
-  const merged5 = Object.assign(obj2);
-  return obj4;
+  const merged4 = Object.assign(obj4);
+  const merged5 = Object.assign(obj6);
+  return obj8;
 };
 export { extractClientInfo };
 export const extractSessionDataFromInitializeRequest = function extractSessionDataFromInitializeRequest(params) {
-  let obj = {};
+  const obj = {};
   if (obj2.isValidContentItem(params.params)) {
     if (typeof params.params.protocolVersion === "string") {
       obj.protocolVersion = params.params.protocolVersion;
     }
     if (params.params.clientInfo) {
       const clientInfo = params.params.clientInfo;
-      obj = {};
+      const obj3 = {};
       if (tmpResult.isValidContentItem(clientInfo)) {
         if (typeof clientInfo.name === "string") {
-          obj.name = clientInfo.name;
+          obj3.name = clientInfo.name;
         }
         if (typeof clientInfo.title === "string") {
-          obj.title = clientInfo.title;
+          obj3.title = clientInfo.title;
         }
         if (typeof clientInfo.version === "string") {
-          obj.version = clientInfo.version;
+          obj3.version = clientInfo.version;
         }
       }
-      obj.clientInfo = obj;
+      obj.clientInfo = obj3;
       tmpResult = validateMcpServerInstance;
     }
   }
   return obj;
 };
 export const extractSessionDataFromInitializeResponse = function extractSessionDataFromInitializeResponse(protocolVersion) {
-  let obj = {};
+  const obj = {};
   if (obj2.isValidContentItem(protocolVersion)) {
     if (typeof protocolVersion.protocolVersion === "string") {
       obj.protocolVersion = protocolVersion.protocolVersion;
     }
     if (protocolVersion.serverInfo) {
       const serverInfo = protocolVersion.serverInfo;
-      obj = {};
+      const obj3 = {};
       if (tmpResult.isValidContentItem(serverInfo)) {
         if (typeof serverInfo.name === "string") {
-          obj.name = serverInfo.name;
+          obj3.name = serverInfo.name;
         }
         if (typeof serverInfo.title === "string") {
-          obj.title = serverInfo.title;
+          obj3.title = serverInfo.title;
         }
         if (typeof serverInfo.version === "string") {
-          obj.version = serverInfo.version;
+          obj3.version = serverInfo.version;
         }
       }
-      obj.serverInfo = obj;
+      obj.serverInfo = obj3;
       tmpResult = validateMcpServerInstance;
     }
   }
   return obj;
 };
 export const getClientAttributes = function getClientAttributes(transport) {
-  let obj = _mod804;
-  const clientInfoForTransport = obj.getClientInfoForTransport(transport);
+  const clientInfoForTransport = _mod804.getClientInfoForTransport(transport);
   let name;
   if (clientInfoForTransport != null) {
     name = clientInfoForTransport.name;
   }
-  obj = {};
+  const obj2 = {};
   if (name) {
-    obj["mcp.client.name"] = clientInfoForTransport.name;
+    obj2["mcp.client.name"] = clientInfoForTransport.name;
   }
   let title;
   if (clientInfoForTransport != null) {
     title = clientInfoForTransport.title;
   }
   if (title) {
-    obj["mcp.client.title"] = clientInfoForTransport.title;
+    obj2["mcp.client.title"] = clientInfoForTransport.title;
   }
   let version;
   if (clientInfoForTransport != null) {
     version = clientInfoForTransport.version;
   }
   if (version) {
-    obj["mcp.client.version"] = clientInfoForTransport.version;
+    obj2["mcp.client.version"] = clientInfoForTransport.version;
   }
-  return obj;
+  return obj2;
 };
 export const getServerAttributes = function getServerAttributes(transport) {
-  let obj = _mod804;
-  const sessionDataForTransport = obj.getSessionDataForTransport(transport);
+  const sessionDataForTransport = _mod804.getSessionDataForTransport(transport);
   let serverInfo;
   if (sessionDataForTransport != null) {
     serverInfo = sessionDataForTransport.serverInfo;
@@ -352,33 +349,33 @@ export const getServerAttributes = function getServerAttributes(transport) {
   if (serverInfo != null) {
     name = serverInfo.name;
   }
-  obj = {};
+  const obj2 = {};
   if (name) {
-    obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
+    obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
   }
   let title;
   if (serverInfo != null) {
     title = serverInfo.title;
   }
   if (title) {
-    obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
+    obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
   }
   let version;
   if (serverInfo != null) {
     version = serverInfo.version;
   }
   if (version) {
-    obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
+    obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
   }
-  return obj;
+  return obj2;
 };
 export const getTransportTypes = function getTransportTypes(arg0) {
-  let constructor;
+  let constructor1;
   if (arg0 != null) {
-    constructor = arg0.constructor;
+    constructor1 = arg0.constructor;
   }
-  if (constructor) {
-    constructor = arg0.constructor;
+  if (constructor1) {
+    const constructor = arg0.constructor;
     let name;
     if (constructor != null) {
       name = constructor.name;

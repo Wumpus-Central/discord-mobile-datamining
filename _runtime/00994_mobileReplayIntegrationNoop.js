@@ -5,6 +5,8 @@ import NativeModules from "NativeModules" /* 866 */;
 import _mod995 from "module_995" /* 995 */;
 import enrichXhrBreadcrumbsForMobileReplay from "enrichXhrBreadcrumbsForMobileReplay" /* 996 */;
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 let fn = this;
@@ -20,7 +22,7 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn, arg1) => {
+    return new _Promise((fn, arg1) => {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -42,14 +44,14 @@ if (!fn) {
         if (done.done) {
           closure_0(done.value);
         } else {
-          let tmp = done.value;
-          closure_0 = tmp;
-          if (!(tmp instanceof Promise)) {
-            tmp = new tmp((fn) => {
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
               fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -63,16 +65,15 @@ if (!fn) {
         fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
+          tmp32 = new tmp3((fn) => {
             fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
 const MobileReplay = "MobileReplay";
@@ -92,21 +93,20 @@ export const mobileReplayIntegration = () => {
   function updateCachedReplayId(arg0) {
     currentReplayId = arg0;
   }
-  let obj = require("module_867");
   if (obj.isExpoGo()) {
     let debug = tmp2(tmp3[1]).debug;
     let _HermesInternal = HermesInternal;
     debug.warn("[Sentry] " + MobileReplay + " is not supported in Expo Go. Use EAS Build or `expo prebuild` to enable it.");
   }
-  let tmp2Result = tmp2(tmp3[0]);
+  obj = require("module_867");
   if (tmp2Result.notMobileOs()) {
     let debug2 = tmp2(tmp3[1]).debug;
     let _HermesInternal2 = HermesInternal;
     debug2.warn("[Sentry] " + MobileReplay + " is not supported on this platform.");
   }
-  tmp2Result = tmp2(tmp3[0]);
-  if (!tmp2Result.isExpoGo()) {
-    if (!tmp2Result1.notMobileOs()) {
+  tmp2Result = require("module_867");
+  if (!tmp2Result3.isExpoGo()) {
+    if (!tmp2Result4.notMobileOs()) {
       let _Object = Object;
       let _Object2 = Object;
       const merged = Object.assign(Object.assign({}, options), tmp);
@@ -114,7 +114,7 @@ export const mobileReplayIntegration = () => {
         merged.enableViewRendererV2 = tmp.enableExperimentalViewRenderer;
       }
       currentReplayId = null;
-      obj = {
+      let obj2 = {
         name: MobileReplay,
         setup(on) {
               if (obj.hasHooks(on)) {
@@ -166,7 +166,7 @@ export const mobileReplayIntegration = () => {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value, done: true };
+                    const obj = { value, done: true };
                     return obj;
                   } else {
                     return { value: "HermesInternal", done: null };
@@ -181,8 +181,8 @@ export const mobileReplayIntegration = () => {
                         throw value;
                       } else if (arg0 === 2) {
                         c5 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj2 = { value, done: true };
+                        return obj2;
                       } else {
                         closure_128_0 = undefined;
                         currentReplayId = undefined;
@@ -203,8 +203,8 @@ export const mobileReplayIntegration = () => {
                                 debug5.log("[Sentry] " + MobileReplay + " not sent; beforeErrorSampling conditions not met for event " + value.event_id + ".");
                                 c3 = 0;
                                 c5 = 3;
-                                const obj1 = { value, done: true };
-                                return obj1;
+                                const obj3 = { value, done: true };
+                                return obj3;
                               } else {
                                 c3 = 0;
                               }
@@ -213,8 +213,8 @@ export const mobileReplayIntegration = () => {
                           }
                         }
                         c5 = 3;
-                        const obj2 = { value, done: true };
-                        return obj2;
+                        const obj4 = { value, done: true };
+                        return obj4;
                       }
                     } else if (1 === isHardCrashResult) {
                       c3 = 0;
@@ -227,8 +227,8 @@ export const mobileReplayIntegration = () => {
                       throw value;
                     } else if (arg0 === 2) {
                       c5 = 3;
-                      const obj3 = { value, done: true };
-                      return obj3;
+                      const obj5 = { value, done: true };
+                      return obj5;
                     } else {
                       closure_128_0 = value;
                       if (closure_128_0) {
@@ -243,8 +243,8 @@ export const mobileReplayIntegration = () => {
                         closure_129_0.contexts = contexts;
                         const _Object3 = Object;
                         const _Object4 = Object;
-                        const obj4 = { replay_id: closure_128_0 };
-                        closure_129_0.contexts.replay = Object.assign(Object.assign({}, closure_129_0.contexts.replay), obj4);
+                        const obj6 = { replay_id: closure_128_0 };
+                        closure_129_0.contexts.replay = Object.assign(Object.assign({}, closure_129_0.contexts.replay), obj6);
                         c5 = 3;
                       } else {
                         const NATIVE = value(tmp3[2]).NATIVE;
@@ -267,8 +267,8 @@ export const mobileReplayIntegration = () => {
                       closure_129_0.contexts = contexts1;
                       const _Object = Object;
                       const _Object2 = Object;
-                      const obj5 = { replay_id: currentReplayId };
-                      closure_129_0.contexts.replay = Object.assign(Object.assign({}, closure_129_0.contexts.replay), obj5);
+                      const obj9 = { replay_id: currentReplayId };
+                      closure_129_0.contexts.replay = Object.assign(Object.assign({}, closure_129_0.contexts.replay), obj9);
                     }
                     const NATIVE2 = value(tmp3[2]).NATIVE;
                     isHardCrashResult = value(tmp3[3]).isHardCrash(closure_129_0);
@@ -301,20 +301,21 @@ export const mobileReplayIntegration = () => {
               return tmp;
             }
       };
-      return obj;
+      return obj2;
     }
-    tmp2Result1 = tmp2(tmp3[0]);
+    tmp2Result4 = tmp2(tmp3[0]);
   }
   if (typeof mobileReplayIntegrationNoop === "function") {
-    obj = {
+    let obj3 = {
       name: MobileReplay,
       options,
       getReplayId() {
           return null;
         }
     };
-    return obj;
+    return obj3;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
+  tmp2Result3 = require("module_867");
 };

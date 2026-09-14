@@ -15,8 +15,8 @@ function processEvent(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -29,8 +29,8 @@ function processEvent(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             v32 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
@@ -41,15 +41,14 @@ function processEvent(arg0, arg1) {
             closure_130_4 = undefined;
             closure_130_5 = undefined;
             const exception = closure_0.exception;
-            let values;
+            let values2;
             if (null !== exception) {
               if (undefined !== exception) {
-                values = exception.values;
+                values2 = exception.values;
               }
             }
-            if (values) {
-              let obj2 = closure_0(entries[1]);
-              if (obj2.isErrorLike(entries.originalException)) {
+            if (values2) {
+              if (obj3.isErrorLike(entries.originalException)) {
                 entries = (function getExceptionGroup(originalException) {
                   let isErrorLikeResult;
                   let tmp = originalException;
@@ -74,8 +73,8 @@ function processEvent(arg0, arg1) {
                   closure_130_3 = closure_130_1[1];
                   v3 = 2;
                   v32 = 1;
-                  const obj1 = { value: v3(closure_130_3.stack, closure_0(entries[1]).getFramesToPop(closure_130_3)), done: false };
-                  return obj1;
+                  const obj8 = { value: v3(closure_130_3.stack, closure_0(entries[1]).getFramesToPop(closure_130_3)), done: false };
+                  return obj8;
                 }
                 const obj7 = (function getExceptionGroup(originalException) {
                   let isErrorLikeResult;
@@ -94,16 +93,17 @@ function processEvent(arg0, arg1) {
                 })(tmp40.originalException);
               }
               v32 = 3;
+              obj3 = closure_0(entries[1]);
               tmp40 = entries;
             }
             if (entries.syntheticException) {
-              let obj3 = closure_0(entries[1]);
-              if (obj3.isErrorLike(tmp41.syntheticException)) {
+              if (obj4.isErrorLike(tmp41.syntheticException)) {
                 v3 = 3;
                 v32 = 1;
-                obj2 = { value: v3(tmp41.syntheticException.stack, closure_0(entries[1]).getFramesToPop(tmp41.syntheticException)), done: false };
-                return obj2;
+                const obj9 = { value: v3(tmp41.syntheticException.stack, closure_0(entries[1]).getFramesToPop(tmp41.syntheticException)), done: false };
+                return obj9;
               }
+              obj4 = closure_0(entries[1]);
             }
           }
         } else if (1 === tmp7) {
@@ -118,8 +118,8 @@ function processEvent(arg0, arg1) {
             c5 = 0;
             closure_0.return();
             v32 = 3;
-            obj3 = { value, done: true };
-            return obj3;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             closure_130_4 = value;
             if (closure_130_4) {
@@ -132,7 +132,7 @@ function processEvent(arg0, arg1) {
           throw value;
         } else if (arg0 === 2) {
           v32 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_130_5 = value;
@@ -169,7 +169,7 @@ function processEvent(arg0, arg1) {
             }
           }
         }
-        values = closure_130_5;
+        let values = closure_130_5;
         if (closure_130_5) {
           values = closure_131_0.exception.values;
         }
@@ -198,8 +198,8 @@ function symbolicate(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -212,8 +212,8 @@ function symbolicate(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_0 = tmp7;
             closure_128_0 = undefined;
@@ -226,8 +226,8 @@ function symbolicate(arg0) {
             const parseErrorStackResult = closure_0(tmp3[2]).parseErrorStack(closure_0);
             c4 = 2;
             c5 = 1;
-            let obj1 = { value: closure_0(tmp3[2]).symbolicateStackTrace(parseErrorStackResult), done: false };
-            return obj1;
+            const obj5 = { value: closure_0(tmp3[2]).symbolicateStackTrace(parseErrorStackResult), done: false };
+            return obj5;
           }
         } else if (1 === tmp7) {
           c3 = 0;
@@ -247,8 +247,8 @@ function symbolicate(arg0) {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_128_0 = value;
             if (closure_128_0) {
@@ -287,8 +287,8 @@ function symbolicate(arg0) {
                       if (arg0 === 1) {
                         throw value;
                       } else if (arg0 === 2) {
-                        let obj = { value, done: true };
-                        return obj;
+                        let obj2 = { value, done: true };
+                        return obj2;
                       } else {
                         return { value: "HermesInternal", done: null };
                       }
@@ -300,12 +300,12 @@ function symbolicate(arg0) {
                           throw value;
                         } else if (arg0 === 2) {
                           c1 = 3;
-                          obj = { value, done: true };
-                          return obj;
+                          let obj3 = { value, done: true };
+                          return obj3;
                         } else {
                           _self = self;
                           c1 = 3;
-                          obj = { value: Promise.all(_self.map(() => { ... })), done: true };
+                          let obj = { value: Promise.all(_self.map(() => { ... })), done: true };
                           return obj;
                         }
                       } catch (tmp7) {
@@ -333,15 +333,14 @@ function symbolicate(arg0) {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             closure_128_4 = value;
-            obj2 = closure_0(tmp3[2]);
             c4 = 4;
             c5 = 1;
-            const obj4 = { value: obj2.fetchSourceContext(closure_128_4), done: false };
-            return obj4;
+            const obj8 = { value: closure_0(tmp3[2]).fetchSourceContext(closure_128_4), done: false };
+            return obj8;
           }
         } else if (arg0 === 1) {
           c5 = 3;
@@ -349,12 +348,12 @@ function symbolicate(arg0) {
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           c3 = 0;
           c5 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         }
       } catch (tmp39) {
@@ -391,7 +390,7 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn, arg1) => {
+    return new _Promise((fn, arg1) => {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -413,14 +412,14 @@ if (!fn) {
         if (done.done) {
           closure_0(done.value);
         } else {
-          let tmp = done.value;
-          closure_0 = tmp;
-          if (!(tmp instanceof Promise)) {
-            tmp = new tmp((fn) => {
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
               fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -434,16 +433,15 @@ if (!fn) {
         fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
+          tmp32 = new tmp3((fn) => {
             fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
 let items = ["ReactNativeRenderer-dev\\.js$", "MessageQueue\\.js$"];

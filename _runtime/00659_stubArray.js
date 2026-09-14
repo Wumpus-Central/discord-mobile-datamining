@@ -3,6 +3,8 @@
 // Module 659 (stubArray)
 import _mod660 from "module_660" /* 660 */;
 
+const require = globalThis.__r;
+
 if (getOwnPropertySymbols) {
   let fn = (arg0) => {
     _require = arg0;

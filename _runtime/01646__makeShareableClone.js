@@ -49,7 +49,7 @@ export const _updatePropsJS = (arg0, tag, arg2) => {
     if (typeof animatableRef.setNativeProps === "function") {
       if (typeof setNativeProps === "function") {
         if (arg2) {
-          let obj = {};
+          const obj = {};
           for (const key10106 in first) {
             if (!_mod1649.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST[key10106]) {
               continue;
@@ -65,14 +65,14 @@ export const _updatePropsJS = (arg0, tag, arg2) => {
           }
         }
         const tmp27 = animatableRef.previousStyle || {};
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(tmp27);
         const merged1 = Object.assign(first);
-        animatableRef.previousStyle = obj;
+        animatableRef.previousStyle = obj2;
         const setNativeProps2 = animatableRef.setNativeProps;
         if (setNativeProps2 != null) {
-          const obj1 = { style: obj };
-          setNativeProps2(obj1);
+          const obj3 = { style: obj2 };
+          setNativeProps2(obj3);
         }
       } else {
         throw new TypeError("Trying to call a non-function");
@@ -82,16 +82,16 @@ export const _updatePropsJS = (arg0, tag, arg2) => {
         if (undefined !== animatableRef.style) {
           if (typeof updatePropsDOM === "function") {
             const tmp10 = animatableRef.previousStyle || {};
-            const obj2 = {};
+            const obj4 = {};
             const merged2 = Object.assign(tmp10);
             const merged3 = Object.assign(first);
-            animatableRef.previousStyle = obj2;
-            let tmp36Result = _mod1648;
-            const reactDOMStyle = tmp36Result.createReactDOMStyle(obj2);
+            animatableRef.previousStyle = obj4;
+            const reactDOMStyle = _mod1648.createReactDOMStyle(obj4);
             const _Array = Array;
+            const tmp36Result = _mod1648;
             if (tmp18) {
-              tmp36Result = _mod1648;
-              reactDOMStyle.transform = tmp36Result.createTransformValue(reactDOMStyle.transform);
+              reactDOMStyle.transform = _mod1648.createTransformValue(reactDOMStyle.transform);
+              const tmp36Result3 = _mod1648;
             }
             let tmp19 = undefined !== _mod1648.createTextShadowValue;
             if (tmp19) {
@@ -101,8 +101,8 @@ export const _updatePropsJS = (arg0, tag, arg2) => {
             if (tmp19) {
               ({ textShadowColor: obj6.textShadowColor, textShadowOffset: obj6.textShadowOffset, textShadowRadius: obj6.textShadowRadius } = reactDOMStyle);
               reactDOMStyle.textShadow = _mod1648.createTextShadowValue({ textShadowColor: null, textShadowOffset: null, textShadowRadius: null });
-              const obj3 = { textShadowColor: null, textShadowOffset: null, textShadowRadius: null };
-              const tmp36Result1 = _mod1648;
+              const obj5 = { textShadowColor: null, textShadowOffset: null, textShadowRadius: null };
+              const tmp36Result4 = _mod1648;
             }
             for (const key10094 in reactDOMStyle) {
               if (arg2) {

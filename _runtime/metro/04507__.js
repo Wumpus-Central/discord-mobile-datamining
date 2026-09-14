@@ -108,20 +108,20 @@ export function devtools(arg0) {
       if (__REDUX_DEVTOOLS_EXTENSION__) {
         const tmp9 = ((store, connect, name) => {
           if (undefined === store) {
-            let obj = { type: "untracked", connection: connect.connect(name) };
-            return obj;
+            const obj2 = { type: "untracked", connection: connect.connect(name) };
+            return obj2;
           } else {
             value = store.get(name.name);
             if (value) {
-              obj = { type: "tracked", store };
+              const obj3 = { type: "tracked", store };
               const merged = Object.assign(value);
-              return obj;
+              return obj3;
             } else {
-              obj = { connection: connect.connect(name), stores: {} };
+              const obj = { connection: connect.connect(name), stores: {} };
               const result = store.set(name.name, obj);
-              const obj1 = { type: "tracked", store };
+              const obj4 = { type: "tracked", store };
               const merged1 = Object.assign(obj);
-              return obj1;
+              return obj4;
             }
           }
         })(store, tmp5, tmp2);
@@ -150,13 +150,13 @@ export function devtools(arg0) {
                       if (!str5) {
                         str5 = "";
                       }
-                      let obj1 = /.+ (.+) .+/;
-                      const match = obj1.exec(str5);
+                      const match = /.+ (.+) .+/.exec(str5);
                       let tmp14;
                       if (null != match) {
                         tmp14 = match[1];
                       }
                       tmp10 = tmp14;
+                      const obj2 = /.+ (.+) .+/;
                     }
                   }
                   str = tmp10;
@@ -167,13 +167,13 @@ export function devtools(arg0) {
               if (!str) {
                 str = "anonymous";
               }
-              let obj = { type: str };
+              const obj = { type: str };
               let tmp3 = obj;
             } else {
               tmp3 = type;
               if (typeof type === "string") {
-                obj = { type };
-                tmp3 = obj;
+                const obj3 = { type };
+                tmp3 = obj3;
               }
             }
             if (undefined === store) {
@@ -181,10 +181,10 @@ export function devtools(arg0) {
                 connection.send(tmp3, closure_1());
               }
             } else if (null != connection) {
-              obj1 = {};
+              const obj4 = {};
               const merged = Object.assign(tmp3);
               const _HermesInternal = HermesInternal;
-              obj1.type = "" + store + "/" + tmp3.type;
+              obj4.type = "" + store + "/" + tmp3.type;
               if (typeof getTrackedConnectionState === "function") {
                 value = map.get(tmp33);
                 if (value) {
@@ -199,10 +199,10 @@ export function devtools(arg0) {
                 } else {
                   fromEntriesResult = {};
                 }
-                const obj2 = {};
+                const obj5 = {};
                 const merged1 = Object.assign(fromEntriesResult);
-                obj2[store] = setState.getState();
-                connection.send(obj1, obj2);
+                obj5[store] = setState.getState();
+                connection.send(obj4, obj5);
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -345,17 +345,17 @@ export function devtools(arg0) {
                 }
               } else if (null != connection) {
                 if (typeof getTrackedConnectionState === "function") {
-                  value = map.get(tmp18);
-                  if (value) {
+                  value2 = map.get(tmp18);
+                  if (value2) {
                     let _Object = Object;
                     let _Object2 = Object;
-                    const entries1 = Object.entries(value.stores);
-                    value = entries1.map((item) => {
+                    const entries1 = Object.entries(value2.stores);
+                    value2 = entries1.map((item) => {
                       [tmp, obj] = item;
                       const items = [tmp, obj.getState()];
                       return items;
                     });
-                    let fromEntriesResult1 = Object.fromEntries(value);
+                    let fromEntriesResult1 = Object.fromEntries(value2);
                   } else {
                     fromEntriesResult1 = {};
                   }
@@ -447,13 +447,13 @@ export function devtools(arg0) {
     }
   };
 }
-export function persist(arg0, useReportToModChannelFiltersStore) {
+export function persist(arg0, arg1) {
   closure_0 = arg0;
-  closure_1 = useReportToModChannelFiltersStore;
+  closure_1 = arg1;
   return (arg0, arg1, setState) => {
     closure_0 = arg0;
     closure_1 = arg1;
-    let persist = {
+    let obj = {
       storage: createJSONStorage(() => globalThis.localStorage),
       partialize(arg0) {
         return arg0;
@@ -469,7 +469,7 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
     c3 = false;
     const set = new Set();
     const set1 = new Set();
-    let storage = persist.storage;
+    let storage = obj.storage;
     if (storage) {
       function setItem() {
 
@@ -478,12 +478,10 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
       setState.setState = (arg0, arg1) => {
         setState(arg0, arg1);
         if (typeof setItem === "function") {
-          let obj = {};
+          obj = {};
           const merged = Object.assign(closure_1());
-          obj = { state: null, version: null };
-          obj.state = obj.partialize(obj);
-          obj.version = obj.version;
-          return storage.setItem(obj.name, obj);
+          const obj2 = { state: obj.partialize(obj), version: obj.version };
+          return storage.setItem(obj.name, obj2);
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -491,12 +489,10 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
       let tmp6 = closure_0(() => {
         closure_0(...HermesBuiltin.copyRestArgs());
         if (typeof setItem === "function") {
-          let obj = {};
+          obj = {};
           const merged = Object.assign(closure_1());
-          obj = { state: null, version: null };
-          obj.state = obj.partialize(obj);
-          obj.version = obj.version;
-          return storage.setItem(obj.name, obj);
+          const obj2 = { state: obj.partialize(obj), version: obj.version };
+          return storage.setItem(obj.name, obj2);
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -524,7 +520,7 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                   const tmp3 = closure_0(name);
                   closure_0 = tmp3;
                   if (tmp3 instanceof Promise) {
-                    let obj = tmp3;
+                    obj = tmp3;
                   } else {
                     obj = {
                       then(name) {
@@ -543,7 +539,7 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                   return obj;
                 } catch (tmp6) {
                   closure_1 = tmp6;
-                  obj = {
+                  const obj2 = {
                     then(arg0) {
                         return this;
                       },
@@ -556,7 +552,7 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                         }
                       }
                   };
-                  return obj;
+                  return obj2;
                 }
               })(obj.name);
               let nextPromise = ((name) => {
@@ -564,7 +560,7 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                   const tmp3 = closure_0(name);
                   closure_0 = tmp3;
                   if (tmp3 instanceof Promise) {
-                    let obj = tmp3;
+                    obj = tmp3;
                   } else {
                     obj = {
                       then(name) {
@@ -583,7 +579,7 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                   return obj;
                 } catch (tmp6) {
                   closure_1 = tmp6;
-                  obj = {
+                  const obj2 = {
                     then(arg0) {
                         return this;
                       },
@@ -596,14 +592,14 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                         }
                       }
                   };
-                  return obj;
+                  return obj2;
                 }
               })(obj.name).then((version) => {
                 if (version) {
                   if (typeof version.version === "number") {
-                    if (version.version !== persist.version) {
-                      if (persist.migrate) {
-                        const migrateResult = persist.migrate(version.state, version.version);
+                    if (version.version !== obj.version) {
+                      if (obj.migrate) {
+                        const migrateResult = obj.migrate(version.state, version.version);
                         if (migrateResult instanceof Promise) {
                           let nextPromise = migrateResult.then((result) => {
                             const items = [true, result];
@@ -630,7 +626,7 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                   const tmp3 = closure_0(name);
                   closure_0 = tmp3;
                   if (tmp3 instanceof Promise) {
-                    let obj = tmp3;
+                    obj = tmp3;
                   } else {
                     obj = {
                       then(name) {
@@ -649,7 +645,7 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                   return obj;
                 } catch (tmp6) {
                   closure_1 = tmp6;
-                  obj = {
+                  const obj2 = {
                     then(arg0) {
                         return this;
                       },
@@ -662,14 +658,14 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                         }
                       }
                   };
-                  return obj;
+                  return obj2;
                 }
               })(obj.name).then((version) => {
                 if (version) {
                   if (typeof version.version === "number") {
-                    if (version.version !== persist.version) {
-                      if (persist.migrate) {
-                        const migrateResult = persist.migrate(version.state, version.version);
+                    if (version.version !== obj.version) {
+                      if (obj.migrate) {
+                        const migrateResult = obj.migrate(version.state, version.version);
                         if (migrateResult instanceof Promise) {
                           let nextPromise = migrateResult.then((result) => {
                             const items = [true, result];
@@ -697,27 +693,25 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                   tmp6 = closure_1_10;
                 }
                 const tmp = closure_0(result, 2);
-                closure_0(persist.merge(tmp3, tmp6), true);
+                closure_0(closure_1_2.merge(tmp3, tmp6), true);
                 if (tmp2) {
                   if (typeof setItem === "function") {
-                    let obj = {};
+                    obj = {};
                     const merged = Object.assign(closure_1_1());
-                    obj = { state: null, version: null };
-                    obj.state = persist.partialize(obj);
-                    obj.version = persist.version;
-                    return item.setItem(persist.name, obj);
+                    const obj2 = { state: closure_1_2.partialize(obj), version: closure_1_2.version };
+                    return item.setItem(closure_1_2.name, obj2);
                   } else {
                     throw new TypeError("Trying to call a non-function");
                   }
                 }
-                mergeResult = persist.merge(tmp3, tmp6);
+                mergeResult = closure_1_2.merge(tmp3, tmp6);
               });
               return ((name) => {
                 try {
                   const tmp3 = closure_0(name);
                   closure_0 = tmp3;
                   if (tmp3 instanceof Promise) {
-                    let obj = tmp3;
+                    obj = tmp3;
                   } else {
                     obj = {
                       then(name) {
@@ -736,7 +730,7 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                   return obj;
                 } catch (tmp6) {
                   closure_1 = tmp6;
-                  obj = {
+                  const obj2 = {
                     then(arg0) {
                         return this;
                       },
@@ -749,14 +743,14 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                         }
                       }
                   };
-                  return obj;
+                  return obj2;
                 }
               })(obj.name).then((version) => {
                 if (version) {
                   if (typeof version.version === "number") {
-                    if (version.version !== persist.version) {
-                      if (persist.migrate) {
-                        const migrateResult = persist.migrate(version.state, version.version);
+                    if (version.version !== obj.version) {
+                      if (obj.migrate) {
+                        const migrateResult = obj.migrate(version.state, version.version);
                         if (migrateResult instanceof Promise) {
                           let nextPromise = migrateResult.then((result) => {
                             const items = [true, result];
@@ -784,20 +778,18 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
                   tmp6 = closure_1_10;
                 }
                 const tmp = closure_0(result, 2);
-                closure_0(persist.merge(tmp3, tmp6), true);
+                closure_0(closure_1_2.merge(tmp3, tmp6), true);
                 if (tmp2) {
                   if (typeof setItem === "function") {
-                    let obj = {};
+                    obj = {};
                     const merged = Object.assign(closure_1_1());
-                    obj = { state: null, version: null };
-                    obj.state = persist.partialize(obj);
-                    obj.version = persist.version;
-                    return item.setItem(persist.name, obj);
+                    const obj2 = { state: closure_1_2.partialize(obj), version: closure_1_2.version };
+                    return item.setItem(closure_1_2.name, obj2);
                   } else {
                     throw new TypeError("Trying to call a non-function");
                   }
                 }
-                mergeResult = persist.merge(tmp3, tmp6);
+                mergeResult = closure_1_2.merge(tmp3, tmp6);
               }).then(() => {
                 if (null != closure_0) {
                   tmp(closure_9, undefined);
@@ -823,9 +815,9 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
           }
         }
       }
-      persist = {
+      let obj2 = {
         setOptions(storage) {
-            const obj = {};
+            obj = {};
             const merged = Object.assign(obj);
             const merged1 = Object.assign(storage);
             if (storage.storage) {
@@ -861,8 +853,8 @@ export function persist(arg0, useReportToModChannelFiltersStore) {
             };
           }
       };
-      setState.persist = persist;
-      if (!persist.skipHydration) {
+      setState.persist = obj2;
+      if (!obj.skipHydration) {
         hydrate();
       }
       let tmp9 = closure_9;
